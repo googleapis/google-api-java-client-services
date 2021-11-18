@@ -31,11 +31,21 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class BuildDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * In-toto Provenance representation as defined in spec.
+   * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as
+   * defined in spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InTotoProvenance intotoProvenance;
+
+  /**
+   * In-toto Statement representation as defined in spec. The intoto_statement can contain any type
+   * of provenance. The serialized payload of the statement can be stored and signed in the
+   * Occurrence's envelope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InTotoStatement intotoStatement;
 
   /**
    * The actual provenance
@@ -58,7 +68,8 @@ public final class BuildDetails extends com.google.api.client.json.GenericJson {
   private java.lang.String provenanceBytes;
 
   /**
-   * In-toto Provenance representation as defined in spec.
+   * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as
+   * defined in spec.
    * @return value or {@code null} for none
    */
   public InTotoProvenance getIntotoProvenance() {
@@ -66,11 +77,33 @@ public final class BuildDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * In-toto Provenance representation as defined in spec.
+   * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as
+   * defined in spec.
    * @param intotoProvenance intotoProvenance or {@code null} for none
    */
   public BuildDetails setIntotoProvenance(InTotoProvenance intotoProvenance) {
     this.intotoProvenance = intotoProvenance;
+    return this;
+  }
+
+  /**
+   * In-toto Statement representation as defined in spec. The intoto_statement can contain any type
+   * of provenance. The serialized payload of the statement can be stored and signed in the
+   * Occurrence's envelope.
+   * @return value or {@code null} for none
+   */
+  public InTotoStatement getIntotoStatement() {
+    return intotoStatement;
+  }
+
+  /**
+   * In-toto Statement representation as defined in spec. The intoto_statement can contain any type
+   * of provenance. The serialized payload of the statement can be stored and signed in the
+   * Occurrence's envelope.
+   * @param intotoStatement intotoStatement or {@code null} for none
+   */
+  public BuildDetails setIntotoStatement(InTotoStatement intotoStatement) {
+    this.intotoStatement = intotoStatement;
     return this;
   }
 

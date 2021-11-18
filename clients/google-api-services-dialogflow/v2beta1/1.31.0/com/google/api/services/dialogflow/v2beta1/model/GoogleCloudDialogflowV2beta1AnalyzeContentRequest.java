@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Parameters for a human assist query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1AssistQueryParameters assistQueryParams;
+
+  /**
    * An input event to send to Dialogflow.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1TextInput textInput;
+
+  /**
+   * Parameters for a human assist query.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AssistQueryParameters getAssistQueryParams() {
+    return assistQueryParams;
+  }
+
+  /**
+   * Parameters for a human assist query.
+   * @param assistQueryParams assistQueryParams or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setAssistQueryParams(GoogleCloudDialogflowV2beta1AssistQueryParameters assistQueryParams) {
+    this.assistQueryParams = assistQueryParams;
+    return this;
+  }
 
   /**
    * An input event to send to Dialogflow.

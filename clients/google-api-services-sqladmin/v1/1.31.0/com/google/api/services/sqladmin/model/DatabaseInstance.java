@@ -64,6 +64,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.Long currentDiskSize;
 
   /**
+   * Output only. The databaseInstalledVersion stores the current fully resolved database version
+   * running on the instance including minor version such as MYSQL_5_6_50
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseInstalledVersion;
+
+  /**
    * The database engine type and version. The **databaseVersion** field cannot be changed after
    * instance creation.
    * The value may be {@code null}.
@@ -110,10 +118,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String gceZone;
 
   /**
-   * The instance type. This can be one of the following: * **CLOUD_SQL_INSTANCE**: A Cloud SQL
-   * instance that is not replicating from a primary instance. * **ON_PREMISES_INSTANCE**: An
-   * instance running on the customer's premises. * **READ_REPLICA_INSTANCE**: A Cloud SQL instance
-   * configured as a read-replica.
+   * The instance type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -364,6 +369,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. The databaseInstalledVersion stores the current fully resolved database version
+   * running on the instance including minor version such as MYSQL_5_6_50
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseInstalledVersion() {
+    return databaseInstalledVersion;
+  }
+
+  /**
+   * Output only. The databaseInstalledVersion stores the current fully resolved database version
+   * running on the instance including minor version such as MYSQL_5_6_50
+   * @param databaseInstalledVersion databaseInstalledVersion or {@code null} for none
+   */
+  public DatabaseInstance setDatabaseInstalledVersion(java.lang.String databaseInstalledVersion) {
+    this.databaseInstalledVersion = databaseInstalledVersion;
+    return this;
+  }
+
+  /**
    * The database engine type and version. The **databaseVersion** field cannot be changed after
    * instance creation.
    * @return value or {@code null} for none
@@ -474,10 +498,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The instance type. This can be one of the following: * **CLOUD_SQL_INSTANCE**: A Cloud SQL
-   * instance that is not replicating from a primary instance. * **ON_PREMISES_INSTANCE**: An
-   * instance running on the customer's premises. * **READ_REPLICA_INSTANCE**: A Cloud SQL instance
-   * configured as a read-replica.
+   * The instance type.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceType() {
@@ -485,10 +506,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The instance type. This can be one of the following: * **CLOUD_SQL_INSTANCE**: A Cloud SQL
-   * instance that is not replicating from a primary instance. * **ON_PREMISES_INSTANCE**: An
-   * instance running on the customer's premises. * **READ_REPLICA_INSTANCE**: A Cloud SQL instance
-   * configured as a read-replica.
+   * The instance type.
    * @param instanceType instanceType or {@code null} for none
    */
   public DatabaseInstance setInstanceType(java.lang.String instanceType) {

@@ -114,8 +114,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
-   * The status of an operation. Valid values are: * **PENDING** * **RUNNING** * **DONE** *
-   * **SQL_OPERATION_STATUS_UNSPECIFIED**
+   * The status of an operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,8 +347,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of an operation. Valid values are: * **PENDING** * **RUNNING** * **DONE** *
-   * **SQL_OPERATION_STATUS_UNSPECIFIED**
+   * The status of an operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -357,8 +355,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of an operation. Valid values are: * **PENDING** * **RUNNING** * **DONE** *
-   * **SQL_OPERATION_STATUS_UNSPECIFIED**
+   * The status of an operation.
    * @param status status or {@code null} for none
    */
   public Operation setStatus(java.lang.String status) {

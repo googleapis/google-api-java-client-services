@@ -34,7 +34,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    * managed-services-default". If set, the instance ip will be created in the allocated range. The
    * range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the
    * name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.
+   * `[a-z]([-a-z0-9]*[a-z0-9])?.`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    * managed-services-default". If set, the instance ip will be created in the allocated range. The
    * range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the
    * name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.
+   * `[a-z]([-a-z0-9]*[a-z0-9])?.`
    * @return value or {@code null} for none
    */
   public java.lang.String getAllocatedIpRange() {
@@ -94,7 +94,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    * managed-services-default". If set, the instance ip will be created in the allocated range. The
    * range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the
    * name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?.` Reserved for future use.
+   * `[a-z]([-a-z0-9]*[a-z0-9])?.`
    * @param allocatedIpRange allocatedIpRange or {@code null} for none
    */
   public IpConfiguration setAllocatedIpRange(java.lang.String allocatedIpRange) {

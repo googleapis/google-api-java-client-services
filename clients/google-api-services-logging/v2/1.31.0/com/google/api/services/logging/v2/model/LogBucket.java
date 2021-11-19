@@ -30,6 +30,16 @@ package com.google.api.services.logging.v2.model;
 public final class LogBucket extends com.google.api.client.json.GenericJson {
 
   /**
+   * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are
+   * encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings,
+   * the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is
+   * allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CmekSettings cmekSettings;
+
+  /**
    * Output only. The creation timestamp of the bucket. This is not set for any of the default
    * buckets.
    * The value may be {@code null}.
@@ -95,6 +105,29 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are
+   * encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings,
+   * the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is
+   * allowed.
+   * @return value or {@code null} for none
+   */
+  public CmekSettings getCmekSettings() {
+    return cmekSettings;
+  }
+
+  /**
+   * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are
+   * encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings,
+   * the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is
+   * allowed.
+   * @param cmekSettings cmekSettings or {@code null} for none
+   */
+  public LogBucket setCmekSettings(CmekSettings cmekSettings) {
+    this.cmekSettings = cmekSettings;
+    return this;
+  }
 
   /**
    * Output only. The creation timestamp of the bucket. This is not set for any of the default

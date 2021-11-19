@@ -177,6 +177,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private MaintenanceWindow maintenanceWindow;
 
   /**
+   * The local user password validation policy of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PasswordValidationPolicy passwordValidationPolicy;
+
+  /**
    * The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only
    * **PER_USE** is supported for Second Generation instances.
    * The value may be {@code null}.
@@ -555,6 +562,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
     this.maintenanceWindow = maintenanceWindow;
+    return this;
+  }
+
+  /**
+   * The local user password validation policy of the instance.
+   * @return value or {@code null} for none
+   */
+  public PasswordValidationPolicy getPasswordValidationPolicy() {
+    return passwordValidationPolicy;
+  }
+
+  /**
+   * The local user password validation policy of the instance.
+   * @param passwordValidationPolicy passwordValidationPolicy or {@code null} for none
+   */
+  public Settings setPasswordValidationPolicy(PasswordValidationPolicy passwordValidationPolicy) {
+    this.passwordValidationPolicy = passwordValidationPolicy;
     return this;
   }
 

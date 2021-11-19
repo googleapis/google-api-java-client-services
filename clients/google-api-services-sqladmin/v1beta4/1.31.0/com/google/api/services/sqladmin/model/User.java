@@ -37,9 +37,10 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The host name from which the user can connect. For *insert* operations, host defaults to an
-   * empty string. For *update* operations, host is specified as part of the request URL. The host
-   * name cannot be updated after insertion.
+   * Optional. The host name from which the user can connect. For **insert** operations, host
+   * defaults to an empty string. For **update** operations, host is specified as part of the
+   * request URL. The host name cannot be updated after insertion. For a MySQL instance, it's
+   * required; for a PostgreSQL or SQL Server instance, it's optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +62,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is already
-   * specified in the URL.
+   * The name of the user in the Cloud SQL instance. Can be omitted for **update** since it is
+   * already specified in the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,6 +75,13 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String password;
+
+  /**
+   * User level password validation policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserPasswordValidationPolicy passwordPolicy;
 
   /**
    * The project ID of the project containing the Cloud SQL database. The Google apps domain is
@@ -115,9 +123,10 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The host name from which the user can connect. For *insert* operations, host defaults to an
-   * empty string. For *update* operations, host is specified as part of the request URL. The host
-   * name cannot be updated after insertion.
+   * Optional. The host name from which the user can connect. For **insert** operations, host
+   * defaults to an empty string. For **update** operations, host is specified as part of the
+   * request URL. The host name cannot be updated after insertion. For a MySQL instance, it's
+   * required; for a PostgreSQL or SQL Server instance, it's optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -125,9 +134,10 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The host name from which the user can connect. For *insert* operations, host defaults to an
-   * empty string. For *update* operations, host is specified as part of the request URL. The host
-   * name cannot be updated after insertion.
+   * Optional. The host name from which the user can connect. For **insert** operations, host
+   * defaults to an empty string. For **update** operations, host is specified as part of the
+   * request URL. The host name cannot be updated after insertion. For a MySQL instance, it's
+   * required; for a PostgreSQL or SQL Server instance, it's optional.
    * @param host host or {@code null} for none
    */
   public User setHost(java.lang.String host) {
@@ -172,8 +182,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is already
-   * specified in the URL.
+   * The name of the user in the Cloud SQL instance. Can be omitted for **update** since it is
+   * already specified in the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -181,8 +191,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is already
-   * specified in the URL.
+   * The name of the user in the Cloud SQL instance. Can be omitted for **update** since it is
+   * already specified in the URL.
    * @param name name or {@code null} for none
    */
   public User setName(java.lang.String name) {
@@ -204,6 +214,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setPassword(java.lang.String password) {
     this.password = password;
+    return this;
+  }
+
+  /**
+   * User level password validation policy.
+   * @return value or {@code null} for none
+   */
+  public UserPasswordValidationPolicy getPasswordPolicy() {
+    return passwordPolicy;
+  }
+
+  /**
+   * User level password validation policy.
+   * @param passwordPolicy passwordPolicy or {@code null} for none
+   */
+  public User setPasswordPolicy(UserPasswordValidationPolicy passwordPolicy) {
+    this.passwordPolicy = passwordPolicy;
     return this;
   }
 

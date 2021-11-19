@@ -71,6 +71,14 @@ public final class GoogleCloudMlV1Job extends com.google.api.client.json.Generic
   private java.lang.String jobId;
 
   /**
+   * Output only. It's only effect when the job is in QUEUED state. If it's positive, it indicates
+   * the job's position in the job scheduler. It's 0 when the job is already scheduled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long jobPosition;
+
+  /**
    * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value
    * pair, where both the key and the value are arbitrary strings that you supply. For more
    * information, see the documentation on using labels.
@@ -251,6 +259,25 @@ public final class GoogleCloudMlV1Job extends com.google.api.client.json.Generic
    */
   public GoogleCloudMlV1Job setJobId(java.lang.String jobId) {
     this.jobId = jobId;
+    return this;
+  }
+
+  /**
+   * Output only. It's only effect when the job is in QUEUED state. If it's positive, it indicates
+   * the job's position in the job scheduler. It's 0 when the job is already scheduled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getJobPosition() {
+    return jobPosition;
+  }
+
+  /**
+   * Output only. It's only effect when the job is in QUEUED state. If it's positive, it indicates
+   * the job's position in the job scheduler. It's 0 when the job is already scheduled.
+   * @param jobPosition jobPosition or {@code null} for none
+   */
+  public GoogleCloudMlV1Job setJobPosition(java.lang.Long jobPosition) {
+    this.jobPosition = jobPosition;
     return this;
   }
 

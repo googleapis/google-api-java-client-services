@@ -1,6 +1,6 @@
 # Cloud Logging API Client Library for Java
 
-Writes log entries and manages your Cloud Logging configuration. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the documentation at https://cloud.google.com/logging/docs.
+Writes log entries and manages your Cloud Logging configuration.
 
 This page contains information about getting started with the Cloud Logging API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-logging</artifactId>
-      <version>v2-rev20211019-1.32.1</version>
+      <version>v2-rev20211108-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-logging:v2-rev20211019-1.32.1'
+  compile 'com.google.apis:google-api-services-logging:v2-rev20211108-1.32.1'
 }
 ```
 

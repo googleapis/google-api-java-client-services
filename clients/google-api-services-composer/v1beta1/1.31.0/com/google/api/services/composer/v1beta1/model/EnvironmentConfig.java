@@ -142,8 +142,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The network-level access control policy for the Airflow web server. If unspecified,
-   * no network-level access restrictions will be applied. This field is supported for Cloud
-   * Composer environments in versions composer-1.*.*-airflow-*.*.*.
+   * no network-level access restrictions will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -422,8 +421,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The network-level access control policy for the Airflow web server. If unspecified,
-   * no network-level access restrictions will be applied. This field is supported for Cloud
-   * Composer environments in versions composer-1.*.*-airflow-*.*.*.
+   * no network-level access restrictions will be applied.
    * @return value or {@code null} for none
    */
   public WebServerNetworkAccessControl getWebServerNetworkAccessControl() {
@@ -432,8 +430,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The network-level access control policy for the Airflow web server. If unspecified,
-   * no network-level access restrictions will be applied. This field is supported for Cloud
-   * Composer environments in versions composer-1.*.*-airflow-*.*.*.
+   * no network-level access restrictions will be applied.
    * @param webServerNetworkAccessControl webServerNetworkAccessControl or {@code null} for none
    */
   public EnvironmentConfig setWebServerNetworkAccessControl(WebServerNetworkAccessControl webServerNetworkAccessControl) {

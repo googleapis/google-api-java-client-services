@@ -1106,8 +1106,7 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * the environment. An integer greater than or equal to 3 must be provided in the
            * `config.nodeCount` field. Supported for Cloud Composer environments in versions
            * composer-1.*.*-airflow-*.*.*. * `config.webServerNetworkAccessControl` * Replace the
-           * environment's current WebServerNetworkAccessControl. Supported for Cloud Composer
-           * environments in versions composer-1.*.*-airflow-*.*.*. *
+           * environment's current WebServerNetworkAccessControl. *
            * `config.softwareConfig.airflowConfigOverrides` * Replace all Apache Airflow config
            * overrides. If a replacement config overrides map is not included in `environment`, all
            * config overrides are cleared. It is an error to provide both this mask and a mask
@@ -1184,8 +1183,7 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
          `config.nodeCount` * Horizontally scale the number of nodes in the environment. An integer greater
          than or equal to 3 must be provided in the `config.nodeCount` field. Supported for Cloud Composer
          environments in versions composer-1.*.*-airflow-*.*.*. * `config.webServerNetworkAccessControl` *
-         Replace the environment's current WebServerNetworkAccessControl. Supported for Cloud Composer
-         environments in versions composer-1.*.*-airflow-*.*.*. *
+         Replace the environment's current WebServerNetworkAccessControl. *
          `config.softwareConfig.airflowConfigOverrides` * Replace all Apache Airflow config overrides. If a
          replacement config overrides map is not included in `environment`, all config overrides are
          cleared. It is an error to provide both this mask and a mask specifying one or more individual
@@ -1265,8 +1263,7 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * the environment. An integer greater than or equal to 3 must be provided in the
            * `config.nodeCount` field. Supported for Cloud Composer environments in versions
            * composer-1.*.*-airflow-*.*.*. * `config.webServerNetworkAccessControl` * Replace the
-           * environment's current WebServerNetworkAccessControl. Supported for Cloud Composer
-           * environments in versions composer-1.*.*-airflow-*.*.*. *
+           * environment's current WebServerNetworkAccessControl. *
            * `config.softwareConfig.airflowConfigOverrides` * Replace all Apache Airflow config
            * overrides. If a replacement config overrides map is not included in `environment`, all
            * config overrides are cleared. It is an error to provide both this mask and a mask

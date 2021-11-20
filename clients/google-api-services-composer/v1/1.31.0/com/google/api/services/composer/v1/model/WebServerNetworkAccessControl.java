@@ -17,8 +17,7 @@
 package com.google.api.services.composer.v1.model;
 
 /**
- * Network-level access control policy for the Airflow web server. Supported for Cloud Composer
- * environments in versions composer-1.*.*-airflow-*.*.*.
+ * Network-level access control policy for the Airflow web server.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Composer API. For a detailed explanation see:

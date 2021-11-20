@@ -30,15 +30,6 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class GameServerCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The allocation priority assigned to the game server cluster. Game server clusters
-   * receive new game server allocations based on the relative allocation priorites set for each
-   * cluster, if the realm is configured for multicluster allocation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String allocationPriority;
-
-  /**
    * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to
    * `FULL` in the relevant List/Get/Preview request.
    * The value may be {@code null}.
@@ -98,27 +89,6 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Optional. The allocation priority assigned to the game server cluster. Game server clusters
-   * receive new game server allocations based on the relative allocation priorites set for each
-   * cluster, if the realm is configured for multicluster allocation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAllocationPriority() {
-    return allocationPriority;
-  }
-
-  /**
-   * Optional. The allocation priority assigned to the game server cluster. Game server clusters
-   * receive new game server allocations based on the relative allocation priorites set for each
-   * cluster, if the realm is configured for multicluster allocation.
-   * @param allocationPriority allocationPriority or {@code null} for none
-   */
-  public GameServerCluster setAllocationPriority(java.lang.String allocationPriority) {
-    this.allocationPriority = allocationPriority;
-    return this;
-  }
 
   /**
    * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to

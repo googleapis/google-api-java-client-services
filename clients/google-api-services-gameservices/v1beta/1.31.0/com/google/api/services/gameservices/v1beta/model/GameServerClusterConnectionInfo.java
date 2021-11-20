@@ -37,15 +37,6 @@ public final class GameServerClusterConnectionInfo extends com.google.api.client
   private GkeClusterReference gkeClusterReference;
 
   /**
-   * Reference to a Kubernetes cluster registered through GKE Hub. See
-   * https://cloud.google.com/anthos/multicluster-management/ for more information about registering
-   * Kubernetes clusters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GkeHubClusterReference gkeHubClusterReference;
-
-  /**
    * Namespace designated on the game server cluster where the Agones game server instances will be
    * created. Existence of the namespace will be validated during creation.
    * The value may be {@code null}.
@@ -67,27 +58,6 @@ public final class GameServerClusterConnectionInfo extends com.google.api.client
    */
   public GameServerClusterConnectionInfo setGkeClusterReference(GkeClusterReference gkeClusterReference) {
     this.gkeClusterReference = gkeClusterReference;
-    return this;
-  }
-
-  /**
-   * Reference to a Kubernetes cluster registered through GKE Hub. See
-   * https://cloud.google.com/anthos/multicluster-management/ for more information about registering
-   * Kubernetes clusters.
-   * @return value or {@code null} for none
-   */
-  public GkeHubClusterReference getGkeHubClusterReference() {
-    return gkeHubClusterReference;
-  }
-
-  /**
-   * Reference to a Kubernetes cluster registered through GKE Hub. See
-   * https://cloud.google.com/anthos/multicluster-management/ for more information about registering
-   * Kubernetes clusters.
-   * @param gkeHubClusterReference gkeHubClusterReference or {@code null} for none
-   */
-  public GameServerClusterConnectionInfo setGkeHubClusterReference(GkeHubClusterReference gkeHubClusterReference) {
-    this.gkeHubClusterReference = gkeHubClusterReference;
     return this;
   }
 

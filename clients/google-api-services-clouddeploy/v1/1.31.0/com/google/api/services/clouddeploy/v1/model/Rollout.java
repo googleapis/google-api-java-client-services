@@ -114,10 +114,11 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy.
-   * Labels must meet the following constraints: Each resource is limited to 64 labels. Keys must
-   * conform to the regexp: `a-zA-Z{0,62}`. Values must conform to the regexp:
-   * `[a-zA-Z0-9_-]{0,63}`. Both keys and values are additionally constrained to be <= 128 bytes in
-   * size.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
+   * values are additionally constrained to be <= 128 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,10 +351,11 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy.
-   * Labels must meet the following constraints: Each resource is limited to 64 labels. Keys must
-   * conform to the regexp: `a-zA-Z{0,62}`. Values must conform to the regexp:
-   * `[a-zA-Z0-9_-]{0,63}`. Both keys and values are additionally constrained to be <= 128 bytes in
-   * size.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
+   * values are additionally constrained to be <= 128 bytes.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -362,10 +364,11 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy.
-   * Labels must meet the following constraints: Each resource is limited to 64 labels. Keys must
-   * conform to the regexp: `a-zA-Z{0,62}`. Values must conform to the regexp:
-   * `[a-zA-Z0-9_-]{0,63}`. Both keys and values are additionally constrained to be <= 128 bytes in
-   * size.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
+   * values are additionally constrained to be <= 128 bytes.
    * @param labels labels or {@code null} for none
    */
   public Rollout setLabels(java.util.Map<String, java.lang.String> labels) {

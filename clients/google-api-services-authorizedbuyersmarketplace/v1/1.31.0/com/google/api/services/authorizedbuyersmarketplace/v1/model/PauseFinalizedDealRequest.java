@@ -31,16 +31,16 @@ package com.google.api.services.authorizedbuyersmarketplace.v1.model;
 public final class PauseFinalizedDealRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The reason to pause the finalized deal, will be displayed to the seller. Maximum
-   * length is 1000 characters.
+   * The reason to pause the finalized deal, will be displayed to the seller. Maximum length is 1000
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * Required. The reason to pause the finalized deal, will be displayed to the seller. Maximum
-   * length is 1000 characters.
+   * The reason to pause the finalized deal, will be displayed to the seller. Maximum length is 1000
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -48,8 +48,8 @@ public final class PauseFinalizedDealRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. The reason to pause the finalized deal, will be displayed to the seller. Maximum
-   * length is 1000 characters.
+   * The reason to pause the finalized deal, will be displayed to the seller. Maximum length is 1000
+   * characters.
    * @param reason reason or {@code null} for none
    */
   public PauseFinalizedDealRequest setReason(java.lang.String reason) {

@@ -34,7 +34,7 @@ public final class UrlChannel extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name of the URL channel. Format:
-   * accounts/{account}/adclient/{adclient}/urlchannels/{urlchannel}
+   * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class UrlChannel extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name of the URL channel. Format:
-   * accounts/{account}/adclient/{adclient}/urlchannels/{urlchannel}
+   * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -67,7 +67,7 @@ public final class UrlChannel extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name of the URL channel. Format:
-   * accounts/{account}/adclient/{adclient}/urlchannels/{urlchannel}
+   * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
    * @param name name or {@code null} for none
    */
   public UrlChannel setName(java.lang.String name) {

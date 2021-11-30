@@ -160,7 +160,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the adsense server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Account to get information about. Format: accounts/{account_id}
+     * @param name Required. Account to get information about. Format: accounts/{account}
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -186,7 +186,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Account to get information about. Format: accounts/{account_id}
+       * @param name Required. Account to get information about. Format: accounts/{account}
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -264,17 +264,17 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Account to get information about. Format: accounts/{account_id} */
+      /** Required. Account to get information about. Format: accounts/{account} */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Account to get information about. Format: accounts/{account_id}
+      /** Required. Account to get information about. Format: accounts/{account}
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. Account to get information about. Format: accounts/{account_id} */
+      /** Required. Account to get information about. Format: accounts/{account} */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1040,7 +1040,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. AdUnit to get information about. Format:
-         *        accounts/{account_id}/adclient/{adclient_id}/adunit/{adunit_id}
+         *        accounts/{account}/adclients/{adclient}/adunits/{adunit}
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1067,7 +1067,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. AdUnit to get information about. Format:
-         *        accounts/{account_id}/adclient/{adclient_id}/adunit/{adunit_id}
+         *        accounts/{account}/adclients/{adclient}/adunits/{adunit}
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1147,13 +1147,13 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. AdUnit to get information about. Format:
-           * accounts/{account_id}/adclient/{adclient_id}/adunit/{adunit_id}
+           * accounts/{account}/adclients/{adclient}/adunits/{adunit}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. AdUnit to get information about. Format:
-         accounts/{account_id}/adclient/{adclient_id}/adunit/{adunit_id}
+         accounts/{account}/adclients/{adclient}/adunits/{adunit}
            */
           public java.lang.String getName() {
             return name;
@@ -1161,7 +1161,7 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. AdUnit to get information about. Format:
-           * accounts/{account_id}/adclient/{adclient_id}/adunit/{adunit_id}
+           * accounts/{account}/adclients/{adclient}/adunits/{adunit}
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -32,7 +32,7 @@ package com.google.api.services.adsense.v2.model;
 public final class AdClient extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the ad client. Format: accounts/{account}/adclient/{adclient}
+   * Resource name of the ad client. Format: accounts/{account}/adclients/{adclient}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class AdClient extends com.google.api.client.json.GenericJson {
   private java.lang.String reportingDimensionId;
 
   /**
-   * Resource name of the ad client. Format: accounts/{account}/adclient/{adclient}
+   * Resource name of the ad client. Format: accounts/{account}/adclients/{adclient}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -62,7 +62,7 @@ public final class AdClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the ad client. Format: accounts/{account}/adclient/{adclient}
+   * Resource name of the ad client. Format: accounts/{account}/adclients/{adclient}
    * @param name name or {@code null} for none
    */
   public AdClient setName(java.lang.String name) {

@@ -1724,6 +1724,191 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     }
     /**
+     * An accessor for creating requests from the Countryavailability collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Countryavailability.List request = androidpublisher.countryavailability().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Countryavailability countryavailability() {
+      return new Countryavailability();
+    }
+
+    /**
+     * The "countryavailability" collection of methods.
+     */
+    public class Countryavailability {
+
+      /**
+       * Gets country availability.
+       *
+       * Create a request for the method "countryavailability.get".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Package name of the app.
+       * @param editId Identifier of the edit.
+       * @param track The track to read from.
+       * @return the request
+       */
+      public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String track) throws java.io.IOException {
+        Get result = new Get(packageName, editId, track);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.TrackCountryAvailability> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/countryAvailability/{track}";
+
+        /**
+         * Gets country availability.
+         *
+         * Create a request for the method "countryavailability.get".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Package name of the app.
+         * @param editId Identifier of the edit.
+         * @param track The track to read from.
+         * @since 1.13
+         */
+        protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String track) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.TrackCountryAvailability.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
+          this.track = com.google.api.client.util.Preconditions.checkNotNull(track, "Required parameter track must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Package name of the app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Package name of the app. */
+        public Get setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Identifier of the edit. */
+        @com.google.api.client.util.Key
+        private java.lang.String editId;
+
+        /** Identifier of the edit.
+         */
+        public java.lang.String getEditId() {
+          return editId;
+        }
+
+        /** Identifier of the edit. */
+        public Get setEditId(java.lang.String editId) {
+          this.editId = editId;
+          return this;
+        }
+
+        /** The track to read from. */
+        @com.google.api.client.util.Key
+        private java.lang.String track;
+
+        /** The track to read from.
+         */
+        public java.lang.String getTrack() {
+          return track;
+        }
+
+        /** The track to read from. */
+        public Get setTrack(java.lang.String track) {
+          this.track = track;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Deobfuscationfiles collection.
      *
      * <p>The typical use is:</p>
@@ -6135,6 +6320,370 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
     }
+  }
+
+  /**
+   * An accessor for creating requests from the Generatedapks collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Generatedapks.List request = androidpublisher.generatedapks().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Generatedapks generatedapks() {
+    return new Generatedapks();
+  }
+
+  /**
+   * The "generatedapks" collection of methods.
+   */
+  public class Generatedapks {
+
+    /**
+     * Downloads a single signed APK generated from an app bundle.
+     *
+     * Create a request for the method "generatedapks.download".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Package name of the app.
+     * @param versionCode Version code of the app bundle.
+     * @param downloadId Download ID, which uniquely identifies the APK to download. Can be obtained from the response of
+     *        `generatedapks.list` method.
+     * @return the request
+     */
+    public Download download(java.lang.String packageName, java.lang.Integer versionCode, java.lang.String downloadId) throws java.io.IOException {
+      Download result = new Download(packageName, versionCode, downloadId);
+      initialize(result);
+      return result;
+    }
+
+    public class Download extends AndroidPublisherRequest<Void> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}/downloads/{downloadId}:download";
+
+      /**
+       * Downloads a single signed APK generated from an app bundle.
+       *
+       * Create a request for the method "generatedapks.download".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Package name of the app.
+       * @param versionCode Version code of the app bundle.
+       * @param downloadId Download ID, which uniquely identifies the APK to download. Can be obtained from the response of
+     *        `generatedapks.list` method.
+       * @since 1.13
+       */
+      protected Download(java.lang.String packageName, java.lang.Integer versionCode, java.lang.String downloadId) {
+        super(AndroidPublisher.this, "GET", REST_PATH, null, Void.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+        this.downloadId = com.google.api.client.util.Preconditions.checkNotNull(downloadId, "Required parameter downloadId must be specified.");
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Download setAlt(java.lang.String alt) {
+        return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
+      }
+
+      @Override
+      public Download setFields(java.lang.String fields) {
+        return (Download) super.setFields(fields);
+      }
+
+      @Override
+      public Download setKey(java.lang.String key) {
+        return (Download) super.setKey(key);
+      }
+
+      @Override
+      public Download setOauthToken(java.lang.String oauthToken) {
+        return (Download) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Download) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Download setQuotaUser(java.lang.String quotaUser) {
+        return (Download) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Package name of the app. */
+      public Download setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /** Version code of the app bundle. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer versionCode;
+
+      /** Version code of the app bundle.
+       */
+      public java.lang.Integer getVersionCode() {
+        return versionCode;
+      }
+
+      /** Version code of the app bundle. */
+      public Download setVersionCode(java.lang.Integer versionCode) {
+        this.versionCode = versionCode;
+        return this;
+      }
+
+      /**
+       * Download ID, which uniquely identifies the APK to download. Can be obtained from the
+       * response of `generatedapks.list` method.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String downloadId;
+
+      /** Download ID, which uniquely identifies the APK to download. Can be obtained from the response of
+     `generatedapks.list` method.
+       */
+      public java.lang.String getDownloadId() {
+        return downloadId;
+      }
+
+      /**
+       * Download ID, which uniquely identifies the APK to download. Can be obtained from the
+       * response of `generatedapks.list` method.
+       */
+      public Download setDownloadId(java.lang.String downloadId) {
+        this.downloadId = downloadId;
+        return this;
+      }
+
+      @Override
+      public Download set(String parameterName, Object value) {
+        return (Download) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns download metadata for all APKs that were generated from a given app bundle.
+     *
+     * Create a request for the method "generatedapks.list".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Package name of the app.
+     * @param versionCode Version code of the app bundle.
+     * @return the request
+     */
+    public List list(java.lang.String packageName, java.lang.Integer versionCode) throws java.io.IOException {
+      List result = new List(packageName, versionCode);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.GeneratedApksListResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}";
+
+      /**
+       * Returns download metadata for all APKs that were generated from a given app bundle.
+       *
+       * Create a request for the method "generatedapks.list".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Package name of the app.
+       * @param versionCode Version code of the app bundle.
+       * @since 1.13
+       */
+      protected List(java.lang.String packageName, java.lang.Integer versionCode) {
+        super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.GeneratedApksListResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Package name of the app. */
+      public List setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /** Version code of the app bundle. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer versionCode;
+
+      /** Version code of the app bundle.
+       */
+      public java.lang.Integer getVersionCode() {
+        return versionCode;
+      }
+
+      /** Version code of the app bundle. */
+      public List setVersionCode(java.lang.Integer versionCode) {
+        this.versionCode = versionCode;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

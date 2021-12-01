@@ -160,7 +160,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -188,7 +188,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -257,17 +257,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Messages) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       public Messages setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -352,7 +352,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -380,7 +380,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -449,17 +449,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Webhooks) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       public Webhooks setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -565,7 +565,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -593,7 +593,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -662,17 +662,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Messages) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
         public Messages setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -959,7 +959,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -987,7 +987,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -1056,17 +1056,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Messages) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       public Messages setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1151,7 +1151,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -1179,7 +1179,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -1248,17 +1248,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Webhooks) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       public Webhooks setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1364,7 +1364,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -1392,7 +1392,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -1461,17 +1461,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Messages) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
         public Messages setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1867,7 +1867,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
      * @param content the {@link com.google.api.services.chat.v1.model.Message}
      * @return the request
      */
@@ -1895,7 +1895,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @since 1.13
        */
@@ -1964,17 +1964,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Webhooks) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
       public Webhooks setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2435,7 +2435,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -2462,7 +2462,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -2531,17 +2531,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAAAAAAAA */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2627,7 +2627,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
-       *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2654,7 +2654,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
-       *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2724,13 +2724,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be deleted, in the form "spaces/messages"
-         * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
-       spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+       spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          */
         public java.lang.String getName() {
           return name;
@@ -2738,7 +2738,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be deleted, in the form "spaces/messages"
-         * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2764,7 +2764,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
-       *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2791,7 +2791,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
-       *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2871,13 +2871,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be retrieved, in the form "spaces/messages".
-         * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
-       spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+       spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          */
         public java.lang.String getName() {
           return name;
@@ -2885,7 +2885,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be retrieved, in the form "spaces/messages".
-         * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2911,7 +2911,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param name Resource name in the form `spaces/messages`. Example:
-       *        `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -2939,7 +2939,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Resource name in the form `spaces/messages`. Example:
-       *        `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -3010,13 +3010,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Resource name in the form `spaces/messages`. Example:
-         * `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Resource name in the form `spaces/messages`. Example:
-       `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
+       `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          */
         public java.lang.String getName() {
           return name;
@@ -3024,7 +3024,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Resource name in the form `spaces/messages`. Example:
-         * `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

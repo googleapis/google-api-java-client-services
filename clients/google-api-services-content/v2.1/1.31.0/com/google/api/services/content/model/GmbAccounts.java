@@ -38,7 +38,7 @@ public final class GmbAccounts extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger accountId;
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * A list of Business Profiles which are available to the merchant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GmbAccounts extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * A list of Business Profiles which are available to the merchant.
    * @return value or {@code null} for none
    */
   public java.util.List<GmbAccountsGmbAccount> getGmbAccounts() {
@@ -70,7 +70,7 @@ public final class GmbAccounts extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * A list of Business Profiles which are available to the merchant.
    * @param gmbAccounts gmbAccounts or {@code null} for none
    */
   public GmbAccounts setGmbAccounts(java.util.List<GmbAccountsGmbAccount> gmbAccounts) {

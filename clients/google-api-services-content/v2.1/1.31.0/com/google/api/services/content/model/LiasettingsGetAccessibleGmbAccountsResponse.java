@@ -38,7 +38,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
   private java.math.BigInteger accountId;
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * A list of Business Profiles which are available to the merchant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * A list of Business Profiles which are available to the merchant.
    * @return value or {@code null} for none
    */
   public java.util.List<GmbAccountsGmbAccount> getGmbAccounts() {
@@ -84,7 +84,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
   }
 
   /**
-   * A list of GMB accounts which are available to the merchant.
+   * A list of Business Profiles which are available to the merchant.
    * @param gmbAccounts gmbAccounts or {@code null} for none
    */
   public LiasettingsGetAccessibleGmbAccountsResponse setGmbAccounts(java.util.List<GmbAccountsGmbAccount> gmbAccounts) {

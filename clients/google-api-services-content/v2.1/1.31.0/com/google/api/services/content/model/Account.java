@@ -77,7 +77,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger cssId;
 
   /**
-   * The GMB account which is linked or in the process of being linked with the Merchant Center
+   * The Business Profile which is linked or in the process of being linked with the Merchant Center
    * account.
    * The value may be {@code null}.
    */
@@ -253,7 +253,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The GMB account which is linked or in the process of being linked with the Merchant Center
+   * The Business Profile which is linked or in the process of being linked with the Merchant Center
    * account.
    * @return value or {@code null} for none
    */
@@ -262,7 +262,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The GMB account which is linked or in the process of being linked with the Merchant Center
+   * The Business Profile which is linked or in the process of being linked with the Merchant Center
    * account.
    * @param googleMyBusinessLink googleMyBusinessLink or {@code null} for none
    */

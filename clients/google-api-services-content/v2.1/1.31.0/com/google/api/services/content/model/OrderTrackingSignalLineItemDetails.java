@@ -81,7 +81,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   private java.lang.String productTitle;
 
   /**
-   * Required. The quantity of the line item in the order.
+   * The quantity of the line item in the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -223,7 +223,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Required. The quantity of the line item in the order.
+   * The quantity of the line item in the order.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantity() {
@@ -231,7 +231,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Required. The quantity of the line item in the order.
+   * The quantity of the line item in the order.
    * @param quantity quantity or {@code null} for none
    */
   public OrderTrackingSignalLineItemDetails setQuantity(java.lang.Long quantity) {

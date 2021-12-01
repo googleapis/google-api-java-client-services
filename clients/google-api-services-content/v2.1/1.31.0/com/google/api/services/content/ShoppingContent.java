@@ -9021,7 +9021,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Retrieves the list of accessible Google My Business accounts.
+     * Retrieves the list of accessible Business Profiles.
      *
      * Create a request for the method "liasettings.getaccessiblegmbaccounts".
      *
@@ -9032,7 +9032,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
-     * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
+     * @param accountId The ID of the account for which to retrieve accessible Business Profiles.
      * @return the request
      */
     public Getaccessiblegmbaccounts getaccessiblegmbaccounts(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
@@ -9046,7 +9046,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/accessiblegmbaccounts";
 
       /**
-       * Retrieves the list of accessible Google My Business accounts.
+       * Retrieves the list of accessible Business Profiles.
        *
        * Create a request for the method "liasettings.getaccessiblegmbaccounts".
        *
@@ -9059,7 +9059,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
-       * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
+       * @param accountId The ID of the account for which to retrieve accessible Business Profiles.
        * @since 1.13
        */
       protected Getaccessiblegmbaccounts(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
@@ -9158,17 +9158,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The ID of the account for which to retrieve accessible Google My Business accounts. */
+      /** The ID of the account for which to retrieve accessible Business Profiles. */
       @com.google.api.client.util.Key
       private java.math.BigInteger accountId;
 
-      /** The ID of the account for which to retrieve accessible Google My Business accounts.
+      /** The ID of the account for which to retrieve accessible Business Profiles.
        */
       public java.math.BigInteger getAccountId() {
         return accountId;
       }
 
-      /** The ID of the account for which to retrieve accessible Google My Business accounts. */
+      /** The ID of the account for which to retrieve accessible Business Profiles. */
       public Getaccessiblegmbaccounts setAccountId(java.math.BigInteger accountId) {
         this.accountId = accountId;
         return this;
@@ -9447,7 +9447,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests access to a specified Google My Business account.
+     * Requests access to a specified Business Profile.
      *
      * Create a request for the method "liasettings.requestgmbaccess".
      *
@@ -9457,8 +9457,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
-     * @param accountId The ID of the account for which GMB access is requested.
-     * @param gmbEmail The email of the Google My Business account.
+     * @param accountId The ID of the account for which Business Profile access is requested.
+     * @param gmbEmail The email of the Business Profile.
      * @return the request
      */
     public Requestgmbaccess requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String gmbEmail) throws java.io.IOException {
@@ -9472,7 +9472,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/requestgmbaccess";
 
       /**
-       * Requests access to a specified Google My Business account.
+       * Requests access to a specified Business Profile.
        *
        * Create a request for the method "liasettings.requestgmbaccess".
        *
@@ -9485,8 +9485,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
-       * @param accountId The ID of the account for which GMB access is requested.
-       * @param gmbEmail The email of the Google My Business account.
+       * @param accountId The ID of the account for which Business Profile access is requested.
+       * @param gmbEmail The email of the Business Profile.
        * @since 1.13
        */
       protected Requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String gmbEmail) {
@@ -9576,33 +9576,33 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The ID of the account for which GMB access is requested. */
+      /** The ID of the account for which Business Profile access is requested. */
       @com.google.api.client.util.Key
       private java.math.BigInteger accountId;
 
-      /** The ID of the account for which GMB access is requested.
+      /** The ID of the account for which Business Profile access is requested.
        */
       public java.math.BigInteger getAccountId() {
         return accountId;
       }
 
-      /** The ID of the account for which GMB access is requested. */
+      /** The ID of the account for which Business Profile access is requested. */
       public Requestgmbaccess setAccountId(java.math.BigInteger accountId) {
         this.accountId = accountId;
         return this;
       }
 
-      /** The email of the Google My Business account. */
+      /** The email of the Business Profile. */
       @com.google.api.client.util.Key
       private java.lang.String gmbEmail;
 
-      /** The email of the Google My Business account.
+      /** The email of the Business Profile.
        */
       public java.lang.String getGmbEmail() {
         return gmbEmail;
       }
 
-      /** The email of the Google My Business account. */
+      /** The email of the Business Profile. */
       public Requestgmbaccess setGmbEmail(java.lang.String gmbEmail) {
         this.gmbEmail = gmbEmail;
         return this;
@@ -10017,7 +10017,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
-     * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
+     * @param accountId The ID of the account for which to retrieve accessible Business Profiles.
      * @param country The country for which the POS data provider is selected.
      * @return the request
      */
@@ -10045,7 +10045,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
-       * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
+       * @param accountId The ID of the account for which to retrieve accessible Business Profiles.
        * @param country The country for which the POS data provider is selected.
        * @since 1.13
        */
@@ -10136,17 +10136,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The ID of the account for which to retrieve accessible Google My Business accounts. */
+      /** The ID of the account for which to retrieve accessible Business Profiles. */
       @com.google.api.client.util.Key
       private java.math.BigInteger accountId;
 
-      /** The ID of the account for which to retrieve accessible Google My Business accounts.
+      /** The ID of the account for which to retrieve accessible Business Profiles.
        */
       public java.math.BigInteger getAccountId() {
         return accountId;
       }
 
-      /** The ID of the account for which to retrieve accessible Google My Business accounts. */
+      /** The ID of the account for which to retrieve accessible Business Profiles. */
       public Setposdataprovider setAccountId(java.math.BigInteger accountId) {
         this.accountId = accountId;
         return this;

@@ -8278,7 +8278,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class V1 {
 
     /**
-     * Initializes the customer. **Note:** This API requires an admin account to execute.
+     * Enables `third party` support in Google Cloud Search. **Note:** This API requires an admin
+     * account to execute.
      *
      * Create a request for the method "v1.initializeCustomer".
      *
@@ -8299,7 +8300,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1:initializeCustomer";
 
       /**
-       * Initializes the customer. **Note:** This API requires an admin account to execute.
+       * Enables `third party` support in Google Cloud Search. **Note:** This API requires an admin
+       * account to execute.
        *
        * Create a request for the method "v1.initializeCustomer".
        *

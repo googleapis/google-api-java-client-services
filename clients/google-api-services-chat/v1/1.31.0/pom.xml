@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-chat</artifactId>
-  <version>v1-rev20211117-1.32.1</version>
-  <name>Google Chat API v1-rev20211117-1.32.1</name>
+  <version>v1-rev20211125-1.32.1</version>
+  <name>Google Chat API v1-rev20211125-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

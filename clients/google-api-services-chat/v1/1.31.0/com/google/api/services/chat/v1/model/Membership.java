@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation time of the membership a.k.a. the time at which the member joined the space, if
-   * applicable.
+   * Output only. The creation time of the membership a.k.a. the time at which the member joined the
+   * space, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,15 +51,15 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * State of the membership.
+   * State of the membership. Required for `CreateMembership`. Read-only for other usage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The creation time of the membership a.k.a. the time at which the member joined the space, if
-   * applicable.
+   * Output only. The creation time of the membership a.k.a. the time at which the member joined the
+   * space, if applicable.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -67,8 +67,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The creation time of the membership a.k.a. the time at which the member joined the space, if
-   * applicable.
+   * Output only. The creation time of the membership a.k.a. the time at which the member joined the
+   * space, if applicable.
    * @param createTime createTime or {@code null} for none
    */
   public Membership setCreateTime(String createTime) {
@@ -109,7 +109,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the membership.
+   * State of the membership. Required for `CreateMembership`. Read-only for other usage.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -117,7 +117,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the membership.
+   * State of the membership. Required for `CreateMembership`. Read-only for other usage.
    * @param state state or {@code null} for none
    */
   public Membership setState(java.lang.String state) {

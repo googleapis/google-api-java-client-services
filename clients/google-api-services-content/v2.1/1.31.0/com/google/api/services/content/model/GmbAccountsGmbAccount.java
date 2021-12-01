@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class GmbAccountsGmbAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The email which identifies the GMB account.
+   * The email which identifies the Business Profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,21 +45,21 @@ public final class GmbAccountsGmbAccount extends com.google.api.client.json.Gene
   private java.math.BigInteger listingCount;
 
   /**
-   * The name of the GMB account.
+   * The name of the Business Profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The type of the GMB account (User or Business).
+   * The type of the Business Profile (User or Business).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The email which identifies the GMB account.
+   * The email which identifies the Business Profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -67,7 +67,7 @@ public final class GmbAccountsGmbAccount extends com.google.api.client.json.Gene
   }
 
   /**
-   * The email which identifies the GMB account.
+   * The email which identifies the Business Profile.
    * @param email email or {@code null} for none
    */
   public GmbAccountsGmbAccount setEmail(java.lang.String email) {
@@ -93,7 +93,7 @@ public final class GmbAccountsGmbAccount extends com.google.api.client.json.Gene
   }
 
   /**
-   * The name of the GMB account.
+   * The name of the Business Profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +101,7 @@ public final class GmbAccountsGmbAccount extends com.google.api.client.json.Gene
   }
 
   /**
-   * The name of the GMB account.
+   * The name of the Business Profile.
    * @param name name or {@code null} for none
    */
   public GmbAccountsGmbAccount setName(java.lang.String name) {
@@ -110,7 +110,7 @@ public final class GmbAccountsGmbAccount extends com.google.api.client.json.Gene
   }
 
   /**
-   * The type of the GMB account (User or Business).
+   * The type of the Business Profile (User or Business).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -118,7 +118,7 @@ public final class GmbAccountsGmbAccount extends com.google.api.client.json.Gene
   }
 
   /**
-   * The type of the GMB account (User or Business).
+   * The type of the Business Profile (User or Business).
    * @param type type or {@code null} for none
    */
   public GmbAccountsGmbAccount setType(java.lang.String type) {

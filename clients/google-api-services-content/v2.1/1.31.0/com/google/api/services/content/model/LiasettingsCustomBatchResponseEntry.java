@@ -45,7 +45,7 @@ public final class LiasettingsCustomBatchResponseEntry extends com.google.api.cl
   private Errors errors;
 
   /**
-   * The list of accessible GMB accounts.
+   * The list of accessible Business Profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class LiasettingsCustomBatchResponseEntry extends com.google.api.cl
   }
 
   /**
-   * The list of accessible GMB accounts.
+   * The list of accessible Business Profiles.
    * @return value or {@code null} for none
    */
   public GmbAccounts getGmbAccounts() {
@@ -116,7 +116,7 @@ public final class LiasettingsCustomBatchResponseEntry extends com.google.api.cl
   }
 
   /**
-   * The list of accessible GMB accounts.
+   * The list of accessible Business Profiles.
    * @param gmbAccounts gmbAccounts or {@code null} for none
    */
   public LiasettingsCustomBatchResponseEntry setGmbAccounts(GmbAccounts gmbAccounts) {

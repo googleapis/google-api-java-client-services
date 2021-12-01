@@ -66,7 +66,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   private java.lang.String country;
 
   /**
-   * The GMB account. Required only for RequestGmbAccess.
+   * The Business Profile. Required only for RequestGmbAccess.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   }
 
   /**
-   * The GMB account. Required only for RequestGmbAccess.
+   * The Business Profile. Required only for RequestGmbAccess.
    * @return value or {@code null} for none
    */
   public java.lang.String getGmbEmail() {
@@ -203,7 +203,7 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   }
 
   /**
-   * The GMB account. Required only for RequestGmbAccess.
+   * The Business Profile. Required only for RequestGmbAccess.
    * @param gmbEmail gmbEmail or {@code null} for none
    */
   public LiasettingsCustomBatchRequestEntry setGmbEmail(java.lang.String gmbEmail) {

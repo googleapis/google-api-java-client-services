@@ -38,7 +38,7 @@ public final class OrderTrackingSignalShipmentLineItemMapping extends com.google
   private java.lang.String lineItemId;
 
   /**
-   * Required. The line item quantity in the shipment.
+   * The line item quantity in the shipment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -70,7 +70,7 @@ public final class OrderTrackingSignalShipmentLineItemMapping extends com.google
   }
 
   /**
-   * Required. The line item quantity in the shipment.
+   * The line item quantity in the shipment.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantity() {
@@ -78,7 +78,7 @@ public final class OrderTrackingSignalShipmentLineItemMapping extends com.google
   }
 
   /**
-   * Required. The line item quantity in the shipment.
+   * The line item quantity in the shipment.
    * @param quantity quantity or {@code null} for none
    */
   public OrderTrackingSignalShipmentLineItemMapping setQuantity(java.lang.Long quantity) {

@@ -31,32 +31,33 @@ package com.google.api.services.content.model;
 public final class AccountGoogleMyBusinessLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the GMB account. If this is provided, then `gmbEmail` is ignored. The value of this
-   * field should match the `accountId` used by the GMB API.
+   * The ID of the Business Profile. If this is provided, then `gmbEmail` is ignored. The value of
+   * this field should match the `accountId` used by the Business Profile API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gmbAccountId;
 
   /**
-   * The GMB email address of which a specific account within a GMB account. A sample account within
-   * a GMB account could be a business account with set of locations, managed under the GMB account.
+   * The Business Profile email address of a specific account within a Business Profile. A sample
+   * account within a Business Profile could be a business account with set of locations, managed
+   * under the Business Profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gmbEmail;
 
   /**
-   * Status of the link between this Merchant Center account and the GMB account. Acceptable values
-   * are: - "`active`" - "`pending`"
+   * Status of the link between this Merchant Center account and the Business Profile. Acceptable
+   * values are: - "`active`" - "`pending`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * The ID of the GMB account. If this is provided, then `gmbEmail` is ignored. The value of this
-   * field should match the `accountId` used by the GMB API.
+   * The ID of the Business Profile. If this is provided, then `gmbEmail` is ignored. The value of
+   * this field should match the `accountId` used by the Business Profile API.
    * @return value or {@code null} for none
    */
   public java.lang.String getGmbAccountId() {
@@ -64,8 +65,8 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   }
 
   /**
-   * The ID of the GMB account. If this is provided, then `gmbEmail` is ignored. The value of this
-   * field should match the `accountId` used by the GMB API.
+   * The ID of the Business Profile. If this is provided, then `gmbEmail` is ignored. The value of
+   * this field should match the `accountId` used by the Business Profile API.
    * @param gmbAccountId gmbAccountId or {@code null} for none
    */
   public AccountGoogleMyBusinessLink setGmbAccountId(java.lang.String gmbAccountId) {
@@ -74,8 +75,9 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   }
 
   /**
-   * The GMB email address of which a specific account within a GMB account. A sample account within
-   * a GMB account could be a business account with set of locations, managed under the GMB account.
+   * The Business Profile email address of a specific account within a Business Profile. A sample
+   * account within a Business Profile could be a business account with set of locations, managed
+   * under the Business Profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getGmbEmail() {
@@ -83,8 +85,9 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   }
 
   /**
-   * The GMB email address of which a specific account within a GMB account. A sample account within
-   * a GMB account could be a business account with set of locations, managed under the GMB account.
+   * The Business Profile email address of a specific account within a Business Profile. A sample
+   * account within a Business Profile could be a business account with set of locations, managed
+   * under the Business Profile.
    * @param gmbEmail gmbEmail or {@code null} for none
    */
   public AccountGoogleMyBusinessLink setGmbEmail(java.lang.String gmbEmail) {
@@ -93,8 +96,8 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   }
 
   /**
-   * Status of the link between this Merchant Center account and the GMB account. Acceptable values
-   * are: - "`active`" - "`pending`"
+   * Status of the link between this Merchant Center account and the Business Profile. Acceptable
+   * values are: - "`active`" - "`pending`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -102,8 +105,8 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   }
 
   /**
-   * Status of the link between this Merchant Center account and the GMB account. Acceptable values
-   * are: - "`active`" - "`pending`"
+   * Status of the link between this Merchant Center account and the Business Profile. Acceptable
+   * values are: - "`active`" - "`pending`"
    * @param status status or {@code null} for none
    */
   public AccountGoogleMyBusinessLink setStatus(java.lang.String status) {

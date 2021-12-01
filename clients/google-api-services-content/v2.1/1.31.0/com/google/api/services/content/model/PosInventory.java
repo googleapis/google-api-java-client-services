@@ -74,7 +74,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
-   * the code of the store in Google My Business.
+   * the code of the store in a Business Profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +198,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
-   * the code of the store in Google My Business.
+   * the code of the store in a Business Profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreCode() {
@@ -207,7 +207,7 @@ public final class PosInventory extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
-   * the code of the store in Google My Business.
+   * the code of the store in a Business Profile.
    * @param storeCode storeCode or {@code null} for none
    */
   public PosInventory setStoreCode(java.lang.String storeCode) {

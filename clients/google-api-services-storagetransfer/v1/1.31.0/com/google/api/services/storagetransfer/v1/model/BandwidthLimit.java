@@ -17,8 +17,7 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Specifies the BandwidthLimit to describe the non-negative bandwidth rate in mbps for the agent
- * pool.
+ * Specifies a bandwidth limit for an agent pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -31,14 +30,14 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class BandwidthLimit extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies bandwidth rate in mbps distributed across all the agents in the pool.
+   * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long limitMbps;
 
   /**
-   * Specifies bandwidth rate in mbps distributed across all the agents in the pool.
+   * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLimitMbps() {
@@ -46,7 +45,7 @@ public final class BandwidthLimit extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies bandwidth rate in mbps distributed across all the agents in the pool.
+   * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
    * @param limitMbps limitMbps or {@code null} for none
    */
   public BandwidthLimit setLimitMbps(java.lang.Long limitMbps) {

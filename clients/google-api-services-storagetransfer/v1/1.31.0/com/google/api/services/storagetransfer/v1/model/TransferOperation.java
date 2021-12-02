@@ -71,7 +71,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   private NotificationConfig notificationConfig;
 
   /**
-   * The ID of the Google Cloud Platform Project that owns the operation.
+   * The ID of the Google Cloud project that owns the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the Google Cloud Platform Project that owns the operation.
+   * The ID of the Google Cloud project that owns the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -199,7 +199,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the Google Cloud Platform Project that owns the operation.
+   * The ID of the Google Cloud project that owns the operation.
    * @param projectId projectId or {@code null} for none
    */
   public TransferOperation setProjectId(java.lang.String projectId) {

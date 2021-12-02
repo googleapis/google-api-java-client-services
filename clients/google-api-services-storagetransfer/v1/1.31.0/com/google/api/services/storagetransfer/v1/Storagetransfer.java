@@ -155,18 +155,16 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
     /**
      * Returns the Google service account that is used by Storage Transfer Service to access buckets in
      * the project where transfers run or in other projects. Each Google service account is associated
-     * with one Google Cloud Platform Console project. Users should add this service account to the
-     * Google Cloud Storage bucket ACLs to grant access to Storage Transfer Service. This service
-     * account is created and owned by Storage Transfer Service and can only be used by Storage Transfer
-     * Service.
+     * with one Google Cloud project. Users should add this service account to the Google Cloud Storage
+     * bucket ACLs to grant access to Storage Transfer Service. This service account is created and
+     * owned by Storage Transfer Service and can only be used by Storage Transfer Service.
      *
      * Create a request for the method "googleServiceAccounts.get".
      *
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId Required. The ID of the Google Cloud Platform Console project that the Google service account is
-     *        associated with.
+     * @param projectId Required. The ID of the Google Cloud project that the Google service account is associated with.
      * @return the request
      */
     public Get get(java.lang.String projectId) throws java.io.IOException {
@@ -182,10 +180,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       /**
        * Returns the Google service account that is used by Storage Transfer Service to access buckets
        * in the project where transfers run or in other projects. Each Google service account is
-       * associated with one Google Cloud Platform Console project. Users should add this service
-       * account to the Google Cloud Storage bucket ACLs to grant access to Storage Transfer Service.
-       * This service account is created and owned by Storage Transfer Service and can only be used by
-       * Storage Transfer Service.
+       * associated with one Google Cloud project. Users should add this service account to the Google
+       * Cloud Storage bucket ACLs to grant access to Storage Transfer Service. This service account is
+       * created and owned by Storage Transfer Service and can only be used by Storage Transfer Service.
        *
        * Create a request for the method "googleServiceAccounts.get".
        *
@@ -194,8 +191,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Required. The ID of the Google Cloud Platform Console project that the Google service account is
-     *        associated with.
+       * @param projectId Required. The ID of the Google Cloud project that the Google service account is associated with.
        * @since 1.13
        */
       protected Get(java.lang.String projectId) {
@@ -269,22 +265,21 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Required. The ID of the Google Cloud Platform Console project that the Google service
-       * account is associated with.
+       * Required. The ID of the Google Cloud project that the Google service account is associated
+       * with.
        */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Required. The ID of the Google Cloud Platform Console project that the Google service account is
-     associated with.
+      /** Required. The ID of the Google Cloud project that the Google service account is associated with.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
       /**
-       * Required. The ID of the Google Cloud Platform Console project that the Google service
-       * account is associated with.
+       * Required. The ID of the Google Cloud project that the Google service account is associated
+       * with.
        */
       public Get setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
@@ -347,7 +342,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the storagetransfer server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+       * @param projectId Required. The ID of the Google Cloud project that owns the agent pool.
        * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
        * @return the request
        */
@@ -375,7 +370,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+         * @param projectId Required. The ID of the Google Cloud project that owns the agent pool.
          * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
          * @since 1.13
          */
@@ -444,21 +439,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
-         */
+        /** Required. The ID of the Google Cloud project that owns the agent pool. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+        /** Required. The ID of the Google Cloud project that owns the agent pool.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /**
-         * Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
-         */
+        /** Required. The ID of the Google Cloud project that owns the agent pool. */
         public Create setProjectId(java.lang.String projectId) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -470,27 +461,34 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The id of the agent pool to create. The agent_pool_id must be non-empty, less
-         * than or equal to 128 characters, and satisfy the following regex:
-         * "^[a-z]([a-z0-9-._~]*[a-z0-9])?$". Also, agent pool names cannot start with the string
-         * "goog".
+         * Required. The ID of the agent pool to create. The `agent_pool_id` must meet the following
+         * requirements: * Length of 128 characters or less. * Not start with the string `goog`. *
+         * Start with a lowercase ASCII character, followed by: * Zero or more: lowercase Latin
+         * alphabet characters, numerals, hyphens (`-`), periods (`.`), underscores (`_`), or tildes
+         * (`~`). * One or more numerals or lowercase ASCII characters. As expressed by the regular
+         * expression: `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
          */
         @com.google.api.client.util.Key
         private java.lang.String agentPoolId;
 
-        /** Required. The id of the agent pool to create. The agent_pool_id must be non-empty, less than or
-       equal to 128 characters, and satisfy the following regex: "^[a-z]([a-z0-9-._~]*[a-z0-9])?$". Also,
-       agent pool names cannot start with the string "goog".
+        /** Required. The ID of the agent pool to create. The `agent_pool_id` must meet the following
+       requirements: * Length of 128 characters or less. * Not start with the string `goog`. * Start with
+       a lowercase ASCII character, followed by: * Zero or more: lowercase Latin alphabet characters,
+       numerals, hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`). * One or more numerals
+       or lowercase ASCII characters. As expressed by the regular expression:
+       `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
          */
         public java.lang.String getAgentPoolId() {
           return agentPoolId;
         }
 
         /**
-         * Required. The id of the agent pool to create. The agent_pool_id must be non-empty, less
-         * than or equal to 128 characters, and satisfy the following regex:
-         * "^[a-z]([a-z0-9-._~]*[a-z0-9])?$". Also, agent pool names cannot start with the string
-         * "goog".
+         * Required. The ID of the agent pool to create. The `agent_pool_id` must meet the following
+         * requirements: * Length of 128 characters or less. * Not start with the string `goog`. *
+         * Start with a lowercase ASCII character, followed by: * Zero or more: lowercase Latin
+         * alphabet characters, numerals, hyphens (`-`), periods (`.`), underscores (`_`), or tildes
+         * (`~`). * One or more numerals or lowercase ASCII characters. As expressed by the regular
+         * expression: `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
          */
         public Create setAgentPoolId(java.lang.String agentPoolId) {
           this.agentPoolId = agentPoolId;
@@ -510,7 +508,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the storagetransfer server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The agent pool name to delete.
+       * @param name Required. The name of the agent pool to delete.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -537,7 +535,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The agent pool name to delete.
+         * @param name Required. The name of the agent pool to delete.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -605,17 +603,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The agent pool name to delete. */
+        /** Required. The name of the agent pool to delete. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The agent pool name to delete.
+        /** Required. The name of the agent pool to delete.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The agent pool name to delete. */
+        /** Required. The name of the agent pool to delete. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -639,7 +637,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the storagetransfer server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The agent pool to get.
+       * @param name Required. The name of the agent pool to get.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -665,7 +663,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The agent pool to get.
+         * @param name Required. The name of the agent pool to get.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -743,17 +741,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The agent pool to get. */
+        /** Required. The name of the agent pool to get. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The agent pool to get.
+        /** Required. The name of the agent pool to get.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The agent pool to get. */
+        /** Required. The name of the agent pool to get. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -777,7 +775,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the storagetransfer server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
+       * @param projectId Required. The ID of the Google Cloud project that owns the job.
        * @return the request
        */
       public List list(java.lang.String projectId) throws java.io.IOException {
@@ -803,7 +801,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
+         * @param projectId Required. The ID of the Google Cloud project that owns the job.
          * @since 1.13
          */
         protected List(java.lang.String projectId) {
@@ -881,17 +879,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The ID of the Google Cloud Platform Console project that owns the job. */
+        /** Required. The ID of the Google Cloud project that owns the job. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** Required. The ID of the Google Cloud Platform Console project that owns the job.
+        /** Required. The ID of the Google Cloud project that owns the job.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** Required. The ID of the Google Cloud Platform Console project that owns the job. */
+        /** Required. The ID of the Google Cloud project that owns the job. */
         public List setProjectId(java.lang.String projectId) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -903,47 +901,45 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * A list of optional query parameters specified as JSON text in the form of:
+         * An optional list of query parameters specified as JSON text in the form of:
          * `{"agentPoolNames":["agentpool1","agentpool2",...]}` Since `agentPoolNames` support
-         * multiple values, its values must be specified with array notation. `agentPoolNames` is an
-         * optional field. The list returns all agent pools for the project when the filter is not
-         * provided or empty.
+         * multiple values, its values must be specified with array notation. When the filter is
+         * either empty or not provided, the list returns all agent pools for the project.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** A list of optional query parameters specified as JSON text in the form of:
+        /** An optional list of query parameters specified as JSON text in the form of:
        `{"agentPoolNames":["agentpool1","agentpool2",...]}` Since `agentPoolNames` support multiple
-       values, its values must be specified with array notation. `agentPoolNames` is an optional field.
-       The list returns all agent pools for the project when the filter is not provided or empty.
+       values, its values must be specified with array notation. When the filter is either empty or not
+       provided, the list returns all agent pools for the project.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * A list of optional query parameters specified as JSON text in the form of:
+         * An optional list of query parameters specified as JSON text in the form of:
          * `{"agentPoolNames":["agentpool1","agentpool2",...]}` Since `agentPoolNames` support
-         * multiple values, its values must be specified with array notation. `agentPoolNames` is an
-         * optional field. The list returns all agent pools for the project when the filter is not
-         * provided or empty.
+         * multiple values, its values must be specified with array notation. When the filter is
+         * either empty or not provided, the list returns all agent pools for the project.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The list page size. The max allowed value is 256. */
+        /** The list page size. The max allowed value is `256`. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The list page size. The max allowed value is 256.
+        /** The list page size. The max allowed value is `256`.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The list page size. The max allowed value is 256. */
+        /** The list page size. The max allowed value is `256`. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -979,7 +975,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Required. Specifies a unique string that identifies the agent pool. Format:
-       *        projects/{project_id}/agentPools/{agent_pool_id}
+       *        `projects/{project_id}/agentPools/{agent_pool_id}`
        * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
        * @return the request
        */
@@ -1008,7 +1004,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Specifies a unique string that identifies the agent pool. Format:
-       *        projects/{project_id}/agentPools/{agent_pool_id}
+       *        `projects/{project_id}/agentPools/{agent_pool_id}`
          * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
          * @since 1.13
          */
@@ -1079,13 +1075,13 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Specifies a unique string that identifies the agent pool. Format:
-         * projects/{project_id}/agentPools/{agent_pool_id}
+         * `projects/{project_id}/agentPools/{agent_pool_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Specifies a unique string that identifies the agent pool. Format:
-       projects/{project_id}/agentPools/{agent_pool_id}
+       `projects/{project_id}/agentPools/{agent_pool_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -1093,7 +1089,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Specifies a unique string that identifies the agent pool. Format:
-         * projects/{project_id}/agentPools/{agent_pool_id}
+         * `projects/{project_id}/agentPools/{agent_pool_id}`
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1106,22 +1102,27 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * The field mask of the fields in `agentPool` that are to be updated in this request.
-         * Fields in `agentPool` that can be updated are: display_name, bandwidth_limit,
+         * The [field mask] (https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf) of the fields in `agentPool` to update in this
+         * request. The following `agentPool` fields can be updated: * display_name *
+         * bandwidth_limit
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The field mask of the fields in `agentPool` that are to be updated in this request. Fields in
-       `agentPool` that can be updated are: display_name, bandwidth_limit,
+        /** The [field mask] (https://developers.google.com/protocol-buffers/docs/reference/google.protobuf) of
+       the fields in `agentPool` to update in this request. The following `agentPool` fields can be
+       updated: * display_name * bandwidth_limit
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * The field mask of the fields in `agentPool` that are to be updated in this request.
-         * Fields in `agentPool` that can be updated are: display_name, bandwidth_limit,
+         * The [field mask] (https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf) of the fields in `agentPool` to update in this
+         * request. The following `agentPool` fields can be updated: * display_name *
+         * bandwidth_limit
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -1265,7 +1266,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param jobName Required. The job to get.
-     * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
+     * @param projectId Required. The ID of the Google Cloud project that owns the job.
      * @return the request
      */
     public Get get(java.lang.String jobName, java.lang.String projectId) throws java.io.IOException {
@@ -1292,7 +1293,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param jobName Required. The job to get.
-       * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
+       * @param projectId Required. The ID of the Google Cloud project that owns the job.
        * @since 1.13
        */
       protected Get(java.lang.String jobName, java.lang.String projectId) {
@@ -1392,17 +1393,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Required. The ID of the Google Cloud Platform Console project that owns the job. */
+      /** Required. The ID of the Google Cloud project that owns the job. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Required. The ID of the Google Cloud Platform Console project that owns the job.
+      /** Required. The ID of the Google Cloud project that owns the job.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Required. The ID of the Google Cloud Platform Console project that owns the job. */
+      /** Required. The ID of the Google Cloud project that owns the job. */
       public Get setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;

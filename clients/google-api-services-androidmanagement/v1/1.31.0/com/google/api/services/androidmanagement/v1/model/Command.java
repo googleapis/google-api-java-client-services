@@ -70,7 +70,7 @@ public final class Command extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resetPasswordFlags;
 
   /**
-   * The type of the command. See also params
+   * The type of the command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,7 +179,7 @@ public final class Command extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the command. See also params
+   * The type of the command.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -187,7 +187,7 @@ public final class Command extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the command. See also params
+   * The type of the command.
    * @param type type or {@code null} for none
    */
   public Command setType(java.lang.String type) {

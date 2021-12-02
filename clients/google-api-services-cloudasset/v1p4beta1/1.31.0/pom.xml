@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudasset</artifactId>
-  <version>v1p4beta1-rev20211015-1.32.1</version>
-  <name>Cloud Asset API v1p4beta1-rev20211015-1.32.1</name>
+  <version>v1p4beta1-rev20211125-1.32.1</version>
+  <name>Cloud Asset API v1p4beta1-rev20211125-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

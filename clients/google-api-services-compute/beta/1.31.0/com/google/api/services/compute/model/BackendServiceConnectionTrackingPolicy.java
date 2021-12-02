@@ -39,7 +39,10 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
    * unhealthy backend. They are always diverted to newly selected healthy backends (unless all
    * backends are unhealthy). If set to ALWAYS_PERSIST, existing connections always persist on
    * unhealthy backends regardless of protocol and session affinity. It is generally not recommended
-   * to use this mode overriding the default.
+   * to use this mode overriding the default. For more details, see [Connection Persistence for
+   * Network Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-backend-
+   * service#connection-persistence) and [Connection Persistence for Internal TCP/UDP Load
+   * Balancing](https://cloud.google.com/load-balancing/docs/internal#connection-persistence).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,19 +58,24 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network
-   * Load Balancer the default is 60 seconds. This option is not available publicly. This field will
-   * be supported only if the Connection Tracking key is less than 5-tuple.
+   * seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the
+   * maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e.
+   * Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode
+   * is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not
+   * available publicly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer idleTimeoutSec;
 
   /**
-   * Specifies the key used for connection tracking. There are two options: PER_CONNECTION: This is
-   * the default mode. The Connection Tracking is performed as per the Connection Key (default Hash
-   * Method) for the specific protocol. PER_SESSION: The Connection Tracking is performed as per the
-   * configured Session Affinity. It matches the configured Session Affinity.
+   * Specifies the key used for connection tracking. There are two options: - PER_CONNECTION: This
+   * is the default mode. The Connection Tracking is performed as per the Connection Key (default
+   * Hash Method) for the specific protocol. - PER_SESSION: The Connection Tracking is performed as
+   * per the configured Session Affinity. It matches the configured Session Affinity. For more
+   * details, see [Tracking Mode for Network Load Balancing](https://cloud.google.com/load-
+   * balancing/docs/network/networklb-backend-service#tracking-mode) and [Tracking Mode for Internal
+   * TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal#tracking-mode).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +91,10 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
    * unhealthy backend. They are always diverted to newly selected healthy backends (unless all
    * backends are unhealthy). If set to ALWAYS_PERSIST, existing connections always persist on
    * unhealthy backends regardless of protocol and session affinity. It is generally not recommended
-   * to use this mode overriding the default.
+   * to use this mode overriding the default. For more details, see [Connection Persistence for
+   * Network Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-backend-
+   * service#connection-persistence) and [Connection Persistence for Internal TCP/UDP Load
+   * Balancing](https://cloud.google.com/load-balancing/docs/internal#connection-persistence).
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionPersistenceOnUnhealthyBackends() {
@@ -100,7 +111,10 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
    * unhealthy backend. They are always diverted to newly selected healthy backends (unless all
    * backends are unhealthy). If set to ALWAYS_PERSIST, existing connections always persist on
    * unhealthy backends regardless of protocol and session affinity. It is generally not recommended
-   * to use this mode overriding the default.
+   * to use this mode overriding the default. For more details, see [Connection Persistence for
+   * Network Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-backend-
+   * service#connection-persistence) and [Connection Persistence for Internal TCP/UDP Load
+   * Balancing](https://cloud.google.com/load-balancing/docs/internal#connection-persistence).
    * @param connectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setConnectionPersistenceOnUnhealthyBackends(java.lang.String connectionPersistenceOnUnhealthyBackends) {
@@ -129,9 +143,11 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network
-   * Load Balancer the default is 60 seconds. This option is not available publicly. This field will
-   * be supported only if the Connection Tracking key is less than 5-tuple.
+   * seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the
+   * maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e.
+   * Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode
+   * is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not
+   * available publicly.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIdleTimeoutSec() {
@@ -140,9 +156,11 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network
-   * Load Balancer the default is 60 seconds. This option is not available publicly. This field will
-   * be supported only if the Connection Tracking key is less than 5-tuple.
+   * seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the
+   * maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e.
+   * Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode
+   * is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not
+   * available publicly.
    * @param idleTimeoutSec idleTimeoutSec or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setIdleTimeoutSec(java.lang.Integer idleTimeoutSec) {
@@ -151,10 +169,13 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Specifies the key used for connection tracking. There are two options: PER_CONNECTION: This is
-   * the default mode. The Connection Tracking is performed as per the Connection Key (default Hash
-   * Method) for the specific protocol. PER_SESSION: The Connection Tracking is performed as per the
-   * configured Session Affinity. It matches the configured Session Affinity.
+   * Specifies the key used for connection tracking. There are two options: - PER_CONNECTION: This
+   * is the default mode. The Connection Tracking is performed as per the Connection Key (default
+   * Hash Method) for the specific protocol. - PER_SESSION: The Connection Tracking is performed as
+   * per the configured Session Affinity. It matches the configured Session Affinity. For more
+   * details, see [Tracking Mode for Network Load Balancing](https://cloud.google.com/load-
+   * balancing/docs/network/networklb-backend-service#tracking-mode) and [Tracking Mode for Internal
+   * TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal#tracking-mode).
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingMode() {
@@ -162,10 +183,13 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Specifies the key used for connection tracking. There are two options: PER_CONNECTION: This is
-   * the default mode. The Connection Tracking is performed as per the Connection Key (default Hash
-   * Method) for the specific protocol. PER_SESSION: The Connection Tracking is performed as per the
-   * configured Session Affinity. It matches the configured Session Affinity.
+   * Specifies the key used for connection tracking. There are two options: - PER_CONNECTION: This
+   * is the default mode. The Connection Tracking is performed as per the Connection Key (default
+   * Hash Method) for the specific protocol. - PER_SESSION: The Connection Tracking is performed as
+   * per the configured Session Affinity. It matches the configured Session Affinity. For more
+   * details, see [Tracking Mode for Network Load Balancing](https://cloud.google.com/load-
+   * balancing/docs/network/networklb-backend-service#tracking-mode) and [Tracking Mode for Internal
+   * TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal#tracking-mode).
    * @param trackingMode trackingMode or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setTrackingMode(java.lang.String trackingMode) {

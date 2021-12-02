@@ -40,6 +40,13 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean automaticRestart;
 
   /**
+   * Specifies the termination action for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceTerminationAction;
+
+  /**
    * An opaque location hint used to place the instance close to other resources. This field is for
    * use by internal tools that use the public API.
    * The value may be {@code null}.
@@ -82,6 +89,13 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean preemptible;
 
   /**
+   * Specifies the provisioning model of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provisioningModel;
+
+  /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
    * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
@@ -101,6 +115,23 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {
     this.automaticRestart = automaticRestart;
+    return this;
+  }
+
+  /**
+   * Specifies the termination action for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceTerminationAction() {
+    return instanceTerminationAction;
+  }
+
+  /**
+   * Specifies the termination action for the instance.
+   * @param instanceTerminationAction instanceTerminationAction or {@code null} for none
+   */
+  public Scheduling setInstanceTerminationAction(java.lang.String instanceTerminationAction) {
+    this.instanceTerminationAction = instanceTerminationAction;
     return this;
   }
 
@@ -200,6 +231,23 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * Specifies the provisioning model of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvisioningModel() {
+    return provisioningModel;
+  }
+
+  /**
+   * Specifies the provisioning model of the instance.
+   * @param provisioningModel provisioningModel or {@code null} for none
+   */
+  public Scheduling setProvisioningModel(java.lang.String provisioningModel) {
+    this.provisioningModel = provisioningModel;
     return this;
   }
 

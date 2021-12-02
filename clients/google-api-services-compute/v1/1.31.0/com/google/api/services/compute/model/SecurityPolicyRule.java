@@ -31,8 +31,15 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Action to perform when the client connection triggers the rule. Can currently be either
-   * "allow" or "deny()" where valid values for status are 403, 404, and 502.
+   * The Action to perform when the rule is matched. The following are the valid actions: - allow:
+   * allow access to target. - deny(): deny access to target, returns the HTTP response code
+   * specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the
+   * configured threshold and ban the client if the traffic exceeds the threshold. Configure
+   * parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. -
+   * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or
+   * an external URL-based redirect via a 302 response. Parameters for this action can be configured
+   * via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure
+   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +51,13 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Optional, additional actions that are performed on headers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleHttpHeaderAction headerAction;
 
   /**
    * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
@@ -77,8 +91,30 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer priority;
 
   /**
-   * The Action to perform when the client connection triggers the rule. Can currently be either
-   * "allow" or "deny()" where valid values for status are 403, 404, and 502.
+   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
+   * other actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleRateLimitOptions rateLimitOptions;
+
+  /**
+   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleRedirectOptions redirectOptions;
+
+  /**
+   * The Action to perform when the rule is matched. The following are the valid actions: - allow:
+   * allow access to target. - deny(): deny access to target, returns the HTTP response code
+   * specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the
+   * configured threshold and ban the client if the traffic exceeds the threshold. Configure
+   * parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. -
+   * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or
+   * an external URL-based redirect via a 302 response. Parameters for this action can be configured
+   * via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure
+   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -86,8 +122,15 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Action to perform when the client connection triggers the rule. Can currently be either
-   * "allow" or "deny()" where valid values for status are 403, 404, and 502.
+   * The Action to perform when the rule is matched. The following are the valid actions: - allow:
+   * allow access to target. - deny(): deny access to target, returns the HTTP response code
+   * specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the
+   * configured threshold and ban the client if the traffic exceeds the threshold. Configure
+   * parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. -
+   * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or
+   * an external URL-based redirect via a 302 response. Parameters for this action can be configured
+   * via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure
+   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
    * @param action action or {@code null} for none
    */
   public SecurityPolicyRule setAction(java.lang.String action) {
@@ -109,6 +152,23 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   public SecurityPolicyRule setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional, additional actions that are performed on headers.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleHttpHeaderAction getHeaderAction() {
+    return headerAction;
+  }
+
+  /**
+   * Optional, additional actions that are performed on headers.
+   * @param headerAction headerAction or {@code null} for none
+   */
+  public SecurityPolicyRule setHeaderAction(SecurityPolicyRuleHttpHeaderAction headerAction) {
+    this.headerAction = headerAction;
     return this;
   }
 
@@ -183,6 +243,42 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   public SecurityPolicyRule setPriority(java.lang.Integer priority) {
     this.priority = priority;
+    return this;
+  }
+
+  /**
+   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
+   * other actions.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptions getRateLimitOptions() {
+    return rateLimitOptions;
+  }
+
+  /**
+   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
+   * other actions.
+   * @param rateLimitOptions rateLimitOptions or {@code null} for none
+   */
+  public SecurityPolicyRule setRateLimitOptions(SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
+    this.rateLimitOptions = rateLimitOptions;
+    return this;
+  }
+
+  /**
+   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleRedirectOptions getRedirectOptions() {
+    return redirectOptions;
+  }
+
+  /**
+   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * @param redirectOptions redirectOptions or {@code null} for none
+   */
+  public SecurityPolicyRule setRedirectOptions(SecurityPolicyRuleRedirectOptions redirectOptions) {
+    this.redirectOptions = redirectOptions;
     return this;
   }
 

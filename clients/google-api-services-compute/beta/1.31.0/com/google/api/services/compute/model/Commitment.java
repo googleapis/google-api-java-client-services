@@ -33,6 +33,16 @@ package com.google.api.services.compute.model;
 public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies whether to enable automatic renewal for the commitment. The default value is false if
+   * not specified. The field can be updated until the day of the commitment expiration at 12:00am
+   * PST. If the field is set to true, the commitment will be automatically renewed for either one
+   * or three years according to the terms of the existing commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoRenew;
+
+  /**
    * The category of the commitment. Category MACHINE specifies commitments composed of machine
    * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
    * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
@@ -163,6 +173,29 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Specifies whether to enable automatic renewal for the commitment. The default value is false if
+   * not specified. The field can be updated until the day of the commitment expiration at 12:00am
+   * PST. If the field is set to true, the commitment will be automatically renewed for either one
+   * or three years according to the terms of the existing commitment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoRenew() {
+    return autoRenew;
+  }
+
+  /**
+   * Specifies whether to enable automatic renewal for the commitment. The default value is false if
+   * not specified. The field can be updated until the day of the commitment expiration at 12:00am
+   * PST. If the field is set to true, the commitment will be automatically renewed for either one
+   * or three years according to the terms of the existing commitment.
+   * @param autoRenew autoRenew or {@code null} for none
+   */
+  public Commitment setAutoRenew(java.lang.Boolean autoRenew) {
+    this.autoRenew = autoRenew;
+    return this;
+  }
 
   /**
    * The category of the commitment. Category MACHINE specifies commitments composed of machine

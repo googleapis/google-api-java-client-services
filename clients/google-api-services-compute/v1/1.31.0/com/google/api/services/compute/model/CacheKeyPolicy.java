@@ -37,6 +37,21 @@ public final class CacheKeyPolicy extends com.google.api.client.json.GenericJson
   private java.lang.Boolean includeHost;
 
   /**
+   * Allows HTTP request headers (by name) to be used in the cache key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includeHttpHeaders;
+
+  /**
+   * Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in
+   * the cache key Cloud CDN generates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includeNamedCookies;
+
+  /**
    * If true, http and https requests will be cached separately.
    * The value may be {@code null}.
    */
@@ -84,6 +99,42 @@ public final class CacheKeyPolicy extends com.google.api.client.json.GenericJson
    */
   public CacheKeyPolicy setIncludeHost(java.lang.Boolean includeHost) {
     this.includeHost = includeHost;
+    return this;
+  }
+
+  /**
+   * Allows HTTP request headers (by name) to be used in the cache key.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludeHttpHeaders() {
+    return includeHttpHeaders;
+  }
+
+  /**
+   * Allows HTTP request headers (by name) to be used in the cache key.
+   * @param includeHttpHeaders includeHttpHeaders or {@code null} for none
+   */
+  public CacheKeyPolicy setIncludeHttpHeaders(java.util.List<java.lang.String> includeHttpHeaders) {
+    this.includeHttpHeaders = includeHttpHeaders;
+    return this;
+  }
+
+  /**
+   * Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in
+   * the cache key Cloud CDN generates.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludeNamedCookies() {
+    return includeNamedCookies;
+  }
+
+  /**
+   * Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in
+   * the cache key Cloud CDN generates.
+   * @param includeNamedCookies includeNamedCookies or {@code null} for none
+   */
+  public CacheKeyPolicy setIncludeNamedCookies(java.util.List<java.lang.String> includeNamedCookies) {
+    this.includeNamedCookies = includeNamedCookies;
     return this;
   }
 

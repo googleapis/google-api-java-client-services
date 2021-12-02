@@ -290,7 +290,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Service Directory resources to register this forwarding rule with. Currently, only supports a
-   * single Service Directory resource. It is only supported for internal load balancing.
+   * single Service Directory resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -989,7 +989,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Service Directory resources to register this forwarding rule with. Currently, only supports a
-   * single Service Directory resource. It is only supported for internal load balancing.
+   * single Service Directory resource.
    * @return value or {@code null} for none
    */
   public java.util.List<ForwardingRuleServiceDirectoryRegistration> getServiceDirectoryRegistrations() {
@@ -998,7 +998,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Service Directory resources to register this forwarding rule with. Currently, only supports a
-   * single Service Directory resource. It is only supported for internal load balancing.
+   * single Service Directory resource.
    * @param serviceDirectoryRegistrations serviceDirectoryRegistrations or {@code null} for none
    */
   public ForwardingRule setServiceDirectoryRegistrations(java.util.List<ForwardingRuleServiceDirectoryRegistration> serviceDirectoryRegistrations) {

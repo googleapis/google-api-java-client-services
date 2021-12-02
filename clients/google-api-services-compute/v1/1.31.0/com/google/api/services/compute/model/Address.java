@@ -127,12 +127,12 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * forwarder IP addresses (regional internal IP address in a subnet of a VPC network) -
    * VPC_PEERING for global internal IP addresses used for private services access allocated ranges.
    * - NAT_AUTO for the regional external IP addresses used by Cloud NAT when allocating addresses
-   * using . - IPSEC_INTERCONNECT for addresses created from a private IP range that are reserved
-   * for a VLAN attachment in an *IPsec-encrypted Cloud Interconnect* configuration. These addresses
-   * are regional resources. Not currently available publicly. - `SHARED_LOADBALANCER_VIP` for an
-   * internal IP address that is assigned to multiple internal forwarding rules. -
-   * `PRIVATE_SERVICE_CONNECT` for a private network address that is used to configure Private
-   * Service Connect. Only global internal addresses can use this purpose.
+   * using automatic NAT IP address allocation. - IPSEC_INTERCONNECT for addresses created from a
+   * private IP range that are reserved for a VLAN attachment in an *IPsec-encrypted Cloud
+   * Interconnect* configuration. These addresses are regional resources. Not currently available
+   * publicly. - `SHARED_LOADBALANCER_VIP` for an internal IP address that is assigned to multiple
+   * internal forwarding rules. - `PRIVATE_SERVICE_CONNECT` for a private network address that is
+   * used to configure Private Service Connect. Only global internal addresses can use this purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -394,12 +394,12 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * forwarder IP addresses (regional internal IP address in a subnet of a VPC network) -
    * VPC_PEERING for global internal IP addresses used for private services access allocated ranges.
    * - NAT_AUTO for the regional external IP addresses used by Cloud NAT when allocating addresses
-   * using . - IPSEC_INTERCONNECT for addresses created from a private IP range that are reserved
-   * for a VLAN attachment in an *IPsec-encrypted Cloud Interconnect* configuration. These addresses
-   * are regional resources. Not currently available publicly. - `SHARED_LOADBALANCER_VIP` for an
-   * internal IP address that is assigned to multiple internal forwarding rules. -
-   * `PRIVATE_SERVICE_CONNECT` for a private network address that is used to configure Private
-   * Service Connect. Only global internal addresses can use this purpose.
+   * using automatic NAT IP address allocation. - IPSEC_INTERCONNECT for addresses created from a
+   * private IP range that are reserved for a VLAN attachment in an *IPsec-encrypted Cloud
+   * Interconnect* configuration. These addresses are regional resources. Not currently available
+   * publicly. - `SHARED_LOADBALANCER_VIP` for an internal IP address that is assigned to multiple
+   * internal forwarding rules. - `PRIVATE_SERVICE_CONNECT` for a private network address that is
+   * used to configure Private Service Connect. Only global internal addresses can use this purpose.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -413,12 +413,12 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * forwarder IP addresses (regional internal IP address in a subnet of a VPC network) -
    * VPC_PEERING for global internal IP addresses used for private services access allocated ranges.
    * - NAT_AUTO for the regional external IP addresses used by Cloud NAT when allocating addresses
-   * using . - IPSEC_INTERCONNECT for addresses created from a private IP range that are reserved
-   * for a VLAN attachment in an *IPsec-encrypted Cloud Interconnect* configuration. These addresses
-   * are regional resources. Not currently available publicly. - `SHARED_LOADBALANCER_VIP` for an
-   * internal IP address that is assigned to multiple internal forwarding rules. -
-   * `PRIVATE_SERVICE_CONNECT` for a private network address that is used to configure Private
-   * Service Connect. Only global internal addresses can use this purpose.
+   * using automatic NAT IP address allocation. - IPSEC_INTERCONNECT for addresses created from a
+   * private IP range that are reserved for a VLAN attachment in an *IPsec-encrypted Cloud
+   * Interconnect* configuration. These addresses are regional resources. Not currently available
+   * publicly. - `SHARED_LOADBALANCER_VIP` for an internal IP address that is assigned to multiple
+   * internal forwarding rules. - `PRIVATE_SERVICE_CONNECT` for a private network address that is
+   * used to configure Private Service Connect. Only global internal addresses can use this purpose.
    * @param purpose purpose or {@code null} for none
    */
   public Address setPurpose(java.lang.String purpose) {

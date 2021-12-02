@@ -78,6 +78,17 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   private java.lang.String minimalAction;
 
   /**
+   * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE
+   * to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to
+   * allow actions that can be applied without instance replacing or REPLACE to allow all possible
+   * actions. If the Updater determines that the minimal update action needed is more disruptive
+   * than most disruptive allowed action you specify it will not perform the update at all.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mostDisruptiveAllowedAction;
+
+  /**
    * What action should be used to replace instances. See minimal_action.REPLACE
    * The value may be {@code null}.
    */
@@ -199,6 +210,31 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    */
   public InstanceGroupManagerUpdatePolicy setMinimalAction(java.lang.String minimalAction) {
     this.minimalAction = minimalAction;
+    return this;
+  }
+
+  /**
+   * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE
+   * to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to
+   * allow actions that can be applied without instance replacing or REPLACE to allow all possible
+   * actions. If the Updater determines that the minimal update action needed is more disruptive
+   * than most disruptive allowed action you specify it will not perform the update at all.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMostDisruptiveAllowedAction() {
+    return mostDisruptiveAllowedAction;
+  }
+
+  /**
+   * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE
+   * to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to
+   * allow actions that can be applied without instance replacing or REPLACE to allow all possible
+   * actions. If the Updater determines that the minimal update action needed is more disruptive
+   * than most disruptive allowed action you specify it will not perform the update at all.
+   * @param mostDisruptiveAllowedAction mostDisruptiveAllowedAction or {@code null} for none
+   */
+  public InstanceGroupManagerUpdatePolicy setMostDisruptiveAllowedAction(java.lang.String mostDisruptiveAllowedAction) {
+    this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
     return this;
   }
 

@@ -31,7 +31,7 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * The queryParameterMatch matches if the value of the parameter exactly matches the contents of
-   * exactMatch. Only one of presentMatch, exactMatch or regexMatch must be set.
+   * exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * Specifies that the queryParameterMatch matches if the request contains the query parameter,
-   * irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch
+   * irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch,
    * or regexMatch must be set.
    * The value may be {@code null}.
    */
@@ -56,10 +56,9 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
-   * specified by regexMatch. For the regular expression grammar, please see
-   * github.com/google/re2/wiki/Syntax Only one of presentMatch, exactMatch or regexMatch must be
-   * set. Note that regexMatch only applies when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * specified by regexMatch. For more information about regular expression syntax, see Syntax. Only
+   * one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the
+   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +66,7 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * The queryParameterMatch matches if the value of the parameter exactly matches the contents of
-   * exactMatch. Only one of presentMatch, exactMatch or regexMatch must be set.
+   * exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getExactMatch() {
@@ -76,7 +75,7 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * The queryParameterMatch matches if the value of the parameter exactly matches the contents of
-   * exactMatch. Only one of presentMatch, exactMatch or regexMatch must be set.
+   * exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
    * @param exactMatch exactMatch or {@code null} for none
    */
   public HttpQueryParameterMatch setExactMatch(java.lang.String exactMatch) {
@@ -105,7 +104,7 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * Specifies that the queryParameterMatch matches if the request contains the query parameter,
-   * irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch
+   * irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch,
    * or regexMatch must be set.
    * @return value or {@code null} for none
    */
@@ -115,7 +114,7 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * Specifies that the queryParameterMatch matches if the request contains the query parameter,
-   * irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch
+   * irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch,
    * or regexMatch must be set.
    * @param presentMatch presentMatch or {@code null} for none
    */
@@ -126,10 +125,9 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
-   * specified by regexMatch. For the regular expression grammar, please see
-   * github.com/google/re2/wiki/Syntax Only one of presentMatch, exactMatch or regexMatch must be
-   * set. Note that regexMatch only applies when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * specified by regexMatch. For more information about regular expression syntax, see Syntax. Only
+   * one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the
+   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -138,10 +136,9 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
 
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
-   * specified by regexMatch. For the regular expression grammar, please see
-   * github.com/google/re2/wiki/Syntax Only one of presentMatch, exactMatch or regexMatch must be
-   * set. Note that regexMatch only applies when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * specified by regexMatch. For more information about regular expression syntax, see Syntax. Only
+   * one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the
+   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpQueryParameterMatch setRegexMatch(java.lang.String regexMatch) {

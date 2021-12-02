@@ -30,22 +30,18 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class TransferManifest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Holds URI-encoded path to find the manifest. It can be located in data_source, data_sink, or
-   * separately in GCS. For data_source and data_sink, the manifest location is relative to the path
-   * specified by that data_source or data_sink. If manifest is in GCS, use format "gs:". If
-   * manifest is in data_source, use format "source://". If manifest is in data_sink, use format
-   * "sink://".
+   * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the
+   * transfer must have `storage.objects.get` permission for this object. An example path is
+   * `gs://bucket_name/path/manifest.csv`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Holds URI-encoded path to find the manifest. It can be located in data_source, data_sink, or
-   * separately in GCS. For data_source and data_sink, the manifest location is relative to the path
-   * specified by that data_source or data_sink. If manifest is in GCS, use format "gs:". If
-   * manifest is in data_source, use format "source://". If manifest is in data_sink, use format
-   * "sink://".
+   * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the
+   * transfer must have `storage.objects.get` permission for this object. An example path is
+   * `gs://bucket_name/path/manifest.csv`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -53,11 +49,9 @@ public final class TransferManifest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Holds URI-encoded path to find the manifest. It can be located in data_source, data_sink, or
-   * separately in GCS. For data_source and data_sink, the manifest location is relative to the path
-   * specified by that data_source or data_sink. If manifest is in GCS, use format "gs:". If
-   * manifest is in data_source, use format "source://". If manifest is in data_sink, use format
-   * "sink://".
+   * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the
+   * transfer must have `storage.objects.get` permission for this object. An example path is
+   * `gs://bucket_name/path/manifest.csv`.
    * @param location location or {@code null} for none
    */
   public TransferManifest setLocation(java.lang.String location) {

@@ -89,6 +89,13 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String enable;
 
   /**
+   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIpv6;
+
+  /**
    * Name of the interface the BGP peer is associated with.
    * The value may be {@code null}.
    */
@@ -101,6 +108,13 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
+
+  /**
+   * IPv6 address of the interface inside Google Cloud Platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6NexthopAddress;
 
   /**
    * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
@@ -137,6 +151,13 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String peerIpAddress;
+
+  /**
+   * IPv6 address of the BGP interface outside Google Cloud Platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerIpv6NexthopAddress;
 
   /**
    * URI of the VM instance that is used as third-party router appliances such as Next Gen
@@ -273,6 +294,23 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIpv6() {
+    return enableIpv6;
+  }
+
+  /**
+   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * @param enableIpv6 enableIpv6 or {@code null} for none
+   */
+  public RouterBgpPeer setEnableIpv6(java.lang.Boolean enableIpv6) {
+    this.enableIpv6 = enableIpv6;
+    return this;
+  }
+
+  /**
    * Name of the interface the BGP peer is associated with.
    * @return value or {@code null} for none
    */
@@ -303,6 +341,23 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * IPv6 address of the interface inside Google Cloud Platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6NexthopAddress() {
+    return ipv6NexthopAddress;
+  }
+
+  /**
+   * IPv6 address of the interface inside Google Cloud Platform.
+   * @param ipv6NexthopAddress ipv6NexthopAddress or {@code null} for none
+   */
+  public RouterBgpPeer setIpv6NexthopAddress(java.lang.String ipv6NexthopAddress) {
+    this.ipv6NexthopAddress = ipv6NexthopAddress;
     return this;
   }
 
@@ -387,6 +442,23 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setPeerIpAddress(java.lang.String peerIpAddress) {
     this.peerIpAddress = peerIpAddress;
+    return this;
+  }
+
+  /**
+   * IPv6 address of the BGP interface outside Google Cloud Platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerIpv6NexthopAddress() {
+    return peerIpv6NexthopAddress;
+  }
+
+  /**
+   * IPv6 address of the BGP interface outside Google Cloud Platform.
+   * @param peerIpv6NexthopAddress peerIpv6NexthopAddress or {@code null} for none
+   */
+  public RouterBgpPeer setPeerIpv6NexthopAddress(java.lang.String peerIpv6NexthopAddress) {
+    this.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
     return this;
   }
 

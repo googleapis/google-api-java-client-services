@@ -141,6 +141,12 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String parent;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRecaptchaOptionsConfig recaptchaOptionsConfig;
+
+  /**
    * [Output Only] Total count of all security policy rule tuples. A security policy can not exceed
    * a set number of tuples.
    * The value may be {@code null}.
@@ -511,6 +517,21 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRecaptchaOptionsConfig getRecaptchaOptionsConfig() {
+    return recaptchaOptionsConfig;
+  }
+
+  /**
+   * @param recaptchaOptionsConfig recaptchaOptionsConfig or {@code null} for none
+   */
+  public SecurityPolicy setRecaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfig recaptchaOptionsConfig) {
+    this.recaptchaOptionsConfig = recaptchaOptionsConfig;
     return this;
   }
 

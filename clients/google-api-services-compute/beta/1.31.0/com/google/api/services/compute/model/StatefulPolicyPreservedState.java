@@ -38,6 +38,22 @@ public final class StatefulPolicyPreservedState extends com.google.api.client.js
   private java.util.Map<String, StatefulPolicyPreservedStateDiskDevice> disks;
 
   /**
+   * External network IPs assigned to the instances that will be preserved on instance delete,
+   * update, etc. This map is keyed with the network interface name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> externalIPs;
+
+  /**
+   * Internal network IPs assigned to the instances that will be preserved on instance delete,
+   * update, etc. This map is keyed with the network interface name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> internalIPs;
+
+  /**
    * Disks created on the instances that will be preserved on instance delete, update, etc. This map
    * is keyed with the device names of the disks.
    * @return value or {@code null} for none
@@ -53,6 +69,44 @@ public final class StatefulPolicyPreservedState extends com.google.api.client.js
    */
   public StatefulPolicyPreservedState setDisks(java.util.Map<String, StatefulPolicyPreservedStateDiskDevice> disks) {
     this.disks = disks;
+    return this;
+  }
+
+  /**
+   * External network IPs assigned to the instances that will be preserved on instance delete,
+   * update, etc. This map is keyed with the network interface name.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> getExternalIPs() {
+    return externalIPs;
+  }
+
+  /**
+   * External network IPs assigned to the instances that will be preserved on instance delete,
+   * update, etc. This map is keyed with the network interface name.
+   * @param externalIPs externalIPs or {@code null} for none
+   */
+  public StatefulPolicyPreservedState setExternalIPs(java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> externalIPs) {
+    this.externalIPs = externalIPs;
+    return this;
+  }
+
+  /**
+   * Internal network IPs assigned to the instances that will be preserved on instance delete,
+   * update, etc. This map is keyed with the network interface name.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> getInternalIPs() {
+    return internalIPs;
+  }
+
+  /**
+   * Internal network IPs assigned to the instances that will be preserved on instance delete,
+   * update, etc. This map is keyed with the network interface name.
+   * @param internalIPs internalIPs or {@code null} for none
+   */
+  public StatefulPolicyPreservedState setInternalIPs(java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> internalIPs) {
+    this.internalIPs = internalIPs;
     return this;
   }
 

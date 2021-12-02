@@ -17,8 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * The specification for allowing client side cross-origin requests. Please see W3C Recommendation
- * for Cross Origin Resource Sharing
+ * The specification for allowing client-side cross-origin requests. For more information about the
+ * W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,7 +32,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * In response to a preflight request, setting this to true indicates that the actual request can
-   * include user credentials. This translates to the Access-Control-Allow-Credentials header.
+   * include user credentials. This field translates to the Access-Control-Allow-Credentials header.
    * Default is false.
    * The value may be {@code null}.
    */
@@ -54,25 +54,25 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowMethods;
 
   /**
-   * Specifies the regualar expression patterns that match allowed origins. For regular expression
-   * grammar please see github.com/google/re2/wiki/Syntax An origin is allowed if it matches either
-   * an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies a regular expression that matches allowed origins. For more information about the
+   * regular expression syntax, see Syntax. An origin is allowed if it matches either an item in
+   * allowOrigins or an item in allowOriginRegexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowOriginRegexes;
 
   /**
-   * Specifies the list of origins that will be allowed to do CORS requests. An origin is allowed if
-   * it matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it
+   * matches either an item in allowOrigins or an item in allowOriginRegexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowOrigins;
 
   /**
-   * If true, specifies the CORS policy is disabled. The default value of false, which indicates
-   * that the CORS policy is in effect.
+   * If true, the setting specifies the CORS policy is disabled. The default value of false, which
+   * indicates that the CORS policy is in effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +86,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> exposeHeaders;
 
   /**
-   * Specifies how long results of a preflight request can be cached in seconds. This translates to
-   * the Access-Control-Max-Age header.
+   * Specifies how long results of a preflight request can be cached in seconds. This field
+   * translates to the Access-Control-Max-Age header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * In response to a preflight request, setting this to true indicates that the actual request can
-   * include user credentials. This translates to the Access-Control-Allow-Credentials header.
+   * include user credentials. This field translates to the Access-Control-Allow-Credentials header.
    * Default is false.
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * In response to a preflight request, setting this to true indicates that the actual request can
-   * include user credentials. This translates to the Access-Control-Allow-Credentials header.
+   * include user credentials. This field translates to the Access-Control-Allow-Credentials header.
    * Default is false.
    * @param allowCredentials allowCredentials or {@code null} for none
    */
@@ -149,9 +149,9 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the regualar expression patterns that match allowed origins. For regular expression
-   * grammar please see github.com/google/re2/wiki/Syntax An origin is allowed if it matches either
-   * an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies a regular expression that matches allowed origins. For more information about the
+   * regular expression syntax, see Syntax. An origin is allowed if it matches either an item in
+   * allowOrigins or an item in allowOriginRegexes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOriginRegexes() {
@@ -159,9 +159,9 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the regualar expression patterns that match allowed origins. For regular expression
-   * grammar please see github.com/google/re2/wiki/Syntax An origin is allowed if it matches either
-   * an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies a regular expression that matches allowed origins. For more information about the
+   * regular expression syntax, see Syntax. An origin is allowed if it matches either an item in
+   * allowOrigins or an item in allowOriginRegexes.
    * @param allowOriginRegexes allowOriginRegexes or {@code null} for none
    */
   public CorsPolicy setAllowOriginRegexes(java.util.List<java.lang.String> allowOriginRegexes) {
@@ -170,8 +170,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the list of origins that will be allowed to do CORS requests. An origin is allowed if
-   * it matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it
+   * matches either an item in allowOrigins or an item in allowOriginRegexes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOrigins() {
@@ -179,8 +179,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the list of origins that will be allowed to do CORS requests. An origin is allowed if
-   * it matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it
+   * matches either an item in allowOrigins or an item in allowOriginRegexes.
    * @param allowOrigins allowOrigins or {@code null} for none
    */
   public CorsPolicy setAllowOrigins(java.util.List<java.lang.String> allowOrigins) {
@@ -189,8 +189,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, specifies the CORS policy is disabled. The default value of false, which indicates
-   * that the CORS policy is in effect.
+   * If true, the setting specifies the CORS policy is disabled. The default value of false, which
+   * indicates that the CORS policy is in effect.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -198,8 +198,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, specifies the CORS policy is disabled. The default value of false, which indicates
-   * that the CORS policy is in effect.
+   * If true, the setting specifies the CORS policy is disabled. The default value of false, which
+   * indicates that the CORS policy is in effect.
    * @param disabled disabled or {@code null} for none
    */
   public CorsPolicy setDisabled(java.lang.Boolean disabled) {
@@ -225,8 +225,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies how long results of a preflight request can be cached in seconds. This translates to
-   * the Access-Control-Max-Age header.
+   * Specifies how long results of a preflight request can be cached in seconds. This field
+   * translates to the Access-Control-Max-Age header.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxAge() {
@@ -234,8 +234,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies how long results of a preflight request can be cached in seconds. This translates to
-   * the Access-Control-Max-Age header.
+   * Specifies how long results of a preflight request can be cached in seconds. This field
+   * translates to the Access-Control-Max-Age header.
    * @param maxAge maxAge or {@code null} for none
    */
   public CorsPolicy setMaxAge(java.lang.Integer maxAge) {

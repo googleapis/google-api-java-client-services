@@ -30,8 +30,9 @@ package com.google.api.services.compute.model;
 public final class HttpRouteAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The specification for allowing client side cross-origin requests. Please see W3C Recommendation
-   * for Cross Origin Resource Sharing Not supported when the URL map is bound to target gRPC proxy.
+   * The specification for allowing client-side cross-origin requests. For more information about
+   * the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
+   * Not supported when the URL map is bound to a target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,10 +41,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * The specification for fault injection introduced into traffic to test the resiliency of clients
    * to backend service failure. As part of fault injection, when clients send requests to a backend
-   * service, delays can be introduced by Loadbalancer on a percentage of requests before sending
-   * those request to the backend service. Similarly requests from clients can be aborted by the
-   * Loadbalancer for a percentage of requests. For the requests impacted by fault injection,
-   * timeout and retry_policy will be ignored by clients that are configured with a
+   * service, delays can be introduced by a load balancer on a percentage of requests before sending
+   * those requests to the backend service. Similarly requests from clients can be aborted by the
+   * load balancer for a percentage of requests. For the requests impacted by fault injection,
+   * timeout and retry_policy is ignored by clients that are configured with a
    * fault_injection_policy.
    * The value may be {@code null}.
    */
@@ -53,11 +54,12 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
    * field where the timeout duration starts from the time the request has been fully processed
-   * (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream
-   * until the response has been completely processed, including all retries. A stream that does not
-   * complete in this duration is closed. If not specified, will use the largest maxStreamDuration
-   * among all backend services associated with the route. This field is only allowed if the Url map
-   * is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * (known as *end-of-stream*), the duration in this field is computed from the beginning of the
+   * stream until the response has been processed, including all retries. A stream that does not
+   * complete in this duration is closed. If not specified, this field uses the maximum
+   * maxStreamDuration value among all backend services associated with the route. This field is
+   * only allowed if the Url map is used with backend services with loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,18 +67,17 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies the policy on how requests intended for the route's backends are shadowed to a
-   * separate mirrored backend service. Loadbalancer does not wait for responses from the shadow
-   * service. Prior to sending traffic to the shadow service, the host / authority header is
-   * suffixed with -shadow. Not supported when the URL map is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * separate mirrored backend service. The load balancer does not wait for responses from the
+   * shadow service. Before sending traffic to the shadow service, the host / authority header is
+   * suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has
+   * the validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RequestMirrorPolicy requestMirrorPolicy;
 
   /**
-   * Specifies the retry policy associated with this route. Not supported when the URL map is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * Specifies the retry policy associated with this route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,19 +85,19 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies the timeout for the selected route. Timeout is computed from the time the request has
-   * been fully processed (i.e. end-of-stream) up until the response has been completely processed.
-   * Timeout includes all retries. If not specified, will use the largest timeout among all backend
-   * services associated with the route. Not supported when the URL map is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * been fully processed (known as *end-of-stream*) up until the response has been processed.
+   * Timeout includes all retries. If not specified, this field uses the largest timeout among all
+   * backend services associated with the route. Not supported when the URL map is bound to a target
+   * gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Duration timeout;
 
   /**
-   * The spec to modify the URL of the request, prior to forwarding the request to the matched
+   * The spec to modify the URL of the request, before forwarding the request to the matched
    * service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load
-   * balancers. Not supported when the URL map is bound to target gRPC proxy that has
+   * balancers. Not supported when the URL map is bound to a target gRPC proxy that has the
    * validateForProxyless field set to true.
    * The value may be {@code null}.
    */
@@ -107,8 +108,8 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    * A list of weighted backend services to send traffic to when a route match occurs. The weights
    * determine the fraction of traffic that flows to their corresponding backend service. If all
    * traffic needs to go to a single backend service, there must be one weightedBackendService with
-   * weight set to a non-zero number. Once a backendService is identified and before forwarding the
-   * request to the backend service, advanced routing actions such as URL rewrites and header
+   * weight set to a non-zero number. After a backend service is identified and before forwarding
+   * the request to the backend service, advanced routing actions such as URL rewrites and header
    * transformations are applied depending on additional settings specified in this HttpRouteAction.
    * The value may be {@code null}.
    */
@@ -116,8 +117,9 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   private java.util.List<WeightedBackendService> weightedBackendServices;
 
   /**
-   * The specification for allowing client side cross-origin requests. Please see W3C Recommendation
-   * for Cross Origin Resource Sharing Not supported when the URL map is bound to target gRPC proxy.
+   * The specification for allowing client-side cross-origin requests. For more information about
+   * the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
+   * Not supported when the URL map is bound to a target gRPC proxy.
    * @return value or {@code null} for none
    */
   public CorsPolicy getCorsPolicy() {
@@ -125,8 +127,9 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The specification for allowing client side cross-origin requests. Please see W3C Recommendation
-   * for Cross Origin Resource Sharing Not supported when the URL map is bound to target gRPC proxy.
+   * The specification for allowing client-side cross-origin requests. For more information about
+   * the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
+   * Not supported when the URL map is bound to a target gRPC proxy.
    * @param corsPolicy corsPolicy or {@code null} for none
    */
   public HttpRouteAction setCorsPolicy(CorsPolicy corsPolicy) {
@@ -137,10 +140,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * The specification for fault injection introduced into traffic to test the resiliency of clients
    * to backend service failure. As part of fault injection, when clients send requests to a backend
-   * service, delays can be introduced by Loadbalancer on a percentage of requests before sending
-   * those request to the backend service. Similarly requests from clients can be aborted by the
-   * Loadbalancer for a percentage of requests. For the requests impacted by fault injection,
-   * timeout and retry_policy will be ignored by clients that are configured with a
+   * service, delays can be introduced by a load balancer on a percentage of requests before sending
+   * those requests to the backend service. Similarly requests from clients can be aborted by the
+   * load balancer for a percentage of requests. For the requests impacted by fault injection,
+   * timeout and retry_policy is ignored by clients that are configured with a
    * fault_injection_policy.
    * @return value or {@code null} for none
    */
@@ -151,10 +154,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * The specification for fault injection introduced into traffic to test the resiliency of clients
    * to backend service failure. As part of fault injection, when clients send requests to a backend
-   * service, delays can be introduced by Loadbalancer on a percentage of requests before sending
-   * those request to the backend service. Similarly requests from clients can be aborted by the
-   * Loadbalancer for a percentage of requests. For the requests impacted by fault injection,
-   * timeout and retry_policy will be ignored by clients that are configured with a
+   * service, delays can be introduced by a load balancer on a percentage of requests before sending
+   * those requests to the backend service. Similarly requests from clients can be aborted by the
+   * load balancer for a percentage of requests. For the requests impacted by fault injection,
+   * timeout and retry_policy is ignored by clients that are configured with a
    * fault_injection_policy.
    * @param faultInjectionPolicy faultInjectionPolicy or {@code null} for none
    */
@@ -166,11 +169,12 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
    * field where the timeout duration starts from the time the request has been fully processed
-   * (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream
-   * until the response has been completely processed, including all retries. A stream that does not
-   * complete in this duration is closed. If not specified, will use the largest maxStreamDuration
-   * among all backend services associated with the route. This field is only allowed if the Url map
-   * is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * (known as *end-of-stream*), the duration in this field is computed from the beginning of the
+   * stream until the response has been processed, including all retries. A stream that does not
+   * complete in this duration is closed. If not specified, this field uses the maximum
+   * maxStreamDuration value among all backend services associated with the route. This field is
+   * only allowed if the Url map is used with backend services with loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public Duration getMaxStreamDuration() {
@@ -180,11 +184,12 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
    * field where the timeout duration starts from the time the request has been fully processed
-   * (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream
-   * until the response has been completely processed, including all retries. A stream that does not
-   * complete in this duration is closed. If not specified, will use the largest maxStreamDuration
-   * among all backend services associated with the route. This field is only allowed if the Url map
-   * is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * (known as *end-of-stream*), the duration in this field is computed from the beginning of the
+   * stream until the response has been processed, including all retries. A stream that does not
+   * complete in this duration is closed. If not specified, this field uses the maximum
+   * maxStreamDuration value among all backend services associated with the route. This field is
+   * only allowed if the Url map is used with backend services with loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED.
    * @param maxStreamDuration maxStreamDuration or {@code null} for none
    */
   public HttpRouteAction setMaxStreamDuration(Duration maxStreamDuration) {
@@ -194,10 +199,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies the policy on how requests intended for the route's backends are shadowed to a
-   * separate mirrored backend service. Loadbalancer does not wait for responses from the shadow
-   * service. Prior to sending traffic to the shadow service, the host / authority header is
-   * suffixed with -shadow. Not supported when the URL map is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * separate mirrored backend service. The load balancer does not wait for responses from the
+   * shadow service. Before sending traffic to the shadow service, the host / authority header is
+   * suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has
+   * the validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public RequestMirrorPolicy getRequestMirrorPolicy() {
@@ -206,10 +211,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies the policy on how requests intended for the route's backends are shadowed to a
-   * separate mirrored backend service. Loadbalancer does not wait for responses from the shadow
-   * service. Prior to sending traffic to the shadow service, the host / authority header is
-   * suffixed with -shadow. Not supported when the URL map is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * separate mirrored backend service. The load balancer does not wait for responses from the
+   * shadow service. Before sending traffic to the shadow service, the host / authority header is
+   * suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has
+   * the validateForProxyless field set to true.
    * @param requestMirrorPolicy requestMirrorPolicy or {@code null} for none
    */
   public HttpRouteAction setRequestMirrorPolicy(RequestMirrorPolicy requestMirrorPolicy) {
@@ -218,8 +223,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the retry policy associated with this route. Not supported when the URL map is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * Specifies the retry policy associated with this route.
    * @return value or {@code null} for none
    */
   public HttpRetryPolicy getRetryPolicy() {
@@ -227,8 +231,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the retry policy associated with this route. Not supported when the URL map is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * Specifies the retry policy associated with this route.
    * @param retryPolicy retryPolicy or {@code null} for none
    */
   public HttpRouteAction setRetryPolicy(HttpRetryPolicy retryPolicy) {
@@ -238,10 +241,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies the timeout for the selected route. Timeout is computed from the time the request has
-   * been fully processed (i.e. end-of-stream) up until the response has been completely processed.
-   * Timeout includes all retries. If not specified, will use the largest timeout among all backend
-   * services associated with the route. Not supported when the URL map is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * been fully processed (known as *end-of-stream*) up until the response has been processed.
+   * Timeout includes all retries. If not specified, this field uses the largest timeout among all
+   * backend services associated with the route. Not supported when the URL map is bound to a target
+   * gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public Duration getTimeout() {
@@ -250,10 +253,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies the timeout for the selected route. Timeout is computed from the time the request has
-   * been fully processed (i.e. end-of-stream) up until the response has been completely processed.
-   * Timeout includes all retries. If not specified, will use the largest timeout among all backend
-   * services associated with the route. Not supported when the URL map is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * been fully processed (known as *end-of-stream*) up until the response has been processed.
+   * Timeout includes all retries. If not specified, this field uses the largest timeout among all
+   * backend services associated with the route. Not supported when the URL map is bound to a target
+   * gRPC proxy that has validateForProxyless field set to true.
    * @param timeout timeout or {@code null} for none
    */
   public HttpRouteAction setTimeout(Duration timeout) {
@@ -262,9 +265,9 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The spec to modify the URL of the request, prior to forwarding the request to the matched
+   * The spec to modify the URL of the request, before forwarding the request to the matched
    * service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load
-   * balancers. Not supported when the URL map is bound to target gRPC proxy that has
+   * balancers. Not supported when the URL map is bound to a target gRPC proxy that has the
    * validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
@@ -273,9 +276,9 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The spec to modify the URL of the request, prior to forwarding the request to the matched
+   * The spec to modify the URL of the request, before forwarding the request to the matched
    * service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load
-   * balancers. Not supported when the URL map is bound to target gRPC proxy that has
+   * balancers. Not supported when the URL map is bound to a target gRPC proxy that has the
    * validateForProxyless field set to true.
    * @param urlRewrite urlRewrite or {@code null} for none
    */
@@ -288,8 +291,8 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    * A list of weighted backend services to send traffic to when a route match occurs. The weights
    * determine the fraction of traffic that flows to their corresponding backend service. If all
    * traffic needs to go to a single backend service, there must be one weightedBackendService with
-   * weight set to a non-zero number. Once a backendService is identified and before forwarding the
-   * request to the backend service, advanced routing actions such as URL rewrites and header
+   * weight set to a non-zero number. After a backend service is identified and before forwarding
+   * the request to the backend service, advanced routing actions such as URL rewrites and header
    * transformations are applied depending on additional settings specified in this HttpRouteAction.
    * @return value or {@code null} for none
    */
@@ -301,8 +304,8 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    * A list of weighted backend services to send traffic to when a route match occurs. The weights
    * determine the fraction of traffic that flows to their corresponding backend service. If all
    * traffic needs to go to a single backend service, there must be one weightedBackendService with
-   * weight set to a non-zero number. Once a backendService is identified and before forwarding the
-   * request to the backend service, advanced routing actions such as URL rewrites and header
+   * weight set to a non-zero number. After a backend service is identified and before forwarding
+   * the request to the backend service, advanced routing actions such as URL rewrites and header
    * transformations are applied depending on additional settings specified in this HttpRouteAction.
    * @param weightedBackendServices weightedBackendServices or {@code null} for none
    */

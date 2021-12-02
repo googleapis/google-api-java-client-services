@@ -83,6 +83,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private ConnectionDraining connectionDraining;
 
   /**
+   * Connection Tracking configuration for this BackendService. Connection tracking policy settings
+   * are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceConnectionTrackingPolicy connectionTrackingPolicy;
+
+  /**
    * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP
    * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
    * connections. The affinity to a particular destination host will be lost when one or more hosts
@@ -91,8 +99,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * RING_HASH. This field is applicable to either: - A regional backend service with the
    * service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to
    * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that
-   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,6 +136,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edgeSecurityPolicy;
+
+  /**
    * If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
    * The value may be {@code null}.
    */
@@ -139,7 +154,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Requires at least one backend instance group to be defined as a backup (failover) backend. For
    * load balancers that have configurable failover: [Internal TCP/UDP Load
    * Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
-   * [external TCP/UDP Load Balancing](/network/networklb-failover-overview).
+   * [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network
+   * /networklb-failover-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +232,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
    * load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this
    * field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only
-   * the default ROUND_ROBIN policy is supported when the backend service is referenced by a URL map
+   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
    * that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
@@ -340,10 +356,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * Type of session affinity to use. The default is NONE. For a detailed description of session
-   * affinity options, see: [Session affinity](https://cloud.google.com/load-balancing/docs/backend-
-   * service#session_affinity). Not supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
+   * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true. For more details, see: [Session
+   * Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -457,6 +473,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Connection Tracking configuration for this BackendService. Connection tracking policy settings
+   * are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceConnectionTrackingPolicy getConnectionTrackingPolicy() {
+    return connectionTrackingPolicy;
+  }
+
+  /**
+   * Connection Tracking configuration for this BackendService. Connection tracking policy settings
+   * are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+   * @param connectionTrackingPolicy connectionTrackingPolicy or {@code null} for none
+   */
+  public BackendService setConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicy connectionTrackingPolicy) {
+    this.connectionTrackingPolicy = connectionTrackingPolicy;
+    return this;
+  }
+
+  /**
    * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP
    * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
    * connections. The affinity to a particular destination host will be lost when one or more hosts
@@ -465,8 +500,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * RING_HASH. This field is applicable to either: - A regional backend service with the
    * service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to
    * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that
-   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public ConsistentHashLoadBalancerSettings getConsistentHash() {
@@ -482,8 +516,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * RING_HASH. This field is applicable to either: - A regional backend service with the
    * service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to
    * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that
-   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * INTERNAL_SELF_MANAGED.
    * @param consistentHash consistentHash or {@code null} for none
    */
   public BackendService setConsistentHash(ConsistentHashLoadBalancerSettings consistentHash) {
@@ -564,6 +597,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdgeSecurityPolicy() {
+    return edgeSecurityPolicy;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * @param edgeSecurityPolicy edgeSecurityPolicy or {@code null} for none
+   */
+  public BackendService setEdgeSecurityPolicy(java.lang.String edgeSecurityPolicy) {
+    this.edgeSecurityPolicy = edgeSecurityPolicy;
+    return this;
+  }
+
+  /**
    * If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
    * @return value or {@code null} for none
    */
@@ -584,7 +636,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Requires at least one backend instance group to be defined as a backup (failover) backend. For
    * load balancers that have configurable failover: [Internal TCP/UDP Load
    * Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
-   * [external TCP/UDP Load Balancing](/network/networklb-failover-overview).
+   * [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network
+   * /networklb-failover-overview).
    * @return value or {@code null} for none
    */
   public BackendServiceFailoverPolicy getFailoverPolicy() {
@@ -595,7 +648,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Requires at least one backend instance group to be defined as a backup (failover) backend. For
    * load balancers that have configurable failover: [Internal TCP/UDP Load
    * Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
-   * [external TCP/UDP Load Balancing](/network/networklb-failover-overview).
+   * [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network
+   * /networklb-failover-overview).
    * @param failoverPolicy failoverPolicy or {@code null} for none
    */
   public BackendService setFailoverPolicy(BackendServiceFailoverPolicy failoverPolicy) {
@@ -781,7 +835,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
    * load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this
    * field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only
-   * the default ROUND_ROBIN policy is supported when the backend service is referenced by a URL map
+   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
    * that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
@@ -807,7 +861,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
    * load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this
    * field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only
-   * the default ROUND_ROBIN policy is supported when the backend service is referenced by a URL map
+   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
    * that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
@@ -1085,10 +1139,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE. For a detailed description of session
-   * affinity options, see: [Session affinity](https://cloud.google.com/load-balancing/docs/backend-
-   * service#session_affinity). Not supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
+   * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true. For more details, see: [Session
+   * Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionAffinity() {
@@ -1096,10 +1150,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE. For a detailed description of session
-   * affinity options, see: [Session affinity](https://cloud.google.com/load-balancing/docs/backend-
-   * service#session_affinity). Not supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
+   * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true. For more details, see: [Session
+   * Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public BackendService setSessionAffinity(java.lang.String sessionAffinity) {

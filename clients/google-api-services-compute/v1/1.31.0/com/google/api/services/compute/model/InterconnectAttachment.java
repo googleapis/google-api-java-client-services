@@ -87,7 +87,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String customerRouterIpAddress;
 
   /**
-   * [Output Only] Dataplane version for this InterconnectAttachment.
+   * [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane
+   * version for this InterconnectAttachment. This field is only present for Dataplane version 2 and
+   * higher. Absence of this field in the API output indicates that the Dataplane is version 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -435,7 +437,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Dataplane version for this InterconnectAttachment.
+   * [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane
+   * version for this InterconnectAttachment. This field is only present for Dataplane version 2 and
+   * higher. Absence of this field in the API output indicates that the Dataplane is version 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDataplaneVersion() {
@@ -443,7 +447,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Dataplane version for this InterconnectAttachment.
+   * [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane
+   * version for this InterconnectAttachment. This field is only present for Dataplane version 2 and
+   * higher. Absence of this field in the API output indicates that the Dataplane is version 1.
    * @param dataplaneVersion dataplaneVersion or {@code null} for none
    */
   public InterconnectAttachment setDataplaneVersion(java.lang.Integer dataplaneVersion) {

@@ -240,6 +240,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkPerformanceConfig networkPerformanceConfig;
+
+  /**
    * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK
    * as default.
    * The value may be {@code null}.
@@ -303,6 +309,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy;
+
+  /**
+   * Source machine image
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceMachineImage;
+
+  /**
+   * Source machine image encryption key when creating an instance from a machine image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerEncryptionKey sourceMachineImageEncryptionKey;
 
   /**
    * [Output Only] Whether a VM has been restricted for start because Compute Engine has detected
@@ -885,6 +905,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public NetworkPerformanceConfig getNetworkPerformanceConfig() {
+    return networkPerformanceConfig;
+  }
+
+  /**
+   * @param networkPerformanceConfig networkPerformanceConfig or {@code null} for none
+   */
+  public Instance setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
+    this.networkPerformanceConfig = networkPerformanceConfig;
+    return this;
+  }
+
+  /**
    * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK
    * as default.
    * @return value or {@code null} for none
@@ -1038,6 +1073,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setShieldedInstanceIntegrityPolicy(ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy) {
     this.shieldedInstanceIntegrityPolicy = shieldedInstanceIntegrityPolicy;
+    return this;
+  }
+
+  /**
+   * Source machine image
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceMachineImage() {
+    return sourceMachineImage;
+  }
+
+  /**
+   * Source machine image
+   * @param sourceMachineImage sourceMachineImage or {@code null} for none
+   */
+  public Instance setSourceMachineImage(java.lang.String sourceMachineImage) {
+    this.sourceMachineImage = sourceMachineImage;
+    return this;
+  }
+
+  /**
+   * Source machine image encryption key when creating an instance from a machine image.
+   * @return value or {@code null} for none
+   */
+  public CustomerEncryptionKey getSourceMachineImageEncryptionKey() {
+    return sourceMachineImageEncryptionKey;
+  }
+
+  /**
+   * Source machine image encryption key when creating an instance from a machine image.
+   * @param sourceMachineImageEncryptionKey sourceMachineImageEncryptionKey or {@code null} for none
+   */
+  public Instance setSourceMachineImageEncryptionKey(CustomerEncryptionKey sourceMachineImageEncryptionKey) {
+    this.sourceMachineImageEncryptionKey = sourceMachineImageEncryptionKey;
     return this;
   }
 

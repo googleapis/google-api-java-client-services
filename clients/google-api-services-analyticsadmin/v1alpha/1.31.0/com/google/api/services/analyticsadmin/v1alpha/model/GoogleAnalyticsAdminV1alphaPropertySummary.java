@@ -31,7 +31,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Display name for the property referred to in this account summary.
+   * Display name for the property referred to in this property summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google
   private java.lang.String property;
 
   /**
-   * Display name for the property referred to in this account summary.
+   * Display name for the property referred to in this property summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -54,7 +54,7 @@ public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google
   }
 
   /**
-   * Display name for the property referred to in this account summary.
+   * Display name for the property referred to in this property summary.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaPropertySummary setDisplayName(java.lang.String displayName) {

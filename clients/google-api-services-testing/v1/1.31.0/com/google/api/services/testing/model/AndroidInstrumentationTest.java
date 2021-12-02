@@ -58,7 +58,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   /**
    * The option of whether running each test within its own invocation of instrumentation with
    * Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner
-   * version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state -
+   * version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state -
    * Crashes are isolated - Logs are scoped per test See for more information about Android Test
    * Orchestrator. If not set, the test will be run without the orchestrator.
    * The value may be {@code null}.
@@ -161,7 +161,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   /**
    * The option of whether running each test within its own invocation of instrumentation with
    * Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner
-   * version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state -
+   * version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state -
    * Crashes are isolated - Logs are scoped per test See for more information about Android Test
    * Orchestrator. If not set, the test will be run without the orchestrator.
    * @return value or {@code null} for none
@@ -173,7 +173,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   /**
    * The option of whether running each test within its own invocation of instrumentation with
    * Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner
-   * version 1.0 or higher! ** Orchestrator offers the following benefits: - No shared state -
+   * version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state -
    * Crashes are isolated - Logs are scoped per test See for more information about Android Test
    * Orchestrator. If not set, the test will be run without the orchestrator.
    * @param orchestratorOption orchestratorOption or {@code null} for none

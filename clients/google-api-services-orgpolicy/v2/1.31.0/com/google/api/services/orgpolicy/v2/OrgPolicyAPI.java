@@ -1581,6 +1581,179 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
     }
     /**
+     * An accessor for creating requests from the CustomConstraints collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code OrgPolicyAPI orgpolicy = new OrgPolicyAPI(...);}
+     *   {@code OrgPolicyAPI.CustomConstraints.List request = orgpolicy.customConstraints().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public CustomConstraints customConstraints() {
+      return new CustomConstraints();
+    }
+
+    /**
+     * The "customConstraints" collection of methods.
+     */
+    public class CustomConstraints {
+
+      /**
+       * Updates a Custom Constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if
+       * the constraint does not exist. Note: the supplied policy will perform a full overwrite of all
+       * fields.
+       *
+       * Create a request for the method "customConstraints.patch".
+       *
+       * This request holds the parameters needed by the orgpolicy server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Immutable. Name of the constraint. This is unique within the organization. Format of the name should
+       *        be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+       * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends OrgPolicyAPIRequest<com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/customConstraints/[^/]+$");
+
+        /**
+         * Updates a Custom Constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if
+         * the constraint does not exist. Note: the supplied policy will perform a full overwrite of all
+         * fields.
+         *
+         * Create a request for the method "customConstraints.patch".
+         *
+         * This request holds the parameters needed by the the orgpolicy server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Immutable. Name of the constraint. This is unique within the organization. Format of the name should
+       *        be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint content) {
+          super(OrgPolicyAPI.this, "PATCH", REST_PATH, content, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Immutable. Name of the constraint. This is unique within the organization. Format of the
+         * name should be *
+         * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Immutable. Name of the constraint. This is unique within the organization. Format of the name
+       should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+       "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Immutable. Name of the constraint. This is unique within the organization. Format of the
+         * name should be *
+         * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Policies collection.
      *
      * <p>The typical use is:</p>

@@ -30,7 +30,7 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class UpdateTransferJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ID of the Google Cloud Platform Console project that owns the job.
+   * Required. The ID of the Google Cloud project that owns the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   private String updateTransferJobFieldMask;
 
   /**
-   * Required. The ID of the Google Cloud Platform Console project that owns the job.
+   * Required. The ID of the Google Cloud project that owns the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -66,7 +66,7 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The ID of the Google Cloud Platform Console project that owns the job.
+   * Required. The ID of the Google Cloud project that owns the job.
    * @param projectId projectId or {@code null} for none
    */
   public UpdateTransferJobRequest setProjectId(java.lang.String projectId) {

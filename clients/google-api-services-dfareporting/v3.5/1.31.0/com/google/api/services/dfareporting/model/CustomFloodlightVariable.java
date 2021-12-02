@@ -17,7 +17,8 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * A custom floodlight variable.
+ * A custom floodlight variable. This field may only be used when calling batchinsert; it is not
+ * supported by batchupdate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation

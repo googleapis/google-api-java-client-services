@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class InstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls for advanced machine-related behavior features.
+   * Controls for advanced machine-related behavior features. Note that for MachineImage, this is
+   * not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.lang.Boolean canIpForward;
 
   /**
-   * Specifies the Confidential Instance options.
+   * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported
+   * yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +79,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * Display Device properties to enable support for remote display products like: Teradici, VNC and
-   * TeamViewer
+   * TeamViewer Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,6 +98,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
   }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyRevocationActionType;
 
   /**
    * Labels to apply to instances that are created from these properties.
@@ -138,13 +147,14 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NetworkPerformanceConfig networkPerformanceConfig;
 
   /**
-   * PostKeyRevocationActionType of the instance.(will be deprecated soon)
+   * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,21 +162,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
-   * default.
+   * default. Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateIpv6GoogleAccess;
 
   /**
-   * Specifies the reservations that instances can consume from.
+   * Specifies the reservations that instances can consume from. Note that for MachineImage, this is
+   * not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from these properties.
+   * Resource policies (names, not ULRs) applied to instances created from these properties. Note
+   * that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +193,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is
-   * 50.
+   * 50. Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,6 +209,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<ServiceAccount> serviceAccounts;
 
   /**
+   * Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +232,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private Tags tags;
 
   /**
-   * Controls for advanced machine-related behavior features.
+   * Controls for advanced machine-related behavior features. Note that for MachineImage, this is
+   * not supported yet.
    * @return value or {@code null} for none
    */
   public AdvancedMachineFeatures getAdvancedMachineFeatures() {
@@ -227,7 +241,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Controls for advanced machine-related behavior features.
+   * Controls for advanced machine-related behavior features. Note that for MachineImage, this is
+   * not supported yet.
    * @param advancedMachineFeatures advancedMachineFeatures or {@code null} for none
    */
   public InstanceProperties setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
@@ -261,7 +276,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the Confidential Instance options.
+   * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported
+   * yet.
    * @return value or {@code null} for none
    */
   public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
@@ -269,7 +285,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the Confidential Instance options.
+   * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported
+   * yet.
    * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
    */
   public InstanceProperties setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
@@ -315,7 +332,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * Display Device properties to enable support for remote display products like: Teradici, VNC and
-   * TeamViewer
+   * TeamViewer Note that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
   public DisplayDevice getDisplayDevice() {
@@ -324,7 +341,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * Display Device properties to enable support for remote display products like: Teradici, VNC and
-   * TeamViewer
+   * TeamViewer Note that for MachineImage, this is not supported yet.
    * @param displayDevice displayDevice or {@code null} for none
    */
   public InstanceProperties setDisplayDevice(DisplayDevice displayDevice) {
@@ -348,6 +365,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setGuestAccelerators(java.util.List<AcceleratorConfig> guestAccelerators) {
     this.guestAccelerators = guestAccelerators;
+    return this;
+  }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyRevocationActionType() {
+    return keyRevocationActionType;
+  }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * @param keyRevocationActionType keyRevocationActionType or {@code null} for none
+   */
+  public InstanceProperties setKeyRevocationActionType(java.lang.String keyRevocationActionType) {
+    this.keyRevocationActionType = keyRevocationActionType;
     return this;
   }
 
@@ -447,6 +481,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
+   * Note that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
   public NetworkPerformanceConfig getNetworkPerformanceConfig() {
@@ -454,6 +489,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
+   * Note that for MachineImage, this is not supported yet.
    * @param networkPerformanceConfig networkPerformanceConfig or {@code null} for none
    */
   public InstanceProperties setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
@@ -462,7 +498,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.(will be deprecated soon)
+   * PostKeyRevocationActionType of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -470,7 +506,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.(will be deprecated soon)
+   * PostKeyRevocationActionType of the instance.
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public InstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
@@ -480,7 +516,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
-   * default.
+   * default. Note that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateIpv6GoogleAccess() {
@@ -489,7 +525,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
-   * default.
+   * default. Note that for MachineImage, this is not supported yet.
    * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
    */
   public InstanceProperties setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
@@ -498,7 +534,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the reservations that instances can consume from.
+   * Specifies the reservations that instances can consume from. Note that for MachineImage, this is
+   * not supported yet.
    * @return value or {@code null} for none
    */
   public ReservationAffinity getReservationAffinity() {
@@ -506,7 +543,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the reservations that instances can consume from.
+   * Specifies the reservations that instances can consume from. Note that for MachineImage, this is
+   * not supported yet.
    * @param reservationAffinity reservationAffinity or {@code null} for none
    */
   public InstanceProperties setReservationAffinity(ReservationAffinity reservationAffinity) {
@@ -515,7 +553,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from these properties.
+   * Resource policies (names, not ULRs) applied to instances created from these properties. Note
+   * that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourcePolicies() {
@@ -523,7 +562,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from these properties.
+   * Resource policies (names, not ULRs) applied to instances created from these properties. Note
+   * that for MachineImage, this is not supported yet.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */
   public InstanceProperties setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
@@ -550,7 +590,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is
-   * 50.
+   * 50. Note that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSecureTags() {
@@ -559,7 +599,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * [Input Only] Secure tags to apply to this instance. Maximum number of secure tags allowed is
-   * 50.
+   * 50. Note that for MachineImage, this is not supported yet.
    * @param secureTags secureTags or {@code null} for none
    */
   public InstanceProperties setSecureTags(java.util.List<java.lang.String> secureTags) {
@@ -589,6 +629,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
+   * Note that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
   public ShieldedInstanceConfig getShieldedInstanceConfig() {
@@ -596,6 +637,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
+   * Note that for MachineImage, this is not supported yet.
    * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
    */
   public InstanceProperties setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {

@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for SourceInstanceProperties.
+ * DEPRECATED: Please use compute#instanceProperties instead. New properties will not be added to
+ * this field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -83,6 +84,13 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
+   * KeyRevocationActionType of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyRevocationActionType;
+
+  /**
    * Labels to apply to instances that are created from this machine image.
    * The value may be {@code null}.
    */
@@ -129,7 +137,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
+   * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,6 +272,23 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
+   * KeyRevocationActionType of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyRevocationActionType() {
+    return keyRevocationActionType;
+  }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * @param keyRevocationActionType keyRevocationActionType or {@code null} for none
+   */
+  public SourceInstanceProperties setKeyRevocationActionType(java.lang.String keyRevocationActionType) {
+    this.keyRevocationActionType = keyRevocationActionType;
+    return this;
+  }
+
+  /**
    * Labels to apply to instances that are created from this machine image.
    * @return value or {@code null} for none
    */
@@ -359,7 +384,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
+   * PostKeyRevocationActionType of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -367,7 +392,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
+   * PostKeyRevocationActionType of the instance.
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public SourceInstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {

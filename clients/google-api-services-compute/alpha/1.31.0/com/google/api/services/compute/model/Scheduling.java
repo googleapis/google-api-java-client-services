@@ -114,6 +114,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String maintenanceInterval;
 
   /**
+   * Specifies the max run duration for the given instance. If specified, the instance termination
+   * action will be performed at the end of the run duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration maxRunDuration;
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * The value may be {@code null}.
@@ -153,6 +161,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String provisioningModel;
+
+  /**
+   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * specified, the instance termination action will be performed at the termination time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String terminationTime;
 
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
@@ -353,6 +369,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies the max run duration for the given instance. If specified, the instance termination
+   * action will be performed at the end of the run duration.
+   * @return value or {@code null} for none
+   */
+  public Duration getMaxRunDuration() {
+    return maxRunDuration;
+  }
+
+  /**
+   * Specifies the max run duration for the given instance. If specified, the instance termination
+   * action will be performed at the end of the run duration.
+   * @param maxRunDuration maxRunDuration or {@code null} for none
+   */
+  public Scheduling setMaxRunDuration(Duration maxRunDuration) {
+    this.maxRunDuration = maxRunDuration;
+    return this;
+  }
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * @return value or {@code null} for none
@@ -446,6 +481,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setProvisioningModel(java.lang.String provisioningModel) {
     this.provisioningModel = provisioningModel;
+    return this;
+  }
+
+  /**
+   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * specified, the instance termination action will be performed at the termination time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTerminationTime() {
+    return terminationTime;
+  }
+
+  /**
+   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * specified, the instance termination action will be performed at the termination time.
+   * @param terminationTime terminationTime or {@code null} for none
+   */
+  public Scheduling setTerminationTime(java.lang.String terminationTime) {
+    this.terminationTime = terminationTime;
     return this;
   }
 

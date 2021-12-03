@@ -43,6 +43,13 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Node resources that are reserved by all instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceConsumptionInfo consumedResources;
+
+  /**
    * CPU overcommit.
    * The value may be {@code null}.
    */
@@ -60,6 +67,19 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
     // hack to force ProGuard to consider LocalDisk used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(LocalDisk.class);
+  }
+
+  /**
+   * Instance data that shows consumed resources on the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InstanceConsumptionData> instanceConsumptionDatas;
+
+  static {
+    // hack to force ProGuard to consider InstanceConsumptionData used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InstanceConsumptionData.class);
   }
 
   /**
@@ -111,6 +131,13 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   private java.lang.String status;
 
   /**
+   * Total amount of available resources on the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceConsumptionInfo totalResources;
+
+  /**
    * Accelerators for this node.
    * @return value or {@code null} for none
    */
@@ -124,6 +151,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * Node resources that are reserved by all instances.
+   * @return value or {@code null} for none
+   */
+  public InstanceConsumptionInfo getConsumedResources() {
+    return consumedResources;
+  }
+
+  /**
+   * Node resources that are reserved by all instances.
+   * @param consumedResources consumedResources or {@code null} for none
+   */
+  public NodeGroupNode setConsumedResources(InstanceConsumptionInfo consumedResources) {
+    this.consumedResources = consumedResources;
     return this;
   }
 
@@ -158,6 +202,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setDisks(java.util.List<LocalDisk> disks) {
     this.disks = disks;
+    return this;
+  }
+
+  /**
+   * Instance data that shows consumed resources on the node.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InstanceConsumptionData> getInstanceConsumptionDatas() {
+    return instanceConsumptionDatas;
+  }
+
+  /**
+   * Instance data that shows consumed resources on the node.
+   * @param instanceConsumptionDatas instanceConsumptionDatas or {@code null} for none
+   */
+  public NodeGroupNode setInstanceConsumptionDatas(java.util.List<InstanceConsumptionData> instanceConsumptionDatas) {
+    this.instanceConsumptionDatas = instanceConsumptionDatas;
     return this;
   }
 
@@ -275,6 +336,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Total amount of available resources on the node.
+   * @return value or {@code null} for none
+   */
+  public InstanceConsumptionInfo getTotalResources() {
+    return totalResources;
+  }
+
+  /**
+   * Total amount of available resources on the node.
+   * @param totalResources totalResources or {@code null} for none
+   */
+  public NodeGroupNode setTotalResources(InstanceConsumptionInfo totalResources) {
+    this.totalResources = totalResources;
     return this;
   }
 

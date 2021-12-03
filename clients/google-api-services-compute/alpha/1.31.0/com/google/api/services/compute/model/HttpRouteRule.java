@@ -17,8 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * An HttpRouteRule specifies how to match an HTTP request and the corresponding routing action that
- * load balancing proxies will perform.
+ * The HttpRouteRule setting specifies how to match an HTTP request and the corresponding routing
+ * action that load balancing proxies perform.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -40,11 +40,11 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
-   * backendService. The headerAction specified here are applied before the matching
+   * backendService. The headerAction value specified here is applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
-   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * rvice.backendServiceWeightAction[].headerAction HeaderAction is not supported for load
+   * balancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map
+   * is bound to a target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +52,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
-   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
-   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL map
-   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * Traffic Director. httpFilterConfigs only applies for load balancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL
+   * map is bound to a target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,10 +68,10 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
-   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * Traffic Director. httpFilterMetadata only applies for load balancers with loadBalancingScheme
    * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
    * supported is type.googleapis.com/google.protobuf.Struct Not supported when the URL map is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * to a target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,11 +94,11 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   private java.util.List<HttpRouteRuleMatch> matchRules;
 
   /**
-   * For routeRules within a given pathMatcher, priority determines the order in which load balancer
-   * will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to
-   * highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
+   * For routeRules within a given pathMatcher, priority determines the order in which a load
+   * balancer interprets routeRules. RouteRules are evaluated in order of priority, from the lowest
+   * to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
    * first rule that matches the request is applied. You cannot configure two or more routeRules
-   * with the same priority. Priority for each rule must be set to a number between 0 and 2147483647
+   * with the same priority. Priority for each rule must be set to a number from 0 to 2147483647
    * inclusive. Priority numbers can have gaps, which enable you to add or remove rules in the
    * future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a
    * valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11,
@@ -109,12 +109,12 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   private java.lang.Integer priority;
 
   /**
-   * In response to a matching matchRule, the load balancer performs advanced routing actions like
-   * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
+   * In response to a matching matchRule, the load balancer performs advanced routing actions, such
+   * as URL rewrites and header transformations, before forwarding the request to the selected
    * backend. If routeAction specifies any weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
    * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
-   * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
+   * HTTP(S) load balancers support only the urlRewrite action within a route rule's routeAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,9 +122,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * The full or partial URL of the backend service resource to which traffic is directed if this
-   * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
-   * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
-   * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
+   * rule is matched. If routeAction is also specified, advanced routing actions, such as URL
+   * rewrites, take effect before sending the request to the backend. However, if service is
+   * specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction
    * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
    * service or routeAction.weightedBackendService must be set.
    * The value may be {@code null}.
@@ -135,7 +135,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
    * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
-   * map is bound to target gRPC proxy.
+   * map is bound to a target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,11 +162,11 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
-   * backendService. The headerAction specified here are applied before the matching
+   * backendService. The headerAction value specified here is applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
-   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * rvice.backendServiceWeightAction[].headerAction HeaderAction is not supported for load
+   * balancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map
+   * is bound to a target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public HttpHeaderAction getHeaderAction() {
@@ -175,11 +175,11 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
-   * backendService. The headerAction specified here are applied before the matching
+   * backendService. The headerAction value specified here is applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
-   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * rvice.backendServiceWeightAction[].headerAction HeaderAction is not supported for load
+   * balancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map
+   * is bound to a target gRPC proxy that has validateForProxyless field set to true.
    * @param headerAction headerAction or {@code null} for none
    */
   public HttpRouteRule setHeaderAction(HttpHeaderAction headerAction) {
@@ -189,9 +189,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
-   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
-   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL map
-   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * Traffic Director. httpFilterConfigs only applies for load balancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL
+   * map is bound to a target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpFilterConfig> getHttpFilterConfigs() {
@@ -200,9 +200,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
-   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
-   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL map
-   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * Traffic Director. httpFilterConfigs only applies for load balancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL
+   * map is bound to a target gRPC proxy that has validateForProxyless field set to true.
    * @param httpFilterConfigs httpFilterConfigs or {@code null} for none
    */
   public HttpRouteRule setHttpFilterConfigs(java.util.List<HttpFilterConfig> httpFilterConfigs) {
@@ -212,10 +212,10 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
-   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * Traffic Director. httpFilterMetadata only applies for load balancers with loadBalancingScheme
    * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
    * supported is type.googleapis.com/google.protobuf.Struct Not supported when the URL map is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * to a target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpFilterConfig> getHttpFilterMetadata() {
@@ -224,10 +224,10 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
-   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * Traffic Director. httpFilterMetadata only applies for load balancers with loadBalancingScheme
    * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
    * supported is type.googleapis.com/google.protobuf.Struct Not supported when the URL map is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * to a target gRPC proxy that has validateForProxyless field set to true.
    * @param httpFilterMetadata httpFilterMetadata or {@code null} for none
    */
   public HttpRouteRule setHttpFilterMetadata(java.util.List<HttpFilterConfig> httpFilterMetadata) {
@@ -259,11 +259,11 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * For routeRules within a given pathMatcher, priority determines the order in which load balancer
-   * will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to
-   * highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
+   * For routeRules within a given pathMatcher, priority determines the order in which a load
+   * balancer interprets routeRules. RouteRules are evaluated in order of priority, from the lowest
+   * to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
    * first rule that matches the request is applied. You cannot configure two or more routeRules
-   * with the same priority. Priority for each rule must be set to a number between 0 and 2147483647
+   * with the same priority. Priority for each rule must be set to a number from 0 to 2147483647
    * inclusive. Priority numbers can have gaps, which enable you to add or remove rules in the
    * future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a
    * valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11,
@@ -275,11 +275,11 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * For routeRules within a given pathMatcher, priority determines the order in which load balancer
-   * will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to
-   * highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
+   * For routeRules within a given pathMatcher, priority determines the order in which a load
+   * balancer interprets routeRules. RouteRules are evaluated in order of priority, from the lowest
+   * to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
    * first rule that matches the request is applied. You cannot configure two or more routeRules
-   * with the same priority. Priority for each rule must be set to a number between 0 and 2147483647
+   * with the same priority. Priority for each rule must be set to a number from 0 to 2147483647
    * inclusive. Priority numbers can have gaps, which enable you to add or remove rules in the
    * future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a
    * valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11,
@@ -292,12 +292,12 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * In response to a matching matchRule, the load balancer performs advanced routing actions like
-   * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
+   * In response to a matching matchRule, the load balancer performs advanced routing actions, such
+   * as URL rewrites and header transformations, before forwarding the request to the selected
    * backend. If routeAction specifies any weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
    * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
-   * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
+   * HTTP(S) load balancers support only the urlRewrite action within a route rule's routeAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getRouteAction() {
@@ -305,12 +305,12 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * In response to a matching matchRule, the load balancer performs advanced routing actions like
-   * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
+   * In response to a matching matchRule, the load balancer performs advanced routing actions, such
+   * as URL rewrites and header transformations, before forwarding the request to the selected
    * backend. If routeAction specifies any weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
    * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
-   * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
+   * HTTP(S) load balancers support only the urlRewrite action within a route rule's routeAction.
    * @param routeAction routeAction or {@code null} for none
    */
   public HttpRouteRule setRouteAction(HttpRouteAction routeAction) {
@@ -320,9 +320,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * The full or partial URL of the backend service resource to which traffic is directed if this
-   * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
-   * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
-   * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
+   * rule is matched. If routeAction is also specified, advanced routing actions, such as URL
+   * rewrites, take effect before sending the request to the backend. However, if service is
+   * specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction
    * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
    * service or routeAction.weightedBackendService must be set.
    * @return value or {@code null} for none
@@ -333,9 +333,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * The full or partial URL of the backend service resource to which traffic is directed if this
-   * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
-   * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
-   * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
+   * rule is matched. If routeAction is also specified, advanced routing actions, such as URL
+   * rewrites, take effect before sending the request to the backend. However, if service is
+   * specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction
    * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
    * service or routeAction.weightedBackendService must be set.
    * @param service service or {@code null} for none
@@ -348,7 +348,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
    * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
-   * map is bound to target gRPC proxy.
+   * map is bound to a target gRPC proxy.
    * @return value or {@code null} for none
    */
   public HttpRedirectAction getUrlRedirect() {
@@ -358,7 +358,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
    * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
-   * map is bound to target gRPC proxy.
+   * map is bound to a target gRPC proxy.
    * @param urlRedirect urlRedirect or {@code null} for none
    */
   public HttpRouteRule setUrlRedirect(HttpRedirectAction urlRedirect) {

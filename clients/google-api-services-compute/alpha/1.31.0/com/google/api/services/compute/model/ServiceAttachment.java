@@ -79,6 +79,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
+   * If specified, the domain name will be used during the integration between the PSC connected
+   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> domainNames;
+
+  /**
    * If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP
    * connections that traverse proxies on their way to destination servers.
    * The value may be {@code null}.
@@ -276,6 +284,25 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * If specified, the domain name will be used during the integration between the PSC connected
+   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDomainNames() {
+    return domainNames;
+  }
+
+  /**
+   * If specified, the domain name will be used during the integration between the PSC connected
+   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com".
+   * @param domainNames domainNames or {@code null} for none
+   */
+  public ServiceAttachment setDomainNames(java.util.List<java.lang.String> domainNames) {
+    this.domainNames = domainNames;
     return this;
   }
 

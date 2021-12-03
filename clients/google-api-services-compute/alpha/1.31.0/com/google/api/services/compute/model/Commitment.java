@@ -95,6 +95,13 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private LicenseResourceCommitment licenseResource;
 
   /**
+   * List of source commitments to be merged into a new commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> mergeSourceCommitments;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -148,6 +155,13 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
+
+  /**
+   * Source commitment to be splitted into a new commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String splitSourceCommitment;
 
   /**
    * [Output Only] Commitment start time in RFC3339 text format.
@@ -330,6 +344,23 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * List of source commitments to be merged into a new commitment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMergeSourceCommitments() {
+    return mergeSourceCommitments;
+  }
+
+  /**
+   * List of source commitments to be merged into a new commitment.
+   * @param mergeSourceCommitments mergeSourceCommitments or {@code null} for none
+   */
+  public Commitment setMergeSourceCommitments(java.util.List<java.lang.String> mergeSourceCommitments) {
+    this.mergeSourceCommitments = mergeSourceCommitments;
+    return this;
+  }
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -457,6 +488,23 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Source commitment to be splitted into a new commitment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSplitSourceCommitment() {
+    return splitSourceCommitment;
+  }
+
+  /**
+   * Source commitment to be splitted into a new commitment.
+   * @param splitSourceCommitment splitSourceCommitment or {@code null} for none
+   */
+  public Commitment setSplitSourceCommitment(java.lang.String splitSourceCommitment) {
+    this.splitSourceCommitment = splitSourceCommitment;
     return this;
   }
 

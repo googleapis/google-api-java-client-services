@@ -31,15 +31,16 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * A map of folder id and folder config to specify consumer projects for this shared-reservation.
-   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS.
+   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id
+   * should be a string of number, and without "folders/" prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, ShareSettingsFolderConfig> folderMap;
 
   /**
-   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
-   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * A map of folder id and folder config to specify consumer projects for this shared-reservation.
-   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS.
+   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id
+   * should be a string of number, and without "folders/" prefix.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ShareSettingsFolderConfig> getFolderMap() {
@@ -71,7 +73,8 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * A map of folder id and folder config to specify consumer projects for this shared-reservation.
-   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS.
+   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id
+   * should be a string of number, and without "folders/" prefix.
    * @param folderMap folderMap or {@code null} for none
    */
   public ShareSettings setFolderMap(java.util.Map<String, ShareSettingsFolderConfig> folderMap) {
@@ -80,8 +83,8 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
-   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ShareSettingsProjectConfig> getProjectMap() {
@@ -89,8 +92,8 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
-   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
    * @param projectMap projectMap or {@code null} for none
    */
   public ShareSettings setProjectMap(java.util.Map<String, ShareSettingsProjectConfig> projectMap) {

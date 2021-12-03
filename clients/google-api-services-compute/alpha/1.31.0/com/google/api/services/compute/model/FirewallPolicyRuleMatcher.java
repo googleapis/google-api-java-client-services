@@ -39,6 +39,14 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> destAddressGroups;
 
   /**
+   * Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum
+   * number of destination fqdn allowed is 1000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destFqdns;
+
+  /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
    * The value may be {@code null}.
    */
@@ -59,6 +67,14 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcAddressGroups;
+
+  /**
+   * Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum
+   * number of source fqdn allowed is 1000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcFqdns;
 
   /**
    * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
@@ -92,6 +108,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setDestAddressGroups(java.util.List<java.lang.String> destAddressGroups) {
     this.destAddressGroups = destAddressGroups;
+    return this;
+  }
+
+  /**
+   * Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum
+   * number of destination fqdn allowed is 1000.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestFqdns() {
+    return destFqdns;
+  }
+
+  /**
+   * Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum
+   * number of destination fqdn allowed is 1000.
+   * @param destFqdns destFqdns or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestFqdns(java.util.List<java.lang.String> destFqdns) {
+    this.destFqdns = destFqdns;
     return this;
   }
 
@@ -145,6 +180,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcAddressGroups(java.util.List<java.lang.String> srcAddressGroups) {
     this.srcAddressGroups = srcAddressGroups;
+    return this;
+  }
+
+  /**
+   * Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum
+   * number of source fqdn allowed is 1000.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcFqdns() {
+    return srcFqdns;
+  }
+
+  /**
+   * Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum
+   * number of source fqdn allowed is 1000.
+   * @param srcFqdns srcFqdns or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcFqdns(java.util.List<java.lang.String> srcFqdns) {
+    this.srcFqdns = srcFqdns;
     return this;
   }
 

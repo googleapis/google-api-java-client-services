@@ -30,14 +30,16 @@ package com.google.api.services.compute.model;
 public final class ShareSettingsFolderConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The folder ID, should be same as the key of this folder config in the parent map.
+   * The folder ID, should be same as the key of this folder config in the parent map. Folder id
+   * should be a string of number, and without "folders/" prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String folderId;
 
   /**
-   * The folder ID, should be same as the key of this folder config in the parent map.
+   * The folder ID, should be same as the key of this folder config in the parent map. Folder id
+   * should be a string of number, and without "folders/" prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getFolderId() {
@@ -45,7 +47,8 @@ public final class ShareSettingsFolderConfig extends com.google.api.client.json.
   }
 
   /**
-   * The folder ID, should be same as the key of this folder config in the parent map.
+   * The folder ID, should be same as the key of this folder config in the parent map. Folder id
+   * should be a string of number, and without "folders/" prefix.
    * @param folderId folderId or {@code null} for none
    */
   public ShareSettingsFolderConfig setFolderId(java.lang.String folderId) {

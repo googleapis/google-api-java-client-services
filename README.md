@@ -31,7 +31,7 @@ packages on [Maven Central][maven-search].
 | Ad Experience Report API | [v1](clients/google-api-services-adexperiencereport/v1) |
 | AdMob API | [v1](clients/google-api-services-admob/v1), [v1beta](clients/google-api-services-admob/v1beta) |
 | AdSense Host API | [v4.1](clients/google-api-services-adsensehost/v4.1) |
-| AdSense Management API | [v1.4](clients/google-api-services-adsense/v1.4), [v2](clients/google-api-services-adsense/v2) |
+| AdSense Management API | [v2](clients/google-api-services-adsense/v2) |
 | Admin SDK API | [datatransfer_v1](clients/google-api-services-admin/datatransfer_v1), [directory_v1](clients/google-api-services-admin/directory_v1), [reports_v1](clients/google-api-services-admin/reports_v1) |
 | Analytics Reporting API | [v4](clients/google-api-services-analyticsreporting/v4) |
 | Android Device Provisioning Partner API | [v1](clients/google-api-services-androiddeviceprovisioning/v1) |

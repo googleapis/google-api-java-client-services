@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-adsense",
-    "version": "v1.4-rev20201002-1.32.1"
-  }
-}

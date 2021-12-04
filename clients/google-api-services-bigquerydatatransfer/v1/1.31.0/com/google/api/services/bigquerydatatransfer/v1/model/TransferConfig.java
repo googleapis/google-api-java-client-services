@@ -137,7 +137,8 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    * are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of
    * jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format
    * here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-
-   * yaml#the_schedule_format NOTE: the granularity should be at least 8 hours, or less frequent.
+   * yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on
+   * the data source; refer to the documentation for your data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -409,7 +410,8 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    * are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of
    * jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format
    * here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-
-   * yaml#the_schedule_format NOTE: the granularity should be at least 8 hours, or less frequent.
+   * yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on
+   * the data source; refer to the documentation for your data source.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -422,7 +424,8 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    * are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of
    * jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format
    * here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-
-   * yaml#the_schedule_format NOTE: the granularity should be at least 8 hours, or less frequent.
+   * yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on
+   * the data source; refer to the documentation for your data source.
    * @param schedule schedule or {@code null} for none
    */
   public TransferConfig setSchedule(java.lang.String schedule) {

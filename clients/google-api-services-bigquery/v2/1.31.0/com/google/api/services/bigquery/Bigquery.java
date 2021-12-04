@@ -5971,6 +5971,22 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** When true will autodetect schema, else will keep original schema */
+      @com.google.api.client.util.Key("autodetect_schema")
+      private java.lang.Boolean autodetectSchema;
+
+      /** When true will autodetect schema, else will keep original schema
+       */
+      public java.lang.Boolean getAutodetectSchema() {
+        return autodetectSchema;
+      }
+
+      /** When true will autodetect schema, else will keep original schema */
+      public Patch setAutodetectSchema(java.lang.Boolean autodetectSchema) {
+        this.autodetectSchema = autodetectSchema;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
@@ -6355,6 +6371,22 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       /** Table ID of the table to update */
       public Update setTableId(java.lang.String tableId) {
         this.tableId = tableId;
+        return this;
+      }
+
+      /** When true will autodetect schema, else will keep original schema */
+      @com.google.api.client.util.Key("autodetect_schema")
+      private java.lang.Boolean autodetectSchema;
+
+      /** When true will autodetect schema, else will keep original schema
+       */
+      public java.lang.Boolean getAutodetectSchema() {
+        return autodetectSchema;
+      }
+
+      /** When true will autodetect schema, else will keep original schema */
+      public Update setAutodetectSchema(java.lang.Boolean autodetectSchema) {
+        this.autodetectSchema = autodetectSchema;
         return this;
       }
 

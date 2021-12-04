@@ -17,6 +17,9 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
+ * Describes a time interval: Reads: A half-open time interval. It includes the end time but
+ * excludes the start time: (startTime, endTime]. The start time must be specified, must be earlier
+ * than the end time, and should be no older than the data retention period for the metric. Writes:
  * A closed time interval. It extends from the start time to the end time, and includes both:
  * [startTime, endTime]. Valid time intervals depend on the MetricKind
  * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors#MetricKind) of

@@ -1170,8 +1170,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     private BucketPolicyOnly bucketPolicyOnly;
 
     /**
-     * The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced'
-     * are supported.
+     * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are
+     * supported.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1208,8 +1208,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced'
-     * are supported.
+     * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are
+     * supported.
      * @return value or {@code null} for none
      */
     public java.lang.String getPublicAccessPrevention() {
@@ -1217,8 +1217,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced'
-     * are supported.
+     * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are
+     * supported.
      * @param publicAccessPrevention publicAccessPrevention or {@code null} for none
      */
     public IamConfiguration setPublicAccessPrevention(java.lang.String publicAccessPrevention) {

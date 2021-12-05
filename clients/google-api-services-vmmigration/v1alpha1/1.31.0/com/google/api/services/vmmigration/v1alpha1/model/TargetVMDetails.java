@@ -142,7 +142,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> networkTags;
 
   /**
-   * The project in which to create the VM.
+   * Output only. The project in which to create the VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -443,7 +443,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The project in which to create the VM.
+   * Output only. The project in which to create the VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -451,7 +451,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The project in which to create the VM.
+   * Output only. The project in which to create the VM.
    * @param project project or {@code null} for none
    */
   public TargetVMDetails setProject(java.lang.String project) {

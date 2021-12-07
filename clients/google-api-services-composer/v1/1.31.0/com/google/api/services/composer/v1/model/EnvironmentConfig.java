@@ -58,8 +58,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The encryption options for the Cloud Composer environment and its dependencies.
-   * Cannot be updated. This field is supported for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * Cannot be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,6 +78,19 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String gkeCluster;
+
+  /**
+   * Optional. The maintenance window is the period when Cloud Composer components may undergo
+   * maintenance. It is defined so that maintenance is not executed during peak hours or critical
+   * time periods. The system will not be under maintenance for every occurrence of this window, but
+   * when maintenance is planned, it will be scheduled during the window. The maintenance window
+   * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
+   * with a size of at least 4 hours. If this value is omitted, the default value for maintenance
+   * window will be applied. The default value is Saturday and Sunday 00-06 GMT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceWindow maintenanceWindow;
 
   /**
    * The configuration used for the Kubernetes Engine cluster.
@@ -200,8 +212,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The encryption options for the Cloud Composer environment and its dependencies.
-   * Cannot be updated. This field is supported for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * Cannot be updated.
    * @return value or {@code null} for none
    */
   public EncryptionConfig getEncryptionConfig() {
@@ -210,8 +221,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The encryption options for the Cloud Composer environment and its dependencies.
-   * Cannot be updated. This field is supported for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * Cannot be updated.
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public EnvironmentConfig setEncryptionConfig(EncryptionConfig encryptionConfig) {
@@ -252,6 +262,35 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setGkeCluster(java.lang.String gkeCluster) {
     this.gkeCluster = gkeCluster;
+    return this;
+  }
+
+  /**
+   * Optional. The maintenance window is the period when Cloud Composer components may undergo
+   * maintenance. It is defined so that maintenance is not executed during peak hours or critical
+   * time periods. The system will not be under maintenance for every occurrence of this window, but
+   * when maintenance is planned, it will be scheduled during the window. The maintenance window
+   * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
+   * with a size of at least 4 hours. If this value is omitted, the default value for maintenance
+   * window will be applied. The default value is Saturday and Sunday 00-06 GMT.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceWindow getMaintenanceWindow() {
+    return maintenanceWindow;
+  }
+
+  /**
+   * Optional. The maintenance window is the period when Cloud Composer components may undergo
+   * maintenance. It is defined so that maintenance is not executed during peak hours or critical
+   * time periods. The system will not be under maintenance for every occurrence of this window, but
+   * when maintenance is planned, it will be scheduled during the window. The maintenance window
+   * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
+   * with a size of at least 4 hours. If this value is omitted, the default value for maintenance
+   * window will be applied. The default value is Saturday and Sunday 00-06 GMT.
+   * @param maintenanceWindow maintenanceWindow or {@code null} for none
+   */
+  public EnvironmentConfig setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+    this.maintenanceWindow = maintenanceWindow;
     return this;
   }
 

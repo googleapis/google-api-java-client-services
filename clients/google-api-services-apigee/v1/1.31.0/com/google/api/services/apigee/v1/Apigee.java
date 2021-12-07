@@ -14104,6 +14104,147 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       public class Balance {
 
         /**
+         * Adjust the prepaid balance for the developer. This API will be used in scenarios where the
+         * developer has been under-charged or over-charged.
+         *
+         * Create a request for the method "balance.adjust".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Adjust#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Account balance for the developer. Use the following structure in your request:
+         *        `organizations/{org}/developers/{developer}/balance`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustDeveloperBalanceRequest}
+         * @return the request
+         */
+        public Adjust adjust(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustDeveloperBalanceRequest content) throws java.io.IOException {
+          Adjust result = new Adjust(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Adjust extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperBalance> {
+
+          private static final String REST_PATH = "v1/{+name}:adjust";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/developers/[^/]+/balance$");
+
+          /**
+           * Adjust the prepaid balance for the developer. This API will be used in scenarios where the
+           * developer has been under-charged or over-charged.
+           *
+           * Create a request for the method "balance.adjust".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Adjust#execute()} method to invoke the remote operation. <p> {@link
+           * Adjust#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Account balance for the developer. Use the following structure in your request:
+         *        `organizations/{org}/developers/{developer}/balance`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustDeveloperBalanceRequest}
+           * @since 1.13
+           */
+          protected Adjust(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustDeveloperBalanceRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperBalance.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/developers/[^/]+/balance$");
+            }
+          }
+
+          @Override
+          public Adjust set$Xgafv(java.lang.String $Xgafv) {
+            return (Adjust) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Adjust setAccessToken(java.lang.String accessToken) {
+            return (Adjust) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Adjust setAlt(java.lang.String alt) {
+            return (Adjust) super.setAlt(alt);
+          }
+
+          @Override
+          public Adjust setCallback(java.lang.String callback) {
+            return (Adjust) super.setCallback(callback);
+          }
+
+          @Override
+          public Adjust setFields(java.lang.String fields) {
+            return (Adjust) super.setFields(fields);
+          }
+
+          @Override
+          public Adjust setKey(java.lang.String key) {
+            return (Adjust) super.setKey(key);
+          }
+
+          @Override
+          public Adjust setOauthToken(java.lang.String oauthToken) {
+            return (Adjust) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Adjust setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Adjust) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Adjust setQuotaUser(java.lang.String quotaUser) {
+            return (Adjust) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Adjust setUploadType(java.lang.String uploadType) {
+            return (Adjust) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Adjust setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Adjust) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Account balance for the developer. Use the following structure in your
+           * request: `organizations/{org}/developers/{developer}/balance`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Account balance for the developer. Use the following structure in your request:
+         `organizations/{org}/developers/{developer}/balance`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Account balance for the developer. Use the following structure in your
+           * request: `organizations/{org}/developers/{developer}/balance`
+           */
+          public Adjust setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/developers/[^/]+/balance$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Adjust set(String parameterName, Object value) {
+            return (Adjust) super.set(parameterName, value);
+          }
+        }
+        /**
          * Credits the account balance for the developer.
          *
          * Create a request for the method "balance.credit".

@@ -2148,17 +2148,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return this;
           }
 
-          /** Required list of fields to be updated in this request. */
+          /** Required. The list of fields in `CloudFunction` that have to be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required list of fields to be updated in this request.
+          /** Required. The list of fields in `CloudFunction` that have to be updated.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Required list of fields to be updated in this request. */
+          /** Required. The list of fields in `CloudFunction` that have to be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

@@ -61,6 +61,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataReq
   private java.lang.String parent;
 
   /**
+   * Options for what to do if the destination table already exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String writeDisposition;
+
+  /**
    * Specified if sink is a BigQuery table.
    * @return value or {@code null} for none
    */
@@ -129,6 +136,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataReq
    */
   public GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataRequest setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Options for what to do if the destination table already exists.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWriteDisposition() {
+    return writeDisposition;
+  }
+
+  /**
+   * Options for what to do if the destination table already exists.
+   * @param writeDisposition writeDisposition or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataRequest setWriteDisposition(java.lang.String writeDisposition) {
+    this.writeDisposition = writeDisposition;
     return this;
   }
 

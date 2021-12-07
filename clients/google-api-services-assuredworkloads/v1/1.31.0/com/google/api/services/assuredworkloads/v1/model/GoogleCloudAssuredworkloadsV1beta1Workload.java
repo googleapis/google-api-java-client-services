@@ -72,6 +72,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.String displayName;
 
   /**
+   * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by
+   * Europe/Canada customers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSovereignControls;
+
+  /**
    * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will
    * be used in Update & Delete operations.
    * The value may be {@code null}.
@@ -99,6 +107,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings il4Settings;
+
+  /**
+   * Output only. Represents the KAJ enrollment state of the given workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kajEnrollmentState;
 
   /**
    * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
@@ -149,6 +164,15 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo> resources;
+
+  /**
+   * Output only. Represents the SAA enrollment response of the given workload. SAA enrollment
+   * response is queried during GetWorkload call. In failure cases, user friendly error message is
+   * shown in SAA details page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1beta1WorkloadSaaEnrollmentResponse saaEnrollmentResponse;
 
   /**
    * Input only. The billing account used for the resources which are direct children of workload.
@@ -248,6 +272,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
+   * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by
+   * Europe/Canada customers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSovereignControls() {
+    return enableSovereignControls;
+  }
+
+  /**
+   * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by
+   * Europe/Canada customers.
+   * @param enableSovereignControls enableSovereignControls or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setEnableSovereignControls(java.lang.Boolean enableSovereignControls) {
+    this.enableSovereignControls = enableSovereignControls;
+    return this;
+  }
+
+  /**
    * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will
    * be used in Update & Delete operations.
    * @return value or {@code null} for none
@@ -314,6 +357,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setIl4Settings(GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings il4Settings) {
     this.il4Settings = il4Settings;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the KAJ enrollment state of the given workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKajEnrollmentState() {
+    return kajEnrollmentState;
+  }
+
+  /**
+   * Output only. Represents the KAJ enrollment state of the given workload.
+   * @param kajEnrollmentState kajEnrollmentState or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setKajEnrollmentState(java.lang.String kajEnrollmentState) {
+    this.kajEnrollmentState = kajEnrollmentState;
     return this;
   }
 
@@ -432,6 +492,27 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setResources(java.util.List<GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo> resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the SAA enrollment response of the given workload. SAA enrollment
+   * response is queried during GetWorkload call. In failure cases, user friendly error message is
+   * shown in SAA details page.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadSaaEnrollmentResponse getSaaEnrollmentResponse() {
+    return saaEnrollmentResponse;
+  }
+
+  /**
+   * Output only. Represents the SAA enrollment response of the given workload. SAA enrollment
+   * response is queried during GetWorkload call. In failure cases, user friendly error message is
+   * shown in SAA details page.
+   * @param saaEnrollmentResponse saaEnrollmentResponse or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setSaaEnrollmentResponse(GoogleCloudAssuredworkloadsV1beta1WorkloadSaaEnrollmentResponse saaEnrollmentResponse) {
+    this.saaEnrollmentResponse = saaEnrollmentResponse;
     return this;
   }
 

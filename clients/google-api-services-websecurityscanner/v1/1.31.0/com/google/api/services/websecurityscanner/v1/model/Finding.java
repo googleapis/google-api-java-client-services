@@ -161,6 +161,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Xss xss;
 
   /**
+   * Output only. An addon containing information reported for an XXE, if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Xxe xxe;
+
+  /**
    * Output only. The body of the request that triggered the vulnerability.
    * @return value or {@code null} for none
    */
@@ -468,6 +475,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setXss(Xss xss) {
     this.xss = xss;
+    return this;
+  }
+
+  /**
+   * Output only. An addon containing information reported for an XXE, if any.
+   * @return value or {@code null} for none
+   */
+  public Xxe getXxe() {
+    return xxe;
+  }
+
+  /**
+   * Output only. An addon containing information reported for an XXE, if any.
+   * @param xxe xxe or {@code null} for none
+   */
+  public Finding setXxe(Xxe xxe) {
+    this.xxe = xxe;
     return this;
   }
 

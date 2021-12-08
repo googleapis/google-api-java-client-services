@@ -18,6 +18,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
  * Resource representing the Endpoint Verification-specific attributes of a Device.
+ * https://cloud.google.com/endpoint-verification/docs/overview
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -34,28 +35,28 @@ public final class EndpointVerificationSpecificAttributes extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CertificateInfo> certificateInfo;
+  private java.util.List<CertificateAttributes> certificateAttributes;
 
   static {
-    // hack to force ProGuard to consider CertificateInfo used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider CertificateAttributes used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CertificateInfo.class);
+    com.google.api.client.util.Data.nullOf(CertificateAttributes.class);
   }
 
   /**
    * Details of certificates.
    * @return value or {@code null} for none
    */
-  public java.util.List<CertificateInfo> getCertificateInfo() {
-    return certificateInfo;
+  public java.util.List<CertificateAttributes> getCertificateAttributes() {
+    return certificateAttributes;
   }
 
   /**
    * Details of certificates.
-   * @param certificateInfo certificateInfo or {@code null} for none
+   * @param certificateAttributes certificateAttributes or {@code null} for none
    */
-  public EndpointVerificationSpecificAttributes setCertificateInfo(java.util.List<CertificateInfo> certificateInfo) {
-    this.certificateInfo = certificateInfo;
+  public EndpointVerificationSpecificAttributes setCertificateAttributes(java.util.List<CertificateAttributes> certificateAttributes) {
+    this.certificateAttributes = certificateAttributes;
     return this;
   }
 

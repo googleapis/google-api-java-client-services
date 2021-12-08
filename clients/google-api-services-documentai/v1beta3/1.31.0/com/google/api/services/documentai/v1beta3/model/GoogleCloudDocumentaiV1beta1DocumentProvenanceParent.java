@@ -17,8 +17,8 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Structure for referencing parent provenances. When an element replaces one of more other elements
- * parent references identify the elements that are replaced.
+ * The parent element the current element is based on. Used for referencing/aligning, removal and
+ * replacement operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -47,7 +47,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentProvenanceParent extends 
   private java.lang.Integer index;
 
   /**
-   * The index of the [Document.revisions] identifying the parent revision.
+   * The index of the index into current revision's parent_ids list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentProvenanceParent extends 
   }
 
   /**
-   * The index of the [Document.revisions] identifying the parent revision.
+   * The index of the index into current revision's parent_ids list.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRevision() {
@@ -98,7 +98,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentProvenanceParent extends 
   }
 
   /**
-   * The index of the [Document.revisions] identifying the parent revision.
+   * The index of the index into current revision's parent_ids list.
    * @param revision revision or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentProvenanceParent setRevision(java.lang.Integer revision) {

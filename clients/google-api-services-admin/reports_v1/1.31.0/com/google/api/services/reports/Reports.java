@@ -1764,7 +1764,10 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param entityType Represents the type of entity for the report.
-     * @param entityKey Represents the key of the object to filter the data with.
+     * @param entityKey Represents the key of the object to filter the data with. It is a string which can take the value
+     *        `all` to get activity events for all users, or any other value for an app-specific entity.
+     *        For details on how to obtain the `entityKey` for a particular `entityType`, see the
+     *        Entities Usage parameters reference guides.
      * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
      *        recommend you use your account's time zone for this.
      * @return the request
@@ -1808,7 +1811,10 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param entityType Represents the type of entity for the report.
-       * @param entityKey Represents the key of the object to filter the data with.
+       * @param entityKey Represents the key of the object to filter the data with. It is a string which can take the value
+     *        `all` to get activity events for all users, or any other value for an app-specific entity.
+     *        For details on how to obtain the `entityKey` for a particular `entityType`, see the
+     *        Entities Usage parameters reference guides.
        * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
      *        recommend you use your account's time zone for this.
        * @since 1.13
@@ -1916,17 +1922,30 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Represents the key of the object to filter the data with. */
+      /**
+       * Represents the key of the object to filter the data with. It is a string which can take the
+       * value `all` to get activity events for all users, or any other value for an app-specific
+       * entity. For details on how to obtain the `entityKey` for a particular `entityType`, see the
+       * Entities Usage parameters reference guides.
+       */
       @com.google.api.client.util.Key
       private java.lang.String entityKey;
 
-      /** Represents the key of the object to filter the data with.
+      /** Represents the key of the object to filter the data with. It is a string which can take the value
+     `all` to get activity events for all users, or any other value for an app-specific entity. For
+     details on how to obtain the `entityKey` for a particular `entityType`, see the Entities Usage
+     parameters reference guides.
        */
       public java.lang.String getEntityKey() {
         return entityKey;
       }
 
-      /** Represents the key of the object to filter the data with. */
+      /**
+       * Represents the key of the object to filter the data with. It is a string which can take the
+       * value `all` to get activity events for all users, or any other value for an app-specific
+       * entity. For details on how to obtain the `entityKey` for a particular `entityType`, see the
+       * Entities Usage parameters reference guides.
+       */
       public Get setEntityKey(java.lang.String entityKey) {
         this.entityKey = entityKey;
         return this;

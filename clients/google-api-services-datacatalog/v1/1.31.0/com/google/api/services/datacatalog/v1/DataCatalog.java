@@ -2901,6 +2901,136 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Marks an Entry as starred by the current user. Starring information is private to each user.
+           *
+           * Create a request for the method "entries.star".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Star#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the entry to mark as starred.
+           * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1StarEntryRequest}
+           * @return the request
+           */
+          public Star star(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1StarEntryRequest content) throws java.io.IOException {
+            Star result = new Star(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Star extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1StarEntryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:star";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+
+            /**
+             * Marks an Entry as starred by the current user. Starring information is private to each user.
+             *
+             * Create a request for the method "entries.star".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Star#execute()} method to invoke the remote operation. <p>
+             * {@link Star#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the entry to mark as starred.
+             * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1StarEntryRequest}
+             * @since 1.13
+             */
+            protected Star(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1StarEntryRequest content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1StarEntryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Star set$Xgafv(java.lang.String $Xgafv) {
+              return (Star) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Star setAccessToken(java.lang.String accessToken) {
+              return (Star) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Star setAlt(java.lang.String alt) {
+              return (Star) super.setAlt(alt);
+            }
+
+            @Override
+            public Star setCallback(java.lang.String callback) {
+              return (Star) super.setCallback(callback);
+            }
+
+            @Override
+            public Star setFields(java.lang.String fields) {
+              return (Star) super.setFields(fields);
+            }
+
+            @Override
+            public Star setKey(java.lang.String key) {
+              return (Star) super.setKey(key);
+            }
+
+            @Override
+            public Star setOauthToken(java.lang.String oauthToken) {
+              return (Star) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Star setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Star) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Star setQuotaUser(java.lang.String quotaUser) {
+              return (Star) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Star setUploadType(java.lang.String uploadType) {
+              return (Star) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Star setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Star) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the entry to mark as starred. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the entry to mark as starred.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the entry to mark as starred. */
+            public Star setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Star set(String parameterName, Object value) {
+              return (Star) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets your permissions on a resource. Returns an empty set of permissions if the resource doesn't
            * exist. Supported resources are: - Tag templates - Entry groups Note: This method gets policies
            * only within Data Catalog and can't be used to get policies from BigQuery, Pub/Sub, Dataproc
@@ -3046,6 +3176,138 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             @Override
             public TestIamPermissions set(String parameterName, Object value) {
               return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Marks an Entry as NOT starred by the current user. Starring information is private to each user.
+           *
+           * Create a request for the method "entries.unstar".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Unstar#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the entry to mark as **not** starred.
+           * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1UnstarEntryRequest}
+           * @return the request
+           */
+          public Unstar unstar(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1UnstarEntryRequest content) throws java.io.IOException {
+            Unstar result = new Unstar(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Unstar extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1UnstarEntryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:unstar";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+
+            /**
+             * Marks an Entry as NOT starred by the current user. Starring information is private to each
+             * user.
+             *
+             * Create a request for the method "entries.unstar".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Unstar#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Unstar#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the entry to mark as **not** starred.
+             * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1UnstarEntryRequest}
+             * @since 1.13
+             */
+            protected Unstar(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1UnstarEntryRequest content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1UnstarEntryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Unstar set$Xgafv(java.lang.String $Xgafv) {
+              return (Unstar) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Unstar setAccessToken(java.lang.String accessToken) {
+              return (Unstar) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Unstar setAlt(java.lang.String alt) {
+              return (Unstar) super.setAlt(alt);
+            }
+
+            @Override
+            public Unstar setCallback(java.lang.String callback) {
+              return (Unstar) super.setCallback(callback);
+            }
+
+            @Override
+            public Unstar setFields(java.lang.String fields) {
+              return (Unstar) super.setFields(fields);
+            }
+
+            @Override
+            public Unstar setKey(java.lang.String key) {
+              return (Unstar) super.setKey(key);
+            }
+
+            @Override
+            public Unstar setOauthToken(java.lang.String oauthToken) {
+              return (Unstar) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Unstar setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Unstar) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Unstar setQuotaUser(java.lang.String quotaUser) {
+              return (Unstar) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Unstar setUploadType(java.lang.String uploadType) {
+              return (Unstar) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Unstar setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Unstar) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the entry to mark as **not** starred. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the entry to mark as **not** starred.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the entry to mark as **not** starred. */
+            public Unstar setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Unstar set(String parameterName, Object value) {
+              return (Unstar) super.set(parameterName, value);
             }
           }
 

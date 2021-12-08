@@ -154,6 +154,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String name;
 
   /**
+   * Output only. Additional information related to the entry. Private to the current user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1PersonalDetails personalDetails;
+
+  /**
    * Specification that applies to a user-defined function or procedure. Valid only for entries with
    * the `ROUTINE` type.
    * The value may be {@code null}.
@@ -489,6 +496,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Additional information related to the entry. Private to the current user.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1PersonalDetails getPersonalDetails() {
+    return personalDetails;
+  }
+
+  /**
+   * Output only. Additional information related to the entry. Private to the current user.
+   * @param personalDetails personalDetails or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setPersonalDetails(GoogleCloudDatacatalogV1PersonalDetails personalDetails) {
+    this.personalDetails = personalDetails;
     return this;
   }
 

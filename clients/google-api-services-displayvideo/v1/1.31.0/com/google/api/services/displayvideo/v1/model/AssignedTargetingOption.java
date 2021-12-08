@@ -71,6 +71,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private AudienceGroupAssignedTargetingOptionDetails audienceGroupDetails;
 
   /**
+   * Audio content type details. This field will be populated when the targeting_type is
+   * 'TARGETING_TYPE_AUDIO_CONTENT_TYPE'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AudioContentTypeAssignedTargetingOptionDetails audioContentTypeDetails;
+
+  /**
    * Authorized seller status details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. You can only target one authorized seller status
    * option per resource. If a resource doesn't have an authorized seller status option, all
@@ -488,6 +496,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setAudienceGroupDetails(AudienceGroupAssignedTargetingOptionDetails audienceGroupDetails) {
     this.audienceGroupDetails = audienceGroupDetails;
+    return this;
+  }
+
+  /**
+   * Audio content type details. This field will be populated when the targeting_type is
+   * 'TARGETING_TYPE_AUDIO_CONTENT_TYPE'.
+   * @return value or {@code null} for none
+   */
+  public AudioContentTypeAssignedTargetingOptionDetails getAudioContentTypeDetails() {
+    return audioContentTypeDetails;
+  }
+
+  /**
+   * Audio content type details. This field will be populated when the targeting_type is
+   * 'TARGETING_TYPE_AUDIO_CONTENT_TYPE'.
+   * @param audioContentTypeDetails audioContentTypeDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setAudioContentTypeDetails(AudioContentTypeAssignedTargetingOptionDetails audioContentTypeDetails) {
+    this.audioContentTypeDetails = audioContentTypeDetails;
     return this;
   }
 

@@ -45,6 +45,13 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   private AppCategoryTargetingOptionDetails appCategoryDetails;
 
   /**
+   * Audio content type details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AudioContentTypeTargetingOptionDetails audioContentTypeDetails;
+
+  /**
    * Authorized seller status resource details.
    * The value may be {@code null}.
    */
@@ -286,6 +293,23 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   public TargetingOption setAppCategoryDetails(AppCategoryTargetingOptionDetails appCategoryDetails) {
     this.appCategoryDetails = appCategoryDetails;
+    return this;
+  }
+
+  /**
+   * Audio content type details.
+   * @return value or {@code null} for none
+   */
+  public AudioContentTypeTargetingOptionDetails getAudioContentTypeDetails() {
+    return audioContentTypeDetails;
+  }
+
+  /**
+   * Audio content type details.
+   * @param audioContentTypeDetails audioContentTypeDetails or {@code null} for none
+   */
+  public TargetingOption setAudioContentTypeDetails(AudioContentTypeTargetingOptionDetails audioContentTypeDetails) {
+    this.audioContentTypeDetails = audioContentTypeDetails;
     return this;
   }
 

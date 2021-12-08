@@ -50,6 +50,13 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   private java.util.List<GooglePrivacyDlpV2FieldId> identifyingFields;
 
   /**
+   * Limit scanning only to these fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2FieldId> includedFields;
+
+  /**
    * Max number of rows to scan. If the table has more rows than this value, the rest of the rows
    * are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and
    * rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
@@ -122,6 +129,23 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
    */
   public GooglePrivacyDlpV2BigQueryOptions setIdentifyingFields(java.util.List<GooglePrivacyDlpV2FieldId> identifyingFields) {
     this.identifyingFields = identifyingFields;
+    return this;
+  }
+
+  /**
+   * Limit scanning only to these fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2FieldId> getIncludedFields() {
+    return includedFields;
+  }
+
+  /**
+   * Limit scanning only to these fields.
+   * @param includedFields includedFields or {@code null} for none
+   */
+  public GooglePrivacyDlpV2BigQueryOptions setIncludedFields(java.util.List<GooglePrivacyDlpV2FieldId> includedFields) {
+    this.includedFields = includedFields;
     return this;
   }
 

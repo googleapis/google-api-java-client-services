@@ -31,9 +31,7 @@ package com.google.api.services.cloudkms.v1.model;
 public final class AsymmetricSignRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
-   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
-   * and then encrypted.
+   * Optional. The data to sign. It can't be supplied if AsymmetricSignRequest.digest is supplied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +54,8 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. The digest of the data to sign. The digest must be produced with the same digest
-   * algorithm as specified by the key version's algorithm.
+   * algorithm as specified by the key version's algorithm. This field may not be supplied if
+   * AsymmetricSignRequest.data is supplied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +78,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
   private java.lang.Long digestCrc32c;
 
   /**
-   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
-   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
-   * and then encrypted.
+   * Optional. The data to sign. It can't be supplied if AsymmetricSignRequest.digest is supplied.
    * @see #decodeData()
    * @return value or {@code null} for none
    */
@@ -90,9 +87,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
-   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
-   * and then encrypted.
+   * Optional. The data to sign. It can't be supplied if AsymmetricSignRequest.digest is supplied.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -103,9 +98,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
-   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
-   * and then encrypted.
+   * Optional. The data to sign. It can't be supplied if AsymmetricSignRequest.digest is supplied.
    * @see #encodeData()
    * @param data data or {@code null} for none
    */
@@ -115,9 +108,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
-   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
-   * and then encrypted.
+   * Optional. The data to sign. It can't be supplied if AsymmetricSignRequest.digest is supplied.
    * @see #setData()
    *
    * <p>
@@ -166,7 +157,8 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. The digest of the data to sign. The digest must be produced with the same digest
-   * algorithm as specified by the key version's algorithm.
+   * algorithm as specified by the key version's algorithm. This field may not be supplied if
+   * AsymmetricSignRequest.data is supplied.
    * @return value or {@code null} for none
    */
   public Digest getDigest() {
@@ -175,7 +167,8 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. The digest of the data to sign. The digest must be produced with the same digest
-   * algorithm as specified by the key version's algorithm.
+   * algorithm as specified by the key version's algorithm. This field may not be supplied if
+   * AsymmetricSignRequest.data is supplied.
    * @param digest digest or {@code null} for none
    */
   public AsymmetricSignRequest setDigest(Digest digest) {

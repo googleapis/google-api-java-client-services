@@ -47,6 +47,13 @@ public final class MembershipRole extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * Evaluations of restrictions applied to parent group on this membership.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestrictionEvaluations restrictionEvaluations;
+
+  /**
    * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER`
    * `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other
    * value.
@@ -81,6 +88,23 @@ public final class MembershipRole extends com.google.api.client.json.GenericJson
    */
   public MembershipRole setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Evaluations of restrictions applied to parent group on this membership.
+   * @return value or {@code null} for none
+   */
+  public RestrictionEvaluations getRestrictionEvaluations() {
+    return restrictionEvaluations;
+  }
+
+  /**
+   * Evaluations of restrictions applied to parent group on this membership.
+   * @param restrictionEvaluations restrictionEvaluations or {@code null} for none
+   */
+  public MembershipRole setRestrictionEvaluations(RestrictionEvaluations restrictionEvaluations) {
+    this.restrictionEvaluations = restrictionEvaluations;
     return this;
   }
 

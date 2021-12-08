@@ -3859,6 +3859,172 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
+     * Get Security Settings
+     *
+     * Create a request for the method "groups.getSecuritySettings".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link GetSecuritySettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The security settings to retrieve. Format: `groups/{group_id}/securitySettings`
+     * @return the request
+     */
+    public GetSecuritySettings getSecuritySettings(java.lang.String name) throws java.io.IOException {
+      GetSecuritySettings result = new GetSecuritySettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSecuritySettings extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.SecuritySettings> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^groups/[^/]+/securitySettings$");
+
+      /**
+       * Get Security Settings
+       *
+       * Create a request for the method "groups.getSecuritySettings".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link GetSecuritySettings#execute()} method to invoke the remote
+       * operation. <p> {@link GetSecuritySettings#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The security settings to retrieve. Format: `groups/{group_id}/securitySettings`
+       * @since 1.13
+       */
+      protected GetSecuritySettings(java.lang.String name) {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.SecuritySettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^groups/[^/]+/securitySettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSecuritySettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSecuritySettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSecuritySettings setAccessToken(java.lang.String accessToken) {
+        return (GetSecuritySettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSecuritySettings setAlt(java.lang.String alt) {
+        return (GetSecuritySettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSecuritySettings setCallback(java.lang.String callback) {
+        return (GetSecuritySettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSecuritySettings setFields(java.lang.String fields) {
+        return (GetSecuritySettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSecuritySettings setKey(java.lang.String key) {
+        return (GetSecuritySettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSecuritySettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSecuritySettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSecuritySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSecuritySettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSecuritySettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSecuritySettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSecuritySettings setUploadType(java.lang.String uploadType) {
+        return (GetSecuritySettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSecuritySettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSecuritySettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The security settings to retrieve. Format: `groups/{group_id}/securitySettings`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The security settings to retrieve. Format: `groups/{group_id}/securitySettings`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The security settings to retrieve. Format: `groups/{group_id}/securitySettings`
+       */
+      public GetSecuritySettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^groups/[^/]+/securitySettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Field-level read mask of which fields to return. "*" returns all fields. If not specified,
+       * all fields will be returned. May only contain the following field: `member_restriction`.
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Field-level read mask of which fields to return. "*" returns all fields. If not specified, all
+     fields will be returned. May only contain the following field: `member_restriction`.
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Field-level read mask of which fields to return. "*" returns all fields. If not specified,
+       * all fields will be returned. May only contain the following field: `member_restriction`.
+       */
+      public GetSecuritySettings setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      @Override
+      public GetSecuritySettings set(String parameterName, Object value) {
+        return (GetSecuritySettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lists the `Group` resources under a customer or namespace.
      *
      * Create a request for the method "groups.list".
@@ -4588,6 +4754,170 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Search set(String parameterName, Object value) {
         return (Search) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update Security Settings
+     *
+     * Create a request for the method "groups.updateSecuritySettings".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link UpdateSecuritySettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Output only. The resource name of the security settings. Shall be of the form
+     *        `groups/{group_id}/securitySettings`.
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.SecuritySettings}
+     * @return the request
+     */
+    public UpdateSecuritySettings updateSecuritySettings(java.lang.String name, com.google.api.services.cloudidentity.v1.model.SecuritySettings content) throws java.io.IOException {
+      UpdateSecuritySettings result = new UpdateSecuritySettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateSecuritySettings extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^groups/[^/]+/securitySettings$");
+
+      /**
+       * Update Security Settings
+       *
+       * Create a request for the method "groups.updateSecuritySettings".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link UpdateSecuritySettings#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateSecuritySettings#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Output only. The resource name of the security settings. Shall be of the form
+     *        `groups/{group_id}/securitySettings`.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.SecuritySettings}
+       * @since 1.13
+       */
+      protected UpdateSecuritySettings(java.lang.String name, com.google.api.services.cloudidentity.v1.model.SecuritySettings content) {
+        super(CloudIdentity.this, "PATCH", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^groups/[^/]+/securitySettings$");
+        }
+      }
+
+      @Override
+      public UpdateSecuritySettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateSecuritySettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateSecuritySettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateSecuritySettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateSecuritySettings setAlt(java.lang.String alt) {
+        return (UpdateSecuritySettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateSecuritySettings setCallback(java.lang.String callback) {
+        return (UpdateSecuritySettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateSecuritySettings setFields(java.lang.String fields) {
+        return (UpdateSecuritySettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateSecuritySettings setKey(java.lang.String key) {
+        return (UpdateSecuritySettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateSecuritySettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateSecuritySettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateSecuritySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateSecuritySettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateSecuritySettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateSecuritySettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateSecuritySettings setUploadType(java.lang.String uploadType) {
+        return (UpdateSecuritySettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateSecuritySettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateSecuritySettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. The resource name of the security settings. Shall be of the form
+       * `groups/{group_id}/securitySettings`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. The resource name of the security settings. Shall be of the form
+     `groups/{group_id}/securitySettings`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. The resource name of the security settings. Shall be of the form
+       * `groups/{group_id}/securitySettings`.
+       */
+      public UpdateSecuritySettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^groups/[^/]+/securitySettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. The fully-qualified names of fields to update. May only contain the following
+       * field: `member_restriction.query`.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The fully-qualified names of fields to update. May only contain the following field:
+     `member_restriction.query`.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Required. The fully-qualified names of fields to update. May only contain the following
+       * field: `member_restriction.query`.
+       */
+      public UpdateSecuritySettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateSecuritySettings set(String parameterName, Object value) {
+        return (UpdateSecuritySettings) super.set(parameterName, value);
       }
     }
 

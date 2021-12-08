@@ -67,6 +67,15 @@ public final class GoogleCloudDocumentaiV1beta2DocumentRevision extends com.goog
   private java.util.List<java.lang.Integer> parent;
 
   /**
+   * The revisions that this revision is based on. Must include all the ids that have anything to do
+   * with this revision - eg. there are `provenance.parent.revision` fields that index into this
+   * field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> parentIds;
+
+  /**
    * If the annotation was made by processor identify the processor by its resource name.
    * The value may be {@code null}.
    */
@@ -157,6 +166,27 @@ public final class GoogleCloudDocumentaiV1beta2DocumentRevision extends com.goog
    */
   public GoogleCloudDocumentaiV1beta2DocumentRevision setParent(java.util.List<java.lang.Integer> parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * The revisions that this revision is based on. Must include all the ids that have anything to do
+   * with this revision - eg. there are `provenance.parent.revision` fields that index into this
+   * field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getParentIds() {
+    return parentIds;
+  }
+
+  /**
+   * The revisions that this revision is based on. Must include all the ids that have anything to do
+   * with this revision - eg. there are `provenance.parent.revision` fields that index into this
+   * field.
+   * @param parentIds parentIds or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentRevision setParentIds(java.util.List<java.lang.String> parentIds) {
+    this.parentIds = parentIds;
     return this;
   }
 

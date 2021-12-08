@@ -33,7 +33,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   /**
    * Specifies the ordering of results, currently supported case-sensitive choices are: *
    * `relevance`, only supports descending * `last_modified_timestamp [asc|desc]`, defaults to
-   * descending if not specified If not specified, defaults to `relevance` descending.
+   * descending if not specified * `default` that can only be descending If not specified, defaults
+   * to `relevance` descending.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   /**
    * Specifies the ordering of results, currently supported case-sensitive choices are: *
    * `relevance`, only supports descending * `last_modified_timestamp [asc|desc]`, defaults to
-   * descending if not specified If not specified, defaults to `relevance` descending.
+   * descending if not specified * `default` that can only be descending If not specified, defaults
+   * to `relevance` descending.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -90,7 +92,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   /**
    * Specifies the ordering of results, currently supported case-sensitive choices are: *
    * `relevance`, only supports descending * `last_modified_timestamp [asc|desc]`, defaults to
-   * descending if not specified If not specified, defaults to `relevance` descending.
+   * descending if not specified * `default` that can only be descending If not specified, defaults
+   * to `relevance` descending.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequest setOrderBy(java.lang.String orderBy) {

@@ -78,6 +78,14 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   private java.util.List<java.lang.String> restrictedLocations;
 
   /**
+   * Optional. If `true`, search only among starred entries. By default, all results are returned,
+   * starred or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean starredOnly;
+
+  /**
    * If `true`, include Google Cloud Platform (GCP) public datasets in search results. By default,
    * they are excluded. See [Google Cloud Public Datasets](/public-datasets) for more information.
    * @return value or {@code null} for none
@@ -183,6 +191,25 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
    */
   public GoogleCloudDatacatalogV1SearchCatalogRequestScope setRestrictedLocations(java.util.List<java.lang.String> restrictedLocations) {
     this.restrictedLocations = restrictedLocations;
+    return this;
+  }
+
+  /**
+   * Optional. If `true`, search only among starred entries. By default, all results are returned,
+   * starred or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStarredOnly() {
+    return starredOnly;
+  }
+
+  /**
+   * Optional. If `true`, search only among starred entries. By default, all results are returned,
+   * starred or not.
+   * @param starredOnly starredOnly or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1SearchCatalogRequestScope setStarredOnly(java.lang.Boolean starredOnly) {
+    this.starredOnly = starredOnly;
     return this;
   }
 

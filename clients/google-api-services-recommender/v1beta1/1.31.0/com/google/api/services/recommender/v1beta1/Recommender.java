@@ -3395,7 +3395,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          *
          * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
+         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -3425,7 +3426,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *
            * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
+         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -3506,14 +3508,16 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
            * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
+           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the InsightTypeConfig to get. Acceptable formats: *
          `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -3522,7 +3526,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
            * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
+           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4316,8 +4321,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -4346,8 +4352,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -4427,15 +4434,18 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the Recommendation Config to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+           * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           * `
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the Recommendation Config to get. Acceptable formats: *
-         `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-         `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+         `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -4443,8 +4453,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the Recommendation Config to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+           * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           * `
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5391,7 +5403,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          *
          * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
+         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -5421,7 +5434,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *
            * @param name Required. Name of the InsightTypeConfig to get. Acceptable formats: *
          *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         *        `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
+         *        `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -5502,14 +5516,16 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
            * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
+           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the InsightTypeConfig to get. Acceptable formats: *
          `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-         `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+         `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -5518,7 +5534,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           /**
            * Required. Name of the InsightTypeConfig to get. Acceptable formats: *
            * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+           * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config` * `organ
+           * izations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6312,8 +6329,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
          * @return the request
          */
         public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -6342,8 +6360,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the Recommendation Config to get. Acceptable formats: *
-         *        `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-         *        `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+         *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
            * @since 1.13
            */
           protected GetConfig(java.lang.String name) {
@@ -6423,15 +6442,18 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the Recommendation Config to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+           * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           * `
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the Recommendation Config to get. Acceptable formats: *
-         `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-         `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+         `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+         `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
            */
           public java.lang.String getName() {
             return name;
@@ -6439,8 +6461,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the Recommendation Config to get. Acceptable formats: *
-           * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[RECOMMENDER_ID]/config` *
-           * `projects/[PROJECT_ID]/locations/global/recommenders/[RECOMMENDER_ID]/config`
+           * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` *
+           * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config` * `or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+           * `
            */
           public GetConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

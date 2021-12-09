@@ -704,29 +704,29 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
 
     }
     /**
-     * An accessor for creating requests from the SshPublicKey collection.
+     * An accessor for creating requests from the SshPublicKeys collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code CloudOSLogin oslogin = new CloudOSLogin(...);}
-     *   {@code CloudOSLogin.SshPublicKey.List request = oslogin.sshPublicKey().list(parameters ...)}
+     *   {@code CloudOSLogin.SshPublicKeys.List request = oslogin.sshPublicKeys().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public SshPublicKey sshPublicKey() {
-      return new SshPublicKey();
+    public SshPublicKeys sshPublicKeys() {
+      return new SshPublicKeys();
     }
 
     /**
-     * The "sshPublicKey" collection of methods.
+     * The "sshPublicKeys" collection of methods.
      */
-    public class SshPublicKey {
+    public class SshPublicKeys {
 
       /**
        * Create an SSH public key
        *
-       * Create a request for the method "sshPublicKey.create".
+       * Create a request for the method "sshPublicKeys.create".
        *
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
@@ -743,7 +743,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
 
       public class Create extends CloudOSLoginRequest<com.google.api.services.oslogin.v1alpha.model.SshPublicKey> {
 
-        private static final String REST_PATH = "v1alpha/{+parent}/sshPublicKey";
+        private static final String REST_PATH = "v1alpha/{+parent}/sshPublicKeys";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
             java.util.regex.Pattern.compile("^users/[^/]+$");
@@ -751,7 +751,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         /**
          * Create an SSH public key
          *
-         * Create a request for the method "sshPublicKey.create".
+         * Create a request for the method "sshPublicKeys.create".
          *
          * This request holds the parameters needed by the the oslogin server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
@@ -853,28 +853,6 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
           return (Create) super.set(parameterName, value);
         }
       }
-
-    }
-    /**
-     * An accessor for creating requests from the SshPublicKeys collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code CloudOSLogin oslogin = new CloudOSLogin(...);}
-     *   {@code CloudOSLogin.SshPublicKeys.List request = oslogin.sshPublicKeys().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public SshPublicKeys sshPublicKeys() {
-      return new SshPublicKeys();
-    }
-
-    /**
-     * The "sshPublicKeys" collection of methods.
-     */
-    public class SshPublicKeys {
-
       /**
        * Deletes an SSH public key.
        *

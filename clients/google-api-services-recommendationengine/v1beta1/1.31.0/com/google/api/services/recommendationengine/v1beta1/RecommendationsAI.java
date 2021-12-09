@@ -1274,17 +1274,17 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               return this;
             }
 
-            /** Optional. A filter to apply on the list results. */
+            /** Optional. Use of this field is not supported by version v1beta1. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. A filter to apply on the list results.
+            /** Optional. Use of this field is not supported by version v1beta1.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. A filter to apply on the list results. */
+            /** Optional. Use of this field is not supported by version v1beta1. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;

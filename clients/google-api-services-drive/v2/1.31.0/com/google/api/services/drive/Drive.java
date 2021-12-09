@@ -7348,8 +7348,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Updates a file's metadata and/or content. When calling this method, only populate fields in the
-     * request that you want to modify. When updating fields, some fields might might change
-     * automatically, such as modifiedDate. This method supports patch semantics.
+     * request that you want to modify. When updating fields, some fields might change automatically,
+     * such as modifiedDate. This method supports patch semantics.
      *
      * Create a request for the method "files.patch".
      *
@@ -7372,8 +7372,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Updates a file's metadata and/or content. When calling this method, only populate fields in the
-       * request that you want to modify. When updating fields, some fields might might change
-       * automatically, such as modifiedDate. This method supports patch semantics.
+       * request that you want to modify. When updating fields, some fields might change automatically,
+       * such as modifiedDate. This method supports patch semantics.
        *
        * Create a request for the method "files.patch".
        *

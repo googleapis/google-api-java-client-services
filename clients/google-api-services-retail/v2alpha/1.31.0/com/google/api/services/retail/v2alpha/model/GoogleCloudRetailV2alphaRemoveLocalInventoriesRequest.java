@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest extends
   private java.lang.Boolean allowMissing;
 
   /**
-   * Required. A list of place IDs to have their inventory deleted. At most 1000 place IDs are
+   * Required. A list of place IDs to have their inventory deleted. At most 3000 place IDs are
    * allowed per request.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest extends
   }
 
   /**
-   * Required. A list of place IDs to have their inventory deleted. At most 1000 place IDs are
+   * Required. A list of place IDs to have their inventory deleted. At most 3000 place IDs are
    * allowed per request.
    * @return value or {@code null} for none
    */
@@ -85,7 +85,7 @@ public final class GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest extends
   }
 
   /**
-   * Required. A list of place IDs to have their inventory deleted. At most 1000 place IDs are
+   * Required. A list of place IDs to have their inventory deleted. At most 3000 place IDs are
    * allowed per request.
    * @param placeIds placeIds or {@code null} for none
    */

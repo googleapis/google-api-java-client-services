@@ -61,7 +61,7 @@ public final class GoogleCloudRetailV2alphaAddLocalInventoriesRequest extends co
 
   /**
    * Required. A list of inventory information at difference places. Each place is identified by its
-   * place ID. At most 1000 inventories are allowed per request.
+   * place ID. At most 3000 inventories are allowed per request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +138,7 @@ public final class GoogleCloudRetailV2alphaAddLocalInventoriesRequest extends co
 
   /**
    * Required. A list of inventory information at difference places. Each place is identified by its
-   * place ID. At most 1000 inventories are allowed per request.
+   * place ID. At most 3000 inventories are allowed per request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaLocalInventory> getLocalInventories() {
@@ -147,7 +147,7 @@ public final class GoogleCloudRetailV2alphaAddLocalInventoriesRequest extends co
 
   /**
    * Required. A list of inventory information at difference places. Each place is identified by its
-   * place ID. At most 1000 inventories are allowed per request.
+   * place ID. At most 3000 inventories are allowed per request.
    * @param localInventories localInventories or {@code null} for none
    */
   public GoogleCloudRetailV2alphaAddLocalInventoriesRequest setLocalInventories(java.util.List<GoogleCloudRetailV2alphaLocalInventory> localInventories) {

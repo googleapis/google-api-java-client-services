@@ -30,13 +30,15 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional local inventory attributes, for example, store name, promotion tags, etc. * At most
-   * 5 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned. * The key must be a
-   * UTF-8 encoded string with a length limit of 10 characters. * The key must match the pattern:
-   * `a-zA-Z0-9*`. For example, key0LikeThis or KEY_1_LIKE_THIS. * The attribute values must be of
-   * the same type (text or number). * The max number of values per attribute is 10. * For text
-   * values, the length limit is 10 UTF-8 characters. * The attribute does not support search. The
-   * `searchable` field should be unset or set to false.
+   * Additional local inventory attributes, for example, store name, promotion tags, etc. This field
+   * needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * At most 30
+   * attributes are allowed. * The key must be a UTF-8 encoded string with a length limit of 32
+   * characters. * The key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
+   * KEY_1_LIKE_THIS. * The attribute values must be of the same type (text or number). * The max
+   * number of values per attribute is 10. * For text values, the length limit is 64 UTF-8
+   * characters. * The attribute does not support search. The `searchable` field should be unset or
+   * set to false. * The max summed total bytes of custom attribute keys and values per product is
+   * 5MiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,13 +66,15 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
   private GoogleCloudRetailV2alphaPriceInfo priceInfo;
 
   /**
-   * Additional local inventory attributes, for example, store name, promotion tags, etc. * At most
-   * 5 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned. * The key must be a
-   * UTF-8 encoded string with a length limit of 10 characters. * The key must match the pattern:
-   * `a-zA-Z0-9*`. For example, key0LikeThis or KEY_1_LIKE_THIS. * The attribute values must be of
-   * the same type (text or number). * The max number of values per attribute is 10. * For text
-   * values, the length limit is 10 UTF-8 characters. * The attribute does not support search. The
-   * `searchable` field should be unset or set to false.
+   * Additional local inventory attributes, for example, store name, promotion tags, etc. This field
+   * needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * At most 30
+   * attributes are allowed. * The key must be a UTF-8 encoded string with a length limit of 32
+   * characters. * The key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
+   * KEY_1_LIKE_THIS. * The attribute values must be of the same type (text or number). * The max
+   * number of values per attribute is 10. * For text values, the length limit is 64 UTF-8
+   * characters. * The attribute does not support search. The `searchable` field should be unset or
+   * set to false. * The max summed total bytes of custom attribute keys and values per product is
+   * 5MiB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> getAttributes() {
@@ -78,13 +82,15 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
   }
 
   /**
-   * Additional local inventory attributes, for example, store name, promotion tags, etc. * At most
-   * 5 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned. * The key must be a
-   * UTF-8 encoded string with a length limit of 10 characters. * The key must match the pattern:
-   * `a-zA-Z0-9*`. For example, key0LikeThis or KEY_1_LIKE_THIS. * The attribute values must be of
-   * the same type (text or number). * The max number of values per attribute is 10. * For text
-   * values, the length limit is 10 UTF-8 characters. * The attribute does not support search. The
-   * `searchable` field should be unset or set to false.
+   * Additional local inventory attributes, for example, store name, promotion tags, etc. This field
+   * needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * At most 30
+   * attributes are allowed. * The key must be a UTF-8 encoded string with a length limit of 32
+   * characters. * The key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
+   * KEY_1_LIKE_THIS. * The attribute values must be of the same type (text or number). * The max
+   * number of values per attribute is 10. * For text values, the length limit is 64 UTF-8
+   * characters. * The attribute does not support search. The `searchable` field should be unset or
+   * set to false. * The max summed total bytes of custom attribute keys and values per product is
+   * 5MiB.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaLocalInventory setAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {

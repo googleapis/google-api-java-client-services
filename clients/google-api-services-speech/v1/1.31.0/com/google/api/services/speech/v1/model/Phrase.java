@@ -30,7 +30,10 @@ package com.google.api.services.speech.v1.model;
  * classes that were defined inline in the request, set the class's `custom_class_id` to a string
  * unique to all class resources and inline classes. Then use the class' id wrapped in $`{...}` e.g.
  * "${my-months}". To refer to custom classes resources, use the class' id wrapped in `${}` (e.g.
- * `${my-months}`).
+ * `${my-months}`). Speech-to-Text supports three locations: `global`, `us` (US North America), and
+ * `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint, use the `global`
+ * location. To specify a region, use a [regional endpoint](/speech-to-text/docs/endpoints) with
+ * matching `us` or `eu` location value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Speech-to-Text API. For a detailed explanation

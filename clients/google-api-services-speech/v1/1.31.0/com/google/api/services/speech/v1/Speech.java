@@ -546,7 +546,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource where this custom class will be created. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses
+         *        `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+         *        locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
          * @param content the {@link com.google.api.services.speech.v1.model.CreateCustomClassRequest}
          * @return the request
          */
@@ -574,7 +578,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource where this custom class will be created. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses
+         *        `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+         *        locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
            * @param content the {@link com.google.api.services.speech.v1.model.CreateCustomClassRequest}
            * @since 1.13
            */
@@ -645,13 +653,20 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent resource where this custom class will be created. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses
+           * `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+           * locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource where this custom class will be created. Format:
-         {api_version}/projects/{project}/locations/{location}/customClasses
+         `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three locations:
+         `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a [regional
+         endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -659,7 +674,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent resource where this custom class will be created. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses
+           * `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+           * locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -685,7 +704,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the custom class to delete. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+         *        `projects/{project}/locations/{location}/customClasses/{custom_class}` Speech-to-Text
+         *        supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you are
+         *        calling the `speech.googleapis.com` endpoint, use the `global` location. To specify a
+         *        region, use a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+         *        `eu` location value.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -712,7 +735,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the custom class to delete. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+         *        `projects/{project}/locations/{location}/customClasses/{custom_class}` Speech-to-Text
+         *        supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you are
+         *        calling the `speech.googleapis.com` endpoint, use the `global` location. To specify a
+         *        region, use a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+         *        `eu` location value.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -782,13 +809,20 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the custom class to delete. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+           * `projects/{project}/locations/{location}/customClasses/{custom_class}` Speech-to-Text
+           * supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you
+           * are calling the `speech.googleapis.com` endpoint, use the `global` location. To specify
+           * a region, use a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us`
+           * or `eu` location value.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the custom class to delete. Format:
-         {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+         `projects/{project}/locations/{location}/customClasses/{custom_class}` Speech-to-Text supports
+         three locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a [regional
+         endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
            */
           public java.lang.String getName() {
             return name;
@@ -796,7 +830,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the custom class to delete. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+           * `projects/{project}/locations/{location}/customClasses/{custom_class}` Speech-to-Text
+           * supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you
+           * are calling the `speech.googleapis.com` endpoint, use the `global` location. To specify
+           * a region, use a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us`
+           * or `eu` location value.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -822,7 +860,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the custom class to retrieve. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+         *        `projects/{project}/locations/{location}/customClasses/{custom_class}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -849,7 +887,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the custom class to retrieve. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+         *        `projects/{project}/locations/{location}/customClasses/{custom_class}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -929,13 +967,13 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the custom class to retrieve. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+           * `projects/{project}/locations/{location}/customClasses/{custom_class}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the custom class to retrieve. Format:
-         {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+         `projects/{project}/locations/{location}/customClasses/{custom_class}`
            */
           public java.lang.String getName() {
             return name;
@@ -943,7 +981,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the custom class to retrieve. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+           * `projects/{project}/locations/{location}/customClasses/{custom_class}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -969,7 +1007,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns this collection of custom classes. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses
+         *        `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+         *        locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -996,7 +1038,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns this collection of custom classes. Format:
-         *        {api_version}/projects/{project}/locations/{location}/customClasses
+         *        `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+         *        locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1076,13 +1122,20 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent, which owns this collection of custom classes. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses
+           * `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+           * locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns this collection of custom classes. Format:
-         {api_version}/projects/{project}/locations/{location}/customClasses
+         `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three locations:
+         `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a [regional
+         endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1090,7 +1143,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent, which owns this collection of custom classes. Format:
-           * {api_version}/projects/{project}/locations/{location}/customClasses
+           * `projects/{project}/locations/{location}/customClasses` Speech-to-Text supports three
+           * locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1338,7 +1395,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource where this phrase set will be created. Format:
-         *        {api_version}/projects/{project}/locations/{location}/phraseSets
+         *        `projects/{project}/locations/{location}/phraseSets` Speech-to-Text supports three
+         *        locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
          * @param content the {@link com.google.api.services.speech.v1.model.CreatePhraseSetRequest}
          * @return the request
          */
@@ -1368,7 +1429,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource where this phrase set will be created. Format:
-         *        {api_version}/projects/{project}/locations/{location}/phraseSets
+         *        `projects/{project}/locations/{location}/phraseSets` Speech-to-Text supports three
+         *        locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
            * @param content the {@link com.google.api.services.speech.v1.model.CreatePhraseSetRequest}
            * @since 1.13
            */
@@ -1439,13 +1504,20 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent resource where this phrase set will be created. Format:
-           * {api_version}/projects/{project}/locations/{location}/phraseSets
+           * `projects/{project}/locations/{location}/phraseSets` Speech-to-Text supports three
+           * locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource where this phrase set will be created. Format:
-         {api_version}/projects/{project}/locations/{location}/phraseSets
+         `projects/{project}/locations/{location}/phraseSets` Speech-to-Text supports three locations:
+         `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a [regional
+         endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1453,7 +1525,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent resource where this phrase set will be created. Format:
-           * {api_version}/projects/{project}/locations/{location}/phraseSets
+           * `projects/{project}/locations/{location}/phraseSets` Speech-to-Text supports three
+           * locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1479,7 +1555,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the phrase set to delete. Format:
-         *        {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+         *        `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1506,7 +1582,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the phrase set to delete. Format:
-         *        {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+         *        `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1576,13 +1652,13 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the phrase set to delete. Format:
-           * {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+           * `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the phrase set to delete. Format:
-         {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+         `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
            */
           public java.lang.String getName() {
             return name;
@@ -1590,7 +1666,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the phrase set to delete. Format:
-           * {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+           * `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1616,7 +1692,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the phrase set to retrieve. Format:
-         *        {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+         *        `projects/{project}/locations/{location}/phraseSets/{phrase_set}` Speech-to-Text supports
+         *        three locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling
+         *        the `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use
+         *        a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1643,7 +1723,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the phrase set to retrieve. Format:
-         *        {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+         *        `projects/{project}/locations/{location}/phraseSets/{phrase_set}` Speech-to-Text supports
+         *        three locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling
+         *        the `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use
+         *        a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1723,13 +1807,20 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the phrase set to retrieve. Format:
-           * {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+           * `projects/{project}/locations/{location}/phraseSets/{phrase_set}` Speech-to-Text
+           * supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you
+           * are calling the `speech.googleapis.com` endpoint, use the `global` location. To specify
+           * a region, use a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us`
+           * or `eu` location value.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the phrase set to retrieve. Format:
-         {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+         `projects/{project}/locations/{location}/phraseSets/{phrase_set}` Speech-to-Text supports three
+         locations: `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a [regional
+         endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
            */
           public java.lang.String getName() {
             return name;
@@ -1737,7 +1828,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The name of the phrase set to retrieve. Format:
-           * {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+           * `projects/{project}/locations/{location}/phraseSets/{phrase_set}` Speech-to-Text
+           * supports three locations: `global`, `us` (US North America), and `eu` (Europe). If you
+           * are calling the `speech.googleapis.com` endpoint, use the `global` location. To specify
+           * a region, use a [regional endpoint](/speech-to-text/docs/endpoints) with matching `us`
+           * or `eu` location value.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1763,7 +1858,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns this collection of phrase set. Format:
-         *        projects/{project}/locations/{location}
+         *        `projects/{project}/locations/{location}` Speech-to-Text supports three locations:
+         *        `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1790,7 +1889,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns this collection of phrase set. Format:
-         *        projects/{project}/locations/{location}
+         *        `projects/{project}/locations/{location}` Speech-to-Text supports three locations:
+         *        `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+         *        `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+         *        [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+         *        value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1870,13 +1973,20 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent, which owns this collection of phrase set. Format:
-           * projects/{project}/locations/{location}
+           * `projects/{project}/locations/{location}` Speech-to-Text supports three locations:
+           * `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns this collection of phrase set. Format:
-         projects/{project}/locations/{location}
+         `projects/{project}/locations/{location}` Speech-to-Text supports three locations: `global`, `us`
+         (US North America), and `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint, use
+         the `global` location. To specify a region, use a [regional endpoint](/speech-to-
+         text/docs/endpoints) with matching `us` or `eu` location value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1884,7 +1994,11 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. The parent, which owns this collection of phrase set. Format:
-           * projects/{project}/locations/{location}
+           * `projects/{project}/locations/{location}` Speech-to-Text supports three locations:
+           * `global`, `us` (US North America), and `eu` (Europe). If you are calling the
+           * `speech.googleapis.com` endpoint, use the `global` location. To specify a region, use a
+           * [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or `eu` location
+           * value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

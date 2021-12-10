@@ -128,8 +128,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. An empty
-   * `pushConfig` signifies that the subscriber will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it. At most
+   * one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber
+   * will pull and ack messages using API methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,6 +156,14 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private RetryPolicy retryPolicy;
+
+  /**
+   * Output only. An output-only field indicating whether or not the subscription can receive
+   * messages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * Required. The name of the topic from which this subscription is receiving messages. Format is
@@ -400,8 +409,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. An empty
-   * `pushConfig` signifies that the subscriber will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it. At most
+   * one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber
+   * will pull and ack messages using API methods.
    * @return value or {@code null} for none
    */
   public PushConfig getPushConfig() {
@@ -409,8 +419,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. An empty
-   * `pushConfig` signifies that the subscriber will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it. At most
+   * one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber
+   * will pull and ack messages using API methods.
    * @param pushConfig pushConfig or {@code null} for none
    */
   public Subscription setPushConfig(PushConfig pushConfig) {
@@ -463,6 +474,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setRetryPolicy(RetryPolicy retryPolicy) {
     this.retryPolicy = retryPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. An output-only field indicating whether or not the subscription can receive
+   * messages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. An output-only field indicating whether or not the subscription can receive
+   * messages.
+   * @param state state or {@code null} for none
+   */
+  public Subscription setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -30,18 +30,22 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
+   * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
    * `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in
-   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request.
+   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is
+   * specified and an enhanced version of the specified model for the language does not exist, then
+   * it would emit an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String speechModelVariant;
 
   /**
-   * Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
+   * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
    * `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in
-   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request.
+   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is
+   * specified and an enhanced version of the specified model for the language does not exist, then
+   * it would emit an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpeechModelVariant() {
@@ -49,9 +53,11 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
   }
 
   /**
-   * Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
+   * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
    * `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in
-   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request.
+   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is
+   * specified and an enhanced version of the specified model for the language does not exist, then
+   * it would emit an error.
    * @param speechModelVariant speechModelVariant or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechToTextConfig setSpeechModelVariant(java.lang.String speechModelVariant) {

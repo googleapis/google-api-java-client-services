@@ -153,10 +153,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class AccessPolicies {
 
     /**
-     * Create an `AccessPolicy`. Fails if this organization already has a `AccessPolicy`. The
-     * longrunning Operation will have a successful status once the `AccessPolicy` has propagated to
-     * long-lasting storage. Syntactic and basic semantic errors will be returned in `metadata` as a
-     * BadRequest proto.
+     * Creates an access policy. This method fails if the organization already has an access policy. The
+     * long-running operation has a successful status after the access policy propagates to long-lasting
+     * storage. Syntactic and basic semantic errors are returned in `metadata` as a BadRequest proto.
      *
      * Create a request for the method "accessPolicies.create".
      *
@@ -177,10 +176,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/accessPolicies";
 
       /**
-       * Create an `AccessPolicy`. Fails if this organization already has a `AccessPolicy`. The
-       * longrunning Operation will have a successful status once the `AccessPolicy` has propagated to
-       * long-lasting storage. Syntactic and basic semantic errors will be returned in `metadata` as a
-       * BadRequest proto.
+       * Creates an access policy. This method fails if the organization already has an access policy.
+       * The long-running operation has a successful status after the access policy propagates to long-
+       * lasting storage. Syntactic and basic semantic errors are returned in `metadata` as a BadRequest
+       * proto.
        *
        * Create a request for the method "accessPolicies.create".
        *
@@ -258,8 +257,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Delete an AccessPolicy by resource name. The longrunning Operation will have a successful status
-     * once the AccessPolicy has been removed from long-lasting storage.
+     * Deletes an access policy based on the resource name. The long-running operation has a successful
+     * status after the access policy is removed from long-lasting storage.
      *
      * Create a request for the method "accessPolicies.delete".
      *
@@ -283,8 +282,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
       /**
-       * Delete an AccessPolicy by resource name. The longrunning Operation will have a successful
-       * status once the AccessPolicy has been removed from long-lasting storage.
+       * Deletes an access policy based on the resource name. The long-running operation has a
+       * successful status after the access policy is removed from long-lasting storage.
        *
        * Create a request for the method "accessPolicies.delete".
        *
@@ -395,7 +394,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Get an AccessPolicy by name.
+     * Returns an access policy based on the name.
      *
      * Create a request for the method "accessPolicies.get".
      *
@@ -419,7 +418,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
       /**
-       * Get an AccessPolicy by name.
+       * Returns an access policy based on the name.
        *
        * Create a request for the method "accessPolicies.get".
        *
@@ -538,7 +537,148 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * List all AccessPolicies under a container.
+     * Gets the IAM policy for the specified Access Context Manager access policy.
+     *
+     * Create a request for the method "accessPolicies.getIamPolicy".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.GetIamPolicyRequest}
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.GetIamPolicyRequest content) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.Policy> {
+
+      private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
+
+      /**
+       * Gets the IAM policy for the specified Access Context Manager access policy.
+       *
+       * Create a request for the method "accessPolicies.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.GetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.GetIamPolicyRequest content) {
+        super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^accessPolicies/[^/]+$");
+        }
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^accessPolicies/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all access policies in an organization.
      *
      * Create a request for the method "accessPolicies.list".
      *
@@ -558,7 +698,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/accessPolicies";
 
       /**
-       * List all AccessPolicies under a container.
+       * Lists all access policies in an organization.
        *
        * Create a request for the method "accessPolicies.list".
        *
@@ -707,9 +847,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Update an AccessPolicy. The longrunning Operation from this RPC will have a successful status
-     * once the changes to the AccessPolicy have propagated to long-lasting storage. Syntactic and basic
-     * semantic errors will be returned in `metadata` as a BadRequest proto.
+     * Updates an access policy. The long-running operation from this RPC has a successful status after
+     * the changes to the access policy propagate to long-lasting storage.
      *
      * Create a request for the method "accessPolicies.patch".
      *
@@ -734,9 +873,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
       /**
-       * Update an AccessPolicy. The longrunning Operation from this RPC will have a successful status
-       * once the changes to the AccessPolicy have propagated to long-lasting storage. Syntactic and
-       * basic semantic errors will be returned in `metadata` as a BadRequest proto.
+       * Updates an access policy. The long-running operation from this RPC has a successful status
+       * after the changes to the access policy propagate to long-lasting storage.
        *
        * Create a request for the method "accessPolicies.patch".
        *
@@ -861,6 +999,296 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return (Patch) super.set(parameterName, value);
       }
     }
+    /**
+     * Sets the IAM policy for the specified Access Context Manager access policy. This method replaces
+     * the existing IAM policy on the access policy. The IAM policy controls the set of users who can
+     * perform specific operations on the Access Context Manager access policy.
+     *
+     * Create a request for the method "accessPolicies.setIamPolicy".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.SetIamPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.SetIamPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.Policy> {
+
+      private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
+
+      /**
+       * Sets the IAM policy for the specified Access Context Manager access policy. This method
+       * replaces the existing IAM policy on the access policy. The IAM policy controls the set of users
+       * who can perform specific operations on the Access Context Manager access policy.
+       *
+       * Create a request for the method "accessPolicies.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.SetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.SetIamPolicyRequest content) {
+        super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^accessPolicies/[^/]+$");
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^accessPolicies/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the IAM permissions that the caller has on the specified Access Context Manager resource.
+     * The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method does not
+     * support other resources.
+     *
+     * Create a request for the method "accessPolicies.testIamPermissions".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+     * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
+
+      /**
+       * Returns the IAM permissions that the caller has on the specified Access Context Manager
+       * resource. The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method
+       * does not support other resources.
+       *
+       * Create a request for the method "accessPolicies.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the
+       * remote operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.ser
+       * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest content) {
+        super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^accessPolicies/[^/]+$");
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+     documentation for the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^accessPolicies/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the AccessLevels collection.
@@ -883,9 +1311,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
     public class AccessLevels {
 
       /**
-       * Create an Access Level. The longrunning operation from this RPC will have a successful status
-       * once the Access Level has propagated to long-lasting storage. Access Levels containing errors
-       * will result in an error response for the first error encountered.
+       * Creates an access level. The long-running operation from this RPC has a successful status after
+       * the access level propagates to long-lasting storage. If access levels contain errors, an error
+       * response is returned for the first error encountered.
        *
        * Create a request for the method "accessLevels.create".
        *
@@ -911,9 +1339,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Create an Access Level. The longrunning operation from this RPC will have a successful status
-         * once the Access Level has propagated to long-lasting storage. Access Levels containing errors
-         * will result in an error response for the first error encountered.
+         * Creates an access level. The long-running operation from this RPC has a successful status after
+         * the access level propagates to long-lasting storage. If access levels contain errors, an error
+         * response is returned for the first error encountered.
          *
          * Create a request for the method "accessLevels.create".
          *
@@ -1027,8 +1455,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Delete an Access Level by resource name. The longrunning operation from this RPC will have a
-       * successful status once the Access Level has been removed from long-lasting storage.
+       * Deletes an access level based on the resource name. The long-running operation from this RPC has
+       * a successful status after the access level has been removed from long-lasting storage.
        *
        * Create a request for the method "accessLevels.delete".
        *
@@ -1053,8 +1481,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/accessLevels/[^/]+$");
 
         /**
-         * Delete an Access Level by resource name. The longrunning operation from this RPC will have a
-         * successful status once the Access Level has been removed from long-lasting storage.
+         * Deletes an access level based on the resource name. The long-running operation from this RPC
+         * has a successful status after the access level has been removed from long-lasting storage.
          *
          * Create a request for the method "accessLevels.delete".
          *
@@ -1167,7 +1595,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Get an Access Level by resource name.
+       * Gets an access level based on the resource name.
        *
        * Create a request for the method "accessLevels.get".
        *
@@ -1192,7 +1620,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/accessLevels/[^/]+$");
 
         /**
-         * Get an Access Level by resource name.
+         * Gets an access level based on the resource name.
          *
          * Create a request for the method "accessLevels.get".
          *
@@ -1346,7 +1774,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * List all Access Levels for an access policy.
+       * Lists all access levels for an access policy.
        *
        * Create a request for the method "accessLevels.list".
        *
@@ -1371,7 +1799,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * List all Access Levels for an access policy.
+         * Lists all access levels for an access policy.
          *
          * Create a request for the method "accessLevels.list".
          *
@@ -1558,9 +1986,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Update an Access Level. The longrunning operation from this RPC will have a successful status
-       * once the changes to the Access Level have propagated to long-lasting storage. Access Levels
-       * containing errors will result in an error response for the first error encountered.
+       * Updates an access level. The long-running operation from this RPC has a successful status after
+       * the changes to the access level propagate to long-lasting storage. If access levels contain
+       * errors, an error response is returned for the first error encountered.
        *
        * Create a request for the method "accessLevels.patch".
        *
@@ -1588,9 +2016,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/accessLevels/[^/]+$");
 
         /**
-         * Update an Access Level. The longrunning operation from this RPC will have a successful status
-         * once the changes to the Access Level have propagated to long-lasting storage. Access Levels
-         * containing errors will result in an error response for the first error encountered.
+         * Updates an access level. The long-running operation from this RPC has a successful status after
+         * the changes to the access level propagate to long-lasting storage. If access levels contain
+         * errors, an error response is returned for the first error encountered.
          *
          * Create a request for the method "accessLevels.patch".
          *
@@ -1728,13 +2156,13 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Replace all existing Access Levels in an Access Policy with the Access Levels provided. This is
-       * done atomically. The longrunning operation from this RPC will have a successful status once all
-       * replacements have propagated to long-lasting storage. Replacements containing errors will result
-       * in an error response for the first error encountered. Replacement will be cancelled on error,
-       * existing Access Levels will not be affected. Operation.response field will contain
-       * ReplaceAccessLevelsResponse. Removing Access Levels contained in existing Service Perimeters will
-       * result in error.
+       * Replaces all existing access levels in an access policy with the access levels provided. This is
+       * done atomically. The long-running operation from this RPC has a successful status after all
+       * replacements propagate to long-lasting storage. If the replacement contains errors, an error
+       * response is returned for the first error encountered. Upon error, the replacement is cancelled,
+       * and existing access levels are not affected. The Operation.response field contains
+       * ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters
+       * result in an error.
        *
        * Create a request for the method "accessLevels.replaceAll".
        *
@@ -1760,13 +2188,13 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Replace all existing Access Levels in an Access Policy with the Access Levels provided. This is
-         * done atomically. The longrunning operation from this RPC will have a successful status once all
-         * replacements have propagated to long-lasting storage. Replacements containing errors will
-         * result in an error response for the first error encountered. Replacement will be cancelled on
-         * error, existing Access Levels will not be affected. Operation.response field will contain
-         * ReplaceAccessLevelsResponse. Removing Access Levels contained in existing Service Perimeters
-         * will result in error.
+         * Replaces all existing access levels in an access policy with the access levels provided. This
+         * is done atomically. The long-running operation from this RPC has a successful status after all
+         * replacements propagate to long-lasting storage. If the replacement contains errors, an error
+         * response is returned for the first error encountered. Upon error, the replacement is cancelled,
+         * and existing access levels are not affected. The Operation.response field contains
+         * ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters
+         * result in an error.
          *
          * Create a request for the method "accessLevels.replaceAll".
          *
@@ -1879,6 +2307,151 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return (ReplaceAll) super.set(parameterName, value);
         }
       }
+      /**
+       * Returns the IAM permissions that the caller has on the specified Access Context Manager resource.
+       * The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method does not
+       * support other resources.
+       *
+       * Create a request for the method "accessLevels.testIamPermissions".
+       *
+       * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+       * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+       *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest}
+       * @return the request
+       */
+      public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+        TestIamPermissions result = new TestIamPermissions(resource, content);
+        initialize(result);
+        return result;
+      }
+
+      public class TestIamPermissions extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsResponse> {
+
+        private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+        private final java.util.regex.Pattern RESOURCE_PATTERN =
+            java.util.regex.Pattern.compile("^accessPolicies/[^/]+/accessLevels/[^/]+$");
+
+        /**
+         * Returns the IAM permissions that the caller has on the specified Access Context Manager
+         * resource. The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method
+         * does not support other resources.
+         *
+         * Create a request for the method "accessLevels.testIamPermissions".
+         *
+         * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+         * any optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the
+         * remote operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.ser
+         * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+       *        documentation for the appropriate value for this field.
+         * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest}
+         * @since 1.13
+         */
+        protected TestIamPermissions(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest content) {
+          super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsResponse.class);
+          this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                "Parameter resource must conform to the pattern " +
+                "^accessPolicies/[^/]+/accessLevels/[^/]+$");
+          }
+        }
+
+        @Override
+        public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+          return (TestIamPermissions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+          return (TestIamPermissions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public TestIamPermissions setAlt(java.lang.String alt) {
+          return (TestIamPermissions) super.setAlt(alt);
+        }
+
+        @Override
+        public TestIamPermissions setCallback(java.lang.String callback) {
+          return (TestIamPermissions) super.setCallback(callback);
+        }
+
+        @Override
+        public TestIamPermissions setFields(java.lang.String fields) {
+          return (TestIamPermissions) super.setFields(fields);
+        }
+
+        @Override
+        public TestIamPermissions setKey(java.lang.String key) {
+          return (TestIamPermissions) super.setKey(key);
+        }
+
+        @Override
+        public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+          return (TestIamPermissions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+          return (TestIamPermissions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public TestIamPermissions setUploadType(java.lang.String uploadType) {
+          return (TestIamPermissions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * REQUIRED: The resource for which the policy detail is being requested. See the operation
+         * documentation for the appropriate value for this field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String resource;
+
+        /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+       documentation for the appropriate value for this field.
+         */
+        public java.lang.String getResource() {
+          return resource;
+        }
+
+        /**
+         * REQUIRED: The resource for which the policy detail is being requested. See the operation
+         * documentation for the appropriate value for this field.
+         */
+        public TestIamPermissions setResource(java.lang.String resource) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                "Parameter resource must conform to the pattern " +
+                "^accessPolicies/[^/]+/accessLevels/[^/]+$");
+          }
+          this.resource = resource;
+          return this;
+        }
+
+        @Override
+        public TestIamPermissions set(String parameterName, Object value) {
+          return (TestIamPermissions) super.set(parameterName, value);
+        }
+      }
 
     }
     /**
@@ -1902,14 +2475,14 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
     public class ServicePerimeters {
 
       /**
-       * Commit the dry-run spec for all the Service Perimeters in an Access Policy. A commit operation on
-       * a Service Perimeter involves copying its `spec` field to that Service Perimeter's `status` field.
-       * Only Service Perimeters with `use_explicit_dry_run_spec` field set to true are affected by a
-       * commit operation. The longrunning operation from this RPC will have a successful status once the
-       * dry-run specs for all the Service Perimeters have been committed. If a commit fails, it will
-       * cause the longrunning operation to return an error response and the entire commit operation will
-       * be cancelled. When successful, Operation.response field will contain
-       * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will be cleared after a
+       * Commits the dry-run specification for all the service perimeters in an access policy. A commit
+       * operation on a service perimeter involves copying its `spec` field to the `status` field of the
+       * service perimeter. Only service perimeters with `use_explicit_dry_run_spec` field set to true are
+       * affected by a commit operation. The long-running operation from this RPC has a successful status
+       * after the dry-run specifications for all the service perimeters have been committed. If a commit
+       * fails, it causes the long-running operation to return an error response and the entire commit
+       * operation is cancelled. When successful, the Operation.response field contains
+       * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are cleared after a
        * successful commit operation.
        *
        * Create a request for the method "servicePerimeters.commit".
@@ -1936,14 +2509,14 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Commit the dry-run spec for all the Service Perimeters in an Access Policy. A commit operation
-         * on a Service Perimeter involves copying its `spec` field to that Service Perimeter's `status`
-         * field. Only Service Perimeters with `use_explicit_dry_run_spec` field set to true are affected
-         * by a commit operation. The longrunning operation from this RPC will have a successful status
-         * once the dry-run specs for all the Service Perimeters have been committed. If a commit fails,
-         * it will cause the longrunning operation to return an error response and the entire commit
-         * operation will be cancelled. When successful, Operation.response field will contain
-         * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will be cleared after a
+         * Commits the dry-run specification for all the service perimeters in an access policy. A commit
+         * operation on a service perimeter involves copying its `spec` field to the `status` field of the
+         * service perimeter. Only service perimeters with `use_explicit_dry_run_spec` field set to true
+         * are affected by a commit operation. The long-running operation from this RPC has a successful
+         * status after the dry-run specifications for all the service perimeters have been committed. If
+         * a commit fails, it causes the long-running operation to return an error response and the entire
+         * commit operation is cancelled. When successful, the Operation.response field contains
+         * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are cleared after a
          * successful commit operation.
          *
          * Create a request for the method "servicePerimeters.commit".
@@ -2058,9 +2631,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Create a Service Perimeter. The longrunning operation from this RPC will have a successful status
-       * once the Service Perimeter has propagated to long-lasting storage. Service Perimeters containing
-       * errors will result in an error response for the first error encountered.
+       * Creates a service perimeter. The long-running operation from this RPC has a successful status
+       * after the service perimeter propagates to long-lasting storage. If a service perimeter contains
+       * errors, an error response is returned for the first error encountered.
        *
        * Create a request for the method "servicePerimeters.create".
        *
@@ -2086,9 +2659,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Create a Service Perimeter. The longrunning operation from this RPC will have a successful
-         * status once the Service Perimeter has propagated to long-lasting storage. Service Perimeters
-         * containing errors will result in an error response for the first error encountered.
+         * Creates a service perimeter. The long-running operation from this RPC has a successful status
+         * after the service perimeter propagates to long-lasting storage. If a service perimeter contains
+         * errors, an error response is returned for the first error encountered.
          *
          * Create a request for the method "servicePerimeters.create".
          *
@@ -2202,8 +2775,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Delete a Service Perimeter by resource name. The longrunning operation from this RPC will have a
-       * successful status once the Service Perimeter has been removed from long-lasting storage.
+       * Deletes a service perimeter based on the resource name. The long-running operation from this RPC
+       * has a successful status after the service perimeter is removed from long-lasting storage.
        *
        * Create a request for the method "servicePerimeters.delete".
        *
@@ -2228,8 +2801,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
 
         /**
-         * Delete a Service Perimeter by resource name. The longrunning operation from this RPC will have
-         * a successful status once the Service Perimeter has been removed from long-lasting storage.
+         * Deletes a service perimeter based on the resource name. The long-running operation from this
+         * RPC has a successful status after the service perimeter is removed from long-lasting storage.
          *
          * Create a request for the method "servicePerimeters.delete".
          *
@@ -2342,7 +2915,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Get a Service Perimeter by resource name.
+       * Gets a service perimeter based on the resource name.
        *
        * Create a request for the method "servicePerimeters.get".
        *
@@ -2367,7 +2940,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
 
         /**
-         * Get a Service Perimeter by resource name.
+         * Gets a service perimeter based on the resource name.
          *
          * Create a request for the method "servicePerimeters.get".
          *
@@ -2490,7 +3063,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * List all Service Perimeters for an access policy.
+       * Lists all service perimeters for an access policy.
        *
        * Create a request for the method "servicePerimeters.list".
        *
@@ -2515,7 +3088,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * List all Service Perimeters for an access policy.
+         * Lists all service perimeters for an access policy.
          *
          * Create a request for the method "servicePerimeters.list".
          *
@@ -2677,9 +3250,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Update a Service Perimeter. The longrunning operation from this RPC will have a successful status
-       * once the changes to the Service Perimeter have propagated to long-lasting storage. Service
-       * Perimeter containing errors will result in an error response for the first error encountered.
+       * Updates a service perimeter. The long-running operation from this RPC has a successful status
+       * after the service perimeter propagates to long-lasting storage. If a service perimeter contains
+       * errors, an error response is returned for the first error encountered.
        *
        * Create a request for the method "servicePerimeters.patch".
        *
@@ -2706,10 +3279,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
 
         /**
-         * Update a Service Perimeter. The longrunning operation from this RPC will have a successful
-         * status once the changes to the Service Perimeter have propagated to long-lasting storage.
-         * Service Perimeter containing errors will result in an error response for the first error
-         * encountered.
+         * Updates a service perimeter. The long-running operation from this RPC has a successful status
+         * after the service perimeter propagates to long-lasting storage. If a service perimeter contains
+         * errors, an error response is returned for the first error encountered.
          *
          * Create a request for the method "servicePerimeters.patch".
          *
@@ -2843,11 +3415,11 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Replace all existing Service Perimeters in an Access Policy with the Service Perimeters provided.
-       * This is done atomically. The longrunning operation from this RPC will have a successful status
-       * once all replacements have propagated to long-lasting storage. Replacements containing errors
-       * will result in an error response for the first error encountered. Replacement will be cancelled
-       * on error, existing Service Perimeters will not be affected. Operation.response field will contain
+       * Replace all existing service perimeters in an access policy with the service perimeters provided.
+       * This is done atomically. The long-running operation from this RPC has a successful status after
+       * all replacements propagate to long-lasting storage. Replacements containing errors result in an
+       * error response for the first error encountered. Upon an error, replacement are cancelled and
+       * existing service perimeters are not affected. The Operation.response field contains
        * ReplaceServicePerimetersResponse.
        *
        * Create a request for the method "servicePerimeters.replaceAll".
@@ -2874,12 +3446,12 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Replace all existing Service Perimeters in an Access Policy with the Service Perimeters
-         * provided. This is done atomically. The longrunning operation from this RPC will have a
-         * successful status once all replacements have propagated to long-lasting storage. Replacements
-         * containing errors will result in an error response for the first error encountered. Replacement
-         * will be cancelled on error, existing Service Perimeters will not be affected.
-         * Operation.response field will contain ReplaceServicePerimetersResponse.
+         * Replace all existing service perimeters in an access policy with the service perimeters
+         * provided. This is done atomically. The long-running operation from this RPC has a successful
+         * status after all replacements propagate to long-lasting storage. Replacements containing errors
+         * result in an error response for the first error encountered. Upon an error, replacement are
+         * cancelled and existing service perimeters are not affected. The Operation.response field
+         * contains ReplaceServicePerimetersResponse.
          *
          * Create a request for the method "servicePerimeters.replaceAll".
          *
@@ -2990,6 +3562,151 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         @Override
         public ReplaceAll set(String parameterName, Object value) {
           return (ReplaceAll) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the IAM permissions that the caller has on the specified Access Context Manager resource.
+       * The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method does not
+       * support other resources.
+       *
+       * Create a request for the method "servicePerimeters.testIamPermissions".
+       *
+       * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+       * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+       *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest}
+       * @return the request
+       */
+      public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+        TestIamPermissions result = new TestIamPermissions(resource, content);
+        initialize(result);
+        return result;
+      }
+
+      public class TestIamPermissions extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsResponse> {
+
+        private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+        private final java.util.regex.Pattern RESOURCE_PATTERN =
+            java.util.regex.Pattern.compile("^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
+
+        /**
+         * Returns the IAM permissions that the caller has on the specified Access Context Manager
+         * resource. The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method
+         * does not support other resources.
+         *
+         * Create a request for the method "servicePerimeters.testIamPermissions".
+         *
+         * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+         * any optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the
+         * remote operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.ser
+         * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+       *        documentation for the appropriate value for this field.
+         * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest}
+         * @since 1.13
+         */
+        protected TestIamPermissions(java.lang.String resource, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsRequest content) {
+          super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.TestIamPermissionsResponse.class);
+          this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                "Parameter resource must conform to the pattern " +
+                "^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
+          }
+        }
+
+        @Override
+        public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+          return (TestIamPermissions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+          return (TestIamPermissions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public TestIamPermissions setAlt(java.lang.String alt) {
+          return (TestIamPermissions) super.setAlt(alt);
+        }
+
+        @Override
+        public TestIamPermissions setCallback(java.lang.String callback) {
+          return (TestIamPermissions) super.setCallback(callback);
+        }
+
+        @Override
+        public TestIamPermissions setFields(java.lang.String fields) {
+          return (TestIamPermissions) super.setFields(fields);
+        }
+
+        @Override
+        public TestIamPermissions setKey(java.lang.String key) {
+          return (TestIamPermissions) super.setKey(key);
+        }
+
+        @Override
+        public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+          return (TestIamPermissions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+          return (TestIamPermissions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public TestIamPermissions setUploadType(java.lang.String uploadType) {
+          return (TestIamPermissions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * REQUIRED: The resource for which the policy detail is being requested. See the operation
+         * documentation for the appropriate value for this field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String resource;
+
+        /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+       documentation for the appropriate value for this field.
+         */
+        public java.lang.String getResource() {
+          return resource;
+        }
+
+        /**
+         * REQUIRED: The resource for which the policy detail is being requested. See the operation
+         * documentation for the appropriate value for this field.
+         */
+        public TestIamPermissions setResource(java.lang.String resource) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                "Parameter resource must conform to the pattern " +
+                "^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
+          }
+          this.resource = resource;
+          return this;
+        }
+
+        @Override
+        public TestIamPermissions set(String parameterName, Object value) {
+          return (TestIamPermissions) super.set(parameterName, value);
         }
       }
 
@@ -3676,10 +4393,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
     public class GcpUserAccessBindings {
 
       /**
-       * Creates a GcpUserAccessBinding. If the client specifies a name, the server will ignore it. Fails
-       * if a resource already exists with the same group_key. Completion of this long-running operation
-       * does not necessarily signify that the new binding is deployed onto all affected users, which may
-       * take more time.
+       * Creates a GcpUserAccessBinding. If the client specifies a name, the server ignores it. Fails if a
+       * resource already exists with the same group_key. Completion of this long-running operation does
+       * not necessarily signify that the new binding is deployed onto all affected users, which may take
+       * more time.
        *
        * Create a request for the method "gcpUserAccessBindings.create".
        *
@@ -3704,10 +4421,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a GcpUserAccessBinding. If the client specifies a name, the server will ignore it.
-         * Fails if a resource already exists with the same group_key. Completion of this long-running
-         * operation does not necessarily signify that the new binding is deployed onto all affected
-         * users, which may take more time.
+         * Creates a GcpUserAccessBinding. If the client specifies a name, the server ignores it. Fails if
+         * a resource already exists with the same group_key. Completion of this long-running operation
+         * does not necessarily signify that the new binding is deployed onto all affected users, which
+         * may take more time.
          *
          * Create a request for the method "gcpUserAccessBindings.create".
          *

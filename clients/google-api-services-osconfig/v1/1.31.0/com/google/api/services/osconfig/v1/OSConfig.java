@@ -3627,6 +3627,284 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           return (Patch) super.set(parameterName, value);
         }
       }
+      /**
+       * Change state of patch deployment to "PAUSED". Patch deployment in paused state doesn't generate
+       * patch jobs.
+       *
+       * Create a request for the method "patchDeployments.pause".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+       * @param content the {@link com.google.api.services.osconfig.v1.model.PausePatchDeploymentRequest}
+       * @return the request
+       */
+      public Pause pause(java.lang.String name, com.google.api.services.osconfig.v1.model.PausePatchDeploymentRequest content) throws java.io.IOException {
+        Pause result = new Pause(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Pause extends OSConfigRequest<com.google.api.services.osconfig.v1.model.PatchDeployment> {
+
+        private static final String REST_PATH = "v1/{+name}:pause";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/patchDeployments/[^/]+$");
+
+        /**
+         * Change state of patch deployment to "PAUSED". Patch deployment in paused state doesn't generate
+         * patch jobs.
+         *
+         * Create a request for the method "patchDeployments.pause".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+         * @param content the {@link com.google.api.services.osconfig.v1.model.PausePatchDeploymentRequest}
+         * @since 1.13
+         */
+        protected Pause(java.lang.String name, com.google.api.services.osconfig.v1.model.PausePatchDeploymentRequest content) {
+          super(OSConfig.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v1.model.PatchDeployment.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+        }
+
+        @Override
+        public Pause set$Xgafv(java.lang.String $Xgafv) {
+          return (Pause) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Pause setAccessToken(java.lang.String accessToken) {
+          return (Pause) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Pause setAlt(java.lang.String alt) {
+          return (Pause) super.setAlt(alt);
+        }
+
+        @Override
+        public Pause setCallback(java.lang.String callback) {
+          return (Pause) super.setCallback(callback);
+        }
+
+        @Override
+        public Pause setFields(java.lang.String fields) {
+          return (Pause) super.setFields(fields);
+        }
+
+        @Override
+        public Pause setKey(java.lang.String key) {
+          return (Pause) super.setKey(key);
+        }
+
+        @Override
+        public Pause setOauthToken(java.lang.String oauthToken) {
+          return (Pause) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Pause) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Pause setQuotaUser(java.lang.String quotaUser) {
+          return (Pause) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Pause setUploadType(java.lang.String uploadType) {
+          return (Pause) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Pause) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        public Pause setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Pause set(String parameterName, Object value) {
+          return (Pause) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Change state of patch deployment back to "ACTIVE". Patch deployment in active state continues to
+       * generate patch jobs.
+       *
+       * Create a request for the method "patchDeployments.resume".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+       * @param content the {@link com.google.api.services.osconfig.v1.model.ResumePatchDeploymentRequest}
+       * @return the request
+       */
+      public Resume resume(java.lang.String name, com.google.api.services.osconfig.v1.model.ResumePatchDeploymentRequest content) throws java.io.IOException {
+        Resume result = new Resume(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Resume extends OSConfigRequest<com.google.api.services.osconfig.v1.model.PatchDeployment> {
+
+        private static final String REST_PATH = "v1/{+name}:resume";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/patchDeployments/[^/]+$");
+
+        /**
+         * Change state of patch deployment back to "ACTIVE". Patch deployment in active state continues
+         * to generate patch jobs.
+         *
+         * Create a request for the method "patchDeployments.resume".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+         * @param content the {@link com.google.api.services.osconfig.v1.model.ResumePatchDeploymentRequest}
+         * @since 1.13
+         */
+        protected Resume(java.lang.String name, com.google.api.services.osconfig.v1.model.ResumePatchDeploymentRequest content) {
+          super(OSConfig.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v1.model.PatchDeployment.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+        }
+
+        @Override
+        public Resume set$Xgafv(java.lang.String $Xgafv) {
+          return (Resume) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Resume setAccessToken(java.lang.String accessToken) {
+          return (Resume) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Resume setAlt(java.lang.String alt) {
+          return (Resume) super.setAlt(alt);
+        }
+
+        @Override
+        public Resume setCallback(java.lang.String callback) {
+          return (Resume) super.setCallback(callback);
+        }
+
+        @Override
+        public Resume setFields(java.lang.String fields) {
+          return (Resume) super.setFields(fields);
+        }
+
+        @Override
+        public Resume setKey(java.lang.String key) {
+          return (Resume) super.setKey(key);
+        }
+
+        @Override
+        public Resume setOauthToken(java.lang.String oauthToken) {
+          return (Resume) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Resume) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Resume setQuotaUser(java.lang.String quotaUser) {
+          return (Resume) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Resume setUploadType(java.lang.String uploadType) {
+          return (Resume) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Resume) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        public Resume setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Resume set(String parameterName, Object value) {
+          return (Resume) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

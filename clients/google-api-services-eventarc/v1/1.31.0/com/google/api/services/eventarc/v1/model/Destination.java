@@ -30,8 +30,8 @@ package com.google.api.services.eventarc.v1.model;
 public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully-managed service that receives the events. The service should be running in the
-   * same project of the trigger.
+   * Cloud Run fully-managed resource that receives the events. The resource should be in the same
+   * project as the trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private GKE gke;
 
   /**
-   * Cloud Run fully-managed service that receives the events. The service should be running in the
-   * same project of the trigger.
+   * Cloud Run fully-managed resource that receives the events. The resource should be in the same
+   * project as the trigger.
    * @return value or {@code null} for none
    */
   public CloudRun getCloudRun() {
@@ -55,8 +55,8 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully-managed service that receives the events. The service should be running in the
-   * same project of the trigger.
+   * Cloud Run fully-managed resource that receives the events. The resource should be in the same
+   * project as the trigger.
    * @param cloudRun cloudRun or {@code null} for none
    */
   public Destination setCloudRun(CloudRun cloudRun) {

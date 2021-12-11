@@ -58,6 +58,13 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private GcsData gcsDataSource;
 
   /**
+   * Cloud Storage intermediate data location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcsData gcsIntermediateDataLocation;
+
+  /**
    * An HTTP URL data source.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   public TransferSpec setGcsDataSource(GcsData gcsDataSource) {
     this.gcsDataSource = gcsDataSource;
+    return this;
+  }
+
+  /**
+   * Cloud Storage intermediate data location.
+   * @return value or {@code null} for none
+   */
+  public GcsData getGcsIntermediateDataLocation() {
+    return gcsIntermediateDataLocation;
+  }
+
+  /**
+   * Cloud Storage intermediate data location.
+   * @param gcsIntermediateDataLocation gcsIntermediateDataLocation or {@code null} for none
+   */
+  public TransferSpec setGcsIntermediateDataLocation(GcsData gcsIntermediateDataLocation) {
+    this.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
     return this;
   }
 

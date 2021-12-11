@@ -46,6 +46,13 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean deleteObjectsUniqueInSink;
 
   /**
+   * Represents the selected metadata options for a transfer job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetadataOptions metadataOptions;
+
+  /**
    * When to overwrite objects that already exist in the sink. The default is that only objects that
    * are different from the source are ovewritten. If true, all objects in the sink whose name
    * matches an object in the source are overwritten with the source object.
@@ -89,6 +96,23 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
    */
   public TransferOptions setDeleteObjectsUniqueInSink(java.lang.Boolean deleteObjectsUniqueInSink) {
     this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
+    return this;
+  }
+
+  /**
+   * Represents the selected metadata options for a transfer job.
+   * @return value or {@code null} for none
+   */
+  public MetadataOptions getMetadataOptions() {
+    return metadataOptions;
+  }
+
+  /**
+   * Represents the selected metadata options for a transfer job.
+   * @param metadataOptions metadataOptions or {@code null} for none
+   */
+  public TransferOptions setMetadataOptions(MetadataOptions metadataOptions) {
+    this.metadataOptions = metadataOptions;
     return this;
   }
 

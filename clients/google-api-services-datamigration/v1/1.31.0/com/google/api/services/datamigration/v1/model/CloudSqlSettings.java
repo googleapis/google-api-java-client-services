@@ -51,6 +51,13 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.lang.Boolean autoStorageIncrease;
 
   /**
+   * The KMS key name used for the csql instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cmekKeyName;
+
+  /**
    * The Cloud SQL default instance level collation.
    * The value may be {@code null}.
    */
@@ -192,6 +199,23 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
    */
   public CloudSqlSettings setAutoStorageIncrease(java.lang.Boolean autoStorageIncrease) {
     this.autoStorageIncrease = autoStorageIncrease;
+    return this;
+  }
+
+  /**
+   * The KMS key name used for the csql instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCmekKeyName() {
+    return cmekKeyName;
+  }
+
+  /**
+   * The KMS key name used for the csql instance.
+   * @param cmekKeyName cmekKeyName or {@code null} for none
+   */
+  public CloudSqlSettings setCmekKeyName(java.lang.String cmekKeyName) {
+    this.cmekKeyName = cmekKeyName;
     return this;
   }
 

@@ -108,6 +108,13 @@ public final class PatchDeployment extends com.google.api.client.json.GenericJso
   private PatchRollout rollout;
 
   /**
+   * Output only. Current state of the patch deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Output only. Time the patch deployment was last updated. Timestamp is in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
@@ -292,6 +299,23 @@ public final class PatchDeployment extends com.google.api.client.json.GenericJso
    */
   public PatchDeployment setRollout(PatchRollout rollout) {
     this.rollout = rollout;
+    return this;
+  }
+
+  /**
+   * Output only. Current state of the patch deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. Current state of the patch deployment.
+   * @param state state or {@code null} for none
+   */
+  public PatchDeployment setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

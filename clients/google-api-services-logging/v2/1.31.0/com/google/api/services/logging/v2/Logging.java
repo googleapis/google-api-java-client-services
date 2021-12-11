@@ -156,7 +156,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
      *
      * Create a request for the method "billingAccounts.getCmekSettings".
@@ -190,7 +190,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
        *
        * Create a request for the method "billingAccounts.getCmekSettings".
@@ -7075,7 +7075,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
      *
      * Create a request for the method "folders.getCmekSettings".
@@ -7109,7 +7109,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
        *
        * Create a request for the method "folders.getCmekSettings".
@@ -16052,7 +16052,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
      *
      * Create a request for the method "organizations.getCmekSettings".
@@ -16086,7 +16086,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
        *
        * Create a request for the method "organizations.getCmekSettings".
@@ -21789,7 +21789,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
      *
      * Create a request for the method "projects.getCmekSettings".
@@ -21823,7 +21823,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
        *
        * Create a request for the method "projects.getCmekSettings".
@@ -29064,7 +29064,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
      *
      * Create a request for the method "v2.getCmekSettings".
@@ -29098,7 +29098,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
+       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
        *
        * Create a request for the method "v2.getCmekSettings".

@@ -95,7 +95,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DNSConfig desiredDnsConfig;
 
   /**
-   * The desired GCFS config for the cluster
+   * The desired GCFS config for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -479,7 +479,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired GCFS config for the cluster
+   * The desired GCFS config for the cluster.
    * @return value or {@code null} for none
    */
   public GcfsConfig getDesiredGcfsConfig() {
@@ -487,7 +487,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired GCFS config for the cluster
+   * The desired GCFS config for the cluster.
    * @param desiredGcfsConfig desiredGcfsConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredGcfsConfig(GcfsConfig desiredGcfsConfig) {

@@ -53,8 +53,8 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-
-   * cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which
-   * represents the existing scheduling behavior. - "static": allows pods with certain resource
+   * cluster/cpu-management-policies/ The following values are allowed. * "none": the default, which
+   * represents the existing scheduling behavior. * "static": allows pods with certain resource
    * characteristics to be granted increased CPU affinity and exclusivity on the node. The default
    * value is 'none' if unspecified.
    * The value may be {@code null}.
@@ -112,8 +112,8 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-
-   * cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which
-   * represents the existing scheduling behavior. - "static": allows pods with certain resource
+   * cluster/cpu-management-policies/ The following values are allowed. * "none": the default, which
+   * represents the existing scheduling behavior. * "static": allows pods with certain resource
    * characteristics to be granted increased CPU affinity and exclusivity on the node. The default
    * value is 'none' if unspecified.
    * @return value or {@code null} for none
@@ -124,8 +124,8 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-
-   * cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which
-   * represents the existing scheduling behavior. - "static": allows pods with certain resource
+   * cluster/cpu-management-policies/ The following values are allowed. * "none": the default, which
+   * represents the existing scheduling behavior. * "static": allows pods with certain resource
    * characteristics to be granted increased CPU affinity and exclusivity on the node. The default
    * value is 'none' if unspecified.
    * @param cpuManagerPolicy cpuManagerPolicy or {@code null} for none

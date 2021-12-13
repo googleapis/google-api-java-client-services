@@ -31,6 +31,13 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class ComputeEngineTargetDefaults extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional licenses to assign to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> additionalLicenses;
+
+  /**
    * Output only. The OS license returned from the adaptation module report.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Additional licenses to assign to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdditionalLicenses() {
+    return additionalLicenses;
+  }
+
+  /**
+   * Additional licenses to assign to the VM.
+   * @param additionalLicenses additionalLicenses or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setAdditionalLicenses(java.util.List<java.lang.String> additionalLicenses) {
+    this.additionalLicenses = additionalLicenses;
+    return this;
+  }
 
   /**
    * Output only. The OS license returned from the adaptation module report.

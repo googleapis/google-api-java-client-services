@@ -65,7 +65,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
    * Optional. User-provided latitude and longitude. When creating a location, this field is ignored
    * if the provided address geocodes successfully. This field is only returned on get requests if
    * the user-provided `latlng` value was accepted during create, or the `latlng` value was updated
-   * through the Google My Business website. This field can only be updated by approved clients.
+   * through the Google Business Profile website. This field can only be updated by approved
+   * clients.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +268,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
    * Optional. User-provided latitude and longitude. When creating a location, this field is ignored
    * if the provided address geocodes successfully. This field is only returned on get requests if
    * the user-provided `latlng` value was accepted during create, or the `latlng` value was updated
-   * through the Google My Business website. This field can only be updated by approved clients.
+   * through the Google Business Profile website. This field can only be updated by approved
+   * clients.
    * @return value or {@code null} for none
    */
   public LatLng getLatlng() {
@@ -278,7 +280,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
    * Optional. User-provided latitude and longitude. When creating a location, this field is ignored
    * if the provided address geocodes successfully. This field is only returned on get requests if
    * the user-provided `latlng` value was accepted during create, or the `latlng` value was updated
-   * through the Google My Business website. This field can only be updated by approved clients.
+   * through the Google Business Profile website. This field can only be updated by approved
+   * clients.
    * @param latlng latlng or {@code null} for none
    */
   public Location setLatlng(LatLng latlng) {

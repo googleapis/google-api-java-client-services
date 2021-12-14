@@ -2079,8 +2079,8 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
     }
     /**
      * Deletes a location. If this location cannot be deleted using the API and it is marked so in the
-     * `google.mybusiness.businessinformation.v1.LocationState`, use the [Google My
-     * Business](https://business.google.com/manage/) website.
+     * `google.mybusiness.businessinformation.v1.LocationState`, use the [Google Business
+     * Profile](https://business.google.com/manage/) website.
      *
      * Create a request for the method "locations.delete".
      *
@@ -2106,8 +2106,8 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
 
       /**
        * Deletes a location. If this location cannot be deleted using the API and it is marked so in the
-       * `google.mybusiness.businessinformation.v1.LocationState`, use the [Google My
-       * Business](https://business.google.com/manage/) website.
+       * `google.mybusiness.businessinformation.v1.LocationState`, use the [Google Business
+       * Profile](https://business.google.com/manage/) website.
        *
        * Create a request for the method "locations.delete".
        *

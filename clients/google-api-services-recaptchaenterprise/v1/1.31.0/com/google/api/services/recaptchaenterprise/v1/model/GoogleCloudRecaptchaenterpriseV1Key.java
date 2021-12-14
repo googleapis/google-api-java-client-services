@@ -81,6 +81,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions;
 
   /**
+   * Settings for WAF
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1WafSettings wafSettings;
+
+  /**
    * Settings for keys that can be used by websites.
    * The value may be {@code null}.
    */
@@ -203,6 +210,23 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
    */
   public GoogleCloudRecaptchaenterpriseV1Key setTestingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions) {
     this.testingOptions = testingOptions;
+    return this;
+  }
+
+  /**
+   * Settings for WAF
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1WafSettings getWafSettings() {
+    return wafSettings;
+  }
+
+  /**
+   * Settings for WAF
+   * @param wafSettings wafSettings or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Key setWafSettings(GoogleCloudRecaptchaenterpriseV1WafSettings wafSettings) {
+    this.wafSettings = wafSettings;
     return this;
   }
 

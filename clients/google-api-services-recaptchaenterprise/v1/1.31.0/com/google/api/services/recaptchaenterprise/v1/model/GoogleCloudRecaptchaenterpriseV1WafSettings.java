@@ -17,7 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Account Defender risk assessment.
+ * Settings specific to keys that can be used for WAF (Web Application Firewall).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.recaptchaenterprise.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRecaptchaenterpriseV1WafSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Labels for this request.
+   * Required. The WAF feature for which this key is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> labels;
+  private java.lang.String wafFeature;
 
   /**
-   * Recommended action after this request.
+   * Required. The WAF service that uses this key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String recommendedAction;
+  private java.lang.String wafService;
 
   /**
-   * Labels for this request.
+   * Required. The WAF feature for which this key is enabled.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getLabels() {
-    return labels;
+  public java.lang.String getWafFeature() {
+    return wafFeature;
   }
 
   /**
-   * Labels for this request.
-   * @param labels labels or {@code null} for none
+   * Required. The WAF feature for which this key is enabled.
+   * @param wafFeature wafFeature or {@code null} for none
    */
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment setLabels(java.util.List<java.lang.String> labels) {
-    this.labels = labels;
+  public GoogleCloudRecaptchaenterpriseV1WafSettings setWafFeature(java.lang.String wafFeature) {
+    this.wafFeature = wafFeature;
     return this;
   }
 
   /**
-   * Recommended action after this request.
+   * Required. The WAF service that uses this key.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRecommendedAction() {
-    return recommendedAction;
+  public java.lang.String getWafService() {
+    return wafService;
   }
 
   /**
-   * Recommended action after this request.
-   * @param recommendedAction recommendedAction or {@code null} for none
+   * Required. The WAF service that uses this key.
+   * @param wafService wafService or {@code null} for none
    */
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment setRecommendedAction(java.lang.String recommendedAction) {
-    this.recommendedAction = recommendedAction;
+  public GoogleCloudRecaptchaenterpriseV1WafSettings setWafService(java.lang.String wafService) {
+    this.wafService = wafService;
     return this;
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment set(String fieldName, Object value) {
-    return (GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment) super.set(fieldName, value);
+  public GoogleCloudRecaptchaenterpriseV1WafSettings set(String fieldName, Object value) {
+    return (GoogleCloudRecaptchaenterpriseV1WafSettings) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment clone() {
-    return (GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment) super.clone();
+  public GoogleCloudRecaptchaenterpriseV1WafSettings clone() {
+    return (GoogleCloudRecaptchaenterpriseV1WafSettings) super.clone();
   }
 
 }

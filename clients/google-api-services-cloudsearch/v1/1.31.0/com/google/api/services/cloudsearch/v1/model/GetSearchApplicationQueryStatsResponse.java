@@ -37,6 +37,13 @@ public final class GetSearchApplicationQueryStatsResponse extends com.google.api
   private java.util.List<SearchApplicationQueryStats> stats;
 
   /**
+   * Total successful query count (status code 200) for the given date range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalQueryCount;
+
+  /**
    * Query stats per date for a search application.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GetSearchApplicationQueryStatsResponse extends com.google.api
    */
   public GetSearchApplicationQueryStatsResponse setStats(java.util.List<SearchApplicationQueryStats> stats) {
     this.stats = stats;
+    return this;
+  }
+
+  /**
+   * Total successful query count (status code 200) for the given date range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalQueryCount() {
+    return totalQueryCount;
+  }
+
+  /**
+   * Total successful query count (status code 200) for the given date range.
+   * @param totalQueryCount totalQueryCount or {@code null} for none
+   */
+  public GetSearchApplicationQueryStatsResponse setTotalQueryCount(java.lang.Long totalQueryCount) {
+    this.totalQueryCount = totalQueryCount;
     return this;
   }
 

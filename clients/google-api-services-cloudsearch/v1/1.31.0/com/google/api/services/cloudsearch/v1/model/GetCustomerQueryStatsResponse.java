@@ -42,6 +42,13 @@ public final class GetCustomerQueryStatsResponse extends com.google.api.client.j
   }
 
   /**
+   * Total successful query count (status code 200) for the given date range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalQueryCount;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.util.List<CustomerQueryStats> getStats() {
@@ -53,6 +60,23 @@ public final class GetCustomerQueryStatsResponse extends com.google.api.client.j
    */
   public GetCustomerQueryStatsResponse setStats(java.util.List<CustomerQueryStats> stats) {
     this.stats = stats;
+    return this;
+  }
+
+  /**
+   * Total successful query count (status code 200) for the given date range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalQueryCount() {
+    return totalQueryCount;
+  }
+
+  /**
+   * Total successful query count (status code 200) for the given date range.
+   * @param totalQueryCount totalQueryCount or {@code null} for none
+   */
+  public GetCustomerQueryStatsResponse setTotalQueryCount(java.lang.Long totalQueryCount) {
+    this.totalQueryCount = totalQueryCount;
     return this;
   }
 

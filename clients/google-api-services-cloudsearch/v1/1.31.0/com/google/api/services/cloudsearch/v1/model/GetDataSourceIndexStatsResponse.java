@@ -30,6 +30,13 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class GetDataSourceIndexStatsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Average item count for the given date range for which billing is done.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long averageIndexedItemCount;
+
+  /**
    * Summary of indexed item counts, one for each day in the requested range.
    * The value may be {@code null}.
    */
@@ -40,6 +47,23 @@ public final class GetDataSourceIndexStatsResponse extends com.google.api.client
     // hack to force ProGuard to consider DataSourceIndexStats used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(DataSourceIndexStats.class);
+  }
+
+  /**
+   * Average item count for the given date range for which billing is done.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAverageIndexedItemCount() {
+    return averageIndexedItemCount;
+  }
+
+  /**
+   * Average item count for the given date range for which billing is done.
+   * @param averageIndexedItemCount averageIndexedItemCount or {@code null} for none
+   */
+  public GetDataSourceIndexStatsResponse setAverageIndexedItemCount(java.lang.Long averageIndexedItemCount) {
+    this.averageIndexedItemCount = averageIndexedItemCount;
+    return this;
   }
 
   /**

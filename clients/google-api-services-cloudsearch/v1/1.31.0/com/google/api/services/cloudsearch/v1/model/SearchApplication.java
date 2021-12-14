@@ -101,6 +101,13 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   private QueryInterpretationConfig queryInterpretationConfig;
 
   /**
+   * With each result we should return the URI for its thumbnail (when applicable)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnResultThumbnailUrls;
+
+  /**
    * Configuration for ranking results.
    * The value may be {@code null}.
    */
@@ -253,6 +260,23 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
    */
   public SearchApplication setQueryInterpretationConfig(QueryInterpretationConfig queryInterpretationConfig) {
     this.queryInterpretationConfig = queryInterpretationConfig;
+    return this;
+  }
+
+  /**
+   * With each result we should return the URI for its thumbnail (when applicable)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnResultThumbnailUrls() {
+    return returnResultThumbnailUrls;
+  }
+
+  /**
+   * With each result we should return the URI for its thumbnail (when applicable)
+   * @param returnResultThumbnailUrls returnResultThumbnailUrls or {@code null} for none
+   */
+  public SearchApplication setReturnResultThumbnailUrls(java.lang.Boolean returnResultThumbnailUrls) {
+    this.returnResultThumbnailUrls = returnResultThumbnailUrls;
     return this;
   }
 

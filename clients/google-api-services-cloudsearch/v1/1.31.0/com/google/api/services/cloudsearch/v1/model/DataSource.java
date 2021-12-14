@@ -87,6 +87,13 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> operationIds;
 
   /**
+   * Can a user request to get thumbnail URI for Items indexed in this data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnThumbnailUrls;
+
+  /**
    * A short name or alias for the source. This value will be used to match the 'source' operator.
    * For example, if the short name is ** then queries like *source:* will only return results for
    * this source. The value must be unique across all datasources. The value must only contain
@@ -228,6 +235,23 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    */
   public DataSource setOperationIds(java.util.List<java.lang.String> operationIds) {
     this.operationIds = operationIds;
+    return this;
+  }
+
+  /**
+   * Can a user request to get thumbnail URI for Items indexed in this data source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnThumbnailUrls() {
+    return returnThumbnailUrls;
+  }
+
+  /**
+   * Can a user request to get thumbnail URI for Items indexed in this data source.
+   * @param returnThumbnailUrls returnThumbnailUrls or {@code null} for none
+   */
+  public DataSource setReturnThumbnailUrls(java.lang.Boolean returnThumbnailUrls) {
+    this.returnThumbnailUrls = returnThumbnailUrls;
     return this;
   }
 

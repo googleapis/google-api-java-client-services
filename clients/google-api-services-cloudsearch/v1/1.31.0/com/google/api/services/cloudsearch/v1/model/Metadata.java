@@ -79,6 +79,13 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private Source source;
 
   /**
+   * The thumbnail URL of the result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thumbnailUrl;
+
+  /**
    * The last modified date for the object in the search result. If not set in the item, the value
    * returned here is empty. When `updateTime` is used for calculating freshness and is not set,
    * this value defaults to 2 years from the current time.
@@ -203,6 +210,23 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
    */
   public Metadata setSource(Source source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * The thumbnail URL of the result.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  /**
+   * The thumbnail URL of the result.
+   * @param thumbnailUrl thumbnailUrl or {@code null} for none
+   */
+  public Metadata setThumbnailUrl(java.lang.String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
     return this;
   }
 

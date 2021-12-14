@@ -38,6 +38,13 @@ public final class TimeWindow extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
+   * MaintenanceExclusionOptions provides maintenance exclusion related options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceExclusionOptions maintenanceExclusionOptions;
+
+  /**
    * The time that the window first starts.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class TimeWindow extends com.google.api.client.json.GenericJson {
    */
   public TimeWindow setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * MaintenanceExclusionOptions provides maintenance exclusion related options.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceExclusionOptions getMaintenanceExclusionOptions() {
+    return maintenanceExclusionOptions;
+  }
+
+  /**
+   * MaintenanceExclusionOptions provides maintenance exclusion related options.
+   * @param maintenanceExclusionOptions maintenanceExclusionOptions or {@code null} for none
+   */
+  public TimeWindow setMaintenanceExclusionOptions(MaintenanceExclusionOptions maintenanceExclusionOptions) {
+    this.maintenanceExclusionOptions = maintenanceExclusionOptions;
     return this;
   }
 

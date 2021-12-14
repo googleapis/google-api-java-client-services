@@ -255,6 +255,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ResourceUsageExportConfig desiredResourceUsageExportConfig;
 
   /**
+   * ServiceExternalIPsConfig specifies the config for the use of Services with ExternalIPs field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceExternalIPsConfig desiredServiceExternalIpsConfig;
+
+  /**
    * Configuration for Shielded Nodes.
    * The value may be {@code null}.
    */
@@ -802,6 +809,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
     this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * ServiceExternalIPsConfig specifies the config for the use of Services with ExternalIPs field.
+   * @return value or {@code null} for none
+   */
+  public ServiceExternalIPsConfig getDesiredServiceExternalIpsConfig() {
+    return desiredServiceExternalIpsConfig;
+  }
+
+  /**
+   * ServiceExternalIPsConfig specifies the config for the use of Services with ExternalIPs field.
+   * @param desiredServiceExternalIpsConfig desiredServiceExternalIpsConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredServiceExternalIpsConfig(ServiceExternalIPsConfig desiredServiceExternalIpsConfig) {
+    this.desiredServiceExternalIpsConfig = desiredServiceExternalIpsConfig;
     return this;
   }
 

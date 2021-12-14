@@ -38,6 +38,14 @@ public final class PubSub extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enabled;
 
   /**
+   * Allows filtering to one or more specific event types. If no filter is specified, or if a filter
+   * is specified with no event types, all event types will be sent
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Filter filter;
+
+  /**
    * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is
    * `projects/{project}/topics/{topic}`.
    * The value may be {@code null}.
@@ -59,6 +67,25 @@ public final class PubSub extends com.google.api.client.json.GenericJson {
    */
   public PubSub setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Allows filtering to one or more specific event types. If no filter is specified, or if a filter
+   * is specified with no event types, all event types will be sent
+   * @return value or {@code null} for none
+   */
+  public Filter getFilter() {
+    return filter;
+  }
+
+  /**
+   * Allows filtering to one or more specific event types. If no filter is specified, or if a filter
+   * is specified with no event types, all event types will be sent
+   * @param filter filter or {@code null} for none
+   */
+  public PubSub setFilter(Filter filter) {
+    this.filter = filter;
     return this;
   }
 

@@ -87,6 +87,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String privateIpv6GoogleAccess;
 
   /**
+   * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceExternalIPsConfig serviceExternalIpsConfig;
+
+  /**
    * Output only. The relative name of the Google Compute Engine
    * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
    * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
@@ -225,6 +232,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
     this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+    return this;
+  }
+
+  /**
+   * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+   * @return value or {@code null} for none
+   */
+  public ServiceExternalIPsConfig getServiceExternalIpsConfig() {
+    return serviceExternalIpsConfig;
+  }
+
+  /**
+   * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+   * @param serviceExternalIpsConfig serviceExternalIpsConfig or {@code null} for none
+   */
+  public NetworkConfig setServiceExternalIpsConfig(ServiceExternalIPsConfig serviceExternalIpsConfig) {
+    this.serviceExternalIpsConfig = serviceExternalIpsConfig;
     return this;
   }
 

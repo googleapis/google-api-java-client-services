@@ -37,10 +37,11 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   private java.lang.String projectId;
 
   /**
-   * Required. The job to update. `transferJob` is expected to specify only four fields:
-   * description, transfer_spec, notification_config, and status. An `UpdateTransferJobRequest` that
-   * specifies other fields are rejected with the error INVALID_ARGUMENT. Updating a job status to
-   * DELETED requires `storagetransfer.jobs.delete` permissions.
+   * Required. The job to update. `transferJob` is expected to specify one or more of five fields:
+   * description, transfer_spec, notification_config, [logging_config[TransferJob.logging_config],
+   * and status. An `UpdateTransferJobRequest` that specifies other fields are rejected with the
+   * error INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
+   * permissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,10 +49,10 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * The field mask of the fields in `transferJob` that are to be updated in this request. Fields in
-   * `transferJob` that can be updated are: description, transfer_spec, notification_config, and
-   * status. To update the `transfer_spec` of the job, a complete transfer specification must be
-   * provided. An incomplete specification missing any required fields is rejected with the error
-   * INVALID_ARGUMENT.
+   * `transferJob` that can be updated are: description, transfer_spec, notification_config,
+   * logging_config, and status. To update the `transfer_spec` of the job, a complete transfer
+   * specification must be provided. An incomplete specification missing any required fields is
+   * rejected with the error INVALID_ARGUMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,10 +76,11 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The job to update. `transferJob` is expected to specify only four fields:
-   * description, transfer_spec, notification_config, and status. An `UpdateTransferJobRequest` that
-   * specifies other fields are rejected with the error INVALID_ARGUMENT. Updating a job status to
-   * DELETED requires `storagetransfer.jobs.delete` permissions.
+   * Required. The job to update. `transferJob` is expected to specify one or more of five fields:
+   * description, transfer_spec, notification_config, [logging_config[TransferJob.logging_config],
+   * and status. An `UpdateTransferJobRequest` that specifies other fields are rejected with the
+   * error INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
+   * permissions.
    * @return value or {@code null} for none
    */
   public TransferJob getTransferJob() {
@@ -86,10 +88,11 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The job to update. `transferJob` is expected to specify only four fields:
-   * description, transfer_spec, notification_config, and status. An `UpdateTransferJobRequest` that
-   * specifies other fields are rejected with the error INVALID_ARGUMENT. Updating a job status to
-   * DELETED requires `storagetransfer.jobs.delete` permissions.
+   * Required. The job to update. `transferJob` is expected to specify one or more of five fields:
+   * description, transfer_spec, notification_config, [logging_config[TransferJob.logging_config],
+   * and status. An `UpdateTransferJobRequest` that specifies other fields are rejected with the
+   * error INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
+   * permissions.
    * @param transferJob transferJob or {@code null} for none
    */
   public UpdateTransferJobRequest setTransferJob(TransferJob transferJob) {
@@ -99,10 +102,10 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * The field mask of the fields in `transferJob` that are to be updated in this request. Fields in
-   * `transferJob` that can be updated are: description, transfer_spec, notification_config, and
-   * status. To update the `transfer_spec` of the job, a complete transfer specification must be
-   * provided. An incomplete specification missing any required fields is rejected with the error
-   * INVALID_ARGUMENT.
+   * `transferJob` that can be updated are: description, transfer_spec, notification_config,
+   * logging_config, and status. To update the `transfer_spec` of the job, a complete transfer
+   * specification must be provided. An incomplete specification missing any required fields is
+   * rejected with the error INVALID_ARGUMENT.
    * @return value or {@code null} for none
    */
   public String getUpdateTransferJobFieldMask() {
@@ -111,10 +114,10 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * The field mask of the fields in `transferJob` that are to be updated in this request. Fields in
-   * `transferJob` that can be updated are: description, transfer_spec, notification_config, and
-   * status. To update the `transfer_spec` of the job, a complete transfer specification must be
-   * provided. An incomplete specification missing any required fields is rejected with the error
-   * INVALID_ARGUMENT.
+   * `transferJob` that can be updated are: description, transfer_spec, notification_config,
+   * logging_config, and status. To update the `transfer_spec` of the job, a complete transfer
+   * specification must be provided. An incomplete specification missing any required fields is
+   * rejected with the error INVALID_ARGUMENT.
    * @param updateTransferJobFieldMask updateTransferJobFieldMask or {@code null} for none
    */
   public UpdateTransferJobRequest setUpdateTransferJobFieldMask(String updateTransferJobFieldMask) {

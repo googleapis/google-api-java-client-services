@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Model definition for GetCustomerIndexStatsResponse.
+ * Response format for search application stats for a customer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,70 +27,70 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetCustomerIndexStatsResponse extends com.google.api.client.json.GenericJson {
+public final class GetCustomerSearchApplicationStatsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Average item count for the given date range for which billing is done.
+   * Average search application count for the given date range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long averageIndexedItemCount;
+  private java.lang.Long averageSearchApplicationCount;
 
   /**
-   * Summary of indexed item counts, one for each day in the requested range.
+   * Search application stats by date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CustomerIndexStats> stats;
+  private java.util.List<CustomerSearchApplicationStats> stats;
 
   static {
-    // hack to force ProGuard to consider CustomerIndexStats used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider CustomerSearchApplicationStats used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CustomerIndexStats.class);
+    com.google.api.client.util.Data.nullOf(CustomerSearchApplicationStats.class);
   }
 
   /**
-   * Average item count for the given date range for which billing is done.
+   * Average search application count for the given date range.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getAverageIndexedItemCount() {
-    return averageIndexedItemCount;
+  public java.lang.Long getAverageSearchApplicationCount() {
+    return averageSearchApplicationCount;
   }
 
   /**
-   * Average item count for the given date range for which billing is done.
-   * @param averageIndexedItemCount averageIndexedItemCount or {@code null} for none
+   * Average search application count for the given date range.
+   * @param averageSearchApplicationCount averageSearchApplicationCount or {@code null} for none
    */
-  public GetCustomerIndexStatsResponse setAverageIndexedItemCount(java.lang.Long averageIndexedItemCount) {
-    this.averageIndexedItemCount = averageIndexedItemCount;
+  public GetCustomerSearchApplicationStatsResponse setAverageSearchApplicationCount(java.lang.Long averageSearchApplicationCount) {
+    this.averageSearchApplicationCount = averageSearchApplicationCount;
     return this;
   }
 
   /**
-   * Summary of indexed item counts, one for each day in the requested range.
+   * Search application stats by date.
    * @return value or {@code null} for none
    */
-  public java.util.List<CustomerIndexStats> getStats() {
+  public java.util.List<CustomerSearchApplicationStats> getStats() {
     return stats;
   }
 
   /**
-   * Summary of indexed item counts, one for each day in the requested range.
+   * Search application stats by date.
    * @param stats stats or {@code null} for none
    */
-  public GetCustomerIndexStatsResponse setStats(java.util.List<CustomerIndexStats> stats) {
+  public GetCustomerSearchApplicationStatsResponse setStats(java.util.List<CustomerSearchApplicationStats> stats) {
     this.stats = stats;
     return this;
   }
 
   @Override
-  public GetCustomerIndexStatsResponse set(String fieldName, Object value) {
-    return (GetCustomerIndexStatsResponse) super.set(fieldName, value);
+  public GetCustomerSearchApplicationStatsResponse set(String fieldName, Object value) {
+    return (GetCustomerSearchApplicationStatsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GetCustomerIndexStatsResponse clone() {
-    return (GetCustomerIndexStatsResponse) super.clone();
+  public GetCustomerSearchApplicationStatsResponse clone() {
+    return (GetCustomerSearchApplicationStatsResponse) super.clone();
   }
 
 }

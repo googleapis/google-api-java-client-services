@@ -1922,7 +1922,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * version in the index to the version of the queued Item using lexical ordering. Cloud
            * Search Indexing won't delete any queued item with a version value that is less than or
            * equal to the version of the currently indexed item. The maximum length for this field
-           * is 1024 bytes.
+           * is 1024 bytes. See [this guide](https://developers.devsite.corp.google.com/cloud-
+           * search/docs/guides/operations) to understand how item version affects reindexing after
+           * delete item.
            */
           @com.google.api.client.util.Key
           private java.lang.String version;
@@ -1931,7 +1933,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          the version from the datasource as a byte string and compares the Item version in the index to the
          version of the queued Item using lexical ordering. Cloud Search Indexing won't delete any queued
          item with a version value that is less than or equal to the version of the currently indexed item.
-         The maximum length for this field is 1024 bytes.
+         The maximum length for this field is 1024 bytes. See [this
+         guide](https://developers.devsite.corp.google.com/cloud-search/docs/guides/operations) to
+         understand how item version affects reindexing after delete item.
            */
           public java.lang.String getVersion() {
             return version;
@@ -1943,7 +1947,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * version in the index to the version of the queued Item using lexical ordering. Cloud
            * Search Indexing won't delete any queued item with a version value that is less than or
            * equal to the version of the currently indexed item. The maximum length for this field
-           * is 1024 bytes.
+           * is 1024 bytes. See [this guide](https://developers.devsite.corp.google.com/cloud-
+           * search/docs/guides/operations) to understand how item version affects reindexing after
+           * delete item.
            */
           public Delete setVersion(java.lang.String version) {
             this.version = version;
@@ -6690,6 +6696,212 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       @Override
       public GetQuery set(String parameterName, Object value) {
         return (GetQuery) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get search application stats for customer. **Note:** This API requires a standard end user
+     * account to execute.
+     *
+     * Create a request for the method "stats.getSearchapplication".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link GetSearchapplication#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public GetSearchapplication getSearchapplication() throws java.io.IOException {
+      GetSearchapplication result = new GetSearchapplication();
+      initialize(result);
+      return result;
+    }
+
+    public class GetSearchapplication extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.GetCustomerSearchApplicationStatsResponse> {
+
+      private static final String REST_PATH = "v1/stats/searchapplication";
+
+      /**
+       * Get search application stats for customer. **Note:** This API requires a standard end user
+       * account to execute.
+       *
+       * Create a request for the method "stats.getSearchapplication".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link GetSearchapplication#execute()} method to invoke the
+       * remote operation. <p> {@link GetSearchapplication#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetSearchapplication() {
+        super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.GetCustomerSearchApplicationStatsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSearchapplication set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSearchapplication) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSearchapplication setAccessToken(java.lang.String accessToken) {
+        return (GetSearchapplication) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSearchapplication setAlt(java.lang.String alt) {
+        return (GetSearchapplication) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSearchapplication setCallback(java.lang.String callback) {
+        return (GetSearchapplication) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSearchapplication setFields(java.lang.String fields) {
+        return (GetSearchapplication) super.setFields(fields);
+      }
+
+      @Override
+      public GetSearchapplication setKey(java.lang.String key) {
+        return (GetSearchapplication) super.setKey(key);
+      }
+
+      @Override
+      public GetSearchapplication setOauthToken(java.lang.String oauthToken) {
+        return (GetSearchapplication) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSearchapplication setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSearchapplication) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSearchapplication setQuotaUser(java.lang.String quotaUser) {
+        return (GetSearchapplication) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSearchapplication setUploadType(java.lang.String uploadType) {
+        return (GetSearchapplication) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSearchapplication setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSearchapplication) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("endDate.day")
+      private java.lang.Integer endDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getEndDateDay() {
+        return endDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetSearchapplication setEndDateDay(java.lang.Integer endDateDay) {
+        this.endDateDay = endDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("endDate.month")
+      private java.lang.Integer endDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getEndDateMonth() {
+        return endDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetSearchapplication setEndDateMonth(java.lang.Integer endDateMonth) {
+        this.endDateMonth = endDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("endDate.year")
+      private java.lang.Integer endDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getEndDateYear() {
+        return endDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetSearchapplication setEndDateYear(java.lang.Integer endDateYear) {
+        this.endDateYear = endDateYear;
+        return this;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("startDate.day")
+      private java.lang.Integer startDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getStartDateDay() {
+        return startDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetSearchapplication setStartDateDay(java.lang.Integer startDateDay) {
+        this.startDateDay = startDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("startDate.month")
+      private java.lang.Integer startDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getStartDateMonth() {
+        return startDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetSearchapplication setStartDateMonth(java.lang.Integer startDateMonth) {
+        this.startDateMonth = startDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("startDate.year")
+      private java.lang.Integer startDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getStartDateYear() {
+        return startDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetSearchapplication setStartDateYear(java.lang.Integer startDateYear) {
+        this.startDateYear = startDateYear;
+        return this;
+      }
+
+      @Override
+      public GetSearchapplication set(String parameterName, Object value) {
+        return (GetSearchapplication) super.set(parameterName, value);
       }
     }
     /**

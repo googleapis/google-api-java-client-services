@@ -37,6 +37,15 @@ public final class ItemCountByStatus extends com.google.api.client.json.GenericJ
   private java.lang.Long count;
 
   /**
+   * Number of items matching the status code for which billing is done. This excludes virtual
+   * container items from the total count. This count would not be applicable for items with ERROR
+   * or NEW_ITEM status code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long indexedItemsCount;
+
+  /**
    * Status of the items.
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class ItemCountByStatus extends com.google.api.client.json.GenericJ
    */
   public ItemCountByStatus setCount(java.lang.Long count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * Number of items matching the status code for which billing is done. This excludes virtual
+   * container items from the total count. This count would not be applicable for items with ERROR
+   * or NEW_ITEM status code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getIndexedItemsCount() {
+    return indexedItemsCount;
+  }
+
+  /**
+   * Number of items matching the status code for which billing is done. This excludes virtual
+   * container items from the total count. This count would not be applicable for items with ERROR
+   * or NEW_ITEM status code.
+   * @param indexedItemsCount indexedItemsCount or {@code null} for none
+   */
+  public ItemCountByStatus setIndexedItemsCount(java.lang.Long indexedItemsCount) {
+    this.indexedItemsCount = indexedItemsCount;
     return this;
   }
 

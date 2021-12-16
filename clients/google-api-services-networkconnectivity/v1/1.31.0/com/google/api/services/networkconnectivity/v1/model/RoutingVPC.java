@@ -31,11 +31,44 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class RoutingVPC extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. If true, indicates that this VPC network is currently associated with spokes that
+   * use the data transfer feature (spokes where the site_to_site_data_transfer field is set to
+   * true). If you create new spokes that use data transfer, they must be associated with this VPC
+   * network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requiredForNewSiteToSiteDataTransferSpokes;
+
+  /**
    * The URI of the VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Output only. If true, indicates that this VPC network is currently associated with spokes that
+   * use the data transfer feature (spokes where the site_to_site_data_transfer field is set to
+   * true). If you create new spokes that use data transfer, they must be associated with this VPC
+   * network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequiredForNewSiteToSiteDataTransferSpokes() {
+    return requiredForNewSiteToSiteDataTransferSpokes;
+  }
+
+  /**
+   * Output only. If true, indicates that this VPC network is currently associated with spokes that
+   * use the data transfer feature (spokes where the site_to_site_data_transfer field is set to
+   * true). If you create new spokes that use data transfer, they must be associated with this VPC
+   * network.
+   * @param requiredForNewSiteToSiteDataTransferSpokes requiredForNewSiteToSiteDataTransferSpokes or {@code null} for none
+   */
+  public RoutingVPC setRequiredForNewSiteToSiteDataTransferSpokes(java.lang.Boolean requiredForNewSiteToSiteDataTransferSpokes) {
+    this.requiredForNewSiteToSiteDataTransferSpokes = requiredForNewSiteToSiteDataTransferSpokes;
+    return this;
+  }
 
   /**
    * The URI of the VPC network.

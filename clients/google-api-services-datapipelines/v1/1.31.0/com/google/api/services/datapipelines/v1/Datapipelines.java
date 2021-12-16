@@ -173,8 +173,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
     public class Locations {
 
       /**
-       * Lists pipelines. Returns a "NOT_FOUND" error if the list is empty. Returns a "FORBIDDEN" error if
-       * the caller doesn't have permission to access it.
+       * Lists pipelines. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
        *
        * Create a request for the method "locations.listPipelines".
        *
@@ -198,8 +197,8 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Lists pipelines. Returns a "NOT_FOUND" error if the list is empty. Returns a "FORBIDDEN" error
-         * if the caller doesn't have permission to access it.
+         * Lists pipelines. Returns a "FORBIDDEN" error if the caller doesn't have permission to access
+         * it.
          *
          * Create a request for the method "locations.listPipelines".
          *
@@ -316,9 +315,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
          * An expression for filtering the results of the request. If unspecified, all pipelines
          * will be returned. Multiple filters can be applied and must be comma separated. Fields
          * eligible for filtering are: + `type`: The type of the pipeline (streaming or batch).
-         * Allowed values are `ALL`, `BATCH`, and `STREAMING`. + `executor_type`: The type of
-         * pipeline execution layer. This is always Dataflow for now, but more executors may be
-         * added later. Allowed values are `ALL` and `DATAFLOW`. + `status`: The activity status of
+         * Allowed values are `ALL`, `BATCH`, and `STREAMING`. + `status`: The activity status of
          * the pipeline. Allowed values are `ALL`, `ACTIVE`, `ARCHIVED`, and `PAUSED`. For example,
          * to limit results to active batch processing pipelines: type:BATCH,status:ACTIVE
          */
@@ -328,11 +325,9 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
         /** An expression for filtering the results of the request. If unspecified, all pipelines will be
        returned. Multiple filters can be applied and must be comma separated. Fields eligible for
        filtering are: + `type`: The type of the pipeline (streaming or batch). Allowed values are `ALL`,
-       `BATCH`, and `STREAMING`. + `executor_type`: The type of pipeline execution layer. This is always
-       Dataflow for now, but more executors may be added later. Allowed values are `ALL` and `DATAFLOW`. +
-       `status`: The activity status of the pipeline. Allowed values are `ALL`, `ACTIVE`, `ARCHIVED`, and
-       `PAUSED`. For example, to limit results to active batch processing pipelines:
-       type:BATCH,status:ACTIVE
+       `BATCH`, and `STREAMING`. + `status`: The activity status of the pipeline. Allowed values are
+       `ALL`, `ACTIVE`, `ARCHIVED`, and `PAUSED`. For example, to limit results to active batch processing
+       pipelines: type:BATCH,status:ACTIVE
          */
         public java.lang.String getFilter() {
           return filter;
@@ -342,9 +337,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
          * An expression for filtering the results of the request. If unspecified, all pipelines
          * will be returned. Multiple filters can be applied and must be comma separated. Fields
          * eligible for filtering are: + `type`: The type of the pipeline (streaming or batch).
-         * Allowed values are `ALL`, `BATCH`, and `STREAMING`. + `executor_type`: The type of
-         * pipeline execution layer. This is always Dataflow for now, but more executors may be
-         * added later. Allowed values are `ALL` and `DATAFLOW`. + `status`: The activity status of
+         * Allowed values are `ALL`, `BATCH`, and `STREAMING`. + `status`: The activity status of
          * the pipeline. Allowed values are `ALL`, `ACTIVE`, `ARCHIVED`, and `PAUSED`. For example,
          * to limit results to active batch processing pipelines: type:BATCH,status:ACTIVE
          */
@@ -717,7 +710,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the datapipelines server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The pipeeline name. For example:
+         * @param name Required. The pipeline name. For example:
          *        `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
          * @return the request
          */
@@ -745,7 +738,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The pipeeline name. For example:
+           * @param name Required. The pipeline name. For example:
          *        `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
            * @since 1.13
            */
@@ -825,13 +818,13 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The pipeeline name. For example:
+           * Required. The pipeline name. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The pipeeline name. For example:
+          /** Required. The pipeline name. For example:
          `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
            */
           public java.lang.String getName() {
@@ -839,7 +832,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The pipeeline name. For example:
+           * Required. The pipeline name. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
            */
           public Get setName(java.lang.String name) {
@@ -858,7 +851,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates a pipeline. If successful, the updated [Pipeline] is returned. Returns `NOT_FOUND` if the
+         * Updates a pipeline. If successful, the updated Pipeline is returned. Returns `NOT_FOUND` if the
          * pipeline doesn't exist. If UpdatePipeline does not return successfully, you can retry the
          * UpdatePipeline request until you receive a successful response.
          *
@@ -870,13 +863,13 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
          * @param name The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. *
          *        `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and
          *        periods (.). For more information, see [Identifying projects](https://cloud.google.com
-         *        /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is
-         *        the canonical ID for the pipeline's location. The list of available locations can be
-         *        obtained by calling ListLocations. Note that the Data Pipelines service is not available
-         *        in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only
-         *        available in [App Engine regions](https://cloud.google.com/about/locations#region). *
-         *        `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and
-         *        location.
+         *        /resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID`
+         *        is the canonical ID for the pipeline's location. The list of available locations can be
+         *        obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data
+         *        Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App
+         *        Engine application, so it's only available in [App Engine
+         *        regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of
+         *        the pipeline. Must be unique for the selected project and location.
          * @param content the {@link com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1Pipeline}
          * @return the request
          */
@@ -894,8 +887,8 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
 
           /**
-           * Updates a pipeline. If successful, the updated [Pipeline] is returned. Returns `NOT_FOUND` if
-           * the pipeline doesn't exist. If UpdatePipeline does not return successfully, you can retry the
+           * Updates a pipeline. If successful, the updated Pipeline is returned. Returns `NOT_FOUND` if the
+           * pipeline doesn't exist. If UpdatePipeline does not return successfully, you can retry the
            * UpdatePipeline request until you receive a successful response.
            *
            * Create a request for the method "pipelines.patch".
@@ -909,13 +902,13 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
            * @param name The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. *
          *        `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and
          *        periods (.). For more information, see [Identifying projects](https://cloud.google.com
-         *        /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is
-         *        the canonical ID for the pipeline's location. The list of available locations can be
-         *        obtained by calling ListLocations. Note that the Data Pipelines service is not available
-         *        in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only
-         *        available in [App Engine regions](https://cloud.google.com/about/locations#region). *
-         *        `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and
-         *        location.
+         *        /resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID`
+         *        is the canonical ID for the pipeline's location. The list of available locations can be
+         *        obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data
+         *        Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App
+         *        Engine application, so it's only available in [App Engine
+         *        regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of
+         *        the pipeline. Must be unique for the selected project and location.
            * @param content the {@link com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1Pipeline}
            * @since 1.13
            */
@@ -989,11 +982,11 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
            * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can
            * contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.).
            * For more information, see [Identifying projects](https://cloud.google.com/resource-
-           * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
+           * manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the
            * canonical ID for the pipeline's location. The list of available locations can be
-           * obtained by calling ListLocations. Note that the Data Pipelines service is not
-           * available in all regions. It depends on Cloud Scheduler, an App Engine application, so
-           * it's only available in [App Engine
+           * obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data
+           * Pipelines service is not available in all regions. It depends on Cloud Scheduler, an
+           * App Engine application, so it's only available in [App Engine
            * regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of
            * the pipeline. Must be unique for the selected project and location.
            */
@@ -1003,12 +996,12 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           /** The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
          * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and
          periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-
-         manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID
+         manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID
          for the pipeline's location. The list of available locations can be obtained by calling
-         ListLocations. Note that the Data Pipelines service is not available in all regions. It depends on
-         Cloud Scheduler, an App Engine application, so it's only available in [App Engine
-         regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the
-         pipeline. Must be unique for the selected project and location.
+         `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not
+         available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only
+         available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID`
+         is the ID of the pipeline. Must be unique for the selected project and location.
            */
           public java.lang.String getName() {
             return name;
@@ -1019,11 +1012,11 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
            * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can
            * contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.).
            * For more information, see [Identifying projects](https://cloud.google.com/resource-
-           * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
+           * manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the
            * canonical ID for the pipeline's location. The list of available locations can be
-           * obtained by calling ListLocations. Note that the Data Pipelines service is not
-           * available in all regions. It depends on Cloud Scheduler, an App Engine application, so
-           * it's only available in [App Engine
+           * obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data
+           * Pipelines service is not available in all regions. It depends on Cloud Scheduler, an
+           * App Engine application, so it's only available in [App Engine
            * regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of
            * the pipeline. Must be unique for the selected project and location.
            */
@@ -1061,7 +1054,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
         /**
          * Creates a job for the specified pipeline directly. You can use this method when the internal
          * scheduler is not configured and you want to trigger the job directly or through an external
-         * system. Returns a "NOT_FOUND" error if the pipeline doesn't exist. Returns a "FOBIDDEN" error if
+         * system. Returns a "NOT_FOUND" error if the pipeline doesn't exist. Returns a "FORBIDDEN" error if
          * the user doesn't have permission to access the pipeline or run jobs for the pipeline.
          *
          * Create a request for the method "pipelines.run".
@@ -1090,7 +1083,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           /**
            * Creates a job for the specified pipeline directly. You can use this method when the internal
            * scheduler is not configured and you want to trigger the job directly or through an external
-           * system. Returns a "NOT_FOUND" error if the pipeline doesn't exist. Returns a "FOBIDDEN" error
+           * system. Returns a "NOT_FOUND" error if the pipeline doesn't exist. Returns a "FORBIDDEN" error
            * if the user doesn't have permission to access the pipeline or run jobs for the pipeline.
            *
            * Create a request for the method "pipelines.run".
@@ -1205,8 +1198,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
         }
         /**
          * Freezes pipeline execution permanently. If there's a corresponding scheduler entry, it's deleted,
-         * and the pipeline state is changed to "ARCHIVED". However, pipeline metadata is retained. Upon
-         * success, the pipeline state is updated to ARCHIVED.
+         * and the pipeline state is changed to "ARCHIVED". However, pipeline metadata is retained.
          *
          * Create a request for the method "pipelines.stop".
          *
@@ -1234,7 +1226,7 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           /**
            * Freezes pipeline execution permanently. If there's a corresponding scheduler entry, it's
            * deleted, and the pipeline state is changed to "ARCHIVED". However, pipeline metadata is
-           * retained. Upon success, the pipeline state is updated to ARCHIVED.
+           * retained.
            *
            * Create a request for the method "pipelines.stop".
            *

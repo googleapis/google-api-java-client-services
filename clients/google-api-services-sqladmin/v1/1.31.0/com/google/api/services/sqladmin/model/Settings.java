@@ -117,7 +117,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * Configuration specific to read replica instances. Indicates whether replication is enabled or
-   * not.
+   * not. WARNING: Changing this restarts the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +231,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageAutoResizeLimit;
 
   /**
-   * The tier (or machine type) for this instance, for example **db-custom-1-3840**.
+   * The tier (or machine type) for this instance, for example **db-custom-1-3840**. WARNING:
+   * Changing this restarts the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -436,7 +437,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * Configuration specific to read replica instances. Indicates whether replication is enabled or
-   * not.
+   * not. WARNING: Changing this restarts the instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDatabaseReplicationEnabled() {
@@ -445,7 +446,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * Configuration specific to read replica instances. Indicates whether replication is enabled or
-   * not.
+   * not. WARNING: Changing this restarts the instance.
    * @param databaseReplicationEnabled databaseReplicationEnabled or {@code null} for none
    */
   public Settings setDatabaseReplicationEnabled(java.lang.Boolean databaseReplicationEnabled) {
@@ -695,7 +696,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example **db-custom-1-3840**.
+   * The tier (or machine type) for this instance, for example **db-custom-1-3840**. WARNING:
+   * Changing this restarts the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -703,7 +705,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example **db-custom-1-3840**.
+   * The tier (or machine type) for this instance, for example **db-custom-1-3840**. WARNING:
+   * Changing this restarts the instance.
    * @param tier tier or {@code null} for none
    */
   public Settings setTier(java.lang.String tier) {

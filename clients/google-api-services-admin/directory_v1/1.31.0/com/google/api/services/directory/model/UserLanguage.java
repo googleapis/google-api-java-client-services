@@ -30,36 +30,35 @@ package com.google.api.services.directory.model;
 public final class UserLanguage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Other language. User can provide own language name if there is no corresponding ISO 639
-   * language code. If this is set `languageCode` can't be set.
+   * Other language. User can provide their own language name if there is no corresponding ISO 639
+   * language code. If this is set, `languageCode` can't be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customLanguage;
 
   /**
-   * Language Code. Should be used for storing ISO 639 LanguageCode string representation for
-   * language. See the [Language Codes](/admin-sdk/directory/v1/languages) page for the list of
-   * supported codes. Valid language codes outside the supported set will be accepted by the API but
-   * may lead to unexpected behavior. Illegal values cause SchemaException. If this is set
-   * `customLanguage` can't be set.
+   * ISO 639 string representation of a language. See [Language Codes](/admin-
+   * sdk/directory/v1/languages) for the list of supported codes. Valid language codes outside the
+   * supported set will be accepted by the API but may lead to unexpected behavior. Illegal values
+   * cause `SchemaException`. If this is set, `customLanguage` can't be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Preference. Optional field, which if present, controls whether the specified `languageCode` is
-   * stored as the user's preferred language. If `customLanguage` is set, this can't be set. Allowed
-   * values are `preferred` and `not_preferred`.
+   * Optional. If present, controls whether the specified `languageCode` is the user's preferred
+   * language. If `customLanguage` is set, this can't be set. Allowed values are `preferred` and
+   * `not_preferred`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String preference;
 
   /**
-   * Other language. User can provide own language name if there is no corresponding ISO 639
-   * language code. If this is set `languageCode` can't be set.
+   * Other language. User can provide their own language name if there is no corresponding ISO 639
+   * language code. If this is set, `languageCode` can't be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomLanguage() {
@@ -67,8 +66,8 @@ public final class UserLanguage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Other language. User can provide own language name if there is no corresponding ISO 639
-   * language code. If this is set `languageCode` can't be set.
+   * Other language. User can provide their own language name if there is no corresponding ISO 639
+   * language code. If this is set, `languageCode` can't be set.
    * @param customLanguage customLanguage or {@code null} for none
    */
   public UserLanguage setCustomLanguage(java.lang.String customLanguage) {
@@ -77,11 +76,10 @@ public final class UserLanguage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Language Code. Should be used for storing ISO 639 LanguageCode string representation for
-   * language. See the [Language Codes](/admin-sdk/directory/v1/languages) page for the list of
-   * supported codes. Valid language codes outside the supported set will be accepted by the API but
-   * may lead to unexpected behavior. Illegal values cause SchemaException. If this is set
-   * `customLanguage` can't be set.
+   * ISO 639 string representation of a language. See [Language Codes](/admin-
+   * sdk/directory/v1/languages) for the list of supported codes. Valid language codes outside the
+   * supported set will be accepted by the API but may lead to unexpected behavior. Illegal values
+   * cause `SchemaException`. If this is set, `customLanguage` can't be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -89,11 +87,10 @@ public final class UserLanguage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Language Code. Should be used for storing ISO 639 LanguageCode string representation for
-   * language. See the [Language Codes](/admin-sdk/directory/v1/languages) page for the list of
-   * supported codes. Valid language codes outside the supported set will be accepted by the API but
-   * may lead to unexpected behavior. Illegal values cause SchemaException. If this is set
-   * `customLanguage` can't be set.
+   * ISO 639 string representation of a language. See [Language Codes](/admin-
+   * sdk/directory/v1/languages) for the list of supported codes. Valid language codes outside the
+   * supported set will be accepted by the API but may lead to unexpected behavior. Illegal values
+   * cause `SchemaException`. If this is set, `customLanguage` can't be set.
    * @param languageCode languageCode or {@code null} for none
    */
   public UserLanguage setLanguageCode(java.lang.String languageCode) {
@@ -102,9 +99,9 @@ public final class UserLanguage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Preference. Optional field, which if present, controls whether the specified `languageCode` is
-   * stored as the user's preferred language. If `customLanguage` is set, this can't be set. Allowed
-   * values are `preferred` and `not_preferred`.
+   * Optional. If present, controls whether the specified `languageCode` is the user's preferred
+   * language. If `customLanguage` is set, this can't be set. Allowed values are `preferred` and
+   * `not_preferred`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreference() {
@@ -112,9 +109,9 @@ public final class UserLanguage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Preference. Optional field, which if present, controls whether the specified `languageCode` is
-   * stored as the user's preferred language. If `customLanguage` is set, this can't be set. Allowed
-   * values are `preferred` and `not_preferred`.
+   * Optional. If present, controls whether the specified `languageCode` is the user's preferred
+   * language. If `customLanguage` is set, this can't be set. Allowed values are `preferred` and
+   * `not_preferred`.
    * @param preference preference or {@code null} for none
    */
   public UserLanguage setPreference(java.lang.String preference) {

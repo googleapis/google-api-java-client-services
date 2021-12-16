@@ -64,8 +64,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.Long currentDiskSize;
 
   /**
-   * Output only. The databaseInstalledVersion stores the current fully resolved database version
-   * running on the instance including minor version such as MYSQL_5_6_50
+   * Output only. Stores the current database version running on the instance including minor
+   * version such as **MYSQL_8_0_18**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The Compute Engine zone that the instance is currently serving from. This value could be
    * different from the zone that was specified when the instance was created if the instance has
-   * failed over to its secondary zone.
+   * failed over to its secondary zone. WARNING: Changing this might restart the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -369,8 +369,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The databaseInstalledVersion stores the current fully resolved database version
-   * running on the instance including minor version such as MYSQL_5_6_50
+   * Output only. Stores the current database version running on the instance including minor
+   * version such as **MYSQL_8_0_18**.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseInstalledVersion() {
@@ -378,8 +378,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The databaseInstalledVersion stores the current fully resolved database version
-   * running on the instance including minor version such as MYSQL_5_6_50
+   * Output only. Stores the current database version running on the instance including minor
+   * version such as **MYSQL_8_0_18**.
    * @param databaseInstalledVersion databaseInstalledVersion or {@code null} for none
    */
   public DatabaseInstance setDatabaseInstalledVersion(java.lang.String databaseInstalledVersion) {
@@ -479,7 +479,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The Compute Engine zone that the instance is currently serving from. This value could be
    * different from the zone that was specified when the instance was created if the instance has
-   * failed over to its secondary zone.
+   * failed over to its secondary zone. WARNING: Changing this might restart the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getGceZone() {
@@ -489,7 +489,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The Compute Engine zone that the instance is currently serving from. This value could be
    * different from the zone that was specified when the instance was created if the instance has
-   * failed over to its secondary zone.
+   * failed over to its secondary zone. WARNING: Changing this might restart the instance.
    * @param gceZone gceZone or {@code null} for none
    */
   public DatabaseInstance setGceZone(java.lang.String gceZone) {

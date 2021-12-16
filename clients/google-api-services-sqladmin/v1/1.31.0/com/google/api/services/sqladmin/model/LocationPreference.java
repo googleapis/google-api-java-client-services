@@ -33,6 +33,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
 
   /**
    * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
+   * WARNING: Changing this might restart the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,8 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   private java.lang.String secondaryZone;
 
   /**
-   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).
+   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING:
+   * Changing this might restart the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +64,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
 
   /**
    * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
+   * WARNING: Changing this might restart the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getFollowGaeApplication() {
@@ -70,6 +73,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
 
   /**
    * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
+   * WARNING: Changing this might restart the instance.
    * @param followGaeApplication followGaeApplication or {@code null} for none
    */
   public LocationPreference setFollowGaeApplication(java.lang.String followGaeApplication) {
@@ -114,7 +118,8 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).
+   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING:
+   * Changing this might restart the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -122,7 +127,8 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).
+   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING:
+   * Changing this might restart the instance.
    * @param zone zone or {@code null} for none
    */
   public LocationPreference setZone(java.lang.String zone) {

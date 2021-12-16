@@ -17,7 +17,7 @@
 package com.google.api.services.datapipelines.v1.model;
 
 /**
- * The main pipeline entity and all the needed metadata to launch and manage linked jobs.
+ * The main pipeline entity and all the necessary metadata for launching and managing linked jobs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data pipelines API. For a detailed explanation see:
@@ -65,12 +65,12 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
    * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more
    * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
-   * /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the
-   * pipeline's location. The list of available locations can be obtained by calling ListLocations.
-   * Note that the Data Pipelines service is not available in all regions. It depends on Cloud
-   * Scheduler, an App Engine application, so it's only available in [App Engine
-   * regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the
-   * pipeline. Must be unique for the selected project and location.
+   * /creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the
+   * pipeline's location. The list of available locations can be obtained by calling
+   * `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not
+   * available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's
+   * only available in [App Engine regions](https://cloud.google.com/about/locations#region). *
+   * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,12 +203,12 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
    * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more
    * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
-   * /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the
-   * pipeline's location. The list of available locations can be obtained by calling ListLocations.
-   * Note that the Data Pipelines service is not available in all regions. It depends on Cloud
-   * Scheduler, an App Engine application, so it's only available in [App Engine
-   * regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the
-   * pipeline. Must be unique for the selected project and location.
+   * /creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the
+   * pipeline's location. The list of available locations can be obtained by calling
+   * `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not
+   * available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's
+   * only available in [App Engine regions](https://cloud.google.com/about/locations#region). *
+   * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -220,12 +220,12 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
    * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more
    * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
-   * /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the
-   * pipeline's location. The list of available locations can be obtained by calling ListLocations.
-   * Note that the Data Pipelines service is not available in all regions. It depends on Cloud
-   * Scheduler, an App Engine application, so it's only available in [App Engine
-   * regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the
-   * pipeline. Must be unique for the selected project and location.
+   * /creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the
+   * pipeline's location. The list of available locations can be obtained by calling
+   * `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not
+   * available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's
+   * only available in [App Engine regions](https://cloud.google.com/about/locations#region). *
+   * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatapipelinesV1Pipeline setName(java.lang.String name) {

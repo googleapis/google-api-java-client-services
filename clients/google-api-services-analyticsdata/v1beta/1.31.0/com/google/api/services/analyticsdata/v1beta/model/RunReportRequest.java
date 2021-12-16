@@ -116,8 +116,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> metricAggregations;
 
   /**
-   * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Dimensions cannot be used in this filter.
+   * The filter clause of metrics. Applied after aggregating the report's rows, similar to SQL
+   * having-clause. Dimensions cannot be used in this filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -351,8 +351,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Dimensions cannot be used in this filter.
+   * The filter clause of metrics. Applied after aggregating the report's rows, similar to SQL
+   * having-clause. Dimensions cannot be used in this filter.
    * @return value or {@code null} for none
    */
   public FilterExpression getMetricFilter() {
@@ -360,8 +360,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Dimensions cannot be used in this filter.
+   * The filter clause of metrics. Applied after aggregating the report's rows, similar to SQL
+   * having-clause. Dimensions cannot be used in this filter.
    * @param metricFilter metricFilter or {@code null} for none
    */
   public RunReportRequest setMetricFilter(FilterExpression metricFilter) {

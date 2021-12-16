@@ -4709,7 +4709,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Drops (aka deletes) a Cloud Spanner database. Completed backups for the database will be retained
-         * according to their `expire_time`.
+         * according to their `expire_time`. Note: Cloud Spanner might continue to accept requests for a few
+         * seconds after the database has been deleted.
          *
          * Create a request for the method "databases.dropDatabase".
          *
@@ -4734,7 +4735,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Drops (aka deletes) a Cloud Spanner database. Completed backups for the database will be
-           * retained according to their `expire_time`.
+           * retained according to their `expire_time`. Note: Cloud Spanner might continue to accept
+           * requests for a few seconds after the database has been deleted.
            *
            * Create a request for the method "databases.dropDatabase".
            *

@@ -18,18 +18,7 @@ package com.google.api.services.documentai.v1beta3.model;
 
 /**
  * A processor type is responsible for performing a certain document understanding task on a certain
- * type of document. All processor types are created by the documentai service internally. User will
- * only list all available processor types via UI. For different users (projects), the available
- * processor types may be different since we'll expose the access of some types via EAP
- * whitelisting. We make the ProcessorType a resource under location so we have a unified API and
- * keep the possibility that UI will load different available processor types from different
- * regions. But for alpha the behavior is that the user will always get the union of all available
- * processor types among all regions no matter which regionalized endpoint is called, and then we
- * use the 'available_locations' field to show under which regions a processor type is available.
- * For example, users can call either the 'US' or 'EU' endpoint to feach processor types. In the
- * return, we will have an 'invoice parsing' processor with 'available_locations' field only
- * containing 'US'. So the user can try to create an 'invoice parsing' processor under the location
- * 'US'. Such attempt of creating under the location 'EU' will fail. Next ID: 9.
+ * type of document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -43,8 +32,8 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the processor type allows creation. If yes, user can create a processor of this
-   * processor type. Otherwise, user needs to request access.
+   * Whether the processor type allows creation. If true, users can create a processor of this
+   * processor type. Otherwise, users need to request access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +76,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
   private java.lang.String type;
 
   /**
-   * Whether the processor type allows creation. If yes, user can create a processor of this
-   * processor type. Otherwise, user needs to request access.
+   * Whether the processor type allows creation. If true, users can create a processor of this
+   * processor type. Otherwise, users need to request access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowCreation() {
@@ -96,8 +85,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
   }
 
   /**
-   * Whether the processor type allows creation. If yes, user can create a processor of this
-   * processor type. Otherwise, user needs to request access.
+   * Whether the processor type allows creation. If true, users can create a processor of this
+   * processor type. Otherwise, users need to request access.
    * @param allowCreation allowCreation or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorType setAllowCreation(java.lang.Boolean allowCreation) {

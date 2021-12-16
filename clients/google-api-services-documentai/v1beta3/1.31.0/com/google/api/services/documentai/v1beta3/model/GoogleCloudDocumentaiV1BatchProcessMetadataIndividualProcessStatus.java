@@ -47,7 +47,7 @@ public final class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessS
   private java.lang.String inputGcsSource;
 
   /**
-   * The output_gcs_destination (in the request as 'output_gcs_destination') of the processed
+   * The output_gcs_destination (in the request as `output_gcs_destination`) of the processed
    * document if it was successful, otherwise empty.
    * The value may be {@code null}.
    */
@@ -100,7 +100,7 @@ public final class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessS
   }
 
   /**
-   * The output_gcs_destination (in the request as 'output_gcs_destination') of the processed
+   * The output_gcs_destination (in the request as `output_gcs_destination`) of the processed
    * document if it was successful, otherwise empty.
    * @return value or {@code null} for none
    */
@@ -109,7 +109,7 @@ public final class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessS
   }
 
   /**
-   * The output_gcs_destination (in the request as 'output_gcs_destination') of the processed
+   * The output_gcs_destination (in the request as `output_gcs_destination`) of the processed
    * document if it was successful, otherwise empty.
    * @param outputGcsDestination outputGcsDestination or {@code null} for none
    */

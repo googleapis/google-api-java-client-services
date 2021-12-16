@@ -48,8 +48,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   private java.lang.String displayName;
 
   /**
-   * The resource name of the processor version. Format: projects/{project}/locations/{location}/pro
-   * cessors/{processor}/processorVersions/{processor_version}
+   * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
+   * ocessors/{processor}/processorVersions/{processor_version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +97,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   }
 
   /**
-   * The resource name of the processor version. Format: projects/{project}/locations/{location}/pro
-   * cessors/{processor}/processorVersions/{processor_version}
+   * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
+   * ocessors/{processor}/processorVersions/{processor_version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -106,8 +106,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   }
 
   /**
-   * The resource name of the processor version. Format: projects/{project}/locations/{location}/pro
-   * cessors/{processor}/processorVersions/{processor_version}
+   * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
+   * ocessors/{processor}/processorVersions/{processor_version}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersion setName(java.lang.String name) {

@@ -17,8 +17,8 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The first-class citizen for DAI. Each processor defines how to extract structural information
- * from a document.
+ * The first-class citizen for Document AI. Each processor defines how to extract structural
+ * information from a document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
 
   /**
    * Output only. Immutable. The resource name of the processor. Format:
-   * projects/{project}/locations/{location}/processors/{processor}
+   * `projects/{project}/locations/{location}/processors/{processor}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +161,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
 
   /**
    * Output only. Immutable. The resource name of the processor. Format:
-   * projects/{project}/locations/{location}/processors/{processor}
+   * `projects/{project}/locations/{location}/processors/{processor}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -170,7 +170,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
 
   /**
    * Output only. Immutable. The resource name of the processor. Format:
-   * projects/{project}/locations/{location}/processors/{processor}
+   * `projects/{project}/locations/{location}/processors/{processor}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Processor setName(java.lang.String name) {

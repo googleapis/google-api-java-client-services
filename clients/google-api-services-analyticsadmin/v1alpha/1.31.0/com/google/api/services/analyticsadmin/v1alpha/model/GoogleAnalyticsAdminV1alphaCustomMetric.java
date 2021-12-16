@@ -72,6 +72,14 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
   private java.lang.String parameterName;
 
   /**
+   * Optional. Types of restricted data that this metric may contain. Required for metrics with
+   * CURRENCY measurement unit. Must be empty for metrics with a non-CURRENCY measurement unit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> restrictedMetricType;
+
+  /**
    * Required. Immutable. The scope of this custom metric.
    * The value may be {@code null}.
    */
@@ -172,6 +180,25 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
    */
   public GoogleAnalyticsAdminV1alphaCustomMetric setParameterName(java.lang.String parameterName) {
     this.parameterName = parameterName;
+    return this;
+  }
+
+  /**
+   * Optional. Types of restricted data that this metric may contain. Required for metrics with
+   * CURRENCY measurement unit. Must be empty for metrics with a non-CURRENCY measurement unit.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRestrictedMetricType() {
+    return restrictedMetricType;
+  }
+
+  /**
+   * Optional. Types of restricted data that this metric may contain. Required for metrics with
+   * CURRENCY measurement unit. Must be empty for metrics with a non-CURRENCY measurement unit.
+   * @param restrictedMetricType restrictedMetricType or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaCustomMetric setRestrictedMetricType(java.util.List<java.lang.String> restrictedMetricType) {
+    this.restrictedMetricType = restrictedMetricType;
     return this;
   }
 

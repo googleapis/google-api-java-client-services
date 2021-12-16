@@ -37,7 +37,14 @@ public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.goo
   private java.lang.String organization;
 
   /**
-   * List of GCP projects associated with the Apigee organization.
+   * GCP project associated with the Apigee organization
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectId;
+
+  /**
+   * DEPRECATED: Use `project_id`. An Apigee Organization is mapped to a single project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +68,24 @@ public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.goo
   }
 
   /**
-   * List of GCP projects associated with the Apigee organization.
+   * GCP project associated with the Apigee organization
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectId() {
+    return projectId;
+  }
+
+  /**
+   * GCP project associated with the Apigee organization
+   * @param projectId projectId or {@code null} for none
+   */
+  public GoogleCloudApigeeV1OrganizationProjectMapping setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * DEPRECATED: Use `project_id`. An Apigee Organization is mapped to a single project.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProjectIds() {
@@ -69,7 +93,7 @@ public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.goo
   }
 
   /**
-   * List of GCP projects associated with the Apigee organization.
+   * DEPRECATED: Use `project_id`. An Apigee Organization is mapped to a single project.
    * @param projectIds projectIds or {@code null} for none
    */
   public GoogleCloudApigeeV1OrganizationProjectMapping setProjectIds(java.util.List<java.lang.String> projectIds) {

@@ -39,8 +39,8 @@ public final class FilterExpression extends com.google.api.client.json.GenericJs
   private FilterExpressionList andGroup;
 
   /**
-   * A primitive filter. All fields in filter in same FilterExpression needs to be either all
-   * dimensions or metrics.
+   * A primitive filter. In the same FilterExpression, all of the filter's field names need to be
+   * either all dimensions or all metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +78,8 @@ public final class FilterExpression extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A primitive filter. All fields in filter in same FilterExpression needs to be either all
-   * dimensions or metrics.
+   * A primitive filter. In the same FilterExpression, all of the filter's field names need to be
+   * either all dimensions or all metrics.
    * @return value or {@code null} for none
    */
   public Filter getFilter() {
@@ -87,8 +87,8 @@ public final class FilterExpression extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A primitive filter. All fields in filter in same FilterExpression needs to be either all
-   * dimensions or metrics.
+   * A primitive filter. In the same FilterExpression, all of the filter's field names need to be
+   * either all dimensions or all metrics.
    * @param filter filter or {@code null} for none
    */
   public FilterExpression setFilter(Filter filter) {

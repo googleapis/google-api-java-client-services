@@ -85,8 +85,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue ext
 
   /**
    * Optional. An optional field to store a normalized string. For some entity types, one of
-   * respective 'structured_value' fields may also be populated. Also not all the types of
-   * 'structured_value' will be normalized. For example, some processors may not generate float or
+   * respective `structured_value` fields may also be populated. Also not all the types of
+   * `structured_value` will be normalized. For example, some processors may not generate float or
    * int normalized text by default. Below are sample formats mapped to structured values. -
    * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date type (`date_value`)
    * is in the ISO 8601 text format. - Datetime type (`datetime_value`) is in the ISO 8601 text
@@ -225,8 +225,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue ext
 
   /**
    * Optional. An optional field to store a normalized string. For some entity types, one of
-   * respective 'structured_value' fields may also be populated. Also not all the types of
-   * 'structured_value' will be normalized. For example, some processors may not generate float or
+   * respective `structured_value` fields may also be populated. Also not all the types of
+   * `structured_value` will be normalized. For example, some processors may not generate float or
    * int normalized text by default. Below are sample formats mapped to structured values. -
    * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date type (`date_value`)
    * is in the ISO 8601 text format. - Datetime type (`datetime_value`) is in the ISO 8601 text
@@ -239,8 +239,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue ext
 
   /**
    * Optional. An optional field to store a normalized string. For some entity types, one of
-   * respective 'structured_value' fields may also be populated. Also not all the types of
-   * 'structured_value' will be normalized. For example, some processors may not generate float or
+   * respective `structured_value` fields may also be populated. Also not all the types of
+   * `structured_value` will be normalized. For example, some processors may not generate float or
    * int normalized text by default. Below are sample formats mapped to structured values. -
    * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date type (`date_value`)
    * is in the ISO 8601 text format. - Datetime type (`datetime_value`) is in the ISO 8601 text

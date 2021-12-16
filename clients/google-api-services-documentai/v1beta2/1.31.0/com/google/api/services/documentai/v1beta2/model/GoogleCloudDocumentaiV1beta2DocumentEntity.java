@@ -17,8 +17,8 @@
 package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * An entity that could be a phrase in the text or a property belongs to the document. It is a known
- * entity type, such as a person, an organization, or location.
+ * An entity that could be a phrase in the text or a property that belongs to the document. It is a
+ * known entity type, such as a person, an organization, or location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

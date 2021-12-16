@@ -1276,17 +1276,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitPath;
 
-      /** The full path of the organizational unit or its unique ID.
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID.
        */
       public java.lang.String getOrgUnitPath() {
         return orgUnitPath;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       public List setOrgUnitPath(java.lang.String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
@@ -8375,7 +8375,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param orgUnitPath The full path of the organizational unit or its unique ID.
+     * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @return the request
      */
     public Delete delete(java.lang.String customerId, java.lang.String orgUnitPath) throws java.io.IOException {
@@ -8404,7 +8404,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param orgUnitPath The full path of the organizational unit or its unique ID.
+       * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @since 1.13
        */
       protected Delete(java.lang.String customerId, java.lang.String orgUnitPath) {
@@ -8501,17 +8501,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitPath;
 
-      /** The full path of the organizational unit or its unique ID.
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID.
        */
       public java.lang.String getOrgUnitPath() {
         return orgUnitPath;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       public Delete setOrgUnitPath(java.lang.String orgUnitPath) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ORG_UNIT_PATH_PATTERN.matcher(orgUnitPath).matches(),
@@ -8538,7 +8538,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param orgUnitPath The full path of the organizational unit or its unique ID.
+     * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @return the request
      */
     public Get get(java.lang.String customerId, java.lang.String orgUnitPath) throws java.io.IOException {
@@ -8567,7 +8567,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param orgUnitPath The full path of the organizational unit or its unique ID.
+       * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @since 1.13
        */
       protected Get(java.lang.String customerId, java.lang.String orgUnitPath) {
@@ -8674,17 +8674,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitPath;
 
-      /** The full path of the organizational unit or its unique ID.
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID.
        */
       public java.lang.String getOrgUnitPath() {
         return orgUnitPath;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       public Get setOrgUnitPath(java.lang.String orgUnitPath) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ORG_UNIT_PATH_PATTERN.matcher(orgUnitPath).matches(),
@@ -9027,7 +9027,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param orgUnitPath The full path of the organizational unit or its unique ID.
+     * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
      */
@@ -9058,7 +9058,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param orgUnitPath The full path of the organizational unit or its unique ID.
+       * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
        */
@@ -9156,17 +9156,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitPath;
 
-      /** The full path of the organizational unit or its unique ID.
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID.
        */
       public java.lang.String getOrgUnitPath() {
         return orgUnitPath;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       public Patch setOrgUnitPath(java.lang.String orgUnitPath) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ORG_UNIT_PATH_PATTERN.matcher(orgUnitPath).matches(),
@@ -9193,7 +9193,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param orgUnitPath The full path of the organizational unit or its unique ID.
+     * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
      */
@@ -9223,7 +9223,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
      *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param orgUnitPath The full path of the organizational unit or its unique ID.
+       * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
        */
@@ -9321,17 +9321,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitPath;
 
-      /** The full path of the organizational unit or its unique ID.
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID.
        */
       public java.lang.String getOrgUnitPath() {
         return orgUnitPath;
       }
 
-      /** The full path of the organizational unit or its unique ID. */
+      /** The full path of the organizational unit (minus the leading `/`) or its unique ID. */
       public Update setOrgUnitPath(java.lang.String orgUnitPath) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ORG_UNIT_PATH_PATTERN.matcher(orgUnitPath).matches(),

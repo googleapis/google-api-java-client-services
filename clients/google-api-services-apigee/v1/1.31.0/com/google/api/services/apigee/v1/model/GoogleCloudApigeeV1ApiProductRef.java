@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1ApiProductRef extends com.google.api.clien
   private java.lang.String apiproduct;
 
   /**
-   * Status of the API product.
+   * Status of the API product. Valid values are `approved` or `revoked`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudApigeeV1ApiProductRef extends com.google.api.clien
   }
 
   /**
-   * Status of the API product.
+   * Status of the API product. Valid values are `approved` or `revoked`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -69,7 +69,7 @@ public final class GoogleCloudApigeeV1ApiProductRef extends com.google.api.clien
   }
 
   /**
-   * Status of the API product.
+   * Status of the API product. Valid values are `approved` or `revoked`.
    * @param status status or {@code null} for none
    */
   public GoogleCloudApigeeV1ApiProductRef setStatus(java.lang.String status) {

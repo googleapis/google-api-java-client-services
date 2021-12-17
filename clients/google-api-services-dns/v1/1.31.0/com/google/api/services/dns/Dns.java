@@ -4791,6 +4791,2074 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   }
 
   /**
+   * An accessor for creating requests from the ResponsePolicies collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dns dns = new Dns(...);}
+   *   {@code Dns.ResponsePolicies.List request = dns.responsePolicies().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ResponsePolicies responsePolicies() {
+    return new ResponsePolicies();
+  }
+
+  /**
+   * The "responsePolicies" collection of methods.
+   */
+  public class ResponsePolicies {
+
+    /**
+     * Creates a new Response Policy
+     *
+     * Create a request for the method "responsePolicies.create".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
+     * @return the request
+     */
+    public Create create(java.lang.String project, com.google.api.services.dns.model.ResponsePolicy content) throws java.io.IOException {
+      Create result = new Create(project, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DnsRequest<com.google.api.services.dns.model.ResponsePolicy> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies";
+
+      /**
+       * Creates a new Response Policy
+       *
+       * Create a request for the method "responsePolicies.create".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
+       * @since 1.13
+       */
+      protected Create(java.lang.String project, com.google.api.services.dns.model.ResponsePolicy content) {
+        super(Dns.this, "POST", REST_PATH, content, com.google.api.services.dns.model.ResponsePolicy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Create setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Create setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a previously created Response Policy. Fails if the response policy is non-empty or still
+     * being referenced by a network.
+     *
+     * Create a request for the method "responsePolicies.delete".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy addressed by this request.
+     * @return the request
+     */
+    public Delete delete(java.lang.String project, java.lang.String responsePolicy) throws java.io.IOException {
+      Delete result = new Delete(project, responsePolicy);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DnsRequest<Void> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}";
+
+      /**
+       * Deletes a previously created Response Policy. Fails if the response policy is non-empty or
+       * still being referenced by a network.
+       *
+       * Create a request for the method "responsePolicies.delete".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy addressed by this request.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String project, java.lang.String responsePolicy) {
+        super(Dns.this, "DELETE", REST_PATH, null, Void.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Delete setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy addressed by this request.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy addressed by this request. */
+      public Delete setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Delete setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Fetches the representation of an existing Response Policy.
+     *
+     * Create a request for the method "responsePolicies.get".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy addressed by this request.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String responsePolicy) throws java.io.IOException {
+      Get result = new Get(project, responsePolicy);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DnsRequest<com.google.api.services.dns.model.ResponsePolicy> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}";
+
+      /**
+       * Fetches the representation of an existing Response Policy.
+       *
+       * Create a request for the method "responsePolicies.get".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy addressed by this request.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String responsePolicy) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.ResponsePolicy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Get setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy addressed by this request.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy addressed by this request. */
+      public Get setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Get setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Enumerates all Response Policies associated with a project.
+     *
+     * Create a request for the method "responsePolicies.list".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @return the request
+     */
+    public List list(java.lang.String project) throws java.io.IOException {
+      List result = new List(project);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DnsRequest<com.google.api.services.dns.model.ResponsePoliciesListResponse> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies";
+
+      /**
+       * Enumerates all Response Policies associated with a project.
+       *
+       * Create a request for the method "responsePolicies.list".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String project) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.ResponsePoliciesListResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public List setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxResults;
+
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
+     results to return.
+       */
+      public java.lang.Integer getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
+       */
+      public List setMaxResults(java.lang.Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Applies a partial update to an existing Response Policy.
+     *
+     * Create a request for the method "responsePolicies.patch".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Respones Policy addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
+     * @return the request
+     */
+    public Patch patch(java.lang.String project, java.lang.String responsePolicy, com.google.api.services.dns.model.ResponsePolicy content) throws java.io.IOException {
+      Patch result = new Patch(project, responsePolicy, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DnsRequest<com.google.api.services.dns.model.ResponsePoliciesPatchResponse> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}";
+
+      /**
+       * Applies a partial update to an existing Response Policy.
+       *
+       * Create a request for the method "responsePolicies.patch".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Respones Policy addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String project, java.lang.String responsePolicy, com.google.api.services.dns.model.ResponsePolicy content) {
+        super(Dns.this, "PATCH", REST_PATH, content, com.google.api.services.dns.model.ResponsePoliciesPatchResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Patch setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Respones Policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Respones Policy addressed by this request.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Respones Policy addressed by this request. */
+      public Patch setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Patch setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing Response Policy.
+     *
+     * Create a request for the method "responsePolicies.update".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
+     * @return the request
+     */
+    public Update update(java.lang.String project, java.lang.String responsePolicy, com.google.api.services.dns.model.ResponsePolicy content) throws java.io.IOException {
+      Update result = new Update(project, responsePolicy, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends DnsRequest<com.google.api.services.dns.model.ResponsePoliciesUpdateResponse> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}";
+
+      /**
+       * Updates an existing Response Policy.
+       *
+       * Create a request for the method "responsePolicies.update".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.ResponsePolicy}
+       * @since 1.13
+       */
+      protected Update(java.lang.String project, java.lang.String responsePolicy, com.google.api.services.dns.model.ResponsePolicy content) {
+        super(Dns.this, "PUT", REST_PATH, content, com.google.api.services.dns.model.ResponsePoliciesUpdateResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Update setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy addressed by this request.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy addressed by this request. */
+      public Update setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Update setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the ResponsePolicyRules collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dns dns = new Dns(...);}
+   *   {@code Dns.ResponsePolicyRules.List request = dns.responsePolicyRules().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ResponsePolicyRules responsePolicyRules() {
+    return new ResponsePolicyRules();
+  }
+
+  /**
+   * The "responsePolicyRules" collection of methods.
+   */
+  public class ResponsePolicyRules {
+
+    /**
+     * Creates a new Response Policy Rule.
+     *
+     * Create a request for the method "responsePolicyRules.create".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+     * @param content the {@link com.google.api.services.dns.model.ResponsePolicyRule}
+     * @return the request
+     */
+    public Create create(java.lang.String project, java.lang.String responsePolicy, com.google.api.services.dns.model.ResponsePolicyRule content) throws java.io.IOException {
+      Create result = new Create(project, responsePolicy, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DnsRequest<com.google.api.services.dns.model.ResponsePolicyRule> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}/rules";
+
+      /**
+       * Creates a new Response Policy Rule.
+       *
+       * Create a request for the method "responsePolicyRules.create".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+       * @param content the {@link com.google.api.services.dns.model.ResponsePolicyRule}
+       * @since 1.13
+       */
+      protected Create(java.lang.String project, java.lang.String responsePolicy, com.google.api.services.dns.model.ResponsePolicyRule content) {
+        super(Dns.this, "POST", REST_PATH, content, com.google.api.services.dns.model.ResponsePolicyRule.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Create setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      public Create setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Create setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a previously created Response Policy Rule.
+     *
+     * Create a request for the method "responsePolicyRules.delete".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+     * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+     * @return the request
+     */
+    public Delete delete(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule) throws java.io.IOException {
+      Delete result = new Delete(project, responsePolicy, responsePolicyRule);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DnsRequest<Void> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}";
+
+      /**
+       * Deletes a previously created Response Policy Rule.
+       *
+       * Create a request for the method "responsePolicyRules.delete".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+       * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule) {
+        super(Dns.this, "DELETE", REST_PATH, null, Void.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+        this.responsePolicyRule = com.google.api.client.util.Preconditions.checkNotNull(responsePolicyRule, "Required parameter responsePolicyRule must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Delete setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      public Delete setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicyRule;
+
+      /** User assigned name of the Response Policy Rule addressed by this request.
+       */
+      public java.lang.String getResponsePolicyRule() {
+        return responsePolicyRule;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      public Delete setResponsePolicyRule(java.lang.String responsePolicyRule) {
+        this.responsePolicyRule = responsePolicyRule;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Delete setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Fetches the representation of an existing Response Policy Rule.
+     *
+     * Create a request for the method "responsePolicyRules.get".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+     * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule) throws java.io.IOException {
+      Get result = new Get(project, responsePolicy, responsePolicyRule);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DnsRequest<com.google.api.services.dns.model.ResponsePolicyRule> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}";
+
+      /**
+       * Fetches the representation of an existing Response Policy Rule.
+       *
+       * Create a request for the method "responsePolicyRules.get".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+       * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.ResponsePolicyRule.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+        this.responsePolicyRule = com.google.api.client.util.Preconditions.checkNotNull(responsePolicyRule, "Required parameter responsePolicyRule must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Get setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      public Get setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicyRule;
+
+      /** User assigned name of the Response Policy Rule addressed by this request.
+       */
+      public java.lang.String getResponsePolicyRule() {
+        return responsePolicyRule;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      public Get setResponsePolicyRule(java.lang.String responsePolicyRule) {
+        this.responsePolicyRule = responsePolicyRule;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Get setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Enumerates all Response Policy Rules associated with a project.
+     *
+     * Create a request for the method "responsePolicyRules.list".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy to list.
+     * @return the request
+     */
+    public List list(java.lang.String project, java.lang.String responsePolicy) throws java.io.IOException {
+      List result = new List(project, responsePolicy);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DnsRequest<com.google.api.services.dns.model.ResponsePolicyRulesListResponse> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}/rules";
+
+      /**
+       * Enumerates all Response Policy Rules associated with a project.
+       *
+       * Create a request for the method "responsePolicyRules.list".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy to list.
+       * @since 1.13
+       */
+      protected List(java.lang.String project, java.lang.String responsePolicy) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.ResponsePolicyRulesListResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public List setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy to list. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy to list.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy to list. */
+      public List setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxResults;
+
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
+     results to return.
+       */
+      public java.lang.Integer getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
+       */
+      public List setMaxResults(java.lang.Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Applies a partial update to an existing Response Policy Rule.
+     *
+     * Create a request for the method "responsePolicyRules.patch".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+     * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.ResponsePolicyRule}
+     * @return the request
+     */
+    public Patch patch(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule, com.google.api.services.dns.model.ResponsePolicyRule content) throws java.io.IOException {
+      Patch result = new Patch(project, responsePolicy, responsePolicyRule, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DnsRequest<com.google.api.services.dns.model.ResponsePolicyRulesPatchResponse> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}";
+
+      /**
+       * Applies a partial update to an existing Response Policy Rule.
+       *
+       * Create a request for the method "responsePolicyRules.patch".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+       * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.ResponsePolicyRule}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule, com.google.api.services.dns.model.ResponsePolicyRule content) {
+        super(Dns.this, "PATCH", REST_PATH, content, com.google.api.services.dns.model.ResponsePolicyRulesPatchResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+        this.responsePolicyRule = com.google.api.client.util.Preconditions.checkNotNull(responsePolicyRule, "Required parameter responsePolicyRule must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Patch setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      public Patch setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicyRule;
+
+      /** User assigned name of the Response Policy Rule addressed by this request.
+       */
+      public java.lang.String getResponsePolicyRule() {
+        return responsePolicyRule;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      public Patch setResponsePolicyRule(java.lang.String responsePolicyRule) {
+        this.responsePolicyRule = responsePolicyRule;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Patch setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing Response Policy Rule.
+     *
+     * Create a request for the method "responsePolicyRules.update".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+     * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.ResponsePolicyRule}
+     * @return the request
+     */
+    public Update update(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule, com.google.api.services.dns.model.ResponsePolicyRule content) throws java.io.IOException {
+      Update result = new Update(project, responsePolicy, responsePolicyRule, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends DnsRequest<com.google.api.services.dns.model.ResponsePolicyRulesUpdateResponse> {
+
+      private static final String REST_PATH = "dns/v1/projects/{project}/responsePolicies/{responsePolicy}/rules/{responsePolicyRule}";
+
+      /**
+       * Updates an existing Response Policy Rule.
+       *
+       * Create a request for the method "responsePolicyRules.update".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param responsePolicy User assigned name of the Response Policy containing the Response Policy Rule.
+       * @param responsePolicyRule User assigned name of the Response Policy Rule addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.ResponsePolicyRule}
+       * @since 1.13
+       */
+      protected Update(java.lang.String project, java.lang.String responsePolicy, java.lang.String responsePolicyRule, com.google.api.services.dns.model.ResponsePolicyRule content) {
+        super(Dns.this, "PUT", REST_PATH, content, com.google.api.services.dns.model.ResponsePolicyRulesUpdateResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.responsePolicy = com.google.api.client.util.Preconditions.checkNotNull(responsePolicy, "Required parameter responsePolicy must be specified.");
+        this.responsePolicyRule = com.google.api.client.util.Preconditions.checkNotNull(responsePolicyRule, "Required parameter responsePolicyRule must be specified.");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Update setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicy;
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule.
+       */
+      public java.lang.String getResponsePolicy() {
+        return responsePolicy;
+      }
+
+      /** User assigned name of the Response Policy containing the Response Policy Rule. */
+      public Update setResponsePolicy(java.lang.String responsePolicy) {
+        this.responsePolicy = responsePolicy;
+        return this;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String responsePolicyRule;
+
+      /** User assigned name of the Response Policy Rule addressed by this request.
+       */
+      public java.lang.String getResponsePolicyRule() {
+        return responsePolicyRule;
+      }
+
+      /** User assigned name of the Response Policy Rule addressed by this request. */
+      public Update setResponsePolicyRule(java.lang.String responsePolicyRule) {
+        this.responsePolicyRule = responsePolicyRule;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Update setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link Dns}.
    *
    * <p>

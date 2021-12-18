@@ -69,6 +69,14 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String deployEndTime;
 
   /**
+   * Output only. The reason this deploy failed. This will always be unspecified while the deploy in
+   * progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deployFailureCause;
+
+  /**
    * Output only. Time at which the `Rollout` started deploying.
    * The value may be {@code null}.
    */
@@ -240,6 +248,25 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setDeployEndTime(String deployEndTime) {
     this.deployEndTime = deployEndTime;
+    return this;
+  }
+
+  /**
+   * Output only. The reason this deploy failed. This will always be unspecified while the deploy in
+   * progress.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeployFailureCause() {
+    return deployFailureCause;
+  }
+
+  /**
+   * Output only. The reason this deploy failed. This will always be unspecified while the deploy in
+   * progress.
+   * @param deployFailureCause deployFailureCause or {@code null} for none
+   */
+  public Rollout setDeployFailureCause(java.lang.String deployFailureCause) {
+    this.deployFailureCause = deployFailureCause;
     return this;
   }
 

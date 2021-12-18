@@ -31,6 +31,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class TargetRender extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Reason this render failed. This will always be unspecified while the render in
+   * progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String failureCause;
+
+  /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to render the
    * manifest for this target. Format is `projects/{project}/locations/{location}/builds/{build}`.
    * The value may be {@code null}.
@@ -44,6 +52,25 @@ public final class TargetRender extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String renderingState;
+
+  /**
+   * Output only. Reason this render failed. This will always be unspecified while the render in
+   * progress.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFailureCause() {
+    return failureCause;
+  }
+
+  /**
+   * Output only. Reason this render failed. This will always be unspecified while the render in
+   * progress.
+   * @param failureCause failureCause or {@code null} for none
+   */
+  public TargetRender setFailureCause(java.lang.String failureCause) {
+    this.failureCause = failureCause;
+    return this;
+  }
 
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to render the

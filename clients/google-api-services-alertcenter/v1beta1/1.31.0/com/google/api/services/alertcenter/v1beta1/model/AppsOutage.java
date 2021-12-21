@@ -38,6 +38,21 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
   private java.lang.String dashboardUri;
 
   /**
+   * Incident tracking ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String incidentTrackingId;
+
+  /**
+   * Indicates new alert details under which the outage is communicated. Only populated when Status
+   * is MERGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MergeInfo mergeInfo;
+
+  /**
    * Timestamp by which the next update is expected to arrive.
    * The value may be {@code null}.
    */
@@ -80,6 +95,42 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
    */
   public AppsOutage setDashboardUri(java.lang.String dashboardUri) {
     this.dashboardUri = dashboardUri;
+    return this;
+  }
+
+  /**
+   * Incident tracking ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIncidentTrackingId() {
+    return incidentTrackingId;
+  }
+
+  /**
+   * Incident tracking ID.
+   * @param incidentTrackingId incidentTrackingId or {@code null} for none
+   */
+  public AppsOutage setIncidentTrackingId(java.lang.String incidentTrackingId) {
+    this.incidentTrackingId = incidentTrackingId;
+    return this;
+  }
+
+  /**
+   * Indicates new alert details under which the outage is communicated. Only populated when Status
+   * is MERGED.
+   * @return value or {@code null} for none
+   */
+  public MergeInfo getMergeInfo() {
+    return mergeInfo;
+  }
+
+  /**
+   * Indicates new alert details under which the outage is communicated. Only populated when Status
+   * is MERGED.
+   * @param mergeInfo mergeInfo or {@code null} for none
+   */
+  public AppsOutage setMergeInfo(MergeInfo mergeInfo) {
+    this.mergeInfo = mergeInfo;
     return this;
   }
 

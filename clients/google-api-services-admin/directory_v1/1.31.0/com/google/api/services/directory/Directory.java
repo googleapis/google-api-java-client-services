@@ -8090,7 +8090,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Retrieves a paginated list of all mobile devices for an account.
+     * Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list
+     * that includes company-owned devices, use the Cloud Identity [Devices
+     * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead.
      *
      * Create a request for the method "mobiledevices.list".
      *
@@ -8113,7 +8115,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/devices/mobile";
 
       /**
-       * Retrieves a paginated list of all mobile devices for an account.
+       * Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list
+       * that includes company-owned devices, use the Cloud Identity [Devices
+       * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead.
        *
        * Create a request for the method "mobiledevices.list".
        *

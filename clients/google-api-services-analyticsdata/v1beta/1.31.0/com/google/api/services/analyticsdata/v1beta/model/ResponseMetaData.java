@@ -66,6 +66,18 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
   private SchemaRestrictionResponse schemaRestrictionResponse;
 
   /**
+   * If `subjectToThresholding` is true, this report is subject to thresholding and only returns
+   * data that meets the minimum aggregation thresholds. It is possible for a request to be subject
+   * to thresholding thresholding and no data is absent from the report, and this happens when all
+   * data is above the thresholds. To learn more, see [Data
+   * thresholds](https://support.google.com/analytics/answer/9383630) and [About Demographics and
+   * Interests](https://support.google.com/analytics/answer/2799357).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean subjectToThresholding;
+
+  /**
    * The property's current timezone. Intended to be used to interpret time-based dimensions like
    * `hour` and `minute`. Formatted as strings from the IANA Time Zone database
    * (https://www.iana.org/time-zones); for example "America/New_York" or "Asia/Tokyo".
@@ -153,6 +165,33 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    */
   public ResponseMetaData setSchemaRestrictionResponse(SchemaRestrictionResponse schemaRestrictionResponse) {
     this.schemaRestrictionResponse = schemaRestrictionResponse;
+    return this;
+  }
+
+  /**
+   * If `subjectToThresholding` is true, this report is subject to thresholding and only returns
+   * data that meets the minimum aggregation thresholds. It is possible for a request to be subject
+   * to thresholding thresholding and no data is absent from the report, and this happens when all
+   * data is above the thresholds. To learn more, see [Data
+   * thresholds](https://support.google.com/analytics/answer/9383630) and [About Demographics and
+   * Interests](https://support.google.com/analytics/answer/2799357).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSubjectToThresholding() {
+    return subjectToThresholding;
+  }
+
+  /**
+   * If `subjectToThresholding` is true, this report is subject to thresholding and only returns
+   * data that meets the minimum aggregation thresholds. It is possible for a request to be subject
+   * to thresholding thresholding and no data is absent from the report, and this happens when all
+   * data is above the thresholds. To learn more, see [Data
+   * thresholds](https://support.google.com/analytics/answer/9383630) and [About Demographics and
+   * Interests](https://support.google.com/analytics/answer/2799357).
+   * @param subjectToThresholding subjectToThresholding or {@code null} for none
+   */
+  public ResponseMetaData setSubjectToThresholding(java.lang.Boolean subjectToThresholding) {
+    this.subjectToThresholding = subjectToThresholding;
     return this;
   }
 

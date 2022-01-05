@@ -69,6 +69,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig;
 
   /**
+   * Configuration for the Backup for GKE agent addon.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeBackupAgentConfig gkeBackupAgentConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -203,6 +210,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setGcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
     this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the Backup for GKE agent addon.
+   * @return value or {@code null} for none
+   */
+  public GkeBackupAgentConfig getGkeBackupAgentConfig() {
+    return gkeBackupAgentConfig;
+  }
+
+  /**
+   * Configuration for the Backup for GKE agent addon.
+   * @param gkeBackupAgentConfig gkeBackupAgentConfig or {@code null} for none
+   */
+  public AddonsConfig setGkeBackupAgentConfig(GkeBackupAgentConfig gkeBackupAgentConfig) {
+    this.gkeBackupAgentConfig = gkeBackupAgentConfig;
     return this;
   }
 

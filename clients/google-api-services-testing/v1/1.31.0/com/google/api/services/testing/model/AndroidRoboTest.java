@@ -60,21 +60,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   private java.lang.String appPackageId;
 
   /**
-   * The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo
-   * explore the app beyond the first activity. Default is 50.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxDepth;
-
-  /**
-   * The max number of steps Robo can execute. Default is no limit.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxSteps;
-
-  /**
    * A set of directives Robo should apply during the crawl. This allows users to customize the
    * crawl. For example, the username and password for a test account can be provided.
    * The value may be {@code null}.
@@ -173,42 +158,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
    */
   public AndroidRoboTest setAppPackageId(java.lang.String appPackageId) {
     this.appPackageId = appPackageId;
-    return this;
-  }
-
-  /**
-   * The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo
-   * explore the app beyond the first activity. Default is 50.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxDepth() {
-    return maxDepth;
-  }
-
-  /**
-   * The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo
-   * explore the app beyond the first activity. Default is 50.
-   * @param maxDepth maxDepth or {@code null} for none
-   */
-  public AndroidRoboTest setMaxDepth(java.lang.Integer maxDepth) {
-    this.maxDepth = maxDepth;
-    return this;
-  }
-
-  /**
-   * The max number of steps Robo can execute. Default is no limit.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxSteps() {
-    return maxSteps;
-  }
-
-  /**
-   * The max number of steps Robo can execute. Default is no limit.
-   * @param maxSteps maxSteps or {@code null} for none
-   */
-  public AndroidRoboTest setMaxSteps(java.lang.Integer maxSteps) {
-    this.maxSteps = maxSteps;
     return this;
   }
 

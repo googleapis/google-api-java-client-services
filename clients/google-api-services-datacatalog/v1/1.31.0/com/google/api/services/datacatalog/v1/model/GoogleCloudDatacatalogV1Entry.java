@@ -51,6 +51,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1BigQueryTableSpec bigqueryTableSpec;
 
   /**
+   * Business Context of the entry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1BusinessContext businessContext;
+
+  /**
    * Output only. Physical location of the entry.
    * The value may be {@code null}.
    */
@@ -257,6 +264,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setBigqueryTableSpec(GoogleCloudDatacatalogV1BigQueryTableSpec bigqueryTableSpec) {
     this.bigqueryTableSpec = bigqueryTableSpec;
+    return this;
+  }
+
+  /**
+   * Business Context of the entry.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1BusinessContext getBusinessContext() {
+    return businessContext;
+  }
+
+  /**
+   * Business Context of the entry.
+   * @param businessContext businessContext or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setBusinessContext(GoogleCloudDatacatalogV1BusinessContext businessContext) {
+    this.businessContext = businessContext;
     return this;
   }
 

@@ -196,6 +196,7 @@ packages on [Maven Central][maven-search].
 | My Business Lodging API | [v1](clients/google-api-services-mybusinesslodging/v1) |
 | My Business Notifications API | [v1](clients/google-api-services-mybusinessnotifications/v1) |
 | My Business Place Actions API | [v1](clients/google-api-services-mybusinessplaceactions/v1) |
+| My Business Q&A API | [v1](clients/google-api-services-mybusinessqanda/v1) |
 | My Business Verifications API | [v1](clients/google-api-services-mybusinessverifications/v1) |
 | Network Connectivity API | [v1](clients/google-api-services-networkconnectivity/v1), [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
@@ -238,7 +239,7 @@ packages on [Maven Central][maven-search].
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
 | Traffic Director API | [v2](clients/google-api-services-trafficdirector/v2) |
-| Transcoder API | [v1beta1](clients/google-api-services-transcoder/v1beta1) |
+| Transcoder API | [v1](clients/google-api-services-transcoder/v1), [v1beta1](clients/google-api-services-transcoder/v1beta1) |
 | VM Migration API | [v1](clients/google-api-services-vmmigration/v1), [v1alpha1](clients/google-api-services-vmmigration/v1alpha1) |
 | Version History API | [v1](clients/google-api-services-versionhistory/v1) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |

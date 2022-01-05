@@ -2717,6 +2717,272 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Modifies contacts, part of the business context of an Entry. To call this method, you must have
+           * the `datacatalog.entries.updateContacts` IAM permission on the corresponding project.
+           *
+           * Create a request for the method "entries.modifyEntryContacts".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link ModifyEntryContacts#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The full resource name of the entry.
+           * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryContactsRequest}
+           * @return the request
+           */
+          public ModifyEntryContacts modifyEntryContacts(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryContactsRequest content) throws java.io.IOException {
+            ModifyEntryContacts result = new ModifyEntryContacts(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ModifyEntryContacts extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1Contacts> {
+
+            private static final String REST_PATH = "v1/{+name}:modifyEntryContacts";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+
+            /**
+             * Modifies contacts, part of the business context of an Entry. To call this method, you must have
+             * the `datacatalog.entries.updateContacts` IAM permission on the corresponding project.
+             *
+             * Create a request for the method "entries.modifyEntryContacts".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link ModifyEntryContacts#execute()} method to invoke the remote
+             * operation. <p> {@link ModifyEntryContacts#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The full resource name of the entry.
+             * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryContactsRequest}
+             * @since 1.13
+             */
+            protected ModifyEntryContacts(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryContactsRequest content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1Contacts.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+            }
+
+            @Override
+            public ModifyEntryContacts set$Xgafv(java.lang.String $Xgafv) {
+              return (ModifyEntryContacts) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ModifyEntryContacts setAccessToken(java.lang.String accessToken) {
+              return (ModifyEntryContacts) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ModifyEntryContacts setAlt(java.lang.String alt) {
+              return (ModifyEntryContacts) super.setAlt(alt);
+            }
+
+            @Override
+            public ModifyEntryContacts setCallback(java.lang.String callback) {
+              return (ModifyEntryContacts) super.setCallback(callback);
+            }
+
+            @Override
+            public ModifyEntryContacts setFields(java.lang.String fields) {
+              return (ModifyEntryContacts) super.setFields(fields);
+            }
+
+            @Override
+            public ModifyEntryContacts setKey(java.lang.String key) {
+              return (ModifyEntryContacts) super.setKey(key);
+            }
+
+            @Override
+            public ModifyEntryContacts setOauthToken(java.lang.String oauthToken) {
+              return (ModifyEntryContacts) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ModifyEntryContacts setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ModifyEntryContacts) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ModifyEntryContacts setQuotaUser(java.lang.String quotaUser) {
+              return (ModifyEntryContacts) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ModifyEntryContacts setUploadType(java.lang.String uploadType) {
+              return (ModifyEntryContacts) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ModifyEntryContacts setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ModifyEntryContacts) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The full resource name of the entry. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The full resource name of the entry.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The full resource name of the entry. */
+            public ModifyEntryContacts setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ModifyEntryContacts set(String parameterName, Object value) {
+              return (ModifyEntryContacts) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Modifies entry overview, part of the business context of an Entry. To call this method, you must
+           * have the `datacatalog.entries.updateOverview` IAM permission on the corresponding project.
+           *
+           * Create a request for the method "entries.modifyEntryOverview".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link ModifyEntryOverview#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The full resource name of the entry.
+           * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryOverviewRequest}
+           * @return the request
+           */
+          public ModifyEntryOverview modifyEntryOverview(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryOverviewRequest content) throws java.io.IOException {
+            ModifyEntryOverview result = new ModifyEntryOverview(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ModifyEntryOverview extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1EntryOverview> {
+
+            private static final String REST_PATH = "v1/{+name}:modifyEntryOverview";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+
+            /**
+             * Modifies entry overview, part of the business context of an Entry. To call this method, you
+             * must have the `datacatalog.entries.updateOverview` IAM permission on the corresponding project.
+             *
+             * Create a request for the method "entries.modifyEntryOverview".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link ModifyEntryOverview#execute()} method to invoke the remote
+             * operation. <p> {@link ModifyEntryOverview#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The full resource name of the entry.
+             * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryOverviewRequest}
+             * @since 1.13
+             */
+            protected ModifyEntryOverview(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1ModifyEntryOverviewRequest content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1EntryOverview.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+            }
+
+            @Override
+            public ModifyEntryOverview set$Xgafv(java.lang.String $Xgafv) {
+              return (ModifyEntryOverview) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ModifyEntryOverview setAccessToken(java.lang.String accessToken) {
+              return (ModifyEntryOverview) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ModifyEntryOverview setAlt(java.lang.String alt) {
+              return (ModifyEntryOverview) super.setAlt(alt);
+            }
+
+            @Override
+            public ModifyEntryOverview setCallback(java.lang.String callback) {
+              return (ModifyEntryOverview) super.setCallback(callback);
+            }
+
+            @Override
+            public ModifyEntryOverview setFields(java.lang.String fields) {
+              return (ModifyEntryOverview) super.setFields(fields);
+            }
+
+            @Override
+            public ModifyEntryOverview setKey(java.lang.String key) {
+              return (ModifyEntryOverview) super.setKey(key);
+            }
+
+            @Override
+            public ModifyEntryOverview setOauthToken(java.lang.String oauthToken) {
+              return (ModifyEntryOverview) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ModifyEntryOverview setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ModifyEntryOverview) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ModifyEntryOverview setQuotaUser(java.lang.String quotaUser) {
+              return (ModifyEntryOverview) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ModifyEntryOverview setUploadType(java.lang.String uploadType) {
+              return (ModifyEntryOverview) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ModifyEntryOverview setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ModifyEntryOverview) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The full resource name of the entry. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The full resource name of the entry.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The full resource name of the entry. */
+            public ModifyEntryOverview setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ModifyEntryOverview set(String parameterName, Object value) {
+              return (ModifyEntryOverview) super.set(parameterName, value);
+            }
+          }
+          /**
            * Updates an existing entry. You must enable the Data Catalog API in the project identified by the
            * `entry.name` parameter. For more information, see [Data Catalog resource
            * project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
@@ -3620,7 +3886,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * Lists tags assigned to an Entry.
+             * Lists tags assigned to an Entry. The columns in the response are lowercased.
              *
              * Create a request for the method "tags.list".
              *
@@ -3645,7 +3911,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
 
               /**
-               * Lists tags assigned to an Entry.
+               * Lists tags assigned to an Entry. The columns in the response are lowercased.
                *
                * Create a request for the method "tags.list".
                *
@@ -4287,7 +4553,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists tags assigned to an Entry.
+           * Lists tags assigned to an Entry. The columns in the response are lowercased.
            *
            * Create a request for the method "tags.list".
            *
@@ -4312,7 +4578,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
             /**
-             * Lists tags assigned to an Entry.
+             * Lists tags assigned to an Entry. The columns in the response are lowercased.
              *
              * Create a request for the method "tags.list".
              *

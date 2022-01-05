@@ -3366,7 +3366,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * Lists the tags on an Entry.
+             * Lists tags assigned to an Entry. The columns in the response are lowercased.
              *
              * Create a request for the method "tags.list".
              *
@@ -3393,7 +3393,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
 
               /**
-               * Lists the tags on an Entry.
+               * Lists tags assigned to an Entry. The columns in the response are lowercased.
                *
                * Create a request for the method "tags.list".
                *
@@ -4061,7 +4061,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists the tags on an Entry.
+           * Lists tags assigned to an Entry. The columns in the response are lowercased.
            *
            * Create a request for the method "tags.list".
            *
@@ -4088,7 +4088,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
             /**
-             * Lists the tags on an Entry.
+             * Lists tags assigned to an Entry. The columns in the response are lowercased.
              *
              * Create a request for the method "tags.list".
              *

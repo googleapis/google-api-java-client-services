@@ -129,6 +129,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodeNetworkConfig networkConfig;
 
   /**
+   * Specifies the node placement policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PlacementPolicy placementPolicy;
+
+  /**
    * [Output only] The pod CIDR block size per node in this node pool.
    * The value may be {@code null}.
    */
@@ -364,6 +371,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setNetworkConfig(NodeNetworkConfig networkConfig) {
     this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the node placement policy.
+   * @return value or {@code null} for none
+   */
+  public PlacementPolicy getPlacementPolicy() {
+    return placementPolicy;
+  }
+
+  /**
+   * Specifies the node placement policy.
+   * @param placementPolicy placementPolicy or {@code null} for none
+   */
+  public NodePool setPlacementPolicy(PlacementPolicy placementPolicy) {
+    this.placementPolicy = placementPolicy;
     return this;
   }
 

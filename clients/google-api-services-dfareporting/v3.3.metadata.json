@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-dfareporting",
-    "version": "v3.3-rev20210524-1.32.1"
+    "version": "v3.3-rev20220104-1.32.1"
   }
 }

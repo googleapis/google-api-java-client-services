@@ -31,20 +31,6 @@ package com.google.api.services.prod_tt_sasportal.v1alpha1.model;
 public final class SasPortalDeployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The allowed billing modes under this deployment.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> allowedBillingModes;
-
-  /**
-   * Default billing mode for the deployment and devices under it.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String defaultBillingMode;
-
-  /**
    * The deployment's display name.
    * The value may be {@code null}.
    */
@@ -72,40 +58,6 @@ public final class SasPortalDeployment extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sasUserIds;
-
-  /**
-   * The allowed billing modes under this deployment.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAllowedBillingModes() {
-    return allowedBillingModes;
-  }
-
-  /**
-   * The allowed billing modes under this deployment.
-   * @param allowedBillingModes allowedBillingModes or {@code null} for none
-   */
-  public SasPortalDeployment setAllowedBillingModes(java.util.List<java.lang.String> allowedBillingModes) {
-    this.allowedBillingModes = allowedBillingModes;
-    return this;
-  }
-
-  /**
-   * Default billing mode for the deployment and devices under it.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDefaultBillingMode() {
-    return defaultBillingMode;
-  }
-
-  /**
-   * Default billing mode for the deployment and devices under it.
-   * @param defaultBillingMode defaultBillingMode or {@code null} for none
-   */
-  public SasPortalDeployment setDefaultBillingMode(java.lang.String defaultBillingMode) {
-    this.defaultBillingMode = defaultBillingMode;
-    return this;
-  }
 
   /**
    * The deployment's display name.

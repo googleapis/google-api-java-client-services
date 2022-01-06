@@ -173,7 +173,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
-       * Fetches processor types.
+       * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not
+       * paginated.
        *
        * Create a request for the method "locations.fetchProcessorTypes".
        *
@@ -198,7 +199,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Fetches processor types.
+         * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not
+         * paginated.
          *
          * Create a request for the method "locations.fetchProcessorTypes".
          *

@@ -72,7 +72,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Audio content type details. This field will be populated when the targeting_type is
-   * 'TARGETING_TYPE_AUDIO_CONTENT_TYPE'.
+   * `TARGETING_TYPE_AUDIO_CONTENT_TYPE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -501,7 +501,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Audio content type details. This field will be populated when the targeting_type is
-   * 'TARGETING_TYPE_AUDIO_CONTENT_TYPE'.
+   * `TARGETING_TYPE_AUDIO_CONTENT_TYPE`.
    * @return value or {@code null} for none
    */
   public AudioContentTypeAssignedTargetingOptionDetails getAudioContentTypeDetails() {
@@ -510,7 +510,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Audio content type details. This field will be populated when the targeting_type is
-   * 'TARGETING_TYPE_AUDIO_CONTENT_TYPE'.
+   * `TARGETING_TYPE_AUDIO_CONTENT_TYPE`.
    * @param audioContentTypeDetails audioContentTypeDetails or {@code null} for none
    */
   public AssignedTargetingOption setAudioContentTypeDetails(AudioContentTypeAssignedTargetingOptionDetails audioContentTypeDetails) {

@@ -1528,7 +1528,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param parent Required. The resource name of the region or location, as described in
          *        https://cloud.google.com/apis/design/resource_names. For
-         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        projects.regions.workflowTemplates.create, the resource name of the region has the
          *        following format: projects/{project_id}/regions/{region} For
          *        projects.locations.workflowTemplates.create, the resource name of the location has the
          *        following format: projects/{project_id}/locations/{location}
@@ -1561,7 +1561,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param parent Required. The resource name of the region or location, as described in
          *        https://cloud.google.com/apis/design/resource_names. For
-         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        projects.regions.workflowTemplates.create, the resource name of the region has the
          *        following format: projects/{project_id}/regions/{region} For
          *        projects.locations.workflowTemplates.create, the resource name of the location has the
          *        following format: projects/{project_id}/locations/{location}
@@ -1636,7 +1636,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * projects.regions.workflowTemplates.create, the resource name of the region has the
            * following format: projects/{project_id}/regions/{region} For
            * projects.locations.workflowTemplates.create, the resource name of the location has the
            * following format: projects/{project_id}/locations/{location}
@@ -1645,7 +1645,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
-         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,create,
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.create,
          the resource name of the region has the following format: projects/{project_id}/regions/{region}
          For projects.locations.workflowTemplates.create, the resource name of the location has the
          following format: projects/{project_id}/locations/{location}
@@ -1657,7 +1657,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * projects.regions.workflowTemplates.create, the resource name of the region has the
            * following format: projects/{project_id}/regions/{region} For
            * projects.locations.workflowTemplates.create, the resource name of the location has the
            * following format: projects/{project_id}/locations/{location}
@@ -9730,7 +9730,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param parent Required. The resource name of the region or location, as described in
          *        https://cloud.google.com/apis/design/resource_names. For
-         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        projects.regions.workflowTemplates.create, the resource name of the region has the
          *        following format: projects/{project_id}/regions/{region} For
          *        projects.locations.workflowTemplates.create, the resource name of the location has the
          *        following format: projects/{project_id}/locations/{location}
@@ -9763,7 +9763,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param parent Required. The resource name of the region or location, as described in
          *        https://cloud.google.com/apis/design/resource_names. For
-         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        projects.regions.workflowTemplates.create, the resource name of the region has the
          *        following format: projects/{project_id}/regions/{region} For
          *        projects.locations.workflowTemplates.create, the resource name of the location has the
          *        following format: projects/{project_id}/locations/{location}
@@ -9838,7 +9838,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * projects.regions.workflowTemplates.create, the resource name of the region has the
            * following format: projects/{project_id}/regions/{region} For
            * projects.locations.workflowTemplates.create, the resource name of the location has the
            * following format: projects/{project_id}/locations/{location}
@@ -9847,7 +9847,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
-         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,create,
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.create,
          the resource name of the region has the following format: projects/{project_id}/regions/{region}
          For projects.locations.workflowTemplates.create, the resource name of the location has the
          following format: projects/{project_id}/locations/{location}
@@ -9859,7 +9859,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * projects.regions.workflowTemplates.create, the resource name of the region has the
            * following format: projects/{project_id}/regions/{region} For
            * projects.locations.workflowTemplates.create, the resource name of the location has the
            * following format: projects/{project_id}/locations/{location}

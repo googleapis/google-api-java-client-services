@@ -47,6 +47,15 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String bootDiskType;
 
   /**
+   * Optional. Interface type of local SSDs (default is "scsi"). Valid values: "scsi" (Small
+   * Computer System Interface), "nvme" (Non-Volatile Memory Express). See SSD Interface types
+   * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localSsdInterface;
+
+  /**
    * Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the
    * boot disk is used to store runtime logs and HDFS
    * (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are
@@ -94,6 +103,27 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
    */
   public DiskConfig setBootDiskType(java.lang.String bootDiskType) {
     this.bootDiskType = bootDiskType;
+    return this;
+  }
+
+  /**
+   * Optional. Interface type of local SSDs (default is "scsi"). Valid values: "scsi" (Small
+   * Computer System Interface), "nvme" (Non-Volatile Memory Express). See SSD Interface types
+   * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalSsdInterface() {
+    return localSsdInterface;
+  }
+
+  /**
+   * Optional. Interface type of local SSDs (default is "scsi"). Valid values: "scsi" (Small
+   * Computer System Interface), "nvme" (Non-Volatile Memory Express). See SSD Interface types
+   * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
+   * @param localSsdInterface localSsdInterface or {@code null} for none
+   */
+  public DiskConfig setLocalSsdInterface(java.lang.String localSsdInterface) {
+    this.localSsdInterface = localSsdInterface;
     return this;
   }
 

@@ -38,6 +38,22 @@ public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.goog
   private java.lang.String contentUri;
 
   /**
+   * Optional. Whether to import custom metadata from Google Cloud Storage. Only valid when the
+   * document source is Google Cloud Storage URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean importGcsCustomMetadata;
+
+  /**
+   * Optional. When enabled, the reload request is to apply partial update to the smart messaging
+   * allowlist.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean smartMessagingPartialUpdate;
+
+  /**
    * Optional. The path of gcs source file for reloading document content. For now, only gcs uri is
    * supported. For documents stored in Google Cloud Storage, these URIs must have the form `gs:`.
    * @return value or {@code null} for none
@@ -53,6 +69,44 @@ public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.goog
    */
   public GoogleCloudDialogflowV2ReloadDocumentRequest setContentUri(java.lang.String contentUri) {
     this.contentUri = contentUri;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to import custom metadata from Google Cloud Storage. Only valid when the
+   * document source is Google Cloud Storage URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImportGcsCustomMetadata() {
+    return importGcsCustomMetadata;
+  }
+
+  /**
+   * Optional. Whether to import custom metadata from Google Cloud Storage. Only valid when the
+   * document source is Google Cloud Storage URI.
+   * @param importGcsCustomMetadata importGcsCustomMetadata or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ReloadDocumentRequest setImportGcsCustomMetadata(java.lang.Boolean importGcsCustomMetadata) {
+    this.importGcsCustomMetadata = importGcsCustomMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. When enabled, the reload request is to apply partial update to the smart messaging
+   * allowlist.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSmartMessagingPartialUpdate() {
+    return smartMessagingPartialUpdate;
+  }
+
+  /**
+   * Optional. When enabled, the reload request is to apply partial update to the smart messaging
+   * allowlist.
+   * @param smartMessagingPartialUpdate smartMessagingPartialUpdate or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ReloadDocumentRequest setSmartMessagingPartialUpdate(java.lang.Boolean smartMessagingPartialUpdate) {
+    this.smartMessagingPartialUpdate = smartMessagingPartialUpdate;
     return this;
   }
 

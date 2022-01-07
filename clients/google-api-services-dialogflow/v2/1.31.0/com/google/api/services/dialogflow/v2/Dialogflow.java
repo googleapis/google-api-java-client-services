@@ -8824,6 +8824,52 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
+           * The filter expression used to filter knowledge bases returned by the list method. The
+           * expression has the following syntax: [AND ] ... The following fields and operators are
+           * supported: * display_name with has(:) operator * language_code with equals(=) operator
+           * Examples: * 'language_code=en-us' matches knowledge bases with en-us language code. *
+           * 'display_name:articles' matches knowledge bases whose display name contains "articles".
+           * * 'display_name:"Best Articles"' matches knowledge bases whose display name contains
+           * "Best Articles". * 'language_code=en-gb AND display_name=articles' matches all
+           * knowledge bases whose display name contains "articles" and whose language code is "en-
+           * gb". Note: An empty filter string (i.e. "") is a no-op and will result in no filtering.
+           * For more information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression used to filter knowledge bases returned by the list method. The expression
+         has the following syntax: [AND ] ... The following fields and operators are supported: *
+         display_name with has(:) operator * language_code with equals(=) operator Examples: *
+         'language_code=en-us' matches knowledge bases with en-us language code. * 'display_name:articles'
+         matches knowledge bases whose display name contains "articles". * 'display_name:"Best Articles"'
+         matches knowledge bases whose display name contains "Best Articles". * 'language_code=en-gb AND
+         display_name=articles' matches all knowledge bases whose display name contains "articles" and whose
+         language code is "en-gb". Note: An empty filter string (i.e. "") is a no-op and will result in no
+         filtering. For more information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter expression used to filter knowledge bases returned by the list method. The
+           * expression has the following syntax: [AND ] ... The following fields and operators are
+           * supported: * display_name with has(:) operator * language_code with equals(=) operator
+           * Examples: * 'language_code=en-us' matches knowledge bases with en-us language code. *
+           * 'display_name:articles' matches knowledge bases whose display name contains "articles".
+           * * 'display_name:"Best Articles"' matches knowledge bases whose display name contains
+           * "Best Articles". * 'language_code=en-gb AND display_name=articles' matches all
+           * knowledge bases whose display name contains "articles" and whose language code is "en-
+           * gb". Note: An empty filter string (i.e. "") is a no-op and will result in no filtering.
+           * For more information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * The maximum number of items to return in a single page. By default 10 and at most 100.
            */
           @com.google.api.client.util.Key
@@ -9626,6 +9672,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/agent/knowledgeBases/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The filter expression used to filter documents returned by the list method. The
+             * expression has the following syntax: [AND ] ... The following fields and operators
+             * are supported: * knowledge_types with has(:) operator * display_name with has(:)
+             * operator * state with equals(=) operator Examples: * "knowledge_types:FAQ" matches
+             * documents with FAQ knowledge type. * "display_name:customer" matches documents whose
+             * display name contains "customer". * "state=ACTIVE" matches documents with ACTIVE
+             * state. * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For
+             * more information about filtering, see [API Filtering](https://aip.dev/160).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression used to filter documents returned by the list method. The expression has the
+           following syntax: [AND ] ... The following fields and operators are supported: * knowledge_types
+           with has(:) operator * display_name with has(:) operator * state with equals(=) operator Examples:
+           * "knowledge_types:FAQ" matches documents with FAQ knowledge type. * "display_name:customer"
+           matches documents whose display name contains "customer". * "state=ACTIVE" matches documents with
+           ACTIVE state. * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For more
+           information about filtering, see [API Filtering](https://aip.dev/160).
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter expression used to filter documents returned by the list method. The
+             * expression has the following syntax: [AND ] ... The following fields and operators
+             * are supported: * knowledge_types with has(:) operator * display_name with has(:)
+             * operator * state with equals(=) operator Examples: * "knowledge_types:FAQ" matches
+             * documents with FAQ knowledge type. * "display_name:customer" matches documents whose
+             * display name contains "customer". * "state=ACTIVE" matches documents with ACTIVE
+             * state. * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For
+             * more information about filtering, see [API Filtering](https://aip.dev/160).
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
               return this;
             }
 
@@ -16128,6 +16214,146 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (SuggestFaqAnswers) super.set(parameterName, value);
             }
           }
+          /**
+           * Gets smart replies for a participant based on specific historical messages.
+           *
+           * Create a request for the method "suggestions.suggestSmartReplies".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link SuggestSmartReplies#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the participant to fetch suggestion for. Format:
+           *        `projects//locations//conversations//participants/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest}
+           * @return the request
+           */
+          public SuggestSmartReplies suggestSmartReplies(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest content) throws java.io.IOException {
+            SuggestSmartReplies result = new SuggestSmartReplies(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SuggestSmartReplies extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/suggestions:suggestSmartReplies";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+
+            /**
+             * Gets smart replies for a participant based on specific historical messages.
+             *
+             * Create a request for the method "suggestions.suggestSmartReplies".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link SuggestSmartReplies#execute()} method to invoke the remote
+             * operation. <p> {@link SuggestSmartReplies#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the participant to fetch suggestion for. Format:
+           *        `projects//locations//conversations//participants/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest}
+             * @since 1.13
+             */
+            protected SuggestSmartReplies(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+              }
+            }
+
+            @Override
+            public SuggestSmartReplies set$Xgafv(java.lang.String $Xgafv) {
+              return (SuggestSmartReplies) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SuggestSmartReplies setAccessToken(java.lang.String accessToken) {
+              return (SuggestSmartReplies) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SuggestSmartReplies setAlt(java.lang.String alt) {
+              return (SuggestSmartReplies) super.setAlt(alt);
+            }
+
+            @Override
+            public SuggestSmartReplies setCallback(java.lang.String callback) {
+              return (SuggestSmartReplies) super.setCallback(callback);
+            }
+
+            @Override
+            public SuggestSmartReplies setFields(java.lang.String fields) {
+              return (SuggestSmartReplies) super.setFields(fields);
+            }
+
+            @Override
+            public SuggestSmartReplies setKey(java.lang.String key) {
+              return (SuggestSmartReplies) super.setKey(key);
+            }
+
+            @Override
+            public SuggestSmartReplies setOauthToken(java.lang.String oauthToken) {
+              return (SuggestSmartReplies) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SuggestSmartReplies setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SuggestSmartReplies) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SuggestSmartReplies setQuotaUser(java.lang.String quotaUser) {
+              return (SuggestSmartReplies) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SuggestSmartReplies setUploadType(java.lang.String uploadType) {
+              return (SuggestSmartReplies) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SuggestSmartReplies setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SuggestSmartReplies) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the participant to fetch suggestion for. Format:
+             * `projects//locations//conversations//participants/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the participant to fetch suggestion for. Format:
+           `projects//locations//conversations//participants/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the participant to fetch suggestion for. Format:
+             * `projects//locations//conversations//participants/`.
+             */
+            public SuggestSmartReplies setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SuggestSmartReplies set(String parameterName, Object value) {
+              return (SuggestSmartReplies) super.set(parameterName, value);
+            }
+          }
 
         }
       }
@@ -16728,6 +16954,52 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * The filter expression used to filter knowledge bases returned by the list method. The
+         * expression has the following syntax: [AND ] ... The following fields and operators are
+         * supported: * display_name with has(:) operator * language_code with equals(=) operator
+         * Examples: * 'language_code=en-us' matches knowledge bases with en-us language code. *
+         * 'display_name:articles' matches knowledge bases whose display name contains "articles". *
+         * 'display_name:"Best Articles"' matches knowledge bases whose display name contains "Best
+         * Articles". * 'language_code=en-gb AND display_name=articles' matches all knowledge bases
+         * whose display name contains "articles" and whose language code is "en-gb". Note: An empty
+         * filter string (i.e. "") is a no-op and will result in no filtering. For more information
+         * about filtering, see [API Filtering](https://aip.dev/160).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The filter expression used to filter knowledge bases returned by the list method. The expression
+       has the following syntax: [AND ] ... The following fields and operators are supported: *
+       display_name with has(:) operator * language_code with equals(=) operator Examples: *
+       'language_code=en-us' matches knowledge bases with en-us language code. * 'display_name:articles'
+       matches knowledge bases whose display name contains "articles". * 'display_name:"Best Articles"'
+       matches knowledge bases whose display name contains "Best Articles". * 'language_code=en-gb AND
+       display_name=articles' matches all knowledge bases whose display name contains "articles" and whose
+       language code is "en-gb". Note: An empty filter string (i.e. "") is a no-op and will result in no
+       filtering. For more information about filtering, see [API Filtering](https://aip.dev/160).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * The filter expression used to filter knowledge bases returned by the list method. The
+         * expression has the following syntax: [AND ] ... The following fields and operators are
+         * supported: * display_name with has(:) operator * language_code with equals(=) operator
+         * Examples: * 'language_code=en-us' matches knowledge bases with en-us language code. *
+         * 'display_name:articles' matches knowledge bases whose display name contains "articles". *
+         * 'display_name:"Best Articles"' matches knowledge bases whose display name contains "Best
+         * Articles". * 'language_code=en-gb AND display_name=articles' matches all knowledge bases
+         * whose display name contains "articles" and whose language code is "en-gb". Note: An empty
+         * filter string (i.e. "") is a no-op and will result in no filtering. For more information
+         * about filtering, see [API Filtering](https://aip.dev/160).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * The maximum number of items to return in a single page. By default 10 and at most 100.
          */
         @com.google.api.client.util.Key
@@ -17245,6 +17517,152 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Exports a smart messaging candidate document into the specified destination. This method is a
+         * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+         * The returned `Operation` type has the following method-specific fields: - `metadata`:
+         * KnowledgeOperationMetadata - `response`: Document
+         *
+         * Create a request for the method "documents.export".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the document to export. Format:
+         *        `projects//locations//knowledgeBases//documents/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest}
+         * @return the request
+         */
+        public Export export(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest content) throws java.io.IOException {
+          Export result = new Export(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Export extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:export";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+
+          /**
+           * Exports a smart messaging candidate document into the specified destination. This method is a
+           * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+           * operation). The returned `Operation` type has the following method-specific fields: -
+           * `metadata`: KnowledgeOperationMetadata - `response`: Document
+           *
+           * Create a request for the method "documents.export".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the document to export. Format:
+         *        `projects//locations//knowledgeBases//documents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest}
+           * @since 1.13
+           */
+          protected Export(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+            }
+          }
+
+          @Override
+          public Export set$Xgafv(java.lang.String $Xgafv) {
+            return (Export) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Export setAccessToken(java.lang.String accessToken) {
+            return (Export) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Export setAlt(java.lang.String alt) {
+            return (Export) super.setAlt(alt);
+          }
+
+          @Override
+          public Export setCallback(java.lang.String callback) {
+            return (Export) super.setCallback(callback);
+          }
+
+          @Override
+          public Export setFields(java.lang.String fields) {
+            return (Export) super.setFields(fields);
+          }
+
+          @Override
+          public Export setKey(java.lang.String key) {
+            return (Export) super.setKey(key);
+          }
+
+          @Override
+          public Export setOauthToken(java.lang.String oauthToken) {
+            return (Export) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Export) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Export setQuotaUser(java.lang.String quotaUser) {
+            return (Export) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Export setUploadType(java.lang.String uploadType) {
+            return (Export) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Export setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Export) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the document to export. Format:
+           * `projects//locations//knowledgeBases//documents/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the document to export. Format:
+         `projects//locations//knowledgeBases//documents/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the document to export. Format:
+           * `projects//locations//knowledgeBases//documents/`.
+           */
+          public Export setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Export set(String parameterName, Object value) {
+            return (Export) super.set(parameterName, value);
+          }
+        }
+        /**
          * Retrieves the specified document.
          *
          * Create a request for the method "documents.get".
@@ -17530,6 +17948,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   "^projects/[^/]+/knowledgeBases/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter expression used to filter documents returned by the list method. The
+           * expression has the following syntax: [AND ] ... The following fields and operators are
+           * supported: * knowledge_types with has(:) operator * display_name with has(:) operator *
+           * state with equals(=) operator Examples: * "knowledge_types:FAQ" matches documents with
+           * FAQ knowledge type. * "display_name:customer" matches documents whose display name
+           * contains "customer". * "state=ACTIVE" matches documents with ACTIVE state. *
+           * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For more
+           * information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression used to filter documents returned by the list method. The expression has the
+         following syntax: [AND ] ... The following fields and operators are supported: * knowledge_types
+         with has(:) operator * display_name with has(:) operator * state with equals(=) operator Examples:
+         * "knowledge_types:FAQ" matches documents with FAQ knowledge type. * "display_name:customer"
+         matches documents whose display name contains "customer". * "state=ACTIVE" matches documents with
+         ACTIVE state. * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For more
+         information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter expression used to filter documents returned by the list method. The
+           * expression has the following syntax: [AND ] ... The following fields and operators are
+           * supported: * knowledge_types with has(:) operator * display_name with has(:) operator *
+           * state with equals(=) operator Examples: * "knowledge_types:FAQ" matches documents with
+           * FAQ knowledge type. * "display_name:customer" matches documents whose display name
+           * contains "customer". * "state=ACTIVE" matches documents with ACTIVE state. *
+           * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For more
+           * information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -32482,6 +32940,146 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (SuggestFaqAnswers) super.set(parameterName, value);
               }
             }
+            /**
+             * Gets smart replies for a participant based on specific historical messages.
+             *
+             * Create a request for the method "suggestions.suggestSmartReplies".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link SuggestSmartReplies#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the participant to fetch suggestion for. Format:
+             *        `projects//locations//conversations//participants/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest}
+             * @return the request
+             */
+            public SuggestSmartReplies suggestSmartReplies(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest content) throws java.io.IOException {
+              SuggestSmartReplies result = new SuggestSmartReplies(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class SuggestSmartReplies extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesResponse> {
+
+              private static final String REST_PATH = "v2/{+parent}/suggestions:suggestSmartReplies";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+/participants/[^/]+$");
+
+              /**
+               * Gets smart replies for a participant based on specific historical messages.
+               *
+               * Create a request for the method "suggestions.suggestSmartReplies".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link SuggestSmartReplies#execute()} method to invoke the remote
+               * operation. <p> {@link SuggestSmartReplies#initialize(com.google.api.client.googleapis.services.
+               * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the participant to fetch suggestion for. Format:
+             *        `projects//locations//conversations//participants/`.
+               * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest}
+               * @since 1.13
+               */
+              protected SuggestSmartReplies(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesRequest content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SuggestSmartRepliesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/conversations/[^/]+/participants/[^/]+$");
+                }
+              }
+
+              @Override
+              public SuggestSmartReplies set$Xgafv(java.lang.String $Xgafv) {
+                return (SuggestSmartReplies) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public SuggestSmartReplies setAccessToken(java.lang.String accessToken) {
+                return (SuggestSmartReplies) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public SuggestSmartReplies setAlt(java.lang.String alt) {
+                return (SuggestSmartReplies) super.setAlt(alt);
+              }
+
+              @Override
+              public SuggestSmartReplies setCallback(java.lang.String callback) {
+                return (SuggestSmartReplies) super.setCallback(callback);
+              }
+
+              @Override
+              public SuggestSmartReplies setFields(java.lang.String fields) {
+                return (SuggestSmartReplies) super.setFields(fields);
+              }
+
+              @Override
+              public SuggestSmartReplies setKey(java.lang.String key) {
+                return (SuggestSmartReplies) super.setKey(key);
+              }
+
+              @Override
+              public SuggestSmartReplies setOauthToken(java.lang.String oauthToken) {
+                return (SuggestSmartReplies) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public SuggestSmartReplies setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (SuggestSmartReplies) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public SuggestSmartReplies setQuotaUser(java.lang.String quotaUser) {
+                return (SuggestSmartReplies) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public SuggestSmartReplies setUploadType(java.lang.String uploadType) {
+                return (SuggestSmartReplies) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public SuggestSmartReplies setUploadProtocol(java.lang.String uploadProtocol) {
+                return (SuggestSmartReplies) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the participant to fetch suggestion for. Format:
+               * `projects//locations//conversations//participants/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the participant to fetch suggestion for. Format:
+             `projects//locations//conversations//participants/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The name of the participant to fetch suggestion for. Format:
+               * `projects//locations//conversations//participants/`.
+               */
+              public SuggestSmartReplies setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/conversations/[^/]+/participants/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public SuggestSmartReplies set(String parameterName, Object value) {
+                return (SuggestSmartReplies) super.set(parameterName, value);
+              }
+            }
 
           }
         }
@@ -33082,6 +33680,52 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
+           * The filter expression used to filter knowledge bases returned by the list method. The
+           * expression has the following syntax: [AND ] ... The following fields and operators are
+           * supported: * display_name with has(:) operator * language_code with equals(=) operator
+           * Examples: * 'language_code=en-us' matches knowledge bases with en-us language code. *
+           * 'display_name:articles' matches knowledge bases whose display name contains "articles".
+           * * 'display_name:"Best Articles"' matches knowledge bases whose display name contains
+           * "Best Articles". * 'language_code=en-gb AND display_name=articles' matches all
+           * knowledge bases whose display name contains "articles" and whose language code is "en-
+           * gb". Note: An empty filter string (i.e. "") is a no-op and will result in no filtering.
+           * For more information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression used to filter knowledge bases returned by the list method. The expression
+         has the following syntax: [AND ] ... The following fields and operators are supported: *
+         display_name with has(:) operator * language_code with equals(=) operator Examples: *
+         'language_code=en-us' matches knowledge bases with en-us language code. * 'display_name:articles'
+         matches knowledge bases whose display name contains "articles". * 'display_name:"Best Articles"'
+         matches knowledge bases whose display name contains "Best Articles". * 'language_code=en-gb AND
+         display_name=articles' matches all knowledge bases whose display name contains "articles" and whose
+         language code is "en-gb". Note: An empty filter string (i.e. "") is a no-op and will result in no
+         filtering. For more information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter expression used to filter knowledge bases returned by the list method. The
+           * expression has the following syntax: [AND ] ... The following fields and operators are
+           * supported: * display_name with has(:) operator * language_code with equals(=) operator
+           * Examples: * 'language_code=en-us' matches knowledge bases with en-us language code. *
+           * 'display_name:articles' matches knowledge bases whose display name contains "articles".
+           * * 'display_name:"Best Articles"' matches knowledge bases whose display name contains
+           * "Best Articles". * 'language_code=en-gb AND display_name=articles' matches all
+           * knowledge bases whose display name contains "articles" and whose language code is "en-
+           * gb". Note: An empty filter string (i.e. "") is a no-op and will result in no filtering.
+           * For more information about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * The maximum number of items to return in a single page. By default 10 and at most 100.
            */
           @com.google.api.client.util.Key
@@ -33599,6 +34243,152 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
+           * Exports a smart messaging candidate document into the specified destination. This method is a
+           * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+           * The returned `Operation` type has the following method-specific fields: - `metadata`:
+           * KnowledgeOperationMetadata - `response`: Document
+           *
+           * Create a request for the method "documents.export".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the document to export. Format:
+           *        `projects//locations//knowledgeBases//documents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest content) throws java.io.IOException {
+            Export result = new Export(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2/{+name}:export";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+
+            /**
+             * Exports a smart messaging candidate document into the specified destination. This method is a
+             * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+             * operation). The returned `Operation` type has the following method-specific fields: -
+             * `metadata`: KnowledgeOperationMetadata - `response`: Document
+             *
+             * Create a request for the method "documents.export".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the document to export. Format:
+           *        `projects//locations//knowledgeBases//documents/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ExportDocumentRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the document to export. Format:
+             * `projects//locations//knowledgeBases//documents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the document to export. Format:
+           `projects//locations//knowledgeBases//documents/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the document to export. Format:
+             * `projects//locations//knowledgeBases//documents/`.
+             */
+            public Export setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
+          /**
            * Retrieves the specified document.
            *
            * Create a request for the method "documents.get".
@@ -33884,6 +34674,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/locations/[^/]+/knowledgeBases/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The filter expression used to filter documents returned by the list method. The
+             * expression has the following syntax: [AND ] ... The following fields and operators
+             * are supported: * knowledge_types with has(:) operator * display_name with has(:)
+             * operator * state with equals(=) operator Examples: * "knowledge_types:FAQ" matches
+             * documents with FAQ knowledge type. * "display_name:customer" matches documents whose
+             * display name contains "customer". * "state=ACTIVE" matches documents with ACTIVE
+             * state. * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For
+             * more information about filtering, see [API Filtering](https://aip.dev/160).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression used to filter documents returned by the list method. The expression has the
+           following syntax: [AND ] ... The following fields and operators are supported: * knowledge_types
+           with has(:) operator * display_name with has(:) operator * state with equals(=) operator Examples:
+           * "knowledge_types:FAQ" matches documents with FAQ knowledge type. * "display_name:customer"
+           matches documents whose display name contains "customer". * "state=ACTIVE" matches documents with
+           ACTIVE state. * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For more
+           information about filtering, see [API Filtering](https://aip.dev/160).
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter expression used to filter documents returned by the list method. The
+             * expression has the following syntax: [AND ] ... The following fields and operators
+             * are supported: * knowledge_types with has(:) operator * display_name with has(:)
+             * operator * state with equals(=) operator Examples: * "knowledge_types:FAQ" matches
+             * documents with FAQ knowledge type. * "display_name:customer" matches documents whose
+             * display name contains "customer". * "state=ACTIVE" matches documents with ACTIVE
+             * state. * "knowledge_types:FAQ AND state=ACTIVE" matches all active FAQ documents. For
+             * more information about filtering, see [API Filtering](https://aip.dev/160).
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
               return this;
             }
 

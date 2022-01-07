@@ -17,10 +17,7 @@
 package com.google.api.services.bigquerydatatransfer.v1.model;
 
 /**
- * Represents a data source parameter with validation rules, so that parameters can be rendered in
- * the UI. These parameters are given to us by supported data sources, and include all needed
- * information for rendering and validation. Thus, whoever uses this api can decide to generate
- * either generic ui, or custom data source specific forms.
+ * A parameter used to define custom fields in a data source definition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery Data Transfer API. For a detailed

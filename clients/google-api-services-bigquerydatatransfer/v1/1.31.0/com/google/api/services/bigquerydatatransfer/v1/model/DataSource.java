@@ -17,8 +17,7 @@
 package com.google.api.services.bigquerydatatransfer.v1.model;
 
 /**
- * Represents data source metadata. Metadata is sufficient to render UI and request proper OAuth
- * tokens.
+ * Defines the properties and custom parameters for a data source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery Data Transfer API. For a detailed

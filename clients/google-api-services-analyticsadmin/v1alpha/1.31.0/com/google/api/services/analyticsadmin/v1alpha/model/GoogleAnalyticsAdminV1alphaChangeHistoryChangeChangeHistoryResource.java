@@ -38,13 +38,6 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaAccount account;
 
   /**
-   * A snapshot of an AndroidAppDataStream resource in change history.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAnalyticsAdminV1alphaAndroidAppDataStream androidAppDataStream;
-
-  /**
    * A snapshot of a ConversionEvent resource in change history.
    * The value may be {@code null}.
    */
@@ -71,6 +64,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   @com.google.api.client.util.Key
   private GoogleAnalyticsAdminV1alphaDataRetentionSettings dataRetentionSettings;
+
+  /**
+   * A snapshot of a DataStream resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaDataStream dataStream;
 
   /**
    * A snapshot of a DisplayVideo360AdvertiserLink resource in change history.
@@ -108,13 +108,6 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaGoogleSignalsSettings googleSignalsSettings;
 
   /**
-   * A snapshot of an IosAppDataStream resource in change history.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAnalyticsAdminV1alphaIosAppDataStream iosAppDataStream;
-
-  /**
    * A snapshot of a MeasurementProtocolSecret resource in change history.
    * The value may be {@code null}.
    */
@@ -127,13 +120,6 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   @com.google.api.client.util.Key
   private GoogleAnalyticsAdminV1alphaProperty property;
-
-  /**
-   * A snapshot of a WebDataStream resource in change history.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAnalyticsAdminV1alphaWebDataStream webDataStream;
 
   /**
    * A snapshot of an Account resource in change history.
@@ -149,23 +135,6 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAccount(GoogleAnalyticsAdminV1alphaAccount account) {
     this.account = account;
-    return this;
-  }
-
-  /**
-   * A snapshot of an AndroidAppDataStream resource in change history.
-   * @return value or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaAndroidAppDataStream getAndroidAppDataStream() {
-    return androidAppDataStream;
-  }
-
-  /**
-   * A snapshot of an AndroidAppDataStream resource in change history.
-   * @param androidAppDataStream androidAppDataStream or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAndroidAppDataStream(GoogleAnalyticsAdminV1alphaAndroidAppDataStream androidAppDataStream) {
-    this.androidAppDataStream = androidAppDataStream;
     return this;
   }
 
@@ -234,6 +203,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDataRetentionSettings(GoogleAnalyticsAdminV1alphaDataRetentionSettings dataRetentionSettings) {
     this.dataRetentionSettings = dataRetentionSettings;
+    return this;
+  }
+
+  /**
+   * A snapshot of a DataStream resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaDataStream getDataStream() {
+    return dataStream;
+  }
+
+  /**
+   * A snapshot of a DataStream resource in change history.
+   * @param dataStream dataStream or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDataStream(GoogleAnalyticsAdminV1alphaDataStream dataStream) {
+    this.dataStream = dataStream;
     return this;
   }
 
@@ -323,23 +309,6 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   }
 
   /**
-   * A snapshot of an IosAppDataStream resource in change history.
-   * @return value or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaIosAppDataStream getIosAppDataStream() {
-    return iosAppDataStream;
-  }
-
-  /**
-   * A snapshot of an IosAppDataStream resource in change history.
-   * @param iosAppDataStream iosAppDataStream or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setIosAppDataStream(GoogleAnalyticsAdminV1alphaIosAppDataStream iosAppDataStream) {
-    this.iosAppDataStream = iosAppDataStream;
-    return this;
-  }
-
-  /**
    * A snapshot of a MeasurementProtocolSecret resource in change history.
    * @return value or {@code null} for none
    */
@@ -370,23 +339,6 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setProperty(GoogleAnalyticsAdminV1alphaProperty property) {
     this.property = property;
-    return this;
-  }
-
-  /**
-   * A snapshot of a WebDataStream resource in change history.
-   * @return value or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaWebDataStream getWebDataStream() {
-    return webDataStream;
-  }
-
-  /**
-   * A snapshot of a WebDataStream resource in change history.
-   * @param webDataStream webDataStream or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setWebDataStream(GoogleAnalyticsAdminV1alphaWebDataStream webDataStream) {
-    this.webDataStream = webDataStream;
     return this;
   }
 

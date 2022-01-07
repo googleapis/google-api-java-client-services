@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   private java.lang.String content;
 
   /**
-   * Output only. The time when the message was created.
+   * Output only. The time when the message was created in Contact Center AI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,8 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   private GoogleCloudDialogflowV2MessageAnnotation messageAnnotation;
 
   /**
-   * The unique identifier of the message. Format: `projects//locations//conversations//messages/`.
+   * Optional. The unique identifier of the message. Format:
+   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,6 +81,20 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   private java.lang.String participantRole;
 
   /**
+   * Optional. The time when the message was sent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String sendTime;
+
+  /**
+   * Output only. The sentiment analysis result for the message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysis;
+
+  /**
    * Required. The message content.
    * @return value or {@code null} for none
    */
@@ -97,7 +112,7 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   }
 
   /**
-   * Output only. The time when the message was created.
+   * Output only. The time when the message was created in Contact Center AI.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -105,7 +120,7 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   }
 
   /**
-   * Output only. The time when the message was created.
+   * Output only. The time when the message was created in Contact Center AI.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2Message setCreateTime(String createTime) {
@@ -150,7 +165,8 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   }
 
   /**
-   * The unique identifier of the message. Format: `projects//locations//conversations//messages/`.
+   * Optional. The unique identifier of the message. Format:
+   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -158,7 +174,8 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   }
 
   /**
-   * The unique identifier of the message. Format: `projects//locations//conversations//messages/`.
+   * Optional. The unique identifier of the message. Format:
+   * `projects//locations//conversations//messages/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2Message setName(java.lang.String name) {
@@ -197,6 +214,40 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
    */
   public GoogleCloudDialogflowV2Message setParticipantRole(java.lang.String participantRole) {
     this.participantRole = participantRole;
+    return this;
+  }
+
+  /**
+   * Optional. The time when the message was sent.
+   * @return value or {@code null} for none
+   */
+  public String getSendTime() {
+    return sendTime;
+  }
+
+  /**
+   * Optional. The time when the message was sent.
+   * @param sendTime sendTime or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Message setSendTime(String sendTime) {
+    this.sendTime = sendTime;
+    return this;
+  }
+
+  /**
+   * Output only. The sentiment analysis result for the message.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SentimentAnalysisResult getSentimentAnalysis() {
+    return sentimentAnalysis;
+  }
+
+  /**
+   * Output only. The sentiment analysis result for the message.
+   * @param sentimentAnalysis sentimentAnalysis or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Message setSentimentAnalysis(GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysis) {
+    this.sentimentAnalysis = sentimentAnalysis;
     return this;
   }
 

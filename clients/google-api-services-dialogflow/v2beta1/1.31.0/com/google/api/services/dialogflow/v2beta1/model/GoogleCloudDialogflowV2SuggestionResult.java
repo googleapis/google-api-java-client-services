@@ -52,6 +52,13 @@ public final class GoogleCloudDialogflowV2SuggestionResult extends com.google.ap
   private GoogleCloudDialogflowV2SuggestFaqAnswersResponse suggestFaqAnswersResponse;
 
   /**
+   * SuggestSmartRepliesResponse if request is for SMART_REPLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SuggestSmartRepliesResponse suggestSmartRepliesResponse;
+
+  /**
    * Error status if the request failed.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class GoogleCloudDialogflowV2SuggestionResult extends com.google.ap
    */
   public GoogleCloudDialogflowV2SuggestionResult setSuggestFaqAnswersResponse(GoogleCloudDialogflowV2SuggestFaqAnswersResponse suggestFaqAnswersResponse) {
     this.suggestFaqAnswersResponse = suggestFaqAnswersResponse;
+    return this;
+  }
+
+  /**
+   * SuggestSmartRepliesResponse if request is for SMART_REPLY.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestSmartRepliesResponse getSuggestSmartRepliesResponse() {
+    return suggestSmartRepliesResponse;
+  }
+
+  /**
+   * SuggestSmartRepliesResponse if request is for SMART_REPLY.
+   * @param suggestSmartRepliesResponse suggestSmartRepliesResponse or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestionResult setSuggestSmartRepliesResponse(GoogleCloudDialogflowV2SuggestSmartRepliesResponse suggestSmartRepliesResponse) {
+    this.suggestSmartRepliesResponse = suggestSmartRepliesResponse;
     return this;
   }
 

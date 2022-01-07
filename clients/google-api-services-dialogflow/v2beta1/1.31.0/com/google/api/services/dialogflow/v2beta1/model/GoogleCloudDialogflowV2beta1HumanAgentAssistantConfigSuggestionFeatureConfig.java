@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig conversationModelConfig;
 
   /**
+   * Configs for processing conversation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig;
+
+  /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
    * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
    * The value may be {@code null}.
@@ -80,6 +87,23 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setConversationModelConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig conversationModelConfig) {
     this.conversationModelConfig = conversationModelConfig;
+    return this;
+  }
+
+  /**
+   * Configs for processing conversation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig getConversationProcessConfig() {
+    return conversationProcessConfig;
+  }
+
+  /**
+   * Configs for processing conversation.
+   * @param conversationProcessConfig conversationProcessConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setConversationProcessConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig) {
+    this.conversationProcessConfig = conversationProcessConfig;
     return this;
   }
 

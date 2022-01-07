@@ -38,6 +38,14 @@ public final class GoogleCloudDialogflowCxV3PageInfo extends com.google.api.clie
   private java.lang.String currentPage;
 
   /**
+   * Always present for WebhookRequest. Ignored for WebhookResponse. The display name of the current
+   * page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Optional for both WebhookRequest and WebhookResponse. Information about the form.
    * The value may be {@code null}.
    */
@@ -60,6 +68,25 @@ public final class GoogleCloudDialogflowCxV3PageInfo extends com.google.api.clie
    */
   public GoogleCloudDialogflowCxV3PageInfo setCurrentPage(java.lang.String currentPage) {
     this.currentPage = currentPage;
+    return this;
+  }
+
+  /**
+   * Always present for WebhookRequest. Ignored for WebhookResponse. The display name of the current
+   * page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Always present for WebhookRequest. Ignored for WebhookResponse. The display name of the current
+   * page.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3PageInfo setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

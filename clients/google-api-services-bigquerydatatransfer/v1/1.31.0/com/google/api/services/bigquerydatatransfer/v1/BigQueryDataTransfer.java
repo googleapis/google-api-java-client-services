@@ -314,10 +314,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
     public class DataSources {
 
       /**
-       * Returns true if valid credentials exist for the given data source and requesting user. Some data
-       * sources doesn't support service account, so we need to talk to them on behalf of the end user.
-       * This API just checks whether we have OAuth token for the particular user, which is a pre-
-       * requisite before user can create a transfer config.
+       * Returns true if valid credentials exist for the given data source and requesting user.
        *
        * Create a request for the method "dataSources.checkValidCreds".
        *
@@ -344,10 +341,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^projects/[^/]+/dataSources/[^/]+$");
 
         /**
-         * Returns true if valid credentials exist for the given data source and requesting user. Some
-         * data sources doesn't support service account, so we need to talk to them on behalf of the end
-         * user. This API just checks whether we have OAuth token for the particular user, which is a pre-
-         * requisite before user can create a transfer config.
+         * Returns true if valid credentials exist for the given data source and requesting user.
          *
          * Create a request for the method "dataSources.checkValidCreds".
          *
@@ -463,7 +457,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Retrieves a supported data source and returns its settings, which can be used for UI rendering.
+       * Retrieves a supported data source and returns its settings.
        *
        * Create a request for the method "dataSources.get".
        *
@@ -489,7 +483,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^projects/[^/]+/dataSources/[^/]+$");
 
         /**
-         * Retrieves a supported data source and returns its settings, which can be used for UI rendering.
+         * Retrieves a supported data source and returns its settings.
          *
          * Create a request for the method "dataSources.get".
          *
@@ -616,7 +610,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Lists supported data sources and returns their settings, which can be used for UI rendering.
+       * Lists supported data sources and returns their settings.
        *
        * Create a request for the method "dataSources.list".
        *
@@ -641,7 +635,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists supported data sources and returns their settings, which can be used for UI rendering.
+         * Lists supported data sources and returns their settings.
          *
          * Create a request for the method "dataSources.list".
          *
@@ -1333,10 +1327,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
       public class DataSources {
 
         /**
-         * Returns true if valid credentials exist for the given data source and requesting user. Some data
-         * sources doesn't support service account, so we need to talk to them on behalf of the end user.
-         * This API just checks whether we have OAuth token for the particular user, which is a pre-
-         * requisite before user can create a transfer config.
+         * Returns true if valid credentials exist for the given data source and requesting user.
          *
          * Create a request for the method "dataSources.checkValidCreds".
          *
@@ -1363,10 +1354,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataSources/[^/]+$");
 
           /**
-           * Returns true if valid credentials exist for the given data source and requesting user. Some
-           * data sources doesn't support service account, so we need to talk to them on behalf of the end
-           * user. This API just checks whether we have OAuth token for the particular user, which is a pre-
-           * requisite before user can create a transfer config.
+           * Returns true if valid credentials exist for the given data source and requesting user.
            *
            * Create a request for the method "dataSources.checkValidCreds".
            *
@@ -1482,7 +1470,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
         }
         /**
-         * Retrieves a supported data source and returns its settings, which can be used for UI rendering.
+         * Retrieves a supported data source and returns its settings.
          *
          * Create a request for the method "dataSources.get".
          *
@@ -1508,7 +1496,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataSources/[^/]+$");
 
           /**
-           * Retrieves a supported data source and returns its settings, which can be used for UI rendering.
+           * Retrieves a supported data source and returns its settings.
            *
            * Create a request for the method "dataSources.get".
            *
@@ -1635,7 +1623,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
         }
         /**
-         * Lists supported data sources and returns their settings, which can be used for UI rendering.
+         * Lists supported data sources and returns their settings.
          *
          * Create a request for the method "dataSources.list".
          *
@@ -1660,7 +1648,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists supported data sources and returns their settings, which can be used for UI rendering.
+           * Lists supported data sources and returns their settings.
            *
            * Create a request for the method "dataSources.list".
            *
@@ -3497,7 +3485,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
           }
           /**
-           * Returns information about running and completed jobs.
+           * Returns information about running and completed transfer runs.
            *
            * Create a request for the method "runs.list".
            *
@@ -3524,7 +3512,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+$");
 
             /**
-             * Returns information about running and completed jobs.
+             * Returns information about running and completed transfer runs.
              *
              * Create a request for the method "runs.list".
              *
@@ -3751,7 +3739,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           public class TransferLogs {
 
             /**
-             * Returns user facing log messages for the data transfer run.
+             * Returns log messages for the transfer run.
              *
              * Create a request for the method "transferLogs.list".
              *
@@ -3777,7 +3765,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+/runs/[^/]+$");
 
               /**
-               * Returns user facing log messages for the data transfer run.
+               * Returns log messages for the transfer run.
                *
                * Create a request for the method "transferLogs.list".
                *
@@ -5643,7 +5631,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
         }
         /**
-         * Returns information about running and completed jobs.
+         * Returns information about running and completed transfer runs.
          *
          * Create a request for the method "runs.list".
          *
@@ -5670,7 +5658,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               java.util.regex.Pattern.compile("^projects/[^/]+/transferConfigs/[^/]+$");
 
           /**
-           * Returns information about running and completed jobs.
+           * Returns information about running and completed transfer runs.
            *
            * Create a request for the method "runs.list".
            *
@@ -5897,7 +5885,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         public class TransferLogs {
 
           /**
-           * Returns user facing log messages for the data transfer run.
+           * Returns log messages for the transfer run.
            *
            * Create a request for the method "transferLogs.list".
            *
@@ -5923,7 +5911,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
                 java.util.regex.Pattern.compile("^projects/[^/]+/transferConfigs/[^/]+/runs/[^/]+$");
 
             /**
-             * Returns user facing log messages for the data transfer run.
+             * Returns log messages for the transfer run.
              *
              * Create a request for the method "transferLogs.list".
              *

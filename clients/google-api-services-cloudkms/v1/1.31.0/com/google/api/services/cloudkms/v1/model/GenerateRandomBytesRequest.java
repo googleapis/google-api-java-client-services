@@ -39,7 +39,8 @@ public final class GenerateRandomBytesRequest extends com.google.api.client.json
   private java.lang.Integer lengthBytes;
 
   /**
-   * The ProtectionLevel to use when generating the random data. Defaults to SOFTWARE.
+   * The ProtectionLevel to use when generating the random data. Currently, only HSM protection
+   * level is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class GenerateRandomBytesRequest extends com.google.api.client.json
   }
 
   /**
-   * The ProtectionLevel to use when generating the random data. Defaults to SOFTWARE.
+   * The ProtectionLevel to use when generating the random data. Currently, only HSM protection
+   * level is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtectionLevel() {
@@ -73,7 +75,8 @@ public final class GenerateRandomBytesRequest extends com.google.api.client.json
   }
 
   /**
-   * The ProtectionLevel to use when generating the random data. Defaults to SOFTWARE.
+   * The ProtectionLevel to use when generating the random data. Currently, only HSM protection
+   * level is supported.
    * @param protectionLevel protectionLevel or {@code null} for none
    */
   public GenerateRandomBytesRequest setProtectionLevel(java.lang.String protectionLevel) {

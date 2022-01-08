@@ -50,7 +50,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    * always available to subscribers. For instance, it allows any attached subscription to [seek to
    * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
    * `message_retention_duration` in the past. If this field is not set, message retention is
-   * controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10
+   * controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10
    * minutes.
    * The value may be {@code null}.
    */
@@ -132,7 +132,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    * always available to subscribers. For instance, it allows any attached subscription to [seek to
    * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
    * `message_retention_duration` in the past. If this field is not set, message retention is
-   * controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10
+   * controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10
    * minutes.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    * always available to subscribers. For instance, it allows any attached subscription to [seek to
    * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
    * `message_retention_duration` in the past. If this field is not set, message retention is
-   * controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10
+   * controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10
    * minutes.
    * @param messageRetentionDuration messageRetentionDuration or {@code null} for none
    */

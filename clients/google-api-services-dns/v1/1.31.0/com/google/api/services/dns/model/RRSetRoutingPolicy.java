@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * A RRSetRoutingPolicy represents ResourceRecordSet data that will be returned dynamically with the
+ * A RRSetRoutingPolicy represents ResourceRecordSet data that is returned dynamically with the
  * response varying based on configured properties such as geolocation or by weighted random
  * selection.
  *
@@ -35,7 +35,7 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RRSetRoutingPolicyGeoPolicy geoPolicy;
+  private RRSetRoutingPolicyGeoPolicy geo;
 
   /**
    * The value may be {@code null}.
@@ -47,20 +47,20 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RRSetRoutingPolicyWrrPolicy wrrPolicy;
+  private RRSetRoutingPolicyWrrPolicy wrr;
 
   /**
    * @return value or {@code null} for none
    */
-  public RRSetRoutingPolicyGeoPolicy getGeoPolicy() {
-    return geoPolicy;
+  public RRSetRoutingPolicyGeoPolicy getGeo() {
+    return geo;
   }
 
   /**
-   * @param geoPolicy geoPolicy or {@code null} for none
+   * @param geo geo or {@code null} for none
    */
-  public RRSetRoutingPolicy setGeoPolicy(RRSetRoutingPolicyGeoPolicy geoPolicy) {
-    this.geoPolicy = geoPolicy;
+  public RRSetRoutingPolicy setGeo(RRSetRoutingPolicyGeoPolicy geo) {
+    this.geo = geo;
     return this;
   }
 
@@ -82,15 +82,15 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
   /**
    * @return value or {@code null} for none
    */
-  public RRSetRoutingPolicyWrrPolicy getWrrPolicy() {
-    return wrrPolicy;
+  public RRSetRoutingPolicyWrrPolicy getWrr() {
+    return wrr;
   }
 
   /**
-   * @param wrrPolicy wrrPolicy or {@code null} for none
+   * @param wrr wrr or {@code null} for none
    */
-  public RRSetRoutingPolicy setWrrPolicy(RRSetRoutingPolicyWrrPolicy wrrPolicy) {
-    this.wrrPolicy = wrrPolicy;
+  public RRSetRoutingPolicy setWrr(RRSetRoutingPolicyWrrPolicy wrr) {
+    this.wrr = wrr;
     return this;
   }
 

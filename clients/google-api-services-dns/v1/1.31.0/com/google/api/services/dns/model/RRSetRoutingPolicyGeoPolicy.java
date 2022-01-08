@@ -30,16 +30,6 @@ package com.google.api.services.dns.model;
 public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the health check for the primary target for a geo location returns an unhealthy status, the
-   * failover target is returned instead. This failover configuration is not mandatory. If a
-   * failover is not provided, the primary target won't be healthchecked - we'll return the
-   * primarily configured rrdata irrespective of whether it is healthy or not.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<RRSetRoutingPolicyGeoPolicyGeoPolicyItem> failovers;
-
-  /**
    * The primary geo routing configuration. If there are multiple items with the same location, an
    * error is returned instead.
    * The value may be {@code null}.
@@ -52,29 +42,6 @@ public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
-
-  /**
-   * If the health check for the primary target for a geo location returns an unhealthy status, the
-   * failover target is returned instead. This failover configuration is not mandatory. If a
-   * failover is not provided, the primary target won't be healthchecked - we'll return the
-   * primarily configured rrdata irrespective of whether it is healthy or not.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<RRSetRoutingPolicyGeoPolicyGeoPolicyItem> getFailovers() {
-    return failovers;
-  }
-
-  /**
-   * If the health check for the primary target for a geo location returns an unhealthy status, the
-   * failover target is returned instead. This failover configuration is not mandatory. If a
-   * failover is not provided, the primary target won't be healthchecked - we'll return the
-   * primarily configured rrdata irrespective of whether it is healthy or not.
-   * @param failovers failovers or {@code null} for none
-   */
-  public RRSetRoutingPolicyGeoPolicy setFailovers(java.util.List<RRSetRoutingPolicyGeoPolicyGeoPolicyItem> failovers) {
-    this.failovers = failovers;
-    return this;
-  }
 
   /**
    * The primary geo routing configuration. If there are multiple items with the same location, an

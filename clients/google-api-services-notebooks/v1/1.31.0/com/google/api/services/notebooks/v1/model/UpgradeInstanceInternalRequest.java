@@ -30,12 +30,39 @@ package com.google.api.services.notebooks.v1.model;
 public final class UpgradeInstanceInternalRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The optional UpgradeType. Setting this field will search for additional compute
+   * images to upgrade this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Required. The VM hardware token for authenticating the VM.
    * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmId;
+
+  /**
+   * Optional. The optional UpgradeType. Setting this field will search for additional compute
+   * images to upgrade this instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. The optional UpgradeType. Setting this field will search for additional compute
+   * images to upgrade this instance.
+   * @param type type or {@code null} for none
+   */
+  public UpgradeInstanceInternalRequest setType(java.lang.String type) {
+    this.type = type;
+    return this;
+  }
 
   /**
    * Required. The VM hardware token for authenticating the VM.

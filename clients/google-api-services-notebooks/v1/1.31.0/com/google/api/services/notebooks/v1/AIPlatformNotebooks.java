@@ -2398,32 +2398,41 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-         must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset. To learn which resources support conditions in their IAM policies, see the
-         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -2714,6 +2723,29 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
                   "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
             }
             this.notebookInstance = notebookInstance;
+            return this;
+          }
+
+          /**
+           * Optional. The optional UpgradeType. Setting this field will search for additional
+           * compute images to upgrade this instance.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String type;
+
+          /** Optional. The optional UpgradeType. Setting this field will search for additional compute images to
+         upgrade this instance.
+           */
+          public java.lang.String getType() {
+            return type;
+          }
+
+          /**
+           * Optional. The optional UpgradeType. Setting this field will search for additional
+           * compute images to upgrade this instance.
+           */
+          public IsUpgradeable setType(java.lang.String type) {
+            this.type = type;
             return this;
           }
 
@@ -4540,6 +4572,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Add/update metadata items for an instance.
+         *
+         * Create a request for the method "instances.updateMetadataItems".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link UpdateMetadataItems#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.UpdateInstanceMetadataItemsRequest}
+         * @return the request
+         */
+        public UpdateMetadataItems updateMetadataItems(java.lang.String name, com.google.api.services.notebooks.v1.model.UpdateInstanceMetadataItemsRequest content) throws java.io.IOException {
+          UpdateMetadataItems result = new UpdateMetadataItems(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateMetadataItems extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.UpdateInstanceMetadataItemsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:updateMetadataItems";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Add/update metadata items for an instance.
+           *
+           * Create a request for the method "instances.updateMetadataItems".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link UpdateMetadataItems#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateMetadataItems#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.UpdateInstanceMetadataItemsRequest}
+           * @since 1.13
+           */
+          protected UpdateMetadataItems(java.lang.String name, com.google.api.services.notebooks.v1.model.UpdateInstanceMetadataItemsRequest content) {
+            super(AIPlatformNotebooks.this, "PATCH", REST_PATH, content, com.google.api.services.notebooks.v1.model.UpdateInstanceMetadataItemsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateMetadataItems set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateMetadataItems) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateMetadataItems setAccessToken(java.lang.String accessToken) {
+            return (UpdateMetadataItems) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateMetadataItems setAlt(java.lang.String alt) {
+            return (UpdateMetadataItems) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateMetadataItems setCallback(java.lang.String callback) {
+            return (UpdateMetadataItems) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateMetadataItems setFields(java.lang.String fields) {
+            return (UpdateMetadataItems) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateMetadataItems setKey(java.lang.String key) {
+            return (UpdateMetadataItems) super.setKey(key);
+          }
+
+          @Override
+          public UpdateMetadataItems setOauthToken(java.lang.String oauthToken) {
+            return (UpdateMetadataItems) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateMetadataItems setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateMetadataItems) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateMetadataItems setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateMetadataItems) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateMetadataItems setUploadType(java.lang.String uploadType) {
+            return (UpdateMetadataItems) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateMetadataItems setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateMetadataItems) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public UpdateMetadataItems setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public UpdateMetadataItems set(String parameterName, Object value) {
+            return (UpdateMetadataItems) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates the Shielded instance configuration of a single Instance.
          *
          * Create a request for the method "instances.updateShieldedInstanceConfig".
@@ -6173,32 +6340,41 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-         must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset. To learn which resources support conditions in their IAM policies, see the
-         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {

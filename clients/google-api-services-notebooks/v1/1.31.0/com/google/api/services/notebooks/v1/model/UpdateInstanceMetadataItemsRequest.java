@@ -17,7 +17,7 @@
 package com.google.api.services.notebooks.v1.model;
 
 /**
- * Request for upgrading a notebook instance
+ * Request for adding/changing metadata items for an instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.notebooks.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UpgradeInstanceRequest extends com.google.api.client.json.GenericJson {
+public final class UpdateInstanceMetadataItemsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The optional UpgradeType. Setting this field will search for additional compute
-   * images to upgrade this instance.
+   * Metadata items to add/update for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.util.Map<String, java.lang.String> items;
 
   /**
-   * Optional. The optional UpgradeType. Setting this field will search for additional compute
-   * images to upgrade this instance.
+   * Metadata items to add/update for the instance.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.util.Map<String, java.lang.String> getItems() {
+    return items;
   }
 
   /**
-   * Optional. The optional UpgradeType. Setting this field will search for additional compute
-   * images to upgrade this instance.
-   * @param type type or {@code null} for none
+   * Metadata items to add/update for the instance.
+   * @param items items or {@code null} for none
    */
-  public UpgradeInstanceRequest setType(java.lang.String type) {
-    this.type = type;
+  public UpdateInstanceMetadataItemsRequest setItems(java.util.Map<String, java.lang.String> items) {
+    this.items = items;
     return this;
   }
 
   @Override
-  public UpgradeInstanceRequest set(String fieldName, Object value) {
-    return (UpgradeInstanceRequest) super.set(fieldName, value);
+  public UpdateInstanceMetadataItemsRequest set(String fieldName, Object value) {
+    return (UpdateInstanceMetadataItemsRequest) super.set(fieldName, value);
   }
 
   @Override
-  public UpgradeInstanceRequest clone() {
-    return (UpgradeInstanceRequest) super.clone();
+  public UpdateInstanceMetadataItemsRequest clone() {
+    return (UpdateInstanceMetadataItemsRequest) super.clone();
   }
 
 }

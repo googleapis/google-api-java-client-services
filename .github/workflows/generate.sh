@@ -38,7 +38,7 @@ pushd ${ROOT_DIR}/discovery-artifact-manager
 
 for DISCOVERY in `ls discoveries/${SERVICE}.*.json`
 do
-  VERSION=$(basename ${DISCOVERY} | cut -d. -f2)
+  VERSION=$(basename ${DISCOVERY} | sed 's/\.json//' | cut -d. -f2-)
   OUTPUT_DIR=${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${VARIANT}
   echo ${DISCOVERY}
   echo ${VERSION}

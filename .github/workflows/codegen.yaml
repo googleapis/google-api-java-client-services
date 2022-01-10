@@ -7,7 +7,7 @@ on:
 name: codegen
 jobs:
   discovery:
-    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml
+    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
 
   generate:
     runs-on: ubuntu-latest

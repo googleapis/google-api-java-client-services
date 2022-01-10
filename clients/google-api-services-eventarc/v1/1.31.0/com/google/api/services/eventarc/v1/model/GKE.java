@@ -39,8 +39,8 @@ public final class GKE extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the Google Compute Engine in which the cluster resides, which can either
-   * be compute zone (e.g. us-central1-a) for the zonal clusters or region (e.g. us-central1) for
-   * regional clusters.
+   * be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-
+   * central1) for regional clusters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class GKE extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The relative path on the GKE service the events should be sent to. The value must
-   * conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route",
+   * conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route",
    * "route", "route/subroute".
    * The value may be {@code null}.
    */
@@ -90,8 +90,8 @@ public final class GKE extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the Google Compute Engine in which the cluster resides, which can either
-   * be compute zone (e.g. us-central1-a) for the zonal clusters or region (e.g. us-central1) for
-   * regional clusters.
+   * be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-
+   * central1) for regional clusters.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -100,8 +100,8 @@ public final class GKE extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the Google Compute Engine in which the cluster resides, which can either
-   * be compute zone (e.g. us-central1-a) for the zonal clusters or region (e.g. us-central1) for
-   * regional clusters.
+   * be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-
+   * central1) for regional clusters.
    * @param location location or {@code null} for none
    */
   public GKE setLocation(java.lang.String location) {
@@ -128,7 +128,7 @@ public final class GKE extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The relative path on the GKE service the events should be sent to. The value must
-   * conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route",
+   * conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route",
    * "route", "route/subroute".
    * @return value or {@code null} for none
    */
@@ -138,7 +138,7 @@ public final class GKE extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The relative path on the GKE service the events should be sent to. The value must
-   * conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route",
+   * conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route",
    * "route", "route/subroute".
    * @param path path or {@code null} for none
    */

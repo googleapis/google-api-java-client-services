@@ -31,7 +31,7 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The relative path on the Cloud Run service the events should be sent to. The value
-   * must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples:
+   * must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples:
    * "/route", "route", "route/subroute".
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
   /**
    * Required. The name of the Cloud Run service being addressed. See
    * https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located
-   * in the same project of the trigger object can be addressed.
+   * in the same project as the trigger object can be addressed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The relative path on the Cloud Run service the events should be sent to. The value
-   * must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples:
+   * must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples:
    * "/route", "route", "route/subroute".
    * @return value or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The relative path on the Cloud Run service the events should be sent to. The value
-   * must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples:
+   * must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples:
    * "/route", "route", "route/subroute".
    * @param path path or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
   /**
    * Required. The name of the Cloud Run service being addressed. See
    * https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located
-   * in the same project of the trigger object can be addressed.
+   * in the same project as the trigger object can be addressed.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -105,7 +105,7 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
   /**
    * Required. The name of the Cloud Run service being addressed. See
    * https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located
-   * in the same project of the trigger object can be addressed.
+   * in the same project as the trigger object can be addressed.
    * @param service service or {@code null} for none
    */
   public CloudRun setService(java.lang.String service) {

@@ -17,7 +17,7 @@
 package com.google.api.services.eventarc.v1.model;
 
 /**
- * Represents the transport intermediaries created for the trigger in order to deliver events.
+ * Represents the transport intermediaries created for the trigger to deliver events.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Eventarc API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.eventarc.v1.model;
 public final class Transport extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+   * The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Pubsub pubsub;
 
   /**
-   * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+   * The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
    * @return value or {@code null} for none
    */
   public Pubsub getPubsub() {
@@ -45,7 +45,7 @@ public final class Transport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
+   * The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
    * @param pubsub pubsub or {@code null} for none
    */
   public Transport setPubsub(Pubsub pubsub) {

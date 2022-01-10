@@ -38,7 +38,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private CloudRun cloudRun;
 
   /**
-   * A GKE service capable of receiving events. The service should be running in the same project of
+   * A GKE service capable of receiving events. The service should be running in the same project as
    * the trigger.
    * The value may be {@code null}.
    */
@@ -65,7 +65,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A GKE service capable of receiving events. The service should be running in the same project of
+   * A GKE service capable of receiving events. The service should be running in the same project as
    * the trigger.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A GKE service capable of receiving events. The service should be running in the same project of
+   * A GKE service capable of receiving events. The service should be running in the same project as
    * the trigger.
    * @param gke gke or {@code null} for none
    */

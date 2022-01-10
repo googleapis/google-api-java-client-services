@@ -31,11 +31,32 @@ package com.google.api.services.content.model;
 public final class PosStore extends com.google.api.client.json.GenericJson {
 
   /**
+   * The business type of the store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> gcidCategory;
+
+  /**
    * Identifies what kind of resource this is. Value: the fixed string "`content#posStore`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * The store phone number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phoneNumber;
+
+  /**
+   * The Google Place Id of the store location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String placeId;
 
   /**
    * Required. The street address of the store.
@@ -52,6 +73,37 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   private java.lang.String storeCode;
 
   /**
+   * The merchant or store name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storeName;
+
+  /**
+   * The website url for the store or merchant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String websiteUrl;
+
+  /**
+   * The business type of the store.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGcidCategory() {
+    return gcidCategory;
+  }
+
+  /**
+   * The business type of the store.
+   * @param gcidCategory gcidCategory or {@code null} for none
+   */
+  public PosStore setGcidCategory(java.util.List<java.lang.String> gcidCategory) {
+    this.gcidCategory = gcidCategory;
+    return this;
+  }
+
+  /**
    * Identifies what kind of resource this is. Value: the fixed string "`content#posStore`"
    * @return value or {@code null} for none
    */
@@ -65,6 +117,40 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
    */
   public PosStore setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The store phone number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  /**
+   * The store phone number.
+   * @param phoneNumber phoneNumber or {@code null} for none
+   */
+  public PosStore setPhoneNumber(java.lang.String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+  /**
+   * The Google Place Id of the store location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlaceId() {
+    return placeId;
+  }
+
+  /**
+   * The Google Place Id of the store location.
+   * @param placeId placeId or {@code null} for none
+   */
+  public PosStore setPlaceId(java.lang.String placeId) {
+    this.placeId = placeId;
     return this;
   }
 
@@ -99,6 +185,40 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
    */
   public PosStore setStoreCode(java.lang.String storeCode) {
     this.storeCode = storeCode;
+    return this;
+  }
+
+  /**
+   * The merchant or store name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoreName() {
+    return storeName;
+  }
+
+  /**
+   * The merchant or store name.
+   * @param storeName storeName or {@code null} for none
+   */
+  public PosStore setStoreName(java.lang.String storeName) {
+    this.storeName = storeName;
+    return this;
+  }
+
+  /**
+   * The website url for the store or merchant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebsiteUrl() {
+    return websiteUrl;
+  }
+
+  /**
+   * The website url for the store or merchant.
+   * @param websiteUrl websiteUrl or {@code null} for none
+   */
+  public PosStore setWebsiteUrl(java.lang.String websiteUrl) {
+    this.websiteUrl = websiteUrl;
     return this;
   }
 

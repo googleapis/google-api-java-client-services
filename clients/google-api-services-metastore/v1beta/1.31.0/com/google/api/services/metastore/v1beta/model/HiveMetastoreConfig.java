@@ -34,7 +34,8 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   /**
    * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore
    * (configured in hive-site.xml). The mappings override system defaults (some keys cannot be
-   * overridden).
+   * overridden). These overrides are also applied to auxiliary versions and can be further
+   * customized in the auxiliary version's AuxiliaryVersionConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   /**
    * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore
    * (configured in hive-site.xml). The mappings override system defaults (some keys cannot be
-   * overridden).
+   * overridden). These overrides are also applied to auxiliary versions and can be further
+   * customized in the auxiliary version's AuxiliaryVersionConfig.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getConfigOverrides() {
@@ -77,7 +79,8 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   /**
    * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore
    * (configured in hive-site.xml). The mappings override system defaults (some keys cannot be
-   * overridden).
+   * overridden). These overrides are also applied to auxiliary versions and can be further
+   * customized in the auxiliary version's AuxiliaryVersionConfig.
    * @param configOverrides configOverrides or {@code null} for none
    */
   public HiveMetastoreConfig setConfigOverrides(java.util.Map<String, java.lang.String> configOverrides) {

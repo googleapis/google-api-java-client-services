@@ -37,6 +37,13 @@ public final class GoogleAppsScriptTypeFunction extends com.google.api.client.js
   private java.lang.String name;
 
   /**
+   * The ordered list of parameter names of the function in the script project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> parameters;
+
+  /**
    * The function name in the script project.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleAppsScriptTypeFunction extends com.google.api.client.js
    */
   public GoogleAppsScriptTypeFunction setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The ordered list of parameter names of the function in the script project.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getParameters() {
+    return parameters;
+  }
+
+  /**
+   * The ordered list of parameter names of the function in the script project.
+   * @param parameters parameters or {@code null} for none
+   */
+  public GoogleAppsScriptTypeFunction setParameters(java.util.List<java.lang.String> parameters) {
+    this.parameters = parameters;
     return this;
   }
 

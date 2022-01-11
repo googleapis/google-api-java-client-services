@@ -59,9 +59,9 @@ public final class GoogleCloudRetailV2betaSetInventoryRequest extends com.google
   private GoogleCloudRetailV2betaProduct inventory;
 
   /**
-   * Indicates which inventory fields in the provided Product to update. If not set or set with
-   * empty paths, all inventory fields will be updated. If an unsupported or unknown field is
-   * provided, an INVALID_ARGUMENT error is returned and the entire update will be ignored.
+   * Indicates which inventory fields in the provided Product to update. At least one field must be
+   * provided. If an unsupported or unknown field is provided, an INVALID_ARGUMENT error is returned
+   * and the entire update will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,9 +140,9 @@ public final class GoogleCloudRetailV2betaSetInventoryRequest extends com.google
   }
 
   /**
-   * Indicates which inventory fields in the provided Product to update. If not set or set with
-   * empty paths, all inventory fields will be updated. If an unsupported or unknown field is
-   * provided, an INVALID_ARGUMENT error is returned and the entire update will be ignored.
+   * Indicates which inventory fields in the provided Product to update. At least one field must be
+   * provided. If an unsupported or unknown field is provided, an INVALID_ARGUMENT error is returned
+   * and the entire update will be ignored.
    * @return value or {@code null} for none
    */
   public String getSetMask() {
@@ -150,9 +150,9 @@ public final class GoogleCloudRetailV2betaSetInventoryRequest extends com.google
   }
 
   /**
-   * Indicates which inventory fields in the provided Product to update. If not set or set with
-   * empty paths, all inventory fields will be updated. If an unsupported or unknown field is
-   * provided, an INVALID_ARGUMENT error is returned and the entire update will be ignored.
+   * Indicates which inventory fields in the provided Product to update. At least one field must be
+   * provided. If an unsupported or unknown field is provided, an INVALID_ARGUMENT error is returned
+   * and the entire update will be ignored.
    * @param setMask setMask or {@code null} for none
    */
   public GoogleCloudRetailV2betaSetInventoryRequest setSetMask(String setMask) {

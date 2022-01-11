@@ -58,7 +58,7 @@ public final class GoogleCloudRetailV2alphaPriceInfo extends com.google.api.clie
   /**
    * Price of the product. Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371). Schema.org property
-   * [Offer.priceSpecification](https://schema.org/priceSpecification).
+   * [Offer.price](https://schema.org/price).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class GoogleCloudRetailV2alphaPriceInfo extends com.google.api.clie
   /**
    * Price of the product. Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371). Schema.org property
-   * [Offer.priceSpecification](https://schema.org/priceSpecification).
+   * [Offer.price](https://schema.org/price).
    * @return value or {@code null} for none
    */
   public java.lang.Float getPrice() {
@@ -167,7 +167,7 @@ public final class GoogleCloudRetailV2alphaPriceInfo extends com.google.api.clie
   /**
    * Price of the product. Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371). Schema.org property
-   * [Offer.priceSpecification](https://schema.org/priceSpecification).
+   * [Offer.price](https://schema.org/price).
    * @param price price or {@code null} for none
    */
   public GoogleCloudRetailV2alphaPriceInfo setPrice(java.lang.Float price) {

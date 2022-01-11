@@ -32,6 +32,13 @@ package com.google.api.services.orgpolicy.v2.model;
 public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Deprecated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudOrgpolicyV2AlternatePolicySpec alternate;
+
+  /**
    * Immutable. The resource name of the Policy. Must be one of the following forms, where
    * constraint_name is the name of the constraint which this Policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
@@ -51,6 +58,23 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private GoogleCloudOrgpolicyV2PolicySpec spec;
+
+  /**
+   * Deprecated.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2AlternatePolicySpec getAlternate() {
+    return alternate;
+  }
+
+  /**
+   * Deprecated.
+   * @param alternate alternate or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2Policy setAlternate(GoogleCloudOrgpolicyV2AlternatePolicySpec alternate) {
+    this.alternate = alternate;
+    return this;
+  }
 
   /**
    * Immutable. The resource name of the Policy. Must be one of the following forms, where

@@ -71,6 +71,14 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   private java.util.List<QuotaBucket> quotaBuckets;
 
   /**
+   * List of all supported locations. This field is present only if the limit has a {region} or
+   * {zone} dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedLocations;
+
+  /**
    * The limit unit. An example unit would be `1/{project}/{region}` Note that `{project}` and
    * `{region}` are not placeholders in this example; the literal characters `{` and `}` occur in
    * the string.
@@ -173,6 +181,25 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
    */
   public ConsumerQuotaLimit setQuotaBuckets(java.util.List<QuotaBucket> quotaBuckets) {
     this.quotaBuckets = quotaBuckets;
+    return this;
+  }
+
+  /**
+   * List of all supported locations. This field is present only if the limit has a {region} or
+   * {zone} dimension.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedLocations() {
+    return supportedLocations;
+  }
+
+  /**
+   * List of all supported locations. This field is present only if the limit has a {region} or
+   * {zone} dimension.
+   * @param supportedLocations supportedLocations or {@code null} for none
+   */
+  public ConsumerQuotaLimit setSupportedLocations(java.util.List<java.lang.String> supportedLocations) {
+    this.supportedLocations = supportedLocations;
     return this;
   }
 

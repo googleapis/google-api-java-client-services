@@ -31,6 +31,14 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class ValidateConsumerConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The IAM permission check determines whether the consumer project has
+   * 'servicenetworking.services.use' permission or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean checkServiceNetworkingUsePermission;
+
+  /**
    * Required. The network that the consumer is using to connect with services. Must be in the form
    * of projects/{project}/global/networks/{network} {project} is a project number, as in '12345'
    * {network} is network name.
@@ -65,6 +73,25 @@ public final class ValidateConsumerConfigRequest extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateNetwork;
+
+  /**
+   * Optional. The IAM permission check determines whether the consumer project has
+   * 'servicenetworking.services.use' permission or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCheckServiceNetworkingUsePermission() {
+    return checkServiceNetworkingUsePermission;
+  }
+
+  /**
+   * Optional. The IAM permission check determines whether the consumer project has
+   * 'servicenetworking.services.use' permission or not.
+   * @param checkServiceNetworkingUsePermission checkServiceNetworkingUsePermission or {@code null} for none
+   */
+  public ValidateConsumerConfigRequest setCheckServiceNetworkingUsePermission(java.lang.Boolean checkServiceNetworkingUsePermission) {
+    this.checkServiceNetworkingUsePermission = checkServiceNetworkingUsePermission;
+    return this;
+  }
 
   /**
    * Required. The network that the consumer is using to connect with services. Must be in the form

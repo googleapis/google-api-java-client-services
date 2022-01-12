@@ -37,7 +37,8 @@ public final class RunBuildTriggerRequest extends com.google.api.client.json.Gen
   private java.lang.String projectId;
 
   /**
-   * Source to build against this trigger.
+   * Source to build against this trigger. Branch and tag names cannot consist of regular
+   * expressions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class RunBuildTriggerRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Source to build against this trigger.
+   * Source to build against this trigger. Branch and tag names cannot consist of regular
+   * expressions.
    * @return value or {@code null} for none
    */
   public RepoSource getSource() {
@@ -76,7 +78,8 @@ public final class RunBuildTriggerRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Source to build against this trigger.
+   * Source to build against this trigger. Branch and tag names cannot consist of regular
+   * expressions.
    * @param source source or {@code null} for none
    */
   public RunBuildTriggerRequest setSource(RepoSource source) {

@@ -30,10 +30,10 @@ package com.google.api.services.run.v1.model;
 public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
-   * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
-   * Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is
-   * not limited, and the system decides the target concurrency for the autoscaler.
+   * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
+   * container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud
+   * Run for Anthos: supported, defaults to 0, which means concurrency to the application is not
+   * limited, and the system decides the target concurrency for the autoscaler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +53,33 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider Container used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Container.class);
+  }
+
+  /**
+   * Indicates whether information about services should be injected into pod's environment
+   * variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud
+   * Run for Anthos: supported, defaults to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableServiceLinks;
+
+  /**
+   * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling
+   * any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from
+   * Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by
+   * the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-
+   * imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos:
+   * supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LocalObjectReference> imagePullSecrets;
+
+  static {
+    // hack to force ProGuard to consider LocalObjectReference used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LocalObjectReference.class);
   }
 
   /**
@@ -82,10 +109,10 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.util.List<Volume> volumes;
 
   /**
-   * Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
-   * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
-   * Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is
-   * not limited, and the system decides the target concurrency for the autoscaler.
+   * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
+   * container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud
+   * Run for Anthos: supported, defaults to 0, which means concurrency to the application is not
+   * limited, and the system decides the target concurrency for the autoscaler.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContainerConcurrency() {
@@ -93,10 +120,10 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
-   * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
-   * Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is
-   * not limited, and the system decides the target concurrency for the autoscaler.
+   * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
+   * container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud
+   * Run for Anthos: supported, defaults to 0, which means concurrency to the application is not
+   * limited, and the system decides the target concurrency for the autoscaler.
    * @param containerConcurrency containerConcurrency or {@code null} for none
    */
   public RevisionSpec setContainerConcurrency(java.lang.Integer containerConcurrency) {
@@ -124,6 +151,54 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    */
   public RevisionSpec setContainers(java.util.List<Container> containers) {
     this.containers = containers;
+    return this;
+  }
+
+  /**
+   * Indicates whether information about services should be injected into pod's environment
+   * variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud
+   * Run for Anthos: supported, defaults to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableServiceLinks() {
+    return enableServiceLinks;
+  }
+
+  /**
+   * Indicates whether information about services should be injected into pod's environment
+   * variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud
+   * Run for Anthos: supported, defaults to true.
+   * @param enableServiceLinks enableServiceLinks or {@code null} for none
+   */
+  public RevisionSpec setEnableServiceLinks(java.lang.Boolean enableServiceLinks) {
+    this.enableServiceLinks = enableServiceLinks;
+    return this;
+  }
+
+  /**
+   * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling
+   * any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from
+   * Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by
+   * the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-
+   * imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos:
+   * supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LocalObjectReference> getImagePullSecrets() {
+    return imagePullSecrets;
+  }
+
+  /**
+   * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling
+   * any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from
+   * Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by
+   * the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-
+   * imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos:
+   * supported.
+   * @param imagePullSecrets imagePullSecrets or {@code null} for none
+   */
+  public RevisionSpec setImagePullSecrets(java.util.List<LocalObjectReference> imagePullSecrets) {
+    this.imagePullSecrets = imagePullSecrets;
     return this;
   }
 

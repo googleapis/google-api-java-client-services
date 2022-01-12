@@ -31,11 +31,14 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Extra user event features to include in the recommendation model. The key must be a UTF-8
-   * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. For product recommendation, an example of extra user information is traffic_channel,
-   * i.e. how user arrives at the site. Users can arrive at the site by coming to the site directly,
-   * or coming through Google search, and etc.
+   * Extra user event features to include in the recommendation model. This field needs to pass all
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * The key must be a UTF-8
+   * encoded string with a length limit of 5,000 characters. * For text attributes, at most 400
+   * values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string
+   * with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
+   * For product recommendation, an example of extra user information is traffic_channel, i.e. how
+   * user arrives at the site. Users can arrive at the site by coming to the site directly, or
+   * coming through Google search, and etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +75,8 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   private java.lang.String cartId;
 
   /**
-   * The main completion details related to the event. In a `completion` event, this field
-   * represents the completions returned to the end user and the clicked completion by the end user.
-   * In a `search` event, it represents the search event happens after clicking completion.
+   * The main auto-completion details related to the event. This field should be set for `search`
+   * event when autocomplete function is enabled and the user clicks a suggestion for search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,12 +92,11 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
 
   /**
    * Required. User event type. Allowed values are: * `add-to-cart`: Products being added to cart. *
-   * `category-page-view`: Special pages such as sale or promotion pages viewed. * `completion`:
-   * Completion query result showed/clicked. * `detail-page-view`: Products detail page viewed. *
-   * `home-page-view`: Homepage viewed. * `promotion-offered`: Promotion is offered to a user. *
-   * `promotion-not-offered`: Promotion is not offered to a user. * `purchase-complete`: User
-   * finishing a purchase. * `search`: Product search. * `shopping-cart-page-view`: User viewing a
-   * shopping cart.
+   * `category-page-view`: Special pages such as sale or promotion pages viewed. * `detail-page-
+   * view`: Products detail page viewed. * `home-page-view`: Homepage viewed. * `promotion-offered`:
+   * Promotion is offered to a user. * `promotion-not-offered`: Promotion is not offered to a user.
+   * * `purchase-complete`: User finishing a purchase. * `search`: Product search. * `shopping-cart-
+   * page-view`: User viewing a shopping cart.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,11 +253,14 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   private java.lang.String visitorId;
 
   /**
-   * Extra user event features to include in the recommendation model. The key must be a UTF-8
-   * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. For product recommendation, an example of extra user information is traffic_channel,
-   * i.e. how user arrives at the site. Users can arrive at the site by coming to the site directly,
-   * or coming through Google search, and etc.
+   * Extra user event features to include in the recommendation model. This field needs to pass all
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * The key must be a UTF-8
+   * encoded string with a length limit of 5,000 characters. * For text attributes, at most 400
+   * values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string
+   * with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
+   * For product recommendation, an example of extra user information is traffic_channel, i.e. how
+   * user arrives at the site. Users can arrive at the site by coming to the site directly, or
+   * coming through Google search, and etc.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> getAttributes() {
@@ -264,11 +268,14 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   }
 
   /**
-   * Extra user event features to include in the recommendation model. The key must be a UTF-8
-   * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. For product recommendation, an example of extra user information is traffic_channel,
-   * i.e. how user arrives at the site. Users can arrive at the site by coming to the site directly,
-   * or coming through Google search, and etc.
+   * Extra user event features to include in the recommendation model. This field needs to pass all
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * The key must be a UTF-8
+   * encoded string with a length limit of 5,000 characters. * For text attributes, at most 400
+   * values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string
+   * with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
+   * For product recommendation, an example of extra user information is traffic_channel, i.e. how
+   * user arrives at the site. Users can arrive at the site by coming to the site directly, or
+   * coming through Google search, and etc.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaUserEvent setAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
@@ -331,9 +338,8 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   }
 
   /**
-   * The main completion details related to the event. In a `completion` event, this field
-   * represents the completions returned to the end user and the clicked completion by the end user.
-   * In a `search` event, it represents the search event happens after clicking completion.
+   * The main auto-completion details related to the event. This field should be set for `search`
+   * event when autocomplete function is enabled and the user clicks a suggestion for search.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionDetail getCompletionDetail() {
@@ -341,9 +347,8 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   }
 
   /**
-   * The main completion details related to the event. In a `completion` event, this field
-   * represents the completions returned to the end user and the clicked completion by the end user.
-   * In a `search` event, it represents the search event happens after clicking completion.
+   * The main auto-completion details related to the event. This field should be set for `search`
+   * event when autocomplete function is enabled and the user clicks a suggestion for search.
    * @param completionDetail completionDetail or {@code null} for none
    */
   public GoogleCloudRetailV2alphaUserEvent setCompletionDetail(GoogleCloudRetailV2alphaCompletionDetail completionDetail) {
@@ -372,12 +377,11 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
 
   /**
    * Required. User event type. Allowed values are: * `add-to-cart`: Products being added to cart. *
-   * `category-page-view`: Special pages such as sale or promotion pages viewed. * `completion`:
-   * Completion query result showed/clicked. * `detail-page-view`: Products detail page viewed. *
-   * `home-page-view`: Homepage viewed. * `promotion-offered`: Promotion is offered to a user. *
-   * `promotion-not-offered`: Promotion is not offered to a user. * `purchase-complete`: User
-   * finishing a purchase. * `search`: Product search. * `shopping-cart-page-view`: User viewing a
-   * shopping cart.
+   * `category-page-view`: Special pages such as sale or promotion pages viewed. * `detail-page-
+   * view`: Products detail page viewed. * `home-page-view`: Homepage viewed. * `promotion-offered`:
+   * Promotion is offered to a user. * `promotion-not-offered`: Promotion is not offered to a user.
+   * * `purchase-complete`: User finishing a purchase. * `search`: Product search. * `shopping-cart-
+   * page-view`: User viewing a shopping cart.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -386,12 +390,11 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
 
   /**
    * Required. User event type. Allowed values are: * `add-to-cart`: Products being added to cart. *
-   * `category-page-view`: Special pages such as sale or promotion pages viewed. * `completion`:
-   * Completion query result showed/clicked. * `detail-page-view`: Products detail page viewed. *
-   * `home-page-view`: Homepage viewed. * `promotion-offered`: Promotion is offered to a user. *
-   * `promotion-not-offered`: Promotion is not offered to a user. * `purchase-complete`: User
-   * finishing a purchase. * `search`: Product search. * `shopping-cart-page-view`: User viewing a
-   * shopping cart.
+   * `category-page-view`: Special pages such as sale or promotion pages viewed. * `detail-page-
+   * view`: Products detail page viewed. * `home-page-view`: Homepage viewed. * `promotion-offered`:
+   * Promotion is offered to a user. * `promotion-not-offered`: Promotion is not offered to a user.
+   * * `purchase-complete`: User finishing a purchase. * `search`: Product search. * `shopping-cart-
+   * page-view`: User viewing a shopping cart.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudRetailV2alphaUserEvent setEventType(java.lang.String eventType) {

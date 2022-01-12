@@ -30,6 +30,14 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The fully qualified resource name of applied [controls](https://cloud.google.com/retail/docs
+   * /serving-control-rules).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> appliedControls;
+
+  /**
    * A unique search token. This should be included in the UserEvent logs resulting from this
    * search, which enables accurate attribution of search model performance.
    * The value may be {@code null}.
@@ -88,6 +96,25 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalSize;
+
+  /**
+   * The fully qualified resource name of applied [controls](https://cloud.google.com/retail/docs
+   * /serving-control-rules).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAppliedControls() {
+    return appliedControls;
+  }
+
+  /**
+   * The fully qualified resource name of applied [controls](https://cloud.google.com/retail/docs
+   * /serving-control-rules).
+   * @param appliedControls appliedControls or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchResponse setAppliedControls(java.util.List<java.lang.String> appliedControls) {
+    this.appliedControls = appliedControls;
+    return this;
+  }
 
   /**
    * A unique search token. This should be included in the UserEvent logs resulting from this

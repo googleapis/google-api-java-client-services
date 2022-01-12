@@ -40,8 +40,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
-   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
-   * KEY_1_LIKE_THIS.
+   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or
+   * `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For
+   * number attributes, at most 400 values are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +64,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private GoogleCloudRetailV2alphaAudience audience;
 
   /**
-   * The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant
-   * Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org
-   * Property [Offer.availability](https://schema.org/availability).
+   * The online availability of the Product. Default to Availability.IN_STOCK. Corresponding
+   * properties: Google Merchant Center property
+   * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
+   * [Offer.availability](https://schema.org/availability).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +90,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
    * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Google Merchant Center property
+   * returned. Corresponding properties: Google Merchant Center property
    * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
    * [Product.brand](https://schema.org/brand).
    * The value may be {@code null}.
@@ -106,8 +109,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
    * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
    * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
-   * Google Merchant Center property google_product_category. Schema.org property [Product.category]
-   * (https://schema.org/category). [mc_google_product_category]:
+   * Corresponding properties: Google Merchant Center property google_product_category. Schema.org
+   * property [Product.category] (https://schema.org/category). [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * The value may be {@code null}.
    */
@@ -123,7 +126,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.util.List<java.lang.String> collectionMemberIds;
 
   /**
-   * The color of the product. Google Merchant Center property
+   * The color of the product. Corresponding properties: Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
    * [Product.color](https://schema.org/color).
    * The value may be {@code null}.
@@ -135,7 +138,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * The condition of the product. Strongly encouraged to use the standard values: "new",
    * "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a
    * UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Google Merchant Center property
+   * error is returned. Corresponding properties: Google Merchant Center property
    * [condition](https://support.google.com/merchants/answer/6324469). Schema.org property
    * [Offer.itemCondition](https://schema.org/itemCondition).
    * The value may be {@code null}.
@@ -145,9 +148,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Product description. This field must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [description](https://support.google.com/merchants/answer/6324468). schema.org property
-   * [Product.description](https://schema.org/description).
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [description](https://support.google.com/merchants/answer/6324468).
+   * Schema.org property [Product.description](https://schema.org/description).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +161,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Product is not available for SearchService.Search after expire_time. However, the product can
    * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
    * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
-   * thrown. Google Merchant Center property
+   * thrown. Corresponding properties: Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * The value may be {@code null}.
    */
@@ -183,11 +186,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
    * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This
-   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant
-   * Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org
-   * property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8)
-   * or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13)
-   * or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
+   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property
+   * [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property
+   * [Product.isbn](https://schema.org/isbn), [Product.gtin8](https://schema.org/gtin8),
+   * [Product.gtin12](https://schema.org/gtin12), [Product.gtin13](https://schema.org/gtin13), or
+   * [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
    * INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
@@ -199,8 +203,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * "id_1", if name is
    * `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
    * This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [id](https://support.google.com/merchants/answer/6324405). Schema.org Property
+   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
+   * [id](https://support.google.com/merchants/answer/6324405). Schema.org property
    * [Product.sku](https://schema.org/sku).
    * The value may be {@code null}.
    */
@@ -209,7 +213,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Product images for the product.Highly recommended to put the main image to the first. A maximum
-   * of 300 images are allowed. Google Merchant Center property
+   * of 300 images are allowed. Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property
    * [Product.image](https://schema.org/image).
    * The value may be {@code null}.
@@ -224,11 +228,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Language of the title/description and other string attributes. Use language tags defined by BCP
-   * 47. For product prediction, this field is ignored and the model automatically detects the text
-   * language. The Product can include text in different languages, but duplicating Products to
-   * provide text in multiple languages can result in degraded model performance. For product search
-   * this field is in use. It defaults to "en-US" if unset.
+   * Language of the title/description and other string attributes. Use language tags defined by
+   * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). For product prediction, this field is
+   * ignored and the model automatically detects the text language. The Product can include text in
+   * different languages, but duplicating Products to provide text in multiple languages can result
+   * in degraded model performance. For product search this field is in use. It defaults to "en-US"
+   * if unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,9 +242,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
    * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
-   * [Product.material](https://schema.org/material).
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org
+   * property [Product.material](https://schema.org/material).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,16 +261,17 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
    * maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a
-   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
-   * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
-   * Schema.org property [Product.pattern](https://schema.org/pattern).
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property
+   * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property
+   * [Product.pattern](https://schema.org/pattern).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> patterns;
 
   /**
-   * Product price and cost information. Google Merchant Center property
+   * Product price and cost information. Corresponding properties: Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371).
    * The value may be {@code null}.
    */
@@ -277,10 +283,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set
    * to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000
    * products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Google Merchant Center Property
-   * [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property
-   * [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be
-   * enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+   * error is returned. Corresponding properties: Google Merchant Center property
+   * [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org property
+   * [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,9 +339,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size
    * system and size type are empty, while size value is "32 inches". A maximum of 20 values are
    * allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [size](https://support.google.com/merchants/answer/6324492),
-   * [size_type](https://support.google.com/merchants/answer/6324497) and
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [size](https://support.google.com/merchants/answer/6324492),
+   * [size_type](https://support.google.com/merchants/answer/6324497), and
    * [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property
    * [Product.size](https://schema.org/size).
    * The value may be {@code null}.
@@ -348,7 +353,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Custom tags associated with the product. At most 250 values are allowed per Product. This value
    * must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results
-   * by passing the tag as part of the PredictRequest.filter. Google Merchant Center property
+   * by passing the tag as part of the PredictRequest.filter. Corresponding properties: Google
+   * Merchant Center property
    * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
    * The value may be {@code null}.
    */
@@ -357,9 +363,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [title](https://support.google.com/merchants/answer/6324415). Schema.org property
-   * [Product.name](https://schema.org/name).
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [title](https://support.google.com/merchants/answer/6324415).
+   * Schema.org property [Product.name](https://schema.org/name).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,9 +395,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Canonical URL directly linking to the product detail page. It is strongly recommended to
    * provide a valid uri for the product, otherwise the service performance could be significantly
    * degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [link](https://support.google.com/merchants/answer/6324416). Schema.org property
-   * [Offer.url](https://schema.org/url).
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org
+   * property [Offer.url](https://schema.org/url).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -418,8 +424,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
-   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
-   * KEY_1_LIKE_THIS.
+   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or
+   * `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For
+   * number attributes, at most 400 values are allowed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> getAttributes() {
@@ -437,8 +445,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
-   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
-   * KEY_1_LIKE_THIS.
+   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or
+   * `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For
+   * number attributes, at most 400 values are allowed.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
@@ -466,9 +476,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant
-   * Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org
-   * Property [Offer.availability](https://schema.org/availability).
+   * The online availability of the Product. Default to Availability.IN_STOCK. Corresponding
+   * properties: Google Merchant Center property
+   * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
+   * [Offer.availability](https://schema.org/availability).
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -476,9 +487,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant
-   * Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org
-   * Property [Offer.availability](https://schema.org/availability).
+   * The online availability of the Product. Default to Availability.IN_STOCK. Corresponding
+   * properties: Google Merchant Center property
+   * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
+   * [Offer.availability](https://schema.org/availability).
    * @param availability availability or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setAvailability(java.lang.String availability) {
@@ -523,7 +535,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
    * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Google Merchant Center property
+   * returned. Corresponding properties: Google Merchant Center property
    * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
    * [Product.brand](https://schema.org/brand).
    * @return value or {@code null} for none
@@ -535,7 +547,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
    * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Google Merchant Center property
+   * returned. Corresponding properties: Google Merchant Center property
    * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
    * [Product.brand](https://schema.org/brand).
    * @param brands brands or {@code null} for none
@@ -556,8 +568,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
    * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
    * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
-   * Google Merchant Center property google_product_category. Schema.org property [Product.category]
-   * (https://schema.org/category). [mc_google_product_category]:
+   * Corresponding properties: Google Merchant Center property google_product_category. Schema.org
+   * property [Product.category] (https://schema.org/category). [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * @return value or {@code null} for none
    */
@@ -576,8 +588,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
    * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
    * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
-   * Google Merchant Center property google_product_category. Schema.org property [Product.category]
-   * (https://schema.org/category). [mc_google_product_category]:
+   * Corresponding properties: Google Merchant Center property google_product_category. Schema.org
+   * property [Product.category] (https://schema.org/category). [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * @param categories categories or {@code null} for none
    */
@@ -606,7 +618,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The color of the product. Google Merchant Center property
+   * The color of the product. Corresponding properties: Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
    * [Product.color](https://schema.org/color).
    * @return value or {@code null} for none
@@ -616,7 +628,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The color of the product. Google Merchant Center property
+   * The color of the product. Corresponding properties: Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
    * [Product.color](https://schema.org/color).
    * @param colorInfo colorInfo or {@code null} for none
@@ -630,7 +642,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * The condition of the product. Strongly encouraged to use the standard values: "new",
    * "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a
    * UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Google Merchant Center property
+   * error is returned. Corresponding properties: Google Merchant Center property
    * [condition](https://support.google.com/merchants/answer/6324469). Schema.org property
    * [Offer.itemCondition](https://schema.org/itemCondition).
    * @return value or {@code null} for none
@@ -643,7 +655,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * The condition of the product. Strongly encouraged to use the standard values: "new",
    * "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a
    * UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Google Merchant Center property
+   * error is returned. Corresponding properties: Google Merchant Center property
    * [condition](https://support.google.com/merchants/answer/6324469). Schema.org property
    * [Offer.itemCondition](https://schema.org/itemCondition).
    * @param conditions conditions or {@code null} for none
@@ -655,9 +667,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Product description. This field must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [description](https://support.google.com/merchants/answer/6324468). schema.org property
-   * [Product.description](https://schema.org/description).
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [description](https://support.google.com/merchants/answer/6324468).
+   * Schema.org property [Product.description](https://schema.org/description).
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -666,9 +678,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Product description. This field must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [description](https://support.google.com/merchants/answer/6324468). schema.org property
-   * [Product.description](https://schema.org/description).
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [description](https://support.google.com/merchants/answer/6324468).
+   * Schema.org property [Product.description](https://schema.org/description).
    * @param description description or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setDescription(java.lang.String description) {
@@ -681,7 +693,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Product is not available for SearchService.Search after expire_time. However, the product can
    * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
    * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
-   * thrown. Google Merchant Center property
+   * thrown. Corresponding properties: Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @return value or {@code null} for none
    */
@@ -694,7 +706,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Product is not available for SearchService.Search after expire_time. However, the product can
    * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
    * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
-   * thrown. Google Merchant Center property
+   * thrown. Corresponding properties: Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @param expireTime expireTime or {@code null} for none
    */
@@ -727,11 +739,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
    * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This
-   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant
-   * Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org
-   * property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8)
-   * or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13)
-   * or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
+   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property
+   * [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property
+   * [Product.isbn](https://schema.org/isbn), [Product.gtin8](https://schema.org/gtin8),
+   * [Product.gtin12](https://schema.org/gtin12), [Product.gtin13](https://schema.org/gtin13), or
+   * [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
    * INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
@@ -742,11 +755,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
    * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This
-   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant
-   * Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org
-   * property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8)
-   * or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13)
-   * or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
+   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property
+   * [gtin](https://support.google.com/merchants/answer/6324461). Schema.org property
+   * [Product.isbn](https://schema.org/isbn), [Product.gtin8](https://schema.org/gtin8),
+   * [Product.gtin12](https://schema.org/gtin12), [Product.gtin13](https://schema.org/gtin13), or
+   * [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
    * INVALID_ARGUMENT error is returned.
    * @param gtin gtin or {@code null} for none
    */
@@ -760,8 +774,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * "id_1", if name is
    * `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
    * This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [id](https://support.google.com/merchants/answer/6324405). Schema.org Property
+   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
+   * [id](https://support.google.com/merchants/answer/6324405). Schema.org property
    * [Product.sku](https://schema.org/sku).
    * @return value or {@code null} for none
    */
@@ -774,8 +788,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * "id_1", if name is
    * `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
    * This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [id](https://support.google.com/merchants/answer/6324405). Schema.org Property
+   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
+   * [id](https://support.google.com/merchants/answer/6324405). Schema.org property
    * [Product.sku](https://schema.org/sku).
    * @param id id or {@code null} for none
    */
@@ -786,7 +800,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Product images for the product.Highly recommended to put the main image to the first. A maximum
-   * of 300 images are allowed. Google Merchant Center property
+   * of 300 images are allowed. Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property
    * [Product.image](https://schema.org/image).
    * @return value or {@code null} for none
@@ -797,7 +811,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Product images for the product.Highly recommended to put the main image to the first. A maximum
-   * of 300 images are allowed. Google Merchant Center property
+   * of 300 images are allowed. Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property
    * [Product.image](https://schema.org/image).
    * @param images images or {@code null} for none
@@ -808,11 +822,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Language of the title/description and other string attributes. Use language tags defined by BCP
-   * 47. For product prediction, this field is ignored and the model automatically detects the text
-   * language. The Product can include text in different languages, but duplicating Products to
-   * provide text in multiple languages can result in degraded model performance. For product search
-   * this field is in use. It defaults to "en-US" if unset.
+   * Language of the title/description and other string attributes. Use language tags defined by
+   * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). For product prediction, this field is
+   * ignored and the model automatically detects the text language. The Product can include text in
+   * different languages, but duplicating Products to provide text in multiple languages can result
+   * in degraded model performance. For product search this field is in use. It defaults to "en-US"
+   * if unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -820,11 +835,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Language of the title/description and other string attributes. Use language tags defined by BCP
-   * 47. For product prediction, this field is ignored and the model automatically detects the text
-   * language. The Product can include text in different languages, but duplicating Products to
-   * provide text in multiple languages can result in degraded model performance. For product search
-   * this field is in use. It defaults to "en-US" if unset.
+   * Language of the title/description and other string attributes. Use language tags defined by
+   * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). For product prediction, this field is
+   * ignored and the model automatically detects the text language. The Product can include text in
+   * different languages, but duplicating Products to provide text in multiple languages can result
+   * in degraded model performance. For product search this field is in use. It defaults to "en-US"
+   * if unset.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setLanguageCode(java.lang.String languageCode) {
@@ -835,9 +851,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
    * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
-   * [Product.material](https://schema.org/material).
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org
+   * property [Product.material](https://schema.org/material).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMaterials() {
@@ -847,9 +863,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
    * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
-   * [Product.material](https://schema.org/material).
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org
+   * property [Product.material](https://schema.org/material).
    * @param materials materials or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setMaterials(java.util.List<java.lang.String> materials) {
@@ -879,9 +895,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
    * maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a
-   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
-   * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
-   * Schema.org property [Product.pattern](https://schema.org/pattern).
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property
+   * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property
+   * [Product.pattern](https://schema.org/pattern).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPatterns() {
@@ -891,9 +908,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
    * maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a
-   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
-   * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
-   * Schema.org property [Product.pattern](https://schema.org/pattern).
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property
+   * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org property
+   * [Product.pattern](https://schema.org/pattern).
    * @param patterns patterns or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setPatterns(java.util.List<java.lang.String> patterns) {
@@ -902,7 +920,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Product price and cost information. Google Merchant Center property
+   * Product price and cost information. Corresponding properties: Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371).
    * @return value or {@code null} for none
    */
@@ -911,7 +929,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Product price and cost information. Google Merchant Center property
+   * Product price and cost information. Corresponding properties: Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371).
    * @param priceInfo priceInfo or {@code null} for none
    */
@@ -925,10 +943,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set
    * to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000
    * products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Google Merchant Center Property
-   * [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property
-   * [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be
-   * enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+   * error is returned. Corresponding properties: Google Merchant Center property
+   * [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org property
+   * [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID).
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryProductId() {
@@ -940,10 +957,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set
    * to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000
    * products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Google Merchant Center Property
-   * [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property
-   * [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be
-   * enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+   * error is returned. Corresponding properties: Google Merchant Center property
+   * [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org property
+   * [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID).
    * @param primaryProductId primaryProductId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setPrimaryProductId(java.lang.String primaryProductId) {
@@ -1052,9 +1068,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size
    * system and size type are empty, while size value is "32 inches". A maximum of 20 values are
    * allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [size](https://support.google.com/merchants/answer/6324492),
-   * [size_type](https://support.google.com/merchants/answer/6324497) and
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [size](https://support.google.com/merchants/answer/6324492),
+   * [size_type](https://support.google.com/merchants/answer/6324497), and
    * [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property
    * [Product.size](https://schema.org/size).
    * @return value or {@code null} for none
@@ -1070,9 +1086,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size
    * system and size type are empty, while size value is "32 inches". A maximum of 20 values are
    * allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [size](https://support.google.com/merchants/answer/6324492),
-   * [size_type](https://support.google.com/merchants/answer/6324497) and
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [size](https://support.google.com/merchants/answer/6324492),
+   * [size_type](https://support.google.com/merchants/answer/6324497), and
    * [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property
    * [Product.size](https://schema.org/size).
    * @param sizes sizes or {@code null} for none
@@ -1086,7 +1102,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Custom tags associated with the product. At most 250 values are allowed per Product. This value
    * must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results
-   * by passing the tag as part of the PredictRequest.filter. Google Merchant Center property
+   * by passing the tag as part of the PredictRequest.filter. Corresponding properties: Google
+   * Merchant Center property
    * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
    * @return value or {@code null} for none
    */
@@ -1098,7 +1115,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Custom tags associated with the product. At most 250 values are allowed per Product. This value
    * must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results
-   * by passing the tag as part of the PredictRequest.filter. Google Merchant Center property
+   * by passing the tag as part of the PredictRequest.filter. Corresponding properties: Google
+   * Merchant Center property
    * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
    * @param tags tags or {@code null} for none
    */
@@ -1109,9 +1127,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [title](https://support.google.com/merchants/answer/6324415). Schema.org property
-   * [Product.name](https://schema.org/name).
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [title](https://support.google.com/merchants/answer/6324415).
+   * Schema.org property [Product.name](https://schema.org/name).
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -1120,9 +1138,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [title](https://support.google.com/merchants/answer/6324415). Schema.org property
-   * [Product.name](https://schema.org/name).
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [title](https://support.google.com/merchants/answer/6324415).
+   * Schema.org property [Product.name](https://schema.org/name).
    * @param title title or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setTitle(java.lang.String title) {
@@ -1180,9 +1198,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Canonical URL directly linking to the product detail page. It is strongly recommended to
    * provide a valid uri for the product, otherwise the service performance could be significantly
    * degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [link](https://support.google.com/merchants/answer/6324416). Schema.org property
-   * [Offer.url](https://schema.org/url).
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org
+   * property [Offer.url](https://schema.org/url).
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -1193,9 +1211,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Canonical URL directly linking to the product detail page. It is strongly recommended to
    * provide a valid uri for the product, otherwise the service performance could be significantly
    * degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
-   * [link](https://support.google.com/merchants/answer/6324416). Schema.org property
-   * [Offer.url](https://schema.org/url).
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org
+   * property [Offer.url](https://schema.org/url).
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setUri(java.lang.String uri) {

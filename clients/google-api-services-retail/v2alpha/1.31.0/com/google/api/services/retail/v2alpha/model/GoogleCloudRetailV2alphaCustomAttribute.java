@@ -40,8 +40,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]` when the key is
-   * "lengths_cm". At most 400 values are allowed.Otherwise, an INVALID_ARGUMENT error is returned.
-   * Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * "lengths_cm". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT
+   * error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,10 +58,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The textual values of this custom attribute. For example, `["yellow", "green"]` when the key is
-   * "color". At most 400 values are allowed. Empty values are not allowed. Each value must be a
-   * UTF-8 encoded string with a length limit of 256 characters. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT
-   * error is returned.
+   * "color". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +88,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]` when the key is
-   * "lengths_cm". At most 400 values are allowed.Otherwise, an INVALID_ARGUMENT error is returned.
-   * Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * "lengths_cm". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT
+   * error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Double> getNumbers() {
@@ -100,8 +98,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]` when the key is
-   * "lengths_cm". At most 400 values are allowed.Otherwise, an INVALID_ARGUMENT error is returned.
-   * Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * "lengths_cm". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT
+   * error is returned.
    * @param numbers numbers or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCustomAttribute setNumbers(java.util.List<java.lang.Double> numbers) {
@@ -132,10 +130,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The textual values of this custom attribute. For example, `["yellow", "green"]` when the key is
-   * "color". At most 400 values are allowed. Empty values are not allowed. Each value must be a
-   * UTF-8 encoded string with a length limit of 256 characters. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT
-   * error is returned.
+   * "color". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getText() {
@@ -144,10 +140,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The textual values of this custom attribute. For example, `["yellow", "green"]` when the key is
-   * "color". At most 400 values are allowed. Empty values are not allowed. Each value must be a
-   * UTF-8 encoded string with a length limit of 256 characters. Otherwise, an INVALID_ARGUMENT
-   * error is returned. Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT
-   * error is returned.
+   * "color". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
    * @param text text or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCustomAttribute setText(java.util.List<java.lang.String> text) {

@@ -46,6 +46,14 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean autodetect;
 
   /**
+   * BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build
+   * whenever a Bitbucket Server event is received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BitbucketServerTriggerConfig bitbucketServerTriggerConfig;
+
+  /**
    * Contents of the build template.
    * The value may be {@code null}.
    */
@@ -74,9 +82,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disabled;
 
   /**
-   * Optional. EventType allows the user to explicitly set the type of event to which this
-   * BuildTrigger should respond. This field is optional but will be validated against the rest of
-   * the configuration if it is set.
+   * EventType allows the user to explicitly set the type of event to which this BuildTrigger should
+   * respond. This field will be validated against the rest of the configuration if it is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,6 +264,25 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build
+   * whenever a Bitbucket Server event is received.
+   * @return value or {@code null} for none
+   */
+  public BitbucketServerTriggerConfig getBitbucketServerTriggerConfig() {
+    return bitbucketServerTriggerConfig;
+  }
+
+  /**
+   * BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build
+   * whenever a Bitbucket Server event is received.
+   * @param bitbucketServerTriggerConfig bitbucketServerTriggerConfig or {@code null} for none
+   */
+  public BuildTrigger setBitbucketServerTriggerConfig(BitbucketServerTriggerConfig bitbucketServerTriggerConfig) {
+    this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
+    return this;
+  }
+
+  /**
    * Contents of the build template.
    * @return value or {@code null} for none
    */
@@ -325,9 +351,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. EventType allows the user to explicitly set the type of event to which this
-   * BuildTrigger should respond. This field is optional but will be validated against the rest of
-   * the configuration if it is set.
+   * EventType allows the user to explicitly set the type of event to which this BuildTrigger should
+   * respond. This field will be validated against the rest of the configuration if it is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -335,9 +360,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. EventType allows the user to explicitly set the type of event to which this
-   * BuildTrigger should respond. This field is optional but will be validated against the rest of
-   * the configuration if it is set.
+   * EventType allows the user to explicitly set the type of event to which this BuildTrigger should
+   * respond. This field will be validated against the rest of the configuration if it is set.
    * @param eventType eventType or {@code null} for none
    */
   public BuildTrigger setEventType(java.lang.String eventType) {

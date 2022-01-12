@@ -1224,7 +1224,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
         /**
-         * Retrieve a list of all connection profiles in a given project and location.
+         * Retrieves a list of all connection profiles in a given project and location.
          *
          * Create a request for the method "connectionProfiles.list".
          *
@@ -1248,7 +1248,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Retrieve a list of all connection profiles in a given project and location.
+           * Retrieves a list of all connection profiles in a given project and location.
            *
            * Create a request for the method "connectionProfiles.list".
            *
@@ -1396,17 +1396,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
-          /** the order by fields for the result. */
+          /** A comma-separated list of fields to order results according to. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** the order by fields for the result.
+          /** A comma-separated list of fields to order results according to.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** the order by fields for the result. */
+          /** A comma-separated list of fields to order results according to. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;

@@ -127,7 +127,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String ipv6AccessType;
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork.
+   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
+   * will be for private google access only eventually.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -509,7 +510,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork.
+   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
+   * will be for private google access only eventually.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6CidrRange() {
@@ -517,7 +519,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork.
+   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
+   * will be for private google access only eventually.
    * @param ipv6CidrRange ipv6CidrRange or {@code null} for none
    */
   public Subnetwork setIpv6CidrRange(java.lang.String ipv6CidrRange) {

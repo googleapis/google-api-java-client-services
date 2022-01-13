@@ -187,6 +187,13 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.Long priority;
 
   /**
+   * [Output only] The status of the route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routeStatus;
+
+  /**
    * [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for
    * a transit route that this router learned from another Cloud Router and will readvertise to one
    * of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned
@@ -595,6 +602,23 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setPriority(java.lang.Long priority) {
     this.priority = priority;
+    return this;
+  }
+
+  /**
+   * [Output only] The status of the route.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRouteStatus() {
+    return routeStatus;
+  }
+
+  /**
+   * [Output only] The status of the route.
+   * @param routeStatus routeStatus or {@code null} for none
+   */
+  public Route setRouteStatus(java.lang.String routeStatus) {
+    this.routeStatus = routeStatus;
     return this;
   }
 

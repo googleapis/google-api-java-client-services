@@ -101,6 +101,38 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   private java.lang.Integer restarting;
 
   /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * resumed or are currently being resumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer resuming;
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * started or are currently being started.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer starting;
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * stopped or are currently being stopped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer stopping;
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * suspended or are currently being suspended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer suspending;
+
+  /**
    * [Output Only] The number of instances in the managed instance group that are being verified.
    * See the managedInstances[].currentAction property in the listManagedInstances method
    * documentation.
@@ -272,6 +304,82 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
    */
   public InstanceGroupManagerActionsSummary setRestarting(java.lang.Integer restarting) {
     this.restarting = restarting;
+    return this;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * resumed or are currently being resumed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getResuming() {
+    return resuming;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * resumed or are currently being resumed.
+   * @param resuming resuming or {@code null} for none
+   */
+  public InstanceGroupManagerActionsSummary setResuming(java.lang.Integer resuming) {
+    this.resuming = resuming;
+    return this;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * started or are currently being started.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getStarting() {
+    return starting;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * started or are currently being started.
+   * @param starting starting or {@code null} for none
+   */
+  public InstanceGroupManagerActionsSummary setStarting(java.lang.Integer starting) {
+    this.starting = starting;
+    return this;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * stopped or are currently being stopped.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getStopping() {
+    return stopping;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * stopped or are currently being stopped.
+   * @param stopping stopping or {@code null} for none
+   */
+  public InstanceGroupManagerActionsSummary setStopping(java.lang.Integer stopping) {
+    this.stopping = stopping;
+    return this;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * suspended or are currently being suspended.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSuspending() {
+    return suspending;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * suspended or are currently being suspended.
+   * @param suspending suspending or {@code null} for none
+   */
+  public InstanceGroupManagerActionsSummary setSuspending(java.lang.Integer suspending) {
+    this.suspending = suspending;
     return this;
   }
 

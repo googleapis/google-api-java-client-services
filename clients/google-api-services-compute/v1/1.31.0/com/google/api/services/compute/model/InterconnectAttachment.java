@@ -52,6 +52,18 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String bandwidth;
 
   /**
+   * Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and
+   * customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address
+   * (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a
+   * range owned by Google will cause the request to fail. Google will select an available prefix
+   * from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned
+   * GUA block will be selected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> candidateIpv6Subnets;
+
+  /**
    * Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress
    * and customerRouterIpAddress for this attachment. All prefixes must be within link-local address
    * space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to
@@ -72,6 +84,23 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String cloudRouterIpAddress;
 
   /**
+   * [Output Only] IPv6 address + prefix length to be configured on Cloud Router Interface for this
+   * interconnect attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudRouterIpv6Address;
+
+  /**
+   * If supplied, the interface id (index within the subnet) to be used for the cloud router
+   * address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125,
+   * and the subnet should either be 0 or match the selected subnet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudRouterIpv6InterfaceId;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -85,6 +114,23 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String customerRouterIpAddress;
+
+  /**
+   * [Output Only] IPv6 address + prefix length to be configured on the customer router subinterface
+   * for this interconnect attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerRouterIpv6Address;
+
+  /**
+   * If supplied, the interface id (index within the subnet) to be used for the customer router
+   * address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125,
+   * and the subnet should either be 0 or match the selected subnet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerRouterIpv6InterfaceId;
 
   /**
    * [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane
@@ -272,6 +318,15 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String selfLink;
 
   /**
+   * The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled
+   * or not. If not specified, IPV4_ONLY will be used. This field can be both set at interconnect
+   * attachments creation and update interconnect attachment operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
+
+  /**
    * [Output Only] The current state of this attachment's functionality. Enum values ACTIVE and
    * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
    * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
@@ -355,6 +410,33 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
+   * Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and
+   * customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address
+   * (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a
+   * range owned by Google will cause the request to fail. Google will select an available prefix
+   * from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned
+   * GUA block will be selected.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCandidateIpv6Subnets() {
+    return candidateIpv6Subnets;
+  }
+
+  /**
+   * Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and
+   * customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address
+   * (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a
+   * range owned by Google will cause the request to fail. Google will select an available prefix
+   * from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned
+   * GUA block will be selected.
+   * @param candidateIpv6Subnets candidateIpv6Subnets or {@code null} for none
+   */
+  public InterconnectAttachment setCandidateIpv6Subnets(java.util.List<java.lang.String> candidateIpv6Subnets) {
+    this.candidateIpv6Subnets = candidateIpv6Subnets;
+    return this;
+  }
+
+  /**
    * Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress
    * and customerRouterIpAddress for this attachment. All prefixes must be within link-local address
    * space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to
@@ -401,6 +483,46 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
+   * [Output Only] IPv6 address + prefix length to be configured on Cloud Router Interface for this
+   * interconnect attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudRouterIpv6Address() {
+    return cloudRouterIpv6Address;
+  }
+
+  /**
+   * [Output Only] IPv6 address + prefix length to be configured on Cloud Router Interface for this
+   * interconnect attachment.
+   * @param cloudRouterIpv6Address cloudRouterIpv6Address or {@code null} for none
+   */
+  public InterconnectAttachment setCloudRouterIpv6Address(java.lang.String cloudRouterIpv6Address) {
+    this.cloudRouterIpv6Address = cloudRouterIpv6Address;
+    return this;
+  }
+
+  /**
+   * If supplied, the interface id (index within the subnet) to be used for the cloud router
+   * address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125,
+   * and the subnet should either be 0 or match the selected subnet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudRouterIpv6InterfaceId() {
+    return cloudRouterIpv6InterfaceId;
+  }
+
+  /**
+   * If supplied, the interface id (index within the subnet) to be used for the cloud router
+   * address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125,
+   * and the subnet should either be 0 or match the selected subnet.
+   * @param cloudRouterIpv6InterfaceId cloudRouterIpv6InterfaceId or {@code null} for none
+   */
+  public InterconnectAttachment setCloudRouterIpv6InterfaceId(java.lang.String cloudRouterIpv6InterfaceId) {
+    this.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
+    return this;
+  }
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -433,6 +555,46 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setCustomerRouterIpAddress(java.lang.String customerRouterIpAddress) {
     this.customerRouterIpAddress = customerRouterIpAddress;
+    return this;
+  }
+
+  /**
+   * [Output Only] IPv6 address + prefix length to be configured on the customer router subinterface
+   * for this interconnect attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerRouterIpv6Address() {
+    return customerRouterIpv6Address;
+  }
+
+  /**
+   * [Output Only] IPv6 address + prefix length to be configured on the customer router subinterface
+   * for this interconnect attachment.
+   * @param customerRouterIpv6Address customerRouterIpv6Address or {@code null} for none
+   */
+  public InterconnectAttachment setCustomerRouterIpv6Address(java.lang.String customerRouterIpv6Address) {
+    this.customerRouterIpv6Address = customerRouterIpv6Address;
+    return this;
+  }
+
+  /**
+   * If supplied, the interface id (index within the subnet) to be used for the customer router
+   * address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125,
+   * and the subnet should either be 0 or match the selected subnet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerRouterIpv6InterfaceId() {
+    return customerRouterIpv6InterfaceId;
+  }
+
+  /**
+   * If supplied, the interface id (index within the subnet) to be used for the customer router
+   * address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125,
+   * and the subnet should either be 0 or match the selected subnet.
+   * @param customerRouterIpv6InterfaceId customerRouterIpv6InterfaceId or {@code null} for none
+   */
+  public InterconnectAttachment setCustomerRouterIpv6InterfaceId(java.lang.String customerRouterIpv6InterfaceId) {
+    this.customerRouterIpv6InterfaceId = customerRouterIpv6InterfaceId;
     return this;
   }
 
@@ -863,6 +1025,27 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled
+   * or not. If not specified, IPV4_ONLY will be used. This field can be both set at interconnect
+   * attachments creation and update interconnect attachment operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled
+   * or not. If not specified, IPV4_ONLY will be used. This field can be both set at interconnect
+   * attachments creation and update interconnect attachment operations.
+   * @param stackType stackType or {@code null} for none
+   */
+  public InterconnectAttachment setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

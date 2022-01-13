@@ -40,6 +40,13 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Boolean enableNestedVirtualization;
 
   /**
+   * Whether to enable UEFI networking for instance creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableUefiNetworking;
+
+  /**
    * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this
    * to 1. If unset, the maximum number of threads supported per core by the underlying processor is
    * assumed.
@@ -62,6 +69,23 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
     this.enableNestedVirtualization = enableNestedVirtualization;
+    return this;
+  }
+
+  /**
+   * Whether to enable UEFI networking for instance creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableUefiNetworking() {
+    return enableUefiNetworking;
+  }
+
+  /**
+   * Whether to enable UEFI networking for instance creation.
+   * @param enableUefiNetworking enableUefiNetworking or {@code null} for none
+   */
+  public AdvancedMachineFeatures setEnableUefiNetworking(java.lang.Boolean enableUefiNetworking) {
+    this.enableUefiNetworking = enableUefiNetworking;
     return this;
   }
 

@@ -56,6 +56,14 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adultContent;
 
   /**
+   * The automatic improvements of the account can be used to automatically update items, improve
+   * images and shipping. Each section inside AutomaticImprovements is updated separately.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccountAutomaticImprovements automaticImprovements;
+
+  /**
    * Automatically created label IDs that are assigned to the account by CSS Center.
    * The value may be {@code null}.
    */
@@ -198,6 +206,25 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setAdultContent(java.lang.Boolean adultContent) {
     this.adultContent = adultContent;
+    return this;
+  }
+
+  /**
+   * The automatic improvements of the account can be used to automatically update items, improve
+   * images and shipping. Each section inside AutomaticImprovements is updated separately.
+   * @return value or {@code null} for none
+   */
+  public AccountAutomaticImprovements getAutomaticImprovements() {
+    return automaticImprovements;
+  }
+
+  /**
+   * The automatic improvements of the account can be used to automatically update items, improve
+   * images and shipping. Each section inside AutomaticImprovements is updated separately.
+   * @param automaticImprovements automaticImprovements or {@code null} for none
+   */
+  public Account setAutomaticImprovements(AccountAutomaticImprovements automaticImprovements) {
+    this.automaticImprovements = automaticImprovements;
     return this;
   }
 

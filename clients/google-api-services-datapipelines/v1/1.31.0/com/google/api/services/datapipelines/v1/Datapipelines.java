@@ -1339,6 +1339,229 @@ public class Datapipelines extends com.google.api.client.googleapis.services.jso
           }
         }
 
+        /**
+         * An accessor for creating requests from the Jobs collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Datapipelines datapipelines = new Datapipelines(...);}
+         *   {@code Datapipelines.Jobs.List request = datapipelines.jobs().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Jobs jobs() {
+          return new Jobs();
+        }
+
+        /**
+         * The "jobs" collection of methods.
+         */
+        public class Jobs {
+
+          /**
+           * Lists jobs for a given pipeline. Throws a "FORBIDDEN" error if the caller doesn't have permission
+           * to access it.
+           *
+           * Create a request for the method "jobs.list".
+           *
+           * This request holds the parameters needed by the datapipelines server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The pipeline name. For example:
+           *        `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DatapipelinesRequest<com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1ListJobsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/jobs";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+
+            /**
+             * Lists jobs for a given pipeline. Throws a "FORBIDDEN" error if the caller doesn't have
+             * permission to access it.
+             *
+             * Create a request for the method "jobs.list".
+             *
+             * This request holds the parameters needed by the the datapipelines server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The pipeline name. For example:
+           *        `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Datapipelines.this, "GET", REST_PATH, null, com.google.api.services.datapipelines.v1.model.GoogleCloudDatapipelinesV1ListJobsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The pipeline name. For example:
+             * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The pipeline name. For example:
+           `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The pipeline name. For example:
+             * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of entities to return. The service may return fewer than this
+             * value, even if there are additional pages. If unspecified, the max limit will be
+             * determined by the backend implementation.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of entities to return. The service may return fewer than this value, even if
+           there are additional pages. If unspecified, the max limit will be determined by the backend
+           implementation.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of entities to return. The service may return fewer than this
+             * value, even if there are additional pages. If unspecified, the max limit will be
+             * determined by the backend implementation.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListJobs` call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters provided to `ListJobs` must
+             * match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListJobs` call. Provide this to retrieve the subsequent
+           page. When paginating, all other parameters provided to `ListJobs` must match the call that
+           provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListJobs` call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters provided to `ListJobs` must
+             * match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
   }

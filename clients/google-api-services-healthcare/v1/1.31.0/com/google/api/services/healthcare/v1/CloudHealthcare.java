@@ -1285,32 +1285,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-         must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset. To learn which resources support conditions in their IAM policies, see the
-         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -2829,32 +2838,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-           must specify version 3. Policies without any conditional bindings may specify any valid value or
-           leave the field unset. To learn which resources support conditions in their IAM policies, see the
-           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -8915,32 +8933,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-           must specify version 3. Policies without any conditional bindings may specify any valid value or
-           leave the field unset. To learn which resources support conditions in their IAM policies, see the
-           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -14802,32 +14829,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-           must specify version 3. Policies without any conditional bindings may specify any valid value or
-           leave the field unset. To learn which resources support conditions in their IAM policies, see the
-           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -16250,6 +16286,233 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @Override
               public ResourcePurge set(String parameterName, Object value) {
                 return (ResourcePurge) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Validates an input FHIR resource's conformance to its profiles and the profiles configured on the
+             * FHIR store. Implements the FHIR extended operation $validate
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resource-operations.html#validate),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/resource-operations.html#validate), or
+             * [R4](http://hl7.org/implement/standards/fhir/R4/resource-operation-validate.html)). The request
+             * body must contain a JSON-encoded FHIR resource, and the request headers must contain `Content-
+             * Type: application/fhir+json`. The `Parameters` input syntax is not supported. The `profile` query
+             * parameter can be used to request that the resource only be validated against a specific profile.
+             * If a profile with the given URL cannot be found in the FHIR store then an error is returned.
+             * Errors generated by validation contain a JSON-encoded `OperationOutcome` resource describing the
+             * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+             * generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.Resource-validate".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ResourceValidate#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the FHIR store that holds the profiles being used for validation.
+             * @param type The FHIR resource type of the resource being validated. For a complete list, see the FHIR Resource
+             *        Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
+             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
+             *        resource type in the provided content.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
+             * @return the request
+             */
+            public ResourceValidate resourceValidate(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1.model.HttpBody content) throws java.io.IOException {
+              ResourceValidate result = new ResourceValidate(parent, type, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ResourceValidate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/fhir/{+type}/$validate";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              private final java.util.regex.Pattern TYPE_PATTERN =
+                  java.util.regex.Pattern.compile("^[^/]+$");
+
+              /**
+               * Validates an input FHIR resource's conformance to its profiles and the profiles configured on
+               * the FHIR store. Implements the FHIR extended operation $validate
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resource-operations.html#validate),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resource-operations.html#validate), or
+               * [R4](http://hl7.org/implement/standards/fhir/R4/resource-operation-validate.html)). The request
+               * body must contain a JSON-encoded FHIR resource, and the request headers must contain `Content-
+               * Type: application/fhir+json`. The `Parameters` input syntax is not supported. The `profile`
+               * query parameter can be used to request that the resource only be validated against a specific
+               * profile. If a profile with the given URL cannot be found in the FHIR store then an error is
+               * returned. Errors generated by validation contain a JSON-encoded `OperationOutcome` resource
+               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+               * FHIR store, a generic GCP error might be returned instead.
+               *
+               * Create a request for the method "fhir.Resource-validate".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ResourceValidate#execute()} method to invoke the remote
+               * operation. <p> {@link ResourceValidate#initialize(com.google.api.client.googleapis.services.Abs
+               * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param parent The name of the FHIR store that holds the profiles being used for validation.
+               * @param type The FHIR resource type of the resource being validated. For a complete list, see the FHIR Resource
+             *        Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
+             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
+             *        resource type in the provided content.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
+               * @since 1.13
+               */
+              protected ResourceValidate(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1.model.HttpBody content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+              }
+
+              @Override
+              public ResourceValidate set$Xgafv(java.lang.String $Xgafv) {
+                return (ResourceValidate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ResourceValidate setAccessToken(java.lang.String accessToken) {
+                return (ResourceValidate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ResourceValidate setAlt(java.lang.String alt) {
+                return (ResourceValidate) super.setAlt(alt);
+              }
+
+              @Override
+              public ResourceValidate setCallback(java.lang.String callback) {
+                return (ResourceValidate) super.setCallback(callback);
+              }
+
+              @Override
+              public ResourceValidate setFields(java.lang.String fields) {
+                return (ResourceValidate) super.setFields(fields);
+              }
+
+              @Override
+              public ResourceValidate setKey(java.lang.String key) {
+                return (ResourceValidate) super.setKey(key);
+              }
+
+              @Override
+              public ResourceValidate setOauthToken(java.lang.String oauthToken) {
+                return (ResourceValidate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ResourceValidate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ResourceValidate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ResourceValidate setQuotaUser(java.lang.String quotaUser) {
+                return (ResourceValidate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ResourceValidate setUploadType(java.lang.String uploadType) {
+                return (ResourceValidate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ResourceValidate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ResourceValidate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the FHIR store that holds the profiles being used for validation. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the FHIR store that holds the profiles being used for validation.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** The name of the FHIR store that holds the profiles being used for validation. */
+              public ResourceValidate setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The FHIR resource type of the resource being validated. For a complete list, see
+               * the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
+               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
+               * resource type in the provided content.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String type;
+
+              /** The FHIR resource type of the resource being validated. For a complete list, see the FHIR Resource
+             Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
+             [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
+             in the provided content.
+               */
+              public java.lang.String getType() {
+                return type;
+              }
+
+              /**
+               * The FHIR resource type of the resource being validated. For a complete list, see
+               * the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
+               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
+               * resource type in the provided content.
+               */
+              public ResourceValidate setType(java.lang.String type) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+                this.type = type;
+                return this;
+              }
+
+              /** A profile that this resource should be validated against. */
+              @com.google.api.client.util.Key
+              private java.lang.String profile;
+
+              /** A profile that this resource should be validated against.
+               */
+              public java.lang.String getProfile() {
+                return profile;
+              }
+
+              /** A profile that this resource should be validated against. */
+              public ResourceValidate setProfile(java.lang.String profile) {
+                this.profile = profile;
+                return this;
+              }
+
+              @Override
+              public ResourceValidate set(String parameterName, Object value) {
+                return (ResourceValidate) super.set(parameterName, value);
               }
             }
             /**
@@ -19040,32 +19303,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-           must specify version 3. Policies without any conditional bindings may specify any valid value or
-           leave the field unset. To learn which resources support conditions in their IAM policies, see the
-           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {

@@ -33,7 +33,8 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
+   * generated for each Deidentify operation and is used when neither `crypto_key` nor `kms_wrapped`
+   * is specified. Must not be set if `kms_wrapped` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +42,8 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
+   * generated for each Deidentify operation and is used when neither `crypto_key` nor `kms_wrapped`
+   * is specified. Must not be set if `kms_wrapped` is set.
    * @see #decodeCryptoKey()
    * @return value or {@code null} for none
    */
@@ -51,7 +53,8 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
+   * generated for each Deidentify operation and is used when neither `crypto_key` nor `kms_wrapped`
+   * is specified. Must not be set if `kms_wrapped` is set.
    * @see #getCryptoKey()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -63,7 +66,8 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
+   * generated for each Deidentify operation and is used when neither `crypto_key` nor `kms_wrapped`
+   * is specified. Must not be set if `kms_wrapped` is set.
    * @see #encodeCryptoKey()
    * @param cryptoKey cryptoKey or {@code null} for none
    */
@@ -74,7 +78,8 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
+   * generated for each Deidentify operation and is used when neither `crypto_key` nor `kms_wrapped`
+   * is specified. Must not be set if `kms_wrapped` is set.
    * @see #setCryptoKey()
    *
    * <p>

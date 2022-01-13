@@ -52,8 +52,9 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String segmentTerminator;
 
   /**
-   * Immutable. Determines the version of the unschematized parser to be used when `schema` is not
-   * given. This field is immutable after store creation.
+   * Immutable. Determines the version of both the default parser to be used when `schema` is not
+   * given, as well as the schematized parser used when `schema` is specified. This field is
+   * immutable after HL7v2 store creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,8 +144,9 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Determines the version of the unschematized parser to be used when `schema` is not
-   * given. This field is immutable after store creation.
+   * Immutable. Determines the version of both the default parser to be used when `schema` is not
+   * given, as well as the schematized parser used when `schema` is specified. This field is
+   * immutable after HL7v2 store creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -152,8 +154,9 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Determines the version of the unschematized parser to be used when `schema` is not
-   * given. This field is immutable after store creation.
+   * Immutable. Determines the version of both the default parser to be used when `schema` is not
+   * given, as well as the schematized parser used when `schema` is specified. This field is
+   * immutable after HL7v2 store creation.
    * @param version version or {@code null} for none
    */
   public ParserConfig setVersion(java.lang.String version) {

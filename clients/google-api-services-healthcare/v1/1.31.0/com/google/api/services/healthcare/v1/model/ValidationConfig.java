@@ -40,6 +40,14 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disableFhirpathValidation;
 
   /**
+   * Whether to disable profile validation for this FHIR store. Set this to true to disable checking
+   * incoming resources for conformance against structure definitions in this FHIR store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableProfileValidation;
+
+  /**
    * Whether to disable reference type validation for incoming resources. Set this to true to
    * disable checking incoming resources for conformance against reference type requirement defined
    * in the FHIR specification. This property only affects resource types that do not have profiles
@@ -58,6 +66,22 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableRequiredFieldValidation;
+
+  /**
+   * A list of implementation guide URLs in this FHIR store that are used to configure the profiles
+   * to use for validation. For example, to use the US Core profiles for validation, set
+   * `enabled_implementation_guides` to `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
+   * `enabled_implementation_guides` is empty or omitted, then incoming resources are only required
+   * to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one
+   * profile listed in the `global` property of one of the enabled ImplementationGuides. The Cloud
+   * Healthcare API does not currently enforce all of the rules in a StructureDefinition. The
+   * following rules are supported: - min/max - minValue/maxValue - maxLength - type - fixed[x] -
+   * pattern[x] on simple types - slicing, when using "value" as the discriminator type When a URL
+   * cannot be resolved (for example, in a type assertion), the server does not return an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> enabledImplementationGuides;
 
   /**
    * Whether to disable FHIRPath validation for incoming resources. Set this to true to disable
@@ -79,6 +103,25 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
    */
   public ValidationConfig setDisableFhirpathValidation(java.lang.Boolean disableFhirpathValidation) {
     this.disableFhirpathValidation = disableFhirpathValidation;
+    return this;
+  }
+
+  /**
+   * Whether to disable profile validation for this FHIR store. Set this to true to disable checking
+   * incoming resources for conformance against structure definitions in this FHIR store.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableProfileValidation() {
+    return disableProfileValidation;
+  }
+
+  /**
+   * Whether to disable profile validation for this FHIR store. Set this to true to disable checking
+   * incoming resources for conformance against structure definitions in this FHIR store.
+   * @param disableProfileValidation disableProfileValidation or {@code null} for none
+   */
+  public ValidationConfig setDisableProfileValidation(java.lang.Boolean disableProfileValidation) {
+    this.disableProfileValidation = disableProfileValidation;
     return this;
   }
 
@@ -125,6 +168,41 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
    */
   public ValidationConfig setDisableRequiredFieldValidation(java.lang.Boolean disableRequiredFieldValidation) {
     this.disableRequiredFieldValidation = disableRequiredFieldValidation;
+    return this;
+  }
+
+  /**
+   * A list of implementation guide URLs in this FHIR store that are used to configure the profiles
+   * to use for validation. For example, to use the US Core profiles for validation, set
+   * `enabled_implementation_guides` to `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
+   * `enabled_implementation_guides` is empty or omitted, then incoming resources are only required
+   * to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one
+   * profile listed in the `global` property of one of the enabled ImplementationGuides. The Cloud
+   * Healthcare API does not currently enforce all of the rules in a StructureDefinition. The
+   * following rules are supported: - min/max - minValue/maxValue - maxLength - type - fixed[x] -
+   * pattern[x] on simple types - slicing, when using "value" as the discriminator type When a URL
+   * cannot be resolved (for example, in a type assertion), the server does not return an error.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEnabledImplementationGuides() {
+    return enabledImplementationGuides;
+  }
+
+  /**
+   * A list of implementation guide URLs in this FHIR store that are used to configure the profiles
+   * to use for validation. For example, to use the US Core profiles for validation, set
+   * `enabled_implementation_guides` to `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
+   * `enabled_implementation_guides` is empty or omitted, then incoming resources are only required
+   * to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one
+   * profile listed in the `global` property of one of the enabled ImplementationGuides. The Cloud
+   * Healthcare API does not currently enforce all of the rules in a StructureDefinition. The
+   * following rules are supported: - min/max - minValue/maxValue - maxLength - type - fixed[x] -
+   * pattern[x] on simple types - slicing, when using "value" as the discriminator type When a URL
+   * cannot be resolved (for example, in a type assertion), the server does not return an error.
+   * @param enabledImplementationGuides enabledImplementationGuides or {@code null} for none
+   */
+  public ValidationConfig setEnabledImplementationGuides(java.util.List<java.lang.String> enabledImplementationGuides) {
+    this.enabledImplementationGuides = enabledImplementationGuides;
     return this;
   }
 

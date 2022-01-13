@@ -119,6 +119,13 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   private java.lang.String name;
 
   /**
+   * Obfuscated user ID which the customer sent to us.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String obfuscatedUserId;
+
+  /**
    * Output only. The annotations that were generated during the customer and agent interaction.
    * The value may be {@code null}.
    */
@@ -370,6 +377,23 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
    */
   public GoogleCloudContactcenterinsightsV1Conversation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Obfuscated user ID which the customer sent to us.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObfuscatedUserId() {
+    return obfuscatedUserId;
+  }
+
+  /**
+   * Obfuscated user ID which the customer sent to us.
+   * @param obfuscatedUserId obfuscatedUserId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Conversation setObfuscatedUserId(java.lang.String obfuscatedUserId) {
+    this.obfuscatedUserId = obfuscatedUserId;
     return this;
   }
 

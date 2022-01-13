@@ -31,7 +31,8 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1IssueModelResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Issue model that generates the result.
+   * Issue model that generates the result. Format:
+   * projects/{project}/locations/{location}/issueModels/{issue_model}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResult extends co
   }
 
   /**
-   * Issue model that generates the result.
+   * Issue model that generates the result. Format:
+   * projects/{project}/locations/{location}/issueModels/{issue_model}
    * @return value or {@code null} for none
    */
   public java.lang.String getIssueModel() {
@@ -59,7 +61,8 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResult extends co
   }
 
   /**
-   * Issue model that generates the result.
+   * Issue model that generates the result. Format:
+   * projects/{project}/locations/{location}/issueModels/{issue_model}
    * @param issueModel issueModel or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1IssueModelResult setIssueModel(java.lang.String issueModel) {

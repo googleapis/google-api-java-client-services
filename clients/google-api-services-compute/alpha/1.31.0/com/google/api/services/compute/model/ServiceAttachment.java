@@ -80,7 +80,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * If specified, the domain name will be used during the integration between the PSC connected
-   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com".
+   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com.".
+   * Current max number of domain names supported is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,7 +290,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * If specified, the domain name will be used during the integration between the PSC connected
-   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com".
+   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com.".
+   * Current max number of domain names supported is 1.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomainNames() {
@@ -298,7 +300,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * If specified, the domain name will be used during the integration between the PSC connected
-   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com".
+   * endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com.".
+   * Current max number of domain names supported is 1.
    * @param domainNames domainNames or {@code null} for none
    */
   public ServiceAttachment setDomainNames(java.util.List<java.lang.String> domainNames) {

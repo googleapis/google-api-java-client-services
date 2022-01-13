@@ -80,6 +80,13 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * A list of publicly visible licenses. Reserved for Google's use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> licenses;
+
+  /**
    * Specifies which action to take on instance update with this disk. Default is to use the
    * existing disk.
    * The value may be {@code null}.
@@ -255,6 +262,23 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * A list of publicly visible licenses. Reserved for Google's use.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLicenses() {
+    return licenses;
+  }
+
+  /**
+   * A list of publicly visible licenses. Reserved for Google's use.
+   * @param licenses licenses or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setLicenses(java.util.List<java.lang.String> licenses) {
+    this.licenses = licenses;
     return this;
   }
 

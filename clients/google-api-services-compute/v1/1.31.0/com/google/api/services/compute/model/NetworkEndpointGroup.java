@@ -128,6 +128,14 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String networkEndpointType;
 
   /**
+   * The target service url used to set up private service connection to a Google API. An example
+   * value is: "asia-northeast3-cloudkms.googleapis.com"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscTargetService;
+
+  /**
    * [Output Only] The URL of the region where the network endpoint group is located.
    * The value may be {@code null}.
    */
@@ -385,6 +393,25 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {
     this.networkEndpointType = networkEndpointType;
+    return this;
+  }
+
+  /**
+   * The target service url used to set up private service connection to a Google API. An example
+   * value is: "asia-northeast3-cloudkms.googleapis.com"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscTargetService() {
+    return pscTargetService;
+  }
+
+  /**
+   * The target service url used to set up private service connection to a Google API. An example
+   * value is: "asia-northeast3-cloudkms.googleapis.com"
+   * @param pscTargetService pscTargetService or {@code null} for none
+   */
+  public NetworkEndpointGroup setPscTargetService(java.lang.String pscTargetService) {
+    this.pscTargetService = pscTargetService;
     return this;
   }
 

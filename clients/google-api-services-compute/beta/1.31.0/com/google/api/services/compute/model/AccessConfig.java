@@ -31,17 +31,16 @@ package com.google.api.services.compute.model;
 public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The first IPv6 address of the external IPv6 range associated with this instance,
-   * prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output
-   * only, an IPv6 address from a subnetwork associated with the instance will be allocated
-   * dynamically.
+   * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
+   * is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6
+   * address from a subnetwork associated with the instance will be allocated dynamically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIpv6;
 
   /**
-   * [Output Only] The prefix length of the external IPv6 range.
+   * The prefix length of the external IPv6 range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,10 +109,9 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * [Output Only] The first IPv6 address of the external IPv6 range associated with this instance,
-   * prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output
-   * only, an IPv6 address from a subnetwork associated with the instance will be allocated
-   * dynamically.
+   * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
+   * is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6
+   * address from a subnetwork associated with the instance will be allocated dynamically.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIpv6() {
@@ -121,10 +119,9 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The first IPv6 address of the external IPv6 range associated with this instance,
-   * prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output
-   * only, an IPv6 address from a subnetwork associated with the instance will be allocated
-   * dynamically.
+   * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
+   * is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6
+   * address from a subnetwork associated with the instance will be allocated dynamically.
    * @param externalIpv6 externalIpv6 or {@code null} for none
    */
   public AccessConfig setExternalIpv6(java.lang.String externalIpv6) {
@@ -133,7 +130,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The prefix length of the external IPv6 range.
+   * The prefix length of the external IPv6 range.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExternalIpv6PrefixLength() {
@@ -141,7 +138,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The prefix length of the external IPv6 range.
+   * The prefix length of the external IPv6 range.
    * @param externalIpv6PrefixLength externalIpv6PrefixLength or {@code null} for none
    */
   public AccessConfig setExternalIpv6PrefixLength(java.lang.Integer externalIpv6PrefixLength) {

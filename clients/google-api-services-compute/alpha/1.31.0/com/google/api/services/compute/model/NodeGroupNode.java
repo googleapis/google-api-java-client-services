@@ -74,7 +74,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<InstanceConsumptionData> instanceConsumptionDatas;
+  private java.util.List<InstanceConsumptionData> instanceConsumptionData;
 
   static {
     // hack to force ProGuard to consider InstanceConsumptionData used, since otherwise it would be stripped out
@@ -209,16 +209,16 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    * Instance data that shows consumed resources on the node.
    * @return value or {@code null} for none
    */
-  public java.util.List<InstanceConsumptionData> getInstanceConsumptionDatas() {
-    return instanceConsumptionDatas;
+  public java.util.List<InstanceConsumptionData> getInstanceConsumptionData() {
+    return instanceConsumptionData;
   }
 
   /**
    * Instance data that shows consumed resources on the node.
-   * @param instanceConsumptionDatas instanceConsumptionDatas or {@code null} for none
+   * @param instanceConsumptionData instanceConsumptionData or {@code null} for none
    */
-  public NodeGroupNode setInstanceConsumptionDatas(java.util.List<InstanceConsumptionData> instanceConsumptionDatas) {
-    this.instanceConsumptionDatas = instanceConsumptionDatas;
+  public NodeGroupNode setInstanceConsumptionData(java.util.List<InstanceConsumptionData> instanceConsumptionData) {
+    this.instanceConsumptionData = instanceConsumptionData;
     return this;
   }
 

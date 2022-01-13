@@ -211,6 +211,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey snapshotEncryptionKey;
 
   /**
+   * Indicates the type of the snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String snapshotType;
+
+  /**
    * The source disk used to create this snapshot.
    * The value may be {@code null}.
    */
@@ -744,6 +751,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setSnapshotEncryptionKey(CustomerEncryptionKey snapshotEncryptionKey) {
     this.snapshotEncryptionKey = snapshotEncryptionKey;
+    return this;
+  }
+
+  /**
+   * Indicates the type of the snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSnapshotType() {
+    return snapshotType;
+  }
+
+  /**
+   * Indicates the type of the snapshot.
+   * @param snapshotType snapshotType or {@code null} for none
+   */
+  public Snapshot setSnapshotType(java.lang.String snapshotType) {
+    this.snapshotType = snapshotType;
     return this;
   }
 

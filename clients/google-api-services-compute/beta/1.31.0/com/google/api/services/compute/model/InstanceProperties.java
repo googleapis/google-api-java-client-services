@@ -170,7 +170,16 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from these properties. Note
+   * Resource manager tags to be bound to the instance. Tag keys and values have the same definition
+   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
+   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceManagerTags;
+
+  /**
+   * Resource policies (names, not URLs) applied to instances created from these properties. Note
    * that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
@@ -521,7 +530,28 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from these properties. Note
+   * Resource manager tags to be bound to the instance. Tag keys and values have the same definition
+   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
+   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * Resource manager tags to be bound to the instance. Tag keys and values have the same definition
+   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
+   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public InstanceProperties setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
+    return this;
+  }
+
+  /**
+   * Resource policies (names, not URLs) applied to instances created from these properties. Note
    * that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
@@ -530,7 +560,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from these properties. Note
+   * Resource policies (names, not URLs) applied to instances created from these properties. Note
    * that for MachineImage, this is not supported yet.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */

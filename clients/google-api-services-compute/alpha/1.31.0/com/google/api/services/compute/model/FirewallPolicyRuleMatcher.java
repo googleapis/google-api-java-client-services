@@ -54,6 +54,15 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> destIpRanges;
 
   /**
+   * Region codes whose IP addresses will be used to match for destination of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of dest region codes allowed is 5000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destRegionCodes;
+
+  /**
    * Pairs of IP protocols and ports that the rule should match.
    * The value may be {@code null}.
    */
@@ -82,6 +91,15 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcIpRanges;
+
+  /**
+   * Region codes whose IP addresses will be used to match for source of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of source region codes allowed is 5000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcRegionCodes;
 
   /**
    * List of secure tag values, which should be matched at the source of the traffic. For INGRESS
@@ -144,6 +162,27 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
     this.destIpRanges = destIpRanges;
+    return this;
+  }
+
+  /**
+   * Region codes whose IP addresses will be used to match for destination of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of dest region codes allowed is 5000.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestRegionCodes() {
+    return destRegionCodes;
+  }
+
+  /**
+   * Region codes whose IP addresses will be used to match for destination of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of dest region codes allowed is 5000.
+   * @param destRegionCodes destRegionCodes or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestRegionCodes(java.util.List<java.lang.String> destRegionCodes) {
+    this.destRegionCodes = destRegionCodes;
     return this;
   }
 
@@ -216,6 +255,27 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {
     this.srcIpRanges = srcIpRanges;
+    return this;
+  }
+
+  /**
+   * Region codes whose IP addresses will be used to match for source of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of source region codes allowed is 5000.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcRegionCodes() {
+    return srcRegionCodes;
+  }
+
+  /**
+   * Region codes whose IP addresses will be used to match for source of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of source region codes allowed is 5000.
+   * @param srcRegionCodes srcRegionCodes or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcRegionCodes(java.util.List<java.lang.String> srcRegionCodes) {
+    this.srcRegionCodes = srcRegionCodes;
     return this;
   }
 

@@ -49,8 +49,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * of headers that will be ignored or replaced is below: - Host: This will be computed by Cloud
    * Scheduler and derived from uri. * `Content-Length`: This will be computed by Cloud Scheduler. *
    * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`. * `X-Google-*`: Google internal
-   * use only. * `X-AppEngine-*`: Google internal use only. The total size of headers must be less
-   * than 80KB.
+   * use only. * `X-AppEngine-*`: Google internal use only. * `X-CloudScheduler`: This header will
+   * be set to true. * `X-CloudScheduler-JobName`: This header will contain the job name. * `X
+   * -CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron format, this
+   * header will contain the job schedule time in RFC3339 UTC "Zulu" format. The total size of
+   * headers must be less than 80KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,8 +153,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * of headers that will be ignored or replaced is below: - Host: This will be computed by Cloud
    * Scheduler and derived from uri. * `Content-Length`: This will be computed by Cloud Scheduler. *
    * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`. * `X-Google-*`: Google internal
-   * use only. * `X-AppEngine-*`: Google internal use only. The total size of headers must be less
-   * than 80KB.
+   * use only. * `X-AppEngine-*`: Google internal use only. * `X-CloudScheduler`: This header will
+   * be set to true. * `X-CloudScheduler-JobName`: This header will contain the job name. * `X
+   * -CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron format, this
+   * header will contain the job schedule time in RFC3339 UTC "Zulu" format. The total size of
+   * headers must be less than 80KB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -166,8 +172,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * of headers that will be ignored or replaced is below: - Host: This will be computed by Cloud
    * Scheduler and derived from uri. * `Content-Length`: This will be computed by Cloud Scheduler. *
    * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`. * `X-Google-*`: Google internal
-   * use only. * `X-AppEngine-*`: Google internal use only. The total size of headers must be less
-   * than 80KB.
+   * use only. * `X-AppEngine-*`: Google internal use only. * `X-CloudScheduler`: This header will
+   * be set to true. * `X-CloudScheduler-JobName`: This header will contain the job name. * `X
+   * -CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron format, this
+   * header will contain the job schedule time in RFC3339 UTC "Zulu" format. The total size of
+   * headers must be less than 80KB.
    * @param headers headers or {@code null} for none
    */
   public HttpTarget setHeaders(java.util.Map<String, java.lang.String> headers) {

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudscheduler.v1.model;
 
 /**
- * Configuration for a job. The maximum allowed size for a job is 100KB.
+ * Configuration for a job. The maximum allowed size for a job is 1MB.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Scheduler API. For a detailed explanation see:
@@ -41,7 +41,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. The failed
    * attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the
    * RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds
-   * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours.
+   * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours 15 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. The failed
    * attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the
    * RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds
-   * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours.
+   * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours 15 seconds.
    * @return value or {@code null} for none
    */
   public String getAttemptDeadline() {
@@ -189,7 +189,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. The failed
    * attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the
    * RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds
-   * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours.
+   * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours 15 seconds.
    * @param attemptDeadline attemptDeadline or {@code null} for none
    */
   public Job setAttemptDeadline(String attemptDeadline) {

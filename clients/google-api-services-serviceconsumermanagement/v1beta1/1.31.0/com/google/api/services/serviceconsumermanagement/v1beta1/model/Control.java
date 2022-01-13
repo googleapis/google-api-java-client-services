@@ -18,7 +18,12 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 
 /**
  * Selects and configures the service controller used by the service. The service controller handles
- * features like abuse, quota, billing, logging, monitoring, etc.
+ * two things: - **What is allowed:** for each API request, Chemist checks the project status,
+ * activation status, abuse status, billing status, service status, location restrictions, VPC
+ * Service Controls, SuperQuota, and other policies. - **What has happened:** for each API response,
+ * Chemist reports the telemetry data to analytics, auditing, billing, eventing, logging,
+ * monitoring, sawmill, and tracing. Chemist also accepts telemetry data not associated with API
+ * traffic, such as billing metrics. Example: control: environment: servicecontrol.googleapis.com
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -32,16 +37,18 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 public final class Control extends com.google.api.client.json.GenericJson {
 
   /**
-   * The service control environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled.
+   * The service controller environment to use. If empty, no control plane feature (like quota and
+   * billing) will be enabled. The recommended value for most services is
+   * servicecontrol.googleapis.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
 
   /**
-   * The service control environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled.
+   * The service controller environment to use. If empty, no control plane feature (like quota and
+   * billing) will be enabled. The recommended value for most services is
+   * servicecontrol.googleapis.com
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -49,8 +56,9 @@ public final class Control extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The service control environment to use. If empty, no control plane feature (like quota and
-   * billing) will be enabled.
+   * The service controller environment to use. If empty, no control plane feature (like quota and
+   * billing) will be enabled. The recommended value for most services is
+   * servicecontrol.googleapis.com
    * @param environment environment or {@code null} for none
    */
   public Control setEnvironment(java.lang.String environment) {

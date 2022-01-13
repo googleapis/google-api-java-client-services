@@ -34,6 +34,14 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
+   * Access details associated to the Finding, such as more information on the caller, which method
+   * was accessed, from where, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Access access;
+
+  /**
    * The canonical name of the finding. It's either
    * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
    * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
@@ -103,6 +111,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Indicator indicator;
+
+  /**
+   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MitreAttack mitreAttack;
 
   /**
    * Indicates the mute state of a finding (either unspecified, muted, unmuted or undefined).
@@ -194,6 +209,25 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Vulnerability vulnerability;
+
+  /**
+   * Access details associated to the Finding, such as more information on the caller, which method
+   * was accessed, from where, etc.
+   * @return value or {@code null} for none
+   */
+  public Access getAccess() {
+    return access;
+  }
+
+  /**
+   * Access details associated to the Finding, such as more information on the caller, which method
+   * was accessed, from where, etc.
+   * @param access access or {@code null} for none
+   */
+  public Finding setAccess(Access access) {
+    this.access = access;
+    return this;
+  }
 
   /**
    * The canonical name of the finding. It's either
@@ -358,6 +392,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setIndicator(Indicator indicator) {
     this.indicator = indicator;
+    return this;
+  }
+
+  /**
+   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
+   * @return value or {@code null} for none
+   */
+  public MitreAttack getMitreAttack() {
+    return mitreAttack;
+  }
+
+  /**
+   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
+   * @param mitreAttack mitreAttack or {@code null} for none
+   */
+  public Finding setMitreAttack(MitreAttack mitreAttack) {
+    this.mitreAttack = mitreAttack;
     return this;
   }
 

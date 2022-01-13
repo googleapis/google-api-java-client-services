@@ -634,6 +634,165 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Get the VirtualMachineThreatDetectionSettings resource.
+     *
+     * Create a request for the method "folders.getVirtualMachineThreatDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
+     * to invoke the remote operation.
+     *
+     * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @return the request
+     */
+    public GetVirtualMachineThreatDetectionSettings getVirtualMachineThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
+      GetVirtualMachineThreatDetectionSettings result = new GetVirtualMachineThreatDetectionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetVirtualMachineThreatDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+
+      /**
+       * Get the VirtualMachineThreatDetectionSettings resource.
+       *
+       * Create a request for the method "folders.getVirtualMachineThreatDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
+       * to invoke the remote operation. <p> {@link GetVirtualMachineThreatDetectionSettings#initialize(
+       * com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @since 1.13
+       */
+      protected GetVirtualMachineThreatDetectionSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetVirtualMachineThreatDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setAlt(java.lang.String alt) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setCallback(java.lang.String callback) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setFields(java.lang.String fields) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setKey(java.lang.String key) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     organizations/{organization}/virtualMachineThreatDetectionSettings *
+     folders/{folder}/virtualMachineThreatDetectionSettings *
+     projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public GetVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings set(String parameterName, Object value) {
+        return (GetVirtualMachineThreatDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the WebSecurityScannerSettings resource.
      *
      * Create a request for the method "folders.getWebSecurityScannerSettings".
@@ -1292,6 +1451,173 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public UpdateSecurityHealthAnalyticsSettings set(String parameterName, Object value) {
         return (UpdateSecurityHealthAnalyticsSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the VirtualMachineThreatDetectionSettings resource.
+     *
+     * Create a request for the method "folders.updateVirtualMachineThreatDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
+     * method to invoke the remote operation.
+     *
+     * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
+     * @return the request
+     */
+    public UpdateVirtualMachineThreatDetectionSettings updateVirtualMachineThreatDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings content) throws java.io.IOException {
+      UpdateVirtualMachineThreatDetectionSettings result = new UpdateVirtualMachineThreatDetectionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateVirtualMachineThreatDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+
+      /**
+       * Update the VirtualMachineThreatDetectionSettings resource.
+       *
+       * Create a request for the method "folders.updateVirtualMachineThreatDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
+       * method to invoke the remote operation. <p> {@link UpdateVirtualMachineThreatDetectionSettings#i
+       * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
+       * @since 1.13
+       */
+      protected UpdateVirtualMachineThreatDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings content) {
+        super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setAlt(java.lang.String alt) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setCallback(java.lang.String callback) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setFields(java.lang.String fields) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setKey(java.lang.String key) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     organizations/{organization}/virtualMachineThreatDetectionSettings *
+     folders/{folder}/virtualMachineThreatDetectionSettings *
+     projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public UpdateVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** The list of fields to be updated. */
+      public UpdateVirtualMachineThreatDetectionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings set(String parameterName, Object value) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.set(parameterName, value);
       }
     }
     /**
@@ -1997,6 +2323,188 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^folders/[^/]+/securityHealthAnalyticsSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Calculate set(String parameterName, Object value) {
+          return (Calculate) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the VirtualMachineThreatDetectionSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.VirtualMachineThreatDetectionSettings.List request = securitycenter.virtualMachineThreatDetectionSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public VirtualMachineThreatDetectionSettings virtualMachineThreatDetectionSettings() {
+      return new VirtualMachineThreatDetectionSettings();
+    }
+
+    /**
+     * The "virtualMachineThreatDetectionSettings" collection of methods.
+     */
+    public class VirtualMachineThreatDetectionSettings {
+
+      /**
+       * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
+       * hierarchy and its settings.
+       *
+       * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+       *        folders/{folder}/virtualMachineThreatDetectionSettings *
+       *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @return the request
+       */
+      public Calculate calculate(java.lang.String name) throws java.io.IOException {
+        Calculate result = new Calculate(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Calculate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:calculate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+
+        /**
+         * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
+         * resource hierarchy and its settings.
+         *
+         * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Calculate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+       *        folders/{folder}/virtualMachineThreatDetectionSettings *
+       *        projects/{project}/virtualMachineThreatDetectionSettings
+         * @since 1.13
+         */
+        protected Calculate(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/virtualMachineThreatDetectionSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Calculate set$Xgafv(java.lang.String $Xgafv) {
+          return (Calculate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Calculate setAccessToken(java.lang.String accessToken) {
+          return (Calculate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Calculate setAlt(java.lang.String alt) {
+          return (Calculate) super.setAlt(alt);
+        }
+
+        @Override
+        public Calculate setCallback(java.lang.String callback) {
+          return (Calculate) super.setCallback(callback);
+        }
+
+        @Override
+        public Calculate setFields(java.lang.String fields) {
+          return (Calculate) super.setFields(fields);
+        }
+
+        @Override
+        public Calculate setKey(java.lang.String key) {
+          return (Calculate) super.setKey(key);
+        }
+
+        @Override
+        public Calculate setOauthToken(java.lang.String oauthToken) {
+          return (Calculate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Calculate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Calculate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Calculate setQuotaUser(java.lang.String quotaUser) {
+          return (Calculate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Calculate setUploadType(java.lang.String uploadType) {
+          return (Calculate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Calculate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Calculate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/virtualMachineThreatDetectionSettings *
+         * folders/{folder}/virtualMachineThreatDetectionSettings *
+         * projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       organizations/{organization}/virtualMachineThreatDetectionSettings *
+       folders/{folder}/virtualMachineThreatDetectionSettings *
+       projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/virtualMachineThreatDetectionSettings *
+         * folders/{folder}/virtualMachineThreatDetectionSettings *
+         * projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        public Calculate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/virtualMachineThreatDetectionSettings$");
           }
           this.name = name;
           return this;
@@ -2992,6 +3500,165 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Get the VirtualMachineThreatDetectionSettings resource.
+     *
+     * Create a request for the method "organizations.getVirtualMachineThreatDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
+     * to invoke the remote operation.
+     *
+     * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @return the request
+     */
+    public GetVirtualMachineThreatDetectionSettings getVirtualMachineThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
+      GetVirtualMachineThreatDetectionSettings result = new GetVirtualMachineThreatDetectionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetVirtualMachineThreatDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+
+      /**
+       * Get the VirtualMachineThreatDetectionSettings resource.
+       *
+       * Create a request for the method "organizations.getVirtualMachineThreatDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
+       * to invoke the remote operation. <p> {@link GetVirtualMachineThreatDetectionSettings#initialize(
+       * com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @since 1.13
+       */
+      protected GetVirtualMachineThreatDetectionSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetVirtualMachineThreatDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setAlt(java.lang.String alt) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setCallback(java.lang.String callback) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setFields(java.lang.String fields) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setKey(java.lang.String key) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     organizations/{organization}/virtualMachineThreatDetectionSettings *
+     folders/{folder}/virtualMachineThreatDetectionSettings *
+     projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public GetVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings set(String parameterName, Object value) {
+        return (GetVirtualMachineThreatDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the WebSecurityScannerSettings resource.
      *
      * Create a request for the method "organizations.getWebSecurityScannerSettings".
@@ -3650,6 +4317,173 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public UpdateSecurityHealthAnalyticsSettings set(String parameterName, Object value) {
         return (UpdateSecurityHealthAnalyticsSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the VirtualMachineThreatDetectionSettings resource.
+     *
+     * Create a request for the method "organizations.updateVirtualMachineThreatDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
+     * method to invoke the remote operation.
+     *
+     * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
+     * @return the request
+     */
+    public UpdateVirtualMachineThreatDetectionSettings updateVirtualMachineThreatDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings content) throws java.io.IOException {
+      UpdateVirtualMachineThreatDetectionSettings result = new UpdateVirtualMachineThreatDetectionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateVirtualMachineThreatDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+
+      /**
+       * Update the VirtualMachineThreatDetectionSettings resource.
+       *
+       * Create a request for the method "organizations.updateVirtualMachineThreatDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
+       * method to invoke the remote operation. <p> {@link UpdateVirtualMachineThreatDetectionSettings#i
+       * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
+       * @since 1.13
+       */
+      protected UpdateVirtualMachineThreatDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings content) {
+        super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setAlt(java.lang.String alt) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setCallback(java.lang.String callback) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setFields(java.lang.String fields) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setKey(java.lang.String key) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     organizations/{organization}/virtualMachineThreatDetectionSettings *
+     folders/{folder}/virtualMachineThreatDetectionSettings *
+     projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public UpdateVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** The list of fields to be updated. */
+      public UpdateVirtualMachineThreatDetectionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings set(String parameterName, Object value) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.set(parameterName, value);
       }
     }
     /**
@@ -4368,6 +5202,188 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the VirtualMachineThreatDetectionSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.VirtualMachineThreatDetectionSettings.List request = securitycenter.virtualMachineThreatDetectionSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public VirtualMachineThreatDetectionSettings virtualMachineThreatDetectionSettings() {
+      return new VirtualMachineThreatDetectionSettings();
+    }
+
+    /**
+     * The "virtualMachineThreatDetectionSettings" collection of methods.
+     */
+    public class VirtualMachineThreatDetectionSettings {
+
+      /**
+       * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
+       * hierarchy and its settings.
+       *
+       * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+       *        folders/{folder}/virtualMachineThreatDetectionSettings *
+       *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @return the request
+       */
+      public Calculate calculate(java.lang.String name) throws java.io.IOException {
+        Calculate result = new Calculate(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Calculate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:calculate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+
+        /**
+         * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
+         * resource hierarchy and its settings.
+         *
+         * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Calculate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+       *        folders/{folder}/virtualMachineThreatDetectionSettings *
+       *        projects/{project}/virtualMachineThreatDetectionSettings
+         * @since 1.13
+         */
+        protected Calculate(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Calculate set$Xgafv(java.lang.String $Xgafv) {
+          return (Calculate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Calculate setAccessToken(java.lang.String accessToken) {
+          return (Calculate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Calculate setAlt(java.lang.String alt) {
+          return (Calculate) super.setAlt(alt);
+        }
+
+        @Override
+        public Calculate setCallback(java.lang.String callback) {
+          return (Calculate) super.setCallback(callback);
+        }
+
+        @Override
+        public Calculate setFields(java.lang.String fields) {
+          return (Calculate) super.setFields(fields);
+        }
+
+        @Override
+        public Calculate setKey(java.lang.String key) {
+          return (Calculate) super.setKey(key);
+        }
+
+        @Override
+        public Calculate setOauthToken(java.lang.String oauthToken) {
+          return (Calculate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Calculate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Calculate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Calculate setQuotaUser(java.lang.String quotaUser) {
+          return (Calculate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Calculate setUploadType(java.lang.String uploadType) {
+          return (Calculate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Calculate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Calculate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/virtualMachineThreatDetectionSettings *
+         * folders/{folder}/virtualMachineThreatDetectionSettings *
+         * projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       organizations/{organization}/virtualMachineThreatDetectionSettings *
+       folders/{folder}/virtualMachineThreatDetectionSettings *
+       projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/virtualMachineThreatDetectionSettings *
+         * folders/{folder}/virtualMachineThreatDetectionSettings *
+         * projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        public Calculate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Calculate set(String parameterName, Object value) {
+          return (Calculate) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the WebSecurityScannerSettings collection.
      *
      * <p>The typical use is:</p>
@@ -5052,6 +6068,165 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Get the VirtualMachineThreatDetectionSettings resource.
+     *
+     * Create a request for the method "projects.getVirtualMachineThreatDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
+     * to invoke the remote operation.
+     *
+     * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @return the request
+     */
+    public GetVirtualMachineThreatDetectionSettings getVirtualMachineThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
+      GetVirtualMachineThreatDetectionSettings result = new GetVirtualMachineThreatDetectionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetVirtualMachineThreatDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+
+      /**
+       * Get the VirtualMachineThreatDetectionSettings resource.
+       *
+       * Create a request for the method "projects.getVirtualMachineThreatDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
+       * to invoke the remote operation. <p> {@link GetVirtualMachineThreatDetectionSettings#initialize(
+       * com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @since 1.13
+       */
+      protected GetVirtualMachineThreatDetectionSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetVirtualMachineThreatDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setAlt(java.lang.String alt) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setCallback(java.lang.String callback) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setFields(java.lang.String fields) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setKey(java.lang.String key) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+     organizations/{organization}/virtualMachineThreatDetectionSettings *
+     folders/{folder}/virtualMachineThreatDetectionSettings *
+     projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public GetVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetVirtualMachineThreatDetectionSettings set(String parameterName, Object value) {
+        return (GetVirtualMachineThreatDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the WebSecurityScannerSettings resource.
      *
      * Create a request for the method "projects.getWebSecurityScannerSettings".
@@ -5710,6 +6885,173 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public UpdateSecurityHealthAnalyticsSettings set(String parameterName, Object value) {
         return (UpdateSecurityHealthAnalyticsSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the VirtualMachineThreatDetectionSettings resource.
+     *
+     * Create a request for the method "projects.updateVirtualMachineThreatDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
+     * method to invoke the remote operation.
+     *
+     * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
+     * @return the request
+     */
+    public UpdateVirtualMachineThreatDetectionSettings updateVirtualMachineThreatDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings content) throws java.io.IOException {
+      UpdateVirtualMachineThreatDetectionSettings result = new UpdateVirtualMachineThreatDetectionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateVirtualMachineThreatDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+
+      /**
+       * Update the VirtualMachineThreatDetectionSettings resource.
+       *
+       * Create a request for the method "projects.updateVirtualMachineThreatDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
+       * method to invoke the remote operation. <p> {@link UpdateVirtualMachineThreatDetectionSettings#i
+       * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+     *        folders/{folder}/virtualMachineThreatDetectionSettings *
+     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
+       * @since 1.13
+       */
+      protected UpdateVirtualMachineThreatDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings content) {
+        super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setAlt(java.lang.String alt) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setCallback(java.lang.String callback) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setFields(java.lang.String fields) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setKey(java.lang.String key) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     organizations/{organization}/virtualMachineThreatDetectionSettings *
+     folders/{folder}/virtualMachineThreatDetectionSettings *
+     projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * organizations/{organization}/virtualMachineThreatDetectionSettings *
+       * folders/{folder}/virtualMachineThreatDetectionSettings *
+       * projects/{project}/virtualMachineThreatDetectionSettings
+       */
+      public UpdateVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** The list of fields to be updated. */
+      public UpdateVirtualMachineThreatDetectionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateVirtualMachineThreatDetectionSettings set(String parameterName, Object value) {
+        return (UpdateVirtualMachineThreatDetectionSettings) super.set(parameterName, value);
       }
     }
     /**
@@ -6981,6 +8323,188 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^projects/[^/]+/securityHealthAnalyticsSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Calculate set(String parameterName, Object value) {
+          return (Calculate) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the VirtualMachineThreatDetectionSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.VirtualMachineThreatDetectionSettings.List request = securitycenter.virtualMachineThreatDetectionSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public VirtualMachineThreatDetectionSettings virtualMachineThreatDetectionSettings() {
+      return new VirtualMachineThreatDetectionSettings();
+    }
+
+    /**
+     * The "virtualMachineThreatDetectionSettings" collection of methods.
+     */
+    public class VirtualMachineThreatDetectionSettings {
+
+      /**
+       * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
+       * hierarchy and its settings.
+       *
+       * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+       *        folders/{folder}/virtualMachineThreatDetectionSettings *
+       *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @return the request
+       */
+      public Calculate calculate(java.lang.String name) throws java.io.IOException {
+        Calculate result = new Calculate(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Calculate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:calculate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+
+        /**
+         * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
+         * resource hierarchy and its settings.
+         *
+         * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Calculate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
+       *        folders/{folder}/virtualMachineThreatDetectionSettings *
+       *        projects/{project}/virtualMachineThreatDetectionSettings
+         * @since 1.13
+         */
+        protected Calculate(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/virtualMachineThreatDetectionSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Calculate set$Xgafv(java.lang.String $Xgafv) {
+          return (Calculate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Calculate setAccessToken(java.lang.String accessToken) {
+          return (Calculate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Calculate setAlt(java.lang.String alt) {
+          return (Calculate) super.setAlt(alt);
+        }
+
+        @Override
+        public Calculate setCallback(java.lang.String callback) {
+          return (Calculate) super.setCallback(callback);
+        }
+
+        @Override
+        public Calculate setFields(java.lang.String fields) {
+          return (Calculate) super.setFields(fields);
+        }
+
+        @Override
+        public Calculate setKey(java.lang.String key) {
+          return (Calculate) super.setKey(key);
+        }
+
+        @Override
+        public Calculate setOauthToken(java.lang.String oauthToken) {
+          return (Calculate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Calculate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Calculate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Calculate setQuotaUser(java.lang.String quotaUser) {
+          return (Calculate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Calculate setUploadType(java.lang.String uploadType) {
+          return (Calculate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Calculate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Calculate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/virtualMachineThreatDetectionSettings *
+         * folders/{folder}/virtualMachineThreatDetectionSettings *
+         * projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+       organizations/{organization}/virtualMachineThreatDetectionSettings *
+       folders/{folder}/virtualMachineThreatDetectionSettings *
+       projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/virtualMachineThreatDetectionSettings *
+         * folders/{folder}/virtualMachineThreatDetectionSettings *
+         * projects/{project}/virtualMachineThreatDetectionSettings
+         */
+        public Calculate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/virtualMachineThreatDetectionSettings$");
           }
           this.name = name;
           return this;

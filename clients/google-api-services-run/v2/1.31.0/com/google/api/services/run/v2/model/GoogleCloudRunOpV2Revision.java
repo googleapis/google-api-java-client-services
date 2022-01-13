@@ -66,19 +66,6 @@ public final class GoogleCloudRunOpV2Revision extends com.google.api.client.json
   private java.lang.Integer containerConcurrency;
 
   /**
-   * Output only. Status information for each of the containers specified.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRunOpV2ContainerStatus> containerStatuses;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudRunOpV2ContainerStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudRunOpV2ContainerStatus.class);
-  }
-
-  /**
    * Holds the single container that defines the unit of execution for this Revision.
    * The value may be {@code null}.
    */
@@ -323,23 +310,6 @@ public final class GoogleCloudRunOpV2Revision extends com.google.api.client.json
    */
   public GoogleCloudRunOpV2Revision setContainerConcurrency(java.lang.Integer containerConcurrency) {
     this.containerConcurrency = containerConcurrency;
-    return this;
-  }
-
-  /**
-   * Output only. Status information for each of the containers specified.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudRunOpV2ContainerStatus> getContainerStatuses() {
-    return containerStatuses;
-  }
-
-  /**
-   * Output only. Status information for each of the containers specified.
-   * @param containerStatuses containerStatuses or {@code null} for none
-   */
-  public GoogleCloudRunOpV2Revision setContainerStatuses(java.util.List<GoogleCloudRunOpV2ContainerStatus> containerStatuses) {
-    this.containerStatuses = containerStatuses;
     return this;
   }
 

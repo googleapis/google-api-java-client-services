@@ -31,7 +31,7 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class Subject extends com.google.api.client.json.GenericJson {
 
   /**
-   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * `"": ""` Algorithms can be e.g. sha256, sha512 See https://github.com/in-
    * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * `"": ""` Algorithms can be e.g. sha256, sha512 See https://github.com/in-
    * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * `"": ""` Algorithms can be e.g. sha256, sha512 See https://github.com/in-
    * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @param digest digest or {@code null} for none
    */

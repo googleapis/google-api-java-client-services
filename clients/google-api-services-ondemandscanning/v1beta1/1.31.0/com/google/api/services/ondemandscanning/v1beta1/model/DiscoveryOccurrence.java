@@ -46,6 +46,13 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
   private Status analysisStatusError;
 
   /**
+   * Output only. The time occurrences related to this discovery occurrence were archived.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String archiveTime;
+
+  /**
    * Whether the resource is continuously analyzed.
    * The value may be {@code null}.
    */
@@ -99,6 +106,23 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
    */
   public DiscoveryOccurrence setAnalysisStatusError(Status analysisStatusError) {
     this.analysisStatusError = analysisStatusError;
+    return this;
+  }
+
+  /**
+   * Output only. The time occurrences related to this discovery occurrence were archived.
+   * @return value or {@code null} for none
+   */
+  public String getArchiveTime() {
+    return archiveTime;
+  }
+
+  /**
+   * Output only. The time occurrences related to this discovery occurrence were archived.
+   * @param archiveTime archiveTime or {@code null} for none
+   */
+  public DiscoveryOccurrence setArchiveTime(String archiveTime) {
+    this.archiveTime = archiveTime;
     return this;
   }
 

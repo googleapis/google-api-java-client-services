@@ -33,14 +33,14 @@ package com.google.api.services.ondemandscanning.v1beta1.model;
 public final class InTotoStatement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Always "https://in-toto.io/Statement/v0.1".
+   * Always `https://in-toto.io/Statement/v0.1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("_type")
   private java.lang.String type;
 
   /**
-   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
+   * `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   private java.util.List<Subject> subject;
 
   /**
-   * Always "https://in-toto.io/Statement/v0.1".
+   * Always `https://in-toto.io/Statement/v0.1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -73,7 +73,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Always "https://in-toto.io/Statement/v0.1".
+   * Always `https://in-toto.io/Statement/v0.1`.
    * @param type type or {@code null} for none
    */
   public InTotoStatement setType(java.lang.String type) {
@@ -82,7 +82,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
+   * `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPredicateType() {
@@ -90,7 +90,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
+   * `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
    * @param predicateType predicateType or {@code null} for none
    */
   public InTotoStatement setPredicateType(java.lang.String predicateType) {

@@ -96,6 +96,14 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The organizational unit of this shared drive. This field is only populated on drives.list
+   * responses when the useDomainAdminAccess parameter is set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String orgUnitId;
+
+  /**
    * A set of restrictions that apply to this shared drive or items inside this shared drive.
    * The value may be {@code null}.
    */
@@ -269,6 +277,25 @@ public final class Drive extends com.google.api.client.json.GenericJson {
    */
   public Drive setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The organizational unit of this shared drive. This field is only populated on drives.list
+   * responses when the useDomainAdminAccess parameter is set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrgUnitId() {
+    return orgUnitId;
+  }
+
+  /**
+   * The organizational unit of this shared drive. This field is only populated on drives.list
+   * responses when the useDomainAdminAccess parameter is set to true.
+   * @param orgUnitId orgUnitId or {@code null} for none
+   */
+  public Drive setOrgUnitId(java.lang.String orgUnitId) {
+    this.orgUnitId = orgUnitId;
     return this;
   }
 

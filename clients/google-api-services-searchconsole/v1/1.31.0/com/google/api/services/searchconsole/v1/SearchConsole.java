@@ -302,7 +302,8 @@ public class SearchConsole extends com.google.api.client.googleapis.services.jso
   public class Sitemaps {
 
     /**
-     * Deletes a sitemap from this site.
+     * Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or
+     * the URLs that were previously crawled in the deleted sitemap.
      *
      * Create a request for the method "sitemaps.delete".
      *
@@ -324,7 +325,8 @@ public class SearchConsole extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}";
 
       /**
-       * Deletes a sitemap from this site.
+       * Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or
+       * the URLs that were previously crawled in the deleted sitemap.
        *
        * Create a request for the method "sitemaps.delete".
        *

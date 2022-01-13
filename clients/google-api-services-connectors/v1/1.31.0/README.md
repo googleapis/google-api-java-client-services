@@ -1,6 +1,6 @@
 # Connectors API Client Library for Java
 
-
+Enables users to create and manage connections to Google Cloud services and third-party business applications using the Connectors interface.
 
 This page contains information about getting started with the Connectors API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-connectors</artifactId>
-      <version>v1-rev20211106-1.32.1</version>
+      <version>v1-rev20211217-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-connectors:v1-rev20211106-1.32.1'
+  compile 'com.google.apis:google-api-services-connectors:v1-rev20211217-1.32.1'
 }
 ```
 

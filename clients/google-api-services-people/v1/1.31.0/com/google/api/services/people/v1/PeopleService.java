@@ -336,7 +336,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     /**
      * Create a new contact group owned by the authenticated user. Created contact group names must be
      * unique to the users contact groups. Attempting to create a group with a duplicate name will
-     * return a HTTP 409 error.
+     * return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid
+     * increased latency and failures.
      *
      * Create a request for the method "contactGroups.create".
      *
@@ -359,7 +360,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Create a new contact group owned by the authenticated user. Created contact group names must be
        * unique to the users contact groups. Attempting to create a group with a duplicate name will
-       * return a HTTP 409 error.
+       * return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid
+       * increased latency and failures.
        *
        * Create a request for the method "contactGroups.create".
        *
@@ -437,7 +439,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Delete an existing contact group owned by the authenticated user by specifying a contact group
-     * resource name.
+     * resource name. Mutate requests for the same user should be sent sequentially to avoid increased
+     * latency and failures.
      *
      * Create a request for the method "contactGroups.delete".
      *
@@ -462,7 +465,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Delete an existing contact group owned by the authenticated user by specifying a contact group
-       * resource name.
+       * resource name. Mutate requests for the same user should be sent sequentially to avoid increased
+       * latency and failures.
        *
        * Create a request for the method "contactGroups.delete".
        *
@@ -978,7 +982,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     /**
      * Update the name of an existing contact group owned by the authenticated user. Updated contact
      * group names must be unique to the users contact groups. Attempting to create a group with a
-     * duplicate name will return a HTTP 409 error.
+     * duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent
+     * sequentially to avoid increased latency and failures.
      *
      * Create a request for the method "contactGroups.update".
      *
@@ -1006,7 +1011,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Update the name of an existing contact group owned by the authenticated user. Updated contact
        * group names must be unique to the users contact groups. Attempting to create a group with a
-       * duplicate name will return a HTTP 409 error.
+       * duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent
+       * sequentially to avoid increased latency and failures.
        *
        * Create a request for the method "contactGroups.update".
        *
@@ -1298,7 +1304,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   public class OtherContacts {
 
     /**
-     * Copies an "Other contact" to a new contact in the user's "myContacts" group
+     * Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for
+     * the same user should be sent sequentially to avoid increased latency and failures.
      *
      * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
      *
@@ -1324,7 +1331,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^otherContacts/[^/]+$");
 
       /**
-       * Copies an "Other contact" to a new contact in the user's "myContacts" group
+       * Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for
+       * the same user should be sent sequentially to avoid increased latency and failures.
        *
        * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
        *
@@ -1939,8 +1947,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   public class People {
 
     /**
-     * Create a batch of new contacts and return the PersonResponses for the newly created contacts.
-     * Limited to 10 parallel requests per user.
+     * Create a batch of new contacts and return the PersonResponses for the newly Mutate requests for
+     * the same user should be sent sequentially to avoid increased latency and failures.
      *
      * Create a request for the method "people.batchCreateContacts".
      *
@@ -1961,8 +1969,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/people:batchCreateContacts";
 
       /**
-       * Create a batch of new contacts and return the PersonResponses for the newly created contacts.
-       * Limited to 10 parallel requests per user.
+       * Create a batch of new contacts and return the PersonResponses for the newly Mutate requests for
+       * the same user should be sent sequentially to avoid increased latency and failures.
        *
        * Create a request for the method "people.batchCreateContacts".
        *
@@ -2040,8 +2048,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Delete a batch of contacts. Any non-contact data will not be deleted. Limited to 10 parallel
-     * requests per user.
+     * Delete a batch of contacts. Any non-contact data will not be deleted. Mutate requests for the
+     * same user should be sent sequentially to avoid increased latency and failures.
      *
      * Create a request for the method "people.batchDeleteContacts".
      *
@@ -2062,8 +2070,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/people:batchDeleteContacts";
 
       /**
-       * Delete a batch of contacts. Any non-contact data will not be deleted. Limited to 10 parallel
-       * requests per user.
+       * Delete a batch of contacts. Any non-contact data will not be deleted. Mutate requests for the
+       * same user should be sent sequentially to avoid increased latency and failures.
        *
        * Create a request for the method "people.batchDeleteContacts".
        *
@@ -2142,7 +2150,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Update a batch of contacts and return a map of resource names to PersonResponses for the updated
-     * contacts. Limited to 10 parallel requests per user.
+     * contacts. Mutate requests for the same user should be sent sequentially to avoid increased
+     * latency and failures.
      *
      * Create a request for the method "people.batchUpdateContacts".
      *
@@ -2164,7 +2173,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Update a batch of contacts and return a map of resource names to PersonResponses for the
-       * updated contacts. Limited to 10 parallel requests per user.
+       * updated contacts. Mutate requests for the same user should be sent sequentially to avoid
+       * increased latency and failures.
        *
        * Create a request for the method "people.batchUpdateContacts".
        *
@@ -2244,7 +2254,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     /**
      * Create a new contact and return the person resource for that contact. The request returns a 400
      * error if more than one field is specified on a field that is a singleton for contact sources: *
-     * biographies * birthdays * genders * names
+     * biographies * birthdays * genders * names Mutate requests for the same user should be sent
+     * sequentially to avoid increased latency and failures.
      *
      * Create a request for the method "people.createContact".
      *
@@ -2267,7 +2278,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Create a new contact and return the person resource for that contact. The request returns a 400
        * error if more than one field is specified on a field that is a singleton for contact sources: *
-       * biographies * birthdays * genders * names
+       * biographies * birthdays * genders * names Mutate requests for the same user should be sent
+       * sequentially to avoid increased latency and failures.
        *
        * Create a request for the method "people.createContact".
        *
@@ -2405,7 +2417,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Delete a contact person. Any non-contact data will not be deleted.
+     * Delete a contact person. Any non-contact data will not be deleted. Mutate requests for the same
+     * user should be sent sequentially to avoid increased latency and failures.
      *
      * Create a request for the method "people.deleteContact".
      *
@@ -2429,7 +2442,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^people/[^/]+$");
 
       /**
-       * Delete a contact person. Any non-contact data will not be deleted.
+       * Delete a contact person. Any non-contact data will not be deleted. Mutate requests for the same
+       * user should be sent sequentially to avoid increased latency and failures.
        *
        * Create a request for the method "people.deleteContact".
        *
@@ -2534,7 +2548,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Delete a contact's photo.
+     * Delete a contact's photo. Mutate requests for the same user should be done sequentially to avoid
+     * // lock contention.
      *
      * Create a request for the method "people.deleteContactPhoto".
      *
@@ -2558,7 +2573,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^people/[^/]+$");
 
       /**
-       * Delete a contact's photo.
+       * Delete a contact's photo. Mutate requests for the same user should be done sequentially to
+       * avoid // lock contention.
        *
        * Create a request for the method "people.deleteContactPhoto".
        *
@@ -3982,7 +3998,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * should get the latest person and merge their updates into the latest person. The server returns a
      * 400 error if `memberships` are being updated and there are no contact group memberships specified
      * on the person. The server returns a 400 error if more than one field is specified on a field that
-     * is a singleton for contact sources: * biographies * birthdays * genders * names
+     * is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests
+     * for the same user should be sent sequentially to avoid increased latency and failures.
      *
      * Create a request for the method "people.updateContact".
      *
@@ -4018,7 +4035,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * server returns a 400 error if `memberships` are being updated and there are no contact group
        * memberships specified on the person. The server returns a 400 error if more than one field is
        * specified on a field that is a singleton for contact sources: * biographies * birthdays *
-       * genders * names
+       * genders * names Mutate requests for the same user should be sent sequentially to avoid
+       * increased latency and failures.
        *
        * Create a request for the method "people.updateContact".
        *
@@ -4227,7 +4245,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Update a contact's photo.
+     * Update a contact's photo. Mutate requests for the same user should be sent sequentially to avoid
+     * increased latency and failures.
      *
      * Create a request for the method "people.updateContactPhoto".
      *
@@ -4252,7 +4271,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^people/[^/]+$");
 
       /**
-       * Update a contact's photo.
+       * Update a contact's photo. Mutate requests for the same user should be sent sequentially to
+       * avoid increased latency and failures.
        *
        * Create a request for the method "people.updateContactPhoto".
        *

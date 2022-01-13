@@ -38,9 +38,9 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * Required. The job to update. `transferJob` is expected to specify one or more of five fields:
-   * description, transfer_spec, notification_config, [logging_config[TransferJob.logging_config],
-   * and status. An `UpdateTransferJobRequest` that specifies other fields are rejected with the
-   * error INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
+   * description, transfer_spec, notification_config, logging_config, and status. An
+   * `UpdateTransferJobRequest` that specifies other fields are rejected with the error
+   * INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
    * permissions.
    * The value may be {@code null}.
    */
@@ -77,9 +77,9 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * Required. The job to update. `transferJob` is expected to specify one or more of five fields:
-   * description, transfer_spec, notification_config, [logging_config[TransferJob.logging_config],
-   * and status. An `UpdateTransferJobRequest` that specifies other fields are rejected with the
-   * error INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
+   * description, transfer_spec, notification_config, logging_config, and status. An
+   * `UpdateTransferJobRequest` that specifies other fields are rejected with the error
+   * INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
    * permissions.
    * @return value or {@code null} for none
    */
@@ -89,9 +89,9 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * Required. The job to update. `transferJob` is expected to specify one or more of five fields:
-   * description, transfer_spec, notification_config, [logging_config[TransferJob.logging_config],
-   * and status. An `UpdateTransferJobRequest` that specifies other fields are rejected with the
-   * error INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
+   * description, transfer_spec, notification_config, logging_config, and status. An
+   * `UpdateTransferJobRequest` that specifies other fields are rejected with the error
+   * INVALID_ARGUMENT. Updating a job status to DELETED requires `storagetransfer.jobs.delete`
    * permissions.
    * @param transferJob transferJob or {@code null} for none
    */

@@ -56,12 +56,12 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
    * the task's HTTP request. Some HTTP request headers will be ignored or replaced. A partial list
    * of headers that will be ignored or replaced is: * Host: This will be computed by Cloud Tasks
    * and derived from HttpRequest.url. * Content-Length: This will be computed by Cloud Tasks. *
-   * User-Agent: This will be set to `"Google-Cloud-Tasks"`. * X-Google-*: Google use only. *
-   * X-AppEngine-*: Google use only. `Content-Type` won't be set by Cloud Tasks. You can explicitly
-   * set `Content-Type` to a media type when the task is created. For example, `Content-Type` can be
-   * set to `"application/octet-stream"` or `"application/json"`. Headers which can have multiple
-   * values (according to RFC2616) can be specified using comma-separated values. The size of the
-   * headers must be less than 80KB.
+   * User-Agent: This will be set to `"Google-Cloud-Tasks"`. * `X-Google-*`: Google use only. *
+   * `X-AppEngine-*`: Google use only. `Content-Type` won't be set by Cloud Tasks. You can
+   * explicitly set `Content-Type` to a media type when the task is created. For example, `Content-
+   * Type` can be set to `"application/octet-stream"` or `"application/json"`. Headers which can
+   * have multiple values (according to RFC2616) can be specified using comma-separated values. The
+   * size of the headers must be less than 80KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,12 +161,12 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
    * the task's HTTP request. Some HTTP request headers will be ignored or replaced. A partial list
    * of headers that will be ignored or replaced is: * Host: This will be computed by Cloud Tasks
    * and derived from HttpRequest.url. * Content-Length: This will be computed by Cloud Tasks. *
-   * User-Agent: This will be set to `"Google-Cloud-Tasks"`. * X-Google-*: Google use only. *
-   * X-AppEngine-*: Google use only. `Content-Type` won't be set by Cloud Tasks. You can explicitly
-   * set `Content-Type` to a media type when the task is created. For example, `Content-Type` can be
-   * set to `"application/octet-stream"` or `"application/json"`. Headers which can have multiple
-   * values (according to RFC2616) can be specified using comma-separated values. The size of the
-   * headers must be less than 80KB.
+   * User-Agent: This will be set to `"Google-Cloud-Tasks"`. * `X-Google-*`: Google use only. *
+   * `X-AppEngine-*`: Google use only. `Content-Type` won't be set by Cloud Tasks. You can
+   * explicitly set `Content-Type` to a media type when the task is created. For example, `Content-
+   * Type` can be set to `"application/octet-stream"` or `"application/json"`. Headers which can
+   * have multiple values (according to RFC2616) can be specified using comma-separated values. The
+   * size of the headers must be less than 80KB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -179,12 +179,12 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
    * the task's HTTP request. Some HTTP request headers will be ignored or replaced. A partial list
    * of headers that will be ignored or replaced is: * Host: This will be computed by Cloud Tasks
    * and derived from HttpRequest.url. * Content-Length: This will be computed by Cloud Tasks. *
-   * User-Agent: This will be set to `"Google-Cloud-Tasks"`. * X-Google-*: Google use only. *
-   * X-AppEngine-*: Google use only. `Content-Type` won't be set by Cloud Tasks. You can explicitly
-   * set `Content-Type` to a media type when the task is created. For example, `Content-Type` can be
-   * set to `"application/octet-stream"` or `"application/json"`. Headers which can have multiple
-   * values (according to RFC2616) can be specified using comma-separated values. The size of the
-   * headers must be less than 80KB.
+   * User-Agent: This will be set to `"Google-Cloud-Tasks"`. * `X-Google-*`: Google use only. *
+   * `X-AppEngine-*`: Google use only. `Content-Type` won't be set by Cloud Tasks. You can
+   * explicitly set `Content-Type` to a media type when the task is created. For example, `Content-
+   * Type` can be set to `"application/octet-stream"` or `"application/json"`. Headers which can
+   * have multiple values (according to RFC2616) can be specified using comma-separated values. The
+   * size of the headers must be less than 80KB.
    * @param headers headers or {@code null} for none
    */
   public HttpRequest setHeaders(java.util.Map<String, java.lang.String> headers) {

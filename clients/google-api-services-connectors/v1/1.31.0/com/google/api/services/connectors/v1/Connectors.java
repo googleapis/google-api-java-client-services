@@ -20,7 +20,7 @@ package com.google.api.services.connectors.v1;
  * Service definition for Connectors (v1).
  *
  * <p>
- * 
+ * Enables users to create and manage connections to Google Cloud services and third-party business applications using the Connectors interface.
  * </p>
  *
  * <p>

@@ -73,6 +73,13 @@ public final class Provider extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launchStage;
+
+  /**
    * Output only. Resource name of the Provider. Format:
    * projects/{project}/locations/{location}/providers/{provider}
    * The value may be {@code null}.
@@ -195,6 +202,23 @@ public final class Provider extends com.google.api.client.json.GenericJson {
    */
   public Provider setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLaunchStage() {
+    return launchStage;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @param launchStage launchStage or {@code null} for none
+   */
+  public Provider setLaunchStage(java.lang.String launchStage) {
+    this.launchStage = launchStage;
     return this;
   }
 

@@ -9071,19 +9071,22 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The output format of the public key requested. X509_PEM is the default output format.
+           * Optional. The output format of the public key. The default is `TYPE_NONE`, which means
+           * that the public key is not returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String publicKeyType;
 
-          /** The output format of the public key requested. X509_PEM is the default output format.
+          /** Optional. The output format of the public key. The default is `TYPE_NONE`, which means that the
+         public key is not returned.
            */
           public java.lang.String getPublicKeyType() {
             return publicKeyType;
           }
 
           /**
-           * The output format of the public key requested. X509_PEM is the default output format.
+           * Optional. The output format of the public key. The default is `TYPE_NONE`, which means
+           * that the public key is not returned.
            */
           public Get setPublicKeyType(java.lang.String publicKeyType) {
             this.publicKeyType = publicKeyType;

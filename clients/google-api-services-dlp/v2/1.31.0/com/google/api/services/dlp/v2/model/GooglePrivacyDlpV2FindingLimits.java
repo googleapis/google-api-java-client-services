@@ -17,8 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Configuration to control the number of findings returned. Cannot be set if de-identification is
- * requested.
+ * Configuration to control the number of findings returned for inspection. This is not used for de-
+ * identification or data profiling.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

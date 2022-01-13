@@ -32,8 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of options defining data content to scan. If empty, text, images, and other content will
-   * be included.
+   * Deprecated and unused.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +53,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * When true, excludes type information of the findings.
+   * When true, excludes type information of the findings. This is not used for data profiling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +61,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * When true, a contextual quote from the data that triggered a finding is included in the
-   * response; see Finding.quote.
+   * response; see Finding.quote. This is not used for data profiling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +87,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * Configuration to control the number of findings returned.
+   * Configuration to control the number of findings returned. This is not used for data profiling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +111,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   private java.util.List<GooglePrivacyDlpV2InspectionRuleSet> ruleSet;
 
   /**
-   * List of options defining data content to scan. If empty, text, images, and other content will
-   * be included.
+   * Deprecated and unused.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContentOptions() {
@@ -121,8 +119,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * List of options defining data content to scan. If empty, text, images, and other content will
-   * be included.
+   * Deprecated and unused.
    * @param contentOptions contentOptions or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setContentOptions(java.util.List<java.lang.String> contentOptions) {
@@ -150,7 +147,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * When true, excludes type information of the findings.
+   * When true, excludes type information of the findings. This is not used for data profiling.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeInfoTypes() {
@@ -158,7 +155,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * When true, excludes type information of the findings.
+   * When true, excludes type information of the findings. This is not used for data profiling.
    * @param excludeInfoTypes excludeInfoTypes or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setExcludeInfoTypes(java.lang.Boolean excludeInfoTypes) {
@@ -168,7 +165,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * When true, a contextual quote from the data that triggered a finding is included in the
-   * response; see Finding.quote.
+   * response; see Finding.quote. This is not used for data profiling.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeQuote() {
@@ -177,7 +174,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * When true, a contextual quote from the data that triggered a finding is included in the
-   * response; see Finding.quote.
+   * response; see Finding.quote. This is not used for data profiling.
    * @param includeQuote includeQuote or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setIncludeQuote(java.lang.Boolean includeQuote) {
@@ -215,7 +212,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * Configuration to control the number of findings returned.
+   * Configuration to control the number of findings returned. This is not used for data profiling.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FindingLimits getLimits() {
@@ -223,7 +220,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * Configuration to control the number of findings returned.
+   * Configuration to control the number of findings returned. This is not used for data profiling.
    * @param limits limits or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setLimits(GooglePrivacyDlpV2FindingLimits limits) {

@@ -316,6 +316,304 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
   public class Projects {
 
     /**
+     * Retrieves the Settings for the Project.
+     *
+     * Create a request for the method "projects.getProjectSettings".
+     *
+     * This request holds the parameters needed by the artifactregistry server.  After setting any
+     * optional parameters, call the {@link GetProjectSettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the projectSettings resource.
+     * @return the request
+     */
+    public GetProjectSettings getProjectSettings(java.lang.String name) throws java.io.IOException {
+      GetProjectSettings result = new GetProjectSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetProjectSettings extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ProjectSettings> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/projectSettings$");
+
+      /**
+       * Retrieves the Settings for the Project.
+       *
+       * Create a request for the method "projects.getProjectSettings".
+       *
+       * This request holds the parameters needed by the the artifactregistry server.  After setting any
+       * optional parameters, call the {@link GetProjectSettings#execute()} method to invoke the remote
+       * operation. <p> {@link GetProjectSettings#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the projectSettings resource.
+       * @since 1.13
+       */
+      protected GetProjectSettings(java.lang.String name) {
+        super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ProjectSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetProjectSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetProjectSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetProjectSettings setAccessToken(java.lang.String accessToken) {
+        return (GetProjectSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetProjectSettings setAlt(java.lang.String alt) {
+        return (GetProjectSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetProjectSettings setCallback(java.lang.String callback) {
+        return (GetProjectSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetProjectSettings setFields(java.lang.String fields) {
+        return (GetProjectSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetProjectSettings setKey(java.lang.String key) {
+        return (GetProjectSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetProjectSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetProjectSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetProjectSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetProjectSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetProjectSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetProjectSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetProjectSettings setUploadType(java.lang.String uploadType) {
+        return (GetProjectSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetProjectSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetProjectSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the projectSettings resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the projectSettings resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the projectSettings resource. */
+      public GetProjectSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetProjectSettings set(String parameterName, Object value) {
+        return (GetProjectSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the Settings for the Project.
+     *
+     * Create a request for the method "projects.updateProjectSettings".
+     *
+     * This request holds the parameters needed by the artifactregistry server.  After setting any
+     * optional parameters, call the {@link UpdateProjectSettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name The name of the project's settings. Always of the form: projects/{project-id}/projectSettings In
+     *        update request: never set In response: always set
+     * @param content the {@link com.google.api.services.artifactregistry.v1.model.ProjectSettings}
+     * @return the request
+     */
+    public UpdateProjectSettings updateProjectSettings(java.lang.String name, com.google.api.services.artifactregistry.v1.model.ProjectSettings content) throws java.io.IOException {
+      UpdateProjectSettings result = new UpdateProjectSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateProjectSettings extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ProjectSettings> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/projectSettings$");
+
+      /**
+       * Updates the Settings for the Project.
+       *
+       * Create a request for the method "projects.updateProjectSettings".
+       *
+       * This request holds the parameters needed by the the artifactregistry server.  After setting any
+       * optional parameters, call the {@link UpdateProjectSettings#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateProjectSettings#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name The name of the project's settings. Always of the form: projects/{project-id}/projectSettings In
+     *        update request: never set In response: always set
+       * @param content the {@link com.google.api.services.artifactregistry.v1.model.ProjectSettings}
+       * @since 1.13
+       */
+      protected UpdateProjectSettings(java.lang.String name, com.google.api.services.artifactregistry.v1.model.ProjectSettings content) {
+        super(ArtifactRegistry.this, "PATCH", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.ProjectSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+      }
+
+      @Override
+      public UpdateProjectSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateProjectSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateProjectSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateProjectSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateProjectSettings setAlt(java.lang.String alt) {
+        return (UpdateProjectSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateProjectSettings setCallback(java.lang.String callback) {
+        return (UpdateProjectSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateProjectSettings setFields(java.lang.String fields) {
+        return (UpdateProjectSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateProjectSettings setKey(java.lang.String key) {
+        return (UpdateProjectSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateProjectSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateProjectSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateProjectSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateProjectSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateProjectSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateProjectSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateProjectSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateProjectSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateProjectSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateProjectSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The name of the project's settings. Always of the form: projects/{project-
+       * id}/projectSettings In update request: never set In response: always set
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the project's settings. Always of the form: projects/{project-id}/projectSettings In
+     update request: never set In response: always set
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The name of the project's settings. Always of the form: projects/{project-
+       * id}/projectSettings In update request: never set In response: always set
+       */
+      public UpdateProjectSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Field mask to support partial updates. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Field mask to support partial updates.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Field mask to support partial updates. */
+      public UpdateProjectSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateProjectSettings set(String parameterName, Object value) {
+        return (UpdateProjectSettings) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -355,6 +653,288 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
        */
       public class Repositories {
 
+        /**
+         * Creates a repository. The returned Operation will finish once the repository has been created.
+         * Its response will be the created Repository.
+         *
+         * Create a request for the method "repositories.create".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the parent resource where the repository will be created.
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.Repository}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.Repository content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/repositories";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a repository. The returned Operation will finish once the repository has been created.
+           * Its response will be the created Repository.
+           *
+           * Create a request for the method "repositories.create".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the parent resource where the repository will be created.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.Repository}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.Repository content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the parent resource where the repository will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the parent resource where the repository will be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The name of the parent resource where the repository will be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The repository id to use for this repository. */
+          @com.google.api.client.util.Key
+          private java.lang.String repositoryId;
+
+          /** The repository id to use for this repository.
+           */
+          public java.lang.String getRepositoryId() {
+            return repositoryId;
+          }
+
+          /** The repository id to use for this repository. */
+          public Create setRepositoryId(java.lang.String repositoryId) {
+            this.repositoryId = repositoryId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a repository and all of its contents. The returned Operation will finish once the
+         * repository has been deleted. It will not have any Operation metadata and will return a
+         * google.protobuf.Empty response.
+         *
+         * Create a request for the method "repositories.delete".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the repository to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Deletes a repository and all of its contents. The returned Operation will finish once the
+           * repository has been deleted. It will not have any Operation metadata and will return a
+           * google.protobuf.Empty response.
+           *
+           * Create a request for the method "repositories.delete".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the repository to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(ArtifactRegistry.this, "DELETE", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the repository to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the repository to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the repository to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets a repository.
          *
@@ -494,6 +1074,198 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           }
         }
         /**
+         * Gets the IAM policy for a given resource.
+         *
+         * Create a request for the method "repositories.getIamPolicy".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         *        the appropriate value for this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Gets the IAM policy for a given resource.
+           *
+           * Create a request for the method "repositories.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         *        the appropriate value for this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists repositories.
          *
          * Create a request for the method "repositories.list".
@@ -626,17 +1398,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** The maximum number of repositories to return. */
+          /** The maximum number of repositories to return. Maximum page size is 1,000. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of repositories to return.
+          /** The maximum number of repositories to return. Maximum page size is 1,000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The maximum number of repositories to return. */
+          /** The maximum number of repositories to return. Maximum page size is 1,000. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -663,7 +1435,818 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates a repository.
+         *
+         * Create a request for the method "repositories.patch".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.Repository}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.artifactregistry.v1.model.Repository content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
 
+        public class Patch extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Repository> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Updates a repository.
+           *
+           * Create a request for the method "repositories.patch".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.Repository}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.artifactregistry.v1.model.Repository content) {
+            super(ArtifactRegistry.this, "PATCH", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Repository.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the repository, for example: "projects/p1/locations/us-
+           * central1/repositories/repo1".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the repository, for example: "projects/p1/locations/us-
+           * central1/repositories/repo1".
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The update mask applies to the resource. For the `FieldMask` definition, see
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The update mask applies to the resource. For the `FieldMask` definition, see
+         https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The update mask applies to the resource. For the `FieldMask` definition, see
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the IAM policy for a given resource.
+         *
+         * Create a request for the method "repositories.setIamPolicy".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         *        the appropriate value for this field.
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.artifactregistry.v1.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Updates the IAM policy for a given resource.
+           *
+           * Create a request for the method "repositories.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.artifactregistry.v1.model.SetIamPolicyRequest content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Tests if the caller has a list of permissions on a resource.
+         *
+         * Create a request for the method "repositories.testIamPermissions".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+         *        documentation for the appropriate value for this field.
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.artifactregistry.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Tests if the caller has a list of permissions on a resource.
+           *
+           * Create a request for the method "repositories.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+         *        documentation for the appropriate value for this field.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.artifactregistry.v1.model.TestIamPermissionsRequest content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+         documentation for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the AptArtifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.AptArtifacts.List request = artifactregistry.aptArtifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AptArtifacts aptArtifacts() {
+          return new AptArtifacts();
+        }
+
+        /**
+         * The "aptArtifacts" collection of methods.
+         */
+        public class AptArtifacts {
+
+          /**
+           * Imports Apt artifacts. The returned Operation will complete once the resources are imported.
+           * Package, Version, and File resources are created based on the imported artifacts. Imported
+           * artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "aptArtifacts.import".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be imported.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.ImportAptArtifactsRequest}
+           * @return the request
+           */
+          public ArtifactRegistryImport artifactregistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.ImportAptArtifactsRequest content) throws java.io.IOException {
+            ArtifactRegistryImport result = new ArtifactRegistryImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ArtifactRegistryImport extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/aptArtifacts:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Imports Apt artifacts. The returned Operation will complete once the resources are imported.
+             * Package, Version, and File resources are created based on the imported artifacts. Imported
+             * artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "aptArtifacts.import".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+             * remote operation. <p> {@link ArtifactRegistryImport#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be imported.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.ImportAptArtifactsRequest}
+             * @since 1.13
+             */
+            protected ArtifactRegistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.ImportAptArtifactsRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public ArtifactRegistryImport set$Xgafv(java.lang.String $Xgafv) {
+              return (ArtifactRegistryImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAccessToken(java.lang.String accessToken) {
+              return (ArtifactRegistryImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAlt(java.lang.String alt) {
+              return (ArtifactRegistryImport) super.setAlt(alt);
+            }
+
+            @Override
+            public ArtifactRegistryImport setCallback(java.lang.String callback) {
+              return (ArtifactRegistryImport) super.setCallback(callback);
+            }
+
+            @Override
+            public ArtifactRegistryImport setFields(java.lang.String fields) {
+              return (ArtifactRegistryImport) super.setFields(fields);
+            }
+
+            @Override
+            public ArtifactRegistryImport setKey(java.lang.String key) {
+              return (ArtifactRegistryImport) super.setKey(key);
+            }
+
+            @Override
+            public ArtifactRegistryImport setOauthToken(java.lang.String oauthToken) {
+              return (ArtifactRegistryImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ArtifactRegistryImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ArtifactRegistryImport setQuotaUser(java.lang.String quotaUser) {
+              return (ArtifactRegistryImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadType(java.lang.String uploadType) {
+              return (ArtifactRegistryImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ArtifactRegistryImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be imported.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            public ArtifactRegistryImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ArtifactRegistryImport set(String parameterName, Object value) {
+              return (ArtifactRegistryImport) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Aptartifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.Aptartifacts.List request = artifactregistry.aptartifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Aptartifacts aptartifacts() {
+          return new Aptartifacts();
+        }
+
+        /**
+         * The "aptartifacts" collection of methods.
+         */
+        public class Aptartifacts {
+
+          /**
+           * Directly uploads an Apt artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the imported artifact.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "aptartifacts.upload".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest}
+           * @return the request
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest content) throws java.io.IOException {
+            Upload result = new Upload(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          /**
+           * Directly uploads an Apt artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the imported artifact.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "aptartifacts.upload".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * <p>
+           * This method should be used for uploading media content.
+           * </p>
+           *
+           * @param parent The name of the parent resource where the artifacts will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest} media metadata or {@code null} if none
+           * @param mediaContent The media HTTP content or {@code null} if none.
+           * @return the request
+           * @throws java.io.IOException if the initialization of the request fails
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+            Upload result = new Upload(parent, content, mediaContent);
+            initialize(result);
+            return result;
+          }
+
+          public class Upload extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.UploadAptArtifactMediaResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/aptArtifacts:create";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Directly uploads an Apt artifact. The returned Operation will complete once the resources are
+             * uploaded. Package, Version, and File resources are created based on the imported artifact.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "aptartifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest}
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            /**
+             * Directly uploads an Apt artifact. The returned Operation will complete once the resources are
+             * uploaded. Package, Version, and File resources are created based on the imported artifact.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "aptartifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * <p>
+             * This constructor should be used for uploading media content.
+             * </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest} media metadata or {@code null} if none
+             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+              super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              initializeMediaUpload(mediaContent);
+            }
+
+            @Override
+            public Upload set$Xgafv(java.lang.String $Xgafv) {
+              return (Upload) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Upload setAccessToken(java.lang.String accessToken) {
+              return (Upload) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Upload setAlt(java.lang.String alt) {
+              return (Upload) super.setAlt(alt);
+            }
+
+            @Override
+            public Upload setCallback(java.lang.String callback) {
+              return (Upload) super.setCallback(callback);
+            }
+
+            @Override
+            public Upload setFields(java.lang.String fields) {
+              return (Upload) super.setFields(fields);
+            }
+
+            @Override
+            public Upload setKey(java.lang.String key) {
+              return (Upload) super.setKey(key);
+            }
+
+            @Override
+            public Upload setOauthToken(java.lang.String oauthToken) {
+              return (Upload) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Upload) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Upload setQuotaUser(java.lang.String quotaUser) {
+              return (Upload) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Upload setUploadType(java.lang.String uploadType) {
+              return (Upload) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Upload) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be uploaded. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be uploaded.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be uploaded. */
+            public Upload setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Upload set(String parameterName, Object value) {
+              return (Upload) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the DockerImages collection.
          *
@@ -990,6 +2573,2916 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Files collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.Files.List request = artifactregistry.files().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Files files() {
+          return new Files();
+        }
+
+        /**
+         * The "files" collection of methods.
+         */
+        public class Files {
+
+          /**
+           * Gets a file.
+           *
+           * Create a request for the method "files.get".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the file to retrieve.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.GoogleDevtoolsArtifactregistryV1File> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/.*$");
+
+            /**
+             * Gets a file.
+             *
+             * Create a request for the method "files.get".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the file to retrieve.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.GoogleDevtoolsArtifactregistryV1File.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the file to retrieve. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the file to retrieve.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the file to retrieve. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists files.
+           *
+           * Create a request for the method "files.list".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the parent resource whose files will be listed.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ListFilesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/files";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Lists files.
+             *
+             * Create a request for the method "files.list".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource whose files will be listed.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ListFilesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource whose files will be listed. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource whose files will be listed.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource whose files will be listed. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * An expression for filtering the results of the request. Filter rules are case
+             * insensitive. The fields eligible for filtering are: * `name` * `owner` An example of
+             * using a filter: * `name="projects/p1/locations/us-
+             * central1/repositories/repo1/files/a/b"` --> Files with an ID starting with "a/b/". *
+             * `owner="projects/p1/locations/us-
+             * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Files owned by the
+             * version `1.0` in package `pkg1`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** An expression for filtering the results of the request. Filter rules are case insensitive. The
+           fields eligible for filtering are: * `name` * `owner` An example of using a filter: *
+           `name="projects/p1/locations/us-central1/repositories/repo1/files/a/b"` --> Files with an ID
+           starting with "a/b/". * `owner="projects/p1/locations/us-
+           central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Files owned by the version `1.0` in
+           package `pkg1`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * An expression for filtering the results of the request. Filter rules are case
+             * insensitive. The fields eligible for filtering are: * `name` * `owner` An example of
+             * using a filter: * `name="projects/p1/locations/us-
+             * central1/repositories/repo1/files/a/b"` --> Files with an ID starting with "a/b/". *
+             * `owner="projects/p1/locations/us-
+             * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Files owned by the
+             * version `1.0` in package `pkg1`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** The maximum number of files to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of files to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of files to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token value returned from a previous list request, if any. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from a previous list request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token value returned from a previous list request, if any. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the GooGetArtifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.GooGetArtifacts.List request = artifactregistry.gooGetArtifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public GooGetArtifacts gooGetArtifacts() {
+          return new GooGetArtifacts();
+        }
+
+        /**
+         * The "gooGetArtifacts" collection of methods.
+         */
+        public class GooGetArtifacts {
+
+          /**
+           * Imports GooGet artifacts. The returned Operation will complete once the resources are imported.
+           * Package, Version, and File resources are created based on the imported artifacts. Imported
+           * artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "gooGetArtifacts.import".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be imported.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.ImportGooGetArtifactsRequest}
+           * @return the request
+           */
+          public ArtifactRegistryImport artifactregistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.ImportGooGetArtifactsRequest content) throws java.io.IOException {
+            ArtifactRegistryImport result = new ArtifactRegistryImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ArtifactRegistryImport extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/gooGetArtifacts:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Imports GooGet artifacts. The returned Operation will complete once the resources are imported.
+             * Package, Version, and File resources are created based on the imported artifacts. Imported
+             * artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "gooGetArtifacts.import".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+             * remote operation. <p> {@link ArtifactRegistryImport#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be imported.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.ImportGooGetArtifactsRequest}
+             * @since 1.13
+             */
+            protected ArtifactRegistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.ImportGooGetArtifactsRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public ArtifactRegistryImport set$Xgafv(java.lang.String $Xgafv) {
+              return (ArtifactRegistryImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAccessToken(java.lang.String accessToken) {
+              return (ArtifactRegistryImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAlt(java.lang.String alt) {
+              return (ArtifactRegistryImport) super.setAlt(alt);
+            }
+
+            @Override
+            public ArtifactRegistryImport setCallback(java.lang.String callback) {
+              return (ArtifactRegistryImport) super.setCallback(callback);
+            }
+
+            @Override
+            public ArtifactRegistryImport setFields(java.lang.String fields) {
+              return (ArtifactRegistryImport) super.setFields(fields);
+            }
+
+            @Override
+            public ArtifactRegistryImport setKey(java.lang.String key) {
+              return (ArtifactRegistryImport) super.setKey(key);
+            }
+
+            @Override
+            public ArtifactRegistryImport setOauthToken(java.lang.String oauthToken) {
+              return (ArtifactRegistryImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ArtifactRegistryImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ArtifactRegistryImport setQuotaUser(java.lang.String quotaUser) {
+              return (ArtifactRegistryImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadType(java.lang.String uploadType) {
+              return (ArtifactRegistryImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ArtifactRegistryImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be imported.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            public ArtifactRegistryImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ArtifactRegistryImport set(String parameterName, Object value) {
+              return (ArtifactRegistryImport) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Googetartifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.Googetartifacts.List request = artifactregistry.googetartifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Googetartifacts googetartifacts() {
+          return new Googetartifacts();
+        }
+
+        /**
+         * The "googetartifacts" collection of methods.
+         */
+        public class Googetartifacts {
+
+          /**
+           * Directly uploads a GooGet artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the imported artifact.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "googetartifacts.upload".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest}
+           * @return the request
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest content) throws java.io.IOException {
+            Upload result = new Upload(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          /**
+           * Directly uploads a GooGet artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the imported artifact.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "googetartifacts.upload".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * <p>
+           * This method should be used for uploading media content.
+           * </p>
+           *
+           * @param parent The name of the parent resource where the artifacts will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest} media metadata or {@code null} if none
+           * @param mediaContent The media HTTP content or {@code null} if none.
+           * @return the request
+           * @throws java.io.IOException if the initialization of the request fails
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+            Upload result = new Upload(parent, content, mediaContent);
+            initialize(result);
+            return result;
+          }
+
+          public class Upload extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactMediaResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/googetArtifacts:create";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Directly uploads a GooGet artifact. The returned Operation will complete once the resources are
+             * uploaded. Package, Version, and File resources are created based on the imported artifact.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "googetartifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest}
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            /**
+             * Directly uploads a GooGet artifact. The returned Operation will complete once the resources are
+             * uploaded. Package, Version, and File resources are created based on the imported artifact.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "googetartifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * <p>
+             * This constructor should be used for uploading media content.
+             * </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest} media metadata or {@code null} if none
+             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+              super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadGooGetArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              initializeMediaUpload(mediaContent);
+            }
+
+            @Override
+            public Upload set$Xgafv(java.lang.String $Xgafv) {
+              return (Upload) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Upload setAccessToken(java.lang.String accessToken) {
+              return (Upload) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Upload setAlt(java.lang.String alt) {
+              return (Upload) super.setAlt(alt);
+            }
+
+            @Override
+            public Upload setCallback(java.lang.String callback) {
+              return (Upload) super.setCallback(callback);
+            }
+
+            @Override
+            public Upload setFields(java.lang.String fields) {
+              return (Upload) super.setFields(fields);
+            }
+
+            @Override
+            public Upload setKey(java.lang.String key) {
+              return (Upload) super.setKey(key);
+            }
+
+            @Override
+            public Upload setOauthToken(java.lang.String oauthToken) {
+              return (Upload) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Upload) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Upload setQuotaUser(java.lang.String quotaUser) {
+              return (Upload) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Upload setUploadType(java.lang.String uploadType) {
+              return (Upload) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Upload) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be uploaded. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be uploaded.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be uploaded. */
+            public Upload setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Upload set(String parameterName, Object value) {
+              return (Upload) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Packages collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.Packages.List request = artifactregistry.packages().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Packages packages() {
+          return new Packages();
+        }
+
+        /**
+         * The "packages" collection of methods.
+         */
+        public class Packages {
+
+          /**
+           * Deletes a package and all of its versions and tags. The returned operation will complete once the
+           * package has been deleted.
+           *
+           * Create a request for the method "packages.delete".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the package to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+
+            /**
+             * Deletes a package and all of its versions and tags. The returned operation will complete once
+             * the package has been deleted.
+             *
+             * Create a request for the method "packages.delete".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the package to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ArtifactRegistry.this, "DELETE", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the package to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the package to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the package to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a package.
+           *
+           * Create a request for the method "packages.get".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the package to retrieve.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ArtifactRegistryPackage> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+
+            /**
+             * Gets a package.
+             *
+             * Create a request for the method "packages.get".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the package to retrieve.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ArtifactRegistryPackage.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the package to retrieve. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the package to retrieve.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the package to retrieve. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists packages.
+           *
+           * Create a request for the method "packages.list".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the parent resource whose packages will be listed.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ListPackagesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/packages";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Lists packages.
+             *
+             * Create a request for the method "packages.list".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the parent resource whose packages will be listed.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ListPackagesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the parent resource whose packages will be listed. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the parent resource whose packages will be listed.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the parent resource whose packages will be listed. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** The maximum number of packages to return. Maximum page size is 1,000. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of packages to return. Maximum page size is 1,000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of packages to return. Maximum page size is 1,000. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token value returned from a previous list request, if any. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from a previous list request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token value returned from a previous list request, if any. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Tags collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+           *   {@code ArtifactRegistry.Tags.List request = artifactregistry.tags().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Tags tags() {
+            return new Tags();
+          }
+
+          /**
+           * The "tags" collection of methods.
+           */
+          public class Tags {
+
+            /**
+             * Creates a tag.
+             *
+             * Create a request for the method "tags.create".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the parent resource where the tag will be created.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.Tag}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.Tag content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Tag> {
+
+              private static final String REST_PATH = "v1/{+parent}/tags";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+
+              /**
+               * Creates a tag.
+               *
+               * Create a request for the method "tags.create".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent The name of the parent resource where the tag will be created.
+               * @param content the {@link com.google.api.services.artifactregistry.v1.model.Tag}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.Tag content) {
+                super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Tag.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the parent resource where the tag will be created. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the parent resource where the tag will be created.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** The name of the parent resource where the tag will be created. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** The tag id to use for this repository. */
+              @com.google.api.client.util.Key
+              private java.lang.String tagId;
+
+              /** The tag id to use for this repository.
+               */
+              public java.lang.String getTagId() {
+                return tagId;
+              }
+
+              /** The tag id to use for this repository. */
+              public Create setTagId(java.lang.String tagId) {
+                this.tagId = tagId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes a tag.
+             *
+             * Create a request for the method "tags.delete".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the tag to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Empty> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+
+              /**
+               * Deletes a tag.
+               *
+               * Create a request for the method "tags.delete".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the tag to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ArtifactRegistry.this, "DELETE", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the tag to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the tag to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the tag to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets a tag.
+             *
+             * Create a request for the method "tags.get".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the tag to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Tag> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+
+              /**
+               * Gets a tag.
+               *
+               * Create a request for the method "tags.get".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the tag to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Tag.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the tag to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the tag to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the tag to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists tags.
+             *
+             * Create a request for the method "tags.list".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the parent resource whose tags will be listed.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ListTagsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/tags";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+
+              /**
+               * Lists tags.
+               *
+               * Create a request for the method "tags.list".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent The name of the parent resource whose tags will be listed.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ListTagsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the parent resource whose tags will be listed. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the parent resource whose tags will be listed.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** The name of the parent resource whose tags will be listed. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * An expression for filtering the results of the request. Filter rules are case
+               * insensitive. The fields eligible for filtering are: * `version` An example of using
+               * a filter: * `version="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Tags that are applied
+               * to the version `1.0` in package `pkg1`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** An expression for filtering the results of the request. Filter rules are case insensitive. The
+             fields eligible for filtering are: * `version` An example of using a filter: *
+             `version="projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/1.0"` -->
+             Tags that are applied to the version `1.0` in package `pkg1`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * An expression for filtering the results of the request. Filter rules are case
+               * insensitive. The fields eligible for filtering are: * `version` An example of using
+               * a filter: * `version="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Tags that are applied
+               * to the version `1.0` in package `pkg1`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The maximum number of tags to return. Maximum page size is 10,000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The next_page_token value returned from a previous list request, if any. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The next_page_token value returned from a previous list request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The next_page_token value returned from a previous list request, if any. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates a tag.
+             *
+             * Create a request for the method "tags.patch".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the tag, for example: "projects/p1/locations/us-
+             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+             *        slashes, the slashes are escaped. The tag part can only have characters in
+             *        [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.Tag}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.artifactregistry.v1.model.Tag content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Tag> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+
+              /**
+               * Updates a tag.
+               *
+               * Create a request for the method "tags.patch".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the tag, for example: "projects/p1/locations/us-
+             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+             *        slashes, the slashes are escaped. The tag part can only have characters in
+             *        [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+               * @param content the {@link com.google.api.services.artifactregistry.v1.model.Tag}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.artifactregistry.v1.model.Tag content) {
+                super(ArtifactRegistry.this, "PATCH", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Tag.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * The name of the tag, for example: "projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+               * slashes, the slashes are escaped. The tag part can only have characters in
+               * [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the tag, for example: "projects/p1/locations/us-
+             central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the
+             slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else
+             must be URL encoded.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * The name of the tag, for example: "projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+               * slashes, the slashes are escaped. The tag part can only have characters in
+               * [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/tags/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The update mask applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The update mask applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * The update mask applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Versions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+           *   {@code ArtifactRegistry.Versions.List request = artifactregistry.versions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Versions versions() {
+            return new Versions();
+          }
+
+          /**
+           * The "versions" collection of methods.
+           */
+          public class Versions {
+
+            /**
+             * Deletes a version and all of its content. The returned operation will complete once the version
+             * has been deleted.
+             *
+             * Create a request for the method "versions.delete".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the version to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/versions/[^/]+$");
+
+              /**
+               * Deletes a version and all of its content. The returned operation will complete once the version
+               * has been deleted.
+               *
+               * Create a request for the method "versions.delete".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the version to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ArtifactRegistry.this, "DELETE", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the version to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the version to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the version to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * By default, a version that is tagged may not be deleted. If force=true, the version
+               * and any tags pointing to the version are deleted.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean force;
+
+              /** By default, a version that is tagged may not be deleted. If force=true, the version and any tags
+             pointing to the version are deleted.
+               */
+              public java.lang.Boolean getForce() {
+                return force;
+              }
+
+              /**
+               * By default, a version that is tagged may not be deleted. If force=true, the version
+               * and any tags pointing to the version are deleted.
+               */
+              public Delete setForce(java.lang.Boolean force) {
+                this.force = force;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets a version
+             *
+             * Create a request for the method "versions.get".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the version to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Version> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/versions/[^/]+$");
+
+              /**
+               * Gets a version
+               *
+               * Create a request for the method "versions.get".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the version to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Version.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the version to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the version to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the version to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** The view that should be returned in the response. */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** The view that should be returned in the response.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /** The view that should be returned in the response. */
+              public Get setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists versions.
+             *
+             * Create a request for the method "versions.list".
+             *
+             * This request holds the parameters needed by the artifactregistry server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the parent resource whose versions will be listed.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ListVersionsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+
+              /**
+               * Lists versions.
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the the artifactregistry server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent The name of the parent resource whose versions will be listed.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ListVersionsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the parent resource whose versions will be listed. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the parent resource whose versions will be listed.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** The name of the parent resource whose versions will be listed. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Optional. Sorting field and order */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Sorting field and order
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /** Optional. Sorting field and order */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /** The maximum number of versions to return. Maximum page size is 1,000. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The maximum number of versions to return. Maximum page size is 1,000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** The maximum number of versions to return. Maximum page size is 1,000. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The next_page_token value returned from a previous list request, if any. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The next_page_token value returned from a previous list request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The next_page_token value returned from a previous list request, if any. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** The view that should be returned in the response. */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** The view that should be returned in the response.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /** The view that should be returned in the response. */
+              public List setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
+         * An accessor for creating requests from the YumArtifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.YumArtifacts.List request = artifactregistry.yumArtifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public YumArtifacts yumArtifacts() {
+          return new YumArtifacts();
+        }
+
+        /**
+         * The "yumArtifacts" collection of methods.
+         */
+        public class YumArtifacts {
+
+          /**
+           * Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are
+           * imported. Package, Version, and File resources are created based on the imported artifacts.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "yumArtifacts.import".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be imported.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.ImportYumArtifactsRequest}
+           * @return the request
+           */
+          public ArtifactRegistryImport artifactregistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.ImportYumArtifactsRequest content) throws java.io.IOException {
+            ArtifactRegistryImport result = new ArtifactRegistryImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ArtifactRegistryImport extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/yumArtifacts:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are
+             * imported. Package, Version, and File resources are created based on the imported artifacts.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "yumArtifacts.import".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+             * remote operation. <p> {@link ArtifactRegistryImport#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be imported.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.ImportYumArtifactsRequest}
+             * @since 1.13
+             */
+            protected ArtifactRegistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.ImportYumArtifactsRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public ArtifactRegistryImport set$Xgafv(java.lang.String $Xgafv) {
+              return (ArtifactRegistryImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAccessToken(java.lang.String accessToken) {
+              return (ArtifactRegistryImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAlt(java.lang.String alt) {
+              return (ArtifactRegistryImport) super.setAlt(alt);
+            }
+
+            @Override
+            public ArtifactRegistryImport setCallback(java.lang.String callback) {
+              return (ArtifactRegistryImport) super.setCallback(callback);
+            }
+
+            @Override
+            public ArtifactRegistryImport setFields(java.lang.String fields) {
+              return (ArtifactRegistryImport) super.setFields(fields);
+            }
+
+            @Override
+            public ArtifactRegistryImport setKey(java.lang.String key) {
+              return (ArtifactRegistryImport) super.setKey(key);
+            }
+
+            @Override
+            public ArtifactRegistryImport setOauthToken(java.lang.String oauthToken) {
+              return (ArtifactRegistryImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ArtifactRegistryImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ArtifactRegistryImport setQuotaUser(java.lang.String quotaUser) {
+              return (ArtifactRegistryImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadType(java.lang.String uploadType) {
+              return (ArtifactRegistryImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ArtifactRegistryImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be imported.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            public ArtifactRegistryImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ArtifactRegistryImport set(String parameterName, Object value) {
+              return (ArtifactRegistryImport) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Yumartifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.Yumartifacts.List request = artifactregistry.yumartifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Yumartifacts yumartifacts() {
+          return new Yumartifacts();
+        }
+
+        /**
+         * The "yumartifacts" collection of methods.
+         */
+        public class Yumartifacts {
+
+          /**
+           * Directly uploads a Yum artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the imported artifact.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "yumartifacts.upload".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest}
+           * @return the request
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest content) throws java.io.IOException {
+            Upload result = new Upload(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          /**
+           * Directly uploads a Yum artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the imported artifact.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "yumartifacts.upload".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * <p>
+           * This method should be used for uploading media content.
+           * </p>
+           *
+           * @param parent The name of the parent resource where the artifacts will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest} media metadata or {@code null} if none
+           * @param mediaContent The media HTTP content or {@code null} if none.
+           * @return the request
+           * @throws java.io.IOException if the initialization of the request fails
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+            Upload result = new Upload(parent, content, mediaContent);
+            initialize(result);
+            return result;
+          }
+
+          public class Upload extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.UploadYumArtifactMediaResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/yumArtifacts:create";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Directly uploads a Yum artifact. The returned Operation will complete once the resources are
+             * uploaded. Package, Version, and File resources are created based on the imported artifact.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "yumartifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest}
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            /**
+             * Directly uploads a Yum artifact. The returned Operation will complete once the resources are
+             * uploaded. Package, Version, and File resources are created based on the imported artifact.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "yumartifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * <p>
+             * This constructor should be used for uploading media content.
+             * </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest} media metadata or {@code null} if none
+             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+              super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              initializeMediaUpload(mediaContent);
+            }
+
+            @Override
+            public Upload set$Xgafv(java.lang.String $Xgafv) {
+              return (Upload) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Upload setAccessToken(java.lang.String accessToken) {
+              return (Upload) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Upload setAlt(java.lang.String alt) {
+              return (Upload) super.setAlt(alt);
+            }
+
+            @Override
+            public Upload setCallback(java.lang.String callback) {
+              return (Upload) super.setCallback(callback);
+            }
+
+            @Override
+            public Upload setFields(java.lang.String fields) {
+              return (Upload) super.setFields(fields);
+            }
+
+            @Override
+            public Upload setKey(java.lang.String key) {
+              return (Upload) super.setKey(key);
+            }
+
+            @Override
+            public Upload setOauthToken(java.lang.String oauthToken) {
+              return (Upload) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Upload) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Upload setQuotaUser(java.lang.String quotaUser) {
+              return (Upload) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Upload setUploadType(java.lang.String uploadType) {
+              return (Upload) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Upload) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be uploaded. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be uploaded.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be uploaded. */
+            public Upload setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Upload set(String parameterName, Object value) {
+              return (Upload) super.set(parameterName, value);
             }
           }
 

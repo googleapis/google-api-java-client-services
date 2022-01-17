@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.artifactregistry.v1beta1.model;
+package com.google.api.services.artifactregistry.v1.model;
 
 /**
  * Tags point to a version and represent an alternative name that can be used to access the version.

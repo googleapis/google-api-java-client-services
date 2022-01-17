@@ -30,9 +30,10 @@ package com.google.api.services.networksecurity.v1.model;
 public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. List of host names to match. Matched against HOST header in http requests. At least
-   * one host should match. Each host can be an exact match, or a prefix match (example
-   * "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
+   * Required. List of host names to match. Matched against the ":authority" header in http
+   * requests. At least one host should match. Each host can be an exact match, or a prefix match
+   * (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match
+   * "*".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP
-   * headers, for potentially advanced use cases. At least one header should match.
+   * headers, for potentially advanced use cases. At least one header should match. Avoid using
+   * header matches to make authorization decisions unless there is a strong guarantee that requests
+   * arrive through a trusted client or proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +65,10 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> ports;
 
   /**
-   * Required. List of host names to match. Matched against HOST header in http requests. At least
-   * one host should match. Each host can be an exact match, or a prefix match (example
-   * "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
+   * Required. List of host names to match. Matched against the ":authority" header in http
+   * requests. At least one host should match. Each host can be an exact match, or a prefix match
+   * (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match
+   * "*".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHosts() {
@@ -72,9 +76,10 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of host names to match. Matched against HOST header in http requests. At least
-   * one host should match. Each host can be an exact match, or a prefix match (example
-   * "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
+   * Required. List of host names to match. Matched against the ":authority" header in http
+   * requests. At least one host should match. Each host can be an exact match, or a prefix match
+   * (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match
+   * "*".
    * @param hosts hosts or {@code null} for none
    */
   public Destination setHosts(java.util.List<java.lang.String> hosts) {
@@ -84,7 +89,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP
-   * headers, for potentially advanced use cases. At least one header should match.
+   * headers, for potentially advanced use cases. At least one header should match. Avoid using
+   * header matches to make authorization decisions unless there is a strong guarantee that requests
+   * arrive through a trusted client or proxy.
    * @return value or {@code null} for none
    */
   public HttpHeaderMatch getHttpHeaderMatch() {
@@ -93,7 +100,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP
-   * headers, for potentially advanced use cases. At least one header should match.
+   * headers, for potentially advanced use cases. At least one header should match. Avoid using
+   * header matches to make authorization decisions unless there is a strong guarantee that requests
+   * arrive through a trusted client or proxy.
    * @param httpHeaderMatch httpHeaderMatch or {@code null} for none
    */
   public Destination setHttpHeaderMatch(HttpHeaderMatch httpHeaderMatch) {

@@ -46,6 +46,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private Status analysisStatusError;
 
   /**
+   * The time occurrences related to this discovery occurrence were archived.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String archiveTime;
+
+  /**
    * Whether the resource is continuously analyzed.
    * The value may be {@code null}.
    */
@@ -58,6 +65,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String cpe;
+
+  /**
+   * The last time this resource was scanned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastScanTime;
 
   /**
    * Output only. An operation that indicates the status of the current scan. This field is
@@ -104,6 +118,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The time occurrences related to this discovery occurrence were archived.
+   * @return value or {@code null} for none
+   */
+  public String getArchiveTime() {
+    return archiveTime;
+  }
+
+  /**
+   * The time occurrences related to this discovery occurrence were archived.
+   * @param archiveTime archiveTime or {@code null} for none
+   */
+  public Discovered setArchiveTime(String archiveTime) {
+    this.archiveTime = archiveTime;
+    return this;
+  }
+
+  /**
    * Whether the resource is continuously analyzed.
    * @return value or {@code null} for none
    */
@@ -134,6 +165,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setCpe(java.lang.String cpe) {
     this.cpe = cpe;
+    return this;
+  }
+
+  /**
+   * The last time this resource was scanned.
+   * @return value or {@code null} for none
+   */
+  public String getLastScanTime() {
+    return lastScanTime;
+  }
+
+  /**
+   * The last time this resource was scanned.
+   * @param lastScanTime lastScanTime or {@code null} for none
+   */
+  public Discovered setLastScanTime(String lastScanTime) {
+    this.lastScanTime = lastScanTime;
     return this;
   }
 

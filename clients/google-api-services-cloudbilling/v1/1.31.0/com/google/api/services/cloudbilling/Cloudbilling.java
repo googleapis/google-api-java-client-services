@@ -1475,8 +1475,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
   public class Projects {
 
     /**
-     * Gets the billing information for a project. The current authenticated user must have [permission
-     * to view the project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo ).
+     * Gets the billing information for a project. The current authenticated user must have the
+     * `resourcemanager.projects.get` permission for the project, which can be granted by assigning the
+     * [Project Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) role.
      *
      * Create a request for the method "projects.getBillingInfo".
      *
@@ -1501,9 +1502,10 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Gets the billing information for a project. The current authenticated user must have
-       * [permission to view the project](https://cloud.google.com/docs/permissions-
-       * overview#h.bgs0oxofvnoo ).
+       * Gets the billing information for a project. The current authenticated user must have the
+       * `resourcemanager.projects.get` permission for the project, which can be granted by assigning
+       * the [Project Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+       * role.
        *
        * Create a request for the method "projects.getBillingInfo".
        *

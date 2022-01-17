@@ -70,6 +70,14 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Maven repository config contains repository level configuration for the repositories of maven
+   * type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MavenRepositoryConfig mavenConfig;
+
+  /**
    * The name of the repository, for example: "projects/p1/locations/us-
    * central1/repositories/repo1".
    * The value may be {@code null}.
@@ -174,6 +182,25 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Maven repository config contains repository level configuration for the repositories of maven
+   * type.
+   * @return value or {@code null} for none
+   */
+  public MavenRepositoryConfig getMavenConfig() {
+    return mavenConfig;
+  }
+
+  /**
+   * Maven repository config contains repository level configuration for the repositories of maven
+   * type.
+   * @param mavenConfig mavenConfig or {@code null} for none
+   */
+  public Repository setMavenConfig(MavenRepositoryConfig mavenConfig) {
+    this.mavenConfig = mavenConfig;
     return this;
   }
 

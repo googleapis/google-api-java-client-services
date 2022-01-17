@@ -39,7 +39,7 @@ public final class PartialUpdateClusterRequest extends com.google.api.client.jso
   private Cluster cluster;
 
   /**
-   * Required. The subset of Cluster fields which should be replaced. Must be explicitly set.
+   * Required. The subset of Cluster fields which should be replaced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class PartialUpdateClusterRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The subset of Cluster fields which should be replaced. Must be explicitly set.
+   * Required. The subset of Cluster fields which should be replaced.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -73,7 +73,7 @@ public final class PartialUpdateClusterRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The subset of Cluster fields which should be replaced. Must be explicitly set.
+   * Required. The subset of Cluster fields which should be replaced.
    * @param updateMask updateMask or {@code null} for none
    */
   public PartialUpdateClusterRequest setUpdateMask(String updateMask) {

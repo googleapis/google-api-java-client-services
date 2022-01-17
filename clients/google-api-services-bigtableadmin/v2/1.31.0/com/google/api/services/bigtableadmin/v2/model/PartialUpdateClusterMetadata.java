@@ -38,6 +38,7 @@ public final class PartialUpdateClusterMetadata extends com.google.api.client.js
   private String finishTime;
 
   /**
+   * The original request for PartialUpdateCluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,6 +69,7 @@ public final class PartialUpdateClusterMetadata extends com.google.api.client.js
   }
 
   /**
+   * The original request for PartialUpdateCluster.
    * @return value or {@code null} for none
    */
   public PartialUpdateClusterRequest getOriginalRequest() {
@@ -75,6 +77,7 @@ public final class PartialUpdateClusterMetadata extends com.google.api.client.js
   }
 
   /**
+   * The original request for PartialUpdateCluster.
    * @param originalRequest originalRequest or {@code null} for none
    */
   public PartialUpdateClusterMetadata setOriginalRequest(PartialUpdateClusterRequest originalRequest) {

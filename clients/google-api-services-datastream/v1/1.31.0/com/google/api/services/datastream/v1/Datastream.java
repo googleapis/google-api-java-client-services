@@ -173,16 +173,15 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
     public class Locations {
 
       /**
-       * The FetchStaticIps API call exposes the static ips used by Datastream. Typically, a request
-       * returns children data objects under a parent data object that's optionally supplied in the
-       * request.
+       * The FetchStaticIps API call exposes the static IP addresses used by Datastream.
        *
        * Create a request for the method "locations.fetchStaticIps".
        *
        * This request holds the parameters needed by the datastream server.  After setting any optional
        * parameters, call the {@link FetchStaticIps#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name resource of the Response type. Must be in the format `projects/locations`.
+       * @param name Required. The resource name for the location for which static IPs should be returned. Must be in the
+       *        format `projects/locations`.
        * @return the request
        */
       public FetchStaticIps fetchStaticIps(java.lang.String name) throws java.io.IOException {
@@ -199,9 +198,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * The FetchStaticIps API call exposes the static ips used by Datastream. Typically, a request
-         * returns children data objects under a parent data object that's optionally supplied in the
-         * request.
+         * The FetchStaticIps API call exposes the static IP addresses used by Datastream.
          *
          * Create a request for the method "locations.fetchStaticIps".
          *
@@ -211,7 +208,8 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
          * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Required. The name resource of the Response type. Must be in the format `projects/locations`.
+         * @param name Required. The resource name for the location for which static IPs should be returned. Must be in the
+       *        format `projects/locations`.
          * @since 1.13
          */
         protected FetchStaticIps(java.lang.String name) {
@@ -290,21 +288,22 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The name resource of the Response type. Must be in the format
-         * `projects/locations`.
+         * Required. The resource name for the location for which static IPs should be returned.
+         * Must be in the format `projects/locations`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name resource of the Response type. Must be in the format `projects/locations`.
+        /** Required. The resource name for the location for which static IPs should be returned. Must be in
+       the format `projects/locations`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name resource of the Response type. Must be in the format
-         * `projects/locations`.
+         * Required. The resource name for the location for which static IPs should be returned.
+         * Must be in the format `projects/locations`.
          */
         public FetchStaticIps setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -921,13 +920,36 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. Only validate the connection profile, but don't create any resources. The
+           * default is false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the connection profile, but don't create any resources. The default is
+         false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the connection profile, but don't create any resources. The
+           * default is false.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
           }
         }
         /**
-         * Use this method to delete a connection profile..
+         * Use this method to delete a connection profile.
          *
          * Create a request for the method "connectionProfiles.delete".
          *
@@ -951,7 +973,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connectionProfiles/[^/]+$");
 
           /**
-           * Use this method to delete a connection profile..
+           * Use this method to delete a connection profile.
            *
            * Create a request for the method "connectionProfiles.delete".
            *
@@ -1100,7 +1122,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Use this method to discover a connection profile. The discover API call exposes the data objects
-         * and metadata belonging to the profile. Typically, a request returns children data objects under a
+         * and metadata belonging to the profile. Typically, a request returns children data objects of a
          * parent data object that's optionally supplied in the request.
          *
          * Create a request for the method "connectionProfiles.discover".
@@ -1129,7 +1151,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           /**
            * Use this method to discover a connection profile. The discover API call exposes the data
            * objects and metadata belonging to the profile. Typically, a request returns children data
-           * objects under a parent data object that's optionally supplied in the request.
+           * objects of a parent data object that's optionally supplied in the request.
            *
            * Create a request for the method "connectionProfiles.discover".
            *
@@ -1727,17 +1749,17 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Optional. Execute the update without validating it. */
+          /** Optional. Update the connection profile without validating it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** Optional. Execute the update without validating it.
+          /** Optional. Update the connection profile without validating it.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
-          /** Optional. Execute the update without validating it. */
+          /** Optional. Update the connection profile without validating it. */
           public Patch setForce(java.lang.Boolean force) {
             this.force = force;
             return this;
@@ -1812,6 +1834,29 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the connection profile, but don't update any resources. The
+           * default is false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the connection profile, but don't update any resources. The default is
+         false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the connection profile, but don't update any resources. The
+           * default is false.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 
@@ -3249,7 +3294,8 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
         public class Routes {
 
           /**
-           * Use this method to create a route for a private connectivity in a project and location.
+           * Use this method to create a route for a private connectivity configuration in a project and
+           * location.
            *
            * Create a request for the method "routes.create".
            *
@@ -3274,7 +3320,8 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
 
             /**
-             * Use this method to create a route for a private connectivity in a project and location.
+             * Use this method to create a route for a private connectivity configuration in a project and
+             * location.
              *
              * Create a request for the method "routes.create".
              *
@@ -3749,7 +3796,8 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Use this method to list routes created for a private connectivity in a project and location.
+           * Use this method to list routes created for a private connectivity configuration in a project and
+           * location.
            *
            * Create a request for the method "routes.list".
            *
@@ -3773,7 +3821,8 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateConnections/[^/]+$");
 
             /**
-             * Use this method to list routes created for a private connectivity in a project and location.
+             * Use this method to list routes created for a private connectivity configuration in a project
+             * and location.
              *
              * Create a request for the method "routes.list".
              *
@@ -4195,20 +4244,20 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Only validate the stream, but do not create any resources. The default is
+           * Optional. Only validate the stream, but don't create any resources. The default is
            * false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Only validate the stream, but do not create any resources. The default is false.
+          /** Optional. Only validate the stream, but don't create any resources. The default is false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Only validate the stream, but do not create any resources. The default is
+           * Optional. Only validate the stream, but don't create any resources. The default is
            * false.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
@@ -4876,17 +4925,17 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Optional. Create the stream without validating it. */
+          /** Optional. Update the stream without validating it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** Optional. Create the stream without validating it.
+          /** Optional. Update the stream without validating it.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
-          /** Optional. Create the stream without validating it. */
+          /** Optional. Update the stream without validating it. */
           public Patch setForce(java.lang.Boolean force) {
             this.force = force;
             return this;
@@ -5470,7 +5519,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Starts backfill job for the specified stream object.
+           * Use this method to start a backfill job for the specified stream object.
            *
            * Create a request for the method "objects.startBackfillJob".
            *
@@ -5495,7 +5544,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
 
             /**
-             * Starts backfill job for the specified stream object.
+             * Use this method to start a backfill job for the specified stream object.
              *
              * Create a request for the method "objects.startBackfillJob".
              *
@@ -5601,7 +5650,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Stops the backfill job for the specified stream object.
+           * Use this method to stop a backfill job for the specified stream object.
            *
            * Create a request for the method "objects.stopBackfillJob".
            *
@@ -5626,7 +5675,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
 
             /**
-             * Stops the backfill job for the specified stream object.
+             * Use this method to stop a backfill job for the specified stream object.
              *
              * Create a request for the method "objects.stopBackfillJob".
              *

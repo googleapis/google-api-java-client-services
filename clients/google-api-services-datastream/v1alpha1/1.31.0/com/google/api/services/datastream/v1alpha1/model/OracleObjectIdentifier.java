@@ -30,21 +30,21 @@ package com.google.api.services.datastream.v1alpha1.model;
 public final class OracleObjectIdentifier extends com.google.api.client.json.GenericJson {
 
   /**
-   * The schema name.
+   * Required. The schema name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schema;
 
   /**
-   * The table name.
+   * Required. The table name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String table;
 
   /**
-   * The schema name.
+   * Required. The schema name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchema() {
@@ -52,7 +52,7 @@ public final class OracleObjectIdentifier extends com.google.api.client.json.Gen
   }
 
   /**
-   * The schema name.
+   * Required. The schema name.
    * @param schema schema or {@code null} for none
    */
   public OracleObjectIdentifier setSchema(java.lang.String schema) {
@@ -61,7 +61,7 @@ public final class OracleObjectIdentifier extends com.google.api.client.json.Gen
   }
 
   /**
-   * The table name.
+   * Required. The table name.
    * @return value or {@code null} for none
    */
   public java.lang.String getTable() {
@@ -69,7 +69,7 @@ public final class OracleObjectIdentifier extends com.google.api.client.json.Gen
   }
 
   /**
-   * The table name.
+   * Required. The table name.
    * @param table table or {@code null} for none
    */
   public OracleObjectIdentifier setTable(java.lang.String table) {

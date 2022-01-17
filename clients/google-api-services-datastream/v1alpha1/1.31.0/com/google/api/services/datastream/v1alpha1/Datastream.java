@@ -173,9 +173,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
     public class Locations {
 
       /**
-       * The FetchStaticIps API call exposes the static ips used by Datastream. Typically, a request
-       * returns children data objects under a parent data object that's optionally supplied in the
-       * request.
+       * The FetchStaticIps API call exposes the static IP addresses used by Datastream.
        *
        * Create a request for the method "locations.fetchStaticIps".
        *
@@ -199,9 +197,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * The FetchStaticIps API call exposes the static ips used by Datastream. Typically, a request
-         * returns children data objects under a parent data object that's optionally supplied in the
-         * request.
+         * The FetchStaticIps API call exposes the static IP addresses used by Datastream.
          *
          * Create a request for the method "locations.fetchStaticIps".
          *

@@ -30,21 +30,21 @@ package com.google.api.services.datastream.v1.model;
 public final class MysqlObjectIdentifier extends com.google.api.client.json.GenericJson {
 
   /**
-   * The database name.
+   * Required. The database name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String database;
 
   /**
-   * The table name.
+   * Required. The table name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String table;
 
   /**
-   * The database name.
+   * Required. The database name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -52,7 +52,7 @@ public final class MysqlObjectIdentifier extends com.google.api.client.json.Gene
   }
 
   /**
-   * The database name.
+   * Required. The database name.
    * @param database database or {@code null} for none
    */
   public MysqlObjectIdentifier setDatabase(java.lang.String database) {
@@ -61,7 +61,7 @@ public final class MysqlObjectIdentifier extends com.google.api.client.json.Gene
   }
 
   /**
-   * The table name.
+   * Required. The table name.
    * @return value or {@code null} for none
    */
   public java.lang.String getTable() {
@@ -69,7 +69,7 @@ public final class MysqlObjectIdentifier extends com.google.api.client.json.Gene
   }
 
   /**
-   * The table name.
+   * Required. The table name.
    * @param table table or {@code null} for none
    */
   public MysqlObjectIdentifier setTable(java.lang.String table) {

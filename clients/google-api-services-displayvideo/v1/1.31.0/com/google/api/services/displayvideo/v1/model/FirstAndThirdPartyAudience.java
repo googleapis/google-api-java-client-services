@@ -117,7 +117,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.Long firstAndThirdPartyAudienceId;
 
   /**
-   * Output only. Whether the audience is a first or third party audience.
+   * Whether the audience is a first or third party audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -357,7 +357,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. Whether the audience is a first or third party audience.
+   * Whether the audience is a first or third party audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstAndThirdPartyAudienceType() {
@@ -365,7 +365,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. Whether the audience is a first or third party audience.
+   * Whether the audience is a first or third party audience.
    * @param firstAndThirdPartyAudienceType firstAndThirdPartyAudienceType or {@code null} for none
    */
   public FirstAndThirdPartyAudience setFirstAndThirdPartyAudienceType(java.lang.String firstAndThirdPartyAudienceType) {

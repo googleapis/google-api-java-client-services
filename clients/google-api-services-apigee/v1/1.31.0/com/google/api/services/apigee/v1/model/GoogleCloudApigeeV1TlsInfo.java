@@ -78,8 +78,7 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   private java.lang.String keyAlias;
 
   /**
-   * Required if `client_auth_enabled` is true. The resource ID of the keystore. References not yet
-   * supported.
+   * Required if `client_auth_enabled` is true. The resource ID of the keystore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +92,7 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   private java.util.List<java.lang.String> protocols;
 
   /**
-   * The resource ID of the truststore. References not yet supported.
+   * The resource ID of the truststore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,8 +213,7 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   }
 
   /**
-   * Required if `client_auth_enabled` is true. The resource ID of the keystore. References not yet
-   * supported.
+   * Required if `client_auth_enabled` is true. The resource ID of the keystore.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyStore() {
@@ -223,8 +221,7 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   }
 
   /**
-   * Required if `client_auth_enabled` is true. The resource ID of the keystore. References not yet
-   * supported.
+   * Required if `client_auth_enabled` is true. The resource ID of the keystore.
    * @param keyStore keyStore or {@code null} for none
    */
   public GoogleCloudApigeeV1TlsInfo setKeyStore(java.lang.String keyStore) {
@@ -250,7 +247,7 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   }
 
   /**
-   * The resource ID of the truststore. References not yet supported.
+   * The resource ID of the truststore.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrustStore() {
@@ -258,7 +255,7 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   }
 
   /**
-   * The resource ID of the truststore. References not yet supported.
+   * The resource ID of the truststore.
    * @param trustStore trustStore or {@code null} for none
    */
   public GoogleCloudApigeeV1TlsInfo setTrustStore(java.lang.String trustStore) {

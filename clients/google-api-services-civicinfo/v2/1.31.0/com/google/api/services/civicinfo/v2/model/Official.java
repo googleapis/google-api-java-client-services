@@ -58,6 +58,19 @@ public final class Official extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> emails;
 
   /**
+   * Detailed summary about the official's address's geocoding
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeocodingSummary> geocodingSummaries;
+
+  static {
+    // hack to force ProGuard to consider GeocodingSummary used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GeocodingSummary.class);
+  }
+
+  /**
    * The official's name.
    * The value may be {@code null}.
    */
@@ -140,6 +153,23 @@ public final class Official extends com.google.api.client.json.GenericJson {
    */
   public Official setEmails(java.util.List<java.lang.String> emails) {
     this.emails = emails;
+    return this;
+  }
+
+  /**
+   * Detailed summary about the official's address's geocoding
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeocodingSummary> getGeocodingSummaries() {
+    return geocodingSummaries;
+  }
+
+  /**
+   * Detailed summary about the official's address's geocoding
+   * @param geocodingSummaries geocodingSummaries or {@code null} for none
+   */
+  public Official setGeocodingSummaries(java.util.List<GeocodingSummary> geocodingSummaries) {
+    this.geocodingSummaries = geocodingSummaries;
     return this;
   }
 

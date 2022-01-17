@@ -108,6 +108,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private String lastUpdateTime;
 
   /**
+   * A URL in `spaces.messages.text` that matches a link unfurling pattern. For more information,
+   * refer to [Unfurl links](/chat/how-tos/link-unfurling).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MatchedUrl matchedUrl;
+
+  /**
    * Resource name in the form `spaces/messages`. Example:
    * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
    * The value may be {@code null}.
@@ -299,6 +307,25 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setLastUpdateTime(String lastUpdateTime) {
     this.lastUpdateTime = lastUpdateTime;
+    return this;
+  }
+
+  /**
+   * A URL in `spaces.messages.text` that matches a link unfurling pattern. For more information,
+   * refer to [Unfurl links](/chat/how-tos/link-unfurling).
+   * @return value or {@code null} for none
+   */
+  public MatchedUrl getMatchedUrl() {
+    return matchedUrl;
+  }
+
+  /**
+   * A URL in `spaces.messages.text` that matches a link unfurling pattern. For more information,
+   * refer to [Unfurl links](/chat/how-tos/link-unfurling).
+   * @param matchedUrl matchedUrl or {@code null} for none
+   */
+  public Message setMatchedUrl(MatchedUrl matchedUrl) {
+    this.matchedUrl = matchedUrl;
     return this;
   }
 

@@ -17,7 +17,9 @@
 package com.google.api.services.containeranalysis.v1.model;
 
 /**
- * Details about files that caused a compliance check to fail.
+ * Details about files that caused a compliance check to fail. display_command is a single command
+ * that can be used to display a list of non compliant files. When there is no such command, we can
+ * also iterate a list of non compliant file using 'path'.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -38,8 +40,6 @@ public final class NonCompliantFile extends com.google.api.client.json.GenericJs
   private java.lang.String displayCommand;
 
   /**
-   * display_command is a single command that can be used to display a list of non compliant files.
-   * When there is no such command, we can also iterate a list of non compliant file using 'path'.
    * Empty if `display_command` is set.
    * The value may be {@code null}.
    */
@@ -71,8 +71,6 @@ public final class NonCompliantFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * display_command is a single command that can be used to display a list of non compliant files.
-   * When there is no such command, we can also iterate a list of non compliant file using 'path'.
    * Empty if `display_command` is set.
    * @return value or {@code null} for none
    */
@@ -81,8 +79,6 @@ public final class NonCompliantFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * display_command is a single command that can be used to display a list of non compliant files.
-   * When there is no such command, we can also iterate a list of non compliant file using 'path'.
    * Empty if `display_command` is set.
    * @param path path or {@code null} for none
    */

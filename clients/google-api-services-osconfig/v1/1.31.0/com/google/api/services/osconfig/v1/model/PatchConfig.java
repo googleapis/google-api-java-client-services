@@ -45,6 +45,13 @@ public final class PatchConfig extends com.google.api.client.json.GenericJson {
   private GooSettings goo;
 
   /**
+   * Allows the patch job to run on Managed instance groups (MIGs).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean migInstancesAllowed;
+
+  /**
    * The `ExecStep` to run after the patch update.
    * The value may be {@code null}.
    */
@@ -117,6 +124,23 @@ public final class PatchConfig extends com.google.api.client.json.GenericJson {
    */
   public PatchConfig setGoo(GooSettings goo) {
     this.goo = goo;
+    return this;
+  }
+
+  /**
+   * Allows the patch job to run on Managed instance groups (MIGs).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMigInstancesAllowed() {
+    return migInstancesAllowed;
+  }
+
+  /**
+   * Allows the patch job to run on Managed instance groups (MIGs).
+   * @param migInstancesAllowed migInstancesAllowed or {@code null} for none
+   */
+  public PatchConfig setMigInstancesAllowed(java.lang.Boolean migInstancesAllowed) {
+    this.migInstancesAllowed = migInstancesAllowed;
     return this;
   }
 

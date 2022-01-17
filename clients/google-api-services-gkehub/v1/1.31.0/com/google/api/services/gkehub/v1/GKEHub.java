@@ -541,8 +541,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the gkehub server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent (project and location) where the Feature will be created. Specified in the format
-         *        `projects/locations`.
+         * @param parent Required. The parent (project and location) where the Feature will be created. Specified in the
+         *        format `projects/locations`.
          * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
          * @return the request
          */
@@ -569,8 +569,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent (project and location) where the Feature will be created. Specified in the format
-         *        `projects/locations`.
+           * @param parent Required. The parent (project and location) where the Feature will be created. Specified in the
+         *        format `projects/locations`.
            * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
            * @since 1.13
            */
@@ -640,22 +640,22 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The parent (project and location) where the Feature will be created. Specified in the
-           * format `projects/locations`.
+           * Required. The parent (project and location) where the Feature will be created.
+           * Specified in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent (project and location) where the Feature will be created. Specified in the format
-         `projects/locations`.
+          /** Required. The parent (project and location) where the Feature will be created. Specified in the
+         format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The parent (project and location) where the Feature will be created. Specified in the
-           * format `projects/locations`.
+           * Required. The parent (project and location) where the Feature will be created.
+           * Specified in the format `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -684,9 +684,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * A request ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes after the first
            * request. For example, consider a situation where you make an initial request and the
            * request times out. If you make the request again with the same request ID, the server
            * can check if original operation with the same request ID was received, and if so, will
@@ -697,9 +697,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-         your request, the server will know to ignore the request if it has already been completed. The
-         server will guarantee that for at least 60 minutes after the first request. For example, consider a
+          /** A request ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes after the first request. For example, consider a
          situation where you make an initial request and the request times out. If you make the request
          again with the same request ID, the server can check if original operation with the same request ID
          was received, and if so, will ignore the second request. This prevents clients from accidentally
@@ -711,9 +711,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * A request ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes after the first
            * request. For example, consider a situation where you make an initial request and the
            * request times out. If you make the request again with the same request ID, the server
            * can check if original operation with the same request ID was received, and if so, will
@@ -739,7 +739,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the gkehub server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The Feature resource name in the format `projects/locations/features`.
+         * @param name Required. The Feature resource name in the format `projects/locations/features`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -765,7 +765,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The Feature resource name in the format `projects/locations/features`.
+           * @param name Required. The Feature resource name in the format `projects/locations/features`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -833,17 +833,17 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The Feature resource name in the format `projects/locations/features`. */
+          /** Required. The Feature resource name in the format `projects/locations/features`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The Feature resource name in the format `projects/locations/features`.
+          /** Required. The Feature resource name in the format `projects/locations/features`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The Feature resource name in the format `projects/locations/features`. */
+          /** Required. The Feature resource name in the format `projects/locations/features`. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -936,7 +936,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the gkehub server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The Feature resource name in the format `projects/locations/features`
+         * @param name Required. The Feature resource name in the format `projects/locations/features`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -962,7 +962,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The Feature resource name in the format `projects/locations/features`
+           * @param name Required. The Feature resource name in the format `projects/locations/features`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1040,17 +1040,17 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The Feature resource name in the format `projects/locations/features` */
+          /** Required. The Feature resource name in the format `projects/locations/features` */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The Feature resource name in the format `projects/locations/features`
+          /** Required. The Feature resource name in the format `projects/locations/features`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The Feature resource name in the format `projects/locations/features` */
+          /** Required. The Feature resource name in the format `projects/locations/features` */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1267,8 +1267,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the gkehub server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent (project and location) where the Features will be listed. Specified in the format
-         *        `projects/locations`.
+         * @param parent Required. The parent (project and location) where the Features will be listed. Specified in the
+         *        format `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1294,8 +1294,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent (project and location) where the Features will be listed. Specified in the format
-         *        `projects/locations`.
+           * @param parent Required. The parent (project and location) where the Features will be listed. Specified in the
+         *        format `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1374,22 +1374,22 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The parent (project and location) where the Features will be listed. Specified in the
-           * format `projects/locations`.
+           * Required. The parent (project and location) where the Features will be listed.
+           * Specified in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent (project and location) where the Features will be listed. Specified in the format
-         `projects/locations`.
+          /** Required. The parent (project and location) where the Features will be listed. Specified in the
+         format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The parent (project and location) where the Features will be listed. Specified in the
-           * format `projects/locations`.
+           * Required. The parent (project and location) where the Features will be listed.
+           * Specified in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1514,7 +1514,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the gkehub server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The Feature resource name in the format `projects/locations/features`.
+         * @param name Required. The Feature resource name in the format `projects/locations/features`.
          * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
          * @return the request
          */
@@ -1541,7 +1541,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The Feature resource name in the format `projects/locations/features`.
+           * @param name Required. The Feature resource name in the format `projects/locations/features`.
            * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
            * @since 1.13
            */
@@ -1610,17 +1610,17 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The Feature resource name in the format `projects/locations/features`. */
+          /** Required. The Feature resource name in the format `projects/locations/features`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The Feature resource name in the format `projects/locations/features`.
+          /** Required. The Feature resource name in the format `projects/locations/features`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The Feature resource name in the format `projects/locations/features`. */
+          /** Required. The Feature resource name in the format `projects/locations/features`. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1632,9 +1632,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * A request ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes after the first
            * request. For example, consider a situation where you make an initial request and the
            * request times out. If you make the request again with the same request ID, the server
            * can check if original operation with the same request ID was received, and if so, will
@@ -1645,9 +1645,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-         your request, the server will know to ignore the request if it has already been completed. The
-         server will guarantee that for at least 60 minutes after the first request. For example, consider a
+          /** A request ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes after the first request. For example, consider a
          situation where you make an initial request and the request times out. If you make the request
          again with the same request ID, the server can check if original operation with the same request ID
          was received, and if so, will ignore the second request. This prevents clients from accidentally
@@ -1659,9 +1659,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * A request ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes after the first
            * request. For example, consider a situation where you make an initial request and the
            * request times out. If you make the request again with the same request ID, the server
            * can check if original operation with the same request ID was received, and if so, will

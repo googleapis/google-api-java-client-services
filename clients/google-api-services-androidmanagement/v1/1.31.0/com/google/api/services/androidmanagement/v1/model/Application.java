@@ -51,7 +51,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.util.List<ManagedProperty> managedProperties;
 
   /**
-   * The name of the app in the form enterprises/{enterpriseId}/applications/{package_name}.
+   * The name of the app in the form enterprises/{enterprise}/applications/{package_name}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the app in the form enterprises/{enterpriseId}/applications/{package_name}.
+   * The name of the app in the form enterprises/{enterprise}/applications/{package_name}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -114,7 +114,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the app in the form enterprises/{enterpriseId}/applications/{package_name}.
+   * The name of the app in the form enterprises/{enterprise}/applications/{package_name}.
    * @param name name or {@code null} for none
    */
   public Application setName(java.lang.String name) {

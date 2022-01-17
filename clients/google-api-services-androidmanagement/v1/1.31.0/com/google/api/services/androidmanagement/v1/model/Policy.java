@@ -147,6 +147,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean bluetoothDisabled;
 
   /**
+   * Controls the use of the camera and whether the user has access to the camera access toggle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cameraAccess;
+
+  /**
    * Whether all cameras on the device are disabled.
    * The value may be {@code null}.
    */
@@ -344,6 +351,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maximumTimeToLock;
+
+  /**
+   * Controls the use of the microphone and whether the user has access to the microphone access
+   * toggle. This applies only on fully managed devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String microphoneAccess;
 
   /**
    * The minimum allowed Android API level.
@@ -987,6 +1002,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Controls the use of the camera and whether the user has access to the camera access toggle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCameraAccess() {
+    return cameraAccess;
+  }
+
+  /**
+   * Controls the use of the camera and whether the user has access to the camera access toggle.
+   * @param cameraAccess cameraAccess or {@code null} for none
+   */
+  public Policy setCameraAccess(java.lang.String cameraAccess) {
+    this.cameraAccess = cameraAccess;
+    return this;
+  }
+
+  /**
    * Whether all cameras on the device are disabled.
    * @return value or {@code null} for none
    */
@@ -1432,6 +1464,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setMaximumTimeToLock(java.lang.Long maximumTimeToLock) {
     this.maximumTimeToLock = maximumTimeToLock;
+    return this;
+  }
+
+  /**
+   * Controls the use of the microphone and whether the user has access to the microphone access
+   * toggle. This applies only on fully managed devices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMicrophoneAccess() {
+    return microphoneAccess;
+  }
+
+  /**
+   * Controls the use of the microphone and whether the user has access to the microphone access
+   * toggle. This applies only on fully managed devices.
+   * @param microphoneAccess microphoneAccess or {@code null} for none
+   */
+  public Policy setMicrophoneAccess(java.lang.String microphoneAccess) {
+    this.microphoneAccess = microphoneAccess;
     return this;
   }
 

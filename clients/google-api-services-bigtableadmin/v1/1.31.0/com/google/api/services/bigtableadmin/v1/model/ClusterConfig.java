@@ -31,20 +31,14 @@ package com.google.api.services.bigtableadmin.v1.model;
 public final class ClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Autoscaling configuration for this cluster. Note that when creating or updating a cluster,
-   * exactly one of serve_nodes or cluster_autoscaling_config must be set. If serve_nodes is set,
-   * then serve_nodes is fixed and autoscaling is turned off. If cluster_autoscaling_config is set,
-   * then serve_nodes will be autoscaled.
+   * Autoscaling configuration for this cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ClusterAutoscalingConfig clusterAutoscalingConfig;
 
   /**
-   * Autoscaling configuration for this cluster. Note that when creating or updating a cluster,
-   * exactly one of serve_nodes or cluster_autoscaling_config must be set. If serve_nodes is set,
-   * then serve_nodes is fixed and autoscaling is turned off. If cluster_autoscaling_config is set,
-   * then serve_nodes will be autoscaled.
+   * Autoscaling configuration for this cluster.
    * @return value or {@code null} for none
    */
   public ClusterAutoscalingConfig getClusterAutoscalingConfig() {
@@ -52,10 +46,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Autoscaling configuration for this cluster. Note that when creating or updating a cluster,
-   * exactly one of serve_nodes or cluster_autoscaling_config must be set. If serve_nodes is set,
-   * then serve_nodes is fixed and autoscaling is turned off. If cluster_autoscaling_config is set,
-   * then serve_nodes will be autoscaled.
+   * Autoscaling configuration for this cluster.
    * @param clusterAutoscalingConfig clusterAutoscalingConfig or {@code null} for none
    */
   public ClusterConfig setClusterAutoscalingConfig(ClusterAutoscalingConfig clusterAutoscalingConfig) {

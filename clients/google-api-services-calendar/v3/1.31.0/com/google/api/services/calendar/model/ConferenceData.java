@@ -84,10 +84,8 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   private ConferenceParameters parameters;
 
   /**
-   * The signature of the conference data. Generated on server side. Must be preserved while copying
-   * the conference data between events, otherwise the conference data will not be copied. Unset for
-   * a conference with a failed create request. Optional for a conference with a pending create
-   * request.
+   * The signature of the conference data. Generated on server side. Unset for a conference with a
+   * failed create request. Optional for a conference with a pending create request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,10 +218,8 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The signature of the conference data. Generated on server side. Must be preserved while copying
-   * the conference data between events, otherwise the conference data will not be copied. Unset for
-   * a conference with a failed create request. Optional for a conference with a pending create
-   * request.
+   * The signature of the conference data. Generated on server side. Unset for a conference with a
+   * failed create request. Optional for a conference with a pending create request.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignature() {
@@ -231,10 +227,8 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The signature of the conference data. Generated on server side. Must be preserved while copying
-   * the conference data between events, otherwise the conference data will not be copied. Unset for
-   * a conference with a failed create request. Optional for a conference with a pending create
-   * request.
+   * The signature of the conference data. Generated on server side. Unset for a conference with a
+   * failed create request. Optional for a conference with a pending create request.
    * @param signature signature or {@code null} for none
    */
   public ConferenceData setSignature(java.lang.String signature) {

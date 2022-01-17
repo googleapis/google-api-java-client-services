@@ -43,7 +43,11 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another
    * IAM policy states service account SA has permission P to the GCP folder F, then user A
    * potentially has access to the GCP folder F. And those advanced analysis results will be
-   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
+   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Only the following
+   * permissions are considered in this analysis: * `iam.serviceAccounts.actAs` *
+   * `iam.serviceAccounts.signBlob` * `iam.serviceAccounts.signJwt` *
+   * `iam.serviceAccounts.getAccessToken` * `iam.serviceAccounts.getOpenIdToken` *
+   * `iam.serviceAccounts.implicitDelegation` Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +120,11 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another
    * IAM policy states service account SA has permission P to the GCP folder F, then user A
    * potentially has access to the GCP folder F. And those advanced analysis results will be
-   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
+   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Only the following
+   * permissions are considered in this analysis: * `iam.serviceAccounts.actAs` *
+   * `iam.serviceAccounts.signBlob` * `iam.serviceAccounts.signJwt` *
+   * `iam.serviceAccounts.getAccessToken` * `iam.serviceAccounts.getOpenIdToken` *
+   * `iam.serviceAccounts.implicitDelegation` Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnalyzeServiceAccountImpersonation() {
@@ -137,7 +145,11 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another
    * IAM policy states service account SA has permission P to the GCP folder F, then user A
    * potentially has access to the GCP folder F. And those advanced analysis results will be
-   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
+   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Only the following
+   * permissions are considered in this analysis: * `iam.serviceAccounts.actAs` *
+   * `iam.serviceAccounts.signBlob` * `iam.serviceAccounts.signJwt` *
+   * `iam.serviceAccounts.getAccessToken` * `iam.serviceAccounts.getOpenIdToken` *
+   * `iam.serviceAccounts.implicitDelegation` Default is false.
    * @param analyzeServiceAccountImpersonation analyzeServiceAccountImpersonation or {@code null} for none
    */
   public Options setAnalyzeServiceAccountImpersonation(java.lang.Boolean analyzeServiceAccountImpersonation) {

@@ -65,6 +65,16 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Immutable. The Google Compute Engine network (VPC) of the endpoint in the format
+   * `projects//locations/global/networks`. The project must be specified by project number (project
+   * id is rejected). Incorrectly formatted networks are rejected, we also check to make sure that
+   * you have the servicedirectory.networks.attach permission on the project specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Optional. Service Directory rejects values outside of `[0, 65535]`.
    * The value may be {@code null}.
    */
@@ -143,6 +153,29 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Immutable. The Google Compute Engine network (VPC) of the endpoint in the format
+   * `projects//locations/global/networks`. The project must be specified by project number (project
+   * id is rejected). Incorrectly formatted networks are rejected, we also check to make sure that
+   * you have the servicedirectory.networks.attach permission on the project specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Immutable. The Google Compute Engine network (VPC) of the endpoint in the format
+   * `projects//locations/global/networks`. The project must be specified by project number (project
+   * id is rejected). Incorrectly formatted networks are rejected, we also check to make sure that
+   * you have the servicedirectory.networks.attach permission on the project specified.
+   * @param network network or {@code null} for none
+   */
+  public Endpoint setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

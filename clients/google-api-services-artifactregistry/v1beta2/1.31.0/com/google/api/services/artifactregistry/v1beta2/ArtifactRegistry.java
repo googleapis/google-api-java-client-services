@@ -153,7 +153,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
   public class Projects {
 
     /**
-     * Retrieves the Settings for the Project
+     * Retrieves the Settings for the Project.
      *
      * Create a request for the method "projects.getProjectSettings".
      *
@@ -178,7 +178,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           java.util.regex.Pattern.compile("^projects/[^/]+/projectSettings$");
 
       /**
-       * Retrieves the Settings for the Project
+       * Retrieves the Settings for the Project.
        *
        * Create a request for the method "projects.getProjectSettings".
        *
@@ -293,7 +293,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Retrieves the Settings for the Project
+     * Updates the Settings for the Project.
      *
      * Create a request for the method "projects.updateProjectSettings".
      *
@@ -320,7 +320,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           java.util.regex.Pattern.compile("^projects/[^/]+/projectSettings$");
 
       /**
-       * Retrieves the Settings for the Project
+       * Updates the Settings for the Project.
        *
        * Create a request for the method "projects.updateProjectSettings".
        *
@@ -1002,7 +1002,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the parent resource where the repository will be created.
+         * @param parent Required. The name of the parent resource where the repository will be created.
          * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.Repository}
          * @return the request
          */
@@ -1031,7 +1031,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the parent resource where the repository will be created.
+           * @param parent Required. The name of the parent resource where the repository will be created.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.Repository}
            * @since 1.13
            */
@@ -1100,17 +1100,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the parent resource where the repository will be created. */
+          /** Required. The name of the parent resource where the repository will be created. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The name of the parent resource where the repository will be created.
+          /** Required. The name of the parent resource where the repository will be created.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The name of the parent resource where the repository will be created. */
+          /** Required. The name of the parent resource where the repository will be created. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1152,7 +1152,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the repository to delete.
+         * @param name Required. The name of the repository to delete.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1181,7 +1181,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the repository to delete.
+           * @param name Required. The name of the repository to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1249,17 +1249,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the repository to delete. */
+          /** Required. The name of the repository to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the repository to delete.
+          /** Required. The name of the repository to delete.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the repository to delete. */
+          /** Required. The name of the repository to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1283,7 +1283,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the repository to retrieve.
+         * @param name Required. The name of the repository to retrieve.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1309,7 +1309,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the repository to retrieve.
+           * @param name Required. The name of the repository to retrieve.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1387,17 +1387,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the repository to retrieve. */
+          /** Required. The name of the repository to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the repository to retrieve.
+          /** Required. The name of the repository to retrieve.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the repository to retrieve. */
+          /** Required. The name of the repository to retrieve. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1613,7 +1613,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the parent resource whose repositories will be listed.
+         * @param parent Required. The name of the parent resource whose repositories will be listed.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1639,7 +1639,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the parent resource whose repositories will be listed.
+           * @param parent Required. The name of the parent resource whose repositories will be listed.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1717,17 +1717,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the parent resource whose repositories will be listed. */
+          /** Required. The name of the parent resource whose repositories will be listed. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The name of the parent resource whose repositories will be listed.
+          /** Required. The name of the parent resource whose repositories will be listed.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The name of the parent resource whose repositories will be listed. */
+          /** Required. The name of the parent resource whose repositories will be listed. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2983,7 +2983,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the package to delete.
+           * @param name Required. The name of the package to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3011,7 +3011,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the package to delete.
+             * @param name Required. The name of the package to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3079,17 +3079,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the package to delete. */
+            /** Required. The name of the package to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the package to delete.
+            /** Required. The name of the package to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The name of the package to delete. */
+            /** Required. The name of the package to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3113,7 +3113,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the package to retrieve.
+           * @param name Required. The name of the package to retrieve.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3139,7 +3139,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the package to retrieve.
+             * @param name Required. The name of the package to retrieve.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3217,17 +3217,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the package to retrieve. */
+            /** Required. The name of the package to retrieve. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the package to retrieve.
+            /** Required. The name of the package to retrieve.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The name of the package to retrieve. */
+            /** Required. The name of the package to retrieve. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3251,7 +3251,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the parent resource whose packages will be listed.
+           * @param parent Required. The name of the parent resource whose packages will be listed.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3277,7 +3277,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the parent resource whose packages will be listed.
+             * @param parent Required. The name of the parent resource whose packages will be listed.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3355,17 +3355,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the parent resource whose packages will be listed. */
+            /** Required. The name of the parent resource whose packages will be listed. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the parent resource whose packages will be listed.
+            /** Required. The name of the parent resource whose packages will be listed.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** The name of the parent resource whose packages will be listed. */
+            /** Required. The name of the parent resource whose packages will be listed. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

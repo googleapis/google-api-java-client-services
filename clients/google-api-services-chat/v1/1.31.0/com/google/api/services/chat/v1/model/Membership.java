@@ -38,7 +38,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * A user in Google Chat.
+   * A user in Google Chat. Represents a person in the People API. Formatted as `users/person_id`
+   * where `person_id` is available from the [People
+   * API](https://developers.google.com/people/api/rest/v1/people).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +79,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user in Google Chat.
+   * A user in Google Chat. Represents a person in the People API. Formatted as `users/person_id`
+   * where `person_id` is available from the [People
+   * API](https://developers.google.com/people/api/rest/v1/people).
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -85,7 +89,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user in Google Chat.
+   * A user in Google Chat. Represents a person in the People API. Formatted as `users/person_id`
+   * where `person_id` is available from the [People
+   * API](https://developers.google.com/people/api/rest/v1/people).
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {

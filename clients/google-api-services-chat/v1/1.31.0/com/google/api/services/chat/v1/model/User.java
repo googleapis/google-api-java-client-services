@@ -37,7 +37,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Obfuscated domain information.
+   * Unique identifier of the user's Google Workspace domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isAnonymous;
 
   /**
-   * Resource name, in the format "users".
+   * Resource name for a Google Chat user. Formatted as `users/AAAAAAAAAAA`. Represents a
+   * [person](https://developers.google.com/people/api/rest/v1/people#Person) in the People API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +83,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Obfuscated domain information.
+   * Unique identifier of the user's Google Workspace domain.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomainId() {
@@ -90,7 +91,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Obfuscated domain information.
+   * Unique identifier of the user's Google Workspace domain.
    * @param domainId domainId or {@code null} for none
    */
   public User setDomainId(java.lang.String domainId) {
@@ -116,7 +117,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name, in the format "users".
+   * Resource name for a Google Chat user. Formatted as `users/AAAAAAAAAAA`. Represents a
+   * [person](https://developers.google.com/people/api/rest/v1/people#Person) in the People API.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -124,7 +126,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name, in the format "users".
+   * Resource name for a Google Chat user. Formatted as `users/AAAAAAAAAAA`. Represents a
+   * [person](https://developers.google.com/people/api/rest/v1/people#Person) in the People API.
    * @param name name or {@code null} for none
    */
   public User setName(java.lang.String name) {

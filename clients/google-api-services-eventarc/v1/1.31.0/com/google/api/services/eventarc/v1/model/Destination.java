@@ -30,6 +30,14 @@ package com.google.api.services.eventarc.v1.model;
 public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
+   * projects/{project}/locations/{location}/functions/{function}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudFunction;
+
+  /**
    * Cloud Run fully-managed resource that receives the events. The resource should be in the same
    * project as the trigger.
    * The value may be {@code null}.
@@ -44,6 +52,25 @@ public final class Destination extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GKE gke;
+
+  /**
+   * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
+   * projects/{project}/locations/{location}/functions/{function}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudFunction() {
+    return cloudFunction;
+  }
+
+  /**
+   * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
+   * projects/{project}/locations/{location}/functions/{function}
+   * @param cloudFunction cloudFunction or {@code null} for none
+   */
+  public Destination setCloudFunction(java.lang.String cloudFunction) {
+    this.cloudFunction = cloudFunction;
+    return this;
+  }
 
   /**
    * Cloud Run fully-managed resource that receives the events. The resource should be in the same

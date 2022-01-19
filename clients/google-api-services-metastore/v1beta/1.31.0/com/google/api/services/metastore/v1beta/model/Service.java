@@ -46,6 +46,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Immutable. The database type that the Metastore service stores its data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseType;
+
+  /**
    * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer
    * data at rest. Cannot be updated.
    * The value may be {@code null}.
@@ -205,6 +212,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Immutable. The database type that the Metastore service stores its data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseType() {
+    return databaseType;
+  }
+
+  /**
+   * Immutable. The database type that the Metastore service stores its data.
+   * @param databaseType databaseType or {@code null} for none
+   */
+  public Service setDatabaseType(java.lang.String databaseType) {
+    this.databaseType = databaseType;
     return this;
   }
 

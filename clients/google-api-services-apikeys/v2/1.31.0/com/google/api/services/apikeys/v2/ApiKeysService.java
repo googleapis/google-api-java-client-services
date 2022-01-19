@@ -506,6 +506,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
       public class Keys {
 
         /**
+         * DEPRECATED: API customers can call `GetKey` and then `CreateKey` methods to create a copy of an
+         * existing key. Retire `CloneKey` method to eliminate the unnessary method from API Keys API.
          * Clones the existing key's restriction and display name to a new API key. The service account must
          * have the `apikeys.keys.get` and `apikeys.keys.create` permissions in the project. NOTE: Key is a
          * global resource; hence the only supported value for location is `global`.
@@ -533,6 +535,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keys/[^/]+$");
 
           /**
+           * DEPRECATED: API customers can call `GetKey` and then `CreateKey` methods to create a copy of an
+           * existing key. Retire `CloneKey` method to eliminate the unnessary method from API Keys API.
            * Clones the existing key's restriction and display name to a new API key. The service account
            * must have the `apikeys.keys.get` and `apikeys.keys.create` permissions in the project. NOTE:
            * Key is a global resource; hence the only supported value for location is `global`.
@@ -1377,24 +1381,25 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. Only list keys that conform to the specified filter. The allowed filter
-           * strings are `state:ACTIVE` and `state:DELETED`. By default, ListKeys returns only
-           * active keys.
+           * Optional. Deprecated: Use `show_deleted` instead. Only list keys that conform to the
+           * specified filter. The allowed filter strings are `state:ACTIVE` and `state:DELETED`. By
+           * default, ListKeys returns only active keys.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Only list keys that conform to the specified filter. The allowed filter strings are
-         `state:ACTIVE` and `state:DELETED`. By default, ListKeys returns only active keys.
+          /** Optional. Deprecated: Use `show_deleted` instead. Only list keys that conform to the specified
+         filter. The allowed filter strings are `state:ACTIVE` and `state:DELETED`. By default, ListKeys
+         returns only active keys.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Only list keys that conform to the specified filter. The allowed filter
-           * strings are `state:ACTIVE` and `state:DELETED`. By default, ListKeys returns only
-           * active keys.
+           * Optional. Deprecated: Use `show_deleted` instead. Only list keys that conform to the
+           * specified filter. The allowed filter strings are `state:ACTIVE` and `state:DELETED`. By
+           * default, ListKeys returns only active keys.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -1430,6 +1435,29 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
           /** Optional. Requests a specific page of results. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Indicate that keys are marked as deleted within 30 days should also be
+           * returned. Normally only active keys are returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showDeleted;
+
+          /** Optional. Indicate that keys are marked as deleted within 30 days should also be returned. Normally
+         only active keys are returned.
+           */
+          public java.lang.Boolean getShowDeleted() {
+            return showDeleted;
+          }
+
+          /**
+           * Optional. Indicate that keys are marked as deleted within 30 days should also be
+           * returned. Normally only active keys are returned.
+           */
+          public List setShowDeleted(java.lang.Boolean showDeleted) {
+            this.showDeleted = showDeleted;
             return this;
           }
 

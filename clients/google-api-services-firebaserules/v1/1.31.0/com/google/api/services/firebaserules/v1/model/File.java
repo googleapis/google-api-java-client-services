@@ -30,7 +30,7 @@ package com.google.api.services.firebaserules.v1.model;
 public final class File extends com.google.api.client.json.GenericJson {
 
   /**
-   * Textual Content.
+   * Required. Textual Content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * File name.
+   * Required. File name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Textual Content.
+   * Required. Textual Content.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -59,7 +59,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Textual Content.
+   * Required. Textual Content.
    * @param content content or {@code null} for none
    */
   public File setContent(java.lang.String content) {
@@ -113,7 +113,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File name.
+   * Required. File name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -121,7 +121,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File name.
+   * Required. File name.
    * @param name name or {@code null} for none
    */
   public File setName(java.lang.String name) {

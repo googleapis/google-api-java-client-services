@@ -17,7 +17,7 @@
 package com.google.api.services.eventarc.v1.model;
 
 /**
- * The response message for the ListTriggers method.
+ * The response message for the `ListTriggers` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Eventarc API. For a detailed explanation see:

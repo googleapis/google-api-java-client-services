@@ -2317,23 +2317,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * Required. If set, validate the request and preview the review, but do not actually post
-           * it.
-           */
+          /** Required. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not actually post it.
+          /** Required. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /**
-           * Required. If set, validate the request and preview the review, but do not actually post
-           * it.
-           */
+          /** Required. If set, validate the request and preview the review, but do not post it. */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -2513,23 +2507,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * Required. If set, validate the request and preview the review, but do not actually post
-           * it.
-           */
+          /** Required. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not actually post it.
+          /** Required. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /**
-           * Required. If set, validate the request and preview the review, but do not actually post
-           * it.
-           */
+          /** Required. If set, validate the request and preview the review, but do not post it. */
           public Delete setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -3005,15 +2993,15 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The sorting order of the resources returned. Value should be a comma separated list of
-           * fields. The default sorting oder is ascending. To specify descending order for a field,
-           * append a ` desc` suffix; for example: `name desc, trigger_id`.
+           * The sorting order of the resources returned. Value should be a comma-separated list of
+           * fields. The default sorting order is ascending. To specify descending order for a
+           * field, append a `desc` suffix; for example: `name desc, trigger_id`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** The sorting order of the resources returned. Value should be a comma separated list of fields. The
-         default sorting oder is ascending. To specify descending order for a field, append a ` desc`
+          /** The sorting order of the resources returned. Value should be a comma-separated list of fields. The
+         default sorting order is ascending. To specify descending order for a field, append a `desc`
          suffix; for example: `name desc, trigger_id`.
            */
           public java.lang.String getOrderBy() {
@@ -3021,9 +3009,9 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The sorting order of the resources returned. Value should be a comma separated list of
-           * fields. The default sorting oder is ascending. To specify descending order for a field,
-           * append a ` desc` suffix; for example: `name desc, trigger_id`.
+           * The sorting order of the resources returned. Value should be a comma-separated list of
+           * fields. The default sorting order is ascending. To specify descending order for a
+           * field, append a `desc` suffix; for example: `name desc, trigger_id`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -3244,15 +3232,15 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fields to be updated; only fields explicitly provided will be updated. If no field
-           * mask is provided, all provided fields in the request will be updated. To update all
-           * fields, provide a field mask of "*".
+           * The fields to be updated; only fields explicitly provided are updated. If no field mask
+           * is provided, all provided fields in the request are updated. To update all fields,
+           * provide a field mask of "*".
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The fields to be updated; only fields explicitly provided will be updated. If no field mask is
-         provided, all provided fields in the request will be updated. To update all fields, provide a field
+          /** The fields to be updated; only fields explicitly provided are updated. If no field mask is
+         provided, all provided fields in the request are updated. To update all fields, provide a field
          mask of "*".
            */
           public String getUpdateMask() {
@@ -3260,32 +3248,26 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fields to be updated; only fields explicitly provided will be updated. If no field
-           * mask is provided, all provided fields in the request will be updated. To update all
-           * fields, provide a field mask of "*".
+           * The fields to be updated; only fields explicitly provided are updated. If no field mask
+           * is provided, all provided fields in the request are updated. To update all fields,
+           * provide a field mask of "*".
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
           }
 
-          /**
-           * Required. If set, validate the request and preview the review, but do not actually post
-           * it.
-           */
+          /** Required. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not actually post it.
+          /** Required. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /**
-           * Required. If set, validate the request and preview the review, but do not actually post
-           * it.
-           */
+          /** Required. If set, validate the request and preview the review, but do not post it. */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;

@@ -52,7 +52,7 @@ public final class Ruleset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * `Source` for the `Ruleset`.
+   * Required. `Source` for the `Ruleset`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class Ruleset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * `Source` for the `Ruleset`.
+   * Required. `Source` for the `Ruleset`.
    * @return value or {@code null} for none
    */
   public Source getSource() {
@@ -120,7 +120,7 @@ public final class Ruleset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * `Source` for the `Ruleset`.
+   * Required. `Source` for the `Ruleset`.
    * @param source source or {@code null} for none
    */
   public Ruleset setSource(Source source) {

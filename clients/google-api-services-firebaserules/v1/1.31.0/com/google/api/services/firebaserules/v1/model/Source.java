@@ -30,7 +30,7 @@ package com.google.api.services.firebaserules.v1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
-   * `File` set constituting the `Source` bundle.
+   * Required. `File` set constituting the `Source` bundle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * `File` set constituting the `Source` bundle.
+   * Required. `File` set constituting the `Source` bundle.
    * @return value or {@code null} for none
    */
   public java.util.List<File> getFiles() {
@@ -51,7 +51,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * `File` set constituting the `Source` bundle.
+   * Required. `File` set constituting the `Source` bundle.
    * @param files files or {@code null} for none
    */
   public Source setFiles(java.util.List<File> files) {

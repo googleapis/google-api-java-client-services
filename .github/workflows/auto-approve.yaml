@@ -17,14 +17,16 @@ name: auto-approve
 jobs:
   approve:
     runs-on: ubuntu-latest
-    if: contains(github.head_ref, 'autosynth')
+    if: |
+      contains(github.head_ref, 'regenerate') &&
+      contains(github.repository_owner, 'yoshi-code-bot')
     steps:
       - uses: actions/github-script@0.9.0
         with:
           github-token: ${{secrets.YOSHI_APPROVER_TOKEN}}
           script: |
             // only approve PRs from yoshi-automation user
-            if (context.payload.sender.login != "yoshi-automation") {
+            if (context.payload.sender.login != "yoshi-code-bot") {
               return;
             }
             // only approve PRs like "Regenerate X client"

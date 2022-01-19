@@ -57,12 +57,12 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   private java.lang.String methodName;
 
   /**
-   * Identity of the operation. This is expected to be unique within the scope of the service that
-   * generated the operation, and guarantees idempotency in case of retries. In order to ensure best
-   * performance and latency in the Quota backends, operation_ids are optimally associated with
-   * time, so that related operations can be accessed fast in storage. For this reason, the
-   * recommended token for services that intend to operate at a high QPS is Unix time in nanos +
-   * UUID
+   * Identity of the operation. For Allocation Quota, this is expected to be unique within the scope
+   * of the service that generated the operation, and guarantees idempotency in case of retries. In
+   * order to ensure best performance and latency in the Quota backends, operation_ids are optimally
+   * associated with time, so that related operations can be accessed fast in storage. For this
+   * reason, the recommended token for services that intend to operate at a high QPS is Unix time in
+   * nanos + UUID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,12 +157,12 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identity of the operation. This is expected to be unique within the scope of the service that
-   * generated the operation, and guarantees idempotency in case of retries. In order to ensure best
-   * performance and latency in the Quota backends, operation_ids are optimally associated with
-   * time, so that related operations can be accessed fast in storage. For this reason, the
-   * recommended token for services that intend to operate at a high QPS is Unix time in nanos +
-   * UUID
+   * Identity of the operation. For Allocation Quota, this is expected to be unique within the scope
+   * of the service that generated the operation, and guarantees idempotency in case of retries. In
+   * order to ensure best performance and latency in the Quota backends, operation_ids are optimally
+   * associated with time, so that related operations can be accessed fast in storage. For this
+   * reason, the recommended token for services that intend to operate at a high QPS is Unix time in
+   * nanos + UUID
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationId() {
@@ -170,12 +170,12 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identity of the operation. This is expected to be unique within the scope of the service that
-   * generated the operation, and guarantees idempotency in case of retries. In order to ensure best
-   * performance and latency in the Quota backends, operation_ids are optimally associated with
-   * time, so that related operations can be accessed fast in storage. For this reason, the
-   * recommended token for services that intend to operate at a high QPS is Unix time in nanos +
-   * UUID
+   * Identity of the operation. For Allocation Quota, this is expected to be unique within the scope
+   * of the service that generated the operation, and guarantees idempotency in case of retries. In
+   * order to ensure best performance and latency in the Quota backends, operation_ids are optimally
+   * associated with time, so that related operations can be accessed fast in storage. For this
+   * reason, the recommended token for services that intend to operate at a high QPS is Unix time in
+   * nanos + UUID
    * @param operationId operationId or {@code null} for none
    */
   public QuotaOperation setOperationId(java.lang.String operationId) {

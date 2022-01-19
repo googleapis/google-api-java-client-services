@@ -403,24 +403,25 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Only available to selected merchants. When set to `True`, this flag removes any existing
-       * claim on the requested website by another account and replaces it with a claim from this
-       * account.
+       * Only available to selected merchants, for example multi-client accounts (MCAs) and their
+       * sub-accounts. When set to `True`, this flag removes any existing claim on the requested
+       * website and replaces it with a claim from the account that makes the request.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean overwrite;
 
-      /** Only available to selected merchants. When set to `True`, this flag removes any existing claim on
-     the requested website by another account and replaces it with a claim from this account.
+      /** Only available to selected merchants, for example multi-client accounts (MCAs) and their sub-
+     accounts. When set to `True`, this flag removes any existing claim on the requested website and
+     replaces it with a claim from the account that makes the request.
        */
       public java.lang.Boolean getOverwrite() {
         return overwrite;
       }
 
       /**
-       * Only available to selected merchants. When set to `True`, this flag removes any existing
-       * claim on the requested website by another account and replaces it with a claim from this
-       * account.
+       * Only available to selected merchants, for example multi-client accounts (MCAs) and their
+       * sub-accounts. When set to `True`, this flag removes any existing claim on the requested
+       * website and replaces it with a claim from the account that makes the request.
        */
       public Claimwebsite setOverwrite(java.lang.Boolean overwrite) {
         this.overwrite = overwrite;

@@ -399,7 +399,7 @@ class JavaApi(api.Api):
       A name suitable for use as a class in the generator's target language.
     """
     # Camelcase what we have and account for spaces in canonical names
-    name = utilities.CamelCase(s).replace(' ', '')
+    name = utilities.CamelCase(s).replace(' ', '').replace('&', '')
     if name.lower() in JavaLanguageModel.RESERVED_CLASS_NAMES:
       # Prepend the service name
       service = self._class_name or utilities.CamelCase(self.values['name'])

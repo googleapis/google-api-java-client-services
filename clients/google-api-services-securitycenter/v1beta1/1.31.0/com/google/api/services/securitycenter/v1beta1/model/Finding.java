@@ -68,11 +68,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The time at which the event took place, or when an update to the finding occurred. For example,
-   * if the finding represents an open firewall it would capture the time the detector believes the
-   * firewall became open. The accuracy is determined by the detector. If the finding were to be
-   * resolved afterward, this time would reflect when the finding was resolved. Must not be set to a
-   * value greater than the current timestamp.
+   * The time the finding was first detected. If an existing finding is updated, then this is the
+   * time the update occurred. For example, if the finding represents an open firewall, this
+   * property captures the time the detector believes the firewall became open. The accuracy is
+   * determined by the detector. If the finding is later resolved, then this time reflects when the
+   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -291,11 +291,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the event took place, or when an update to the finding occurred. For example,
-   * if the finding represents an open firewall it would capture the time the detector believes the
-   * firewall became open. The accuracy is determined by the detector. If the finding were to be
-   * resolved afterward, this time would reflect when the finding was resolved. Must not be set to a
-   * value greater than the current timestamp.
+   * The time the finding was first detected. If an existing finding is updated, then this is the
+   * time the update occurred. For example, if the finding represents an open firewall, this
+   * property captures the time the detector believes the firewall became open. The accuracy is
+   * determined by the detector. If the finding is later resolved, then this time reflects when the
+   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -303,11 +303,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the event took place, or when an update to the finding occurred. For example,
-   * if the finding represents an open firewall it would capture the time the detector believes the
-   * firewall became open. The accuracy is determined by the detector. If the finding were to be
-   * resolved afterward, this time would reflect when the finding was resolved. Must not be set to a
-   * value greater than the current timestamp.
+   * The time the finding was first detected. If an existing finding is updated, then this is the
+   * time the update occurred. For example, if the finding represents an open firewall, this
+   * property captures the time the detector believes the firewall became open. The accuracy is
+   * determined by the detector. If the finding is later resolved, then this time reflects when the
+   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * @param eventTime eventTime or {@code null} for none
    */
   public Finding setEventTime(String eventTime) {

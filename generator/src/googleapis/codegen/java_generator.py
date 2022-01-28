@@ -315,7 +315,7 @@ class JavaLanguageModel(language_model.LanguageModel):
     Returns:
       A name suitable for use as an element in Java.
     """
-    safe_class_name = utilities.CamelCase(s)
+    safe_class_name = utilities.CamelCase(s).replace(' ', '').replace('&', '')
     if parent:
       for ancestor in parent.full_path:
         if ancestor.safeClassName == safe_class_name:

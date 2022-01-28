@@ -245,6 +245,17 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedIpRange;
 
   /**
+   * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range.
+   * At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported
+   * for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or
+   * deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during
+   * instance creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secondaryIpRange;
+
+  /**
    * Output only. List of server CA certificates for the instance.
    * The value may be {@code null}.
    */
@@ -780,6 +791,31 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setReservedIpRange(java.lang.String reservedIpRange) {
     this.reservedIpRange = reservedIpRange;
+    return this;
+  }
+
+  /**
+   * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range.
+   * At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported
+   * for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or
+   * deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during
+   * instance creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecondaryIpRange() {
+    return secondaryIpRange;
+  }
+
+  /**
+   * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range.
+   * At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported
+   * for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or
+   * deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during
+   * instance creation.
+   * @param secondaryIpRange secondaryIpRange or {@code null} for none
+   */
+  public Instance setSecondaryIpRange(java.lang.String secondaryIpRange) {
+    this.secondaryIpRange = secondaryIpRange;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A configuration for running Apache Spark SQL (http://spark.apache.org/sql/) queries as a batch
+ * A configuration for running Apache Spark SQL (https://spark.apache.org/sql/) queries as a batch
  * workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

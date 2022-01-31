@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A Dataproc job for running Apache Spark SQL (http://spark.apache.org/sql/) queries.
+ * A Dataproc job for running Apache Spark SQL (https://spark.apache.org/sql/) queries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

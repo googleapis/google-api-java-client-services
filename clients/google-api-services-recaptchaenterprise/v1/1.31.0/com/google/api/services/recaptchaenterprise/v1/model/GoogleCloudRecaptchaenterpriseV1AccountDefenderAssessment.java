@@ -38,13 +38,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment ext
   private java.util.List<java.lang.String> labels;
 
   /**
-   * Recommended action after this request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String recommendedAction;
-
-  /**
    * Labels for this request.
    * @return value or {@code null} for none
    */
@@ -58,23 +51,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment ext
    */
   public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment setLabels(java.util.List<java.lang.String> labels) {
     this.labels = labels;
-    return this;
-  }
-
-  /**
-   * Recommended action after this request.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRecommendedAction() {
-    return recommendedAction;
-  }
-
-  /**
-   * Recommended action after this request.
-   * @param recommendedAction recommendedAction or {@code null} for none
-   */
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment setRecommendedAction(java.lang.String recommendedAction) {
-    this.recommendedAction = recommendedAction;
     return this;
   }
 

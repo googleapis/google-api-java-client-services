@@ -40,9 +40,8 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   /**
    * The target_id to which this stage points. This field refers exclusively to the last segment of
    * a target name. For example, this field would just be `my-target` (rather than
-   * `projects/project/deliveryPipelines/pipeline/targets/my-target`). The parent `DeliveryPipeline`
-   * of the `Target` is inferred to be the parent `DeliveryPipeline` of the `Release` in which this
-   * `Stage` lives.
+   * `projects/project/locations/location/targets/my-target`). The location of the `Target` is
+   * inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +67,8 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   /**
    * The target_id to which this stage points. This field refers exclusively to the last segment of
    * a target name. For example, this field would just be `my-target` (rather than
-   * `projects/project/deliveryPipelines/pipeline/targets/my-target`). The parent `DeliveryPipeline`
-   * of the `Target` is inferred to be the parent `DeliveryPipeline` of the `Release` in which this
-   * `Stage` lives.
+   * `projects/project/locations/location/targets/my-target`). The location of the `Target` is
+   * inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetId() {
@@ -80,9 +78,8 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   /**
    * The target_id to which this stage points. This field refers exclusively to the last segment of
    * a target name. For example, this field would just be `my-target` (rather than
-   * `projects/project/deliveryPipelines/pipeline/targets/my-target`). The parent `DeliveryPipeline`
-   * of the `Target` is inferred to be the parent `DeliveryPipeline` of the `Release` in which this
-   * `Stage` lives.
+   * `projects/project/locations/location/targets/my-target`). The location of the `Target` is
+   * inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
    * @param targetId targetId or {@code null} for none
    */
   public Stage setTargetId(java.lang.String targetId) {

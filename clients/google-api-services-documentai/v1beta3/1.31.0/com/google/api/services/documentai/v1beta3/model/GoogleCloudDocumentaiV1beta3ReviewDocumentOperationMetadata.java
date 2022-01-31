@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   private String createTime;
 
   /**
+   * The Crowd Compute question ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String questionId;
+
+  /**
    * Used only when Operation.done is false.
    * The value may be {@code null}.
    */
@@ -97,6 +104,23 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
    */
   public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The Crowd Compute question ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuestionId() {
+    return questionId;
+  }
+
+  /**
+   * The Crowd Compute question ID.
+   * @param questionId questionId or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setQuestionId(java.lang.String questionId) {
+    this.questionId = questionId;
     return this;
   }
 

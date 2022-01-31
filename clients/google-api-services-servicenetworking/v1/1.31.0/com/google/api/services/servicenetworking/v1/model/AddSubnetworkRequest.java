@@ -31,6 +31,14 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class AddSubnetworkRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The IAM permission check determines whether the consumer project has
+   * 'servicenetworking.services.use' permission or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean checkServiceNetworkingUsePermission;
+
+  /**
    * Required. A resource that represents the service consumer, such as `projects/123456`. The
    * project number can be different from the value in the consumer network parameter. For example,
    * the network might be part of a Shared VPC network. In those cases, Service Networking validates
@@ -144,6 +152,25 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subnetworkUsers;
+
+  /**
+   * Optional. The IAM permission check determines whether the consumer project has
+   * 'servicenetworking.services.use' permission or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCheckServiceNetworkingUsePermission() {
+    return checkServiceNetworkingUsePermission;
+  }
+
+  /**
+   * Optional. The IAM permission check determines whether the consumer project has
+   * 'servicenetworking.services.use' permission or not.
+   * @param checkServiceNetworkingUsePermission checkServiceNetworkingUsePermission or {@code null} for none
+   */
+  public AddSubnetworkRequest setCheckServiceNetworkingUsePermission(java.lang.Boolean checkServiceNetworkingUsePermission) {
+    this.checkServiceNetworkingUsePermission = checkServiceNetworkingUsePermission;
+    return this;
+  }
 
   /**
    * Required. A resource that represents the service consumer, such as `projects/123456`. The

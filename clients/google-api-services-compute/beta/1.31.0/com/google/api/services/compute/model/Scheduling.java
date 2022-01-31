@@ -97,7 +97,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Defines the maintenance behavior for this instance. For standard instances, the default
    * behavior is MIGRATE. For preemptible instances, the default and only possible behavior is
-   * TERMINATE. For more information, see Setting Instance Scheduling Options.
+   * TERMINATE. For more information, see Set VM availability policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,7 +276,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Defines the maintenance behavior for this instance. For standard instances, the default
    * behavior is MIGRATE. For preemptible instances, the default and only possible behavior is
-   * TERMINATE. For more information, see Setting Instance Scheduling Options.
+   * TERMINATE. For more information, see Set VM availability policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getOnHostMaintenance() {
@@ -286,7 +286,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Defines the maintenance behavior for this instance. For standard instances, the default
    * behavior is MIGRATE. For preemptible instances, the default and only possible behavior is
-   * TERMINATE. For more information, see Setting Instance Scheduling Options.
+   * TERMINATE. For more information, see Set VM availability policies.
    * @param onHostMaintenance onHostMaintenance or {@code null} for none
    */
   public Scheduling setOnHostMaintenance(java.lang.String onHostMaintenance) {

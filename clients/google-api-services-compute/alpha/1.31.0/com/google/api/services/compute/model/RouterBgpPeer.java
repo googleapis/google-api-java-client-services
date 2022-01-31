@@ -128,6 +128,14 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String managementType;
 
   /**
+   * Present if MD5 authentication is enabled for the peering. Must be the name of one of the
+   * entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String md5AuthenticationKeyName;
+
+  /**
    * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035.
    * Specifically, the name must be 1-63 characters long and match the regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
@@ -383,6 +391,25 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setManagementType(java.lang.String managementType) {
     this.managementType = managementType;
+    return this;
+  }
+
+  /**
+   * Present if MD5 authentication is enabled for the peering. Must be the name of one of the
+   * entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMd5AuthenticationKeyName() {
+    return md5AuthenticationKeyName;
+  }
+
+  /**
+   * Present if MD5 authentication is enabled for the peering. Must be the name of one of the
+   * entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
+   * @param md5AuthenticationKeyName md5AuthenticationKeyName or {@code null} for none
+   */
+  public RouterBgpPeer setMd5AuthenticationKeyName(java.lang.String md5AuthenticationKeyName) {
+    this.md5AuthenticationKeyName = md5AuthenticationKeyName;
     return this;
   }
 

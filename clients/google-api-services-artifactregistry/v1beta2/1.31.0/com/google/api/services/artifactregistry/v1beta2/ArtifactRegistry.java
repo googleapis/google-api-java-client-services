@@ -4687,17 +4687,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                 return this;
               }
 
-              /** Optional. Sorting field and order */
+              /** Optional. The field to order the results by. */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
-              /** Optional. Sorting field and order
+              /** Optional. The field to order the results by.
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
               }
 
-              /** Optional. Sorting field and order */
+              /** Optional. The field to order the results by. */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
                 return this;

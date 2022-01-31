@@ -17,12 +17,12 @@
 package com.google.api.services.mybusinessqanda.v1;
 
 /**
- * MyBusinessQ&A request.
+ * MyBusinessQA request.
  *
  * @since 1.3
  */
 @SuppressWarnings("javadoc")
-public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest<T> {
+public abstract class MyBusinessQARequest<T> extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest<T> {
 
   /**
    * @param client Google client
@@ -34,8 +34,8 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
    * @param content A POJO that can be serialized into JSON or {@code null} for none
    * @param responseClass response class to parse into
    */
-  public MyBusinessQ&ARequest(
-      MyBusinessQ&A client, String method, String uriTemplate, Object content, Class<T> responseClass) {
+  public MyBusinessQARequest(
+      MyBusinessQA client, String method, String uriTemplate, Object content, Class<T> responseClass) {
     super(
         client,
         method,
@@ -56,7 +56,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** V1 error format. */
-  public MyBusinessQ&ARequest<T> set$Xgafv(java.lang.String $Xgafv) {
+  public MyBusinessQARequest<T> set$Xgafv(java.lang.String $Xgafv) {
     this.$Xgafv = $Xgafv;
     return this;
   }
@@ -73,7 +73,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** OAuth access token. */
-  public MyBusinessQ&ARequest<T> setAccessToken(java.lang.String accessToken) {
+  public MyBusinessQARequest<T> setAccessToken(java.lang.String accessToken) {
     this.accessToken = accessToken;
     return this;
   }
@@ -90,7 +90,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** Data format for response. */
-  public MyBusinessQ&ARequest<T> setAlt(java.lang.String alt) {
+  public MyBusinessQARequest<T> setAlt(java.lang.String alt) {
     this.alt = alt;
     return this;
   }
@@ -107,7 +107,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** JSONP */
-  public MyBusinessQ&ARequest<T> setCallback(java.lang.String callback) {
+  public MyBusinessQARequest<T> setCallback(java.lang.String callback) {
     this.callback = callback;
     return this;
   }
@@ -124,7 +124,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** Selector specifying which fields to include in a partial response. */
-  public MyBusinessQ&ARequest<T> setFields(java.lang.String fields) {
+  public MyBusinessQARequest<T> setFields(java.lang.String fields) {
     this.fields = fields;
     return this;
   }
@@ -148,7 +148,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
    * API key. Your API key identifies your project and provides you with API access, quota, and
    * reports. Required unless you provide an OAuth 2.0 token.
    */
-  public MyBusinessQ&ARequest<T> setKey(java.lang.String key) {
+  public MyBusinessQARequest<T> setKey(java.lang.String key) {
     this.key = key;
     return this;
   }
@@ -165,7 +165,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** OAuth 2.0 token for the current user. */
-  public MyBusinessQ&ARequest<T> setOauthToken(java.lang.String oauthToken) {
+  public MyBusinessQARequest<T> setOauthToken(java.lang.String oauthToken) {
     this.oauthToken = oauthToken;
     return this;
   }
@@ -182,7 +182,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** Returns response with indentations and line breaks. */
-  public MyBusinessQ&ARequest<T> setPrettyPrint(java.lang.Boolean prettyPrint) {
+  public MyBusinessQARequest<T> setPrettyPrint(java.lang.Boolean prettyPrint) {
     this.prettyPrint = prettyPrint;
     return this;
   }
@@ -206,7 +206,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
    * Available to use for quota purposes for server-side applications. Can be any arbitrary string
    * assigned to a user, but should not exceed 40 characters.
    */
-  public MyBusinessQ&ARequest<T> setQuotaUser(java.lang.String quotaUser) {
+  public MyBusinessQARequest<T> setQuotaUser(java.lang.String quotaUser) {
     this.quotaUser = quotaUser;
     return this;
   }
@@ -223,7 +223,7 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** Legacy upload protocol for media (e.g. "media", "multipart"). */
-  public MyBusinessQ&ARequest<T> setUploadType(java.lang.String uploadType) {
+  public MyBusinessQARequest<T> setUploadType(java.lang.String uploadType) {
     this.uploadType = uploadType;
     return this;
   }
@@ -240,28 +240,28 @@ public abstract class MyBusinessQ&ARequest<T> extends com.google.api.client.goog
   }
 
   /** Upload protocol for media (e.g. "raw", "multipart"). */
-  public MyBusinessQ&ARequest<T> setUploadProtocol(java.lang.String uploadProtocol) {
+  public MyBusinessQARequest<T> setUploadProtocol(java.lang.String uploadProtocol) {
     this.uploadProtocol = uploadProtocol;
     return this;
   }
 
   @Override
-  public final MyBusinessQ&A getAbstractGoogleClient() {
-    return (MyBusinessQ&A) super.getAbstractGoogleClient();
+  public final MyBusinessQA getAbstractGoogleClient() {
+    return (MyBusinessQA) super.getAbstractGoogleClient();
   }
 
   @Override
-  public MyBusinessQ&ARequest<T> setDisableGZipContent(boolean disableGZipContent) {
-    return (MyBusinessQ&ARequest<T>) super.setDisableGZipContent(disableGZipContent);
+  public MyBusinessQARequest<T> setDisableGZipContent(boolean disableGZipContent) {
+    return (MyBusinessQARequest<T>) super.setDisableGZipContent(disableGZipContent);
   }
 
   @Override
-  public MyBusinessQ&ARequest<T> setRequestHeaders(com.google.api.client.http.HttpHeaders headers) {
-    return (MyBusinessQ&ARequest<T>) super.setRequestHeaders(headers);
+  public MyBusinessQARequest<T> setRequestHeaders(com.google.api.client.http.HttpHeaders headers) {
+    return (MyBusinessQARequest<T>) super.setRequestHeaders(headers);
   }
 
   @Override
-  public MyBusinessQ&ARequest<T> set(String parameterName, Object value) {
-    return (MyBusinessQ&ARequest<T>) super.set(parameterName, value);
+  public MyBusinessQARequest<T> set(String parameterName, Object value) {
+    return (MyBusinessQARequest<T>) super.set(parameterName, value);
   }
 }

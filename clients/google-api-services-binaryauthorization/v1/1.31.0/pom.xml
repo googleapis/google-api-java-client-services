@@ -92,7 +92,7 @@
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.41.0/</link>
             <link>https://googleapis.dev/java/google-oauth-client/1.31.2/</link>
-            <link>https://googleapis.dev/java/google-api-client/1.33.0/</link>
+            <link>https://googleapis.dev/java/google-api-client/1.33.1/</link>
           </links>
         </configuration>
       </plugin>

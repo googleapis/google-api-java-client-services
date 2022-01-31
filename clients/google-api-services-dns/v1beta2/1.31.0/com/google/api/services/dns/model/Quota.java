@@ -99,6 +99,14 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer networksPerPolicy;
 
   /**
+   * Maximum allowed number of consumer peering zones per target network owned by this producer
+   * project
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer peeringZonesPerTargetNetwork;
+
+  /**
    * Maximum allowed number of policies per project.
    * The value may be {@code null}.
    */
@@ -339,6 +347,25 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setNetworksPerPolicy(java.lang.Integer networksPerPolicy) {
     this.networksPerPolicy = networksPerPolicy;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of consumer peering zones per target network owned by this producer
+   * project
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPeeringZonesPerTargetNetwork() {
+    return peeringZonesPerTargetNetwork;
+  }
+
+  /**
+   * Maximum allowed number of consumer peering zones per target network owned by this producer
+   * project
+   * @param peeringZonesPerTargetNetwork peeringZonesPerTargetNetwork or {@code null} for none
+   */
+  public Quota setPeeringZonesPerTargetNetwork(java.lang.Integer peeringZonesPerTargetNetwork) {
+    this.peeringZonesPerTargetNetwork = peeringZonesPerTargetNetwork;
     return this;
   }
 

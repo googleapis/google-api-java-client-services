@@ -17,8 +17,9 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Represents an upload session reference. This reference is created via upload method. Updating of
- * item content may refer to this uploaded content via contentDataRef.
+ * Represents an upload session reference. This reference is created via upload method. This
+ * reference is valid for 30 days after its creation. Updating of item content may refer to this
+ * uploaded content via contentDataRef.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

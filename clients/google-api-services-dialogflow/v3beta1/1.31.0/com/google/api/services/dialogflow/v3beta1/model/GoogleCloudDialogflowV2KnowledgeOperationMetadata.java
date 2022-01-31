@@ -30,11 +30,35 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name of the knowledge base interacted with during the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String knowledgeBase;
+
+  /**
    * Output only. The current state of this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * The name of the knowledge base interacted with during the operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKnowledgeBase() {
+    return knowledgeBase;
+  }
+
+  /**
+   * The name of the knowledge base interacted with during the operation.
+   * @param knowledgeBase knowledgeBase or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeOperationMetadata setKnowledgeBase(java.lang.String knowledgeBase) {
+    this.knowledgeBase = knowledgeBase;
+    return this;
+  }
 
   /**
    * Output only. The current state of this operation.

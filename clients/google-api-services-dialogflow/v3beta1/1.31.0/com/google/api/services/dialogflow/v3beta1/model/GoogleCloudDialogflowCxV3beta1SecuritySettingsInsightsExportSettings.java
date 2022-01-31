@@ -17,8 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for exporting conversations to
- * [Insights](https://cloud.google.com/dialogflow/priv/docs/insights).
+ * Settings for exporting conversations to [Insights](https://cloud.google.com/contact-
+ * center/insights/docs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

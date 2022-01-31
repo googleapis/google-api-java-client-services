@@ -43,6 +43,13 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
+   * Output only. Status of control plane management
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceMeshControlPlaneManagement controlPlaneManagement;
+
+  /**
    * Output only. Results of running Service Mesh analyzers.
    * @return value or {@code null} for none
    */
@@ -56,6 +63,23 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
    */
   public ServiceMeshMembershipState setAnalysisMessages(java.util.List<ServiceMeshAnalysisMessage> analysisMessages) {
     this.analysisMessages = analysisMessages;
+    return this;
+  }
+
+  /**
+   * Output only. Status of control plane management
+   * @return value or {@code null} for none
+   */
+  public ServiceMeshControlPlaneManagement getControlPlaneManagement() {
+    return controlPlaneManagement;
+  }
+
+  /**
+   * Output only. Status of control plane management
+   * @param controlPlaneManagement controlPlaneManagement or {@code null} for none
+   */
+  public ServiceMeshMembershipState setControlPlaneManagement(ServiceMeshControlPlaneManagement controlPlaneManagement) {
+    this.controlPlaneManagement = controlPlaneManagement;
     return this;
   }
 

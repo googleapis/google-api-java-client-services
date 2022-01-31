@@ -618,7 +618,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
-       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -646,7 +646,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
-       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -726,13 +726,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
         /**
          * Required. The BigQuery project id for which data sources should be returned. Must be in
-         * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+         * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The BigQuery project id for which data sources should be returned. Must be in the form:
-       `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+       `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -740,7 +740,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
         /**
          * Required. The BigQuery project id for which data sources should be returned. Must be in
-         * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+         * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1631,7 +1631,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
-         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1659,7 +1659,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
-         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1739,13 +1739,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
           /**
            * Required. The BigQuery project id for which data sources should be returned. Must be in
-           * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+           * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The BigQuery project id for which data sources should be returned. Must be in the form:
-         `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+         `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -1753,7 +1753,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
           /**
            * Required. The BigQuery project id for which data sources should be returned. Must be in
-           * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
+           * the form: `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2395,8 +2395,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
-         *        or `projects/{project_id}/locations/{location_id}`
+         * @param parent Required. The BigQuery project id for which transfer configs should be returned:
+         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2423,8 +2423,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
-         *        or `projects/{project_id}/locations/{location_id}`
+           * @param parent Required. The BigQuery project id for which transfer configs should be returned:
+         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2503,13 +2503,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Required. The BigQuery project id for which data sources should be returned:
+           * Required. The BigQuery project id for which transfer configs should be returned:
            * `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The BigQuery project id for which data sources should be returned:
+          /** Required. The BigQuery project id for which transfer configs should be returned:
          `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            */
           public java.lang.String getParent() {
@@ -2517,7 +2517,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Required. The BigQuery project id for which data sources should be returned:
+           * Required. The BigQuery project id for which transfer configs should be returned:
            * `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
            */
           public List setParent(java.lang.String parent) {
@@ -4541,8 +4541,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
-       *        or `projects/{project_id}/locations/{location_id}`
+       * @param parent Required. The BigQuery project id for which transfer configs should be returned:
+       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4569,8 +4569,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
-       *        or `projects/{project_id}/locations/{location_id}`
+         * @param parent Required. The BigQuery project id for which transfer configs should be returned:
+       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4649,13 +4649,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The BigQuery project id for which data sources should be returned:
+         * Required. The BigQuery project id for which transfer configs should be returned:
          * `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The BigQuery project id for which data sources should be returned:
+        /** Required. The BigQuery project id for which transfer configs should be returned:
        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          */
         public java.lang.String getParent() {
@@ -4663,7 +4663,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The BigQuery project id for which data sources should be returned:
+         * Required. The BigQuery project id for which transfer configs should be returned:
          * `projects/{project_id}` or `projects/{project_id}/locations/{location_id}`
          */
         public List setParent(java.lang.String parent) {

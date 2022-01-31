@@ -68,6 +68,19 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
   private java.lang.String host;
 
   /**
+   * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used
+   * for the Apigee instance creation. This optional range, if provided, should be freely available
+   * as part of larger named range the customer has allocated to the Service Networking peering. If
+   * this is not provided, Apigee will automatically request for any available /22 CIDR block from
+   * Service Networking. The customer should use this CIDR block for configuring their firewall
+   * needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22,
+   * e.f.g.h/28"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipRange;
+
+  /**
    * Output only. Time the instance was last modified in milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -209,6 +222,35 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
    */
   public GoogleCloudApigeeV1Instance setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used
+   * for the Apigee instance creation. This optional range, if provided, should be freely available
+   * as part of larger named range the customer has allocated to the Service Networking peering. If
+   * this is not provided, Apigee will automatically request for any available /22 CIDR block from
+   * Service Networking. The customer should use this CIDR block for configuring their firewall
+   * needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22,
+   * e.f.g.h/28"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpRange() {
+    return ipRange;
+  }
+
+  /**
+   * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used
+   * for the Apigee instance creation. This optional range, if provided, should be freely available
+   * as part of larger named range the customer has allocated to the Service Networking peering. If
+   * this is not provided, Apigee will automatically request for any available /22 CIDR block from
+   * Service Networking. The customer should use this CIDR block for configuring their firewall
+   * needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22,
+   * e.f.g.h/28"
+   * @param ipRange ipRange or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Instance setIpRange(java.lang.String ipRange) {
+    this.ipRange = ipRange;
     return this;
   }
 

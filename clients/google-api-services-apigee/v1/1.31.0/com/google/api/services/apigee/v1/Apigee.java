@@ -6204,15 +6204,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       public class Keyvaluemaps {
 
         /**
-         * Creates a key value map in an api proxy.
+         * Creates a key value map in an API proxy.
          *
          * Create a request for the method "keyvaluemaps.create".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The name of the environment in which to create the key value map. Must be of the form
-         *        `organizations/{organization}/apis/{api}`.
+         * @param parent Required. Name of the environment in which to create the key value map. Use the following structure
+         *        in your request: `organizations/{org}/apis/{api}`
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
          * @return the request
          */
@@ -6230,7 +6230,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+$");
 
           /**
-           * Creates a key value map in an api proxy.
+           * Creates a key value map in an API proxy.
            *
            * Create a request for the method "keyvaluemaps.create".
            *
@@ -6239,8 +6239,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The name of the environment in which to create the key value map. Must be of the form
-         *        `organizations/{organization}/apis/{api}`.
+           * @param parent Required. Name of the environment in which to create the key value map. Use the following structure
+         *        in your request: `organizations/{org}/apis/{api}`
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
            * @since 1.13
            */
@@ -6310,22 +6310,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The name of the environment in which to create the key value map. Must be of
-           * the form `organizations/{organization}/apis/{api}`.
+           * Required. Name of the environment in which to create the key value map. Use the
+           * following structure in your request: `organizations/{org}/apis/{api}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The name of the environment in which to create the key value map. Must be of the form
-         `organizations/{organization}/apis/{api}`.
+          /** Required. Name of the environment in which to create the key value map. Use the following structure
+         in your request: `organizations/{org}/apis/{api}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The name of the environment in which to create the key value map. Must be of
-           * the form `organizations/{organization}/apis/{api}`.
+           * Required. Name of the environment in which to create the key value map. Use the
+           * following structure in your request: `organizations/{org}/apis/{api}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6343,15 +6343,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Delete a key value map in an api proxy.
+         * Deletes a key value map from an API proxy.
          *
          * Create a request for the method "keyvaluemaps.delete".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the key value map. Must be of the form
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+         * @param name Required. Name of the key value map. Use the following structure in your request:
+         *        `organizations/{org}/apis/{api}/keyvaluemaps/{keyvaluemap}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6368,7 +6368,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
 
           /**
-           * Delete a key value map in an api proxy.
+           * Deletes a key value map from an API proxy.
            *
            * Create a request for the method "keyvaluemaps.delete".
            *
@@ -6377,8 +6377,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the key value map. Must be of the form
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+           * @param name Required. Name of the key value map. Use the following structure in your request:
+         *        `organizations/{org}/apis/{api}/keyvaluemaps/{keyvaluemap}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6447,22 +6447,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The name of the key value map. Must be of the form
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+           * Required. Name of the key value map. Use the following structure in your request:
+           * `organizations/{org}/apis/{api}/keyvaluemaps/{keyvaluemap}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the key value map. Must be of the form
-         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+          /** Required. Name of the key value map. Use the following structure in your request:
+         `organizations/{org}/apis/{api}/keyvaluemaps/{keyvaluemap}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the key value map. Must be of the form
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+           * Required. Name of the key value map. Use the following structure in your request:
+           * `organizations/{org}/apis/{api}/keyvaluemaps/{keyvaluemap}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -18160,7 +18160,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * Updates an existing environment. When updating properties, you must pass all existing properties
        * to the API, even if they are not being changed. If you omit properties from the payload, the
        * properties are removed. To get the current list of properties for the environment, use the [Get
-       * Environment API](get).
+       * Environment API](get). **Note**: Both `PUT` and `POST` methods are supported for updating an
+       * existing environment.
        *
        * Create a request for the method "environments.update".
        *
@@ -18189,7 +18190,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Updates an existing environment. When updating properties, you must pass all existing
          * properties to the API, even if they are not being changed. If you omit properties from the
          * payload, the properties are removed. To get the current list of properties for the environment,
-         * use the [Get Environment API](get).
+         * use the [Get Environment API](get). **Note**: Both `PUT` and `POST` methods are supported for
+         * updating an existing environment.
          *
          * Create a request for the method "environments.update".
          *
@@ -18478,7 +18480,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * Updates an existing environment. When updating properties, you must pass all existing properties
        * to the API, even if they are not being changed. If you omit properties from the payload, the
        * properties are removed. To get the current list of properties for the environment, use the [Get
-       * Environment API](get).
+       * Environment API](get). **Note**: Both `PUT` and `POST` methods are supported for updating an
+       * existing environment.
        *
        * Create a request for the method "environments.updateEnvironment".
        *
@@ -18507,7 +18510,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Updates an existing environment. When updating properties, you must pass all existing
          * properties to the API, even if they are not being changed. If you omit properties from the
          * payload, the properties are removed. To get the current list of properties for the environment,
-         * use the [Get Environment API](get).
+         * use the [Get Environment API](get). **Note**: Both `PUT` and `POST` methods are supported for
+         * updating an existing environment.
          *
          * Create a request for the method "environments.updateEnvironment".
          *
@@ -24948,8 +24952,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The name of the environment in which to create the key value map. Must be of the form
-         *        `organizations/{organization}/environments/{environment}`.
+         * @param parent Required. Name of the environment in which to create the key value map. Use the following structure
+         *        in your request: `organizations/{org}/environments/{env}`
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
          * @return the request
          */
@@ -24976,8 +24980,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The name of the environment in which to create the key value map. Must be of the form
-         *        `organizations/{organization}/environments/{environment}`.
+           * @param parent Required. Name of the environment in which to create the key value map. Use the following structure
+         *        in your request: `organizations/{org}/environments/{env}`
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
            * @since 1.13
            */
@@ -25047,22 +25051,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The name of the environment in which to create the key value map. Must be of
-           * the form `organizations/{organization}/environments/{environment}`.
+           * Required. Name of the environment in which to create the key value map. Use the
+           * following structure in your request: `organizations/{org}/environments/{env}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The name of the environment in which to create the key value map. Must be of the form
-         `organizations/{organization}/environments/{environment}`.
+          /** Required. Name of the environment in which to create the key value map. Use the following structure
+         in your request: `organizations/{org}/environments/{env}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The name of the environment in which to create the key value map. Must be of
-           * the form `organizations/{organization}/environments/{environment}`.
+           * Required. Name of the environment in which to create the key value map. Use the
+           * following structure in your request: `organizations/{org}/environments/{env}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -25080,15 +25084,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Delete a key value map in an environment.
+         * Deletes a key value map from an environment.
          *
          * Create a request for the method "keyvaluemaps.delete".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the key value map. Must be of the form
-         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`.
+         * @param name Required. Name of the key value map. Use the following structure in your request:
+         *        `organizations/{org}/environments/{env}/keyvaluemaps/{keyvaluemap}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -25105,7 +25109,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
 
           /**
-           * Delete a key value map in an environment.
+           * Deletes a key value map from an environment.
            *
            * Create a request for the method "keyvaluemaps.delete".
            *
@@ -25114,8 +25118,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the key value map. Must be of the form
-         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`.
+           * @param name Required. Name of the key value map. Use the following structure in your request:
+         *        `organizations/{org}/environments/{env}/keyvaluemaps/{keyvaluemap}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -25184,22 +25188,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The name of the key value map. Must be of the form
-           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`.
+           * Required. Name of the key value map. Use the following structure in your request:
+           * `organizations/{org}/environments/{env}/keyvaluemaps/{keyvaluemap}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the key value map. Must be of the form
-         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`.
+          /** Required. Name of the key value map. Use the following structure in your request:
+         `organizations/{org}/environments/{env}/keyvaluemaps/{keyvaluemap}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the key value map. Must be of the form
-           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`.
+           * Required. Name of the key value map. Use the following structure in your request:
+           * `organizations/{org}/environments/{env}/keyvaluemaps/{keyvaluemap}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -34778,8 +34782,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the organization in which to create the key value map file. Must be of the
-       *        form `organizations/{organization}`.
+       * @param parent Required. Name of the organization in which to create the key value map file. Use the following
+       *        structure in your request: `organizations/{org}`
        * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
        * @return the request
        */
@@ -34806,8 +34810,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the organization in which to create the key value map file. Must be of the
-       *        form `organizations/{organization}`.
+         * @param parent Required. Name of the organization in which to create the key value map file. Use the following
+       *        structure in your request: `organizations/{org}`
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
          * @since 1.13
          */
@@ -34877,22 +34881,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the organization in which to create the key value map file. Must be
-         * of the form `organizations/{organization}`.
+         * Required. Name of the organization in which to create the key value map file. Use the
+         * following structure in your request: `organizations/{org}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the organization in which to create the key value map file. Must be of the
-       form `organizations/{organization}`.
+        /** Required. Name of the organization in which to create the key value map file. Use the following
+       structure in your request: `organizations/{org}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the organization in which to create the key value map file. Must be
-         * of the form `organizations/{organization}`.
+         * Required. Name of the organization in which to create the key value map file. Use the
+         * following structure in your request: `organizations/{org}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -34910,15 +34914,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Delete a key value map in an organization.
+       * Deletes a key value map from an organization.
        *
        * Create a request for the method "keyvaluemaps.delete".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the key value map. Must be of the form
-       *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+       * @param name Required. Name of the key value map. Use the following structure in your request:
+       *        `organizations/{org}/keyvaluemaps/{keyvaluemap}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -34935,7 +34939,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+/keyvaluemaps/[^/]+$");
 
         /**
-         * Delete a key value map in an organization.
+         * Deletes a key value map from an organization.
          *
          * Create a request for the method "keyvaluemaps.delete".
          *
@@ -34944,8 +34948,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the key value map. Must be of the form
-       *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+         * @param name Required. Name of the key value map. Use the following structure in your request:
+       *        `organizations/{org}/keyvaluemaps/{keyvaluemap}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -35014,22 +35018,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the key value map. Must be of the form
-         * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+         * Required. Name of the key value map. Use the following structure in your request:
+         * `organizations/{org}/keyvaluemaps/{keyvaluemap}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the key value map. Must be of the form
-       `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+        /** Required. Name of the key value map. Use the following structure in your request:
+       `organizations/{org}/keyvaluemaps/{keyvaluemap}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the key value map. Must be of the form
-         * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+         * Required. Name of the key value map. Use the following structure in your request:
+         * `organizations/{org}/keyvaluemaps/{keyvaluemap}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

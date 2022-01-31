@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1Session extends com.google.api.client.json
   private java.lang.String id;
 
   /**
-   * The first transaction creation timestamp in millisecond, recoreded by UAP.
+   * The first transaction creation timestamp in millisecond, recorded by UAP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -61,7 +61,7 @@ public final class GoogleCloudApigeeV1Session extends com.google.api.client.json
   }
 
   /**
-   * The first transaction creation timestamp in millisecond, recoreded by UAP.
+   * The first transaction creation timestamp in millisecond, recorded by UAP.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTimestampMs() {
@@ -69,7 +69,7 @@ public final class GoogleCloudApigeeV1Session extends com.google.api.client.json
   }
 
   /**
-   * The first transaction creation timestamp in millisecond, recoreded by UAP.
+   * The first transaction creation timestamp in millisecond, recorded by UAP.
    * @param timestampMs timestampMs or {@code null} for none
    */
   public GoogleCloudApigeeV1Session setTimestampMs(java.lang.Long timestampMs) {

@@ -17,7 +17,7 @@
 package com.google.api.services.mybusinessqanda.v1;
 
 /**
- * Service definition for MyBusinessQ&A (v1).
+ * Service definition for MyBusinessQA (v1).
  *
  * <p>
  * The My Business Q API allows questions and answers to be posted for specific listings.
@@ -29,7 +29,7 @@ package com.google.api.services.mybusinessqanda.v1;
  * </p>
  *
  * <p>
- * This service uses {@link MyBusinessQ&ARequestInitializer} to initialize global parameters via its
+ * This service uses {@link MyBusinessQARequestInitializer} to initialize global parameters via its
  * {@link Builder}.
  * </p>
  *
@@ -37,7 +37,7 @@ package com.google.api.services.mybusinessqanda.v1;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public class MyBusinessQ&A extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClient {
+public class MyBusinessQA extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClient {
 
   // Note: Leave this static initializer at the top of the file.
   static {
@@ -115,7 +115,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
    * @param httpRequestInitializer HTTP request initializer or {@code null} for none
    * @since 1.7
    */
-  public MyBusinessQ&A(com.google.api.client.http.HttpTransport transport, com.google.api.client.json.JsonFactory jsonFactory,
+  public MyBusinessQA(com.google.api.client.http.HttpTransport transport, com.google.api.client.json.JsonFactory jsonFactory,
       com.google.api.client.http.HttpRequestInitializer httpRequestInitializer) {
     this(new Builder(transport, jsonFactory, httpRequestInitializer));
   }
@@ -123,7 +123,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
   /**
    * @param builder builder
    */
-  MyBusinessQ&A(Builder builder) {
+  MyBusinessQA(Builder builder) {
     super(builder);
   }
 
@@ -137,8 +137,8 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
    *
    * <p>The typical use is:</p>
    * <pre>
-   *   {@code MyBusinessQ&A mybusinessqanda = new MyBusinessQ&A(...);}
-   *   {@code MyBusinessQ&A.Locations.List request = mybusinessqanda.locations().list(parameters ...)}
+   *   {@code MyBusinessQA mybusinessqanda = new MyBusinessQA(...);}
+   *   {@code MyBusinessQA.Locations.List request = mybusinessqanda.locations().list(parameters ...)}
    * </pre>
    *
    * @return the resource collection
@@ -157,8 +157,8 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
      *
      * <p>The typical use is:</p>
      * <pre>
-     *   {@code MyBusinessQ&A mybusinessqanda = new MyBusinessQ&A(...);}
-     *   {@code MyBusinessQ&A.Questions.List request = mybusinessqanda.questions().list(parameters ...)}
+     *   {@code MyBusinessQA mybusinessqanda = new MyBusinessQA(...);}
+     *   {@code MyBusinessQA.Questions.List request = mybusinessqanda.questions().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
@@ -190,7 +190,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
         return result;
       }
 
-      public class Create extends MyBusinessQ&ARequest<com.google.api.services.mybusinessqanda.v1.model.Question> {
+      public class Create extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.Question> {
 
         private static final String REST_PATH = "v1/{+parent}";
 
@@ -213,7 +213,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
          * @since 1.13
          */
         protected Create(java.lang.String parent, com.google.api.services.mybusinessqanda.v1.model.Question content) {
-          super(MyBusinessQ&A.this, "POST", REST_PATH, content, com.google.api.services.mybusinessqanda.v1.model.Question.class);
+          super(MyBusinessQA.this, "POST", REST_PATH, content, com.google.api.services.mybusinessqanda.v1.model.Question.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -320,7 +320,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
         return result;
       }
 
-      public class Delete extends MyBusinessQ&ARequest<com.google.api.services.mybusinessqanda.v1.model.Empty> {
+      public class Delete extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.Empty> {
 
         private static final String REST_PATH = "v1/{+name}";
 
@@ -342,7 +342,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(MyBusinessQ&A.this, "DELETE", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.Empty.class);
+          super(MyBusinessQA.this, "DELETE", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.Empty.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -450,7 +450,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
         return result;
       }
 
-      public class DeleteAnswers extends MyBusinessQ&ARequest<com.google.api.services.mybusinessqanda.v1.model.Empty> {
+      public class DeleteAnswers extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.Empty> {
 
         private static final String REST_PATH = "v1/{+name}/answers";
 
@@ -472,7 +472,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
          * @since 1.13
          */
         protected DeleteAnswers(java.lang.String name) {
-          super(MyBusinessQ&A.this, "DELETE", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.Empty.class);
+          super(MyBusinessQA.this, "DELETE", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.Empty.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -580,7 +580,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
         return result;
       }
 
-      public class List extends MyBusinessQ&ARequest<com.google.api.services.mybusinessqanda.v1.model.ListQuestionsResponse> {
+      public class List extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.ListQuestionsResponse> {
 
         private static final String REST_PATH = "v1/{+parent}";
 
@@ -602,7 +602,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
          * @since 1.13
          */
         protected List(java.lang.String parent) {
-          super(MyBusinessQ&A.this, "GET", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.ListQuestionsResponse.class);
+          super(MyBusinessQA.this, "GET", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.ListQuestionsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -831,7 +831,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
         return result;
       }
 
-      public class Patch extends MyBusinessQ&ARequest<com.google.api.services.mybusinessqanda.v1.model.Question> {
+      public class Patch extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.Question> {
 
         private static final String REST_PATH = "v1/{+name}";
 
@@ -855,7 +855,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
          * @since 1.13
          */
         protected Patch(java.lang.String name, com.google.api.services.mybusinessqanda.v1.model.Question content) {
-          super(MyBusinessQ&A.this, "PATCH", REST_PATH, content, com.google.api.services.mybusinessqanda.v1.model.Question.class);
+          super(MyBusinessQA.this, "PATCH", REST_PATH, content, com.google.api.services.mybusinessqanda.v1.model.Question.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -974,8 +974,8 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
        *
        * <p>The typical use is:</p>
        * <pre>
-       *   {@code MyBusinessQ&A mybusinessqanda = new MyBusinessQ&A(...);}
-       *   {@code MyBusinessQ&A.Answers.List request = mybusinessqanda.answers().list(parameters ...)}
+       *   {@code MyBusinessQA mybusinessqanda = new MyBusinessQA(...);}
+       *   {@code MyBusinessQA.Answers.List request = mybusinessqanda.answers().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
@@ -1006,7 +1006,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
           return result;
         }
 
-        public class List extends MyBusinessQ&ARequest<com.google.api.services.mybusinessqanda.v1.model.ListAnswersResponse> {
+        public class List extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.ListAnswersResponse> {
 
           private static final String REST_PATH = "v1/{+parent}";
 
@@ -1027,7 +1027,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
            * @since 1.13
            */
           protected List(java.lang.String parent) {
-            super(MyBusinessQ&A.this, "GET", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.ListAnswersResponse.class);
+            super(MyBusinessQA.this, "GET", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.ListAnswersResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1210,7 +1210,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
           return result;
         }
 
-        public class Upsert extends MyBusinessQ&ARequest<com.google.api.services.mybusinessqanda.v1.model.Answer> {
+        public class Upsert extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.Answer> {
 
           private static final String REST_PATH = "v1/{+parent}/answers:upsert";
 
@@ -1234,7 +1234,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
            * @since 1.13
            */
           protected Upsert(java.lang.String parent, com.google.api.services.mybusinessqanda.v1.model.UpsertAnswerRequest content) {
-            super(MyBusinessQ&A.this, "POST", REST_PATH, content, com.google.api.services.mybusinessqanda.v1.model.Answer.class);
+            super(MyBusinessQA.this, "POST", REST_PATH, content, com.google.api.services.mybusinessqanda.v1.model.Answer.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1330,7 +1330,7 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
   }
 
   /**
-   * Builder for {@link MyBusinessQ&A}.
+   * Builder for {@link MyBusinessQA}.
    *
    * <p>
    * Implementation is not thread-safe.
@@ -1386,10 +1386,10 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
       setBatchPath(DEFAULT_BATCH_PATH);
     }
 
-    /** Builds a new instance of {@link MyBusinessQ&A}. */
+    /** Builds a new instance of {@link MyBusinessQA}. */
     @Override
-    public MyBusinessQ&A build() {
-      return new MyBusinessQ&A(this);
+    public MyBusinessQA build() {
+      return new MyBusinessQA(this);
     }
 
     @Override
@@ -1433,13 +1433,13 @@ public class MyBusinessQ&A extends com.google.api.client.googleapis.services.jso
     }
 
     /**
-     * Set the {@link MyBusinessQ&ARequestInitializer}.
+     * Set the {@link MyBusinessQARequestInitializer}.
      *
      * @since 1.12
      */
-    public Builder setMyBusinessQ&ARequestInitializer(
-        MyBusinessQ&ARequestInitializer mybusinessq&aRequestInitializer) {
-      return (Builder) super.setGoogleClientRequestInitializer(mybusinessq&aRequestInitializer);
+    public Builder setMyBusinessQARequestInitializer(
+        MyBusinessQARequestInitializer mybusinessqaRequestInitializer) {
+      return (Builder) super.setGoogleClientRequestInitializer(mybusinessqaRequestInitializer);
     }
 
     @Override

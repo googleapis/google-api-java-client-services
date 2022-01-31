@@ -17,7 +17,7 @@
 package com.google.api.services.mybusinessqanda.v1;
 
 /**
- * MyBusinessQ&A request initializer for setting properties like key and userIp.
+ * MyBusinessQA request initializer for setting properties like key and userIp.
  *
  * <p>
  * The simplest usage is to use it to set the key parameter:
@@ -25,7 +25,7 @@ package com.google.api.services.mybusinessqanda.v1;
  *
  * <pre>
   public static final GoogleClientRequestInitializer KEY_INITIALIZER =
-      new MyBusinessQ&ARequestInitializer(KEY);
+      new MyBusinessQARequestInitializer(KEY);
  * </pre>
  *
  * <p>
@@ -34,7 +34,7 @@ package com.google.api.services.mybusinessqanda.v1;
  *
  * <pre>
   public static final GoogleClientRequestInitializer INITIALIZER =
-      new MyBusinessQ&ARequestInitializer(KEY, USER_IP);
+      new MyBusinessQARequestInitializer(KEY, USER_IP);
  * </pre>
  *
  * <p>
@@ -42,10 +42,10 @@ package com.google.api.services.mybusinessqanda.v1;
  * </p>
  *
  * <pre>
-  public static class MyRequestInitializer extends MyBusinessQ&ARequestInitializer {
+  public static class MyRequestInitializer extends MyBusinessQARequestInitializer {
 
     {@literal @}Override
-    public void initializeMyBusinessQ&ARequest(MyBusinessQ&ARequest{@literal <}?{@literal >} request)
+    public void initializeMyBusinessQARequest(MyBusinessQARequest{@literal <}?{@literal >} request)
         throws IOException {
       // custom logic
     }
@@ -57,14 +57,14 @@ package com.google.api.services.mybusinessqanda.v1;
  * </p>
  *
  * <pre>
-  public static class MyRequestInitializer2 extends MyBusinessQ&ARequestInitializer {
+  public static class MyRequestInitializer2 extends MyBusinessQARequestInitializer {
 
     public MyKeyRequestInitializer() {
       super(KEY, USER_IP);
     }
 
     {@literal @}Override
-    public void initializeMyBusinessQ&ARequest(MyBusinessQ&ARequest{@literal <}?{@literal >} request)
+    public void initializeMyBusinessQARequest(MyBusinessQARequest{@literal <}?{@literal >} request)
         throws IOException {
       // custom logic
     }
@@ -77,16 +77,16 @@ package com.google.api.services.mybusinessqanda.v1;
  *
  * @since 1.12
  */
-public class MyBusinessQ&ARequestInitializer extends com.google.api.client.googleapis.services.json.CommonGoogleJsonClientRequestInitializer {
+public class MyBusinessQARequestInitializer extends com.google.api.client.googleapis.services.json.CommonGoogleJsonClientRequestInitializer {
 
-  public MyBusinessQ&ARequestInitializer() {
+  public MyBusinessQARequestInitializer() {
     super();
   }
 
   /**
    * @param key API key or {@code null} to leave it unchanged
    */
-  public MyBusinessQ&ARequestInitializer(String key) {
+  public MyBusinessQARequestInitializer(String key) {
     super(key);
   }
 
@@ -94,18 +94,18 @@ public class MyBusinessQ&ARequestInitializer extends com.google.api.client.googl
    * @param key API key or {@code null} to leave it unchanged
    * @param userIp user IP or {@code null} to leave it unchanged
    */
-  public MyBusinessQ&ARequestInitializer(String key, String userIp) {
+  public MyBusinessQARequestInitializer(String key, String userIp) {
     super(key, userIp);
   }
 
   @Override
   public final void initializeJsonRequest(com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest<?> request) throws java.io.IOException {
     super.initializeJsonRequest(request);
-    initializeMyBusinessQ&ARequest((MyBusinessQ&ARequest<?>) request);
+    initializeMyBusinessQARequest((MyBusinessQARequest<?>) request);
   }
 
   /**
-   * Initializes MyBusinessQ&A request.
+   * Initializes MyBusinessQA request.
    *
    * <p>
    * Default implementation does nothing. Called from
@@ -114,6 +114,6 @@ public class MyBusinessQ&ARequestInitializer extends com.google.api.client.googl
    *
    * @throws java.io.IOException I/O exception
    */
-  protected void initializeMyBusinessQ&ARequest(MyBusinessQ&ARequest<?> request) throws java.io.IOException {
+  protected void initializeMyBusinessQARequest(MyBusinessQARequest<?> request) throws java.io.IOException {
   }
 }

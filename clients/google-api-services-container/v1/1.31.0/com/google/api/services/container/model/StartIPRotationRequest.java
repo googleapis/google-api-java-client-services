@@ -40,8 +40,8 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   private java.lang.String clusterId;
 
   /**
-   * The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
-   * format `projects/locations/clusters`.
+   * The name (project, location, cluster name) of the cluster to start IP rotation. Specified in
+   * the format `projects/locations/clusters`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
-   * format `projects/locations/clusters`.
+   * The name (project, location, cluster name) of the cluster to start IP rotation. Specified in
+   * the format `projects/locations/clusters`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,8 +101,8 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
-   * format `projects/locations/clusters`.
+   * The name (project, location, cluster name) of the cluster to start IP rotation. Specified in
+   * the format `projects/locations/clusters`.
    * @param name name or {@code null} for none
    */
   public StartIPRotationRequest setName(java.lang.String name) {

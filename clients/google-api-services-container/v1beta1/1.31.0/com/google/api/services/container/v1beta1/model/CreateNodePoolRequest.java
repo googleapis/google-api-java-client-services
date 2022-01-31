@@ -46,7 +46,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   private NodePool nodePool;
 
   /**
-   * The parent (project, location, cluster id) where the node pool will be created. Specified in
+   * The parent (project, location, cluster name) where the node pool will be created. Specified in
    * the format `projects/locations/clusters`.
    * The value may be {@code null}.
    */
@@ -108,7 +108,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The parent (project, location, cluster id) where the node pool will be created. Specified in
+   * The parent (project, location, cluster name) where the node pool will be created. Specified in
    * the format `projects/locations/clusters`.
    * @return value or {@code null} for none
    */
@@ -117,7 +117,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The parent (project, location, cluster id) where the node pool will be created. Specified in
+   * The parent (project, location, cluster name) where the node pool will be created. Specified in
    * the format `projects/locations/clusters`.
    * @param parent parent or {@code null} for none
    */

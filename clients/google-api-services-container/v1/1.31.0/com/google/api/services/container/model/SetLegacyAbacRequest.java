@@ -46,7 +46,7 @@ public final class SetLegacyAbacRequest extends com.google.api.client.json.Gener
   private java.lang.Boolean enabled;
 
   /**
-   * The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the
+   * The name (project, location, cluster name) of the cluster to set legacy abac. Specified in the
    * format `projects/locations/clusters`.
    * The value may be {@code null}.
    */
@@ -108,7 +108,7 @@ public final class SetLegacyAbacRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the
+   * The name (project, location, cluster name) of the cluster to set legacy abac. Specified in the
    * format `projects/locations/clusters`.
    * @return value or {@code null} for none
    */
@@ -117,7 +117,7 @@ public final class SetLegacyAbacRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the
+   * The name (project, location, cluster name) of the cluster to set legacy abac. Specified in the
    * format `projects/locations/clusters`.
    * @param name name or {@code null} for none
    */

@@ -1371,6 +1371,149 @@ public class SearchConsole extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the UrlInspection collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SearchConsole searchconsole = new SearchConsole(...);}
+   *   {@code SearchConsole.UrlInspection.List request = searchconsole.urlInspection().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public UrlInspection urlInspection() {
+    return new UrlInspection();
+  }
+
+  /**
+   * The "urlInspection" collection of methods.
+   */
+  public class UrlInspection {
+
+    /**
+     * An accessor for creating requests from the Index collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SearchConsole searchconsole = new SearchConsole(...);}
+     *   {@code SearchConsole.Index.List request = searchconsole.index().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Index index() {
+      return new Index();
+    }
+
+    /**
+     * The "index" collection of methods.
+     */
+    public class Index {
+
+      /**
+       * Index inspection.
+       *
+       * Create a request for the method "index.inspect".
+       *
+       * This request holds the parameters needed by the searchconsole server.  After setting any optional
+       * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
+       *
+       * @param content the {@link com.google.api.services.searchconsole.v1.model.InspectUrlIndexRequest}
+       * @return the request
+       */
+      public Inspect inspect(com.google.api.services.searchconsole.v1.model.InspectUrlIndexRequest content) throws java.io.IOException {
+        Inspect result = new Inspect(content);
+        initialize(result);
+        return result;
+      }
+
+      public class Inspect extends SearchConsoleRequest<com.google.api.services.searchconsole.v1.model.InspectUrlIndexResponse> {
+
+        private static final String REST_PATH = "v1/urlInspection/index:inspect";
+
+        /**
+         * Index inspection.
+         *
+         * Create a request for the method "index.inspect".
+         *
+         * This request holds the parameters needed by the the searchconsole server.  After setting any
+         * optional parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param content the {@link com.google.api.services.searchconsole.v1.model.InspectUrlIndexRequest}
+         * @since 1.13
+         */
+        protected Inspect(com.google.api.services.searchconsole.v1.model.InspectUrlIndexRequest content) {
+          super(SearchConsole.this, "POST", REST_PATH, content, com.google.api.services.searchconsole.v1.model.InspectUrlIndexResponse.class);
+        }
+
+        @Override
+        public Inspect set$Xgafv(java.lang.String $Xgafv) {
+          return (Inspect) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Inspect setAccessToken(java.lang.String accessToken) {
+          return (Inspect) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Inspect setAlt(java.lang.String alt) {
+          return (Inspect) super.setAlt(alt);
+        }
+
+        @Override
+        public Inspect setCallback(java.lang.String callback) {
+          return (Inspect) super.setCallback(callback);
+        }
+
+        @Override
+        public Inspect setFields(java.lang.String fields) {
+          return (Inspect) super.setFields(fields);
+        }
+
+        @Override
+        public Inspect setKey(java.lang.String key) {
+          return (Inspect) super.setKey(key);
+        }
+
+        @Override
+        public Inspect setOauthToken(java.lang.String oauthToken) {
+          return (Inspect) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Inspect setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Inspect) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Inspect setQuotaUser(java.lang.String quotaUser) {
+          return (Inspect) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Inspect setUploadType(java.lang.String uploadType) {
+          return (Inspect) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Inspect setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Inspect) super.setUploadProtocol(uploadProtocol);
+        }
+
+        @Override
+        public Inspect set(String parameterName, Object value) {
+          return (Inspect) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the UrlTestingTools collection.
    *
    * <p>The typical use is:</p>

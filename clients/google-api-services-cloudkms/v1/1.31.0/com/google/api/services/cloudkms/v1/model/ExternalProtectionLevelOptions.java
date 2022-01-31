@@ -18,7 +18,8 @@ package com.google.api.services.cloudkms.v1.model;
 
 /**
  * ExternalProtectionLevelOptions stores a group of additional fields for configuring a
- * CryptoKeyVersion that are specific to the EXTERNAL protection level.
+ * CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection
+ * levels.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a
@@ -32,11 +33,38 @@ package com.google.api.services.cloudkms.v1.model;
 public final class ExternalProtectionLevelOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key".
+   * Set this field instead of external_key_uri when using an EkmConnection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ekmConnectionKeyPath;
+
+  /**
    * The URI for an external resource that this CryptoKeyVersion represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalKeyUri;
+
+  /**
+   * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key".
+   * Set this field instead of external_key_uri when using an EkmConnection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEkmConnectionKeyPath() {
+    return ekmConnectionKeyPath;
+  }
+
+  /**
+   * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key".
+   * Set this field instead of external_key_uri when using an EkmConnection.
+   * @param ekmConnectionKeyPath ekmConnectionKeyPath or {@code null} for none
+   */
+  public ExternalProtectionLevelOptions setEkmConnectionKeyPath(java.lang.String ekmConnectionKeyPath) {
+    this.ekmConnectionKeyPath = ekmConnectionKeyPath;
+    return this;
+  }
 
   /**
    * The URI for an external resource that this CryptoKeyVersion represents.

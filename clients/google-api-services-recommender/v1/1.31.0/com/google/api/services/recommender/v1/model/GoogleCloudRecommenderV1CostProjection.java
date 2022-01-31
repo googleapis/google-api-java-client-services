@@ -32,7 +32,8 @@ public final class GoogleCloudRecommenderV1CostProjection extends com.google.api
   /**
    * An approximate projection on amount saved or amount incurred. Negative cost units indicate cost
    * savings and positive cost units indicate increase. See google.type.Money documentation for
-   * positive/negative units.
+   * positive/negative units. A user's permissions may affect whether the cost is computed using
+   * list prices or custom contract prices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class GoogleCloudRecommenderV1CostProjection extends com.google.api
   /**
    * An approximate projection on amount saved or amount incurred. Negative cost units indicate cost
    * savings and positive cost units indicate increase. See google.type.Money documentation for
-   * positive/negative units.
+   * positive/negative units. A user's permissions may affect whether the cost is computed using
+   * list prices or custom contract prices.
    * @return value or {@code null} for none
    */
   public GoogleTypeMoney getCost() {
@@ -58,7 +60,8 @@ public final class GoogleCloudRecommenderV1CostProjection extends com.google.api
   /**
    * An approximate projection on amount saved or amount incurred. Negative cost units indicate cost
    * savings and positive cost units indicate increase. See google.type.Money documentation for
-   * positive/negative units.
+   * positive/negative units. A user's permissions may affect whether the cost is computed using
+   * list prices or custom contract prices.
    * @param cost cost or {@code null} for none
    */
   public GoogleCloudRecommenderV1CostProjection setCost(GoogleTypeMoney cost) {

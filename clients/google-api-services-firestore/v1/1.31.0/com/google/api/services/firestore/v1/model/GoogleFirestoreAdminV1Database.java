@@ -38,19 +38,6 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String concurrencyMode;
 
   /**
-   * Output only. The earliest timestamp at which older versions of the data can be read from the
-   * database. See [version_retention_period] above; this field is populated with `now -
-   * version_retention_period`. This value is continuously updated, and becomes stale the moment it
-   * is queried. If you are using this value to recover data, make sure to account for the time from
-   * the moment when the value is queried to the moment when you initiate the recovery. Note that
-   * you should not need to query this field: if you know the `version_retention_period` then you
-   * can query within that time.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String earliestVersionTime;
-
-  /**
    * This checksum is computed by the server based on the value of other fields, and may be sent on
    * update and delete requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -95,35 +82,6 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setConcurrencyMode(java.lang.String concurrencyMode) {
     this.concurrencyMode = concurrencyMode;
-    return this;
-  }
-
-  /**
-   * Output only. The earliest timestamp at which older versions of the data can be read from the
-   * database. See [version_retention_period] above; this field is populated with `now -
-   * version_retention_period`. This value is continuously updated, and becomes stale the moment it
-   * is queried. If you are using this value to recover data, make sure to account for the time from
-   * the moment when the value is queried to the moment when you initiate the recovery. Note that
-   * you should not need to query this field: if you know the `version_retention_period` then you
-   * can query within that time.
-   * @return value or {@code null} for none
-   */
-  public String getEarliestVersionTime() {
-    return earliestVersionTime;
-  }
-
-  /**
-   * Output only. The earliest timestamp at which older versions of the data can be read from the
-   * database. See [version_retention_period] above; this field is populated with `now -
-   * version_retention_period`. This value is continuously updated, and becomes stale the moment it
-   * is queried. If you are using this value to recover data, make sure to account for the time from
-   * the moment when the value is queried to the moment when you initiate the recovery. Note that
-   * you should not need to query this field: if you know the `version_retention_period` then you
-   * can query within that time.
-   * @param earliestVersionTime earliestVersionTime or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1Database setEarliestVersionTime(String earliestVersionTime) {
-    this.earliestVersionTime = earliestVersionTime;
     return this;
   }
 

@@ -1206,32 +1206,6 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * A comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
-       * list is case-insensitive, default sorting order is ascending, redundant space characters
-       * are insignificant. Example: `name asc,update_time, create_time desc`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String orderBy;
-
-      /** A comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is
-     case-insensitive, default sorting order is ascending, redundant space characters are insignificant.
-     Example: `name asc,update_time, create_time desc`
-       */
-      public java.lang.String getOrderBy() {
-        return orderBy;
-      }
-
-      /**
-       * A comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
-       * list is case-insensitive, default sorting order is ascending, redundant space characters
-       * are insignificant. Example: `name asc,update_time, create_time desc`
-       */
-      public List setOrderBy(java.lang.String orderBy) {
-        this.orderBy = orderBy;
-        return this;
-      }
-
       /** The maximum number of cases fetched with each request. Defaults to 10. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
@@ -1277,8 +1251,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     }
     /**
      * Update the specified case. Only a subset of fields (display_name, description, time_zone,
-     * subscriber_email_addresses, related_resources, severity, primary_contact, and labels) can be
-     * updated.
+     * subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels)
+     * can be updated.
      *
      * Create a request for the method "cases.patch".
      *
@@ -1304,8 +1278,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
       /**
        * Update the specified case. Only a subset of fields (display_name, description, time_zone,
-       * subscriber_email_addresses, related_resources, severity, primary_contact, and labels) can be
-       * updated.
+       * subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels)
+       * can be updated.
        *
        * Create a request for the method "cases.patch".
        *

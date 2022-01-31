@@ -58,7 +58,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * This is always **sql#database**.
+   * This is always `sql#database`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#database**.
+   * This is always `sql#database`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -170,7 +170,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#database**.
+   * This is always `sql#database`.
    * @param kind kind or {@code null} for none
    */
   public Database setKind(java.lang.String kind) {

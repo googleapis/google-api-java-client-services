@@ -40,7 +40,7 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * The value of the flag. Booleans are set to **on** for true and **off** for false. This field
+   * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field
    * must be omitted if the flag doesn't take a value.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The value of the flag. Booleans are set to **on** for true and **off** for false. This field
+   * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field
    * must be omitted if the flag doesn't take a value.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The value of the flag. Booleans are set to **on** for true and **off** for false. This field
+   * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field
    * must be omitted if the flag doesn't take a value.
    * @param value value or {@code null} for none
    */

@@ -37,7 +37,7 @@ public final class SslCertsInsertResponse extends com.google.api.client.json.Gen
   private SslCertDetail clientCert;
 
   /**
-   * This is always **sql#sslCertsInsert**.
+   * This is always `sql#sslCertsInsert`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class SslCertsInsertResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#sslCertsInsert**.
+   * This is always `sql#sslCertsInsert`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -84,7 +84,7 @@ public final class SslCertsInsertResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#sslCertsInsert**.
+   * This is always `sql#sslCertsInsert`.
    * @param kind kind or {@code null} for none
    */
   public SslCertsInsertResponse setKind(java.lang.String kind) {

@@ -43,7 +43,7 @@ public final class SqlInstancesVerifyExternalSyncSettingsResponse extends com.go
   }
 
   /**
-   * This is always **sql#migrationSettingErrorList**.
+   * This is always `sql#migrationSettingErrorList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class SqlInstancesVerifyExternalSyncSettingsResponse extends com.go
   }
 
   /**
-   * This is always **sql#migrationSettingErrorList**.
+   * This is always `sql#migrationSettingErrorList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -88,7 +88,7 @@ public final class SqlInstancesVerifyExternalSyncSettingsResponse extends com.go
   }
 
   /**
-   * This is always **sql#migrationSettingErrorList**.
+   * This is always `sql#migrationSettingErrorList`.
    * @param kind kind or {@code null} for none
    */
   public SqlInstancesVerifyExternalSyncSettingsResponse setKind(java.lang.String kind) {

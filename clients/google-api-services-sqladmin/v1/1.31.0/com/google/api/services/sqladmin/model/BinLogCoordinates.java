@@ -44,7 +44,7 @@ public final class BinLogCoordinates extends com.google.api.client.json.GenericJ
   private java.lang.Long binLogPosition;
 
   /**
-   * This is always **sql#binLogCoordinates**.
+   * This is always `sql#binLogCoordinates`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class BinLogCoordinates extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#binLogCoordinates**.
+   * This is always `sql#binLogCoordinates`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -93,7 +93,7 @@ public final class BinLogCoordinates extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#binLogCoordinates**.
+   * This is always `sql#binLogCoordinates`.
    * @param kind kind or {@code null} for none
    */
   public BinLogCoordinates setKind(java.lang.String kind) {

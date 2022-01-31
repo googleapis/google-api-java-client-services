@@ -52,7 +52,7 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   private java.lang.String clientKey;
 
   /**
-   * This is always **sql#demoteMasterMysqlReplicaConfiguration**.
+   * This is always `sql#demoteMasterMysqlReplicaConfiguration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * This is always **sql#demoteMasterMysqlReplicaConfiguration**.
+   * This is always `sql#demoteMasterMysqlReplicaConfiguration`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -134,7 +134,7 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * This is always **sql#demoteMasterMysqlReplicaConfiguration**.
+   * This is always `sql#demoteMasterMysqlReplicaConfiguration`.
    * @param kind kind or {@code null} for none
    */
   public DemoteMasterMySqlReplicaConfiguration setKind(java.lang.String kind) {

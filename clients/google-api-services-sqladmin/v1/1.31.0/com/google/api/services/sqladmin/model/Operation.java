@@ -39,7 +39,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation finished in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +68,14 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation was enqueued in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String insertTime;
 
   /**
-   * This is always **sql#operation**.
+   * This is always `sql#operation`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +90,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The type of the operation. Valid values are: * **CREATE** * **DELETE** * **UPDATE** *
-   * **RESTART** * **IMPORT** * **EXPORT** * **BACKUP_VOLUME** * **RESTORE_VOLUME** *
-   * **CREATE_USER** * **DELETE_USER** * **CREATE_DATABASE** * **DELETE_DATABASE**
+   * The type of the operation. Valid values are: * `CREATE` * `DELETE` * `UPDATE` * `RESTART` *
+   * `IMPORT` * `EXPORT` * `BACKUP_VOLUME` * `RESTORE_VOLUME` * `CREATE_USER` * `DELETE_USER` *
+   * `CREATE_DATABASE` * `DELETE_DATABASE`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation actually started in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +166,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation finished in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -175,7 +175,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation finished in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @param endTime endTime or {@code null} for none
    */
   public Operation setEndTime(String endTime) {
@@ -236,7 +236,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation was enqueued in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @return value or {@code null} for none
    */
   public String getInsertTime() {
@@ -245,7 +245,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation was enqueued in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @param insertTime insertTime or {@code null} for none
    */
   public Operation setInsertTime(String insertTime) {
@@ -254,7 +254,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#operation**.
+   * This is always `sql#operation`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -262,7 +262,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#operation**.
+   * This is always `sql#operation`.
    * @param kind kind or {@code null} for none
    */
   public Operation setKind(java.lang.String kind) {
@@ -290,9 +290,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the operation. Valid values are: * **CREATE** * **DELETE** * **UPDATE** *
-   * **RESTART** * **IMPORT** * **EXPORT** * **BACKUP_VOLUME** * **RESTORE_VOLUME** *
-   * **CREATE_USER** * **DELETE_USER** * **CREATE_DATABASE** * **DELETE_DATABASE**
+   * The type of the operation. Valid values are: * `CREATE` * `DELETE` * `UPDATE` * `RESTART` *
+   * `IMPORT` * `EXPORT` * `BACKUP_VOLUME` * `RESTORE_VOLUME` * `CREATE_USER` * `DELETE_USER` *
+   * `CREATE_DATABASE` * `DELETE_DATABASE`
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationType() {
@@ -300,9 +300,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the operation. Valid values are: * **CREATE** * **DELETE** * **UPDATE** *
-   * **RESTART** * **IMPORT** * **EXPORT** * **BACKUP_VOLUME** * **RESTORE_VOLUME** *
-   * **CREATE_USER** * **DELETE_USER** * **CREATE_DATABASE** * **DELETE_DATABASE**
+   * The type of the operation. Valid values are: * `CREATE` * `DELETE` * `UPDATE` * `RESTART` *
+   * `IMPORT` * `EXPORT` * `BACKUP_VOLUME` * `RESTORE_VOLUME` * `CREATE_USER` * `DELETE_USER` *
+   * `CREATE_DATABASE` * `DELETE_DATABASE`
    * @param operationType operationType or {@code null} for none
    */
   public Operation setOperationType(java.lang.String operationType) {
@@ -329,7 +329,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation actually started in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -338,7 +338,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation actually started in UTC timezone in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @param startTime startTime or {@code null} for none
    */
   public Operation setStartTime(String startTime) {

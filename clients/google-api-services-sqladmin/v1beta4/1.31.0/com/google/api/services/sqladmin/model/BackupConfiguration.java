@@ -52,7 +52,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.Boolean enabled;
 
   /**
-   * This is always **sql#backupConfiguration**.
+   * This is always `sql#backupConfiguration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.Boolean replicationLogArchivingEnabled;
 
   /**
-   * Start time for the daily backup configuration in UTC timezone in the 24 hour format -
-   * **HH:MM**.
+   * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +147,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always **sql#backupConfiguration**.
+   * This is always `sql#backupConfiguration`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -156,7 +155,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always **sql#backupConfiguration**.
+   * This is always `sql#backupConfiguration`.
    * @param kind kind or {@code null} for none
    */
   public BackupConfiguration setKind(java.lang.String kind) {
@@ -216,8 +215,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * Start time for the daily backup configuration in UTC timezone in the 24 hour format -
-   * **HH:MM**.
+   * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTime() {
@@ -225,8 +223,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * Start time for the daily backup configuration in UTC timezone in the 24 hour format -
-   * **HH:MM**.
+   * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
    * @param startTime startTime or {@code null} for none
    */
   public BackupConfiguration setStartTime(java.lang.String startTime) {

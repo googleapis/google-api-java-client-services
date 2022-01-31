@@ -43,7 +43,7 @@ public final class TiersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always *sql#tiersList*.
+   * This is always `sql#tiersList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class TiersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always *sql#tiersList*.
+   * This is always `sql#tiersList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,7 +75,7 @@ public final class TiersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always *sql#tiersList*.
+   * This is always `sql#tiersList`.
    * @param kind kind or {@code null} for none
    */
   public TiersListResponse setKind(java.lang.String kind) {

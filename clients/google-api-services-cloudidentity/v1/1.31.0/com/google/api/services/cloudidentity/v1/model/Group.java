@@ -60,7 +60,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private DynamicGroupMetadata dynamicGroupMetadata;
 
   /**
-   * Required. Immutable. The `EntityKey` of the `Group`.
+   * Required. The `EntityKey` of the `Group`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The `EntityKey` of the `Group`.
+   * Required. The `EntityKey` of the `Group`.
    * @return value or {@code null} for none
    */
   public EntityKey getGroupKey() {
@@ -184,7 +184,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The `EntityKey` of the `Group`.
+   * Required. The `EntityKey` of the `Group`.
    * @param groupKey groupKey or {@code null} for none
    */
   public Group setGroupKey(EntityKey groupKey) {

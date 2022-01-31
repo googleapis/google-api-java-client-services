@@ -138,6 +138,13 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private PerformanceGoal performanceGoal;
 
   /**
+   * Output only. The reservation type of the insertion order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationType;
+
+  /**
    * Output only. The timestamp when the insertion order was last updated. Assigned by the system.
    * The value may be {@code null}.
    */
@@ -397,6 +404,23 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
    */
   public InsertionOrder setPerformanceGoal(PerformanceGoal performanceGoal) {
     this.performanceGoal = performanceGoal;
+    return this;
+  }
+
+  /**
+   * Output only. The reservation type of the insertion order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationType() {
+    return reservationType;
+  }
+
+  /**
+   * Output only. The reservation type of the insertion order.
+   * @param reservationType reservationType or {@code null} for none
+   */
+  public InsertionOrder setReservationType(java.lang.String reservationType) {
+    this.reservationType = reservationType;
     return this;
   }
 

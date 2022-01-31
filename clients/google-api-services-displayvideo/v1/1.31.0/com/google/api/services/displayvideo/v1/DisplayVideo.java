@@ -1455,7 +1455,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size
-       * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos.
+       * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used
+       * within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart).
+       * Examples using provided client libraries can be found in our [Creating Creatives guide](/display-
+       * video/api/guides/creating-creatives/overview#upload_an_asset).
        *
        * Create a request for the method "assets.upload".
        *
@@ -1474,7 +1477,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size
-       * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos.
+       * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used
+       * within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart).
+       * Examples using provided client libraries can be found in our [Creating Creatives guide](/display-
+       * video/api/guides/creating-creatives/overview#upload_an_asset).
        *
        * Create a request for the method "assets.upload".
        *
@@ -1506,7 +1512,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size
-         * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos.
+         * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be
+         * used within the [multipart media upload process](/display-video/api/guides/how-
+         * tos/upload#multipart). Examples using provided client libraries can be found in our [Creating
+         * Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
          *
          * Create a request for the method "assets.upload".
          *
@@ -1527,7 +1536,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size
-         * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos.
+         * should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be
+         * used within the [multipart media upload process](/display-video/api/guides/how-
+         * tos/upload#multipart). Examples using provided client libraries can be found in our [Creating
+         * Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
          *
          * Create a request for the method "assets.upload".
          *
@@ -17945,6 +17957,259 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class FirstAndThirdPartyAudiences {
 
     /**
+     * Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: *
+     * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+     *
+     * Create a request for the method "firstAndThirdPartyAudiences.create".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience}
+     * @return the request
+     */
+    public Create create(com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience> {
+
+      private static final String REST_PATH = "v1/firstAndThirdPartyAudiences";
+
+      /**
+       * Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: *
+       * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+       *
+       * Create a request for the method "firstAndThirdPartyAudiences.create".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the advertiser under whom the FirstAndThirdPartyAudience will be
+       * created.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** Required. The ID of the advertiser under whom the FirstAndThirdPartyAudience will be created.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /**
+       * Required. The ID of the advertiser under whom the FirstAndThirdPartyAudience will be
+       * created.
+       */
+      public Create setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the member list of a Customer Match audience. Only supported for the following
+     * audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+     *
+     * Create a request for the method "firstAndThirdPartyAudiences.editCustomerMatchMembers".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link EditCustomerMatchMembers#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param firstAndThirdPartyAudienceId Required. The ID of the Customer Match FirstAndThirdPartyAudience whose members will be edited.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.EditCustomerMatchMembersRequest}
+     * @return the request
+     */
+    public EditCustomerMatchMembers editCustomerMatchMembers(java.lang.Long firstAndThirdPartyAudienceId, com.google.api.services.displayvideo.v1.model.EditCustomerMatchMembersRequest content) throws java.io.IOException {
+      EditCustomerMatchMembers result = new EditCustomerMatchMembers(firstAndThirdPartyAudienceId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class EditCustomerMatchMembers extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.EditCustomerMatchMembersResponse> {
+
+      private static final String REST_PATH = "v1/firstAndThirdPartyAudiences/{+firstAndThirdPartyAudienceId}:editCustomerMatchMembers";
+
+      private final java.util.regex.Pattern FIRST_AND_THIRD_PARTY_AUDIENCE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates the member list of a Customer Match audience. Only supported for the following
+       * audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+       *
+       * Create a request for the method "firstAndThirdPartyAudiences.editCustomerMatchMembers".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link EditCustomerMatchMembers#execute()} method to invoke the
+       * remote operation. <p> {@link EditCustomerMatchMembers#initialize(com.google.api.client.googleap
+       * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param firstAndThirdPartyAudienceId Required. The ID of the Customer Match FirstAndThirdPartyAudience whose members will be edited.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.EditCustomerMatchMembersRequest}
+       * @since 1.13
+       */
+      protected EditCustomerMatchMembers(java.lang.Long firstAndThirdPartyAudienceId, com.google.api.services.displayvideo.v1.model.EditCustomerMatchMembersRequest content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.EditCustomerMatchMembersResponse.class);
+        this.firstAndThirdPartyAudienceId = com.google.api.client.util.Preconditions.checkNotNull(firstAndThirdPartyAudienceId, "Required parameter firstAndThirdPartyAudienceId must be specified.");
+      }
+
+      @Override
+      public EditCustomerMatchMembers set$Xgafv(java.lang.String $Xgafv) {
+        return (EditCustomerMatchMembers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setAccessToken(java.lang.String accessToken) {
+        return (EditCustomerMatchMembers) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setAlt(java.lang.String alt) {
+        return (EditCustomerMatchMembers) super.setAlt(alt);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setCallback(java.lang.String callback) {
+        return (EditCustomerMatchMembers) super.setCallback(callback);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setFields(java.lang.String fields) {
+        return (EditCustomerMatchMembers) super.setFields(fields);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setKey(java.lang.String key) {
+        return (EditCustomerMatchMembers) super.setKey(key);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setOauthToken(java.lang.String oauthToken) {
+        return (EditCustomerMatchMembers) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (EditCustomerMatchMembers) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setQuotaUser(java.lang.String quotaUser) {
+        return (EditCustomerMatchMembers) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setUploadType(java.lang.String uploadType) {
+        return (EditCustomerMatchMembers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EditCustomerMatchMembers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EditCustomerMatchMembers) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the Customer Match FirstAndThirdPartyAudience whose members will be
+       * edited.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long firstAndThirdPartyAudienceId;
+
+      /** Required. The ID of the Customer Match FirstAndThirdPartyAudience whose members will be edited.
+       */
+      public java.lang.Long getFirstAndThirdPartyAudienceId() {
+        return firstAndThirdPartyAudienceId;
+      }
+
+      /**
+       * Required. The ID of the Customer Match FirstAndThirdPartyAudience whose members will be
+       * edited.
+       */
+      public EditCustomerMatchMembers setFirstAndThirdPartyAudienceId(java.lang.Long firstAndThirdPartyAudienceId) {
+        this.firstAndThirdPartyAudienceId = firstAndThirdPartyAudienceId;
+        return this;
+      }
+
+      @Override
+      public EditCustomerMatchMembers set(String parameterName, Object value) {
+        return (EditCustomerMatchMembers) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets a first and third party audience.
      *
      * Create a request for the method "firstAndThirdPartyAudiences.get".
@@ -18362,6 +18627,165 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: *
+     * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+     *
+     * Create a request for the method "firstAndThirdPartyAudiences.patch".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param firstAndThirdPartyAudienceId Output only. The unique ID of the first and third party audience. Assigned by the system.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long firstAndThirdPartyAudienceId, com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience content) throws java.io.IOException {
+      Patch result = new Patch(firstAndThirdPartyAudienceId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience> {
+
+      private static final String REST_PATH = "v1/firstAndThirdPartyAudiences/{+firstAndThirdPartyAudienceId}";
+
+      private final java.util.regex.Pattern FIRST_AND_THIRD_PARTY_AUDIENCE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type:
+       * * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+       *
+       * Create a request for the method "firstAndThirdPartyAudiences.patch".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param firstAndThirdPartyAudienceId Output only. The unique ID of the first and third party audience. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long firstAndThirdPartyAudienceId, com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience content) {
+        super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.FirstAndThirdPartyAudience.class);
+        this.firstAndThirdPartyAudienceId = com.google.api.client.util.Preconditions.checkNotNull(firstAndThirdPartyAudienceId, "Required parameter firstAndThirdPartyAudienceId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. The unique ID of the first and third party audience. Assigned by the system.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long firstAndThirdPartyAudienceId;
+
+      /** Output only. The unique ID of the first and third party audience. Assigned by the system.
+       */
+      public java.lang.Long getFirstAndThirdPartyAudienceId() {
+        return firstAndThirdPartyAudienceId;
+      }
+
+      /**
+       * Output only. The unique ID of the first and third party audience. Assigned by the system.
+       */
+      public Patch setFirstAndThirdPartyAudienceId(java.lang.Long firstAndThirdPartyAudienceId) {
+        this.firstAndThirdPartyAudienceId = firstAndThirdPartyAudienceId;
+        return this;
+      }
+
+      /** Required. The ID of the owner advertiser of the updated FirstAndThirdPartyAudience. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** Required. The ID of the owner advertiser of the updated FirstAndThirdPartyAudience.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** Required. The ID of the owner advertiser of the updated FirstAndThirdPartyAudience. */
+      public Patch setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The mask to control which fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
       }
     }
 

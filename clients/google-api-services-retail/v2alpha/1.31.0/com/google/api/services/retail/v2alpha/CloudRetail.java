@@ -3558,6 +3558,855 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
         }
         /**
+         * An accessor for creating requests from the Controls collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.Controls.List request = retail.controls().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Controls controls() {
+          return new Controls();
+        }
+
+        /**
+         * The "controls" collection of methods.
+         */
+        public class Controls {
+
+          /**
+           * Creates a Control. If the Control to create already exists, an ALREADY_EXISTS error is returned.
+           *
+           * Create a request for the method "controls.create".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Full resource name of parent catalog. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/controls";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Creates a Control. If the Control to create already exists, an ALREADY_EXISTS error is
+             * returned.
+             *
+             * Create a request for the method "controls.create".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Full resource name of parent catalog. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of parent catalog. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Full resource name of parent catalog. Format:
+           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Full resource name of parent catalog. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the Control, which will become the final component of the
+             * Control's resource name. This value should be 4-63 characters, and valid characters
+             * are /a-z-_/.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String controlId;
+
+            /** Required. The ID to use for the Control, which will become the final component of the Control's
+           resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+             */
+            public java.lang.String getControlId() {
+              return controlId;
+            }
+
+            /**
+             * Required. The ID to use for the Control, which will become the final component of the
+             * Control's resource name. This value should be 4-63 characters, and valid characters
+             * are /a-z-_/.
+             */
+            public Create setControlId(java.lang.String controlId) {
+              this.controlId = controlId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a Control. If the Control to delete does not exist, a NOT_FOUND error is returned.
+           *
+           * Create a request for the method "controls.delete".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Control to delete. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_
+           *        id}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+
+            /**
+             * Deletes a Control. If the Control to delete does not exist, a NOT_FOUND error is returned.
+             *
+             * Create a request for the method "controls.delete".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Control to delete. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_
+           *        id}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudRetail.this, "DELETE", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Control to delete. Format: projects/{project_numbe
+             * r}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Control to delete. Format:
+           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Control to delete. Format: projects/{project_numbe
+             * r}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a Control.
+           *
+           * Create a request for the method "controls.get".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Control to delete. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_
+           *        id}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+
+            /**
+             * Gets a Control.
+             *
+             * Create a request for the method "controls.get".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Control to delete. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_
+           *        id}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Control to delete. Format: projects/{project_numbe
+             * r}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Control to delete. Format:
+           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Control to delete. Format: projects/{project_numbe
+             * r}/locations/{location_id}/catalogs/{catalog_id}/controls/{control_id}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all Controls linked to this catalog.
+           *
+           * Create a request for the method "controls.list".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The catalog resource name. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListControlsResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/controls";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Lists all Controls linked to this catalog.
+             *
+             * Create a request for the method "controls.list".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The catalog resource name. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListControlsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The catalog resource name. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The catalog resource name. Format:
+           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The catalog resource name. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. A filter to apply on the list results. Supported features: * List all the
+             * products under the parent branch if filter is unset. * List controls that are used in
+             * a single ServingConfig: 'serving_config = "boosted_home_page_cvr"'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. A filter to apply on the list results. Supported features: * List all the products under
+           the parent branch if filter is unset. * List controls that are used in a single ServingConfig:
+           'serving_config = "boosted_home_page_cvr"'
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. A filter to apply on the list results. Supported features: * List all the
+             * products under the parent branch if filter is unset. * List controls that are used in
+             * a single ServingConfig: 'serving_config = "boosted_home_page_cvr"'
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of results to return. If unspecified, defaults to 50. Max
+             * allowed value is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of results to return. If unspecified, defaults to 50. Max allowed value is
+           1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of results to return. If unspecified, defaults to 50. Max
+             * allowed value is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListControls` call. Provide this to
+             * retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListControls` call. Provide this to retrieve the
+           subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListControls` call. Provide this to
+             * retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a Control. Control cannot be set to a different oneof field, if so an INVALID_ARGUMENT is
+           * returned. If the Control to delete does not exist, a NOT_FOUND error is returned.
+           *
+           * Create a request for the method "controls.patch".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. Fully qualified name projects/locations/global/catalogs/controls
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+
+            /**
+             * Updates a Control. Control cannot be set to a different oneof field, if so an INVALID_ARGUMENT
+             * is returned. If the Control to delete does not exist, a NOT_FOUND error is returned.
+             *
+             * Create a request for the method "controls.patch".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. Fully qualified name projects/locations/global/catalogs/controls
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl content) {
+              super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaControl.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Immutable. Fully qualified name projects/locations/global/catalogs/controls */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. Fully qualified name projects/locations/global/catalogs/controls
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Immutable. Fully qualified name projects/locations/global/catalogs/controls */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/controls/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Indicates which fields in the provided Control to update. The following are NOT
+             * supported: * Control.name If not set or empty, all supported fields are updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Indicates which fields in the provided Control to update. The following are NOT supported: *
+           Control.name If not set or empty, all supported fields are updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Indicates which fields in the provided Control to update. The following are NOT
+             * supported: * Control.name If not set or empty, all supported fields are updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -4252,6 +5101,1119 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             @Override
             public Search set(String parameterName, Object value) {
               return (Search) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the ServingConfigs collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.ServingConfigs.List request = retail.servingConfigs().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ServingConfigs servingConfigs() {
+          return new ServingConfigs();
+        }
+
+        /**
+         * The "servingConfigs" collection of methods.
+         */
+        public class ServingConfigs {
+
+          /**
+           * Enables a Control on the specified ServingConfig. The control is added in the last position of
+           * the list of controls it belongs to (e.g. if it's a facet spec control it will be applied in the
+           * last position of servingConfig.facetSpecIds) Returns a ALREADY_EXISTS error if the control has
+           * already been applied. Returns a FAILED_PRECONDITION error if the addition could exceed maximum
+           * number of control allowed for that type of control.
+           *
+           * Create a request for the method "servingConfigs.addControl".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link AddControl#execute()} method to invoke the remote operation.
+           *
+           * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
+           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddControlRequest}
+           * @return the request
+           */
+          public AddControl addControl(java.lang.String servingConfig, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddControlRequest content) throws java.io.IOException {
+            AddControl result = new AddControl(servingConfig, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AddControl extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig> {
+
+            private static final String REST_PATH = "v2alpha/{+servingConfig}:addControl";
+
+            private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+
+            /**
+             * Enables a Control on the specified ServingConfig. The control is added in the last position of
+             * the list of controls it belongs to (e.g. if it's a facet spec control it will be applied in the
+             * last position of servingConfig.facetSpecIds) Returns a ALREADY_EXISTS error if the control has
+             * already been applied. Returns a FAILED_PRECONDITION error if the addition could exceed maximum
+             * number of control allowed for that type of control.
+             *
+             * Create a request for the method "servingConfigs.addControl".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link AddControl#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * AddControl#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
+           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddControlRequest}
+             * @since 1.13
+             */
+            protected AddControl(java.lang.String servingConfig, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddControlRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig.class);
+              this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                    "Parameter servingConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public AddControl set$Xgafv(java.lang.String $Xgafv) {
+              return (AddControl) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AddControl setAccessToken(java.lang.String accessToken) {
+              return (AddControl) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AddControl setAlt(java.lang.String alt) {
+              return (AddControl) super.setAlt(alt);
+            }
+
+            @Override
+            public AddControl setCallback(java.lang.String callback) {
+              return (AddControl) super.setCallback(callback);
+            }
+
+            @Override
+            public AddControl setFields(java.lang.String fields) {
+              return (AddControl) super.setFields(fields);
+            }
+
+            @Override
+            public AddControl setKey(java.lang.String key) {
+              return (AddControl) super.setKey(key);
+            }
+
+            @Override
+            public AddControl setOauthToken(java.lang.String oauthToken) {
+              return (AddControl) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AddControl setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AddControl) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AddControl setQuotaUser(java.lang.String quotaUser) {
+              return (AddControl) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AddControl setUploadType(java.lang.String uploadType) {
+              return (AddControl) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AddControl setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AddControl) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String servingConfig;
+
+            /** Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loc
+           ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            public java.lang.String getServingConfig() {
+              return servingConfig;
+            }
+
+            /**
+             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            public AddControl setServingConfig(java.lang.String servingConfig) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                    "Parameter servingConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+              this.servingConfig = servingConfig;
+              return this;
+            }
+
+            @Override
+            public AddControl set(String parameterName, Object value) {
+              return (AddControl) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a ServingConfig. A maximum of 100 ServingConfigs are allowed in a Catalog, otherwise a
+           * FAILED_PRECONDITION error is returned.
+           *
+           * Create a request for the method "servingConfigs.create".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Full resource name of parent. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/servingConfigs";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Creates a ServingConfig. A maximum of 100 ServingConfigs are allowed in a Catalog, otherwise a
+             * FAILED_PRECONDITION error is returned.
+             *
+             * Create a request for the method "servingConfigs.create".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Full resource name of parent. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of parent. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Full resource name of parent. Format:
+           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Full resource name of parent. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the ServingConfig, which will become the final component
+             * of the ServingConfig's resource name. This value should be 4-63 characters, and valid
+             * characters are /a-z-_/.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String servingConfigId;
+
+            /** Required. The ID to use for the ServingConfig, which will become the final component of the
+           ServingConfig's resource name. This value should be 4-63 characters, and valid characters are
+           /a-z-_/.
+             */
+            public java.lang.String getServingConfigId() {
+              return servingConfigId;
+            }
+
+            /**
+             * Required. The ID to use for the ServingConfig, which will become the final component
+             * of the ServingConfig's resource name. This value should be 4-63 characters, and valid
+             * characters are /a-z-_/.
+             */
+            public Create setServingConfigId(java.lang.String servingConfigId) {
+              this.servingConfigId = servingConfigId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
+           *
+           * Create a request for the method "servingConfigs.delete".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the ServingConfig to delete. Format: projects/{project_number}/locati
+           *        ons/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+
+            /**
+             * Deletes a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
+             *
+             * Create a request for the method "servingConfigs.delete".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the ServingConfig to delete. Format: projects/{project_number}/locati
+           *        ons/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudRetail.this, "DELETE", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the ServingConfig to delete. Format: projects/{project
+             * _number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config
+             * _id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the ServingConfig to delete. Format: projects/{project_number}/locat
+           ions/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the ServingConfig to delete. Format: projects/{project
+             * _number}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config
+             * _id}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
+           *
+           * Create a request for the method "servingConfigs.get".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the ServingConfig to get. Format: projects/{project_number}/locations
+           *        /{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+
+            /**
+             * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
+             *
+             * Create a request for the method "servingConfigs.get".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the ServingConfig to get. Format: projects/{project_number}/locations
+           *        /{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the ServingConfig to get. Format: projects/{project_nu
+             * mber}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id
+             * }
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the ServingConfig to get. Format: projects/{project_number}/location
+           s/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the ServingConfig to get. Format: projects/{project_nu
+             * mber}/locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id
+             * }
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all ServingConfigs linked to this catalog.
+           *
+           * Create a request for the method "servingConfigs.list".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The catalog resource name. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListServingConfigsResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/servingConfigs";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Lists all ServingConfigs linked to this catalog.
+             *
+             * Create a request for the method "servingConfigs.list".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The catalog resource name. Format:
+           *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListServingConfigsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The catalog resource name. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The catalog resource name. Format:
+           projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The catalog resource name. Format:
+             * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of results to return. If unspecified, defaults to 100. If a
+             * value greater than 100 is provided, at most 100 results are returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of results to return. If unspecified, defaults to 100. If a value greater
+           than 100 is provided, at most 100 results are returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of results to return. If unspecified, defaults to 100. If a
+             * value greater than 100 is provided, at most 100 results are returned.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListServingConfigs` call. Provide
+             * this to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListServingConfigs` call. Provide this to
+           retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListServingConfigs` call. Provide
+             * this to retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a ServingConfig.
+           *
+           * Create a request for the method "servingConfigs.patch".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+
+            /**
+             * Updates a ServingConfig.
+             *
+             * Create a request for the method "servingConfigs.patch".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig content) {
+              super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Indicates which fields in the provided ServingConfig to update. The following are NOT
+             * supported: * ServingConfig.name If not set, all supported fields are updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Indicates which fields in the provided ServingConfig to update. The following are NOT supported: *
+           ServingConfig.name If not set, all supported fields are updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Indicates which fields in the provided ServingConfig to update. The following are NOT
+             * supported: * ServingConfig.name If not set, all supported fields are updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Disables a Control on the specified ServingConfig. The control is removed from the ServingConfig.
+           * Returns a NOT_FOUND error if the Control is not enabled for the ServingConfig.
+           *
+           * Create a request for the method "servingConfigs.removeControl".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link RemoveControl#execute()} method to invoke the remote operation.
+           *
+           * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
+           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveControlRequest}
+           * @return the request
+           */
+          public RemoveControl removeControl(java.lang.String servingConfig, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveControlRequest content) throws java.io.IOException {
+            RemoveControl result = new RemoveControl(servingConfig, content);
+            initialize(result);
+            return result;
+          }
+
+          public class RemoveControl extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig> {
+
+            private static final String REST_PATH = "v2alpha/{+servingConfig}:removeControl";
+
+            private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+
+            /**
+             * Disables a Control on the specified ServingConfig. The control is removed from the
+             * ServingConfig. Returns a NOT_FOUND error if the Control is not enabled for the ServingConfig.
+             *
+             * Create a request for the method "servingConfigs.removeControl".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link RemoveControl#execute()} method to invoke the remote operation. <p>
+             * {@link RemoveControl#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+             * equest)} must be called to initialize this instance immediately after invoking the constructor.
+             * </p>
+             *
+             * @param servingConfig Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loca
+           *        tion_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveControlRequest}
+             * @since 1.13
+             */
+            protected RemoveControl(java.lang.String servingConfig, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveControlRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaServingConfig.class);
+              this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                    "Parameter servingConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public RemoveControl set$Xgafv(java.lang.String $Xgafv) {
+              return (RemoveControl) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public RemoveControl setAccessToken(java.lang.String accessToken) {
+              return (RemoveControl) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public RemoveControl setAlt(java.lang.String alt) {
+              return (RemoveControl) super.setAlt(alt);
+            }
+
+            @Override
+            public RemoveControl setCallback(java.lang.String callback) {
+              return (RemoveControl) super.setCallback(callback);
+            }
+
+            @Override
+            public RemoveControl setFields(java.lang.String fields) {
+              return (RemoveControl) super.setFields(fields);
+            }
+
+            @Override
+            public RemoveControl setKey(java.lang.String key) {
+              return (RemoveControl) super.setKey(key);
+            }
+
+            @Override
+            public RemoveControl setOauthToken(java.lang.String oauthToken) {
+              return (RemoveControl) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public RemoveControl setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (RemoveControl) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public RemoveControl setQuotaUser(java.lang.String quotaUser) {
+              return (RemoveControl) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public RemoveControl setUploadType(java.lang.String uploadType) {
+              return (RemoveControl) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public RemoveControl setUploadProtocol(java.lang.String uploadProtocol) {
+              return (RemoveControl) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String servingConfig;
+
+            /** Required. The source ServingConfig resource name . Format: projects/{project_number}/locations/{loc
+           ation_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            public java.lang.String getServingConfig() {
+              return servingConfig;
+            }
+
+            /**
+             * Required. The source ServingConfig resource name . Format: projects/{project_number}/
+             * locations/{location_id}/catalogs/{catalog_id}/servingConfigs/{serving_config_id}
+             */
+            public RemoveControl setServingConfig(java.lang.String servingConfig) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                    "Parameter servingConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+              this.servingConfig = servingConfig;
+              return this;
+            }
+
+            @Override
+            public RemoveControl set(String parameterName, Object value) {
+              return (RemoveControl) super.set(parameterName, value);
             }
           }
 

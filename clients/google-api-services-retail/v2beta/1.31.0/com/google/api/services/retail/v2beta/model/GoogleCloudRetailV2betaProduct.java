@@ -118,8 +118,10 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   private java.util.List<java.lang.String> categories;
 
   /**
-   * The id of the collection members when type is Type.COLLECTION. Should not set it for other
-   * types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.
+   * The id of the collection members when type is Type.COLLECTION. Non-existent product ids are
+   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise and
+   * INVALID_ARGUMENT error is thrown. Should not set it for other types. A maximum of 1000 values
+   * are allowed. Otherwise, an INVALID_ARGUMENT error is return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -599,8 +601,10 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   }
 
   /**
-   * The id of the collection members when type is Type.COLLECTION. Should not set it for other
-   * types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.
+   * The id of the collection members when type is Type.COLLECTION. Non-existent product ids are
+   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise and
+   * INVALID_ARGUMENT error is thrown. Should not set it for other types. A maximum of 1000 values
+   * are allowed. Otherwise, an INVALID_ARGUMENT error is return.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCollectionMemberIds() {
@@ -608,8 +612,10 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   }
 
   /**
-   * The id of the collection members when type is Type.COLLECTION. Should not set it for other
-   * types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.
+   * The id of the collection members when type is Type.COLLECTION. Non-existent product ids are
+   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise and
+   * INVALID_ARGUMENT error is thrown. Should not set it for other types. A maximum of 1000 values
+   * are allowed. Otherwise, an INVALID_ARGUMENT error is return.
    * @param collectionMemberIds collectionMemberIds or {@code null} for none
    */
   public GoogleCloudRetailV2betaProduct setCollectionMemberIds(java.util.List<java.lang.String> collectionMemberIds) {

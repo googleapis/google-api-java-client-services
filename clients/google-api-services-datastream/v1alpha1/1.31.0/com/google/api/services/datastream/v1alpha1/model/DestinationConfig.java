@@ -37,6 +37,7 @@ public final class DestinationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String destinationConnectionProfileName;
 
   /**
+   * GCS destination configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,6 +61,7 @@ public final class DestinationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * GCS destination configuration.
    * @return value or {@code null} for none
    */
   public GcsDestinationConfig getGcsDestinationConfig() {
@@ -67,6 +69,7 @@ public final class DestinationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * GCS destination configuration.
    * @param gcsDestinationConfig gcsDestinationConfig or {@code null} for none
    */
   public DestinationConfig setGcsDestinationConfig(GcsDestinationConfig gcsDestinationConfig) {

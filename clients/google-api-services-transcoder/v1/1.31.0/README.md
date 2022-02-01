@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-transcoder</artifactId>
-      <version>v1-rev20211108-1.32.1</version>
+      <version>v1-rev20220131-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-transcoder:v1-rev20211108-1.32.1'
+  compile 'com.google.apis:google-api-services-transcoder:v1-rev20220131-1.32.1'
 }
 ```
 

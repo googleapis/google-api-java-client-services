@@ -38,9 +38,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * A user in Google Chat. Represents a person in the People API. Formatted as `users/person_id`
-   * where `person_id` is available from the [People
-   * API](https://developers.google.com/people/api/rest/v1/people).
+   * A user in Google Chat. Represents a
+   * [person](https://developers.google.com/people/api/rest/v1/people) in the People API. Format:
+   * `users/{person}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * State of the membership. Required for `CreateMembership`. Read-only for other usage.
+   * State of the membership. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +79,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user in Google Chat. Represents a person in the People API. Formatted as `users/person_id`
-   * where `person_id` is available from the [People
-   * API](https://developers.google.com/people/api/rest/v1/people).
+   * A user in Google Chat. Represents a
+   * [person](https://developers.google.com/people/api/rest/v1/people) in the People API. Format:
+   * `users/{person}`
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -89,9 +89,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user in Google Chat. Represents a person in the People API. Formatted as `users/person_id`
-   * where `person_id` is available from the [People
-   * API](https://developers.google.com/people/api/rest/v1/people).
+   * A user in Google Chat. Represents a
+   * [person](https://developers.google.com/people/api/rest/v1/people) in the People API. Format:
+   * `users/{person}`
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {
@@ -115,7 +115,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the membership. Required for `CreateMembership`. Read-only for other usage.
+   * State of the membership. Output only.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -123,7 +123,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the membership. Required for `CreateMembership`. Read-only for other usage.
+   * State of the membership. Output only.
    * @param state state or {@code null} for none
    */
   public Membership setState(java.lang.String state) {

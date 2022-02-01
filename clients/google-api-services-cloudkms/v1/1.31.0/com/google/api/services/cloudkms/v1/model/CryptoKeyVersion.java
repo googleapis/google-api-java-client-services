@@ -75,7 +75,8 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
 
   /**
    * ExternalProtectionLevelOptions stores a group of additional fields for configuring a
-   * CryptoKeyVersion that are specific to the EXTERNAL protection level.
+   * CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection
+   * levels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,7 +238,8 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
 
   /**
    * ExternalProtectionLevelOptions stores a group of additional fields for configuring a
-   * CryptoKeyVersion that are specific to the EXTERNAL protection level.
+   * CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection
+   * levels.
    * @return value or {@code null} for none
    */
   public ExternalProtectionLevelOptions getExternalProtectionLevelOptions() {
@@ -246,7 +248,8 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
 
   /**
    * ExternalProtectionLevelOptions stores a group of additional fields for configuring a
-   * CryptoKeyVersion that are specific to the EXTERNAL protection level.
+   * CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection
+   * levels.
    * @param externalProtectionLevelOptions externalProtectionLevelOptions or {@code null} for none
    */
   public CryptoKeyVersion setExternalProtectionLevelOptions(ExternalProtectionLevelOptions externalProtectionLevelOptions) {

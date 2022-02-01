@@ -42,6 +42,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOp
   private java.lang.String name;
 
   /**
+   * Configuration per workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig workerConfig;
+
+  /**
    * The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use`
    * on the project hosting the WorkerPool. Format
    * projects/{project}/locations/{location}/workerPools/{workerPoolId}
@@ -59,6 +66,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOp
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configuration per workload.
+   * @return value or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig getWorkerConfig() {
+    return workerConfig;
+  }
+
+  /**
+   * Configuration per workload.
+   * @param workerConfig workerConfig or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption setWorkerConfig(ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig workerConfig) {
+    this.workerConfig = workerConfig;
     return this;
   }
 

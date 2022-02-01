@@ -189,6 +189,19 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Tags> tags;
+
+  static {
+    // hack to force ProGuard to consider Tags used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Tags.class);
+  }
+
+  /**
    * [Optional] An array of objects that define dataset access for one or more entities. You can set
    * this property when inserting or updating a dataset in order to control who is allowed to access
    * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
@@ -548,6 +561,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     return this;
   }
 
+  /**
+   * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Tags> getTags() {
+    return tags;
+  }
+
+  /**
+   * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+   * @param tags tags or {@code null} for none
+   */
+  public Dataset setTags(java.util.List<Tags> tags) {
+    this.tags = tags;
+    return this;
+  }
+
   @Override
   public Dataset set(String fieldName, Object value) {
     return (Dataset) super.set(fieldName, value);
@@ -853,6 +883,74 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     @Override
     public Access clone() {
       return (Access) super.clone();
+    }
+
+  }
+
+  /**
+   * Model definition for DatasetTags.
+   */
+  public static final class Tags extends com.google.api.client.json.GenericJson {
+
+    /**
+     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
+     * org id.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String tagKey;
+
+    /**
+     * [Required] Friendly short name of the tag value, e.g. "production".
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String tagValue;
+
+    /**
+     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
+     * org id.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getTagKey() {
+      return tagKey;
+    }
+
+    /**
+     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
+     * org id.
+     * @param tagKey tagKey or {@code null} for none
+     */
+    public Tags setTagKey(java.lang.String tagKey) {
+      this.tagKey = tagKey;
+      return this;
+    }
+
+    /**
+     * [Required] Friendly short name of the tag value, e.g. "production".
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getTagValue() {
+      return tagValue;
+    }
+
+    /**
+     * [Required] Friendly short name of the tag value, e.g. "production".
+     * @param tagValue tagValue or {@code null} for none
+     */
+    public Tags setTagValue(java.lang.String tagValue) {
+      this.tagValue = tagValue;
+      return this;
+    }
+
+    @Override
+    public Tags set(String fieldName, Object value) {
+      return (Tags) super.set(fieldName, value);
+    }
+
+    @Override
+    public Tags clone() {
+      return (Tags) super.clone();
     }
 
   }

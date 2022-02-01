@@ -51,8 +51,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to
-   * zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName
-   * TrafficTarget entry.
+   * zero if unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +59,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by
-   * Cloud Run.
+   * exclusive with ConfigurationName.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +129,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to
-   * zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName
-   * TrafficTarget entry.
+   * zero if unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPercent() {
@@ -141,8 +138,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to
-   * zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName
-   * TrafficTarget entry.
+   * zero if unspecified.
    * @param percent percent or {@code null} for none
    */
   public TrafficTarget setPercent(java.lang.Integer percent) {
@@ -152,8 +148,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by
-   * Cloud Run.
+   * exclusive with ConfigurationName.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionName() {
@@ -162,8 +157,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * RevisionName of a specific revision to which to send this portion of traffic. This is mutually
-   * exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by
-   * Cloud Run.
+   * exclusive with ConfigurationName.
    * @param revisionName revisionName or {@code null} for none
    */
   public TrafficTarget setRevisionName(java.lang.String revisionName) {

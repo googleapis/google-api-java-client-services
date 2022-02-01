@@ -96,7 +96,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String disclosureDate;
 
   /**
-   * A list of excluded destinations.
+   * A list of excluded destinations such as "ClientExport", "ClientShoppingCatalog" or
+   * "PartnerShoppingCatalog". For more information, see
+   * https://support.google.com/manufacturers/answer/7443550
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +153,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Image imageLink;
 
   /**
-   * A list of included destinations.
+   * A list of included destinations such as "ClientExport", "ClientShoppingCatalog" or
+   * "PartnerShoppingCatalog". For more information, see
+   * https://support.google.com/manufacturers/answer/7443550
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,7 +298,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Price suggestedRetailPrice;
 
   /**
-   * The target client id. Should only be used in the accounts of the data partners.
+   * The target client id. Should only be used in the accounts of the data partners. For more
+   * information, see https://support.google.com/manufacturers/answer/10857344
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -477,7 +482,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of excluded destinations.
+   * A list of excluded destinations such as "ClientExport", "ClientShoppingCatalog" or
+   * "PartnerShoppingCatalog". For more information, see
+   * https://support.google.com/manufacturers/answer/7443550
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedDestination() {
@@ -485,7 +492,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of excluded destinations.
+   * A list of excluded destinations such as "ClientExport", "ClientShoppingCatalog" or
+   * "PartnerShoppingCatalog". For more information, see
+   * https://support.google.com/manufacturers/answer/7443550
    * @param excludedDestination excludedDestination or {@code null} for none
    */
   public Attributes setExcludedDestination(java.util.List<java.lang.String> excludedDestination) {
@@ -608,7 +617,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of included destinations.
+   * A list of included destinations such as "ClientExport", "ClientShoppingCatalog" or
+   * "PartnerShoppingCatalog". For more information, see
+   * https://support.google.com/manufacturers/answer/7443550
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedDestination() {
@@ -616,7 +627,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of included destinations.
+   * A list of included destinations such as "ClientExport", "ClientShoppingCatalog" or
+   * "PartnerShoppingCatalog". For more information, see
+   * https://support.google.com/manufacturers/answer/7443550
    * @param includedDestination includedDestination or {@code null} for none
    */
   public Attributes setIncludedDestination(java.util.List<java.lang.String> includedDestination) {
@@ -948,7 +961,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target client id. Should only be used in the accounts of the data partners.
+   * The target client id. Should only be used in the accounts of the data partners. For more
+   * information, see https://support.google.com/manufacturers/answer/10857344
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetClientId() {
@@ -956,7 +970,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target client id. Should only be used in the accounts of the data partners.
+   * The target client id. Should only be used in the accounts of the data partners. For more
+   * information, see https://support.google.com/manufacturers/answer/10857344
    * @param targetClientId targetClientId or {@code null} for none
    */
   public Attributes setTargetClientId(java.lang.String targetClientId) {

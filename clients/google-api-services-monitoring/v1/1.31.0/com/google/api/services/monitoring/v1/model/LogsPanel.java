@@ -39,8 +39,8 @@ public final class LogsPanel extends com.google.api.client.json.GenericJson {
   private java.lang.String filter;
 
   /**
-   * The names of logging resources to collect logs for. Does not implicitly include the current
-   * host project. Currently only projects are supported. There must be at least one resource_name.
+   * The names of logging resources to collect logs for. Currently only projects are supported. If
+   * empty, the widget will default to the host project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class LogsPanel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The names of logging resources to collect logs for. Does not implicitly include the current
-   * host project. Currently only projects are supported. There must be at least one resource_name.
+   * The names of logging resources to collect logs for. Currently only projects are supported. If
+   * empty, the widget will default to the host project.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNames() {
@@ -77,8 +77,8 @@ public final class LogsPanel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The names of logging resources to collect logs for. Does not implicitly include the current
-   * host project. Currently only projects are supported. There must be at least one resource_name.
+   * The names of logging resources to collect logs for. Currently only projects are supported. If
+   * empty, the widget will default to the host project.
    * @param resourceNames resourceNames or {@code null} for none
    */
   public LogsPanel setResourceNames(java.util.List<java.lang.String> resourceNames) {

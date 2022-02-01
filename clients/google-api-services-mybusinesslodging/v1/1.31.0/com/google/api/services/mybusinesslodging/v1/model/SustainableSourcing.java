@@ -147,7 +147,7 @@ public final class SustainableSourcing extends com.google.api.client.json.Generi
 
   /**
    * Vegetarian meals. The property provides vegetarian menu options for guests. Vegetarian food
-   * does not contain animal products.
+   * does not contain meat, poultry, fish, or seafood.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -434,7 +434,7 @@ public final class SustainableSourcing extends com.google.api.client.json.Generi
 
   /**
    * Vegetarian meals. The property provides vegetarian menu options for guests. Vegetarian food
-   * does not contain animal products.
+   * does not contain meat, poultry, fish, or seafood.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVegetarianMeals() {
@@ -443,7 +443,7 @@ public final class SustainableSourcing extends com.google.api.client.json.Generi
 
   /**
    * Vegetarian meals. The property provides vegetarian menu options for guests. Vegetarian food
-   * does not contain animal products.
+   * does not contain meat, poultry, fish, or seafood.
    * @param vegetarianMeals vegetarianMeals or {@code null} for none
    */
   public SustainableSourcing setVegetarianMeals(java.lang.Boolean vegetarianMeals) {

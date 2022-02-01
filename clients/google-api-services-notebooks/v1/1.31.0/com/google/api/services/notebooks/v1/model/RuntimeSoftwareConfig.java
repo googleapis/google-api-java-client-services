@@ -19,7 +19,7 @@ package com.google.api.services.notebooks.v1.model;
 /**
  * Specifies the selection and configuration of software inside the runtime. The properties to set
  * on runtime. Properties keys are specified in `key:value` format, for example: * `idle_shutdown:
- * true` * `idle_shutdown_timeout: 180` * `report-system-health: true`
+ * true` * `idle_shutdown_timeout: 180` * `enable_health_monitoring: true`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:
@@ -66,6 +66,19 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean installGpuDriver;
+
+  /**
+   * Optional. Use a list of container images to use as Kernels in the notebook instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContainerImage> kernels;
+
+  static {
+    // hack to force ProGuard to consider ContainerImage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContainerImage.class);
+  }
 
   /**
    * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the
@@ -167,6 +180,23 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
    */
   public RuntimeSoftwareConfig setInstallGpuDriver(java.lang.Boolean installGpuDriver) {
     this.installGpuDriver = installGpuDriver;
+    return this;
+  }
+
+  /**
+   * Optional. Use a list of container images to use as Kernels in the notebook instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContainerImage> getKernels() {
+    return kernels;
+  }
+
+  /**
+   * Optional. Use a list of container images to use as Kernels in the notebook instance.
+   * @param kernels kernels or {@code null} for none
+   */
+  public RuntimeSoftwareConfig setKernels(java.util.List<ContainerImage> kernels) {
+    this.kernels = kernels;
     return this;
   }
 

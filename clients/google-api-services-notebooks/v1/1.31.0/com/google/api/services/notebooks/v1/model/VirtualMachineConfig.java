@@ -37,7 +37,7 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
   private RuntimeAcceleratorConfig acceleratorConfig;
 
   /**
-   * Optional. Use a list of container images to start the notebook instance.
+   * Optional. Use a list of container images to use as Kernels in the notebook instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +185,7 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Use a list of container images to start the notebook instance.
+   * Optional. Use a list of container images to use as Kernels in the notebook instance.
    * @return value or {@code null} for none
    */
   public java.util.List<ContainerImage> getContainerImages() {
@@ -193,7 +193,7 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Use a list of container images to start the notebook instance.
+   * Optional. Use a list of container images to use as Kernels in the notebook instance.
    * @param containerImages containerImages or {@code null} for none
    */
   public VirtualMachineConfig setContainerImages(java.util.List<ContainerImage> containerImages) {

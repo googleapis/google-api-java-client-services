@@ -20,7 +20,7 @@ package com.google.api.services.datastore.v1beta3.model;
  * Metadata for Datastore to Firestore migration operations. The DatastoreFirestoreMigration
  * operation is not started by the end-user via an explicit "creation" method. This is an
  * intentional deviation from the LRO design pattern. This singleton resource can be accessed at:
- * "projects/{project_id}/datastore-firestore-migration"
+ * "projects/{project_id}/operations/datastore-firestore-migration"
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:

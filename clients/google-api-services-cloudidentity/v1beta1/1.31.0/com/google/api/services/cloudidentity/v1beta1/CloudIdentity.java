@@ -7190,6 +7190,493 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the OrgUnits collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+   *   {@code CloudIdentity.OrgUnits.List request = cloudidentity.orgUnits().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public OrgUnits orgUnits() {
+    return new OrgUnits();
+  }
+
+  /**
+   * The "orgUnits" collection of methods.
+   */
+  public class OrgUnits {
+
+    /**
+     * An accessor for creating requests from the Memberships collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+     *   {@code CloudIdentity.Memberships.List request = cloudidentity.memberships().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Memberships memberships() {
+      return new Memberships();
+    }
+
+    /**
+     * The "memberships" collection of methods.
+     */
+    public class Memberships {
+
+      /**
+       * List OrgMembership resources in an OrgUnit treated as 'parent'. Parent format:
+       * orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit`
+       * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits)
+       *
+       * Create a request for the method "memberships.list".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Immutable. OrgUnit which is queried for a list of memberships. Format:
+       *        orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit`
+       *        resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.ListOrgMembershipsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/memberships";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^orgUnits/[^/]+$");
+
+        /**
+         * List OrgMembership resources in an OrgUnit treated as 'parent'. Parent format:
+         * orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit`
+         * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits)
+         *
+         * Create a request for the method "memberships.list".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Immutable. OrgUnit which is queried for a list of memberships. Format:
+       *        orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit`
+       *        resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1beta1.model.ListOrgMembershipsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^orgUnits/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Immutable. OrgUnit which is queried for a list of memberships. Format:
+         * orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit`
+         * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Immutable. OrgUnit which is queried for a list of memberships. Format:
+       orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit`
+       resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Immutable. OrgUnit which is queried for a list of memberships. Format:
+         * orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit`
+         * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^orgUnits/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. Immutable. Customer that this OrgMembership belongs to. All authorization will
+         * happen on the role assignments of this customer. Format: customers/{$customerId} where
+         * `$customerId` is the `id` from the [Admin SDK `Customer`
+         * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers).
+         * You may also use `customers/my_customer` to specify your own organization.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Immutable. Customer that this OrgMembership belongs to. All authorization will happen on
+       the role assignments of this customer. Format: customers/{$customerId} where `$customerId` is the
+       `id` from the [Admin SDK `Customer` resource](https://developers.google.com/admin-
+       sdk/directory/reference/rest/v1/customers). You may also use `customers/my_customer` to specify
+       your own organization.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Immutable. Customer that this OrgMembership belongs to. All authorization will
+         * happen on the role assignments of this customer. Format: customers/{$customerId} where
+         * `$customerId` is the `id` from the [Admin SDK `Customer`
+         * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers).
+         * You may also use `customers/my_customer` to specify your own organization.
+         */
+        public List setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * The search query. Must be specified in [Common Expression
+         * Language](https://opensource.google/projects/cel). May only contain equality operators on
+         * the `type` (e.g., `type == 'shared_drive'`).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The search query. Must be specified in [Common Expression
+       Language](https://opensource.google/projects/cel). May only contain equality operators on the
+       `type` (e.g., `type == 'shared_drive'`).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * The search query. Must be specified in [Common Expression
+         * Language](https://opensource.google/projects/cel). May only contain equality operators on
+         * the `type` (e.g., `type == 'shared_drive'`).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * The maximum number of results to return. The service may return fewer than this value. If
+         * omitted (or defaulted to zero) the server will default to 50. The maximum allowed value
+         * is 100, though requests with page_size greater than that will be silently interpreted as
+         * 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return. The service may return fewer than this value. If omitted
+       (or defaulted to zero) the server will default to 50. The maximum allowed value is 100, though
+       requests with page_size greater than that will be silently interpreted as 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to return. The service may return fewer than this value. If
+         * omitted (or defaulted to zero) the server will default to 50. The maximum allowed value
+         * is 100, though requests with page_size greater than that will be silently interpreted as
+         * 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `OrgMembershipsService.ListOrgMemberships` call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to `ListOrgMembershipsRequest` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `OrgMembershipsService.ListOrgMemberships` call. Provide
+       this to retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListOrgMembershipsRequest` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `OrgMembershipsService.ListOrgMemberships` call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to `ListOrgMembershipsRequest` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Move an OrgMembership to a new OrgUnit. NOTE: This is an atomic copy-and-delete. The resource
+       * will have a new copy under the destination OrgUnit and be deleted from the source OrgUnit. The
+       * resource can only be searched under the destination OrgUnit afterwards.
+       *
+       * Create a request for the method "memberships.move".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
+       *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
+       *        /admin-sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+       *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+       *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
+       *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
+       *        OrgMembership.EntityType.SHARED_DRIVE.
+       * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.MoveOrgMembershipRequest}
+       * @return the request
+       */
+      public Move move(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.MoveOrgMembershipRequest content) throws java.io.IOException {
+        Move result = new Move(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Move extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:move";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^orgUnits/[^/]+/memberships/[^/]+$");
+
+        /**
+         * Move an OrgMembership to a new OrgUnit. NOTE: This is an atomic copy-and-delete. The resource
+         * will have a new copy under the destination OrgUnit and be deleted from the source OrgUnit. The
+         * resource can only be searched under the destination OrgUnit afterwards.
+         *
+         * Create a request for the method "memberships.move".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Move#execute()} method to invoke the remote operation. <p>
+         * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
+       *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
+       *        /admin-sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+       *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+       *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
+       *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
+       *        OrgMembership.EntityType.SHARED_DRIVE.
+         * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.MoveOrgMembershipRequest}
+         * @since 1.13
+         */
+        protected Move(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.MoveOrgMembershipRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1beta1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^orgUnits/[^/]+/memberships/[^/]+$");
+          }
+        }
+
+        @Override
+        public Move set$Xgafv(java.lang.String $Xgafv) {
+          return (Move) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Move setAccessToken(java.lang.String accessToken) {
+          return (Move) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Move setAlt(java.lang.String alt) {
+          return (Move) super.setAlt(alt);
+        }
+
+        @Override
+        public Move setCallback(java.lang.String callback) {
+          return (Move) super.setCallback(callback);
+        }
+
+        @Override
+        public Move setFields(java.lang.String fields) {
+          return (Move) super.setFields(fields);
+        }
+
+        @Override
+        public Move setKey(java.lang.String key) {
+          return (Move) super.setKey(key);
+        }
+
+        @Override
+        public Move setOauthToken(java.lang.String oauthToken) {
+          return (Move) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Move) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Move setQuotaUser(java.lang.String quotaUser) {
+          return (Move) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Move setUploadType(java.lang.String uploadType) {
+          return (Move) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Move setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Move) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Immutable. The [resource
+         * name](https://cloud.google.com/apis/design/resource_names) of the OrgMembership. Format:
+         * orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is the `orgUnitId` from
+         * the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-
+         * sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+         * `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+         * OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
+         * resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
+         * OrgMembership.EntityType.SHARED_DRIVE.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+       the OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is the
+       `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-
+       sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+       `{$entityType};{$memberId}`, where `$entityType` is the enum value of OrgMembership.EntityType, and
+       `memberId` is the `id` from [Drive API (V3) `Drive`
+       resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
+       OrgMembership.EntityType.SHARED_DRIVE.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Immutable. The [resource
+         * name](https://cloud.google.com/apis/design/resource_names) of the OrgMembership. Format:
+         * orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is the `orgUnitId` from
+         * the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-
+         * sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+         * `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+         * OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
+         * resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
+         * OrgMembership.EntityType.SHARED_DRIVE.
+         */
+        public Move setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^orgUnits/[^/]+/memberships/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Move set(String parameterName, Object value) {
+          return (Move) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * Builder for {@link CloudIdentity}.
    *
    * <p>

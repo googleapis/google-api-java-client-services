@@ -124,8 +124,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   private SearchQualityMetadata searchQualityMetadata;
 
   /**
-   * Link to the source repository serving the data. Search results apply this link to the title.
-   * Whitespace or special characters may cause Cloud Search result links to trigger a redirect
+   * Link to the source repository serving the data. Seach results apply this link to the title.
+   * Whitespace or special characters may cause Cloud Seach result links to trigger a redirect
    * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * The value may be {@code null}.
    */
@@ -342,8 +342,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the source repository serving the data. Search results apply this link to the title.
-   * Whitespace or special characters may cause Cloud Search result links to trigger a redirect
+   * Link to the source repository serving the data. Seach results apply this link to the title.
+   * Whitespace or special characters may cause Cloud Seach result links to trigger a redirect
    * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
@@ -352,8 +352,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the source repository serving the data. Search results apply this link to the title.
-   * Whitespace or special characters may cause Cloud Search result links to trigger a redirect
+   * Link to the source repository serving the data. Seach results apply this link to the title.
+   * Whitespace or special characters may cause Cloud Seach result links to trigger a redirect
    * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * @param sourceRepositoryUrl sourceRepositoryUrl or {@code null} for none
    */

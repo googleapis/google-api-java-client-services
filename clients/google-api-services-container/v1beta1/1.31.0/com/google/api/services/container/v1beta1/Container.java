@@ -809,7 +809,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link CompleteIpRotation#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in the
+         * @param name The name (project, location, cluster name) of the cluster to complete IP rotation. Specified in the
          *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteIPRotationRequest}
          * @return the request
@@ -838,7 +838,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in the
+           * @param name The name (project, location, cluster name) of the cluster to complete IP rotation. Specified in the
          *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteIPRotationRequest}
            * @since 1.13
@@ -909,13 +909,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to complete IP rotation.
+           * The name (project, location, cluster name) of the cluster to complete IP rotation.
            * Specified in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in the
+          /** The name (project, location, cluster name) of the cluster to complete IP rotation. Specified in the
          format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
@@ -923,7 +923,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to complete IP rotation.
+           * The name (project, location, cluster name) of the cluster to complete IP rotation.
            * Specified in the format `projects/locations/clusters`.
            */
           public CompleteIpRotation setName(java.lang.String name) {
@@ -1542,7 +1542,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
          *
-         * @param parent The cluster (project, location, cluster id) to get keys for. Specified in the format
+         * @param parent The cluster (project, location, cluster name) to get keys for. Specified in the format
          *        `projects/locations/clusters`.
          * @return the request
          */
@@ -1571,7 +1571,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * GetJwks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The cluster (project, location, cluster id) to get keys for. Specified in the format
+           * @param parent The cluster (project, location, cluster name) to get keys for. Specified in the format
          *        `projects/locations/clusters`.
            * @since 1.13
            */
@@ -1651,13 +1651,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The cluster (project, location, cluster id) to get keys for. Specified in the format
+           * The cluster (project, location, cluster name) to get keys for. Specified in the format
            * `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The cluster (project, location, cluster id) to get keys for. Specified in the format
+          /** The cluster (project, location, cluster name) to get keys for. Specified in the format
          `projects/locations/clusters`.
            */
           public java.lang.String getParent() {
@@ -1665,7 +1665,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The cluster (project, location, cluster id) to get keys for. Specified in the format
+           * The cluster (project, location, cluster name) to get keys for. Specified in the format
            * `projects/locations/clusters`.
            */
           public GetJwks setParent(java.lang.String parent) {
@@ -2032,8 +2032,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetLegacyAbac#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the format
-         *        `projects/locations/clusters`.
+         * @param name The name (project, location, cluster name) of the cluster to set legacy abac. Specified in the
+         *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.v1beta1.model.SetLegacyAbacRequest}
          * @return the request
          */
@@ -2061,8 +2061,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the format
-         *        `projects/locations/clusters`.
+           * @param name The name (project, location, cluster name) of the cluster to set legacy abac. Specified in the
+         *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.v1beta1.model.SetLegacyAbacRequest}
            * @since 1.13
            */
@@ -2132,21 +2132,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set legacy abac. Specified
+           * The name (project, location, cluster name) of the cluster to set legacy abac. Specified
            * in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the format
-         `projects/locations/clusters`.
+          /** The name (project, location, cluster name) of the cluster to set legacy abac. Specified in the
+         format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set legacy abac. Specified
+           * The name (project, location, cluster name) of the cluster to set legacy abac. Specified
            * in the format `projects/locations/clusters`.
            */
           public SetLegacyAbac setName(java.lang.String name) {
@@ -2457,8 +2457,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link SetMaintenancePolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set maintenance policy. Specified in the
-         *        format `projects/locations/clusters`.
+         * @param name The name (project, location, cluster name) of the cluster to set maintenance policy. Specified in
+         *        the format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.v1beta1.model.SetMaintenancePolicyRequest}
          * @return the request
          */
@@ -2486,8 +2486,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set maintenance policy. Specified in the
-         *        format `projects/locations/clusters`.
+           * @param name The name (project, location, cluster name) of the cluster to set maintenance policy. Specified in
+         *        the format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.v1beta1.model.SetMaintenancePolicyRequest}
            * @since 1.13
            */
@@ -2557,21 +2557,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set maintenance policy.
+           * The name (project, location, cluster name) of the cluster to set maintenance policy.
            * Specified in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name (project, location, cluster id) of the cluster to set maintenance policy. Specified in the
-         format `projects/locations/clusters`.
+          /** The name (project, location, cluster name) of the cluster to set maintenance policy. Specified in
+         the format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set maintenance policy.
+           * The name (project, location, cluster name) of the cluster to set maintenance policy.
            * Specified in the format `projects/locations/clusters`.
            */
           public SetMaintenancePolicy setName(java.lang.String name) {
@@ -2879,7 +2879,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetNetworkPolicy#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set networking policy. Specified in the
+         * @param name The name (project, location, cluster name) of the cluster to set networking policy. Specified in the
          *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.v1beta1.model.SetNetworkPolicyRequest}
          * @return the request
@@ -2908,7 +2908,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set networking policy. Specified in the
+           * @param name The name (project, location, cluster name) of the cluster to set networking policy. Specified in the
          *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.v1beta1.model.SetNetworkPolicyRequest}
            * @since 1.13
@@ -2979,21 +2979,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set networking policy.
+           * The name (project, location, cluster name) of the cluster to set networking policy.
            * Specified in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name (project, location, cluster id) of the cluster to set networking policy. Specified in the
-         format `projects/locations/clusters`.
+          /** The name (project, location, cluster name) of the cluster to set networking policy. Specified in
+         the format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set networking policy.
+           * The name (project, location, cluster name) of the cluster to set networking policy.
            * Specified in the format `projects/locations/clusters`.
            */
           public SetNetworkPolicy setName(java.lang.String name) {
@@ -3019,7 +3019,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetResourceLabels#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set labels. Specified in the format
+         * @param name The name (project, location, cluster name) of the cluster to set labels. Specified in the format
          *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.v1beta1.model.SetLabelsRequest}
          * @return the request
@@ -3048,7 +3048,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set labels. Specified in the format
+           * @param name The name (project, location, cluster name) of the cluster to set labels. Specified in the format
          *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.v1beta1.model.SetLabelsRequest}
            * @since 1.13
@@ -3119,13 +3119,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set labels. Specified in the
-           * format `projects/locations/clusters`.
+           * The name (project, location, cluster name) of the cluster to set labels. Specified in
+           * the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name (project, location, cluster id) of the cluster to set labels. Specified in the format
+          /** The name (project, location, cluster name) of the cluster to set labels. Specified in the format
          `projects/locations/clusters`.
            */
           public java.lang.String getName() {
@@ -3133,8 +3133,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to set labels. Specified in the
-           * format `projects/locations/clusters`.
+           * The name (project, location, cluster name) of the cluster to set labels. Specified in
+           * the format `projects/locations/clusters`.
            */
           public SetResourceLabels setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3159,7 +3159,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link StartIpRotation#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
+         * @param name The name (project, location, cluster name) of the cluster to start IP rotation. Specified in the
          *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.v1beta1.model.StartIPRotationRequest}
          * @return the request
@@ -3188,7 +3188,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
+           * @param name The name (project, location, cluster name) of the cluster to start IP rotation. Specified in the
          *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.v1beta1.model.StartIPRotationRequest}
            * @since 1.13
@@ -3259,13 +3259,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to start IP rotation. Specified
-           * in the format `projects/locations/clusters`.
+           * The name (project, location, cluster name) of the cluster to start IP rotation.
+           * Specified in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
+          /** The name (project, location, cluster name) of the cluster to start IP rotation. Specified in the
          format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
@@ -3273,8 +3273,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The name (project, location, cluster id) of the cluster to start IP rotation. Specified
-           * in the format `projects/locations/clusters`.
+           * The name (project, location, cluster name) of the cluster to start IP rotation.
+           * Specified in the format `projects/locations/clusters`.
            */
           public StartIpRotation setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3600,7 +3600,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The parent (project, location, cluster id) where the node pool will be created. Specified in the
+           * @param parent The parent (project, location, cluster name) where the node pool will be created. Specified in the
            *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.v1beta1.model.CreateNodePoolRequest}
            * @return the request
@@ -3629,7 +3629,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The parent (project, location, cluster id) where the node pool will be created. Specified in the
+             * @param parent The parent (project, location, cluster name) where the node pool will be created. Specified in the
            *        format `projects/locations/clusters`.
              * @param content the {@link com.google.api.services.container.v1beta1.model.CreateNodePoolRequest}
              * @since 1.13
@@ -3700,13 +3700,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The parent (project, location, cluster id) where the node pool will be created.
+             * The parent (project, location, cluster name) where the node pool will be created.
              * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The parent (project, location, cluster id) where the node pool will be created. Specified in the
+            /** The parent (project, location, cluster name) where the node pool will be created. Specified in the
            format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
@@ -3714,7 +3714,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The parent (project, location, cluster id) where the node pool will be created.
+             * The parent (project, location, cluster name) where the node pool will be created.
              * Specified in the format `projects/locations/clusters`.
              */
             public Create setParent(java.lang.String parent) {
@@ -4221,7 +4221,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The parent (project, location, cluster id) where the node pools will be listed. Specified in the
+           * @param parent The parent (project, location, cluster name) where the node pools will be listed. Specified in the
            *        format `projects/locations/clusters`.
            * @return the request
            */
@@ -4248,7 +4248,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The parent (project, location, cluster id) where the node pools will be listed. Specified in the
+             * @param parent The parent (project, location, cluster name) where the node pools will be listed. Specified in the
            *        format `projects/locations/clusters`.
              * @since 1.13
              */
@@ -4328,13 +4328,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The parent (project, location, cluster id) where the node pools will be listed.
+             * The parent (project, location, cluster name) where the node pools will be listed.
              * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The parent (project, location, cluster id) where the node pools will be listed. Specified in the
+            /** The parent (project, location, cluster name) where the node pools will be listed. Specified in the
            format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
@@ -4342,7 +4342,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The parent (project, location, cluster id) where the node pools will be listed.
+             * The parent (project, location, cluster name) where the node pools will be listed.
              * Specified in the format `projects/locations/clusters`.
              */
             public List setParent(java.lang.String parent) {
@@ -5174,7 +5174,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the remote
            * operation.
            *
-           * @param parent The cluster (project, location, cluster id) to get the discovery document for. Specified in the
+           * @param parent The cluster (project, location, cluster name) to get the discovery document for. Specified in the
            *        format `projects/locations/clusters`.
            * @return the request
            */
@@ -5204,7 +5204,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param parent The cluster (project, location, cluster id) to get the discovery document for. Specified in the
+             * @param parent The cluster (project, location, cluster name) to get the discovery document for. Specified in the
            *        format `projects/locations/clusters`.
              * @since 1.13
              */
@@ -5284,13 +5284,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The cluster (project, location, cluster id) to get the discovery document for.
+             * The cluster (project, location, cluster name) to get the discovery document for.
              * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The cluster (project, location, cluster id) to get the discovery document for. Specified in the
+            /** The cluster (project, location, cluster name) to get the discovery document for. Specified in the
            format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
@@ -5298,7 +5298,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The cluster (project, location, cluster id) to get the discovery document for.
+             * The cluster (project, location, cluster name) to get the discovery document for.
              * Specified in the format `projects/locations/clusters`.
              */
             public GetOpenidConfiguration setParent(java.lang.String parent) {
@@ -10583,13 +10583,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The parent (project, location, cluster id) where the node pools will be listed.
+             * The parent (project, location, cluster name) where the node pools will be listed.
              * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The parent (project, location, cluster id) where the node pools will be listed. Specified in the
+            /** The parent (project, location, cluster name) where the node pools will be listed. Specified in the
            format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
@@ -10597,7 +10597,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * The parent (project, location, cluster id) where the node pools will be listed.
+             * The parent (project, location, cluster name) where the node pools will be listed.
              * Specified in the format `projects/locations/clusters`.
              */
             public List setParent(java.lang.String parent) {

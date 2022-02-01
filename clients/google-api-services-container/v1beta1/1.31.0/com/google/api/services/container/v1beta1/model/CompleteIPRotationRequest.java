@@ -39,7 +39,7 @@ public final class CompleteIPRotationRequest extends com.google.api.client.json.
   private java.lang.String clusterId;
 
   /**
-   * The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in
+   * The name (project, location, cluster name) of the cluster to complete IP rotation. Specified in
    * the format `projects/locations/clusters`.
    * The value may be {@code null}.
    */
@@ -84,7 +84,7 @@ public final class CompleteIPRotationRequest extends com.google.api.client.json.
   }
 
   /**
-   * The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in
+   * The name (project, location, cluster name) of the cluster to complete IP rotation. Specified in
    * the format `projects/locations/clusters`.
    * @return value or {@code null} for none
    */
@@ -93,7 +93,7 @@ public final class CompleteIPRotationRequest extends com.google.api.client.json.
   }
 
   /**
-   * The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in
+   * The name (project, location, cluster name) of the cluster to complete IP rotation. Specified in
    * the format `projects/locations/clusters`.
    * @param name name or {@code null} for none
    */

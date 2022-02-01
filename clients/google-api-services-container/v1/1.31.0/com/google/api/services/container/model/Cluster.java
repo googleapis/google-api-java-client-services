@@ -83,7 +83,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<StatusCondition> conditions;
 
   /**
-   * Configuration of Confidential Nodes
+   * Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once
+   * enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -646,7 +647,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration of Confidential Nodes
+   * Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once
+   * enabled.
    * @return value or {@code null} for none
    */
   public ConfidentialNodes getConfidentialNodes() {
@@ -654,7 +656,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration of Confidential Nodes
+   * Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once
+   * enabled.
    * @param confidentialNodes confidentialNodes or {@code null} for none
    */
   public Cluster setConfidentialNodes(ConfidentialNodes confidentialNodes) {

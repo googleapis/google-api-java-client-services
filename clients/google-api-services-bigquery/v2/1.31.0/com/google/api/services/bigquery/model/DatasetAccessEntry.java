@@ -40,13 +40,7 @@ public final class DatasetAccessEntry extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("target_types")
-  private java.util.List<TargetTypes> targetTypes;
-
-  static {
-    // hack to force ProGuard to consider TargetTypes used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TargetTypes.class);
-  }
+  private java.util.List<java.lang.String> targetTypes;
 
   /**
    * [Required] The dataset this entry applies to.
@@ -68,14 +62,14 @@ public final class DatasetAccessEntry extends com.google.api.client.json.Generic
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<TargetTypes> getTargetTypes() {
+  public java.util.List<java.lang.String> getTargetTypes() {
     return targetTypes;
   }
 
   /**
    * @param targetTypes targetTypes or {@code null} for none
    */
-  public DatasetAccessEntry setTargetTypes(java.util.List<TargetTypes> targetTypes) {
+  public DatasetAccessEntry setTargetTypes(java.util.List<java.lang.String> targetTypes) {
     this.targetTypes = targetTypes;
     return this;
   }
@@ -88,53 +82,6 @@ public final class DatasetAccessEntry extends com.google.api.client.json.Generic
   @Override
   public DatasetAccessEntry clone() {
     return (DatasetAccessEntry) super.clone();
-  }
-
-  /**
-   * Model definition for DatasetAccessEntryTargetTypes.
-   */
-  public static final class TargetTypes extends com.google.api.client.json.GenericJson {
-
-    /**
-     * [Required] Which resources in the dataset this entry applies to. Currently, only views are
-     * supported, but additional target types may be added in the future. Possible values: VIEWS: This
-     * entry applies to all views in the dataset.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.String targetType;
-
-    /**
-     * [Required] Which resources in the dataset this entry applies to. Currently, only views are
-     * supported, but additional target types may be added in the future. Possible values: VIEWS: This
-     * entry applies to all views in the dataset.
-     * @return value or {@code null} for none
-     */
-    public java.lang.String getTargetType() {
-      return targetType;
-    }
-
-    /**
-     * [Required] Which resources in the dataset this entry applies to. Currently, only views are
-     * supported, but additional target types may be added in the future. Possible values: VIEWS: This
-     * entry applies to all views in the dataset.
-     * @param targetType targetType or {@code null} for none
-     */
-    public TargetTypes setTargetType(java.lang.String targetType) {
-      this.targetType = targetType;
-      return this;
-    }
-
-    @Override
-    public TargetTypes set(String fieldName, Object value) {
-      return (TargetTypes) super.set(fieldName, value);
-    }
-
-    @Override
-    public TargetTypes clone() {
-      return (TargetTypes) super.clone();
-    }
-
   }
 
 }

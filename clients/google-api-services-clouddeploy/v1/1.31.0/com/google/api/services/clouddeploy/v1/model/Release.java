@@ -161,7 +161,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, TargetRender> targetRenders;
 
   /**
-   * Output only. Snapshot of the parent pipeline's targets taken at release creation time.
+   * Output only. Snapshot of the targets taken at release creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -469,7 +469,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Snapshot of the parent pipeline's targets taken at release creation time.
+   * Output only. Snapshot of the targets taken at release creation time.
    * @return value or {@code null} for none
    */
   public java.util.List<Target> getTargetSnapshots() {
@@ -477,7 +477,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Snapshot of the parent pipeline's targets taken at release creation time.
+   * Output only. Snapshot of the targets taken at release creation time.
    * @param targetSnapshots targetSnapshots or {@code null} for none
    */
   public Release setTargetSnapshots(java.util.List<Target> targetSnapshots) {

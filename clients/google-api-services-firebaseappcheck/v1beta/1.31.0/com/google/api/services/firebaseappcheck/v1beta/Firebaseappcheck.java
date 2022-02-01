@@ -502,11 +502,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Accepts an App Attest CBOR attestation and verifies it with Apple using the developer's
-       * preconfigured team and bundle IDs. If valid, returns an attestation artifact that can later be
-       * exchanged for an AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and
-       * performance, this method's response object will also contain an App Check token encapsulated in
-       * an AttestationTokenResponse (if the verification is successful).
+       * Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team
+       * and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an
+       * AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and performance, this
+       * method's response object will also contain an App Check token encapsulated in an
+       * AttestationTokenResponse (if the verification is successful).
        *
        * Create a request for the method "apps.exchangeAppAttestAttestation".
        *
@@ -535,11 +535,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
         /**
-         * Accepts an App Attest CBOR attestation and verifies it with Apple using the developer's
-         * preconfigured team and bundle IDs. If valid, returns an attestation artifact that can later be
-         * exchanged for an AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and
-         * performance, this method's response object will also contain an App Check token encapsulated in
-         * an AttestationTokenResponse (if the verification is successful).
+         * Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team
+         * and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an
+         * AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and performance,
+         * this method's response object will also contain an App Check token encapsulated in an
+         * AttestationTokenResponse (if the verification is successful).
          *
          * Create a request for the method "apps.exchangeAppAttestAttestation".
          *
@@ -1764,7 +1764,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       public class AppAttestConfig {
 
         /**
-         * Gets the AppAttestConfigs for the specified list of apps atomically.
+         * Atomically gets the AppAttestConfigs for the specified list of apps.
          *
          * Create a request for the method "appAttestConfig.batchGet".
          *
@@ -1790,7 +1790,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+$");
 
           /**
-           * Gets the AppAttestConfigs for the specified list of apps atomically.
+           * Atomically gets the AppAttestConfigs for the specified list of apps.
            *
            * Create a request for the method "appAttestConfig.batchGet".
            *
@@ -3108,7 +3108,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       public class DeviceCheckConfig {
 
         /**
-         * Gets the DeviceCheckConfigs for the specified list of apps atomically. For security reasons, the
+         * Atomically gets the DeviceCheckConfigs for the specified list of apps. For security reasons, the
          * `private_key` field is never populated in the response.
          *
          * Create a request for the method "deviceCheckConfig.batchGet".
@@ -3135,7 +3135,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+$");
 
           /**
-           * Gets the DeviceCheckConfigs for the specified list of apps atomically. For security reasons,
+           * Atomically gets the DeviceCheckConfigs for the specified list of apps. For security reasons,
            * the `private_key` field is never populated in the response.
            *
            * Create a request for the method "deviceCheckConfig.batchGet".
@@ -3627,7 +3627,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       public class RecaptchaConfig {
 
         /**
-         * Gets the RecaptchaConfigs for the specified list of apps atomically. For security reasons, the
+         * Atomically gets the RecaptchaConfigs for the specified list of apps. For security reasons, the
          * `site_secret` field is never populated in the response.
          *
          * Create a request for the method "recaptchaConfig.batchGet".
@@ -3654,7 +3654,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+$");
 
           /**
-           * Gets the RecaptchaConfigs for the specified list of apps atomically. For security reasons, the
+           * Atomically gets the RecaptchaConfigs for the specified list of apps. For security reasons, the
            * `site_secret` field is never populated in the response.
            *
            * Create a request for the method "recaptchaConfig.batchGet".
@@ -4146,7 +4146,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       public class RecaptchaEnterpriseConfig {
 
         /**
-         * Gets the RecaptchaEnterpriseConfigs for the specified list of apps atomically.
+         * Atomically gets the RecaptchaEnterpriseConfigs for the specified list of apps.
          *
          * Create a request for the method "recaptchaEnterpriseConfig.batchGet".
          *
@@ -4172,7 +4172,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+$");
 
           /**
-           * Gets the RecaptchaEnterpriseConfigs for the specified list of apps atomically.
+           * Atomically gets the RecaptchaEnterpriseConfigs for the specified list of apps.
            *
            * Create a request for the method "recaptchaEnterpriseConfig.batchGet".
            *
@@ -4665,7 +4665,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       public class SafetyNetConfig {
 
         /**
-         * Gets the SafetyNetConfigs for the specified list of apps atomically.
+         * Atomically gets the SafetyNetConfigs for the specified list of apps.
          *
          * Create a request for the method "safetyNetConfig.batchGet".
          *
@@ -4691,7 +4691,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+$");
 
           /**
-           * Gets the SafetyNetConfigs for the specified list of apps atomically.
+           * Atomically gets the SafetyNetConfigs for the specified list of apps.
            *
            * Create a request for the method "safetyNetConfig.batchGet".
            *
@@ -5179,7 +5179,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
     public class Services {
 
       /**
-       * Updates the specified Service configurations atomically.
+       * Atomically updates the specified Service configurations.
        *
        * Create a request for the method "services.batchUpdate".
        *
@@ -5207,7 +5207,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Updates the specified Service configurations atomically.
+         * Atomically updates the specified Service configurations.
          *
          * Create a request for the method "services.batchUpdate".
          *

@@ -32,6 +32,24 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class HiveMetastoreConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a
+   * secondary Hive metastore service is created along with the primary service. All auxiliary
+   * versions must be less than the service's primary version. The key is the auxiliary service name
+   * and it must match the regular expression a-z?. This means that the first character must be a
+   * lowercase letter, and all the following characters must be hyphens, lowercase letters, or
+   * digits, except the last character, which cannot be a hyphen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, AuxiliaryVersionConfig> auxiliaryVersions;
+
+  static {
+    // hack to force ProGuard to consider AuxiliaryVersionConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AuxiliaryVersionConfig.class);
+  }
+
+  /**
    * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore
    * (configured in hive-site.xml). The mappings override system defaults (some keys cannot be
    * overridden). These overrides are also applied to auxiliary versions and can be further
@@ -64,6 +82,33 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a
+   * secondary Hive metastore service is created along with the primary service. All auxiliary
+   * versions must be less than the service's primary version. The key is the auxiliary service name
+   * and it must match the regular expression a-z?. This means that the first character must be a
+   * lowercase letter, and all the following characters must be hyphens, lowercase letters, or
+   * digits, except the last character, which cannot be a hyphen.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, AuxiliaryVersionConfig> getAuxiliaryVersions() {
+    return auxiliaryVersions;
+  }
+
+  /**
+   * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a
+   * secondary Hive metastore service is created along with the primary service. All auxiliary
+   * versions must be less than the service's primary version. The key is the auxiliary service name
+   * and it must match the regular expression a-z?. This means that the first character must be a
+   * lowercase letter, and all the following characters must be hyphens, lowercase letters, or
+   * digits, except the last character, which cannot be a hyphen.
+   * @param auxiliaryVersions auxiliaryVersions or {@code null} for none
+   */
+  public HiveMetastoreConfig setAuxiliaryVersions(java.util.Map<String, AuxiliaryVersionConfig> auxiliaryVersions) {
+    this.auxiliaryVersions = auxiliaryVersions;
+    return this;
+  }
 
   /**
    * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore

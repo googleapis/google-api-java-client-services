@@ -31,8 +31,7 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunOpV2TrafficTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified. Cloud
-   * Run currently requires 100 percent for a single TrafficTarget entry.
+   * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +59,7 @@ public final class GoogleCloudRunOpV2TrafficTarget extends com.google.api.client
   private java.lang.String type;
 
   /**
-   * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified. Cloud
-   * Run currently requires 100 percent for a single TrafficTarget entry.
+   * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPercent() {
@@ -69,8 +67,7 @@ public final class GoogleCloudRunOpV2TrafficTarget extends com.google.api.client
   }
 
   /**
-   * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified. Cloud
-   * Run currently requires 100 percent for a single TrafficTarget entry.
+   * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
    * @param percent percent or {@code null} for none
    */
   public GoogleCloudRunOpV2TrafficTarget setPercent(java.lang.Integer percent) {

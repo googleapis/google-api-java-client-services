@@ -31,6 +31,15 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class ExecutionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Cloud Storage location where execution outputs should be stored. This can either be a
+   * bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified,
+   * a default bucket located in the same region will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String artifactStorage;
+
+  /**
    * Optional. Use default Cloud Build pool.
    * The value may be {@code null}.
    */
@@ -45,11 +54,49 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private PrivatePool privatePool;
 
   /**
+   * Optional. Google service account to use for execution. If unspecified, the project execution
+   * service account (-compute@developer.gserviceaccount.com) will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Required. Usages when this configuration should be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> usages;
+
+  /**
+   * Optional. The resource name of the `WorkerPool`, with the format
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is
+   * unspecified, the default Cloud Build pool will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerPool;
+
+  /**
+   * Optional. Cloud Storage location where execution outputs should be stored. This can either be a
+   * bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified,
+   * a default bucket located in the same region will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArtifactStorage() {
+    return artifactStorage;
+  }
+
+  /**
+   * Optional. Cloud Storage location where execution outputs should be stored. This can either be a
+   * bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified,
+   * a default bucket located in the same region will be used.
+   * @param artifactStorage artifactStorage or {@code null} for none
+   */
+  public ExecutionConfig setArtifactStorage(java.lang.String artifactStorage) {
+    this.artifactStorage = artifactStorage;
+    return this;
+  }
 
   /**
    * Optional. Use default Cloud Build pool.
@@ -86,6 +133,25 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional. Google service account to use for execution. If unspecified, the project execution
+   * service account (-compute@developer.gserviceaccount.com) will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. Google service account to use for execution. If unspecified, the project execution
+   * service account (-compute@developer.gserviceaccount.com) will be used.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public ExecutionConfig setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
    * Required. Usages when this configuration should be applied.
    * @return value or {@code null} for none
    */
@@ -99,6 +165,27 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    */
   public ExecutionConfig setUsages(java.util.List<java.lang.String> usages) {
     this.usages = usages;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of the `WorkerPool`, with the format
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is
+   * unspecified, the default Cloud Build pool will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerPool() {
+    return workerPool;
+  }
+
+  /**
+   * Optional. The resource name of the `WorkerPool`, with the format
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is
+   * unspecified, the default Cloud Build pool will be used.
+   * @param workerPool workerPool or {@code null} for none
+   */
+  public ExecutionConfig setWorkerPool(java.lang.String workerPool) {
+    this.workerPool = workerPool;
     return this;
   }
 

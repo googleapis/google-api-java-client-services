@@ -5412,8 +5412,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/
-         *        deliveryPipelines/{deliveryPipeline}/targets/a-z{0,62}.
+         * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
          * @return the request
          */
@@ -5441,8 +5440,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/
-         *        deliveryPipelines/{deliveryPipeline}/targets/a-z{0,62}.
+           * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
            * @since 1.13
            */
@@ -5512,22 +5510,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/
-           * deliveryPipelines/{deliveryPipeline}/targets/a-z{0,62}.
+           * Optional. Name of the `Target`. Format is
+           * projects/{project}/locations/{location}/targets/a-z{0,62}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/
-         deliveryPipelines/{deliveryPipeline}/targets/a-z{0,62}.
+          /** Optional. Name of the `Target`. Format is
+         projects/{project}/locations/{location}/targets/a-z{0,62}.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/
-           * deliveryPipelines/{deliveryPipeline}/targets/a-z{0,62}.
+           * Optional. Name of the `Target`. Format is
+           * projects/{project}/locations/{location}/targets/a-z{0,62}.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

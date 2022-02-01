@@ -30,20 +30,20 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1AdjustDeveloperBalanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * * A positive value of `adjustment` means that that the API provider wishes to adjust the
-   * balance for an over-charged developer i.e. the balance of the developer will increase. * A
-   * negative value of `adjustment` means that that the API provider wishes to adjust the balance
-   * for an under-charged developer i.e. the balance of the developer will decrease.
+   * * A positive value of `adjustment` means that that the API provider wants to adjust the balance
+   * for an under-charged developer i.e. the balance of the developer will decrease. * A negative
+   * value of `adjustment` means that that the API provider wants to adjust the balance for an over-
+   * charged developer i.e. the balance of the developer will increase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeMoney adjustment;
 
   /**
-   * * A positive value of `adjustment` means that that the API provider wishes to adjust the
-   * balance for an over-charged developer i.e. the balance of the developer will increase. * A
-   * negative value of `adjustment` means that that the API provider wishes to adjust the balance
-   * for an under-charged developer i.e. the balance of the developer will decrease.
+   * * A positive value of `adjustment` means that that the API provider wants to adjust the balance
+   * for an under-charged developer i.e. the balance of the developer will decrease. * A negative
+   * value of `adjustment` means that that the API provider wants to adjust the balance for an over-
+   * charged developer i.e. the balance of the developer will increase.
    * @return value or {@code null} for none
    */
   public GoogleTypeMoney getAdjustment() {
@@ -51,10 +51,10 @@ public final class GoogleCloudApigeeV1AdjustDeveloperBalanceRequest extends com.
   }
 
   /**
-   * * A positive value of `adjustment` means that that the API provider wishes to adjust the
-   * balance for an over-charged developer i.e. the balance of the developer will increase. * A
-   * negative value of `adjustment` means that that the API provider wishes to adjust the balance
-   * for an under-charged developer i.e. the balance of the developer will decrease.
+   * * A positive value of `adjustment` means that that the API provider wants to adjust the balance
+   * for an under-charged developer i.e. the balance of the developer will decrease. * A negative
+   * value of `adjustment` means that that the API provider wants to adjust the balance for an over-
+   * charged developer i.e. the balance of the developer will increase.
    * @param adjustment adjustment or {@code null} for none
    */
   public GoogleCloudApigeeV1AdjustDeveloperBalanceRequest setAdjustment(GoogleTypeMoney adjustment) {

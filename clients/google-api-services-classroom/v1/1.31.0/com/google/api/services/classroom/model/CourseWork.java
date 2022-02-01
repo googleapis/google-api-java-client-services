@@ -105,6 +105,14 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private TimeOfDay dueTime;
 
   /**
+   * The category that this coursework's grade contributes to. Present only when a category has been
+   * chosen for the coursework. May be used in calculating the overall grade. Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GradeCategory gradeCategory;
+
+  /**
    * Classroom-assigned identifier of this course work, unique per course. Read-only.
    * The value may be {@code null}.
    */
@@ -375,6 +383,25 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
    */
   public CourseWork setDueTime(TimeOfDay dueTime) {
     this.dueTime = dueTime;
+    return this;
+  }
+
+  /**
+   * The category that this coursework's grade contributes to. Present only when a category has been
+   * chosen for the coursework. May be used in calculating the overall grade. Read-only.
+   * @return value or {@code null} for none
+   */
+  public GradeCategory getGradeCategory() {
+    return gradeCategory;
+  }
+
+  /**
+   * The category that this coursework's grade contributes to. Present only when a category has been
+   * chosen for the coursework. May be used in calculating the overall grade. Read-only.
+   * @param gradeCategory gradeCategory or {@code null} for none
+   */
+  public CourseWork setGradeCategory(GradeCategory gradeCategory) {
+    this.gradeCategory = gradeCategory;
     return this;
   }
 

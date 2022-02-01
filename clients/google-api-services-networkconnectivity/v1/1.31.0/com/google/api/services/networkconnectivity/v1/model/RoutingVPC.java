@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * RoutingVPC contains information about the VPC network that is associated with a hub's spokes.
+ * RoutingVPC contains information about the VPC networks that are associated with a hub's spokes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -34,7 +34,7 @@ public final class RoutingVPC extends com.google.api.client.json.GenericJson {
    * Output only. If true, indicates that this VPC network is currently associated with spokes that
    * use the data transfer feature (spokes where the site_to_site_data_transfer field is set to
    * true). If you create new spokes that use data transfer, they must be associated with this VPC
-   * network.
+   * network. At most, one VPC network will have this field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class RoutingVPC extends com.google.api.client.json.GenericJson {
    * Output only. If true, indicates that this VPC network is currently associated with spokes that
    * use the data transfer feature (spokes where the site_to_site_data_transfer field is set to
    * true). If you create new spokes that use data transfer, they must be associated with this VPC
-   * network.
+   * network. At most, one VPC network will have this field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequiredForNewSiteToSiteDataTransferSpokes() {
@@ -62,7 +62,7 @@ public final class RoutingVPC extends com.google.api.client.json.GenericJson {
    * Output only. If true, indicates that this VPC network is currently associated with spokes that
    * use the data transfer feature (spokes where the site_to_site_data_transfer field is set to
    * true). If you create new spokes that use data transfer, they must be associated with this VPC
-   * network.
+   * network. At most, one VPC network will have this field set to true.
    * @param requiredForNewSiteToSiteDataTransferSpokes requiredForNewSiteToSiteDataTransferSpokes or {@code null} for none
    */
   public RoutingVPC setRequiredForNewSiteToSiteDataTransferSpokes(java.lang.Boolean requiredForNewSiteToSiteDataTransferSpokes) {

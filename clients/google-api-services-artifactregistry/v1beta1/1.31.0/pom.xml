@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-artifactregistry</artifactId>
-  <version>v1beta1-rev20220113-1.32.1</version>
-  <name>Artifact Registry API v1beta1-rev20220113-1.32.1</name>
+  <version>v1beta1-rev20220121-1.32.1</version>
+  <name>Artifact Registry API v1beta1-rev20220121-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

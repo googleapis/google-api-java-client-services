@@ -37,6 +37,13 @@ public final class GoogleCloudApigeeV1DebugSession extends com.google.api.client
   private java.lang.Integer count;
 
   /**
+   * Output only. The first transaction creation timestamp, recorded by UAP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. A conditional statement which is evaluated against the request message to determine
    * if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
    * The value may be {@code null}.
@@ -89,6 +96,23 @@ public final class GoogleCloudApigeeV1DebugSession extends com.google.api.client
    */
   public GoogleCloudApigeeV1DebugSession setCount(java.lang.Integer count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * Output only. The first transaction creation timestamp, recorded by UAP.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The first transaction creation timestamp, recorded by UAP.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudApigeeV1DebugSession setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

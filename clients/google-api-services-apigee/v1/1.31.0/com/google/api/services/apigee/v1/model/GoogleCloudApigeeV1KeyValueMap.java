@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * A collection of key, value string pairs
+ * Collection of key/value string pairs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -30,21 +30,23 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If `true` entry values will be encrypted.
+   * Optional. Flag that specifies whether entry values will be encrypted. Enable to encrypt entry
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean encrypted;
 
   /**
-   * Required. The id of the key value map.
+   * Required. ID of the key value map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. If `true` entry values will be encrypted.
+   * Optional. Flag that specifies whether entry values will be encrypted. Enable to encrypt entry
+   * values.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEncrypted() {
@@ -52,7 +54,8 @@ public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.
   }
 
   /**
-   * Optional. If `true` entry values will be encrypted.
+   * Optional. Flag that specifies whether entry values will be encrypted. Enable to encrypt entry
+   * values.
    * @param encrypted encrypted or {@code null} for none
    */
   public GoogleCloudApigeeV1KeyValueMap setEncrypted(java.lang.Boolean encrypted) {
@@ -61,7 +64,7 @@ public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.
   }
 
   /**
-   * Required. The id of the key value map.
+   * Required. ID of the key value map.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,7 +72,7 @@ public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.
   }
 
   /**
-   * Required. The id of the key value map.
+   * Required. ID of the key value map.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1KeyValueMap setName(java.lang.String name) {

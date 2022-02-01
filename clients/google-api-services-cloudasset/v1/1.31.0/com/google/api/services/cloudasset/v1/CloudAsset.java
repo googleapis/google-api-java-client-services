@@ -2696,15 +2696,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. If true, the identities section of the result will expand any Google groups
        * appearing in an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is
        * specified, the identity in the result will be determined by the selector, and this flag is
-       * not allowed to set. Default is false.
+       * not allowed to set. If true, the default max expansion per group is 1000 for
+       * AssetService.AnalyzeIamPolicy][]. Default is false.
        */
       @com.google.api.client.util.Key("analysisQuery.options.expandGroups")
       private java.lang.Boolean analysisQueryOptionsExpandGroups;
 
       /** Optional. If true, the identities section of the result will expand any Google groups appearing in
      an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is specified, the identity in
-     the result will be determined by the selector, and this flag is not allowed to set. Default is
-     false.
+     the result will be determined by the selector, and this flag is not allowed to set. If true, the
+     default max expansion per group is 1000 for AssetService.AnalyzeIamPolicy][]. Default is false.
        */
       public java.lang.Boolean getAnalysisQueryOptionsExpandGroups() {
         return analysisQueryOptionsExpandGroups;
@@ -2714,7 +2715,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. If true, the identities section of the result will expand any Google groups
        * appearing in an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is
        * specified, the identity in the result will be determined by the selector, and this flag is
-       * not allowed to set. Default is false.
+       * not allowed to set. If true, the default max expansion per group is 1000 for
+       * AssetService.AnalyzeIamPolicy][]. Default is false.
        */
       public AnalyzeIamPolicy setAnalysisQueryOptionsExpandGroups(java.lang.Boolean analysisQueryOptionsExpandGroups) {
         this.analysisQueryOptionsExpandGroups = analysisQueryOptionsExpandGroups;
@@ -2732,7 +2734,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * hierarchy. Only project or lower resources are supported. Folder and organization resource
        * cannot be used together with this option. For example, if the request analyzes for which
        * users have permission P on a GCP project with this option enabled, the results will include
-       * all users who have permission P on that project or any lower resource. Default is false.
+       * all users who have permission P on that project or any lower resource. If true, the default
+       * max expansion per resource is 1000 for AssetService.AnalyzeIamPolicy][] and 100000 for
+       * AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
        */
       @com.google.api.client.util.Key("analysisQuery.options.expandResources")
       private java.lang.Boolean analysisQueryOptionsExpandResources;
@@ -2747,7 +2751,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      lower resources are supported. Folder and organization resource cannot be used together with this
      option. For example, if the request analyzes for which users have permission P on a GCP project
      with this option enabled, the results will include all users who have permission P on that project
-     or any lower resource. Default is false.
+     or any lower resource. If true, the default max expansion per resource is 1000 for
+     AssetService.AnalyzeIamPolicy][] and 100000 for AssetService.AnalyzeIamPolicyLongrunning][].
+     Default is false.
        */
       public java.lang.Boolean getAnalysisQueryOptionsExpandResources() {
         return analysisQueryOptionsExpandResources;
@@ -2764,7 +2770,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * hierarchy. Only project or lower resources are supported. Folder and organization resource
        * cannot be used together with this option. For example, if the request analyzes for which
        * users have permission P on a GCP project with this option enabled, the results will include
-       * all users who have permission P on that project or any lower resource. Default is false.
+       * all users who have permission P on that project or any lower resource. If true, the default
+       * max expansion per resource is 1000 for AssetService.AnalyzeIamPolicy][] and 100000 for
+       * AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
        */
       public AnalyzeIamPolicy setAnalysisQueryOptionsExpandResources(java.lang.Boolean analysisQueryOptionsExpandResources) {
         this.analysisQueryOptionsExpandResources = analysisQueryOptionsExpandResources;

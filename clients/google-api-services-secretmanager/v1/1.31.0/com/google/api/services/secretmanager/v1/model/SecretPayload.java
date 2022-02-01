@@ -38,6 +38,19 @@ public final class SecretPayload extends com.google.api.client.json.GenericJson 
   private java.lang.String data;
 
   /**
+   * Optional. If specified, SecretManagerService will verify the integrity of the received data on
+   * SecretManagerService.AddSecretVersion calls using the crc32c checksum and store it to include
+   * in future SecretManagerService.AccessSecretVersion responses. If a checksum is not provided in
+   * the SecretManagerService.AddSecretVersion request, the SecretManagerService will generate and
+   * store one for you. The CRC32C value is encoded as a Int64 for compatibility, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   * https://cloud.google.com/apis/design/design_patterns#integer_types
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long dataCrc32c;
+
+  /**
    * The secret data. Must be no larger than 64KiB.
    * @see #decodeData()
    * @return value or {@code null} for none
@@ -79,6 +92,35 @@ public final class SecretPayload extends com.google.api.client.json.GenericJson 
    */
   public SecretPayload encodeData(byte[] data) {
     this.data = com.google.api.client.util.Base64.encodeBase64URLSafeString(data);
+    return this;
+  }
+
+  /**
+   * Optional. If specified, SecretManagerService will verify the integrity of the received data on
+   * SecretManagerService.AddSecretVersion calls using the crc32c checksum and store it to include
+   * in future SecretManagerService.AccessSecretVersion responses. If a checksum is not provided in
+   * the SecretManagerService.AddSecretVersion request, the SecretManagerService will generate and
+   * store one for you. The CRC32C value is encoded as a Int64 for compatibility, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   * https://cloud.google.com/apis/design/design_patterns#integer_types
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDataCrc32c() {
+    return dataCrc32c;
+  }
+
+  /**
+   * Optional. If specified, SecretManagerService will verify the integrity of the received data on
+   * SecretManagerService.AddSecretVersion calls using the crc32c checksum and store it to include
+   * in future SecretManagerService.AccessSecretVersion responses. If a checksum is not provided in
+   * the SecretManagerService.AddSecretVersion request, the SecretManagerService will generate and
+   * store one for you. The CRC32C value is encoded as a Int64 for compatibility, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   * https://cloud.google.com/apis/design/design_patterns#integer_types
+   * @param dataCrc32c dataCrc32c or {@code null} for none
+   */
+  public SecretPayload setDataCrc32c(java.lang.Long dataCrc32c) {
+    this.dataCrc32c = dataCrc32c;
     return this;
   }
 

@@ -57,6 +57,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * Optional. If true, the identities section of the result will expand any Google groups appearing
    * in an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is specified, the
    * identity in the result will be determined by the selector, and this flag is not allowed to set.
+   * If true, the default max expansion per group is 1000 for AssetService.AnalyzeIamPolicy][].
    * Default is false.
    * The value may be {@code null}.
    */
@@ -74,7 +75,9 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * project or lower resources are supported. Folder and organization resource cannot be used
    * together with this option. For example, if the request analyzes for which users have permission
    * P on a GCP project with this option enabled, the results will include all users who have
-   * permission P on that project or any lower resource. Default is false.
+   * permission P on that project or any lower resource. If true, the default max expansion per
+   * resource is 1000 for AssetService.AnalyzeIamPolicy][] and 100000 for
+   * AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,6 +164,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * Optional. If true, the identities section of the result will expand any Google groups appearing
    * in an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is specified, the
    * identity in the result will be determined by the selector, and this flag is not allowed to set.
+   * If true, the default max expansion per group is 1000 for AssetService.AnalyzeIamPolicy][].
    * Default is false.
    * @return value or {@code null} for none
    */
@@ -172,6 +176,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * Optional. If true, the identities section of the result will expand any Google groups appearing
    * in an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is specified, the
    * identity in the result will be determined by the selector, and this flag is not allowed to set.
+   * If true, the default max expansion per group is 1000 for AssetService.AnalyzeIamPolicy][].
    * Default is false.
    * @param expandGroups expandGroups or {@code null} for none
    */
@@ -191,7 +196,9 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * project or lower resources are supported. Folder and organization resource cannot be used
    * together with this option. For example, if the request analyzes for which users have permission
    * P on a GCP project with this option enabled, the results will include all users who have
-   * permission P on that project or any lower resource. Default is false.
+   * permission P on that project or any lower resource. If true, the default max expansion per
+   * resource is 1000 for AssetService.AnalyzeIamPolicy][] and 100000 for
+   * AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExpandResources() {
@@ -209,7 +216,9 @@ public final class Options extends com.google.api.client.json.GenericJson {
    * project or lower resources are supported. Folder and organization resource cannot be used
    * together with this option. For example, if the request analyzes for which users have permission
    * P on a GCP project with this option enabled, the results will include all users who have
-   * permission P on that project or any lower resource. Default is false.
+   * permission P on that project or any lower resource. If true, the default max expansion per
+   * resource is 1000 for AssetService.AnalyzeIamPolicy][] and 100000 for
+   * AssetService.AnalyzeIamPolicyLongrunning][]. Default is false.
    * @param expandResources expandResources or {@code null} for none
    */
   public Options setExpandResources(java.lang.Boolean expandResources) {

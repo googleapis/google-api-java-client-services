@@ -144,6 +144,15 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkPeering> peerings;
 
   /**
+   * [Output Only] URL of the region where the regional network resides. This field is not
+   * applicable to global network. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * The network-level routing configuration for this network. Used by Cloud Router to determine
    * what type of network-wide routing behavior to enforce.
    * The value may be {@code null}.
@@ -437,6 +446,27 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setPeerings(java.util.List<NetworkPeering> peerings) {
     this.peerings = peerings;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional network resides. This field is not
+   * applicable to global network. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional network resides. This field is not
+   * applicable to global network. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
+   * @param region region or {@code null} for none
+   */
+  public Network setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

@@ -91,6 +91,13 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Keys used for MD5 authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouterMd5AuthenticationKey> md5AuthenticationKeys;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -278,6 +285,23 @@ public final class Router extends com.google.api.client.json.GenericJson {
    */
   public Router setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Keys used for MD5 authentication.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouterMd5AuthenticationKey> getMd5AuthenticationKeys() {
+    return md5AuthenticationKeys;
+  }
+
+  /**
+   * Keys used for MD5 authentication.
+   * @param md5AuthenticationKeys md5AuthenticationKeys or {@code null} for none
+   */
+  public Router setMd5AuthenticationKeys(java.util.List<RouterMd5AuthenticationKey> md5AuthenticationKeys) {
+    this.md5AuthenticationKeys = md5AuthenticationKeys;
     return this;
   }
 

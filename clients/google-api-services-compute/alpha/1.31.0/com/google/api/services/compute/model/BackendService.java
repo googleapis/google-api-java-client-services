@@ -347,10 +347,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String securityPolicy;
 
   /**
-   * This field specifies the security policy that applies to this backend service. This field is
-   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
-   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service
-   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * This field specifies the security settings that apply to this backend service. This field is
+   * applicable to a global backend service with the load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1151,10 +1150,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field specifies the security policy that applies to this backend service. This field is
-   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
-   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service
-   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * This field specifies the security settings that apply to this backend service. This field is
+   * applicable to a global backend service with the load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public SecuritySettings getSecuritySettings() {
@@ -1162,10 +1160,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field specifies the security policy that applies to this backend service. This field is
-   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
-   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service
-   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * This field specifies the security settings that apply to this backend service. This field is
+   * applicable to a global backend service with the load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED.
    * @param securitySettings securitySettings or {@code null} for none
    */
   public BackendService setSecuritySettings(SecuritySettings securitySettings) {

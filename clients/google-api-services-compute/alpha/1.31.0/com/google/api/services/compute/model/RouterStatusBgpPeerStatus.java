@@ -77,6 +77,13 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.String linkedVpnTunnel;
 
   /**
+   * Informs whether MD5 authentication is enabled on this BGP peer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean md5AuthEnabled;
+
+  /**
    * Name of this BGP peer. Unique within the Routers resource.
    * The value may be {@code null}.
    */
@@ -126,6 +133,13 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * Indicates why particular status was returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String statusReason;
 
   /**
    * Time this session has been up. Format: 14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59
@@ -239,6 +253,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setLinkedVpnTunnel(java.lang.String linkedVpnTunnel) {
     this.linkedVpnTunnel = linkedVpnTunnel;
+    return this;
+  }
+
+  /**
+   * Informs whether MD5 authentication is enabled on this BGP peer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMd5AuthEnabled() {
+    return md5AuthEnabled;
+  }
+
+  /**
+   * Informs whether MD5 authentication is enabled on this BGP peer.
+   * @param md5AuthEnabled md5AuthEnabled or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setMd5AuthEnabled(java.lang.Boolean md5AuthEnabled) {
+    this.md5AuthEnabled = md5AuthEnabled;
     return this;
   }
 
@@ -362,6 +393,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Indicates why particular status was returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatusReason() {
+    return statusReason;
+  }
+
+  /**
+   * Indicates why particular status was returned.
+   * @param statusReason statusReason or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setStatusReason(java.lang.String statusReason) {
+    this.statusReason = statusReason;
     return this;
   }
 

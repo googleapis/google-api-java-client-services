@@ -158,6 +158,18 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String shortName;
 
   /**
+   * The scope of networks allowed to be associated with the firewall policy. This field can be
+   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A firewall policy with the VPC scope set to
+   * GLOBAL_VPC_NETWORK is allowed to be attached only to global networks. When the VPC scope is set
+   * to REGIONAL_VPC_NETWORK the firewall policy is allowed to be attached only to regional networks
+   * in the same scope as the firewall policy. Note: if not specified then GLOBAL_VPC_NETWORK will
+   * be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vpcNetworkScope;
+
+  /**
    * A list of associations that belong to this firewall policy.
    * @return value or {@code null} for none
    */
@@ -493,6 +505,33 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   public FirewallPolicy setShortName(java.lang.String shortName) {
     this.shortName = shortName;
+    return this;
+  }
+
+  /**
+   * The scope of networks allowed to be associated with the firewall policy. This field can be
+   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A firewall policy with the VPC scope set to
+   * GLOBAL_VPC_NETWORK is allowed to be attached only to global networks. When the VPC scope is set
+   * to REGIONAL_VPC_NETWORK the firewall policy is allowed to be attached only to regional networks
+   * in the same scope as the firewall policy. Note: if not specified then GLOBAL_VPC_NETWORK will
+   * be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVpcNetworkScope() {
+    return vpcNetworkScope;
+  }
+
+  /**
+   * The scope of networks allowed to be associated with the firewall policy. This field can be
+   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A firewall policy with the VPC scope set to
+   * GLOBAL_VPC_NETWORK is allowed to be attached only to global networks. When the VPC scope is set
+   * to REGIONAL_VPC_NETWORK the firewall policy is allowed to be attached only to regional networks
+   * in the same scope as the firewall policy. Note: if not specified then GLOBAL_VPC_NETWORK will
+   * be used.
+   * @param vpcNetworkScope vpcNetworkScope or {@code null} for none
+   */
+  public FirewallPolicy setVpcNetworkScope(java.lang.String vpcNetworkScope) {
+    this.vpcNetworkScope = vpcNetworkScope;
     return this;
   }
 

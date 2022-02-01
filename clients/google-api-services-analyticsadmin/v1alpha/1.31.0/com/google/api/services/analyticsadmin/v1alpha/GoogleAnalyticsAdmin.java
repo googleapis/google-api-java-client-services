@@ -3830,25 +3830,27 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Required. An expression for filtering the results of the request. Fields eligible for
-       * filtering are: `parent:`(The resource name of the parent account) or `ancestor:`(The
-       * resource name of the parent account) or `firebase_project:`(The id or number of the linked
-       * firebase project). Some examples of filters: ``` | Filter | Description |
-       * |-----------------------------|-------------------------------------------| |
-       * parent:accounts/123 | The account with account id: 123. | | ancestor:accounts/123 | The
-       * account with account id: 123. | | firebase_project:project-id | The firebase project with
-       * id: project-id. | | firebase_project:123 | The firebase project with number: 123. | ```
+       * filtering are: `parent:`(The resource name of the parent account/property) or
+       * `ancestor:`(The resource name of the parent account) or `firebase_project:`(The id or
+       * number of the linked firebase project). Some examples of filters: ``` | Filter |
+       * Description | |-----------------------------|-------------------------------------------| |
+       * parent:accounts/123 | The account with account id: 123. | | parent:properties/123 | The
+       * property with property id: 123. | | ancestor:accounts/123 | The account with account id:
+       * 123. | | firebase_project:project-id | The firebase project with id: project-id. | |
+       * firebase_project:123 | The firebase project with number: 123. | ```
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Required. An expression for filtering the results of the request. Fields eligible for filtering
-     are: `parent:`(The resource name of the parent account) or `ancestor:`(The resource name of the
-     parent account) or `firebase_project:`(The id or number of the linked firebase project). Some
-     examples of filters: ``` | Filter | Description |
+     are: `parent:`(The resource name of the parent account/property) or `ancestor:`(The resource name
+     of the parent account) or `firebase_project:`(The id or number of the linked firebase project).
+     Some examples of filters: ``` | Filter | Description |
      |-----------------------------|-------------------------------------------| | parent:accounts/123 |
-     The account with account id: 123. | | ancestor:accounts/123 | The account with account id: 123. | |
-     firebase_project:project-id | The firebase project with id: project-id. | | firebase_project:123 |
-     The firebase project with number: 123. | ```
+     The account with account id: 123. | | parent:properties/123 | The property with property id: 123. |
+     | ancestor:accounts/123 | The account with account id: 123. | | firebase_project:project-id | The
+     firebase project with id: project-id. | | firebase_project:123 | The firebase project with number:
+     123. | ```
        */
       public java.lang.String getFilter() {
         return filter;
@@ -3856,13 +3858,14 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Required. An expression for filtering the results of the request. Fields eligible for
-       * filtering are: `parent:`(The resource name of the parent account) or `ancestor:`(The
-       * resource name of the parent account) or `firebase_project:`(The id or number of the linked
-       * firebase project). Some examples of filters: ``` | Filter | Description |
-       * |-----------------------------|-------------------------------------------| |
-       * parent:accounts/123 | The account with account id: 123. | | ancestor:accounts/123 | The
-       * account with account id: 123. | | firebase_project:project-id | The firebase project with
-       * id: project-id. | | firebase_project:123 | The firebase project with number: 123. | ```
+       * filtering are: `parent:`(The resource name of the parent account/property) or
+       * `ancestor:`(The resource name of the parent account) or `firebase_project:`(The id or
+       * number of the linked firebase project). Some examples of filters: ``` | Filter |
+       * Description | |-----------------------------|-------------------------------------------| |
+       * parent:accounts/123 | The account with account id: 123. | | parent:properties/123 | The
+       * property with property id: 123. | | ancestor:accounts/123 | The account with account id:
+       * 123. | | firebase_project:project-id | The firebase project with id: project-id. | |
+       * firebase_project:123 | The firebase project with number: 123. | ```
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -4452,6 +4455,694 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
 
+    /**
+     * An accessor for creating requests from the AndroidAppDataStreams collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+     *   {@code GoogleAnalyticsAdmin.AndroidAppDataStreams.List request = analyticsadmin.androidAppDataStreams().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AndroidAppDataStreams androidAppDataStreams() {
+      return new AndroidAppDataStreams();
+    }
+
+    /**
+     * The "androidAppDataStreams" collection of methods.
+     */
+    public class AndroidAppDataStreams {
+
+      /**
+       * Deletes an android app stream on a property.
+       *
+       * Create a request for the method "androidAppDataStreams.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the android app data stream to delete. Format:
+       *        properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       *        "properties/123/androidAppDataStreams/456"
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/androidAppDataStreams/[^/]+$");
+
+        /**
+         * Deletes an android app stream on a property.
+         *
+         * Create a request for the method "androidAppDataStreams.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the android app data stream to delete. Format:
+       *        properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       *        "properties/123/androidAppDataStreams/456"
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/androidAppDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the android app data stream to delete. Format:
+         * properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+         * "properties/123/androidAppDataStreams/456"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the android app data stream to delete. Format:
+       properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       "properties/123/androidAppDataStreams/456"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the android app data stream to delete. Format:
+         * properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+         * "properties/123/androidAppDataStreams/456"
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/androidAppDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lookup for a single AndroidAppDataStream
+       *
+       * Create a request for the method "androidAppDataStreams.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the android app data stream to lookup. Format:
+       *        properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       *        "properties/123/androidAppDataStreams/456"
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/androidAppDataStreams/[^/]+$");
+
+        /**
+         * Lookup for a single AndroidAppDataStream
+         *
+         * Create a request for the method "androidAppDataStreams.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the android app data stream to lookup. Format:
+       *        properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       *        "properties/123/androidAppDataStreams/456"
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/androidAppDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the android app data stream to lookup. Format:
+         * properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+         * "properties/123/androidAppDataStreams/456"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the android app data stream to lookup. Format:
+       properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       "properties/123/androidAppDataStreams/456"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the android app data stream to lookup. Format:
+         * properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+         * "properties/123/androidAppDataStreams/456"
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/androidAppDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns child android app streams under the specified parent property. Android app streams will
+       * be excluded if the caller does not have access. Returns an empty list if no relevant android app
+       * streams are found.
+       *
+       * Create a request for the method "androidAppDataStreams.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the parent property. For example, to limit results to app streams under the
+       *        property with Id 123: "properties/123"
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListAndroidAppDataStreamsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/androidAppDataStreams";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Returns child android app streams under the specified parent property. Android app streams will
+         * be excluded if the caller does not have access. Returns an empty list if no relevant android
+         * app streams are found.
+         *
+         * Create a request for the method "androidAppDataStreams.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the parent property. For example, to limit results to app streams under the
+       *        property with Id 123: "properties/123"
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListAndroidAppDataStreamsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the parent property. For example, to limit results to app streams
+         * under the property with Id 123: "properties/123"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the parent property. For example, to limit results to app streams under the
+       property with Id 123: "properties/123"
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the parent property. For example, to limit results to app streams
+         * under the property with Id 123: "properties/123"
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of resources to return. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of resources to return. If unspecified, at most 50 resources will be returned.
+       The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of resources to return. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous call. Provide this to retrieve the subsequent
+         * page. When paginating, all other parameters provided to `ListAndroidAppDataStreams` must
+         * match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous call. Provide this to retrieve the subsequent page. When
+       paginating, all other parameters provided to `ListAndroidAppDataStreams` must match the call that
+       provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous call. Provide this to retrieve the subsequent
+         * page. When paginating, all other parameters provided to `ListAndroidAppDataStreams` must
+         * match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an android app stream on a property.
+       *
+       * Create a request for the method "androidAppDataStreams.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Resource name of this Data Stream. Format:
+       *        properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       *        "properties/1000/androidAppDataStreams/2000"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/androidAppDataStreams/[^/]+$");
+
+        /**
+         * Updates an android app stream on a property.
+         *
+         * Create a request for the method "androidAppDataStreams.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of this Data Stream. Format:
+       *        properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       *        "properties/1000/androidAppDataStreams/2000"
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAndroidAppDataStream.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/androidAppDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of this Data Stream. Format:
+         * properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+         * "properties/1000/androidAppDataStreams/2000"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of this Data Stream. Format:
+       properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+       "properties/1000/androidAppDataStreams/2000"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of this Data Stream. Format:
+         * properties/{property_id}/androidAppDataStreams/{stream_id} Example:
+         * "properties/1000/androidAppDataStreams/2000"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/androidAppDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
     /**
      * An accessor for creating requests from the ConversionEvents collection.
      *
@@ -11096,6 +11787,694 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
     }
     /**
+     * An accessor for creating requests from the IosAppDataStreams collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+     *   {@code GoogleAnalyticsAdmin.IosAppDataStreams.List request = analyticsadmin.iosAppDataStreams().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public IosAppDataStreams iosAppDataStreams() {
+      return new IosAppDataStreams();
+    }
+
+    /**
+     * The "iosAppDataStreams" collection of methods.
+     */
+    public class IosAppDataStreams {
+
+      /**
+       * Deletes an iOS app stream on a property.
+       *
+       * Create a request for the method "iosAppDataStreams.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the iOS app data stream to delete. Format:
+       *        properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       *        "properties/123/iosAppDataStreams/456"
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/iosAppDataStreams/[^/]+$");
+
+        /**
+         * Deletes an iOS app stream on a property.
+         *
+         * Create a request for the method "iosAppDataStreams.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the iOS app data stream to delete. Format:
+       *        properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       *        "properties/123/iosAppDataStreams/456"
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/iosAppDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the iOS app data stream to delete. Format:
+         * properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+         * "properties/123/iosAppDataStreams/456"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the iOS app data stream to delete. Format:
+       properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       "properties/123/iosAppDataStreams/456"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the iOS app data stream to delete. Format:
+         * properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+         * "properties/123/iosAppDataStreams/456"
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/iosAppDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lookup for a single IosAppDataStream
+       *
+       * Create a request for the method "iosAppDataStreams.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the iOS app data stream to lookup. Format:
+       *        properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       *        "properties/123/iosAppDataStreams/456"
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/iosAppDataStreams/[^/]+$");
+
+        /**
+         * Lookup for a single IosAppDataStream
+         *
+         * Create a request for the method "iosAppDataStreams.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the iOS app data stream to lookup. Format:
+       *        properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       *        "properties/123/iosAppDataStreams/456"
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/iosAppDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the iOS app data stream to lookup. Format:
+         * properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+         * "properties/123/iosAppDataStreams/456"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the iOS app data stream to lookup. Format:
+       properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       "properties/123/iosAppDataStreams/456"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the iOS app data stream to lookup. Format:
+         * properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+         * "properties/123/iosAppDataStreams/456"
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/iosAppDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns child iOS app data streams under the specified parent property. iOS app data streams will
+       * be excluded if the caller does not have access. Returns an empty list if no relevant iOS app data
+       * streams are found.
+       *
+       * Create a request for the method "iosAppDataStreams.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the parent property. For example, to list results of app streams under the
+       *        property with Id 123: "properties/123"
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListIosAppDataStreamsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/iosAppDataStreams";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Returns child iOS app data streams under the specified parent property. iOS app data streams
+         * will be excluded if the caller does not have access. Returns an empty list if no relevant iOS
+         * app data streams are found.
+         *
+         * Create a request for the method "iosAppDataStreams.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the parent property. For example, to list results of app streams under the
+       *        property with Id 123: "properties/123"
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListIosAppDataStreamsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the parent property. For example, to list results of app streams
+         * under the property with Id 123: "properties/123"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the parent property. For example, to list results of app streams under the
+       property with Id 123: "properties/123"
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the parent property. For example, to list results of app streams
+         * under the property with Id 123: "properties/123"
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of resources to return. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of resources to return. If unspecified, at most 50 resources will be returned.
+       The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of resources to return. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListIosAppDataStreams` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListIosAppDataStreams` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListIosAppDataStreams` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListIosAppDataStreams` must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListIosAppDataStreams` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListIosAppDataStreams` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an iOS app stream on a property.
+       *
+       * Create a request for the method "iosAppDataStreams.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Resource name of this Data Stream. Format:
+       *        properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       *        "properties/1000/iosAppDataStreams/2000"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/iosAppDataStreams/[^/]+$");
+
+        /**
+         * Updates an iOS app stream on a property.
+         *
+         * Create a request for the method "iosAppDataStreams.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of this Data Stream. Format:
+       *        properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       *        "properties/1000/iosAppDataStreams/2000"
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaIosAppDataStream.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/iosAppDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of this Data Stream. Format:
+         * properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+         * "properties/1000/iosAppDataStreams/2000"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of this Data Stream. Format:
+       properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+       "properties/1000/iosAppDataStreams/2000"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of this Data Stream. Format:
+         * properties/{property_id}/iosAppDataStreams/{stream_id} Example:
+         * "properties/1000/iosAppDataStreams/2000"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/iosAppDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the UserLinks collection.
      *
      * <p>The typical use is:</p>
@@ -12633,6 +14012,436 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     public class WebDataStreams {
 
       /**
+       * Creates a web stream with the specified location and attributes.
+       *
+       * Create a request for the method "webDataStreams.create".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this web data stream will be created. Format: properties/123
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/webDataStreams";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Creates a web stream with the specified location and attributes.
+         *
+         * Create a request for the method "webDataStreams.create".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this web data stream will be created. Format: properties/123
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this web data stream will be created. Format:
+         * properties/123
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this web data stream will be created. Format: properties/123
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this web data stream will be created. Format:
+         * properties/123
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a web stream on a property.
+       *
+       * Create a request for the method "webDataStreams.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the web data stream to delete. Format:
+       *        properties/{property_id}/webDataStreams/{stream_id} Example:
+       *        "properties/123/webDataStreams/456"
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/webDataStreams/[^/]+$");
+
+        /**
+         * Deletes a web stream on a property.
+         *
+         * Create a request for the method "webDataStreams.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the web data stream to delete. Format:
+       *        properties/{property_id}/webDataStreams/{stream_id} Example:
+       *        "properties/123/webDataStreams/456"
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/webDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the web data stream to delete. Format:
+         * properties/{property_id}/webDataStreams/{stream_id} Example:
+         * "properties/123/webDataStreams/456"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the web data stream to delete. Format:
+       properties/{property_id}/webDataStreams/{stream_id} Example: "properties/123/webDataStreams/456"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the web data stream to delete. Format:
+         * properties/{property_id}/webDataStreams/{stream_id} Example:
+         * "properties/123/webDataStreams/456"
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/webDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lookup for a single WebDataStream
+       *
+       * Create a request for the method "webDataStreams.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the web data stream to lookup. Format:
+       *        properties/{property_id}/webDataStreams/{stream_id} Example:
+       *        "properties/123/webDataStreams/456"
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/webDataStreams/[^/]+$");
+
+        /**
+         * Lookup for a single WebDataStream
+         *
+         * Create a request for the method "webDataStreams.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the web data stream to lookup. Format:
+       *        properties/{property_id}/webDataStreams/{stream_id} Example:
+       *        "properties/123/webDataStreams/456"
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/webDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the web data stream to lookup. Format:
+         * properties/{property_id}/webDataStreams/{stream_id} Example:
+         * "properties/123/webDataStreams/456"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the web data stream to lookup. Format:
+       properties/{property_id}/webDataStreams/{stream_id} Example: "properties/123/webDataStreams/456"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the web data stream to lookup. Format:
+         * properties/{property_id}/webDataStreams/{stream_id} Example:
+         * "properties/123/webDataStreams/456"
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/webDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns the Site Tag for the specified web stream. Site Tags are immutable singletons.
        *
        * Create a request for the method "webDataStreams.getGlobalSiteTag".
@@ -12786,6 +14595,376 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         @Override
         public GetGlobalSiteTag set(String parameterName, Object value) {
           return (GetGlobalSiteTag) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns child web data streams under the specified parent property. Web data streams will be
+       * excluded if the caller does not have access. Returns an empty list if no relevant web data
+       * streams are found.
+       *
+       * Create a request for the method "webDataStreams.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the parent property. For example, to list results of web streams under the
+       *        property with Id 123: "properties/123"
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListWebDataStreamsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/webDataStreams";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Returns child web data streams under the specified parent property. Web data streams will be
+         * excluded if the caller does not have access. Returns an empty list if no relevant web data
+         * streams are found.
+         *
+         * Create a request for the method "webDataStreams.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the parent property. For example, to list results of web streams under the
+       *        property with Id 123: "properties/123"
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListWebDataStreamsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the parent property. For example, to list results of web streams
+         * under the property with Id 123: "properties/123"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the parent property. For example, to list results of web streams under the
+       property with Id 123: "properties/123"
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the parent property. For example, to list results of web streams
+         * under the property with Id 123: "properties/123"
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of resources to return. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of resources to return. If unspecified, at most 50 resources will be returned.
+       The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of resources to return. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListWebDataStreams` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListWebDataStreams` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListWebDataStreams` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListWebDataStreams` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListWebDataStreams` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListWebDataStreams` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a web stream on a property.
+       *
+       * Create a request for the method "webDataStreams.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Resource name of this Data Stream. Format:
+       *        properties/{property_id}/webDataStreams/{stream_id} Example:
+       *        "properties/1000/webDataStreams/2000"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/webDataStreams/[^/]+$");
+
+        /**
+         * Updates a web stream on a property.
+         *
+         * Create a request for the method "webDataStreams.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of this Data Stream. Format:
+       *        properties/{property_id}/webDataStreams/{stream_id} Example:
+       *        "properties/1000/webDataStreams/2000"
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaWebDataStream.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/webDataStreams/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of this Data Stream. Format:
+         * properties/{property_id}/webDataStreams/{stream_id} Example:
+         * "properties/1000/webDataStreams/2000"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of this Data Stream. Format:
+       properties/{property_id}/webDataStreams/{stream_id} Example: "properties/1000/webDataStreams/2000"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of this Data Stream. Format:
+         * properties/{property_id}/webDataStreams/{stream_id} Example:
+         * "properties/1000/webDataStreams/2000"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/webDataStreams/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 

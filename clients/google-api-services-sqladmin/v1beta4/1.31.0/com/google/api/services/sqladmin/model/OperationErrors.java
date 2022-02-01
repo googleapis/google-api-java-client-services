@@ -43,7 +43,7 @@ public final class OperationErrors extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This is always **sql#operationErrors**.
+   * This is always `sql#operationErrors`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class OperationErrors extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This is always **sql#operationErrors**.
+   * This is always `sql#operationErrors`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,7 +75,7 @@ public final class OperationErrors extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This is always **sql#operationErrors**.
+   * This is always `sql#operationErrors`.
    * @param kind kind or {@code null} for none
    */
   public OperationErrors setKind(java.lang.String kind) {

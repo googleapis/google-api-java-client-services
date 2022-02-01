@@ -44,17 +44,17 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   private CsvImportOptions csvImportOptions;
 
   /**
-   * The target database for the import. If **fileType** is **SQL**, this field is required only if
-   * the import file does not specify a database, and is overridden by any database specification in
-   * the import file. If **fileType** is **CSV**, one database must be specified.
+   * The target database for the import. If `fileType` is `SQL`, this field is required only if the
+   * import file does not specify a database, and is overridden by any database specification in the
+   * import file. If `fileType` is `CSV`, one database must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String database;
 
   /**
-   * The file type for the specified uri. * **SQL**: The file contains SQL statements. * **CSV**:
-   * The file contains CSV data. * **BAK**: The file contains backup data for a SQL Server instance.
+   * The file type for the specified uri. * `SQL`: The file contains SQL statements. * `CSV`: The
+   * file contains CSV data. * `BAK`: The file contains backup data for a SQL Server instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,15 +68,15 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String importUser;
 
   /**
-   * This is always **sql#importContext**.
+   * This is always `sql#importContext`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Path to the import file in Cloud Storage, in the form **gs://bucketName/fileName**. Compressed
-   * gzip files (.gz) are supported when **fileType** is **SQL**. The instance must have write
+   * Path to the import file in Cloud Storage, in the form `gs://bucketName/fileName`. Compressed
+   * gzip files (.gz) are supported when `fileType` is `SQL`. The instance must have write
    * permissions to the bucket and read access to the file.
    * The value may be {@code null}.
    */
@@ -118,9 +118,9 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The target database for the import. If **fileType** is **SQL**, this field is required only if
-   * the import file does not specify a database, and is overridden by any database specification in
-   * the import file. If **fileType** is **CSV**, one database must be specified.
+   * The target database for the import. If `fileType` is `SQL`, this field is required only if the
+   * import file does not specify a database, and is overridden by any database specification in the
+   * import file. If `fileType` is `CSV`, one database must be specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -128,9 +128,9 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The target database for the import. If **fileType** is **SQL**, this field is required only if
-   * the import file does not specify a database, and is overridden by any database specification in
-   * the import file. If **fileType** is **CSV**, one database must be specified.
+   * The target database for the import. If `fileType` is `SQL`, this field is required only if the
+   * import file does not specify a database, and is overridden by any database specification in the
+   * import file. If `fileType` is `CSV`, one database must be specified.
    * @param database database or {@code null} for none
    */
   public ImportContext setDatabase(java.lang.String database) {
@@ -139,8 +139,8 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The file type for the specified uri. * **SQL**: The file contains SQL statements. * **CSV**:
-   * The file contains CSV data. * **BAK**: The file contains backup data for a SQL Server instance.
+   * The file type for the specified uri. * `SQL`: The file contains SQL statements. * `CSV`: The
+   * file contains CSV data. * `BAK`: The file contains backup data for a SQL Server instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileType() {
@@ -148,8 +148,8 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The file type for the specified uri. * **SQL**: The file contains SQL statements. * **CSV**:
-   * The file contains CSV data. * **BAK**: The file contains backup data for a SQL Server instance.
+   * The file type for the specified uri. * `SQL`: The file contains SQL statements. * `CSV`: The
+   * file contains CSV data. * `BAK`: The file contains backup data for a SQL Server instance.
    * @param fileType fileType or {@code null} for none
    */
   public ImportContext setFileType(java.lang.String fileType) {
@@ -175,7 +175,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This is always **sql#importContext**.
+   * This is always `sql#importContext`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -183,7 +183,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This is always **sql#importContext**.
+   * This is always `sql#importContext`.
    * @param kind kind or {@code null} for none
    */
   public ImportContext setKind(java.lang.String kind) {
@@ -192,8 +192,8 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Path to the import file in Cloud Storage, in the form **gs://bucketName/fileName**. Compressed
-   * gzip files (.gz) are supported when **fileType** is **SQL**. The instance must have write
+   * Path to the import file in Cloud Storage, in the form `gs://bucketName/fileName`. Compressed
+   * gzip files (.gz) are supported when `fileType` is `SQL`. The instance must have write
    * permissions to the bucket and read access to the file.
    * @return value or {@code null} for none
    */
@@ -202,8 +202,8 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Path to the import file in Cloud Storage, in the form **gs://bucketName/fileName**. Compressed
-   * gzip files (.gz) are supported when **fileType** is **SQL**. The instance must have write
+   * Path to the import file in Cloud Storage, in the form `gs://bucketName/fileName`. Compressed
+   * gzip files (.gz) are supported when `fileType` is `SQL`. The instance must have write
    * permissions to the bucket and read access to the file.
    * @param uri uri or {@code null} for none
    */
@@ -264,7 +264,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     public static final class EncryptionOptions extends com.google.api.client.json.GenericJson {
 
       /**
-       * Path to the Certificate (.cer) in Cloud Storage, in the form **gs://bucketName/fileName**. The
+       * Path to the Certificate (.cer) in Cloud Storage, in the form `gs://bucketName/fileName`. The
        * instance must have write permissions to the bucket and read access to the file.
        * The value may be {@code null}.
        */
@@ -280,7 +280,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
-       * **gs://bucketName/fileName**. The instance must have write permissions to the bucket and read
+       * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
        * access to the file.
        * The value may be {@code null}.
        */
@@ -288,7 +288,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
       private java.lang.String pvkPath;
 
       /**
-       * Path to the Certificate (.cer) in Cloud Storage, in the form **gs://bucketName/fileName**. The
+       * Path to the Certificate (.cer) in Cloud Storage, in the form `gs://bucketName/fileName`. The
        * instance must have write permissions to the bucket and read access to the file.
        * @return value or {@code null} for none
        */
@@ -297,7 +297,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
       }
 
       /**
-       * Path to the Certificate (.cer) in Cloud Storage, in the form **gs://bucketName/fileName**. The
+       * Path to the Certificate (.cer) in Cloud Storage, in the form `gs://bucketName/fileName`. The
        * instance must have write permissions to the bucket and read access to the file.
        * @param certPath certPath or {@code null} for none
        */
@@ -325,7 +325,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
-       * **gs://bucketName/fileName**. The instance must have write permissions to the bucket and read
+       * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
        * access to the file.
        * @return value or {@code null} for none
        */
@@ -335,7 +335,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
-       * **gs://bucketName/fileName**. The instance must have write permissions to the bucket and read
+       * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
        * access to the file.
        * @param pvkPath pvkPath or {@code null} for none
        */

@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class RotateServerCaContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always **sql#rotateServerCaContext**.
+   * This is always `sql#rotateServerCaContext`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class RotateServerCaContext extends com.google.api.client.json.Gene
   private java.lang.String nextVersion;
 
   /**
-   * This is always **sql#rotateServerCaContext**.
+   * This is always `sql#rotateServerCaContext`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -53,7 +53,7 @@ public final class RotateServerCaContext extends com.google.api.client.json.Gene
   }
 
   /**
-   * This is always **sql#rotateServerCaContext**.
+   * This is always `sql#rotateServerCaContext`.
    * @param kind kind or {@code null} for none
    */
   public RotateServerCaContext setKind(java.lang.String kind) {

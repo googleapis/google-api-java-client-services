@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class DemoteMasterConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always **sql#demoteMasterConfiguration**.
+   * This is always `sql#demoteMasterConfiguration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class DemoteMasterConfiguration extends com.google.api.client.json.
    * MySQL specific configuration when replicating from a MySQL on-premises primary instance.
    * Replication configuration information such as the username, password, certificates, and keys
    * are not stored in the instance metadata. The configuration information is used only to set up
-   * the replication connection and is stored by MySQL in a file named **master.info** in the data
+   * the replication connection and is stored by MySQL in a file named `master.info` in the data
    * directory.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class DemoteMasterConfiguration extends com.google.api.client.json.
   private DemoteMasterMySqlReplicaConfiguration mysqlReplicaConfiguration;
 
   /**
-   * This is always **sql#demoteMasterConfiguration**.
+   * This is always `sql#demoteMasterConfiguration`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -56,7 +56,7 @@ public final class DemoteMasterConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * This is always **sql#demoteMasterConfiguration**.
+   * This is always `sql#demoteMasterConfiguration`.
    * @param kind kind or {@code null} for none
    */
   public DemoteMasterConfiguration setKind(java.lang.String kind) {
@@ -68,7 +68,7 @@ public final class DemoteMasterConfiguration extends com.google.api.client.json.
    * MySQL specific configuration when replicating from a MySQL on-premises primary instance.
    * Replication configuration information such as the username, password, certificates, and keys
    * are not stored in the instance metadata. The configuration information is used only to set up
-   * the replication connection and is stored by MySQL in a file named **master.info** in the data
+   * the replication connection and is stored by MySQL in a file named `master.info` in the data
    * directory.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class DemoteMasterConfiguration extends com.google.api.client.json.
    * MySQL specific configuration when replicating from a MySQL on-premises primary instance.
    * Replication configuration information such as the username, password, certificates, and keys
    * are not stored in the instance metadata. The configuration information is used only to set up
-   * the replication connection and is stored by MySQL in a file named **master.info** in the data
+   * the replication connection and is stored by MySQL in a file named `master.info` in the data
    * directory.
    * @param mysqlReplicaConfiguration mysqlReplicaConfiguration or {@code null} for none
    */

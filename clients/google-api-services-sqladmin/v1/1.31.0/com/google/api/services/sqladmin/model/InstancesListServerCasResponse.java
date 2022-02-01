@@ -43,7 +43,7 @@ public final class InstancesListServerCasResponse extends com.google.api.client.
   private java.util.List<SslCert> certs;
 
   /**
-   * This is always **sql#instancesListServerCas**.
+   * This is always `sql#instancesListServerCas`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class InstancesListServerCasResponse extends com.google.api.client.
   }
 
   /**
-   * This is always **sql#instancesListServerCas**.
+   * This is always `sql#instancesListServerCas`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -90,7 +90,7 @@ public final class InstancesListServerCasResponse extends com.google.api.client.
   }
 
   /**
-   * This is always **sql#instancesListServerCas**.
+   * This is always `sql#instancesListServerCas`.
    * @param kind kind or {@code null} for none
    */
   public InstancesListServerCasResponse setKind(java.lang.String kind) {

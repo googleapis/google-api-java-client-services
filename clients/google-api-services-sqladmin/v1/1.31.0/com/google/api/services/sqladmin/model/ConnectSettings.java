@@ -30,20 +30,22 @@ package com.google.api.services.sqladmin.model;
 public final class ConnectSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server that is not
-   * managed by Google. This property is read-only; use the **tier** property in the **settings**
-   * object to determine the database type.
+   * `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by
+   * Google. This property is read-only; use the `tier` property in the `settings` object to
+   * determine the database type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backendType;
 
   /**
-   * The database engine type and version. The **databaseVersion** field cannot be changed after
-   * instance creation. MySQL instances: **MYSQL_8_0**, **MYSQL_5_7** (default), or **MYSQL_5_6**.
-   * PostgreSQL instances: **POSTGRES_9_6**, **POSTGRES_10**, **POSTGRES_11** or **POSTGRES_12**
-   * (default). SQL Server instances: **SQLSERVER_2017_STANDARD** (default),
-   * **SQLSERVER_2017_ENTERPRISE**, **SQLSERVER_2017_EXPRESS**, or **SQLSERVER_2017_WEB**.
+   * The database engine type and version. The `databaseVersion` field cannot be changed after
+   * instance creation. MySQL instances: `MYSQL_8_0`, `MYSQL_5_7` (default), or `MYSQL_5_6`.
+   * PostgreSQL instances: `POSTGRES_9_6`, `POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12` (default),
+   * `POSTGRES_13`, or `POSTGRES_14`. SQL Server instances: `SQLSERVER_2017_STANDARD` (default),
+   * `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`,
+   * `SQLSERVER_2019_STANDARD`, `SQLSERVER_2019_ENTERPRISE`, `SQLSERVER_2019_EXPRESS`, or
+   * `SQLSERVER_2019_WEB`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +66,8 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
-   * The cloud region for the instance. e.g. **us-central1**, **europe-west1**. The region cannot be
-   * changed after instance creation.
+   * The cloud region for the instance. For example, `us-central1`, `europe-west1`. The region
+   * cannot be changed after instance creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +81,9 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private SslCert serverCaCert;
 
   /**
-   * **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server that is not
-   * managed by Google. This property is read-only; use the **tier** property in the **settings**
-   * object to determine the database type.
+   * `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by
+   * Google. This property is read-only; use the `tier` property in the `settings` object to
+   * determine the database type.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendType() {
@@ -89,9 +91,9 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server that is not
-   * managed by Google. This property is read-only; use the **tier** property in the **settings**
-   * object to determine the database type.
+   * `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by
+   * Google. This property is read-only; use the `tier` property in the `settings` object to
+   * determine the database type.
    * @param backendType backendType or {@code null} for none
    */
   public ConnectSettings setBackendType(java.lang.String backendType) {
@@ -100,11 +102,13 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The database engine type and version. The **databaseVersion** field cannot be changed after
-   * instance creation. MySQL instances: **MYSQL_8_0**, **MYSQL_5_7** (default), or **MYSQL_5_6**.
-   * PostgreSQL instances: **POSTGRES_9_6**, **POSTGRES_10**, **POSTGRES_11** or **POSTGRES_12**
-   * (default). SQL Server instances: **SQLSERVER_2017_STANDARD** (default),
-   * **SQLSERVER_2017_ENTERPRISE**, **SQLSERVER_2017_EXPRESS**, or **SQLSERVER_2017_WEB**.
+   * The database engine type and version. The `databaseVersion` field cannot be changed after
+   * instance creation. MySQL instances: `MYSQL_8_0`, `MYSQL_5_7` (default), or `MYSQL_5_6`.
+   * PostgreSQL instances: `POSTGRES_9_6`, `POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12` (default),
+   * `POSTGRES_13`, or `POSTGRES_14`. SQL Server instances: `SQLSERVER_2017_STANDARD` (default),
+   * `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`,
+   * `SQLSERVER_2019_STANDARD`, `SQLSERVER_2019_ENTERPRISE`, `SQLSERVER_2019_EXPRESS`, or
+   * `SQLSERVER_2019_WEB`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseVersion() {
@@ -112,11 +116,13 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The database engine type and version. The **databaseVersion** field cannot be changed after
-   * instance creation. MySQL instances: **MYSQL_8_0**, **MYSQL_5_7** (default), or **MYSQL_5_6**.
-   * PostgreSQL instances: **POSTGRES_9_6**, **POSTGRES_10**, **POSTGRES_11** or **POSTGRES_12**
-   * (default). SQL Server instances: **SQLSERVER_2017_STANDARD** (default),
-   * **SQLSERVER_2017_ENTERPRISE**, **SQLSERVER_2017_EXPRESS**, or **SQLSERVER_2017_WEB**.
+   * The database engine type and version. The `databaseVersion` field cannot be changed after
+   * instance creation. MySQL instances: `MYSQL_8_0`, `MYSQL_5_7` (default), or `MYSQL_5_6`.
+   * PostgreSQL instances: `POSTGRES_9_6`, `POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12` (default),
+   * `POSTGRES_13`, or `POSTGRES_14`. SQL Server instances: `SQLSERVER_2017_STANDARD` (default),
+   * `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`,
+   * `SQLSERVER_2019_STANDARD`, `SQLSERVER_2019_ENTERPRISE`, `SQLSERVER_2019_EXPRESS`, or
+   * `SQLSERVER_2019_WEB`.
    * @param databaseVersion databaseVersion or {@code null} for none
    */
   public ConnectSettings setDatabaseVersion(java.lang.String databaseVersion) {
@@ -159,8 +165,8 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The cloud region for the instance. e.g. **us-central1**, **europe-west1**. The region cannot be
-   * changed after instance creation.
+   * The cloud region for the instance. For example, `us-central1`, `europe-west1`. The region
+   * cannot be changed after instance creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -168,8 +174,8 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The cloud region for the instance. e.g. **us-central1**, **europe-west1**. The region cannot be
-   * changed after instance creation.
+   * The cloud region for the instance. For example, `us-central1`, `europe-west1`. The region
+   * cannot be changed after instance creation.
    * @param region region or {@code null} for none
    */
   public ConnectSettings setRegion(java.lang.String region) {

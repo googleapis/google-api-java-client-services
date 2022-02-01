@@ -45,7 +45,7 @@ public final class RestoreBackupContext extends com.google.api.client.json.Gener
   private java.lang.String instanceId;
 
   /**
-   * This is always **sql#restoreBackupContext**.
+   * This is always `sql#restoreBackupContext`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class RestoreBackupContext extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always **sql#restoreBackupContext**.
+   * This is always `sql#restoreBackupContext`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -101,7 +101,7 @@ public final class RestoreBackupContext extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always **sql#restoreBackupContext**.
+   * This is always `sql#restoreBackupContext`.
    * @param kind kind or {@code null} for none
    */
   public RestoreBackupContext setKind(java.lang.String kind) {

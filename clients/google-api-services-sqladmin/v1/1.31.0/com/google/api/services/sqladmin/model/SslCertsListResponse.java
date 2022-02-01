@@ -43,7 +43,7 @@ public final class SslCertsListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always **sql#sslCertsList**.
+   * This is always `sql#sslCertsList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class SslCertsListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always **sql#sslCertsList**.
+   * This is always `sql#sslCertsList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,7 +75,7 @@ public final class SslCertsListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always **sql#sslCertsList**.
+   * This is always `sql#sslCertsList`.
    * @param kind kind or {@code null} for none
    */
   public SslCertsListResponse setKind(java.lang.String kind) {

@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class DiskEncryptionConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always **sql#diskEncryptionConfiguration**.
+   * This is always `sql#diskEncryptionConfiguration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class DiskEncryptionConfiguration extends com.google.api.client.jso
   private java.lang.String kmsKeyName;
 
   /**
-   * This is always **sql#diskEncryptionConfiguration**.
+   * This is always `sql#diskEncryptionConfiguration`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -52,7 +52,7 @@ public final class DiskEncryptionConfiguration extends com.google.api.client.jso
   }
 
   /**
-   * This is always **sql#diskEncryptionConfiguration**.
+   * This is always `sql#diskEncryptionConfiguration`.
    * @param kind kind or {@code null} for none
    */
   public DiskEncryptionConfiguration setKind(java.lang.String kind) {

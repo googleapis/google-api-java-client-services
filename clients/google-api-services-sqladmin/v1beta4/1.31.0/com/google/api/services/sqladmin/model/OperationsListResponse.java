@@ -43,7 +43,7 @@ public final class OperationsListResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#operationsList**.
+   * This is always `sql#operationsList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class OperationsListResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#operationsList**.
+   * This is always `sql#operationsList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -83,7 +83,7 @@ public final class OperationsListResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#operationsList**.
+   * This is always `sql#operationsList`.
    * @param kind kind or {@code null} for none
    */
   public OperationsListResponse setKind(java.lang.String kind) {

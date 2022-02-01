@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1ReviewDocumentOperationMetadata extend
   private GoogleCloudDocumentaiV1CommonOperationMetadata commonMetadata;
 
   /**
+   * The Crowd Compute question ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String questionId;
+
+  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudDocumentaiV1ReviewDocumentOperationMetadata extend
    */
   public GoogleCloudDocumentaiV1ReviewDocumentOperationMetadata setCommonMetadata(GoogleCloudDocumentaiV1CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
+    return this;
+  }
+
+  /**
+   * The Crowd Compute question ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuestionId() {
+    return questionId;
+  }
+
+  /**
+   * The Crowd Compute question ID.
+   * @param questionId questionId or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ReviewDocumentOperationMetadata setQuestionId(java.lang.String questionId) {
+    this.questionId = questionId;
     return this;
   }
 

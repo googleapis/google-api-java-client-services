@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for exporting conversations to [Insights](https://cloud.google.com/contact-
- * center/insights/docs).
+ * Response message for Documents.ImportDocuments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -28,43 +27,40 @@ package com.google.api.services.dialogflow.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDialogflowV2ImportDocumentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If enabled, we will automatically exports conversations to Insights and Insights runs its
-   * analyzers.
+   * Includes details about skipped documents or any other warnings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enableInsightsExport;
+  private java.util.List<GoogleRpcStatus> warnings;
 
   /**
-   * If enabled, we will automatically exports conversations to Insights and Insights runs its
-   * analyzers.
+   * Includes details about skipped documents or any other warnings.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnableInsightsExport() {
-    return enableInsightsExport;
+  public java.util.List<GoogleRpcStatus> getWarnings() {
+    return warnings;
   }
 
   /**
-   * If enabled, we will automatically exports conversations to Insights and Insights runs its
-   * analyzers.
-   * @param enableInsightsExport enableInsightsExport or {@code null} for none
+   * Includes details about skipped documents or any other warnings.
+   * @param warnings warnings or {@code null} for none
    */
-  public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings setEnableInsightsExport(java.lang.Boolean enableInsightsExport) {
-    this.enableInsightsExport = enableInsightsExport;
+  public GoogleCloudDialogflowV2ImportDocumentsResponse setWarnings(java.util.List<GoogleRpcStatus> warnings) {
+    this.warnings = warnings;
     return this;
   }
 
   @Override
-  public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings set(String fieldName, Object value) {
-    return (GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings) super.set(fieldName, value);
+  public GoogleCloudDialogflowV2ImportDocumentsResponse set(String fieldName, Object value) {
+    return (GoogleCloudDialogflowV2ImportDocumentsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings clone() {
-    return (GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings) super.clone();
+  public GoogleCloudDialogflowV2ImportDocumentsResponse clone() {
+    return (GoogleCloudDialogflowV2ImportDocumentsResponse) super.clone();
   }
 
 }

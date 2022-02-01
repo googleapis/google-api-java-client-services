@@ -30,6 +30,13 @@ package com.google.api.services.monitoring.v3.model;
 public final class UptimeCheckConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The type of checkers to use to execute the Uptime check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String checkerType;
+
+  /**
    * The content that is expected to appear in the data returned by the target server against which
    * the check is run. Currently, only the first entry in the content_matchers list is supported,
    * and additional entries will be ignored. This field is optional and should only be specified if
@@ -145,6 +152,23 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String timeout;
+
+  /**
+   * The type of checkers to use to execute the Uptime check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCheckerType() {
+    return checkerType;
+  }
+
+  /**
+   * The type of checkers to use to execute the Uptime check.
+   * @param checkerType checkerType or {@code null} for none
+   */
+  public UptimeCheckConfig setCheckerType(java.lang.String checkerType) {
+    this.checkerType = checkerType;
+    return this;
+  }
 
   /**
    * The content that is expected to appear in the data returned by the target server against which

@@ -23,8 +23,8 @@ package com.google.api.services.monitoring.v3.model;
  * resource's schema. Information in the labels field identifies the actual resource and its
  * attributes according to the schema. For example, a particular Compute Engine VM instance could be
  * represented by the following object, because the MonitoredResourceDescriptor for "gce_instance"
- * has labels "instance_id" and "zone": { "type": "gce_instance", "labels": { "instance_id":
- * "12345678901234", "zone": "us-central1-a" }}
+ * has labels "project_id", "instance_id" and "zone": { "type": "gce_instance", "labels": {
+ * "project_id": "my-project", "instance_id": "12345678901234", "zone": "us-central1-a" }}
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

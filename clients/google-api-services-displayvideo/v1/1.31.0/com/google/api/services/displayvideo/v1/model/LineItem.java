@@ -93,6 +93,14 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.lang.String entityStatus;
 
   /**
+   * Whether to exclude new exchanges from automatically being targeted by the line item. This field
+   * is false by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludeNewExchanges;
+
+  /**
    * Required. The start and end time of the line item's flight.
    * The value may be {@code null}.
    */
@@ -177,6 +185,13 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private PartnerRevenueModel partnerRevenueModel;
+
+  /**
+   * Output only. The reservation type of the line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationType;
 
   /**
    * The [targeting expansion](https://support.google.com/displayvideo/answer/10191558) settings of
@@ -347,6 +362,25 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   public LineItem setEntityStatus(java.lang.String entityStatus) {
     this.entityStatus = entityStatus;
+    return this;
+  }
+
+  /**
+   * Whether to exclude new exchanges from automatically being targeted by the line item. This field
+   * is false by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludeNewExchanges() {
+    return excludeNewExchanges;
+  }
+
+  /**
+   * Whether to exclude new exchanges from automatically being targeted by the line item. This field
+   * is false by default.
+   * @param excludeNewExchanges excludeNewExchanges or {@code null} for none
+   */
+  public LineItem setExcludeNewExchanges(java.lang.Boolean excludeNewExchanges) {
+    this.excludeNewExchanges = excludeNewExchanges;
     return this;
   }
 
@@ -555,6 +589,23 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   public LineItem setPartnerRevenueModel(PartnerRevenueModel partnerRevenueModel) {
     this.partnerRevenueModel = partnerRevenueModel;
+    return this;
+  }
+
+  /**
+   * Output only. The reservation type of the line item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationType() {
+    return reservationType;
+  }
+
+  /**
+   * Output only. The reservation type of the line item.
+   * @param reservationType reservationType or {@code null} for none
+   */
+  public LineItem setReservationType(java.lang.String reservationType) {
+    this.reservationType = reservationType;
     return this;
   }
 

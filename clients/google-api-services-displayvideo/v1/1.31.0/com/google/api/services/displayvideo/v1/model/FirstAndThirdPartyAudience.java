@@ -43,6 +43,14 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.Long activeDisplayAudienceSize;
 
   /**
+   * The app_id matches with the type of the mobile_device_ids being uploaded. Only applicable to
+   * audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appId;
+
+  /**
    * Output only. The source of the audience.
    * The value may be {@code null}.
    */
@@ -50,11 +58,19 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.String audienceSource;
 
   /**
-   * Output only. The type of the audience.
+   * The type of the audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audienceType;
+
+  /**
+   * Input only. A list of contact information to define the initial audience members. Only
+   * applicable to audience_type `CUSTOMER_MATCH_CONTACT_INFO`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContactInfoList contactInfoList;
 
   /**
    * The user-provided description of the audience. Only applicable to first party audiences.
@@ -134,12 +150,23 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   private java.lang.Long gmailAudienceSize;
 
   /**
-   * The duration in days that an entry remains in the audience after the qualifying event. Only
-   * applicable to first party audiences.
+   * The duration in days that an entry remains in the audience after the qualifying event. If the
+   * audience has no expiration, the value of this field should be set 10000. Otherwise, the set
+   * value must be greater than 0 and less than or equal to 540. Only applicable to first party
+   * audiences. This field is required if one of the following audience_type is used: *
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long membershipDurationDays;
+
+  /**
+   * Input only. A list of mobile device IDs to define the initial audience members. Only applicable
+   * to audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MobileDeviceIdList mobileDeviceIdList;
 
   /**
    * Output only. The resource name of the first and third party audience.
@@ -182,6 +209,25 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
+   * The app_id matches with the type of the mobile_device_ids being uploaded. Only applicable to
+   * audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppId() {
+    return appId;
+  }
+
+  /**
+   * The app_id matches with the type of the mobile_device_ids being uploaded. Only applicable to
+   * audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   * @param appId appId or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setAppId(java.lang.String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+  /**
    * Output only. The source of the audience.
    * @return value or {@code null} for none
    */
@@ -199,7 +245,7 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The type of the audience.
+   * The type of the audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudienceType() {
@@ -207,11 +253,30 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * Output only. The type of the audience.
+   * The type of the audience.
    * @param audienceType audienceType or {@code null} for none
    */
   public FirstAndThirdPartyAudience setAudienceType(java.lang.String audienceType) {
     this.audienceType = audienceType;
+    return this;
+  }
+
+  /**
+   * Input only. A list of contact information to define the initial audience members. Only
+   * applicable to audience_type `CUSTOMER_MATCH_CONTACT_INFO`
+   * @return value or {@code null} for none
+   */
+  public ContactInfoList getContactInfoList() {
+    return contactInfoList;
+  }
+
+  /**
+   * Input only. A list of contact information to define the initial audience members. Only
+   * applicable to audience_type `CUSTOMER_MATCH_CONTACT_INFO`
+   * @param contactInfoList contactInfoList or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setContactInfoList(ContactInfoList contactInfoList) {
+    this.contactInfoList = contactInfoList;
     return this;
   }
 
@@ -397,8 +462,11 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * The duration in days that an entry remains in the audience after the qualifying event. Only
-   * applicable to first party audiences.
+   * The duration in days that an entry remains in the audience after the qualifying event. If the
+   * audience has no expiration, the value of this field should be set 10000. Otherwise, the set
+   * value must be greater than 0 and less than or equal to 540. Only applicable to first party
+   * audiences. This field is required if one of the following audience_type is used: *
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    * @return value or {@code null} for none
    */
   public java.lang.Long getMembershipDurationDays() {
@@ -406,12 +474,34 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
   }
 
   /**
-   * The duration in days that an entry remains in the audience after the qualifying event. Only
-   * applicable to first party audiences.
+   * The duration in days that an entry remains in the audience after the qualifying event. If the
+   * audience has no expiration, the value of this field should be set 10000. Otherwise, the set
+   * value must be greater than 0 and less than or equal to 540. Only applicable to first party
+   * audiences. This field is required if one of the following audience_type is used: *
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    * @param membershipDurationDays membershipDurationDays or {@code null} for none
    */
   public FirstAndThirdPartyAudience setMembershipDurationDays(java.lang.Long membershipDurationDays) {
     this.membershipDurationDays = membershipDurationDays;
+    return this;
+  }
+
+  /**
+   * Input only. A list of mobile device IDs to define the initial audience members. Only applicable
+   * to audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   * @return value or {@code null} for none
+   */
+  public MobileDeviceIdList getMobileDeviceIdList() {
+    return mobileDeviceIdList;
+  }
+
+  /**
+   * Input only. A list of mobile device IDs to define the initial audience members. Only applicable
+   * to audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   * @param mobileDeviceIdList mobileDeviceIdList or {@code null} for none
+   */
+  public FirstAndThirdPartyAudience setMobileDeviceIdList(MobileDeviceIdList mobileDeviceIdList) {
+    this.mobileDeviceIdList = mobileDeviceIdList;
     return this;
   }
 

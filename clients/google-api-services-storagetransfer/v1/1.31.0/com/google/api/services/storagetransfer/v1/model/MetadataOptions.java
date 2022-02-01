@@ -30,12 +30,29 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class MetadataOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage
+   * buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acl;
+
+  /**
    * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the
    * default behavior is the same as GID_SKIP when the source is a POSIX file system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gid;
+
+  /**
+   * Specifies how each object's Cloud KMS customer-managed encryption key (CMEK) is preserved for
+   * transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the
+   * same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
 
   /**
    * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the
@@ -46,6 +63,15 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   private java.lang.String mode;
 
   /**
+   * Specifies the storage class to set on objects being transferred to Google Cloud Storage
+   * buckets. If unspecified, the default behavior is the same as
+   * STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageClass;
+
+  /**
    * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior
    * is the same as SYMLINK_SKIP when the source is a POSIX file system.
    * The value may be {@code null}.
@@ -54,12 +80,40 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   private java.lang.String symlink;
 
   /**
+   * Specifies how each object's temporary hold status should be preserved for transfers between
+   * Google Cloud Storage buckets. If unspecified, the default behavior is the same as
+   * TEMPORARY_HOLD_PRESERVE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String temporaryHold;
+
+  /**
    * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the
    * default behavior is the same as UID_SKIP when the source is a POSIX file system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage
+   * buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcl() {
+    return acl;
+  }
+
+  /**
+   * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage
+   * buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+   * @param acl acl or {@code null} for none
+   */
+  public MetadataOptions setAcl(java.lang.String acl) {
+    this.acl = acl;
+    return this;
+  }
 
   /**
    * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the
@@ -77,6 +131,27 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
    */
   public MetadataOptions setGid(java.lang.String gid) {
     this.gid = gid;
+    return this;
+  }
+
+  /**
+   * Specifies how each object's Cloud KMS customer-managed encryption key (CMEK) is preserved for
+   * transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the
+   * same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Specifies how each object's Cloud KMS customer-managed encryption key (CMEK) is preserved for
+   * transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the
+   * same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public MetadataOptions setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 
@@ -100,6 +175,27 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Specifies the storage class to set on objects being transferred to Google Cloud Storage
+   * buckets. If unspecified, the default behavior is the same as
+   * STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageClass() {
+    return storageClass;
+  }
+
+  /**
+   * Specifies the storage class to set on objects being transferred to Google Cloud Storage
+   * buckets. If unspecified, the default behavior is the same as
+   * STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+   * @param storageClass storageClass or {@code null} for none
+   */
+  public MetadataOptions setStorageClass(java.lang.String storageClass) {
+    this.storageClass = storageClass;
+    return this;
+  }
+
+  /**
    * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior
    * is the same as SYMLINK_SKIP when the source is a POSIX file system.
    * @return value or {@code null} for none
@@ -115,6 +211,27 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
    */
   public MetadataOptions setSymlink(java.lang.String symlink) {
     this.symlink = symlink;
+    return this;
+  }
+
+  /**
+   * Specifies how each object's temporary hold status should be preserved for transfers between
+   * Google Cloud Storage buckets. If unspecified, the default behavior is the same as
+   * TEMPORARY_HOLD_PRESERVE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTemporaryHold() {
+    return temporaryHold;
+  }
+
+  /**
+   * Specifies how each object's temporary hold status should be preserved for transfers between
+   * Google Cloud Storage buckets. If unspecified, the default behavior is the same as
+   * TEMPORARY_HOLD_PRESERVE.
+   * @param temporaryHold temporaryHold or {@code null} for none
+   */
+  public MetadataOptions setTemporaryHold(java.lang.String temporaryHold) {
+    this.temporaryHold = temporaryHold;
     return this;
   }
 

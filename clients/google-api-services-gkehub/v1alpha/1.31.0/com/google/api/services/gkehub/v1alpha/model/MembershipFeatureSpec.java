@@ -37,6 +37,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private AnthosObservabilityMembershipSpec anthosobservability;
 
   /**
+   * Cloud Build-specific spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudBuildMembershipSpec cloudbuild;
+
+  /**
    * Config Management-specific spec.
    * The value may be {@code null}.
    */
@@ -58,6 +65,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private ServiceMeshMembershipSpec mesh;
 
   /**
+   * Policy Controller spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicycontrollerMembershipSpec policycontroller;
+
+  /**
    * Anthos Observability-specific spec
    * @return value or {@code null} for none
    */
@@ -71,6 +85,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setAnthosobservability(AnthosObservabilityMembershipSpec anthosobservability) {
     this.anthosobservability = anthosobservability;
+    return this;
+  }
+
+  /**
+   * Cloud Build-specific spec
+   * @return value or {@code null} for none
+   */
+  public CloudBuildMembershipSpec getCloudbuild() {
+    return cloudbuild;
+  }
+
+  /**
+   * Cloud Build-specific spec
+   * @param cloudbuild cloudbuild or {@code null} for none
+   */
+  public MembershipFeatureSpec setCloudbuild(CloudBuildMembershipSpec cloudbuild) {
+    this.cloudbuild = cloudbuild;
     return this;
   }
 
@@ -122,6 +153,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setMesh(ServiceMeshMembershipSpec mesh) {
     this.mesh = mesh;
+    return this;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @return value or {@code null} for none
+   */
+  public PolicycontrollerMembershipSpec getPolicycontroller() {
+    return policycontroller;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @param policycontroller policycontroller or {@code null} for none
+   */
+  public MembershipFeatureSpec setPolicycontroller(PolicycontrollerMembershipSpec policycontroller) {
+    this.policycontroller = policycontroller;
     return this;
   }
 

@@ -20,7 +20,7 @@ package com.google.api.services.displayvideo.v1.model;
  * Assigned audience group targeting option details. This will be populated in the details field of
  * an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUDIENCE_GROUP`. The relation
  * between each group is UNION, except for excluded_first_and_third_party_audience_group and
- * excluded_google_audience_group, of which COMPLEMENT is UNION'ed with other groups.
+ * excluded_google_audience_group, of which COMPLEMENT is used as an INTERSECTION with other groups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -35,16 +35,18 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
 
   /**
    * The first and third party audience ids and recencies of the excluded first and third party
-   * audience group. Used for negative targeting. Its COMPLEMENT is used to UNION other audience
-   * groups.
+   * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
+   * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
+   * All items are logically ‘OR’ of each other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup;
 
   /**
-   * The Google audience ids of the excluded Google audience group. Used for negative targeting.
-   * It's COMPLEMENT is used to UNION other audience groups. Only contains Affinity, In-market and
+   * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
+   * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
+   * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
    * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * The value may be {@code null}.
    */
@@ -87,8 +89,9 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
 
   /**
    * The first and third party audience ids and recencies of the excluded first and third party
-   * audience group. Used for negative targeting. Its COMPLEMENT is used to UNION other audience
-   * groups.
+   * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
+   * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
+   * All items are logically ‘OR’ of each other.
    * @return value or {@code null} for none
    */
   public FirstAndThirdPartyAudienceGroup getExcludedFirstAndThirdPartyAudienceGroup() {
@@ -97,8 +100,9 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
 
   /**
    * The first and third party audience ids and recencies of the excluded first and third party
-   * audience group. Used for negative targeting. Its COMPLEMENT is used to UNION other audience
-   * groups.
+   * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
+   * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
+   * All items are logically ‘OR’ of each other.
    * @param excludedFirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setExcludedFirstAndThirdPartyAudienceGroup(FirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup) {
@@ -107,8 +111,9 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The Google audience ids of the excluded Google audience group. Used for negative targeting.
-   * It's COMPLEMENT is used to UNION other audience groups. Only contains Affinity, In-market and
+   * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
+   * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
+   * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
    * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * @return value or {@code null} for none
    */
@@ -117,8 +122,9 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The Google audience ids of the excluded Google audience group. Used for negative targeting.
-   * It's COMPLEMENT is used to UNION other audience groups. Only contains Affinity, In-market and
+   * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
+   * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
+   * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
    * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * @param excludedGoogleAudienceGroup excludedGoogleAudienceGroup or {@code null} for none
    */

@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   private java.lang.Float confidence;
 
   /**
-   * The event that matched the query. Only filled for `EVENT` match type.
+   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and `NO_INPUT` match types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The event that matched the query. Only filled for `EVENT` match type.
+   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and `NO_INPUT` match types.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvent() {
@@ -114,7 +114,7 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The event that matched the query. Only filled for `EVENT` match type.
+   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and `NO_INPUT` match types.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Match setEvent(java.lang.String event) {

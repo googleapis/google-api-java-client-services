@@ -5617,13 +5617,13 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The domain name. Use this field to get fields from only one domain. To return all domains
+       * The domain name. Use this field to get groups from only one domain. To return all domains
        * for a customer account, use the `customer` query parameter instead.
        */
       @com.google.api.client.util.Key
       private java.lang.String domain;
 
-      /** The domain name. Use this field to get fields from only one domain. To return all domains for a
+      /** The domain name. Use this field to get groups from only one domain. To return all domains for a
      customer account, use the `customer` query parameter instead.
        */
       public java.lang.String getDomain() {
@@ -5631,7 +5631,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The domain name. Use this field to get fields from only one domain. To return all domains
+       * The domain name. Use this field to get groups from only one domain. To return all domains
        * for a customer account, use the `customer` query parameter instead.
        */
       public List setDomain(java.lang.String domain) {
@@ -16001,14 +16001,14 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The domain name. Use this field to get fields from only one domain. To return all domains
+       * The domain name. Use this field to get groups from only one domain. To return all domains
        * for a customer account, use the `customer` query parameter instead. Either the `customer`
        * or the `domain` parameter must be provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String domain;
 
-      /** The domain name. Use this field to get fields from only one domain. To return all domains for a
+      /** The domain name. Use this field to get groups from only one domain. To return all domains for a
      customer account, use the `customer` query parameter instead. Either the `customer` or the `domain`
      parameter must be provided.
        */
@@ -16017,7 +16017,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The domain name. Use this field to get fields from only one domain. To return all domains
+       * The domain name. Use this field to get groups from only one domain. To return all domains
        * for a customer account, use the `customer` query parameter instead. Either the `customer`
        * or the `domain` parameter must be provided.
        */

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.documentai.v1beta2.model;
+package com.google.api.services.documentai.v1.model;
 
 /**
- * The long running operation metadata for review document method.
+ * The common metadata for long running operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,14 +28,7 @@ package com.google.api.services.documentai.v1beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The basic metadata of the long running operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata;
+public final class GoogleCloudDocumentaiV1alpha1CommonOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * The creation time of the operation.
@@ -45,22 +38,21 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   private String createTime;
 
   /**
-   * The Crowd Compute question ID.
+   * A related resource to this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String questionId;
+  private java.lang.String resource;
 
   /**
-   * Used only when Operation.done is false.
+   * The state of the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
+   * A message providing more details about the current state of processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,23 +66,6 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   private String updateTime;
 
   /**
-   * The basic metadata of the long running operation.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3CommonOperationMetadata getCommonMetadata() {
-    return commonMetadata;
-  }
-
-  /**
-   * The basic metadata of the long running operation.
-   * @param commonMetadata commonMetadata or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setCommonMetadata(GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata) {
-    this.commonMetadata = commonMetadata;
-    return this;
-  }
-
-  /**
    * The creation time of the operation.
    * @return value or {@code null} for none
    */
@@ -102,30 +77,30 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
    * The creation time of the operation.
    * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setCreateTime(String createTime) {
+  public GoogleCloudDocumentaiV1alpha1CommonOperationMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
 
   /**
-   * The Crowd Compute question ID.
+   * A related resource to this operation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getQuestionId() {
-    return questionId;
+  public java.lang.String getResource() {
+    return resource;
   }
 
   /**
-   * The Crowd Compute question ID.
-   * @param questionId questionId or {@code null} for none
+   * A related resource to this operation.
+   * @param resource resource or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setQuestionId(java.lang.String questionId) {
-    this.questionId = questionId;
+  public GoogleCloudDocumentaiV1alpha1CommonOperationMetadata setResource(java.lang.String resource) {
+    this.resource = resource;
     return this;
   }
 
   /**
-   * Used only when Operation.done is false.
+   * The state of the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -133,17 +108,16 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   }
 
   /**
-   * Used only when Operation.done is false.
+   * The state of the operation.
    * @param state state or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setState(java.lang.String state) {
+  public GoogleCloudDocumentaiV1alpha1CommonOperationMetadata setState(java.lang.String state) {
     this.state = state;
     return this;
   }
 
   /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
+   * A message providing more details about the current state of processing.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateMessage() {
@@ -151,11 +125,10 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   }
 
   /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
+   * A message providing more details about the current state of processing.
    * @param stateMessage stateMessage or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setStateMessage(java.lang.String stateMessage) {
+  public GoogleCloudDocumentaiV1alpha1CommonOperationMetadata setStateMessage(java.lang.String stateMessage) {
     this.stateMessage = stateMessage;
     return this;
   }
@@ -172,19 +145,19 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
    * The last update time of the operation.
    * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setUpdateTime(String updateTime) {
+  public GoogleCloudDocumentaiV1alpha1CommonOperationMetadata setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata) super.set(fieldName, value);
+  public GoogleCloudDocumentaiV1alpha1CommonOperationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiV1alpha1CommonOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata clone() {
-    return (GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata) super.clone();
+  public GoogleCloudDocumentaiV1alpha1CommonOperationMetadata clone() {
+    return (GoogleCloudDocumentaiV1alpha1CommonOperationMetadata) super.clone();
   }
 
 }

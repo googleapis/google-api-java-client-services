@@ -69,7 +69,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   private java.lang.String dumpFilePath;
 
   /**
-   * This is always **sql#mysqlReplicaConfiguration**.
+   * This is always `sql#mysqlReplicaConfiguration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +205,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * This is always **sql#mysqlReplicaConfiguration**.
+   * This is always `sql#mysqlReplicaConfiguration`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -213,7 +213,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * This is always **sql#mysqlReplicaConfiguration**.
+   * This is always `sql#mysqlReplicaConfiguration`.
    * @param kind kind or {@code null} for none
    */
   public MySqlReplicaConfiguration setKind(java.lang.String kind) {

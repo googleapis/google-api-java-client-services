@@ -31,8 +31,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even
-   * in the absence of connection requests. * **NEVER**: The instance is off; it is not activated,
+   * instance state is RUNNABLE. Valid values: * `ALWAYS`: The instance is on, and remains so even
+   * in the absence of connection requests. * `NEVER`: The instance is off; it is not activated,
    * even if a connection request arrives.
    * The value may be {@code null}.
    */
@@ -55,10 +55,10 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> authorizedGaeApplications;
 
   /**
-   * Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data
-   * from more than one zone in a region (it is highly available)./ For more information, see
-   * [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
+   * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
+   * more than one zone in a region (it is highly available)./ For more information, see [Overview
+   * of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
    * availability).
    * The value may be {@code null}.
    */
@@ -95,8 +95,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long dataDiskSizeGb;
 
   /**
-   * The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation
-   * instances.
+   * The type of data disk: `PD_SSD` (default) or `PD_HDD`. Not used for First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +152,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private IpConfiguration ipConfiguration;
 
   /**
-   * This is always **sql#settings**.
+   * This is always `sql#settings`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,16 +183,16 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private PasswordValidationPolicy passwordValidationPolicy;
 
   /**
-   * The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only
-   * **PER_USE** is supported for Second Generation instances.
+   * The pricing plan for this instance. This can be either `PER_USE` or `PACKAGE`. Only `PER_USE`
+   * is supported for Second Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pricingPlan;
 
   /**
-   * The type of replication this instance uses. This can be either **ASYNCHRONOUS** or
-   * **SYNCHRONOUS**. (Deprecated) This property was only applicable to First Generation instances.
+   * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`.
+   * (Deprecated) This property was only applicable to First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,8 +230,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageAutoResizeLimit;
 
   /**
-   * The tier (or machine type) for this instance, for example **db-custom-1-3840**. WARNING:
-   * Changing this restarts the instance.
+   * The tier (or machine type) for this instance, for example `db-custom-1-3840`. WARNING: Changing
+   * this restarts the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,8 +246,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even
-   * in the absence of connection requests. * **NEVER**: The instance is off; it is not activated,
+   * instance state is RUNNABLE. Valid values: * `ALWAYS`: The instance is on, and remains so even
+   * in the absence of connection requests. * `NEVER`: The instance is off; it is not activated,
    * even if a connection request arrives.
    * @return value or {@code null} for none
    */
@@ -258,8 +257,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values: * **ALWAYS**: The instance is on, and remains so even
-   * in the absence of connection requests. * **NEVER**: The instance is off; it is not activated,
+   * instance state is RUNNABLE. Valid values: * `ALWAYS`: The instance is on, and remains so even
+   * in the absence of connection requests. * `NEVER`: The instance is off; it is not activated,
    * even if a connection request arrives.
    * @param activationPolicy activationPolicy or {@code null} for none
    */
@@ -305,10 +304,10 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data
-   * from more than one zone in a region (it is highly available)./ For more information, see
-   * [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
+   * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
+   * more than one zone in a region (it is highly available)./ For more information, see [Overview
+   * of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
    * availability).
    * @return value or {@code null} for none
    */
@@ -317,10 +316,10 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type. Potential values: * **ZONAL**: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility. * **REGIONAL**: The instance can serve data
-   * from more than one zone in a region (it is highly available)./ For more information, see
-   * [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
+   * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
+   * more than one zone in a region (it is highly available)./ For more information, see [Overview
+   * of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
    * availability).
    * @param availabilityType availabilityType or {@code null} for none
    */
@@ -400,8 +399,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation
-   * instances.
+   * The type of data disk: `PD_SSD` (default) or `PD_HDD`. Not used for First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataDiskType() {
@@ -409,8 +407,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of data disk: **PD_SSD** (default) or **PD_HDD**. Not used for First Generation
-   * instances.
+   * The type of data disk: `PD_SSD` (default) or `PD_HDD`. Not used for First Generation instances.
    * @param dataDiskType dataDiskType or {@code null} for none
    */
   public Settings setDataDiskType(java.lang.String dataDiskType) {
@@ -510,7 +507,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#settings**.
+   * This is always `sql#settings`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -518,7 +515,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#settings**.
+   * This is always `sql#settings`.
    * @param kind kind or {@code null} for none
    */
   public Settings setKind(java.lang.String kind) {
@@ -584,8 +581,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only
-   * **PER_USE** is supported for Second Generation instances.
+   * The pricing plan for this instance. This can be either `PER_USE` or `PACKAGE`. Only `PER_USE`
+   * is supported for Second Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getPricingPlan() {
@@ -593,8 +590,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The pricing plan for this instance. This can be either **PER_USE** or **PACKAGE**. Only
-   * **PER_USE** is supported for Second Generation instances.
+   * The pricing plan for this instance. This can be either `PER_USE` or `PACKAGE`. Only `PER_USE`
+   * is supported for Second Generation instances.
    * @param pricingPlan pricingPlan or {@code null} for none
    */
   public Settings setPricingPlan(java.lang.String pricingPlan) {
@@ -603,8 +600,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of replication this instance uses. This can be either **ASYNCHRONOUS** or
-   * **SYNCHRONOUS**. (Deprecated) This property was only applicable to First Generation instances.
+   * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`.
+   * (Deprecated) This property was only applicable to First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplicationType() {
@@ -612,8 +609,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of replication this instance uses. This can be either **ASYNCHRONOUS** or
-   * **SYNCHRONOUS**. (Deprecated) This property was only applicable to First Generation instances.
+   * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`.
+   * (Deprecated) This property was only applicable to First Generation instances.
    * @param replicationType replicationType or {@code null} for none
    */
   public Settings setReplicationType(java.lang.String replicationType) {
@@ -696,8 +693,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example **db-custom-1-3840**. WARNING:
-   * Changing this restarts the instance.
+   * The tier (or machine type) for this instance, for example `db-custom-1-3840`. WARNING: Changing
+   * this restarts the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -705,8 +702,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example **db-custom-1-3840**. WARNING:
-   * Changing this restarts the instance.
+   * The tier (or machine type) for this instance, for example `db-custom-1-3840`. WARNING: Changing
+   * this restarts the instance.
    * @param tier tier or {@code null} for none
    */
   public Settings setTier(java.lang.String tier) {

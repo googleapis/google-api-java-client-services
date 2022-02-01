@@ -37,7 +37,7 @@ public final class OperationError extends com.google.api.client.json.GenericJson
   private java.lang.String code;
 
   /**
-   * This is always **sql#operationError**.
+   * This is always `sql#operationError`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class OperationError extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is always **sql#operationError**.
+   * This is always `sql#operationError`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -76,7 +76,7 @@ public final class OperationError extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is always **sql#operationError**.
+   * This is always `sql#operationError`.
    * @param kind kind or {@code null} for none
    */
   public OperationError setKind(java.lang.String kind) {

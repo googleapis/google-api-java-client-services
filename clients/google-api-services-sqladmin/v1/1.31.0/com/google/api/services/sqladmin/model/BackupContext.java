@@ -37,7 +37,7 @@ public final class BackupContext extends com.google.api.client.json.GenericJson 
   private java.lang.Long backupId;
 
   /**
-   * This is always **sql#backupContext**.
+   * This is always `sql#backupContext`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class BackupContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This is always **sql#backupContext**.
+   * This is always `sql#backupContext`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -69,7 +69,7 @@ public final class BackupContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This is always **sql#backupContext**.
+   * This is always `sql#backupContext`.
    * @param kind kind or {@code null} for none
    */
   public BackupContext setKind(java.lang.String kind) {

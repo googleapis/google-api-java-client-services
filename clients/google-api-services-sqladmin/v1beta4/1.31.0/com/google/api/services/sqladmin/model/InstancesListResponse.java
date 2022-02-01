@@ -43,7 +43,7 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * This is always **sql#instancesList**.
+   * This is always `sql#instancesList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * This is always **sql#instancesList**.
+   * This is always `sql#instancesList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -96,7 +96,7 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * This is always **sql#instancesList**.
+   * This is always `sql#instancesList`.
    * @param kind kind or {@code null} for none
    */
   public InstancesListResponse setKind(java.lang.String kind) {

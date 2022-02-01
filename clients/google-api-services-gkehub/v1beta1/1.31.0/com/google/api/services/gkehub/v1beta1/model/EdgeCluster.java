@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v1beta1.model;
 
 /**
- * **Service Mesh**: Spec for a single Membership for the servicemesh feature
+ * EdgeCluster contains information specific to Google Edge Clusters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class EdgeCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * Immutable. Self-link of the GCP resource for the Edge Cluster. For example:
+   * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String controlPlane;
+  private java.lang.String resourceLink;
 
   /**
-   * Enables automatic control plane management.
+   * Immutable. Self-link of the GCP resource for the Edge Cluster. For example:
+   * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
    * @return value or {@code null} for none
    */
-  public java.lang.String getControlPlane() {
-    return controlPlane;
+  public java.lang.String getResourceLink() {
+    return resourceLink;
   }
 
   /**
-   * Enables automatic control plane management.
-   * @param controlPlane controlPlane or {@code null} for none
+   * Immutable. Self-link of the GCP resource for the Edge Cluster. For example:
+   * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+   * @param resourceLink resourceLink or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
-    this.controlPlane = controlPlane;
+  public EdgeCluster setResourceLink(java.lang.String resourceLink) {
+    this.resourceLink = resourceLink;
     return this;
   }
 
   @Override
-  public ServiceMeshMembershipSpec set(String fieldName, Object value) {
-    return (ServiceMeshMembershipSpec) super.set(fieldName, value);
+  public EdgeCluster set(String fieldName, Object value) {
+    return (EdgeCluster) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceMeshMembershipSpec clone() {
-    return (ServiceMeshMembershipSpec) super.clone();
+  public EdgeCluster clone() {
+    return (EdgeCluster) super.clone();
   }
 
 }

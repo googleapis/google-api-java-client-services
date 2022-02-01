@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * **Service Mesh**: Spec for a single Membership for the servicemesh feature
+ * The build version of Gatekeeper that Policy Controller is using.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerPolicyControllerHubVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * The gatekeeper image tag that is composed of ACM version, git tag, build number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String controlPlane;
+  private java.lang.String version;
 
   /**
-   * Enables automatic control plane management.
+   * The gatekeeper image tag that is composed of ACM version, git tag, build number.
    * @return value or {@code null} for none
    */
-  public java.lang.String getControlPlane() {
-    return controlPlane;
+  public java.lang.String getVersion() {
+    return version;
   }
 
   /**
-   * Enables automatic control plane management.
-   * @param controlPlane controlPlane or {@code null} for none
+   * The gatekeeper image tag that is composed of ACM version, git tag, build number.
+   * @param version version or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
-    this.controlPlane = controlPlane;
+  public PolicycontrollerPolicyControllerHubVersion setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public ServiceMeshMembershipSpec set(String fieldName, Object value) {
-    return (ServiceMeshMembershipSpec) super.set(fieldName, value);
+  public PolicycontrollerPolicyControllerHubVersion set(String fieldName, Object value) {
+    return (PolicycontrollerPolicyControllerHubVersion) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceMeshMembershipSpec clone() {
-    return (ServiceMeshMembershipSpec) super.clone();
+  public PolicycontrollerPolicyControllerHubVersion clone() {
+    return (PolicycontrollerPolicyControllerHubVersion) super.clone();
   }
 
 }

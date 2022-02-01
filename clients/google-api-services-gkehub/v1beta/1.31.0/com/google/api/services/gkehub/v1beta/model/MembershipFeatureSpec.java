@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class MembershipFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Cloud Build-specific spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MembershipSpec cloudbuild;
+
+  /**
    * Config Management-specific spec.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private IdentityServiceMembershipSpec identityservice;
+
+  /**
+   * Cloud Build-specific spec
+   * @return value or {@code null} for none
+   */
+  public MembershipSpec getCloudbuild() {
+    return cloudbuild;
+  }
+
+  /**
+   * Cloud Build-specific spec
+   * @param cloudbuild cloudbuild or {@code null} for none
+   */
+  public MembershipFeatureSpec setCloudbuild(MembershipSpec cloudbuild) {
+    this.cloudbuild = cloudbuild;
+    return this;
+  }
 
   /**
    * Config Management-specific spec.

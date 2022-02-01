@@ -31,6 +31,13 @@ package com.google.api.services.gkehub.v1alpha2.model;
 public final class MembershipEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specific information for a Google Edge cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EdgeCluster edgeCluster;
+
+  /**
    * Optional. Specific information for a GKE-on-GCP cluster.
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private OnPremCluster onPremCluster;
+
+  /**
+   * Optional. Specific information for a Google Edge cluster.
+   * @return value or {@code null} for none
+   */
+  public EdgeCluster getEdgeCluster() {
+    return edgeCluster;
+  }
+
+  /**
+   * Optional. Specific information for a Google Edge cluster.
+   * @param edgeCluster edgeCluster or {@code null} for none
+   */
+  public MembershipEndpoint setEdgeCluster(EdgeCluster edgeCluster) {
+    this.edgeCluster = edgeCluster;
+    return this;
+  }
 
   /**
    * Optional. Specific information for a GKE-on-GCP cluster.

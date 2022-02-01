@@ -32,14 +32,14 @@ package com.google.api.services.container.model;
 public final class ConfidentialNodes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+   * Whether Confidential Nodes feature is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+   * Whether Confidential Nodes feature is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -47,7 +47,7 @@ public final class ConfidentialNodes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+   * Whether Confidential Nodes feature is enabled.
    * @param enabled enabled or {@code null} for none
    */
   public ConfidentialNodes setEnabled(java.lang.Boolean enabled) {

@@ -33,9 +33,9 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class LinkedVpnTunnels extends com.google.api.client.json.GenericJson {
 
   /**
-   * A value that controls whether site-to-site data transfer is enabled for these resources. This
-   * field is set to false by default, but you must set it to true. Note that data transfer is
-   * available only in supported locations.
+   * A value that controls whether site-to-site data transfer is enabled for these resources. Data
+   * transfer is available only in [supported locations](https://cloud.google.com/network-
+   * connectivity/docs/network-connectivity-center/concepts/locations).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +49,9 @@ public final class LinkedVpnTunnels extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> uris;
 
   /**
-   * A value that controls whether site-to-site data transfer is enabled for these resources. This
-   * field is set to false by default, but you must set it to true. Note that data transfer is
-   * available only in supported locations.
+   * A value that controls whether site-to-site data transfer is enabled for these resources. Data
+   * transfer is available only in [supported locations](https://cloud.google.com/network-
+   * connectivity/docs/network-connectivity-center/concepts/locations).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSiteToSiteDataTransfer() {
@@ -59,9 +59,9 @@ public final class LinkedVpnTunnels extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A value that controls whether site-to-site data transfer is enabled for these resources. This
-   * field is set to false by default, but you must set it to true. Note that data transfer is
-   * available only in supported locations.
+   * A value that controls whether site-to-site data transfer is enabled for these resources. Data
+   * transfer is available only in [supported locations](https://cloud.google.com/network-
+   * connectivity/docs/network-connectivity-center/concepts/locations).
    * @param siteToSiteDataTransfer siteToSiteDataTransfer or {@code null} for none
    */
   public LinkedVpnTunnels setSiteToSiteDataTransfer(java.lang.Boolean siteToSiteDataTransfer) {

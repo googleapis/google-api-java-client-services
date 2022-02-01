@@ -153,6 +153,109 @@ public class Digitalassetlinks extends com.google.api.client.googleapis.services
   public class Assetlinks {
 
     /**
+     * Send a bundle of statement checks in a single RPC to minimize latency and service load.
+     * Statements need not be all for the same source and/or target. We recommend using this method when
+     * you need to check more than one statement in a short period of time.
+     *
+     * Create a request for the method "assetlinks.bulkCheck".
+     *
+     * This request holds the parameters needed by the digitalassetlinks server.  After setting any
+     * optional parameters, call the {@link BulkCheck#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.digitalassetlinks.v1.model.BulkCheckRequest}
+     * @return the request
+     */
+    public BulkCheck bulkCheck(com.google.api.services.digitalassetlinks.v1.model.BulkCheckRequest content) throws java.io.IOException {
+      BulkCheck result = new BulkCheck(content);
+      initialize(result);
+      return result;
+    }
+
+    public class BulkCheck extends DigitalassetlinksRequest<com.google.api.services.digitalassetlinks.v1.model.BulkCheckResponse> {
+
+      private static final String REST_PATH = "v1/assetlinks:bulkCheck";
+
+      /**
+       * Send a bundle of statement checks in a single RPC to minimize latency and service load.
+       * Statements need not be all for the same source and/or target. We recommend using this method
+       * when you need to check more than one statement in a short period of time.
+       *
+       * Create a request for the method "assetlinks.bulkCheck".
+       *
+       * This request holds the parameters needed by the the digitalassetlinks server.  After setting
+       * any optional parameters, call the {@link BulkCheck#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * BulkCheck#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.digitalassetlinks.v1.model.BulkCheckRequest}
+       * @since 1.13
+       */
+      protected BulkCheck(com.google.api.services.digitalassetlinks.v1.model.BulkCheckRequest content) {
+        super(Digitalassetlinks.this, "POST", REST_PATH, content, com.google.api.services.digitalassetlinks.v1.model.BulkCheckResponse.class);
+      }
+
+      @Override
+      public BulkCheck set$Xgafv(java.lang.String $Xgafv) {
+        return (BulkCheck) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BulkCheck setAccessToken(java.lang.String accessToken) {
+        return (BulkCheck) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BulkCheck setAlt(java.lang.String alt) {
+        return (BulkCheck) super.setAlt(alt);
+      }
+
+      @Override
+      public BulkCheck setCallback(java.lang.String callback) {
+        return (BulkCheck) super.setCallback(callback);
+      }
+
+      @Override
+      public BulkCheck setFields(java.lang.String fields) {
+        return (BulkCheck) super.setFields(fields);
+      }
+
+      @Override
+      public BulkCheck setKey(java.lang.String key) {
+        return (BulkCheck) super.setKey(key);
+      }
+
+      @Override
+      public BulkCheck setOauthToken(java.lang.String oauthToken) {
+        return (BulkCheck) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BulkCheck setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BulkCheck) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BulkCheck setQuotaUser(java.lang.String quotaUser) {
+        return (BulkCheck) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BulkCheck setUploadType(java.lang.String uploadType) {
+        return (BulkCheck) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BulkCheck setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BulkCheck) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public BulkCheck set(String parameterName, Object value) {
+        return (BulkCheck) super.set(parameterName, value);
+      }
+    }
+    /**
      * Determines whether the specified (directional) relationship exists between the specified source
      * and target assets. The relation describes the intent of the link between the two assets as
      * claimed by the source asset. An example for such relationships is the delegation of privileges or

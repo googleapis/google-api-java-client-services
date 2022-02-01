@@ -39,9 +39,9 @@ public final class LinkedRouterApplianceInstances extends com.google.api.client.
   private java.util.List<RouterApplianceInstance> instances;
 
   /**
-   * A value that controls whether site-to-site data transfer is enabled for these resources. This
-   * field is set to false by default, but you must set it to true. Note that data transfer is
-   * available only in supported locations.
+   * A value that controls whether site-to-site data transfer is enabled for these resources. Data
+   * transfer is available only in [supported locations](https://cloud.google.com/network-
+   * connectivity/docs/network-connectivity-center/concepts/locations).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +65,9 @@ public final class LinkedRouterApplianceInstances extends com.google.api.client.
   }
 
   /**
-   * A value that controls whether site-to-site data transfer is enabled for these resources. This
-   * field is set to false by default, but you must set it to true. Note that data transfer is
-   * available only in supported locations.
+   * A value that controls whether site-to-site data transfer is enabled for these resources. Data
+   * transfer is available only in [supported locations](https://cloud.google.com/network-
+   * connectivity/docs/network-connectivity-center/concepts/locations).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSiteToSiteDataTransfer() {
@@ -75,9 +75,9 @@ public final class LinkedRouterApplianceInstances extends com.google.api.client.
   }
 
   /**
-   * A value that controls whether site-to-site data transfer is enabled for these resources. This
-   * field is set to false by default, but you must set it to true. Note that data transfer is
-   * available only in supported locations.
+   * A value that controls whether site-to-site data transfer is enabled for these resources. Data
+   * transfer is available only in [supported locations](https://cloud.google.com/network-
+   * connectivity/docs/network-connectivity-center/concepts/locations).
    * @param siteToSiteDataTransfer siteToSiteDataTransfer or {@code null} for none
    */
   public LinkedRouterApplianceInstances setSiteToSiteDataTransfer(java.lang.Boolean siteToSiteDataTransfer) {

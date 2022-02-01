@@ -62,10 +62,8 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The VPC network associated with this hub's spokes. All of the VPN tunnels, VLAN attachments,
-   * and router appliance instances referenced by this hub's spokes must belong to this VPC network.
-   * This field is read-only. Network Connectivity Center automatically populates it based on the
-   * set of spokes attached to the hub.
+   * The VPC networks associated with this hub's spokes. This field is read-only. Network
+   * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,10 +165,8 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The VPC network associated with this hub's spokes. All of the VPN tunnels, VLAN attachments,
-   * and router appliance instances referenced by this hub's spokes must belong to this VPC network.
-   * This field is read-only. Network Connectivity Center automatically populates it based on the
-   * set of spokes attached to the hub.
+   * The VPC networks associated with this hub's spokes. This field is read-only. Network
+   * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
    * @return value or {@code null} for none
    */
   public java.util.List<RoutingVPC> getRoutingVpcs() {
@@ -178,10 +174,8 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The VPC network associated with this hub's spokes. All of the VPN tunnels, VLAN attachments,
-   * and router appliance instances referenced by this hub's spokes must belong to this VPC network.
-   * This field is read-only. Network Connectivity Center automatically populates it based on the
-   * set of spokes attached to the hub.
+   * The VPC networks associated with this hub's spokes. This field is read-only. Network
+   * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
    * @param routingVpcs routingVpcs or {@code null} for none
    */
   public Hub setRoutingVpcs(java.util.List<RoutingVPC> routingVpcs) {

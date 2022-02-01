@@ -30,9 +30,9 @@ package com.google.api.services.sqladmin.model;
 public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * The backend type. **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server
-   * that is not managed by Google. This property is read-only; use the **tier** property in the
-   * **settings** object to determine the database type.
+   * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that
+   * is not managed by Google. This property is read-only; use the `tier` property in the `settings`
+   * object to determine the database type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. The time when the instance was created in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,14 +65,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Stores the current database version running on the instance including minor
-   * version such as **MYSQL_8_0_18**.
+   * version such as `MYSQL_8_0_18`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String databaseInstalledVersion;
 
   /**
-   * The database engine type and version. The **databaseVersion** field cannot be changed after
+   * The database engine type and version. The `databaseVersion` field cannot be changed after
    * instance creation.
    * The value may be {@code null}.
    */
@@ -95,7 +95,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * This field is deprecated and will be removed from a future version of the API. Use the
-   * **settings.settingsVersion** field instead.
+   * `settings.settingsVersion` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String ipv6Address;
 
   /**
-   * This is always **sql#instance**.
+   * This is always `sql#instance`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,10 +192,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String project;
 
   /**
-   * The geographical region. Can be: * **us-central** (**FIRST_GEN** instances only) * **us-
-   * central1** (**SECOND_GEN** instances only) * **asia-east1** or **europe-west1**. Defaults to
-   * **us-central** or **us-central1** depending on the instance type. The region cannot be changed
-   * after instance creation.
+   * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1`
+   * (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or
+   * `us-central1` depending on the instance type. The region cannot be changed after instance
+   * creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,7 +261,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private SslCert serverCaCert;
 
   /**
-   * The service account email address assigned to the instance. This property is read-only.
+   * The service account email address assigned to the instance. \This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,9 +289,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> suspensionReason;
 
   /**
-   * The backend type. **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server
-   * that is not managed by Google. This property is read-only; use the **tier** property in the
-   * **settings** object to determine the database type.
+   * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that
+   * is not managed by Google. This property is read-only; use the `tier` property in the `settings`
+   * object to determine the database type.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendType() {
@@ -299,9 +299,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The backend type. **SECOND_GEN**: Cloud SQL database instance. **EXTERNAL**: A database server
-   * that is not managed by Google. This property is read-only; use the **tier** property in the
-   * **settings** object to determine the database type.
+   * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that
+   * is not managed by Google. This property is read-only; use the `tier` property in the `settings`
+   * object to determine the database type.
    * @param backendType backendType or {@code null} for none
    */
   public DatabaseInstance setBackendType(java.lang.String backendType) {
@@ -328,7 +328,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. The time when the instance was created in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -337,7 +337,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. The time when the instance was created in [RFC
-   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
    * @param createTime createTime or {@code null} for none
    */
   public DatabaseInstance setCreateTime(String createTime) {
@@ -370,7 +370,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Stores the current database version running on the instance including minor
-   * version such as **MYSQL_8_0_18**.
+   * version such as `MYSQL_8_0_18`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseInstalledVersion() {
@@ -379,7 +379,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Stores the current database version running on the instance including minor
-   * version such as **MYSQL_8_0_18**.
+   * version such as `MYSQL_8_0_18`.
    * @param databaseInstalledVersion databaseInstalledVersion or {@code null} for none
    */
   public DatabaseInstance setDatabaseInstalledVersion(java.lang.String databaseInstalledVersion) {
@@ -388,7 +388,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version. The **databaseVersion** field cannot be changed after
+   * The database engine type and version. The `databaseVersion` field cannot be changed after
    * instance creation.
    * @return value or {@code null} for none
    */
@@ -397,7 +397,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version. The **databaseVersion** field cannot be changed after
+   * The database engine type and version. The `databaseVersion` field cannot be changed after
    * instance creation.
    * @param databaseVersion databaseVersion or {@code null} for none
    */
@@ -442,7 +442,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * This field is deprecated and will be removed from a future version of the API. Use the
-   * **settings.settingsVersion** field instead.
+   * `settings.settingsVersion` field instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -451,7 +451,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * This field is deprecated and will be removed from a future version of the API. Use the
-   * **settings.settingsVersion** field instead.
+   * `settings.settingsVersion` field instead.
    * @param etag etag or {@code null} for none
    */
   public DatabaseInstance setEtag(java.lang.String etag) {
@@ -551,7 +551,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This is always **sql#instance**.
+   * This is always `sql#instance`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -559,7 +559,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This is always **sql#instance**.
+   * This is always `sql#instance`.
    * @param kind kind or {@code null} for none
    */
   public DatabaseInstance setKind(java.lang.String kind) {
@@ -676,10 +676,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The geographical region. Can be: * **us-central** (**FIRST_GEN** instances only) * **us-
-   * central1** (**SECOND_GEN** instances only) * **asia-east1** or **europe-west1**. Defaults to
-   * **us-central** or **us-central1** depending on the instance type. The region cannot be changed
-   * after instance creation.
+   * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1`
+   * (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or
+   * `us-central1` depending on the instance type. The region cannot be changed after instance
+   * creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -687,10 +687,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The geographical region. Can be: * **us-central** (**FIRST_GEN** instances only) * **us-
-   * central1** (**SECOND_GEN** instances only) * **asia-east1** or **europe-west1**. Defaults to
-   * **us-central** or **us-central1** depending on the instance type. The region cannot be changed
-   * after instance creation.
+   * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1`
+   * (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or
+   * `us-central1` depending on the instance type. The region cannot be changed after instance
+   * creation.
    * @param region region or {@code null} for none
    */
   public DatabaseInstance setRegion(java.lang.String region) {
@@ -841,7 +841,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The service account email address assigned to the instance. This property is read-only.
+   * The service account email address assigned to the instance. \This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmailAddress() {
@@ -849,7 +849,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The service account email address assigned to the instance. This property is read-only.
+   * The service account email address assigned to the instance. \This property is read-only.
    * @param serviceAccountEmailAddress serviceAccountEmailAddress or {@code null} for none
    */
   public DatabaseInstance setServiceAccountEmailAddress(java.lang.String serviceAccountEmailAddress) {

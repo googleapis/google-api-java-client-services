@@ -66,7 +66,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   private java.lang.String hostPort;
 
   /**
-   * This is always **sql#onPremisesConfiguration**.
+   * This is always `sql#onPremisesConfiguration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +181,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * This is always **sql#onPremisesConfiguration**.
+   * This is always `sql#onPremisesConfiguration`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -189,7 +189,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * This is always **sql#onPremisesConfiguration**.
+   * This is always `sql#onPremisesConfiguration`.
    * @param kind kind or {@code null} for none
    */
   public OnPremisesConfiguration setKind(java.lang.String kind) {

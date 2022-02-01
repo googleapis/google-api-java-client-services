@@ -37,7 +37,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   private java.lang.String detail;
 
   /**
-   * Can be **sql#externalSyncSettingError** or **sql#externalSyncSettingWarning**.
+   * Can be `sql#externalSyncSettingError` or `sql#externalSyncSettingWarning`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   }
 
   /**
-   * Can be **sql#externalSyncSettingError** or **sql#externalSyncSettingWarning**.
+   * Can be `sql#externalSyncSettingError` or `sql#externalSyncSettingWarning`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -76,7 +76,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   }
 
   /**
-   * Can be **sql#externalSyncSettingError** or **sql#externalSyncSettingWarning**.
+   * Can be `sql#externalSyncSettingError` or `sql#externalSyncSettingWarning`.
    * @param kind kind or {@code null} for none
    */
   public SqlExternalSyncSettingError setKind(java.lang.String kind) {

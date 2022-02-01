@@ -30,21 +30,21 @@ package com.google.api.services.sqladmin.model;
 public final class TruncateLogContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always **sql#truncateLogContext**.
+   * This is always `sql#truncateLogContext`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The type of log to truncate. Valid values are **MYSQL_GENERAL_TABLE** and **MYSQL_SLOW_TABLE**.
+   * The type of log to truncate. Valid values are `MYSQL_GENERAL_TABLE` and `MYSQL_SLOW_TABLE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logType;
 
   /**
-   * This is always **sql#truncateLogContext**.
+   * This is always `sql#truncateLogContext`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -52,7 +52,7 @@ public final class TruncateLogContext extends com.google.api.client.json.Generic
   }
 
   /**
-   * This is always **sql#truncateLogContext**.
+   * This is always `sql#truncateLogContext`.
    * @param kind kind or {@code null} for none
    */
   public TruncateLogContext setKind(java.lang.String kind) {
@@ -61,7 +61,7 @@ public final class TruncateLogContext extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of log to truncate. Valid values are **MYSQL_GENERAL_TABLE** and **MYSQL_SLOW_TABLE**.
+   * The type of log to truncate. Valid values are `MYSQL_GENERAL_TABLE` and `MYSQL_SLOW_TABLE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogType() {
@@ -69,7 +69,7 @@ public final class TruncateLogContext extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of log to truncate. Valid values are **MYSQL_GENERAL_TABLE** and **MYSQL_SLOW_TABLE**.
+   * The type of log to truncate. Valid values are `MYSQL_GENERAL_TABLE` and `MYSQL_SLOW_TABLE`.
    * @param logType logType or {@code null} for none
    */
   public TruncateLogContext setLogType(java.lang.String logType) {

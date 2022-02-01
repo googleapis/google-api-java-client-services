@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class FailoverContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always **sql#failoverContext**.
+   * This is always `sql#failoverContext`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class FailoverContext extends com.google.api.client.json.GenericJso
   private java.lang.Long settingsVersion;
 
   /**
-   * This is always **sql#failoverContext**.
+   * This is always `sql#failoverContext`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -53,7 +53,7 @@ public final class FailoverContext extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This is always **sql#failoverContext**.
+   * This is always `sql#failoverContext`.
    * @param kind kind or {@code null} for none
    */
   public FailoverContext setKind(java.lang.String kind) {

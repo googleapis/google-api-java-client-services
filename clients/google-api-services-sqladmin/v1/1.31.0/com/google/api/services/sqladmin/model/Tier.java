@@ -44,7 +44,7 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   private java.lang.Long rAM;
 
   /**
-   * This is always **sql#tier**.
+   * This is always `sql#tier`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,8 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> region;
 
   /**
-   * An identifier for the machine type, for example, db-custom-1-3840. For related information, see
-   * [Pricing](/sql/pricing).
+   * An identifier for the machine type, for example, `db-custom-1-3840`. For related information,
+   * see [Pricing](/sql/pricing).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#tier**.
+   * This is always `sql#tier`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -108,7 +108,7 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always **sql#tier**.
+   * This is always `sql#tier`.
    * @param kind kind or {@code null} for none
    */
   public Tier setKind(java.lang.String kind) {
@@ -134,8 +134,8 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the machine type, for example, db-custom-1-3840. For related information, see
-   * [Pricing](/sql/pricing).
+   * An identifier for the machine type, for example, `db-custom-1-3840`. For related information,
+   * see [Pricing](/sql/pricing).
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -143,8 +143,8 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the machine type, for example, db-custom-1-3840. For related information, see
-   * [Pricing](/sql/pricing).
+   * An identifier for the machine type, for example, `db-custom-1-3840`. For related information,
+   * see [Pricing](/sql/pricing).
    * @param tier tier or {@code null} for none
    */
   public Tier setTier(java.lang.String tier) {

@@ -43,7 +43,7 @@ public final class UsersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#usersList**.
+   * This is always `sql#usersList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class UsersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#usersList**.
+   * This is always `sql#usersList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -83,7 +83,7 @@ public final class UsersListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#usersList**.
+   * This is always `sql#usersList`.
    * @param kind kind or {@code null} for none
    */
   public UsersListResponse setKind(java.lang.String kind) {

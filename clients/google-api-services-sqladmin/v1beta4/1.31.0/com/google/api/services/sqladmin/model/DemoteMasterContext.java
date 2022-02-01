@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class DemoteMasterContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always **sql#demoteMasterContext**.
+   * This is always `sql#demoteMasterContext`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,9 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   private java.lang.Boolean skipReplicationSetup;
 
   /**
-   * Verify GTID consistency for demote operation. Default value: **True**. Setting this flag to
-   * false enables you to bypass GTID consistency check between on-premises primary instance and
-   * Cloud SQL instance during the demotion operation but also exposes you to the risk of future
+   * Verify the GTID consistency for demote operation. Default value: `True`. Setting this flag to
+   * `false` enables you to bypass the GTID consistency check between on-premises primary instance
+   * and Cloud SQL instance during the demotion operation but also exposes you to the risk of future
    * replication failures. Change the value only if you know the reason for the GTID divergence and
    * are confident that doing so will not cause any replication issues.
    * The value may be {@code null}.
@@ -70,7 +70,7 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   private java.lang.Boolean verifyGtidConsistency;
 
   /**
-   * This is always **sql#demoteMasterContext**.
+   * This is always `sql#demoteMasterContext`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -78,7 +78,7 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always **sql#demoteMasterContext**.
+   * This is always `sql#demoteMasterContext`.
    * @param kind kind or {@code null} for none
    */
   public DemoteMasterContext setKind(java.lang.String kind) {
@@ -140,9 +140,9 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   }
 
   /**
-   * Verify GTID consistency for demote operation. Default value: **True**. Setting this flag to
-   * false enables you to bypass GTID consistency check between on-premises primary instance and
-   * Cloud SQL instance during the demotion operation but also exposes you to the risk of future
+   * Verify the GTID consistency for demote operation. Default value: `True`. Setting this flag to
+   * `false` enables you to bypass the GTID consistency check between on-premises primary instance
+   * and Cloud SQL instance during the demotion operation but also exposes you to the risk of future
    * replication failures. Change the value only if you know the reason for the GTID divergence and
    * are confident that doing so will not cause any replication issues.
    * @return value or {@code null} for none
@@ -152,9 +152,9 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   }
 
   /**
-   * Verify GTID consistency for demote operation. Default value: **True**. Setting this flag to
-   * false enables you to bypass GTID consistency check between on-premises primary instance and
-   * Cloud SQL instance during the demotion operation but also exposes you to the risk of future
+   * Verify the GTID consistency for demote operation. Default value: `True`. Setting this flag to
+   * `false` enables you to bypass the GTID consistency check between on-premises primary instance
+   * and Cloud SQL instance during the demotion operation but also exposes you to the risk of future
    * replication failures. Change the value only if you know the reason for the GTID divergence and
    * are confident that doing so will not cause any replication issues.
    * @param verifyGtidConsistency verifyGtidConsistency or {@code null} for none

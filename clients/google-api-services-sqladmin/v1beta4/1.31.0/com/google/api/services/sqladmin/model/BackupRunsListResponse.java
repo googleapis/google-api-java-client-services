@@ -43,7 +43,7 @@ public final class BackupRunsListResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#backupRunsList**.
+   * This is always `sql#backupRunsList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class BackupRunsListResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#backupRunsList**.
+   * This is always `sql#backupRunsList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -83,7 +83,7 @@ public final class BackupRunsListResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always **sql#backupRunsList**.
+   * This is always `sql#backupRunsList`.
    * @param kind kind or {@code null} for none
    */
   public BackupRunsListResponse setKind(java.lang.String kind) {

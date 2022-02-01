@@ -43,7 +43,7 @@ public final class FlagsListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#flagsList**.
+   * This is always `sql#flagsList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class FlagsListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#flagsList**.
+   * This is always `sql#flagsList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,7 +75,7 @@ public final class FlagsListResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always **sql#flagsList**.
+   * This is always `sql#flagsList`.
    * @param kind kind or {@code null} for none
    */
   public FlagsListResponse setKind(java.lang.String kind) {

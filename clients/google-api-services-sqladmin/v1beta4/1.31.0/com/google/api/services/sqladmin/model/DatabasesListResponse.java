@@ -43,7 +43,7 @@ public final class DatabasesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * This is always **sql#databasesList**.
+   * This is always `sql#databasesList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class DatabasesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * This is always **sql#databasesList**.
+   * This is always `sql#databasesList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,7 +75,7 @@ public final class DatabasesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * This is always **sql#databasesList**.
+   * This is always `sql#databasesList`.
    * @param kind kind or {@code null} for none
    */
   public DatabasesListResponse setKind(java.lang.String kind) {

@@ -6785,8 +6785,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   public class Tiers {
 
     /**
-     * Lists all available machine types (tiers) for Cloud SQL, for example, db-custom-1-3840. For more
-     * information, see https://cloud.google.com/sql/pricing.
+     * Lists all available machine types (tiers) for Cloud SQL, for example, `db-custom-1-3840`. For
+     * more information, see https://cloud.google.com/sql/pricing.
      *
      * Create a request for the method "tiers.list".
      *
@@ -6807,7 +6807,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "v1/projects/{project}/tiers";
 
       /**
-       * Lists all available machine types (tiers) for Cloud SQL, for example, db-custom-1-3840. For
+       * Lists all available machine types (tiers) for Cloud SQL, for example, `db-custom-1-3840`. For
        * more information, see https://cloud.google.com/sql/pricing.
        *
        * Create a request for the method "tiers.list".

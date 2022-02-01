@@ -36,7 +36,8 @@ public final class GoogleCloudRetailV2GcsSource extends com.google.api.client.js
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
    * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719. Supported values
-   * for control imports: * 'control' (default): One JSON Control per line.
+   * for control imports: * 'control' (default): One JSON Control per line. Supported values for
+   * catalog attribute imports: * 'catalog_attribute' (default): One CSV CatalogAttribute per line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class GoogleCloudRetailV2GcsSource extends com.google.api.client.js
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
    * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719. Supported values
-   * for control imports: * 'control' (default): One JSON Control per line.
+   * for control imports: * 'control' (default): One JSON Control per line. Supported values for
+   * catalog attribute imports: * 'catalog_attribute' (default): One CSV CatalogAttribute per line.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -75,7 +77,8 @@ public final class GoogleCloudRetailV2GcsSource extends com.google.api.client.js
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
    * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719. Supported values
-   * for control imports: * 'control' (default): One JSON Control per line.
+   * for control imports: * 'control' (default): One JSON Control per line. Supported values for
+   * catalog attribute imports: * 'catalog_attribute' (default): One CSV CatalogAttribute per line.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudRetailV2GcsSource setDataSchema(java.lang.String dataSchema) {

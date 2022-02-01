@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * **Service Mesh**: Spec for a single Membership for the servicemesh feature
+ * Status of control plane management.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,64 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class ServiceMeshControlPlaneManagement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * Explanation of state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String controlPlane;
+  private java.util.List<ServiceMeshStatusDetails> details;
 
   /**
-   * Enables automatic control plane management.
+   * LifecycleState of control plane management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * Explanation of state.
    * @return value or {@code null} for none
    */
-  public java.lang.String getControlPlane() {
-    return controlPlane;
+  public java.util.List<ServiceMeshStatusDetails> getDetails() {
+    return details;
   }
 
   /**
-   * Enables automatic control plane management.
-   * @param controlPlane controlPlane or {@code null} for none
+   * Explanation of state.
+   * @param details details or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
-    this.controlPlane = controlPlane;
+  public ServiceMeshControlPlaneManagement setDetails(java.util.List<ServiceMeshStatusDetails> details) {
+    this.details = details;
+    return this;
+  }
+
+  /**
+   * LifecycleState of control plane management.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * LifecycleState of control plane management.
+   * @param state state or {@code null} for none
+   */
+  public ServiceMeshControlPlaneManagement setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public ServiceMeshMembershipSpec set(String fieldName, Object value) {
-    return (ServiceMeshMembershipSpec) super.set(fieldName, value);
+  public ServiceMeshControlPlaneManagement set(String fieldName, Object value) {
+    return (ServiceMeshControlPlaneManagement) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceMeshMembershipSpec clone() {
-    return (ServiceMeshMembershipSpec) super.clone();
+  public ServiceMeshControlPlaneManagement clone() {
+    return (ServiceMeshControlPlaneManagement) super.clone();
   }
 
 }

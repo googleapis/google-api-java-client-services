@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * **Service Mesh**: Spec for a single Membership for the servicemesh feature
+ * The config specifying which default library templates to install.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerTemplateLibraryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * Whether the standard template library should be installed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String controlPlane;
+  private java.lang.Boolean included;
 
   /**
-   * Enables automatic control plane management.
+   * Whether the standard template library should be installed or not.
    * @return value or {@code null} for none
    */
-  public java.lang.String getControlPlane() {
-    return controlPlane;
+  public java.lang.Boolean getIncluded() {
+    return included;
   }
 
   /**
-   * Enables automatic control plane management.
-   * @param controlPlane controlPlane or {@code null} for none
+   * Whether the standard template library should be installed or not.
+   * @param included included or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
-    this.controlPlane = controlPlane;
+  public PolicycontrollerTemplateLibraryConfig setIncluded(java.lang.Boolean included) {
+    this.included = included;
     return this;
   }
 
   @Override
-  public ServiceMeshMembershipSpec set(String fieldName, Object value) {
-    return (ServiceMeshMembershipSpec) super.set(fieldName, value);
+  public PolicycontrollerTemplateLibraryConfig set(String fieldName, Object value) {
+    return (PolicycontrollerTemplateLibraryConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceMeshMembershipSpec clone() {
-    return (ServiceMeshMembershipSpec) super.clone();
+  public PolicycontrollerTemplateLibraryConfig clone() {
+    return (PolicycontrollerTemplateLibraryConfig) super.clone();
   }
 
 }

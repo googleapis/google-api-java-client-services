@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A configuration for running an Apache Spark (http://spark.apache.org/) batch workload.
+ * A configuration for running an Apache Spark (https://spark.apache.org/) batch workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

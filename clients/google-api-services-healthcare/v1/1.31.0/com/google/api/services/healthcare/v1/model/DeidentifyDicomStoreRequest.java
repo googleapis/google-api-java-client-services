@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1.model;
 public final class DeidentifyDicomStoreRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * De-identify configuration.
+   * Deidentify configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class DeidentifyDicomStoreRequest extends com.google.api.client.jso
   private DicomFilterConfig filterConfig;
 
   /**
-   * De-identify configuration.
+   * Deidentify configuration.
    * @return value or {@code null} for none
    */
   public DeidentifyConfig getConfig() {
@@ -64,7 +64,7 @@ public final class DeidentifyDicomStoreRequest extends com.google.api.client.jso
   }
 
   /**
-   * De-identify configuration.
+   * Deidentify configuration.
    * @param config config or {@code null} for none
    */
   public DeidentifyDicomStoreRequest setConfig(DeidentifyConfig config) {

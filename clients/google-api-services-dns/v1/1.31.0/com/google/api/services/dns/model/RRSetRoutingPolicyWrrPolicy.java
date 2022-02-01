@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for RRSetRoutingPolicyWrrPolicy.
+ * Configures a RRSetRoutingPolicy that routes in a weighted round robin fashion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:

@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for RRSetRoutingPolicyGeoPolicyGeoPolicyItem.
+ * ResourceRecordSet data for one geo location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
@@ -50,7 +50,8 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   private java.util.List<java.lang.String> rrdatas;
 
   /**
-   * DNSSEC generated signatures for the above geo_rrdata.
+   * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
+   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +107,8 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for the above geo_rrdata.
+   * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
+   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSignatureRrdatas() {
@@ -114,7 +116,8 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for the above geo_rrdata.
+   * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
+   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
    * @param signatureRrdatas signatureRrdatas or {@code null} for none
    */
   public RRSetRoutingPolicyGeoPolicyGeoPolicyItem setSignatureRrdatas(java.util.List<java.lang.String> signatureRrdatas) {

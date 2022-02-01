@@ -30,6 +30,14 @@ package com.google.api.services.secretmanager.v1.model;
 public final class SecretVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. True if payload checksum specified in SecretPayload object has been received by
+   * SecretManagerService on SecretManagerService.AddSecretVersion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean clientSpecifiedPayloadChecksum;
+
+  /**
    * Output only. The time at which the SecretVersion was created.
    * The value may be {@code null}.
    */
@@ -72,6 +80,25 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. True if payload checksum specified in SecretPayload object has been received by
+   * SecretManagerService on SecretManagerService.AddSecretVersion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getClientSpecifiedPayloadChecksum() {
+    return clientSpecifiedPayloadChecksum;
+  }
+
+  /**
+   * Output only. True if payload checksum specified in SecretPayload object has been received by
+   * SecretManagerService on SecretManagerService.AddSecretVersion.
+   * @param clientSpecifiedPayloadChecksum clientSpecifiedPayloadChecksum or {@code null} for none
+   */
+  public SecretVersion setClientSpecifiedPayloadChecksum(java.lang.Boolean clientSpecifiedPayloadChecksum) {
+    this.clientSpecifiedPayloadChecksum = clientSpecifiedPayloadChecksum;
+    return this;
+  }
 
   /**
    * Output only. The time at which the SecretVersion was created.

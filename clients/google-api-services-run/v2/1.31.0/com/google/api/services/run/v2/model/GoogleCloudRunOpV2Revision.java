@@ -147,7 +147,7 @@ public final class GoogleCloudRunOpV2Revision extends com.google.api.client.json
   /**
    * Set the launch stage to a preview stage on write to allow use of preview features in that
    * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages).
+   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -489,7 +489,7 @@ public final class GoogleCloudRunOpV2Revision extends com.google.api.client.json
   /**
    * Set the launch stage to a preview stage on write to allow use of preview features in that
    * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages).
+   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
    * @return value or {@code null} for none
    */
   public java.lang.String getLaunchStage() {
@@ -499,7 +499,7 @@ public final class GoogleCloudRunOpV2Revision extends com.google.api.client.json
   /**
    * Set the launch stage to a preview stage on write to allow use of preview features in that
    * stage. On read, describes whether the resource uses preview features. Launch Stages are defined
-   * at [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages).
+   * at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
    * @param launchStage launchStage or {@code null} for none
    */
   public GoogleCloudRunOpV2Revision setLaunchStage(java.lang.String launchStage) {

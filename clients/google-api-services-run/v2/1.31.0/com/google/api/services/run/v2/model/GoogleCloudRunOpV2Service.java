@@ -37,7 +37,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
    * They are not queryable and should be preserved when modifying objects. Cloud Run will populate
    * some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field
    * follows Kubernetes annotations' namespacing, limits, and rules. More info:
-   * http://kubernetes.io/docs/user-guide/annotations
+   * https://kubernetes.io/docs/user-guide/annotations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
 
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
-   * Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
+   * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
    * `GA`. If no value is specified, GA is assumed.
    * The value may be {@code null}.
    */
@@ -279,7 +279,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
    * They are not queryable and should be preserved when modifying objects. Cloud Run will populate
    * some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field
    * follows Kubernetes annotations' namespacing, limits, and rules. More info:
-   * http://kubernetes.io/docs/user-guide/annotations
+   * https://kubernetes.io/docs/user-guide/annotations
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -291,7 +291,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
    * They are not queryable and should be preserved when modifying objects. Cloud Run will populate
    * some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field
    * follows Kubernetes annotations' namespacing, limits, and rules. More info:
-   * http://kubernetes.io/docs/user-guide/annotations
+   * https://kubernetes.io/docs/user-guide/annotations
    * @param annotations annotations or {@code null} for none
    */
   public GoogleCloudRunOpV2Service setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -599,7 +599,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
 
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
-   * Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
+   * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
    * `GA`. If no value is specified, GA is assumed.
    * @return value or {@code null} for none
    */
@@ -609,7 +609,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
 
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
-   * Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
+   * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
    * `GA`. If no value is specified, GA is assumed.
    * @param launchStage launchStage or {@code null} for none
    */

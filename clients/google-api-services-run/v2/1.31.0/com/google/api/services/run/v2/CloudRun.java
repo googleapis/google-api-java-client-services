@@ -20,7 +20,7 @@ package com.google.api.services.run.v2;
  * Service definition for CloudRun (v2).
  *
  * <p>
- * Deploy and manage user provided container images that scale automatically based on incoming requests. The Cloud Run Admin API follows the Knative Serving API specification.
+ * Deploy and manage user provided container images that scale automatically based on incoming requests. The Cloud Run Admin API v1 follows the Knative Serving API specification, while v2 is aligned with Google Cloud AIP-based API standards, as described in https://google.aip.dev/.
  * </p>
  *
  * <p>
@@ -478,7 +478,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the operation's parent resource.
+         * @param name Required. To query for all of the operations for a project.
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -510,7 +510,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the operation's parent resource.
+           * @param name Required. To query for all of the operations for a project.
            * @since 1.13
            */
           protected List(java.lang.String name) {
@@ -588,17 +588,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the operation's parent resource. */
+          /** Required. To query for all of the operations for a project. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the operation's parent resource.
+          /** Required. To query for all of the operations for a project.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the operation's parent resource. */
+          /** Required. To query for all of the operations for a project. */
           public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -609,49 +609,77 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The standard list filter. */
+          /**
+           * Optional. A filter for matching the completed or in-progress operations. The supported
+           * formats of *filter* are: To query for only completed operations: done:true To query for
+           * only ongoing operations: done:false Must be empty to query for all of the latest
+           * operations for the given parent project.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** The standard list filter.
+          /** Optional. A filter for matching the completed or in-progress operations. The supported formats of
+         *filter* are: To query for only completed operations: done:true To query for only ongoing
+         operations: done:false Must be empty to query for all of the latest operations for the given parent
+         project.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** The standard list filter. */
+          /**
+           * Optional. A filter for matching the completed or in-progress operations. The supported
+           * formats of *filter* are: To query for only completed operations: done:true To query for
+           * only ongoing operations: done:false Must be empty to query for all of the latest
+           * operations for the given parent project.
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** The standard list page size. */
+          /**
+           * The maximum number of records that should be returned. Requested page size cannot
+           * exceed 100. If not set or set to less than or equal to 0, the default page size is 100.
+           * .
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The standard list page size.
+          /** The maximum number of records that should be returned. Requested page size cannot exceed 100. If
+         not set or set to less than or equal to 0, the default page size is 100. .
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The standard list page size. */
+          /**
+           * The maximum number of records that should be returned. Requested page size cannot
+           * exceed 100. If not set or set to less than or equal to 0, the default page size is 100.
+           * .
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The standard list page token. */
+          /**
+           * Token identifying which result to start with, which is returned by a previous list
+           * call.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The standard list page token.
+          /** Token identifying which result to start with, which is returned by a previous list call.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The standard list page token. */
+          /**
+           * Token identifying which result to start with, which is returned by a previous list
+           * call.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

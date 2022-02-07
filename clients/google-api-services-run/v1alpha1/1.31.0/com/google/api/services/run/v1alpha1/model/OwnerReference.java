@@ -63,14 +63,14 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
-   * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+   * Name of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#names
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+   * UID of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#uids
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+   * Name of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#names
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -161,7 +161,7 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+   * Name of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#names
    * @param name name or {@code null} for none
    */
   public OwnerReference setName(java.lang.String name) {
@@ -170,7 +170,7 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+   * UID of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#uids
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -178,7 +178,7 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+   * UID of the referent. More info: https://kubernetes.io/docs/user-guide/identifiers#uids
    * @param uid uid or {@code null} for none
    */
   public OwnerReference setUid(java.lang.String uid) {

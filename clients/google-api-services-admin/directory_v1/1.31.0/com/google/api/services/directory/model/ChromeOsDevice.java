@@ -276,8 +276,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The unique ID of the organizational unit. orgUnitPath is the human readable version of
    * orgUnitId. While orgUnitPath may change by renaming an organizational unit within the path,
    * orgUnitId is unchangeable for one organizational unit. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API, and this
-   * will be supported in the future.
+   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
+   * more information about how to create an organizational structure for your device, see the
+   * [administration help center](https://support.google.com/a/answer/182433).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,8 +288,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The full parent path with the organizational unit's name associated with the device. Path names
    * are case insensitive. If the parent organizational unit is the top-level organization, it is
    * represented as a forward slash, `/`. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API. For more
-   * information about how to create an organizational structure for your device, see the
+   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
+   * more information about how to create an organizational structure for your device, see the
    * [administration help center](https://support.google.com/a/answer/182433).
    * The value may be {@code null}.
    */
@@ -884,8 +885,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The unique ID of the organizational unit. orgUnitPath is the human readable version of
    * orgUnitId. While orgUnitPath may change by renaming an organizational unit within the path,
    * orgUnitId is unchangeable for one organizational unit. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API, and this
-   * will be supported in the future.
+   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
+   * more information about how to create an organizational structure for your device, see the
+   * [administration help center](https://support.google.com/a/answer/182433).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitId() {
@@ -896,8 +898,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The unique ID of the organizational unit. orgUnitPath is the human readable version of
    * orgUnitId. While orgUnitPath may change by renaming an organizational unit within the path,
    * orgUnitId is unchangeable for one organizational unit. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API, and this
-   * will be supported in the future.
+   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
+   * more information about how to create an organizational structure for your device, see the
+   * [administration help center](https://support.google.com/a/answer/182433).
    * @param orgUnitId orgUnitId or {@code null} for none
    */
   public ChromeOsDevice setOrgUnitId(java.lang.String orgUnitId) {
@@ -909,8 +912,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The full parent path with the organizational unit's name associated with the device. Path names
    * are case insensitive. If the parent organizational unit is the top-level organization, it is
    * represented as a forward slash, `/`. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API. For more
-   * information about how to create an organizational structure for your device, see the
+   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
+   * more information about how to create an organizational structure for your device, see the
    * [administration help center](https://support.google.com/a/answer/182433).
    * @return value or {@code null} for none
    */
@@ -922,8 +925,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The full parent path with the organizational unit's name associated with the device. Path names
    * are case insensitive. If the parent organizational unit is the top-level organization, it is
    * represented as a forward slash, `/`. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API. For more
-   * information about how to create an organizational structure for your device, see the
+   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
+   * more information about how to create an organizational structure for your device, see the
    * [administration help center](https://support.google.com/a/answer/182433).
    * @param orgUnitPath orgUnitPath or {@code null} for none
    */

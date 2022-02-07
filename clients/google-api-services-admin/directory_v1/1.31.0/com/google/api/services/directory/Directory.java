@@ -16145,17 +16145,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Whether to return results in ascending or descending order. */
+      /** Whether to return results in ascending or descending order, ignoring case. */
       @com.google.api.client.util.Key
       private java.lang.String sortOrder;
 
-      /** Whether to return results in ascending or descending order.
+      /** Whether to return results in ascending or descending order, ignoring case.
        */
       public java.lang.String getSortOrder() {
         return sortOrder;
       }
 
-      /** Whether to return results in ascending or descending order. */
+      /** Whether to return results in ascending or descending order, ignoring case. */
       public List setSortOrder(java.lang.String sortOrder) {
         this.sortOrder = sortOrder;
         return this;

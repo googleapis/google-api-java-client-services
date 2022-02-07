@@ -199,6 +199,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * or greater sampling rate. This is a premium model that costs more than the standard rate.
    * default Best for audio that is not one of the specific audio models. For example, long-form
    * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
+   * medical_conversation Best for audio that originated from a conversation between a medical
+   * provider and patient. medical_dictation Best for audio that originated from dictation notes by
+   * a medical provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -628,6 +631,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * or greater sampling rate. This is a premium model that costs more than the standard rate.
    * default Best for audio that is not one of the specific audio models. For example, long-form
    * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
+   * medical_conversation Best for audio that originated from a conversation between a medical
+   * provider and patient. medical_dictation Best for audio that originated from dictation notes by
+   * a medical provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -644,6 +650,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * or greater sampling rate. This is a premium model that costs more than the standard rate.
    * default Best for audio that is not one of the specific audio models. For example, long-form
    * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
+   * medical_conversation Best for audio that originated from a conversation between a medical
+   * provider and patient. medical_dictation Best for audio that originated from dictation notes by
+   * a medical provider.
    * @param model model or {@code null} for none
    */
   public RecognitionConfig setModel(java.lang.String model) {

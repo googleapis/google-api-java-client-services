@@ -48,12 +48,6 @@ public final class AuditConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<AuditLogConfig> auditLogConfigs;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> exemptedMembers;
-
-  /**
    * Specifies a service that will be enabled for audit logging. For example,
    * `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that
    * covers all services.
@@ -76,21 +70,6 @@ public final class AuditConfig extends com.google.api.client.json.GenericJson {
    */
   public AuditConfig setAuditLogConfigs(java.util.List<AuditLogConfig> auditLogConfigs) {
     this.auditLogConfigs = auditLogConfigs;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getExemptedMembers() {
-    return exemptedMembers;
-  }
-
-  /**
-   * @param exemptedMembers exemptedMembers or {@code null} for none
-   */
-  public AuditConfig setExemptedMembers(java.util.List<java.lang.String> exemptedMembers) {
-    this.exemptedMembers = exemptedMembers;
     return this;
   }
 

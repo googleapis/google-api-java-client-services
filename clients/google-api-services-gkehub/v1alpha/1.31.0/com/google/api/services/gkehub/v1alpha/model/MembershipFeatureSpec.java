@@ -72,6 +72,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private PolicycontrollerMembershipSpec policycontroller;
 
   /**
+   * Workload Certificate spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MembershipSpec workloadcertificate;
+
+  /**
    * Anthos Observability-specific spec
    * @return value or {@code null} for none
    */
@@ -170,6 +177,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setPolicycontroller(PolicycontrollerMembershipSpec policycontroller) {
     this.policycontroller = policycontroller;
+    return this;
+  }
+
+  /**
+   * Workload Certificate spec.
+   * @return value or {@code null} for none
+   */
+  public MembershipSpec getWorkloadcertificate() {
+    return workloadcertificate;
+  }
+
+  /**
+   * Workload Certificate spec.
+   * @param workloadcertificate workloadcertificate or {@code null} for none
+   */
+  public MembershipFeatureSpec setWorkloadcertificate(MembershipSpec workloadcertificate) {
+    this.workloadcertificate = workloadcertificate;
     return this;
   }
 

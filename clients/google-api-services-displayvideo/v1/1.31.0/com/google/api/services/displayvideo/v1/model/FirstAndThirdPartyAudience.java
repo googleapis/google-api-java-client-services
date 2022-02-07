@@ -151,9 +151,9 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
 
   /**
    * The duration in days that an entry remains in the audience after the qualifying event. If the
-   * audience has no expiration, the value of this field should be set 10000. Otherwise, the set
-   * value must be greater than 0 and less than or equal to 540. Only applicable to first party
-   * audiences. This field is required if one of the following audience_type is used: *
+   * audience has no expiration, set the value of this field to 10000. Otherwise, the set value must
+   * be greater than 0 and less than or equal to 540. Only applicable to first party audiences. This
+   * field is required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    * The value may be {@code null}.
    */
@@ -463,9 +463,9 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
 
   /**
    * The duration in days that an entry remains in the audience after the qualifying event. If the
-   * audience has no expiration, the value of this field should be set 10000. Otherwise, the set
-   * value must be greater than 0 and less than or equal to 540. Only applicable to first party
-   * audiences. This field is required if one of the following audience_type is used: *
+   * audience has no expiration, set the value of this field to 10000. Otherwise, the set value must
+   * be greater than 0 and less than or equal to 540. Only applicable to first party audiences. This
+   * field is required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    * @return value or {@code null} for none
    */
@@ -475,9 +475,9 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
 
   /**
    * The duration in days that an entry remains in the audience after the qualifying event. If the
-   * audience has no expiration, the value of this field should be set 10000. Otherwise, the set
-   * value must be greater than 0 and less than or equal to 540. Only applicable to first party
-   * audiences. This field is required if one of the following audience_type is used: *
+   * audience has no expiration, set the value of this field to 10000. Otherwise, the set value must
+   * be greater than 0 and less than or equal to 540. Only applicable to first party audiences. This
+   * field is required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
    * @param membershipDurationDays membershipDurationDays or {@code null} for none
    */

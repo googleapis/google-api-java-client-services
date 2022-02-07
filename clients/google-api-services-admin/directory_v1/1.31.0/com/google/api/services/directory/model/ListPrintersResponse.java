@@ -39,8 +39,8 @@ public final class ListPrintersResponse extends com.google.api.client.json.Gener
 
   /**
    * List of printers. If `org_unit_id` was given in the request, then only printers visible for
-   * this OU will be returned. If `org_unit_id` was given in the request, then all printers will be
-   * returned.
+   * this OU will be returned. If `org_unit_id` was not given in the request, then all printers will
+   * be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class ListPrintersResponse extends com.google.api.client.json.Gener
 
   /**
    * List of printers. If `org_unit_id` was given in the request, then only printers visible for
-   * this OU will be returned. If `org_unit_id` was given in the request, then all printers will be
-   * returned.
+   * this OU will be returned. If `org_unit_id` was not given in the request, then all printers will
+   * be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<Printer> getPrinters() {
@@ -77,8 +77,8 @@ public final class ListPrintersResponse extends com.google.api.client.json.Gener
 
   /**
    * List of printers. If `org_unit_id` was given in the request, then only printers visible for
-   * this OU will be returned. If `org_unit_id` was given in the request, then all printers will be
-   * returned.
+   * this OU will be returned. If `org_unit_id` was not given in the request, then all printers will
+   * be returned.
    * @param printers printers or {@code null} for none
    */
   public ListPrintersResponse setPrinters(java.util.List<Printer> printers) {

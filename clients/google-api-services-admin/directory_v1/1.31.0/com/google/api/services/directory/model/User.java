@@ -133,9 +133,10 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Stores the hash format of the password property. We recommend sending the `password` property
-   * value as a base 16 bit hexadecimal-encoded hash value. Set the `hashFunction` values as either
-   * the [SHA-1](https://wikipedia.org/wiki/SHA-1), [MD5](https://wikipedia.org/wiki/MD5), or
-   * [crypt](https://en.wikipedia.org/wiki/Crypt_\(C\)) hash format.
+   * value as a base 16 bit hexadecimal-encoded hash value. The following `hashFunction` values are
+   * allowed: * `DES` * `MD5` - hash prefix is `$1$` * `SHA2-256` - hash prefix is `$5$` *
+   * `SHA2-512` - hash prefix is `$6$` If rounds are specified as part of the prefix, they must be
+   * 10,000 or fewer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -632,9 +633,10 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Stores the hash format of the password property. We recommend sending the `password` property
-   * value as a base 16 bit hexadecimal-encoded hash value. Set the `hashFunction` values as either
-   * the [SHA-1](https://wikipedia.org/wiki/SHA-1), [MD5](https://wikipedia.org/wiki/MD5), or
-   * [crypt](https://en.wikipedia.org/wiki/Crypt_\(C\)) hash format.
+   * value as a base 16 bit hexadecimal-encoded hash value. The following `hashFunction` values are
+   * allowed: * `DES` * `MD5` - hash prefix is `$1$` * `SHA2-256` - hash prefix is `$5$` *
+   * `SHA2-512` - hash prefix is `$6$` If rounds are specified as part of the prefix, they must be
+   * 10,000 or fewer.
    * @return value or {@code null} for none
    */
   public java.lang.String getHashFunction() {
@@ -643,9 +645,10 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Stores the hash format of the password property. We recommend sending the `password` property
-   * value as a base 16 bit hexadecimal-encoded hash value. Set the `hashFunction` values as either
-   * the [SHA-1](https://wikipedia.org/wiki/SHA-1), [MD5](https://wikipedia.org/wiki/MD5), or
-   * [crypt](https://en.wikipedia.org/wiki/Crypt_\(C\)) hash format.
+   * value as a base 16 bit hexadecimal-encoded hash value. The following `hashFunction` values are
+   * allowed: * `DES` * `MD5` - hash prefix is `$1$` * `SHA2-256` - hash prefix is `$5$` *
+   * `SHA2-512` - hash prefix is `$6$` If rounds are specified as part of the prefix, they must be
+   * 10,000 or fewer.
    * @param hashFunction hashFunction or {@code null} for none
    */
   public User setHashFunction(java.lang.String hashFunction) {

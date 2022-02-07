@@ -18,7 +18,8 @@ package com.google.api.services.people.v1.model;
 
 /**
  * A person's birthday. At least one of the `date` and `text` fields are specified. The `date` and
- * `text` fields typically represent the same date, but are not guaranteed to.
+ * `text` fields typically represent the same date, but are not guaranteed to. Clients should always
+ * set the `date` field when mutating birthdays.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -31,7 +32,7 @@ package com.google.api.services.people.v1.model;
 public final class Birthday extends com.google.api.client.json.GenericJson {
 
   /**
-   * The date of the birthday.
+   * The structured date of the birthday.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +46,15 @@ public final class Birthday extends com.google.api.client.json.GenericJson {
   private FieldMetadata metadata;
 
   /**
-   * A free-form string representing the user's birthday.
+   * Prefer to use the `date` field if set. A free-form string representing the user's birthday.
+   * This value is not validated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The date of the birthday.
+   * The structured date of the birthday.
    * @return value or {@code null} for none
    */
   public Date getDate() {
@@ -60,7 +62,7 @@ public final class Birthday extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The date of the birthday.
+   * The structured date of the birthday.
    * @param date date or {@code null} for none
    */
   public Birthday setDate(Date date) {
@@ -86,7 +88,8 @@ public final class Birthday extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A free-form string representing the user's birthday.
+   * Prefer to use the `date` field if set. A free-form string representing the user's birthday.
+   * This value is not validated.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -94,7 +97,8 @@ public final class Birthday extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A free-form string representing the user's birthday.
+   * Prefer to use the `date` field if set. A free-form string representing the user's birthday.
+   * This value is not validated.
    * @param text text or {@code null} for none
    */
   public Birthday setText(java.lang.String text) {

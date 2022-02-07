@@ -32,7 +32,7 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
 
   /**
    * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale
-   * from 0 (no utilization) to 100 (total utilization).
+   * from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
 
   /**
    * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale
-   * from 0 (no utilization) to 100 (total utilization).
+   * from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuUtilizationPercent() {
@@ -49,7 +49,7 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
 
   /**
    * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale
-   * from 0 (no utilization) to 100 (total utilization).
+   * from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
    * @param cpuUtilizationPercent cpuUtilizationPercent or {@code null} for none
    */
   public AutoscalingTargets setCpuUtilizationPercent(java.lang.Integer cpuUtilizationPercent) {

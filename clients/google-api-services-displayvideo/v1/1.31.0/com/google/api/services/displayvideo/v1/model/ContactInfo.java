@@ -31,49 +31,59 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ContactInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Country code of the member.
+   * Country code of the member. Must also be set with the following fields: * hashed_first_name *
+   * hashed_last_name * zip_codes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String countryCode;
 
   /**
-   * A list of SHA256 hashed email of the member.
+   * A list of SHA256 hashed email of the member. Before hashing, remove all whitespace and make
+   * sure the string is all lowercase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> hashedEmails;
 
   /**
-   * SHA256 hashed first name of the member.
+   * SHA256 hashed first name of the member. Before hashing, remove all whitespace and make sure the
+   * string is all lowercase. Must also be set with the following fields: * country_code *
+   * hashed_last_name * zip_codes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hashedFirstName;
 
   /**
-   * SHA256 hashed last name of the member.
+   * SHA256 hashed last name of the member. Before hashing, remove all whitespace and make sure the
+   * string is all lowercase. Must also be set with the following fields: * country_code *
+   * hashed_first_name * zip_codes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hashedLastName;
 
   /**
-   * A list of SHA256 hashed phone numbers of the member.
+   * A list of SHA256 hashed phone numbers of the member. Before hashing, all phone numbers must be
+   * formatted using the [E.164 format](//en.wikipedia.org/wiki/E.164) and include the country
+   * calling code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> hashedPhoneNumbers;
 
   /**
-   * A list of zip codes of the member.
+   * A list of zip codes of the member. Must also be set with the following fields: * country_code *
+   * hashed_first_name * hashed_last_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> zipCodes;
 
   /**
-   * Country code of the member.
+   * Country code of the member. Must also be set with the following fields: * hashed_first_name *
+   * hashed_last_name * zip_codes
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -81,7 +91,8 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Country code of the member.
+   * Country code of the member. Must also be set with the following fields: * hashed_first_name *
+   * hashed_last_name * zip_codes
    * @param countryCode countryCode or {@code null} for none
    */
   public ContactInfo setCountryCode(java.lang.String countryCode) {
@@ -90,7 +101,8 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of SHA256 hashed email of the member.
+   * A list of SHA256 hashed email of the member. Before hashing, remove all whitespace and make
+   * sure the string is all lowercase.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHashedEmails() {
@@ -98,7 +110,8 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of SHA256 hashed email of the member.
+   * A list of SHA256 hashed email of the member. Before hashing, remove all whitespace and make
+   * sure the string is all lowercase.
    * @param hashedEmails hashedEmails or {@code null} for none
    */
   public ContactInfo setHashedEmails(java.util.List<java.lang.String> hashedEmails) {
@@ -107,7 +120,9 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SHA256 hashed first name of the member.
+   * SHA256 hashed first name of the member. Before hashing, remove all whitespace and make sure the
+   * string is all lowercase. Must also be set with the following fields: * country_code *
+   * hashed_last_name * zip_codes
    * @return value or {@code null} for none
    */
   public java.lang.String getHashedFirstName() {
@@ -115,7 +130,9 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SHA256 hashed first name of the member.
+   * SHA256 hashed first name of the member. Before hashing, remove all whitespace and make sure the
+   * string is all lowercase. Must also be set with the following fields: * country_code *
+   * hashed_last_name * zip_codes
    * @param hashedFirstName hashedFirstName or {@code null} for none
    */
   public ContactInfo setHashedFirstName(java.lang.String hashedFirstName) {
@@ -124,7 +141,9 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SHA256 hashed last name of the member.
+   * SHA256 hashed last name of the member. Before hashing, remove all whitespace and make sure the
+   * string is all lowercase. Must also be set with the following fields: * country_code *
+   * hashed_first_name * zip_codes
    * @return value or {@code null} for none
    */
   public java.lang.String getHashedLastName() {
@@ -132,7 +151,9 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SHA256 hashed last name of the member.
+   * SHA256 hashed last name of the member. Before hashing, remove all whitespace and make sure the
+   * string is all lowercase. Must also be set with the following fields: * country_code *
+   * hashed_first_name * zip_codes
    * @param hashedLastName hashedLastName or {@code null} for none
    */
   public ContactInfo setHashedLastName(java.lang.String hashedLastName) {
@@ -141,7 +162,9 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of SHA256 hashed phone numbers of the member.
+   * A list of SHA256 hashed phone numbers of the member. Before hashing, all phone numbers must be
+   * formatted using the [E.164 format](//en.wikipedia.org/wiki/E.164) and include the country
+   * calling code.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHashedPhoneNumbers() {
@@ -149,7 +172,9 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of SHA256 hashed phone numbers of the member.
+   * A list of SHA256 hashed phone numbers of the member. Before hashing, all phone numbers must be
+   * formatted using the [E.164 format](//en.wikipedia.org/wiki/E.164) and include the country
+   * calling code.
    * @param hashedPhoneNumbers hashedPhoneNumbers or {@code null} for none
    */
   public ContactInfo setHashedPhoneNumbers(java.util.List<java.lang.String> hashedPhoneNumbers) {
@@ -158,7 +183,8 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of zip codes of the member.
+   * A list of zip codes of the member. Must also be set with the following fields: * country_code *
+   * hashed_first_name * hashed_last_name
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getZipCodes() {
@@ -166,7 +192,8 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of zip codes of the member.
+   * A list of zip codes of the member. Must also be set with the following fields: * country_code *
+   * hashed_first_name * hashed_last_name
    * @param zipCodes zipCodes or {@code null} for none
    */
   public ContactInfo setZipCodes(java.util.List<java.lang.String> zipCodes) {

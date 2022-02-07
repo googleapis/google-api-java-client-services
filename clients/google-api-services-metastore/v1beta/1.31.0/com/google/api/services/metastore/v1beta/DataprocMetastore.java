@@ -2343,6 +2343,157 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Removes the attached IAM policies for a resource
+         *
+         * Create a request for the method "services.removeIamPolicy".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link RemoveIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource Required. The relative resource name of the dataplane resource to remove IAM policy, in the
+         *        following form:projects/{project_id}/locations/{location_id}/services/{service_id}/databas
+         *        es/{database_id} or projects/{project_id}/locations/{location_id}/services/{service_id}/da
+         *        tabases/{database_id}/tables/{table_id}.
+         * @param content the {@link com.google.api.services.metastore.v1beta.model.RemoveIamPolicyRequest}
+         * @return the request
+         */
+        public RemoveIamPolicy removeIamPolicy(java.lang.String resource, com.google.api.services.metastore.v1beta.model.RemoveIamPolicyRequest content) throws java.io.IOException {
+          RemoveIamPolicy result = new RemoveIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemoveIamPolicy extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.RemoveIamPolicyResponse> {
+
+          private static final String REST_PATH = "v1beta/{+resource}:removeIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/.*$");
+
+          /**
+           * Removes the attached IAM policies for a resource
+           *
+           * Create a request for the method "services.removeIamPolicy".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link RemoveIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link RemoveIamPolicy#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param resource Required. The relative resource name of the dataplane resource to remove IAM policy, in the
+         *        following form:projects/{project_id}/locations/{location_id}/services/{service_id}/databas
+         *        es/{database_id} or projects/{project_id}/locations/{location_id}/services/{service_id}/da
+         *        tabases/{database_id}/tables/{table_id}.
+           * @param content the {@link com.google.api.services.metastore.v1beta.model.RemoveIamPolicyRequest}
+           * @since 1.13
+           */
+          protected RemoveIamPolicy(java.lang.String resource, com.google.api.services.metastore.v1beta.model.RemoveIamPolicyRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1beta.model.RemoveIamPolicyResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+/.*$");
+            }
+          }
+
+          @Override
+          public RemoveIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (RemoveIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemoveIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (RemoveIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemoveIamPolicy setAlt(java.lang.String alt) {
+            return (RemoveIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public RemoveIamPolicy setCallback(java.lang.String callback) {
+            return (RemoveIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public RemoveIamPolicy setFields(java.lang.String fields) {
+            return (RemoveIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public RemoveIamPolicy setKey(java.lang.String key) {
+            return (RemoveIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public RemoveIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (RemoveIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemoveIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemoveIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemoveIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (RemoveIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemoveIamPolicy setUploadType(java.lang.String uploadType) {
+            return (RemoveIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemoveIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemoveIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the dataplane resource to remove IAM policy, in
+           * the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/
+           * databases/{database_id} or projects/{project_id}/locations/{location_id}/services/{serv
+           * ice_id}/databases/{database_id}/tables/{table_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** Required. The relative resource name of the dataplane resource to remove IAM policy, in the
+         following
+         form:projects/{project_id}/locations/{location_id}/services/{service_id}/databases/{database_id} or
+         projects/{project_id}/locations/{location_id}/services/{service_id}/databases/{database_id}/tables/
+         {table_id}.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * Required. The relative resource name of the dataplane resource to remove IAM policy, in
+           * the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/
+           * databases/{database_id} or projects/{project_id}/locations/{location_id}/services/{serv
+           * ice_id}/databases/{database_id}/tables/{table_id}.
+           */
+          public RemoveIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+/.*$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public RemoveIamPolicy set(String parameterName, Object value) {
+            return (RemoveIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
          * Restores a service from a backup.
          *
          * Create a request for the method "services.restore".

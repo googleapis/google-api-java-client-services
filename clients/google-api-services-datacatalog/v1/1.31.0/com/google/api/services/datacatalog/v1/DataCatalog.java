@@ -5696,8 +5696,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * absent or empty, all modifiable fields are overwritten. If such fields are non-required
            * and omitted in the request body, their values are emptied. Note: Updating the
            * `is_publicly_readable` field may require up to 12 hours to take effect in search
-           * results. Additionally, it also requires the `tagTemplates.getIamPolicy` and
-           * `tagTemplates.setIamPolicy` permissions.
+           * results.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -5706,8 +5705,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          `is_publicly_readable` can be overwritten. If this parameter is absent or empty, all modifiable
          fields are overwritten. If such fields are non-required and omitted in the request body, their
          values are emptied. Note: Updating the `is_publicly_readable` field may require up to 12 hours to
-         take effect in search results. Additionally, it also requires the `tagTemplates.getIamPolicy` and
-         `tagTemplates.setIamPolicy` permissions.
+         take effect in search results.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5719,8 +5717,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * absent or empty, all modifiable fields are overwritten. If such fields are non-required
            * and omitted in the request body, their values are emptied. Note: Updating the
            * `is_publicly_readable` field may require up to 12 hours to take effect in search
-           * results. Additionally, it also requires the `tagTemplates.getIamPolicy` and
-           * `tagTemplates.setIamPolicy` permissions.
+           * results.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

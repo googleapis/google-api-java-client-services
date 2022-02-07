@@ -51,7 +51,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1BigQueryTableSpec bigqueryTableSpec;
 
   /**
-   * Business Context of the entry.
+   * Business Context of the entry. Not supported for BigQuery datasets
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,7 +268,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Business Context of the entry.
+   * Business Context of the entry. Not supported for BigQuery datasets
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1BusinessContext getBusinessContext() {
@@ -276,7 +276,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Business Context of the entry.
+   * Business Context of the entry. Not supported for BigQuery datasets
    * @param businessContext businessContext or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setBusinessContext(GoogleCloudDatacatalogV1BusinessContext businessContext) {

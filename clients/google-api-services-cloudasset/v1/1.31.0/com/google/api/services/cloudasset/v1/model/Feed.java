@@ -35,9 +35,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * A list of the full names of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
    * are exported to the feed. Example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more info.
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list
+   * of the full names for supported asset types, see [Resource name format](/asset-inventory/docs
+   * /resource-name-format).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
-   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this
-   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all
-   * supported asset types.
+   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` For a list of all supported
+   * asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,9 +110,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * A list of the full names of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
    * are exported to the feed. Example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more info.
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list
+   * of the full names for supported asset types, see [Resource name format](/asset-inventory/docs
+   * /resource-name-format).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssetNames() {
@@ -124,9 +123,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * A list of the full names of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
    * are exported to the feed. Example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more info.
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list
+   * of the full names for supported asset types, see [Resource name format](/asset-inventory/docs
+   * /resource-name-format).
    * @param assetNames assetNames or {@code null} for none
    */
   public Feed setAssetNames(java.util.List<java.lang.String> assetNames) {
@@ -137,9 +136,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
-   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this
-   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all
-   * supported asset types.
+   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` For a list of all supported
+   * asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssetTypes() {
@@ -149,9 +147,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
-   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this
-   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all
-   * supported asset types.
+   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` For a list of all supported
+   * asset types, see [Supported asset types](/asset-inventory/docs/supported-asset-types).
    * @param assetTypes assetTypes or {@code null} for none
    */
   public Feed setAssetTypes(java.util.List<java.lang.String> assetTypes) {

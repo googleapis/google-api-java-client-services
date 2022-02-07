@@ -51,6 +51,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String configBucket;
 
   /**
+   * Optional. The configuration(s) for a dataproc metric(s).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataprocMetricConfig dataprocMetricConfig;
+
+  /**
    * Optional. Encryption settings for the cluster.
    * The value may be {@code null}.
    */
@@ -201,6 +208,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setConfigBucket(java.lang.String configBucket) {
     this.configBucket = configBucket;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration(s) for a dataproc metric(s).
+   * @return value or {@code null} for none
+   */
+  public DataprocMetricConfig getDataprocMetricConfig() {
+    return dataprocMetricConfig;
+  }
+
+  /**
+   * Optional. The configuration(s) for a dataproc metric(s).
+   * @param dataprocMetricConfig dataprocMetricConfig or {@code null} for none
+   */
+  public ClusterConfig setDataprocMetricConfig(DataprocMetricConfig dataprocMetricConfig) {
+    this.dataprocMetricConfig = dataprocMetricConfig;
     return this;
   }
 

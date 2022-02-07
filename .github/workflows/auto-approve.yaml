@@ -21,20 +21,20 @@ jobs:
       contains(github.head_ref, 'regenerate') &&
       contains(github.repository_owner, 'yoshi-code-bot')
     steps:
-      - uses: actions/github-script@0.9.0
+      - uses: actions/github-script@v5
         with:
           github-token: ${{secrets.YOSHI_APPROVER_TOKEN}}
           script: |
             // only approve PRs from yoshi-automation user
-            if (context.payload.sender.login != "yoshi-code-bot") {
+            if (context.payload.pull_request.user.login !== != "yoshi-code-bot") {
               return;
             }
             // only approve PRs like "Regenerate X client"
-            if (!context.payload.pull_request.title.startsWith("Regenerate")) {
+            if (  !context.payload.pull_request.title.startsWith("Regenerate")) {
               return;
             }
             // approve the PR
-            await github.pulls.createReview({
+            await github.rest.pulls.createReview({
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: 'Rubber stamped client regeneration!',
@@ -42,7 +42,7 @@ jobs:
               event: 'APPROVE'
             });
             // add the "automerge" label
-            await github.issues.addLabels({
+            await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,

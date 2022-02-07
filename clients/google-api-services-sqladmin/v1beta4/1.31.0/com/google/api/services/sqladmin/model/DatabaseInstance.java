@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
+   * List all maintenance versions applicable on the instance
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableMaintenanceVersions;
+
+  /**
    * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that
    * is not managed by Google. This property is read-only; use the `tier` property in the `settings`
    * object to determine the database type.
@@ -145,6 +152,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * The current software version on the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceVersion;
 
   /**
    * The name of the instance which will act as primary in the replication setup.
@@ -287,6 +301,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> suspensionReason;
+
+  /**
+   * List all maintenance versions applicable on the instance
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableMaintenanceVersions() {
+    return availableMaintenanceVersions;
+  }
+
+  /**
+   * List all maintenance versions applicable on the instance
+   * @param availableMaintenanceVersions availableMaintenanceVersions or {@code null} for none
+   */
+  public DatabaseInstance setAvailableMaintenanceVersions(java.util.List<java.lang.String> availableMaintenanceVersions) {
+    this.availableMaintenanceVersions = availableMaintenanceVersions;
+    return this;
+  }
 
   /**
    * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that
@@ -564,6 +595,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The current software version on the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceVersion() {
+    return maintenanceVersion;
+  }
+
+  /**
+   * The current software version on the instance.
+   * @param maintenanceVersion maintenanceVersion or {@code null} for none
+   */
+  public DatabaseInstance setMaintenanceVersion(java.lang.String maintenanceVersion) {
+    this.maintenanceVersion = maintenanceVersion;
     return this;
   }
 

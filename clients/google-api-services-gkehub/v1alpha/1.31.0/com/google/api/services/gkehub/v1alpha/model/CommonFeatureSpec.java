@@ -51,6 +51,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private MultiClusterIngressFeatureSpec multiclusteringress;
 
   /**
+   * Workload Certificate spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FeatureSpec workloadcertificate;
+
+  /**
    * Appdevexperience specific spec.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setMulticlusteringress(MultiClusterIngressFeatureSpec multiclusteringress) {
     this.multiclusteringress = multiclusteringress;
+    return this;
+  }
+
+  /**
+   * Workload Certificate spec.
+   * @return value or {@code null} for none
+   */
+  public FeatureSpec getWorkloadcertificate() {
+    return workloadcertificate;
+  }
+
+  /**
+   * Workload Certificate spec.
+   * @param workloadcertificate workloadcertificate or {@code null} for none
+   */
+  public CommonFeatureSpec setWorkloadcertificate(FeatureSpec workloadcertificate) {
+    this.workloadcertificate = workloadcertificate;
     return this;
   }
 

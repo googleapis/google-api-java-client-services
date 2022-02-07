@@ -17,7 +17,8 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * Read-only resource with the tag for sending data from a website to a WebDataStream.
+ * Read-only resource with the tag for sending data from a website to a DataStream. Only present for
+ * web DataStream resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed
@@ -32,7 +33,8 @@ public final class GoogleAnalyticsAdminV1alphaGlobalSiteTag extends com.google.a
 
   /**
    * Output only. Resource name for this GlobalSiteTag resource. Format:
-   * properties/{propertyId}/globalSiteTag
+   * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
+   * "properties/123/dataStreams/456/globalSiteTag"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +50,8 @@ public final class GoogleAnalyticsAdminV1alphaGlobalSiteTag extends com.google.a
 
   /**
    * Output only. Resource name for this GlobalSiteTag resource. Format:
-   * properties/{propertyId}/globalSiteTag
+   * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
+   * "properties/123/dataStreams/456/globalSiteTag"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -57,7 +60,8 @@ public final class GoogleAnalyticsAdminV1alphaGlobalSiteTag extends com.google.a
 
   /**
    * Output only. Resource name for this GlobalSiteTag resource. Format:
-   * properties/{propertyId}/globalSiteTag
+   * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
+   * "properties/123/dataStreams/456/globalSiteTag"
    * @param name name or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaGlobalSiteTag setName(java.lang.String name) {

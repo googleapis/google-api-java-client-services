@@ -30,7 +30,7 @@ package com.google.api.services.firebaserules.v1.model;
 public final class UpdateReleaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * `Release` to update.
+   * Required. `Release` to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class UpdateReleaseRequest extends com.google.api.client.json.Gener
   private String updateMask;
 
   /**
-   * `Release` to update.
+   * Required. `Release` to update.
    * @return value or {@code null} for none
    */
   public Release getRelease() {
@@ -52,7 +52,7 @@ public final class UpdateReleaseRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * `Release` to update.
+   * Required. `Release` to update.
    * @param release release or {@code null} for none
    */
   public UpdateReleaseRequest setRelease(Release release) {

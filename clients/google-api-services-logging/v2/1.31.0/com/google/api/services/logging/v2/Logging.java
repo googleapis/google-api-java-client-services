@@ -330,6 +330,184 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         return (GetCmekSettings) super.set(parameterName, value);
       }
     }
+    /**
+     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
+     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
+     * configured for organizations. Once configured for an organization, it applies to all projects and
+     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     *
+     * Create a request for the method "billingAccounts.getSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+     * @return the request
+     */
+    public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
+      GetSettings result = new GetSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSettings extends LoggingRequest<com.google.api.services.logging.v2.model.Settings> {
+
+      private static final String REST_PATH = "v2/{+name}/settings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+      /**
+       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
+       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
+       * only be configured for organizations. Once configured for an organization, it applies to all
+       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       *
+       * Create a request for the method "billingAccounts.getSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+       * @since 1.13
+       */
+      protected GetSettings(java.lang.String name) {
+        super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Settings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^billingAccounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSettings setAlt(java.lang.String alt) {
+        return (GetSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSettings setCallback(java.lang.String callback) {
+        return (GetSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSettings setFields(java.lang.String fields) {
+        return (GetSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSettings setKey(java.lang.String key) {
+        return (GetSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSettings setUploadType(java.lang.String uploadType) {
+        return (GetSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
+     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
+     it can only be configured for organizations. Once configured for an organization, it applies to all
+     projects and folders in the Google Cloud organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      public GetSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^billingAccounts/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSettings set(String parameterName, Object value) {
+        return (GetSettings) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Buckets collection.
@@ -7247,6 +7425,184 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public GetCmekSettings set(String parameterName, Object value) {
         return (GetCmekSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
+     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
+     * configured for organizations. Once configured for an organization, it applies to all projects and
+     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     *
+     * Create a request for the method "folders.getSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+     * @return the request
+     */
+    public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
+      GetSettings result = new GetSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSettings extends LoggingRequest<com.google.api.services.logging.v2.model.Settings> {
+
+      private static final String REST_PATH = "v2/{+name}/settings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
+       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
+       * only be configured for organizations. Once configured for an organization, it applies to all
+       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       *
+       * Create a request for the method "folders.getSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+       * @since 1.13
+       */
+      protected GetSettings(java.lang.String name) {
+        super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Settings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSettings setAlt(java.lang.String alt) {
+        return (GetSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSettings setCallback(java.lang.String callback) {
+        return (GetSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSettings setFields(java.lang.String fields) {
+        return (GetSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSettings setKey(java.lang.String key) {
+        return (GetSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSettings setUploadType(java.lang.String uploadType) {
+        return (GetSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
+     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
+     it can only be configured for organizations. Once configured for an organization, it applies to all
+     projects and folders in the Google Cloud organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      public GetSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSettings set(String parameterName, Object value) {
+        return (GetSettings) super.set(parameterName, value);
       }
     }
 
@@ -16227,6 +16583,184 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
+     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
+     * configured for organizations. Once configured for an organization, it applies to all projects and
+     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     *
+     * Create a request for the method "organizations.getSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+     * @return the request
+     */
+    public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
+      GetSettings result = new GetSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSettings extends LoggingRequest<com.google.api.services.logging.v2.model.Settings> {
+
+      private static final String REST_PATH = "v2/{+name}/settings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
+       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
+       * only be configured for organizations. Once configured for an organization, it applies to all
+       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       *
+       * Create a request for the method "organizations.getSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+       * @since 1.13
+       */
+      protected GetSettings(java.lang.String name) {
+        super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Settings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSettings setAlt(java.lang.String alt) {
+        return (GetSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSettings setCallback(java.lang.String callback) {
+        return (GetSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSettings setFields(java.lang.String fields) {
+        return (GetSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSettings setKey(java.lang.String key) {
+        return (GetSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSettings setUploadType(java.lang.String uploadType) {
+        return (GetSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
+     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
+     it can only be configured for organizations. Once configured for an organization, it applies to all
+     projects and folders in the Google Cloud organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      public GetSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSettings set(String parameterName, Object value) {
+        return (GetSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the Log Router CMEK settings for the given resource.Note: CMEK for the Log Router can
      * currently only be configured for Google Cloud organizations. Once configured, it applies to all
      * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
@@ -16421,6 +16955,198 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public UpdateCmekSettings set(String parameterName, Object value) {
         return (UpdateCmekSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
+     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+     * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1) kms_key_name
+     * is invalid, or 2) the associated service account does not have the required
+     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
+     * disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
+     * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
+     * for more information.
+     *
+     * Create a request for the method "organizations.updateSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
+     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
+     * @param content the {@link com.google.api.services.logging.v2.model.Settings}
+     * @return the request
+     */
+    public UpdateSettings updateSettings(java.lang.String name, com.google.api.services.logging.v2.model.Settings content) throws java.io.IOException {
+      UpdateSettings result = new UpdateSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateSettings extends LoggingRequest<com.google.api.services.logging.v2.model.Settings> {
+
+      private static final String REST_PATH = "v2/{+name}/settings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
+       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+       * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1)
+       * kms_key_name is invalid, or 2) the associated service account does not have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
+       * is disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
+       * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
+       * for more information.
+       *
+       * Create a request for the method "organizations.updateSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
+       * <p> {@link UpdateSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
+     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
+       * @param content the {@link com.google.api.services.logging.v2.model.Settings}
+       * @since 1.13
+       */
+      protected UpdateSettings(java.lang.String name, com.google.api.services.logging.v2.model.Settings content) {
+        super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.Settings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public UpdateSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateSettings setAlt(java.lang.String alt) {
+        return (UpdateSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateSettings setCallback(java.lang.String callback) {
+        return (UpdateSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateSettings setFields(java.lang.String fields) {
+        return (UpdateSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateSettings setKey(java.lang.String key) {
+        return (UpdateSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name for the settings to update.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
+       * Settings for the Log Router can currently only be configured for Google Cloud
+       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
+       * organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
+     For example:"organizations/12345/settings"Note: Settings for the Log Router can currently only be
+     configured for Google Cloud organizations. Once configured, it applies to all projects and folders
+     in the Google Cloud organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name for the settings to update.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
+       * Settings for the Log Router can currently only be configured for Google Cloud
+       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
+       * organization.
+       */
+      public UpdateSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from settings should be updated. A field will
+       * be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.For example: "updateMask=kmsKeyName"
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. Field mask identifying which fields from settings should be updated. A field will be
+     overwritten if and only if it is in the update mask. Output only fields cannot be updated.See
+     FieldMask for more information.For example: "updateMask=kmsKeyName"
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from settings should be updated. A field will
+       * be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.For example: "updateMask=kmsKeyName"
+       */
+      public UpdateSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateSettings set(String parameterName, Object value) {
+        return (UpdateSettings) super.set(parameterName, value);
       }
     }
 
@@ -21961,6 +22687,184 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public GetCmekSettings set(String parameterName, Object value) {
         return (GetCmekSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
+     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
+     * configured for organizations. Once configured for an organization, it applies to all projects and
+     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     *
+     * Create a request for the method "projects.getSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+     * @return the request
+     */
+    public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
+      GetSettings result = new GetSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSettings extends LoggingRequest<com.google.api.services.logging.v2.model.Settings> {
+
+      private static final String REST_PATH = "v2/{+name}/settings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
+       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
+       * only be configured for organizations. Once configured for an organization, it applies to all
+       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       *
+       * Create a request for the method "projects.getSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+       * @since 1.13
+       */
+      protected GetSettings(java.lang.String name) {
+        super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Settings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSettings setAlt(java.lang.String alt) {
+        return (GetSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSettings setCallback(java.lang.String callback) {
+        return (GetSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSettings setFields(java.lang.String fields) {
+        return (GetSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSettings setKey(java.lang.String key) {
+        return (GetSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSettings setUploadType(java.lang.String uploadType) {
+        return (GetSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
+     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
+     it can only be configured for organizations. Once configured for an organization, it applies to all
+     projects and folders in the Google Cloud organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      public GetSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSettings set(String parameterName, Object value) {
+        return (GetSettings) super.set(parameterName, value);
       }
     }
 
@@ -29239,6 +30143,184 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
+     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
+     * configured for organizations. Once configured for an organization, it applies to all projects and
+     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     *
+     * Create a request for the method "v2.getSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+     * @return the request
+     */
+    public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
+      GetSettings result = new GetSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSettings extends LoggingRequest<com.google.api.services.logging.v2.model.Settings> {
+
+      private static final String REST_PATH = "v2/{+name}/settings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
+       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
+       * only be configured for organizations. Once configured for an organization, it applies to all
+       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       *
+       * Create a request for the method "v2.getSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
+     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
+     *        billing accounts. Currently it can only be configured for organizations. Once configured
+     *        for an organization, it applies to all projects and folders in the Google Cloud
+     *        organization.
+       * @since 1.13
+       */
+      protected GetSettings(java.lang.String name) {
+        super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Settings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSettings setAlt(java.lang.String alt) {
+        return (GetSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSettings setCallback(java.lang.String callback) {
+        return (GetSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSettings setFields(java.lang.String fields) {
+        return (GetSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSettings setKey(java.lang.String key) {
+        return (GetSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSettings setUploadType(java.lang.String uploadType) {
+        return (GetSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+     "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
+     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
+     it can only be configured for organizations. Once configured for an organization, it applies to all
+     projects and folders in the Google Cloud organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
+       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
+       * accounts. Currently it can only be configured for organizations. Once configured for an
+       * organization, it applies to all projects and folders in the Google Cloud organization.
+       */
+      public GetSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSettings set(String parameterName, Object value) {
+        return (GetSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the Log Router CMEK settings for the given resource.Note: CMEK for the Log Router can
      * currently only be configured for Google Cloud organizations. Once configured, it applies to all
      * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
@@ -29433,6 +30515,198 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public UpdateCmekSettings set(String parameterName, Object value) {
         return (UpdateCmekSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
+     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+     * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1) kms_key_name
+     * is invalid, or 2) the associated service account does not have the required
+     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
+     * disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
+     * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
+     * for more information.
+     *
+     * Create a request for the method "v2.updateSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
+     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
+     * @param content the {@link com.google.api.services.logging.v2.model.Settings}
+     * @return the request
+     */
+    public UpdateSettings updateSettings(java.lang.String name, com.google.api.services.logging.v2.model.Settings content) throws java.io.IOException {
+      UpdateSettings result = new UpdateSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateSettings extends LoggingRequest<com.google.api.services.logging.v2.model.Settings> {
+
+      private static final String REST_PATH = "v2/{+name}/settings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
+       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+       * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1)
+       * kms_key_name is invalid, or 2) the associated service account does not have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
+       * is disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
+       * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
+       * for more information.
+       *
+       * Create a request for the method "v2.updateSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
+       * <p> {@link UpdateSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
+     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
+       * @param content the {@link com.google.api.services.logging.v2.model.Settings}
+       * @since 1.13
+       */
+      protected UpdateSettings(java.lang.String name, com.google.api.services.logging.v2.model.Settings content) {
+        super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.Settings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public UpdateSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateSettings setAlt(java.lang.String alt) {
+        return (UpdateSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateSettings setCallback(java.lang.String callback) {
+        return (UpdateSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateSettings setFields(java.lang.String fields) {
+        return (UpdateSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateSettings setKey(java.lang.String key) {
+        return (UpdateSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name for the settings to update.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
+       * Settings for the Log Router can currently only be configured for Google Cloud
+       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
+       * organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
+     For example:"organizations/12345/settings"Note: Settings for the Log Router can currently only be
+     configured for Google Cloud organizations. Once configured, it applies to all projects and folders
+     in the Google Cloud organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name for the settings to update.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
+       * Settings for the Log Router can currently only be configured for Google Cloud
+       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
+       * organization.
+       */
+      public UpdateSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from settings should be updated. A field will
+       * be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.For example: "updateMask=kmsKeyName"
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. Field mask identifying which fields from settings should be updated. A field will be
+     overwritten if and only if it is in the update mask. Output only fields cannot be updated.See
+     FieldMask for more information.For example: "updateMask=kmsKeyName"
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from settings should be updated. A field will
+       * be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.For example: "updateMask=kmsKeyName"
+       */
+      public UpdateSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateSettings set(String parameterName, Object value) {
+        return (UpdateSettings) super.set(parameterName, value);
       }
     }
 

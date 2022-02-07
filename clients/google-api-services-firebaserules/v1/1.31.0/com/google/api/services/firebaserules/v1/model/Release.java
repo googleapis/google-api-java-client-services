@@ -38,15 +38,15 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Format: `projects/{project_id}/releases/{release_id}`
+   * Required. Format: `projects/{project_id}/releases/{release_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to
-   * be created.
+   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the
+   * `Release` to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Format: `projects/{project_id}/releases/{release_id}`
+   * Required. Format: `projects/{project_id}/releases/{release_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -85,7 +85,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Format: `projects/{project_id}/releases/{release_id}`
+   * Required. Format: `projects/{project_id}/releases/{release_id}`
    * @param name name or {@code null} for none
    */
   public Release setName(java.lang.String name) {
@@ -94,8 +94,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to
-   * be created.
+   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the
+   * `Release` to be created.
    * @return value or {@code null} for none
    */
   public java.lang.String getRulesetName() {
@@ -103,8 +103,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to
-   * be created.
+   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the
+   * `Release` to be created.
    * @param rulesetName rulesetName or {@code null} for none
    */
   public Release setRulesetName(java.lang.String rulesetName) {

@@ -96,13 +96,6 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String imageLocation;
 
   /**
-   * Optional. Inactive indicates the connection is active to use or not.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean inactive;
-
-  /**
    * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on
    * labels for more details. https://cloud.google.com/compute/docs/labeling-resources
    * The value may be {@code null}.
@@ -147,6 +140,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ConnectionStatus status;
+
+  /**
+   * Optional. Suspended indicates if a user has suspended a connection or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean suspended;
 
   /**
    * Output only. Updated time.
@@ -300,23 +300,6 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Inactive indicates the connection is active to use or not.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getInactive() {
-    return inactive;
-  }
-
-  /**
-   * Optional. Inactive indicates the connection is active to use or not.
-   * @param inactive inactive or {@code null} for none
-   */
-  public Connection setInactive(java.lang.Boolean inactive) {
-    this.inactive = inactive;
-    return this;
-  }
-
-  /**
    * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on
    * labels for more details. https://cloud.google.com/compute/docs/labeling-resources
    * @return value or {@code null} for none
@@ -423,6 +406,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setStatus(ConnectionStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Optional. Suspended indicates if a user has suspended a connection or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSuspended() {
+    return suspended;
+  }
+
+  /**
+   * Optional. Suspended indicates if a user has suspended a connection or not.
+   * @param suspended suspended or {@code null} for none
+   */
+  public Connection setSuspended(java.lang.Boolean suspended) {
+    this.suspended = suspended;
     return this;
   }
 

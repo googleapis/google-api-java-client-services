@@ -53,7 +53,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * State of the membership. Output only.
+   * Output only. State of the membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the membership. Output only.
+   * Output only. State of the membership.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -123,7 +123,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the membership. Output only.
+   * Output only. State of the membership.
    * @param state state or {@code null} for none
    */
   public Membership setState(java.lang.String state) {

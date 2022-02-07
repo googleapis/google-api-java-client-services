@@ -7797,6 +7797,162 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
+       * Returns the Site Tag for the specified web stream. Site Tags are immutable singletons.
+       *
+       * Create a request for the method "dataStreams.getGlobalSiteTag".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetGlobalSiteTag#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
+       *        unique IDs. Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+       *        Example: "properties/123/dataStreams/456/globalSiteTag"
+       * @return the request
+       */
+      public GetGlobalSiteTag getGlobalSiteTag(java.lang.String name) throws java.io.IOException {
+        GetGlobalSiteTag result = new GetGlobalSiteTag(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetGlobalSiteTag extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGlobalSiteTag> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+/globalSiteTag$");
+
+        /**
+         * Returns the Site Tag for the specified web stream. Site Tags are immutable singletons.
+         *
+         * Create a request for the method "dataStreams.getGlobalSiteTag".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link GetGlobalSiteTag#execute()} method to invoke the remote
+         * operation. <p> {@link GetGlobalSiteTag#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
+       *        unique IDs. Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
+       *        Example: "properties/123/dataStreams/456/globalSiteTag"
+         * @since 1.13
+         */
+        protected GetGlobalSiteTag(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGlobalSiteTag.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/globalSiteTag$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetGlobalSiteTag set$Xgafv(java.lang.String $Xgafv) {
+          return (GetGlobalSiteTag) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetGlobalSiteTag setAccessToken(java.lang.String accessToken) {
+          return (GetGlobalSiteTag) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetGlobalSiteTag setAlt(java.lang.String alt) {
+          return (GetGlobalSiteTag) super.setAlt(alt);
+        }
+
+        @Override
+        public GetGlobalSiteTag setCallback(java.lang.String callback) {
+          return (GetGlobalSiteTag) super.setCallback(callback);
+        }
+
+        @Override
+        public GetGlobalSiteTag setFields(java.lang.String fields) {
+          return (GetGlobalSiteTag) super.setFields(fields);
+        }
+
+        @Override
+        public GetGlobalSiteTag setKey(java.lang.String key) {
+          return (GetGlobalSiteTag) super.setKey(key);
+        }
+
+        @Override
+        public GetGlobalSiteTag setOauthToken(java.lang.String oauthToken) {
+          return (GetGlobalSiteTag) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetGlobalSiteTag setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetGlobalSiteTag) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetGlobalSiteTag setQuotaUser(java.lang.String quotaUser) {
+          return (GetGlobalSiteTag) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetGlobalSiteTag setUploadType(java.lang.String uploadType) {
+          return (GetGlobalSiteTag) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetGlobalSiteTag setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetGlobalSiteTag) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the site tag to lookup. Note that site tags are singletons and do
+         * not have unique IDs. Format:
+         * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
+         * "properties/123/dataStreams/456/globalSiteTag"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
+       unique IDs. Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
+       "properties/123/dataStreams/456/globalSiteTag"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the site tag to lookup. Note that site tags are singletons and do
+         * not have unique IDs. Format:
+         * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
+         * "properties/123/dataStreams/456/globalSiteTag"
+         */
+        public GetGlobalSiteTag setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/globalSiteTag$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetGlobalSiteTag set(String parameterName, Object value) {
+          return (GetGlobalSiteTag) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists DataStreams on a property.
        *
        * Create a request for the method "dataStreams.list".
@@ -14439,162 +14595,6 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Returns the Site Tag for the specified web stream. Site Tags are immutable singletons.
-       *
-       * Create a request for the method "webDataStreams.getGlobalSiteTag".
-       *
-       * This request holds the parameters needed by the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link GetGlobalSiteTag#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param name Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
-       *        unique IDs. Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-       *        Example: "properties/123/webDataStreams/456/globalSiteTag"
-       * @return the request
-       */
-      public GetGlobalSiteTag getGlobalSiteTag(java.lang.String name) throws java.io.IOException {
-        GetGlobalSiteTag result = new GetGlobalSiteTag(name);
-        initialize(result);
-        return result;
-      }
-
-      public class GetGlobalSiteTag extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGlobalSiteTag> {
-
-        private static final String REST_PATH = "v1alpha/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^properties/[^/]+/webDataStreams/[^/]+/globalSiteTag$");
-
-        /**
-         * Returns the Site Tag for the specified web stream. Site Tags are immutable singletons.
-         *
-         * Create a request for the method "webDataStreams.getGlobalSiteTag".
-         *
-         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-         * optional parameters, call the {@link GetGlobalSiteTag#execute()} method to invoke the remote
-         * operation. <p> {@link GetGlobalSiteTag#initialize(com.google.api.client.googleapis.services.Abs
-         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param name Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
-       *        unique IDs. Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag
-       *        Example: "properties/123/webDataStreams/456/globalSiteTag"
-         * @since 1.13
-         */
-        protected GetGlobalSiteTag(java.lang.String name) {
-          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGlobalSiteTag.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^properties/[^/]+/webDataStreams/[^/]+/globalSiteTag$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public GetGlobalSiteTag set$Xgafv(java.lang.String $Xgafv) {
-          return (GetGlobalSiteTag) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public GetGlobalSiteTag setAccessToken(java.lang.String accessToken) {
-          return (GetGlobalSiteTag) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public GetGlobalSiteTag setAlt(java.lang.String alt) {
-          return (GetGlobalSiteTag) super.setAlt(alt);
-        }
-
-        @Override
-        public GetGlobalSiteTag setCallback(java.lang.String callback) {
-          return (GetGlobalSiteTag) super.setCallback(callback);
-        }
-
-        @Override
-        public GetGlobalSiteTag setFields(java.lang.String fields) {
-          return (GetGlobalSiteTag) super.setFields(fields);
-        }
-
-        @Override
-        public GetGlobalSiteTag setKey(java.lang.String key) {
-          return (GetGlobalSiteTag) super.setKey(key);
-        }
-
-        @Override
-        public GetGlobalSiteTag setOauthToken(java.lang.String oauthToken) {
-          return (GetGlobalSiteTag) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public GetGlobalSiteTag setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (GetGlobalSiteTag) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public GetGlobalSiteTag setQuotaUser(java.lang.String quotaUser) {
-          return (GetGlobalSiteTag) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public GetGlobalSiteTag setUploadType(java.lang.String uploadType) {
-          return (GetGlobalSiteTag) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public GetGlobalSiteTag setUploadProtocol(java.lang.String uploadProtocol) {
-          return (GetGlobalSiteTag) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The name of the site tag to lookup. Note that site tags are singletons and do
-         * not have unique IDs. Format:
-         * properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag Example:
-         * "properties/123/webDataStreams/456/globalSiteTag"
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
-       unique IDs. Format: properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag Example:
-       "properties/123/webDataStreams/456/globalSiteTag"
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * Required. The name of the site tag to lookup. Note that site tags are singletons and do
-         * not have unique IDs. Format:
-         * properties/{property_id}/webDataStreams/{stream_id}/globalSiteTag Example:
-         * "properties/123/webDataStreams/456/globalSiteTag"
-         */
-        public GetGlobalSiteTag setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^properties/[^/]+/webDataStreams/[^/]+/globalSiteTag$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public GetGlobalSiteTag set(String parameterName, Object value) {
-          return (GetGlobalSiteTag) super.set(parameterName, value);
         }
       }
       /**

@@ -40,6 +40,13 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   private java.lang.String createStatement;
 
   /**
+   * Optional. The dialect of the Cloud Spanner Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseDialect;
+
+  /**
    * Optional. The encryption configuration for the database. If this field is not specified, Cloud
    * Spanner will encrypt/decrypt all data at rest using Google default encryption.
    * The value may be {@code null}.
@@ -76,6 +83,23 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    */
   public CreateDatabaseRequest setCreateStatement(java.lang.String createStatement) {
     this.createStatement = createStatement;
+    return this;
+  }
+
+  /**
+   * Optional. The dialect of the Cloud Spanner Database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseDialect() {
+    return databaseDialect;
+  }
+
+  /**
+   * Optional. The dialect of the Cloud Spanner Database.
+   * @param databaseDialect databaseDialect or {@code null} for none
+   */
+  public CreateDatabaseRequest setDatabaseDialect(java.lang.String databaseDialect) {
+    this.databaseDialect = databaseDialect;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. The dialect of the Cloud Spanner Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseDialect;
+
+  /**
    * Output only. The read-write region which contains the database's leader replicas. This is the
    * same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or
    * DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
@@ -122,6 +129,23 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The dialect of the Cloud Spanner Database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseDialect() {
+    return databaseDialect;
+  }
+
+  /**
+   * Output only. The dialect of the Cloud Spanner Database.
+   * @param databaseDialect databaseDialect or {@code null} for none
+   */
+  public Database setDatabaseDialect(java.lang.String databaseDialect) {
+    this.databaseDialect = databaseDialect;
     return this;
   }
 

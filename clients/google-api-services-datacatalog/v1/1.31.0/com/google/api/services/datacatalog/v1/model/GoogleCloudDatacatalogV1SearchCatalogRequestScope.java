@@ -56,10 +56,8 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   private java.util.List<java.lang.String> includeProjectIds;
 
   /**
-   * Optional. If `true`, include public tag templates in the search results. By default, they are
-   * included only if you have explicit permissions on them to view them. For example, if you are
-   * the owner. Other scope fields, for example, `include_org_ids`, still restrict the returned
-   * public tag templates and at least one of them is required.
+   * Optional. This field is deprecated. The search mechanism for public and private tag templates
+   * is the same.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,10 +143,8 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   }
 
   /**
-   * Optional. If `true`, include public tag templates in the search results. By default, they are
-   * included only if you have explicit permissions on them to view them. For example, if you are
-   * the owner. Other scope fields, for example, `include_org_ids`, still restrict the returned
-   * public tag templates and at least one of them is required.
+   * Optional. This field is deprecated. The search mechanism for public and private tag templates
+   * is the same.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludePublicTagTemplates() {
@@ -156,10 +152,8 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   }
 
   /**
-   * Optional. If `true`, include public tag templates in the search results. By default, they are
-   * included only if you have explicit permissions on them to view them. For example, if you are
-   * the owner. Other scope fields, for example, `include_org_ids`, still restrict the returned
-   * public tag templates and at least one of them is required.
+   * Optional. This field is deprecated. The search mechanism for public and private tag templates
+   * is the same.
    * @param includePublicTagTemplates includePublicTagTemplates or {@code null} for none
    */
   public GoogleCloudDatacatalogV1SearchCatalogRequestScope setIncludePublicTagTemplates(java.lang.Boolean includePublicTagTemplates) {

@@ -138,6 +138,13 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   private java.lang.String pageToken;
 
   /**
+   * The specification for personalization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec;
+
+  /**
    * Raw search query.
    * The value may be {@code null}.
    */
@@ -454,6 +461,23 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    */
   public GoogleCloudRetailV2betaSearchRequest setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * The specification for personalization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequestPersonalizationSpec getPersonalizationSpec() {
+    return personalizationSpec;
+  }
+
+  /**
+   * The specification for personalization.
+   * @param personalizationSpec personalizationSpec or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequest setPersonalizationSpec(GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec) {
+    this.personalizationSpec = personalizationSpec;
     return this;
   }
 

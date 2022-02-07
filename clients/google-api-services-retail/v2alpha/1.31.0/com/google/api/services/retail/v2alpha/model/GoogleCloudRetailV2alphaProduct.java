@@ -294,7 +294,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.String primaryProductId;
 
   /**
-   * The promotions applied to the product. A maximum of 10 values are allowed per Product.
+   * The promotions applied to the product. A maximum of 10 values are allowed per Product. Only
+   * Promotion.promotion_id will be used, other fields will be ignored if set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -974,7 +975,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The promotions applied to the product. A maximum of 10 values are allowed per Product.
+   * The promotions applied to the product. A maximum of 10 values are allowed per Product. Only
+   * Promotion.promotion_id will be used, other fields will be ignored if set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaPromotion> getPromotions() {
@@ -982,7 +984,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The promotions applied to the product. A maximum of 10 values are allowed per Product.
+   * The promotions applied to the product. A maximum of 10 values are allowed per Product. Only
+   * Promotion.promotion_id will be used, other fields will be ignored if set.
    * @param promotions promotions or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setPromotions(java.util.List<GoogleCloudRetailV2alphaPromotion> promotions) {

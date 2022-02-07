@@ -47,6 +47,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String database;
 
   /**
+   * Output only. The database dialect information for the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseDialect;
+
+  /**
    * Output only. The encryption information for the backup.
    * The value may be {@code null}.
    */
@@ -146,6 +153,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * Output only. The database dialect information for the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseDialect() {
+    return databaseDialect;
+  }
+
+  /**
+   * Output only. The database dialect information for the backup.
+   * @param databaseDialect databaseDialect or {@code null} for none
+   */
+  public Backup setDatabaseDialect(java.lang.String databaseDialect) {
+    this.databaseDialect = databaseDialect;
     return this;
   }
 

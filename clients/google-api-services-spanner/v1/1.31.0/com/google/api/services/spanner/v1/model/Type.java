@@ -52,6 +52,17 @@ public final class Type extends com.google.api.client.json.GenericJson {
   private StructType structType;
 
   /**
+   * The TypeAnnotationCode that disambiguates SQL type that Spanner will use to represent values of
+   * this type during query processing. This is necessary for some type codes because a single
+   * TypeCode can be mapped to different SQL types depending on the SQL dialect. type_annotation
+   * typically is not needed to process the content of a value (it doesn't affect serialization) and
+   * clients can ignore it on the read path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String typeAnnotation;
+
+  /**
    * If code == ARRAY, then `array_element_type` is the type of the array elements.
    * @return value or {@code null} for none
    */
@@ -99,6 +110,31 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   public Type setStructType(StructType structType) {
     this.structType = structType;
+    return this;
+  }
+
+  /**
+   * The TypeAnnotationCode that disambiguates SQL type that Spanner will use to represent values of
+   * this type during query processing. This is necessary for some type codes because a single
+   * TypeCode can be mapped to different SQL types depending on the SQL dialect. type_annotation
+   * typically is not needed to process the content of a value (it doesn't affect serialization) and
+   * clients can ignore it on the read path.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTypeAnnotation() {
+    return typeAnnotation;
+  }
+
+  /**
+   * The TypeAnnotationCode that disambiguates SQL type that Spanner will use to represent values of
+   * this type during query processing. This is necessary for some type codes because a single
+   * TypeCode can be mapped to different SQL types depending on the SQL dialect. type_annotation
+   * typically is not needed to process the content of a value (it doesn't affect serialization) and
+   * clients can ignore it on the read path.
+   * @param typeAnnotation typeAnnotation or {@code null} for none
+   */
+  public Type setTypeAnnotation(java.lang.String typeAnnotation) {
+    this.typeAnnotation = typeAnnotation;
     return this;
   }
 

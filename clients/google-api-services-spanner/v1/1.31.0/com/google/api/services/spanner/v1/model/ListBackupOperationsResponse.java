@@ -39,10 +39,11 @@ public final class ListBackupOperationsResponse extends com.google.api.client.js
 
   /**
    * The list of matching backup long-running operations. Each operation's name will be prefixed by
-   * the backup's name and the operation's metadata will be of type CreateBackupMetadata. Operations
-   * returned include those that are pending or have completed/failed/canceled within the last 7
-   * days. Operations returned are ordered by `operation.metadata.value.progress.start_time` in
-   * descending order starting from the most recently started operation.
+   * the backup's name. The operation's metadata field type `metadata.type_url` describes the type
+   * of the metadata. Operations returned include those that are pending or have
+   * completed/failed/canceled within the last 7 days. Operations returned are ordered by
+   * `operation.metadata.value.progress.start_time` in descending order starting from the most
+   * recently started operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,10 +70,11 @@ public final class ListBackupOperationsResponse extends com.google.api.client.js
 
   /**
    * The list of matching backup long-running operations. Each operation's name will be prefixed by
-   * the backup's name and the operation's metadata will be of type CreateBackupMetadata. Operations
-   * returned include those that are pending or have completed/failed/canceled within the last 7
-   * days. Operations returned are ordered by `operation.metadata.value.progress.start_time` in
-   * descending order starting from the most recently started operation.
+   * the backup's name. The operation's metadata field type `metadata.type_url` describes the type
+   * of the metadata. Operations returned include those that are pending or have
+   * completed/failed/canceled within the last 7 days. Operations returned are ordered by
+   * `operation.metadata.value.progress.start_time` in descending order starting from the most
+   * recently started operation.
    * @return value or {@code null} for none
    */
   public java.util.List<Operation> getOperations() {
@@ -81,10 +83,11 @@ public final class ListBackupOperationsResponse extends com.google.api.client.js
 
   /**
    * The list of matching backup long-running operations. Each operation's name will be prefixed by
-   * the backup's name and the operation's metadata will be of type CreateBackupMetadata. Operations
-   * returned include those that are pending or have completed/failed/canceled within the last 7
-   * days. Operations returned are ordered by `operation.metadata.value.progress.start_time` in
-   * descending order starting from the most recently started operation.
+   * the backup's name. The operation's metadata field type `metadata.type_url` describes the type
+   * of the metadata. Operations returned include those that are pending or have
+   * completed/failed/canceled within the last 7 days. Operations returned are ordered by
+   * `operation.metadata.value.progress.start_time` in descending order starting from the most
+   * recently started operation.
    * @param operations operations or {@code null} for none
    */
   public ListBackupOperationsResponse setOperations(java.util.List<Operation> operations) {

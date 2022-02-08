@@ -26,7 +26,7 @@ jobs:
           github-token: ${{secrets.YOSHI_APPROVER_TOKEN}}
           script: |
             // only approve PRs from yoshi-automation user
-            if (context.payload.pull_request.user.login !== != "yoshi-code-bot") {
+            if (context.payload.pull_request.user.login !== "yoshi-code-bot") {
               return;
             }
             // only approve PRs like "Regenerate X client"

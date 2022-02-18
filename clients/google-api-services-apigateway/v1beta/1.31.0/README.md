@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-apigateway:v1beta-rev20211110-1.32.1'
+  implementation 'com.google.apis:google-api-services-apigateway:v1beta-rev20211110-1.32.1'
 }
 ```
 

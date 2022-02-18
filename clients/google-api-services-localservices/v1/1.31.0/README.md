@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-localservices:v1-rev20211011-1.32.1'
+  implementation 'com.google.apis:google-api-services-localservices:v1-rev20211011-1.32.1'
 }
 ```
 

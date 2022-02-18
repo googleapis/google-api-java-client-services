@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-videointelligence:v1beta2-rev20210902-1.32.1'
+  implementation 'com.google.apis:google-api-services-videointelligence:v1beta2-rev20210902-1.32.1'
 }
 ```
 

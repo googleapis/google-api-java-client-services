@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-games:v1-rev20210401-1.32.1'
+  implementation 'com.google.apis:google-api-services-games:v1-rev20210401-1.32.1'
 }
 ```
 

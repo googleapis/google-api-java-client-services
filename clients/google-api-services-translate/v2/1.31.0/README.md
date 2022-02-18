@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-translate:v2-rev20170525-1.32.1'
+  implementation 'com.google.apis:google-api-services-translate:v2-rev20170525-1.32.1'
 }
 ```
 

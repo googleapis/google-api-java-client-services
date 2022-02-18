@@ -69,7 +69,7 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicycontrollerMembershipSpec policycontroller;
+  private PolicyControllerMembershipSpec policycontroller;
 
   /**
    * Workload Certificate spec.
@@ -167,7 +167,7 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    * Policy Controller spec.
    * @return value or {@code null} for none
    */
-  public PolicycontrollerMembershipSpec getPolicycontroller() {
+  public PolicyControllerMembershipSpec getPolicycontroller() {
     return policycontroller;
   }
 
@@ -175,7 +175,7 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    * Policy Controller spec.
    * @param policycontroller policycontroller or {@code null} for none
    */
-  public MembershipFeatureSpec setPolicycontroller(PolicycontrollerMembershipSpec policycontroller) {
+  public MembershipFeatureSpec setPolicycontroller(PolicyControllerMembershipSpec policycontroller) {
     this.policycontroller = policycontroller;
     return this;
   }

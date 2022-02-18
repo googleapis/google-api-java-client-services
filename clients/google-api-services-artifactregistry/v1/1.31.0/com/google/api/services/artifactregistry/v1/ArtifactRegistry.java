@@ -133,169 +133,6 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
   }
 
   /**
-   * An accessor for creating requests from the Operations collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
-   *   {@code ArtifactRegistry.Operations.List request = artifactregistry.operations().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Operations operations() {
-    return new Operations();
-  }
-
-  /**
-   * The "operations" collection of methods.
-   */
-  public class Operations {
-
-    /**
-     * Gets the latest state of a long-running operation. Clients can use this method to poll the
-     * operation result at intervals as recommended by the API service.
-     *
-     * Create a request for the method "operations.get".
-     *
-     * This request holds the parameters needed by the artifactregistry server.  After setting any
-     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-     *
-     * @param name The name of the operation resource.
-     * @return the request
-     */
-    public Get get(java.lang.String name) throws java.io.IOException {
-      Get result = new Get(name);
-      initialize(result);
-      return result;
-    }
-
-    public class Get extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/[^/]+$");
-
-      /**
-       * Gets the latest state of a long-running operation. Clients can use this method to poll the
-       * operation result at intervals as recommended by the API service.
-       *
-       * Create a request for the method "operations.get".
-       *
-       * This request holds the parameters needed by the the artifactregistry server.  After setting any
-       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The name of the operation resource.
-       * @since 1.13
-       */
-      protected Get(java.lang.String name) {
-        super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Operation.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/[^/]+$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Get set$Xgafv(java.lang.String $Xgafv) {
-        return (Get) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Get setAlt(java.lang.String alt) {
-        return (Get) super.setAlt(alt);
-      }
-
-      @Override
-      public Get setCallback(java.lang.String callback) {
-        return (Get) super.setCallback(callback);
-      }
-
-      @Override
-      public Get setFields(java.lang.String fields) {
-        return (Get) super.setFields(fields);
-      }
-
-      @Override
-      public Get setKey(java.lang.String key) {
-        return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Get) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Get setQuotaUser(java.lang.String quotaUser) {
-        return (Get) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Get setUploadType(java.lang.String uploadType) {
-        return (Get) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Get setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Get) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The name of the operation resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation resource.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation resource. */
-      public Get setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Get set(String parameterName, Object value) {
-        return (Get) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -633,6 +470,168 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
      */
     public class Locations {
 
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+       *   {@code ArtifactRegistry.Operations.List request = artifactregistry.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the Repositories collection.
        *
@@ -2034,34 +2033,12 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (ArtifactRegistryImport) super.set(parameterName, value);
             }
           }
-
-        }
-        /**
-         * An accessor for creating requests from the Aptartifacts collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
-         *   {@code ArtifactRegistry.Aptartifacts.List request = artifactregistry.aptartifacts().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Aptartifacts aptartifacts() {
-          return new Aptartifacts();
-        }
-
-        /**
-         * The "aptartifacts" collection of methods.
-         */
-        public class Aptartifacts {
-
           /**
            * Directly uploads an Apt artifact. The returned Operation will complete once the resources are
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "aptartifacts.upload".
+           * Create a request for the method "aptArtifacts.upload".
            *
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -2081,7 +2058,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "aptartifacts.upload".
+           * Create a request for the method "aptArtifacts.upload".
            *
            * This request holds the parameters needed by the the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -2114,7 +2091,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "aptartifacts.upload".
+             * Create a request for the method "aptArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -2141,7 +2118,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "aptartifacts.upload".
+             * Create a request for the method "aptArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -2905,6 +2882,22 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
+            /** The field to order the results by. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** The field to order the results by.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** The field to order the results by. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
             /** The maximum number of files to return. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
@@ -3103,31 +3096,31 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
         }
         /**
-         * An accessor for creating requests from the Googetartifacts collection.
+         * An accessor for creating requests from the GoogetArtifacts collection.
          *
          * <p>The typical use is:</p>
          * <pre>
          *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
-         *   {@code ArtifactRegistry.Googetartifacts.List request = artifactregistry.googetartifacts().list(parameters ...)}
+         *   {@code ArtifactRegistry.GoogetArtifacts.List request = artifactregistry.googetArtifacts().list(parameters ...)}
          * </pre>
          *
          * @return the resource collection
          */
-        public Googetartifacts googetartifacts() {
-          return new Googetartifacts();
+        public GoogetArtifacts googetArtifacts() {
+          return new GoogetArtifacts();
         }
 
         /**
-         * The "googetartifacts" collection of methods.
+         * The "googetArtifacts" collection of methods.
          */
-        public class Googetartifacts {
+        public class GoogetArtifacts {
 
           /**
            * Directly uploads a GooGet artifact. The returned Operation will complete once the resources are
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "googetartifacts.upload".
+           * Create a request for the method "googetArtifacts.upload".
            *
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -3147,7 +3140,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "googetartifacts.upload".
+           * Create a request for the method "googetArtifacts.upload".
            *
            * This request holds the parameters needed by the the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -3180,7 +3173,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "googetartifacts.upload".
+             * Create a request for the method "googetArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -3207,7 +3200,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "googetartifacts.upload".
+             * Create a request for the method "googetArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -5274,34 +5267,12 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (ArtifactRegistryImport) super.set(parameterName, value);
             }
           }
-
-        }
-        /**
-         * An accessor for creating requests from the Yumartifacts collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
-         *   {@code ArtifactRegistry.Yumartifacts.List request = artifactregistry.yumartifacts().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Yumartifacts yumartifacts() {
-          return new Yumartifacts();
-        }
-
-        /**
-         * The "yumartifacts" collection of methods.
-         */
-        public class Yumartifacts {
-
           /**
            * Directly uploads a Yum artifact. The returned Operation will complete once the resources are
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "yumartifacts.upload".
+           * Create a request for the method "yumArtifacts.upload".
            *
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -5321,7 +5292,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "yumartifacts.upload".
+           * Create a request for the method "yumArtifacts.upload".
            *
            * This request holds the parameters needed by the the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -5354,7 +5325,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "yumartifacts.upload".
+             * Create a request for the method "yumArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -5381,7 +5352,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "yumartifacts.upload".
+             * Create a request for the method "yumArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.

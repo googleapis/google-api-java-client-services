@@ -52,7 +52,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String format;
 
   /**
-   * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the
+   * The Cloud KMS resource name of the customer managed encryption key that's used to encrypt the
    * contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-
    * kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
    * The value may be {@code null}.
@@ -144,7 +144,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the
+   * The Cloud KMS resource name of the customer managed encryption key that's used to encrypt the
    * contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-
    * kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
    * @return value or {@code null} for none
@@ -154,7 +154,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the
+   * The Cloud KMS resource name of the customer managed encryption key that's used to encrypt the
    * contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-
    * kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
    * @param kmsKeyName kmsKeyName or {@code null} for none

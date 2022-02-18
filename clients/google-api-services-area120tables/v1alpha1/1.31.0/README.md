@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-area120tables:v1alpha1-rev20211007-1.32.1'
+  implementation 'com.google.apis:google-api-services-area120tables:v1alpha1-rev20211007-1.32.1'
 }
 ```
 

@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1.model;
 
 /**
- * A Google Cloud Redis instance.
+ * A Memorystore for Redis instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a

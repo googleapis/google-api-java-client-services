@@ -32,7 +32,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentTextAnchor extends com.go
 
   /**
    * Contains the content of the text span so that users do not have to look it up in the
-   * text_segments.
+   * text_segments. It is always populated for formFields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentTextAnchor extends com.go
 
   /**
    * Contains the content of the text span so that users do not have to look it up in the
-   * text_segments.
+   * text_segments. It is always populated for formFields.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentTextAnchor extends com.go
 
   /**
    * Contains the content of the text span so that users do not have to look it up in the
-   * text_segments.
+   * text_segments. It is always populated for formFields.
    * @param content content or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentTextAnchor setContent(java.lang.String content) {

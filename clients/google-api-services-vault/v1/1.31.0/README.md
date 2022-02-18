@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-vault:v1-rev20211101-1.32.1'
+  implementation 'com.google.apis:google-api-services-vault:v1-rev20211101-1.32.1'
 }
 ```
 

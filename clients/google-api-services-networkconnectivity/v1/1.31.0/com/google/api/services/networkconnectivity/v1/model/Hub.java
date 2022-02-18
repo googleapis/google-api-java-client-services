@@ -18,7 +18,9 @@ package com.google.api.services.networkconnectivity.v1.model;
 
 /**
  * A hub is a collection of spokes. A single hub can contain spokes from multiple regions. However,
- * all of a hub's spokes must be associated with resources that reside in the same VPC network.
+ * if any of a hub's spokes use the data transfer feature, the resources associated with those
+ * spokes must all reside in the same VPC network. Spokes that do not use data transfer can be
+ * associated with any VPC network in your project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation

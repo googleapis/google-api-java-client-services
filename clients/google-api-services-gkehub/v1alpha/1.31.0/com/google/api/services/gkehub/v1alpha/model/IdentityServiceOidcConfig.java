@@ -44,12 +44,26 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
   private java.lang.String clientId;
 
   /**
+   * Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientSecret;
+
+  /**
    * Flag to denote if reverse proxy is used to connect to auth provider. This flag should be set to
    * true when provider is not reachable by Google Cloud Console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deployCloudConsoleProxy;
+
+  /**
+   * Output only. Encrypted OIDC Client secret
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encryptedClientSecret;
 
   /**
    * Comma-separated list of key-value pairs.
@@ -143,6 +157,23 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
   }
 
   /**
+   * Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientSecret() {
+    return clientSecret;
+  }
+
+  /**
+   * Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
+   * @param clientSecret clientSecret or {@code null} for none
+   */
+  public IdentityServiceOidcConfig setClientSecret(java.lang.String clientSecret) {
+    this.clientSecret = clientSecret;
+    return this;
+  }
+
+  /**
    * Flag to denote if reverse proxy is used to connect to auth provider. This flag should be set to
    * true when provider is not reachable by Google Cloud Console.
    * @return value or {@code null} for none
@@ -158,6 +189,51 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
    */
   public IdentityServiceOidcConfig setDeployCloudConsoleProxy(java.lang.Boolean deployCloudConsoleProxy) {
     this.deployCloudConsoleProxy = deployCloudConsoleProxy;
+    return this;
+  }
+
+  /**
+   * Output only. Encrypted OIDC Client secret
+   * @see #decodeEncryptedClientSecret()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncryptedClientSecret() {
+    return encryptedClientSecret;
+  }
+
+  /**
+   * Output only. Encrypted OIDC Client secret
+   * @see #getEncryptedClientSecret()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeEncryptedClientSecret() {
+    return com.google.api.client.util.Base64.decodeBase64(encryptedClientSecret);
+  }
+
+  /**
+   * Output only. Encrypted OIDC Client secret
+   * @see #encodeEncryptedClientSecret()
+   * @param encryptedClientSecret encryptedClientSecret or {@code null} for none
+   */
+  public IdentityServiceOidcConfig setEncryptedClientSecret(java.lang.String encryptedClientSecret) {
+    this.encryptedClientSecret = encryptedClientSecret;
+    return this;
+  }
+
+  /**
+   * Output only. Encrypted OIDC Client secret
+   * @see #setEncryptedClientSecret()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public IdentityServiceOidcConfig encodeEncryptedClientSecret(byte[] encryptedClientSecret) {
+    this.encryptedClientSecret = com.google.api.client.util.Base64.encodeBase64URLSafeString(encryptedClientSecret);
     return this;
   }
 

@@ -58,6 +58,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private IdentityServiceMembershipSpec identityservice;
 
   /**
+   * Policy Controller spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerMembershipSpec policycontroller;
+
+  /**
    * Anthos Observability-specific spec
    * @return value or {@code null} for none
    */
@@ -122,6 +129,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setIdentityservice(IdentityServiceMembershipSpec identityservice) {
     this.identityservice = identityservice;
+    return this;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerMembershipSpec getPolicycontroller() {
+    return policycontroller;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @param policycontroller policycontroller or {@code null} for none
+   */
+  public MembershipFeatureSpec setPolicycontroller(PolicyControllerMembershipSpec policycontroller) {
+    this.policycontroller = policycontroller;
     return this;
   }
 

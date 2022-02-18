@@ -4013,17 +4013,23 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The requested page size. The actual page size may be fixed to a min or max value. */
+        /**
+         * The requested page size. This is a hint and the actual page size in the response may be
+         * different.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The requested page size. The actual page size may be fixed to a min or max value.
+        /** The requested page size. This is a hint and the actual page size in the response may be different.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The requested page size. The actual page size may be fixed to a min or max value. */
+        /**
+         * The requested page size. This is a hint and the actual page size in the response may be
+         * different.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

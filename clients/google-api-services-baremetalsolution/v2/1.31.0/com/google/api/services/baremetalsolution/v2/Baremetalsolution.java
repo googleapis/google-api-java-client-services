@@ -1162,6 +1162,137 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             return (Reset) super.set(parameterName, value);
           }
         }
+        /**
+         * Starts a server that was shutdown.
+         *
+         * Create a request for the method "instances.start".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.StartInstanceRequest}
+         * @return the request
+         */
+        public Start start(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.StartInstanceRequest content) throws java.io.IOException {
+          Start result = new Start(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Start extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:start";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Starts a server that was shutdown.
+           *
+           * Create a request for the method "instances.start".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Start#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.StartInstanceRequest}
+           * @since 1.13
+           */
+          protected Start(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.StartInstanceRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Start set$Xgafv(java.lang.String $Xgafv) {
+            return (Start) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Start setAccessToken(java.lang.String accessToken) {
+            return (Start) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Start setAlt(java.lang.String alt) {
+            return (Start) super.setAlt(alt);
+          }
+
+          @Override
+          public Start setCallback(java.lang.String callback) {
+            return (Start) super.setCallback(callback);
+          }
+
+          @Override
+          public Start setFields(java.lang.String fields) {
+            return (Start) super.setFields(fields);
+          }
+
+          @Override
+          public Start setKey(java.lang.String key) {
+            return (Start) super.setKey(key);
+          }
+
+          @Override
+          public Start setOauthToken(java.lang.String oauthToken) {
+            return (Start) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Start) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Start setQuotaUser(java.lang.String quotaUser) {
+            return (Start) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Start setUploadType(java.lang.String uploadType) {
+            return (Start) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Start setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Start) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource. */
+          public Start setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Start set(String parameterName, Object value) {
+            return (Start) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -1518,6 +1649,148 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * List all Networks (and used IPs for each Network) in the vendor account associated with the
+         * specified project.
+         *
+         * Create a request for the method "networks.listNetworkUsage".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link ListNetworkUsage#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param location Required. Parent value (project and location).
+         * @return the request
+         */
+        public ListNetworkUsage listNetworkUsage(java.lang.String location) throws java.io.IOException {
+          ListNetworkUsage result = new ListNetworkUsage(location);
+          initialize(result);
+          return result;
+        }
+
+        public class ListNetworkUsage extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.ListNetworkUsageResponse> {
+
+          private static final String REST_PATH = "v2/{+location}/networks:listNetworkUsage";
+
+          private final java.util.regex.Pattern LOCATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List all Networks (and used IPs for each Network) in the vendor account associated with the
+           * specified project.
+           *
+           * Create a request for the method "networks.listNetworkUsage".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link ListNetworkUsage#execute()} method to invoke the
+           * remote operation. <p> {@link ListNetworkUsage#initialize(com.google.api.client.googleapis.servi
+           * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param location Required. Parent value (project and location).
+           * @since 1.13
+           */
+          protected ListNetworkUsage(java.lang.String location) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.ListNetworkUsageResponse.class);
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListNetworkUsage set$Xgafv(java.lang.String $Xgafv) {
+            return (ListNetworkUsage) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListNetworkUsage setAccessToken(java.lang.String accessToken) {
+            return (ListNetworkUsage) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListNetworkUsage setAlt(java.lang.String alt) {
+            return (ListNetworkUsage) super.setAlt(alt);
+          }
+
+          @Override
+          public ListNetworkUsage setCallback(java.lang.String callback) {
+            return (ListNetworkUsage) super.setCallback(callback);
+          }
+
+          @Override
+          public ListNetworkUsage setFields(java.lang.String fields) {
+            return (ListNetworkUsage) super.setFields(fields);
+          }
+
+          @Override
+          public ListNetworkUsage setKey(java.lang.String key) {
+            return (ListNetworkUsage) super.setKey(key);
+          }
+
+          @Override
+          public ListNetworkUsage setOauthToken(java.lang.String oauthToken) {
+            return (ListNetworkUsage) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListNetworkUsage setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListNetworkUsage) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListNetworkUsage setQuotaUser(java.lang.String quotaUser) {
+            return (ListNetworkUsage) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListNetworkUsage setUploadType(java.lang.String uploadType) {
+            return (ListNetworkUsage) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListNetworkUsage setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListNetworkUsage) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent value (project and location). */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. Parent value (project and location).
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** Required. Parent value (project and location). */
+          public ListNetworkUsage setLocation(java.lang.String location) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public ListNetworkUsage set(String parameterName, Object value) {
+            return (ListNetworkUsage) super.set(parameterName, value);
+          }
+        }
+        /**
          * Update details of a single network.
          *
          * Create a request for the method "networks.patch".
@@ -1676,6 +1949,866 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the NfsShares collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Baremetalsolution baremetalsolution = new Baremetalsolution(...);}
+       *   {@code Baremetalsolution.NfsShares.List request = baremetalsolution.nfsShares().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public NfsShares nfsShares() {
+        return new NfsShares();
+      }
+
+      /**
+       * The "nfsShares" collection of methods.
+       */
+      public class NfsShares {
+
+        /**
+         * Get details of a single NFS share.
+         *
+         * Create a request for the method "nfsShares.get".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.NfsShare> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
+
+          /**
+           * Get details of a single NFS share.
+           *
+           * Create a request for the method "nfsShares.get".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.NfsShare.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List NFS shares.
+         *
+         * Create a request for the method "nfsShares.list".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for ListNfsSharesRequest.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.ListNfsSharesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/nfsShares";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List NFS shares.
+           *
+           * Create a request for the method "nfsShares.list".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for ListNfsSharesRequest.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.ListNfsSharesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent value for ListNfsSharesRequest. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for ListNfsSharesRequest.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent value for ListNfsSharesRequest. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** List filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** List filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** List filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server might return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server might return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server might return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** A token identifying a page of results from the server. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results from the server.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** A token identifying a page of results from the server. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update details of a single NFS share.
+         *
+         * Create a request for the method "nfsShares.patch".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The name of the NFS share.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.NfsShare}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.NfsShare content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
+
+          /**
+           * Update details of a single NFS share.
+           *
+           * Create a request for the method "nfsShares.patch".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The name of the NFS share.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.NfsShare}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.NfsShare content) {
+            super(Baremetalsolution.this, "PATCH", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Output only. The name of the NFS share. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The name of the NFS share.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Output only. The name of the NFS share. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nfsShares/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to update. The only currently supported fields are: `labels` */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to update. The only currently supported fields are: `labels`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to update. The only currently supported fields are: `labels` */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the ProvisioningConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Baremetalsolution baremetalsolution = new Baremetalsolution(...);}
+       *   {@code Baremetalsolution.ProvisioningConfigs.List request = baremetalsolution.provisioningConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ProvisioningConfigs provisioningConfigs() {
+        return new ProvisioningConfigs();
+      }
+
+      /**
+       * The "provisioningConfigs" collection of methods.
+       */
+      public class ProvisioningConfigs {
+
+        /**
+         * Submit a provisiong configuration for a given project.
+         *
+         * Create a request for the method "provisioningConfigs.submit".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Submit#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent project and location containing the ProvisioningConfig.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.SubmitProvisioningConfigRequest}
+         * @return the request
+         */
+        public Submit submit(java.lang.String parent, com.google.api.services.baremetalsolution.v2.model.SubmitProvisioningConfigRequest content) throws java.io.IOException {
+          Submit result = new Submit(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Submit extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.SubmitProvisioningConfigResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/provisioningConfigs:submit";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Submit a provisiong configuration for a given project.
+           *
+           * Create a request for the method "provisioningConfigs.submit".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Submit#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Submit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent project and location containing the ProvisioningConfig.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.SubmitProvisioningConfigRequest}
+           * @since 1.13
+           */
+          protected Submit(java.lang.String parent, com.google.api.services.baremetalsolution.v2.model.SubmitProvisioningConfigRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.SubmitProvisioningConfigResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Submit set$Xgafv(java.lang.String $Xgafv) {
+            return (Submit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Submit setAccessToken(java.lang.String accessToken) {
+            return (Submit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Submit setAlt(java.lang.String alt) {
+            return (Submit) super.setAlt(alt);
+          }
+
+          @Override
+          public Submit setCallback(java.lang.String callback) {
+            return (Submit) super.setCallback(callback);
+          }
+
+          @Override
+          public Submit setFields(java.lang.String fields) {
+            return (Submit) super.setFields(fields);
+          }
+
+          @Override
+          public Submit setKey(java.lang.String key) {
+            return (Submit) super.setKey(key);
+          }
+
+          @Override
+          public Submit setOauthToken(java.lang.String oauthToken) {
+            return (Submit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Submit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Submit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Submit setQuotaUser(java.lang.String quotaUser) {
+            return (Submit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Submit setUploadType(java.lang.String uploadType) {
+            return (Submit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Submit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Submit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent project and location containing the ProvisioningConfig. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent project and location containing the ProvisioningConfig.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent project and location containing the ProvisioningConfig. */
+          public Submit setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Submit set(String parameterName, Object value) {
+            return (Submit) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the ProvisioningQuotas collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Baremetalsolution baremetalsolution = new Baremetalsolution(...);}
+       *   {@code Baremetalsolution.ProvisioningQuotas.List request = baremetalsolution.provisioningQuotas().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ProvisioningQuotas provisioningQuotas() {
+        return new ProvisioningQuotas();
+      }
+
+      /**
+       * The "provisioningQuotas" collection of methods.
+       */
+      public class ProvisioningQuotas {
+
+        /**
+         * List the budget details to provision resources on a given project.
+         *
+         * Create a request for the method "provisioningQuotas.list".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for ListProvisioningQuotasRequest.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.ListProvisioningQuotasResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/provisioningQuotas";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List the budget details to provision resources on a given project.
+           *
+           * Create a request for the method "provisioningQuotas.list".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for ListProvisioningQuotasRequest.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.ListProvisioningQuotasResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent value for ListProvisioningQuotasRequest. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for ListProvisioningQuotasRequest.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent value for ListProvisioningQuotasRequest. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server might return fewer items than requested. If
+           * unspecified, server will pick an appropriate default. Notice that page_size field is
+           * not supported and won't be respected in the API request for now, will be updated when
+           * pagination is supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server might return fewer items than requested. If unspecified, server
+         will pick an appropriate default. Notice that page_size field is not supported and won't be
+         respected in the API request for now, will be updated when pagination is supported.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server might return fewer items than requested. If
+           * unspecified, server will pick an appropriate default. Notice that page_size field is
+           * not supported and won't be respected in the API request for now, will be updated when
+           * pagination is supported.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** A token identifying a page of results from the server. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results from the server.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** A token identifying a page of results from the server. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 
@@ -2947,12 +4080,13 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           /**
            * The list of fields to update. The only currently supported fields are:
            * `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels'
+           * 'requested_size_gib'
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** The list of fields to update. The only currently supported fields are:
-         `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels'
+         `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels' 'requested_size_gib'
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2961,6 +4095,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           /**
            * The list of fields to update. The only currently supported fields are:
            * `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels'
+           * 'requested_size_gib'
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

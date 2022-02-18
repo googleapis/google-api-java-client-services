@@ -32,7 +32,8 @@ package com.google.api.services.privateca.v1.model;
 public final class SubjectAltNames extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains additional subject alternative name values.
+   * Contains additional subject alternative name values. For each custom_san, the `value` field
+   * must contain an ASN.1 encoded UTF8String.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class SubjectAltNames extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> uris;
 
   /**
-   * Contains additional subject alternative name values.
+   * Contains additional subject alternative name values. For each custom_san, the `value` field
+   * must contain an ASN.1 encoded UTF8String.
    * @return value or {@code null} for none
    */
   public java.util.List<X509Extension> getCustomSans() {
@@ -75,7 +77,8 @@ public final class SubjectAltNames extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Contains additional subject alternative name values.
+   * Contains additional subject alternative name values. For each custom_san, the `value` field
+   * must contain an ASN.1 encoded UTF8String.
    * @param customSans customSans or {@code null} for none
    */
   public SubjectAltNames setCustomSans(java.util.List<X509Extension> customSans) {

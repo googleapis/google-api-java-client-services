@@ -499,6 +499,233 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the EffectiveIamPolicies collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudAsset cloudasset = new CloudAsset(...);}
+   *   {@code CloudAsset.EffectiveIamPolicies.List request = cloudasset.effectiveIamPolicies().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public EffectiveIamPolicies effectiveIamPolicies() {
+    return new EffectiveIamPolicies();
+  }
+
+  /**
+   * The "effectiveIamPolicies" collection of methods.
+   */
+  public class EffectiveIamPolicies {
+
+    /**
+     * Gets effective IAM policies for a batch of resources.
+     *
+     * Create a request for the method "effectiveIamPolicies.batchGet".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+     *
+     * @param scope Required. Only IAM policies on or below the scope will be returned. This can only be an organization
+     *        number (such as "organizations/123"), a folder number (such as "folders/123"), a project
+     *        ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
+     *        know how to get organization id, visit [here ](https://cloud.google.com/resource-
+     *        manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how
+     *        to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs
+     *        /creating-managing-folders#viewing_or_listing_folders_and_projects).
+     * @return the request
+     */
+    public BatchGet batchGet(java.lang.String scope) throws java.io.IOException {
+      BatchGet result = new BatchGet(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchGet extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.BatchGetEffectiveIamPoliciesResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}/effectiveIamPolicies:batchGet";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Gets effective IAM policies for a batch of resources.
+       *
+       * Create a request for the method "effectiveIamPolicies.batchGet".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param scope Required. Only IAM policies on or below the scope will be returned. This can only be an organization
+     *        number (such as "organizations/123"), a folder number (such as "folders/123"), a project
+     *        ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
+     *        know how to get organization id, visit [here ](https://cloud.google.com/resource-
+     *        manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how
+     *        to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs
+     *        /creating-managing-folders#viewing_or_listing_folders_and_projects).
+       * @since 1.13
+       */
+      protected BatchGet(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.BatchGetEffectiveIamPoliciesResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchGet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchGet setAccessToken(java.lang.String accessToken) {
+        return (BatchGet) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchGet setAlt(java.lang.String alt) {
+        return (BatchGet) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchGet setCallback(java.lang.String callback) {
+        return (BatchGet) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchGet setFields(java.lang.String fields) {
+        return (BatchGet) super.setFields(fields);
+      }
+
+      @Override
+      public BatchGet setKey(java.lang.String key) {
+        return (BatchGet) super.setKey(key);
+      }
+
+      @Override
+      public BatchGet setOauthToken(java.lang.String oauthToken) {
+        return (BatchGet) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchGet) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchGet setQuotaUser(java.lang.String quotaUser) {
+        return (BatchGet) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchGet setUploadType(java.lang.String uploadType) {
+        return (BatchGet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchGet) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Only IAM policies on or below the scope will be returned. This can only be an
+       * organization number (such as "organizations/123"), a folder number (such as "folders/123"),
+       * a project ID (such as "projects/my-project-id"), or a project number (such as
+       * "projects/12345"). To know how to get organization id, visit [here
+       * ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * organization#retrieving_your_organization_id). To know how to get folder or project id,
+       * visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. Only IAM policies on or below the scope will be returned. This can only be an
+     organization number (such as "organizations/123"), a folder number (such as "folders/123"), a
+     project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
+     know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs
+     /creating-managing-organization#retrieving_your_organization_id). To know how to get folder or
+     project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     folders#viewing_or_listing_folders_and_projects).
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. Only IAM policies on or below the scope will be returned. This can only be an
+       * organization number (such as "organizations/123"), a folder number (such as "folders/123"),
+       * a project ID (such as "projects/my-project-id"), or a project number (such as
+       * "projects/12345"). To know how to get organization id, visit [here
+       * ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * organization#retrieving_your_organization_id). To know how to get folder or project id,
+       * visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
+       */
+      public BatchGet setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Required. The names refer to the [full_resource_names] (https://cloud.google.com/asset-
+       * inventory/docs/resource-name-format) of [searchable asset types](https://cloud.google.com
+       * /asset-inventory/docs/supported-asset-types#searchable_asset_types). A maximum of 20
+       * resources' effective policies can be retrieved in a batch.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> names;
+
+      /** Required. The names refer to the [full_resource_names] (https://cloud.google.com/asset-
+     inventory/docs/resource-name-format) of [searchable asset types](https://cloud.google.com/asset-
+     inventory/docs/supported-asset-types#searchable_asset_types). A maximum of 20 resources' effective
+     policies can be retrieved in a batch.
+       */
+      public java.util.List<java.lang.String> getNames() {
+        return names;
+      }
+
+      /**
+       * Required. The names refer to the [full_resource_names] (https://cloud.google.com/asset-
+       * inventory/docs/resource-name-format) of [searchable asset types](https://cloud.google.com
+       * /asset-inventory/docs/supported-asset-types#searchable_asset_types). A maximum of 20
+       * resources' effective policies can be retrieved in a batch.
+       */
+      public BatchGet setNames(java.util.List<java.lang.String> names) {
+        this.names = names;
+        return this;
+      }
+
+      @Override
+      public BatchGet set(String parameterName, Object value) {
+        return (BatchGet) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Feeds collection.
    *
    * <p>The typical use is:</p>

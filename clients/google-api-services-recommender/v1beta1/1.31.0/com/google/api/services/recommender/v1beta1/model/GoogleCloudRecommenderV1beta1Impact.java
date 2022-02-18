@@ -51,6 +51,13 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
   private GoogleCloudRecommenderV1beta1SecurityProjection securityProjection;
 
   /**
+   * Use with CategoryType.SUSTAINABILITY
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecommenderV1beta1SustainabilityProjection sustainabilityProjection;
+
+  /**
    * Category that is being targeted.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
    */
   public GoogleCloudRecommenderV1beta1Impact setSecurityProjection(GoogleCloudRecommenderV1beta1SecurityProjection securityProjection) {
     this.securityProjection = securityProjection;
+    return this;
+  }
+
+  /**
+   * Use with CategoryType.SUSTAINABILITY
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1SustainabilityProjection getSustainabilityProjection() {
+    return sustainabilityProjection;
+  }
+
+  /**
+   * Use with CategoryType.SUSTAINABILITY
+   * @param sustainabilityProjection sustainabilityProjection or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Impact setSustainabilityProjection(GoogleCloudRecommenderV1beta1SustainabilityProjection sustainabilityProjection) {
+    this.sustainabilityProjection = sustainabilityProjection;
     return this;
   }
 

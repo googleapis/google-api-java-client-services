@@ -99,6 +99,14 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String displayName;
 
   /**
+   * Specification that applies to a fileset resource. Valid only for entries with the `FILESET`
+   * type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1FilesetSpec filesetSpec;
+
+  /**
    * Fully qualified name (FQN) of the resource. Set automatically for entries representing
    * resources from synced systems. Settable only during creation and read-only afterwards. Can be
    * used for search and lookup of the entries. FQNs take two forms: * For non-regionalized
@@ -378,6 +386,25 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Specification that applies to a fileset resource. Valid only for entries with the `FILESET`
+   * type.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1FilesetSpec getFilesetSpec() {
+    return filesetSpec;
+  }
+
+  /**
+   * Specification that applies to a fileset resource. Valid only for entries with the `FILESET`
+   * type.
+   * @param filesetSpec filesetSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setFilesetSpec(GoogleCloudDatacatalogV1FilesetSpec filesetSpec) {
+    this.filesetSpec = filesetSpec;
     return this;
   }
 

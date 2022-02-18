@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-doubleclicksearch:v2-rev20200825-1.32.1'
+  implementation 'com.google.apis:google-api-services-doubleclicksearch:v2-rev20200825-1.32.1'
 }
 ```
 

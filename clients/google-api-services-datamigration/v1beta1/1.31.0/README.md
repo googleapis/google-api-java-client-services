@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-datamigration:v1beta1-rev20211201-1.32.1'
+  implementation 'com.google.apis:google-api-services-datamigration:v1beta1-rev20211201-1.32.1'
 }
 ```
 

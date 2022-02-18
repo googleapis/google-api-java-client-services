@@ -48,7 +48,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the assignment
+   * id, it must only contain lower case alphanumeric characters or dashes and the max length is 64
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +101,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the assignment
+   * id, it must only contain lower case alphanumeric characters or dashes and the max length is 64
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +112,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the assignment
+   * id, it must only contain lower case alphanumeric characters or dashes and the max length is 64
+   * characters.
    * @param name name or {@code null} for none
    */
   public Assignment setName(java.lang.String name) {

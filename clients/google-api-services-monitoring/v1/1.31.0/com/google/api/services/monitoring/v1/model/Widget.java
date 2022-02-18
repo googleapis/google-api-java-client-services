@@ -45,6 +45,14 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private Empty blank;
 
   /**
+   * A widget that groups the other widgets. All widgets that are within the area spanned by the
+   * grouping widget are considered member widgets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CollapsibleGroup collapsibleGroup;
+
+  /**
    * A widget that shows a stream of logs.
    * The value may be {@code null}.
    */
@@ -117,6 +125,25 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setBlank(Empty blank) {
     this.blank = blank;
+    return this;
+  }
+
+  /**
+   * A widget that groups the other widgets. All widgets that are within the area spanned by the
+   * grouping widget are considered member widgets.
+   * @return value or {@code null} for none
+   */
+  public CollapsibleGroup getCollapsibleGroup() {
+    return collapsibleGroup;
+  }
+
+  /**
+   * A widget that groups the other widgets. All widgets that are within the area spanned by the
+   * grouping widget are considered member widgets.
+   * @param collapsibleGroup collapsibleGroup or {@code null} for none
+   */
+  public Widget setCollapsibleGroup(CollapsibleGroup collapsibleGroup) {
+    this.collapsibleGroup = collapsibleGroup;
     return this;
   }
 

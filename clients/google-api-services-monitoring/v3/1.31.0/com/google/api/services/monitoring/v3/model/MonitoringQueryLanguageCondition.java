@@ -44,6 +44,14 @@ public final class MonitoringQueryLanguageCondition extends com.google.api.clien
   private String duration;
 
   /**
+   * A condition control that determines how metric-threshold conditions are evaluated when data
+   * stops arriving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationMissingData;
+
+  /**
    * Monitoring Query Language (https://cloud.google.com/monitoring/mql) query that outputs a
    * boolean stream.
    * The value may be {@code null}.
@@ -87,6 +95,25 @@ public final class MonitoringQueryLanguageCondition extends com.google.api.clien
    */
   public MonitoringQueryLanguageCondition setDuration(String duration) {
     this.duration = duration;
+    return this;
+  }
+
+  /**
+   * A condition control that determines how metric-threshold conditions are evaluated when data
+   * stops arriving.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationMissingData() {
+    return evaluationMissingData;
+  }
+
+  /**
+   * A condition control that determines how metric-threshold conditions are evaluated when data
+   * stops arriving.
+   * @param evaluationMissingData evaluationMissingData or {@code null} for none
+   */
+  public MonitoringQueryLanguageCondition setEvaluationMissingData(java.lang.String evaluationMissingData) {
+    this.evaluationMissingData = evaluationMissingData;
     return this;
   }
 

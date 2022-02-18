@@ -173,7 +173,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class TimeSeries {
 
       /**
-       * Lists time series that match a filter. This method does not require a Workspace.
+       * Lists time series that match a filter.
        *
        * Create a request for the method "timeSeries.list".
        *
@@ -199,7 +199,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists time series that match a filter. This method does not require a Workspace.
+         * Lists time series that match a filter.
          *
          * Create a request for the method "timeSeries.list".
          *
@@ -886,7 +886,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class TimeSeries {
 
       /**
-       * Lists time series that match a filter. This method does not require a Workspace.
+       * Lists time series that match a filter.
        *
        * Create a request for the method "timeSeries.list".
        *
@@ -912,7 +912,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists time series that match a filter. This method does not require a Workspace.
+         * Lists time series that match a filter.
          *
          * Create a request for the method "timeSeries.list".
          *
@@ -4197,7 +4197,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Gets a single metric descriptor. This method does not require a Workspace.
+       * Gets a single metric descriptor.
        *
        * Create a request for the method "metricDescriptors.get".
        *
@@ -4223,7 +4223,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/metricDescriptors/.*$");
 
         /**
-         * Gets a single metric descriptor. This method does not require a Workspace.
+         * Gets a single metric descriptor.
          *
          * Create a request for the method "metricDescriptors.get".
          *
@@ -4349,7 +4349,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists metric descriptors that match a filter. This method does not require a Workspace.
+       * Lists metric descriptors that match a filter.
        *
        * Create a request for the method "metricDescriptors.list".
        *
@@ -4374,7 +4374,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists metric descriptors that match a filter. This method does not require a Workspace.
+         * Lists metric descriptors that match a filter.
          *
          * Create a request for the method "metricDescriptors.list".
          *
@@ -4592,7 +4592,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class MonitoredResourceDescriptors {
 
       /**
-       * Gets a single monitored resource descriptor. This method does not require a Workspace.
+       * Gets a single monitored resource descriptor.
        *
        * Create a request for the method "monitoredResourceDescriptors.get".
        *
@@ -4618,7 +4618,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/monitoredResourceDescriptors/.*$");
 
         /**
-         * Gets a single monitored resource descriptor. This method does not require a Workspace.
+         * Gets a single monitored resource descriptor.
          *
          * Create a request for the method "monitoredResourceDescriptors.get".
          *
@@ -4744,8 +4744,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists monitored resource descriptors that match a filter. This method does not require a
-       * Workspace.
+       * Lists monitored resource descriptors that match a filter.
        *
        * Create a request for the method "monitoredResourceDescriptors.list".
        *
@@ -4770,8 +4769,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists monitored resource descriptors that match a filter. This method does not require a
-         * Workspace.
+         * Lists monitored resource descriptors that match a filter.
          *
          * Create a request for the method "monitoredResourceDescriptors.list".
          *
@@ -7015,7 +7013,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists time series that match a filter. This method does not require a Workspace.
+       * Lists time series that match a filter.
        *
        * Create a request for the method "timeSeries.list".
        *
@@ -7041,7 +7039,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists time series that match a filter. This method does not require a Workspace.
+         * Lists time series that match a filter.
          *
          * Create a request for the method "timeSeries.list".
          *
@@ -7684,7 +7682,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Queries time series using Monitoring Query Language. This method does not require a Workspace.
+       * Queries time series using Monitoring Query Language.
        *
        * Create a request for the method "timeSeries.query".
        *
@@ -7710,7 +7708,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Queries time series using Monitoring Query Language. This method does not require a Workspace.
+         * Queries time series using Monitoring Query Language.
          *
          * Create a request for the method "timeSeries.query".
          *

@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-sqladmin:v1beta4-rev20220127-1.32.1'
+  implementation 'com.google.apis:google-api-services-sqladmin:v1beta4-rev20220127-1.32.1'
 }
 ```
 

@@ -54,10 +54,10 @@ public final class EventType extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the event type (for example,
-   * "google.cloud.storage.object.v1.finalized"). In the form of {provider-
-   * id}.{resource}.{version}.{verb}. Types MUST be versioned and event schemas are guaranteed to
-   * remain backward compatible within one version. Note that event type versions and API versions
-   * do not need to match.
+   * "google.cloud.storage.object.v1.finalized"). In the form of {provider-specific-
+   * prefix}.{resource}.{version}.{verb}. Types MUST be versioned and event schemas are guaranteed
+   * to remain backward compatible within one version. Note that event type versions and API
+   * versions do not need to match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,10 +120,10 @@ public final class EventType extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the event type (for example,
-   * "google.cloud.storage.object.v1.finalized"). In the form of {provider-
-   * id}.{resource}.{version}.{verb}. Types MUST be versioned and event schemas are guaranteed to
-   * remain backward compatible within one version. Note that event type versions and API versions
-   * do not need to match.
+   * "google.cloud.storage.object.v1.finalized"). In the form of {provider-specific-
+   * prefix}.{resource}.{version}.{verb}. Types MUST be versioned and event schemas are guaranteed
+   * to remain backward compatible within one version. Note that event type versions and API
+   * versions do not need to match.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -132,10 +132,10 @@ public final class EventType extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the event type (for example,
-   * "google.cloud.storage.object.v1.finalized"). In the form of {provider-
-   * id}.{resource}.{version}.{verb}. Types MUST be versioned and event schemas are guaranteed to
-   * remain backward compatible within one version. Note that event type versions and API versions
-   * do not need to match.
+   * "google.cloud.storage.object.v1.finalized"). In the form of {provider-specific-
+   * prefix}.{resource}.{version}.{verb}. Types MUST be versioned and event schemas are guaranteed
+   * to remain backward compatible within one version. Note that event type versions and API
+   * versions do not need to match.
    * @param type type or {@code null} for none
    */
   public EventType setType(java.lang.String type) {

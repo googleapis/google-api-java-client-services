@@ -187,6 +187,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * Configuration for Identity Service component.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceConfig identityServiceConfig;
+
+  /**
    * The initial Kubernetes version for this cluster. Valid versions are those found in
    * validMasterVersions returned by getServerConfig. The version can be upgraded over time; such
    * upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either
@@ -890,6 +897,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Configuration for Identity Service component.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceConfig getIdentityServiceConfig() {
+    return identityServiceConfig;
+  }
+
+  /**
+   * Configuration for Identity Service component.
+   * @param identityServiceConfig identityServiceConfig or {@code null} for none
+   */
+  public Cluster setIdentityServiceConfig(IdentityServiceConfig identityServiceConfig) {
+    this.identityServiceConfig = identityServiceConfig;
     return this;
   }
 

@@ -12935,12 +12935,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Approve or revoke the consumer key by setting this value to `approve` or `revoke`,
-             * respectively.
+             * respectively. The `Content-Type` header must be set to `application/octet-stream`.
              */
             @com.google.api.client.util.Key
             private java.lang.String action;
 
             /** Approve or revoke the consumer key by setting this value to `approve` or `revoke`, respectively.
+           The `Content-Type` header must be set to `application/octet-stream`.
              */
             public java.lang.String getAction() {
               return action;
@@ -12948,7 +12949,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Approve or revoke the consumer key by setting this value to `approve` or `revoke`,
-             * respectively.
+             * respectively. The `Content-Type` header must be set to `application/octet-stream`.
              */
             public UpdateDeveloperAppKey setAction(java.lang.String action) {
               this.action = action;
@@ -15039,6 +15040,658 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
       }
+    }
+    /**
+     * An accessor for creating requests from the EndpointAttachments collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.EndpointAttachments.List request = apigee.endpointAttachments().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public EndpointAttachments endpointAttachments() {
+      return new EndpointAttachments();
+    }
+
+    /**
+     * The "endpointAttachments" collection of methods.
+     */
+    public class EndpointAttachments {
+
+      /**
+       * Creates an EndpointAttachment. **Note:** Not supported for Apigee hybrid.
+       *
+       * Create a request for the method "endpointAttachments.create".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The Organization this EndpointAttachment will be created in.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}/endpointAttachments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates an EndpointAttachment. **Note:** Not supported for Apigee hybrid.
+         *
+         * Create a request for the method "endpointAttachments.create".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The Organization this EndpointAttachment will be created in.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The Organization this EndpointAttachment will be created in. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The Organization this EndpointAttachment will be created in.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The Organization this EndpointAttachment will be created in. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The ID to use for the endpoint attachment. ID must be a 1-20 characters string with
+         * lowercase letters and numbers and must start with a letter.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String endpointAttachmentId;
+
+        /** The ID to use for the endpoint attachment. ID must be a 1-20 characters string with lowercase
+       letters and numbers and must start with a letter.
+         */
+        public java.lang.String getEndpointAttachmentId() {
+          return endpointAttachmentId;
+        }
+
+        /**
+         * The ID to use for the endpoint attachment. ID must be a 1-20 characters string with
+         * lowercase letters and numbers and must start with a letter.
+         */
+        public Create setEndpointAttachmentId(java.lang.String endpointAttachmentId) {
+          this.endpointAttachmentId = endpointAttachmentId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an endpoint attachment.
+       *
+       * Create a request for the method "endpointAttachments.delete".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the Endpoint Attachment in the following format:
+       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/endpointAttachments/[^/]+$");
+
+        /**
+         * Deletes an endpoint attachment.
+         *
+         * Create a request for the method "endpointAttachments.delete".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the Endpoint Attachment in the following format:
+       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/endpointAttachments/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the Endpoint Attachment in the following format:
+         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the Endpoint Attachment in the following format:
+       `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the Endpoint Attachment in the following format:
+         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/endpointAttachments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets the specified EndpointAttachment.
+       *
+       * Create a request for the method "endpointAttachments.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the Endpoint Attachment in the following format:
+       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/endpointAttachments/[^/]+$");
+
+        /**
+         * Gets the specified EndpointAttachment.
+         *
+         * Create a request for the method "endpointAttachments.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the Endpoint Attachment in the following format:
+       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/endpointAttachments/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the Endpoint Attachment in the following format:
+         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the Endpoint Attachment in the following format:
+       `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the Endpoint Attachment in the following format:
+         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/endpointAttachments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the EndpointAttachments in the specified Organization.
+       *
+       * Create a request for the method "endpointAttachments.list".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the Organization for which to list Endpoint Attachments in the format:
+       *        `organizations/{organization}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListEndpointAttachmentsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/endpointAttachments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists the EndpointAttachments in the specified Organization.
+         *
+         * Create a request for the method "endpointAttachments.list".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the Organization for which to list Endpoint Attachments in the format:
+       *        `organizations/{organization}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListEndpointAttachmentsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the Organization for which to list Endpoint Attachments in the format:
+         * `organizations/{organization}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the Organization for which to list Endpoint Attachments in the format:
+       `organizations/{organization}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the Organization for which to list Endpoint Attachments in the format:
+         * `organizations/{organization}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of Endpoint Attachments to return. If unspecified, at most 25
+         * attachments will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of Endpoint Attachments to return. If unspecified, at most 25 attachments
+       will be returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of Endpoint Attachments to return. If unspecified, at most 25
+         * attachments will be returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Page token, returned from a previous ListEndpointAttachments call, that you can
+         * use to retrieve the next page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token, returned from a previous ListEndpointAttachments call, that you can use to
+       retrieve the next page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Page token, returned from a previous ListEndpointAttachments call, that you can
+         * use to retrieve the next page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
     }
     /**
      * An accessor for creating requests from the Envgroups collection.

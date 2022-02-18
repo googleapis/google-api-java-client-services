@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-secretmanager:v1beta1-rev20211105-1.32.1'
+  implementation 'com.google.apis:google-api-services-secretmanager:v1beta1-rev20211105-1.32.1'
 }
 ```
 

@@ -31,14 +31,16 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class CustomerRemoveConfigurationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The device to remove the configuration from.
+   * Required. The device to remove the configuration from. There are custom validations in
+   * RemoveConfigurationRequestValidator
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceReference device;
 
   /**
-   * Required. The device to remove the configuration from.
+   * Required. The device to remove the configuration from. There are custom validations in
+   * RemoveConfigurationRequestValidator
    * @return value or {@code null} for none
    */
   public DeviceReference getDevice() {
@@ -46,7 +48,8 @@ public final class CustomerRemoveConfigurationRequest extends com.google.api.cli
   }
 
   /**
-   * Required. The device to remove the configuration from.
+   * Required. The device to remove the configuration from. There are custom validations in
+   * RemoveConfigurationRequestValidator
    * @param device device or {@code null} for none
    */
   public CustomerRemoveConfigurationRequest setDevice(DeviceReference device) {

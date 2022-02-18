@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-oauth2:v2-rev20200213-1.32.1'
+  implementation 'com.google.apis:google-api-services-oauth2:v2-rev20200213-1.32.1'
 }
 ```
 

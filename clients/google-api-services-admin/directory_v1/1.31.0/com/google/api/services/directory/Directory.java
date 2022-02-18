@@ -3534,6 +3534,35 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * The order to sort results by. Must be one of display_name, description, make_and_model,
+           * or create_time. Default order is ascending, but descending order can be returned by
+           * appending "desc" to the order_by field. For instance, "description desc" will return
+           * the printers sorted by description in descending order.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** The order to sort results by. Must be one of display_name, description, make_and_model, or
+         create_time. Default order is ascending, but descending order can be returned by appending "desc"
+         to the order_by field. For instance, "description desc" will return the printers sorted by
+         description in descending order.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * The order to sort results by. Must be one of display_name, description, make_and_model,
+           * or create_time. Default order is ascending, but descending order can be returned by
+           * appending "desc" to the order_by field. For instance, "description desc" will return
+           * the printers sorted by description in descending order.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
            * Organization Unit that we want to list the printers for. When org_unit is not present
            * in the request then all printers of the customer are returned (or filtered). When
            * org_unit is present in the request then only printers available to this OU will be

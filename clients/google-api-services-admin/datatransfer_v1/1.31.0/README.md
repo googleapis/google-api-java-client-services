@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-admin-datatransfer:datatransfer_v1-rev20210720-1.32.1'
+  implementation 'com.google.apis:google-api-services-admin-datatransfer:datatransfer_v1-rev20210720-1.32.1'
 }
 ```
 

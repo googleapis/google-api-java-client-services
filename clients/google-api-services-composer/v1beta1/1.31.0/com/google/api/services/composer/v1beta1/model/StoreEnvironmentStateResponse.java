@@ -30,32 +30,32 @@ package com.google.api.services.composer.v1beta1.model;
 public final class StoreEnvironmentStateResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fully-resolved Cloud Storage location of the created snapshot, e.g.: "gs://my-
-   * bucket/snapshots/project_id/location/environment_uuid/timestamp". This field is populated only
-   * if the snapshot creation was successful.
+   * The fully-resolved Cloud Storage path of the created snapshot, e.g.: "gs://my-
+   * bucket/snapshots/project_location_environment_timestamp". This field is populated only if the
+   * snapshot creation was successful.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String snapshotLocation;
+  private java.lang.String snapshotPath;
 
   /**
-   * The fully-resolved Cloud Storage location of the created snapshot, e.g.: "gs://my-
-   * bucket/snapshots/project_id/location/environment_uuid/timestamp". This field is populated only
-   * if the snapshot creation was successful.
+   * The fully-resolved Cloud Storage path of the created snapshot, e.g.: "gs://my-
+   * bucket/snapshots/project_location_environment_timestamp". This field is populated only if the
+   * snapshot creation was successful.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSnapshotLocation() {
-    return snapshotLocation;
+  public java.lang.String getSnapshotPath() {
+    return snapshotPath;
   }
 
   /**
-   * The fully-resolved Cloud Storage location of the created snapshot, e.g.: "gs://my-
-   * bucket/snapshots/project_id/location/environment_uuid/timestamp". This field is populated only
-   * if the snapshot creation was successful.
-   * @param snapshotLocation snapshotLocation or {@code null} for none
+   * The fully-resolved Cloud Storage path of the created snapshot, e.g.: "gs://my-
+   * bucket/snapshots/project_location_environment_timestamp". This field is populated only if the
+   * snapshot creation was successful.
+   * @param snapshotPath snapshotPath or {@code null} for none
    */
-  public StoreEnvironmentStateResponse setSnapshotLocation(java.lang.String snapshotLocation) {
-    this.snapshotLocation = snapshotLocation;
+  public StoreEnvironmentStateResponse setSnapshotPath(java.lang.String snapshotPath) {
+    this.snapshotPath = snapshotPath;
     return this;
   }
 

@@ -37,9 +37,9 @@ public final class GoogleCloudChannelV1ProvisionedService extends com.google.api
   private java.lang.String productId;
 
   /**
-   * Output only. Provisioning ID of the entitlement. For Google Workspace, this would be the
-   * underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of
-   * the billing subaccount."
+   * Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying
+   * Subscription ID. For Google Cloud Platform, this is the Billing Account ID of the billing
+   * subaccount."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,9 @@ public final class GoogleCloudChannelV1ProvisionedService extends com.google.api
   }
 
   /**
-   * Output only. Provisioning ID of the entitlement. For Google Workspace, this would be the
-   * underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of
-   * the billing subaccount."
+   * Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying
+   * Subscription ID. For Google Cloud Platform, this is the Billing Account ID of the billing
+   * subaccount."
    * @return value or {@code null} for none
    */
   public java.lang.String getProvisioningId() {
@@ -80,9 +80,9 @@ public final class GoogleCloudChannelV1ProvisionedService extends com.google.api
   }
 
   /**
-   * Output only. Provisioning ID of the entitlement. For Google Workspace, this would be the
-   * underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of
-   * the billing subaccount."
+   * Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying
+   * Subscription ID. For Google Cloud Platform, this is the Billing Account ID of the billing
+   * subaccount."
    * @param provisioningId provisioningId or {@code null} for none
    */
   public GoogleCloudChannelV1ProvisionedService setProvisioningId(java.lang.String provisioningId) {

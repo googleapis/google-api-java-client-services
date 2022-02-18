@@ -17,7 +17,8 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Specifies the metadata options for running a transfer.
+ * Specifies the metadata options for running a transfer. These options only apply to transfers
+ * involving a POSIX filesystem and are ignored for other transfers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -38,8 +39,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   private java.lang.String acl;
 
   /**
-   * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as GID_SKIP when the source is a POSIX file system.
+   * Specifies how each file's POSIX group ID (GID) attribute should be handled by the transfer. By
+   * default, GID is not preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +56,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   private java.lang.String kmsKey;
 
   /**
-   * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+   * Specifies how each file's mode attribute should be handled by the transfer. By default, mode is
+   * not preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +73,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   private java.lang.String storageClass;
 
   /**
-   * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior
-   * is the same as SYMLINK_SKIP when the source is a POSIX file system.
+   * Specifies how symlinks should be handled by the transfer. By default, symlinks are not
+   * preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +90,16 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   private java.lang.String temporaryHold;
 
   /**
-   * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as UID_SKIP when the source is a POSIX file system.
+   * Specifies how each object's `timeCreated` metadata is preserved for transfers between Google
+   * Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeCreated;
+
+  /**
+   * Specifies how each file's POSIX user ID (UID) attribute should be handled by the transfer. By
+   * default, UID is not preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +125,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as GID_SKIP when the source is a POSIX file system.
+   * Specifies how each file's POSIX group ID (GID) attribute should be handled by the transfer. By
+   * default, GID is not preserved.
    * @return value or {@code null} for none
    */
   public java.lang.String getGid() {
@@ -125,8 +134,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as GID_SKIP when the source is a POSIX file system.
+   * Specifies how each file's POSIX group ID (GID) attribute should be handled by the transfer. By
+   * default, GID is not preserved.
    * @param gid gid or {@code null} for none
    */
   public MetadataOptions setGid(java.lang.String gid) {
@@ -156,8 +165,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+   * Specifies how each file's mode attribute should be handled by the transfer. By default, mode is
+   * not preserved.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -165,8 +174,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+   * Specifies how each file's mode attribute should be handled by the transfer. By default, mode is
+   * not preserved.
    * @param mode mode or {@code null} for none
    */
   public MetadataOptions setMode(java.lang.String mode) {
@@ -196,8 +205,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior
-   * is the same as SYMLINK_SKIP when the source is a POSIX file system.
+   * Specifies how symlinks should be handled by the transfer. By default, symlinks are not
+   * preserved.
    * @return value or {@code null} for none
    */
   public java.lang.String getSymlink() {
@@ -205,8 +214,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior
-   * is the same as SYMLINK_SKIP when the source is a POSIX file system.
+   * Specifies how symlinks should be handled by the transfer. By default, symlinks are not
+   * preserved.
    * @param symlink symlink or {@code null} for none
    */
   public MetadataOptions setSymlink(java.lang.String symlink) {
@@ -236,8 +245,27 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as UID_SKIP when the source is a POSIX file system.
+   * Specifies how each object's `timeCreated` metadata is preserved for transfers between Google
+   * Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeCreated() {
+    return timeCreated;
+  }
+
+  /**
+   * Specifies how each object's `timeCreated` metadata is preserved for transfers between Google
+   * Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+   * @param timeCreated timeCreated or {@code null} for none
+   */
+  public MetadataOptions setTimeCreated(java.lang.String timeCreated) {
+    this.timeCreated = timeCreated;
+    return this;
+  }
+
+  /**
+   * Specifies how each file's POSIX user ID (UID) attribute should be handled by the transfer. By
+   * default, UID is not preserved.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -245,8 +273,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the
-   * default behavior is the same as UID_SKIP when the source is a POSIX file system.
+   * Specifies how each file's POSIX user ID (UID) attribute should be handled by the transfer. By
+   * default, UID is not preserved.
    * @param uid uid or {@code null} for none
    */
   public MetadataOptions setUid(java.lang.String uid) {

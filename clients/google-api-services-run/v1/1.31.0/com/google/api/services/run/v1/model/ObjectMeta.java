@@ -33,7 +33,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) Annotations is an unstructured key value map stored with a resource that may be set
    * by external tools to store and retrieve arbitrary metadata. They are not queryable and should
-   * be preserved when modifying objects. More info: http://kubernetes.io/docs/user-
+   * be preserved when modifying objects. More info: https://kubernetes.io/docs/user-
    * guide/annotations
    * The value may be {@code null}.
    */
@@ -129,7 +129,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) Map of string keys and values that can be used to organize and categorize (scope and
    * select) objects. May match selectors of replication controllers and routes. More info:
-   * http://kubernetes.io/docs/user-guide/labels
+   * https://kubernetes.io/docs/user-guide/labels
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Name must be unique within a namespace, within a Cloud Run region. Is required when creating
    * resources, although some resources may allow a client to request the generation of an
    * appropriate name automatically. Name is primarily intended for creation idempotence and
-   * configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-
+   * configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/user-
    * guide/identifiers#names +optional
    * The value may be {@code null}.
    */
@@ -187,7 +187,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) UID is the unique in time and space value for this object. It is typically generated
    * by the server on successful creation of a resource and is not allowed to change on PUT
-   * operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
+   * operations. Populated by the system. Read-only. More info: https://kubernetes.io/docs/user-
    * guide/identifiers#uids
    * The value may be {@code null}.
    */
@@ -197,7 +197,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) Annotations is an unstructured key value map stored with a resource that may be set
    * by external tools to store and retrieve arbitrary metadata. They are not queryable and should
-   * be preserved when modifying objects. More info: http://kubernetes.io/docs/user-
+   * be preserved when modifying objects. More info: https://kubernetes.io/docs/user-
    * guide/annotations
    * @return value or {@code null} for none
    */
@@ -208,7 +208,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) Annotations is an unstructured key value map stored with a resource that may be set
    * by external tools to store and retrieve arbitrary metadata. They are not queryable and should
-   * be preserved when modifying objects. More info: http://kubernetes.io/docs/user-
+   * be preserved when modifying objects. More info: https://kubernetes.io/docs/user-
    * guide/annotations
    * @param annotations annotations or {@code null} for none
    */
@@ -413,7 +413,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) Map of string keys and values that can be used to organize and categorize (scope and
    * select) objects. May match selectors of replication controllers and routes. More info:
-   * http://kubernetes.io/docs/user-guide/labels
+   * https://kubernetes.io/docs/user-guide/labels
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -423,7 +423,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) Map of string keys and values that can be used to organize and categorize (scope and
    * select) objects. May match selectors of replication controllers and routes. More info:
-   * http://kubernetes.io/docs/user-guide/labels
+   * https://kubernetes.io/docs/user-guide/labels
    * @param labels labels or {@code null} for none
    */
   public ObjectMeta setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -435,7 +435,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Name must be unique within a namespace, within a Cloud Run region. Is required when creating
    * resources, although some resources may allow a client to request the generation of an
    * appropriate name automatically. Name is primarily intended for creation idempotence and
-   * configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-
+   * configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/user-
    * guide/identifiers#names +optional
    * @return value or {@code null} for none
    */
@@ -447,7 +447,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Name must be unique within a namespace, within a Cloud Run region. Is required when creating
    * resources, although some resources may allow a client to request the generation of an
    * appropriate name automatically. Name is primarily intended for creation idempotence and
-   * configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-
+   * configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/user-
    * guide/identifiers#names +optional
    * @param name name or {@code null} for none
    */
@@ -547,7 +547,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) UID is the unique in time and space value for this object. It is typically generated
    * by the server on successful creation of a resource and is not allowed to change on PUT
-   * operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
+   * operations. Populated by the system. Read-only. More info: https://kubernetes.io/docs/user-
    * guide/identifiers#uids
    * @return value or {@code null} for none
    */
@@ -558,7 +558,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   /**
    * (Optional) UID is the unique in time and space value for this object. It is typically generated
    * by the server on successful creation of a resource and is not allowed to change on PUT
-   * operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
+   * operations. Populated by the system. Read-only. More info: https://kubernetes.io/docs/user-
    * guide/identifiers#uids
    * @param uid uid or {@code null} for none
    */

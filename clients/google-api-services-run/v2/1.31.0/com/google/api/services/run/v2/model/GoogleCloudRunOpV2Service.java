@@ -101,7 +101,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
   private String deleteTime;
 
   /**
-   * User-provided description of the Service.
+   * User-provided description of the Service. This field currently has a 512-character limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -423,7 +423,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
   }
 
   /**
-   * User-provided description of the Service.
+   * User-provided description of the Service. This field currently has a 512-character limit.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -431,7 +431,7 @@ public final class GoogleCloudRunOpV2Service extends com.google.api.client.json.
   }
 
   /**
-   * User-provided description of the Service.
+   * User-provided description of the Service. This field currently has a 512-character limit.
    * @param description description or {@code null} for none
    */
   public GoogleCloudRunOpV2Service setDescription(java.lang.String description) {

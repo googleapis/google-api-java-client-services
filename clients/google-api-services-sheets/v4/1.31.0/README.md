@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-sheets:v4-rev20210629-1.32.1'
+  implementation 'com.google.apis:google-api-services-sheets:v4-rev20210629-1.32.1'
 }
 ```
 

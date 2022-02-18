@@ -108,7 +108,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
-   * Configuration for how FHIR resource can be searched.
+   * Configuration for how FHIR resources can be searched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -323,7 +323,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for how FHIR resource can be searched.
+   * Configuration for how FHIR resources can be searched.
    * @return value or {@code null} for none
    */
   public SearchConfig getSearchConfig() {
@@ -331,7 +331,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for how FHIR resource can be searched.
+   * Configuration for how FHIR resources can be searched.
    * @param searchConfig searchConfig or {@code null} for none
    */
   public FhirStore setSearchConfig(SearchConfig searchConfig) {

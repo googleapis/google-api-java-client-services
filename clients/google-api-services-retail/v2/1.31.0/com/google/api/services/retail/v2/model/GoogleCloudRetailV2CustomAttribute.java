@@ -30,9 +30,11 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, custom attribute values are indexed, so that it can be filtered, faceted or boosted in
-   * SearchService.Search. This field is ignored in a UserEvent. See SearchRequest.filter,
-   * SearchRequest.facet_specs and SearchRequest.boost_spec for more details.
+   * This field will only be used when AttributesConfig.attribute_config_level of the Catalog is
+   * 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are indexed, so that it can
+   * be filtered, faceted or boosted in SearchService.Search. This field is ignored in a UserEvent.
+   * See SearchRequest.filter, SearchRequest.facet_specs and SearchRequest.boost_spec for more
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +50,10 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
   private java.util.List<java.lang.Double> numbers;
 
   /**
-   * If true, custom attribute values are searchable by text queries in SearchService.Search. This
-   * field is ignored in a UserEvent. Only set if type text is set. Otherwise, a INVALID_ARGUMENT
-   * error is returned.
+   * This field will only be used when AttributesConfig.attribute_config_level of the Catalog is
+   * 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are searchable by text
+   * queries in SearchService.Search. This field is ignored in a UserEvent. Only set if type text is
+   * set. Otherwise, a INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +69,11 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
   private java.util.List<java.lang.String> text;
 
   /**
-   * If true, custom attribute values are indexed, so that it can be filtered, faceted or boosted in
-   * SearchService.Search. This field is ignored in a UserEvent. See SearchRequest.filter,
-   * SearchRequest.facet_specs and SearchRequest.boost_spec for more details.
+   * This field will only be used when AttributesConfig.attribute_config_level of the Catalog is
+   * 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are indexed, so that it can
+   * be filtered, faceted or boosted in SearchService.Search. This field is ignored in a UserEvent.
+   * See SearchRequest.filter, SearchRequest.facet_specs and SearchRequest.boost_spec for more
+   * details.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIndexable() {
@@ -76,9 +81,11 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
   }
 
   /**
-   * If true, custom attribute values are indexed, so that it can be filtered, faceted or boosted in
-   * SearchService.Search. This field is ignored in a UserEvent. See SearchRequest.filter,
-   * SearchRequest.facet_specs and SearchRequest.boost_spec for more details.
+   * This field will only be used when AttributesConfig.attribute_config_level of the Catalog is
+   * 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are indexed, so that it can
+   * be filtered, faceted or boosted in SearchService.Search. This field is ignored in a UserEvent.
+   * See SearchRequest.filter, SearchRequest.facet_specs and SearchRequest.boost_spec for more
+   * details.
    * @param indexable indexable or {@code null} for none
    */
   public GoogleCloudRetailV2CustomAttribute setIndexable(java.lang.Boolean indexable) {
@@ -108,9 +115,10 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
   }
 
   /**
-   * If true, custom attribute values are searchable by text queries in SearchService.Search. This
-   * field is ignored in a UserEvent. Only set if type text is set. Otherwise, a INVALID_ARGUMENT
-   * error is returned.
+   * This field will only be used when AttributesConfig.attribute_config_level of the Catalog is
+   * 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are searchable by text
+   * queries in SearchService.Search. This field is ignored in a UserEvent. Only set if type text is
+   * set. Otherwise, a INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSearchable() {
@@ -118,9 +126,10 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
   }
 
   /**
-   * If true, custom attribute values are searchable by text queries in SearchService.Search. This
-   * field is ignored in a UserEvent. Only set if type text is set. Otherwise, a INVALID_ARGUMENT
-   * error is returned.
+   * This field will only be used when AttributesConfig.attribute_config_level of the Catalog is
+   * 'PRODUCT_LEVEL_ATTRIBUTE_CONFIG', if true, custom attribute values are searchable by text
+   * queries in SearchService.Search. This field is ignored in a UserEvent. Only set if type text is
+   * set. Otherwise, a INVALID_ARGUMENT error is returned.
    * @param searchable searchable or {@code null} for none
    */
   public GoogleCloudRetailV2CustomAttribute setSearchable(java.lang.Boolean searchable) {

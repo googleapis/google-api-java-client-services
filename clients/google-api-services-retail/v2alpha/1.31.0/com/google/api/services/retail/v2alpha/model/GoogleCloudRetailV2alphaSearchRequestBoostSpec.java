@@ -39,6 +39,15 @@ public final class GoogleCloudRetailV2alphaSearchRequestBoostSpec extends com.go
   private java.util.List<GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec> conditionBoostSpecs;
 
   /**
+   * Whether to skip boostspec validation. If this field is set to true, invalid
+   * BoostSpec.condition_boost_specs will be ignored and valid BoostSpec.condition_boost_specs will
+   * still be applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipBoostSpecValidation;
+
+  /**
    * Condition boost specifications. If a product matches multiple conditions in the specifictions,
    * boost scores from these specifications are all applied and combined in a non-linear way.
    * Maximum number of specifications is 10.
@@ -56,6 +65,27 @@ public final class GoogleCloudRetailV2alphaSearchRequestBoostSpec extends com.go
    */
   public GoogleCloudRetailV2alphaSearchRequestBoostSpec setConditionBoostSpecs(java.util.List<GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec> conditionBoostSpecs) {
     this.conditionBoostSpecs = conditionBoostSpecs;
+    return this;
+  }
+
+  /**
+   * Whether to skip boostspec validation. If this field is set to true, invalid
+   * BoostSpec.condition_boost_specs will be ignored and valid BoostSpec.condition_boost_specs will
+   * still be applied.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipBoostSpecValidation() {
+    return skipBoostSpecValidation;
+  }
+
+  /**
+   * Whether to skip boostspec validation. If this field is set to true, invalid
+   * BoostSpec.condition_boost_specs will be ignored and valid BoostSpec.condition_boost_specs will
+   * still be applied.
+   * @param skipBoostSpecValidation skipBoostSpecValidation or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequestBoostSpec setSkipBoostSpecValidation(java.lang.Boolean skipBoostSpecValidation) {
+    this.skipBoostSpecValidation = skipBoostSpecValidation;
     return this;
   }
 

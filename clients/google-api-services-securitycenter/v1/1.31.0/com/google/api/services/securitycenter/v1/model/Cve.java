@@ -54,6 +54,13 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   private java.util.List<Reference> references;
 
   /**
+   * Whether upstream fix is available for the CVE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean upstreamFixAvailable;
+
+  /**
    * Describe Common Vulnerability Scoring System specified at https://www.first.org/cvss/v3.1
    * /specification-document
    * @return value or {@code null} for none
@@ -105,6 +112,23 @@ public final class Cve extends com.google.api.client.json.GenericJson {
    */
   public Cve setReferences(java.util.List<Reference> references) {
     this.references = references;
+    return this;
+  }
+
+  /**
+   * Whether upstream fix is available for the CVE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUpstreamFixAvailable() {
+    return upstreamFixAvailable;
+  }
+
+  /**
+   * Whether upstream fix is available for the CVE.
+   * @param upstreamFixAvailable upstreamFixAvailable or {@code null} for none
+   */
+  public Cve setUpstreamFixAvailable(java.lang.Boolean upstreamFixAvailable) {
+    this.upstreamFixAvailable = upstreamFixAvailable;
     return this;
   }
 

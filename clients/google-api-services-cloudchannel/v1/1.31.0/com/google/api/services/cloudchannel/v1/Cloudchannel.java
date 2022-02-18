@@ -2600,6 +2600,31 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
           }
 
           /**
+           * Optional. Filters applied to the [CloudChannelService.ListCustomers] results. See
+           * https://cloud.google.com/channel/docs/concepts/google-cloud/filter-customers for more
+           * information.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filters applied to the [CloudChannelService.ListCustomers] results. See
+         https://cloud.google.com/channel/docs/concepts/google-cloud/filter-customers for more information.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filters applied to the [CloudChannelService.ListCustomers] results. See
+           * https://cloud.google.com/channel/docs/concepts/google-cloud/filter-customers for more
+           * information.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of customers to return. The service may return fewer than
            * this value. If unspecified, returns at most 10 customers. The maximum value is 50.
            */
@@ -3573,6 +3598,31 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
                 "^accounts/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Filters applied to the [CloudChannelService.ListCustomers] results. See
+         * https://cloud.google.com/channel/docs/concepts/google-cloud/filter-customers for more
+         * information.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Filters applied to the [CloudChannelService.ListCustomers] results. See
+       https://cloud.google.com/channel/docs/concepts/google-cloud/filter-customers for more information.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Filters applied to the [CloudChannelService.ListCustomers] results. See
+         * https://cloud.google.com/channel/docs/concepts/google-cloud/filter-customers for more
+         * information.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
           return this;
         }
 

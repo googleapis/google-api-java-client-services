@@ -41,13 +41,6 @@ public final class PoolOption extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Configuration per workload.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig workerConfig;
-
-  /**
    * The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use`
    * on the project hosting the WorkerPool. Format
    * projects/{project}/locations/{location}/workerPools/{workerPoolId}
@@ -65,23 +58,6 @@ public final class PoolOption extends com.google.api.client.json.GenericJson {
    */
   public PoolOption setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Configuration per workload.
-   * @return value or {@code null} for none
-   */
-  public GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig getWorkerConfig() {
-    return workerConfig;
-  }
-
-  /**
-   * Configuration per workload.
-   * @param workerConfig workerConfig or {@code null} for none
-   */
-  public PoolOption setWorkerConfig(GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig workerConfig) {
-    this.workerConfig = workerConfig;
     return this;
   }
 

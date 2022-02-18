@@ -74,13 +74,6 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Hybrid pool configuration
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private HybridPoolConfig hybridPoolConfig;
-
-  /**
    * Output only. The resource name of the `WorkerPool`, with format
    * `projects/{project}/locations/{location}/workerPools/{worker_pool}`. The value of
    * `{worker_pool}` is provided by `worker_pool_id` in `CreateWorkerPool` request and the value of
@@ -206,23 +199,6 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    */
   public WorkerPool setEtag(java.lang.String etag) {
     this.etag = etag;
-    return this;
-  }
-
-  /**
-   * Hybrid pool configuration
-   * @return value or {@code null} for none
-   */
-  public HybridPoolConfig getHybridPoolConfig() {
-    return hybridPoolConfig;
-  }
-
-  /**
-   * Hybrid pool configuration
-   * @param hybridPoolConfig hybridPoolConfig or {@code null} for none
-   */
-  public WorkerPool setHybridPoolConfig(HybridPoolConfig hybridPoolConfig) {
-    this.hybridPoolConfig = hybridPoolConfig;
     return this;
   }
 

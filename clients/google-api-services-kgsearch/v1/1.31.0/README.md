@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-kgsearch:v1-rev20200809-1.32.1'
+  implementation 'com.google.apis:google-api-services-kgsearch:v1-rev20200809-1.32.1'
 }
 ```
 

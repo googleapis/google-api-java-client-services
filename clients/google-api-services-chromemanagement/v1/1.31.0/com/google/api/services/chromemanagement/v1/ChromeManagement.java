@@ -1918,17 +1918,17 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Maximum number of results to return. Maximum and default are 100. */
+          /** Maximum number of results to return. Default value is 100. Maximum value is 200. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of results to return. Maximum and default are 100.
+          /** Maximum number of results to return. Default value is 100. Maximum value is 200.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of results to return. Maximum and default are 100. */
+          /** Maximum number of results to return. Default value is 100. Maximum value is 200. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

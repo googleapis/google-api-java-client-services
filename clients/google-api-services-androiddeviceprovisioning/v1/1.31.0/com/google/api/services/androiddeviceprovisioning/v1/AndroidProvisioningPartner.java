@@ -277,17 +277,24 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         return this;
       }
 
-      /** A token specifying which result page to return. */
+      /**
+       * A token specifying which result page to return. This field has custom validations in
+       * ListCustomersRequestValidator
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A token specifying which result page to return.
+      /** A token specifying which result page to return. This field has custom validations in
+     ListCustomersRequestValidator
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** A token specifying which result page to return. */
+      /**
+       * A token specifying which result page to return. This field has custom validations in
+       * ListCustomersRequestValidator
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -328,7 +335,8 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The customer that manages the configuration. An API resource name in the format
-       *        `customers/[CUSTOMER_ID]`.
+       *        `customers/[CUSTOMER_ID]`. This field has custom validation in
+       *        CreateConfigurationRequestValidator
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.Configuration}
        * @return the request
        */
@@ -357,7 +365,8 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The customer that manages the configuration. An API resource name in the format
-       *        `customers/[CUSTOMER_ID]`.
+       *        `customers/[CUSTOMER_ID]`. This field has custom validation in
+       *        CreateConfigurationRequestValidator
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.Configuration}
          * @since 1.13
          */
@@ -428,13 +437,14 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
 
         /**
          * Required. The customer that manages the configuration. An API resource name in the format
-         * `customers/[CUSTOMER_ID]`.
+         * `customers/[CUSTOMER_ID]`. This field has custom validation in
+         * CreateConfigurationRequestValidator
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The customer that manages the configuration. An API resource name in the format
-       `customers/[CUSTOMER_ID]`.
+       `customers/[CUSTOMER_ID]`. This field has custom validation in CreateConfigurationRequestValidator
          */
         public java.lang.String getParent() {
           return parent;
@@ -442,7 +452,8 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
 
         /**
          * Required. The customer that manages the configuration. An API resource name in the format
-         * `customers/[CUSTOMER_ID]`.
+         * `customers/[CUSTOMER_ID]`. This field has custom validation in
+         * CreateConfigurationRequestValidator
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

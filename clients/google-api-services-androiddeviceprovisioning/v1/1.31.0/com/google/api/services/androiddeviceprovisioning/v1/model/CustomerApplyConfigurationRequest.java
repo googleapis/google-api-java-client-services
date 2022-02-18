@@ -39,7 +39,8 @@ public final class CustomerApplyConfigurationRequest extends com.google.api.clie
   private java.lang.String configuration;
 
   /**
-   * Required. The device the configuration is applied to.
+   * Required. The device the configuration is applied to. There are custom validations in
+   * ApplyConfigurationRequestValidator
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class CustomerApplyConfigurationRequest extends com.google.api.clie
   }
 
   /**
-   * Required. The device the configuration is applied to.
+   * Required. The device the configuration is applied to. There are custom validations in
+   * ApplyConfigurationRequestValidator
    * @return value or {@code null} for none
    */
   public DeviceReference getDevice() {
@@ -73,7 +75,8 @@ public final class CustomerApplyConfigurationRequest extends com.google.api.clie
   }
 
   /**
-   * Required. The device the configuration is applied to.
+   * Required. The device the configuration is applied to. There are custom validations in
+   * ApplyConfigurationRequestValidator
    * @param device device or {@code null} for none
    */
   public CustomerApplyConfigurationRequest setDevice(DeviceReference device) {

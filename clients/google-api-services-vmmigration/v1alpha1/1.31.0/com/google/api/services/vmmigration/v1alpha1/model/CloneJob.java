@@ -66,7 +66,7 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
   private Status error;
 
   /**
-   * The name of the clone.
+   * Output only. The name of the clone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +167,7 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the clone.
+   * Output only. The name of the clone.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -175,7 +175,7 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the clone.
+   * Output only. The name of the clone.
    * @param name name or {@code null} for none
    */
   public CloneJob setName(java.lang.String name) {

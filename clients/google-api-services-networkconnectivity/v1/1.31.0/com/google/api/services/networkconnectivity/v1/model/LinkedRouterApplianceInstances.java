@@ -17,8 +17,9 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * A collection of router appliance instances. If you have multiple router appliance instances
- * connected to the same site, they should all be attached to the same spoke.
+ * A collection of router appliance instances. If you configure multiple router appliance instances
+ * to receive data from the same set of sites outside of Google Cloud, we recommend that you
+ * associate those instances with the same spoke.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation

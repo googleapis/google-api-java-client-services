@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-discovery:v1-rev20200806-1.32.1'
+  implementation 'com.google.apis:google-api-services-discovery:v1-rev20200806-1.32.1'
 }
 ```
 

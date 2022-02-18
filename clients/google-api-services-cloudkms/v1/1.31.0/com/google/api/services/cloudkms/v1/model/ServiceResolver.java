@@ -50,7 +50,7 @@ public final class ServiceResolver extends com.google.api.client.json.GenericJso
 
   /**
    * Required. A list of leaf server certificates used to authenticate HTTPS connections to the EKM
-   * replica.
+   * replica. Currently, a maximum of 10 Certificate is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class ServiceResolver extends com.google.api.client.json.GenericJso
 
   /**
    * Required. A list of leaf server certificates used to authenticate HTTPS connections to the EKM
-   * replica.
+   * replica. Currently, a maximum of 10 Certificate is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<Certificate> getServerCertificates() {
@@ -123,7 +123,7 @@ public final class ServiceResolver extends com.google.api.client.json.GenericJso
 
   /**
    * Required. A list of leaf server certificates used to authenticate HTTPS connections to the EKM
-   * replica.
+   * replica. Currently, a maximum of 10 Certificate is supported.
    * @param serverCertificates serverCertificates or {@code null} for none
    */
   public ServiceResolver setServerCertificates(java.util.List<Certificate> serverCertificates) {

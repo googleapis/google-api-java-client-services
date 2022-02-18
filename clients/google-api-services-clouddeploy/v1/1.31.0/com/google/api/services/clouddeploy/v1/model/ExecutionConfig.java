@@ -31,7 +31,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class ExecutionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Cloud Storage location where execution outputs should be stored. This can either be a
+   * Optional. Cloud Storage location in which to store execution outputs. This can either be a
    * bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified,
    * a default bucket located in the same region will be used.
    * The value may be {@code null}.
@@ -55,7 +55,7 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. Google service account to use for execution. If unspecified, the project execution
-   * service account (-compute@developer.gserviceaccount.com) will be used.
+   * service account (-compute@developer.gserviceaccount.com) is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String workerPool;
 
   /**
-   * Optional. Cloud Storage location where execution outputs should be stored. This can either be a
+   * Optional. Cloud Storage location in which to store execution outputs. This can either be a
    * bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified,
    * a default bucket located in the same region will be used.
    * @return value or {@code null} for none
@@ -88,7 +88,7 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Cloud Storage location where execution outputs should be stored. This can either be a
+   * Optional. Cloud Storage location in which to store execution outputs. This can either be a
    * bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified,
    * a default bucket located in the same region will be used.
    * @param artifactStorage artifactStorage or {@code null} for none
@@ -134,7 +134,7 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. Google service account to use for execution. If unspecified, the project execution
-   * service account (-compute@developer.gserviceaccount.com) will be used.
+   * service account (-compute@developer.gserviceaccount.com) is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -143,7 +143,7 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. Google service account to use for execution. If unspecified, the project execution
-   * service account (-compute@developer.gserviceaccount.com) will be used.
+   * service account (-compute@developer.gserviceaccount.com) is used.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public ExecutionConfig setServiceAccount(java.lang.String serviceAccount) {

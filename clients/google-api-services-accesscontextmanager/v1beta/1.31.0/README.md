@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-accesscontextmanager:v1beta-rev20210814-1.32.1'
+  implementation 'com.google.apis:google-api-services-accesscontextmanager:v1beta-rev20210814-1.32.1'
 }
 ```
 

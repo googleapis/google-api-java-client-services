@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-adexchangebuyer2:v2beta1-rev20220131-1.32.1'
+  implementation 'com.google.apis:google-api-services-adexchangebuyer2:v2beta1-rev20220131-1.32.1'
 }
 ```
 

@@ -50,7 +50,7 @@ public final class Provider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. In `projects/{project}/locations/{location}/providers/{provider-id}` format.
+   * Output only. In `projects/{project}/locations/{location}/providers/{provider_id}` format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class Provider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. In `projects/{project}/locations/{location}/providers/{provider-id}` format.
+   * Output only. In `projects/{project}/locations/{location}/providers/{provider_id}` format.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -99,7 +99,7 @@ public final class Provider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. In `projects/{project}/locations/{location}/providers/{provider-id}` format.
+   * Output only. In `projects/{project}/locations/{location}/providers/{provider_id}` format.
    * @param name name or {@code null} for none
    */
   public Provider setName(java.lang.String name) {

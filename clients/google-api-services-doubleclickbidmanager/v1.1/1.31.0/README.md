@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-doubleclickbidmanager:v1.1-rev20211109-1.32.1'
+  implementation 'com.google.apis:google-api-services-doubleclickbidmanager:v1.1-rev20211109-1.32.1'
 }
 ```
 

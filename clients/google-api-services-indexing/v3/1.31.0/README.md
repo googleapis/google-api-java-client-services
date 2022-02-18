@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-indexing:v3-rev20200804-1.32.1'
+  implementation 'com.google.apis:google-api-services-indexing:v3-rev20200804-1.32.1'
 }
 ```
 

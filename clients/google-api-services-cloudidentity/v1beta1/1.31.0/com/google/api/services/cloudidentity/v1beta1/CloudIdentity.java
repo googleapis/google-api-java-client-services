@@ -7510,7 +7510,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
        *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
-       *        /admin-sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+       *        /admin-sdk/directory/reference/rest/v1/orgunits). To manage a Membership without
+       *        specifying source `orgUnitId`, this API also supports the wildcard character '-' for
+       *        `$orgUnitId` per https://google.aip.dev/159. The `$membership` shall be of the form
        *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
        *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
        *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
@@ -7546,7 +7548,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
        *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
-       *        /admin-sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+       *        /admin-sdk/directory/reference/rest/v1/orgunits). To manage a Membership without
+       *        specifying source `orgUnitId`, this API also supports the wildcard character '-' for
+       *        `$orgUnitId` per https://google.aip.dev/159. The `$membership` shall be of the form
        *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
        *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
        *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
@@ -7624,7 +7628,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * name](https://cloud.google.com/apis/design/resource_names) of the OrgMembership. Format:
          * orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is the `orgUnitId` from
          * the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-
-         * sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+         * sdk/directory/reference/rest/v1/orgunits). To manage a Membership without specifying
+         * source `orgUnitId`, this API also supports the wildcard character '-' for `$orgUnitId`
+         * per https://google.aip.dev/159. The `$membership` shall be of the form
          * `{$entityType};{$memberId}`, where `$entityType` is the enum value of
          * OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
          * resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
@@ -7636,9 +7642,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /** Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of
        the OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is the
        `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-
-       sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
-       `{$entityType};{$memberId}`, where `$entityType` is the enum value of OrgMembership.EntityType, and
-       `memberId` is the `id` from [Drive API (V3) `Drive`
+       sdk/directory/reference/rest/v1/orgunits). To manage a Membership without specifying source
+       `orgUnitId`, this API also supports the wildcard character '-' for `$orgUnitId` per
+       https://google.aip.dev/159. The `$membership` shall be of the form `{$entityType};{$memberId}`,
+       where `$entityType` is the enum value of OrgMembership.EntityType, and `memberId` is the `id` from
+       [Drive API (V3) `Drive`
        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
        OrgMembership.EntityType.SHARED_DRIVE.
          */
@@ -7651,7 +7659,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * name](https://cloud.google.com/apis/design/resource_names) of the OrgMembership. Format:
          * orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is the `orgUnitId` from
          * the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-
-         * sdk/directory/reference/rest/v1/orgunits), The `$membership` shall be of the form
+         * sdk/directory/reference/rest/v1/orgunits). To manage a Membership without specifying
+         * source `orgUnitId`, this API also supports the wildcard character '-' for `$orgUnitId`
+         * per https://google.aip.dev/159. The `$membership` shall be of the form
          * `{$entityType};{$memberId}`, where `$entityType` is the enum value of
          * OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
          * resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for

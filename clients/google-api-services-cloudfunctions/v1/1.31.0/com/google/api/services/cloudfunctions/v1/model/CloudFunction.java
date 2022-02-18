@@ -79,6 +79,15 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
+   * Docker Registry to use for this deployment. If `docker_repository` field is specified, this
+   * field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults
+   * to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dockerRegistry;
+
+  /**
    * User managed repository created in Artifact Registry optionally with a customer managed
    * encryption key. If specified, deployments will use Artifact Registry. If unspecified and the
    * deployment is eligible to use Artifact Registry, GCF will create and use a repository named
@@ -422,6 +431,27 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Docker Registry to use for this deployment. If `docker_repository` field is specified, this
+   * field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults
+   * to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDockerRegistry() {
+    return dockerRegistry;
+  }
+
+  /**
+   * Docker Registry to use for this deployment. If `docker_repository` field is specified, this
+   * field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults
+   * to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+   * @param dockerRegistry dockerRegistry or {@code null} for none
+   */
+  public CloudFunction setDockerRegistry(java.lang.String dockerRegistry) {
+    this.dockerRegistry = dockerRegistry;
     return this;
   }
 

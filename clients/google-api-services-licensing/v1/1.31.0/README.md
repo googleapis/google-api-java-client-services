@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-licensing:v1-rev20201116-1.32.1'
+  implementation 'com.google.apis:google-api-services-licensing:v1-rev20201116-1.32.1'
 }
 ```
 

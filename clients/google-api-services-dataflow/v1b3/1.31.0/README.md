@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-dataflow:v1b3-rev20210825-1.32.1'
+  implementation 'com.google.apis:google-api-services-dataflow:v1b3-rev20210825-1.32.1'
 }
 ```
 

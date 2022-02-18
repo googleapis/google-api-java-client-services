@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-blogger:v3-rev20210227-1.32.1'
+  implementation 'com.google.apis:google-api-services-blogger:v3-rev20210227-1.32.1'
 }
 ```
 

@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-safebrowsing:v4-rev20210604-1.32.1'
+  implementation 'com.google.apis:google-api-services-safebrowsing:v4-rev20210604-1.32.1'
 }
 ```
 

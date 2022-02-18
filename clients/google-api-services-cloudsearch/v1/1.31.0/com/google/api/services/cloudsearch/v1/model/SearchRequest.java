@@ -78,8 +78,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   private java.lang.Integer pageSize;
 
   /**
-   * The raw query string. See supported search operators in the [Cloud search Cheat
-   * Sheet](https://support.google.com/a/users/answer/9299929)
+   * The raw query string. See supported search operators in the [Narrow your search with
+   * operators](https://support.google.com/cloudsearch/answer/6172299)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,8 +186,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The raw query string. See supported search operators in the [Cloud search Cheat
-   * Sheet](https://support.google.com/a/users/answer/9299929)
+   * The raw query string. See supported search operators in the [Narrow your search with
+   * operators](https://support.google.com/cloudsearch/answer/6172299)
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -195,8 +195,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The raw query string. See supported search operators in the [Cloud search Cheat
-   * Sheet](https://support.google.com/a/users/answer/9299929)
+   * The raw query string. See supported search operators in the [Narrow your search with
+   * operators](https://support.google.com/cloudsearch/answer/6172299)
    * @param query query or {@code null} for none
    */
   public SearchRequest setQuery(java.lang.String query) {

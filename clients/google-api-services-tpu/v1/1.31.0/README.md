@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-tpu:v1-rev20210824-1.32.1'
+  implementation 'com.google.apis:google-api-services-tpu:v1-rev20210824-1.32.1'
 }
 ```
 

@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-osconfig:v1beta-rev20220103-1.32.1'
+  implementation 'com.google.apis:google-api-services-osconfig:v1beta-rev20220103-1.32.1'
 }
 ```
 

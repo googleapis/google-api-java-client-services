@@ -31,6 +31,14 @@ package com.google.api.services.authorizedbuyersmarketplace.v1.model;
 public final class CreativeRequirements extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The format of the creative, only applicable for programmatic guaranteed and
+   * preferred deals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creativeFormat;
+
+  /**
    * Output only. Specifies the creative pre-approval policy.
    * The value may be {@code null}.
    */
@@ -45,12 +53,47 @@ public final class CreativeRequirements extends com.google.api.client.json.Gener
   private java.lang.String creativeSafeFrameCompatibility;
 
   /**
+   * Output only. The max duration of the video creative in milliseconds. only applicable for deals
+   * with video creatives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxAdDurationMs;
+
+  /**
    * Output only. Specifies the creative source for programmatic deals. PUBLISHER means creative is
    * provided by seller and ADVERTISER means creative is provided by the buyer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String programmaticCreativeSource;
+
+  /**
+   * Output only. Skippable video ads allow viewers to skip ads after 5 seconds. Only applicable for
+   * deals with video creatives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String skippableAdType;
+
+  /**
+   * Output only. The format of the creative, only applicable for programmatic guaranteed and
+   * preferred deals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreativeFormat() {
+    return creativeFormat;
+  }
+
+  /**
+   * Output only. The format of the creative, only applicable for programmatic guaranteed and
+   * preferred deals.
+   * @param creativeFormat creativeFormat or {@code null} for none
+   */
+  public CreativeRequirements setCreativeFormat(java.lang.String creativeFormat) {
+    this.creativeFormat = creativeFormat;
+    return this;
+  }
 
   /**
    * Output only. Specifies the creative pre-approval policy.
@@ -87,6 +130,25 @@ public final class CreativeRequirements extends com.google.api.client.json.Gener
   }
 
   /**
+   * Output only. The max duration of the video creative in milliseconds. only applicable for deals
+   * with video creatives.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxAdDurationMs() {
+    return maxAdDurationMs;
+  }
+
+  /**
+   * Output only. The max duration of the video creative in milliseconds. only applicable for deals
+   * with video creatives.
+   * @param maxAdDurationMs maxAdDurationMs or {@code null} for none
+   */
+  public CreativeRequirements setMaxAdDurationMs(java.lang.Long maxAdDurationMs) {
+    this.maxAdDurationMs = maxAdDurationMs;
+    return this;
+  }
+
+  /**
    * Output only. Specifies the creative source for programmatic deals. PUBLISHER means creative is
    * provided by seller and ADVERTISER means creative is provided by the buyer.
    * @return value or {@code null} for none
@@ -102,6 +164,25 @@ public final class CreativeRequirements extends com.google.api.client.json.Gener
    */
   public CreativeRequirements setProgrammaticCreativeSource(java.lang.String programmaticCreativeSource) {
     this.programmaticCreativeSource = programmaticCreativeSource;
+    return this;
+  }
+
+  /**
+   * Output only. Skippable video ads allow viewers to skip ads after 5 seconds. Only applicable for
+   * deals with video creatives.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSkippableAdType() {
+    return skippableAdType;
+  }
+
+  /**
+   * Output only. Skippable video ads allow viewers to skip ads after 5 seconds. Only applicable for
+   * deals with video creatives.
+   * @param skippableAdType skippableAdType or {@code null} for none
+   */
+  public CreativeRequirements setSkippableAdType(java.lang.String skippableAdType) {
+    this.skippableAdType = skippableAdType;
     return this;
   }
 

@@ -31,7 +31,8 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class MergeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * New alert ID. Reference the [google.apps.alertcenter.Alert] with this ID for the current state.
+   * Optional. New alert ID. Reference the [google.apps.alertcenter.Alert] with this ID for the
+   * current state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class MergeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String newIncidentTrackingId;
 
   /**
-   * New alert ID. Reference the [google.apps.alertcenter.Alert] with this ID for the current state.
+   * Optional. New alert ID. Reference the [google.apps.alertcenter.Alert] with this ID for the
+   * current state.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewAlertId() {
@@ -53,7 +55,8 @@ public final class MergeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * New alert ID. Reference the [google.apps.alertcenter.Alert] with this ID for the current state.
+   * Optional. New alert ID. Reference the [google.apps.alertcenter.Alert] with this ID for the
+   * current state.
    * @param newAlertId newAlertId or {@code null} for none
    */
   public MergeInfo setNewAlertId(java.lang.String newAlertId) {

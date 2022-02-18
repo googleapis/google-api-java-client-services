@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudtrace:v2-rev20210812-1.32.1'
+  implementation 'com.google.apis:google-api-services-cloudtrace:v2-rev20210812-1.32.1'
 }
 ```
 

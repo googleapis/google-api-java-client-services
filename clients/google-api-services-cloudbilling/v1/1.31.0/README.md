@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudbilling:v1-rev20211211-1.32.1'
+  implementation 'com.google.apis:google-api-services-cloudbilling:v1-rev20211211-1.32.1'
 }
 ```
 

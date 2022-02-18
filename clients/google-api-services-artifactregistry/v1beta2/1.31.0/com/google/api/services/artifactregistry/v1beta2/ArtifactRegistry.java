@@ -2374,34 +2374,12 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (ArtifactRegistryImport) super.set(parameterName, value);
             }
           }
-
-        }
-        /**
-         * An accessor for creating requests from the Aptartifacts collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
-         *   {@code ArtifactRegistry.Aptartifacts.List request = artifactregistry.aptartifacts().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Aptartifacts aptartifacts() {
-          return new Aptartifacts();
-        }
-
-        /**
-         * The "aptartifacts" collection of methods.
-         */
-        public class Aptartifacts {
-
           /**
            * Directly uploads an Apt artifact. The returned Operation will complete once the resources are
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "aptartifacts.upload".
+           * Create a request for the method "aptArtifacts.upload".
            *
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -2421,7 +2399,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "aptartifacts.upload".
+           * Create a request for the method "aptArtifacts.upload".
            *
            * This request holds the parameters needed by the the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -2454,7 +2432,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "aptartifacts.upload".
+             * Create a request for the method "aptArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -2481,7 +2459,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "aptartifacts.upload".
+             * Create a request for the method "aptArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -4915,34 +4893,12 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return (ArtifactRegistryImport) super.set(parameterName, value);
             }
           }
-
-        }
-        /**
-         * An accessor for creating requests from the Yumartifacts collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
-         *   {@code ArtifactRegistry.Yumartifacts.List request = artifactregistry.yumartifacts().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Yumartifacts yumartifacts() {
-          return new Yumartifacts();
-        }
-
-        /**
-         * The "yumartifacts" collection of methods.
-         */
-        public class Yumartifacts {
-
           /**
            * Directly uploads a Yum artifact. The returned Operation will complete once the resources are
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "yumartifacts.upload".
+           * Create a request for the method "yumArtifacts.upload".
            *
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -4962,7 +4918,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * uploaded. Package, Version, and File resources are created based on the imported artifact.
            * Imported artifacts that conflict with existing resources are ignored.
            *
-           * Create a request for the method "yumartifacts.upload".
+           * Create a request for the method "yumArtifacts.upload".
            *
            * This request holds the parameters needed by the the artifactregistry server.  After setting any
            * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -4995,7 +4951,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "yumartifacts.upload".
+             * Create a request for the method "yumArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
@@ -5022,7 +4978,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * uploaded. Package, Version, and File resources are created based on the imported artifact.
              * Imported artifacts that conflict with existing resources are ignored.
              *
-             * Create a request for the method "yumartifacts.upload".
+             * Create a request for the method "yumArtifacts.upload".
              *
              * This request holds the parameters needed by the the artifactregistry server.  After setting any
              * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.

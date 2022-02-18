@@ -32,7 +32,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   /**
    * The text of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
-   * format, whichever is smaller.
+   * format, whichever is smaller. This text can be templatized by using variables
+   * (https://cloud.google.com/monitoring/alerts/doc-variables).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +50,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   /**
    * The text of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
-   * format, whichever is smaller.
+   * format, whichever is smaller. This text can be templatized by using variables
+   * (https://cloud.google.com/monitoring/alerts/doc-variables).
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -59,7 +61,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   /**
    * The text of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
-   * format, whichever is smaller.
+   * format, whichever is smaller. This text can be templatized by using variables
+   * (https://cloud.google.com/monitoring/alerts/doc-variables).
    * @param content content or {@code null} for none
    */
   public Documentation setContent(java.lang.String content) {

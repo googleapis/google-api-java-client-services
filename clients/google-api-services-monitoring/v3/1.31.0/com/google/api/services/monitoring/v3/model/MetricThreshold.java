@@ -102,6 +102,14 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   private String duration;
 
   /**
+   * A condition control that determines how metric-threshold conditions are evaluated when data
+   * stops arriving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationMissingData;
+
+  /**
    * Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which
    * time series should be compared with the threshold.The filter is similar to the one that is
    * specified in the ListTimeSeries request
@@ -263,6 +271,25 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    */
   public MetricThreshold setDuration(String duration) {
     this.duration = duration;
+    return this;
+  }
+
+  /**
+   * A condition control that determines how metric-threshold conditions are evaluated when data
+   * stops arriving.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationMissingData() {
+    return evaluationMissingData;
+  }
+
+  /**
+   * A condition control that determines how metric-threshold conditions are evaluated when data
+   * stops arriving.
+   * @param evaluationMissingData evaluationMissingData or {@code null} for none
+   */
+  public MetricThreshold setEvaluationMissingData(java.lang.String evaluationMissingData) {
+    this.evaluationMissingData = evaluationMissingData;
     return this;
   }
 

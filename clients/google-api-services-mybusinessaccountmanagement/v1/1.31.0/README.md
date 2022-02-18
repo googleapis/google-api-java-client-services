@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-mybusinessaccountmanagement</artifactId>
-      <version>v1-rev20210504-1.32.1</version>
+      <version>v1-rev20220215-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-mybusinessaccountmanagement:v1-rev20210504-1.32.1'
+  implementation 'com.google.apis:google-api-services-mybusinessaccountmanagement:v1-rev20220215-1.32.1'
 }
 ```
 

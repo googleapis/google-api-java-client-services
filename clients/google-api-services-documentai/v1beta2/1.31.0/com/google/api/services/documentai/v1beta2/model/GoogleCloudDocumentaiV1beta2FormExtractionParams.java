@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta2FormExtractionParams extends com.
 
   /**
    * Model version of the form extraction system. Default is "builtin/stable". Specify
-   * "builtin/latest" for the latest model. For custom form models, specify: “custom/{model_name}".
+   * "builtin/latest" for the latest model. For custom form models, specify: "custom/{model_name}".
    * Model name format is "bucket_name/path/to/modeldir" corresponding to
    * "gs://bucket_name/path/to/modeldir" where annotated examples are stored.
    * The value may be {@code null}.
@@ -90,7 +90,7 @@ public final class GoogleCloudDocumentaiV1beta2FormExtractionParams extends com.
 
   /**
    * Model version of the form extraction system. Default is "builtin/stable". Specify
-   * "builtin/latest" for the latest model. For custom form models, specify: “custom/{model_name}".
+   * "builtin/latest" for the latest model. For custom form models, specify: "custom/{model_name}".
    * Model name format is "bucket_name/path/to/modeldir" corresponding to
    * "gs://bucket_name/path/to/modeldir" where annotated examples are stored.
    * @return value or {@code null} for none
@@ -101,7 +101,7 @@ public final class GoogleCloudDocumentaiV1beta2FormExtractionParams extends com.
 
   /**
    * Model version of the form extraction system. Default is "builtin/stable". Specify
-   * "builtin/latest" for the latest model. For custom form models, specify: “custom/{model_name}".
+   * "builtin/latest" for the latest model. For custom form models, specify: "custom/{model_name}".
    * Model name format is "bucket_name/path/to/modeldir" corresponding to
    * "gs://bucket_name/path/to/modeldir" where annotated examples are stored.
    * @param modelVersion modelVersion or {@code null} for none

@@ -106,6 +106,13 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPage extends com.google.a
   private GoogleCloudDocumentaiV1beta3DocumentProvenance provenance;
 
   /**
+   * A list of visually detected symbols on the page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1beta3DocumentPageSymbol> symbols;
+
+  /**
    * A list of visually detected tables on the page.
    * The value may be {@code null}.
    */
@@ -310,6 +317,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPage extends com.google.a
    */
   public GoogleCloudDocumentaiV1beta3DocumentPage setProvenance(GoogleCloudDocumentaiV1beta3DocumentProvenance provenance) {
     this.provenance = provenance;
+    return this;
+  }
+
+  /**
+   * A list of visually detected symbols on the page.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1beta3DocumentPageSymbol> getSymbols() {
+    return symbols;
+  }
+
+  /**
+   * A list of visually detected symbols on the page.
+   * @param symbols symbols or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentPage setSymbols(java.util.List<GoogleCloudDocumentaiV1beta3DocumentPageSymbol> symbols) {
+    this.symbols = symbols;
     return this;
   }
 

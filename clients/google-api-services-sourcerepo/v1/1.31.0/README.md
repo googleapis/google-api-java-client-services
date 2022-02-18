@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-sourcerepo:v1-rev20211206-1.32.1'
+  implementation 'com.google.apis:google-api-services-sourcerepo:v1-rev20211206-1.32.1'
 }
 ```
 

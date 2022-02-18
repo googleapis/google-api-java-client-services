@@ -46,6 +46,20 @@ public final class GoogleCloudDatacatalogV1DataSource extends com.google.api.cli
   private java.lang.String service;
 
   /**
+   * Output only. Data Catalog entry name, if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceEntry;
+
+  /**
+   * Detailed properties of the underlying storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1StorageProperties storageProperties;
+
+  /**
    * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/proj
    * ects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
    * @return value or {@code null} for none
@@ -78,6 +92,40 @@ public final class GoogleCloudDatacatalogV1DataSource extends com.google.api.cli
    */
   public GoogleCloudDatacatalogV1DataSource setService(java.lang.String service) {
     this.service = service;
+    return this;
+  }
+
+  /**
+   * Output only. Data Catalog entry name, if applicable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceEntry() {
+    return sourceEntry;
+  }
+
+  /**
+   * Output only. Data Catalog entry name, if applicable.
+   * @param sourceEntry sourceEntry or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1DataSource setSourceEntry(java.lang.String sourceEntry) {
+    this.sourceEntry = sourceEntry;
+    return this;
+  }
+
+  /**
+   * Detailed properties of the underlying storage.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1StorageProperties getStorageProperties() {
+    return storageProperties;
+  }
+
+  /**
+   * Detailed properties of the underlying storage.
+   * @param storageProperties storageProperties or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1DataSource setStorageProperties(GoogleCloudDatacatalogV1StorageProperties storageProperties) {
+    this.storageProperties = storageProperties;
     return this;
   }
 

@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-speech:v1p1beta1-rev20220128-1.32.1'
+  implementation 'com.google.apis:google-api-services-speech:v1p1beta1-rev20220128-1.32.1'
 }
 ```
 

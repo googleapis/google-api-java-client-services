@@ -30,6 +30,18 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class GoogleChromePolicyV1ResolvedPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The added source key establishes at which level an entity was explicitly added for
+   * management. This is useful for certain type of policies that are only applied if they are
+   * explicitly added for management. For example: apps and networks. An entity can only be deleted
+   * from management in an Organizational Unit that it was explicitly added to. If this is not
+   * present it means that the policy is managed without the need to explicitly add an entity, for
+   * example: standard user or device policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromePolicyV1PolicyTargetKey addedSourceKey;
+
+  /**
    * Output only. The source resource from which this policy value is obtained. May be the same as
    * `targetKey` if the policy is directly modified on the target, otherwise it would be another
    * resource from which the policy gets its value (if applicable). If not present, the source is
@@ -52,6 +64,33 @@ public final class GoogleChromePolicyV1ResolvedPolicy extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private GoogleChromePolicyV1PolicyValue value;
+
+  /**
+   * Output only. The added source key establishes at which level an entity was explicitly added for
+   * management. This is useful for certain type of policies that are only applied if they are
+   * explicitly added for management. For example: apps and networks. An entity can only be deleted
+   * from management in an Organizational Unit that it was explicitly added to. If this is not
+   * present it means that the policy is managed without the need to explicitly add an entity, for
+   * example: standard user or device policies.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicyTargetKey getAddedSourceKey() {
+    return addedSourceKey;
+  }
+
+  /**
+   * Output only. The added source key establishes at which level an entity was explicitly added for
+   * management. This is useful for certain type of policies that are only applied if they are
+   * explicitly added for management. For example: apps and networks. An entity can only be deleted
+   * from management in an Organizational Unit that it was explicitly added to. If this is not
+   * present it means that the policy is managed without the need to explicitly add an entity, for
+   * example: standard user or device policies.
+   * @param addedSourceKey addedSourceKey or {@code null} for none
+   */
+  public GoogleChromePolicyV1ResolvedPolicy setAddedSourceKey(GoogleChromePolicyV1PolicyTargetKey addedSourceKey) {
+    this.addedSourceKey = addedSourceKey;
+    return this;
+  }
 
   /**
    * Output only. The source resource from which this policy value is obtained. May be the same as

@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-dfareporting:v3.4-rev20211130-1.32.1'
+  implementation 'com.google.apis:google-api-services-dfareporting:v3.4-rev20211130-1.32.1'
 }
 ```
 

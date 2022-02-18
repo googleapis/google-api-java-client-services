@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-drive:v2-rev20220110-1.32.1'
+  implementation 'com.google.apis:google-api-services-drive:v2-rev20220110-1.32.1'
 }
 ```
 

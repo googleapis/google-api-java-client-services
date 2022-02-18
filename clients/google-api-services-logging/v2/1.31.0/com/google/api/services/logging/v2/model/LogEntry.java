@@ -151,6 +151,14 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String spanId;
 
   /**
+   * Optional. Information indicating this LogEntry is part of a sequence of multiple log entries
+   * split from a single LogEntry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LogSplit split;
+
+  /**
    * The log entry payload, represented as a Unicode string (UTF-8).
    * The value may be {@code null}.
    */
@@ -469,6 +477,25 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    */
   public LogEntry setSpanId(java.lang.String spanId) {
     this.spanId = spanId;
+    return this;
+  }
+
+  /**
+   * Optional. Information indicating this LogEntry is part of a sequence of multiple log entries
+   * split from a single LogEntry.
+   * @return value or {@code null} for none
+   */
+  public LogSplit getSplit() {
+    return split;
+  }
+
+  /**
+   * Optional. Information indicating this LogEntry is part of a sequence of multiple log entries
+   * split from a single LogEntry.
+   * @param split split or {@code null} for none
+   */
+  public LogEntry setSplit(LogSplit split) {
+    this.split = split;
     return this;
   }
 

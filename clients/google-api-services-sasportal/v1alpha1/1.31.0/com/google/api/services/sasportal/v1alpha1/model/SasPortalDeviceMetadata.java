@@ -53,6 +53,14 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   private java.lang.String interferenceCoordinationGroup;
 
   /**
+   * Output only. Whether a CPI has validated to have coordinated with the National Quiet Zone
+   * office.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean nrqzValidated;
+
+  /**
    * If populated, the Antenna Model Pattern to use. Format is: RecordCreatorId:PatternId
    * @return value or {@code null} for none
    */
@@ -104,6 +112,25 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
    */
   public SasPortalDeviceMetadata setInterferenceCoordinationGroup(java.lang.String interferenceCoordinationGroup) {
     this.interferenceCoordinationGroup = interferenceCoordinationGroup;
+    return this;
+  }
+
+  /**
+   * Output only. Whether a CPI has validated to have coordinated with the National Quiet Zone
+   * office.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNrqzValidated() {
+    return nrqzValidated;
+  }
+
+  /**
+   * Output only. Whether a CPI has validated to have coordinated with the National Quiet Zone
+   * office.
+   * @param nrqzValidated nrqzValidated or {@code null} for none
+   */
+  public SasPortalDeviceMetadata setNrqzValidated(java.lang.Boolean nrqzValidated) {
+    this.nrqzValidated = nrqzValidated;
     return this;
   }
 

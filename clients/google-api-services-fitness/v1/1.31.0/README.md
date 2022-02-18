@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-fitness:v1-rev20210920-1.32.1'
+  implementation 'com.google.apis:google-api-services-fitness:v1-rev20210920-1.32.1'
 }
 ```
 

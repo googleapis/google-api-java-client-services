@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-pubsublite:v1-rev20210909-1.32.1'
+  implementation 'com.google.apis:google-api-services-pubsublite:v1-rev20210909-1.32.1'
 }
 ```
 

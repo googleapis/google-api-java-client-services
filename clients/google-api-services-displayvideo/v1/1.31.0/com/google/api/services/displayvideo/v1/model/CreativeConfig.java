@@ -31,7 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class CreativeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of creative that can be assigned to the inventory source.
+   * The type of creative that can be assigned to the inventory source. Only the following types are
+   * supported: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class CreativeConfig extends com.google.api.client.json.GenericJson
   private InventorySourceVideoCreativeConfig videoCreativeConfig;
 
   /**
-   * The type of creative that can be assigned to the inventory source.
+   * The type of creative that can be assigned to the inventory source. Only the following types are
+   * supported: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.lang.String getCreativeType() {
@@ -61,7 +63,8 @@ public final class CreativeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of creative that can be assigned to the inventory source.
+   * The type of creative that can be assigned to the inventory source. Only the following types are
+   * supported: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_VIDEO`
    * @param creativeType creativeType or {@code null} for none
    */
   public CreativeConfig setCreativeType(java.lang.String creativeType) {

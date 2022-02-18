@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-metastore:v1alpha-rev20220127-1.32.1'
+  implementation 'com.google.apis:google-api-services-metastore:v1alpha-rev20220127-1.32.1'
 }
 ```
 

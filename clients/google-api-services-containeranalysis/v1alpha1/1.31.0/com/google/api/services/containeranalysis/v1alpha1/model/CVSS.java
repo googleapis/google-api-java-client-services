@@ -17,8 +17,7 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * Common Vulnerability Scoring System. This is the storage level proto that is intended to store
- * similar data as the CVSS proto in google3/third_party/grafeas/proto/v1/cvss.proto
+ * Common Vulnerability Scoring System.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

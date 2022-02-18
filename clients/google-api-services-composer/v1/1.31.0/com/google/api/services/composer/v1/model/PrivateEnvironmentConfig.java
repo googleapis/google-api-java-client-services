@@ -30,6 +30,15 @@ package com.google.api.services.composer.v1.model;
 public final class PrivateEnvironmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. When specified, the environment will use Private Service Connect instead of VPC
+   * peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer
+   * Project will use an IP address from this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudComposerConnectionSubnetwork;
+
+  /**
    * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will
    * be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and
    * cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions
@@ -90,6 +99,27 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String webServerIpv4ReservedRange;
+
+  /**
+   * Optional. When specified, the environment will use Private Service Connect instead of VPC
+   * peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer
+   * Project will use an IP address from this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudComposerConnectionSubnetwork() {
+    return cloudComposerConnectionSubnetwork;
+  }
+
+  /**
+   * Optional. When specified, the environment will use Private Service Connect instead of VPC
+   * peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer
+   * Project will use an IP address from this subnetwork.
+   * @param cloudComposerConnectionSubnetwork cloudComposerConnectionSubnetwork or {@code null} for none
+   */
+  public PrivateEnvironmentConfig setCloudComposerConnectionSubnetwork(java.lang.String cloudComposerConnectionSubnetwork) {
+    this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
+    return this;
+  }
 
   /**
    * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will

@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudtasks:v2beta3-rev20211130-1.32.1'
+  implementation 'com.google.apis:google-api-services-cloudtasks:v2beta3-rev20211130-1.32.1'
 }
 ```
 

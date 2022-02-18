@@ -97,6 +97,13 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   private java.lang.String postStartupScript;
 
   /**
+   * Output only. Bool indicating whether an newer image is available in an image family.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean upgradeable;
+
+  /**
    * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll
    * automatically choose from official GPU drivers.
    * @return value or {@code null} for none
@@ -235,6 +242,23 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
    */
   public RuntimeSoftwareConfig setPostStartupScript(java.lang.String postStartupScript) {
     this.postStartupScript = postStartupScript;
+    return this;
+  }
+
+  /**
+   * Output only. Bool indicating whether an newer image is available in an image family.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUpgradeable() {
+    return upgradeable;
+  }
+
+  /**
+   * Output only. Bool indicating whether an newer image is available in an image family.
+   * @param upgradeable upgradeable or {@code null} for none
+   */
+  public RuntimeSoftwareConfig setUpgradeable(java.lang.Boolean upgradeable) {
+    this.upgradeable = upgradeable;
     return this;
   }
 

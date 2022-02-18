@@ -134,6 +134,18 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
   private java.lang.String nicType;
 
   /**
+   * Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use
+   * the range *name* if it's assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3
+   * =managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \
+   * --prefix-length=24 \ --description="Google Cloud Managed Notebooks Range 24 c" \
+   * --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be:
+   * `managed-notebooks-range-c`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservedIpRange;
+
+  /**
    * Optional. Shielded VM Instance configuration settings.
    * The value may be {@code null}.
    */
@@ -393,6 +405,33 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
    */
   public VirtualMachineConfig setNicType(java.lang.String nicType) {
     this.nicType = nicType;
+    return this;
+  }
+
+  /**
+   * Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use
+   * the range *name* if it's assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3
+   * =managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \
+   * --prefix-length=24 \ --description="Google Cloud Managed Notebooks Range 24 c" \
+   * --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be:
+   * `managed-notebooks-range-c`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservedIpRange() {
+    return reservedIpRange;
+  }
+
+  /**
+   * Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use
+   * the range *name* if it's assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3
+   * =managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \
+   * --prefix-length=24 \ --description="Google Cloud Managed Notebooks Range 24 c" \
+   * --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be:
+   * `managed-notebooks-range-c`
+   * @param reservedIpRange reservedIpRange or {@code null} for none
+   */
+  public VirtualMachineConfig setReservedIpRange(java.lang.String reservedIpRange) {
+    this.reservedIpRange = reservedIpRange;
     return this;
   }
 

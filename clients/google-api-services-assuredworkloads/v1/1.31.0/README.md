@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-assuredworkloads:v1-rev20211202-1.32.1'
+  implementation 'com.google.apis:google-api-services-assuredworkloads:v1-rev20211202-1.32.1'
 }
 ```
 

@@ -44,7 +44,7 @@ public final class ContentOutstreamPositionAssignedTargetingOptionDetails extend
   private java.lang.String adType;
 
   /**
-   * Output only. The content outstream position.
+   * The content outstream position. Output only in v1. Required in v2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class ContentOutstreamPositionAssignedTargetingOptionDetails extend
   }
 
   /**
-   * Output only. The content outstream position.
+   * The content outstream position. Output only in v1. Required in v2.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentOutstreamPosition() {
@@ -92,7 +92,7 @@ public final class ContentOutstreamPositionAssignedTargetingOptionDetails extend
   }
 
   /**
-   * Output only. The content outstream position.
+   * The content outstream position. Output only in v1. Required in v2.
    * @param contentOutstreamPosition contentOutstreamPosition or {@code null} for none
    */
   public ContentOutstreamPositionAssignedTargetingOptionDetails setContentOutstreamPosition(java.lang.String contentOutstreamPosition) {

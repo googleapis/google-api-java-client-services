@@ -108,7 +108,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private LineItemFlight flight;
 
   /**
-   * Required. The frequency capping setting of the line item.
+   * Required. The impression frequency cap settings of the line item. The max_impressions field in
+   * this settings object must be used if assigning a limited cap.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -402,7 +403,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The frequency capping setting of the line item.
+   * Required. The impression frequency cap settings of the line item. The max_impressions field in
+   * this settings object must be used if assigning a limited cap.
    * @return value or {@code null} for none
    */
   public FrequencyCap getFrequencyCap() {
@@ -410,7 +412,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The frequency capping setting of the line item.
+   * Required. The impression frequency cap settings of the line item. The max_impressions field in
+   * this settings object must be used if assigning a limited cap.
    * @param frequencyCap frequencyCap or {@code null} for none
    */
   public LineItem setFrequencyCap(FrequencyCap frequencyCap) {

@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-books:v1-rev20201021-1.32.1'
+  implementation 'com.google.apis:google-api-services-books:v1-rev20201021-1.32.1'
 }
 ```
 

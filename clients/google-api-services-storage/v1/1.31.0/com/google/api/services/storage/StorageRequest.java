@@ -153,6 +153,23 @@ public abstract class StorageRequest<T> extends com.google.api.client.googleapis
     return this;
   }
 
+  /** Upload protocol for media (e.g. "media", "multipart", "resumable"). */
+  @com.google.api.client.util.Key
+  private java.lang.String uploadType;
+
+  /**
+   * Upload protocol for media (e.g. "media", "multipart", "resumable").
+   */
+  public java.lang.String getUploadType() {
+    return uploadType;
+  }
+
+  /** Upload protocol for media (e.g. "media", "multipart", "resumable"). */
+  public StorageRequest<T> setUploadType(java.lang.String uploadType) {
+    this.uploadType = uploadType;
+    return this;
+  }
+
   /** Deprecated. Please use quotaUser instead. */
   @com.google.api.client.util.Key
   private java.lang.String userIp;

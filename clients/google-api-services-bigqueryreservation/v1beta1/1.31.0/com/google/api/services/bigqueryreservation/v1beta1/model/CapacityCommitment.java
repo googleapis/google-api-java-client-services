@@ -58,8 +58,20 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private Status failureStatus;
 
   /**
+   * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If
+   * set to true, this commitment is placed in the organization's secondary region which is
+   * designated for disaster recovery purposes. If false, this commitment is placed in the
+   * organization's default region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multiRegionAuxiliary;
+
+  /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * `projects/myproject/locations/US/capacityCommitments/123`
+   * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only
+   * contain lower case alphanumeric characters or dashes.It must start with a letter and must not
+   * end with a dash. Its maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +163,33 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
+   * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If
+   * set to true, this commitment is placed in the organization's secondary region which is
+   * designated for disaster recovery purposes. If false, this commitment is placed in the
+   * organization's default region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultiRegionAuxiliary() {
+    return multiRegionAuxiliary;
+  }
+
+  /**
+   * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If
+   * set to true, this commitment is placed in the organization's secondary region which is
+   * designated for disaster recovery purposes. If false, this commitment is placed in the
+   * organization's default region.
+   * @param multiRegionAuxiliary multiRegionAuxiliary or {@code null} for none
+   */
+  public CapacityCommitment setMultiRegionAuxiliary(java.lang.Boolean multiRegionAuxiliary) {
+    this.multiRegionAuxiliary = multiRegionAuxiliary;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * `projects/myproject/locations/US/capacityCommitments/123`
+   * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only
+   * contain lower case alphanumeric characters or dashes.It must start with a letter and must not
+   * end with a dash. Its maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -161,7 +198,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * `projects/myproject/locations/US/capacityCommitments/123`
+   * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only
+   * contain lower case alphanumeric characters or dashes.It must start with a letter and must not
+   * end with a dash. Its maximum length is 64 characters.
    * @param name name or {@code null} for none
    */
   public CapacityCommitment setName(java.lang.String name) {

@@ -243,7 +243,7 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
 
   /**
    * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters.
    * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
    * Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org
    * property [Product.material](https://schema.org/material).
@@ -857,7 +857,7 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
 
   /**
    * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters.
    * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
    * Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org
    * property [Product.material](https://schema.org/material).
@@ -869,7 +869,7 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
 
   /**
    * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters.
    * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
    * Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org
    * property [Product.material](https://schema.org/material).

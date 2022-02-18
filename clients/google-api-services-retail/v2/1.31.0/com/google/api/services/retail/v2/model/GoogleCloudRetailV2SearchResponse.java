@@ -60,6 +60,19 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
   private java.util.List<GoogleCloudRetailV2SearchResponseFacet> facets;
 
   /**
+   * The invalid SearchRequest.BoostSpec.condition_boost_specs that are not applied during serving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec> invalidConditionBoostSpecs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec.class);
+  }
+
+  /**
    * A token that can be sent as SearchRequest.page_token to retrieve the next page. If this field
    * is omitted, there are no subsequent pages.
    * The value may be {@code null}.
@@ -166,6 +179,23 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
    */
   public GoogleCloudRetailV2SearchResponse setFacets(java.util.List<GoogleCloudRetailV2SearchResponseFacet> facets) {
     this.facets = facets;
+    return this;
+  }
+
+  /**
+   * The invalid SearchRequest.BoostSpec.condition_boost_specs that are not applied during serving.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec> getInvalidConditionBoostSpecs() {
+    return invalidConditionBoostSpecs;
+  }
+
+  /**
+   * The invalid SearchRequest.BoostSpec.condition_boost_specs that are not applied during serving.
+   * @param invalidConditionBoostSpecs invalidConditionBoostSpecs or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchResponse setInvalidConditionBoostSpecs(java.util.List<GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec> invalidConditionBoostSpecs) {
+    this.invalidConditionBoostSpecs = invalidConditionBoostSpecs;
     return this;
   }
 

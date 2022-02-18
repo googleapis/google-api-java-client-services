@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-retail</artifactId>
-  <version>v2-rev20220127-1.32.1</version>
-  <name>Retail API v2-rev20220127-1.32.1</name>
+  <version>v2-rev20220210-1.32.1</version>
+  <name>Retail API v2-rev20220210-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

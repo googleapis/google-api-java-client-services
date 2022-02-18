@@ -60,6 +60,19 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
   private java.util.List<GoogleCloudRetailV2alphaSearchResponseFacet> facets;
 
   /**
+   * The invalid SearchRequest.BoostSpec.condition_boost_specs that are not applied during serving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec> invalidConditionBoostSpecs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec.class);
+  }
+
+  /**
    * A token that can be sent as SearchRequest.page_token to retrieve the next page. If this field
    * is omitted, there are no subsequent pages.
    * The value may be {@code null}.
@@ -166,6 +179,23 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
    */
   public GoogleCloudRetailV2alphaSearchResponse setFacets(java.util.List<GoogleCloudRetailV2alphaSearchResponseFacet> facets) {
     this.facets = facets;
+    return this;
+  }
+
+  /**
+   * The invalid SearchRequest.BoostSpec.condition_boost_specs that are not applied during serving.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec> getInvalidConditionBoostSpecs() {
+    return invalidConditionBoostSpecs;
+  }
+
+  /**
+   * The invalid SearchRequest.BoostSpec.condition_boost_specs that are not applied during serving.
+   * @param invalidConditionBoostSpecs invalidConditionBoostSpecs or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchResponse setInvalidConditionBoostSpecs(java.util.List<GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec> invalidConditionBoostSpecs) {
+    this.invalidConditionBoostSpecs = invalidConditionBoostSpecs;
     return this;
   }
 

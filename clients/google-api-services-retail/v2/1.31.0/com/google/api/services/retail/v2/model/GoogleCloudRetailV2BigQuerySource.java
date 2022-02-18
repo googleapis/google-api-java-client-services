@@ -35,7 +35,10 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
    * `product_merchant_center`: See [Importing catalog data from Merchant
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
-   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719.
+   * `user_event_ga360`: The schema is available here:
+   * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: This feature is in
+   * private preview. Please contact the support team for importing Google Analytics 4 events. The
+   * schema is available here: https://support.google.com/analytics/answer/7029846.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +89,10 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
    * `product_merchant_center`: See [Importing catalog data from Merchant
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
-   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719.
+   * `user_event_ga360`: The schema is available here:
+   * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: This feature is in
+   * private preview. Please contact the support team for importing Google Analytics 4 events. The
+   * schema is available here: https://support.google.com/analytics/answer/7029846.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -99,7 +105,10 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
    * `product_merchant_center`: See [Importing catalog data from Merchant
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
-   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719.
+   * `user_event_ga360`: The schema is available here:
+   * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: This feature is in
+   * private preview. Please contact the support team for importing Google Analytics 4 events. The
+   * schema is available here: https://support.google.com/analytics/answer/7029846.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudRetailV2BigQuerySource setDataSchema(java.lang.String dataSchema) {

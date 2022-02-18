@@ -51,9 +51,10 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
   private java.util.List<java.lang.String> destinations;
 
   /**
-   * Language of the title/description and other string attributes. Use language tags defined by BCP
-   * 47. ISO 639-1. This specifies the language of offers in Merchant Center that will be accepted.
-   * If empty no language filtering will be performed.
+   * Language of the title/description and other string attributes. Use language tags defined by
+   * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO 639-1. This specifies the language
+   * of offers in Merchant Center that will be accepted. If empty no language filtering will be
+   * performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +71,9 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
 
   /**
    * Region code of offers to accept. 2-letter Uppercase ISO 3166-1 alpha-2 code. List of values can
-   * be found here under the `region` tag. [https://www.iana.org/assignments/language-subtag-
-   * registry/language-subtag-registry]. If left blank no region filtering will be performed. Ex.
-   * `US`.
+   * be found [here](https://www.iana.org/assignments/language-subtag-registry/language-subtag-
+   * registry) under the `region` tag. If left blank no region filtering will be performed. Example
+   * value: `US`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,9 +126,10 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
   }
 
   /**
-   * Language of the title/description and other string attributes. Use language tags defined by BCP
-   * 47. ISO 639-1. This specifies the language of offers in Merchant Center that will be accepted.
-   * If empty no language filtering will be performed.
+   * Language of the title/description and other string attributes. Use language tags defined by
+   * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO 639-1. This specifies the language
+   * of offers in Merchant Center that will be accepted. If empty no language filtering will be
+   * performed.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -135,9 +137,10 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
   }
 
   /**
-   * Language of the title/description and other string attributes. Use language tags defined by BCP
-   * 47. ISO 639-1. This specifies the language of offers in Merchant Center that will be accepted.
-   * If empty no language filtering will be performed.
+   * Language of the title/description and other string attributes. Use language tags defined by
+   * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO 639-1. This specifies the language
+   * of offers in Merchant Center that will be accepted. If empty no language filtering will be
+   * performed.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudRetailV2alphaMerchantCenterLink setLanguageCode(java.lang.String languageCode) {
@@ -168,9 +171,9 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
 
   /**
    * Region code of offers to accept. 2-letter Uppercase ISO 3166-1 alpha-2 code. List of values can
-   * be found here under the `region` tag. [https://www.iana.org/assignments/language-subtag-
-   * registry/language-subtag-registry]. If left blank no region filtering will be performed. Ex.
-   * `US`.
+   * be found [here](https://www.iana.org/assignments/language-subtag-registry/language-subtag-
+   * registry) under the `region` tag. If left blank no region filtering will be performed. Example
+   * value: `US`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -179,9 +182,9 @@ public final class GoogleCloudRetailV2alphaMerchantCenterLink extends com.google
 
   /**
    * Region code of offers to accept. 2-letter Uppercase ISO 3166-1 alpha-2 code. List of values can
-   * be found here under the `region` tag. [https://www.iana.org/assignments/language-subtag-
-   * registry/language-subtag-registry]. If left blank no region filtering will be performed. Ex.
-   * `US`.
+   * be found [here](https://www.iana.org/assignments/language-subtag-registry/language-subtag-
+   * registry) under the `region` tag. If left blank no region filtering will be performed. Example
+   * value: `US`.
    * @param regionCode regionCode or {@code null} for none
    */
   public GoogleCloudRetailV2alphaMerchantCenterLink setRegionCode(java.lang.String regionCode) {

@@ -69,6 +69,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Email address of entity that sent original CreateInstance request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creator;
+
+  /**
    * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll
    * automatically choose from official GPU drivers.
    * The value may be {@code null}.
@@ -393,6 +400,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Email address of entity that sent original CreateInstance request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreator() {
+    return creator;
+  }
+
+  /**
+   * Output only. Email address of entity that sent original CreateInstance request.
+   * @param creator creator or {@code null} for none
+   */
+  public Instance setCreator(java.lang.String creator) {
+    this.creator = creator;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.notebooks.v1.model;
 public final class Event extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Event details. This field is used to pass event information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> details;
+
+  /**
    * Event report time.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Event details. This field is used to pass event information.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getDetails() {
+    return details;
+  }
+
+  /**
+   * Optional. Event details. This field is used to pass event information.
+   * @param details details or {@code null} for none
+   */
+  public Event setDetails(java.util.Map<String, java.lang.String> details) {
+    this.details = details;
+    return this;
+  }
 
   /**
    * Event report time.

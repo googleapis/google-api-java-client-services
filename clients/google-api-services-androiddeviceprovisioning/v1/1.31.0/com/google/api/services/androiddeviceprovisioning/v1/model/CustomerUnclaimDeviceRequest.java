@@ -31,14 +31,14 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class CustomerUnclaimDeviceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The device to unclaim.
+   * Required. The device to unclaim. There are custom validations in UnclaimDeviceRequestValidator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceReference device;
 
   /**
-   * Required. The device to unclaim.
+   * Required. The device to unclaim. There are custom validations in UnclaimDeviceRequestValidator.
    * @return value or {@code null} for none
    */
   public DeviceReference getDevice() {
@@ -46,7 +46,7 @@ public final class CustomerUnclaimDeviceRequest extends com.google.api.client.js
   }
 
   /**
-   * Required. The device to unclaim.
+   * Required. The device to unclaim. There are custom validations in UnclaimDeviceRequestValidator.
    * @param device device or {@code null} for none
    */
   public CustomerUnclaimDeviceRequest setDevice(DeviceReference device) {

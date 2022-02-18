@@ -1394,7 +1394,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the vmmigration server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The Group name.
+         * @param name Output only. The Group name.
          * @param content the {@link com.google.api.services.vmmigration.v1alpha1.model.Group}
          * @return the request
          */
@@ -1422,7 +1422,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The Group name.
+           * @param name Output only. The Group name.
            * @param content the {@link com.google.api.services.vmmigration.v1alpha1.model.Group}
            * @since 1.13
            */
@@ -1491,17 +1491,17 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The Group name. */
+          /** Output only. The Group name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The Group name.
+          /** Output only. The Group name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The Group name. */
+          /** Output only. The Group name. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4229,6 +4229,137 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Upgrades the appliance relate to this DatacenterConnector to the in-place updateable version.
+           *
+           * Create a request for the method "datacenterConnectors.upgradeAppliance".
+           *
+           * This request holds the parameters needed by the vmmigration server.  After setting any optional
+           * parameters, call the {@link UpgradeAppliance#execute()} method to invoke the remote operation.
+           *
+           * @param datacenterConnector Required. The DatacenterConnector name.
+           * @param content the {@link com.google.api.services.vmmigration.v1alpha1.model.UpgradeApplianceRequest}
+           * @return the request
+           */
+          public UpgradeAppliance upgradeAppliance(java.lang.String datacenterConnector, com.google.api.services.vmmigration.v1alpha1.model.UpgradeApplianceRequest content) throws java.io.IOException {
+            UpgradeAppliance result = new UpgradeAppliance(datacenterConnector, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpgradeAppliance extends VMMigrationServiceRequest<com.google.api.services.vmmigration.v1alpha1.model.Operation> {
+
+            private static final String REST_PATH = "v1alpha1/{+datacenterConnector}:upgradeAppliance";
+
+            private final java.util.regex.Pattern DATACENTER_CONNECTOR_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sources/[^/]+/datacenterConnectors/[^/]+$");
+
+            /**
+             * Upgrades the appliance relate to this DatacenterConnector to the in-place updateable version.
+             *
+             * Create a request for the method "datacenterConnectors.upgradeAppliance".
+             *
+             * This request holds the parameters needed by the the vmmigration server.  After setting any
+             * optional parameters, call the {@link UpgradeAppliance#execute()} method to invoke the remote
+             * operation. <p> {@link UpgradeAppliance#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param datacenterConnector Required. The DatacenterConnector name.
+             * @param content the {@link com.google.api.services.vmmigration.v1alpha1.model.UpgradeApplianceRequest}
+             * @since 1.13
+             */
+            protected UpgradeAppliance(java.lang.String datacenterConnector, com.google.api.services.vmmigration.v1alpha1.model.UpgradeApplianceRequest content) {
+              super(VMMigrationService.this, "POST", REST_PATH, content, com.google.api.services.vmmigration.v1alpha1.model.Operation.class);
+              this.datacenterConnector = com.google.api.client.util.Preconditions.checkNotNull(datacenterConnector, "Required parameter datacenterConnector must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATACENTER_CONNECTOR_PATTERN.matcher(datacenterConnector).matches(),
+                    "Parameter datacenterConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sources/[^/]+/datacenterConnectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public UpgradeAppliance set$Xgafv(java.lang.String $Xgafv) {
+              return (UpgradeAppliance) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpgradeAppliance setAccessToken(java.lang.String accessToken) {
+              return (UpgradeAppliance) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpgradeAppliance setAlt(java.lang.String alt) {
+              return (UpgradeAppliance) super.setAlt(alt);
+            }
+
+            @Override
+            public UpgradeAppliance setCallback(java.lang.String callback) {
+              return (UpgradeAppliance) super.setCallback(callback);
+            }
+
+            @Override
+            public UpgradeAppliance setFields(java.lang.String fields) {
+              return (UpgradeAppliance) super.setFields(fields);
+            }
+
+            @Override
+            public UpgradeAppliance setKey(java.lang.String key) {
+              return (UpgradeAppliance) super.setKey(key);
+            }
+
+            @Override
+            public UpgradeAppliance setOauthToken(java.lang.String oauthToken) {
+              return (UpgradeAppliance) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpgradeAppliance setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpgradeAppliance) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpgradeAppliance setQuotaUser(java.lang.String quotaUser) {
+              return (UpgradeAppliance) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpgradeAppliance setUploadType(java.lang.String uploadType) {
+              return (UpgradeAppliance) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpgradeAppliance setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpgradeAppliance) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The DatacenterConnector name. */
+            @com.google.api.client.util.Key
+            private java.lang.String datacenterConnector;
+
+            /** Required. The DatacenterConnector name.
+             */
+            public java.lang.String getDatacenterConnector() {
+              return datacenterConnector;
+            }
+
+            /** Required. The DatacenterConnector name. */
+            public UpgradeAppliance setDatacenterConnector(java.lang.String datacenterConnector) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATACENTER_CONNECTOR_PATTERN.matcher(datacenterConnector).matches(),
+                    "Parameter datacenterConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sources/[^/]+/datacenterConnectors/[^/]+$");
+              }
+              this.datacenterConnector = datacenterConnector;
+              return this;
+            }
+
+            @Override
+            public UpgradeAppliance set(String parameterName, Object value) {
+              return (UpgradeAppliance) super.set(parameterName, value);
             }
           }
 
@@ -8662,7 +8793,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the vmmigration server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the target project.
+         * @param name Output only. The name of the target project.
          * @param content the {@link com.google.api.services.vmmigration.v1alpha1.model.TargetProject}
          * @return the request
          */
@@ -8691,7 +8822,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the target project.
+           * @param name Output only. The name of the target project.
            * @param content the {@link com.google.api.services.vmmigration.v1alpha1.model.TargetProject}
            * @since 1.13
            */
@@ -8760,17 +8891,17 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the target project. */
+          /** Output only. The name of the target project. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the target project.
+          /** Output only. The name of the target project.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the target project. */
+          /** Output only. The name of the target project. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

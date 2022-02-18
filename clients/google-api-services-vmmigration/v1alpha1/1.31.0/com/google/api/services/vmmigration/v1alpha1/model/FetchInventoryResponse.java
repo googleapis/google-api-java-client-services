@@ -37,7 +37,7 @@ public final class FetchInventoryResponse extends com.google.api.client.json.Gen
   private String updateTime;
 
   /**
-   * Output only. The description of the VMs in a Source of type Vmware.
+   * The description of the VMs in a Source of type Vmware.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class FetchInventoryResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The description of the VMs in a Source of type Vmware.
+   * The description of the VMs in a Source of type Vmware.
    * @return value or {@code null} for none
    */
   public VmwareVmsDetails getVmwareVms() {
@@ -69,7 +69,7 @@ public final class FetchInventoryResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The description of the VMs in a Source of type Vmware.
+   * The description of the VMs in a Source of type Vmware.
    * @param vmwareVms vmwareVms or {@code null} for none
    */
   public FetchInventoryResponse setVmwareVms(VmwareVmsDetails vmwareVms) {

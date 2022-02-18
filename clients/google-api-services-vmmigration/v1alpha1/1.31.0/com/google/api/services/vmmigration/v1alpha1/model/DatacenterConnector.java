@@ -32,6 +32,29 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class DatacenterConnector extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Appliance OVA version. This is the OVA which is manually installed by the user and
+   * contains the infrastructure for the automatically updatable components on the appliance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String applianceInfrastructureVersion;
+
+  /**
+   * Output only. Appliance last installed update bundle version. This is the version of the
+   * automatically updatable components on the appliance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String applianceSoftwareVersion;
+
+  /**
+   * Output only. The available versions for updating this appliance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AvailableUpdates availableVersions;
+
+  /**
    * Output only. The communication channel between the datacenter connector and GCP.
    * The value may be {@code null}.
    */
@@ -97,12 +120,74 @@ public final class DatacenterConnector extends com.google.api.client.json.Generi
   private String updateTime;
 
   /**
+   * Output only. The status of the current / last upgradeAppliance operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeStatus upgradeStatus;
+
+  /**
    * The version running in the DatacenterConnector. This is supplied by the OVA connector during
    * the registration process and can not be modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Output only. Appliance OVA version. This is the OVA which is manually installed by the user and
+   * contains the infrastructure for the automatically updatable components on the appliance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApplianceInfrastructureVersion() {
+    return applianceInfrastructureVersion;
+  }
+
+  /**
+   * Output only. Appliance OVA version. This is the OVA which is manually installed by the user and
+   * contains the infrastructure for the automatically updatable components on the appliance.
+   * @param applianceInfrastructureVersion applianceInfrastructureVersion or {@code null} for none
+   */
+  public DatacenterConnector setApplianceInfrastructureVersion(java.lang.String applianceInfrastructureVersion) {
+    this.applianceInfrastructureVersion = applianceInfrastructureVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Appliance last installed update bundle version. This is the version of the
+   * automatically updatable components on the appliance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApplianceSoftwareVersion() {
+    return applianceSoftwareVersion;
+  }
+
+  /**
+   * Output only. Appliance last installed update bundle version. This is the version of the
+   * automatically updatable components on the appliance.
+   * @param applianceSoftwareVersion applianceSoftwareVersion or {@code null} for none
+   */
+  public DatacenterConnector setApplianceSoftwareVersion(java.lang.String applianceSoftwareVersion) {
+    this.applianceSoftwareVersion = applianceSoftwareVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The available versions for updating this appliance.
+   * @return value or {@code null} for none
+   */
+  public AvailableUpdates getAvailableVersions() {
+    return availableVersions;
+  }
+
+  /**
+   * Output only. The available versions for updating this appliance.
+   * @param availableVersions availableVersions or {@code null} for none
+   */
+  public DatacenterConnector setAvailableVersions(AvailableUpdates availableVersions) {
+    this.availableVersions = availableVersions;
+    return this;
+  }
 
   /**
    * Output only. The communication channel between the datacenter connector and GCP.
@@ -258,6 +343,23 @@ public final class DatacenterConnector extends com.google.api.client.json.Generi
    */
   public DatacenterConnector setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The status of the current / last upgradeAppliance operation.
+   * @return value or {@code null} for none
+   */
+  public UpgradeStatus getUpgradeStatus() {
+    return upgradeStatus;
+  }
+
+  /**
+   * Output only. The status of the current / last upgradeAppliance operation.
+   * @param upgradeStatus upgradeStatus or {@code null} for none
+   */
+  public DatacenterConnector setUpgradeStatus(UpgradeStatus upgradeStatus) {
+    this.upgradeStatus = upgradeStatus;
     return this;
   }
 

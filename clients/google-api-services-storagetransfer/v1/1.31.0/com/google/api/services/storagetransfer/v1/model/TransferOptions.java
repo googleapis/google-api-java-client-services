@@ -46,7 +46,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean deleteObjectsUniqueInSink;
 
   /**
-   * Represents the selected metadata options for a transfer job.
+   * Represents the selected metadata options for a transfer job. This feature is in Preview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents the selected metadata options for a transfer job.
+   * Represents the selected metadata options for a transfer job. This feature is in Preview.
    * @return value or {@code null} for none
    */
   public MetadataOptions getMetadataOptions() {
@@ -108,7 +108,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents the selected metadata options for a transfer job.
+   * Represents the selected metadata options for a transfer job. This feature is in Preview.
    * @param metadataOptions metadataOptions or {@code null} for none
    */
   public TransferOptions setMetadataOptions(MetadataOptions metadataOptions) {

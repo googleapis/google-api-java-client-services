@@ -227,6 +227,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Delete setUserIp(java.lang.String userIp) {
         return (Delete) super.setUserIp(userIp);
       }
@@ -396,6 +401,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Get setUserIp(java.lang.String userIp) {
         return (Get) super.setUserIp(userIp);
       }
@@ -556,6 +566,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Insert setUserIp(java.lang.String userIp) {
         return (Insert) super.setUserIp(userIp);
       }
@@ -697,6 +712,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
       public List setUserIp(java.lang.String userIp) {
         return (List) super.setUserIp(userIp);
       }
@@ -832,6 +852,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Patch setQuotaUser(java.lang.String quotaUser) {
         return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
       }
 
       @Override
@@ -993,6 +1018,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Update setQuotaUser(java.lang.String quotaUser) {
         return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
       @Override
@@ -1173,6 +1203,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Delete setUserIp(java.lang.String userIp) {
         return (Delete) super.setUserIp(userIp);
       }
@@ -1343,6 +1378,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Get setQuotaUser(java.lang.String quotaUser) {
         return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
       @Override
@@ -1550,6 +1590,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
       public GetIamPolicy setUserIp(java.lang.String userIp) {
         return (GetIamPolicy) super.setUserIp(userIp);
       }
@@ -1707,6 +1752,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Insert setQuotaUser(java.lang.String quotaUser) {
         return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
       }
 
       @Override
@@ -1903,6 +1953,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public List setQuotaUser(java.lang.String quotaUser) {
         return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
       @Override
@@ -2116,6 +2171,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public LockRetentionPolicy setUploadType(java.lang.String uploadType) {
+        return (LockRetentionPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
       public LockRetentionPolicy setUserIp(java.lang.String userIp) {
         return (LockRetentionPolicy) super.setUserIp(userIp);
       }
@@ -2270,6 +2330,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Patch setQuotaUser(java.lang.String quotaUser) {
         return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
       }
 
       @Override
@@ -2501,6 +2566,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
       public SetIamPolicy setUserIp(java.lang.String userIp) {
         return (SetIamPolicy) super.setUserIp(userIp);
       }
@@ -2643,6 +2713,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
         return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
       }
 
       @Override
@@ -2794,6 +2869,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Update setQuotaUser(java.lang.String quotaUser) {
         return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
       @Override
@@ -3044,6 +3124,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Stop setUploadType(java.lang.String uploadType) {
+        return (Stop) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Stop setUserIp(java.lang.String userIp) {
         return (Stop) super.setUserIp(userIp);
       }
@@ -3150,6 +3235,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Delete setQuotaUser(java.lang.String quotaUser) {
         return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
       }
 
       @Override
@@ -3322,6 +3412,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Get setUserIp(java.lang.String userIp) {
         return (Get) super.setUserIp(userIp);
       }
@@ -3482,6 +3577,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Insert setUserIp(java.lang.String userIp) {
         return (Insert) super.setUserIp(userIp);
       }
@@ -3620,6 +3720,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public List setQuotaUser(java.lang.String quotaUser) {
         return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
       @Override
@@ -3807,6 +3912,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Patch setUserIp(java.lang.String userIp) {
         return (Patch) super.setUserIp(userIp);
       }
@@ -3965,6 +4075,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Update setQuotaUser(java.lang.String quotaUser) {
         return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
       @Override
@@ -4148,6 +4263,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Delete setUserIp(java.lang.String userIp) {
         return (Delete) super.setUserIp(userIp);
       }
@@ -4308,6 +4428,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Get setUserIp(java.lang.String userIp) {
         return (Get) super.setUserIp(userIp);
       }
@@ -4461,6 +4586,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Insert setUserIp(java.lang.String userIp) {
         return (Insert) super.setUserIp(userIp);
       }
@@ -4599,6 +4729,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public List setQuotaUser(java.lang.String quotaUser) {
         return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
       @Override
@@ -4763,6 +4898,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Delete setQuotaUser(java.lang.String quotaUser) {
         return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
       }
 
       @Override
@@ -4986,6 +5126,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Get setUserIp(java.lang.String userIp) {
         return (Get) super.setUserIp(userIp);
       }
@@ -5197,6 +5342,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Insert setUserIp(java.lang.String userIp) {
         return (Insert) super.setUserIp(userIp);
       }
@@ -5389,6 +5539,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
       public List setUserIp(java.lang.String userIp) {
         return (List) super.setUserIp(userIp);
       }
@@ -5575,6 +5730,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Patch setQuotaUser(java.lang.String quotaUser) {
         return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
       }
 
       @Override
@@ -5787,6 +5947,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Update setQuotaUser(java.lang.String quotaUser) {
         return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
       @Override
@@ -6018,6 +6183,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Compose setQuotaUser(java.lang.String quotaUser) {
         return (Compose) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Compose setUploadType(java.lang.String uploadType) {
+        return (Compose) super.setUploadType(uploadType);
       }
 
       @Override
@@ -6287,6 +6457,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Copy setQuotaUser(java.lang.String quotaUser) {
         return (Copy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Copy setUploadType(java.lang.String uploadType) {
+        return (Copy) super.setUploadType(uploadType);
       }
 
       @Override
@@ -6778,6 +6953,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Delete setUserIp(java.lang.String userIp) {
         return (Delete) super.setUserIp(userIp);
       }
@@ -7091,6 +7271,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Get setUserIp(java.lang.String userIp) {
         return (Get) super.setUserIp(userIp);
       }
@@ -7397,6 +7582,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
       public GetIamPolicy setUserIp(java.lang.String userIp) {
         return (GetIamPolicy) super.setUserIp(userIp);
       }
@@ -7626,6 +7816,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Insert setQuotaUser(java.lang.String quotaUser) {
         return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
       }
 
       @Override
@@ -7993,6 +8188,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
       public List setUserIp(java.lang.String userIp) {
         return (List) super.setUserIp(userIp);
       }
@@ -8336,6 +8536,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
       public Patch setUserIp(java.lang.String userIp) {
         return (Patch) super.setUserIp(userIp);
       }
@@ -8659,6 +8864,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Rewrite setQuotaUser(java.lang.String quotaUser) {
         return (Rewrite) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Rewrite setUploadType(java.lang.String uploadType) {
+        return (Rewrite) super.setUploadType(uploadType);
       }
 
       @Override
@@ -9213,6 +9423,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
       public SetIamPolicy setUserIp(java.lang.String userIp) {
         return (SetIamPolicy) super.setUserIp(userIp);
       }
@@ -9406,6 +9621,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
         return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
       }
 
       @Override
@@ -9606,6 +9826,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Update setQuotaUser(java.lang.String quotaUser) {
         return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
       @Override
@@ -9915,6 +10140,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public WatchAll setQuotaUser(java.lang.String quotaUser) {
         return (WatchAll) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public WatchAll setUploadType(java.lang.String uploadType) {
+        return (WatchAll) super.setUploadType(uploadType);
       }
 
       @Override
@@ -10300,6 +10530,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
         public Create setUserIp(java.lang.String userIp) {
           return (Create) super.setUserIp(userIp);
         }
@@ -10427,6 +10662,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public Delete setQuotaUser(java.lang.String quotaUser) {
           return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
         }
 
         @Override
@@ -10570,6 +10810,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
         public Get setUserIp(java.lang.String userIp) {
           return (Get) super.setUserIp(userIp);
         }
@@ -10704,6 +10949,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public List setQuotaUser(java.lang.String quotaUser) {
           return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
         @Override
@@ -10907,6 +11157,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         }
 
         @Override
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
         public Update setUserIp(java.lang.String userIp) {
           return (Update) super.setUserIp(userIp);
         }
@@ -11063,6 +11318,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public Get setQuotaUser(java.lang.String quotaUser) {
           return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
         }
 
         @Override

@@ -2476,6 +2476,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       protected Create(java.lang.String requestId, com.google.api.services.drive.model.Drive content) {
         super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Drive.class);
         this.requestId = com.google.api.client.util.Preconditions.checkNotNull(requestId, "Required parameter requestId must be specified.");
+        checkRequiredParameter(content, "content");
+        checkRequiredParameter(content.getName(), "Drive.getName()");
       }
 
       @Override
@@ -6082,7 +6084,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Subscribes to changes to a file
+     * Subscribes to changes to a file. While you can establish a channel forchanges to a file on a
+     * shared drive, a change to a shared drive file won't create a notification.
      *
      * Create a request for the method "files.watch".
      *
@@ -6104,7 +6107,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/watch";
 
       /**
-       * Subscribes to changes to a file
+       * Subscribes to changes to a file. While you can establish a channel forchanges to a file on a
+       * shared drive, a change to a shared drive file won't create a notification.
        *
        * Create a request for the method "files.watch".
        *
@@ -9526,6 +9530,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       protected Create(java.lang.String requestId, com.google.api.services.drive.model.TeamDrive content) {
         super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.TeamDrive.class);
         this.requestId = com.google.api.client.util.Preconditions.checkNotNull(requestId, "Required parameter requestId must be specified.");
+        checkRequiredParameter(content, "content");
+        checkRequiredParameter(content.getName(), "TeamDrive.getName()");
       }
 
       @Override

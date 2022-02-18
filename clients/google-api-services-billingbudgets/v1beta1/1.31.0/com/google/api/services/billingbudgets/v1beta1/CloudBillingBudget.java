@@ -173,8 +173,8 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
     public class Budgets {
 
       /**
-       * Creates a new budget. See Quotas and limits for more information on the limits of the number of
-       * budgets you can create.
+       * Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more
+       * information on the limits of the number of budgets you can create.
        *
        * Create a request for the method "budgets.create".
        *
@@ -200,8 +200,8 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
 
         /**
-         * Creates a new budget. See Quotas and limits for more information on the limits of the number of
-         * budgets you can create.
+         * Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more
+         * information on the limits of the number of budgets you can create.
          *
          * Create a request for the method "budgets.create".
          *

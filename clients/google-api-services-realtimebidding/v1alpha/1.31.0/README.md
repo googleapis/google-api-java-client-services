@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-realtimebidding:v1alpha-rev20210923-1.32.1'
+  implementation 'com.google.apis:google-api-services-realtimebidding:v1alpha-rev20210923-1.32.1'
 }
 ```
 

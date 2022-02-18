@@ -18,8 +18,10 @@ package com.google.api.services.testing.model;
 
 /**
  * Uniformly shards test cases given a total number of shards. For Instrumentation test, it will be
- * translated to "-e numShard" "-e shardIndex" AndroidJUnitRunner arguments. With uniform sharding
- * enabled, specifying these sharding arguments via environment_variables is invalid.
+ * translated to "-e numShard" "-e shardIndex" AndroidJUnitRunner arguments. Based on the sharding
+ * mechanism AndroidJUnitRunner uses, there is no guarantee that test cases will be distributed
+ * uniformly across all shards. With uniform sharding enabled, specifying these sharding arguments
+ * via environment_variables is invalid.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:

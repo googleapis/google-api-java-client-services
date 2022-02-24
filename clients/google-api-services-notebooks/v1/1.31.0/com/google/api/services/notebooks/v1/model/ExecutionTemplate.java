@@ -146,6 +146,14 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   private java.lang.String serviceAccount;
 
   /**
+   * The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard
+   * logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tensorboard;
+
+  /**
    * Parameters used in Vertex AI JobType executions.
    * The value may be {@code null}.
    */
@@ -420,6 +428,25 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   public ExecutionTemplate setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard
+   * logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTensorboard() {
+    return tensorboard;
+  }
+
+  /**
+   * The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard
+   * logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+   * @param tensorboard tensorboard or {@code null} for none
+   */
+  public ExecutionTemplate setTensorboard(java.lang.String tensorboard) {
+    this.tensorboard = tensorboard;
     return this;
   }
 

@@ -61,8 +61,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The textual values of this custom attribute. For example, `["yellow", "green"]` when the key is
-   * "color". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * "color". Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is returned. Exactly
+   * one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +139,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The textual values of this custom attribute. For example, `["yellow", "green"]` when the key is
-   * "color". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * "color". Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is returned. Exactly
+   * one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getText() {
@@ -149,8 +149,8 @@ public final class GoogleCloudRetailV2alphaCustomAttribute extends com.google.ap
 
   /**
    * The textual values of this custom attribute. For example, `["yellow", "green"]` when the key is
-   * "color". Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * "color". Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is returned. Exactly
+   * one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param text text or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCustomAttribute setText(java.util.List<java.lang.String> text) {

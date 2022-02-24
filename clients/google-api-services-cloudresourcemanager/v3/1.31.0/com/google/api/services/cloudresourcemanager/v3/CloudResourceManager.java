@@ -4702,7 +4702,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Optional. A query string for searching for projects that the caller has
        * `resourcemanager.projects.get` permission to. If multiple fields are included in the query,
-       * the it will return results that match any of the fields. Some eligible fields are: ``` |
+       * then it will return results that match any of the fields. Some eligible fields are: ``` |
        * Field | Description |
        * |-------------------------|----------------------------------------------| | displayName,
        * name | Filters by displayName. | | parent | Project's parent (for example: folders/123,
@@ -4725,7 +4725,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private java.lang.String query;
 
       /** Optional. A query string for searching for projects that the caller has
-     `resourcemanager.projects.get` permission to. If multiple fields are included in the query, the it
+     `resourcemanager.projects.get` permission to. If multiple fields are included in the query, then it
      will return results that match any of the fields. Some eligible fields are: ``` | Field |
      Description | |-------------------------|----------------------------------------------| |
      displayName, name | Filters by displayName. | | parent | Project's parent (for example:
@@ -4749,7 +4749,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Optional. A query string for searching for projects that the caller has
        * `resourcemanager.projects.get` permission to. If multiple fields are included in the query,
-       * the it will return results that match any of the fields. Some eligible fields are: ``` |
+       * then it will return results that match any of the fields. Some eligible fields are: ``` |
        * Field | Description |
        * |-------------------------|----------------------------------------------| | displayName,
        * name | Filters by displayName. | | parent | Project's parent (for example: folders/123,

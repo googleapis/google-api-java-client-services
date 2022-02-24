@@ -61,7 +61,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   private java.lang.Integer idleShutdownTimeout;
 
   /**
-   * Install Nvidia Driver automatically.
+   * Install Nvidia Driver automatically. Default: True
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +174,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Install Nvidia Driver automatically.
+   * Install Nvidia Driver automatically. Default: True
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInstallGpuDriver() {
@@ -182,7 +182,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Install Nvidia Driver automatically.
+   * Install Nvidia Driver automatically. Default: True
    * @param installGpuDriver installGpuDriver or {@code null} for none
    */
   public RuntimeSoftwareConfig setInstallGpuDriver(java.lang.Boolean installGpuDriver) {

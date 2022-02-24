@@ -74,8 +74,8 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
   private java.lang.Long quantity;
 
   /**
-   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
-   * the code of the store in a Business Profile.
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted through the API
+   * or the code of the store in a Business Profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,8 +200,8 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
-   * the code of the store in a Business Profile.
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted through the API
+   * or the code of the store in a Business Profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreCode() {
@@ -209,8 +209,8 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
-   * the code of the store in a Business Profile.
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted through the API
+   * or the code of the store in a Business Profile.
    * @param storeCode storeCode or {@code null} for none
    */
   public PosInventoryResponse setStoreCode(java.lang.String storeCode) {

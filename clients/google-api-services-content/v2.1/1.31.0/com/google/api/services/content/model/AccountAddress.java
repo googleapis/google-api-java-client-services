@@ -31,15 +31,15 @@ package com.google.api.services.content.model;
 public final class AccountAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * CLDR country code (e.g. "US"). All MCA sub-accounts inherit the country of their parent MCA by
-   * default, however the country can be updated for individual sub-accounts.
+   * CLDR country code (for example, "US"). All MCA sub-accounts inherit the country of their parent
+   * MCA by default, however the country can be updated for individual sub-accounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String country;
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   private java.lang.String locality;
 
   /**
-   * Postal code or ZIP (e.g. "94043").
+   * Postal code or ZIP (for example, "94043").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   private java.lang.String streetAddress;
 
   /**
-   * CLDR country code (e.g. "US"). All MCA sub-accounts inherit the country of their parent MCA by
-   * default, however the country can be updated for individual sub-accounts.
+   * CLDR country code (for example, "US"). All MCA sub-accounts inherit the country of their parent
+   * MCA by default, however the country can be updated for individual sub-accounts.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -78,8 +78,8 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * CLDR country code (e.g. "US"). All MCA sub-accounts inherit the country of their parent MCA by
-   * default, however the country can be updated for individual sub-accounts.
+   * CLDR country code (for example, "US"). All MCA sub-accounts inherit the country of their parent
+   * MCA by default, however the country can be updated for individual sub-accounts.
    * @param country country or {@code null} for none
    */
   public AccountAddress setCountry(java.lang.String country) {
@@ -88,7 +88,7 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * @return value or {@code null} for none
    */
@@ -97,7 +97,7 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * @param locality locality or {@code null} for none
    */
@@ -107,7 +107,7 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Postal code or ZIP (e.g. "94043").
+   * Postal code or ZIP (for example, "94043").
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCode() {
@@ -115,7 +115,7 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Postal code or ZIP (e.g. "94043").
+   * Postal code or ZIP (for example, "94043").
    * @param postalCode postalCode or {@code null} for none
    */
   public AccountAddress setPostalCode(java.lang.String postalCode) {

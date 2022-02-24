@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * The status of a datafeed, i.e., the result of the last retrieval of the datafeed computed
+ * The status of a datafeed, that is, the result of the last retrieval of the datafeed computed
  * asynchronously when the feed processing is finished.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

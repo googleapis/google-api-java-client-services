@@ -93,8 +93,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The carrier-service pair delivering items to collection points. The list of supported pickup
-   * services can be retrieved via the `getSupportedPickupServices` method. Required if and only if
-   * the service delivery type is `pickup`.
+   * services can be retrieved through the `getSupportedPickupServices` method. Required if and only
+   * if the service delivery type is `pickup`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,8 +271,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The carrier-service pair delivering items to collection points. The list of supported pickup
-   * services can be retrieved via the `getSupportedPickupServices` method. Required if and only if
-   * the service delivery type is `pickup`.
+   * services can be retrieved through the `getSupportedPickupServices` method. Required if and only
+   * if the service delivery type is `pickup`.
    * @return value or {@code null} for none
    */
   public PickupCarrierService getPickupService() {
@@ -281,8 +281,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The carrier-service pair delivering items to collection points. The list of supported pickup
-   * services can be retrieved via the `getSupportedPickupServices` method. Required if and only if
-   * the service delivery type is `pickup`.
+   * services can be retrieved through the `getSupportedPickupServices` method. Required if and only
+   * if the service delivery type is `pickup`.
    * @param pickupService pickupService or {@code null} for none
    */
   public Service setPickupService(PickupCarrierService pickupService) {

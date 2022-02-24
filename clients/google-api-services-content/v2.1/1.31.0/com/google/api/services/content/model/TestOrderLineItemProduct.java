@@ -110,7 +110,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private Price price;
 
   /**
-   * Required. The CLDR territory // code of the target country of the product.
+   * Required. The CLDR territory code of the target country of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +313,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The CLDR territory // code of the target country of the product.
+   * Required. The CLDR territory code of the target country of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -321,7 +321,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The CLDR territory // code of the target country of the product.
+   * Required. The CLDR territory code of the target country of the product.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public TestOrderLineItemProduct setTargetCountry(java.lang.String targetCountry) {

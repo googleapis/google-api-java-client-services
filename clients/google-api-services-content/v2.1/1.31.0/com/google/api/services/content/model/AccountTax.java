@@ -45,7 +45,7 @@ public final class AccountTax extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Tax rules. Updating the tax rules will enable US taxes (not reversible). Defining no rules is
+   * Tax rules. Updating the tax rules will enable "US" taxes (not reversible). Defining no rules is
    * equivalent to not charging tax at all.
    * The value may be {@code null}.
    */
@@ -87,7 +87,7 @@ public final class AccountTax extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tax rules. Updating the tax rules will enable US taxes (not reversible). Defining no rules is
+   * Tax rules. Updating the tax rules will enable "US" taxes (not reversible). Defining no rules is
    * equivalent to not charging tax at all.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class AccountTax extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tax rules. Updating the tax rules will enable US taxes (not reversible). Defining no rules is
+   * Tax rules. Updating the tax rules will enable "US" taxes (not reversible). Defining no rules is
    * equivalent to not charging tax at all.
    * @param rules rules or {@code null} for none
    */

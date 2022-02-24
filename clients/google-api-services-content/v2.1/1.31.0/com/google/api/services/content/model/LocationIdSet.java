@@ -31,14 +31,16 @@ package com.google.api.services.content.model;
 public final class LocationIdSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * A non-empty list of location IDs. They must all be of the same location type (e.g., state).
+   * A non-empty list of location IDs. They must all be of the same location type (for example,
+   * state).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> locationIds;
 
   /**
-   * A non-empty list of location IDs. They must all be of the same location type (e.g., state).
+   * A non-empty list of location IDs. They must all be of the same location type (for example,
+   * state).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocationIds() {
@@ -46,7 +48,8 @@ public final class LocationIdSet extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A non-empty list of location IDs. They must all be of the same location type (e.g., state).
+   * A non-empty list of location IDs. They must all be of the same location type (for example,
+   * state).
    * @param locationIds locationIds or {@code null} for none
    */
   public LocationIdSet setLocationIds(java.util.List<java.lang.String> locationIds) {

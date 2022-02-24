@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Tax calculation rule to apply in a state or province (USA only).
+ * Tax calculation rule to apply in a state or province (US only).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

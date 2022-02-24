@@ -148,9 +148,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
-   * attribute of the feed specification in its generic form (e.g., `{ "name": "size type", "value":
-   * "regular" }`). This is useful for submitting attributes not explicitly exposed by the API, such
-   * as additional attributes used for Buy on Google (formerly known as Shopping Actions).
+   * attribute of the feed specification in its generic form (for example, `{ "name": "size type",
+   * "value": "regular" }`). This is useful for submitting attributes not explicitly exposed by the
+   * API, such as additional attributes used for Buy on Google (formerly known as Shopping Actions).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,7 +247,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String energyEfficiencyClass;
 
   /**
-   * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
+   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
    * Merchant Center).
    * The value may be {@code null}.
    */
@@ -445,7 +445,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String offerId;
 
   /**
-   * The item's pattern (e.g. polka dots).
+   * The item's pattern (for example, polka dots).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -629,7 +629,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> sizes;
 
   /**
-   * The source of the offer, i.e., how the offer was created. Acceptable values are: - "`api`" -
+   * The source of the offer, that is, how the offer was created. Acceptable values are: - "`api`" -
    * "`crawl`" - "`feed`"
    * The value may be {@code null}.
    */
@@ -973,9 +973,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
-   * attribute of the feed specification in its generic form (e.g., `{ "name": "size type", "value":
-   * "regular" }`). This is useful for submitting attributes not explicitly exposed by the API, such
-   * as additional attributes used for Buy on Google (formerly known as Shopping Actions).
+   * attribute of the feed specification in its generic form (for example, `{ "name": "size type",
+   * "value": "regular" }`). This is useful for submitting attributes not explicitly exposed by the
+   * API, such as additional attributes used for Buy on Google (formerly known as Shopping Actions).
    * @return value or {@code null} for none
    */
   public java.util.List<CustomAttribute> getCustomAttributes() {
@@ -984,9 +984,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
-   * attribute of the feed specification in its generic form (e.g., `{ "name": "size type", "value":
-   * "regular" }`). This is useful for submitting attributes not explicitly exposed by the API, such
-   * as additional attributes used for Buy on Google (formerly known as Shopping Actions).
+   * attribute of the feed specification in its generic form (for example, `{ "name": "size type",
+   * "value": "regular" }`). This is useful for submitting attributes not explicitly exposed by the
+   * API, such as additional attributes used for Buy on Google (formerly known as Shopping Actions).
    * @param customAttributes customAttributes or {@code null} for none
    */
   public Product setCustomAttributes(java.util.List<CustomAttribute> customAttributes) {
@@ -1199,7 +1199,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
+   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
    * Merchant Center).
    * @return value or {@code null} for none
    */
@@ -1208,7 +1208,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
+   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
    * Merchant Center).
    * @param excludedDestinations excludedDestinations or {@code null} for none
    */
@@ -1673,7 +1673,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The item's pattern (e.g. polka dots).
+   * The item's pattern (for example, polka dots).
    * @return value or {@code null} for none
    */
   public java.lang.String getPattern() {
@@ -1681,7 +1681,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The item's pattern (e.g. polka dots).
+   * The item's pattern (for example, polka dots).
    * @param pattern pattern or {@code null} for none
    */
   public Product setPattern(java.lang.String pattern) {
@@ -2116,7 +2116,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the offer, i.e., how the offer was created. Acceptable values are: - "`api`" -
+   * The source of the offer, that is, how the offer was created. Acceptable values are: - "`api`" -
    * "`crawl`" - "`feed`"
    * @return value or {@code null} for none
    */
@@ -2125,7 +2125,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the offer, i.e., how the offer was created. Acceptable values are: - "`api`" -
+   * The source of the offer, that is, how the offer was created. Acceptable values are: - "`api`" -
    * "`crawl`" - "`feed`"
    * @param source source or {@code null} for none
    */

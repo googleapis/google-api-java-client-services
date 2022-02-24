@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class CarriersCarrier extends com.google.api.client.json.GenericJson {
 
   /**
-   * The CLDR country code of the carrier (e.g., "US"). Always present.
+   * The CLDR country code of the carrier (for example, "US"). Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> eddServices;
 
   /**
-   * The name of the carrier (e.g., `"UPS"`). Always present.
+   * The name of the carrier (for example, `"UPS"`). Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
+   * A list of supported services (for example, `"ground"`) for that carrier. Contains at least one
    * service. This is the list of valid values for CarrierRate.carrierService.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> services;
 
   /**
-   * The CLDR country code of the carrier (e.g., "US"). Always present.
+   * The CLDR country code of the carrier (for example, "US"). Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -69,7 +69,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The CLDR country code of the carrier (e.g., "US"). Always present.
+   * The CLDR country code of the carrier (for example, "US"). Always present.
    * @param country country or {@code null} for none
    */
   public CarriersCarrier setCountry(java.lang.String country) {
@@ -97,7 +97,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the carrier (e.g., `"UPS"`). Always present.
+   * The name of the carrier (for example, `"UPS"`). Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,7 +105,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the carrier (e.g., `"UPS"`). Always present.
+   * The name of the carrier (for example, `"UPS"`). Always present.
    * @param name name or {@code null} for none
    */
   public CarriersCarrier setName(java.lang.String name) {
@@ -114,7 +114,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
+   * A list of supported services (for example, `"ground"`) for that carrier. Contains at least one
    * service. This is the list of valid values for CarrierRate.carrierService.
    * @return value or {@code null} for none
    */
@@ -123,7 +123,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
+   * A list of supported services (for example, `"ground"`) for that carrier. Contains at least one
    * service. This is the list of valid values for CarrierRate.carrierService.
    * @param services services or {@code null} for none
    */

@@ -115,7 +115,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   private java.lang.String shownImage;
 
   /**
-   * The CLDR territory // code of the target country of the product.
+   * The CLDR territory code of the target country of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -341,7 +341,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   }
 
   /**
-   * The CLDR territory // code of the target country of the product.
+   * The CLDR territory code of the target country of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -349,7 +349,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   }
 
   /**
-   * The CLDR territory // code of the target country of the product.
+   * The CLDR territory code of the target country of the product.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public OrderLineItemProduct setTargetCountry(java.lang.String targetCountry) {

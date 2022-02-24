@@ -31,28 +31,28 @@ package com.google.api.services.content.model;
 public final class MonetaryAmount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pre-tax or post-tax price depends on the location of the order. - For countries (e.g. US)
-   * where price attribute excludes tax, this field corresponds to the pre-tax value. - For coutries
-   * (e.g. France) where price attribute includes tax, this field corresponds to the post-tax value
-   * .
+   * The pre-tax or post-tax price depends on the location of the order. - For countries (for
+   * example, "US". where price attribute excludes tax, this field corresponds to the pre-tax value.
+   * - For coutries (for example, "France") where price attribute includes tax, this field
+   * corresponds to the post-tax value .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price priceAmount;
 
   /**
-   * Tax value, present only for countries where price attribute excludes tax (e.g. US). No tax is
-   * referenced as 0 value with the corresponding `currency`.
+   * Tax value, present only for countries where price attribute excludes tax (for example, "US". No
+   * tax is referenced as 0 value with the corresponding `currency`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price taxAmount;
 
   /**
-   * The pre-tax or post-tax price depends on the location of the order. - For countries (e.g. US)
-   * where price attribute excludes tax, this field corresponds to the pre-tax value. - For coutries
-   * (e.g. France) where price attribute includes tax, this field corresponds to the post-tax value
-   * .
+   * The pre-tax or post-tax price depends on the location of the order. - For countries (for
+   * example, "US". where price attribute excludes tax, this field corresponds to the pre-tax value.
+   * - For coutries (for example, "France") where price attribute includes tax, this field
+   * corresponds to the post-tax value .
    * @return value or {@code null} for none
    */
   public Price getPriceAmount() {
@@ -60,10 +60,10 @@ public final class MonetaryAmount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The pre-tax or post-tax price depends on the location of the order. - For countries (e.g. US)
-   * where price attribute excludes tax, this field corresponds to the pre-tax value. - For coutries
-   * (e.g. France) where price attribute includes tax, this field corresponds to the post-tax value
-   * .
+   * The pre-tax or post-tax price depends on the location of the order. - For countries (for
+   * example, "US". where price attribute excludes tax, this field corresponds to the pre-tax value.
+   * - For coutries (for example, "France") where price attribute includes tax, this field
+   * corresponds to the post-tax value .
    * @param priceAmount priceAmount or {@code null} for none
    */
   public MonetaryAmount setPriceAmount(Price priceAmount) {
@@ -72,8 +72,8 @@ public final class MonetaryAmount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Tax value, present only for countries where price attribute excludes tax (e.g. US). No tax is
-   * referenced as 0 value with the corresponding `currency`.
+   * Tax value, present only for countries where price attribute excludes tax (for example, "US". No
+   * tax is referenced as 0 value with the corresponding `currency`.
    * @return value or {@code null} for none
    */
   public Price getTaxAmount() {
@@ -81,8 +81,8 @@ public final class MonetaryAmount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Tax value, present only for countries where price attribute excludes tax (e.g. US). No tax is
-   * referenced as 0 value with the corresponding `currency`.
+   * Tax value, present only for countries where price attribute excludes tax (for example, "US". No
+   * tax is referenced as 0 value with the corresponding `currency`.
    * @param taxAmount taxAmount or {@code null} for none
    */
   public MonetaryAmount setTaxAmount(Price taxAmount) {

@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * The status of a product, i.e., information about a product computed asynchronously.
+ * The status of a product, that is, information about a product computed asynchronously.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

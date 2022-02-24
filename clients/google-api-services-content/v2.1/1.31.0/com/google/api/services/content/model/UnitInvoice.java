@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class UnitInvoice extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional charges for a unit, e.g. shipping costs.
+   * Additional charges for a unit, for example, shipping costs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   private java.util.List<UnitInvoiceTaxLine> unitPriceTaxes;
 
   /**
-   * Additional charges for a unit, e.g. shipping costs.
+   * Additional charges for a unit, for example, shipping costs.
    * @return value or {@code null} for none
    */
   public java.util.List<UnitInvoiceAdditionalCharge> getAdditionalCharges() {
@@ -62,7 +62,7 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional charges for a unit, e.g. shipping costs.
+   * Additional charges for a unit, for example, shipping costs.
    * @param additionalCharges additionalCharges or {@code null} for none
    */
   public UnitInvoice setAdditionalCharges(java.util.List<UnitInvoiceAdditionalCharge> additionalCharges) {

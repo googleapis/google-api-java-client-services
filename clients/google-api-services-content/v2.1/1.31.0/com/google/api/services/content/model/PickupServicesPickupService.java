@@ -31,28 +31,28 @@ package com.google.api.services.content.model;
 public final class PickupServicesPickupService extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the carrier (e.g., `"UPS"`). Always present.
+   * The name of the carrier (for example, `"UPS"`). Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String carrierName;
 
   /**
-   * The CLDR country code of the carrier (e.g., "US"). Always present.
+   * The CLDR country code of the carrier (for example, "US"). Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String country;
 
   /**
-   * The name of the pickup service (e.g., `"Access point"`). Always present.
+   * The name of the pickup service (for example, `"Access point"`). Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceName;
 
   /**
-   * The name of the carrier (e.g., `"UPS"`). Always present.
+   * The name of the carrier (for example, `"UPS"`). Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierName() {
@@ -60,7 +60,7 @@ public final class PickupServicesPickupService extends com.google.api.client.jso
   }
 
   /**
-   * The name of the carrier (e.g., `"UPS"`). Always present.
+   * The name of the carrier (for example, `"UPS"`). Always present.
    * @param carrierName carrierName or {@code null} for none
    */
   public PickupServicesPickupService setCarrierName(java.lang.String carrierName) {
@@ -69,7 +69,7 @@ public final class PickupServicesPickupService extends com.google.api.client.jso
   }
 
   /**
-   * The CLDR country code of the carrier (e.g., "US"). Always present.
+   * The CLDR country code of the carrier (for example, "US"). Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -77,7 +77,7 @@ public final class PickupServicesPickupService extends com.google.api.client.jso
   }
 
   /**
-   * The CLDR country code of the carrier (e.g., "US"). Always present.
+   * The CLDR country code of the carrier (for example, "US"). Always present.
    * @param country country or {@code null} for none
    */
   public PickupServicesPickupService setCountry(java.lang.String country) {
@@ -86,7 +86,7 @@ public final class PickupServicesPickupService extends com.google.api.client.jso
   }
 
   /**
-   * The name of the pickup service (e.g., `"Access point"`). Always present.
+   * The name of the pickup service (for example, `"Access point"`). Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceName() {
@@ -94,7 +94,7 @@ public final class PickupServicesPickupService extends com.google.api.client.jso
   }
 
   /**
-   * The name of the pickup service (e.g., `"Access point"`). Always present.
+   * The name of the pickup service (for example, `"Access point"`). Always present.
    * @param serviceName serviceName or {@code null} for none
    */
   public PickupServicesPickupService setServiceName(java.lang.String serviceName) {

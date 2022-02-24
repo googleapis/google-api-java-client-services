@@ -39,8 +39,8 @@ public final class OrdersRefundOrderRequest extends com.google.api.client.json.G
   private MonetaryAmount amount;
 
   /**
-   * If true, the full order will be refunded, including shipping. If this is true, amount should
-   * not be provided and will be ignored.
+   * If true, the full order will be refunded, including shipping. If this is true, amount shouldn't
+   * be provided and will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +87,8 @@ public final class OrdersRefundOrderRequest extends com.google.api.client.json.G
   }
 
   /**
-   * If true, the full order will be refunded, including shipping. If this is true, amount should
-   * not be provided and will be ignored.
+   * If true, the full order will be refunded, including shipping. If this is true, amount shouldn't
+   * be provided and will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullRefund() {
@@ -96,8 +96,8 @@ public final class OrdersRefundOrderRequest extends com.google.api.client.json.G
   }
 
   /**
-   * If true, the full order will be refunded, including shipping. If this is true, amount should
-   * not be provided and will be ignored.
+   * If true, the full order will be refunded, including shipping. If this is true, amount shouldn't
+   * be provided and will be ignored.
    * @param fullRefund fullRefund or {@code null} for none
    */
   public OrdersRefundOrderRequest setFullRefund(java.lang.Boolean fullRefund) {

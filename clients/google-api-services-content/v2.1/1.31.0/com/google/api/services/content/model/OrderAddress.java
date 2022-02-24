@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class OrderAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * CLDR country code (e.g. "US").
+   * CLDR country code (for example, "US").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isPostOfficeBox;
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   private java.lang.String locality;
 
   /**
-   * Postal Code or ZIP (e.g. "94043").
+   * Postal Code or ZIP (for example, "94043").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> streetAddress;
 
   /**
-   * CLDR country code (e.g. "US").
+   * CLDR country code (for example, "US").
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -98,7 +98,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * CLDR country code (e.g. "US").
+   * CLDR country code (for example, "US").
    * @param country country or {@code null} for none
    */
   public OrderAddress setCountry(java.lang.String country) {
@@ -143,7 +143,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * @return value or {@code null} for none
    */
@@ -152,7 +152,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * @param locality locality or {@code null} for none
    */
@@ -162,7 +162,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Postal Code or ZIP (e.g. "94043").
+   * Postal Code or ZIP (for example, "94043").
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCode() {
@@ -170,7 +170,7 @@ public final class OrderAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Postal Code or ZIP (e.g. "94043").
+   * Postal Code or ZIP (for example, "94043").
    * @param postalCode postalCode or {@code null} for none
    */
   public OrderAddress setPostalCode(java.lang.String postalCode) {

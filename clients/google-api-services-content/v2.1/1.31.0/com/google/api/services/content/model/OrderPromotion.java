@@ -49,7 +49,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.util.List<OrderPromotionItem> appliedItems;
 
   /**
-   * Promotion end time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * Promotion end time in ISO 8601 format. Date, time, and offset required, for example,
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.lang.String shortTitle;
 
   /**
-   * Promotion start time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * Promotion start time in ISO 8601 format. Date, time, and offset required, for example,
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
    * The value may be {@code null}.
    */
@@ -172,7 +172,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Promotion end time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * Promotion end time in ISO 8601 format. Date, time, and offset required, for example,
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
    * @return value or {@code null} for none
    */
@@ -181,7 +181,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Promotion end time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * Promotion end time in ISO 8601 format. Date, time, and offset required, for example,
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
    * @param endTime endTime or {@code null} for none
    */
@@ -265,7 +265,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Promotion start time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * Promotion start time in ISO 8601 format. Date, time, and offset required, for example,
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
    * @return value or {@code null} for none
    */
@@ -274,7 +274,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Promotion start time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * Promotion start time in ISO 8601 format. Date, time, and offset required, for example,
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
    * @param startTime startTime or {@code null} for none
    */

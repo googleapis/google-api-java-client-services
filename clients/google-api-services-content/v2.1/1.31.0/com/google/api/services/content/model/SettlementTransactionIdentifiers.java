@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class SettlementTransactionIdentifiers extends com.google.api.client.json.GenericJson {
 
   /**
-   * The identifier of the adjustments, if it is available.
+   * The identifier of the adjustments, if it's available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class SettlementTransactionIdentifiers extends com.google.api.clien
   private java.lang.String transactionId;
 
   /**
-   * The identifier of the adjustments, if it is available.
+   * The identifier of the adjustments, if it's available.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdjustmentId() {
@@ -81,7 +81,7 @@ public final class SettlementTransactionIdentifiers extends com.google.api.clien
   }
 
   /**
-   * The identifier of the adjustments, if it is available.
+   * The identifier of the adjustments, if it's available.
    * @param adjustmentId adjustmentId or {@code null} for none
    */
   public SettlementTransactionIdentifiers setAdjustmentId(java.lang.String adjustmentId) {

@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class HolidayCutoff extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date of the order deadline, in ISO 8601 format. E.g. "2016-11-29" for 29th November 2016.
-   * Required.
+   * Date of the order deadline, in ISO 8601 format. For example, "2016-11-29" for 29th November
+   * 2016. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   private java.lang.Long deadlineHour;
 
   /**
-   * Timezone identifier for the deadline hour. A list of identifiers can be found in the AdWords
-   * API documentation. E.g. "Europe/Zurich". Required.
+   * Timezone identifier for the deadline hour (for example, "Europe/Zurich"). List of identifiers.
+   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   private java.lang.String holidayId;
 
   /**
-   * Date on which the deadline will become visible to consumers in ISO 8601 format. E.g.
+   * Date on which the deadline will become visible to consumers in ISO 8601 format. For example,
    * "2016-10-31" for 31st October 2016. Required.
    * The value may be {@code null}.
    */
@@ -71,8 +71,8 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   private java.lang.String visibleFromDate;
 
   /**
-   * Date of the order deadline, in ISO 8601 format. E.g. "2016-11-29" for 29th November 2016.
-   * Required.
+   * Date of the order deadline, in ISO 8601 format. For example, "2016-11-29" for 29th November
+   * 2016. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeadlineDate() {
@@ -80,8 +80,8 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Date of the order deadline, in ISO 8601 format. E.g. "2016-11-29" for 29th November 2016.
-   * Required.
+   * Date of the order deadline, in ISO 8601 format. For example, "2016-11-29" for 29th November
+   * 2016. Required.
    * @param deadlineDate deadlineDate or {@code null} for none
    */
   public HolidayCutoff setDeadlineDate(java.lang.String deadlineDate) {
@@ -111,8 +111,8 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timezone identifier for the deadline hour. A list of identifiers can be found in the AdWords
-   * API documentation. E.g. "Europe/Zurich". Required.
+   * Timezone identifier for the deadline hour (for example, "Europe/Zurich"). List of identifiers.
+   * Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeadlineTimezone() {
@@ -120,8 +120,8 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timezone identifier for the deadline hour. A list of identifiers can be found in the AdWords
-   * API documentation. E.g. "Europe/Zurich". Required.
+   * Timezone identifier for the deadline hour (for example, "Europe/Zurich"). List of identifiers.
+   * Required.
    * @param deadlineTimezone deadlineTimezone or {@code null} for none
    */
   public HolidayCutoff setDeadlineTimezone(java.lang.String deadlineTimezone) {
@@ -147,7 +147,7 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Date on which the deadline will become visible to consumers in ISO 8601 format. E.g.
+   * Date on which the deadline will become visible to consumers in ISO 8601 format. For example,
    * "2016-10-31" for 31st October 2016. Required.
    * @return value or {@code null} for none
    */
@@ -156,7 +156,7 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Date on which the deadline will become visible to consumers in ISO 8601 format. E.g.
+   * Date on which the deadline will become visible to consumers in ISO 8601 format. For example,
    * "2016-10-31" for 31st October 2016. Required.
    * @param visibleFromDate visibleFromDate or {@code null} for none
    */

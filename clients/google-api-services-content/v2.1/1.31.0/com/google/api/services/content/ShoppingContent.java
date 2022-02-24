@@ -404,14 +404,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Only available to selected merchants, for example multi-client accounts (MCAs) and their
-       * sub-accounts. When set to `True`, this flag removes any existing claim on the requested
+       * sub-accounts. When set to `True`, this option removes any existing claim on the requested
        * website and replaces it with a claim from the account that makes the request.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean overwrite;
 
       /** Only available to selected merchants, for example multi-client accounts (MCAs) and their sub-
-     accounts. When set to `True`, this flag removes any existing claim on the requested website and
+     accounts. When set to `True`, this option removes any existing claim on the requested website and
      replaces it with a claim from the account that makes the request.
        */
       public java.lang.Boolean getOverwrite() {
@@ -420,7 +420,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Only available to selected merchants, for example multi-client accounts (MCAs) and their
-       * sub-accounts. When set to `True`, this flag removes any existing claim on the requested
+       * sub-accounts. When set to `True`, this option removes any existing claim on the requested
        * website and replaces it with a claim from the account that makes the request.
        */
       public Claimwebsite setOverwrite(java.lang.Boolean overwrite) {
@@ -672,17 +672,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to delete sub-accounts with products. The default value is false. */
+      /** Option to delete sub-accounts with products. The default value is false. */
       @com.google.api.client.util.Key
       private java.lang.Boolean force;
 
-      /** Flag to delete sub-accounts with products. The default value is false. [default: false]
+      /** Option to delete sub-accounts with products. The default value is false. [default: false]
        */
       public java.lang.Boolean getForce() {
         return force;
       }
 
-      /** Flag to delete sub-accounts with products. The default value is false. */
+      /** Option to delete sub-accounts with products. The default value is false. */
       public Delete setForce(java.lang.Boolean force) {
         this.force = force;
         return this;
@@ -705,7 +705,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * </p>
        *
        * <p>
-       * Flag to delete sub-accounts with products. The default value is false.
+       * Option to delete sub-accounts with products. The default value is false.
        * </p>
        */
       public boolean isForce() {
@@ -14017,17 +14017,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The country of the template to retrieve. Defaults to `US`. */
+      /** The country of the template to retrieve. Defaults to "`US`". */
       @com.google.api.client.util.Key
       private java.lang.String country;
 
-      /** The country of the template to retrieve. Defaults to `US`.
+      /** The country of the template to retrieve. Defaults to "`US`".
        */
       public java.lang.String getCountry() {
         return country;
       }
 
-      /** The country of the template to retrieve. Defaults to `US`. */
+      /** The country of the template to retrieve. Defaults to "`US`". */
       public Gettestordertemplate setCountry(java.lang.String country) {
         this.country = country;
         return this;
@@ -14040,12 +14040,12 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     }
     /**
      * Deprecated. Notifies that item return and refund was handled directly by merchant outside of
-     * Google payments processing (e.g. cash refund done in store). Note: We recommend calling the
-     * returnrefundlineitem method to refund in-store returns. We will issue the refund directly to the
-     * customer. This helps to prevent possible differences arising between merchant and Google
+     * Google payments processing (for example, cash refund done in store). Note: We recommend calling
+     * the returnrefundlineitem method to refund in-store returns. We will issue the refund directly to
+     * the customer. This helps to prevent possible differences arising between merchant and Google
      * transaction records. We also recommend having the point of sale system communicate with Google to
-     * ensure that customers do not receive a double refund by first refunding via Google then via an
-     * in-store return.
+     * ensure that customers do not receive a double refund by first refunding through Google then
+     * through an in-store return.
      *
      * Create a request for the method "orders.instorerefundlineitem".
      *
@@ -14070,12 +14070,12 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Deprecated. Notifies that item return and refund was handled directly by merchant outside of
-       * Google payments processing (e.g. cash refund done in store). Note: We recommend calling the
-       * returnrefundlineitem method to refund in-store returns. We will issue the refund directly to
-       * the customer. This helps to prevent possible differences arising between merchant and Google
+       * Google payments processing (for example, cash refund done in store). Note: We recommend calling
+       * the returnrefundlineitem method to refund in-store returns. We will issue the refund directly
+       * to the customer. This helps to prevent possible differences arising between merchant and Google
        * transaction records. We also recommend having the point of sale system communicate with Google
-       * to ensure that customers do not receive a double refund by first refunding via Google then via
-       * an in-store return.
+       * to ensure that customers do not receive a double refund by first refunding through Google then
+       * through an in-store return.
        *
        * Create a request for the method "orders.instorerefundlineitem".
        *
@@ -14432,16 +14432,15 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Please note that `active` is a
-       * shortcut for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for
-       * `shipped`, `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and
-       * `canceled`.
+       * Obtains orders that match any of the specified statuses. Note that `active` is a shortcut
+       * for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for `shipped`,
+       * `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and `canceled`.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> statuses;
 
-      /** Obtains orders that match any of the specified statuses. Please note that `active` is a shortcut
-     for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for `shipped`,
+      /** Obtains orders that match any of the specified statuses. Note that `active` is a shortcut for
+     `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for `shipped`,
      `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and `canceled`.
        */
       public java.util.List<java.lang.String> getStatuses() {
@@ -14449,10 +14448,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Please note that `active` is a
-       * shortcut for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for
-       * `shipped`, `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and
-       * `canceled`.
+       * Obtains orders that match any of the specified statuses. Note that `active` is a shortcut
+       * for `pendingShipment` and `partiallyShipped`, and `completed` is a shortcut for `shipped`,
+       * `partiallyDelivered`, `delivered`, `partiallyReturned`, `returned`, and `canceled`.
        */
       public List setStatuses(java.util.List<java.lang.String> statuses) {
         this.statuses = statuses;
@@ -14878,10 +14876,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     }
     /**
      * Returns and refunds a line item. Note that this method can only be called on fully shipped
-     * orders. Please also note that the Orderreturns API is the preferred way to handle returns after
-     * you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to search
-     * for the return, and then use Orderreturns.processreturn to issue the refund. If the return cannot
-     * be found, then we recommend using this API to issue a refund.
+     * orders. The Orderreturns API is the preferred way to handle returns after you receive a return
+     * from a customer. You can use Orderreturns.list or Orderreturns.get to search for the return, and
+     * then use Orderreturns.processreturn to issue the refund. If the return cannot be found, then we
+     * recommend using this API to issue a refund.
      *
      * Create a request for the method "orders.returnrefundlineitem".
      *
@@ -14906,10 +14904,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Returns and refunds a line item. Note that this method can only be called on fully shipped
-       * orders. Please also note that the Orderreturns API is the preferred way to handle returns after
-       * you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to
-       * search for the return, and then use Orderreturns.processreturn to issue the refund. If the
-       * return cannot be found, then we recommend using this API to issue a refund.
+       * orders. The Orderreturns API is the preferred way to handle returns after you receive a return
+       * from a customer. You can use Orderreturns.list or Orderreturns.get to search for the return,
+       * and then use Orderreturns.processreturn to issue the refund. If the return cannot be found,
+       * then we recommend using this API to issue a refund.
        *
        * Create a request for the method "orders.returnrefundlineitem".
        *
@@ -15025,8 +15023,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     /**
      * Sets (or overrides if it already exists) merchant provided annotations in the form of key-value
      * pairs. A common use case would be to supply us with additional structured information about a
-     * line item that cannot be provided via other methods. Submitted key-value pairs can be retrieved
-     * as part of the orders resource.
+     * line item that cannot be provided through other methods. Submitted key-value pairs can be
+     * retrieved as part of the orders resource.
      *
      * Create a request for the method "orders.setlineitemmetadata".
      *
@@ -15051,8 +15049,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * Sets (or overrides if it already exists) merchant provided annotations in the form of key-value
        * pairs. A common use case would be to supply us with additional structured information about a
-       * line item that cannot be provided via other methods. Submitted key-value pairs can be retrieved
-       * as part of the orders resource.
+       * line item that cannot be provided through other methods. Submitted key-value pairs can be
+       * retrieved as part of the orders resource.
        *
        * Create a request for the method "orders.setlineitemmetadata".
        *
@@ -18983,8 +18981,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Register a Merchant Center account for pubsub notifications. Note that cloud topic name should
-     * not be provided as part of the request.
+     * Register a Merchant Center account for pubsub notifications. Note that cloud topic name shouldn't
+     * be provided as part of the request.
      *
      * Create a request for the method "pubsubnotificationsettings.update".
      *
@@ -19006,8 +19004,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/pubsubnotificationsettings";
 
       /**
-       * Register a Merchant Center account for pubsub notifications. Note that cloud topic name should
-       * not be provided as part of the request.
+       * Register a Merchant Center account for pubsub notifications. Note that cloud topic name
+       * shouldn't be provided as part of the request.
        *
        * Create a request for the method "pubsubnotificationsettings.update".
        *

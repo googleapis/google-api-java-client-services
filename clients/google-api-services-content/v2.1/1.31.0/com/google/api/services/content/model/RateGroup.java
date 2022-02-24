@@ -68,7 +68,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The value of the rate group (e.g. flat rate $10). Can only be set if `mainTable` and
+   * The value of the rate group (for example, flat rate $10). Can only be set if `mainTable` and
    * `subtables` are not set.
    * The value may be {@code null}.
    */
@@ -157,7 +157,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the rate group (e.g. flat rate $10). Can only be set if `mainTable` and
+   * The value of the rate group (for example, flat rate $10). Can only be set if `mainTable` and
    * `subtables` are not set.
    * @return value or {@code null} for none
    */
@@ -166,7 +166,7 @@ public final class RateGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the rate group (e.g. flat rate $10). Can only be set if `mainTable` and
+   * The value of the rate group (for example, flat rate $10). Can only be set if `mainTable` and
    * `subtables` are not set.
    * @param singleValue singleValue or {@code null} for none
    */

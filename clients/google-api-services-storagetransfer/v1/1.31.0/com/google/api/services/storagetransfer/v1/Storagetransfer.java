@@ -2198,7 +2198,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param name Not used.
+     * @param name Required. The name of the type being listed; must be `transferOperations`.
      * @param filter Required. A list of query parameters specified as JSON text in the form of:
      *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
      *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
@@ -2233,7 +2233,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Not used.
+       * @param name Required. The name of the type being listed; must be `transferOperations`.
        * @param filter Required. A list of query parameters specified as JSON text in the form of:
      *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
      *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
@@ -2320,17 +2320,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Not used. */
+      /** Required. The name of the type being listed; must be `transferOperations`. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Not used.
+      /** Required. The name of the type being listed; must be `transferOperations`.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Not used. */
+      /** Required. The name of the type being listed; must be `transferOperations`. */
       public List setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

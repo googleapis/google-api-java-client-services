@@ -235,6 +235,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private ShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
+   * Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean spot;
+
+  /**
    * The list of instance tags applied to all nodes. Tags are used to identify valid sources or
    * targets for network firewalls and are specified by the client during cluster or node pool
    * creation. Each tag within the list must comply with RFC1035.
@@ -717,6 +724,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
     this.shieldedInstanceConfig = shieldedInstanceConfig;
+    return this;
+  }
+
+  /**
+   * Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSpot() {
+    return spot;
+  }
+
+  /**
+   * Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+   * @param spot spot or {@code null} for none
+   */
+  public NodeConfig setSpot(java.lang.Boolean spot) {
+    this.spot = spot;
     return this;
   }
 

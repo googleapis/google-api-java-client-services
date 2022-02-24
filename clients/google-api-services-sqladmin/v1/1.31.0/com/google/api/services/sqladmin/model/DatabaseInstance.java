@@ -253,8 +253,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The Compute Engine zone that the failover instance is currently serving from for a regional
    * instance. This value could be different from the zone that was specified when the instance was
-   * created if the instance has failed over to its secondary/failover zone. Reserved for future
-   * use.
+   * created if the instance has failed over to its secondary/failover zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -834,8 +833,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The Compute Engine zone that the failover instance is currently serving from for a regional
    * instance. This value could be different from the zone that was specified when the instance was
-   * created if the instance has failed over to its secondary/failover zone. Reserved for future
-   * use.
+   * created if the instance has failed over to its secondary/failover zone.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryGceZone() {
@@ -845,8 +843,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The Compute Engine zone that the failover instance is currently serving from for a regional
    * instance. This value could be different from the zone that was specified when the instance was
-   * created if the instance has failed over to its secondary/failover zone. Reserved for future
-   * use.
+   * created if the instance has failed over to its secondary/failover zone.
    * @param secondaryGceZone secondaryGceZone or {@code null} for none
    */
   public DatabaseInstance setSecondaryGceZone(java.lang.String secondaryGceZone) {

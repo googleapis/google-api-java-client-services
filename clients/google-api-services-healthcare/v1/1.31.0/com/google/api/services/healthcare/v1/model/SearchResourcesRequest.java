@@ -30,6 +30,13 @@ package com.google.api.services.healthcare.v1.model;
 public final class SearchResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Raw body of the request for POST searches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpBody requestBody;
+
+  /**
    * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
    * FHIR Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
@@ -38,6 +45,23 @@ public final class SearchResourcesRequest extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
+
+  /**
+   * Raw body of the request for POST searches.
+   * @return value or {@code null} for none
+   */
+  public HttpBody getRequestBody() {
+    return requestBody;
+  }
+
+  /**
+   * Raw body of the request for POST searches.
+   * @param requestBody requestBody or {@code null} for none
+   */
+  public SearchResourcesRequest setRequestBody(HttpBody requestBody) {
+    this.requestBody = requestBody;
+    return this;
+  }
 
   /**
    * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the

@@ -49,10 +49,17 @@ public final class GoogleCloudRetailV2alphaSetInventoryRequest extends com.googl
    * provided inventory information will be inserted. If the Product to update has existing
    * inventory information, the provided inventory information will be merged while respecting the
    * last update time for each inventory field, using the provided or default value for
-   * SetInventoryRequest.set_time. The last update time is recorded for the following inventory
-   * fields: * Product.price_info * Product.availability * Product.available_quantity *
-   * Product.fulfillment_info If a full overwrite of inventory information while ignoring timestamps
-   * is needed, UpdateProduct should be invoked instead.
+   * SetInventoryRequest.set_time. The caller can replace place IDs for a subset of fulfillment
+   * types in the following ways: * Adds "fulfillment_info" in SetInventoryRequest.set_mask *
+   * Specifies only the desired fulfillment types and corresponding place IDs to update in
+   * SetInventoryRequest.inventory.fulfillment_info The caller can clear all place IDs from a subset
+   * of fulfillment types in the following ways: * Adds "fulfillment_info" in
+   * SetInventoryRequest.set_mask * Specifies only the desired fulfillment types to clear in
+   * SetInventoryRequest.inventory.fulfillment_info * Checks that only the desired fulfillment info
+   * types have empty SetInventoryRequest.inventory.fulfillment_info.place_ids The last update time
+   * is recorded for the following inventory fields: * Product.price_info * Product.availability *
+   * Product.available_quantity * Product.fulfillment_info If a full overwrite of inventory
+   * information while ignoring timestamps is needed, UpdateProduct should be invoked instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,10 +114,17 @@ public final class GoogleCloudRetailV2alphaSetInventoryRequest extends com.googl
    * provided inventory information will be inserted. If the Product to update has existing
    * inventory information, the provided inventory information will be merged while respecting the
    * last update time for each inventory field, using the provided or default value for
-   * SetInventoryRequest.set_time. The last update time is recorded for the following inventory
-   * fields: * Product.price_info * Product.availability * Product.available_quantity *
-   * Product.fulfillment_info If a full overwrite of inventory information while ignoring timestamps
-   * is needed, UpdateProduct should be invoked instead.
+   * SetInventoryRequest.set_time. The caller can replace place IDs for a subset of fulfillment
+   * types in the following ways: * Adds "fulfillment_info" in SetInventoryRequest.set_mask *
+   * Specifies only the desired fulfillment types and corresponding place IDs to update in
+   * SetInventoryRequest.inventory.fulfillment_info The caller can clear all place IDs from a subset
+   * of fulfillment types in the following ways: * Adds "fulfillment_info" in
+   * SetInventoryRequest.set_mask * Specifies only the desired fulfillment types to clear in
+   * SetInventoryRequest.inventory.fulfillment_info * Checks that only the desired fulfillment info
+   * types have empty SetInventoryRequest.inventory.fulfillment_info.place_ids The last update time
+   * is recorded for the following inventory fields: * Product.price_info * Product.availability *
+   * Product.available_quantity * Product.fulfillment_info If a full overwrite of inventory
+   * information while ignoring timestamps is needed, UpdateProduct should be invoked instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct getInventory() {
@@ -128,10 +142,17 @@ public final class GoogleCloudRetailV2alphaSetInventoryRequest extends com.googl
    * provided inventory information will be inserted. If the Product to update has existing
    * inventory information, the provided inventory information will be merged while respecting the
    * last update time for each inventory field, using the provided or default value for
-   * SetInventoryRequest.set_time. The last update time is recorded for the following inventory
-   * fields: * Product.price_info * Product.availability * Product.available_quantity *
-   * Product.fulfillment_info If a full overwrite of inventory information while ignoring timestamps
-   * is needed, UpdateProduct should be invoked instead.
+   * SetInventoryRequest.set_time. The caller can replace place IDs for a subset of fulfillment
+   * types in the following ways: * Adds "fulfillment_info" in SetInventoryRequest.set_mask *
+   * Specifies only the desired fulfillment types and corresponding place IDs to update in
+   * SetInventoryRequest.inventory.fulfillment_info The caller can clear all place IDs from a subset
+   * of fulfillment types in the following ways: * Adds "fulfillment_info" in
+   * SetInventoryRequest.set_mask * Specifies only the desired fulfillment types to clear in
+   * SetInventoryRequest.inventory.fulfillment_info * Checks that only the desired fulfillment info
+   * types have empty SetInventoryRequest.inventory.fulfillment_info.place_ids The last update time
+   * is recorded for the following inventory fields: * Product.price_info * Product.availability *
+   * Product.available_quantity * Product.fulfillment_info If a full overwrite of inventory
+   * information while ignoring timestamps is needed, UpdateProduct should be invoked instead.
    * @param inventory inventory or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSetInventoryRequest setInventory(GoogleCloudRetailV2alphaProduct inventory) {

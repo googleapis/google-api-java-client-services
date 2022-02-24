@@ -31,11 +31,20 @@ public final class GoogleCloudRetailV2betaSetDefaultBranchRequest extends com.go
 
   /**
    * The final component of the resource name of a branch. This field must be one of "0", "1" or
-   * "2". Otherwise, an INVALID_ARGUMENT error is returned.
+   * "2". Otherwise, an INVALID_ARGUMENT error is returned. If there are no sufficient active
+   * products in the targeted branch and force is not set, a FAILED_PRECONDITION error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String branchId;
+
+  /**
+   * If set to true, it permits switching to a branch with branch_id even if it has no sufficient
+   * active products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean force;
 
   /**
    * Some note on this request, this can be retrieved by CatalogService.GetDefaultBranch before next
@@ -48,7 +57,8 @@ public final class GoogleCloudRetailV2betaSetDefaultBranchRequest extends com.go
 
   /**
    * The final component of the resource name of a branch. This field must be one of "0", "1" or
-   * "2". Otherwise, an INVALID_ARGUMENT error is returned.
+   * "2". Otherwise, an INVALID_ARGUMENT error is returned. If there are no sufficient active
+   * products in the targeted branch and force is not set, a FAILED_PRECONDITION error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getBranchId() {
@@ -57,11 +67,31 @@ public final class GoogleCloudRetailV2betaSetDefaultBranchRequest extends com.go
 
   /**
    * The final component of the resource name of a branch. This field must be one of "0", "1" or
-   * "2". Otherwise, an INVALID_ARGUMENT error is returned.
+   * "2". Otherwise, an INVALID_ARGUMENT error is returned. If there are no sufficient active
+   * products in the targeted branch and force is not set, a FAILED_PRECONDITION error is returned.
    * @param branchId branchId or {@code null} for none
    */
   public GoogleCloudRetailV2betaSetDefaultBranchRequest setBranchId(java.lang.String branchId) {
     this.branchId = branchId;
+    return this;
+  }
+
+  /**
+   * If set to true, it permits switching to a branch with branch_id even if it has no sufficient
+   * active products.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForce() {
+    return force;
+  }
+
+  /**
+   * If set to true, it permits switching to a branch with branch_id even if it has no sufficient
+   * active products.
+   * @param force force or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSetDefaultBranchRequest setForce(java.lang.Boolean force) {
+    this.force = force;
     return this;
   }
 

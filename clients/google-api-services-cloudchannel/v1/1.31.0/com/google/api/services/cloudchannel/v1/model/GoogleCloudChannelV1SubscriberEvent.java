@@ -17,7 +17,7 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * Represents information which resellers will get as part of notification from Cloud Pub/Sub.
+ * Represents information which resellers will get as part of notification from Pub/Sub.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1SubscriberEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Customer event send as part of Pub/Sub event to partners.
+   * Customer event sent as part of Pub/Sub event to partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudChannelV1CustomerEvent customerEvent;
 
   /**
-   * Entitlement event send as part of Pub/Sub event to partners.
+   * Entitlement event sent as part of Pub/Sub event to partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudChannelV1EntitlementEvent entitlementEvent;
 
   /**
-   * Customer event send as part of Pub/Sub event to partners.
+   * Customer event sent as part of Pub/Sub event to partners.
    * @return value or {@code null} for none
    */
   public GoogleCloudChannelV1CustomerEvent getCustomerEvent() {
@@ -52,7 +52,7 @@ public final class GoogleCloudChannelV1SubscriberEvent extends com.google.api.cl
   }
 
   /**
-   * Customer event send as part of Pub/Sub event to partners.
+   * Customer event sent as part of Pub/Sub event to partners.
    * @param customerEvent customerEvent or {@code null} for none
    */
   public GoogleCloudChannelV1SubscriberEvent setCustomerEvent(GoogleCloudChannelV1CustomerEvent customerEvent) {
@@ -61,7 +61,7 @@ public final class GoogleCloudChannelV1SubscriberEvent extends com.google.api.cl
   }
 
   /**
-   * Entitlement event send as part of Pub/Sub event to partners.
+   * Entitlement event sent as part of Pub/Sub event to partners.
    * @return value or {@code null} for none
    */
   public GoogleCloudChannelV1EntitlementEvent getEntitlementEvent() {
@@ -69,7 +69,7 @@ public final class GoogleCloudChannelV1SubscriberEvent extends com.google.api.cl
   }
 
   /**
-   * Entitlement event send as part of Pub/Sub event to partners.
+   * Entitlement event sent as part of Pub/Sub event to partners.
    * @param entitlementEvent entitlementEvent or {@code null} for none
    */
   public GoogleCloudChannelV1SubscriberEvent setEntitlementEvent(GoogleCloudChannelV1EntitlementEvent entitlementEvent) {

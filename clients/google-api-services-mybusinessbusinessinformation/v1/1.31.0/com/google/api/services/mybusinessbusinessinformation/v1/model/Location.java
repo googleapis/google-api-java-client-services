@@ -108,8 +108,9 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private PhoneNumbers phoneNumbers;
 
   /**
-   * Required. Describes your business in your own voice and shares with users the unique story of
-   * your business and offerings.
+   * Optional. Describes your business in your own voice and shares with users the unique story of
+   * your business and offerings. This field is required for all categories except lodging
+   * categories (e.g. hotels, motels, inns).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +124,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private BusinessHours regularHours;
 
   /**
-   * Output only. All locations and chain related to this one.
+   * Optional. All locations and chain related to this one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,8 +376,9 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Describes your business in your own voice and shares with users the unique story of
-   * your business and offerings.
+   * Optional. Describes your business in your own voice and shares with users the unique story of
+   * your business and offerings. This field is required for all categories except lodging
+   * categories (e.g. hotels, motels, inns).
    * @return value or {@code null} for none
    */
   public Profile getProfile() {
@@ -384,8 +386,9 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Describes your business in your own voice and shares with users the unique story of
-   * your business and offerings.
+   * Optional. Describes your business in your own voice and shares with users the unique story of
+   * your business and offerings. This field is required for all categories except lodging
+   * categories (e.g. hotels, motels, inns).
    * @param profile profile or {@code null} for none
    */
   public Location setProfile(Profile profile) {
@@ -411,7 +414,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. All locations and chain related to this one.
+   * Optional. All locations and chain related to this one.
    * @return value or {@code null} for none
    */
   public RelationshipData getRelationshipData() {
@@ -419,7 +422,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. All locations and chain related to this one.
+   * Optional. All locations and chain related to this one.
    * @param relationshipData relationshipData or {@code null} for none
    */
   public Location setRelationshipData(RelationshipData relationshipData) {

@@ -37,6 +37,13 @@ public final class MemInfo extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger currentLimitBytes;
 
   /**
+   * Number of Out of Memory (OOM) events recorded since the previous measurement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long currentOoms;
+
+  /**
    * Instantenous memory (RSS) size in bytes.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class MemInfo extends com.google.api.client.json.GenericJson {
    */
   public MemInfo setCurrentLimitBytes(java.math.BigInteger currentLimitBytes) {
     this.currentLimitBytes = currentLimitBytes;
+    return this;
+  }
+
+  /**
+   * Number of Out of Memory (OOM) events recorded since the previous measurement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCurrentOoms() {
+    return currentOoms;
+  }
+
+  /**
+   * Number of Out of Memory (OOM) events recorded since the previous measurement.
+   * @param currentOoms currentOoms or {@code null} for none
+   */
+  public MemInfo setCurrentOoms(java.lang.Long currentOoms) {
+    this.currentOoms = currentOoms;
     return this;
   }
 

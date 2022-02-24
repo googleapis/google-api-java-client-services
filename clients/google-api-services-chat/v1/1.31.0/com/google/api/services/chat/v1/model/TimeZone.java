@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * The timezone id and offset. The id is the tz database time zones such as "America/Toronto". The
- * user timezone offset, in milliseconds, from Coordinated Universal Time (UTC).
+ * The timezone ID and offset from Coordinated Universal Time (UTC). Not supported by Chat apps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,18 +30,23 @@ package com.google.api.services.chat.v1.model;
 public final class TimeZone extends com.google.api.client.json.GenericJson {
 
   /**
+   * The [IANA TZ](https://www.iana.org/time-zones) time zone database code, such as
+   * "America/Toronto".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
+   * The user timezone offset, in milliseconds, from Coordinated Universal Time (UTC).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer offset;
 
   /**
+   * The [IANA TZ](https://www.iana.org/time-zones) time zone database code, such as
+   * "America/Toronto".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -50,6 +54,8 @@ public final class TimeZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The [IANA TZ](https://www.iana.org/time-zones) time zone database code, such as
+   * "America/Toronto".
    * @param id id or {@code null} for none
    */
   public TimeZone setId(java.lang.String id) {
@@ -58,6 +64,7 @@ public final class TimeZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The user timezone offset, in milliseconds, from Coordinated Universal Time (UTC).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getOffset() {
@@ -65,6 +72,7 @@ public final class TimeZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The user timezone offset, in milliseconds, from Coordinated Universal Time (UTC).
    * @param offset offset or {@code null} for none
    */
   public TimeZone setOffset(java.lang.Integer offset) {

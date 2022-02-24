@@ -45,7 +45,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   private Color color;
 
   /**
-   * If true, the button is displayed in a disabled state and doesn't respond to user actions.
+   * If `true`, the button is displayed in a disabled state and doesn't respond to user actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * If true, the button is displayed in a disabled state and doesn't respond to user actions.
+   * If `true`, the button is displayed in a disabled state and doesn't respond to user actions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -117,7 +117,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   }
 
   /**
-   * If true, the button is displayed in a disabled state and doesn't respond to user actions.
+   * If `true`, the button is displayed in a disabled state and doesn't respond to user actions.
    * @param disabled disabled or {@code null} for none
    */
   public GoogleAppsCardV1Button setDisabled(java.lang.Boolean disabled) {

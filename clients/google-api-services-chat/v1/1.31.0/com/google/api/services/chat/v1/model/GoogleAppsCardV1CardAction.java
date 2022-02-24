@@ -38,7 +38,7 @@ public final class GoogleAppsCardV1CardAction extends com.google.api.client.json
   private java.lang.String actionLabel;
 
   /**
-   * The onclick action for this action item.
+   * The `onClick` action for this action item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleAppsCardV1CardAction extends com.google.api.client.json
   }
 
   /**
-   * The onclick action for this action item.
+   * The `onClick` action for this action item.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -70,7 +70,7 @@ public final class GoogleAppsCardV1CardAction extends com.google.api.client.json
   }
 
   /**
-   * The onclick action for this action item.
+   * The `onClick` action for this action item.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1CardAction setOnClick(GoogleAppsCardV1OnClick onClick) {

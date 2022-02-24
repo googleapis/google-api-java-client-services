@@ -53,7 +53,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   private java.lang.String imageType;
 
   /**
-   * The icon specified by the string name of a list of known icons
+   * The icon specified by the string name of a list of known icons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon specified by the string name of a list of known icons
+   * The icon specified by the string name of a list of known icons.
    * @return value or {@code null} for none
    */
   public java.lang.String getKnownIcon() {
@@ -123,7 +123,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon specified by the string name of a list of known icons
+   * The icon specified by the string name of a list of known icons.
    * @param knownIcon knownIcon or {@code null} for none
    */
   public GoogleAppsCardV1Icon setKnownIcon(java.lang.String knownIcon) {

@@ -30,7 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class ActionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * This response is for Dialog related events and must be accompanied by ResponseType.Dialog
+   * A response to an event related to a [dialog](https://developers.google.com/chat/how-tos/bot-
+   * dialogs). Must be accompanied by `ResponseType.Dialog`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   private java.lang.String url;
 
   /**
-   * This response is for Dialog related events and must be accompanied by ResponseType.Dialog
+   * A response to an event related to a [dialog](https://developers.google.com/chat/how-tos/bot-
+   * dialogs). Must be accompanied by `ResponseType.Dialog`.
    * @return value or {@code null} for none
    */
   public DialogAction getDialogAction() {
@@ -59,7 +61,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This response is for Dialog related events and must be accompanied by ResponseType.Dialog
+   * A response to an event related to a [dialog](https://developers.google.com/chat/how-tos/bot-
+   * dialogs). Must be accompanied by `ResponseType.Dialog`.
    * @param dialogAction dialogAction or {@code null} for none
    */
   public ActionResponse setDialogAction(DialogAction dialogAction) {

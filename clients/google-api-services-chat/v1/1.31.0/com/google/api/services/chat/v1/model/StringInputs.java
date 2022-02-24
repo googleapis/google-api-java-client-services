@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Input parameter for regular widgets. For single-valued widgets, it will be a single value list;
- * for multi-valued widgets, such as checkbox, all the values are presented.
+ * Input parameter for regular widgets. For single-valued widgets, it is a single value list. For
+ * multi-valued widgets, such as checkbox, all the values are presented.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,12 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class StringInputs extends com.google.api.client.json.GenericJson {
 
   /**
+   * An array of strings entered by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> value;
 
   /**
+   * An array of strings entered by the user.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValue() {
@@ -44,6 +46,7 @@ public final class StringInputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * An array of strings entered by the user.
    * @param value value or {@code null} for none
    */
   public StringInputs setValue(java.util.List<java.lang.String> value) {

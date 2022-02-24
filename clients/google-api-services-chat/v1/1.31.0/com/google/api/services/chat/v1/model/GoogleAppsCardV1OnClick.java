@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Model definition for GoogleAppsCardV1OnClick.
+ * Represents the response to an `onClick` event.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.GenericJson {
 
   /**
-   * If specified, an action is triggered by this onClick.
+   * If specified, an action is triggered by this `onClick`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
 
   /**
    * An add-on triggers this action when the action needs to open a link. This differs from the
-   * open_link above in that this needs to talk to server to get the link. Thus some preparation
+   * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
    * work is required for web client to do before the open link action response comes back.
    * The value may be {@code null}.
    */
@@ -53,14 +53,14 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   private GoogleAppsCardV1Action openDynamicLinkAction;
 
   /**
-   * If specified, this onClick triggers an open link action.
+   * If specified, this `onClick` triggers an open link action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1OpenLink openLink;
 
   /**
-   * If specified, an action is triggered by this onClick.
+   * If specified, an action is triggered by this `onClick`.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getAction() {
@@ -68,7 +68,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   }
 
   /**
-   * If specified, an action is triggered by this onClick.
+   * If specified, an action is triggered by this `onClick`.
    * @param action action or {@code null} for none
    */
   public GoogleAppsCardV1OnClick setAction(GoogleAppsCardV1Action action) {
@@ -95,7 +95,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
 
   /**
    * An add-on triggers this action when the action needs to open a link. This differs from the
-   * open_link above in that this needs to talk to server to get the link. Thus some preparation
+   * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
    * work is required for web client to do before the open link action response comes back.
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
 
   /**
    * An add-on triggers this action when the action needs to open a link. This differs from the
-   * open_link above in that this needs to talk to server to get the link. Thus some preparation
+   * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
    * work is required for web client to do before the open link action response comes back.
    * @param openDynamicLinkAction openDynamicLinkAction or {@code null} for none
    */
@@ -115,7 +115,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   }
 
   /**
-   * If specified, this onClick triggers an open link action.
+   * If specified, this `onClick` triggers an open link action.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OpenLink getOpenLink() {
@@ -123,7 +123,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   }
 
   /**
-   * If specified, this onClick triggers an open link action.
+   * If specified, this `onClick` triggers an open link action.
    * @param openLink openLink or {@code null} for none
    */
   public GoogleAppsCardV1OnClick setOpenLink(GoogleAppsCardV1OpenLink openLink) {

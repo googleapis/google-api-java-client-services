@@ -17,9 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * ActionStatus represents status of a request from the bot developer's side. In specific, for each
- * request a bot gets, the bot developer will set both fields below in relation to what the response
- * status and message related to status should be.
+ * Represents the status of a request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -39,9 +37,8 @@ public final class ActionStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String statusCode;
 
   /**
-   * This message will be the corresponding string to the above status_code. If unset, an
-   * appropriate generic message based on the status_code will be shown to the user. If this field
-   * is set then the message will be surfaced to the user for both successes and errors.
+   * The message to send users about the status of their request. If unset, a generic message based
+   * on the `status_code` is sent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +62,8 @@ public final class ActionStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This message will be the corresponding string to the above status_code. If unset, an
-   * appropriate generic message based on the status_code will be shown to the user. If this field
-   * is set then the message will be surfaced to the user for both successes and errors.
+   * The message to send users about the status of their request. If unset, a generic message based
+   * on the `status_code` is sent.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserFacingMessage() {
@@ -75,9 +71,8 @@ public final class ActionStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This message will be the corresponding string to the above status_code. If unset, an
-   * appropriate generic message based on the status_code will be shown to the user. If this field
-   * is set then the message will be surfaced to the user for both successes and errors.
+   * The message to send users about the status of their request. If unset, a generic message based
+   * on the `status_code` is sent.
    * @param userFacingMessage userFacingMessage or {@code null} for none
    */
   public ActionStatus setUserFacingMessage(java.lang.String userFacingMessage) {

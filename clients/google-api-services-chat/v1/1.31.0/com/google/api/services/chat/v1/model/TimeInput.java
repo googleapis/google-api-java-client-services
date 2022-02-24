@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Input Parameter for Time Picker widget.
+ * Time input values. Not supported by Chat apps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,18 +30,21 @@ package com.google.api.services.chat.v1.model;
 public final class TimeInput extends com.google.api.client.json.GenericJson {
 
   /**
+   * The hour on a 24-hour clock.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer hours;
 
   /**
+   * The number of minutes past the hour. Valid values are 0 to 59.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minutes;
 
   /**
+   * The hour on a 24-hour clock.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHours() {
@@ -49,6 +52,7 @@ public final class TimeInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The hour on a 24-hour clock.
    * @param hours hours or {@code null} for none
    */
   public TimeInput setHours(java.lang.Integer hours) {
@@ -57,6 +61,7 @@ public final class TimeInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The number of minutes past the hour. Valid values are 0 to 59.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinutes() {
@@ -64,6 +69,7 @@ public final class TimeInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The number of minutes past the hour. Valid values are 0 to 59.
    * @param minutes minutes or {@code null} for none
    */
   public TimeInput setMinutes(java.lang.Integer minutes) {

@@ -48,9 +48,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * The number of uncollapsible widgets. For example, when a section contains five widgets and the
-   * `numUncollapsibleWidget` is set to `2`, the first two widgets are always shown and the last
-   * three are collapsed as default. The `numUncollapsibleWidget` is taken into account only when
-   * collapsible is set to `true`.
+   * `uncollapsibleWidgetsCount` is set to `2`, the first two widgets are always shown and the last
+   * three are collapsed as default. The `uncollapsibleWidgetsCount` is taken into account only when
+   * `collapsible` is `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +101,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * The number of uncollapsible widgets. For example, when a section contains five widgets and the
-   * `numUncollapsibleWidget` is set to `2`, the first two widgets are always shown and the last
-   * three are collapsed as default. The `numUncollapsibleWidget` is taken into account only when
-   * collapsible is set to `true`.
+   * `uncollapsibleWidgetsCount` is set to `2`, the first two widgets are always shown and the last
+   * three are collapsed as default. The `uncollapsibleWidgetsCount` is taken into account only when
+   * `collapsible` is `true`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUncollapsibleWidgetsCount() {
@@ -112,9 +112,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * The number of uncollapsible widgets. For example, when a section contains five widgets and the
-   * `numUncollapsibleWidget` is set to `2`, the first two widgets are always shown and the last
-   * three are collapsed as default. The `numUncollapsibleWidget` is taken into account only when
-   * collapsible is set to `true`.
+   * `uncollapsibleWidgetsCount` is set to `2`, the first two widgets are always shown and the last
+   * three are collapsed as default. The `uncollapsibleWidgetsCount` is taken into account only when
+   * `collapsible` is `true`.
    * @param uncollapsibleWidgetsCount uncollapsibleWidgetsCount or {@code null} for none
    */
   public GoogleAppsCardV1Section setUncollapsibleWidgetsCount(java.lang.Integer uncollapsibleWidgetsCount) {

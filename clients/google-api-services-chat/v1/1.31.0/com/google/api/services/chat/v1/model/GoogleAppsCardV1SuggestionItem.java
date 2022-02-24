@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A suggestion item. Only supports text for now.
+ * A suggestion item.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,12 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SuggestionItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * The suggested autocomplete result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
+   * The suggested autocomplete result.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -43,6 +45,7 @@ public final class GoogleAppsCardV1SuggestionItem extends com.google.api.client.
   }
 
   /**
+   * The suggested autocomplete result.
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1SuggestionItem setText(java.lang.String text) {

@@ -74,7 +74,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String parentName;
 
   /**
-   * The human readable name of project that the resource belongs to.
+   * The project id that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +184,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of project that the resource belongs to.
+   * The project id that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectDisplayName() {
@@ -192,7 +192,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of project that the resource belongs to.
+   * The project id that the resource belongs to.
    * @param projectDisplayName projectDisplayName or {@code null} for none
    */
   public Resource setProjectDisplayName(java.lang.String projectDisplayName) {

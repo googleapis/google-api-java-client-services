@@ -30,6 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1ButtonList extends com.google.api.client.json.GenericJson {
 
   /**
+   * An array of buttons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,6 +43,7 @@ public final class GoogleAppsCardV1ButtonList extends com.google.api.client.json
   }
 
   /**
+   * An array of buttons.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1Button> getButtons() {
@@ -49,6 +51,7 @@ public final class GoogleAppsCardV1ButtonList extends com.google.api.client.json
   }
 
   /**
+   * An array of buttons.
    * @param buttons buttons or {@code null} for none
    */
   public GoogleAppsCardV1ButtonList setButtons(java.util.List<GoogleAppsCardV1Button> buttons) {

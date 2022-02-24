@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Input Parameter for Date and Time Picker widget.
+ * Date and time input values. Not supported by Chat apps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,24 +30,28 @@ package com.google.api.services.chat.v1.model;
 public final class DateTimeInput extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the `datetime` input includes a calendar date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasDate;
 
   /**
+   * Whether the `datetime` input includes a timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasTime;
 
   /**
+   * Time since epoch time, in milliseconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long msSinceEpoch;
 
   /**
+   * Whether the `datetime` input includes a calendar date.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasDate() {
@@ -55,6 +59,7 @@ public final class DateTimeInput extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Whether the `datetime` input includes a calendar date.
    * @param hasDate hasDate or {@code null} for none
    */
   public DateTimeInput setHasDate(java.lang.Boolean hasDate) {
@@ -63,6 +68,7 @@ public final class DateTimeInput extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Whether the `datetime` input includes a timestamp.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasTime() {
@@ -70,6 +76,7 @@ public final class DateTimeInput extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Whether the `datetime` input includes a timestamp.
    * @param hasTime hasTime or {@code null} for none
    */
   public DateTimeInput setHasTime(java.lang.Boolean hasTime) {
@@ -78,6 +85,7 @@ public final class DateTimeInput extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Time since epoch time, in milliseconds.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMsSinceEpoch() {
@@ -85,6 +93,7 @@ public final class DateTimeInput extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Time since epoch time, in milliseconds.
    * @param msSinceEpoch msSinceEpoch or {@code null} for none
    */
   public DateTimeInput setMsSinceEpoch(java.lang.Long msSinceEpoch) {

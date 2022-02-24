@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * The widget that lets users to specify a date and time.
+ * The widget that lets users to specify a date and time. Not supported by Google Chat apps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   private java.lang.String label;
 
   /**
-   * The name of the text input that's used in formInput, and uniquely identifies this input.
+   * The name of the text input that's used in `formInput`, and uniquely identifies this input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The name of the text input that's used in formInput, and uniquely identifies this input.
+   * The name of the text input that's used in `formInput`, and uniquely identifies this input.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -104,7 +104,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The name of the text input that's used in formInput, and uniquely identifies this input.
+   * The name of the text input that's used in `formInput`, and uniquely identifies this input.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setName(java.lang.String name) {

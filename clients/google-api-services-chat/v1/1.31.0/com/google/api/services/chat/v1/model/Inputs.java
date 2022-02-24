@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * The inputs with widgets.
+ * Types of data inputs for widgets. Users enter data with these inputs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,30 +30,36 @@ package com.google.api.services.chat.v1.model;
 public final class Inputs extends com.google.api.client.json.GenericJson {
 
   /**
+   * Date input values. Not supported by Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateInput dateInput;
 
   /**
+   * Date and time input values. Not supported by Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateTimeInput dateTimeInput;
 
   /**
+   * Input parameter for regular widgets. For single-valued widgets, it is a single value list. For
+   * multi-valued widgets, such as checkbox, all the values are presented.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StringInputs stringInputs;
 
   /**
+   * Time input values. Not supported by Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeInput timeInput;
 
   /**
+   * Date input values. Not supported by Chat apps.
    * @return value or {@code null} for none
    */
   public DateInput getDateInput() {
@@ -61,6 +67,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Date input values. Not supported by Chat apps.
    * @param dateInput dateInput or {@code null} for none
    */
   public Inputs setDateInput(DateInput dateInput) {
@@ -69,6 +76,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Date and time input values. Not supported by Chat apps.
    * @return value or {@code null} for none
    */
   public DateTimeInput getDateTimeInput() {
@@ -76,6 +84,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Date and time input values. Not supported by Chat apps.
    * @param dateTimeInput dateTimeInput or {@code null} for none
    */
   public Inputs setDateTimeInput(DateTimeInput dateTimeInput) {
@@ -84,6 +93,8 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Input parameter for regular widgets. For single-valued widgets, it is a single value list. For
+   * multi-valued widgets, such as checkbox, all the values are presented.
    * @return value or {@code null} for none
    */
   public StringInputs getStringInputs() {
@@ -91,6 +102,8 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Input parameter for regular widgets. For single-valued widgets, it is a single value list. For
+   * multi-valued widgets, such as checkbox, all the values are presented.
    * @param stringInputs stringInputs or {@code null} for none
    */
   public Inputs setStringInputs(StringInputs stringInputs) {
@@ -99,6 +112,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Time input values. Not supported by Chat apps.
    * @return value or {@code null} for none
    */
   public TimeInput getTimeInput() {
@@ -106,6 +120,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Time input values. Not supported by Chat apps.
    * @param timeInput timeInput or {@code null} for none
    */
   public Inputs setTimeInput(TimeInput timeInput) {

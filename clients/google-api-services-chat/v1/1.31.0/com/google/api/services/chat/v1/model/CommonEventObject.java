@@ -17,7 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Next available ID = 8
+ * Represents information about the user's client, such as locale, host app, and platform. For Chat
+ * apps, `CommonEventObject` includes data submitted by users interacting with cards, like data
+ * entered in [dialogs](https://developers.google.com/chat/how-tos/bot-dialogs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,43 +32,51 @@ package com.google.api.services.chat.v1.model;
 public final class CommonEventObject extends com.google.api.client.json.GenericJson {
 
   /**
-   * The keys are the string IDs associated with the widget and the values are inputs with a widget
-   * in the card.
+   * A map containing the current values of the widgets in a card. The map keys are the string IDs
+   * assigned to each widget, and the values represent inputs to the widget. Depending on the input
+   * data type, a different object represents each input: For single-value widgets, `StringInput`.
+   * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
+   * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
+   * Corresponds with the data entered by a user on a card in a
+   * [dialog](https://developers.google.com/chat/how-tos/bot-dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Inputs> formInputs;
 
   /**
-   * The hostApp enum which indicates the app the add-on is invoked from
+   * The hostApp enum which indicates the app the add-on is invoked from. Always `CHAT` for Chat
+   * apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hostApp;
 
   /**
-   * Name of the invoked function associated with the widget. This field is currently only set for
-   * chat.
+   * Name of the invoked function associated with the widget. Only set for Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String invokedFunction;
 
   /**
-   * Any additional parameters.
+   * Custom [parameters](/chat/api/reference/rest/v1/cards#ActionParameter) passed to the invoked
+   * function. Both keys and values must be strings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> parameters;
 
   /**
-   * The platform enum which indicates the platform where the add-on is running.
+   * The platform enum which indicates the platform where the event originates (`WEB`, `IOS`, or
+   * `ANDROID`). Not supported by Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platform;
 
   /**
+   * The timezone ID and offset from Coordinated Universal Time (UTC).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,15 +84,20 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * The full locale.displayName in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US"
+   * code] such as "en-US". Not supported by Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userLocale;
 
   /**
-   * The keys are the string IDs associated with the widget and the values are inputs with a widget
-   * in the card.
+   * A map containing the current values of the widgets in a card. The map keys are the string IDs
+   * assigned to each widget, and the values represent inputs to the widget. Depending on the input
+   * data type, a different object represents each input: For single-value widgets, `StringInput`.
+   * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
+   * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
+   * Corresponds with the data entered by a user on a card in a
+   * [dialog](https://developers.google.com/chat/how-tos/bot-dialogs).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Inputs> getFormInputs() {
@@ -90,8 +105,13 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The keys are the string IDs associated with the widget and the values are inputs with a widget
-   * in the card.
+   * A map containing the current values of the widgets in a card. The map keys are the string IDs
+   * assigned to each widget, and the values represent inputs to the widget. Depending on the input
+   * data type, a different object represents each input: For single-value widgets, `StringInput`.
+   * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
+   * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
+   * Corresponds with the data entered by a user on a card in a
+   * [dialog](https://developers.google.com/chat/how-tos/bot-dialogs).
    * @param formInputs formInputs or {@code null} for none
    */
   public CommonEventObject setFormInputs(java.util.Map<String, Inputs> formInputs) {
@@ -100,7 +120,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The hostApp enum which indicates the app the add-on is invoked from
+   * The hostApp enum which indicates the app the add-on is invoked from. Always `CHAT` for Chat
+   * apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostApp() {
@@ -108,7 +129,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The hostApp enum which indicates the app the add-on is invoked from
+   * The hostApp enum which indicates the app the add-on is invoked from. Always `CHAT` for Chat
+   * apps.
    * @param hostApp hostApp or {@code null} for none
    */
   public CommonEventObject setHostApp(java.lang.String hostApp) {
@@ -117,8 +139,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the invoked function associated with the widget. This field is currently only set for
-   * chat.
+   * Name of the invoked function associated with the widget. Only set for Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvokedFunction() {
@@ -126,8 +147,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the invoked function associated with the widget. This field is currently only set for
-   * chat.
+   * Name of the invoked function associated with the widget. Only set for Chat apps.
    * @param invokedFunction invokedFunction or {@code null} for none
    */
   public CommonEventObject setInvokedFunction(java.lang.String invokedFunction) {
@@ -136,7 +156,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Any additional parameters.
+   * Custom [parameters](/chat/api/reference/rest/v1/cards#ActionParameter) passed to the invoked
+   * function. Both keys and values must be strings.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParameters() {
@@ -144,7 +165,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Any additional parameters.
+   * Custom [parameters](/chat/api/reference/rest/v1/cards#ActionParameter) passed to the invoked
+   * function. Both keys and values must be strings.
    * @param parameters parameters or {@code null} for none
    */
   public CommonEventObject setParameters(java.util.Map<String, java.lang.String> parameters) {
@@ -153,7 +175,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The platform enum which indicates the platform where the add-on is running.
+   * The platform enum which indicates the platform where the event originates (`WEB`, `IOS`, or
+   * `ANDROID`). Not supported by Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -161,7 +184,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The platform enum which indicates the platform where the add-on is running.
+   * The platform enum which indicates the platform where the event originates (`WEB`, `IOS`, or
+   * `ANDROID`). Not supported by Chat apps.
    * @param platform platform or {@code null} for none
    */
   public CommonEventObject setPlatform(java.lang.String platform) {
@@ -170,6 +194,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The timezone ID and offset from Coordinated Universal Time (UTC).
    * @return value or {@code null} for none
    */
   public TimeZone getTimeZone() {
@@ -177,6 +202,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The timezone ID and offset from Coordinated Universal Time (UTC).
    * @param timeZone timeZone or {@code null} for none
    */
   public CommonEventObject setTimeZone(TimeZone timeZone) {
@@ -186,7 +212,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * The full locale.displayName in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US"
+   * code] such as "en-US". Not supported by Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserLocale() {
@@ -195,7 +221,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * The full locale.displayName in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US"
+   * code] such as "en-US". Not supported by Chat apps.
    * @param userLocale userLocale or {@code null} for none
    */
   public CommonEventObject setUserLocale(java.lang.String userLocale) {

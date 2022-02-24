@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Model definition for GoogleAppsCardV1SwitchControl.
+ * Either a toggle-style switch or a checkbox.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   private java.lang.String controlType;
 
   /**
-   * The name of the switch widget that's used in formInput.
+   * The name of the switch widget that's used in `formInput`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The name of the switch widget that's used in formInput.
+   * The name of the switch widget that's used in `formInput`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -90,7 +90,7 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The name of the switch widget that's used in formInput.
+   * The name of the switch widget that's used in `formInput`.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setName(java.lang.String name) {

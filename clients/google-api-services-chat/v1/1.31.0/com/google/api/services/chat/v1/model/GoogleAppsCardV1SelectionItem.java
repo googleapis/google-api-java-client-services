@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * The item in the switch control. A radio button, at most one of the items is selected.
+ * A selectable item in the switch control.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

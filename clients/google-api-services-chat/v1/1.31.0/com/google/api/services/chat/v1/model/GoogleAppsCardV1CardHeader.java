@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Model definition for GoogleAppsCardV1CardHeader.
+ * Represents a card header.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -58,9 +58,9 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   private java.lang.String subtitle;
 
   /**
-   * The title of the card header. The title must be specified. The header has a fixed height: if
-   * both a title and subtitle are specified, each takes up one line. If only the title is
-   * specified, it takes up both lines.
+   * Required. The title of the card header. The header has a fixed height: if both a title and
+   * subtitle are specified, each takes up one line. If only the title is specified, it takes up
+   * both lines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,9 +135,9 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The title of the card header. The title must be specified. The header has a fixed height: if
-   * both a title and subtitle are specified, each takes up one line. If only the title is
-   * specified, it takes up both lines.
+   * Required. The title of the card header. The header has a fixed height: if both a title and
+   * subtitle are specified, each takes up one line. If only the title is specified, it takes up
+   * both lines.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -145,9 +145,9 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The title of the card header. The title must be specified. The header has a fixed height: if
-   * both a title and subtitle are specified, each takes up one line. If only the title is
-   * specified, it takes up both lines.
+   * Required. The title of the card header. The header has a fixed height: if both a title and
+   * subtitle are specified, each takes up one line. If only the title is specified, it takes up
+   * both lines.
    * @param title title or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader setTitle(java.lang.String title) {

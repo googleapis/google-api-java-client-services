@@ -42,8 +42,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
    * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or
    * `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For
-   * number attributes, at most 400 values are allowed.
+   * allowed. Each value must be a non-empty UTF-8 encoded string with a length limit of 256
+   * characters. * For number attributes, at most 400 values are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,8 +429,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
    * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or
    * `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For
-   * number attributes, at most 400 values are allowed.
+   * allowed. Each value must be a non-empty UTF-8 encoded string with a length limit of 256
+   * characters. * For number attributes, at most 400 values are allowed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> getAttributes() {
@@ -450,8 +450,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
    * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or
    * `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For
-   * number attributes, at most 400 values are allowed.
+   * allowed. Each value must be a non-empty UTF-8 encoded string with a length limit of 256
+   * characters. * For number attributes, at most 400 values are allowed.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2betaProduct setAttributes(java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> attributes) {

@@ -30,18 +30,18 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2betaImportErrorsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Cloud Storage path for import errors. This must be an empty, existing Cloud Storage
-   * bucket. Import errors will be written to a file in this bucket, one per line, as a JSON-encoded
-   * `google.rpc.Status` message.
+   * Google Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
+   * directory. Import errors will be written to sharded files in this directory, one per line, as a
+   * JSON-encoded `google.rpc.Status` message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsPrefix;
 
   /**
-   * Google Cloud Storage path for import errors. This must be an empty, existing Cloud Storage
-   * bucket. Import errors will be written to a file in this bucket, one per line, as a JSON-encoded
-   * `google.rpc.Status` message.
+   * Google Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
+   * directory. Import errors will be written to sharded files in this directory, one per line, as a
+   * JSON-encoded `google.rpc.Status` message.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsPrefix() {
@@ -49,9 +49,9 @@ public final class GoogleCloudRetailV2betaImportErrorsConfig extends com.google.
   }
 
   /**
-   * Google Cloud Storage path for import errors. This must be an empty, existing Cloud Storage
-   * bucket. Import errors will be written to a file in this bucket, one per line, as a JSON-encoded
-   * `google.rpc.Status` message.
+   * Google Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
+   * directory. Import errors will be written to sharded files in this directory, one per line, as a
+   * JSON-encoded `google.rpc.Status` message.
    * @param gcsPrefix gcsPrefix or {@code null} for none
    */
   public GoogleCloudRetailV2betaImportErrorsConfig setGcsPrefix(java.lang.String gcsPrefix) {

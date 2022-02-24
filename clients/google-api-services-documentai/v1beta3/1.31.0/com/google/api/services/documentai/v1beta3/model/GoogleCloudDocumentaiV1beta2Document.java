@@ -49,7 +49,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentEntity> entities;
 
   /**
-   * Relationship among Document.entities.
+   * Placeholder. Relationship among Document.entities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentPage> pages;
 
   /**
-   * Revision history of this document.
+   * Placeholder. Revision history of this document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,15 +107,16 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   private java.lang.String text;
 
   /**
-   * A list of text corrections made to [Document.text]. This is usually used for annotating
-   * corrections to OCR mistakes. Text changes for a given revision may not overlap with each other.
+   * Placeholder. A list of text corrections made to [Document.text]. This is usually used for
+   * annotating corrections to OCR mistakes. Text changes for a given revision may not overlap with
+   * each other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentTextChange> textChanges;
 
   /**
-   * Styles for the Document.text.
+   * Placeholder. Styles for the Document.text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +200,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * Relationship among Document.entities.
+   * Placeholder. Relationship among Document.entities.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1beta2DocumentEntityRelation> getEntityRelations() {
@@ -207,7 +208,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * Relationship among Document.entities.
+   * Placeholder. Relationship among Document.entities.
    * @param entityRelations entityRelations or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2Document setEntityRelations(java.util.List<GoogleCloudDocumentaiV1beta2DocumentEntityRelation> entityRelations) {
@@ -286,7 +287,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * Revision history of this document.
+   * Placeholder. Revision history of this document.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1beta2DocumentRevision> getRevisions() {
@@ -294,7 +295,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * Revision history of this document.
+   * Placeholder. Revision history of this document.
    * @param revisions revisions or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2Document setRevisions(java.util.List<GoogleCloudDocumentaiV1beta2DocumentRevision> revisions) {
@@ -339,8 +340,9 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * A list of text corrections made to [Document.text]. This is usually used for annotating
-   * corrections to OCR mistakes. Text changes for a given revision may not overlap with each other.
+   * Placeholder. A list of text corrections made to [Document.text]. This is usually used for
+   * annotating corrections to OCR mistakes. Text changes for a given revision may not overlap with
+   * each other.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1beta2DocumentTextChange> getTextChanges() {
@@ -348,8 +350,9 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * A list of text corrections made to [Document.text]. This is usually used for annotating
-   * corrections to OCR mistakes. Text changes for a given revision may not overlap with each other.
+   * Placeholder. A list of text corrections made to [Document.text]. This is usually used for
+   * annotating corrections to OCR mistakes. Text changes for a given revision may not overlap with
+   * each other.
    * @param textChanges textChanges or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2Document setTextChanges(java.util.List<GoogleCloudDocumentaiV1beta2DocumentTextChange> textChanges) {
@@ -358,7 +361,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * Styles for the Document.text.
+   * Placeholder. Styles for the Document.text.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1beta2DocumentStyle> getTextStyles() {
@@ -366,7 +369,7 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * Styles for the Document.text.
+   * Placeholder. Styles for the Document.text.
    * @param textStyles textStyles or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2Document setTextStyles(java.util.List<GoogleCloudDocumentaiV1beta2DocumentStyle> textStyles) {

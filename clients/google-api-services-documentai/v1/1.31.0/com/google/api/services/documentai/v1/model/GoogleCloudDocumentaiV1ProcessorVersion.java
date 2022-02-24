@@ -48,6 +48,20 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.String displayName;
 
   /**
+   * The KMS key name used for encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
+   * The KMS key version with which data is encrypted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyVersionName;
+
+  /**
    * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
    * ocessors/{processor}/processorVersions/{processor_version}`
    * The value may be {@code null}.
@@ -93,6 +107,40 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The KMS key name used for encryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * The KMS key name used for encryption.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessorVersion setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
+   * The KMS key version with which data is encrypted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyVersionName() {
+    return kmsKeyVersionName;
+  }
+
+  /**
+   * The KMS key version with which data is encrypted.
+   * @param kmsKeyVersionName kmsKeyVersionName or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessorVersion setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {
+    this.kmsKeyVersionName = kmsKeyVersionName;
     return this;
   }
 

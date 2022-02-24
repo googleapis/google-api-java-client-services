@@ -39,6 +39,12 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String avatarUrl;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
@@ -78,6 +84,21 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
    */
   public SpaceInfo setAvatarInfo(AvatarInfo avatarInfo) {
     this.avatarInfo = avatarInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAvatarUrl() {
+    return avatarUrl;
+  }
+
+  /**
+   * @param avatarUrl avatarUrl or {@code null} for none
+   */
+  public SpaceInfo setAvatarUrl(java.lang.String avatarUrl) {
+    this.avatarUrl = avatarUrl;
     return this;
   }
 

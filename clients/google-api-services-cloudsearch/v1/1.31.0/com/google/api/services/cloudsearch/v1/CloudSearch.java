@@ -5210,21 +5210,22 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Maximum number of datasources to fetch in a request. The max value is 100. The default
-         * value is 10
+         * Maximum number of datasources to fetch in a request. The max value is 1000. The default
+         * value is 1000.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of datasources to fetch in a request. The max value is 100. The default value is 10
+        /** Maximum number of datasources to fetch in a request. The max value is 1000. The default value is
+       1000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Maximum number of datasources to fetch in a request. The max value is 100. The default
-         * value is 10
+         * Maximum number of datasources to fetch in a request. The max value is 1000. The default
+         * value is 1000.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

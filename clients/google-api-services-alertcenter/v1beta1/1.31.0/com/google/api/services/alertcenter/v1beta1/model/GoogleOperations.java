@@ -53,6 +53,13 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
+   * Customer domain for email template personalization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String domain;
+
+  /**
    * A header to display above the incident message. Typically used to attach a localized notice on
    * the timeline for followup comms translations.
    * The value may be {@code null}.
@@ -117,6 +124,23 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
    */
   public GoogleOperations setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Customer domain for email template personalization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDomain() {
+    return domain;
+  }
+
+  /**
+   * Customer domain for email template personalization.
+   * @param domain domain or {@code null} for none
+   */
+  public GoogleOperations setDomain(java.lang.String domain) {
+    this.domain = domain;
     return this;
   }
 

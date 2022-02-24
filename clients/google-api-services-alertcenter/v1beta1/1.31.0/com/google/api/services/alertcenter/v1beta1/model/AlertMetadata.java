@@ -54,7 +54,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   /**
    * Optional. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of an alert metadata from overwriting each other. It is strongly suggested
-   * that systems make use of the `etag` in the read-modify-write cycle to perform metatdata updates
+   * that systems make use of the `etag` in the read-modify-write cycle to perform metadata updates
    * in order to avoid race conditions: An `etag` is returned in the response which contains alert
    * metadata, and systems are expected to put that etag in the request to update alert metadata to
    * ensure that their change will be applied to the same version of the alert metadata. If no
@@ -143,7 +143,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   /**
    * Optional. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of an alert metadata from overwriting each other. It is strongly suggested
-   * that systems make use of the `etag` in the read-modify-write cycle to perform metatdata updates
+   * that systems make use of the `etag` in the read-modify-write cycle to perform metadata updates
    * in order to avoid race conditions: An `etag` is returned in the response which contains alert
    * metadata, and systems are expected to put that etag in the request to update alert metadata to
    * ensure that their change will be applied to the same version of the alert metadata. If no
@@ -158,7 +158,7 @@ public final class AlertMetadata extends com.google.api.client.json.GenericJson 
   /**
    * Optional. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of an alert metadata from overwriting each other. It is strongly suggested
-   * that systems make use of the `etag` in the read-modify-write cycle to perform metatdata updates
+   * that systems make use of the `etag` in the read-modify-write cycle to perform metadata updates
    * in order to avoid race conditions: An `etag` is returned in the response which contains alert
    * metadata, and systems are expected to put that etag in the request to update alert metadata to
    * ensure that their change will be applied to the same version of the alert metadata. If no

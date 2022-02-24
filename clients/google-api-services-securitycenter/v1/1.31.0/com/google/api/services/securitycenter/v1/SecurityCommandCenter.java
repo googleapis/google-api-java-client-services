@@ -974,6 +974,878 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the BigQueryExports collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.BigQueryExports.List request = securitycenter.bigQueryExports().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BigQueryExports bigQueryExports() {
+      return new BigQueryExports();
+    }
+
+    /**
+     * The "bigQueryExports" collection of methods.
+     */
+    public class BigQueryExports {
+
+      /**
+       * Creates a big query export.
+       *
+       * Create a request for the method "bigQueryExports.create".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the new big query export's parent. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+parent}/bigQueryExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Creates a big query export.
+         *
+         * Create a request for the method "bigQueryExports.create".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the new big query export's parent. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) {
+          super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the new big query export's parent. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the new big query export's parent. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the new big query export's parent. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. Unique identifier provided by the client within the parent scope. It must
+         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
+         * the last a letter or a number, and a 63 character maximum.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String bigQueryExportId;
+
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
+       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
+       number, and a 63 character maximum.
+         */
+        public java.lang.String getBigQueryExportId() {
+          return bigQueryExportId;
+        }
+
+        /**
+         * Required. Unique identifier provided by the client within the parent scope. It must
+         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
+         * the last a letter or a number, and a 63 character maximum.
+         */
+        public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
+          this.bigQueryExportId = bigQueryExportId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an existing big query export.
+       *
+       * Create a request for the method "bigQueryExports.delete".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the big query export to delete. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Deletes an existing big query export.
+         *
+         * Create a request for the method "bigQueryExports.delete".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the big query export to delete. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the big query export to delete. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the big query export to delete. Its format is
+       organizations/{organization}/bigQueryExports/{export_id},
+       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the big query export to delete. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a big query export.
+       *
+       * Create a request for the method "bigQueryExports.get".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the big query export to retrieve. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Gets a big query export.
+         *
+         * Create a request for the method "bigQueryExports.get".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the big query export to retrieve. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the big query export to retrieve. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the big query export to retrieve. Its format is
+       organizations/{organization}/bigQueryExports/{export_id},
+       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the big query export to retrieve. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
+       * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
+       * BigQuery exports immediately under the folder plus the ones created under the projects within the
+       * folder are returned.
+       *
+       * Create a request for the method "bigQueryExports.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListBigQueryExportsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/bigQueryExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
+         * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
+         * BigQuery exports immediately under the folder plus the ones created under the projects within
+         * the folder are returned.
+         *
+         * Create a request for the method "bigQueryExports.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListBigQueryExportsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which owns the collection of BigQuery exports. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns the collection of BigQuery exports. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which owns the collection of BigQuery exports. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of configs to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of configs to return. The service may return fewer than this value. If
+       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
+       be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of configs to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryExports` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListBigQueryExports` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListBigQueryExports` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryExports` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a BigQuery export.
+       *
+       * Create a request for the method "bigQueryExports.patch".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The relative resource name of this export. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+       *        and is ignored when provided in create requests.
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Updates a BigQuery export.
+         *
+         * Create a request for the method "bigQueryExports.patch".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The relative resource name of this export. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+       *        and is ignored when provided in create requests.
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) {
+          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The relative resource name of this export. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+         * and is ignored when provided in create requests.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The relative resource name of this export. See:
+       https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example format:
+       "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses, and is
+       ignored when provided in create requests.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The relative resource name of this export. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+         * and is ignored when provided in create requests.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Findings collection.
      *
      * <p>The typical use is:</p>
@@ -5024,6 +5896,878 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @Override
         public UpdateSecurityMarks set(String parameterName, Object value) {
           return (UpdateSecurityMarks) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the BigQueryExports collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.BigQueryExports.List request = securitycenter.bigQueryExports().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BigQueryExports bigQueryExports() {
+      return new BigQueryExports();
+    }
+
+    /**
+     * The "bigQueryExports" collection of methods.
+     */
+    public class BigQueryExports {
+
+      /**
+       * Creates a big query export.
+       *
+       * Create a request for the method "bigQueryExports.create".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the new big query export's parent. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+parent}/bigQueryExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a big query export.
+         *
+         * Create a request for the method "bigQueryExports.create".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the new big query export's parent. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) {
+          super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the new big query export's parent. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the new big query export's parent. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the new big query export's parent. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. Unique identifier provided by the client within the parent scope. It must
+         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
+         * the last a letter or a number, and a 63 character maximum.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String bigQueryExportId;
+
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
+       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
+       number, and a 63 character maximum.
+         */
+        public java.lang.String getBigQueryExportId() {
+          return bigQueryExportId;
+        }
+
+        /**
+         * Required. Unique identifier provided by the client within the parent scope. It must
+         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
+         * the last a letter or a number, and a 63 character maximum.
+         */
+        public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
+          this.bigQueryExportId = bigQueryExportId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an existing big query export.
+       *
+       * Create a request for the method "bigQueryExports.delete".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the big query export to delete. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Deletes an existing big query export.
+         *
+         * Create a request for the method "bigQueryExports.delete".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the big query export to delete. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the big query export to delete. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the big query export to delete. Its format is
+       organizations/{organization}/bigQueryExports/{export_id},
+       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the big query export to delete. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a big query export.
+       *
+       * Create a request for the method "bigQueryExports.get".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the big query export to retrieve. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Gets a big query export.
+         *
+         * Create a request for the method "bigQueryExports.get".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the big query export to retrieve. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the big query export to retrieve. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the big query export to retrieve. Its format is
+       organizations/{organization}/bigQueryExports/{export_id},
+       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the big query export to retrieve. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
+       * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
+       * BigQuery exports immediately under the folder plus the ones created under the projects within the
+       * folder are returned.
+       *
+       * Create a request for the method "bigQueryExports.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListBigQueryExportsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/bigQueryExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
+         * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
+         * BigQuery exports immediately under the folder plus the ones created under the projects within
+         * the folder are returned.
+         *
+         * Create a request for the method "bigQueryExports.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListBigQueryExportsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which owns the collection of BigQuery exports. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns the collection of BigQuery exports. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which owns the collection of BigQuery exports. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of configs to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of configs to return. The service may return fewer than this value. If
+       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
+       be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of configs to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryExports` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListBigQueryExports` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListBigQueryExports` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryExports` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a BigQuery export.
+       *
+       * Create a request for the method "bigQueryExports.patch".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The relative resource name of this export. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+       *        and is ignored when provided in create requests.
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Updates a BigQuery export.
+         *
+         * Create a request for the method "bigQueryExports.patch".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The relative resource name of this export. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+       *        and is ignored when provided in create requests.
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) {
+          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The relative resource name of this export. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+         * and is ignored when provided in create requests.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The relative resource name of this export. See:
+       https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example format:
+       "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses, and is
+       ignored when provided in create requests.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The relative resource name of this export. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+         * and is ignored when provided in create requests.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 
@@ -11130,6 +12874,878 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @Override
         public UpdateSecurityMarks set(String parameterName, Object value) {
           return (UpdateSecurityMarks) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the BigQueryExports collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.BigQueryExports.List request = securitycenter.bigQueryExports().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BigQueryExports bigQueryExports() {
+      return new BigQueryExports();
+    }
+
+    /**
+     * The "bigQueryExports" collection of methods.
+     */
+    public class BigQueryExports {
+
+      /**
+       * Creates a big query export.
+       *
+       * Create a request for the method "bigQueryExports.create".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the new big query export's parent. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+parent}/bigQueryExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a big query export.
+         *
+         * Create a request for the method "bigQueryExports.create".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the new big query export's parent. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) {
+          super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the new big query export's parent. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the new big query export's parent. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the new big query export's parent. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. Unique identifier provided by the client within the parent scope. It must
+         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
+         * the last a letter or a number, and a 63 character maximum.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String bigQueryExportId;
+
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
+       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
+       number, and a 63 character maximum.
+         */
+        public java.lang.String getBigQueryExportId() {
+          return bigQueryExportId;
+        }
+
+        /**
+         * Required. Unique identifier provided by the client within the parent scope. It must
+         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
+         * the last a letter or a number, and a 63 character maximum.
+         */
+        public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
+          this.bigQueryExportId = bigQueryExportId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an existing big query export.
+       *
+       * Create a request for the method "bigQueryExports.delete".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the big query export to delete. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Deletes an existing big query export.
+         *
+         * Create a request for the method "bigQueryExports.delete".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the big query export to delete. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the big query export to delete. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the big query export to delete. Its format is
+       organizations/{organization}/bigQueryExports/{export_id},
+       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the big query export to delete. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a big query export.
+       *
+       * Create a request for the method "bigQueryExports.get".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the big query export to retrieve. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Gets a big query export.
+         *
+         * Create a request for the method "bigQueryExports.get".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the big query export to retrieve. Its format is
+       *        organizations/{organization}/bigQueryExports/{export_id},
+       *        folders/{folder}/bigQueryExports/{export_id}, or
+       *        projects/{project}/bigQueryExports/{export_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the big query export to retrieve. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the big query export to retrieve. Its format is
+       organizations/{organization}/bigQueryExports/{export_id},
+       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the big query export to retrieve. Its format is
+         * organizations/{organization}/bigQueryExports/{export_id},
+         * folders/{folder}/bigQueryExports/{export_id}, or
+         * projects/{project}/bigQueryExports/{export_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
+       * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
+       * BigQuery exports immediately under the folder plus the ones created under the projects within the
+       * folder are returned.
+       *
+       * Create a request for the method "bigQueryExports.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListBigQueryExportsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/bigQueryExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
+         * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
+         * BigQuery exports immediately under the folder plus the ones created under the projects within
+         * the folder are returned.
+         *
+         * Create a request for the method "bigQueryExports.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
+       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListBigQueryExportsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which owns the collection of BigQuery exports. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns the collection of BigQuery exports. Its format is
+       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which owns the collection of BigQuery exports. Its format is
+         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of configs to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of configs to return. The service may return fewer than this value. If
+       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
+       be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of configs to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryExports` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListBigQueryExports` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListBigQueryExports` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBigQueryExports` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a BigQuery export.
+       *
+       * Create a request for the method "bigQueryExports.patch".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The relative resource name of this export. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+       *        and is ignored when provided in create requests.
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
+
+        /**
+         * Updates a BigQuery export.
+         *
+         * Create a request for the method "bigQueryExports.patch".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The relative resource name of this export. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+       *        and is ignored when provided in create requests.
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport content) {
+          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/bigQueryExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The relative resource name of this export. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+         * and is ignored when provided in create requests.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The relative resource name of this export. See:
+       https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example format:
+       "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+       "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+       "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses, and is
+       ignored when provided in create requests.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The relative resource name of this export. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
+         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
+         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
+         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
+         * and is ignored when provided in create requests.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/bigQueryExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 

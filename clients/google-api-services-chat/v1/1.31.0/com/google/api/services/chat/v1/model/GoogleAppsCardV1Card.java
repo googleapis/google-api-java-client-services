@@ -45,9 +45,9 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Card extends com.google.api.client.json.GenericJson {
 
   /**
-   * The actions of this card. They are added to a card's generated toolbar menu. For example, the
+   * The card's actions. Actions are added to the card's generated toolbar menu. For example, the
    * following JSON constructs a card action menu with Settings and Send Feedback options: ```
-   * "card_actions": [ { "actionLabel": "Setting", "onClick": { "action": { "functionName":
+   * "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": { "functionName":
    * "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
    * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
    * "url": "https://example.com/feedback" } } } ] ```
@@ -57,7 +57,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.util.List<GoogleAppsCardV1CardAction> cardActions;
 
   /**
-   * The display style for peekCardHeader.
+   * The display style for `peekCardHeader`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private GoogleAppsCardV1CardHeader header;
 
   /**
-   * Name of the card, which is used as a identifier for the card in card navigation.
+   * Name of the card. Used as a card identifier in card navigation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,9 +100,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.util.List<GoogleAppsCardV1Section> sections;
 
   /**
-   * The actions of this card. They are added to a card's generated toolbar menu. For example, the
+   * The card's actions. Actions are added to the card's generated toolbar menu. For example, the
    * following JSON constructs a card action menu with Settings and Send Feedback options: ```
-   * "card_actions": [ { "actionLabel": "Setting", "onClick": { "action": { "functionName":
+   * "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": { "functionName":
    * "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
    * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
    * "url": "https://example.com/feedback" } } } ] ```
@@ -113,9 +113,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The actions of this card. They are added to a card's generated toolbar menu. For example, the
+   * The card's actions. Actions are added to the card's generated toolbar menu. For example, the
    * following JSON constructs a card action menu with Settings and Send Feedback options: ```
-   * "card_actions": [ { "actionLabel": "Setting", "onClick": { "action": { "functionName":
+   * "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": { "functionName":
    * "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
    * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
    * "url": "https://example.com/feedback" } } } ] ```
@@ -127,7 +127,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The display style for peekCardHeader.
+   * The display style for `peekCardHeader`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayStyle() {
@@ -135,7 +135,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The display style for peekCardHeader.
+   * The display style for `peekCardHeader`.
    * @param displayStyle displayStyle or {@code null} for none
    */
   public GoogleAppsCardV1Card setDisplayStyle(java.lang.String displayStyle) {
@@ -178,7 +178,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of the card, which is used as a identifier for the card in card navigation.
+   * Name of the card. Used as a card identifier in card navigation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -186,7 +186,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of the card, which is used as a identifier for the card in card navigation.
+   * Name of the card. Used as a card identifier in card navigation.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1Card setName(java.lang.String name) {

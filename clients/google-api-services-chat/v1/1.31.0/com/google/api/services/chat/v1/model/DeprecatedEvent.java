@@ -39,7 +39,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private FormAction action;
 
   /**
-   * This will include form information for dialogs such as form inputs, action parameters.
+   * Represents information about the user's client, such as locale, host app, and platform. For
+   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
+   * [dialogs](https://developers.google.com/chat/how-tos/bot-dialogs), like data entered on a card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +57,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String configCompleteRedirectUrl;
 
   /**
-   * The type of dialog event we have received.
+   * The type of [dialog](https://developers.google.com/chat/how-tos/bot-dialogs) event received.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +71,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private String eventTime;
 
   /**
-   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
-   * true when we want a request/submit/cancel event.
+   * True when the event is related to [dialogs](https://developers.google.com/chat/how-tos/bot-
+   * dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +145,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This will include form information for dialogs such as form inputs, action parameters.
+   * Represents information about the user's client, such as locale, host app, and platform. For
+   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
+   * [dialogs](https://developers.google.com/chat/how-tos/bot-dialogs), like data entered on a card.
    * @return value or {@code null} for none
    */
   public CommonEventObject getCommon() {
@@ -151,7 +155,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This will include form information for dialogs such as form inputs, action parameters.
+   * Represents information about the user's client, such as locale, host app, and platform. For
+   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
+   * [dialogs](https://developers.google.com/chat/how-tos/bot-dialogs), like data entered on a card.
    * @param common common or {@code null} for none
    */
   public DeprecatedEvent setCommon(CommonEventObject common) {
@@ -181,7 +187,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of dialog event we have received.
+   * The type of [dialog](https://developers.google.com/chat/how-tos/bot-dialogs) event received.
    * @return value or {@code null} for none
    */
   public java.lang.String getDialogEventType() {
@@ -189,7 +195,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of dialog event we have received.
+   * The type of [dialog](https://developers.google.com/chat/how-tos/bot-dialogs) event received.
    * @param dialogEventType dialogEventType or {@code null} for none
    */
   public DeprecatedEvent setDialogEventType(java.lang.String dialogEventType) {
@@ -215,8 +221,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
-   * true when we want a request/submit/cancel event.
+   * True when the event is related to [dialogs](https://developers.google.com/chat/how-tos/bot-
+   * dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDialogEvent() {
@@ -224,8 +230,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
-   * true when we want a request/submit/cancel event.
+   * True when the event is related to [dialogs](https://developers.google.com/chat/how-tos/bot-
+   * dialogs).
    * @param isDialogEvent isDialogEvent or {@code null} for none
    */
   public DeprecatedEvent setIsDialogEvent(java.lang.Boolean isDialogEvent) {

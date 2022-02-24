@@ -60,7 +60,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   private java.lang.String label;
 
   /**
-   * The name of the text input which is used in formInput.
+   * The name of the text input which is used in `formInput`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The name of the text input which is used in formInput.
+   * The name of the text input which is used in `formInput`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -166,7 +166,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * The name of the text input which is used in formInput.
+   * The name of the text input which is used in `formInput`.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setName(java.lang.String name) {

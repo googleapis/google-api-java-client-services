@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An image that is specified by a URL and can have an onClick action.
+ * An image that is specified by a URL and can have an `onClick` action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -44,6 +44,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   private java.lang.String imageUrl;
 
   /**
+   * The action triggered by an `onClick` event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,6 +85,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
+   * The action triggered by an `onClick` event.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -91,6 +93,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
+   * The action triggered by an `onClick` event.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1Image setOnClick(GoogleAppsCardV1OnClick onClick) {

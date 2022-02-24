@@ -30,26 +30,16 @@ package com.google.api.services.chat.v1.model;
 public final class Dialog extends com.google.api.client.json.GenericJson {
 
   /**
-   * Body of the dialog, which will be rendered in a modal. NOTE: The following fields within the
-   * objects are not supported: google.apps.card.v1.Widget.date_time_picker
-   * google.apps.card.v1.DecoratedText.SwitchControl.on_change_action
-   * google.apps.card.v1.TextInput.on_change_action
-   * google.apps.card.v1.SelectionInput.on_change_action
-   * google.apps.card.v1.DateTimePicker.on_change_action Setting the fields above will have no
-   * effect on the dialog.
+   * Body of the dialog, which is rendered in a modal. Google Chat apps do not support the following
+   * card entities: `DateTimePicker`, `OnChangeAction`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Card body;
 
   /**
-   * Body of the dialog, which will be rendered in a modal. NOTE: The following fields within the
-   * objects are not supported: google.apps.card.v1.Widget.date_time_picker
-   * google.apps.card.v1.DecoratedText.SwitchControl.on_change_action
-   * google.apps.card.v1.TextInput.on_change_action
-   * google.apps.card.v1.SelectionInput.on_change_action
-   * google.apps.card.v1.DateTimePicker.on_change_action Setting the fields above will have no
-   * effect on the dialog.
+   * Body of the dialog, which is rendered in a modal. Google Chat apps do not support the following
+   * card entities: `DateTimePicker`, `OnChangeAction`.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Card getBody() {
@@ -57,13 +47,8 @@ public final class Dialog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Body of the dialog, which will be rendered in a modal. NOTE: The following fields within the
-   * objects are not supported: google.apps.card.v1.Widget.date_time_picker
-   * google.apps.card.v1.DecoratedText.SwitchControl.on_change_action
-   * google.apps.card.v1.TextInput.on_change_action
-   * google.apps.card.v1.SelectionInput.on_change_action
-   * google.apps.card.v1.DateTimePicker.on_change_action Setting the fields above will have no
-   * effect on the dialog.
+   * Body of the dialog, which is rendered in a modal. Google Chat apps do not support the following
+   * card entities: `DateTimePicker`, `OnChangeAction`.
    * @param body body or {@code null} for none
    */
   public Dialog setBody(GoogleAppsCardV1Card body) {

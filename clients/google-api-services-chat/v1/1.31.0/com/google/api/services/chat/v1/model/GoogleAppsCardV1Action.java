@@ -38,6 +38,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   private java.lang.String function;
 
   /**
+   * Specifies the loading indicator that the action displays while making the call to the action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,6 +85,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   }
 
   /**
+   * Specifies the loading indicator that the action displays while making the call to the action.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadIndicator() {
@@ -91,6 +93,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   }
 
   /**
+   * Specifies the loading indicator that the action displays while making the call to the action.
    * @param loadIndicator loadIndicator or {@code null} for none
    */
   public GoogleAppsCardV1Action setLoadIndicator(java.lang.String loadIndicator) {

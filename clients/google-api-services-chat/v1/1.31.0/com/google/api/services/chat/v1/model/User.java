@@ -51,7 +51,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isAnonymous;
 
   /**
-   * Resource name for a Google Chat user. Formatted as `users/AAAAAAAAAAA`. Represents a
+   * Resource name for a Google Chat user. Formatted as `users/{user}`. Represents a
    * [person](https://developers.google.com/people/api/rest/v1/people#Person) in the People API.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for a Google Chat user. Formatted as `users/AAAAAAAAAAA`. Represents a
+   * Resource name for a Google Chat user. Formatted as `users/{user}`. Represents a
    * [person](https://developers.google.com/people/api/rest/v1/people#Person) in the People API.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for a Google Chat user. Formatted as `users/AAAAAAAAAAA`. Represents a
+   * Resource name for a Google Chat user. Formatted as `users/{user}`. Represents a
    * [person](https://developers.google.com/people/api/rest/v1/people#Person) in the People API.
    * @param name name or {@code null} for none
    */

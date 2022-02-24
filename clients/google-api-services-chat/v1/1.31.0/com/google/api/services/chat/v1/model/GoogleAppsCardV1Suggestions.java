@@ -31,7 +31,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Suggestions extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of suggestions items which will be used in are used in autocomplete.
+   * A list of suggestions used for autocomplete recommendations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleAppsCardV1Suggestions extends com.google.api.client.jso
   }
 
   /**
-   * A list of suggestions items which will be used in are used in autocomplete.
+   * A list of suggestions used for autocomplete recommendations.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1SuggestionItem> getItems() {
@@ -52,7 +52,7 @@ public final class GoogleAppsCardV1Suggestions extends com.google.api.client.jso
   }
 
   /**
-   * A list of suggestions items which will be used in are used in autocomplete.
+   * A list of suggestions used for autocomplete recommendations.
    * @param items items or {@code null} for none
    */
   public GoogleAppsCardV1Suggestions setItems(java.util.List<GoogleAppsCardV1SuggestionItem> items) {

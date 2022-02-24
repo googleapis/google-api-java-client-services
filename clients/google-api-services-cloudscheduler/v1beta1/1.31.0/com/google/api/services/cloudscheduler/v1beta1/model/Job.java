@@ -42,7 +42,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the
    * RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds
    * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours 15 seconds. *
-   * For PubSub targets, this field is ignored.
+   * For Pub/Sub targets, this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
-   * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
    * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
    * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
    * Scheduler will never allow two simultaneously outstanding executions. For example, this implies
@@ -189,7 +189,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the
    * RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds
    * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours 15 seconds. *
-   * For PubSub targets, this field is ignored.
+   * For Pub/Sub targets, this field is ignored.
    * @return value or {@code null} for none
    */
   public String getAttemptDeadline() {
@@ -202,7 +202,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the
    * RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds
    * and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours 15 seconds. *
-   * For PubSub targets, this field is ignored.
+   * For Pub/Sub targets, this field is ignored.
    * @param attemptDeadline attemptDeadline or {@code null} for none
    */
   public Job setAttemptDeadline(String attemptDeadline) {
@@ -356,7 +356,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
-   * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
    * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
    * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
    * Scheduler will never allow two simultaneously outstanding executions. For example, this implies
@@ -374,7 +374,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
-   * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
    * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
    * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
    * Scheduler will never allow two simultaneously outstanding executions. For example, this implies

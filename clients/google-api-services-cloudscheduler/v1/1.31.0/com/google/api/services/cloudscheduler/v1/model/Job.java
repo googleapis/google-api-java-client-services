@@ -101,7 +101,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
-   * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
    * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
    * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
    * Scheduler will never allow two simultaneously outstanding executions. For example, this implies
@@ -320,7 +320,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
-   * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
    * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
    * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
    * Scheduler will never allow two simultaneously outstanding executions. For example, this implies
@@ -338,7 +338,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
-   * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
    * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
    * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
    * Scheduler will never allow two simultaneously outstanding executions. For example, this implies

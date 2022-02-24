@@ -81,7 +81,7 @@ public final class SettlementReport extends com.google.api.client.json.GenericJs
   private java.lang.String transferDate;
 
   /**
-   * The list of bank identifiers used for the transfer. e.g. Trace ID for Federal Automated
+   * The list of bank identifiers used for the transfer. For example, Trace ID for Federal Automated
    * Clearing House (ACH). This may also be known as the Wire ID.
    * The value may be {@code null}.
    */
@@ -210,7 +210,7 @@ public final class SettlementReport extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of bank identifiers used for the transfer. e.g. Trace ID for Federal Automated
+   * The list of bank identifiers used for the transfer. For example, Trace ID for Federal Automated
    * Clearing House (ACH). This may also be known as the Wire ID.
    * @return value or {@code null} for none
    */
@@ -219,7 +219,7 @@ public final class SettlementReport extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of bank identifiers used for the transfer. e.g. Trace ID for Federal Automated
+   * The list of bank identifiers used for the transfer. For example, Trace ID for Federal Automated
    * Clearing House (ACH). This may also be known as the Wire ID.
    * @param transferIds transferIds or {@code null} for none
    */

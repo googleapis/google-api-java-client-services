@@ -40,7 +40,7 @@ public final class OrdersCustomBatchRequestEntryRefundItemShipping extends com.g
 
   /**
    * If set to true, all shipping costs for the order will be refunded. If this is true, amount
-   * should not be provided and will be ignored. If set to false, submit the amount of the partial
+   * shouldn't be provided and will be ignored. If set to false, submit the amount of the partial
    * shipping refund, excluding the shipping tax. The shipping tax is calculated and handled on
    * Google's side.
    * The value may be {@code null}.
@@ -69,7 +69,7 @@ public final class OrdersCustomBatchRequestEntryRefundItemShipping extends com.g
 
   /**
    * If set to true, all shipping costs for the order will be refunded. If this is true, amount
-   * should not be provided and will be ignored. If set to false, submit the amount of the partial
+   * shouldn't be provided and will be ignored. If set to false, submit the amount of the partial
    * shipping refund, excluding the shipping tax. The shipping tax is calculated and handled on
    * Google's side.
    * @return value or {@code null} for none
@@ -80,7 +80,7 @@ public final class OrdersCustomBatchRequestEntryRefundItemShipping extends com.g
 
   /**
    * If set to true, all shipping costs for the order will be refunded. If this is true, amount
-   * should not be provided and will be ignored. If set to false, submit the amount of the partial
+   * shouldn't be provided and will be ignored. If set to false, submit the amount of the partial
    * shipping refund, excluding the shipping tax. The shipping tax is calculated and handled on
    * Google's side.
    * @param fullRefund fullRefund or {@code null} for none

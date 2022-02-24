@@ -17,8 +17,8 @@
 package com.google.api.services.content.model;
 
 /**
- * The status of an account, i.e., information about its products, which is computed offline and not
- * returned immediately at insertion time.
+ * The status of an account, that is, information about its products, which is computed offline and
+ * not returned immediately at insertion time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

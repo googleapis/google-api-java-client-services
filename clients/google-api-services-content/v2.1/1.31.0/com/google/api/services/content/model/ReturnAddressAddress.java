@@ -31,14 +31,14 @@ package com.google.api.services.content.model;
 public final class ReturnAddressAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * CLDR country code (e.g. "US").
+   * CLDR country code (for example, "US").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String country;
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class ReturnAddressAddress extends com.google.api.client.json.Gener
   private java.lang.String locality;
 
   /**
-   * Postal code or ZIP (e.g. "94043").
+   * Postal code or ZIP (for example, "94043").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class ReturnAddressAddress extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> streetAddress;
 
   /**
-   * CLDR country code (e.g. "US").
+   * CLDR country code (for example, "US").
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -84,7 +84,7 @@ public final class ReturnAddressAddress extends com.google.api.client.json.Gener
   }
 
   /**
-   * CLDR country code (e.g. "US").
+   * CLDR country code (for example, "US").
    * @param country country or {@code null} for none
    */
   public ReturnAddressAddress setCountry(java.lang.String country) {
@@ -93,7 +93,7 @@ public final class ReturnAddressAddress extends com.google.api.client.json.Gener
   }
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class ReturnAddressAddress extends com.google.api.client.json.Gener
   }
 
   /**
-   * City, town or commune. May also include dependent localities or sublocalities (e.g.
+   * City, town or commune. May also include dependent localities or sublocalities (for example,
    * neighborhoods or suburbs).
    * @param locality locality or {@code null} for none
    */
@@ -112,7 +112,7 @@ public final class ReturnAddressAddress extends com.google.api.client.json.Gener
   }
 
   /**
-   * Postal code or ZIP (e.g. "94043").
+   * Postal code or ZIP (for example, "94043").
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCode() {
@@ -120,7 +120,7 @@ public final class ReturnAddressAddress extends com.google.api.client.json.Gener
   }
 
   /**
-   * Postal code or ZIP (e.g. "94043").
+   * Postal code or ZIP (for example, "94043").
    * @param postalCode postalCode or {@code null} for none
    */
   public ReturnAddressAddress setPostalCode(java.lang.String postalCode) {

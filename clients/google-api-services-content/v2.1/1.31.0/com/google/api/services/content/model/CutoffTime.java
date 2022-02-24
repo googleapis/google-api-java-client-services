@@ -47,8 +47,8 @@ public final class CutoffTime extends com.google.api.client.json.GenericJson {
   private java.lang.Long minute;
 
   /**
-   * Timezone identifier for the cutoff time. A list of identifiers can be found in the AdWords API
-   * documentation. E.g. "Europe/Zurich". Required.
+   * Timezone identifier for the cutoff time (for example, "Europe/Zurich"). List of identifiers.
+   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +93,8 @@ public final class CutoffTime extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timezone identifier for the cutoff time. A list of identifiers can be found in the AdWords API
-   * documentation. E.g. "Europe/Zurich". Required.
+   * Timezone identifier for the cutoff time (for example, "Europe/Zurich"). List of identifiers.
+   * Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimezone() {
@@ -102,8 +102,8 @@ public final class CutoffTime extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timezone identifier for the cutoff time. A list of identifiers can be found in the AdWords API
-   * documentation. E.g. "Europe/Zurich". Required.
+   * Timezone identifier for the cutoff time (for example, "Europe/Zurich"). List of identifiers.
+   * Required.
    * @param timezone timezone or {@code null} for none
    */
   public CutoffTime setTimezone(java.lang.String timezone) {

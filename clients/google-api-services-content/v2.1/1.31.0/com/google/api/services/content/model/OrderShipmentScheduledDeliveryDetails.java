@@ -32,7 +32,7 @@ public final class OrderShipmentScheduledDeliveryDetails extends com.google.api.
 
   /**
    * The phone number of the carrier fulfilling the delivery. The phone number is formatted as the
-   * international notation in ITU-T Recommendation E.123 (e.g., "+41 44 668 1800").
+   * international notation in ITU-T Recommendation E.123 (for example, "+41 44 668 1800").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class OrderShipmentScheduledDeliveryDetails extends com.google.api.
 
   /**
    * The phone number of the carrier fulfilling the delivery. The phone number is formatted as the
-   * international notation in ITU-T Recommendation E.123 (e.g., "+41 44 668 1800").
+   * international notation in ITU-T Recommendation E.123 (for example, "+41 44 668 1800").
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierPhoneNumber() {
@@ -56,7 +56,7 @@ public final class OrderShipmentScheduledDeliveryDetails extends com.google.api.
 
   /**
    * The phone number of the carrier fulfilling the delivery. The phone number is formatted as the
-   * international notation in ITU-T Recommendation E.123 (e.g., "+41 44 668 1800").
+   * international notation in ITU-T Recommendation E.123 (for example, "+41 44 668 1800").
    * @param carrierPhoneNumber carrierPhoneNumber or {@code null} for none
    */
   public OrderShipmentScheduledDeliveryDetails setCarrierPhoneNumber(java.lang.String carrierPhoneNumber) {

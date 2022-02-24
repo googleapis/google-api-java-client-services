@@ -32,7 +32,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
 
   /**
    * Required. Carrier, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be
-   * retrieved via the `listSupportedCarriers` method.
+   * retrieved through the `listSupportedCarriers` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
 
   /**
    * Required. Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for
-   * a carrier can be retrieved via the `listSupportedCarriers` method. The name of the service must
-   * be in the eddSupportedServices list.
+   * a carrier can be retrieved through the `listSupportedCarriers` method. The name of the service
+   * must be in the eddSupportedServices list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   private java.lang.String originCity;
 
   /**
-   * Shipping origin's country represented as a [CLDR territory
-   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml).
+   * Shipping origin's country represented as a [CLDR territory code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
 
   /**
    * Required. Carrier, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be
-   * retrieved via the `listSupportedCarriers` method.
+   * retrieved through the `listSupportedCarriers` method.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -102,7 +102,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
 
   /**
    * Required. Carrier, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be
-   * retrieved via the `listSupportedCarriers` method.
+   * retrieved through the `listSupportedCarriers` method.
    * @param carrier carrier or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setCarrier(java.lang.String carrier) {
@@ -112,8 +112,8 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
 
   /**
    * Required. Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for
-   * a carrier can be retrieved via the `listSupportedCarriers` method. The name of the service must
-   * be in the eddSupportedServices list.
+   * a carrier can be retrieved through the `listSupportedCarriers` method. The name of the service
+   * must be in the eddSupportedServices list.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierService() {
@@ -122,8 +122,8 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
 
   /**
    * Required. Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for
-   * a carrier can be retrieved via the `listSupportedCarriers` method. The name of the service must
-   * be in the eddSupportedServices list.
+   * a carrier can be retrieved through the `listSupportedCarriers` method. The name of the service
+   * must be in the eddSupportedServices list.
    * @param carrierService carrierService or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setCarrierService(java.lang.String carrierService) {
@@ -166,8 +166,8 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Shipping origin's country represented as a [CLDR territory
-   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml).
+   * Shipping origin's country represented as a [CLDR territory code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml).
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginCountry() {
@@ -175,8 +175,8 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Shipping origin's country represented as a [CLDR territory
-   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml).
+   * Shipping origin's country represented as a [CLDR territory code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml).
    * @param originCountry originCountry or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setOriginCountry(java.lang.String originCountry) {

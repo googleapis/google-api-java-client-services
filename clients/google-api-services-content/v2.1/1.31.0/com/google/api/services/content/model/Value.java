@@ -55,16 +55,16 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean noShipping;
 
   /**
-   * A percentage of the price represented as a number in decimal notation (e.g., `"5.4"`). Can only
-   * be set if all other fields are not set.
+   * A percentage of the price represented as a number in decimal notation (for example, `"5.4"`).
+   * Can only be set if all other fields are not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pricePercentage;
 
   /**
-   * The name of a subtable. Can only be set in table cells (i.e., not for single values), and only
-   * if all other fields are not set.
+   * The name of a subtable. Can only be set in table cells (not for single values), and only if all
+   * other fields are not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +126,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A percentage of the price represented as a number in decimal notation (e.g., `"5.4"`). Can only
-   * be set if all other fields are not set.
+   * A percentage of the price represented as a number in decimal notation (for example, `"5.4"`).
+   * Can only be set if all other fields are not set.
    * @return value or {@code null} for none
    */
   public java.lang.String getPricePercentage() {
@@ -135,8 +135,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A percentage of the price represented as a number in decimal notation (e.g., `"5.4"`). Can only
-   * be set if all other fields are not set.
+   * A percentage of the price represented as a number in decimal notation (for example, `"5.4"`).
+   * Can only be set if all other fields are not set.
    * @param pricePercentage pricePercentage or {@code null} for none
    */
   public Value setPricePercentage(java.lang.String pricePercentage) {
@@ -145,8 +145,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a subtable. Can only be set in table cells (i.e., not for single values), and only
-   * if all other fields are not set.
+   * The name of a subtable. Can only be set in table cells (not for single values), and only if all
+   * other fields are not set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtableName() {
@@ -154,8 +154,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a subtable. Can only be set in table cells (i.e., not for single values), and only
-   * if all other fields are not set.
+   * The name of a subtable. Can only be set in table cells (not for single values), and only if all
+   * other fields are not set.
    * @param subtableName subtableName or {@code null} for none
    */
   public Value setSubtableName(java.lang.String subtableName) {

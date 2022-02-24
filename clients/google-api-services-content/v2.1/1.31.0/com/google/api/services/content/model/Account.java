@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Account data. After the creation of a new account it may take a few minutes before it is fully
+ * Account data. After the creation of a new account it may take a few minutes before it's fully
  * operational. The methods delete, insert, and update require the admin role.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

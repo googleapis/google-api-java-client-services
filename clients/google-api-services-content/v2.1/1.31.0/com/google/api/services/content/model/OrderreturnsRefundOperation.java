@@ -33,7 +33,7 @@ public final class OrderreturnsRefundOperation extends com.google.api.client.jso
   /**
    * If true, the item will be fully refunded. Allowed only when payment_type is FOP. Merchant can
    * choose this refund option to indicate the full remaining amount of corresponding object to be
-   * refunded to the customer via FOP.
+   * refunded to the customer through FOP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class OrderreturnsRefundOperation extends com.google.api.client.jso
   /**
    * If true, the item will be fully refunded. Allowed only when payment_type is FOP. Merchant can
    * choose this refund option to indicate the full remaining amount of corresponding object to be
-   * refunded to the customer via FOP.
+   * refunded to the customer through FOP.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullRefund() {
@@ -81,7 +81,7 @@ public final class OrderreturnsRefundOperation extends com.google.api.client.jso
   /**
    * If true, the item will be fully refunded. Allowed only when payment_type is FOP. Merchant can
    * choose this refund option to indicate the full remaining amount of corresponding object to be
-   * refunded to the customer via FOP.
+   * refunded to the customer through FOP.
    * @param fullRefund fullRefund or {@code null} for none
    */
   public OrderreturnsRefundOperation setFullRefund(java.lang.Boolean fullRefund) {

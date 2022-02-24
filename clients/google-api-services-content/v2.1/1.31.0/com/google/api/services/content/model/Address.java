@@ -39,23 +39,23 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String administrativeArea;
 
   /**
-   * Required. City, town or commune. May also include dependent localities or sublocalities (e.g.
-   * neighborhoods or suburbs).
+   * Required. City, town or commune. May also include dependent localities or sublocalities (for
+   * example, neighborhoods or suburbs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String city;
 
   /**
-   * Required. [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml)
-   * (e.g. "US").
+   * Required. [CLDR country code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml) (for example, "US").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String country;
 
   /**
-   * Required. Postal code or ZIP (e.g. "94043").
+   * Required. Postal code or ZIP (for example, "94043").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +88,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. City, town or commune. May also include dependent localities or sublocalities (e.g.
-   * neighborhoods or suburbs).
+   * Required. City, town or commune. May also include dependent localities or sublocalities (for
+   * example, neighborhoods or suburbs).
    * @return value or {@code null} for none
    */
   public java.lang.String getCity() {
@@ -97,8 +97,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. City, town or commune. May also include dependent localities or sublocalities (e.g.
-   * neighborhoods or suburbs).
+   * Required. City, town or commune. May also include dependent localities or sublocalities (for
+   * example, neighborhoods or suburbs).
    * @param city city or {@code null} for none
    */
   public Address setCity(java.lang.String city) {
@@ -107,8 +107,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml)
-   * (e.g. "US").
+   * Required. [CLDR country code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml) (for example, "US").
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -116,8 +116,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml)
-   * (e.g. "US").
+   * Required. [CLDR country code](https://github.com/unicode-
+   * org/cldr/blob/latest/common/main/en.xml) (for example, "US").
    * @param country country or {@code null} for none
    */
   public Address setCountry(java.lang.String country) {
@@ -126,7 +126,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Postal code or ZIP (e.g. "94043").
+   * Required. Postal code or ZIP (for example, "94043").
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCode() {
@@ -134,7 +134,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Postal code or ZIP (e.g. "94043").
+   * Required. Postal code or ZIP (for example, "94043").
    * @param postalCode postalCode or {@code null} for none
    */
   public Address setPostalCode(java.lang.String postalCode) {

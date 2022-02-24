@@ -31,24 +31,25 @@ package com.google.api.services.content.model;
 public final class HolidaysHoliday extends com.google.api.client.json.GenericJson {
 
   /**
-   * The CLDR territory code of the country in which the holiday is available. E.g. "US", "DE",
-   * "GB". A holiday cutoff can only be configured in a shipping settings service with matching
-   * delivery country. Always present.
+   * The CLDR territory code of the country in which the holiday is available. For example, "US",
+   * "DE", "GB". A holiday cutoff can only be configured in a shipping settings service with
+   * matching delivery country. Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String countryCode;
 
   /**
-   * Date of the holiday, in ISO 8601 format. E.g. "2016-12-25" for Christmas 2016. Always present.
+   * Date of the holiday, in ISO 8601 format. For example, "2016-12-25" for Christmas 2016. Always
+   * present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String date;
 
   /**
-   * Date on which the order has to arrive at the customer's, in ISO 8601 format. E.g. "2016-12-24"
-   * for 24th December 2016. Always present.
+   * Date on which the order has to arrive at the customer's, in ISO 8601 format. For example,
+   * "2016-12-24" for 24th December 2016. Always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +81,9 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
   private java.lang.String type;
 
   /**
-   * The CLDR territory code of the country in which the holiday is available. E.g. "US", "DE",
-   * "GB". A holiday cutoff can only be configured in a shipping settings service with matching
-   * delivery country. Always present.
+   * The CLDR territory code of the country in which the holiday is available. For example, "US",
+   * "DE", "GB". A holiday cutoff can only be configured in a shipping settings service with
+   * matching delivery country. Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -90,9 +91,9 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The CLDR territory code of the country in which the holiday is available. E.g. "US", "DE",
-   * "GB". A holiday cutoff can only be configured in a shipping settings service with matching
-   * delivery country. Always present.
+   * The CLDR territory code of the country in which the holiday is available. For example, "US",
+   * "DE", "GB". A holiday cutoff can only be configured in a shipping settings service with
+   * matching delivery country. Always present.
    * @param countryCode countryCode or {@code null} for none
    */
   public HolidaysHoliday setCountryCode(java.lang.String countryCode) {
@@ -101,7 +102,8 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Date of the holiday, in ISO 8601 format. E.g. "2016-12-25" for Christmas 2016. Always present.
+   * Date of the holiday, in ISO 8601 format. For example, "2016-12-25" for Christmas 2016. Always
+   * present.
    * @return value or {@code null} for none
    */
   public java.lang.String getDate() {
@@ -109,7 +111,8 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Date of the holiday, in ISO 8601 format. E.g. "2016-12-25" for Christmas 2016. Always present.
+   * Date of the holiday, in ISO 8601 format. For example, "2016-12-25" for Christmas 2016. Always
+   * present.
    * @param date date or {@code null} for none
    */
   public HolidaysHoliday setDate(java.lang.String date) {
@@ -118,8 +121,8 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Date on which the order has to arrive at the customer's, in ISO 8601 format. E.g. "2016-12-24"
-   * for 24th December 2016. Always present.
+   * Date on which the order has to arrive at the customer's, in ISO 8601 format. For example,
+   * "2016-12-24" for 24th December 2016. Always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliveryGuaranteeDate() {
@@ -127,8 +130,8 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Date on which the order has to arrive at the customer's, in ISO 8601 format. E.g. "2016-12-24"
-   * for 24th December 2016. Always present.
+   * Date on which the order has to arrive at the customer's, in ISO 8601 format. For example,
+   * "2016-12-24" for 24th December 2016. Always present.
    * @param deliveryGuaranteeDate deliveryGuaranteeDate or {@code null} for none
    */
   public HolidaysHoliday setDeliveryGuaranteeDate(java.lang.String deliveryGuaranteeDate) {

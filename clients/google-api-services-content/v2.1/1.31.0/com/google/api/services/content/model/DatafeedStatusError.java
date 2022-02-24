@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class DatafeedStatusError extends com.google.api.client.json.GenericJson {
 
   /**
-   * The code of the error, e.g., "validation/invalid_value".
+   * The code of the error, for example, "validation/invalid_value".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +52,14 @@ public final class DatafeedStatusError extends com.google.api.client.json.Generi
   private java.util.List<DatafeedStatusExample> examples;
 
   /**
-   * The error message, e.g., "Invalid price".
+   * The error message, for example, "Invalid price".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * The code of the error, e.g., "validation/invalid_value".
+   * The code of the error, for example, "validation/invalid_value".
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -67,7 +67,7 @@ public final class DatafeedStatusError extends com.google.api.client.json.Generi
   }
 
   /**
-   * The code of the error, e.g., "validation/invalid_value".
+   * The code of the error, for example, "validation/invalid_value".
    * @param code code or {@code null} for none
    */
   public DatafeedStatusError setCode(java.lang.String code) {
@@ -110,7 +110,7 @@ public final class DatafeedStatusError extends com.google.api.client.json.Generi
   }
 
   /**
-   * The error message, e.g., "Invalid price".
+   * The error message, for example, "Invalid price".
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -118,7 +118,7 @@ public final class DatafeedStatusError extends com.google.api.client.json.Generi
   }
 
   /**
-   * The error message, e.g., "Invalid price".
+   * The error message, for example, "Invalid price".
    * @param message message or {@code null} for none
    */
   public DatafeedStatusError setMessage(java.lang.String message) {

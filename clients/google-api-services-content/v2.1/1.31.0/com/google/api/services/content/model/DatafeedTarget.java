@@ -39,7 +39,7 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   private java.lang.String country;
 
   /**
-   * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
+   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
    * Merchant Center).
    * The value may be {@code null}.
    */
@@ -83,7 +83,7 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
+   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
    * Merchant Center).
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
+   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
    * Merchant Center).
    * @param excludedDestinations excludedDestinations or {@code null} for none
    */

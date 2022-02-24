@@ -31,17 +31,17 @@ package com.google.api.services.content.model;
 public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total amount that is refunded. (e.g. refunding $5 each for 2 products should be done by
-   * setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be the amount
-   * you currently want to refund to the customer.
+   * The total amount that is refunded. (for example, refunding $5 each for 2 products should be
+   * done by setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be
+   * the amount you currently want to refund to the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MonetaryAmount amount;
 
   /**
-   * If true, the full item will be refunded. If this is true, amount should not be provided and
-   * will be ignored.
+   * If true, the full item will be refunded. If this is true, amount shouldn't be provided and will
+   * be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,9 @@ public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.googl
   private java.lang.Integer quantity;
 
   /**
-   * The total amount that is refunded. (e.g. refunding $5 each for 2 products should be done by
-   * setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be the amount
-   * you currently want to refund to the customer.
+   * The total amount that is refunded. (for example, refunding $5 each for 2 products should be
+   * done by setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be
+   * the amount you currently want to refund to the customer.
    * @return value or {@code null} for none
    */
   public MonetaryAmount getAmount() {
@@ -80,9 +80,9 @@ public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.googl
   }
 
   /**
-   * The total amount that is refunded. (e.g. refunding $5 each for 2 products should be done by
-   * setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be the amount
-   * you currently want to refund to the customer.
+   * The total amount that is refunded. (for example, refunding $5 each for 2 products should be
+   * done by setting quantity to 2 and amount to 10$) In case of multiple refunds, this should be
+   * the amount you currently want to refund to the customer.
    * @param amount amount or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryRefundItemItem setAmount(MonetaryAmount amount) {
@@ -91,8 +91,8 @@ public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.googl
   }
 
   /**
-   * If true, the full item will be refunded. If this is true, amount should not be provided and
-   * will be ignored.
+   * If true, the full item will be refunded. If this is true, amount shouldn't be provided and will
+   * be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullRefund() {
@@ -100,8 +100,8 @@ public final class OrdersCustomBatchRequestEntryRefundItemItem extends com.googl
   }
 
   /**
-   * If true, the full item will be refunded. If this is true, amount should not be provided and
-   * will be ignored.
+   * If true, the full item will be refunded. If this is true, amount shouldn't be provided and will
+   * be ignored.
    * @param fullRefund fullRefund or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryRefundItemItem setFullRefund(java.lang.Boolean fullRefund) {

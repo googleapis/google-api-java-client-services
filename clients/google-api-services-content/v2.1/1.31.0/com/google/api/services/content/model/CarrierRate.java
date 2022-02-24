@@ -32,7 +32,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be retrieved
-   * via the `getSupportedCarriers` method. Required.
+   * through the `getSupportedCarriers` method. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for a carrier
-   * can be retrieved via the `getSupportedCarriers` method. Required.
+   * can be retrieved through the `getSupportedCarriers` method. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be retrieved
-   * via the `getSupportedCarriers` method. Required.
+   * through the `getSupportedCarriers` method. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierName() {
@@ -88,7 +88,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Carrier service, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be retrieved
-   * via the `getSupportedCarriers` method. Required.
+   * through the `getSupportedCarriers` method. Required.
    * @param carrierName carrierName or {@code null} for none
    */
   public CarrierRate setCarrierName(java.lang.String carrierName) {
@@ -98,7 +98,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for a carrier
-   * can be retrieved via the `getSupportedCarriers` method. Required.
+   * can be retrieved through the `getSupportedCarriers` method. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierService() {
@@ -107,7 +107,7 @@ public final class CarrierRate extends com.google.api.client.json.GenericJson {
 
   /**
    * Carrier service, such as `"ground"` or `"2 days"`. The list of supported services for a carrier
-   * can be retrieved via the `getSupportedCarriers` method. Required.
+   * can be retrieved through the `getSupportedCarriers` method. Required.
    * @param carrierService carrierService or {@code null} for none
    */
   public CarrierRate setCarrierService(java.lang.String carrierService) {

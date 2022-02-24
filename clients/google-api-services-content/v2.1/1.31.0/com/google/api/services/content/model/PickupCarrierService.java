@@ -31,21 +31,21 @@ package com.google.api.services.content.model;
 public final class PickupCarrierService extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the pickup carrier (e.g., `"UPS"`). Required.
+   * The name of the pickup carrier (for example, `"UPS"`). Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String carrierName;
 
   /**
-   * The name of the pickup service (e.g., `"Access point"`). Required.
+   * The name of the pickup service (for example, `"Access point"`). Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceName;
 
   /**
-   * The name of the pickup carrier (e.g., `"UPS"`). Required.
+   * The name of the pickup carrier (for example, `"UPS"`). Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrierName() {
@@ -53,7 +53,7 @@ public final class PickupCarrierService extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name of the pickup carrier (e.g., `"UPS"`). Required.
+   * The name of the pickup carrier (for example, `"UPS"`). Required.
    * @param carrierName carrierName or {@code null} for none
    */
   public PickupCarrierService setCarrierName(java.lang.String carrierName) {
@@ -62,7 +62,7 @@ public final class PickupCarrierService extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name of the pickup service (e.g., `"Access point"`). Required.
+   * The name of the pickup service (for example, `"Access point"`). Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceName() {
@@ -70,7 +70,7 @@ public final class PickupCarrierService extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name of the pickup service (e.g., `"Access point"`). Required.
+   * The name of the pickup service (for example, `"Access point"`). Required.
    * @param serviceName serviceName or {@code null} for none
    */
   public PickupCarrierService setServiceName(java.lang.String serviceName) {

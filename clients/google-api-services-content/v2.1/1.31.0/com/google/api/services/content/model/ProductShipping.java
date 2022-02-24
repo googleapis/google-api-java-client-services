@@ -53,7 +53,7 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
 
   /**
    * Maximum handling time (inclusive) between when the order is received and shipped in business
-   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * days. 0 means that the order is shipped on the same day as it's received if it happens before
    * the cut-off time. Both maxHandlingTime and maxTransitTime are required if providing shipping
    * speeds.
    * The value may be {@code null}.
@@ -62,7 +62,7 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   private java.lang.Long maxHandlingTime;
 
   /**
-   * Maximum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * Maximum transit time (inclusive) between when the order has shipped and when it's delivered in
    * business days. 0 means that the order is delivered on the same day as it ships. Both
    * maxHandlingTime and maxTransitTime are required if providing shipping speeds.
    * The value may be {@code null}.
@@ -72,8 +72,8 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
 
   /**
    * Minimum handling time (inclusive) between when the order is received and shipped in business
-   * days. 0 means that the order is shipped on the same day as it is received if it happens before
-   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it is
+   * days. 0 means that the order is shipped on the same day as it's received if it happens before
+   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it's
    * not required if maxHandlingTime is present.
    * The value may be {@code null}.
    */
@@ -81,9 +81,9 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   private java.lang.Long minHandlingTime;
 
   /**
-   * Minimum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * Minimum transit time (inclusive) between when the order has shipped and when it's delivered in
    * business days. 0 means that the order is delivered on the same day as it ships. minTransitTime
-   * can only be present together with maxTransitTime; but it is not required if maxTransitTime is
+   * can only be present together with maxTransitTime; but it's not required if maxTransitTime is
    * present.
    * The value may be {@code null}.
    */
@@ -173,7 +173,7 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
 
   /**
    * Maximum handling time (inclusive) between when the order is received and shipped in business
-   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * days. 0 means that the order is shipped on the same day as it's received if it happens before
    * the cut-off time. Both maxHandlingTime and maxTransitTime are required if providing shipping
    * speeds.
    * @return value or {@code null} for none
@@ -184,7 +184,7 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
 
   /**
    * Maximum handling time (inclusive) between when the order is received and shipped in business
-   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * days. 0 means that the order is shipped on the same day as it's received if it happens before
    * the cut-off time. Both maxHandlingTime and maxTransitTime are required if providing shipping
    * speeds.
    * @param maxHandlingTime maxHandlingTime or {@code null} for none
@@ -195,7 +195,7 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Maximum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * Maximum transit time (inclusive) between when the order has shipped and when it's delivered in
    * business days. 0 means that the order is delivered on the same day as it ships. Both
    * maxHandlingTime and maxTransitTime are required if providing shipping speeds.
    * @return value or {@code null} for none
@@ -205,7 +205,7 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Maximum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * Maximum transit time (inclusive) between when the order has shipped and when it's delivered in
    * business days. 0 means that the order is delivered on the same day as it ships. Both
    * maxHandlingTime and maxTransitTime are required if providing shipping speeds.
    * @param maxTransitTime maxTransitTime or {@code null} for none
@@ -217,8 +217,8 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
 
   /**
    * Minimum handling time (inclusive) between when the order is received and shipped in business
-   * days. 0 means that the order is shipped on the same day as it is received if it happens before
-   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it is
+   * days. 0 means that the order is shipped on the same day as it's received if it happens before
+   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it's
    * not required if maxHandlingTime is present.
    * @return value or {@code null} for none
    */
@@ -228,8 +228,8 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
 
   /**
    * Minimum handling time (inclusive) between when the order is received and shipped in business
-   * days. 0 means that the order is shipped on the same day as it is received if it happens before
-   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it is
+   * days. 0 means that the order is shipped on the same day as it's received if it happens before
+   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it's
    * not required if maxHandlingTime is present.
    * @param minHandlingTime minHandlingTime or {@code null} for none
    */
@@ -239,9 +239,9 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Minimum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * Minimum transit time (inclusive) between when the order has shipped and when it's delivered in
    * business days. 0 means that the order is delivered on the same day as it ships. minTransitTime
-   * can only be present together with maxTransitTime; but it is not required if maxTransitTime is
+   * can only be present together with maxTransitTime; but it's not required if maxTransitTime is
    * present.
    * @return value or {@code null} for none
    */
@@ -250,9 +250,9 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Minimum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * Minimum transit time (inclusive) between when the order has shipped and when it's delivered in
    * business days. 0 means that the order is delivered on the same day as it ships. minTransitTime
-   * can only be present together with maxTransitTime; but it is not required if maxTransitTime is
+   * can only be present together with maxTransitTime; but it's not required if maxTransitTime is
    * present.
    * @param minTransitTime minTransitTime or {@code null} for none
    */

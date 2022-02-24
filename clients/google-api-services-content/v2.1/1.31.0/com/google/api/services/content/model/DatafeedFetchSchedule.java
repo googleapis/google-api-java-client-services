@@ -77,7 +77,7 @@ public final class DatafeedFetchSchedule extends com.google.api.client.json.Gene
   private java.lang.Boolean paused;
 
   /**
-   * Time zone used for schedule. UTC by default. E.g., "America/Los_Angeles".
+   * Time zone used for schedule. UTC by default. For example, "America/Los_Angeles".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +205,7 @@ public final class DatafeedFetchSchedule extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time zone used for schedule. UTC by default. E.g., "America/Los_Angeles".
+   * Time zone used for schedule. UTC by default. For example, "America/Los_Angeles".
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -213,7 +213,7 @@ public final class DatafeedFetchSchedule extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time zone used for schedule. UTC by default. E.g., "America/Los_Angeles".
+   * Time zone used for schedule. UTC by default. For example, "America/Los_Angeles".
    * @param timeZone timeZone or {@code null} for none
    */
   public DatafeedFetchSchedule setTimeZone(java.lang.String timeZone) {

@@ -32,8 +32,8 @@ public final class OrdersCreateTestOrderRequest extends com.google.api.client.js
 
   /**
    * The CLDR territory code of the country of the test order to create. Affects the currency and
-   * addresses of orders created via `template_name`, or the addresses of orders created via
-   * `test_order`. Acceptable values are: - "`US`" - "`FR`" Defaults to `US`.
+   * addresses of orders created through `template_name`, or the addresses of orders created through
+   * `test_order`. Acceptable values are: - "`US`" - "`FR`" Defaults to "`US`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class OrdersCreateTestOrderRequest extends com.google.api.client.js
 
   /**
    * The CLDR territory code of the country of the test order to create. Affects the currency and
-   * addresses of orders created via `template_name`, or the addresses of orders created via
-   * `test_order`. Acceptable values are: - "`US`" - "`FR`" Defaults to `US`.
+   * addresses of orders created through `template_name`, or the addresses of orders created through
+   * `test_order`. Acceptable values are: - "`US`" - "`FR`" Defaults to "`US`".
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -67,8 +67,8 @@ public final class OrdersCreateTestOrderRequest extends com.google.api.client.js
 
   /**
    * The CLDR territory code of the country of the test order to create. Affects the currency and
-   * addresses of orders created via `template_name`, or the addresses of orders created via
-   * `test_order`. Acceptable values are: - "`US`" - "`FR`" Defaults to `US`.
+   * addresses of orders created through `template_name`, or the addresses of orders created through
+   * `test_order`. Acceptable values are: - "`US`" - "`FR`" Defaults to "`US`".
    * @param country country or {@code null} for none
    */
   public OrdersCreateTestOrderRequest setCountry(java.lang.String country) {

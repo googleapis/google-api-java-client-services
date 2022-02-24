@@ -38,7 +38,7 @@ public final class LiaCountrySettings extends com.google.api.client.json.Generic
   private LiaAboutPageSettings about;
 
   /**
-   * Required. CLDR country code (e.g. "US").
+   * Required. CLDR country code (for example, "US").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class LiaCountrySettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. CLDR country code (e.g. "US").
+   * Required. CLDR country code (for example, "US").
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -105,7 +105,7 @@ public final class LiaCountrySettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. CLDR country code (e.g. "US").
+   * Required. CLDR country code (for example, "US").
    * @param country country or {@code null} for none
    */
   public LiaCountrySettings setCountry(java.lang.String country) {

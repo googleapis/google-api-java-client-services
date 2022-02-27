@@ -49,6 +49,14 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   private java.lang.String connectionPersistenceOnUnhealthyBackends;
 
   /**
+   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
+   * publicly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableStrongAffinity;
+
+  /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
    * seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the
    * maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e.
@@ -111,6 +119,25 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
    */
   public BackendServiceConnectionTrackingPolicy setConnectionPersistenceOnUnhealthyBackends(java.lang.String connectionPersistenceOnUnhealthyBackends) {
     this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
+    return this;
+  }
+
+  /**
+   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
+   * publicly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableStrongAffinity() {
+    return enableStrongAffinity;
+  }
+
+  /**
+   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
+   * publicly.
+   * @param enableStrongAffinity enableStrongAffinity or {@code null} for none
+   */
+  public BackendServiceConnectionTrackingPolicy setEnableStrongAffinity(java.lang.Boolean enableStrongAffinity) {
+    this.enableStrongAffinity = enableStrongAffinity;
     return this;
   }
 

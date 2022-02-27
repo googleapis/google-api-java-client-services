@@ -246,6 +246,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private NetworkPerformanceConfig networkPerformanceConfig;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceParams params;
+
+  /**
    * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK
    * as default.
    * The value may be {@code null}.
@@ -916,6 +924,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
     this.networkPerformanceConfig = networkPerformanceConfig;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public InstanceParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Instance setParams(InstanceParams params) {
+    this.params = params;
     return this;
   }
 

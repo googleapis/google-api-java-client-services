@@ -69,6 +69,13 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String fingerprint;
 
   /**
+   * The prefix length of the primary internal IPv6 range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer internalIpv6PrefixLength;
+
+  /**
    * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
    * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
    * instance will have no external IPv6 Internet access.
@@ -267,6 +274,23 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface encodeFingerprint(byte[] fingerprint) {
     this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
+   * The prefix length of the primary internal IPv6 range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInternalIpv6PrefixLength() {
+    return internalIpv6PrefixLength;
+  }
+
+  /**
+   * The prefix length of the primary internal IPv6 range.
+   * @param internalIpv6PrefixLength internalIpv6PrefixLength or {@code null} for none
+   */
+  public NetworkInterface setInternalIpv6PrefixLength(java.lang.Integer internalIpv6PrefixLength) {
+    this.internalIpv6PrefixLength = internalIpv6PrefixLength;
     return this;
   }
 

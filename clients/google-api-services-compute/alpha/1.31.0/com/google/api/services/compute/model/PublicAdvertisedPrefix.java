@@ -98,6 +98,17 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Specifies how child public delegated prefix will be scoped. It could be one of following
+   * values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take
+   * a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will
+   * take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1
+   * legacy prefix. This is output only value and no longer supported in BYOIP V2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pdpScope;
+
+  /**
    * [Output Only] The list of public delegated prefixes that exist for this public advertised
    * prefix.
    * The value may be {@code null}.
@@ -327,6 +338,31 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
    */
   public PublicAdvertisedPrefix setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Specifies how child public delegated prefix will be scoped. It could be one of following
+   * values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take
+   * a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will
+   * take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1
+   * legacy prefix. This is output only value and no longer supported in BYOIP V2.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPdpScope() {
+    return pdpScope;
+  }
+
+  /**
+   * Specifies how child public delegated prefix will be scoped. It could be one of following
+   * values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take
+   * a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will
+   * take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1
+   * legacy prefix. This is output only value and no longer supported in BYOIP V2.
+   * @param pdpScope pdpScope or {@code null} for none
+   */
+  public PublicAdvertisedPrefix setPdpScope(java.lang.String pdpScope) {
+    this.pdpScope = pdpScope;
     return this;
   }
 

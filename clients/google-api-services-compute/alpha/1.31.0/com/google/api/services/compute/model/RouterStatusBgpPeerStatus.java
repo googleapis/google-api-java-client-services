@@ -121,7 +121,8 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.String routerApplianceInstance;
 
   /**
-   * BGP state as specified in RFC1771.
+   * The state of the BGP session. For a list of possible values for this field, see BGP session
+   * states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +364,8 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * BGP state as specified in RFC1771.
+   * The state of the BGP session. For a list of possible values for this field, see BGP session
+   * states.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -371,7 +373,8 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * BGP state as specified in RFC1771.
+   * The state of the BGP session. For a list of possible values for this field, see BGP session
+   * states.
    * @param state state or {@code null} for none
    */
   public RouterStatusBgpPeerStatus setState(java.lang.String state) {

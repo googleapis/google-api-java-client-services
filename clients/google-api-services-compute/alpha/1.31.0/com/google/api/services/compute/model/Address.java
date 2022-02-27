@@ -79,6 +79,14 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String ipVersion;
 
   /**
+   * The endpoint type of this address, which should be VM. This is used for deciding which endpoint
+   * this address will be assigned to during the IPv6 external IP address reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6EndpointType;
+
+  /**
    * [Output Only] Type of the resource. Always compute#address for addresses.
    * The value may be {@code null}.
    */
@@ -311,6 +319,25 @@ public final class Address extends com.google.api.client.json.GenericJson {
    */
   public Address setIpVersion(java.lang.String ipVersion) {
     this.ipVersion = ipVersion;
+    return this;
+  }
+
+  /**
+   * The endpoint type of this address, which should be VM. This is used for deciding which endpoint
+   * this address will be assigned to during the IPv6 external IP address reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6EndpointType() {
+    return ipv6EndpointType;
+  }
+
+  /**
+   * The endpoint type of this address, which should be VM. This is used for deciding which endpoint
+   * this address will be assigned to during the IPv6 external IP address reservation.
+   * @param ipv6EndpointType ipv6EndpointType or {@code null} for none
+   */
+  public Address setIpv6EndpointType(java.lang.String ipv6EndpointType) {
+    this.ipv6EndpointType = ipv6EndpointType;
     return this;
   }
 

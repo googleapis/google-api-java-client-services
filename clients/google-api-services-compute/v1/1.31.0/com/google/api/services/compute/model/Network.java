@@ -65,6 +65,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google
+   * defined ULA prefix fd20::/20. .
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableUlaInternalIpv6;
+
+  /**
    * [Output Only] The gateway address for default routing out of the network, selected by GCP.
    * The value may be {@code null}.
    */
@@ -77,6 +85,17 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
+
+  /**
+   * When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the
+   * google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be
+   * within the fd20::/20. Operation will fail if the speficied /48 is already in used by another
+   * resource. If the field is not speficied, then a /48 range will be randomly allocated from
+   * fd20::/20 and returned via this field. .
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalIpv6Range;
 
   /**
    * [Output Only] Type of the resource. Always compute#network for networks.
@@ -105,6 +124,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or
+   * BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkFirewallPolicyEnforcementOrder;
+
+  /**
    * [Output Only] A list of network peerings for the resource.
    * The value may be {@code null}.
    */
@@ -125,6 +152,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLinkWithId;
 
   /**
    * [Output Only] Server-defined fully-qualified URLs for all subnetworks in this VPC network.
@@ -214,6 +248,25 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google
+   * defined ULA prefix fd20::/20. .
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableUlaInternalIpv6() {
+    return enableUlaInternalIpv6;
+  }
+
+  /**
+   * Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google
+   * defined ULA prefix fd20::/20. .
+   * @param enableUlaInternalIpv6 enableUlaInternalIpv6 or {@code null} for none
+   */
+  public Network setEnableUlaInternalIpv6(java.lang.Boolean enableUlaInternalIpv6) {
+    this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
+    return this;
+  }
+
+  /**
    * [Output Only] The gateway address for default routing out of the network, selected by GCP.
    * @return value or {@code null} for none
    */
@@ -244,6 +297,31 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the
+   * google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be
+   * within the fd20::/20. Operation will fail if the speficied /48 is already in used by another
+   * resource. If the field is not speficied, then a /48 range will be randomly allocated from
+   * fd20::/20 and returned via this field. .
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalIpv6Range() {
+    return internalIpv6Range;
+  }
+
+  /**
+   * When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the
+   * google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be
+   * within the fd20::/20. Operation will fail if the speficied /48 is already in used by another
+   * resource. If the field is not speficied, then a /48 range will be randomly allocated from
+   * fd20::/20 and returned via this field. .
+   * @param internalIpv6Range internalIpv6Range or {@code null} for none
+   */
+  public Network setInternalIpv6Range(java.lang.String internalIpv6Range) {
+    this.internalIpv6Range = internalIpv6Range;
     return this;
   }
 
@@ -309,6 +387,25 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or
+   * BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkFirewallPolicyEnforcementOrder() {
+    return networkFirewallPolicyEnforcementOrder;
+  }
+
+  /**
+   * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or
+   * BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+   * @param networkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder or {@code null} for none
+   */
+  public Network setNetworkFirewallPolicyEnforcementOrder(java.lang.String networkFirewallPolicyEnforcementOrder) {
+    this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
+    return this;
+  }
+
+  /**
    * [Output Only] A list of network peerings for the resource.
    * @return value or {@code null} for none
    */
@@ -358,6 +455,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLinkWithId() {
+    return selfLinkWithId;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @param selfLinkWithId selfLinkWithId or {@code null} for none
+   */
+  public Network setSelfLinkWithId(java.lang.String selfLinkWithId) {
+    this.selfLinkWithId = selfLinkWithId;
     return this;
   }
 

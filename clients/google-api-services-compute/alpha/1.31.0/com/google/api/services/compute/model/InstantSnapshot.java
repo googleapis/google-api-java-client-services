@@ -60,8 +60,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
 
   /**
    * Whether to attempt an application consistent instant snapshot by informing the OS to prepare
-   * for the snapshot process. Currently only supported on Windows instances using the Volume Shadow
-   * Copy Service (VSS).
+   * for the snapshot process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,8 +256,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
 
   /**
    * Whether to attempt an application consistent instant snapshot by informing the OS to prepare
-   * for the snapshot process. Currently only supported on Windows instances using the Volume Shadow
-   * Copy Service (VSS).
+   * for the snapshot process.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGuestFlush() {
@@ -267,8 +265,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
 
   /**
    * Whether to attempt an application consistent instant snapshot by informing the OS to prepare
-   * for the snapshot process. Currently only supported on Windows instances using the Volume Shadow
-   * Copy Service (VSS).
+   * for the snapshot process.
    * @param guestFlush guestFlush or {@code null} for none
    */
   public InstantSnapshot setGuestFlush(java.lang.Boolean guestFlush) {

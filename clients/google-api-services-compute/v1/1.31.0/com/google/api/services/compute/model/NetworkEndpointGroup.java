@@ -119,8 +119,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String network;
 
   /**
-   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
-   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
+   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
+   * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
    * PRIVATE_SERVICE_CONNECT.
    * The value may be {@code null}.
    */
@@ -376,8 +376,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
-   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
+   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
+   * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
    * PRIVATE_SERVICE_CONNECT.
    * @return value or {@code null} for none
    */
@@ -386,8 +386,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
-   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
+   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
+   * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
    * PRIVATE_SERVICE_CONNECT.
    * @param networkEndpointType networkEndpointType or {@code null} for none
    */

@@ -95,6 +95,13 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer priority;
 
   /**
+   * An optional name for the rule. This field is not a unique identifier and can be updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ruleName;
+
+  /**
    * [Output Only] Calculation of the complexity of a single firewall policy rule.
    * The value may be {@code null}.
    */
@@ -279,6 +286,23 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setPriority(java.lang.Integer priority) {
     this.priority = priority;
+    return this;
+  }
+
+  /**
+   * An optional name for the rule. This field is not a unique identifier and can be updated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuleName() {
+    return ruleName;
+  }
+
+  /**
+   * An optional name for the rule. This field is not a unique identifier and can be updated.
+   * @param ruleName ruleName or {@code null} for none
+   */
+  public FirewallPolicyRule setRuleName(java.lang.String ruleName) {
+    this.ruleName = ruleName;
     return this;
   }
 

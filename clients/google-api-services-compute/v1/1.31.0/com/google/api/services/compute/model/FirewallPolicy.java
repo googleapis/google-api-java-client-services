@@ -105,6 +105,15 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String parent;
 
   /**
+   * [Output Only] URL of the region where the regional firewall policy resides. This field is not
+   * applicable to global firewall policies. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output Only] Total count of all firewall policy rule tuples. A firewall policy can not exceed
    * a set number of tuples.
    * The value may be {@code null}.
@@ -360,6 +369,27 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   public FirewallPolicy setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional firewall policy resides. This field is not
+   * applicable to global firewall policies. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional firewall policy resides. This field is not
+   * applicable to global firewall policies. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   * @param region region or {@code null} for none
+   */
+  public FirewallPolicy setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

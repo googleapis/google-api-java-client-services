@@ -58,6 +58,14 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableEndpointIndependentMapping;
 
   /**
+   * List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will
+   * be equivalent to include ENDPOINT_TYPE_VM
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> endpointTypes;
+
+  /**
    * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
    * The value may be {@code null}.
    */
@@ -238,6 +246,25 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   public RouterNat setEnableEndpointIndependentMapping(java.lang.Boolean enableEndpointIndependentMapping) {
     this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
+    return this;
+  }
+
+  /**
+   * List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will
+   * be equivalent to include ENDPOINT_TYPE_VM
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEndpointTypes() {
+    return endpointTypes;
+  }
+
+  /**
+   * List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will
+   * be equivalent to include ENDPOINT_TYPE_VM
+   * @param endpointTypes endpointTypes or {@code null} for none
+   */
+  public RouterNat setEndpointTypes(java.util.List<java.lang.String> endpointTypes) {
+    this.endpointTypes = endpointTypes;
     return this;
   }
 

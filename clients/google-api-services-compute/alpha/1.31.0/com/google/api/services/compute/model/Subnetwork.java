@@ -144,6 +144,14 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
+   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
+   * is for general VM to VM communication, not to be confused with the ipv6_cidr_range field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalIpv6Prefix;
+
+  /**
    * The range of internal addresses that are owned by this subnetwork. Provide this property when
    * you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and
    * non-overlapping within a network. Only IPv4 is supported. This field is set at resource
@@ -306,9 +314,10 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
-   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
-   * specified IPV4_ONLY will be used. This field can be both set at resource creation time and
-   * updated using patch.
+   * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
+   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
+   * time and updated using patch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -627,6 +636,25 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
+   * is for general VM to VM communication, not to be confused with the ipv6_cidr_range field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalIpv6Prefix() {
+    return internalIpv6Prefix;
+  }
+
+  /**
+   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
+   * is for general VM to VM communication, not to be confused with the ipv6_cidr_range field.
+   * @param internalIpv6Prefix internalIpv6Prefix or {@code null} for none
+   */
+  public Subnetwork setInternalIpv6Prefix(java.lang.String internalIpv6Prefix) {
+    this.internalIpv6Prefix = internalIpv6Prefix;
     return this;
   }
 
@@ -1009,9 +1037,10 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
-   * specified IPV4_ONLY will be used. This field can be both set at resource creation time and
-   * updated using patch.
+   * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
+   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
+   * time and updated using patch.
    * @return value or {@code null} for none
    */
   public java.lang.String getStackType() {
@@ -1019,9 +1048,10 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
-   * specified IPV4_ONLY will be used. This field can be both set at resource creation time and
-   * updated using patch.
+   * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
+   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
+   * time and updated using patch.
    * @param stackType stackType or {@code null} for none
    */
   public Subnetwork setStackType(java.lang.String stackType) {

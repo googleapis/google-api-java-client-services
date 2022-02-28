@@ -6658,22 +6658,22 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * The view to be applied to the returned tables' fields. Only NAME_ONLY view (default)
-           * and REPLICATION_VIEW are supported.
+           * The view to be applied to the returned tables' fields. Only NAME_ONLY view (default),
+           * REPLICATION_VIEW and ENCRYPTION_VIEW are supported.
            */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** The view to be applied to the returned tables' fields. Only NAME_ONLY view (default) and
-         REPLICATION_VIEW are supported.
+          /** The view to be applied to the returned tables' fields. Only NAME_ONLY view (default),
+         REPLICATION_VIEW and ENCRYPTION_VIEW are supported.
            */
           public java.lang.String getView() {
             return view;
           }
 
           /**
-           * The view to be applied to the returned tables' fields. Only NAME_ONLY view (default)
-           * and REPLICATION_VIEW are supported.
+           * The view to be applied to the returned tables' fields. Only NAME_ONLY view (default),
+           * REPLICATION_VIEW and ENCRYPTION_VIEW are supported.
            */
           public List setView(java.lang.String view) {
             this.view = view;

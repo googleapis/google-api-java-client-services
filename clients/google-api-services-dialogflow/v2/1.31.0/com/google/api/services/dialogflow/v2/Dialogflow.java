@@ -13369,6 +13369,1758 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
     }
     /**
+     * An accessor for creating requests from the ConversationDatasets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.ConversationDatasets.List request = dialogflow.conversationDatasets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ConversationDatasets conversationDatasets() {
+      return new ConversationDatasets();
+    }
+
+    /**
+     * The "conversationDatasets" collection of methods.
+     */
+    public class ConversationDatasets {
+
+      /**
+       * Retrieves the specified conversation dataset.
+       *
+       * Create a request for the method "conversationDatasets.get".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The conversation dataset to retrieve. Format: `projects//locations//conversationDatasets/`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationDatasets/[^/]+$");
+
+        /**
+         * Retrieves the specified conversation dataset.
+         *
+         * Create a request for the method "conversationDatasets.get".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The conversation dataset to retrieve. Format: `projects//locations//conversationDatasets/`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationDatasets/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The conversation dataset to retrieve. Format:
+         * `projects//locations//conversationDatasets/`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The conversation dataset to retrieve. Format:
+       `projects//locations//conversationDatasets/`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The conversation dataset to retrieve. Format:
+         * `projects//locations//conversationDatasets/`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationDatasets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Import data into the specified conversation dataset. Note that it is not allowed to import data
+       * to a conversation dataset that already has data in it. This method is a [long-running
+       * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+       * `Operation` type has the following method-specific fields: - `metadata`:
+       * ImportConversationDataOperationMetadata - `response`: ImportConversationDataOperationResponse
+       *
+       * Create a request for the method "conversationDatasets.importConversationData".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link ImportConversationData#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest}
+       * @return the request
+       */
+      public ImportConversationData importConversationData(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest content) throws java.io.IOException {
+        ImportConversationData result = new ImportConversationData(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ImportConversationData extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2/{+name}:importConversationData";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationDatasets/[^/]+$");
+
+        /**
+         * Import data into the specified conversation dataset. Note that it is not allowed to import data
+         * to a conversation dataset that already has data in it. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+         * returned `Operation` type has the following method-specific fields: - `metadata`:
+         * ImportConversationDataOperationMetadata - `response`: ImportConversationDataOperationResponse
+         *
+         * Create a request for the method "conversationDatasets.importConversationData".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link ImportConversationData#execute()} method to invoke the
+         * remote operation. <p> {@link ImportConversationData#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest}
+         * @since 1.13
+         */
+        protected ImportConversationData(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationDatasets/[^/]+$");
+          }
+        }
+
+        @Override
+        public ImportConversationData set$Xgafv(java.lang.String $Xgafv) {
+          return (ImportConversationData) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ImportConversationData setAccessToken(java.lang.String accessToken) {
+          return (ImportConversationData) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ImportConversationData setAlt(java.lang.String alt) {
+          return (ImportConversationData) super.setAlt(alt);
+        }
+
+        @Override
+        public ImportConversationData setCallback(java.lang.String callback) {
+          return (ImportConversationData) super.setCallback(callback);
+        }
+
+        @Override
+        public ImportConversationData setFields(java.lang.String fields) {
+          return (ImportConversationData) super.setFields(fields);
+        }
+
+        @Override
+        public ImportConversationData setKey(java.lang.String key) {
+          return (ImportConversationData) super.setKey(key);
+        }
+
+        @Override
+        public ImportConversationData setOauthToken(java.lang.String oauthToken) {
+          return (ImportConversationData) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ImportConversationData setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ImportConversationData) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ImportConversationData setQuotaUser(java.lang.String quotaUser) {
+          return (ImportConversationData) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ImportConversationData setUploadType(java.lang.String uploadType) {
+          return (ImportConversationData) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ImportConversationData setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ImportConversationData) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+         */
+        public ImportConversationData setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationDatasets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ImportConversationData set(String parameterName, Object value) {
+          return (ImportConversationData) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the list of all conversation datasets in the specified project and location.
+       *
+       * Create a request for the method "conversationDatasets.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project and location name to list all conversation datasets for. Format:
+       *        `projects//locations/`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationDatasetsResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/conversationDatasets";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Returns the list of all conversation datasets in the specified project and location.
+         *
+         * Create a request for the method "conversationDatasets.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project and location name to list all conversation datasets for. Format:
+       *        `projects//locations/`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationDatasetsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project and location name to list all conversation datasets for. Format:
+         * `projects//locations/`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project and location name to list all conversation datasets for. Format:
+       `projects//locations/`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project and location name to list all conversation datasets for. Format:
+         * `projects//locations/`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of conversation datasets to return in a single page. By default
+         * 100 and at most 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of conversation datasets to return in a single page. By default 100 and at
+       most 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of conversation datasets to return in a single page. By default
+         * 100 and at most 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the ConversationModels collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.ConversationModels.List request = dialogflow.conversationModels().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ConversationModels conversationModels() {
+      return new ConversationModels();
+    }
+
+    /**
+     * The "conversationModels" collection of methods.
+     */
+    public class ConversationModels {
+
+      /**
+       * Creates a model. This method is a [long-running
+       * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+       * `Operation` type has the following method-specific fields: - `metadata`:
+       * CreateConversationModelOperationMetadata - `response`: ConversationModel
+       *
+       * Create a request for the method "conversationModels.create".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project to create conversation model for. Format: `projects/`
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2/{+parent}/conversationModels";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a model. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+         * returned `Operation` type has the following method-specific fields: - `metadata`:
+         * CreateConversationModelOperationMetadata - `response`: ConversationModel
+         *
+         * Create a request for the method "conversationModels.create".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project to create conversation model for. Format: `projects/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The project to create conversation model for. Format: `projects/` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project to create conversation model for. Format: `projects/`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** The project to create conversation model for. Format: `projects/` */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a model. This method is a [long-running
+       * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+       * `Operation` type has the following method-specific fields: - `metadata`:
+       * DeleteConversationModelOperationMetadata - `response`: An [Empty
+       * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+       *
+       * Create a request for the method "conversationModels.delete".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The conversation model to delete. Format: `projects//conversationModels/`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationModels/[^/]+$");
+
+        /**
+         * Deletes a model. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+         * returned `Operation` type has the following method-specific fields: - `metadata`:
+         * DeleteConversationModelOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+         *
+         * Create a request for the method "conversationModels.delete".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The conversation model to delete. Format: `projects//conversationModels/`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The conversation model to delete. Format: `projects//conversationModels/` */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The conversation model to delete. Format: `projects//conversationModels/`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The conversation model to delete. Format: `projects//conversationModels/` */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deploys a model. If a model is already deployed, deploying it has no effect. A model can only
+       * serve prediction requests after it gets deployed. For article suggestion, custom model will not
+       * be used unless it is deployed. This method is a [long-running
+       * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+       * `Operation` type has the following method-specific fields: - `metadata`:
+       * DeployConversationModelOperationMetadata - `response`: An [Empty
+       * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+       *
+       * Create a request for the method "conversationModels.deploy".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Deploy#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The conversation model to deploy. Format: `projects//conversationModels/`
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest}
+       * @return the request
+       */
+      public Deploy deploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest content) throws java.io.IOException {
+        Deploy result = new Deploy(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Deploy extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2/{+name}:deploy";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationModels/[^/]+$");
+
+        /**
+         * Deploys a model. If a model is already deployed, deploying it has no effect. A model can only
+         * serve prediction requests after it gets deployed. For article suggestion, custom model will not
+         * be used unless it is deployed. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+         * returned `Operation` type has the following method-specific fields: - `metadata`:
+         * DeployConversationModelOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+         *
+         * Create a request for the method "conversationModels.deploy".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Deploy#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Deploy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The conversation model to deploy. Format: `projects//conversationModels/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest}
+         * @since 1.13
+         */
+        protected Deploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+        }
+
+        @Override
+        public Deploy set$Xgafv(java.lang.String $Xgafv) {
+          return (Deploy) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Deploy setAccessToken(java.lang.String accessToken) {
+          return (Deploy) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Deploy setAlt(java.lang.String alt) {
+          return (Deploy) super.setAlt(alt);
+        }
+
+        @Override
+        public Deploy setCallback(java.lang.String callback) {
+          return (Deploy) super.setCallback(callback);
+        }
+
+        @Override
+        public Deploy setFields(java.lang.String fields) {
+          return (Deploy) super.setFields(fields);
+        }
+
+        @Override
+        public Deploy setKey(java.lang.String key) {
+          return (Deploy) super.setKey(key);
+        }
+
+        @Override
+        public Deploy setOauthToken(java.lang.String oauthToken) {
+          return (Deploy) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Deploy setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Deploy) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Deploy setQuotaUser(java.lang.String quotaUser) {
+          return (Deploy) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Deploy setUploadType(java.lang.String uploadType) {
+          return (Deploy) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Deploy setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Deploy) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The conversation model to deploy. Format: `projects//conversationModels/` */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The conversation model to deploy. Format: `projects//conversationModels/`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The conversation model to deploy. Format: `projects//conversationModels/` */
+        public Deploy setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Deploy set(String parameterName, Object value) {
+          return (Deploy) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets conversation model.
+       *
+       * Create a request for the method "conversationModels.get".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationModels/[^/]+$");
+
+        /**
+         * Gets conversation model.
+         *
+         * Create a request for the method "conversationModels.get".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists conversation models.
+       *
+       * Create a request for the method "conversationModels.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to list all conversation models for. Format: `projects/`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelsResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/conversationModels";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists conversation models.
+         *
+         * Create a request for the method "conversationModels.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to list all conversation models for. Format: `projects/`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The project to list all conversation models for. Format: `projects/` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to list all conversation models for. Format: `projects/`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The project to list all conversation models for. Format: `projects/` */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of conversation models to return in a single page. By default
+         * 100 and at most 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of conversation models to return in a single page. By default 100 and at
+       most 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of conversation models to return in a single page. By default
+         * 100 and at most 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Undeploys a model. If the model is not deployed this method has no effect. If the model is
+       * currently being used: - For article suggestion, article suggestion will fallback to the default
+       * model if model is undeployed. This method is a [long-running
+       * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+       * `Operation` type has the following method-specific fields: - `metadata`:
+       * UndeployConversationModelOperationMetadata - `response`: An [Empty
+       * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+       *
+       * Create a request for the method "conversationModels.undeploy".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Undeploy#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest}
+       * @return the request
+       */
+      public Undeploy undeploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest content) throws java.io.IOException {
+        Undeploy result = new Undeploy(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Undeploy extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2/{+name}:undeploy";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationModels/[^/]+$");
+
+        /**
+         * Undeploys a model. If the model is not deployed this method has no effect. If the model is
+         * currently being used: - For article suggestion, article suggestion will fallback to the default
+         * model if model is undeployed. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+         * returned `Operation` type has the following method-specific fields: - `metadata`:
+         * UndeployConversationModelOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+         *
+         * Create a request for the method "conversationModels.undeploy".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Undeploy#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Undeploy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest}
+         * @since 1.13
+         */
+        protected Undeploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+        }
+
+        @Override
+        public Undeploy set$Xgafv(java.lang.String $Xgafv) {
+          return (Undeploy) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Undeploy setAccessToken(java.lang.String accessToken) {
+          return (Undeploy) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Undeploy setAlt(java.lang.String alt) {
+          return (Undeploy) super.setAlt(alt);
+        }
+
+        @Override
+        public Undeploy setCallback(java.lang.String callback) {
+          return (Undeploy) super.setCallback(callback);
+        }
+
+        @Override
+        public Undeploy setFields(java.lang.String fields) {
+          return (Undeploy) super.setFields(fields);
+        }
+
+        @Override
+        public Undeploy setKey(java.lang.String key) {
+          return (Undeploy) super.setKey(key);
+        }
+
+        @Override
+        public Undeploy setOauthToken(java.lang.String oauthToken) {
+          return (Undeploy) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Undeploy setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Undeploy) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Undeploy setQuotaUser(java.lang.String quotaUser) {
+          return (Undeploy) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Undeploy setUploadType(java.lang.String uploadType) {
+          return (Undeploy) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Undeploy setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Undeploy) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+         */
+        public Undeploy setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationModels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Undeploy set(String parameterName, Object value) {
+          return (Undeploy) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Evaluations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.Evaluations.List request = dialogflow.evaluations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Evaluations evaluations() {
+        return new Evaluations();
+      }
+
+      /**
+       * The "evaluations" collection of methods.
+       */
+      public class Evaluations {
+
+        /**
+         * Gets an evaluation of conversation model.
+         *
+         * Create a request for the method "evaluations.get".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The conversation model evaluation resource name. Format:
+         *        `projects//conversationModels//evaluations/`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModelEvaluation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversationModels/[^/]+/evaluations/[^/]+$");
+
+          /**
+           * Gets an evaluation of conversation model.
+           *
+           * Create a request for the method "evaluations.get".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The conversation model evaluation resource name. Format:
+         *        `projects//conversationModels//evaluations/`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModelEvaluation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/conversationModels/[^/]+/evaluations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation model evaluation resource name. Format:
+           * `projects//conversationModels//evaluations/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The conversation model evaluation resource name. Format:
+         `projects//conversationModels//evaluations/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The conversation model evaluation resource name. Format:
+           * `projects//conversationModels//evaluations/`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/conversationModels/[^/]+/evaluations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists evaluations of a conversation model.
+         *
+         * Create a request for the method "evaluations.list".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The conversation model resource name. Format: `projects//conversationModels/`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/evaluations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversationModels/[^/]+$");
+
+          /**
+           * Lists evaluations of a conversation model.
+           *
+           * Create a request for the method "evaluations.list".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The conversation model resource name. Format: `projects//conversationModels/`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/conversationModels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation model resource name. Format: `projects//conversationModels/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The conversation model resource name. Format: `projects//conversationModels/`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The conversation model resource name. Format: `projects//conversationModels/`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/conversationModels/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of evaluations to return in a single page. By default 100 and
+           * at most 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of evaluations to return in a single page. By default 100 and at most
+         1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of evaluations to return in a single page. By default 100 and
+           * at most 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the ConversationProfiles collection.
      *
      * <p>The typical use is:</p>
@@ -13388,6 +15140,153 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
      */
     public class ConversationProfiles {
 
+      /**
+       * Clears a suggestion feature from a conversation profile for the given participant role. This
+       * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+       * running-operations). The returned `Operation` type has the following method-specific fields: -
+       * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+       *
+       * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest}
+       * @return the request
+       */
+      public ClearSuggestionFeatureConfig clearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest content) throws java.io.IOException {
+        ClearSuggestionFeatureConfig result = new ClearSuggestionFeatureConfig(conversationProfile, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ClearSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2/{+conversationProfile}:clearSuggestionFeatureConfig";
+
+        private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
+
+        /**
+         * Clears a suggestion feature from a conversation profile for the given participant role. This
+         * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+         * running-operations). The returned `Operation` type has the following method-specific fields: -
+         * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+         *
+         * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke
+         * the remote operation. <p> {@link ClearSuggestionFeatureConfig#initialize(com.google.api.client.
+         * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest}
+         * @since 1.13
+         */
+        protected ClearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+          this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (ClearSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+          return (ClearSuggestionFeatureConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setAlt(java.lang.String alt) {
+          return (ClearSuggestionFeatureConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setCallback(java.lang.String callback) {
+          return (ClearSuggestionFeatureConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setFields(java.lang.String fields) {
+          return (ClearSuggestionFeatureConfig) super.setFields(fields);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setKey(java.lang.String key) {
+          return (ClearSuggestionFeatureConfig) super.setKey(key);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+          return (ClearSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ClearSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+          return (ClearSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+          return (ClearSuggestionFeatureConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ClearSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String conversationProfile;
+
+        /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       `projects//locations//conversationProfiles/`.
+         */
+        public java.lang.String getConversationProfile() {
+          return conversationProfile;
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        public ClearSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+          this.conversationProfile = conversationProfile;
+          return this;
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig set(String parameterName, Object value) {
+          return (ClearSuggestionFeatureConfig) super.set(parameterName, value);
+        }
+      }
       /**
        * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
        * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
@@ -14152,6 +16051,163 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+       * contains the type of suggestion feature for the participant role, it will update it. Otherwise it
+       * will insert the suggestion feature. This method is a [long-running
+       * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+       * `Operation` type has the following method-specific fields: - `metadata`:
+       * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+       * operation to add or update suggestion feature config for the same conversation profile,
+       * participant role and suggestion feature type exists, please cancel the existing long running
+       * operation before sending such request, otherwise the request will be rejected.
+       *
+       * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest}
+       * @return the request
+       */
+      public SetSuggestionFeatureConfig setSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest content) throws java.io.IOException {
+        SetSuggestionFeatureConfig result = new SetSuggestionFeatureConfig(conversationProfile, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SetSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2/{+conversationProfile}:setSuggestionFeatureConfig";
+
+        private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
+
+        /**
+         * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+         * contains the type of suggestion feature for the participant role, it will update it. Otherwise
+         * it will insert the suggestion feature. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+         * returned `Operation` type has the following method-specific fields: - `metadata`:
+         * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+         * operation to add or update suggestion feature config for the same conversation profile,
+         * participant role and suggestion feature type exists, please cancel the existing long running
+         * operation before sending such request, otherwise the request will be rejected.
+         *
+         * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the
+         * remote operation. <p> {@link SetSuggestionFeatureConfig#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest}
+         * @since 1.13
+         */
+        protected SetSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+          this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (SetSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+          return (SetSuggestionFeatureConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setAlt(java.lang.String alt) {
+          return (SetSuggestionFeatureConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setCallback(java.lang.String callback) {
+          return (SetSuggestionFeatureConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setFields(java.lang.String fields) {
+          return (SetSuggestionFeatureConfig) super.setFields(fields);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setKey(java.lang.String key) {
+          return (SetSuggestionFeatureConfig) super.setKey(key);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+          return (SetSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SetSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+          return (SetSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+          return (SetSuggestionFeatureConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SetSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String conversationProfile;
+
+        /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       `projects//locations//conversationProfiles/`.
+         */
+        public java.lang.String getConversationProfile() {
+          return conversationProfile;
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        public SetSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+          this.conversationProfile = conversationProfile;
+          return this;
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig set(String parameterName, Object value) {
+          return (SetSuggestionFeatureConfig) super.set(parameterName, value);
         }
       }
 
@@ -30241,6 +32297,2191 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
       }
       /**
+       * An accessor for creating requests from the ConversationDatasets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.ConversationDatasets.List request = dialogflow.conversationDatasets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ConversationDatasets conversationDatasets() {
+        return new ConversationDatasets();
+      }
+
+      /**
+       * The "conversationDatasets" collection of methods.
+       */
+      public class ConversationDatasets {
+
+        /**
+         * Creates a new conversation dataset. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * CreateConversationDatasetOperationMetadata - `response`: ConversationDataset
+         *
+         * Create a request for the method "conversationDatasets.create".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project to create conversation dataset for. Format: `projects//locations/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+parent}/conversationDatasets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new conversation dataset. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * CreateConversationDatasetOperationMetadata - `response`: ConversationDataset
+           *
+           * Create a request for the method "conversationDatasets.create".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project to create conversation dataset for. Format: `projects//locations/`
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project to create conversation dataset for. Format:
+           * `projects//locations/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project to create conversation dataset for. Format: `projects//locations/`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project to create conversation dataset for. Format:
+           * `projects//locations/`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the specified conversation dataset. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * DeleteConversationDatasetOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+         *
+         * Create a request for the method "conversationDatasets.delete".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The conversation dataset to delete. Format: `projects//locations//conversationDatasets/`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+
+          /**
+           * Deletes the specified conversation dataset. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * DeleteConversationDatasetOperationMetadata - `response`: An [Empty
+           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+           *
+           * Create a request for the method "conversationDatasets.delete".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The conversation dataset to delete. Format: `projects//locations//conversationDatasets/`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation dataset to delete. Format:
+           * `projects//locations//conversationDatasets/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The conversation dataset to delete. Format: `projects//locations//conversationDatasets/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The conversation dataset to delete. Format:
+           * `projects//locations//conversationDatasets/`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves the specified conversation dataset.
+         *
+         * Create a request for the method "conversationDatasets.get".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The conversation dataset to retrieve. Format: `projects//locations//conversationDatasets/`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+
+          /**
+           * Retrieves the specified conversation dataset.
+           *
+           * Create a request for the method "conversationDatasets.get".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The conversation dataset to retrieve. Format: `projects//locations//conversationDatasets/`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationDataset.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation dataset to retrieve. Format:
+           * `projects//locations//conversationDatasets/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The conversation dataset to retrieve. Format:
+         `projects//locations//conversationDatasets/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The conversation dataset to retrieve. Format:
+           * `projects//locations//conversationDatasets/`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Import data into the specified conversation dataset. Note that it is not allowed to import data
+         * to a conversation dataset that already has data in it. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * ImportConversationDataOperationMetadata - `response`: ImportConversationDataOperationResponse
+         *
+         * Create a request for the method "conversationDatasets.importConversationData".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link ImportConversationData#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest}
+         * @return the request
+         */
+        public ImportConversationData importConversationData(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest content) throws java.io.IOException {
+          ImportConversationData result = new ImportConversationData(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ImportConversationData extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:importConversationData";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+
+          /**
+           * Import data into the specified conversation dataset. Note that it is not allowed to import data
+           * to a conversation dataset that already has data in it. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * ImportConversationDataOperationMetadata - `response`: ImportConversationDataOperationResponse
+           *
+           * Create a request for the method "conversationDatasets.importConversationData".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link ImportConversationData#execute()} method to invoke the
+           * remote operation. <p> {@link ImportConversationData#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest}
+           * @since 1.13
+           */
+          protected ImportConversationData(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ImportConversationDataRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public ImportConversationData set$Xgafv(java.lang.String $Xgafv) {
+            return (ImportConversationData) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ImportConversationData setAccessToken(java.lang.String accessToken) {
+            return (ImportConversationData) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ImportConversationData setAlt(java.lang.String alt) {
+            return (ImportConversationData) super.setAlt(alt);
+          }
+
+          @Override
+          public ImportConversationData setCallback(java.lang.String callback) {
+            return (ImportConversationData) super.setCallback(callback);
+          }
+
+          @Override
+          public ImportConversationData setFields(java.lang.String fields) {
+            return (ImportConversationData) super.setFields(fields);
+          }
+
+          @Override
+          public ImportConversationData setKey(java.lang.String key) {
+            return (ImportConversationData) super.setKey(key);
+          }
+
+          @Override
+          public ImportConversationData setOauthToken(java.lang.String oauthToken) {
+            return (ImportConversationData) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ImportConversationData setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ImportConversationData) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ImportConversationData setQuotaUser(java.lang.String quotaUser) {
+            return (ImportConversationData) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ImportConversationData setUploadType(java.lang.String uploadType) {
+            return (ImportConversationData) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ImportConversationData setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ImportConversationData) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Dataset resource name. Format: `projects//locations//conversationDatasets/`
+           */
+          public ImportConversationData setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationDatasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ImportConversationData set(String parameterName, Object value) {
+            return (ImportConversationData) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the list of all conversation datasets in the specified project and location.
+         *
+         * Create a request for the method "conversationDatasets.list".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location name to list all conversation datasets for. Format:
+         *        `projects//locations/`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationDatasetsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/conversationDatasets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns the list of all conversation datasets in the specified project and location.
+           *
+           * Create a request for the method "conversationDatasets.list".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location name to list all conversation datasets for. Format:
+         *        `projects//locations/`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationDatasetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location name to list all conversation datasets for. Format:
+           * `projects//locations/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location name to list all conversation datasets for. Format:
+         `projects//locations/`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location name to list all conversation datasets for. Format:
+           * `projects//locations/`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of conversation datasets to return in a single page. By
+           * default 100 and at most 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of conversation datasets to return in a single page. By default 100 and at
+         most 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of conversation datasets to return in a single page. By
+           * default 100 and at most 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the ConversationModels collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.ConversationModels.List request = dialogflow.conversationModels().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ConversationModels conversationModels() {
+        return new ConversationModels();
+      }
+
+      /**
+       * The "conversationModels" collection of methods.
+       */
+      public class ConversationModels {
+
+        /**
+         * Creates a model. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * CreateConversationModelOperationMetadata - `response`: ConversationModel
+         *
+         * Create a request for the method "conversationModels.create".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project to create conversation model for. Format: `projects/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+parent}/conversationModels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a model. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * CreateConversationModelOperationMetadata - `response`: ConversationModel
+           *
+           * Create a request for the method "conversationModels.create".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project to create conversation model for. Format: `projects/`
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The project to create conversation model for. Format: `projects/` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project to create conversation model for. Format: `projects/`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** The project to create conversation model for. Format: `projects/` */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a model. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * DeleteConversationModelOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+         *
+         * Create a request for the method "conversationModels.delete".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The conversation model to delete. Format: `projects//conversationModels/`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+
+          /**
+           * Deletes a model. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * DeleteConversationModelOperationMetadata - `response`: An [Empty
+           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+           *
+           * Create a request for the method "conversationModels.delete".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The conversation model to delete. Format: `projects//conversationModels/`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation model to delete. Format: `projects//conversationModels/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The conversation model to delete. Format: `projects//conversationModels/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The conversation model to delete. Format: `projects//conversationModels/`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deploys a model. If a model is already deployed, deploying it has no effect. A model can only
+         * serve prediction requests after it gets deployed. For article suggestion, custom model will not
+         * be used unless it is deployed. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * DeployConversationModelOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+         *
+         * Create a request for the method "conversationModels.deploy".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Deploy#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The conversation model to deploy. Format: `projects//conversationModels/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest}
+         * @return the request
+         */
+        public Deploy deploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest content) throws java.io.IOException {
+          Deploy result = new Deploy(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Deploy extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:deploy";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+
+          /**
+           * Deploys a model. If a model is already deployed, deploying it has no effect. A model can only
+           * serve prediction requests after it gets deployed. For article suggestion, custom model will not
+           * be used unless it is deployed. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * DeployConversationModelOperationMetadata - `response`: An [Empty
+           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+           *
+           * Create a request for the method "conversationModels.deploy".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Deploy#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Deploy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The conversation model to deploy. Format: `projects//conversationModels/`
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest}
+           * @since 1.13
+           */
+          protected Deploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2DeployConversationModelRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Deploy set$Xgafv(java.lang.String $Xgafv) {
+            return (Deploy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Deploy setAccessToken(java.lang.String accessToken) {
+            return (Deploy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Deploy setAlt(java.lang.String alt) {
+            return (Deploy) super.setAlt(alt);
+          }
+
+          @Override
+          public Deploy setCallback(java.lang.String callback) {
+            return (Deploy) super.setCallback(callback);
+          }
+
+          @Override
+          public Deploy setFields(java.lang.String fields) {
+            return (Deploy) super.setFields(fields);
+          }
+
+          @Override
+          public Deploy setKey(java.lang.String key) {
+            return (Deploy) super.setKey(key);
+          }
+
+          @Override
+          public Deploy setOauthToken(java.lang.String oauthToken) {
+            return (Deploy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Deploy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Deploy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Deploy setQuotaUser(java.lang.String quotaUser) {
+            return (Deploy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Deploy setUploadType(java.lang.String uploadType) {
+            return (Deploy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Deploy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Deploy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation model to deploy. Format: `projects//conversationModels/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The conversation model to deploy. Format: `projects//conversationModels/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The conversation model to deploy. Format: `projects//conversationModels/`
+           */
+          public Deploy setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Deploy set(String parameterName, Object value) {
+            return (Deploy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets conversation model.
+         *
+         * Create a request for the method "conversationModels.get".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+
+          /**
+           * Gets conversation model.
+           *
+           * Create a request for the method "conversationModels.get".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The conversation model to retrieve. Format: `projects//conversationModels/`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists conversation models.
+         *
+         * Create a request for the method "conversationModels.list".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project to list all conversation models for. Format: `projects/`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/conversationModels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists conversation models.
+           *
+           * Create a request for the method "conversationModels.list".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project to list all conversation models for. Format: `projects/`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The project to list all conversation models for. Format: `projects/` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project to list all conversation models for. Format: `projects/`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The project to list all conversation models for. Format: `projects/` */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of conversation models to return in a single page. By default
+           * 100 and at most 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of conversation models to return in a single page. By default 100 and at
+         most 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of conversation models to return in a single page. By default
+           * 100 and at most 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Undeploys a model. If the model is not deployed this method has no effect. If the model is
+         * currently being used: - For article suggestion, article suggestion will fallback to the default
+         * model if model is undeployed. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * UndeployConversationModelOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+         *
+         * Create a request for the method "conversationModels.undeploy".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Undeploy#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest}
+         * @return the request
+         */
+        public Undeploy undeploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest content) throws java.io.IOException {
+          Undeploy result = new Undeploy(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Undeploy extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:undeploy";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+
+          /**
+           * Undeploys a model. If the model is not deployed this method has no effect. If the model is
+           * currently being used: - For article suggestion, article suggestion will fallback to the default
+           * model if model is undeployed. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * UndeployConversationModelOperationMetadata - `response`: An [Empty
+           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+           *
+           * Create a request for the method "conversationModels.undeploy".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Undeploy#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Undeploy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest}
+           * @since 1.13
+           */
+          protected Undeploy(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2UndeployConversationModelRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Undeploy set$Xgafv(java.lang.String $Xgafv) {
+            return (Undeploy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Undeploy setAccessToken(java.lang.String accessToken) {
+            return (Undeploy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Undeploy setAlt(java.lang.String alt) {
+            return (Undeploy) super.setAlt(alt);
+          }
+
+          @Override
+          public Undeploy setCallback(java.lang.String callback) {
+            return (Undeploy) super.setCallback(callback);
+          }
+
+          @Override
+          public Undeploy setFields(java.lang.String fields) {
+            return (Undeploy) super.setFields(fields);
+          }
+
+          @Override
+          public Undeploy setKey(java.lang.String key) {
+            return (Undeploy) super.setKey(key);
+          }
+
+          @Override
+          public Undeploy setOauthToken(java.lang.String oauthToken) {
+            return (Undeploy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Undeploy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Undeploy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Undeploy setQuotaUser(java.lang.String quotaUser) {
+            return (Undeploy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Undeploy setUploadType(java.lang.String uploadType) {
+            return (Undeploy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Undeploy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Undeploy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The conversation model to undeploy. Format: `projects//conversationModels/`
+           */
+          public Undeploy setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Undeploy set(String parameterName, Object value) {
+            return (Undeploy) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Evaluations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Evaluations.List request = dialogflow.evaluations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Evaluations evaluations() {
+          return new Evaluations();
+        }
+
+        /**
+         * The "evaluations" collection of methods.
+         */
+        public class Evaluations {
+
+          /**
+           * Creates evaluation of a conversation model.
+           *
+           * Create a request for the method "evaluations.create".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The conversation model resource name. Format: `projects//locations//conversationModels/`
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2CreateConversationModelEvaluationRequest}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2CreateConversationModelEvaluationRequest content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2/{+parent}/evaluations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+
+            /**
+             * Creates evaluation of a conversation model.
+             *
+             * Create a request for the method "evaluations.create".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The conversation model resource name. Format: `projects//locations//conversationModels/`
+             * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2CreateConversationModelEvaluationRequest}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2CreateConversationModelEvaluationRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The conversation model resource name. Format:
+             * `projects//locations//conversationModels/`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The conversation model resource name. Format: `projects//locations//conversationModels/`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The conversation model resource name. Format:
+             * `projects//locations//conversationModels/`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an evaluation of conversation model.
+           *
+           * Create a request for the method "evaluations.get".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The conversation model evaluation resource name. Format:
+           *        `projects//conversationModels//evaluations/`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModelEvaluation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+/evaluations/[^/]+$");
+
+            /**
+             * Gets an evaluation of conversation model.
+             *
+             * Create a request for the method "evaluations.get".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The conversation model evaluation resource name. Format:
+           *        `projects//conversationModels//evaluations/`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ConversationModelEvaluation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+/evaluations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The conversation model evaluation resource name. Format:
+             * `projects//conversationModels//evaluations/`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The conversation model evaluation resource name. Format:
+           `projects//conversationModels//evaluations/`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The conversation model evaluation resource name. Format:
+             * `projects//conversationModels//evaluations/`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+/evaluations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists evaluations of a conversation model.
+           *
+           * Create a request for the method "evaluations.list".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The conversation model resource name. Format: `projects//conversationModels/`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/evaluations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+
+            /**
+             * Lists evaluations of a conversation model.
+             *
+             * Create a request for the method "evaluations.list".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The conversation model resource name. Format: `projects//conversationModels/`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The conversation model resource name. Format:
+             * `projects//conversationModels/`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The conversation model resource name. Format: `projects//conversationModels/`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The conversation model resource name. Format:
+             * `projects//conversationModels/`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversationModels/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of evaluations to return in a single page. By default 100
+             * and at most 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of evaluations to return in a single page. By default 100 and at most
+           1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of evaluations to return in a single page. By default 100
+             * and at most 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the ConversationProfiles collection.
        *
        * <p>The typical use is:</p>
@@ -30260,6 +34501,153 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
        */
       public class ConversationProfiles {
 
+        /**
+         * Clears a suggestion feature from a conversation profile for the given participant role. This
+         * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+         * running-operations). The returned `Operation` type has the following method-specific fields: -
+         * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+         *
+         * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest}
+         * @return the request
+         */
+        public ClearSuggestionFeatureConfig clearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest content) throws java.io.IOException {
+          ClearSuggestionFeatureConfig result = new ClearSuggestionFeatureConfig(conversationProfile, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ClearSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+conversationProfile}:clearSuggestionFeatureConfig";
+
+          private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+
+          /**
+           * Clears a suggestion feature from a conversation profile for the given participant role. This
+           * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+           * running-operations). The returned `Operation` type has the following method-specific fields: -
+           * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+           *
+           * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke
+           * the remote operation. <p> {@link ClearSuggestionFeatureConfig#initialize(com.google.api.client.
+           * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest}
+           * @since 1.13
+           */
+          protected ClearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (ClearSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+            return (ClearSuggestionFeatureConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setAlt(java.lang.String alt) {
+            return (ClearSuggestionFeatureConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setCallback(java.lang.String callback) {
+            return (ClearSuggestionFeatureConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setFields(java.lang.String fields) {
+            return (ClearSuggestionFeatureConfig) super.setFields(fields);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setKey(java.lang.String key) {
+            return (ClearSuggestionFeatureConfig) super.setKey(key);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+            return (ClearSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ClearSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+            return (ClearSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+            return (ClearSuggestionFeatureConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ClearSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversationProfile;
+
+          /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         `projects//locations//conversationProfiles/`.
+           */
+          public java.lang.String getConversationProfile() {
+            return conversationProfile;
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          public ClearSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+            this.conversationProfile = conversationProfile;
+            return this;
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig set(String parameterName, Object value) {
+            return (ClearSuggestionFeatureConfig) super.set(parameterName, value);
+          }
+        }
         /**
          * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
          * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
@@ -31026,6 +35414,163 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+         * contains the type of suggestion feature for the participant role, it will update it. Otherwise it
+         * will insert the suggestion feature. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+         * operation to add or update suggestion feature config for the same conversation profile,
+         * participant role and suggestion feature type exists, please cancel the existing long running
+         * operation before sending such request, otherwise the request will be rejected.
+         *
+         * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest}
+         * @return the request
+         */
+        public SetSuggestionFeatureConfig setSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest content) throws java.io.IOException {
+          SetSuggestionFeatureConfig result = new SetSuggestionFeatureConfig(conversationProfile, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+conversationProfile}:setSuggestionFeatureConfig";
+
+          private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+
+          /**
+           * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+           * contains the type of suggestion feature for the participant role, it will update it. Otherwise
+           * it will insert the suggestion feature. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+           * operation to add or update suggestion feature config for the same conversation profile,
+           * participant role and suggestion feature type exists, please cancel the existing long running
+           * operation before sending such request, otherwise the request will be rejected.
+           *
+           * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the
+           * remote operation. <p> {@link SetSuggestionFeatureConfig#initialize(com.google.api.client.google
+           * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest}
+           * @since 1.13
+           */
+          protected SetSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (SetSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+            return (SetSuggestionFeatureConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setAlt(java.lang.String alt) {
+            return (SetSuggestionFeatureConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setCallback(java.lang.String callback) {
+            return (SetSuggestionFeatureConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setFields(java.lang.String fields) {
+            return (SetSuggestionFeatureConfig) super.setFields(fields);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setKey(java.lang.String key) {
+            return (SetSuggestionFeatureConfig) super.setKey(key);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+            return (SetSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+            return (SetSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+            return (SetSuggestionFeatureConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversationProfile;
+
+          /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         `projects//locations//conversationProfiles/`.
+           */
+          public java.lang.String getConversationProfile() {
+            return conversationProfile;
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          public SetSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+            this.conversationProfile = conversationProfile;
+            return this;
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig set(String parameterName, Object value) {
+            return (SetSuggestionFeatureConfig) super.set(parameterName, value);
           }
         }
 

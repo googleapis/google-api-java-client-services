@@ -193,6 +193,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private ParquetOptions parquetOptions;
 
   /**
+   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
+   * other formats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preserveAsciiControlCharacters;
+
+  /**
    * If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into
    * BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level
    * properties. If no properties are specified, BigQuery loads all properties. If any named
@@ -694,6 +703,27 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setParquetOptions(ParquetOptions parquetOptions) {
     this.parquetOptions = parquetOptions;
+    return this;
+  }
+
+  /**
+   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
+   * other formats.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreserveAsciiControlCharacters() {
+    return preserveAsciiControlCharacters;
+  }
+
+  /**
+   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
+   * other formats.
+   * @param preserveAsciiControlCharacters preserveAsciiControlCharacters or {@code null} for none
+   */
+  public JobConfigurationLoad setPreserveAsciiControlCharacters(java.lang.Boolean preserveAsciiControlCharacters) {
+    this.preserveAsciiControlCharacters = preserveAsciiControlCharacters;
     return this;
   }
 

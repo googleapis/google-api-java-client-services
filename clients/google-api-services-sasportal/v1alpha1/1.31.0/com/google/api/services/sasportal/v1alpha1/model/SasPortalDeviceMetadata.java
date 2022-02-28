@@ -61,6 +61,13 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
   private java.lang.Boolean nrqzValidated;
 
   /**
+   * Output only. National Radio Quiet Zone validation info.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SasPortalNrqzValidation nrqzValidation;
+
+  /**
    * If populated, the Antenna Model Pattern to use. Format is: RecordCreatorId:PatternId
    * @return value or {@code null} for none
    */
@@ -131,6 +138,23 @@ public final class SasPortalDeviceMetadata extends com.google.api.client.json.Ge
    */
   public SasPortalDeviceMetadata setNrqzValidated(java.lang.Boolean nrqzValidated) {
     this.nrqzValidated = nrqzValidated;
+    return this;
+  }
+
+  /**
+   * Output only. National Radio Quiet Zone validation info.
+   * @return value or {@code null} for none
+   */
+  public SasPortalNrqzValidation getNrqzValidation() {
+    return nrqzValidation;
+  }
+
+  /**
+   * Output only. National Radio Quiet Zone validation info.
+   * @param nrqzValidation nrqzValidation or {@code null} for none
+   */
+  public SasPortalDeviceMetadata setNrqzValidation(SasPortalNrqzValidation nrqzValidation) {
+    this.nrqzValidation = nrqzValidation;
     return this;
   }
 

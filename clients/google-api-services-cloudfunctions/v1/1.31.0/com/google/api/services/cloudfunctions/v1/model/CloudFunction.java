@@ -18,7 +18,7 @@ package com.google.api.services.cloudfunctions.v1.model;
 
 /**
  * Describes a Cloud Function that contains user computation executed in response to an event. It
- * encapsulate function and triggers configurations. Next tag: 36
+ * encapsulate function and triggers configurations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Functions API. For a detailed explanation see:

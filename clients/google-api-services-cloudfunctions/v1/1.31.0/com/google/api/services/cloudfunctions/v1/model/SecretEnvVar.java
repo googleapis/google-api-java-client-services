@@ -18,8 +18,7 @@ package com.google.api.services.cloudfunctions.v1.model;
 
 /**
  * Configuration for a secret environment variable. It has the information necessary to fetch the
- * secret value from secret manager and expose it as an environment variable. Secret value is not a
- * part of the configuration. Secret values are only fetched when a new clone starts.
+ * secret value from secret manager and expose it as an environment variable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Functions API. For a detailed explanation see:
@@ -57,7 +56,7 @@ public final class SecretEnvVar extends com.google.api.client.json.GenericJson {
   /**
    * Version of the secret (version number or the string 'latest'). It is recommended to use a
    * numeric version for secret environment variables as any updates to the secret value is not
-   * reflected until new clones start.
+   * reflected until new instances start.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +120,7 @@ public final class SecretEnvVar extends com.google.api.client.json.GenericJson {
   /**
    * Version of the secret (version number or the string 'latest'). It is recommended to use a
    * numeric version for secret environment variables as any updates to the secret value is not
-   * reflected until new clones start.
+   * reflected until new instances start.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -131,7 +130,7 @@ public final class SecretEnvVar extends com.google.api.client.json.GenericJson {
   /**
    * Version of the secret (version number or the string 'latest'). It is recommended to use a
    * numeric version for secret environment variables as any updates to the secret value is not
-   * reflected until new clones start.
+   * reflected until new instances start.
    * @param version version or {@code null} for none
    */
   public SecretEnvVar setVersion(java.lang.String version) {

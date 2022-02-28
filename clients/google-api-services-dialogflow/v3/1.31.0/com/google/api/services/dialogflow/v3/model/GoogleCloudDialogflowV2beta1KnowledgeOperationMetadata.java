@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata for the Export Data Operation such as the destination of export.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1ExportOperationMetadata exportOperationMetadata;
+
+  /**
    * The name of the knowledge base interacted with during the operation.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeOperationMetadata extend
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Metadata for the Export Data Operation such as the destination of export.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ExportOperationMetadata getExportOperationMetadata() {
+    return exportOperationMetadata;
+  }
+
+  /**
+   * Metadata for the Export Data Operation such as the destination of export.
+   * @param exportOperationMetadata exportOperationMetadata or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1KnowledgeOperationMetadata setExportOperationMetadata(GoogleCloudDialogflowV2beta1ExportOperationMetadata exportOperationMetadata) {
+    this.exportOperationMetadata = exportOperationMetadata;
+    return this;
+  }
 
   /**
    * The name of the knowledge base interacted with during the operation.

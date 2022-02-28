@@ -14009,6 +14009,153 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
     public class ConversationProfiles {
 
       /**
+       * Clears a suggestion feature from a conversation profile for the given participant role. This
+       * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+       * running-operations). The returned `Operation` type has the following method-specific fields: -
+       * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+       *
+       * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest}
+       * @return the request
+       */
+      public ClearSuggestionFeatureConfig clearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest content) throws java.io.IOException {
+        ClearSuggestionFeatureConfig result = new ClearSuggestionFeatureConfig(conversationProfile, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ClearSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2beta1/{+conversationProfile}:clearSuggestionFeatureConfig";
+
+        private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
+
+        /**
+         * Clears a suggestion feature from a conversation profile for the given participant role. This
+         * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+         * running-operations). The returned `Operation` type has the following method-specific fields: -
+         * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+         *
+         * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke
+         * the remote operation. <p> {@link ClearSuggestionFeatureConfig#initialize(com.google.api.client.
+         * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest}
+         * @since 1.13
+         */
+        protected ClearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+          this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (ClearSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+          return (ClearSuggestionFeatureConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setAlt(java.lang.String alt) {
+          return (ClearSuggestionFeatureConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setCallback(java.lang.String callback) {
+          return (ClearSuggestionFeatureConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setFields(java.lang.String fields) {
+          return (ClearSuggestionFeatureConfig) super.setFields(fields);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setKey(java.lang.String key) {
+          return (ClearSuggestionFeatureConfig) super.setKey(key);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+          return (ClearSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ClearSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+          return (ClearSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+          return (ClearSuggestionFeatureConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ClearSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String conversationProfile;
+
+        /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       `projects//locations//conversationProfiles/`.
+         */
+        public java.lang.String getConversationProfile() {
+          return conversationProfile;
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        public ClearSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+          this.conversationProfile = conversationProfile;
+          return this;
+        }
+
+        @Override
+        public ClearSuggestionFeatureConfig set(String parameterName, Object value) {
+          return (ClearSuggestionFeatureConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
        * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
        * GetConversationProfile API.
@@ -14772,6 +14919,163 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+       * contains the type of suggestion feature for the participant role, it will update it. Otherwise it
+       * will insert the suggestion feature. This method is a [long-running
+       * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+       * `Operation` type has the following method-specific fields: - `metadata`:
+       * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+       * operation to add or update suggestion feature config for the same conversation profile,
+       * participant role and suggestion feature type exists, please cancel the existing long running
+       * operation before sending such request, otherwise the request will be rejected.
+       *
+       * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest}
+       * @return the request
+       */
+      public SetSuggestionFeatureConfig setSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest content) throws java.io.IOException {
+        SetSuggestionFeatureConfig result = new SetSuggestionFeatureConfig(conversationProfile, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SetSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v2beta1/{+conversationProfile}:setSuggestionFeatureConfig";
+
+        private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
+
+        /**
+         * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+         * contains the type of suggestion feature for the participant role, it will update it. Otherwise
+         * it will insert the suggestion feature. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+         * returned `Operation` type has the following method-specific fields: - `metadata`:
+         * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+         * operation to add or update suggestion feature config for the same conversation profile,
+         * participant role and suggestion feature type exists, please cancel the existing long running
+         * operation before sending such request, otherwise the request will be rejected.
+         *
+         * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the
+         * remote operation. <p> {@link SetSuggestionFeatureConfig#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest}
+         * @since 1.13
+         */
+        protected SetSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+          this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (SetSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+          return (SetSuggestionFeatureConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setAlt(java.lang.String alt) {
+          return (SetSuggestionFeatureConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setCallback(java.lang.String callback) {
+          return (SetSuggestionFeatureConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setFields(java.lang.String fields) {
+          return (SetSuggestionFeatureConfig) super.setFields(fields);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setKey(java.lang.String key) {
+          return (SetSuggestionFeatureConfig) super.setKey(key);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+          return (SetSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SetSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+          return (SetSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+          return (SetSuggestionFeatureConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SetSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String conversationProfile;
+
+        /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+       `projects//locations//conversationProfiles/`.
+         */
+        public java.lang.String getConversationProfile() {
+          return conversationProfile;
+        }
+
+        /**
+         * Required. The Conversation Profile to add or update the suggestion feature config.
+         * Format: `projects//locations//conversationProfiles/`.
+         */
+        public SetSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                "Parameter conversationProfile must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+          this.conversationProfile = conversationProfile;
+          return this;
+        }
+
+        @Override
+        public SetSuggestionFeatureConfig set(String parameterName, Object value) {
+          return (SetSuggestionFeatureConfig) super.set(parameterName, value);
         }
       }
 
@@ -31877,6 +32181,153 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       public class ConversationProfiles {
 
         /**
+         * Clears a suggestion feature from a conversation profile for the given participant role. This
+         * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+         * running-operations). The returned `Operation` type has the following method-specific fields: -
+         * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+         *
+         * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest}
+         * @return the request
+         */
+        public ClearSuggestionFeatureConfig clearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest content) throws java.io.IOException {
+          ClearSuggestionFeatureConfig result = new ClearSuggestionFeatureConfig(conversationProfile, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ClearSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2beta1/{+conversationProfile}:clearSuggestionFeatureConfig";
+
+          private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+
+          /**
+           * Clears a suggestion feature from a conversation profile for the given participant role. This
+           * method is a [long-running operation](https://cloud.google.com/dialogflow/es/docs/how/long-
+           * running-operations). The returned `Operation` type has the following method-specific fields: -
+           * `metadata`: ClearSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile
+           *
+           * Create a request for the method "conversationProfiles.clearSuggestionFeatureConfig".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link ClearSuggestionFeatureConfig#execute()} method to invoke
+           * the remote operation. <p> {@link ClearSuggestionFeatureConfig#initialize(com.google.api.client.
+           * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest}
+           * @since 1.13
+           */
+          protected ClearSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+            this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (ClearSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+            return (ClearSuggestionFeatureConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setAlt(java.lang.String alt) {
+            return (ClearSuggestionFeatureConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setCallback(java.lang.String callback) {
+            return (ClearSuggestionFeatureConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setFields(java.lang.String fields) {
+            return (ClearSuggestionFeatureConfig) super.setFields(fields);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setKey(java.lang.String key) {
+            return (ClearSuggestionFeatureConfig) super.setKey(key);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+            return (ClearSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ClearSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+            return (ClearSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+            return (ClearSuggestionFeatureConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ClearSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversationProfile;
+
+          /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         `projects//locations//conversationProfiles/`.
+           */
+          public java.lang.String getConversationProfile() {
+            return conversationProfile;
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          public ClearSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+            this.conversationProfile = conversationProfile;
+            return this;
+          }
+
+          @Override
+          public ClearSuggestionFeatureConfig set(String parameterName, Object value) {
+            return (ClearSuggestionFeatureConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
          * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
          * GetConversationProfile API.
@@ -32642,6 +33093,163 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+         * contains the type of suggestion feature for the participant role, it will update it. Otherwise it
+         * will insert the suggestion feature. This method is a [long-running
+         * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The returned
+         * `Operation` type has the following method-specific fields: - `metadata`:
+         * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+         * operation to add or update suggestion feature config for the same conversation profile,
+         * participant role and suggestion feature type exists, please cancel the existing long running
+         * operation before sending such request, otherwise the request will be rejected.
+         *
+         * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest}
+         * @return the request
+         */
+        public SetSuggestionFeatureConfig setSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest content) throws java.io.IOException {
+          SetSuggestionFeatureConfig result = new SetSuggestionFeatureConfig(conversationProfile, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetSuggestionFeatureConfig extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2beta1/{+conversationProfile}:setSuggestionFeatureConfig";
+
+          private final java.util.regex.Pattern CONVERSATION_PROFILE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+
+          /**
+           * Adds or updates a suggestion feature in a conversation profile. If the conversation profile
+           * contains the type of suggestion feature for the participant role, it will update it. Otherwise
+           * it will insert the suggestion feature. This method is a [long-running
+           * operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations). The
+           * returned `Operation` type has the following method-specific fields: - `metadata`:
+           * SetSuggestionFeatureConfigOperationMetadata - `response`: ConversationProfile If a long running
+           * operation to add or update suggestion feature config for the same conversation profile,
+           * participant role and suggestion feature type exists, please cancel the existing long running
+           * operation before sending such request, otherwise the request will be rejected.
+           *
+           * Create a request for the method "conversationProfiles.setSuggestionFeatureConfig".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link SetSuggestionFeatureConfig#execute()} method to invoke the
+           * remote operation. <p> {@link SetSuggestionFeatureConfig#initialize(com.google.api.client.google
+           * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param conversationProfile Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         *        `projects//locations//conversationProfiles/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest}
+           * @since 1.13
+           */
+          protected SetSuggestionFeatureConfig(java.lang.String conversationProfile, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+            this.conversationProfile = com.google.api.client.util.Preconditions.checkNotNull(conversationProfile, "Required parameter conversationProfile must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (SetSuggestionFeatureConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setAccessToken(java.lang.String accessToken) {
+            return (SetSuggestionFeatureConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setAlt(java.lang.String alt) {
+            return (SetSuggestionFeatureConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setCallback(java.lang.String callback) {
+            return (SetSuggestionFeatureConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setFields(java.lang.String fields) {
+            return (SetSuggestionFeatureConfig) super.setFields(fields);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setKey(java.lang.String key) {
+            return (SetSuggestionFeatureConfig) super.setKey(key);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setOauthToken(java.lang.String oauthToken) {
+            return (SetSuggestionFeatureConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetSuggestionFeatureConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setQuotaUser(java.lang.String quotaUser) {
+            return (SetSuggestionFeatureConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setUploadType(java.lang.String uploadType) {
+            return (SetSuggestionFeatureConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetSuggestionFeatureConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversationProfile;
+
+          /** Required. The Conversation Profile to add or update the suggestion feature config. Format:
+         `projects//locations//conversationProfiles/`.
+           */
+          public java.lang.String getConversationProfile() {
+            return conversationProfile;
+          }
+
+          /**
+           * Required. The Conversation Profile to add or update the suggestion feature config.
+           * Format: `projects//locations//conversationProfiles/`.
+           */
+          public SetSuggestionFeatureConfig setConversationProfile(java.lang.String conversationProfile) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PROFILE_PATTERN.matcher(conversationProfile).matches(),
+                  "Parameter conversationProfile must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
+            }
+            this.conversationProfile = conversationProfile;
+            return this;
+          }
+
+          @Override
+          public SetSuggestionFeatureConfig set(String parameterName, Object value) {
+            return (SetSuggestionFeatureConfig) super.set(parameterName, value);
           }
         }
 

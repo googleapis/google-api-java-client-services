@@ -65,7 +65,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1.
+   * 1. Maximum value is 3600. Must be greater or equal than timeout_seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+   * failed. Defaults to 1. Must be 1 for liveness and startup Probes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
-   * value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1.
+   * 1. Maximum value is 3600. Must be greater or equal than timeout_seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodSeconds() {
@@ -185,7 +185,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1.
+   * 1. Maximum value is 3600. Must be greater or equal than timeout_seconds.
    * @param periodSeconds periodSeconds or {@code null} for none
    */
   public Probe setPeriodSeconds(java.lang.Integer periodSeconds) {
@@ -195,7 +195,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+   * failed. Defaults to 1. Must be 1 for liveness and startup Probes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessThreshold() {
@@ -204,7 +204,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
+   * failed. Defaults to 1. Must be 1 for liveness and startup Probes.
    * @param successThreshold successThreshold or {@code null} for none
    */
   public Probe setSuccessThreshold(java.lang.Integer successThreshold) {
@@ -233,8 +233,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
-   * value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSeconds() {
@@ -243,8 +243,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
-   * value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public Probe setTimeoutSeconds(java.lang.Integer timeoutSeconds) {

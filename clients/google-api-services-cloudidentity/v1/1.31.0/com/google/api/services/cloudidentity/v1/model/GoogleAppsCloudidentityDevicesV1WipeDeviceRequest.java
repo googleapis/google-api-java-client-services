@@ -40,6 +40,16 @@ public final class GoogleAppsCloudidentityDevicesV1WipeDeviceRequest extends com
   private java.lang.String customer;
 
   /**
+   * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,
+   * this is called "Activation Lock", while on Android, this is known as "Factory Reset
+   * Protection". If true, this protection will be removed from the device, so that a user can
+   * successfully factory reset. If false, the setting is untouched on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean removeResetLock;
+
+  /**
    * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use `customers/my_customer` If you're using
    * this API to manage another organization, use `customers/{customer}`, where customer is the
@@ -59,6 +69,29 @@ public final class GoogleAppsCloudidentityDevicesV1WipeDeviceRequest extends com
    */
   public GoogleAppsCloudidentityDevicesV1WipeDeviceRequest setCustomer(java.lang.String customer) {
     this.customer = customer;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,
+   * this is called "Activation Lock", while on Android, this is known as "Factory Reset
+   * Protection". If true, this protection will be removed from the device, so that a user can
+   * successfully factory reset. If false, the setting is untouched on the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRemoveResetLock() {
+    return removeResetLock;
+  }
+
+  /**
+   * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,
+   * this is called "Activation Lock", while on Android, this is known as "Factory Reset
+   * Protection". If true, this protection will be removed from the device, so that a user can
+   * successfully factory reset. If false, the setting is untouched on the device.
+   * @param removeResetLock removeResetLock or {@code null} for none
+   */
+  public GoogleAppsCloudidentityDevicesV1WipeDeviceRequest setRemoveResetLock(java.lang.Boolean removeResetLock) {
+    this.removeResetLock = removeResetLock;
     return this;
   }
 

@@ -30,15 +30,15 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class SpecSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The game server config resource. Uses the form: `projects/{project}/locations/{location}/gameSe
-   * rverDeployments/{deployment_id}/configs/{config_id}`.
+   * The game server config resource. Uses the form: `projects/{project}/locations/{locationId}/game
+   * ServerDeployments/{deploymentId}/configs/{configId}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gameServerConfigName;
 
   /**
-   * The name of the Agones leet config or Agones scaling config used to derive the Agones fleet or
+   * The name of the Agones fleet config or Agones scaling config used to derive the Agones fleet or
    * Agones autoscaler spec.
    * The value may be {@code null}.
    */
@@ -46,8 +46,8 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The game server config resource. Uses the form: `projects/{project}/locations/{location}/gameSe
-   * rverDeployments/{deployment_id}/configs/{config_id}`.
+   * The game server config resource. Uses the form: `projects/{project}/locations/{locationId}/game
+   * ServerDeployments/{deploymentId}/configs/{configId}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGameServerConfigName() {
@@ -55,8 +55,8 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The game server config resource. Uses the form: `projects/{project}/locations/{location}/gameSe
-   * rverDeployments/{deployment_id}/configs/{config_id}`.
+   * The game server config resource. Uses the form: `projects/{project}/locations/{locationId}/game
+   * ServerDeployments/{deploymentId}/configs/{configId}`.
    * @param gameServerConfigName gameServerConfigName or {@code null} for none
    */
   public SpecSource setGameServerConfigName(java.lang.String gameServerConfigName) {
@@ -65,7 +65,7 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Agones leet config or Agones scaling config used to derive the Agones fleet or
+   * The name of the Agones fleet config or Agones scaling config used to derive the Agones fleet or
    * Agones autoscaler spec.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class SpecSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Agones leet config or Agones scaling config used to derive the Agones fleet or
+   * The name of the Agones fleet config or Agones scaling config used to derive the Agones fleet or
    * Agones autoscaler spec.
    * @param name name or {@code null} for none
    */

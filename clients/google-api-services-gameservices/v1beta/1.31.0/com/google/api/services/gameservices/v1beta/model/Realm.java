@@ -44,7 +44,8 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +60,8 @@ public final class Realm extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the realm, in the following form:
-   * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
-   * project/locations/{location}/realms/my-realm`.
+   * `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-
+   * project/locations/global/realms/my-realm`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Time zone where all policies targeting this realm are evaluated. The value of this
-   * field must be from the IANA time zone database: https://www.iana.org/time-zones.
+   * field must be from the [IANA time zone database](https://www.iana.org/time-zones).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +117,8 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -124,7 +126,8 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * @param etag etag or {@code null} for none
    */
   public Realm setEtag(java.lang.String etag) {
@@ -151,8 +154,8 @@ public final class Realm extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the realm, in the following form:
-   * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
-   * project/locations/{location}/realms/my-realm`.
+   * `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-
+   * project/locations/global/realms/my-realm`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -161,8 +164,8 @@ public final class Realm extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the realm, in the following form:
-   * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
-   * project/locations/{location}/realms/my-realm`.
+   * `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-
+   * project/locations/global/realms/my-realm`.
    * @param name name or {@code null} for none
    */
   public Realm setName(java.lang.String name) {
@@ -172,7 +175,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Time zone where all policies targeting this realm are evaluated. The value of this
-   * field must be from the IANA time zone database: https://www.iana.org/time-zones.
+   * field must be from the [IANA time zone database](https://www.iana.org/time-zones).
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -181,7 +184,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Time zone where all policies targeting this realm are evaluated. The value of this
-   * field must be from the IANA time zone database: https://www.iana.org/time-zones.
+   * field must be from the [IANA time zone database](https://www.iana.org/time-zones).
    * @param timeZone timeZone or {@code null} for none
    */
   public Realm setTimeZone(java.lang.String timeZone) {

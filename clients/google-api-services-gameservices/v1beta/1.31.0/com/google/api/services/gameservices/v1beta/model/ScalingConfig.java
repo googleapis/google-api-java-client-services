@@ -30,22 +30,22 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class ScalingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Agones fleet autoscaler spec. Example spec:
-   * https://agones.dev/site/docs/reference/fleetautoscaler/
+   * Required. Agones fleet autoscaler spec (see [example
+   * spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fleetAutoscalerSpec;
 
   /**
-   * Required. The name of the Scaling Config
+   * Required. The name of the scaling config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The schedules to which this Scaling Config applies.
+   * The schedules to which this scaling config applies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Agones fleet autoscaler spec. Example spec:
-   * https://agones.dev/site/docs/reference/fleetautoscaler/
+   * Required. Agones fleet autoscaler spec (see [example
+   * spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
    * @return value or {@code null} for none
    */
   public java.lang.String getFleetAutoscalerSpec() {
@@ -76,8 +76,8 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Agones fleet autoscaler spec. Example spec:
-   * https://agones.dev/site/docs/reference/fleetautoscaler/
+   * Required. Agones fleet autoscaler spec (see [example
+   * spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
    * @param fleetAutoscalerSpec fleetAutoscalerSpec or {@code null} for none
    */
   public ScalingConfig setFleetAutoscalerSpec(java.lang.String fleetAutoscalerSpec) {
@@ -86,7 +86,7 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The name of the Scaling Config
+   * Required. The name of the scaling config.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -94,7 +94,7 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The name of the Scaling Config
+   * Required. The name of the scaling config.
    * @param name name or {@code null} for none
    */
   public ScalingConfig setName(java.lang.String name) {
@@ -103,7 +103,7 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The schedules to which this Scaling Config applies.
+   * The schedules to which this scaling config applies.
    * @return value or {@code null} for none
    */
   public java.util.List<Schedule> getSchedules() {
@@ -111,7 +111,7 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The schedules to which this Scaling Config applies.
+   * The schedules to which this scaling config applies.
    * @param schedules schedules or {@code null} for none
    */
   public ScalingConfig setSchedules(java.util.List<Schedule> schedules) {

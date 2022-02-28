@@ -37,14 +37,15 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   private String createTime;
 
   /**
-   * Human readable description of the game server delpoyment.
+   * Human readable description of the game server deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
 
   /**
    * The resource name of the game server deployment, in the following form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example,
    * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * The value may be {@code null}.
    */
@@ -91,7 +92,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Human readable description of the game server delpoyment.
+   * Human readable description of the game server deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -99,7 +100,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Human readable description of the game server delpoyment.
+   * Human readable description of the game server deployment.
    * @param description description or {@code null} for none
    */
   public GameServerDeployment setDescription(java.lang.String description) {
@@ -108,7 +109,8 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -116,7 +118,8 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * @param etag etag or {@code null} for none
    */
   public GameServerDeployment setEtag(java.lang.String etag) {
@@ -143,7 +146,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
 
   /**
    * The resource name of the game server deployment, in the following form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example,
    * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * @return value or {@code null} for none
    */
@@ -153,7 +156,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
 
   /**
    * The resource name of the game server deployment, in the following form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example,
    * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * @param name name or {@code null} for none
    */

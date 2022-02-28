@@ -37,8 +37,8 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   private java.util.List<TargetFleetDetails> fleetDetails;
 
   /**
-   * The game server cluster name. Uses the form:
-   * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
+   * The game server cluster name. Uses the form: `projects/{project}/locations/{locationId}/realms/
+   * {realmId}/gameServerClusters/{gameServerClusterId}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The game server deployment name. Uses the form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The game server cluster name. Uses the form:
-   * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
+   * The game server cluster name. Uses the form: `projects/{project}/locations/{locationId}/realms/
+   * {realmId}/gameServerClusters/{gameServerClusterId}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGameServerClusterName() {
@@ -79,8 +79,8 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The game server cluster name. Uses the form:
-   * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
+   * The game server cluster name. Uses the form: `projects/{project}/locations/{locationId}/realms/
+   * {realmId}/gameServerClusters/{gameServerClusterId}`.
    * @param gameServerClusterName gameServerClusterName or {@code null} for none
    */
   public TargetDetails setGameServerClusterName(java.lang.String gameServerClusterName) {
@@ -90,7 +90,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The game server deployment name. Uses the form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGameServerDeploymentName() {
@@ -99,7 +99,7 @@ public final class TargetDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The game server deployment name. Uses the form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`.
    * @param gameServerDeploymentName gameServerDeploymentName or {@code null} for none
    */
   public TargetDetails setGameServerDeploymentName(java.lang.String gameServerDeploymentName) {

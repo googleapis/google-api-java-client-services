@@ -114,6 +114,13 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   private java.lang.String rawContent;
 
   /**
+   * Output only. The current state of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The URI where the file content is located. For documents stored in Google Cloud Storage, these
    * URIs must have the form `gs:`. NOTE: External URLs must correspond to public webpages, i.e.,
    * they must be indexed by Google Search. In particular, URLs for showing documents in Google
@@ -329,6 +336,23 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
    */
   public GoogleCloudDialogflowV2Document encodeRawContent(byte[] rawContent) {
     this.rawContent = com.google.api.client.util.Base64.encodeBase64URLSafeString(rawContent);
+    return this;
+  }
+
+  /**
+   * Output only. The current state of the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The current state of the document.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Document setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

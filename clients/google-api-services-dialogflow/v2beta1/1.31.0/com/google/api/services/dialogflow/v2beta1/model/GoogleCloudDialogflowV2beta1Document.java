@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2beta1Document extends com.google.api.c
    * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
    * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
    * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document
+   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
    * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
    * clear the errors.
    * The value may be {@code null}.
@@ -121,6 +121,13 @@ public final class GoogleCloudDialogflowV2beta1Document extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String rawContent;
+
+  /**
+   * Output only. The current state of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ
@@ -194,7 +201,7 @@ public final class GoogleCloudDialogflowV2beta1Document extends com.google.api.c
    * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
    * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
    * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document
+   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
    * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
    * clear the errors.
    * @return value or {@code null} for none
@@ -210,7 +217,7 @@ public final class GoogleCloudDialogflowV2beta1Document extends com.google.api.c
    * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
    * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
    * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document
+   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
    * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
    * clear the errors.
    * @param enableAutoReload enableAutoReload or {@code null} for none
@@ -359,6 +366,23 @@ public final class GoogleCloudDialogflowV2beta1Document extends com.google.api.c
    */
   public GoogleCloudDialogflowV2beta1Document encodeRawContent(byte[] rawContent) {
     this.rawContent = com.google.api.client.util.Base64.encodeBase64URLSafeString(rawContent);
+    return this;
+  }
+
+  /**
+   * Output only. The current state of the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The current state of the document.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1Document setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

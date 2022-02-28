@@ -31,6 +31,16 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class IosApp extends com.google.api.client.json.GenericJson {
 
   /**
+   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
+   * only have restrictions that are valid for the associated Firebase App. Cannot be set in create
+   * requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one
+   * will be provisioned for you. Cannot be set to an empty value in update requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiKeyId;
+
+  /**
    * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier
    * should be treated as an opaque token, as the data format is not specified.
    * The value may be {@code null}.
@@ -86,6 +96,29 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String teamId;
+
+  /**
+   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
+   * only have restrictions that are valid for the associated Firebase App. Cannot be set in create
+   * requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one
+   * will be provisioned for you. Cannot be set to an empty value in update requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiKeyId() {
+    return apiKeyId;
+  }
+
+  /**
+   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
+   * only have restrictions that are valid for the associated Firebase App. Cannot be set in create
+   * requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one
+   * will be provisioned for you. Cannot be set to an empty value in update requests.
+   * @param apiKeyId apiKeyId or {@code null} for none
+   */
+  public IosApp setApiKeyId(java.lang.String apiKeyId) {
+    this.apiKeyId = apiKeyId;
+    return this;
+  }
 
   /**
    * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier

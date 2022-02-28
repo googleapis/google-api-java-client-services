@@ -30,7 +30,7 @@ package com.google.api.services.gameservices.v1.model;
 public final class FleetConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+   * Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class FleetConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+   * Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
    * @return value or {@code null} for none
    */
   public java.lang.String getFleetSpec() {
@@ -52,7 +52,7 @@ public final class FleetConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+   * Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
    * @param fleetSpec fleetSpec or {@code null} for none
    */
   public FleetConfig setFleetSpec(java.lang.String fleetSpec) {

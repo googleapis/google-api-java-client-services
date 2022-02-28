@@ -30,8 +30,8 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class PreviewCreateGameServerClusterResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The state of the Kubernetes cluster in preview, this will be available if 'view'
-   * is set to `FULL` in the relevant List/Get/Preview request.
+   * Output only. The state of the Kubernetes cluster in preview. This will be available if view is
+   * set to FULL in the relevant list/get/preview request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class PreviewCreateGameServerClusterResponse extends com.google.api
   private TargetState targetState;
 
   /**
-   * Output only. The state of the Kubernetes cluster in preview, this will be available if 'view'
-   * is set to `FULL` in the relevant List/Get/Preview request.
+   * Output only. The state of the Kubernetes cluster in preview. This will be available if view is
+   * set to FULL in the relevant list/get/preview request.
    * @return value or {@code null} for none
    */
   public KubernetesClusterState getClusterState() {
@@ -61,8 +61,8 @@ public final class PreviewCreateGameServerClusterResponse extends com.google.api
   }
 
   /**
-   * Output only. The state of the Kubernetes cluster in preview, this will be available if 'view'
-   * is set to `FULL` in the relevant List/Get/Preview request.
+   * Output only. The state of the Kubernetes cluster in preview. This will be available if view is
+   * set to FULL in the relevant list/get/preview request.
    * @param clusterState clusterState or {@code null} for none
    */
   public PreviewCreateGameServerClusterResponse setClusterState(KubernetesClusterState clusterState) {

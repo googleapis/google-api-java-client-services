@@ -59,7 +59,7 @@ public final class KubernetesClusterState extends com.google.api.client.json.Gen
   private java.lang.String kubernetesVersionInstalled;
 
   /**
-   * Output only. The cloud provider type reported by the first node's providerID in the list of
+   * Output only. The cloud provider type reported by the first node's `providerID` in the list of
    * nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like
    * GKE-on-GCP), the provider type will be empty.
    * The value may be {@code null}.
@@ -145,7 +145,7 @@ public final class KubernetesClusterState extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The cloud provider type reported by the first node's providerID in the list of
+   * Output only. The cloud provider type reported by the first node's `providerID` in the list of
    * nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like
    * GKE-on-GCP), the provider type will be empty.
    * @return value or {@code null} for none
@@ -155,7 +155,7 @@ public final class KubernetesClusterState extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The cloud provider type reported by the first node's providerID in the list of
+   * Output only. The cloud provider type reported by the first node's `providerID` in the list of
    * nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like
    * GKE-on-GCP), the provider type will be empty.
    * @param provider provider or {@code null} for none

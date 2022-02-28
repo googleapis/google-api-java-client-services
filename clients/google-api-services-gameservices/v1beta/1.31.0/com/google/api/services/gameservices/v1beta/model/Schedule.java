@@ -18,9 +18,9 @@ package com.google.api.services.gameservices.v1beta.model;
 
 /**
  * The schedule of a recurring or one time event. The event's time span is specified by start_time
- * and end_time. If the scheduled event's timespan is larger than the cron_spec + cron_job_duration,
- * the event will be recurring. If only cron_spec + cron_job_duration are specified, the event is
- * effective starting at the local time specified by cron_spec, and is recurring. ```
+ * and end_time. If the scheduled event's timespan is larger than cron_spec added with
+ * cron_job_duration, the event is recurring. If only cron_spec and cron_job_duration are specified,
+ * the event starts at the local time specified by cron_spec, and is recurring. ```
  * start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time cron job: cron spec
  * start time + duration ```
  *
@@ -43,8 +43,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   private String cronJobDuration;
 
   /**
-   * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec
-   * specifies the local time as defined by the realm.
+   * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. The cron
+   * spec specifies the local time as defined by the realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec
-   * specifies the local time as defined by the realm.
+   * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. The cron
+   * spec specifies the local time as defined by the realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getCronSpec() {
@@ -93,8 +93,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec
-   * specifies the local time as defined by the realm.
+   * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. The cron
+   * spec specifies the local time as defined by the realm.
    * @param cronSpec cronSpec or {@code null} for none
    */
   public Schedule setCronSpec(java.lang.String cronSpec) {

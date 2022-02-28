@@ -68,7 +68,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The resource name of the game server deployment rollout, in the following form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}/rollout`. For
    * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
    * The value may be {@code null}.
    */
@@ -158,7 +158,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The resource name of the game server deployment rollout, in the following form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}/rollout`. For
    * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
    * @return value or {@code null} for none
    */
@@ -168,7 +168,7 @@ public final class GameServerDeploymentRollout extends com.google.api.client.jso
 
   /**
    * The resource name of the game server deployment rollout, in the following form:
-   * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
+   * `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}/rollout`. For
    * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
    * @param name name or {@code null} for none
    */

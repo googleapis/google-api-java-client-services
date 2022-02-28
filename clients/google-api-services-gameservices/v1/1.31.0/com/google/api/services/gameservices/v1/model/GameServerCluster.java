@@ -30,8 +30,8 @@ package com.google.api.services.gameservices.v1.model;
 public final class GameServerCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to
-   * `FULL` in the relevant List/Get/Preview request.
+   * Output only. The state of the Kubernetes cluster in preview. This will be available if view is
+   * set to FULL in the relevant list/get/preview request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,8 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,10 +75,10 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The resource name of the game server cluster, in the following form:
-   * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
-   * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
-   * onprem-cluster`.
+   * Required. The resource name of the game server cluster, in the following form: `projects/{proje
+   * ct}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For
+   * example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-
+   * cluster`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +92,8 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
-   * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to
-   * `FULL` in the relevant List/Get/Preview request.
+   * Output only. The state of the Kubernetes cluster in preview. This will be available if view is
+   * set to FULL in the relevant list/get/preview request.
    * @return value or {@code null} for none
    */
   public KubernetesClusterState getClusterState() {
@@ -100,8 +101,8 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to
-   * `FULL` in the relevant List/Get/Preview request.
+   * Output only. The state of the Kubernetes cluster in preview. This will be available if view is
+   * set to FULL in the relevant list/get/preview request.
    * @param clusterState clusterState or {@code null} for none
    */
   public GameServerCluster setClusterState(KubernetesClusterState clusterState) {
@@ -163,7 +164,8 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -171,7 +173,8 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * ETag of the resource.
+   * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
+   * happens.
    * @param etag etag or {@code null} for none
    */
   public GameServerCluster setEtag(java.lang.String etag) {
@@ -197,10 +200,10 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the game server cluster, in the following form:
-   * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
-   * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
-   * onprem-cluster`.
+   * Required. The resource name of the game server cluster, in the following form: `projects/{proje
+   * ct}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For
+   * example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-
+   * cluster`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -208,10 +211,10 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the game server cluster, in the following form:
-   * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
-   * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
-   * onprem-cluster`.
+   * Required. The resource name of the game server cluster, in the following form: `projects/{proje
+   * ct}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For
+   * example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-
+   * cluster`.
    * @param name name or {@code null} for none
    */
   public GameServerCluster setName(java.lang.String name) {

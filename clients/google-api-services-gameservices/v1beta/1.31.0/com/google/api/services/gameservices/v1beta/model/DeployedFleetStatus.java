@@ -17,8 +17,8 @@
 package com.google.api.services.gameservices.v1beta.model;
 
 /**
- * DeployedFleetStatus has details about the Agones fleets such as how many are running, how many
- * allocated, and so on.
+ * DeployedFleetStatus has details about the Agones fleets, such as how many are running, how many
+ * are allocated, and so on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Game Services API. For a detailed explanation see:

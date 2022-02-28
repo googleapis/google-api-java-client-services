@@ -1820,22 +1820,47 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * If provided, this field specifies the criteria that must be met by a
-             * `vulnerabilityReport` API resource to be included in the response.
+             * This field supports filtering by the severity level for the vulnerability. For a list
+             * of severity levels, see [Severity levels for
+             * vulnerabilities](https://cloud.google.com/container-analysis/docs/container-scanning-
+             * overview#severity_levels_for_vulnerabilities). The filter field follows the rules
+             * described in the [AIP-160](https://google.aip.dev/160) guidelines as follows: +
+             * **Filter for a specific severity type**: you can list reports that contain
+             * vulnerabilities that are classified as medium by specifying
+             * `vulnerabilities.details.severity:MEDIUM`. + **Filter for a range of severities** :
+             * you can list reports that have vulnerabilities that are classified as critical or
+             * high by specifying `vulnerabilities.details.severity:HIGH OR
+             * vulnerabilities.details.severity:CRITICAL`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** If provided, this field specifies the criteria that must be met by a `vulnerabilityReport` API
-           resource to be included in the response.
+            /** This field supports filtering by the severity level for the vulnerability. For a list of severity
+           levels, see [Severity levels for vulnerabilities](https://cloud.google.com/container-analysis/docs
+           /container-scanning-overview#severity_levels_for_vulnerabilities). The filter field follows the
+           rules described in the [AIP-160](https://google.aip.dev/160) guidelines as follows: + **Filter for
+           a specific severity type**: you can list reports that contain vulnerabilities that are classified
+           as medium by specifying `vulnerabilities.details.severity:MEDIUM`. + **Filter for a range of
+           severities** : you can list reports that have vulnerabilities that are classified as critical or
+           high by specifying `vulnerabilities.details.severity:HIGH OR
+           vulnerabilities.details.severity:CRITICAL`
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * If provided, this field specifies the criteria that must be met by a
-             * `vulnerabilityReport` API resource to be included in the response.
+             * This field supports filtering by the severity level for the vulnerability. For a list
+             * of severity levels, see [Severity levels for
+             * vulnerabilities](https://cloud.google.com/container-analysis/docs/container-scanning-
+             * overview#severity_levels_for_vulnerabilities). The filter field follows the rules
+             * described in the [AIP-160](https://google.aip.dev/160) guidelines as follows: +
+             * **Filter for a specific severity type**: you can list reports that contain
+             * vulnerabilities that are classified as medium by specifying
+             * `vulnerabilities.details.severity:MEDIUM`. + **Filter for a range of severities** :
+             * you can list reports that have vulnerabilities that are classified as critical or
+             * high by specifying `vulnerabilities.details.severity:HIGH OR
+             * vulnerabilities.details.severity:CRITICAL`
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

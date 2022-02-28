@@ -2064,7 +2064,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
            * example, the type string for CreateBackupMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata`. *
-           * `metadata.` - any field in metadata.value. `metadata.type_url` must be specified if
+           * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first if
            * filtering on metadata fields. * `error` - Error associated with the long-running
            * operation. * `response.@type` - the type of response. * `response.` - any field in
            * response.value. You can combine multiple expressions by enclosing each expression in
@@ -2091,8 +2091,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          `done` - False if the operation is in progress, else true. * `metadata.@type` - the type of
          metadata. For example, the type string for CreateBackupMetadata is
          `type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata`. * `metadata.` - any
-         field in metadata.value. `metadata.type_url` must be specified if filtering on metadata fields. *
-         `error` - Error associated with the long-running operation. * `response.@type` - the type of
+         field in metadata.value. `metadata.@type` must be specified first if filtering on metadata fields.
+         * `error` - Error associated with the long-running operation. * `response.@type` - the type of
          response. * `response.` - any field in response.value. You can combine multiple expressions by
          enclosing each expression in parentheses. By default, expressions are combined with AND logic, but
          you can specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
@@ -2121,7 +2121,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
            * example, the type string for CreateBackupMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata`. *
-           * `metadata.` - any field in metadata.value. `metadata.type_url` must be specified if
+           * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first if
            * filtering on metadata fields. * `error` - Error associated with the long-running
            * operation. * `response.@type` - the type of response. * `response.` - any field in
            * response.value. You can combine multiple expressions by enclosing each expression in
@@ -4428,9 +4428,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
            * example, the type string for RestoreDatabaseMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`. *
-           * `metadata.` - any field in metadata.value. * `error` - Error associated with the long-
-           * running operation. * `response.@type` - the type of response. * `response.` - any field
-           * in response.value. You can combine multiple expressions by enclosing each expression in
+           * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first, if
+           * filtering on metadata fields. * `error` - Error associated with the long-running
+           * operation. * `response.@type` - the type of response. * `response.` - any field in
+           * response.value. You can combine multiple expressions by enclosing each expression in
            * parentheses. By default, expressions are combined with AND logic. However, you can
            * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
            * operation is complete. * `(metadata.@type=type.googleapis.com/google.spanner.admin.data
@@ -4453,11 +4454,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          False if the operation is in progress, else true. * `metadata.@type` - the type of metadata. For
          example, the type string for RestoreDatabaseMetadata is
          `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`. * `metadata.` - any
-         field in metadata.value. * `error` - Error associated with the long-running operation. *
-         `response.@type` - the type of response. * `response.` - any field in response.value. You can
-         combine multiple expressions by enclosing each expression in parentheses. By default, expressions
-         are combined with AND logic. However, you can specify AND, OR, and NOT logic explicitly. Here are a
-         few examples: * `done:true` - The operation is complete. *
+         field in metadata.value. `metadata.@type` must be specified first, if filtering on metadata fields.
+         * `error` - Error associated with the long-running operation. * `response.@type` - the type of
+         response. * `response.` - any field in response.value. You can combine multiple expressions by
+         enclosing each expression in parentheses. By default, expressions are combined with AND logic.
+         However, you can specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true`
+         - The operation is complete. *
          `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata) AND`
          \ `(metadata.source_type:BACKUP) AND` \ `(metadata.backup_info.backup:backup_howl) AND` \
          `(metadata.name:restored_howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\")
@@ -4480,9 +4482,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
            * example, the type string for RestoreDatabaseMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`. *
-           * `metadata.` - any field in metadata.value. * `error` - Error associated with the long-
-           * running operation. * `response.@type` - the type of response. * `response.` - any field
-           * in response.value. You can combine multiple expressions by enclosing each expression in
+           * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first, if
+           * filtering on metadata fields. * `error` - Error associated with the long-running
+           * operation. * `response.@type` - the type of response. * `response.` - any field in
+           * response.value. You can combine multiple expressions by enclosing each expression in
            * parentheses. By default, expressions are combined with AND logic. However, you can
            * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
            * operation is complete. * `(metadata.@type=type.googleapis.com/google.spanner.admin.data

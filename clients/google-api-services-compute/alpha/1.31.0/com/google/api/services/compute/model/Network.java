@@ -131,6 +131,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or
+   * BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -418,6 +420,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or
+   * BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkFirewallPolicyEnforcementOrder() {
@@ -425,6 +429,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or
+   * BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
    * @param networkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder or {@code null} for none
    */
   public Network setNetworkFirewallPolicyEnforcementOrder(java.lang.String networkFirewallPolicyEnforcementOrder) {

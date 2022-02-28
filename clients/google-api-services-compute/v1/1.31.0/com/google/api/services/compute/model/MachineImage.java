@@ -47,8 +47,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
 
   /**
    * [Input Only] Whether to attempt an application consistent machine image by informing the OS to
-   * prepare for the snapshot process. Currently only supported on Windows instances using the
-   * Volume Shadow Copy Service (VSS).
+   * prepare for the snapshot process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,8 +204,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
 
   /**
    * [Input Only] Whether to attempt an application consistent machine image by informing the OS to
-   * prepare for the snapshot process. Currently only supported on Windows instances using the
-   * Volume Shadow Copy Service (VSS).
+   * prepare for the snapshot process.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGuestFlush() {
@@ -215,8 +213,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
 
   /**
    * [Input Only] Whether to attempt an application consistent machine image by informing the OS to
-   * prepare for the snapshot process. Currently only supported on Windows instances using the
-   * Volume Shadow Copy Service (VSS).
+   * prepare for the snapshot process.
    * @param guestFlush guestFlush or {@code null} for none
    */
   public MachineImage setGuestFlush(java.lang.Boolean guestFlush) {

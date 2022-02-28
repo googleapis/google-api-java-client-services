@@ -44,6 +44,20 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String architecture;
 
   /**
+   * Disk asynchronously replicated into this disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskAsyncReplication asyncPrimaryDisk;
+
+  /**
+   * [Output Only] A list of disks this disk is asynchronously replicated to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, DiskAsyncReplicationList> asyncSecondaryDisks;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -252,6 +266,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Status information for the disk resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskResourceStatus resourceStatus;
+
+  /**
    * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
@@ -281,6 +302,22 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sizeGb;
+
+  /**
+   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using
+   * a consistency group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceConsistencyGroupPolicy;
+
+  /**
+   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using
+   * a consistency group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceConsistencyGroupPolicyId;
 
   /**
    * The source disk used to create this disk. You can provide this as a partial or full URL to the
@@ -464,6 +501,40 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setArchitecture(java.lang.String architecture) {
     this.architecture = architecture;
+    return this;
+  }
+
+  /**
+   * Disk asynchronously replicated into this disk.
+   * @return value or {@code null} for none
+   */
+  public DiskAsyncReplication getAsyncPrimaryDisk() {
+    return asyncPrimaryDisk;
+  }
+
+  /**
+   * Disk asynchronously replicated into this disk.
+   * @param asyncPrimaryDisk asyncPrimaryDisk or {@code null} for none
+   */
+  public Disk setAsyncPrimaryDisk(DiskAsyncReplication asyncPrimaryDisk) {
+    this.asyncPrimaryDisk = asyncPrimaryDisk;
+    return this;
+  }
+
+  /**
+   * [Output Only] A list of disks this disk is asynchronously replicated to.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, DiskAsyncReplicationList> getAsyncSecondaryDisks() {
+    return asyncSecondaryDisks;
+  }
+
+  /**
+   * [Output Only] A list of disks this disk is asynchronously replicated to.
+   * @param asyncSecondaryDisks asyncSecondaryDisks or {@code null} for none
+   */
+  public Disk setAsyncSecondaryDisks(java.util.Map<String, DiskAsyncReplicationList> asyncSecondaryDisks) {
+    this.asyncSecondaryDisks = asyncSecondaryDisks;
     return this;
   }
 
@@ -994,6 +1065,23 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Status information for the disk resource.
+   * @return value or {@code null} for none
+   */
+  public DiskResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * [Output Only] Status information for the disk resource.
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Disk setResourceStatus(DiskResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
+    return this;
+  }
+
+  /**
    * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
@@ -1064,6 +1152,44 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSizeGb(java.lang.Long sizeGb) {
     this.sizeGb = sizeGb;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using
+   * a consistency group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceConsistencyGroupPolicy() {
+    return sourceConsistencyGroupPolicy;
+  }
+
+  /**
+   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using
+   * a consistency group.
+   * @param sourceConsistencyGroupPolicy sourceConsistencyGroupPolicy or {@code null} for none
+   */
+  public Disk setSourceConsistencyGroupPolicy(java.lang.String sourceConsistencyGroupPolicy) {
+    this.sourceConsistencyGroupPolicy = sourceConsistencyGroupPolicy;
+    return this;
+  }
+
+  /**
+   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using
+   * a consistency group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceConsistencyGroupPolicyId() {
+    return sourceConsistencyGroupPolicyId;
+  }
+
+  /**
+   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using
+   * a consistency group.
+   * @param sourceConsistencyGroupPolicyId sourceConsistencyGroupPolicyId or {@code null} for none
+   */
+  public Disk setSourceConsistencyGroupPolicyId(java.lang.String sourceConsistencyGroupPolicyId) {
+    this.sourceConsistencyGroupPolicyId = sourceConsistencyGroupPolicyId;
     return this;
   }
 

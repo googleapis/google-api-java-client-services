@@ -30,11 +30,35 @@ package com.google.api.services.compute.model;
 public final class LocationPolicyLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Constraints that the caller requires on the result distribution in this zone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocationPolicyLocationConstraints constraints;
+
+  /**
    * Preference for a given location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String preference;
+
+  /**
+   * Constraints that the caller requires on the result distribution in this zone.
+   * @return value or {@code null} for none
+   */
+  public LocationPolicyLocationConstraints getConstraints() {
+    return constraints;
+  }
+
+  /**
+   * Constraints that the caller requires on the result distribution in this zone.
+   * @param constraints constraints or {@code null} for none
+   */
+  public LocationPolicyLocation setConstraints(LocationPolicyLocationConstraints constraints) {
+    this.constraints = constraints;
+    return this;
+  }
 
   /**
    * Preference for a given location.

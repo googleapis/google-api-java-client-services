@@ -84,7 +84,7 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
    * The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will
    * initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for
    * the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
-   * disabled for this BGP peer. The default is PASSIVE.
+   * disabled for this BGP peer. The default is DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,7 +222,7 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
    * The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will
    * initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for
    * the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
-   * disabled for this BGP peer. The default is PASSIVE.
+   * disabled for this BGP peer. The default is DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionInitializationMode() {
@@ -233,7 +233,7 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
    * The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will
    * initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for
    * the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
-   * disabled for this BGP peer. The default is PASSIVE.
+   * disabled for this BGP peer. The default is DISABLED.
    * @param sessionInitializationMode sessionInitializationMode or {@code null} for none
    */
   public RouterBgpPeerBfd setSessionInitializationMode(java.lang.String sessionInitializationMode) {

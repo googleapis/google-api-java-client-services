@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyDailyCycle extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines a schedule with units measured in months. The value determines how many months pass
-   * between the start of each cycle.
+   * Defines a schedule with units measured in days. The value determines how many days pass between
+   * the start of each cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
   private java.lang.String startTime;
 
   /**
-   * Defines a schedule with units measured in months. The value determines how many months pass
-   * between the start of each cycle.
+   * Defines a schedule with units measured in days. The value determines how many days pass between
+   * the start of each cycle.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDaysInCycle() {
@@ -63,8 +63,8 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
   }
 
   /**
-   * Defines a schedule with units measured in months. The value determines how many months pass
-   * between the start of each cycle.
+   * Defines a schedule with units measured in days. The value determines how many days pass between
+   * the start of each cycle.
    * @param daysInCycle daysInCycle or {@code null} for none
    */
   public ResourcePolicyDailyCycle setDaysInCycle(java.lang.Integer daysInCycle) {

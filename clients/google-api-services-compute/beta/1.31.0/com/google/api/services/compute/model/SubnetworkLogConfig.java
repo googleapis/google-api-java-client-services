@@ -49,8 +49,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   private java.lang.Boolean enable;
 
   /**
-   * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to
-   * define which VPC flow logs should be logged.
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is
+   * used to define which VPC flow logs should be exported to Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +128,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to
-   * define which VPC flow logs should be logged.
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is
+   * used to define which VPC flow logs should be exported to Cloud Logging.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilterExpr() {
@@ -137,8 +137,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to
-   * define which VPC flow logs should be logged.
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is
+   * used to define which VPC flow logs should be exported to Cloud Logging.
    * @param filterExpr filterExpr or {@code null} for none
    */
   public SubnetworkLogConfig setFilterExpr(java.lang.String filterExpr) {

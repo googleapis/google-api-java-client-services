@@ -52,6 +52,15 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> srcIpRanges;
 
   /**
+   * List of secure tag values, which should be matched at the source of the traffic. For INGRESS
+   * rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be
+   * ignored. Maximum number of source tag values allowed is 256.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FirewallPolicyRuleSecureTag> srcSecureTags;
+
+  /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
    * @return value or {@code null} for none
    */
@@ -99,6 +108,27 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {
     this.srcIpRanges = srcIpRanges;
+    return this;
+  }
+
+  /**
+   * List of secure tag values, which should be matched at the source of the traffic. For INGRESS
+   * rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be
+   * ignored. Maximum number of source tag values allowed is 256.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FirewallPolicyRuleSecureTag> getSrcSecureTags() {
+    return srcSecureTags;
+  }
+
+  /**
+   * List of secure tag values, which should be matched at the source of the traffic. For INGRESS
+   * rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be
+   * ignored. Maximum number of source tag values allowed is 256.
+   * @param srcSecureTags srcSecureTags or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcSecureTags(java.util.List<FirewallPolicyRuleSecureTag> srcSecureTags) {
+    this.srcSecureTags = srcSecureTags;
     return this;
   }
 

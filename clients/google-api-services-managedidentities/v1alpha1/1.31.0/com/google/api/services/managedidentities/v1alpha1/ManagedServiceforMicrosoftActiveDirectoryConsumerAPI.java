@@ -3860,24 +3860,17 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
                 return this;
               }
 
-              /**
-               * Optional. Filter specifying constraints of a list operation. For example,
-               * `backup.location ="us-west1-a"`.
-               */
+              /** Optional. Filter specifying constraints of a list operation. */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. Filter specifying constraints of a list operation. For example, `backup.location ="us-
-             west1-a"`.
+              /** Optional. Filter specifying constraints of a list operation.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
-              /**
-               * Optional. Filter specifying constraints of a list operation. For example,
-               * `backup.location ="us-west1-a"`.
-               */
+              /** Optional. Filter specifying constraints of a list operation. */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
                 return this;

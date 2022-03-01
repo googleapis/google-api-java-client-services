@@ -52,6 +52,15 @@ public final class AccountItemUpdates extends com.google.api.client.json.Generic
   private java.lang.Boolean effectiveAllowAvailabilityUpdates;
 
   /**
+   * Output only. The effective value of allow_condition_updates. If account_item_updates_settings
+   * is present, then this value is the same. Otherwise, it represents the inherited value of the
+   * parent account. Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean effectiveAllowConditionUpdates;
+
+  /**
    * Output only. The effective value of allow_price_updates. If account_item_updates_settings is
    * present, then this value is the same. Otherwise, it represents the inherited value of the
    * parent account. Read-only.
@@ -108,6 +117,27 @@ public final class AccountItemUpdates extends com.google.api.client.json.Generic
    */
   public AccountItemUpdates setEffectiveAllowAvailabilityUpdates(java.lang.Boolean effectiveAllowAvailabilityUpdates) {
     this.effectiveAllowAvailabilityUpdates = effectiveAllowAvailabilityUpdates;
+    return this;
+  }
+
+  /**
+   * Output only. The effective value of allow_condition_updates. If account_item_updates_settings
+   * is present, then this value is the same. Otherwise, it represents the inherited value of the
+   * parent account. Read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEffectiveAllowConditionUpdates() {
+    return effectiveAllowConditionUpdates;
+  }
+
+  /**
+   * Output only. The effective value of allow_condition_updates. If account_item_updates_settings
+   * is present, then this value is the same. Otherwise, it represents the inherited value of the
+   * parent account. Read-only.
+   * @param effectiveAllowConditionUpdates effectiveAllowConditionUpdates or {@code null} for none
+   */
+  public AccountItemUpdates setEffectiveAllowConditionUpdates(java.lang.Boolean effectiveAllowConditionUpdates) {
+    this.effectiveAllowConditionUpdates = effectiveAllowConditionUpdates;
     return this;
   }
 

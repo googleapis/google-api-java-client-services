@@ -41,6 +41,14 @@ public final class AccountItemUpdatesSettings extends com.google.api.client.json
   private java.lang.Boolean allowAvailabilityUpdates;
 
   /**
+   * If condition updates are enabled, Google always updates item condition with the condition
+   * detected from the details of your product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowConditionUpdates;
+
+  /**
    * If price updates are enabled, Google always updates the active price with the crawled
    * information.
    * The value may be {@code null}.
@@ -79,6 +87,25 @@ public final class AccountItemUpdatesSettings extends com.google.api.client.json
    */
   public AccountItemUpdatesSettings setAllowAvailabilityUpdates(java.lang.Boolean allowAvailabilityUpdates) {
     this.allowAvailabilityUpdates = allowAvailabilityUpdates;
+    return this;
+  }
+
+  /**
+   * If condition updates are enabled, Google always updates item condition with the condition
+   * detected from the details of your product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowConditionUpdates() {
+    return allowConditionUpdates;
+  }
+
+  /**
+   * If condition updates are enabled, Google always updates item condition with the condition
+   * detected from the details of your product.
+   * @param allowConditionUpdates allowConditionUpdates or {@code null} for none
+   */
+  public AccountItemUpdatesSettings setAllowConditionUpdates(java.lang.Boolean allowConditionUpdates) {
+    this.allowConditionUpdates = allowConditionUpdates;
     return this;
   }
 

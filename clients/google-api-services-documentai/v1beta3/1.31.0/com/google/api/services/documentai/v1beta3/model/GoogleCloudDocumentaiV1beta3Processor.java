@@ -83,7 +83,8 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
   private java.lang.String state;
 
   /**
-   * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+   * The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors
+   * types, see FetchProcessorTypes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +214,8 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
   }
 
   /**
-   * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+   * The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors
+   * types, see FetchProcessorTypes.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -221,7 +223,8 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
   }
 
   /**
-   * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+   * The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors
+   * types, see FetchProcessorTypes.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Processor setType(java.lang.String type) {

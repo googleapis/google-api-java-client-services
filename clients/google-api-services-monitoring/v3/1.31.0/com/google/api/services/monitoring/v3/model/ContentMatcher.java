@@ -33,8 +33,8 @@ package com.google.api.services.monitoring.v3.model;
 public final class ContentMatcher extends com.google.api.client.json.GenericJson {
 
   /**
-   * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no
-   * content matching is to be performed.
+   * String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates
+   * no content matching is to be performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +49,8 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   private java.lang.String matcher;
 
   /**
-   * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no
-   * content matching is to be performed.
+   * String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates
+   * no content matching is to be performed.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -58,8 +58,8 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no
-   * content matching is to be performed.
+   * String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates
+   * no content matching is to be performed.
    * @param content content or {@code null} for none
    */
   public ContentMatcher setContent(java.lang.String content) {

@@ -103,6 +103,15 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hasPendingEdits;
 
   /**
+   * Output only. Indicates if the listing has Voice of Merchant. If this boolean is false, you
+   * should call the locations.getVoiceOfMerchantState API to get details as to why they do not have
+   * Voice of Merchant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasVoiceOfMerchant;
+
+  /**
    * Output only. A link to the location on Maps.
    * The value may be {@code null}.
    */
@@ -297,6 +306,27 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
    */
   public Metadata setHasPendingEdits(java.lang.Boolean hasPendingEdits) {
     this.hasPendingEdits = hasPendingEdits;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates if the listing has Voice of Merchant. If this boolean is false, you
+   * should call the locations.getVoiceOfMerchantState API to get details as to why they do not have
+   * Voice of Merchant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasVoiceOfMerchant() {
+    return hasVoiceOfMerchant;
+  }
+
+  /**
+   * Output only. Indicates if the listing has Voice of Merchant. If this boolean is false, you
+   * should call the locations.getVoiceOfMerchantState API to get details as to why they do not have
+   * Voice of Merchant.
+   * @param hasVoiceOfMerchant hasVoiceOfMerchant or {@code null} for none
+   */
+  public Metadata setHasVoiceOfMerchant(java.lang.Boolean hasVoiceOfMerchant) {
+    this.hasVoiceOfMerchant = hasVoiceOfMerchant;
     return this;
   }
 

@@ -79,6 +79,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The max number of shares allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxShareCount;
+
+  /**
    * Output only. The resource name of the instance, in the format
    * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
    * The value may be {@code null}.
@@ -230,6 +237,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The max number of shares allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxShareCount() {
+    return maxShareCount;
+  }
+
+  /**
+   * Output only. The max number of shares allowed.
+   * @param maxShareCount maxShareCount or {@code null} for none
+   */
+  public Instance setMaxShareCount(java.lang.Long maxShareCount) {
+    this.maxShareCount = maxShareCount;
     return this;
   }
 

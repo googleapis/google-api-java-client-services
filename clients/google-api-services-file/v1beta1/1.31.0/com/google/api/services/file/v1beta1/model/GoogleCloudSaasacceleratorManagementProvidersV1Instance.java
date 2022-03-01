@@ -47,6 +47,17 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   private String createTime;
 
   /**
+   * Optional. The instance_type of this instance of format:
+   * projects/{project_id}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance Type
+   * represents a high-level tier or SKU of the service that this instance belong to. When
+   * enabled(eg: Maintenance Rollout), Rollout uses 'instance_type' along with 'software_versions'
+   * to determine whether instance needs an update or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceType;
+
+  /**
    * Optional. Resource labels to represent user provided metadata. Each label is a key-value pair,
    * where both the key and the value are arbitrary strings provided by the user.
    * The value may be {@code null}.
@@ -88,6 +99,15 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. notification_parameters are information that service producers may like to include
+   * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
+   * for notification/logging purpose.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> notificationParameters;
 
   /**
    * Output only. Custom string attributes used primarily to expose producer-specific information in
@@ -193,6 +213,31 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   }
 
   /**
+   * Optional. The instance_type of this instance of format:
+   * projects/{project_id}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance Type
+   * represents a high-level tier or SKU of the service that this instance belong to. When
+   * enabled(eg: Maintenance Rollout), Rollout uses 'instance_type' along with 'software_versions'
+   * to determine whether instance needs an update or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceType() {
+    return instanceType;
+  }
+
+  /**
+   * Optional. The instance_type of this instance of format:
+   * projects/{project_id}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance Type
+   * represents a high-level tier or SKU of the service that this instance belong to. When
+   * enabled(eg: Maintenance Rollout), Rollout uses 'instance_type' along with 'software_versions'
+   * to determine whether instance needs an update or not.
+   * @param instanceType instanceType or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setInstanceType(java.lang.String instanceType) {
+    this.instanceType = instanceType;
+    return this;
+  }
+
+  /**
    * Optional. Resource labels to represent user provided metadata. Each label is a key-value pair,
    * where both the key and the value are arbitrary strings provided by the user.
    * @return value or {@code null} for none
@@ -290,6 +335,27 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. notification_parameters are information that service producers may like to include
+   * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
+   * for notification/logging purpose.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getNotificationParameters() {
+    return notificationParameters;
+  }
+
+  /**
+   * Optional. notification_parameters are information that service producers may like to include
+   * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
+   * for notification/logging purpose.
+   * @param notificationParameters notificationParameters or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setNotificationParameters(java.util.Map<String, java.lang.String> notificationParameters) {
+    this.notificationParameters = notificationParameters;
     return this;
   }
 

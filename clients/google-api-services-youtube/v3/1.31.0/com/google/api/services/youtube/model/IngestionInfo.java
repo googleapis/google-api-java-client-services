@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Describes information necessary for ingesting an RTMP or an HTTP stream.
+ * Describes information necessary for ingesting an RTMP, HTTP, or SRT stream.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -64,7 +64,7 @@ public final class IngestionInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String rtmpsIngestionAddress;
 
   /**
-   * The HTTP or RTMP stream name that YouTube assigns to the video stream.
+   * The stream name that YouTube assigns to the video stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class IngestionInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The HTTP or RTMP stream name that YouTube assigns to the video stream.
+   * The stream name that YouTube assigns to the video stream.
    * @return value or {@code null} for none
    */
   public java.lang.String getStreamName() {
@@ -159,7 +159,7 @@ public final class IngestionInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The HTTP or RTMP stream name that YouTube assigns to the video stream.
+   * The stream name that YouTube assigns to the video stream.
    * @param streamName streamName or {@code null} for none
    */
   public IngestionInfo setStreamName(java.lang.String streamName) {

@@ -30,7 +30,7 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Endpoint Attachments in the specified organization.
+   * Endpoint attachments in the specified organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +43,15 @@ public final class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends co
   }
 
   /**
-   * Page token that you can include in a ListEndpointAttachments request to retrieve the next page.
-   * If omitted, no subsequent pages exist.
+   * Page token that you can include in an `ListEndpointAttachments` request to retrieve the next
+   * page. If omitted, no subsequent pages exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Endpoint Attachments in the specified organization.
+   * Endpoint attachments in the specified organization.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1EndpointAttachment> getEndpointAttachments() {
@@ -59,7 +59,7 @@ public final class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends co
   }
 
   /**
-   * Endpoint Attachments in the specified organization.
+   * Endpoint attachments in the specified organization.
    * @param endpointAttachments endpointAttachments or {@code null} for none
    */
   public GoogleCloudApigeeV1ListEndpointAttachmentsResponse setEndpointAttachments(java.util.List<GoogleCloudApigeeV1EndpointAttachment> endpointAttachments) {
@@ -68,8 +68,8 @@ public final class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends co
   }
 
   /**
-   * Page token that you can include in a ListEndpointAttachments request to retrieve the next page.
-   * If omitted, no subsequent pages exist.
+   * Page token that you can include in an `ListEndpointAttachments` request to retrieve the next
+   * page. If omitted, no subsequent pages exist.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -77,8 +77,8 @@ public final class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends co
   }
 
   /**
-   * Page token that you can include in a ListEndpointAttachments request to retrieve the next page.
-   * If omitted, no subsequent pages exist.
+   * Page token that you can include in an `ListEndpointAttachments` request to retrieve the next
+   * page. If omitted, no subsequent pages exist.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudApigeeV1ListEndpointAttachmentsResponse setNextPageToken(java.lang.String nextPageToken) {

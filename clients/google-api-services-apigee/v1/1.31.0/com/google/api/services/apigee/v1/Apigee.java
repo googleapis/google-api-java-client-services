@@ -15062,14 +15062,14 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
     public class EndpointAttachments {
 
       /**
-       * Creates an EndpointAttachment. **Note:** Not supported for Apigee hybrid.
+       * Creates an endpoint attachment. **Note:** Not supported for Apigee hybrid.
        *
        * Create a request for the method "endpointAttachments.create".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The Organization this EndpointAttachment will be created in.
+       * @param parent Required. Organization the endpoint attachment will be created in.
        * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment}
        * @return the request
        */
@@ -15087,7 +15087,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates an EndpointAttachment. **Note:** Not supported for Apigee hybrid.
+         * Creates an endpoint attachment. **Note:** Not supported for Apigee hybrid.
          *
          * Create a request for the method "endpointAttachments.create".
          *
@@ -15096,7 +15096,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The Organization this EndpointAttachment will be created in.
+         * @param parent Required. Organization the endpoint attachment will be created in.
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EndpointAttachment}
          * @since 1.13
          */
@@ -15165,17 +15165,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The Organization this EndpointAttachment will be created in. */
+        /** Required. Organization the endpoint attachment will be created in. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The Organization this EndpointAttachment will be created in.
+        /** Required. Organization the endpoint attachment will be created in.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The Organization this EndpointAttachment will be created in. */
+        /** Required. Organization the endpoint attachment will be created in. */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15187,22 +15187,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The ID to use for the endpoint attachment. ID must be a 1-20 characters string with
-         * lowercase letters and numbers and must start with a letter.
+         * ID to use for the endpoint attachment. The ID can contain lowercase letters and numbers,
+         * must start with a letter, and must be 1-20 characters in length.
          */
         @com.google.api.client.util.Key
         private java.lang.String endpointAttachmentId;
 
-        /** The ID to use for the endpoint attachment. ID must be a 1-20 characters string with lowercase
-       letters and numbers and must start with a letter.
+        /** ID to use for the endpoint attachment. The ID can contain lowercase letters and numbers, must start
+       with a letter, and must be 1-20 characters in length.
          */
         public java.lang.String getEndpointAttachmentId() {
           return endpointAttachmentId;
         }
 
         /**
-         * The ID to use for the endpoint attachment. ID must be a 1-20 characters string with
-         * lowercase letters and numbers and must start with a letter.
+         * ID to use for the endpoint attachment. The ID can contain lowercase letters and numbers,
+         * must start with a letter, and must be 1-20 characters in length.
          */
         public Create setEndpointAttachmentId(java.lang.String endpointAttachmentId) {
           this.endpointAttachmentId = endpointAttachmentId;
@@ -15222,8 +15222,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the Endpoint Attachment in the following format:
-       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+       * @param name Required. Name of the endpoint attachment. Use the following structure in your request:
+       *        `organizations/{org}/endpointAttachments/{endpoint_attachment}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15249,8 +15249,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the Endpoint Attachment in the following format:
-       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * @param name Required. Name of the endpoint attachment. Use the following structure in your request:
+       *        `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -15319,22 +15319,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Name of the Endpoint Attachment in the following format:
-         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * Required. Name of the endpoint attachment. Use the following structure in your request:
+         * `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the Endpoint Attachment in the following format:
-       `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+        /** Required. Name of the endpoint attachment. Use the following structure in your request:
+       `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Name of the Endpoint Attachment in the following format:
-         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * Required. Name of the endpoint attachment. Use the following structure in your request:
+         * `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15352,15 +15352,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Gets the specified EndpointAttachment.
+       * Gets the endpoint attachment.
        *
        * Create a request for the method "endpointAttachments.get".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the Endpoint Attachment in the following format:
-       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+       * @param name Required. Name of the endpoint attachment. Use the following structure in your request:
+       *        `organizations/{org}/endpointAttachments/{endpoint_attachment}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -15377,7 +15377,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+/endpointAttachments/[^/]+$");
 
         /**
-         * Gets the specified EndpointAttachment.
+         * Gets the endpoint attachment.
          *
          * Create a request for the method "endpointAttachments.get".
          *
@@ -15386,8 +15386,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the Endpoint Attachment in the following format:
-       *        `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * @param name Required. Name of the endpoint attachment. Use the following structure in your request:
+       *        `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -15466,22 +15466,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Name of the Endpoint Attachment in the following format:
-         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * Required. Name of the endpoint attachment. Use the following structure in your request:
+         * `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the Endpoint Attachment in the following format:
-       `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+        /** Required. Name of the endpoint attachment. Use the following structure in your request:
+       `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Name of the Endpoint Attachment in the following format:
-         * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+         * Required. Name of the endpoint attachment. Use the following structure in your request:
+         * `organizations/{org}/endpointAttachments/{endpoint_attachment}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15499,15 +15499,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Lists the EndpointAttachments in the specified Organization.
+       * Lists the endpoint attachments in an organization.
        *
        * Create a request for the method "endpointAttachments.list".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the Organization for which to list Endpoint Attachments in the format:
-       *        `organizations/{organization}`.
+       * @param parent Required. Name of the organization for which to list endpoint attachments. Use the following
+       *        structure in your request: `organizations/{org}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -15524,7 +15524,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists the EndpointAttachments in the specified Organization.
+         * Lists the endpoint attachments in an organization.
          *
          * Create a request for the method "endpointAttachments.list".
          *
@@ -15533,8 +15533,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the Organization for which to list Endpoint Attachments in the format:
-       *        `organizations/{organization}`.
+         * @param parent Required. Name of the organization for which to list endpoint attachments. Use the following
+       *        structure in your request: `organizations/{org}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -15613,22 +15613,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Name of the Organization for which to list Endpoint Attachments in the format:
-         * `organizations/{organization}`.
+         * Required. Name of the organization for which to list endpoint attachments. Use the
+         * following structure in your request: `organizations/{org}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the Organization for which to list Endpoint Attachments in the format:
-       `organizations/{organization}`.
+        /** Required. Name of the organization for which to list endpoint attachments. Use the following
+       structure in your request: `organizations/{org}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the Organization for which to list Endpoint Attachments in the format:
-         * `organizations/{organization}`.
+         * Required. Name of the organization for which to list endpoint attachments. Use the
+         * following structure in your request: `organizations/{org}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -15641,13 +15641,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Maximum number of Endpoint Attachments to return. If unspecified, at most 25
+         * Optional. Maximum number of endpoint attachments to return. If unspecified, at most 25
          * attachments will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. Maximum number of Endpoint Attachments to return. If unspecified, at most 25 attachments
+        /** Optional. Maximum number of endpoint attachments to return. If unspecified, at most 25 attachments
        will be returned.
          */
         public java.lang.Integer getPageSize() {
@@ -15655,7 +15655,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Maximum number of Endpoint Attachments to return. If unspecified, at most 25
+         * Optional. Maximum number of endpoint attachments to return. If unspecified, at most 25
          * attachments will be returned.
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -15664,13 +15664,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Page token, returned from a previous ListEndpointAttachments call, that you can
-         * use to retrieve the next page.
+         * Optional. Page token, returned from a previous `ListEndpointAttachments` call, that you
+         * can use to retrieve the next page.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. Page token, returned from a previous ListEndpointAttachments call, that you can use to
+        /** Optional. Page token, returned from a previous `ListEndpointAttachments` call, that you can use to
        retrieve the next page.
          */
         public java.lang.String getPageToken() {
@@ -15678,8 +15678,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Page token, returned from a previous ListEndpointAttachments call, that you can
-         * use to retrieve the next page.
+         * Optional. Page token, returned from a previous `ListEndpointAttachments` call, that you
+         * can use to retrieve the next page.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

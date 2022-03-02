@@ -42,7 +42,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.String billingAccount;
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for CJIS.
+   * Input only. Immutable. Settings specific to resources needed for CJIS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,21 +88,21 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.String etag;
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.
+   * Input only. Immutable. Settings specific to resources needed for FedRAMP High.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings fedrampHighSettings;
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
+   * Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings fedrampModerateSettings;
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for IL4.
+   * Input only. Immutable. Settings specific to resources needed for IL4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,10 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.String kajEnrollmentState;
 
   /**
-   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
-   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key
+   * is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring,
+   * callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,7 +202,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for CJIS.
+   * Input only. Immutable. Settings specific to resources needed for CJIS.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings getCjisSettings() {
@@ -208,7 +210,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for CJIS.
+   * Input only. Immutable. Settings specific to resources needed for CJIS.
    * @param cjisSettings cjisSettings or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setCjisSettings(GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings cjisSettings) {
@@ -310,7 +312,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.
+   * Input only. Immutable. Settings specific to resources needed for FedRAMP High.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings getFedrampHighSettings() {
@@ -318,7 +320,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.
+   * Input only. Immutable. Settings specific to resources needed for FedRAMP High.
    * @param fedrampHighSettings fedrampHighSettings or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setFedrampHighSettings(GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings fedrampHighSettings) {
@@ -327,7 +329,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
+   * Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings getFedrampModerateSettings() {
@@ -335,7 +337,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
+   * Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
    * @param fedrampModerateSettings fedrampModerateSettings or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setFedrampModerateSettings(GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings fedrampModerateSettings) {
@@ -344,7 +346,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for IL4.
+   * Input only. Immutable. Settings specific to resources needed for IL4.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings getIl4Settings() {
@@ -352,7 +354,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for IL4.
+   * Input only. Immutable. Settings specific to resources needed for IL4.
    * @param il4Settings il4Settings or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setIl4Settings(GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings il4Settings) {
@@ -378,8 +380,10 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
-   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key
+   * is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring,
+   * callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type
+   * field.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings getKmsSettings() {
@@ -387,8 +391,10 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
-   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key
+   * is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring,
+   * callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type
+   * field.
    * @param kmsSettings kmsSettings or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setKmsSettings(GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings kmsSettings) {

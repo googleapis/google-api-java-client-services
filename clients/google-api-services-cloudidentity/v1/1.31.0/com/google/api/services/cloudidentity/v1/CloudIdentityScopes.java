@@ -23,8 +23,14 @@ package com.google.api.services.cloudidentity.v1;
  */
 public class CloudIdentityScopes {
 
+  /** Private Service: https://www.googleapis.com/auth/cloud-identity.devices. */
+  public static final String CLOUD_IDENTITY_DEVICES = "https://www.googleapis.com/auth/cloud-identity.devices";
+
   /** See your device details. */
   public static final String CLOUD_IDENTITY_DEVICES_LOOKUP = "https://www.googleapis.com/auth/cloud-identity.devices.lookup";
+
+  /** Private Service: https://www.googleapis.com/auth/cloud-identity.devices.readonly. */
+  public static final String CLOUD_IDENTITY_DEVICES_READONLY = "https://www.googleapis.com/auth/cloud-identity.devices.readonly";
 
   /** See, change, create, and delete any of the Cloud Identity Groups that you can access, including the members of each group. */
   public static final String CLOUD_IDENTITY_GROUPS = "https://www.googleapis.com/auth/cloud-identity.groups";
@@ -42,7 +48,9 @@ public class CloudIdentityScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_IDENTITY_DEVICES);
     set.add(CLOUD_IDENTITY_DEVICES_LOOKUP);
+    set.add(CLOUD_IDENTITY_DEVICES_READONLY);
     set.add(CLOUD_IDENTITY_GROUPS);
     set.add(CLOUD_IDENTITY_GROUPS_READONLY);
     set.add(CLOUD_PLATFORM);

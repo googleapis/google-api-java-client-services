@@ -40,7 +40,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings ex
 
   /**
    * Resource identifier. For a project this represents project_id. If the project is already taken,
-   * the workload creation will fail.
+   * the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder,
+   * don't set this value as folder_id is assigned by Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings ex
 
   /**
    * Resource identifier. For a project this represents project_id. If the project is already taken,
-   * the workload creation will fail.
+   * the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder,
+   * don't set this value as folder_id is assigned by Google.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceId() {
@@ -84,7 +86,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings ex
 
   /**
    * Resource identifier. For a project this represents project_id. If the project is already taken,
-   * the workload creation will fail.
+   * the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder,
+   * don't set this value as folder_id is assigned by Google.
    * @param resourceId resourceId or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings setResourceId(java.lang.String resourceId) {

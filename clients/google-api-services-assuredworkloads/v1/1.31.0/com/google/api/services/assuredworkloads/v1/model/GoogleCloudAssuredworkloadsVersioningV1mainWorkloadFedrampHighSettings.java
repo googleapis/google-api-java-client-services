@@ -31,14 +31,14 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadFedrampHighSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input only. Immutable. Settings used to create a CMEK crypto key.
+   * Input only. Immutable. Settings used to create a CMEK crypto key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsVersioningV1mainWorkloadKMSSettings kmsSettings;
 
   /**
-   * Required. Input only. Immutable. Settings used to create a CMEK crypto key.
+   * Input only. Immutable. Settings used to create a CMEK crypto key.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadKMSSettings getKmsSettings() {
@@ -46,7 +46,7 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadFedrampHig
   }
 
   /**
-   * Required. Input only. Immutable. Settings used to create a CMEK crypto key.
+   * Input only. Immutable. Settings used to create a CMEK crypto key.
    * @param kmsSettings kmsSettings or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadFedrampHighSettings setKmsSettings(GoogleCloudAssuredworkloadsVersioningV1mainWorkloadKMSSettings kmsSettings) {

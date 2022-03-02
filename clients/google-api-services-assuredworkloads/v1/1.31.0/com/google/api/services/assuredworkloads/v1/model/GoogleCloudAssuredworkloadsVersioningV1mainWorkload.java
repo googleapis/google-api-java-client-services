@@ -116,8 +116,10 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
   private java.lang.String kajEnrollmentState;
 
   /**
-   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
-   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key
+   * is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring,
+   * callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -378,8 +380,10 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
   }
 
   /**
-   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
-   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key
+   * is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring,
+   * callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type
+   * field.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadKMSSettings getKmsSettings() {
@@ -387,8 +391,10 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
   }
 
   /**
-   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
-   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key
+   * is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring,
+   * callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type
+   * field.
    * @param kmsSettings kmsSettings or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkload setKmsSettings(GoogleCloudAssuredworkloadsVersioningV1mainWorkloadKMSSettings kmsSettings) {

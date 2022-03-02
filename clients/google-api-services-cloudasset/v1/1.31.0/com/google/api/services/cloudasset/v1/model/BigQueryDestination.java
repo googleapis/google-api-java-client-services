@@ -32,7 +32,9 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   /**
    * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId", to which the
    * snapshot result should be exported. If this dataset does not exist, the export call returns an
-   * INVALID_ARGUMENT error.
+   * INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets` determines the [schema
+   * ](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema) of the BigQuery table. Setting
+   * `separateTablesPerAssetType` to `TRUE` also influences the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +100,9 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   /**
    * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId", to which the
    * snapshot result should be exported. If this dataset does not exist, the export call returns an
-   * INVALID_ARGUMENT error.
+   * INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets` determines the [schema
+   * ](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema) of the BigQuery table. Setting
+   * `separateTablesPerAssetType` to `TRUE` also influences the schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -108,7 +112,9 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   /**
    * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId", to which the
    * snapshot result should be exported. If this dataset does not exist, the export call returns an
-   * INVALID_ARGUMENT error.
+   * INVALID_ARGUMENT error. Setting the `contentType` for `exportAssets` determines the [schema
+   * ](/asset-inventory/docs/exporting-to-bigquery#bigquery-schema) of the BigQuery table. Setting
+   * `separateTablesPerAssetType` to `TRUE` also influences the schema.
    * @param dataset dataset or {@code null} for none
    */
   public BigQueryDestination setDataset(java.lang.String dataset) {

@@ -30,6 +30,23 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class GitFileSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The full resource name of the bitbucket server config. Format:
+   * `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bitbucketServerConfig;
+
+  /**
+   * The full resource name of the github enterprise config. Format:
+   * `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`.
+   * `projects/{project}/githubEnterpriseConfigs/{id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String githubEnterpriseConfig;
+
+  /**
    * The path of the file, with the repo root as the root of the path.
    * The value may be {@code null}.
    */
@@ -60,6 +77,46 @@ public final class GitFileSource extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * The full resource name of the bitbucket server config. Format:
+   * `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBitbucketServerConfig() {
+    return bitbucketServerConfig;
+  }
+
+  /**
+   * The full resource name of the bitbucket server config. Format:
+   * `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.
+   * @param bitbucketServerConfig bitbucketServerConfig or {@code null} for none
+   */
+  public GitFileSource setBitbucketServerConfig(java.lang.String bitbucketServerConfig) {
+    this.bitbucketServerConfig = bitbucketServerConfig;
+    return this;
+  }
+
+  /**
+   * The full resource name of the github enterprise config. Format:
+   * `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`.
+   * `projects/{project}/githubEnterpriseConfigs/{id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGithubEnterpriseConfig() {
+    return githubEnterpriseConfig;
+  }
+
+  /**
+   * The full resource name of the github enterprise config. Format:
+   * `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`.
+   * `projects/{project}/githubEnterpriseConfigs/{id}`.
+   * @param githubEnterpriseConfig githubEnterpriseConfig or {@code null} for none
+   */
+  public GitFileSource setGithubEnterpriseConfig(java.lang.String githubEnterpriseConfig) {
+    this.githubEnterpriseConfig = githubEnterpriseConfig;
+    return this;
+  }
 
   /**
    * The path of the file, with the repo root as the root of the path.

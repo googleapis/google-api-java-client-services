@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-androidpublisher</artifactId>
-  <version>v3-rev20220221-1.32.1</version>
-  <name>Google Play Android Developer API v3-rev20220221-1.32.1</name>
+  <version>v3-rev20220302-1.32.1</version>
+  <name>Google Play Android Developer API v3-rev20220302-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

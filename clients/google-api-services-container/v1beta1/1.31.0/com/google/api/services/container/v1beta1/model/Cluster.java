@@ -421,6 +421,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer nodeIpv4CidrSize;
 
   /**
+   * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node
+   * auto-provisioning enabled clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolAutoConfig nodePoolAutoConfig;
+
+  /**
    * Default NodePool settings for the entire cluster. These settings are overridden if specified on
    * the specific NodePool object.
    * The value may be {@code null}.
@@ -558,6 +566,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VerticalPodAutoscaling verticalPodAutoscaling;
+
+  /**
+   * Configuration for direct-path (via ALTS) with workload identity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadALTSConfig workloadAltsConfig;
 
   /**
    * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
@@ -1501,6 +1516,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node
+   * auto-provisioning enabled clusters.
+   * @return value or {@code null} for none
+   */
+  public NodePoolAutoConfig getNodePoolAutoConfig() {
+    return nodePoolAutoConfig;
+  }
+
+  /**
+   * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node
+   * auto-provisioning enabled clusters.
+   * @param nodePoolAutoConfig nodePoolAutoConfig or {@code null} for none
+   */
+  public Cluster setNodePoolAutoConfig(NodePoolAutoConfig nodePoolAutoConfig) {
+    this.nodePoolAutoConfig = nodePoolAutoConfig;
+    return this;
+  }
+
+  /**
    * Default NodePool settings for the entire cluster. These settings are overridden if specified on
    * the specific NodePool object.
    * @return value or {@code null} for none
@@ -1829,6 +1863,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setVerticalPodAutoscaling(VerticalPodAutoscaling verticalPodAutoscaling) {
     this.verticalPodAutoscaling = verticalPodAutoscaling;
+    return this;
+  }
+
+  /**
+   * Configuration for direct-path (via ALTS) with workload identity.
+   * @return value or {@code null} for none
+   */
+  public WorkloadALTSConfig getWorkloadAltsConfig() {
+    return workloadAltsConfig;
+  }
+
+  /**
+   * Configuration for direct-path (via ALTS) with workload identity.
+   * @param workloadAltsConfig workloadAltsConfig or {@code null} for none
+   */
+  public Cluster setWorkloadAltsConfig(WorkloadALTSConfig workloadAltsConfig) {
+    this.workloadAltsConfig = workloadAltsConfig;
     return this;
   }
 

@@ -38,10 +38,11 @@ public final class GoogleCloudDialogflowV2NotificationConfig extends com.google.
 
   /**
    * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as
-   * serialized ConversationEvent protos. Notification works for phone calls, if this topic either
-   * is in the same project as the conversation or you grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project.
-   * Format: `projects//locations//topics/`.
+   * serialized ConversationEvent protos. For telephony integration to receive notification, make
+   * sure either this topic is in the same project as the conversation or you grant `service-@gcp-
+   * sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic
+   * project. For chat integration to receive notification, make sure API caller has been granted
+   * the `Dialogflow Service Agent` role for the topic. Format: `projects//locations//topics/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,10 +67,11 @@ public final class GoogleCloudDialogflowV2NotificationConfig extends com.google.
 
   /**
    * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as
-   * serialized ConversationEvent protos. Notification works for phone calls, if this topic either
-   * is in the same project as the conversation or you grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project.
-   * Format: `projects//locations//topics/`.
+   * serialized ConversationEvent protos. For telephony integration to receive notification, make
+   * sure either this topic is in the same project as the conversation or you grant `service-@gcp-
+   * sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic
+   * project. For chat integration to receive notification, make sure API caller has been granted
+   * the `Dialogflow Service Agent` role for the topic. Format: `projects//locations//topics/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -78,10 +80,11 @@ public final class GoogleCloudDialogflowV2NotificationConfig extends com.google.
 
   /**
    * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as
-   * serialized ConversationEvent protos. Notification works for phone calls, if this topic either
-   * is in the same project as the conversation or you grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project.
-   * Format: `projects//locations//topics/`.
+   * serialized ConversationEvent protos. For telephony integration to receive notification, make
+   * sure either this topic is in the same project as the conversation or you grant `service-@gcp-
+   * sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic
+   * project. For chat integration to receive notification, make sure API caller has been granted
+   * the `Dialogflow Service Agent` role for the topic. Format: `projects//locations//topics/`.
    * @param topic topic or {@code null} for none
    */
   public GoogleCloudDialogflowV2NotificationConfig setTopic(java.lang.String topic) {

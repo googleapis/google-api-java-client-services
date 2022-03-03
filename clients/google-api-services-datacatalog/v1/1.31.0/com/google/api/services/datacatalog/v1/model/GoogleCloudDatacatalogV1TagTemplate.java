@@ -59,7 +59,7 @@ public final class GoogleCloudDatacatalogV1TagTemplate extends com.google.api.cl
   /**
    * Indicates whether tags created with this template are public. Public tags do not require tag
    * template access to appear in ListTags API response. Additionally, you can search for a public
-   * tag by value with a simple search query instead of using a ``tag:`` predicate.
+   * tag by value with a simple search query in addition to using a ``tag:`` predicate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class GoogleCloudDatacatalogV1TagTemplate extends com.google.api.cl
   /**
    * Indicates whether tags created with this template are public. Public tags do not require tag
    * template access to appear in ListTags API response. Additionally, you can search for a public
-   * tag by value with a simple search query instead of using a ``tag:`` predicate.
+   * tag by value with a simple search query in addition to using a ``tag:`` predicate.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsPubliclyReadable() {
@@ -134,7 +134,7 @@ public final class GoogleCloudDatacatalogV1TagTemplate extends com.google.api.cl
   /**
    * Indicates whether tags created with this template are public. Public tags do not require tag
    * template access to appear in ListTags API response. Additionally, you can search for a public
-   * tag by value with a simple search query instead of using a ``tag:`` predicate.
+   * tag by value with a simple search query in addition to using a ``tag:`` predicate.
    * @param isPubliclyReadable isPubliclyReadable or {@code null} for none
    */
   public GoogleCloudDatacatalogV1TagTemplate setIsPubliclyReadable(java.lang.Boolean isPubliclyReadable) {

@@ -18767,17 +18767,24 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Required. The mask to control which fields to update. */
+      /**
+       * Required. The mask to control which fields to update. Updates are only supported for the
+       * following fields: * `displayName` * `description` * `membershipDurationDays`
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Required. The mask to control which fields to update.
+      /** Required. The mask to control which fields to update. Updates are only supported for the following
+     fields: * `displayName` * `description` * `membershipDurationDays`
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Required. The mask to control which fields to update. */
+      /**
+       * Required. The mask to control which fields to update. Updates are only supported for the
+       * following fields: * `displayName` * `description` * `membershipDurationDays`
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;

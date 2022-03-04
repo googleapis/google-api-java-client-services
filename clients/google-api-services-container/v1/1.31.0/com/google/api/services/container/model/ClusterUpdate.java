@@ -197,6 +197,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredMonitoringService;
 
   /**
+   * The desired network tags that apply to all auto-provisioned node pools in autopilot clusters
+   * and node auto-provisioning enabled clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkTags desiredNodePoolAutoConfigNetworkTags;
+
+  /**
    * Autoscaler configuration for the node pool specified in desired_node_pool_id. If there is only
    * one pool in the cluster and desired_node_pool_id is not provided then the change applies to
    * that single node pool.
@@ -679,6 +687,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredMonitoringService(java.lang.String desiredMonitoringService) {
     this.desiredMonitoringService = desiredMonitoringService;
+    return this;
+  }
+
+  /**
+   * The desired network tags that apply to all auto-provisioned node pools in autopilot clusters
+   * and node auto-provisioning enabled clusters.
+   * @return value or {@code null} for none
+   */
+  public NetworkTags getDesiredNodePoolAutoConfigNetworkTags() {
+    return desiredNodePoolAutoConfigNetworkTags;
+  }
+
+  /**
+   * The desired network tags that apply to all auto-provisioned node pools in autopilot clusters
+   * and node auto-provisioning enabled clusters.
+   * @param desiredNodePoolAutoConfigNetworkTags desiredNodePoolAutoConfigNetworkTags or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNodePoolAutoConfigNetworkTags(NetworkTags desiredNodePoolAutoConfigNetworkTags) {
+    this.desiredNodePoolAutoConfigNetworkTags = desiredNodePoolAutoConfigNetworkTags;
     return this;
   }
 

@@ -77,6 +77,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Used to prevent updating the policy when another request has updated it since it was
+   * retrieved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Optional. Controls the evaluation of a Google-maintained global admission policy for common
    * system-level images. Images not covered by the global policy will be subject to the project
    * admission policy. This setting has no effect when specified inside a global admission policy.
@@ -219,6 +227,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Used to prevent updating the policy when another request has updated it since it was
+   * retrieved.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. Used to prevent updating the policy when another request has updated it since it was
+   * retrieved.
+   * @param etag etag or {@code null} for none
+   */
+  public Policy setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

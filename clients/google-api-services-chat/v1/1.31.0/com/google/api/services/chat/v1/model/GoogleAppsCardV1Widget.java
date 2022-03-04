@@ -53,10 +53,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a decorated text item in this widget. For example, the following JSON creates a
    * decorated text widget showing email address: ``` "decoratedText": { "icon": { "knownIcon":
-   * "EMAIL" }, "topLabel": "Email Address", "content": "heba.salam@example.com", "bottomLabel":
-   * "This is a new Email address!", "switchWidget": { "name":
-   * "has_send_welcome_email_to_heba_salam", "selected": false, "controlType":
-   * "ControlType.CHECKBOX" } } ```
+   * "EMAIL" }, "topLabel": "Email Address", "content": "sasha@example.com", "bottomLabel": "This is
+   * a new Email address!", "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected":
+   * false, "controlType": "ControlType.CHECKBOX" } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +89,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays an image in this widget. For example, the following JSON creates an image with
-   * alternative text: ``` "image": { "imageUrl": "https://example.com/heba_salam.png" "altText":
-   * "Avatar for Heba Salam" } ```
+   * alternative text: ``` "image": { "imageUrl": "https://example.com/sasha.png" "altText": "Avatar
+   * for Sasha" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,10 +178,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a decorated text item in this widget. For example, the following JSON creates a
    * decorated text widget showing email address: ``` "decoratedText": { "icon": { "knownIcon":
-   * "EMAIL" }, "topLabel": "Email Address", "content": "heba.salam@example.com", "bottomLabel":
-   * "This is a new Email address!", "switchWidget": { "name":
-   * "has_send_welcome_email_to_heba_salam", "selected": false, "controlType":
-   * "ControlType.CHECKBOX" } } ```
+   * "EMAIL" }, "topLabel": "Email Address", "content": "sasha@example.com", "bottomLabel": "This is
+   * a new Email address!", "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected":
+   * false, "controlType": "ControlType.CHECKBOX" } } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText getDecoratedText() {
@@ -192,10 +190,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a decorated text item in this widget. For example, the following JSON creates a
    * decorated text widget showing email address: ``` "decoratedText": { "icon": { "knownIcon":
-   * "EMAIL" }, "topLabel": "Email Address", "content": "heba.salam@example.com", "bottomLabel":
-   * "This is a new Email address!", "switchWidget": { "name":
-   * "has_send_welcome_email_to_heba_salam", "selected": false, "controlType":
-   * "ControlType.CHECKBOX" } } ```
+   * "EMAIL" }, "topLabel": "Email Address", "content": "sasha@example.com", "bottomLabel": "This is
+   * a new Email address!", "switchWidget": { "name": "has_send_welcome_email_to_sasha", "selected":
+   * false, "controlType": "ControlType.CHECKBOX" } } ```
    * @param decoratedText decoratedText or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDecoratedText(GoogleAppsCardV1DecoratedText decoratedText) {
@@ -266,8 +263,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays an image in this widget. For example, the following JSON creates an image with
-   * alternative text: ``` "image": { "imageUrl": "https://example.com/heba_salam.png" "altText":
-   * "Avatar for Heba Salam" } ```
+   * alternative text: ``` "image": { "imageUrl": "https://example.com/sasha.png" "altText": "Avatar
+   * for Sasha" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Image getImage() {
@@ -276,8 +273,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * Displays an image in this widget. For example, the following JSON creates an image with
-   * alternative text: ``` "image": { "imageUrl": "https://example.com/heba_salam.png" "altText":
-   * "Avatar for Heba Salam" } ```
+   * alternative text: ``` "image": { "imageUrl": "https://example.com/sasha.png" "altText": "Avatar
+   * for Sasha" } ```
    * @param image image or {@code null} for none
    */
   public GoogleAppsCardV1Widget setImage(GoogleAppsCardV1Image image) {

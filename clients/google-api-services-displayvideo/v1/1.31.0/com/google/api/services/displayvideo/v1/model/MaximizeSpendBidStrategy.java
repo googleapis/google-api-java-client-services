@@ -58,6 +58,13 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
   private java.lang.String performanceGoalType;
 
   /**
+   * Controls whether the strategy takes deal floor prices into account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean raiseBidForDeals;
+
+  /**
    * The ID of the Custom Bidding Algorithm used by this strategy. Only applicable when
    * performance_goal_type is set to `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`.
    * @return value or {@code null} for none
@@ -115,6 +122,23 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
    */
   public MaximizeSpendBidStrategy setPerformanceGoalType(java.lang.String performanceGoalType) {
     this.performanceGoalType = performanceGoalType;
+    return this;
+  }
+
+  /**
+   * Controls whether the strategy takes deal floor prices into account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRaiseBidForDeals() {
+    return raiseBidForDeals;
+  }
+
+  /**
+   * Controls whether the strategy takes deal floor prices into account.
+   * @param raiseBidForDeals raiseBidForDeals or {@code null} for none
+   */
+  public MaximizeSpendBidStrategy setRaiseBidForDeals(java.lang.Boolean raiseBidForDeals) {
+    this.raiseBidForDeals = raiseBidForDeals;
     return this;
   }
 

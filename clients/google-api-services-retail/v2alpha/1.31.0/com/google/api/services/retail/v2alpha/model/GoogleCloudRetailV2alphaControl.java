@@ -73,7 +73,8 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   /**
    * Required. Immutable. The solution types that the serving config is used for. Currently we
    * support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value
-   * is supported at the moment.
+   * is supported at the moment. If no solution type is provided at creation time, will default to
+   * SOLUTION_TYPE_SEARCH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +178,8 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   /**
    * Required. Immutable. The solution types that the serving config is used for. Currently we
    * support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value
-   * is supported at the moment.
+   * is supported at the moment. If no solution type is provided at creation time, will default to
+   * SOLUTION_TYPE_SEARCH.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSolutionTypes() {
@@ -187,7 +189,8 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   /**
    * Required. Immutable. The solution types that the serving config is used for. Currently we
    * support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value
-   * is supported at the moment.
+   * is supported at the moment. If no solution type is provided at creation time, will default to
+   * SOLUTION_TYPE_SEARCH.
    * @param solutionTypes solutionTypes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaControl setSolutionTypes(java.util.List<java.lang.String> solutionTypes) {

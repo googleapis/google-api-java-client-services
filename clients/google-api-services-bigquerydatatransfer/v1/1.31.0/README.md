@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-bigquerydatatransfer</artifactId>
-      <version>v1-rev20220116-1.32.1</version>
+      <version>v1-rev20220225-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-bigquerydatatransfer:v1-rev20220116-1.32.1'
+  implementation 'com.google.apis:google-api-services-bigquerydatatransfer:v1-rev20220225-1.32.1'
 }
 ```
 

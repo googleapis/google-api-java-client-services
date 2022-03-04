@@ -42,7 +42,9 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   private java.lang.Float confidence;
 
   /**
-   * Transcript text representing the words that the user spoke.
+   * Transcript text representing the words that the user spoke. In languages that use spaces to
+   * separate words, the transcript might have a leading space if it isn't the first result. You can
+   * concatenate each result to obtain the full transcript without using a separator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +85,9 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   }
 
   /**
-   * Transcript text representing the words that the user spoke.
+   * Transcript text representing the words that the user spoke. In languages that use spaces to
+   * separate words, the transcript might have a leading space if it isn't the first result. You can
+   * concatenate each result to obtain the full transcript without using a separator.
    * @return value or {@code null} for none
    */
   public java.lang.String getTranscript() {
@@ -91,7 +95,9 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   }
 
   /**
-   * Transcript text representing the words that the user spoke.
+   * Transcript text representing the words that the user spoke. In languages that use spaces to
+   * separate words, the transcript might have a leading space if it isn't the first result. You can
+   * concatenate each result to obtain the full transcript without using a separator.
    * @param transcript transcript or {@code null} for none
    */
   public SpeechRecognitionAlternative setTranscript(java.lang.String transcript) {

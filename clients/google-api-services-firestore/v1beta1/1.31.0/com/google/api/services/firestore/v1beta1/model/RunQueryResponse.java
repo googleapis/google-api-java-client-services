@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class RunQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A query result. Not set when reporting partial progress.
+   * A query result, not set when reporting partial progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   private java.lang.String transaction;
 
   /**
-   * A query result. Not set when reporting partial progress.
+   * A query result, not set when reporting partial progress.
    * @return value or {@code null} for none
    */
   public Document getDocument() {
@@ -72,7 +72,7 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A query result. Not set when reporting partial progress.
+   * A query result, not set when reporting partial progress.
    * @param document document or {@code null} for none
    */
   public RunQueryResponse setDocument(Document document) {

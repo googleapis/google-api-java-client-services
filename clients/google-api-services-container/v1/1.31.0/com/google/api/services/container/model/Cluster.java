@@ -397,6 +397,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer nodeIpv4CidrSize;
 
   /**
+   * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node
+   * auto-provisioning enabled clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolAutoConfig nodePoolAutoConfig;
+
+  /**
    * Default NodePool settings for the entire cluster. These settings are overridden if specified on
    * the specific NodePool object.
    * The value may be {@code null}.
@@ -1386,6 +1394,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodeIpv4CidrSize(java.lang.Integer nodeIpv4CidrSize) {
     this.nodeIpv4CidrSize = nodeIpv4CidrSize;
+    return this;
+  }
+
+  /**
+   * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node
+   * auto-provisioning enabled clusters.
+   * @return value or {@code null} for none
+   */
+  public NodePoolAutoConfig getNodePoolAutoConfig() {
+    return nodePoolAutoConfig;
+  }
+
+  /**
+   * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node
+   * auto-provisioning enabled clusters.
+   * @param nodePoolAutoConfig nodePoolAutoConfig or {@code null} for none
+   */
+  public Cluster setNodePoolAutoConfig(NodePoolAutoConfig nodePoolAutoConfig) {
+    this.nodePoolAutoConfig = nodePoolAutoConfig;
     return this;
   }
 

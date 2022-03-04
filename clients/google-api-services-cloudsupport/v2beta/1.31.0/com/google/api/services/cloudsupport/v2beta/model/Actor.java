@@ -58,15 +58,6 @@ public final class Actor extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean googleSupport;
 
   /**
-   * Output only. An ID representing the user that was authenticated when the corresponding action
-   * was taken. This will be an email address, if one is available, or some other unique ID. See
-   * https://cloud.google.com/docs/authentication for more information on types of authentication.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String principalId;
-
-  /**
    * The name to display for the actor. If not provided, it is inferred from credentials supplied
    * during case creation. When an email is provided, a display name must also be provided. This
    * will be obfuscated if the user is a Google Support agent.
@@ -124,27 +115,6 @@ public final class Actor extends com.google.api.client.json.GenericJson {
    */
   public Actor setGoogleSupport(java.lang.Boolean googleSupport) {
     this.googleSupport = googleSupport;
-    return this;
-  }
-
-  /**
-   * Output only. An ID representing the user that was authenticated when the corresponding action
-   * was taken. This will be an email address, if one is available, or some other unique ID. See
-   * https://cloud.google.com/docs/authentication for more information on types of authentication.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPrincipalId() {
-    return principalId;
-  }
-
-  /**
-   * Output only. An ID representing the user that was authenticated when the corresponding action
-   * was taken. This will be an email address, if one is available, or some other unique ID. See
-   * https://cloud.google.com/docs/authentication for more information on types of authentication.
-   * @param principalId principalId or {@code null} for none
-   */
-  public Actor setPrincipalId(java.lang.String principalId) {
-    this.principalId = principalId;
     return this;
   }
 

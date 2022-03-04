@@ -31,20 +31,6 @@ package com.google.api.services.cloudsupport.v2beta.model;
 public final class Escalation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The user or Google Support agent initiated this escalation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Actor actor;
-
-  /**
-   * Output only. The time when this escalation event was created.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String createTime;
-
-  /**
    * Required. A free text description to accompany the `reason` field above. Provides additional
    * context on why the case is being escalated.
    * The value may be {@code null}.
@@ -53,52 +39,11 @@ public final class Escalation extends com.google.api.client.json.GenericJson {
   private java.lang.String justification;
 
   /**
-   * Output only. The resource name for the escalation event.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * Required. The reason why the Case is being escalated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
-
-  /**
-   * Output only. The user or Google Support agent initiated this escalation.
-   * @return value or {@code null} for none
-   */
-  public Actor getActor() {
-    return actor;
-  }
-
-  /**
-   * Output only. The user or Google Support agent initiated this escalation.
-   * @param actor actor or {@code null} for none
-   */
-  public Escalation setActor(Actor actor) {
-    this.actor = actor;
-    return this;
-  }
-
-  /**
-   * Output only. The time when this escalation event was created.
-   * @return value or {@code null} for none
-   */
-  public String getCreateTime() {
-    return createTime;
-  }
-
-  /**
-   * Output only. The time when this escalation event was created.
-   * @param createTime createTime or {@code null} for none
-   */
-  public Escalation setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
 
   /**
    * Required. A free text description to accompany the `reason` field above. Provides additional
@@ -116,23 +61,6 @@ public final class Escalation extends com.google.api.client.json.GenericJson {
    */
   public Escalation setJustification(java.lang.String justification) {
     this.justification = justification;
-    return this;
-  }
-
-  /**
-   * Output only. The resource name for the escalation event.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Output only. The resource name for the escalation event.
-   * @param name name or {@code null} for none
-   */
-  public Escalation setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

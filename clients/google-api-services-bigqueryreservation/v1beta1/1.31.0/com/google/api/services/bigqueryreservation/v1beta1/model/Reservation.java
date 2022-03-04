@@ -31,6 +31,16 @@ package com.google.api.services.bigqueryreservation.v1beta1.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Maximum number of queries that are allowed to run concurrently in this reservation. This is a
+   * soft limit due to asynchronous nature of the system and various optimizations for small
+   * queries. Default value is 0 which means that concurrency will be automatically set based on the
+   * reservation size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long concurrency;
+
+  /**
    * Output only. Creation time of the reservation.
    * The value may be {@code null}.
    */
@@ -85,6 +95,29 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Maximum number of queries that are allowed to run concurrently in this reservation. This is a
+   * soft limit due to asynchronous nature of the system and various optimizations for small
+   * queries. Default value is 0 which means that concurrency will be automatically set based on the
+   * reservation size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConcurrency() {
+    return concurrency;
+  }
+
+  /**
+   * Maximum number of queries that are allowed to run concurrently in this reservation. This is a
+   * soft limit due to asynchronous nature of the system and various optimizations for small
+   * queries. Default value is 0 which means that concurrency will be automatically set based on the
+   * reservation size.
+   * @param concurrency concurrency or {@code null} for none
+   */
+  public Reservation setConcurrency(java.lang.Long concurrency) {
+    this.concurrency = concurrency;
+    return this;
+  }
 
   /**
    * Output only. Creation time of the reservation.

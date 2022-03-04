@@ -279,25 +279,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /** Optional. A unique request ID for this message. If a message has already been created in the space
-     with this request ID, the subsequent request will return the existing message and no new message
-     will be created.
+      /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+     message created with that ID instead of creating a new message.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       public Messages setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
@@ -471,25 +468,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /** Optional. A unique request ID for this message. If a message has already been created in the space
-     with this request ID, the subsequent request will return the existing message and no new message
-     will be created.
+      /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+     message created with that ID instead of creating a new message.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       public Webhooks setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
@@ -684,25 +678,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. A unique request ID for this message. If a message has already been created in
-         * the space with this request ID, the subsequent request will return the existing message
-         * and no new message will be created.
+         * Optional. A unique request ID for this message. Specifying an existing request ID returns
+         * the message created with that ID instead of creating a new message.
          */
         @com.google.api.client.util.Key
         private java.lang.String requestId;
 
-        /** Optional. A unique request ID for this message. If a message has already been created in the space
-       with this request ID, the subsequent request will return the existing message and no new message
-       will be created.
+        /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+       message created with that ID instead of creating a new message.
          */
         public java.lang.String getRequestId() {
           return requestId;
         }
 
         /**
-         * Optional. A unique request ID for this message. If a message has already been created in
-         * the space with this request ID, the subsequent request will return the existing message
-         * and no new message will be created.
+         * Optional. A unique request ID for this message. Specifying an existing request ID returns
+         * the message created with that ID instead of creating a new message.
          */
         public Messages setRequestId(java.lang.String requestId) {
           this.requestId = requestId;
@@ -1078,25 +1069,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /** Optional. A unique request ID for this message. If a message has already been created in the space
-     with this request ID, the subsequent request will return the existing message and no new message
-     will be created.
+      /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+     message created with that ID instead of creating a new message.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       public Messages setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
@@ -1270,25 +1258,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /** Optional. A unique request ID for this message. If a message has already been created in the space
-     with this request ID, the subsequent request will return the existing message and no new message
-     will be created.
+      /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+     message created with that ID instead of creating a new message.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       public Webhooks setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
@@ -1483,25 +1468,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. A unique request ID for this message. If a message has already been created in
-         * the space with this request ID, the subsequent request will return the existing message
-         * and no new message will be created.
+         * Optional. A unique request ID for this message. Specifying an existing request ID returns
+         * the message created with that ID instead of creating a new message.
          */
         @com.google.api.client.util.Key
         private java.lang.String requestId;
 
-        /** Optional. A unique request ID for this message. If a message has already been created in the space
-       with this request ID, the subsequent request will return the existing message and no new message
-       will be created.
+        /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+       message created with that ID instead of creating a new message.
          */
         public java.lang.String getRequestId() {
           return requestId;
         }
 
         /**
-         * Optional. A unique request ID for this message. If a message has already been created in
-         * the space with this request ID, the subsequent request will return the existing message
-         * and no new message will be created.
+         * Optional. A unique request ID for this message. Specifying an existing request ID returns
+         * the message created with that ID instead of creating a new message.
          */
         public Messages setRequestId(java.lang.String requestId) {
           this.requestId = requestId;
@@ -1986,25 +1968,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /** Optional. A unique request ID for this message. If a message has already been created in the space
-     with this request ID, the subsequent request will return the existing message and no new message
-     will be created.
+      /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+     message created with that ID instead of creating a new message.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
       /**
-       * Optional. A unique request ID for this message. If a message has already been created in
-       * the space with this request ID, the subsequent request will return the existing message and
-       * no new message will be created.
+       * Optional. A unique request ID for this message. Specifying an existing request ID returns
+       * the message created with that ID instead of creating a new message.
        */
       public Webhooks setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
@@ -2553,25 +2532,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. A unique request ID for this message. If a message has already been created in
-         * the space with this request ID, the subsequent request will return the existing message
-         * and no new message will be created.
+         * Optional. A unique request ID for this message. Specifying an existing request ID returns
+         * the message created with that ID instead of creating a new message.
          */
         @com.google.api.client.util.Key
         private java.lang.String requestId;
 
-        /** Optional. A unique request ID for this message. If a message has already been created in the space
-       with this request ID, the subsequent request will return the existing message and no new message
-       will be created.
+        /** Optional. A unique request ID for this message. Specifying an existing request ID returns the
+       message created with that ID instead of creating a new message.
          */
         public java.lang.String getRequestId() {
           return requestId;
         }
 
         /**
-         * Optional. A unique request ID for this message. If a message has already been created in
-         * the space with this request ID, the subsequent request will return the existing message
-         * and no new message will be created.
+         * Optional. A unique request ID for this message. Specifying an existing request ID returns
+         * the message created with that ID instead of creating a new message.
          */
         public Create setRequestId(java.lang.String requestId) {
           this.requestId = requestId;

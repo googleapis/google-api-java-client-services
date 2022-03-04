@@ -83,7 +83,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   private TimeZone timeZone;
 
   /**
-   * The full locale.displayName in the format of [ISO 639 language code]-[ISO 3166 country/region
+   * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
    * code] such as "en-US". Not supported by Chat apps.
    * The value may be {@code null}.
    */
@@ -211,7 +211,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The full locale.displayName in the format of [ISO 639 language code]-[ISO 3166 country/region
+   * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
    * code] such as "en-US". Not supported by Chat apps.
    * @return value or {@code null} for none
    */
@@ -220,7 +220,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The full locale.displayName in the format of [ISO 639 language code]-[ISO 3166 country/region
+   * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
    * code] such as "en-US". Not supported by Chat apps.
    * @param userLocale userLocale or {@code null} for none
    */

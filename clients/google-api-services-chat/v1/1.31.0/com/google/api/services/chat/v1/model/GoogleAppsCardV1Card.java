@@ -20,19 +20,18 @@ package com.google.api.services.chat.v1.model;
  * A card is a UI element that can contain UI widgets such as text and images. For more information,
  * see Cards . For example, the following JSON creates a card that has a header with the name,
  * position, icons, and link for a contact, followed by a section with contact information like
- * email and phone number. ``` { "header": { "title": "Heba Salam", "subtitle": "Software Engineer",
- * "imageStyle": "ImageStyle.AVATAR", "imageUrl": "https://example.com/heba_salam.png",
- * "imageAltText": "Avatar for Heba Salam" }, "sections" : [ { "header": "Contact Info", "widgets":
- * [ { "decorated_text": { "icon": { "knownIcon": "EMAIL" }, "content": "heba.salam@example.com" }
- * }, { "decoratedText": { "icon": { "knownIcon": "PERSON" }, "content": "Online" } }, {
- * "decoratedText": { "icon": { "knownIcon": "PHONE" }, "content": "+1 (555) 555-1234" } }, {
- * "buttons": [ { "textButton": { "text": "Share", }, "onClick": { "openLink": { "url":
- * "https://example.com/share" } } }, { "textButton": { "text": "Edit", }, "onClick": { "action": {
- * "function": "goToView", "parameters": [ { "key": "viewType", "value": "EDIT" } ],
- * "loadIndicator": "LoadIndicator.SPINNER" } } } ] } ], "collapsible": true,
- * "uncollapsibleWidgetsCount": 3 } ], "cardActions": [ { "actionLabel": "Send Feedback", "onClick":
- * { "openLink": { "url": "https://example.com/feedback" } } } ], "name": "contact-card-
- * K3wB6arF2H9L" } ```
+ * email and phone number. ``` { "header": { "title": "Sasha", "subtitle": "Software Engineer",
+ * "imageStyle": "ImageStyle.AVATAR", "imageUrl": "https://example.com/sasha.png", "imageAltText":
+ * "Avatar for Sasha" }, "sections" : [ { "header": "Contact Info", "widgets": [ { "decorated_text":
+ * { "icon": { "knownIcon": "EMAIL" }, "content": "sasha@example.com" } }, { "decoratedText": {
+ * "icon": { "knownIcon": "PERSON" }, "content": "Online" } }, { "decoratedText": { "icon": {
+ * "knownIcon": "PHONE" }, "content": "+1 (555) 555-1234" } }, { "buttons": [ { "textButton": {
+ * "text": "Share", }, "onClick": { "openLink": { "url": "https://example.com/share" } } }, {
+ * "textButton": { "text": "Edit", }, "onClick": { "action": { "function": "goToView", "parameters":
+ * [ { "key": "viewType", "value": "EDIT" } ], "loadIndicator": "LoadIndicator.SPINNER" } } } ] } ],
+ * "collapsible": true, "uncollapsibleWidgetsCount": 3 } ], "cardActions": [ { "actionLabel": "Send
+ * Feedback", "onClick": { "openLink": { "url": "https://example.com/feedback" } } } ], "name":
+ * "contact-card-K3wB6arF2H9L" } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

@@ -52,7 +52,8 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   private StructuredQuery structuredQuery;
 
   /**
-   * Reads documents in a transaction.
+   * Run the query within an already active transaction. The value here is the opaque transaction ID
+   * to execute the query in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,8 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reads documents in a transaction.
+   * Run the query within an already active transaction. The value here is the opaque transaction ID
+   * to execute the query in.
    * @see #decodeTransaction()
    * @return value or {@code null} for none
    */
@@ -121,7 +123,8 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reads documents in a transaction.
+   * Run the query within an already active transaction. The value here is the opaque transaction ID
+   * to execute the query in.
    * @see #getTransaction()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -132,7 +135,8 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reads documents in a transaction.
+   * Run the query within an already active transaction. The value here is the opaque transaction ID
+   * to execute the query in.
    * @see #encodeTransaction()
    * @param transaction transaction or {@code null} for none
    */
@@ -142,7 +146,8 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reads documents in a transaction.
+   * Run the query within an already active transaction. The value here is the opaque transaction ID
+   * to execute the query in.
    * @see #setTransaction()
    *
    * <p>

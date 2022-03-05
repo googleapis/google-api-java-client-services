@@ -17,7 +17,7 @@
 package com.google.api.services.cloudtrace.v2.model;
 
 /**
- * A set of attributes, each in the format `[KEY]:[VALUE]`.
+ * A set of attributes as key-value pairs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Trace API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
-   * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
+   * A set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
+   * string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`. For
    * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
    * { "int_value": 300 } "abc.com/myattribute": { "bool_value": false }
    * The value may be {@code null}.
@@ -55,8 +55,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.Integer droppedAttributesCount;
 
   /**
-   * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
-   * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
+   * A set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
+   * string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`. For
    * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
    * { "int_value": 300 } "abc.com/myattribute": { "bool_value": false }
    * @return value or {@code null} for none
@@ -66,8 +66,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
-   * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
+   * A set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
+   * string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`. For
    * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
    * { "int_value": 300 } "abc.com/myattribute": { "bool_value": false }
    * @param attributeMap attributeMap or {@code null} for none

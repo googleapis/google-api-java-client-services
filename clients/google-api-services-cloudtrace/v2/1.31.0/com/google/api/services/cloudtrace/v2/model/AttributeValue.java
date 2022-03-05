@@ -17,7 +17,7 @@
 package com.google.api.services.cloudtrace.v2.model;
 
 /**
- * The allowed types for [VALUE] in a `[KEY]:[VALUE]` attribute.
+ * The allowed types for `[VALUE]` in a `[KEY]:[VALUE]` attribute.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Trace API. For a detailed explanation see:

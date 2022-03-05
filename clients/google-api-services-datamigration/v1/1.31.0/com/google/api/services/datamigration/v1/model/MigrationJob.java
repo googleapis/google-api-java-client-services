@@ -60,8 +60,16 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * The initial dump flags. This field and the "dump_path" field are mutually exclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DumpFlags dumpFlags;
+
+  /**
    * The path to the dump file in Google Cloud Storage, in the format:
-   * (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+   * (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the "dump_flags" field are mutually
+   * exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,8 +249,26 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The initial dump flags. This field and the "dump_path" field are mutually exclusive.
+   * @return value or {@code null} for none
+   */
+  public DumpFlags getDumpFlags() {
+    return dumpFlags;
+  }
+
+  /**
+   * The initial dump flags. This field and the "dump_path" field are mutually exclusive.
+   * @param dumpFlags dumpFlags or {@code null} for none
+   */
+  public MigrationJob setDumpFlags(DumpFlags dumpFlags) {
+    this.dumpFlags = dumpFlags;
+    return this;
+  }
+
+  /**
    * The path to the dump file in Google Cloud Storage, in the format:
-   * (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+   * (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the "dump_flags" field are mutually
+   * exclusive.
    * @return value or {@code null} for none
    */
   public java.lang.String getDumpPath() {
@@ -251,7 +277,8 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
 
   /**
    * The path to the dump file in Google Cloud Storage, in the format:
-   * (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+   * (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the "dump_flags" field are mutually
+   * exclusive.
    * @param dumpPath dumpPath or {@code null} for none
    */
   public MigrationJob setDumpPath(java.lang.String dumpPath) {

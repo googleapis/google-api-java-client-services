@@ -39,7 +39,7 @@ public final class DatasetAccessEntry extends com.google.api.client.json.Generic
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("target_types")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetTypes;
 
   /**

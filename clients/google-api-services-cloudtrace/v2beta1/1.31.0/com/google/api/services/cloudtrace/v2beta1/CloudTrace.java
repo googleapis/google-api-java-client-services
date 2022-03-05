@@ -20,7 +20,7 @@ package com.google.api.services.cloudtrace.v2beta1;
  * Service definition for CloudTrace (v2beta1).
  *
  * <p>
- * Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus. 
+ * Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenTelemetry. 
  * </p>
  *
  * <p>
@@ -752,14 +752,14 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The maximum number of results to return from this request. Non-positive values
-         * are ignored. The presence of `nextPageToken` in the response indicates that more results
-         * might be available.
+         * are ignored. The presence of `next_page_token` in the response indicates that more
+         * results might be available.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The maximum number of results to return from this request. Non-positive values are
-       ignored. The presence of `nextPageToken` in the response indicates that more results might be
+       ignored. The presence of `next_page_token` in the response indicates that more results might be
        available.
          */
         public java.lang.Integer getPageSize() {
@@ -768,8 +768,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The maximum number of results to return from this request. Non-positive values
-         * are ignored. The presence of `nextPageToken` in the response indicates that more results
-         * might be available.
+         * are ignored. The presence of `next_page_token` in the response indicates that more
+         * results might be available.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -778,15 +778,16 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. If present, then retrieve the next batch of results from the preceding call to
-         * this method. `pageToken` must be the value of `nextPageToken` from the previous response.
-         * The values of other method parameters should be identical to those in the previous call.
+         * this method. `page_token` must be the value of `next_page_token` from the previous
+         * response. The values of other method parameters should be identical to those in the
+         * previous call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** Optional. If present, then retrieve the next batch of results from the preceding call to this
-       method. `pageToken` must be the value of `nextPageToken` from the previous response. The values of
-       other method parameters should be identical to those in the previous call.
+       method. `page_token` must be the value of `next_page_token` from the previous response. The values
+       of other method parameters should be identical to those in the previous call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -794,8 +795,9 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. If present, then retrieve the next batch of results from the preceding call to
-         * this method. `pageToken` must be the value of `nextPageToken` from the previous response.
-         * The values of other method parameters should be identical to those in the previous call.
+         * this method. `page_token` must be the value of `next_page_token` from the previous
+         * response. The values of other method parameters should be identical to those in the
+         * previous call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -953,8 +955,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. Field mask that specifies the fields in `trace_sink` that are to be updated. A
          * sink field is overwritten if, and only if, it is in the update mask. `name` and
-         * `writer_identity` fields cannot be updated. An empty updateMask is considered an error.
-         * For a detailed `FieldMask` definition, see https://developers.google.com/protocol-
+         * `writer_identity` fields cannot be updated. An empty `update_mask` is considered an
+         * error. For a detailed `FieldMask` definition, see https://developers.google.com/protocol-
          * buffers/docs/reference/google.protobuf#fieldmask Example: `updateMask=output_config`.
          */
         @com.google.api.client.util.Key
@@ -962,7 +964,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /** Required. Field mask that specifies the fields in `trace_sink` that are to be updated. A sink field
        is overwritten if, and only if, it is in the update mask. `name` and `writer_identity` fields
-       cannot be updated. An empty updateMask is considered an error. For a detailed `FieldMask`
+       cannot be updated. An empty `update_mask` is considered an error. For a detailed `FieldMask`
        definition, see https://developers.google.com/protocol-
        buffers/docs/reference/google.protobuf#fieldmask Example: `updateMask=output_config`.
          */
@@ -973,8 +975,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. Field mask that specifies the fields in `trace_sink` that are to be updated. A
          * sink field is overwritten if, and only if, it is in the update mask. `name` and
-         * `writer_identity` fields cannot be updated. An empty updateMask is considered an error.
-         * For a detailed `FieldMask` definition, see https://developers.google.com/protocol-
+         * `writer_identity` fields cannot be updated. An empty `update_mask` is considered an
+         * error. For a detailed `FieldMask` definition, see https://developers.google.com/protocol-
          * buffers/docs/reference/google.protobuf#fieldmask Example: `updateMask=output_config`.
          */
         public Patch setUpdateMask(String updateMask) {

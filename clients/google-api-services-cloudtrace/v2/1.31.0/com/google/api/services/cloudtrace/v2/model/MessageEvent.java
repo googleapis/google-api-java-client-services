@@ -30,16 +30,16 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class MessageEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of compressed bytes sent or received. If missing assumed to be the same size as
-   * uncompressed.
+   * The number of compressed bytes sent or received. If missing, the compressed size is assumed to
+   * be the same size as the uncompressed size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long compressedSizeBytes;
 
   /**
-   * An identifier for the MessageEvent's message that can be used to match SENT and RECEIVED
-   * MessageEvents. It is recommended to be unique within a Span.
+   * An identifier for the MessageEvent's message that can be used to match `SENT` and `RECEIVED`
+   * MessageEvents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -60,8 +60,8 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   private java.lang.Long uncompressedSizeBytes;
 
   /**
-   * The number of compressed bytes sent or received. If missing assumed to be the same size as
-   * uncompressed.
+   * The number of compressed bytes sent or received. If missing, the compressed size is assumed to
+   * be the same size as the uncompressed size.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCompressedSizeBytes() {
@@ -69,8 +69,8 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of compressed bytes sent or received. If missing assumed to be the same size as
-   * uncompressed.
+   * The number of compressed bytes sent or received. If missing, the compressed size is assumed to
+   * be the same size as the uncompressed size.
    * @param compressedSizeBytes compressedSizeBytes or {@code null} for none
    */
   public MessageEvent setCompressedSizeBytes(java.lang.Long compressedSizeBytes) {
@@ -79,8 +79,8 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the MessageEvent's message that can be used to match SENT and RECEIVED
-   * MessageEvents. It is recommended to be unique within a Span.
+   * An identifier for the MessageEvent's message that can be used to match `SENT` and `RECEIVED`
+   * MessageEvents.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -88,8 +88,8 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the MessageEvent's message that can be used to match SENT and RECEIVED
-   * MessageEvents. It is recommended to be unique within a Span.
+   * An identifier for the MessageEvent's message that can be used to match `SENT` and `RECEIVED`
+   * MessageEvents.
    * @param id id or {@code null} for none
    */
   public MessageEvent setId(java.lang.Long id) {

@@ -20,7 +20,7 @@ package com.google.api.services.cloudtrace.v2.model;
  * A span represents a single operation within a trace. Spans can be nested to form a trace tree.
  * Often, a trace contains a root span that describes the end-to-end latency, and one or more
  * subspans for its sub-operations. A trace can also contain multiple root spans, or none at all.
- * Spans do not need to be contiguous—there may be gaps or overlaps between spans in a trace.
+ * Spans do not need to be contiguous—there might be gaps or overlaps between spans in a trace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Trace API. For a detailed explanation see:
@@ -48,11 +48,11 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.Integer childSpanCount;
 
   /**
-   * Required. A description of the span's operation (up to 128 bytes). Trace displays the
-   * description in the Google Cloud Platform Console. For example, the display name can be a
-   * qualified method name or a file name and a line number where the operation is called. A best
-   * practice is to use the same display name within an application and at the same call point. This
-   * makes it easier to correlate spans in different traces.
+   * Required. A description of the span's operation (up to 128 bytes). Cloud Trace displays the
+   * description in the Cloud Console. For example, the display name can be a qualified method name
+   * or a file name and a line number where the operation is called. A best practice is to use the
+   * same display name within an application and at the same call point. This makes it easier to
+   * correlate spans in different traces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,18 +75,18 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private Links links;
 
   /**
-   * Required. The resource name of the span in the following format:
-   * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within
-   * a project; it is a 32-character hexadecimal encoding of a 16-byte array. [SPAN_ID] is a unique
-   * identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte
-   * array. It should not be zero.
+   * Required. The resource name of the span in the following format: *
+   * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier
+   * for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It
+   * should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a
+   * 16-character hexadecimal encoding of an 8-byte array. It should not be zero. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The [SPAN_ID] of this span's parent span. If this is a root span, then this field must be
+   * The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field must be
    * empty.
    * The value may be {@code null}.
    */
@@ -103,7 +103,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean sameProcessAsParentSpan;
 
   /**
-   * Required. The [SPAN_ID] portion of the span's resource name.
+   * Required. The `[SPAN_ID]` portion of the span's resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,11 +185,11 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A description of the span's operation (up to 128 bytes). Trace displays the
-   * description in the Google Cloud Platform Console. For example, the display name can be a
-   * qualified method name or a file name and a line number where the operation is called. A best
-   * practice is to use the same display name within an application and at the same call point. This
-   * makes it easier to correlate spans in different traces.
+   * Required. A description of the span's operation (up to 128 bytes). Cloud Trace displays the
+   * description in the Cloud Console. For example, the display name can be a qualified method name
+   * or a file name and a line number where the operation is called. A best practice is to use the
+   * same display name within an application and at the same call point. This makes it easier to
+   * correlate spans in different traces.
    * @return value or {@code null} for none
    */
   public TruncatableString getDisplayName() {
@@ -197,11 +197,11 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A description of the span's operation (up to 128 bytes). Trace displays the
-   * description in the Google Cloud Platform Console. For example, the display name can be a
-   * qualified method name or a file name and a line number where the operation is called. A best
-   * practice is to use the same display name within an application and at the same call point. This
-   * makes it easier to correlate spans in different traces.
+   * Required. A description of the span's operation (up to 128 bytes). Cloud Trace displays the
+   * description in the Cloud Console. For example, the display name can be a qualified method name
+   * or a file name and a line number where the operation is called. A best practice is to use the
+   * same display name within an application and at the same call point. This makes it easier to
+   * correlate spans in different traces.
    * @param displayName displayName or {@code null} for none
    */
   public Span setDisplayName(TruncatableString displayName) {
@@ -248,11 +248,11 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the span in the following format:
-   * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within
-   * a project; it is a 32-character hexadecimal encoding of a 16-byte array. [SPAN_ID] is a unique
-   * identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte
-   * array. It should not be zero.
+   * Required. The resource name of the span in the following format: *
+   * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier
+   * for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It
+   * should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a
+   * 16-character hexadecimal encoding of an 8-byte array. It should not be zero. .
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -260,11 +260,11 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the span in the following format:
-   * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within
-   * a project; it is a 32-character hexadecimal encoding of a 16-byte array. [SPAN_ID] is a unique
-   * identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte
-   * array. It should not be zero.
+   * Required. The resource name of the span in the following format: *
+   * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier
+   * for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It
+   * should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a
+   * 16-character hexadecimal encoding of an 8-byte array. It should not be zero. .
    * @param name name or {@code null} for none
    */
   public Span setName(java.lang.String name) {
@@ -273,7 +273,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [SPAN_ID] of this span's parent span. If this is a root span, then this field must be
+   * The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field must be
    * empty.
    * @return value or {@code null} for none
    */
@@ -282,7 +282,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [SPAN_ID] of this span's parent span. If this is a root span, then this field must be
+   * The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field must be
    * empty.
    * @param parentSpanId parentSpanId or {@code null} for none
    */
@@ -313,7 +313,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The [SPAN_ID] portion of the span's resource name.
+   * Required. The `[SPAN_ID]` portion of the span's resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpanId() {
@@ -321,7 +321,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The [SPAN_ID] portion of the span's resource name.
+   * Required. The `[SPAN_ID]` portion of the span's resource name.
    * @param spanId spanId or {@code null} for none
    */
   public Span setSpanId(java.lang.String spanId) {

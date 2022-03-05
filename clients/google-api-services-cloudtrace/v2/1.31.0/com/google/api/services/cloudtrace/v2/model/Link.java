@@ -32,21 +32,21 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of attributes on the link. You have have up to 32 attributes per link.
+   * A set of attributes on the link. Up to 32 attributes can be specified per link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Attributes attributes;
 
   /**
-   * The [SPAN_ID] for a span within a trace.
+   * The `[SPAN_ID]` for a span within a trace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String spanId;
 
   /**
-   * The [TRACE_ID] for a trace within a project.
+   * The `[TRACE_ID]` for a trace within a project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * A set of attributes on the link. You have have up to 32 attributes per link.
+   * A set of attributes on the link. Up to 32 attributes can be specified per link.
    * @return value or {@code null} for none
    */
   public Attributes getAttributes() {
@@ -68,7 +68,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of attributes on the link. You have have up to 32 attributes per link.
+   * A set of attributes on the link. Up to 32 attributes can be specified per link.
    * @param attributes attributes or {@code null} for none
    */
   public Link setAttributes(Attributes attributes) {
@@ -77,7 +77,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [SPAN_ID] for a span within a trace.
+   * The `[SPAN_ID]` for a span within a trace.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpanId() {
@@ -85,7 +85,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [SPAN_ID] for a span within a trace.
+   * The `[SPAN_ID]` for a span within a trace.
    * @param spanId spanId or {@code null} for none
    */
   public Link setSpanId(java.lang.String spanId) {
@@ -94,7 +94,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [TRACE_ID] for a trace within a project.
+   * The `[TRACE_ID]` for a trace within a project.
    * @return value or {@code null} for none
    */
   public java.lang.String getTraceId() {
@@ -102,7 +102,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [TRACE_ID] for a trace within a project.
+   * The `[TRACE_ID]` for a trace within a project.
    * @param traceId traceId or {@code null} for none
    */
   public Link setTraceId(java.lang.String traceId) {

@@ -30,9 +30,9 @@ package com.google.api.services.cloudtrace.v2beta1.model;
 public final class ListTraceSinksResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If there might be more results than appear in this response, then `nextPageToken` is included.
-   * To get the next set of results, call the same method again using the value of `nextPageToken`
-   * as `pageToken`.
+   * A paginated response where more pages might be available has `next_page_token` set. To get the
+   * next set of results, call the same method again using the value of `next_page_token` as
+   * `page_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,9 @@ public final class ListTraceSinksResponse extends com.google.api.client.json.Gen
   private java.util.List<TraceSink> sinks;
 
   /**
-   * If there might be more results than appear in this response, then `nextPageToken` is included.
-   * To get the next set of results, call the same method again using the value of `nextPageToken`
-   * as `pageToken`.
+   * A paginated response where more pages might be available has `next_page_token` set. To get the
+   * next set of results, call the same method again using the value of `next_page_token` as
+   * `page_token`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -56,9 +56,9 @@ public final class ListTraceSinksResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * If there might be more results than appear in this response, then `nextPageToken` is included.
-   * To get the next set of results, call the same method again using the value of `nextPageToken`
-   * as `pageToken`.
+   * A paginated response where more pages might be available has `next_page_token` set. To get the
+   * next set of results, call the same method again using the value of `next_page_token` as
+   * `page_token`.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListTraceSinksResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -17,7 +17,7 @@
 package com.google.api.services.tpu.v1alpha1.model;
 
 /**
- * Represents the metadata of the long-running operation.
+ * Metadata describing an Operation
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud TPU API. For a detailed explanation see:
@@ -30,58 +30,56 @@ package com.google.api.services.tpu.v1alpha1.model;
 public final class OperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. API version used to start the operation.
+   * API version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have been cancelled successfully have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+   * Specifies if cancellation was requested for the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cancelRequested;
 
   /**
-   * Output only. The time the operation was created.
+   * The time the operation was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. The time the operation finished running.
+   * The time the operation finished running.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Output only. Human-readable status of the operation, if any.
+   * Human-readable status of the operation, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String statusDetail;
 
   /**
-   * Output only. Server-defined resource path for the target of the operation.
+   * Target of the operation - for example projects/project-1/connectivityTests/test-1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
 
   /**
-   * Output only. Name of the verb executed by the operation.
+   * Name of the verb executed by the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String verb;
 
   /**
-   * Output only. API version used to start the operation.
+   * API version.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -89,7 +87,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. API version used to start the operation.
+   * API version.
    * @param apiVersion apiVersion or {@code null} for none
    */
   public OperationMetadata setApiVersion(java.lang.String apiVersion) {
@@ -98,9 +96,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have been cancelled successfully have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+   * Specifies if cancellation was requested for the operation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCancelRequested() {
@@ -108,9 +104,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have been cancelled successfully have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+   * Specifies if cancellation was requested for the operation.
    * @param cancelRequested cancelRequested or {@code null} for none
    */
   public OperationMetadata setCancelRequested(java.lang.Boolean cancelRequested) {
@@ -119,7 +113,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation was created.
+   * The time the operation was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -127,7 +121,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation was created.
+   * The time the operation was created.
    * @param createTime createTime or {@code null} for none
    */
   public OperationMetadata setCreateTime(String createTime) {
@@ -136,7 +130,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation finished running.
+   * The time the operation finished running.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -144,7 +138,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation finished running.
+   * The time the operation finished running.
    * @param endTime endTime or {@code null} for none
    */
   public OperationMetadata setEndTime(String endTime) {
@@ -153,7 +147,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Human-readable status of the operation, if any.
+   * Human-readable status of the operation, if any.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusDetail() {
@@ -161,7 +155,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Human-readable status of the operation, if any.
+   * Human-readable status of the operation, if any.
    * @param statusDetail statusDetail or {@code null} for none
    */
   public OperationMetadata setStatusDetail(java.lang.String statusDetail) {
@@ -170,7 +164,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Server-defined resource path for the target of the operation.
+   * Target of the operation - for example projects/project-1/connectivityTests/test-1
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -178,7 +172,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Server-defined resource path for the target of the operation.
+   * Target of the operation - for example projects/project-1/connectivityTests/test-1
    * @param target target or {@code null} for none
    */
   public OperationMetadata setTarget(java.lang.String target) {
@@ -187,7 +181,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Name of the verb executed by the operation.
+   * Name of the verb executed by the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getVerb() {
@@ -195,7 +189,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Name of the verb executed by the operation.
+   * Name of the verb executed by the operation.
    * @param verb verb or {@code null} for none
    */
   public OperationMetadata setVerb(java.lang.String verb) {

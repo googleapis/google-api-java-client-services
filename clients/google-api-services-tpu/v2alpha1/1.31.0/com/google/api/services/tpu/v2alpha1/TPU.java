@@ -1168,6 +1168,22 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
+          /** Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Idempotent request UUID. */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -1293,6 +1309,22 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
                   "^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /** Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Idempotent request UUID. */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 

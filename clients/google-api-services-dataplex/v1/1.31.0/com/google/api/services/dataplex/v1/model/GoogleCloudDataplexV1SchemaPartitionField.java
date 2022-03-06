@@ -19,7 +19,7 @@ package com.google.api.services.dataplex.v1.model;
 /**
  * Represents a key field within the entity's partition structure. You could have up to 20 partition
  * fields, but only the first 10 partitions have the filtering ability due to performance
- * consideration.
+ * consideration. Note: Partition fields are immutable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -32,8 +32,8 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1SchemaPartitionField extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Partition name is editable if only the partition style is not HIVE compatible. The
-   * maximum length allowed is 767 characters.
+   * Required. Partition field name must consist of letters, numbers, and underscores only, with a
+   * maximum of length of 256 characters, and must begin with a letter or underscore..
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class GoogleCloudDataplexV1SchemaPartitionField extends com.google.
   private java.lang.String type;
 
   /**
-   * Required. Partition name is editable if only the partition style is not HIVE compatible. The
-   * maximum length allowed is 767 characters.
+   * Required. Partition field name must consist of letters, numbers, and underscores only, with a
+   * maximum of length of 256 characters, and must begin with a letter or underscore..
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -56,8 +56,8 @@ public final class GoogleCloudDataplexV1SchemaPartitionField extends com.google.
   }
 
   /**
-   * Required. Partition name is editable if only the partition style is not HIVE compatible. The
-   * maximum length allowed is 767 characters.
+   * Required. Partition field name must consist of letters, numbers, and underscores only, with a
+   * maximum of length of 256 characters, and must begin with a letter or underscore..
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1SchemaPartitionField setName(java.lang.String name) {

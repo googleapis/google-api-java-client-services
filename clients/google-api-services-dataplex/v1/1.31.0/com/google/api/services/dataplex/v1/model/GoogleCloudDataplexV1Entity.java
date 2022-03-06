@@ -85,15 +85,15 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   private java.lang.String description;
 
   /**
-   * Optional. Display name must be shorter than or equal to 63 characters.
+   * Optional. Display name must be shorter than or equal to 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. The etag for this entity. Required for update and delete requests. Must match the
-   * server's etag.
+   * Optional. The etag associated with the entity, which can be retrieved with a GetEntity request.
+   * Required for update and delete requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,8 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   /**
    * Required. A user-provided entity ID. It is mutable, and will be used as the published table
    * name. Specifying a new ID in an update entity request will override the existing value. The ID
-   * must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter.
+   * must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter
+   * and consist of 256 or fewer characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +286,7 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Display name must be shorter than or equal to 63 characters.
+   * Optional. Display name must be shorter than or equal to 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -293,7 +294,7 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Display name must be shorter than or equal to 63 characters.
+   * Optional. Display name must be shorter than or equal to 256 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDataplexV1Entity setDisplayName(java.lang.String displayName) {
@@ -302,8 +303,8 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   }
 
   /**
-   * Optional. The etag for this entity. Required for update and delete requests. Must match the
-   * server's etag.
+   * Optional. The etag associated with the entity, which can be retrieved with a GetEntity request.
+   * Required for update and delete requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -311,8 +312,8 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   }
 
   /**
-   * Optional. The etag for this entity. Required for update and delete requests. Must match the
-   * server's etag.
+   * Optional. The etag associated with the entity, which can be retrieved with a GetEntity request.
+   * Required for update and delete requests.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudDataplexV1Entity setEtag(java.lang.String etag) {
@@ -342,7 +343,8 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   /**
    * Required. A user-provided entity ID. It is mutable, and will be used as the published table
    * name. Specifying a new ID in an update entity request will override the existing value. The ID
-   * must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter.
+   * must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter
+   * and consist of 256 or fewer characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -352,7 +354,8 @@ public final class GoogleCloudDataplexV1Entity extends com.google.api.client.jso
   /**
    * Required. A user-provided entity ID. It is mutable, and will be used as the published table
    * name. Specifying a new ID in an update entity request will override the existing value. The ID
-   * must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter.
+   * must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter
+   * and consist of 256 or fewer characters.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDataplexV1Entity setId(java.lang.String id) {

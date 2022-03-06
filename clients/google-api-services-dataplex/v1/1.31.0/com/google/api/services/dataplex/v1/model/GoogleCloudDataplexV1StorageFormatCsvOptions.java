@@ -53,8 +53,8 @@ public final class GoogleCloudDataplexV1StorageFormatCsvOptions extends com.goog
   private java.lang.Integer headerRows;
 
   /**
-   * Optional. The character used to quote column values. Accepts '"' and '''. Defaults to '"' if
-   * unspecified.
+   * Optional. The character used to quote column values. Accepts '"' (double quotation mark) or '''
+   * (single quotation mark). Defaults to '"' (double quotation mark) if unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class GoogleCloudDataplexV1StorageFormatCsvOptions extends com.goog
   }
 
   /**
-   * Optional. The character used to quote column values. Accepts '"' and '''. Defaults to '"' if
-   * unspecified.
+   * Optional. The character used to quote column values. Accepts '"' (double quotation mark) or '''
+   * (single quotation mark). Defaults to '"' (double quotation mark) if unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuote() {
@@ -125,8 +125,8 @@ public final class GoogleCloudDataplexV1StorageFormatCsvOptions extends com.goog
   }
 
   /**
-   * Optional. The character used to quote column values. Accepts '"' and '''. Defaults to '"' if
-   * unspecified.
+   * Optional. The character used to quote column values. Accepts '"' (double quotation mark) or '''
+   * (single quotation mark). Defaults to '"' (double quotation mark) if unspecified.
    * @param quote quote or {@code null} for none
    */
   public GoogleCloudDataplexV1StorageFormatCsvOptions setQuote(java.lang.String quote) {

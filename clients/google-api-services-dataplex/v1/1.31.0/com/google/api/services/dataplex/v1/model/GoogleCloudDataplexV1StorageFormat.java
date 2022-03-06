@@ -61,9 +61,9 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
 
   /**
    * Required. The mime type descriptor for the data. Must match the pattern {type}/{subtype}.
-   * Supported values: - application/x-parquet - application/x-avro - application/x-orc -
-   * application/x-tfrecord - application/json - application/{subtypes} - text/csv - text/ -
-   * image/{image subtype} - video/{video subtype} - audio/{audio subtype}
+   * Supported values: application/x-parquet application/x-avro application/x-orc
+   * application/x-tfrecord application/json application/{subtypes} text/csv text/ image/{image
+   * subtype} video/{video subtype} audio/{audio subtype}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,9 +143,9 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
 
   /**
    * Required. The mime type descriptor for the data. Must match the pattern {type}/{subtype}.
-   * Supported values: - application/x-parquet - application/x-avro - application/x-orc -
-   * application/x-tfrecord - application/json - application/{subtypes} - text/csv - text/ -
-   * image/{image subtype} - video/{video subtype} - audio/{audio subtype}
+   * Supported values: application/x-parquet application/x-avro application/x-orc
+   * application/x-tfrecord application/json application/{subtypes} text/csv text/ image/{image
+   * subtype} video/{video subtype} audio/{audio subtype}
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -154,9 +154,9 @@ public final class GoogleCloudDataplexV1StorageFormat extends com.google.api.cli
 
   /**
    * Required. The mime type descriptor for the data. Must match the pattern {type}/{subtype}.
-   * Supported values: - application/x-parquet - application/x-avro - application/x-orc -
-   * application/x-tfrecord - application/json - application/{subtypes} - text/csv - text/ -
-   * image/{image subtype} - video/{video subtype} - audio/{audio subtype}
+   * Supported values: application/x-parquet application/x-avro application/x-orc
+   * application/x-tfrecord application/json application/{subtypes} text/csv text/ image/{image
+   * subtype} video/{video subtype} audio/{audio subtype}
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDataplexV1StorageFormat setMimeType(java.lang.String mimeType) {

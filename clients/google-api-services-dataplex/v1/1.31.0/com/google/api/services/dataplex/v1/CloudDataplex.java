@@ -10590,19 +10590,21 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               }
 
               /**
-               * Required. The etag associated with the partition if it was previously retrieved.
+               * Required. The etag associated with the entity, which can be retrieved with a
+               * GetEntity request.
                */
               @com.google.api.client.util.Key
               private java.lang.String etag;
 
-              /** Required. The etag associated with the partition if it was previously retrieved.
+              /** Required. The etag associated with the entity, which can be retrieved with a GetEntity request.
                */
               public java.lang.String getEtag() {
                 return etag;
               }
 
               /**
-               * Required. The etag associated with the partition if it was previously retrieved.
+               * Required. The etag associated with the entity, which can be retrieved with a
+               * GetEntity request.
                */
               public Delete setEtag(java.lang.String etag) {
                 this.etag = etag;
@@ -10929,16 +10931,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * Optional. The following filter parameters can be added to the URL to limit the
                * entities returned by the API: Entity ID: ?filter="id=entityID" Asset ID:
                * ?filter="asset=assetID" Data path ?filter="data_path=gs://my-bucket" Is HIVE
-               * compatible: ?filter=”hive_compatible=true” Is BigQuery compatible:
-               * ?filter=”bigquery_compatible=true”
+               * compatible: ?filter="hive_compatible=true" Is BigQuery compatible:
+               * ?filter="bigquery_compatible=true"
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** Optional. The following filter parameters can be added to the URL to limit the entities returned by
              the API: Entity ID: ?filter="id=entityID" Asset ID: ?filter="asset=assetID" Data path
-             ?filter="data_path=gs://my-bucket" Is HIVE compatible: ?filter=”hive_compatible=true” Is BigQuery
-             compatible: ?filter=”bigquery_compatible=true”
+             ?filter="data_path=gs://my-bucket" Is HIVE compatible: ?filter="hive_compatible=true" Is BigQuery
+             compatible: ?filter="bigquery_compatible=true"
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -10948,8 +10950,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * Optional. The following filter parameters can be added to the URL to limit the
                * entities returned by the API: Entity ID: ?filter="id=entityID" Asset ID:
                * ?filter="asset=assetID" Data path ?filter="data_path=gs://my-bucket" Is HIVE
-               * compatible: ?filter=”hive_compatible=true” Is BigQuery compatible:
-               * ?filter=”bigquery_compatible=true”
+               * compatible: ?filter="hive_compatible=true" Is BigQuery compatible:
+               * ?filter="bigquery_compatible=true"
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -11521,21 +11523,17 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                   return this;
                 }
 
-                /**
-                 * Optional. The etag associated with the partition if it was previously retrieved.
-                 */
+                /** Optional. The etag associated with the partition. */
                 @com.google.api.client.util.Key
                 private java.lang.String etag;
 
-                /** Optional. The etag associated with the partition if it was previously retrieved.
+                /** Optional. The etag associated with the partition.
                  */
                 public java.lang.String getEtag() {
                   return etag;
                 }
 
-                /**
-                 * Optional. The etag associated with the partition if it was previously retrieved.
-                 */
+                /** Optional. The etag associated with the partition. */
                 public Delete setEtag(java.lang.String etag) {
                   this.etag = etag;
                   return this;
@@ -11846,10 +11844,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 }
 
                 /**
-                 * Optional. Filter the partitions returned to the caller using a key vslue pair
-                 * expression. The filter expression supports: logical operators: AND, OR comparison
+                 * Optional. Filter the partitions returned to the caller using a key value pair
+                 * expression. Supported operators and syntax: logic operators: AND, OR comparison
                  * operators: <, >, >=, <= ,=, != LIKE operators: The right hand of a LIKE operator
-                 * supports “.” and “*” for wildcard searches, for example "value1 LIKE ".*oo.*"
+                 * supports "." and "*" for wildcard searches, for example "value1 LIKE ".*oo.*"
                  * parenthetical grouping: ( )Sample filter expression: `?filter="key1 < value1 OR
                  * key2 > value2"Notes: Keys to the left of operators are case insensitive.
                  * Partition results are sorted first by creation time, then by lexicographic order.
@@ -11859,9 +11857,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 @com.google.api.client.util.Key
                 private java.lang.String filter;
 
-                /** Optional. Filter the partitions returned to the caller using a key vslue pair expression. The
-               filter expression supports: logical operators: AND, OR comparison operators: <, >, >=, <= ,=, !=
-               LIKE operators: The right hand of a LIKE operator supports “.” and “*” for wildcard searches, for
+                /** Optional. Filter the partitions returned to the caller using a key value pair expression. Supported
+               operators and syntax: logic operators: AND, OR comparison operators: <, >, >=, <= ,=, != LIKE
+               operators: The right hand of a LIKE operator supports "." and "*" for wildcard searches, for
                example "value1 LIKE ".*oo.*" parenthetical grouping: ( )Sample filter expression: `?filter="key1 <
                value1 OR key2 > value2"Notes: Keys to the left of operators are case insensitive. Partition
                results are sorted first by creation time, then by lexicographic order. Up to 20 key value filter
@@ -11873,10 +11871,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 }
 
                 /**
-                 * Optional. Filter the partitions returned to the caller using a key vslue pair
-                 * expression. The filter expression supports: logical operators: AND, OR comparison
+                 * Optional. Filter the partitions returned to the caller using a key value pair
+                 * expression. Supported operators and syntax: logic operators: AND, OR comparison
                  * operators: <, >, >=, <= ,=, != LIKE operators: The right hand of a LIKE operator
-                 * supports “.” and “*” for wildcard searches, for example "value1 LIKE ".*oo.*"
+                 * supports "." and "*" for wildcard searches, for example "value1 LIKE ".*oo.*"
                  * parenthetical grouping: ( )Sample filter expression: `?filter="key1 < value1 OR
                  * key2 > value2"Notes: Keys to the left of operators are case insensitive.
                  * Partition results are sorted first by creation time, then by lexicographic order.

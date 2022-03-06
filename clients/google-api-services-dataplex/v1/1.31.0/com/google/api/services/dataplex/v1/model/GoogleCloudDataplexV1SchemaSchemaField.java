@@ -51,8 +51,8 @@ public final class GoogleCloudDataplexV1SchemaSchemaField extends com.google.api
   private java.lang.String mode;
 
   /**
-   * Required. The name of the field. The maximum length is 767 characters. The name must begins
-   * with a letter and not contains : and ..
+   * Required. The name of the field. Must contain only letters, numbers and underscores, with a
+   * maximum length of 767 characters, and must begin with a letter or underscore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class GoogleCloudDataplexV1SchemaSchemaField extends com.google.api
   }
 
   /**
-   * Required. The name of the field. The maximum length is 767 characters. The name must begins
-   * with a letter and not contains : and ..
+   * Required. The name of the field. Must contain only letters, numbers and underscores, with a
+   * maximum length of 767 characters, and must begin with a letter or underscore.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -126,8 +126,8 @@ public final class GoogleCloudDataplexV1SchemaSchemaField extends com.google.api
   }
 
   /**
-   * Required. The name of the field. The maximum length is 767 characters. The name must begins
-   * with a letter and not contains : and ..
+   * Required. The name of the field. Must contain only letters, numbers and underscores, with a
+   * maximum length of 767 characters, and must begin with a letter or underscore.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1SchemaSchemaField setName(java.lang.String name) {

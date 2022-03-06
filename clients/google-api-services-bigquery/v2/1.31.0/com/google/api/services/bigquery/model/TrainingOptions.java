@@ -65,6 +65,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String boosterType;
 
   /**
+   * Whether or not p-value test should be computed for this model. Only available for linear and
+   * logistic regression models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean calculatePValues;
+
+  /**
    * If true, clean spikes and dips in the input time series.
    * The value may be {@code null}.
    */
@@ -165,6 +173,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean earlyStop;
 
   /**
+   * If true, enable global explanation during training.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableGlobalExplain;
+
+  /**
    * Feedback type that specifies which algorithm to run for matrix factorization.
    * The value may be {@code null}.
    */
@@ -194,6 +209,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long horizon;
 
   /**
+   * The target evaluation metrics to optimize the hyperparameters for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> hparamTuningObjectives;
+
+  /**
    * Include drift when fitting an ARIMA model.
    * The value may be {@code null}.
    */
@@ -213,6 +235,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inputLabelColumns;
+
+  /**
+   * Number of integral steps for the integrated gradients explain method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long integratedGradientsNumSteps;
 
   /**
    * Item column specified for matrix factorization models.
@@ -287,6 +316,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long maxIterations;
 
   /**
+   * Maximum number of trials to run in parallel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxParallelTrials;
+
+  /**
    * Maximum depth of a tree for boosted tree models.
    * The value may be {@code null}.
    */
@@ -353,6 +389,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long numParallelTree;
 
   /**
+   * Number of trials to run this hyperparameter tuning job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numTrials;
+
+  /**
    * Optimization strategy for training linear regression models.
    * The value may be {@code null}.
    */
@@ -367,6 +410,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preserveInputStructs;
+
+  /**
+   * Number of paths for the sampled shapley explain method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long sampledShapleyNumPaths;
 
   /**
    * Subsample fraction of the training data to grow tree to prevent overfitting for boosted tree
@@ -514,6 +564,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setBoosterType(java.lang.String boosterType) {
     this.boosterType = boosterType;
+    return this;
+  }
+
+  /**
+   * Whether or not p-value test should be computed for this model. Only available for linear and
+   * logistic regression models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCalculatePValues() {
+    return calculatePValues;
+  }
+
+  /**
+   * Whether or not p-value test should be computed for this model. Only available for linear and
+   * logistic regression models.
+   * @param calculatePValues calculatePValues or {@code null} for none
+   */
+  public TrainingOptions setCalculatePValues(java.lang.Boolean calculatePValues) {
+    this.calculatePValues = calculatePValues;
     return this;
   }
 
@@ -757,6 +826,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * If true, enable global explanation during training.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableGlobalExplain() {
+    return enableGlobalExplain;
+  }
+
+  /**
+   * If true, enable global explanation during training.
+   * @param enableGlobalExplain enableGlobalExplain or {@code null} for none
+   */
+  public TrainingOptions setEnableGlobalExplain(java.lang.Boolean enableGlobalExplain) {
+    this.enableGlobalExplain = enableGlobalExplain;
+    return this;
+  }
+
+  /**
    * Feedback type that specifies which algorithm to run for matrix factorization.
    * @return value or {@code null} for none
    */
@@ -827,6 +913,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The target evaluation metrics to optimize the hyperparameters for.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHparamTuningObjectives() {
+    return hparamTuningObjectives;
+  }
+
+  /**
+   * The target evaluation metrics to optimize the hyperparameters for.
+   * @param hparamTuningObjectives hparamTuningObjectives or {@code null} for none
+   */
+  public TrainingOptions setHparamTuningObjectives(java.util.List<java.lang.String> hparamTuningObjectives) {
+    this.hparamTuningObjectives = hparamTuningObjectives;
+    return this;
+  }
+
+  /**
    * Include drift when fitting an ARIMA model.
    * @return value or {@code null} for none
    */
@@ -874,6 +977,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setInputLabelColumns(java.util.List<java.lang.String> inputLabelColumns) {
     this.inputLabelColumns = inputLabelColumns;
+    return this;
+  }
+
+  /**
+   * Number of integral steps for the integrated gradients explain method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getIntegratedGradientsNumSteps() {
+    return integratedGradientsNumSteps;
+  }
+
+  /**
+   * Number of integral steps for the integrated gradients explain method.
+   * @param integratedGradientsNumSteps integratedGradientsNumSteps or {@code null} for none
+   */
+  public TrainingOptions setIntegratedGradientsNumSteps(java.lang.Long integratedGradientsNumSteps) {
+    this.integratedGradientsNumSteps = integratedGradientsNumSteps;
     return this;
   }
 
@@ -1052,6 +1172,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Maximum number of trials to run in parallel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxParallelTrials() {
+    return maxParallelTrials;
+  }
+
+  /**
+   * Maximum number of trials to run in parallel.
+   * @param maxParallelTrials maxParallelTrials or {@code null} for none
+   */
+  public TrainingOptions setMaxParallelTrials(java.lang.Long maxParallelTrials) {
+    this.maxParallelTrials = maxParallelTrials;
+    return this;
+  }
+
+  /**
    * Maximum depth of a tree for boosted tree models.
    * @return value or {@code null} for none
    */
@@ -1211,6 +1348,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Number of trials to run this hyperparameter tuning job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumTrials() {
+    return numTrials;
+  }
+
+  /**
+   * Number of trials to run this hyperparameter tuning job.
+   * @param numTrials numTrials or {@code null} for none
+   */
+  public TrainingOptions setNumTrials(java.lang.Long numTrials) {
+    this.numTrials = numTrials;
+    return this;
+  }
+
+  /**
    * Optimization strategy for training linear regression models.
    * @return value or {@code null} for none
    */
@@ -1245,6 +1399,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setPreserveInputStructs(java.lang.Boolean preserveInputStructs) {
     this.preserveInputStructs = preserveInputStructs;
+    return this;
+  }
+
+  /**
+   * Number of paths for the sampled shapley explain method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSampledShapleyNumPaths() {
+    return sampledShapleyNumPaths;
+  }
+
+  /**
+   * Number of paths for the sampled shapley explain method.
+   * @param sampledShapleyNumPaths sampledShapleyNumPaths or {@code null} for none
+   */
+  public TrainingOptions setSampledShapleyNumPaths(java.lang.Long sampledShapleyNumPaths) {
+    this.sampledShapleyNumPaths = sampledShapleyNumPaths;
     return this;
   }
 

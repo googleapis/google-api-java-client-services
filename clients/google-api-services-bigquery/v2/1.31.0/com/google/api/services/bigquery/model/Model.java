@@ -44,6 +44,15 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.Long creationTime;
 
   /**
+   * Output only. The default trial_id to use in TVFs when the trial_id is not passed in. For
+   * single-objective hyperparameter tuning, this is the best trial id. For multi-objective
+   * hyperparameter tuning, this is the smallest trial id among all Pareto optimal trials.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long defaultTrialId;
+
+  /**
    * Optional. A user-friendly description of this model.
    * The value may be {@code null}.
    */
@@ -89,6 +98,26 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String friendlyName;
+
+  /**
+   * Output only. All hyperparameter search spaces in this model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HparamSearchSpaces hparamSearchSpaces;
+
+  /**
+   * Output only. Trials of a hyperparameter tuning model sorted by trial_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HparamTuningTrial> hparamTrials;
+
+  static {
+    // hack to force ProGuard to consider HparamTuningTrial used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HparamTuningTrial.class);
+  }
 
   /**
    * Output only. Label columns that were used to train this model. The output of the model will
@@ -139,6 +168,15 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.String modelType;
 
   /**
+   * Output only. For single-objective hyperparameter tuning, it only contains the best trial. For
+   * multi-objective hyperparameter tuning, it contains all Pareto optimal trials sorted by
+   * trial_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> optimalTrialIds;
+
+  /**
    * Output only. Information for all training runs in increasing order of start_time.
    * The value may be {@code null}.
    */
@@ -176,6 +214,27 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   public Model setCreationTime(java.lang.Long creationTime) {
     this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * Output only. The default trial_id to use in TVFs when the trial_id is not passed in. For
+   * single-objective hyperparameter tuning, this is the best trial id. For multi-objective
+   * hyperparameter tuning, this is the smallest trial id among all Pareto optimal trials.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDefaultTrialId() {
+    return defaultTrialId;
+  }
+
+  /**
+   * Output only. The default trial_id to use in TVFs when the trial_id is not passed in. For
+   * single-objective hyperparameter tuning, this is the best trial id. For multi-objective
+   * hyperparameter tuning, this is the smallest trial id among all Pareto optimal trials.
+   * @param defaultTrialId defaultTrialId or {@code null} for none
+   */
+  public Model setDefaultTrialId(java.lang.Long defaultTrialId) {
+    this.defaultTrialId = defaultTrialId;
     return this;
   }
 
@@ -292,6 +351,40 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. All hyperparameter search spaces in this model.
+   * @return value or {@code null} for none
+   */
+  public HparamSearchSpaces getHparamSearchSpaces() {
+    return hparamSearchSpaces;
+  }
+
+  /**
+   * Output only. All hyperparameter search spaces in this model.
+   * @param hparamSearchSpaces hparamSearchSpaces or {@code null} for none
+   */
+  public Model setHparamSearchSpaces(HparamSearchSpaces hparamSearchSpaces) {
+    this.hparamSearchSpaces = hparamSearchSpaces;
+    return this;
+  }
+
+  /**
+   * Output only. Trials of a hyperparameter tuning model sorted by trial_id.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HparamTuningTrial> getHparamTrials() {
+    return hparamTrials;
+  }
+
+  /**
+   * Output only. Trials of a hyperparameter tuning model sorted by trial_id.
+   * @param hparamTrials hparamTrials or {@code null} for none
+   */
+  public Model setHparamTrials(java.util.List<HparamTuningTrial> hparamTrials) {
+    this.hparamTrials = hparamTrials;
+    return this;
+  }
+
+  /**
    * Output only. Label columns that were used to train this model. The output of the model will
    * have a "predicted_" prefix to these columns.
    * @return value or {@code null} for none
@@ -402,6 +495,27 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   public Model setModelType(java.lang.String modelType) {
     this.modelType = modelType;
+    return this;
+  }
+
+  /**
+   * Output only. For single-objective hyperparameter tuning, it only contains the best trial. For
+   * multi-objective hyperparameter tuning, it contains all Pareto optimal trials sorted by
+   * trial_id.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getOptimalTrialIds() {
+    return optimalTrialIds;
+  }
+
+  /**
+   * Output only. For single-objective hyperparameter tuning, it only contains the best trial. For
+   * multi-objective hyperparameter tuning, it contains all Pareto optimal trials sorted by
+   * trial_id.
+   * @param optimalTrialIds optimalTrialIds or {@code null} for none
+   */
+  public Model setOptimalTrialIds(java.util.List<java.lang.Long> optimalTrialIds) {
+    this.optimalTrialIds = optimalTrialIds;
     return this;
   }
 

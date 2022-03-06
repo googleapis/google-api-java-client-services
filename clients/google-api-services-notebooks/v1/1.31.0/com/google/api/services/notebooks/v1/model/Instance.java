@@ -55,6 +55,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String bootDiskType;
 
   /**
+   * Optional. Flag to enable ip forwarding or not, default false/off.
+   * https://cloud.google.com/vpc/docs/using-routes#canipforward
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canIpForward;
+
+  /**
    * Use a container image to start the notebook instance.
    * The value may be {@code null}.
    */
@@ -366,6 +374,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setBootDiskType(java.lang.String bootDiskType) {
     this.bootDiskType = bootDiskType;
+    return this;
+  }
+
+  /**
+   * Optional. Flag to enable ip forwarding or not, default false/off.
+   * https://cloud.google.com/vpc/docs/using-routes#canipforward
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanIpForward() {
+    return canIpForward;
+  }
+
+  /**
+   * Optional. Flag to enable ip forwarding or not, default false/off.
+   * https://cloud.google.com/vpc/docs/using-routes#canipforward
+   * @param canIpForward canIpForward or {@code null} for none
+   */
+  public Instance setCanIpForward(java.lang.Boolean canIpForward) {
+    this.canIpForward = canIpForward;
     return this;
   }
 

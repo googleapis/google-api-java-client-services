@@ -37,6 +37,13 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
   private RuntimeAcceleratorConfig acceleratorConfig;
 
   /**
+   * Optional. Boot image metadata used for runtime upgradeability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BootImage bootImage;
+
+  /**
    * Optional. Use a list of container images to use as Kernels in the notebook instance.
    * The value may be {@code null}.
    */
@@ -193,6 +200,23 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
    */
   public VirtualMachineConfig setAcceleratorConfig(RuntimeAcceleratorConfig acceleratorConfig) {
     this.acceleratorConfig = acceleratorConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Boot image metadata used for runtime upgradeability.
+   * @return value or {@code null} for none
+   */
+  public BootImage getBootImage() {
+    return bootImage;
+  }
+
+  /**
+   * Optional. Boot image metadata used for runtime upgradeability.
+   * @param bootImage bootImage or {@code null} for none
+   */
+  public VirtualMachineConfig setBootImage(BootImage bootImage) {
+    this.bootImage = bootImage;
     return this;
   }
 

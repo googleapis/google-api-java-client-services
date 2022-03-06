@@ -30,6 +30,20 @@ package com.google.api.services.bigquery.model;
 public final class TrainingRun extends com.google.api.client.json.GenericJson {
 
   /**
+   * Global explanation contains the explanation of top features on the class level. Applies to
+   * classification models only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GlobalExplanation> classLevelGlobalExplanations;
+
+  static {
+    // hack to force ProGuard to consider GlobalExplanation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GlobalExplanation.class);
+  }
+
+  /**
    * Data split result of the training run. Only set when the input data is actually split.
    * The value may be {@code null}.
    */
@@ -42,6 +56,14 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private EvaluationMetrics evaluationMetrics;
+
+  /**
+   * Global explanation contains the explanation of top features on the model level. Applies to both
+   * regression and classification models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GlobalExplanation modelLevelGlobalExplanation;
 
   /**
    * Output of each iteration run, results.size() <= max_iterations.
@@ -70,6 +92,25 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TrainingOptions trainingOptions;
+
+  /**
+   * Global explanation contains the explanation of top features on the class level. Applies to
+   * classification models only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GlobalExplanation> getClassLevelGlobalExplanations() {
+    return classLevelGlobalExplanations;
+  }
+
+  /**
+   * Global explanation contains the explanation of top features on the class level. Applies to
+   * classification models only.
+   * @param classLevelGlobalExplanations classLevelGlobalExplanations or {@code null} for none
+   */
+  public TrainingRun setClassLevelGlobalExplanations(java.util.List<GlobalExplanation> classLevelGlobalExplanations) {
+    this.classLevelGlobalExplanations = classLevelGlobalExplanations;
+    return this;
+  }
 
   /**
    * Data split result of the training run. Only set when the input data is actually split.
@@ -102,6 +143,25 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
    */
   public TrainingRun setEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
     this.evaluationMetrics = evaluationMetrics;
+    return this;
+  }
+
+  /**
+   * Global explanation contains the explanation of top features on the model level. Applies to both
+   * regression and classification models.
+   * @return value or {@code null} for none
+   */
+  public GlobalExplanation getModelLevelGlobalExplanation() {
+    return modelLevelGlobalExplanation;
+  }
+
+  /**
+   * Global explanation contains the explanation of top features on the model level. Applies to both
+   * regression and classification models.
+   * @param modelLevelGlobalExplanation modelLevelGlobalExplanation or {@code null} for none
+   */
+  public TrainingRun setModelLevelGlobalExplanation(GlobalExplanation modelLevelGlobalExplanation) {
+    this.modelLevelGlobalExplanation = modelLevelGlobalExplanation;
     return this;
   }
 

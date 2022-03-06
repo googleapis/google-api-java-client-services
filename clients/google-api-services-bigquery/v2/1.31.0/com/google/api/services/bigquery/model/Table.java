@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output-only] Clone definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloneDefinition cloneDefinition;
+
+  /**
    * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the
    * table will be first partitioned and subsequently clustered.
    * The value may be {@code null}.
@@ -263,6 +270,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ViewDefinition view;
+
+  /**
+   * [Output-only] Clone definition.
+   * @return value or {@code null} for none
+   */
+  public CloneDefinition getCloneDefinition() {
+    return cloneDefinition;
+  }
+
+  /**
+   * [Output-only] Clone definition.
+   * @param cloneDefinition cloneDefinition or {@code null} for none
+   */
+  public Table setCloneDefinition(CloneDefinition cloneDefinition) {
+    this.cloneDefinition = cloneDefinition;
+    return this;
+  }
 
   /**
    * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the

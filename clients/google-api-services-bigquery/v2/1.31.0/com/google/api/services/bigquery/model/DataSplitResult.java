@@ -38,6 +38,13 @@ public final class DataSplitResult extends com.google.api.client.json.GenericJso
   private TableReference evaluationTable;
 
   /**
+   * Table reference of the test data after split.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableReference testTable;
+
+  /**
    * Table reference of the training data after split.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class DataSplitResult extends com.google.api.client.json.GenericJso
    */
   public DataSplitResult setEvaluationTable(TableReference evaluationTable) {
     this.evaluationTable = evaluationTable;
+    return this;
+  }
+
+  /**
+   * Table reference of the test data after split.
+   * @return value or {@code null} for none
+   */
+  public TableReference getTestTable() {
+    return testTable;
+  }
+
+  /**
+   * Table reference of the test data after split.
+   * @param testTable testTable or {@code null} for none
+   */
+  public DataSplitResult setTestTable(TableReference testTable) {
+    this.testTable = testTable;
     return this;
   }
 

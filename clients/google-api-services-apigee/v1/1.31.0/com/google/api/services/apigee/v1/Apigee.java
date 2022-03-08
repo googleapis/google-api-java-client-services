@@ -26825,6 +26825,157 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
+         * After the query is completed, use this API to retrieve the results. If the request succeeds, and
+         * there is a non-zero result set, the result is sent to the client as a list of urls to JSON files.
+         *
+         * Create a request for the method "queries.getResulturl".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link GetResulturl#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the asynchronous query result to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/queries/{queryId}/resulturl`.
+         * @return the request
+         */
+        public GetResulturl getResulturl(java.lang.String name) throws java.io.IOException {
+          GetResulturl result = new GetResulturl(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetResulturl extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1GetAsyncQueryResultUrlResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/queries/[^/]+/resulturl$");
+
+          /**
+           * After the query is completed, use this API to retrieve the results. If the request succeeds,
+           * and there is a non-zero result set, the result is sent to the client as a list of urls to JSON
+           * files.
+           *
+           * Create a request for the method "queries.getResulturl".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link GetResulturl#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * GetResulturl#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the asynchronous query result to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/queries/{queryId}/resulturl`.
+           * @since 1.13
+           */
+          protected GetResulturl(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1GetAsyncQueryResultUrlResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/queries/[^/]+/resulturl$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetResulturl set$Xgafv(java.lang.String $Xgafv) {
+            return (GetResulturl) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetResulturl setAccessToken(java.lang.String accessToken) {
+            return (GetResulturl) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetResulturl setAlt(java.lang.String alt) {
+            return (GetResulturl) super.setAlt(alt);
+          }
+
+          @Override
+          public GetResulturl setCallback(java.lang.String callback) {
+            return (GetResulturl) super.setCallback(callback);
+          }
+
+          @Override
+          public GetResulturl setFields(java.lang.String fields) {
+            return (GetResulturl) super.setFields(fields);
+          }
+
+          @Override
+          public GetResulturl setKey(java.lang.String key) {
+            return (GetResulturl) super.setKey(key);
+          }
+
+          @Override
+          public GetResulturl setOauthToken(java.lang.String oauthToken) {
+            return (GetResulturl) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetResulturl setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetResulturl) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetResulturl setQuotaUser(java.lang.String quotaUser) {
+            return (GetResulturl) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetResulturl setUploadType(java.lang.String uploadType) {
+            return (GetResulturl) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetResulturl setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetResulturl) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the asynchronous query result to get. Must be of the form
+           * `organizations/{org}/environments/{env}/queries/{queryId}/resulturl`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the asynchronous query result to get. Must be of the form
+         `organizations/{org}/environments/{env}/queries/{queryId}/resulturl`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the asynchronous query result to get. Must be of the form
+           * `organizations/{org}/environments/{env}/queries/{queryId}/resulturl`.
+           */
+          public GetResulturl setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/queries/[^/]+/resulturl$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetResulturl set(String parameterName, Object value) {
+            return (GetResulturl) super.set(parameterName, value);
+          }
+        }
+        /**
          * Return a list of Asynchronous Queries
          *
          * Create a request for the method "queries.list".

@@ -30,6 +30,16 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Customer accept list represents the list of projects (id/number) on customer side
+   * that can privately connect to the service attachment. It is an optional field which the
+   * customers can provide during the instance creation. By default, the customer project associated
+   * with the Apigee organization will be included to the list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> consumerAcceptList;
+
+  /**
    * Output only. Time the instance was created in milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -127,12 +137,44 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
   private java.lang.String runtimeVersion;
 
   /**
+   * Output only. Resource name of the service attachment created for the instance in the format:
+   * `projects/regions/serviceAttachments` Apigee customers can privately forward traffic to this
+   * service attachment using the PSC endpoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAttachment;
+
+  /**
    * Output only. State of the instance. Values other than `ACTIVE` means the resource is not ready
    * to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. Customer accept list represents the list of projects (id/number) on customer side
+   * that can privately connect to the service attachment. It is an optional field which the
+   * customers can provide during the instance creation. By default, the customer project associated
+   * with the Apigee organization will be included to the list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getConsumerAcceptList() {
+    return consumerAcceptList;
+  }
+
+  /**
+   * Optional. Customer accept list represents the list of projects (id/number) on customer side
+   * that can privately connect to the service attachment. It is an optional field which the
+   * customers can provide during the instance creation. By default, the customer project associated
+   * with the Apigee organization will be included to the list.
+   * @param consumerAcceptList consumerAcceptList or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Instance setConsumerAcceptList(java.util.List<java.lang.String> consumerAcceptList) {
+    this.consumerAcceptList = consumerAcceptList;
+    return this;
+  }
 
   /**
    * Output only. Time the instance was created in milliseconds since epoch.
@@ -361,6 +403,27 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
    */
   public GoogleCloudApigeeV1Instance setRuntimeVersion(java.lang.String runtimeVersion) {
     this.runtimeVersion = runtimeVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Resource name of the service attachment created for the instance in the format:
+   * `projects/regions/serviceAttachments` Apigee customers can privately forward traffic to this
+   * service attachment using the PSC endpoints.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAttachment() {
+    return serviceAttachment;
+  }
+
+  /**
+   * Output only. Resource name of the service attachment created for the instance in the format:
+   * `projects/regions/serviceAttachments` Apigee customers can privately forward traffic to this
+   * service attachment using the PSC endpoints.
+   * @param serviceAttachment serviceAttachment or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Instance setServiceAttachment(java.lang.String serviceAttachment) {
+    this.serviceAttachment = serviceAttachment;
     return this;
   }
 

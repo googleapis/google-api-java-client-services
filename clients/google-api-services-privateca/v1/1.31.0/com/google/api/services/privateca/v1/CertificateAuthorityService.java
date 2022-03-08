@@ -2662,6 +2662,22 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
               return this;
             }
 
+            /** Optional. This field sets the CA to have a pending delete duration of 0. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean skipGracePeriod;
+
+            /** Optional. This field sets the CA to have a pending delete duration of 0.
+             */
+            public java.lang.Boolean getSkipGracePeriod() {
+              return skipGracePeriod;
+            }
+
+            /** Optional. This field sets the CA to have a pending delete duration of 0. */
+            public Delete setSkipGracePeriod(java.lang.Boolean skipGracePeriod) {
+              this.skipGracePeriod = skipGracePeriod;
+              return this;
+            }
+
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);

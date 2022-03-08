@@ -31,6 +31,13 @@ package com.google.api.services.content.model;
 public final class FreeListingsProgramStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * State of the program, It is set to enabled if there are offers for at least one region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String globalState;
+
+  /**
    * Status of the program in each region. Regions with the same status and review eligibility are
    * grouped together in `regionCodes`.
    * The value may be {@code null}.
@@ -39,11 +46,21 @@ public final class FreeListingsProgramStatus extends com.google.api.client.json.
   private java.util.List<FreeListingsProgramStatusRegionStatus> regionStatuses;
 
   /**
-   * If program is successfully onboarded for at least one region.
-   * The value may be {@code null}.
+   * State of the program, It is set to enabled if there are offers for at least one region.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
+  public java.lang.String getGlobalState() {
+    return globalState;
+  }
+
+  /**
+   * State of the program, It is set to enabled if there are offers for at least one region.
+   * @param globalState globalState or {@code null} for none
+   */
+  public FreeListingsProgramStatus setGlobalState(java.lang.String globalState) {
+    this.globalState = globalState;
+    return this;
+  }
 
   /**
    * Status of the program in each region. Regions with the same status and review eligibility are
@@ -61,23 +78,6 @@ public final class FreeListingsProgramStatus extends com.google.api.client.json.
    */
   public FreeListingsProgramStatus setRegionStatuses(java.util.List<FreeListingsProgramStatusRegionStatus> regionStatuses) {
     this.regionStatuses = regionStatuses;
-    return this;
-  }
-
-  /**
-   * If program is successfully onboarded for at least one region.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * If program is successfully onboarded for at least one region.
-   * @param state state or {@code null} for none
-   */
-  public FreeListingsProgramStatus setState(java.lang.String state) {
-    this.state = state;
     return this;
   }
 

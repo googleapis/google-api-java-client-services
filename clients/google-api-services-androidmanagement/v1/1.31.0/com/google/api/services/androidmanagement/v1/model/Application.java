@@ -31,6 +31,15 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether this app is free, free with in-app purchases, or paid. If the pricing is unspecified,
+   * this means the app is not generally available anymore (even though it might still be available
+   * to people who own it).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appPricing;
+
+  /**
    * Application tracks visible to the enterprise.
    * The value may be {@code null}.
    */
@@ -44,11 +53,95 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Versions currently available for this app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppVersion> appVersions;
+
+  static {
+    // hack to force ProGuard to consider AppVersion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppVersion.class);
+  }
+
+  /**
+   * The name of the author of the apps (for example, the app developer).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String author;
+
+  /**
+   * The countries which this app is available in as per ISO 3166-1 alpha-2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableCountries;
+
+  /**
+   * The app category (e.g. RACING, SOCIAL, etc.)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String category;
+
+  /**
+   * The content rating for this app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentRating;
+
+  /**
+   * The localized promotional description, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * How and to whom the package is made available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String distributionChannel;
+
+  /**
+   * Noteworthy features (if any) of this app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> features;
+
+  /**
+   * Full app description, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fullDescription;
+
+  /**
+   * A link to an image that can be used as an icon for the app. This image is suitable for use at
+   * up to 512px x 512px
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iconUrl;
+
+  /**
    * The set of managed properties available to be pre-configured for the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ManagedProperty> managedProperties;
+
+  /**
+   * The minimum Android SDK necessary to run the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minAndroidSdkVersion;
 
   /**
    * The name of the app in the form enterprises/{enterprise}/applications/{package_name}.
@@ -65,11 +158,68 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.util.List<ApplicationPermission> permissions;
 
   /**
+   * A link to the (consumer) Google Play details page for the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String playStoreUrl;
+
+  /**
+   * A localised description of the recent changes made to the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recentChanges;
+
+  /**
+   * A list of screenshot links representing the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> screenshotUrls;
+
+  /**
+   * A link to a smaller image that can be used as an icon for the app. This image is suitable for
+   * use at up to 128px x 128px.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String smallIconUrl;
+
+  /**
    * The title of the app. Localized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Output only. The approximate time (within 7 days) the app was last published.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Whether this app is free, free with in-app purchases, or paid. If the pricing is unspecified,
+   * this means the app is not generally available anymore (even though it might still be available
+   * to people who own it).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppPricing() {
+    return appPricing;
+  }
+
+  /**
+   * Whether this app is free, free with in-app purchases, or paid. If the pricing is unspecified,
+   * this means the app is not generally available anymore (even though it might still be available
+   * to people who own it).
+   * @param appPricing appPricing or {@code null} for none
+   */
+  public Application setAppPricing(java.lang.String appPricing) {
+    this.appPricing = appPricing;
+    return this;
+  }
 
   /**
    * Application tracks visible to the enterprise.
@@ -89,6 +239,178 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Versions currently available for this app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppVersion> getAppVersions() {
+    return appVersions;
+  }
+
+  /**
+   * Versions currently available for this app.
+   * @param appVersions appVersions or {@code null} for none
+   */
+  public Application setAppVersions(java.util.List<AppVersion> appVersions) {
+    this.appVersions = appVersions;
+    return this;
+  }
+
+  /**
+   * The name of the author of the apps (for example, the app developer).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthor() {
+    return author;
+  }
+
+  /**
+   * The name of the author of the apps (for example, the app developer).
+   * @param author author or {@code null} for none
+   */
+  public Application setAuthor(java.lang.String author) {
+    this.author = author;
+    return this;
+  }
+
+  /**
+   * The countries which this app is available in as per ISO 3166-1 alpha-2.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableCountries() {
+    return availableCountries;
+  }
+
+  /**
+   * The countries which this app is available in as per ISO 3166-1 alpha-2.
+   * @param availableCountries availableCountries or {@code null} for none
+   */
+  public Application setAvailableCountries(java.util.List<java.lang.String> availableCountries) {
+    this.availableCountries = availableCountries;
+    return this;
+  }
+
+  /**
+   * The app category (e.g. RACING, SOCIAL, etc.)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategory() {
+    return category;
+  }
+
+  /**
+   * The app category (e.g. RACING, SOCIAL, etc.)
+   * @param category category or {@code null} for none
+   */
+  public Application setCategory(java.lang.String category) {
+    this.category = category;
+    return this;
+  }
+
+  /**
+   * The content rating for this app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentRating() {
+    return contentRating;
+  }
+
+  /**
+   * The content rating for this app.
+   * @param contentRating contentRating or {@code null} for none
+   */
+  public Application setContentRating(java.lang.String contentRating) {
+    this.contentRating = contentRating;
+    return this;
+  }
+
+  /**
+   * The localized promotional description, if available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * The localized promotional description, if available.
+   * @param description description or {@code null} for none
+   */
+  public Application setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * How and to whom the package is made available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDistributionChannel() {
+    return distributionChannel;
+  }
+
+  /**
+   * How and to whom the package is made available.
+   * @param distributionChannel distributionChannel or {@code null} for none
+   */
+  public Application setDistributionChannel(java.lang.String distributionChannel) {
+    this.distributionChannel = distributionChannel;
+    return this;
+  }
+
+  /**
+   * Noteworthy features (if any) of this app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFeatures() {
+    return features;
+  }
+
+  /**
+   * Noteworthy features (if any) of this app.
+   * @param features features or {@code null} for none
+   */
+  public Application setFeatures(java.util.List<java.lang.String> features) {
+    this.features = features;
+    return this;
+  }
+
+  /**
+   * Full app description, if available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFullDescription() {
+    return fullDescription;
+  }
+
+  /**
+   * Full app description, if available.
+   * @param fullDescription fullDescription or {@code null} for none
+   */
+  public Application setFullDescription(java.lang.String fullDescription) {
+    this.fullDescription = fullDescription;
+    return this;
+  }
+
+  /**
+   * A link to an image that can be used as an icon for the app. This image is suitable for use at
+   * up to 512px x 512px
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIconUrl() {
+    return iconUrl;
+  }
+
+  /**
+   * A link to an image that can be used as an icon for the app. This image is suitable for use at
+   * up to 512px x 512px
+   * @param iconUrl iconUrl or {@code null} for none
+   */
+  public Application setIconUrl(java.lang.String iconUrl) {
+    this.iconUrl = iconUrl;
+    return this;
+  }
+
+  /**
    * The set of managed properties available to be pre-configured for the app.
    * @return value or {@code null} for none
    */
@@ -102,6 +424,23 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   public Application setManagedProperties(java.util.List<ManagedProperty> managedProperties) {
     this.managedProperties = managedProperties;
+    return this;
+  }
+
+  /**
+   * The minimum Android SDK necessary to run the app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinAndroidSdkVersion() {
+    return minAndroidSdkVersion;
+  }
+
+  /**
+   * The minimum Android SDK necessary to run the app.
+   * @param minAndroidSdkVersion minAndroidSdkVersion or {@code null} for none
+   */
+  public Application setMinAndroidSdkVersion(java.lang.Integer minAndroidSdkVersion) {
+    this.minAndroidSdkVersion = minAndroidSdkVersion;
     return this;
   }
 
@@ -140,6 +479,76 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A link to the (consumer) Google Play details page for the app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlayStoreUrl() {
+    return playStoreUrl;
+  }
+
+  /**
+   * A link to the (consumer) Google Play details page for the app.
+   * @param playStoreUrl playStoreUrl or {@code null} for none
+   */
+  public Application setPlayStoreUrl(java.lang.String playStoreUrl) {
+    this.playStoreUrl = playStoreUrl;
+    return this;
+  }
+
+  /**
+   * A localised description of the recent changes made to the app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecentChanges() {
+    return recentChanges;
+  }
+
+  /**
+   * A localised description of the recent changes made to the app.
+   * @param recentChanges recentChanges or {@code null} for none
+   */
+  public Application setRecentChanges(java.lang.String recentChanges) {
+    this.recentChanges = recentChanges;
+    return this;
+  }
+
+  /**
+   * A list of screenshot links representing the app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getScreenshotUrls() {
+    return screenshotUrls;
+  }
+
+  /**
+   * A list of screenshot links representing the app.
+   * @param screenshotUrls screenshotUrls or {@code null} for none
+   */
+  public Application setScreenshotUrls(java.util.List<java.lang.String> screenshotUrls) {
+    this.screenshotUrls = screenshotUrls;
+    return this;
+  }
+
+  /**
+   * A link to a smaller image that can be used as an icon for the app. This image is suitable for
+   * use at up to 128px x 128px.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSmallIconUrl() {
+    return smallIconUrl;
+  }
+
+  /**
+   * A link to a smaller image that can be used as an icon for the app. This image is suitable for
+   * use at up to 128px x 128px.
+   * @param smallIconUrl smallIconUrl or {@code null} for none
+   */
+  public Application setSmallIconUrl(java.lang.String smallIconUrl) {
+    this.smallIconUrl = smallIconUrl;
+    return this;
+  }
+
+  /**
    * The title of the app. Localized.
    * @return value or {@code null} for none
    */
@@ -153,6 +562,23 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   public Application setTitle(java.lang.String title) {
     this.title = title;
+    return this;
+  }
+
+  /**
+   * Output only. The approximate time (within 7 days) the app was last published.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The approximate time (within 7 days) the app was last published.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Application setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

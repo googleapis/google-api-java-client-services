@@ -37,8 +37,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private GoogleCloudApigeeV1AddonsConfig addonsConfig;
 
   /**
-   * Required. Primary GCP region for analytics data storage. For valid values, see [Create an
-   * Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP
+   * region for analytics data storage. For valid values, see [Create an Apigee
+   * organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,8 +224,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Required. Primary GCP region for analytics data storage. For valid values, see [Create an
-   * Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP
+   * region for analytics data storage. For valid values, see [Create an Apigee
+   * organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
    * @return value or {@code null} for none
    */
   public java.lang.String getAnalyticsRegion() {
@@ -232,8 +234,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Required. Primary GCP region for analytics data storage. For valid values, see [Create an
-   * Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+   * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP
+   * region for analytics data storage. For valid values, see [Create an Apigee
+   * organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
    * @param analyticsRegion analyticsRegion or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setAnalyticsRegion(java.lang.String analyticsRegion) {

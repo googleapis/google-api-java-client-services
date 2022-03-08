@@ -30,8 +30,12 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in:
-   * http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+   * The SSL/TLS cipher suites to be used. For programmable proxies, it must be one of the cipher
+   * suite names listed in:
+   * http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites.
+   * For configurable proxies, it must follow the configuration specified in:
+   * https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Cipher-suite-
+   * configuration. This setting has no effect for configurable proxies when negotiating TLS 1.3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +103,12 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   private java.lang.String trustStore;
 
   /**
-   * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in:
-   * http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+   * The SSL/TLS cipher suites to be used. For programmable proxies, it must be one of the cipher
+   * suite names listed in:
+   * http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites.
+   * For configurable proxies, it must follow the configuration specified in:
+   * https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Cipher-suite-
+   * configuration. This setting has no effect for configurable proxies when negotiating TLS 1.3.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCiphers() {
@@ -108,8 +116,12 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   }
 
   /**
-   * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in:
-   * http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+   * The SSL/TLS cipher suites to be used. For programmable proxies, it must be one of the cipher
+   * suite names listed in:
+   * http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites.
+   * For configurable proxies, it must follow the configuration specified in:
+   * https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Cipher-suite-
+   * configuration. This setting has no effect for configurable proxies when negotiating TLS 1.3.
    * @param ciphers ciphers or {@code null} for none
    */
   public GoogleCloudApigeeV1TlsInfo setCiphers(java.util.List<java.lang.String> ciphers) {

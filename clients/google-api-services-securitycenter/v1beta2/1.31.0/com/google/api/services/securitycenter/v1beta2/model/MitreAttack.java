@@ -55,9 +55,9 @@ public final class MitreAttack extends com.google.api.client.json.GenericJson {
   /**
    * The MITRE ATT technique most closely represented by this finding, if any. primary_techniques is
    * a repeated field because there are multiple levels of MITRE ATT techniques. If the technique
-   * most closely represented by this finding is a sub-technique (e.g. SCANNING_IP_BLOCKS), both the
-   * sub-technique and its parent technique(s) will be listed (e.g. SCANNING_IP_BLOCKS,
-   * ACTIVE_SCANNING).
+   * most closely represented by this finding is a sub-technique (e.g. `SCANNING_IP_BLOCKS`), both
+   * the sub-technique and its parent technique(s) will be listed (e.g. `SCANNING_IP_BLOCKS`,
+   * `ACTIVE_SCANNING`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +126,9 @@ public final class MitreAttack extends com.google.api.client.json.GenericJson {
   /**
    * The MITRE ATT technique most closely represented by this finding, if any. primary_techniques is
    * a repeated field because there are multiple levels of MITRE ATT techniques. If the technique
-   * most closely represented by this finding is a sub-technique (e.g. SCANNING_IP_BLOCKS), both the
-   * sub-technique and its parent technique(s) will be listed (e.g. SCANNING_IP_BLOCKS,
-   * ACTIVE_SCANNING).
+   * most closely represented by this finding is a sub-technique (e.g. `SCANNING_IP_BLOCKS`), both
+   * the sub-technique and its parent technique(s) will be listed (e.g. `SCANNING_IP_BLOCKS`,
+   * `ACTIVE_SCANNING`).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPrimaryTechniques() {
@@ -138,9 +138,9 @@ public final class MitreAttack extends com.google.api.client.json.GenericJson {
   /**
    * The MITRE ATT technique most closely represented by this finding, if any. primary_techniques is
    * a repeated field because there are multiple levels of MITRE ATT techniques. If the technique
-   * most closely represented by this finding is a sub-technique (e.g. SCANNING_IP_BLOCKS), both the
-   * sub-technique and its parent technique(s) will be listed (e.g. SCANNING_IP_BLOCKS,
-   * ACTIVE_SCANNING).
+   * most closely represented by this finding is a sub-technique (e.g. `SCANNING_IP_BLOCKS`), both
+   * the sub-technique and its parent technique(s) will be listed (e.g. `SCANNING_IP_BLOCKS`,
+   * `ACTIVE_SCANNING`).
    * @param primaryTechniques primaryTechniques or {@code null} for none
    */
   public MitreAttack setPrimaryTechniques(java.util.List<java.lang.String> primaryTechniques) {

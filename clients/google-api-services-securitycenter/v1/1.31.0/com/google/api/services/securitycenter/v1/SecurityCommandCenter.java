@@ -4425,9 +4425,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           *        folders/1234/sources/5678/findings/123456/externalSystems/jira
-           *        projects/1234/sources/5678/findings/123456/externalSystems/jira
+           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -4456,9 +4456,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           *        folders/1234/sources/5678/findings/123456/externalSystems/jira
-           *        projects/1234/sources/5678/findings/123456/externalSystems/jira
+           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -4529,17 +4529,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * External System Name e.g. jira, demisto, etc. e.g.:
-             * organizations/1234/sources/5678/findings/123456/externalSystems/jira
-             * folders/1234/sources/5678/findings/123456/externalSystems/jira
-             * projects/1234/sources/5678/findings/123456/externalSystems/jira
+             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** External System Name e.g. jira, demisto, etc. e.g.:
-           organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           folders/1234/sources/5678/findings/123456/externalSystems/jira
-           projects/1234/sources/5678/findings/123456/externalSystems/jira
+           `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             public java.lang.String getName() {
               return name;
@@ -4547,9 +4547,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * External System Name e.g. jira, demisto, etc. e.g.:
-             * organizations/1234/sources/5678/findings/123456/externalSystems/jira
-             * folders/1234/sources/5678/findings/123456/externalSystems/jira
-             * projects/1234/sources/5678/findings/123456/externalSystems/jira
+             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -11867,9 +11867,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           *        folders/1234/sources/5678/findings/123456/externalSystems/jira
-           *        projects/1234/sources/5678/findings/123456/externalSystems/jira
+           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -11898,9 +11898,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           *        folders/1234/sources/5678/findings/123456/externalSystems/jira
-           *        projects/1234/sources/5678/findings/123456/externalSystems/jira
+           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -11971,17 +11971,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * External System Name e.g. jira, demisto, etc. e.g.:
-             * organizations/1234/sources/5678/findings/123456/externalSystems/jira
-             * folders/1234/sources/5678/findings/123456/externalSystems/jira
-             * projects/1234/sources/5678/findings/123456/externalSystems/jira
+             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** External System Name e.g. jira, demisto, etc. e.g.:
-           organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           folders/1234/sources/5678/findings/123456/externalSystems/jira
-           projects/1234/sources/5678/findings/123456/externalSystems/jira
+           `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             public java.lang.String getName() {
               return name;
@@ -11989,9 +11989,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * External System Name e.g. jira, demisto, etc. e.g.:
-             * organizations/1234/sources/5678/findings/123456/externalSystems/jira
-             * folders/1234/sources/5678/findings/123456/externalSystems/jira
-             * projects/1234/sources/5678/findings/123456/externalSystems/jira
+             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -16330,9 +16330,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           *        folders/1234/sources/5678/findings/123456/externalSystems/jira
-           *        projects/1234/sources/5678/findings/123456/externalSystems/jira
+           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -16361,9 +16361,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name External System Name e.g. jira, demisto, etc. e.g.:
-           *        organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           *        folders/1234/sources/5678/findings/123456/externalSystems/jira
-           *        projects/1234/sources/5678/findings/123456/externalSystems/jira
+           *        `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           *        `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -16434,17 +16434,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * External System Name e.g. jira, demisto, etc. e.g.:
-             * organizations/1234/sources/5678/findings/123456/externalSystems/jira
-             * folders/1234/sources/5678/findings/123456/externalSystems/jira
-             * projects/1234/sources/5678/findings/123456/externalSystems/jira
+             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** External System Name e.g. jira, demisto, etc. e.g.:
-           organizations/1234/sources/5678/findings/123456/externalSystems/jira
-           folders/1234/sources/5678/findings/123456/externalSystems/jira
-           projects/1234/sources/5678/findings/123456/externalSystems/jira
+           `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+           `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+           `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             public java.lang.String getName() {
               return name;
@@ -16452,9 +16452,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * External System Name e.g. jira, demisto, etc. e.g.:
-             * organizations/1234/sources/5678/findings/123456/externalSystems/jira
-             * folders/1234/sources/5678/findings/123456/externalSystems/jira
-             * projects/1234/sources/5678/findings/123456/externalSystems/jira
+             * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
+             * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

@@ -195,7 +195,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer readEndpointPort;
 
   /**
-   * Optional. Read replica mode. Can only be specified when trying to create the instance.
+   * Optional. Read replicas mode for the instance. Defaults to READ_REPLICAS_DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,11 +245,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedIpRange;
 
   /**
-   * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range.
-   * At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported
-   * for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or
-   * deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during
-   * instance creation.
+   * Optional. Additional IP range for node placement. Required when enabling read replicas on an
+   * existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or "auto".
+   * For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address range associated
+   * with the private service access connection, or "auto".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -680,7 +679,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Read replica mode. Can only be specified when trying to create the instance.
+   * Optional. Read replicas mode for the instance. Defaults to READ_REPLICAS_DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getReadReplicasMode() {
@@ -688,7 +687,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Read replica mode. Can only be specified when trying to create the instance.
+   * Optional. Read replicas mode for the instance. Defaults to READ_REPLICAS_DISABLED.
    * @param readReplicasMode readReplicasMode or {@code null} for none
    */
   public Instance setReadReplicasMode(java.lang.String readReplicasMode) {
@@ -795,11 +794,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range.
-   * At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported
-   * for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or
-   * deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during
-   * instance creation.
+   * Optional. Additional IP range for node placement. Required when enabling read replicas on an
+   * existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or "auto".
+   * For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address range associated
+   * with the private service access connection, or "auto".
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryIpRange() {
@@ -807,11 +805,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range.
-   * At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported
-   * for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or
-   * deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during
-   * instance creation.
+   * Optional. Additional IP range for node placement. Required when enabling read replicas on an
+   * existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or "auto".
+   * For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address range associated
+   * with the private service access connection, or "auto".
    * @param secondaryIpRange secondaryIpRange or {@code null} for none
    */
   public Instance setSecondaryIpRange(java.lang.String secondaryIpRange) {

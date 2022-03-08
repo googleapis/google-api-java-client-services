@@ -17,9 +17,9 @@
 package com.google.api.services.content.model;
 
 /**
- * The Promotions feature is currently in alpha and is not yet publicly available via Content API
- * for Shopping. This documentation is provided for reference only may be subject to change.
- * Represents a promotion. See the following articles for more details. * [Promotions feed
+ * The Promotions feature is currently in alpha and is not yet publicly available in Content API for
+ * Shopping. This documentation is provided for reference only may be subject to change. Represents
+ * a promotion. See the following articles for more details. * [Promotions feed
  * specification](https://support.google.com/merchants/answer/2906014) * [Local promotions feed
  * specification](https://support.google.com/merchants/answer/10146130) * [Promotions on Buy on
  * Google product data specification](https://support.google.com/merchants/answer/9173673)
@@ -235,7 +235,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> promotionDestinationIds;
 
   /**
-   * String representation of the promotion display dates.
+   * String representation of the promotion display dates (deprecated: Use
+   * promotion_display_time_period instead).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +250,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private TimePeriod promotionDisplayTimePeriod;
 
   /**
-   * Required. String representation of the promotion effective dates.
+   * String representation of the promotion effective dates (deprecated: Use
+   * promotion_effective_time_period instead).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -773,7 +775,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String representation of the promotion display dates.
+   * String representation of the promotion display dates (deprecated: Use
+   * promotion_display_time_period instead).
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionDisplayDates() {
@@ -781,7 +784,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String representation of the promotion display dates.
+   * String representation of the promotion display dates (deprecated: Use
+   * promotion_display_time_period instead).
    * @param promotionDisplayDates promotionDisplayDates or {@code null} for none
    */
   public Promotion setPromotionDisplayDates(java.lang.String promotionDisplayDates) {
@@ -807,7 +811,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. String representation of the promotion effective dates.
+   * String representation of the promotion effective dates (deprecated: Use
+   * promotion_effective_time_period instead).
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionEffectiveDates() {
@@ -815,7 +820,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. String representation of the promotion effective dates.
+   * String representation of the promotion effective dates (deprecated: Use
+   * promotion_effective_time_period instead).
    * @param promotionEffectiveDates promotionEffectiveDates or {@code null} for none
    */
   public Promotion setPromotionEffectiveDates(java.lang.String promotionEffectiveDates) {

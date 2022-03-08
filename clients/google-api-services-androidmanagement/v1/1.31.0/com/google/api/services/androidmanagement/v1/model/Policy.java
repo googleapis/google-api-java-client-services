@@ -154,7 +154,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String cameraAccess;
 
   /**
-   * Whether all cameras on the device are disabled.
+   * If camera_access is set to any value other than CAMERA_ACCESS_UNSPECIFIED, this has no effect.
+   * Otherwise this field controls whether cameras are disabled: If true, all cameras are disabled,
+   * otherwise they are available. For fully managed devices this field applies for all apps on the
+   * device. For work profiles, this field applies only to apps in the work profile, and the camera
+   * access of apps outside the work profile is unaffected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -466,8 +470,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
-   * DEPRECATED - Use password_policies.Note:Complexity-based values of PasswordQuality, that is,
+   * DEPRECATED - Use passwordPolicies.Note:Complexity-based values of PasswordQuality, that is,
    * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
+   * unified_lock_settings cannot be used here
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -606,7 +611,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean setWallpaperDisabled;
 
   /**
-   * Actions to take during the setup process.
+   * Action to take during the setup process. At most one action may be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -690,7 +695,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean uninstallAppsDisabled;
 
   /**
-   * Whether the microphone is muted and adjusting microphone volume is disabled.
+   * If microphone_access is set to any value other than MICROPHONE_ACCESS_UNSPECIFIED, this has no
+   * effect. Otherwise this field controls whether microphones are disabled: If true, all
+   * microphones are disabled, otherwise they are available. This is available only on fully managed
+   * devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1019,7 +1027,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether all cameras on the device are disabled.
+   * If camera_access is set to any value other than CAMERA_ACCESS_UNSPECIFIED, this has no effect.
+   * Otherwise this field controls whether cameras are disabled: If true, all cameras are disabled,
+   * otherwise they are available. For fully managed devices this field applies for all apps on the
+   * device. For work profiles, this field applies only to apps in the work profile, and the camera
+   * access of apps outside the work profile is unaffected.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCameraDisabled() {
@@ -1027,7 +1039,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether all cameras on the device are disabled.
+   * If camera_access is set to any value other than CAMERA_ACCESS_UNSPECIFIED, this has no effect.
+   * Otherwise this field controls whether cameras are disabled: If true, all cameras are disabled,
+   * otherwise they are available. For fully managed devices this field applies for all apps on the
+   * device. For work profiles, this field applies only to apps in the work profile, and the camera
+   * access of apps outside the work profile is unaffected.
    * @param cameraDisabled cameraDisabled or {@code null} for none
    */
   public Policy setCameraDisabled(java.lang.Boolean cameraDisabled) {
@@ -1708,8 +1724,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
-   * DEPRECATED - Use password_policies.Note:Complexity-based values of PasswordQuality, that is,
+   * DEPRECATED - Use passwordPolicies.Note:Complexity-based values of PasswordQuality, that is,
    * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
+   * unified_lock_settings cannot be used here
    * @return value or {@code null} for none
    */
   public PasswordRequirements getPasswordRequirements() {
@@ -1718,8 +1735,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
-   * DEPRECATED - Use password_policies.Note:Complexity-based values of PasswordQuality, that is,
+   * DEPRECATED - Use passwordPolicies.Note:Complexity-based values of PasswordQuality, that is,
    * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
+   * unified_lock_settings cannot be used here
    * @param passwordRequirements passwordRequirements or {@code null} for none
    */
   public Policy setPasswordRequirements(PasswordRequirements passwordRequirements) {
@@ -2013,7 +2031,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Actions to take during the setup process.
+   * Action to take during the setup process. At most one action may be specified.
    * @return value or {@code null} for none
    */
   public java.util.List<SetupAction> getSetupActions() {
@@ -2021,7 +2039,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Actions to take during the setup process.
+   * Action to take during the setup process. At most one action may be specified.
    * @param setupActions setupActions or {@code null} for none
    */
   public Policy setSetupActions(java.util.List<SetupAction> setupActions) {
@@ -2214,7 +2232,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the microphone is muted and adjusting microphone volume is disabled.
+   * If microphone_access is set to any value other than MICROPHONE_ACCESS_UNSPECIFIED, this has no
+   * effect. Otherwise this field controls whether microphones are disabled: If true, all
+   * microphones are disabled, otherwise they are available. This is available only on fully managed
+   * devices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnmuteMicrophoneDisabled() {
@@ -2222,7 +2243,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the microphone is muted and adjusting microphone volume is disabled.
+   * If microphone_access is set to any value other than MICROPHONE_ACCESS_UNSPECIFIED, this has no
+   * effect. Otherwise this field controls whether microphones are disabled: If true, all
+   * microphones are disabled, otherwise they are available. This is available only on fully managed
+   * devices.
    * @param unmuteMicrophoneDisabled unmuteMicrophoneDisabled or {@code null} for none
    */
   public Policy setUnmuteMicrophoneDisabled(java.lang.Boolean unmuteMicrophoneDisabled) {

@@ -54,8 +54,8 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
 
   /**
    * Required. Immutable. A domain which is being authorized. A DnsAuthorization resource covers a
-   * single domain and its wildcard, e.g. authorization for "example.com" can be used to issue
-   * certificates for "example.com" and "*.example.com".
+   * single domain and its wildcard, e.g. authorization for `example.com` can be used to issue
+   * certificates for `example.com` and `*.example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,8 +136,8 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
 
   /**
    * Required. Immutable. A domain which is being authorized. A DnsAuthorization resource covers a
-   * single domain and its wildcard, e.g. authorization for "example.com" can be used to issue
-   * certificates for "example.com" and "*.example.com".
+   * single domain and its wildcard, e.g. authorization for `example.com` can be used to issue
+   * certificates for `example.com` and `*.example.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -146,8 +146,8 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
 
   /**
    * Required. Immutable. A domain which is being authorized. A DnsAuthorization resource covers a
-   * single domain and its wildcard, e.g. authorization for "example.com" can be used to issue
-   * certificates for "example.com" and "*.example.com".
+   * single domain and its wildcard, e.g. authorization for `example.com` can be used to issue
+   * certificates for `example.com` and `*.example.com`.
    * @param domain domain or {@code null} for none
    */
   public DnsAuthorization setDomain(java.lang.String domain) {

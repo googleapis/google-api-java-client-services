@@ -57,6 +57,14 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   private java.lang.String bodyLocKey;
 
   /**
+   * If set, display notifications delivered to the device will be handled by the app instead of the
+   * proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bypassProxyNotification;
+
+  /**
    * The [notification's channel
    * id](https://developer.android.com/guide/topics/ui/notifiers/notifications#ManageChannels) (new
    * in Android O). The app must create a channel with this channel ID before any notification with
@@ -326,6 +334,25 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   public AndroidNotification setBodyLocKey(java.lang.String bodyLocKey) {
     this.bodyLocKey = bodyLocKey;
+    return this;
+  }
+
+  /**
+   * If set, display notifications delivered to the device will be handled by the app instead of the
+   * proxy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBypassProxyNotification() {
+    return bypassProxyNotification;
+  }
+
+  /**
+   * If set, display notifications delivered to the device will be handled by the app instead of the
+   * proxy.
+   * @param bypassProxyNotification bypassProxyNotification or {@code null} for none
+   */
+  public AndroidNotification setBypassProxyNotification(java.lang.Boolean bypassProxyNotification) {
+    this.bypassProxyNotification = bypassProxyNotification;
     return this;
   }
 

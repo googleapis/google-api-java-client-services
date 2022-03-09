@@ -30,6 +30,26 @@ package com.google.api.services.accessapproval.v1.model;
 public final class AccessApprovalSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * The asymmetric crypto key version to use for signing approval requests. Empty
+   * active_key_version indicates that a Google-managed key should be used for signing. This
+   * property will be ignored if set by an ancestor of this resource, and new non-empty values may
+   * not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String activeKeyVersion;
+
+  /**
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that an ancestor of this Project or Folder has set
+   * active_key_version (this field will always be unset for the organization since organizations do
+   * not have ancestors).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ancestorHasActiveKeyVersion;
+
+  /**
    * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
    * the field is true, that indicates that at least one service is enrolled for Access Approval in
    * one or more ancestors of the Project or Folder (this field will always be unset for the
@@ -53,6 +73,18 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.util.List<EnrolledService> enrolledServices;
 
   /**
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that there is some configuration issue with the
+   * active_key_version configured at this level in the resource hierarchy (e.g. it doesn't exist or
+   * the Access Approval service account doesn't have the correct permissions on it, etc.) This key
+   * version is not necessarily the effective key version at this level, as key versions are
+   * inherited top-down.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean invalidKeyVersion;
+
+  /**
    * The resource name of the settings. Format is one of: *
    * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
    * "organizations/{organization}/accessApprovalSettings"
@@ -69,6 +101,52 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> notificationEmails;
+
+  /**
+   * The asymmetric crypto key version to use for signing approval requests. Empty
+   * active_key_version indicates that a Google-managed key should be used for signing. This
+   * property will be ignored if set by an ancestor of this resource, and new non-empty values may
+   * not be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActiveKeyVersion() {
+    return activeKeyVersion;
+  }
+
+  /**
+   * The asymmetric crypto key version to use for signing approval requests. Empty
+   * active_key_version indicates that a Google-managed key should be used for signing. This
+   * property will be ignored if set by an ancestor of this resource, and new non-empty values may
+   * not be set.
+   * @param activeKeyVersion activeKeyVersion or {@code null} for none
+   */
+  public AccessApprovalSettings setActiveKeyVersion(java.lang.String activeKeyVersion) {
+    this.activeKeyVersion = activeKeyVersion;
+    return this;
+  }
+
+  /**
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that an ancestor of this Project or Folder has set
+   * active_key_version (this field will always be unset for the organization since organizations do
+   * not have ancestors).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAncestorHasActiveKeyVersion() {
+    return ancestorHasActiveKeyVersion;
+  }
+
+  /**
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that an ancestor of this Project or Folder has set
+   * active_key_version (this field will always be unset for the organization since organizations do
+   * not have ancestors).
+   * @param ancestorHasActiveKeyVersion ancestorHasActiveKeyVersion or {@code null} for none
+   */
+  public AccessApprovalSettings setAncestorHasActiveKeyVersion(java.lang.Boolean ancestorHasActiveKeyVersion) {
+    this.ancestorHasActiveKeyVersion = ancestorHasActiveKeyVersion;
+    return this;
+  }
 
   /**
    * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
@@ -119,6 +197,33 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   public AccessApprovalSettings setEnrolledServices(java.util.List<EnrolledService> enrolledServices) {
     this.enrolledServices = enrolledServices;
+    return this;
+  }
+
+  /**
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that there is some configuration issue with the
+   * active_key_version configured at this level in the resource hierarchy (e.g. it doesn't exist or
+   * the Access Approval service account doesn't have the correct permissions on it, etc.) This key
+   * version is not necessarily the effective key version at this level, as key versions are
+   * inherited top-down.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInvalidKeyVersion() {
+    return invalidKeyVersion;
+  }
+
+  /**
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that there is some configuration issue with the
+   * active_key_version configured at this level in the resource hierarchy (e.g. it doesn't exist or
+   * the Access Approval service account doesn't have the correct permissions on it, etc.) This key
+   * version is not necessarily the effective key version at this level, as key versions are
+   * inherited top-down.
+   * @param invalidKeyVersion invalidKeyVersion or {@code null} for none
+   */
+  public AccessApprovalSettings setInvalidKeyVersion(java.lang.Boolean invalidKeyVersion) {
+    this.invalidKeyVersion = invalidKeyVersion;
     return this;
   }
 

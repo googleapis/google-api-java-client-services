@@ -37,11 +37,25 @@ public final class ApproveDecision extends com.google.api.client.json.GenericJso
   private String approveTime;
 
   /**
+   * True when the request has been auto-approved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoApproved;
+
+  /**
    * The time at which the approval expires.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
+
+  /**
+   * The signature for the ApprovalRequest and details on how it was signed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SignatureInfo signatureInfo;
 
   /**
    * The time at which approval was granted.
@@ -61,6 +75,23 @@ public final class ApproveDecision extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * True when the request has been auto-approved.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoApproved() {
+    return autoApproved;
+  }
+
+  /**
+   * True when the request has been auto-approved.
+   * @param autoApproved autoApproved or {@code null} for none
+   */
+  public ApproveDecision setAutoApproved(java.lang.Boolean autoApproved) {
+    this.autoApproved = autoApproved;
+    return this;
+  }
+
+  /**
    * The time at which the approval expires.
    * @return value or {@code null} for none
    */
@@ -74,6 +105,23 @@ public final class ApproveDecision extends com.google.api.client.json.GenericJso
    */
   public ApproveDecision setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * The signature for the ApprovalRequest and details on how it was signed.
+   * @return value or {@code null} for none
+   */
+  public SignatureInfo getSignatureInfo() {
+    return signatureInfo;
+  }
+
+  /**
+   * The signature for the ApprovalRequest and details on how it was signed.
+   * @param signatureInfo signatureInfo or {@code null} for none
+   */
+  public ApproveDecision setSignatureInfo(SignatureInfo signatureInfo) {
+    this.signatureInfo = signatureInfo;
     return this;
   }
 

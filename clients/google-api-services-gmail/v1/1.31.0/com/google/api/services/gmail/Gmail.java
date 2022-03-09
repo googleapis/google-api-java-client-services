@@ -10131,8 +10131,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
     public class Threads {
 
       /**
-       * Immediately and permanently deletes the specified thread. This operation cannot be undone. Prefer
-       * `threads.trash` instead.
+       * Immediately and permanently deletes the specified thread. Any messages that belong to the thread
+       * are also deleted. This operation cannot be undone. Prefer `threads.trash` instead.
        *
        * Create a request for the method "threads.delete".
        *
@@ -10155,8 +10155,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/threads/{id}";
 
         /**
-         * Immediately and permanently deletes the specified thread. This operation cannot be undone.
-         * Prefer `threads.trash` instead.
+         * Immediately and permanently deletes the specified thread. Any messages that belong to the
+         * thread are also deleted. This operation cannot be undone. Prefer `threads.trash` instead.
          *
          * Create a request for the method "threads.delete".
          *
@@ -10864,7 +10864,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Moves the specified thread to the trash.
+       * Moves the specified thread to the trash. Any messages that belong to the thread are also moved to
+       * the trash.
        *
        * Create a request for the method "threads.trash".
        *
@@ -10887,7 +10888,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/threads/{id}/trash";
 
         /**
-         * Moves the specified thread to the trash.
+         * Moves the specified thread to the trash. Any messages that belong to the thread are also moved
+         * to the trash.
          *
          * Create a request for the method "threads.trash".
          *
@@ -11007,7 +11009,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Removes the specified thread from the trash.
+       * Removes the specified thread from the trash. Any messages that belong to the thread are also
+       * removed from the trash.
        *
        * Create a request for the method "threads.untrash".
        *
@@ -11030,7 +11033,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/threads/{id}/untrash";
 
         /**
-         * Removes the specified thread from the trash.
+         * Removes the specified thread from the trash. Any messages that belong to the thread are also
+         * removed from the trash.
          *
          * Create a request for the method "threads.untrash".
          *

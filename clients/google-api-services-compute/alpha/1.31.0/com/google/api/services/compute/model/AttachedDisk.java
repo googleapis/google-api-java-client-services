@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The architecture of the attached disk. Valid values are ARM64 or X86_64.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
    * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the
    * disk is detached from the instance).
    * The value may be {@code null}.
@@ -202,6 +209,23 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> userLicenses;
+
+  /**
+   * [Output Only] The architecture of the attached disk. Valid values are ARM64 or X86_64.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * [Output Only] The architecture of the attached disk. Valid values are ARM64 or X86_64.
+   * @param architecture architecture or {@code null} for none
+   */
+  public AttachedDisk setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
+    return this;
+  }
 
   /**
    * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the

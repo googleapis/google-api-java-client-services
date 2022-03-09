@@ -264,6 +264,20 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInstantSnapshotId;
 
   /**
+   * [Output Only] URL of the resource policy which created this scheduled snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceSnapshotSchedulePolicy;
+
+  /**
+   * [Output Only] ID of the resource policy which created this scheduled snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceSnapshotSchedulePolicyId;
+
+  /**
    * [Output Only] The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or
    * UPLOADING.
    * The value may be {@code null}.
@@ -874,6 +888,40 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setSourceInstantSnapshotId(java.lang.String sourceInstantSnapshotId) {
     this.sourceInstantSnapshotId = sourceInstantSnapshotId;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the resource policy which created this scheduled snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceSnapshotSchedulePolicy() {
+    return sourceSnapshotSchedulePolicy;
+  }
+
+  /**
+   * [Output Only] URL of the resource policy which created this scheduled snapshot.
+   * @param sourceSnapshotSchedulePolicy sourceSnapshotSchedulePolicy or {@code null} for none
+   */
+  public Snapshot setSourceSnapshotSchedulePolicy(java.lang.String sourceSnapshotSchedulePolicy) {
+    this.sourceSnapshotSchedulePolicy = sourceSnapshotSchedulePolicy;
+    return this;
+  }
+
+  /**
+   * [Output Only] ID of the resource policy which created this scheduled snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceSnapshotSchedulePolicyId() {
+    return sourceSnapshotSchedulePolicyId;
+  }
+
+  /**
+   * [Output Only] ID of the resource policy which created this scheduled snapshot.
+   * @param sourceSnapshotSchedulePolicyId sourceSnapshotSchedulePolicyId or {@code null} for none
+   */
+  public Snapshot setSourceSnapshotSchedulePolicyId(java.lang.String sourceSnapshotSchedulePolicyId) {
+    this.sourceSnapshotSchedulePolicyId = sourceSnapshotSchedulePolicyId;
     return this;
   }
 

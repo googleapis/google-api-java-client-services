@@ -44,6 +44,13 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] The architecture of the machine type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -157,6 +164,23 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
    */
   public MachineType setAccelerators(java.util.List<Accelerators> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * [Output Only] The architecture of the machine type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * [Output Only] The architecture of the machine type.
+   * @param architecture architecture or {@code null} for none
+   */
+  public MachineType setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
     return this;
   }
 

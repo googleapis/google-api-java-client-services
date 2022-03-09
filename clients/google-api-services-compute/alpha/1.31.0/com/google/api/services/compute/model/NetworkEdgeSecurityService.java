@@ -62,6 +62,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   private java.math.BigInteger id;
 
   /**
+   * [Output only] Type of the resource. Always compute#networkEdgeSecurityService for
+   * NetworkEdgeSecurityServices
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,6 +223,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
+   * [Output only] Type of the resource. Always compute#networkEdgeSecurityService for
+   * NetworkEdgeSecurityServices
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -228,6 +232,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
+   * [Output only] Type of the resource. Always compute#networkEdgeSecurityService for
+   * NetworkEdgeSecurityServices
    * @param kind kind or {@code null} for none
    */
   public NetworkEdgeSecurityService setKind(java.lang.String kind) {

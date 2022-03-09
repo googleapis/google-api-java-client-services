@@ -30,21 +30,22 @@ package com.google.api.services.gmail.model;
 public final class ModifyMessageRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of IDs of labels to add to this message.
+   * A list of IDs of labels to add to this message. You can add up to 100 labels with each update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> addLabelIds;
 
   /**
-   * A list IDs of labels to remove from this message.
+   * A list IDs of labels to remove from this message. You can remove up to 100 labels with each
+   * update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> removeLabelIds;
 
   /**
-   * A list of IDs of labels to add to this message.
+   * A list of IDs of labels to add to this message. You can add up to 100 labels with each update.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAddLabelIds() {
@@ -52,7 +53,7 @@ public final class ModifyMessageRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list of IDs of labels to add to this message.
+   * A list of IDs of labels to add to this message. You can add up to 100 labels with each update.
    * @param addLabelIds addLabelIds or {@code null} for none
    */
   public ModifyMessageRequest setAddLabelIds(java.util.List<java.lang.String> addLabelIds) {
@@ -61,7 +62,8 @@ public final class ModifyMessageRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list IDs of labels to remove from this message.
+   * A list IDs of labels to remove from this message. You can remove up to 100 labels with each
+   * update.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRemoveLabelIds() {
@@ -69,7 +71,8 @@ public final class ModifyMessageRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list IDs of labels to remove from this message.
+   * A list IDs of labels to remove from this message. You can remove up to 100 labels with each
+   * update.
    * @param removeLabelIds removeLabelIds or {@code null} for none
    */
   public ModifyMessageRequest setRemoveLabelIds(java.util.List<java.lang.String> removeLabelIds) {

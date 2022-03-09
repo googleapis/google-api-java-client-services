@@ -39,8 +39,8 @@ public final class DnsResourceRecord extends com.google.api.client.json.GenericJ
   private java.lang.String data;
 
   /**
-   * Output only. Fully qualified name of the DNS Resource Record. e.g. "_acme-
-   * challenge.example.com."
+   * Output only. Fully qualified name of the DNS Resource Record. e.g. `_acme-
+   * challenge.example.com`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class DnsResourceRecord extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Fully qualified name of the DNS Resource Record. e.g. "_acme-
-   * challenge.example.com."
+   * Output only. Fully qualified name of the DNS Resource Record. e.g. `_acme-
+   * challenge.example.com`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,8 +80,8 @@ public final class DnsResourceRecord extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Fully qualified name of the DNS Resource Record. e.g. "_acme-
-   * challenge.example.com."
+   * Output only. Fully qualified name of the DNS Resource Record. e.g. `_acme-
+   * challenge.example.com`
    * @param name name or {@code null} for none
    */
   public DnsResourceRecord setName(java.lang.String name) {

@@ -54,9 +54,9 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
-   * A Hostname (FQDN, e.g. example.com) or a wildcard hostname expression (*.example.com) for a set
-   * of hostnames with common suffix. Used as Server Name Indication (SNI) for selecting a proper
-   * certificate.
+   * A Hostname (FQDN, e.g. `example.com`) or a wildcard hostname expression (`*.example.com`) for a
+   * set of hostnames with common suffix. Used as Server Name Indication (SNI) for selecting a
+   * proper certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,9 +154,9 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * A Hostname (FQDN, e.g. example.com) or a wildcard hostname expression (*.example.com) for a set
-   * of hostnames with common suffix. Used as Server Name Indication (SNI) for selecting a proper
-   * certificate.
+   * A Hostname (FQDN, e.g. `example.com`) or a wildcard hostname expression (`*.example.com`) for a
+   * set of hostnames with common suffix. Used as Server Name Indication (SNI) for selecting a
+   * proper certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostname() {
@@ -164,9 +164,9 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * A Hostname (FQDN, e.g. example.com) or a wildcard hostname expression (*.example.com) for a set
-   * of hostnames with common suffix. Used as Server Name Indication (SNI) for selecting a proper
-   * certificate.
+   * A Hostname (FQDN, e.g. `example.com`) or a wildcard hostname expression (`*.example.com`) for a
+   * set of hostnames with common suffix. Used as Server Name Indication (SNI) for selecting a
+   * proper certificate.
    * @param hostname hostname or {@code null} for none
    */
   public CertificateMapEntry setHostname(java.lang.String hostname) {

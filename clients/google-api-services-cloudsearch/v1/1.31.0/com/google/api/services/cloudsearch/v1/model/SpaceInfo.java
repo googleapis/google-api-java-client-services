@@ -54,6 +54,13 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
   private GroupId groupId;
 
   /**
+   * Whether this is an external space outside of user's organization
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isExternal;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,6 +136,23 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
    */
   public SpaceInfo setGroupId(GroupId groupId) {
     this.groupId = groupId;
+    return this;
+  }
+
+  /**
+   * Whether this is an external space outside of user's organization
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsExternal() {
+    return isExternal;
+  }
+
+  /**
+   * Whether this is an external space outside of user's organization
+   * @param isExternal isExternal or {@code null} for none
+   */
+  public SpaceInfo setIsExternal(java.lang.Boolean isExternal) {
+    this.isExternal = isExternal;
     return this;
   }
 

@@ -440,6 +440,148 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
     }
     /**
+     * Retrieves the service account that is used by Access Approval to access KMS keys for signing
+     * approved approval requests.
+     *
+     * Create a request for the method "folders.getServiceAccount".
+     *
+     * This request holds the parameters needed by the accessapproval server.  After setting any
+     * optional parameters, call the {@link GetServiceAccount#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Name of the AccessApprovalServiceAccount to retrieve.
+     * @return the request
+     */
+    public GetServiceAccount getServiceAccount(java.lang.String name) throws java.io.IOException {
+      GetServiceAccount result = new GetServiceAccount(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetServiceAccount extends AccessApprovalRequest<com.google.api.services.accessapproval.v1.model.AccessApprovalServiceAccount> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/serviceAccount$");
+
+      /**
+       * Retrieves the service account that is used by Access Approval to access KMS keys for signing
+       * approved approval requests.
+       *
+       * Create a request for the method "folders.getServiceAccount".
+       *
+       * This request holds the parameters needed by the the accessapproval server.  After setting any
+       * optional parameters, call the {@link GetServiceAccount#execute()} method to invoke the remote
+       * operation. <p> {@link GetServiceAccount#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Name of the AccessApprovalServiceAccount to retrieve.
+       * @since 1.13
+       */
+      protected GetServiceAccount(java.lang.String name) {
+        super(AccessApproval.this, "GET", REST_PATH, null, com.google.api.services.accessapproval.v1.model.AccessApprovalServiceAccount.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/serviceAccount$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetServiceAccount set$Xgafv(java.lang.String $Xgafv) {
+        return (GetServiceAccount) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetServiceAccount setAccessToken(java.lang.String accessToken) {
+        return (GetServiceAccount) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetServiceAccount setAlt(java.lang.String alt) {
+        return (GetServiceAccount) super.setAlt(alt);
+      }
+
+      @Override
+      public GetServiceAccount setCallback(java.lang.String callback) {
+        return (GetServiceAccount) super.setCallback(callback);
+      }
+
+      @Override
+      public GetServiceAccount setFields(java.lang.String fields) {
+        return (GetServiceAccount) super.setFields(fields);
+      }
+
+      @Override
+      public GetServiceAccount setKey(java.lang.String key) {
+        return (GetServiceAccount) super.setKey(key);
+      }
+
+      @Override
+      public GetServiceAccount setOauthToken(java.lang.String oauthToken) {
+        return (GetServiceAccount) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetServiceAccount setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetServiceAccount) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetServiceAccount setQuotaUser(java.lang.String quotaUser) {
+        return (GetServiceAccount) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetServiceAccount setUploadType(java.lang.String uploadType) {
+        return (GetServiceAccount) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetServiceAccount setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetServiceAccount) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the AccessApprovalServiceAccount to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Name of the AccessApprovalServiceAccount to retrieve.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Name of the AccessApprovalServiceAccount to retrieve. */
+      public GetServiceAccount setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/serviceAccount$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetServiceAccount set(String parameterName, Object value) {
+        return (GetServiceAccount) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the settings associated with a project, folder, or organization. Settings to update are
      * determined by the value of field_mask.
      *
@@ -1588,6 +1730,148 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
     }
     /**
+     * Retrieves the service account that is used by Access Approval to access KMS keys for signing
+     * approved approval requests.
+     *
+     * Create a request for the method "organizations.getServiceAccount".
+     *
+     * This request holds the parameters needed by the accessapproval server.  After setting any
+     * optional parameters, call the {@link GetServiceAccount#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Name of the AccessApprovalServiceAccount to retrieve.
+     * @return the request
+     */
+    public GetServiceAccount getServiceAccount(java.lang.String name) throws java.io.IOException {
+      GetServiceAccount result = new GetServiceAccount(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetServiceAccount extends AccessApprovalRequest<com.google.api.services.accessapproval.v1.model.AccessApprovalServiceAccount> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/serviceAccount$");
+
+      /**
+       * Retrieves the service account that is used by Access Approval to access KMS keys for signing
+       * approved approval requests.
+       *
+       * Create a request for the method "organizations.getServiceAccount".
+       *
+       * This request holds the parameters needed by the the accessapproval server.  After setting any
+       * optional parameters, call the {@link GetServiceAccount#execute()} method to invoke the remote
+       * operation. <p> {@link GetServiceAccount#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Name of the AccessApprovalServiceAccount to retrieve.
+       * @since 1.13
+       */
+      protected GetServiceAccount(java.lang.String name) {
+        super(AccessApproval.this, "GET", REST_PATH, null, com.google.api.services.accessapproval.v1.model.AccessApprovalServiceAccount.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/serviceAccount$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetServiceAccount set$Xgafv(java.lang.String $Xgafv) {
+        return (GetServiceAccount) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetServiceAccount setAccessToken(java.lang.String accessToken) {
+        return (GetServiceAccount) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetServiceAccount setAlt(java.lang.String alt) {
+        return (GetServiceAccount) super.setAlt(alt);
+      }
+
+      @Override
+      public GetServiceAccount setCallback(java.lang.String callback) {
+        return (GetServiceAccount) super.setCallback(callback);
+      }
+
+      @Override
+      public GetServiceAccount setFields(java.lang.String fields) {
+        return (GetServiceAccount) super.setFields(fields);
+      }
+
+      @Override
+      public GetServiceAccount setKey(java.lang.String key) {
+        return (GetServiceAccount) super.setKey(key);
+      }
+
+      @Override
+      public GetServiceAccount setOauthToken(java.lang.String oauthToken) {
+        return (GetServiceAccount) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetServiceAccount setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetServiceAccount) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetServiceAccount setQuotaUser(java.lang.String quotaUser) {
+        return (GetServiceAccount) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetServiceAccount setUploadType(java.lang.String uploadType) {
+        return (GetServiceAccount) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetServiceAccount setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetServiceAccount) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the AccessApprovalServiceAccount to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Name of the AccessApprovalServiceAccount to retrieve.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Name of the AccessApprovalServiceAccount to retrieve. */
+      public GetServiceAccount setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/serviceAccount$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetServiceAccount set(String parameterName, Object value) {
+        return (GetServiceAccount) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the settings associated with a project, folder, or organization. Settings to update are
      * determined by the value of field_mask.
      *
@@ -2733,6 +3017,148 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       @Override
       public GetAccessApprovalSettings set(String parameterName, Object value) {
         return (GetAccessApprovalSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the service account that is used by Access Approval to access KMS keys for signing
+     * approved approval requests.
+     *
+     * Create a request for the method "projects.getServiceAccount".
+     *
+     * This request holds the parameters needed by the accessapproval server.  After setting any
+     * optional parameters, call the {@link GetServiceAccount#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Name of the AccessApprovalServiceAccount to retrieve.
+     * @return the request
+     */
+    public GetServiceAccount getServiceAccount(java.lang.String name) throws java.io.IOException {
+      GetServiceAccount result = new GetServiceAccount(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetServiceAccount extends AccessApprovalRequest<com.google.api.services.accessapproval.v1.model.AccessApprovalServiceAccount> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccount$");
+
+      /**
+       * Retrieves the service account that is used by Access Approval to access KMS keys for signing
+       * approved approval requests.
+       *
+       * Create a request for the method "projects.getServiceAccount".
+       *
+       * This request holds the parameters needed by the the accessapproval server.  After setting any
+       * optional parameters, call the {@link GetServiceAccount#execute()} method to invoke the remote
+       * operation. <p> {@link GetServiceAccount#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Name of the AccessApprovalServiceAccount to retrieve.
+       * @since 1.13
+       */
+      protected GetServiceAccount(java.lang.String name) {
+        super(AccessApproval.this, "GET", REST_PATH, null, com.google.api.services.accessapproval.v1.model.AccessApprovalServiceAccount.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/serviceAccount$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetServiceAccount set$Xgafv(java.lang.String $Xgafv) {
+        return (GetServiceAccount) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetServiceAccount setAccessToken(java.lang.String accessToken) {
+        return (GetServiceAccount) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetServiceAccount setAlt(java.lang.String alt) {
+        return (GetServiceAccount) super.setAlt(alt);
+      }
+
+      @Override
+      public GetServiceAccount setCallback(java.lang.String callback) {
+        return (GetServiceAccount) super.setCallback(callback);
+      }
+
+      @Override
+      public GetServiceAccount setFields(java.lang.String fields) {
+        return (GetServiceAccount) super.setFields(fields);
+      }
+
+      @Override
+      public GetServiceAccount setKey(java.lang.String key) {
+        return (GetServiceAccount) super.setKey(key);
+      }
+
+      @Override
+      public GetServiceAccount setOauthToken(java.lang.String oauthToken) {
+        return (GetServiceAccount) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetServiceAccount setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetServiceAccount) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetServiceAccount setQuotaUser(java.lang.String quotaUser) {
+        return (GetServiceAccount) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetServiceAccount setUploadType(java.lang.String uploadType) {
+        return (GetServiceAccount) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetServiceAccount setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetServiceAccount) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the AccessApprovalServiceAccount to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Name of the AccessApprovalServiceAccount to retrieve.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Name of the AccessApprovalServiceAccount to retrieve. */
+      public GetServiceAccount setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/serviceAccount$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetServiceAccount set(String parameterName, Object value) {
+        return (GetServiceAccount) super.set(parameterName, value);
       }
     }
     /**

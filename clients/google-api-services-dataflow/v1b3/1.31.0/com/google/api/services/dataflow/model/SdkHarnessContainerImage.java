@@ -30,6 +30,14 @@ package com.google.api.services.dataflow.model;
 public final class SdkHarnessContainerImage extends com.google.api.client.json.GenericJson {
 
   /**
+   * The set of capabilities enumerated in the above Environment proto. See also
+   * https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> capabilities;
+
+  /**
    * A docker container image that resides in Google Container Registry.
    * The value may be {@code null}.
    */
@@ -53,6 +61,25 @@ public final class SdkHarnessContainerImage extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useSingleCorePerContainer;
+
+  /**
+   * The set of capabilities enumerated in the above Environment proto. See also
+   * https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCapabilities() {
+    return capabilities;
+  }
+
+  /**
+   * The set of capabilities enumerated in the above Environment proto. See also
+   * https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+   * @param capabilities capabilities or {@code null} for none
+   */
+  public SdkHarnessContainerImage setCapabilities(java.util.List<java.lang.String> capabilities) {
+    this.capabilities = capabilities;
+    return this;
+  }
 
   /**
    * A docker container image that resides in Google Container Registry.

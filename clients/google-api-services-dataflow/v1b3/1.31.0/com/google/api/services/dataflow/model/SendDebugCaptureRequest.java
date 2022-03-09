@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Request to send encoded debug information.
+ * Request to send encoded debug information. Next ID: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -42,6 +42,13 @@ public final class SendDebugCaptureRequest extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String data;
+
+  /**
+   * Format for the data field above (id=5).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataFormat;
 
   /**
    * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
@@ -89,6 +96,23 @@ public final class SendDebugCaptureRequest extends com.google.api.client.json.Ge
    */
   public SendDebugCaptureRequest setData(java.lang.String data) {
     this.data = data;
+    return this;
+  }
+
+  /**
+   * Format for the data field above (id=5).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataFormat() {
+    return dataFormat;
+  }
+
+  /**
+   * Format for the data field above (id=5).
+   * @param dataFormat dataFormat or {@code null} for none
+   */
+  public SendDebugCaptureRequest setDataFormat(java.lang.String dataFormat) {
+    this.dataFormat = dataFormat;
     return this;
   }
 

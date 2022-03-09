@@ -18,8 +18,7 @@ package com.google.api.services.mybusinessverifications.v1.model;
 
 /**
  * Indicates that the location fails to comply with our
- * [guidelines](https://support.google.com/business/answer/3038177). To fix this issue, consult the
- * [Help Center Article](https://support.google.com/business/answer/4569145).
+ * [guidelines](https://support.google.com/business/answer/3038177).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the My Business Verifications API. For a detailed
@@ -31,6 +30,30 @@ package com.google.api.services.mybusinessverifications.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class ComplyWithGuidelines extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The reason why the location is being recommended to comply with guidelines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recommendationReason;
+
+  /**
+   * The reason why the location is being recommended to comply with guidelines.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecommendationReason() {
+    return recommendationReason;
+  }
+
+  /**
+   * The reason why the location is being recommended to comply with guidelines.
+   * @param recommendationReason recommendationReason or {@code null} for none
+   */
+  public ComplyWithGuidelines setRecommendationReason(java.lang.String recommendationReason) {
+    this.recommendationReason = recommendationReason;
+    return this;
+  }
 
   @Override
   public ComplyWithGuidelines set(String fieldName, Object value) {

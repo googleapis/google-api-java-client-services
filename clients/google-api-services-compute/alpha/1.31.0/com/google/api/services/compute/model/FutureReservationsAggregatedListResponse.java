@@ -50,6 +50,8 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   private java.util.Map<String, FutureReservationsScopedList> items;
 
   /**
+   * [Output Only] Type of resource. Always compute#futureReservationsAggregatedListResponse for
+   * future resevation aggregated list response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,6 +138,8 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
+   * [Output Only] Type of resource. Always compute#futureReservationsAggregatedListResponse for
+   * future resevation aggregated list response.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -143,6 +147,8 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
+   * [Output Only] Type of resource. Always compute#futureReservationsAggregatedListResponse for
+   * future resevation aggregated list response.
    * @param kind kind or {@code null} for none
    */
   public FutureReservationsAggregatedListResponse setKind(java.lang.String kind) {

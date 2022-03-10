@@ -5639,13 +5639,14 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Optional. The maximum number of TagBindings to return in the response. The server allows a
        * maximum of 300 TagBindings to return. If unspecified, the server will use 100 as the
-       * default.
+       * default. Currently this api returns unpaginated response and `page_size` is ignored.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The maximum number of TagBindings to return in the response. The server allows a maximum
-     of 300 TagBindings to return. If unspecified, the server will use 100 as the default.
+     of 300 TagBindings to return. If unspecified, the server will use 100 as the default. Currently
+     this api returns unpaginated response and `page_size` is ignored.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -5654,7 +5655,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Optional. The maximum number of TagBindings to return in the response. The server allows a
        * maximum of 300 TagBindings to return. If unspecified, the server will use 100 as the
-       * default.
+       * default. Currently this api returns unpaginated response and `page_size` is ignored.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -5663,13 +5664,15 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Optional. A pagination token returned from a previous call to `ListTagBindings` that
-       * indicates where this listing should continue from.
+       * indicates where this listing should continue from. Currently this api returns unpaginated
+       * response and `page_token` is ignored.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** Optional. A pagination token returned from a previous call to `ListTagBindings` that indicates
-     where this listing should continue from.
+     where this listing should continue from. Currently this api returns unpaginated response and
+     `page_token` is ignored.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -5677,7 +5680,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Optional. A pagination token returned from a previous call to `ListTagBindings` that
-       * indicates where this listing should continue from.
+       * indicates where this listing should continue from. Currently this api returns unpaginated
+       * response and `page_token` is ignored.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;

@@ -61,6 +61,13 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   private ImageConfig image;
 
   /**
+   * Details about the work the de-identify operation performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeidentifyOperationMetadata operationMetadata;
+
+  /**
    * Configures de-identification of text wherever it is found in the source_dataset.
    * The value may be {@code null}.
    */
@@ -134,6 +141,23 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
    */
   public DeidentifyConfig setImage(ImageConfig image) {
     this.image = image;
+    return this;
+  }
+
+  /**
+   * Details about the work the de-identify operation performed.
+   * @return value or {@code null} for none
+   */
+  public DeidentifyOperationMetadata getOperationMetadata() {
+    return operationMetadata;
+  }
+
+  /**
+   * Details about the work the de-identify operation performed.
+   * @param operationMetadata operationMetadata or {@code null} for none
+   */
+  public DeidentifyConfig setOperationMetadata(DeidentifyOperationMetadata operationMetadata) {
+    this.operationMetadata = operationMetadata;
     return this;
   }
 

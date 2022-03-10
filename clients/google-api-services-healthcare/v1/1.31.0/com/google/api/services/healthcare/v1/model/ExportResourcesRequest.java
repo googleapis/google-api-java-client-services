@@ -30,6 +30,23 @@ package com.google.api.services.healthcare.v1.model;
 public final class ExportResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * If provided, only resources updated after this time are exported. The time uses the format
+   * YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or
+   * `2017-01-01T00:00:00Z`. The time must be specified to the second and include a time zone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("_since")
+  private java.lang.String since;
+
+  /**
+   * String of comma-delimited FHIR resource types. If provided, only resources of the specified
+   * resource type(s) are exported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("_type")
+  private java.lang.String type;
+
+  /**
    * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
    * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
    * one BigQuery table per resource type. Unlike when setting `BigQueryDestination` for
@@ -48,6 +65,46 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private GoogleCloudHealthcareV1FhirGcsDestination gcsDestination;
+
+  /**
+   * If provided, only resources updated after this time are exported. The time uses the format
+   * YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or
+   * `2017-01-01T00:00:00Z`. The time must be specified to the second and include a time zone.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSince() {
+    return since;
+  }
+
+  /**
+   * If provided, only resources updated after this time are exported. The time uses the format
+   * YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or
+   * `2017-01-01T00:00:00Z`. The time must be specified to the second and include a time zone.
+   * @param since since or {@code null} for none
+   */
+  public ExportResourcesRequest setSince(java.lang.String since) {
+    this.since = since;
+    return this;
+  }
+
+  /**
+   * String of comma-delimited FHIR resource types. If provided, only resources of the specified
+   * resource type(s) are exported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * String of comma-delimited FHIR resource types. If provided, only resources of the specified
+   * resource type(s) are exported.
+   * @param type type or {@code null} for none
+   */
+  public ExportResourcesRequest setType(java.lang.String type) {
+    this.type = type;
+    return this;
+  }
 
   /**
    * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on

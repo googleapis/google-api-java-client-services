@@ -20,7 +20,7 @@ package com.google.api.services.chat.v1;
  * Service definition for HangoutsChat (v1).
  *
  * <p>
- * Enables bots to fetch information and perform actions in Google Chat. Authentication using a service account is a prerequisite for using the Google Chat REST API.
+ * Enables apps to fetch information and perform actions in Google Chat. Authentication using a service account is a prerequisite for using the Google Chat REST API.
  * </p>
  *
  * <p>
@@ -3069,7 +3069,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the chat server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the attachment, in the form "spaces/messages/attachments".
+         * @param name Required. Resource name of the attachment, in the form "spaces/messages/attachments".
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3095,7 +3095,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the attachment, in the form "spaces/messages/attachments".
+           * @param name Required. Resource name of the attachment, in the form "spaces/messages/attachments".
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3173,17 +3173,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Resource name of the attachment, in the form "spaces/messages/attachments". */
+          /**
+           * Required. Resource name of the attachment, in the form "spaces/messages/attachments".
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the attachment, in the form "spaces/messages/attachments".
+          /** Required. Resource name of the attachment, in the form "spaces/messages/attachments".
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Resource name of the attachment, in the form "spaces/messages/attachments". */
+          /**
+           * Required. Resource name of the attachment, in the form "spaces/messages/attachments".
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

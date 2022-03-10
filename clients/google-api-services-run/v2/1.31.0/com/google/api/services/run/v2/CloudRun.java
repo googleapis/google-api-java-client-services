@@ -722,10 +722,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param parent Required. The location and project in which this service should be created. Format:
          *        projects/{projectnumber}/locations/{location}
-         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service}
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2Service content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
@@ -750,10 +750,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param parent Required. The location and project in which this service should be created. Format:
          *        projects/{projectnumber}/locations/{location}
-           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service}
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service content) {
+          protected Create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2Service content) {
             super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -1097,7 +1097,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service> {
+        public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Service> {
 
           private static final String REST_PATH = "v2/{+name}";
 
@@ -1119,7 +1119,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service.class);
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Service.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1437,7 +1437,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunOpV2ListServicesResponse> {
+        public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ListServicesResponse> {
 
           private static final String REST_PATH = "v2/{+parent}/services";
 
@@ -1459,7 +1459,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected List(java.lang.String parent) {
-            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunOpV2ListServicesResponse.class);
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ListServicesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1633,10 +1633,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @param name The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
          *        instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id.
          *        Format: projects/{project}/locations/{location}/services/{service_id}
-         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service}
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
          * @return the request
          */
-        public Patch patch(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service content) throws java.io.IOException {
+        public Patch patch(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2Service content) throws java.io.IOException {
           Patch result = new Patch(name, content);
           initialize(result);
           return result;
@@ -1662,10 +1662,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @param name The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
          *        instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id.
          *        Format: projects/{project}/locations/{location}/services/{service_id}
-           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service}
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
            * @since 1.13
            */
-          protected Patch(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunOpV2Service content) {
+          protected Patch(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2Service content) {
             super(CloudRun.this, "PATCH", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -2333,7 +2333,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunOpV2Revision> {
+          public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Revision> {
 
             private static final String REST_PATH = "v2/{+name}";
 
@@ -2355,7 +2355,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunOpV2Revision.class);
+              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Revision.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2481,7 +2481,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunOpV2ListRevisionsResponse> {
+          public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ListRevisionsResponse> {
 
             private static final String REST_PATH = "v2/{+parent}/revisions";
 
@@ -2504,7 +2504,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected List(java.lang.String parent) {
-              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunOpV2ListRevisionsResponse.class);
+              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ListRevisionsResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

@@ -30,6 +30,13 @@ package com.google.api.services.run.v1.model;
 public final class ExecutionStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The number of tasks which reached phase Cancelled. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer cancelledCount;
+
+  /**
    * Optional. Represents time when the execution was completed. It is not guaranteed to be set in
    * happens-before order across separate operations. It is represented in RFC3339 form and is in
    * UTC. +optional
@@ -68,6 +75,13 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   private java.lang.Integer observedGeneration;
 
   /**
+   * Optional. The number of tasks which have retried at least once. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer retriedCount;
+
+  /**
    * Optional. The number of actively running tasks. +optional
    * The value may be {@code null}.
    */
@@ -89,6 +103,23 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer succeededCount;
+
+  /**
+   * Optional. The number of tasks which reached phase Cancelled. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCancelledCount() {
+    return cancelledCount;
+  }
+
+  /**
+   * Optional. The number of tasks which reached phase Cancelled. +optional
+   * @param cancelledCount cancelledCount or {@code null} for none
+   */
+  public ExecutionStatus setCancelledCount(java.lang.Integer cancelledCount) {
+    this.cancelledCount = cancelledCount;
+    return this;
+  }
 
   /**
    * Optional. Represents time when the execution was completed. It is not guaranteed to be set in
@@ -178,6 +209,23 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
    */
   public ExecutionStatus setObservedGeneration(java.lang.Integer observedGeneration) {
     this.observedGeneration = observedGeneration;
+    return this;
+  }
+
+  /**
+   * Optional. The number of tasks which have retried at least once. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRetriedCount() {
+    return retriedCount;
+  }
+
+  /**
+   * Optional. The number of tasks which have retried at least once. +optional
+   * @param retriedCount retriedCount or {@code null} for none
+   */
+  public ExecutionStatus setRetriedCount(java.lang.Integer retriedCount) {
+    this.retriedCount = retriedCount;
     return this;
   }
 

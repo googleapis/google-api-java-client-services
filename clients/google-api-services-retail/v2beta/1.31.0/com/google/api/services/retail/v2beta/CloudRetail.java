@@ -404,27 +404,33 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The list of languages of the query. This is the BCP-47 language code, such as "en-US"
-           * or "sr-Latn". For more information, see [Tags for Identifying
-           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of allowed characters
-           * is 255. Only "en-US" is currently supported.
+           * The language filters applied to the output suggestions. If set, it should contain the
+           * language of the query. If not set, suggestions are returned without considering
+           * language restrictions. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+           * For more information, see [Tags for Identifying
+           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of language codes is
+           * 3.
            */
           @com.google.api.client.util.Key
           private java.util.List<java.lang.String> languageCodes;
 
-          /** The list of languages of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-         For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47). The
-         maximum number of allowed characters is 255. Only "en-US" is currently supported.
+          /** The language filters applied to the output suggestions. If set, it should contain the language of
+         the query. If not set, suggestions are returned without considering language restrictions. This is
+         the BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Tags for
+         Identifying Languages](https://tools.ietf.org/html/bcp47). The maximum number of language codes is
+         3.
            */
           public java.util.List<java.lang.String> getLanguageCodes() {
             return languageCodes;
           }
 
           /**
-           * The list of languages of the query. This is the BCP-47 language code, such as "en-US"
-           * or "sr-Latn". For more information, see [Tags for Identifying
-           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of allowed characters
-           * is 255. Only "en-US" is currently supported.
+           * The language filters applied to the output suggestions. If set, it should contain the
+           * language of the query. If not set, suggestions are returned without considering
+           * language restrictions. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+           * For more information, see [Tags for Identifying
+           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of language codes is
+           * 3.
            */
           public CompleteQuery setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
             this.languageCodes = languageCodes;

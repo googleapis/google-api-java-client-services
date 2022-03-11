@@ -35,7 +35,9 @@ public final class GoogleCloudDialogflowV2beta1EventInput extends com.google.api
    * Required. The language of this query. See [Language
    * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
    * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
+   * need to specify the same language. This field is ignored when used in the context of a
+   * WebhookResponse.followup_event_input field, because the language was already defined in the
+   * originating detect intent request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +67,9 @@ public final class GoogleCloudDialogflowV2beta1EventInput extends com.google.api
    * Required. The language of this query. See [Language
    * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
    * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
+   * need to specify the same language. This field is ignored when used in the context of a
+   * WebhookResponse.followup_event_input field, because the language was already defined in the
+   * originating detect intent request.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -76,7 +80,9 @@ public final class GoogleCloudDialogflowV2beta1EventInput extends com.google.api
    * Required. The language of this query. See [Language
    * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
    * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
+   * need to specify the same language. This field is ignored when used in the context of a
+   * WebhookResponse.followup_event_input field, because the language was already defined in the
+   * originating detect intent request.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EventInput setLanguageCode(java.lang.String languageCode) {

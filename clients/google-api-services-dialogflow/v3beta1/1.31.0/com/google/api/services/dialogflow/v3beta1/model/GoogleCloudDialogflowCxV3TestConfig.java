@@ -30,12 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3TestConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Flow name. If not set, default start flow is assumed. Format:
-   * `projects//locations//agents//flows/`.
+   * Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one
+   * of `flow` and `page` should be set to indicate the starting point of the test case. If both are
+   * set, `page` takes precedence over `flow`. If neither is set, the test case will start with
+   * start page on the default start flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flow;
+
+  /**
+   * The page to start the test case with. Format: `projects//locations//agents//flows//pages/`.
+   * Only one of `flow` and `page` should be set to indicate the starting point of the test case. If
+   * both are set, `page` takes precedence over `flow`. If neither is set, the test case will start
+   * with start page on the default start flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String page;
 
   /**
    * Session parameters to be compared when calculating differences.
@@ -45,8 +57,10 @@ public final class GoogleCloudDialogflowCxV3TestConfig extends com.google.api.cl
   private java.util.List<java.lang.String> trackingParameters;
 
   /**
-   * Flow name. If not set, default start flow is assumed. Format:
-   * `projects//locations//agents//flows/`.
+   * Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one
+   * of `flow` and `page` should be set to indicate the starting point of the test case. If both are
+   * set, `page` takes precedence over `flow`. If neither is set, the test case will start with
+   * start page on the default start flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlow() {
@@ -54,12 +68,37 @@ public final class GoogleCloudDialogflowCxV3TestConfig extends com.google.api.cl
   }
 
   /**
-   * Flow name. If not set, default start flow is assumed. Format:
-   * `projects//locations//agents//flows/`.
+   * Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one
+   * of `flow` and `page` should be set to indicate the starting point of the test case. If both are
+   * set, `page` takes precedence over `flow`. If neither is set, the test case will start with
+   * start page on the default start flow.
    * @param flow flow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestConfig setFlow(java.lang.String flow) {
     this.flow = flow;
+    return this;
+  }
+
+  /**
+   * The page to start the test case with. Format: `projects//locations//agents//flows//pages/`.
+   * Only one of `flow` and `page` should be set to indicate the starting point of the test case. If
+   * both are set, `page` takes precedence over `flow`. If neither is set, the test case will start
+   * with start page on the default start flow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPage() {
+    return page;
+  }
+
+  /**
+   * The page to start the test case with. Format: `projects//locations//agents//flows//pages/`.
+   * Only one of `flow` and `page` should be set to indicate the starting point of the test case. If
+   * both are set, `page` takes precedence over `flow`. If neither is set, the test case will start
+   * with start page on the default start flow.
+   * @param page page or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3TestConfig setPage(java.lang.String page) {
+    this.page = page;
     return this;
   }
 

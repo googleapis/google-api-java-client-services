@@ -38,7 +38,10 @@ public final class GoogleCloudDialogflowV2RestoreAgentRequest extends com.google
 
   /**
    * The URI to a Google Cloud Storage file containing the agent to restore. Note: The URI must
-   * start with "gs://".
+   * start with "gs://". Dialogflow performs a read operation for the Cloud Storage object on the
+   * caller's behalf, so your request authentication must have read permissions for the object. For
+   * more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +94,10 @@ public final class GoogleCloudDialogflowV2RestoreAgentRequest extends com.google
 
   /**
    * The URI to a Google Cloud Storage file containing the agent to restore. Note: The URI must
-   * start with "gs://".
+   * start with "gs://". Dialogflow performs a read operation for the Cloud Storage object on the
+   * caller's behalf, so your request authentication must have read permissions for the object. For
+   * more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentUri() {
@@ -100,7 +106,10 @@ public final class GoogleCloudDialogflowV2RestoreAgentRequest extends com.google
 
   /**
    * The URI to a Google Cloud Storage file containing the agent to restore. Note: The URI must
-   * start with "gs://".
+   * start with "gs://". Dialogflow performs a read operation for the Cloud Storage object on the
+   * caller's behalf, so your request authentication must have read permissions for the object. For
+   * more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param agentUri agentUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2RestoreAgentRequest setAgentUri(java.lang.String agentUri) {

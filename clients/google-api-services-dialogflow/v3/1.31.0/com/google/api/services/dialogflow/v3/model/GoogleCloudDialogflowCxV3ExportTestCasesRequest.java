@@ -49,7 +49,10 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   /**
    * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the test cases
    * to. The format of this URI must be `gs:`. If unspecified, the serialized test cases is returned
-   * inline.
+   * inline. Dialogflow performs a write operation for the Cloud Storage object on the caller's
+   * behalf, so your request authentication must have write permissions for the object. For more
+   * information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +101,10 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   /**
    * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the test cases
    * to. The format of this URI must be `gs:`. If unspecified, the serialized test cases is returned
-   * inline.
+   * inline. Dialogflow performs a write operation for the Cloud Storage object on the caller's
+   * behalf, so your request authentication must have write permissions for the object. For more
+   * information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -108,7 +114,10 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   /**
    * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the test cases
    * to. The format of this URI must be `gs:`. If unspecified, the serialized test cases is returned
-   * inline.
+   * inline. Dialogflow performs a write operation for the Cloud Storage object on the caller's
+   * behalf, so your request authentication must have write permissions for the object. For more
+   * information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportTestCasesRequest setGcsUri(java.lang.String gcsUri) {

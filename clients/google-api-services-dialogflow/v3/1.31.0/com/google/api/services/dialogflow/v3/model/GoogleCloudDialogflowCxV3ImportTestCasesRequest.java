@@ -38,7 +38,10 @@ public final class GoogleCloudDialogflowCxV3ImportTestCasesRequest extends com.g
 
   /**
    * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import test cases
-   * from. The format of this URI must be `gs:`.
+   * from. The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
+   * Storage object on the caller's behalf, so your request authentication must have read
+   * permissions for the object. For more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +94,10 @@ public final class GoogleCloudDialogflowCxV3ImportTestCasesRequest extends com.g
 
   /**
    * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import test cases
-   * from. The format of this URI must be `gs:`.
+   * from. The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
+   * Storage object on the caller's behalf, so your request authentication must have read
+   * permissions for the object. For more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -100,7 +106,10 @@ public final class GoogleCloudDialogflowCxV3ImportTestCasesRequest extends com.g
 
   /**
    * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import test cases
-   * from. The format of this URI must be `gs:`.
+   * from. The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
+   * Storage object on the caller's behalf, so your request authentication must have read
+   * permissions for the object. For more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportTestCasesRequest setGcsUri(java.lang.String gcsUri) {

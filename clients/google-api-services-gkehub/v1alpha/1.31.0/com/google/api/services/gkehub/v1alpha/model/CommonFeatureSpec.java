@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class CommonFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Anthos Observability spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnthosObservabilityFeatureSpec anthosobservability;
+
+  /**
    * Appdevexperience specific spec.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private FeatureSpec workloadcertificate;
+
+  /**
+   * Anthos Observability spec
+   * @return value or {@code null} for none
+   */
+  public AnthosObservabilityFeatureSpec getAnthosobservability() {
+    return anthosobservability;
+  }
+
+  /**
+   * Anthos Observability spec
+   * @param anthosobservability anthosobservability or {@code null} for none
+   */
+  public CommonFeatureSpec setAnthosobservability(AnthosObservabilityFeatureSpec anthosobservability) {
+    this.anthosobservability = anthosobservability;
+    return this;
+  }
 
   /**
    * Appdevexperience specific spec.

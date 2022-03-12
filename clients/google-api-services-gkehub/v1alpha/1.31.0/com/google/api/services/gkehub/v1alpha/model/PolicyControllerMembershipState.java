@@ -51,7 +51,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerPolicyControllerHubState policyControllerHubState;
+  private PolicyControllerHubState policyControllerHubState;
 
   /**
    * The lifecycle state Policy Controller is in.
@@ -104,7 +104,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * Policy Controller state observed by the Policy Controller Hub
    * @return value or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubState getPolicyControllerHubState() {
+  public PolicyControllerHubState getPolicyControllerHubState() {
     return policyControllerHubState;
   }
 
@@ -112,7 +112,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * Policy Controller state observed by the Policy Controller Hub
    * @param policyControllerHubState policyControllerHubState or {@code null} for none
    */
-  public PolicyControllerMembershipState setPolicyControllerHubState(PolicyControllerPolicyControllerHubState policyControllerHubState) {
+  public PolicyControllerMembershipState setPolicyControllerHubState(PolicyControllerHubState policyControllerHubState) {
     this.policyControllerHubState = policyControllerHubState;
     return this;
   }

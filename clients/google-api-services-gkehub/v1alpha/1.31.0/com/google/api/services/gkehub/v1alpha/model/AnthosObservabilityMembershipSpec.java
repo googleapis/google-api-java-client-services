@@ -47,6 +47,13 @@ public final class AnthosObservabilityMembershipSpec extends com.google.api.clie
   private java.lang.Boolean enableStackdriverOnApplications;
 
   /**
+   * the version of stackdriver operator used by this feature
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
    * use full of metrics rather than optimized metrics. See
    * https://cloud.google.com/anthos/clusters/docs/on-prem/1.8/concepts/logging-and-
    * monitoring#optimized_metrics_default_metrics
@@ -83,6 +90,23 @@ public final class AnthosObservabilityMembershipSpec extends com.google.api.clie
    */
   public AnthosObservabilityMembershipSpec setEnableStackdriverOnApplications(java.lang.Boolean enableStackdriverOnApplications) {
     this.enableStackdriverOnApplications = enableStackdriverOnApplications;
+    return this;
+  }
+
+  /**
+   * the version of stackdriver operator used by this feature
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * the version of stackdriver operator used by this feature
+   * @param version version or {@code null} for none
+   */
+  public AnthosObservabilityMembershipSpec setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

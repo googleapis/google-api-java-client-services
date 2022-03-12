@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * **Policy Controller**: Configuration for a single cluster. Intended to parallel the
- * PolicyController CR.
+ * The build version of Gatekeeper that Policy Controller is using.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -28,41 +27,17 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class PolicyControllerHubVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Policy Controller configuration for the cluster.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PolicyControllerHubConfig policyControllerHubConfig;
-
-  /**
-   * Version of Policy Controller installed.
+   * The gatekeeper image tag that is composed of ACM version, git tag, build number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Policy Controller configuration for the cluster.
-   * @return value or {@code null} for none
-   */
-  public PolicyControllerHubConfig getPolicyControllerHubConfig() {
-    return policyControllerHubConfig;
-  }
-
-  /**
-   * Policy Controller configuration for the cluster.
-   * @param policyControllerHubConfig policyControllerHubConfig or {@code null} for none
-   */
-  public PolicyControllerMembershipSpec setPolicyControllerHubConfig(PolicyControllerHubConfig policyControllerHubConfig) {
-    this.policyControllerHubConfig = policyControllerHubConfig;
-    return this;
-  }
-
-  /**
-   * Version of Policy Controller installed.
+   * The gatekeeper image tag that is composed of ACM version, git tag, build number.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -70,22 +45,22 @@ public final class PolicyControllerMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Version of Policy Controller installed.
+   * The gatekeeper image tag that is composed of ACM version, git tag, build number.
    * @param version version or {@code null} for none
    */
-  public PolicyControllerMembershipSpec setVersion(java.lang.String version) {
+  public PolicyControllerHubVersion setVersion(java.lang.String version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public PolicyControllerMembershipSpec set(String fieldName, Object value) {
-    return (PolicyControllerMembershipSpec) super.set(fieldName, value);
+  public PolicyControllerHubVersion set(String fieldName, Object value) {
+    return (PolicyControllerHubVersion) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerMembershipSpec clone() {
-    return (PolicyControllerMembershipSpec) super.clone();
+  public PolicyControllerHubVersion clone() {
+    return (PolicyControllerHubVersion) super.clone();
   }
 
 }

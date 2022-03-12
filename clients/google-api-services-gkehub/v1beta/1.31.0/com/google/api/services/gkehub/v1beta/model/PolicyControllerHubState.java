@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * **Policy Controller**: Configuration for a single cluster. Intended to parallel the
- * PolicyController CR.
+ * State of the Policy Controller.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -28,64 +27,67 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class PolicyControllerHubState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Policy Controller configuration for the cluster.
+   * Map from deployment name to deployment state. Example deployments are gatekeeper-controller-
+   * manager, gatekeeper-audit deployment, and gatekeeper-mutation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerHubConfig policyControllerHubConfig;
+  private java.util.Map<String, java.lang.String> deploymentStates;
 
   /**
-   * Version of Policy Controller installed.
+   * The version of Gatekeeper Policy Controller deployed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String version;
+  private PolicyControllerHubVersion version;
 
   /**
-   * Policy Controller configuration for the cluster.
+   * Map from deployment name to deployment state. Example deployments are gatekeeper-controller-
+   * manager, gatekeeper-audit deployment, and gatekeeper-mutation.
    * @return value or {@code null} for none
    */
-  public PolicyControllerHubConfig getPolicyControllerHubConfig() {
-    return policyControllerHubConfig;
+  public java.util.Map<String, java.lang.String> getDeploymentStates() {
+    return deploymentStates;
   }
 
   /**
-   * Policy Controller configuration for the cluster.
-   * @param policyControllerHubConfig policyControllerHubConfig or {@code null} for none
+   * Map from deployment name to deployment state. Example deployments are gatekeeper-controller-
+   * manager, gatekeeper-audit deployment, and gatekeeper-mutation.
+   * @param deploymentStates deploymentStates or {@code null} for none
    */
-  public PolicyControllerMembershipSpec setPolicyControllerHubConfig(PolicyControllerHubConfig policyControllerHubConfig) {
-    this.policyControllerHubConfig = policyControllerHubConfig;
+  public PolicyControllerHubState setDeploymentStates(java.util.Map<String, java.lang.String> deploymentStates) {
+    this.deploymentStates = deploymentStates;
     return this;
   }
 
   /**
-   * Version of Policy Controller installed.
+   * The version of Gatekeeper Policy Controller deployed.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVersion() {
+  public PolicyControllerHubVersion getVersion() {
     return version;
   }
 
   /**
-   * Version of Policy Controller installed.
+   * The version of Gatekeeper Policy Controller deployed.
    * @param version version or {@code null} for none
    */
-  public PolicyControllerMembershipSpec setVersion(java.lang.String version) {
+  public PolicyControllerHubState setVersion(PolicyControllerHubVersion version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public PolicyControllerMembershipSpec set(String fieldName, Object value) {
-    return (PolicyControllerMembershipSpec) super.set(fieldName, value);
+  public PolicyControllerHubState set(String fieldName, Object value) {
+    return (PolicyControllerHubState) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerMembershipSpec clone() {
-    return (PolicyControllerMembershipSpec) super.clone();
+  public PolicyControllerHubState clone() {
+    return (PolicyControllerHubState) super.clone();
   }
 
 }

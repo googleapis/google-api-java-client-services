@@ -133,6 +133,244 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
   }
 
   /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code GKEHub gkehub = new GKEHub(...);}
+   *   {@code GKEHub.Organizations.List request = gkehub.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GKEHub gkehub = new GKEHub(...);}
+     *   {@code GKEHub.Locations.List request = gkehub.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Fleets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code GKEHub gkehub = new GKEHub(...);}
+       *   {@code GKEHub.Fleets.List request = gkehub.fleets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Fleets fleets() {
+        return new Fleets();
+      }
+
+      /**
+       * The "fleets" collection of methods.
+       */
+      public class Fleets {
+
+        /**
+         * Returns all fleets within an organization or a project that the caller has access to.
+         *
+         * Create a request for the method "fleets.list".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The organization or project to list for Fleets under, in the format
+         *        `organizations/locations` or `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.ListFleetsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/fleets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns all fleets within an organization or a project that the caller has access to.
+           *
+           * Create a request for the method "fleets.list".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The organization or project to list for Fleets under, in the format
+         *        `organizations/locations` or `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.ListFleetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The organization or project to list for Fleets under, in the format
+           * `organizations/locations` or `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The organization or project to list for Fleets under, in the format
+         `organizations/locations` or `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The organization or project to list for Fleets under, in the format
+           * `organizations/locations` or `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
+           * match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListFleets` call. Provide this to retrieve the subsequent
+         page. When paginating, all other parameters provided to `ListFleets` must match the call that
+         provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
+           * match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -2408,6 +2646,179 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns all fleets within an organization or a project that the caller has access to.
+         *
+         * Create a request for the method "fleets.list".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The organization or project to list for Fleets under, in the format
+         *        `organizations/locations` or `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.ListFleetsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/fleets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns all fleets within an organization or a project that the caller has access to.
+           *
+           * Create a request for the method "fleets.list".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The organization or project to list for Fleets under, in the format
+         *        `organizations/locations` or `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.ListFleetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The organization or project to list for Fleets under, in the format
+           * `organizations/locations` or `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The organization or project to list for Fleets under, in the format
+         `organizations/locations` or `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The organization or project to list for Fleets under, in the format
+           * `organizations/locations` or `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
+           * match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListFleets` call. Provide this to retrieve the subsequent
+         page. When paginating, all other parameters provided to `ListFleets` must match the call that
+         provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
+           * match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**

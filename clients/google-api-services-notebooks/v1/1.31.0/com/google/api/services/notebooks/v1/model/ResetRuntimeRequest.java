@@ -29,6 +29,30 @@ package com.google.api.services.notebooks.v1.model;
 @SuppressWarnings("javadoc")
 public final class ResetRuntimeRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Idempotent request UUID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
+
+  /**
+   * Idempotent request UUID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * Idempotent request UUID.
+   * @param requestId requestId or {@code null} for none
+   */
+  public ResetRuntimeRequest setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
+    return this;
+  }
+
   @Override
   public ResetRuntimeRequest set(String fieldName, Object value) {
     return (ResetRuntimeRequest) super.set(fieldName, value);

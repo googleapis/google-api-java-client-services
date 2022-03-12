@@ -44,6 +44,13 @@ public final class SwitchRuntimeRequest extends com.google.api.client.json.Gener
   private java.lang.String machineType;
 
   /**
+   * Idempotent request UUID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
+
+  /**
    * accelerator config.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class SwitchRuntimeRequest extends com.google.api.client.json.Gener
    */
   public SwitchRuntimeRequest setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Idempotent request UUID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * Idempotent request UUID.
+   * @param requestId requestId or {@code null} for none
+   */
+  public SwitchRuntimeRequest setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
     return this;
   }
 

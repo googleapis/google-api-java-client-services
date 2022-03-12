@@ -17,8 +17,7 @@
 package com.google.api.services.composer.v1beta1.model;
 
 /**
- * The configuration of Cloud SQL instance that is used by the Apache Airflow software. Supported
- * for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+ * The configuration of Cloud SQL instance that is used by the Apache Airflow software.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Composer API. For a detailed explanation see:
@@ -33,7 +32,8 @@ public final class DatabaseConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Cloud SQL machine type used by Airflow database. It has to be one of:
    * db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified,
-   * db-n1-standard-2 will be used.
+   * db-n1-standard-2 will be used. Supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +42,8 @@ public final class DatabaseConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Cloud SQL machine type used by Airflow database. It has to be one of:
    * db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified,
-   * db-n1-standard-2 will be used.
+   * db-n1-standard-2 will be used. Supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -52,7 +53,8 @@ public final class DatabaseConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Cloud SQL machine type used by Airflow database. It has to be one of:
    * db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified,
-   * db-n1-standard-2 will be used.
+   * db-n1-standard-2 will be used. Supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @param machineType machineType or {@code null} for none
    */
   public DatabaseConfig setMachineType(java.lang.String machineType) {

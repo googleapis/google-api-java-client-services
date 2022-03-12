@@ -49,8 +49,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
-   * software. This field is supported for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * software.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,8 +200,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
-   * software. This field is supported for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * software.
    * @return value or {@code null} for none
    */
   public DatabaseConfig getDatabaseConfig() {
@@ -211,8 +209,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
-   * software. This field is supported for Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*.
+   * software.
    * @param databaseConfig databaseConfig or {@code null} for none
    */
   public EnvironmentConfig setDatabaseConfig(DatabaseConfig databaseConfig) {

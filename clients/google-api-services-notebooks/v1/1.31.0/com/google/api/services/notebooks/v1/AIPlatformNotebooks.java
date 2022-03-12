@@ -5898,6 +5898,22 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
             return this;
           }
 
+          /** Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Idempotent request UUID. */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
           /** Required. User-defined unique ID of this Runtime. */
           @com.google.api.client.util.Key
           private java.lang.String runtimeId;
@@ -6044,6 +6060,22 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
                   "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /** Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Idempotent request UUID. */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 

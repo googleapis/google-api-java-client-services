@@ -37,7 +37,7 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean creationDisabled;
 
   /**
-   * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b(.c)"
+   * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b.c"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b(.c)"
+   * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b.c"
    * @return value or {@code null} for none
    */
   public java.lang.String getImageVersionId() {
@@ -98,7 +98,7 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b(.c)"
+   * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b.c"
    * @param imageVersionId imageVersionId or {@code null} for none
    */
   public ImageVersion setImageVersionId(java.lang.String imageVersionId) {

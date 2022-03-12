@@ -96,7 +96,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.lang.String processingState;
 
   /**
-   * Required. Resource name that identifies one or more subscription products. The format will be
+   * Required. Required. Resource name that identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
    */
@@ -104,8 +104,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.util.List<java.lang.String> products;
 
   /**
-   * Optional. Resource name that identifies one or more promotions that can be applied on the
-   * product. A typical promotion for a subscription is Free trial. The format will be
+   * Optional. Optional. Resource name that identifies one or more promotions that can be applied on
+   * the product. A typical promotion for a subscription is Free trial. The format will be
    * 'partners/{partner_id}/promotions/{promotion_id}'.
    * The value may be {@code null}.
    */
@@ -320,7 +320,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Resource name that identifies one or more subscription products. The format will be
+   * Required. Required. Resource name that identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * @return value or {@code null} for none
    */
@@ -329,7 +329,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Resource name that identifies one or more subscription products. The format will be
+   * Required. Required. Resource name that identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * @param products products or {@code null} for none
    */
@@ -339,8 +339,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Optional. Resource name that identifies one or more promotions that can be applied on the
-   * product. A typical promotion for a subscription is Free trial. The format will be
+   * Optional. Optional. Resource name that identifies one or more promotions that can be applied on
+   * the product. A typical promotion for a subscription is Free trial. The format will be
    * 'partners/{partner_id}/promotions/{promotion_id}'.
    * @return value or {@code null} for none
    */
@@ -349,8 +349,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Optional. Resource name that identifies one or more promotions that can be applied on the
-   * product. A typical promotion for a subscription is Free trial. The format will be
+   * Optional. Optional. Resource name that identifies one or more promotions that can be applied on
+   * the product. A typical promotion for a subscription is Free trial. The format will be
    * 'partners/{partner_id}/promotions/{promotion_id}'.
    * @param promotions promotions or {@code null} for none
    */

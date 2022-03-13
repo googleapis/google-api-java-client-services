@@ -30,14 +30,14 @@ package com.google.api.services.datastream.v1.model;
 public final class SourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * MySQL data source configuration
+   * MySQL data source configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MysqlSourceConfig mysqlSourceConfig;
 
   /**
-   * Oracle data source configuration
+   * Oracle data source configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceConnectionProfile;
 
   /**
-   * MySQL data source configuration
+   * MySQL data source configuration.
    * @return value or {@code null} for none
    */
   public MysqlSourceConfig getMysqlSourceConfig() {
@@ -60,7 +60,7 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MySQL data source configuration
+   * MySQL data source configuration.
    * @param mysqlSourceConfig mysqlSourceConfig or {@code null} for none
    */
   public SourceConfig setMysqlSourceConfig(MysqlSourceConfig mysqlSourceConfig) {
@@ -69,7 +69,7 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Oracle data source configuration
+   * Oracle data source configuration.
    * @return value or {@code null} for none
    */
   public OracleSourceConfig getOracleSourceConfig() {
@@ -77,7 +77,7 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Oracle data source configuration
+   * Oracle data source configuration.
    * @param oracleSourceConfig oracleSourceConfig or {@code null} for none
    */
   public SourceConfig setOracleSourceConfig(OracleSourceConfig oracleSourceConfig) {

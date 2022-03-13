@@ -30,7 +30,7 @@ package com.google.api.services.datastream.v1.model;
 public final class MysqlTable extends com.google.api.client.json.GenericJson {
 
   /**
-   * MySQL columns in the database. When unspecified as part of include/exclude lists,
+   * MySQL columns in the database. When unspecified as part of include/exclude objects,
    * includes/excludes everything.
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class MysqlTable extends com.google.api.client.json.GenericJson {
   private java.lang.String table;
 
   /**
-   * MySQL columns in the database. When unspecified as part of include/exclude lists,
+   * MySQL columns in the database. When unspecified as part of include/exclude objects,
    * includes/excludes everything.
    * @return value or {@code null} for none
    */
@@ -60,7 +60,7 @@ public final class MysqlTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MySQL columns in the database. When unspecified as part of include/exclude lists,
+   * MySQL columns in the database. When unspecified as part of include/exclude objects,
    * includes/excludes everything.
    * @param mysqlColumns mysqlColumns or {@code null} for none
    */

@@ -30,7 +30,7 @@ package com.google.api.services.datastream.v1.model;
 public final class OracleTable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Oracle columns in the schema. When unspecified as part of inclue/exclude lists,
+   * Oracle columns in the schema. When unspecified as part of include/exclude objects,
    * includes/excludes everything.
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class OracleTable extends com.google.api.client.json.GenericJson {
   private java.lang.String table;
 
   /**
-   * Oracle columns in the schema. When unspecified as part of inclue/exclude lists,
+   * Oracle columns in the schema. When unspecified as part of include/exclude objects,
    * includes/excludes everything.
    * @return value or {@code null} for none
    */
@@ -60,7 +60,7 @@ public final class OracleTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Oracle columns in the schema. When unspecified as part of inclue/exclude lists,
+   * Oracle columns in the schema. When unspecified as part of include/exclude objects,
    * includes/excludes everything.
    * @param oracleColumns oracleColumns or {@code null} for none
    */

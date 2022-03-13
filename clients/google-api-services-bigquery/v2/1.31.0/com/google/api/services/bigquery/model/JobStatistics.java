@@ -37,6 +37,13 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Double completionRatio;
 
   /**
+   * [Output-only] Statistics for a copy job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JobStatistics5 copy;
+
+  /**
    * [Output-only] Creation time of this job, in milliseconds since the epoch. This field will be
    * present on all jobs.
    * The value may be {@code null}.
@@ -182,6 +189,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setCompletionRatio(java.lang.Double completionRatio) {
     this.completionRatio = completionRatio;
+    return this;
+  }
+
+  /**
+   * [Output-only] Statistics for a copy job.
+   * @return value or {@code null} for none
+   */
+  public JobStatistics5 getCopy() {
+    return copy;
+  }
+
+  /**
+   * [Output-only] Statistics for a copy job.
+   * @param copy copy or {@code null} for none
+   */
+  public JobStatistics setCopy(JobStatistics5 copy) {
+    this.copy = copy;
     return this;
   }
 

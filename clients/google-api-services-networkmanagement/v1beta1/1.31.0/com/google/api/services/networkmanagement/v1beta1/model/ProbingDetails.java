@@ -38,6 +38,16 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   private java.lang.String abortCause;
 
   /**
+   * The EdgeLocation from which a packet destined for/originating from the internet will
+   * egress/ingress the Google network. This will only be populated for a connectivity test which
+   * has an internet destination/source address. The absence of this field *must not* be used as an
+   * indication that the destination/source is part of the Google network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EdgeLocation destinationEgressLocation;
+
+  /**
    * The source and destination endpoints derived from the test input and used for active probing.
    * The value may be {@code null}.
    */
@@ -101,6 +111,29 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    */
   public ProbingDetails setAbortCause(java.lang.String abortCause) {
     this.abortCause = abortCause;
+    return this;
+  }
+
+  /**
+   * The EdgeLocation from which a packet destined for/originating from the internet will
+   * egress/ingress the Google network. This will only be populated for a connectivity test which
+   * has an internet destination/source address. The absence of this field *must not* be used as an
+   * indication that the destination/source is part of the Google network.
+   * @return value or {@code null} for none
+   */
+  public EdgeLocation getDestinationEgressLocation() {
+    return destinationEgressLocation;
+  }
+
+  /**
+   * The EdgeLocation from which a packet destined for/originating from the internet will
+   * egress/ingress the Google network. This will only be populated for a connectivity test which
+   * has an internet destination/source address. The absence of this field *must not* be used as an
+   * indication that the destination/source is part of the Google network.
+   * @param destinationEgressLocation destinationEgressLocation or {@code null} for none
+   */
+  public ProbingDetails setDestinationEgressLocation(EdgeLocation destinationEgressLocation) {
+    this.destinationEgressLocation = destinationEgressLocation;
     return this;
   }
 

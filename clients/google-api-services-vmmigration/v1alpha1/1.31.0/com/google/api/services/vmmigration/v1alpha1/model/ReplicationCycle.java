@@ -51,6 +51,19 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String startTime;
 
   /**
+   * The cycle's steps list reflecting its progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CycleStep> steps;
+
+  static {
+    // hack to force ProGuard to consider CycleStep used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CycleStep.class);
+  }
+
+  /**
    * The accumulated duration the replication cycle was paused.
    * The value may be {@code null}.
    */
@@ -105,6 +118,23 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
    */
   public ReplicationCycle setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * The cycle's steps list reflecting its progress.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CycleStep> getSteps() {
+    return steps;
+  }
+
+  /**
+   * The cycle's steps list reflecting its progress.
+   * @param steps steps or {@code null} for none
+   */
+  public ReplicationCycle setSteps(java.util.List<CycleStep> steps) {
+    this.steps = steps;
     return this;
   }
 

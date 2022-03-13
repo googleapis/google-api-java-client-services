@@ -31,6 +31,20 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class ProvisioningConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. URI to Cloud Console UI view of this provisioning config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudConsoleUri;
+
+  /**
+   * Optional. Email provided to send a confirmation with provisioning config to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String email;
+
+  /**
    * A service account to enable customers to access instance credentials upon handover.
    * The value may be {@code null}.
    */
@@ -49,6 +63,14 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(InstanceConfig.class);
   }
+
+  /**
+   * Optional. Location name of this ProvisioningConfig. It is optional only for Intake UI
+   * transition period.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
 
   /**
    * Output only. The name of the provisioning config.
@@ -71,6 +93,13 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
+   * Output only. State of ProvisioningConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * A generated buganizer id to track provisioning request.
    * The value may be {@code null}.
    */
@@ -78,11 +107,52 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   private java.lang.String ticketId;
 
   /**
+   * Output only. Last update timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Volumes to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<VolumeConfig> volumes;
+
+  /**
+   * Output only. URI to Cloud Console UI view of this provisioning config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudConsoleUri() {
+    return cloudConsoleUri;
+  }
+
+  /**
+   * Output only. URI to Cloud Console UI view of this provisioning config.
+   * @param cloudConsoleUri cloudConsoleUri or {@code null} for none
+   */
+  public ProvisioningConfig setCloudConsoleUri(java.lang.String cloudConsoleUri) {
+    this.cloudConsoleUri = cloudConsoleUri;
+    return this;
+  }
+
+  /**
+   * Optional. Email provided to send a confirmation with provisioning config to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmail() {
+    return email;
+  }
+
+  /**
+   * Optional. Email provided to send a confirmation with provisioning config to.
+   * @param email email or {@code null} for none
+   */
+  public ProvisioningConfig setEmail(java.lang.String email) {
+    this.email = email;
+    return this;
+  }
 
   /**
    * A service account to enable customers to access instance credentials upon handover.
@@ -115,6 +185,25 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
    */
   public ProvisioningConfig setInstances(java.util.List<InstanceConfig> instances) {
     this.instances = instances;
+    return this;
+  }
+
+  /**
+   * Optional. Location name of this ProvisioningConfig. It is optional only for Intake UI
+   * transition period.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Optional. Location name of this ProvisioningConfig. It is optional only for Intake UI
+   * transition period.
+   * @param location location or {@code null} for none
+   */
+  public ProvisioningConfig setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 
@@ -153,6 +242,23 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
+   * Output only. State of ProvisioningConfig.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of ProvisioningConfig.
+   * @param state state or {@code null} for none
+   */
+  public ProvisioningConfig setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
    * A generated buganizer id to track provisioning request.
    * @return value or {@code null} for none
    */
@@ -166,6 +272,23 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
    */
   public ProvisioningConfig setTicketId(java.lang.String ticketId) {
     this.ticketId = ticketId;
+    return this;
+  }
+
+  /**
+   * Output only. Last update timestamp.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Last update timestamp.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public ProvisioningConfig setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

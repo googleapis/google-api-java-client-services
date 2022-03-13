@@ -45,6 +45,14 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String cidr;
 
   /**
+   * The GCP service of the network. Available gcp_service are in https://cloud.google.com/bare-
+   * metal/docs/bms-planning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcpService;
+
+  /**
    * A transient unique identifier to identify a volume within an ProvisioningConfig request.
    * The value may be {@code null}.
    */
@@ -95,6 +103,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Whether the VLAN attachment pair is located in the same project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean vlanSameProject;
+
+  /**
    * Interconnect bandwidth. Set only when type is CLIENT.
    * @return value or {@code null} for none
    */
@@ -125,6 +140,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setCidr(java.lang.String cidr) {
     this.cidr = cidr;
+    return this;
+  }
+
+  /**
+   * The GCP service of the network. Available gcp_service are in https://cloud.google.com/bare-
+   * metal/docs/bms-planning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcpService() {
+    return gcpService;
+  }
+
+  /**
+   * The GCP service of the network. Available gcp_service are in https://cloud.google.com/bare-
+   * metal/docs/bms-planning.
+   * @param gcpService gcpService or {@code null} for none
+   */
+  public NetworkConfig setGcpService(java.lang.String gcpService) {
+    this.gcpService = gcpService;
     return this;
   }
 
@@ -231,6 +265,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setVlanAttachments(java.util.List<IntakeVlanAttachment> vlanAttachments) {
     this.vlanAttachments = vlanAttachments;
+    return this;
+  }
+
+  /**
+   * Whether the VLAN attachment pair is located in the same project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVlanSameProject() {
+    return vlanSameProject;
+  }
+
+  /**
+   * Whether the VLAN attachment pair is located in the same project.
+   * @param vlanSameProject vlanSameProject or {@code null} for none
+   */
+  public NetworkConfig setVlanSameProject(java.lang.Boolean vlanSameProject) {
+    this.vlanSameProject = vlanSameProject;
     return this;
   }
 

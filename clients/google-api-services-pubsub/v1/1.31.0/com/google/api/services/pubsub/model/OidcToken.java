@@ -43,9 +43,8 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
 
   /**
    * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for
-   * generating the OIDC token. The caller (for CreateSubscription, UpdateSubscription, and
-   * ModifyPushConfig RPCs) must have the iam.serviceAccounts.actAs permission for the service
-   * account.
+   * generating the OIDC token. See [Setting up push
+   * authentication](/pubsub/docs/push#setting_up_for_push_authentication) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +77,8 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
 
   /**
    * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for
-   * generating the OIDC token. The caller (for CreateSubscription, UpdateSubscription, and
-   * ModifyPushConfig RPCs) must have the iam.serviceAccounts.actAs permission for the service
-   * account.
+   * generating the OIDC token. See [Setting up push
+   * authentication](/pubsub/docs/push#setting_up_for_push_authentication) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmail() {
@@ -89,9 +87,8 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
 
   /**
    * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for
-   * generating the OIDC token. The caller (for CreateSubscription, UpdateSubscription, and
-   * ModifyPushConfig RPCs) must have the iam.serviceAccounts.actAs permission for the service
-   * account.
+   * generating the OIDC token. See [Setting up push
+   * authentication](/pubsub/docs/push#setting_up_for_push_authentication) for more details.
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */
   public OidcToken setServiceAccountEmail(java.lang.String serviceAccountEmail) {

@@ -45,6 +45,20 @@ public final class Schema extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The timestamp that the revision was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String revisionCreateTime;
+
+  /**
+   * Output only. Immutable. The revision ID of the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String revisionId;
+
+  /**
    * The type of the schema definition.
    * The value may be {@code null}.
    */
@@ -84,6 +98,40 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    */
   public Schema setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp that the revision was created.
+   * @return value or {@code null} for none
+   */
+  public String getRevisionCreateTime() {
+    return revisionCreateTime;
+  }
+
+  /**
+   * Output only. The timestamp that the revision was created.
+   * @param revisionCreateTime revisionCreateTime or {@code null} for none
+   */
+  public Schema setRevisionCreateTime(String revisionCreateTime) {
+    this.revisionCreateTime = revisionCreateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Immutable. The revision ID of the schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRevisionId() {
+    return revisionId;
+  }
+
+  /**
+   * Output only. Immutable. The revision ID of the schema.
+   * @param revisionId revisionId or {@code null} for none
+   */
+  public Schema setRevisionId(java.lang.String revisionId) {
+    this.revisionId = revisionId;
     return this;
   }
 

@@ -93,6 +93,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String snapshotAutoDeleteBehavior;
 
   /**
+   * Whether snapshots are enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean snapshotEnabled;
+
+  /**
    * Details about snapshot space reservation and usage on the storage volume.
    * The value may be {@code null}.
    */
@@ -265,6 +272,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setSnapshotAutoDeleteBehavior(java.lang.String snapshotAutoDeleteBehavior) {
     this.snapshotAutoDeleteBehavior = snapshotAutoDeleteBehavior;
+    return this;
+  }
+
+  /**
+   * Whether snapshots are enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSnapshotEnabled() {
+    return snapshotEnabled;
+  }
+
+  /**
+   * Whether snapshots are enabled.
+   * @param snapshotEnabled snapshotEnabled or {@code null} for none
+   */
+  public Volume setSnapshotEnabled(java.lang.Boolean snapshotEnabled) {
+    this.snapshotEnabled = snapshotEnabled;
     return this;
   }
 

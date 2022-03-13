@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-baremetalsolution</artifactId>
-      <version>v2-rev20220209-1.32.1</version>
+      <version>v2-rev20220307-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-baremetalsolution:v2-rev20220209-1.32.1'
+  implementation 'com.google.apis:google-api-services-baremetalsolution:v2-rev20220307-1.32.1'
 }
 ```
 

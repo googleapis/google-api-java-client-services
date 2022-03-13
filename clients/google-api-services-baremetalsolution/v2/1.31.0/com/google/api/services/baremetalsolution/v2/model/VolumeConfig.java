@@ -31,6 +31,14 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class VolumeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The GCP service of the storage volume. Available gcp_service are in https://cloud.google.com
+   * /bare-metal/docs/bms-planning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcpService;
+
+  /**
    * A transient unique identifier to identify a volume within an ProvisioningConfig request.
    * The value may be {@code null}.
    */
@@ -112,6 +120,25 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String userNote;
+
+  /**
+   * The GCP service of the storage volume. Available gcp_service are in https://cloud.google.com
+   * /bare-metal/docs/bms-planning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcpService() {
+    return gcpService;
+  }
+
+  /**
+   * The GCP service of the storage volume. Available gcp_service are in https://cloud.google.com
+   * /bare-metal/docs/bms-planning.
+   * @param gcpService gcpService or {@code null} for none
+   */
+  public VolumeConfig setGcpService(java.lang.String gcpService) {
+    this.gcpService = gcpService;
+    return this;
+  }
 
   /**
    * A transient unique identifier to identify a volume within an ProvisioningConfig request.

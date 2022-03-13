@@ -38,6 +38,15 @@ public final class SnapshotReservationDetail extends com.google.api.client.json.
   private java.lang.Long reservedSpaceGib;
 
   /**
+   * Percent of the total Volume size reserved for snapshot copies. Enabling snapshots requires
+   * reserving 20% or more of the storage volume space for snapshots. Maximum reserved space for
+   * snapshots is 40%. Setting this field will effectively set snapshot_enabled to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer reservedSpacePercent;
+
+  /**
    * The amount, in GiB, of available space in this storage volume's reserved snapshot space.
    * The value may be {@code null}.
    */
@@ -67,6 +76,27 @@ public final class SnapshotReservationDetail extends com.google.api.client.json.
    */
   public SnapshotReservationDetail setReservedSpaceGib(java.lang.Long reservedSpaceGib) {
     this.reservedSpaceGib = reservedSpaceGib;
+    return this;
+  }
+
+  /**
+   * Percent of the total Volume size reserved for snapshot copies. Enabling snapshots requires
+   * reserving 20% or more of the storage volume space for snapshots. Maximum reserved space for
+   * snapshots is 40%. Setting this field will effectively set snapshot_enabled to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getReservedSpacePercent() {
+    return reservedSpacePercent;
+  }
+
+  /**
+   * Percent of the total Volume size reserved for snapshot copies. Enabling snapshots requires
+   * reserving 20% or more of the storage volume space for snapshots. Maximum reserved space for
+   * snapshots is 40%. Setting this field will effectively set snapshot_enabled to true.
+   * @param reservedSpacePercent reservedSpacePercent or {@code null} for none
+   */
+  public SnapshotReservationDetail setReservedSpacePercent(java.lang.Integer reservedSpacePercent) {
+    this.reservedSpacePercent = reservedSpacePercent;
     return this;
   }
 

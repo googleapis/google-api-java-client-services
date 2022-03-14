@@ -115,8 +115,8 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. CLDR region code of the country/region of the address. This is never inferred and it
-   * is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * is up to the user to ensure the value is correct. See https://cldr.unicode.org/ and
+   * https://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * The value may be {@code null}.
    */
@@ -326,8 +326,8 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. CLDR region code of the country/region of the address. This is never inferred and it
-   * is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * is up to the user to ensure the value is correct. See https://cldr.unicode.org/ and
+   * https://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * @return value or {@code null} for none
    */
@@ -337,8 +337,8 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. CLDR region code of the country/region of the address. This is never inferred and it
-   * is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * is up to the user to ensure the value is correct. See https://cldr.unicode.org/ and
+   * https://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * @param regionCode regionCode or {@code null} for none
    */

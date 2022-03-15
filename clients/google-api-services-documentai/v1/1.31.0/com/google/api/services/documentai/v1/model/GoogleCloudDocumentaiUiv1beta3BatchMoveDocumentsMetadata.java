@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata exte
   private java.lang.String destDatasetType;
 
   /**
+   * The destination dataset split type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destSplitType;
+
+  /**
    * The list of response details of each document.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata exte
    */
   public GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata setDestDatasetType(java.lang.String destDatasetType) {
     this.destDatasetType = destDatasetType;
+    return this;
+  }
+
+  /**
+   * The destination dataset split type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestSplitType() {
+    return destSplitType;
+  }
+
+  /**
+   * The destination dataset split type.
+   * @param destSplitType destSplitType or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata setDestSplitType(java.lang.String destSplitType) {
+    this.destSplitType = destSplitType;
     return this;
   }
 

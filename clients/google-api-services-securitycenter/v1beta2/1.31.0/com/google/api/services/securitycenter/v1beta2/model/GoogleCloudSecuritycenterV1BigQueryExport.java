@@ -62,11 +62,7 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
    * to those defined in the corresponding resource. The supported operators are: * `=` for all
    * value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for
    * strings. The supported value types are: * string literals in quotes. * integer literals without
-   * quotes. * boolean literals `true` and `false` without quotes. Please see the proto
-   * documentation in the finding (https://source.corp.google.com/piperdepot/google3/google/cloud/se
-   * curitycenter/v1/finding.proto) and in the ListFindingsRequest for valid filter syntax. (https:/
-   * /source.corp.google.com/piperdepot/google3/google/cloud/securitycenter/v1/securitycenter_servic
-   * e.proto).
+   * quotes. * boolean literals `true` and `false` without quotes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,11 +169,7 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
    * to those defined in the corresponding resource. The supported operators are: * `=` for all
    * value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for
    * strings. The supported value types are: * string literals in quotes. * integer literals without
-   * quotes. * boolean literals `true` and `false` without quotes. Please see the proto
-   * documentation in the finding (https://source.corp.google.com/piperdepot/google3/google/cloud/se
-   * curitycenter/v1/finding.proto) and in the ListFindingsRequest for valid filter syntax. (https:/
-   * /source.corp.google.com/piperdepot/google3/google/cloud/securitycenter/v1/securitycenter_servic
-   * e.proto).
+   * quotes. * boolean literals `true` and `false` without quotes.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -192,11 +184,7 @@ public final class GoogleCloudSecuritycenterV1BigQueryExport extends com.google.
    * to those defined in the corresponding resource. The supported operators are: * `=` for all
    * value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for
    * strings. The supported value types are: * string literals in quotes. * integer literals without
-   * quotes. * boolean literals `true` and `false` without quotes. Please see the proto
-   * documentation in the finding (https://source.corp.google.com/piperdepot/google3/google/cloud/se
-   * curitycenter/v1/finding.proto) and in the ListFindingsRequest for valid filter syntax. (https:/
-   * /source.corp.google.com/piperdepot/google3/google/cloud/securitycenter/v1/securitycenter_servic
-   * e.proto).
+   * quotes. * boolean literals `true` and `false` without quotes.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1BigQueryExport setFilter(java.lang.String filter) {

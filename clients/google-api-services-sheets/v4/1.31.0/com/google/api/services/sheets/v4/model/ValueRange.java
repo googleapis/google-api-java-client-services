@@ -42,10 +42,10 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   private java.lang.String majorDimension;
 
   /**
-   * The range the values cover, in A1 notation. For output, this range indicates the entire
-   * requested range, even though the values will exclude trailing rows and columns. When appending
-   * values, this field represents the range to search for a table, after which values will be
-   * appended.
+   * The range the values cover, in [A1 notation](/sheets/api/guides/concepts#cell). For output,
+   * this range indicates the entire requested range, even though the values will exclude trailing
+   * rows and columns. When appending values, this field represents the range to search for a table,
+   * after which values will be appended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,10 +90,10 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range the values cover, in A1 notation. For output, this range indicates the entire
-   * requested range, even though the values will exclude trailing rows and columns. When appending
-   * values, this field represents the range to search for a table, after which values will be
-   * appended.
+   * The range the values cover, in [A1 notation](/sheets/api/guides/concepts#cell). For output,
+   * this range indicates the entire requested range, even though the values will exclude trailing
+   * rows and columns. When appending values, this field represents the range to search for a table,
+   * after which values will be appended.
    * @return value or {@code null} for none
    */
   public java.lang.String getRange() {
@@ -101,10 +101,10 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range the values cover, in A1 notation. For output, this range indicates the entire
-   * requested range, even though the values will exclude trailing rows and columns. When appending
-   * values, this field represents the range to search for a table, after which values will be
-   * appended.
+   * The range the values cover, in [A1 notation](/sheets/api/guides/concepts#cell). For output,
+   * this range indicates the entire requested range, even though the values will exclude trailing
+   * rows and columns. When appending values, this field represents the range to search for a table,
+   * after which values will be appended.
    * @param range range or {@code null} for none
    */
   public ValueRange setRange(java.lang.String range) {

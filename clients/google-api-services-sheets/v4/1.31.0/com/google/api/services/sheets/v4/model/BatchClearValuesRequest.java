@@ -30,14 +30,14 @@ package com.google.api.services.sheets.v4.model;
 public final class BatchClearValuesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ranges to clear, in A1 or R1C1 notation.
+   * The ranges to clear, in [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ranges;
 
   /**
-   * The ranges to clear, in A1 or R1C1 notation.
+   * The ranges to clear, in [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRanges() {
@@ -45,7 +45,7 @@ public final class BatchClearValuesRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The ranges to clear, in A1 or R1C1 notation.
+   * The ranges to clear, in [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell).
    * @param ranges ranges or {@code null} for none
    */
   public BatchClearValuesRequest setRanges(java.util.List<java.lang.String> ranges) {

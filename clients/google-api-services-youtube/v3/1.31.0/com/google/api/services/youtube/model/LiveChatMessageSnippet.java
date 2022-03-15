@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Next ID: 31
+ * Next ID: 33
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -33,10 +33,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * The ID of the user that authored this message, this field is not always filled.
    * textMessageEvent - the user that wrote the message fanFundingEvent - the user that funded the
    * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
-   * member that sent the message messageDeletedEvent - the moderator that took the action
-   * messageRetractedEvent - the author that retracted their message userBannedEvent - the moderator
-   * that took the action superChatEvent - the user that made the purchase superStickerEvent - the
-   * user that made the purchase
+   * member that sent the message membershipGiftingEvent - the user that made the purchase
+   * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
+   * the moderator that took the action messageRetractedEvent - the author that retracted their
+   * message userBannedEvent - the moderator that took the action superChatEvent - the user that
+   * made the purchase superStickerEvent - the user that made the purchase
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,6 +59,14 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private LiveChatFanFundingEventDetails fanFundingEventDetails;
 
   /**
+   * Details about the Gift Membership Received event, this is only set if the type is
+   * 'giftMembershipReceivedEvent'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatGiftMembershipReceivedDetails giftMembershipReceivedDetails;
+
+  /**
    * Whether the message has display content that should be displayed to users.
    * The value may be {@code null}.
    */
@@ -77,6 +86,14 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private LiveChatMemberMilestoneChatDetails memberMilestoneChatDetails;
+
+  /**
+   * Details about the Membership Gifting event, this is only set if the type is
+   * 'membershipGiftingEvent'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatMembershipGiftingDetails membershipGiftingDetails;
 
   /**
    * The value may be {@code null}.
@@ -144,10 +161,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * The ID of the user that authored this message, this field is not always filled.
    * textMessageEvent - the user that wrote the message fanFundingEvent - the user that funded the
    * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
-   * member that sent the message messageDeletedEvent - the moderator that took the action
-   * messageRetractedEvent - the author that retracted their message userBannedEvent - the moderator
-   * that took the action superChatEvent - the user that made the purchase superStickerEvent - the
-   * user that made the purchase
+   * member that sent the message membershipGiftingEvent - the user that made the purchase
+   * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
+   * the moderator that took the action messageRetractedEvent - the author that retracted their
+   * message userBannedEvent - the moderator that took the action superChatEvent - the user that
+   * made the purchase superStickerEvent - the user that made the purchase
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorChannelId() {
@@ -158,10 +176,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * The ID of the user that authored this message, this field is not always filled.
    * textMessageEvent - the user that wrote the message fanFundingEvent - the user that funded the
    * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
-   * member that sent the message messageDeletedEvent - the moderator that took the action
-   * messageRetractedEvent - the author that retracted their message userBannedEvent - the moderator
-   * that took the action superChatEvent - the user that made the purchase superStickerEvent - the
-   * user that made the purchase
+   * member that sent the message membershipGiftingEvent - the user that made the purchase
+   * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
+   * the moderator that took the action messageRetractedEvent - the author that retracted their
+   * message userBannedEvent - the moderator that took the action superChatEvent - the user that
+   * made the purchase superStickerEvent - the user that made the purchase
    * @param authorChannelId authorChannelId or {@code null} for none
    */
   public LiveChatMessageSnippet setAuthorChannelId(java.lang.String authorChannelId) {
@@ -202,6 +221,25 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   public LiveChatMessageSnippet setFanFundingEventDetails(LiveChatFanFundingEventDetails fanFundingEventDetails) {
     this.fanFundingEventDetails = fanFundingEventDetails;
+    return this;
+  }
+
+  /**
+   * Details about the Gift Membership Received event, this is only set if the type is
+   * 'giftMembershipReceivedEvent'.
+   * @return value or {@code null} for none
+   */
+  public LiveChatGiftMembershipReceivedDetails getGiftMembershipReceivedDetails() {
+    return giftMembershipReceivedDetails;
+  }
+
+  /**
+   * Details about the Gift Membership Received event, this is only set if the type is
+   * 'giftMembershipReceivedEvent'.
+   * @param giftMembershipReceivedDetails giftMembershipReceivedDetails or {@code null} for none
+   */
+  public LiveChatMessageSnippet setGiftMembershipReceivedDetails(LiveChatGiftMembershipReceivedDetails giftMembershipReceivedDetails) {
+    this.giftMembershipReceivedDetails = giftMembershipReceivedDetails;
     return this;
   }
 
@@ -253,6 +291,25 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   public LiveChatMessageSnippet setMemberMilestoneChatDetails(LiveChatMemberMilestoneChatDetails memberMilestoneChatDetails) {
     this.memberMilestoneChatDetails = memberMilestoneChatDetails;
+    return this;
+  }
+
+  /**
+   * Details about the Membership Gifting event, this is only set if the type is
+   * 'membershipGiftingEvent'.
+   * @return value or {@code null} for none
+   */
+  public LiveChatMembershipGiftingDetails getMembershipGiftingDetails() {
+    return membershipGiftingDetails;
+  }
+
+  /**
+   * Details about the Membership Gifting event, this is only set if the type is
+   * 'membershipGiftingEvent'.
+   * @param membershipGiftingDetails membershipGiftingDetails or {@code null} for none
+   */
+  public LiveChatMessageSnippet setMembershipGiftingDetails(LiveChatMembershipGiftingDetails membershipGiftingDetails) {
+    this.membershipGiftingDetails = membershipGiftingDetails;
     return this;
   }
 

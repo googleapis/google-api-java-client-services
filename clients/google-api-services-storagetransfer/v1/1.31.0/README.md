@@ -1,6 +1,6 @@
 # Storage Transfer API Client Library for Java
 
-Transfers data from external data sources to a Google Cloud Storage bucket or between Google Cloud Storage buckets.
+Transfers data from external data sources to a Google Cloud Storage bucket or between Google Cloud Storage buckets. 
 
 This page contains information about getting started with the Storage Transfer API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-storagetransfer</artifactId>
-      <version>v1-rev20220303-1.32.1</version>
+      <version>v1-rev20220310-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-storagetransfer:v1-rev20220303-1.32.1'
+  implementation 'com.google.apis:google-api-services-storagetransfer:v1-rev20220310-1.32.1'
 }
 ```
 

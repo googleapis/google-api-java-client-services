@@ -42,6 +42,14 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.Double fraction;
 
   /**
+   * Rollout fraction group. Only fractions with the same fraction_group are statistically
+   * comparable: there may be non-fractional differences between different fraction groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long fractionGroup;
+
+  /**
    * Release name. Format is
    * "{product}/platforms/{platform}/channels/{channel}/versions/{version}/releases/{release}"
    * The value may be {@code null}.
@@ -82,6 +90,25 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setFraction(java.lang.Double fraction) {
     this.fraction = fraction;
+    return this;
+  }
+
+  /**
+   * Rollout fraction group. Only fractions with the same fraction_group are statistically
+   * comparable: there may be non-fractional differences between different fraction groups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getFractionGroup() {
+    return fractionGroup;
+  }
+
+  /**
+   * Rollout fraction group. Only fractions with the same fraction_group are statistically
+   * comparable: there may be non-fractional differences between different fraction groups.
+   * @param fractionGroup fractionGroup or {@code null} for none
+   */
+  public Release setFractionGroup(java.lang.Long fractionGroup) {
+    this.fractionGroup = fractionGroup;
     return this;
   }
 

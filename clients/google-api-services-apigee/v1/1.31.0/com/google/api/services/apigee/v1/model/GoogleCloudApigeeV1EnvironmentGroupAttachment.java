@@ -46,6 +46,13 @@ public final class GoogleCloudApigeeV1EnvironmentGroupAttachment extends com.goo
   private java.lang.String environment;
 
   /**
+   * Output only. ID of the environment group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String environmentGroupId;
+
+  /**
    * ID of the environment group attachment.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class GoogleCloudApigeeV1EnvironmentGroupAttachment extends com.goo
    */
   public GoogleCloudApigeeV1EnvironmentGroupAttachment setEnvironment(java.lang.String environment) {
     this.environment = environment;
+    return this;
+  }
+
+  /**
+   * Output only. ID of the environment group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvironmentGroupId() {
+    return environmentGroupId;
+  }
+
+  /**
+   * Output only. ID of the environment group.
+   * @param environmentGroupId environmentGroupId or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentGroupAttachment setEnvironmentGroupId(java.lang.String environmentGroupId) {
+    this.environmentGroupId = environmentGroupId;
     return this;
   }
 

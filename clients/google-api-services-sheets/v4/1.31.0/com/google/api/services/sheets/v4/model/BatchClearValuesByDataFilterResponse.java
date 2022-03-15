@@ -30,9 +30,9 @@ package com.google.api.services.sheets.v4.model;
 public final class BatchClearValuesByDataFilterResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ranges that were cleared, in A1 notation. If the requests are for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this is the actual ranges that were cleared,
-   * bounded to the sheet's limits.
+   * The ranges that were cleared, in [A1 notation](/sheets/api/guides/concepts#cell). If the
+   * requests are for an unbounded range or a ranger larger than the bounds of the sheet, this is
+   * the actual ranges that were cleared, bounded to the sheet's limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,9 @@ public final class BatchClearValuesByDataFilterResponse extends com.google.api.c
   private java.lang.String spreadsheetId;
 
   /**
-   * The ranges that were cleared, in A1 notation. If the requests are for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this is the actual ranges that were cleared,
-   * bounded to the sheet's limits.
+   * The ranges that were cleared, in [A1 notation](/sheets/api/guides/concepts#cell). If the
+   * requests are for an unbounded range or a ranger larger than the bounds of the sheet, this is
+   * the actual ranges that were cleared, bounded to the sheet's limits.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getClearedRanges() {
@@ -56,9 +56,9 @@ public final class BatchClearValuesByDataFilterResponse extends com.google.api.c
   }
 
   /**
-   * The ranges that were cleared, in A1 notation. If the requests are for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this is the actual ranges that were cleared,
-   * bounded to the sheet's limits.
+   * The ranges that were cleared, in [A1 notation](/sheets/api/guides/concepts#cell). If the
+   * requests are for an unbounded range or a ranger larger than the bounds of the sheet, this is
+   * the actual ranges that were cleared, bounded to the sheet's limits.
    * @param clearedRanges clearedRanges or {@code null} for none
    */
   public BatchClearValuesByDataFilterResponse setClearedRanges(java.util.List<java.lang.String> clearedRanges) {

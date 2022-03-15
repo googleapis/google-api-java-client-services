@@ -1186,8 +1186,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Append#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The A1 notation of a range to search for a logical table of data. Values are appended after the last
-       *        row of the table.
+       * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of
+       *        data. Values are appended after the last row of the table.
        * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
        * @return the request
        */
@@ -1219,8 +1219,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The A1 notation of a range to search for a logical table of data. Values are appended after the last
-       *        row of the table.
+         * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of
+       *        data. Values are appended after the last row of the table.
          * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
          * @since 1.13
          */
@@ -1302,22 +1302,22 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The A1 notation of a range to search for a logical table of data. Values are appended
-         * after the last row of the table.
+         * The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical
+         * table of data. Values are appended after the last row of the table.
          */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The A1 notation of a range to search for a logical table of data. Values are appended after the
-       last row of the table.
+        /** The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of
+       data. Values are appended after the last row of the table.
          */
         public java.lang.String getRange() {
           return range;
         }
 
         /**
-         * The A1 notation of a range to search for a logical table of data. Values are appended
-         * after the last row of the table.
+         * The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical
+         * table of data. Values are appended after the last row of the table.
          */
         public Append setRange(java.lang.String range) {
           this.range = range;
@@ -1436,7 +1436,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet
        * ID and one or more ranges. Only values are cleared -- all other properties of the cell (such as
-       * formatting, data validation, etc..) are kept.
+       * formatting and data validation) are kept.
        *
        * Create a request for the method "values.batchClear".
        *
@@ -1460,7 +1460,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet
          * ID and one or more ranges. Only values are cleared -- all other properties of the cell (such as
-         * formatting, data validation, etc..) are kept.
+         * formatting and data validation) are kept.
          *
          * Create a request for the method "values.batchClear".
          *
@@ -1830,16 +1830,17 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * The major dimension that results should use. For example, if the spreadsheet data is:
-         * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns
-         * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns
+         * `A1=1,B1=2,A2=3,B2=4`, then requesting `ranges=["A1:B2"],majorDimension=ROWS` returns
+         * `[[1,2],[3,4]]`, whereas requesting `ranges=["A1:B2"],majorDimension=COLUMNS` returns
          * `[[1,3],[2,4]]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String majorDimension;
 
         /** The major dimension that results should use. For example, if the spreadsheet data is:
-       `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`,
-       whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+       `A1=1,B1=2,A2=3,B2=4`, then requesting `ranges=["A1:B2"],majorDimension=ROWS` returns
+       `[[1,2],[3,4]]`, whereas requesting `ranges=["A1:B2"],majorDimension=COLUMNS` returns
+       `[[1,3],[2,4]]`.
          */
         public java.lang.String getMajorDimension() {
           return majorDimension;
@@ -1847,8 +1848,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * The major dimension that results should use. For example, if the spreadsheet data is:
-         * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns
-         * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns
+         * `A1=1,B1=2,A2=3,B2=4`, then requesting `ranges=["A1:B2"],majorDimension=ROWS` returns
+         * `[[1,2],[3,4]]`, whereas requesting `ranges=["A1:B2"],majorDimension=COLUMNS` returns
          * `[[1,3],[2,4]]`.
          */
         public BatchGet setMajorDimension(java.lang.String majorDimension) {
@@ -1856,17 +1857,24 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
+        /**
+         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
+         * retrieve values from.
+         */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> ranges;
 
-        /** The A1 notation or R1C1 notation of the range to retrieve values from.
+        /** The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve
+       values from.
          */
         public java.util.List<java.lang.String> getRanges() {
           return ranges;
         }
 
-        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
+        /**
+         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
+         * retrieve values from.
+         */
         public BatchGet setRanges(java.util.List<java.lang.String> ranges) {
           this.ranges = ranges;
           return this;
@@ -2275,7 +2283,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Clear#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The A1 notation or R1C1 notation of the values to clear.
+       * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to clear.
        * @param content the {@link com.google.api.services.sheets.v4.model.ClearValuesRequest}
        * @return the request
        */
@@ -2302,7 +2310,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The A1 notation or R1C1 notation of the values to clear.
+         * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to clear.
          * @param content the {@link com.google.api.services.sheets.v4.model.ClearValuesRequest}
          * @since 1.13
          */
@@ -2383,17 +2391,23 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The A1 notation or R1C1 notation of the values to clear. */
+        /**
+         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to
+         * clear.
+         */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The A1 notation or R1C1 notation of the values to clear.
+        /** The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to clear.
          */
         public java.lang.String getRange() {
           return range;
         }
 
-        /** The A1 notation or R1C1 notation of the values to clear. */
+        /**
+         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to
+         * clear.
+         */
         public Clear setRange(java.lang.String range) {
           this.range = range;
           return this;
@@ -2414,7 +2428,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to retrieve data from.
-       * @param range The A1 notation or R1C1 notation of the range to retrieve values from.
+       * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values
+       *        from.
        * @return the request
        */
       public Get get(java.lang.String spreadsheetId, java.lang.String range) throws java.io.IOException {
@@ -2439,7 +2454,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to retrieve data from.
-         * @param range The A1 notation or R1C1 notation of the range to retrieve values from.
+         * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values
+       *        from.
          * @since 1.13
          */
         protected Get(java.lang.String spreadsheetId, java.lang.String range) {
@@ -2529,17 +2545,24 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
+        /**
+         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
+         * retrieve values from.
+         */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The A1 notation or R1C1 notation of the range to retrieve values from.
+        /** The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve
+       values from.
          */
         public java.lang.String getRange() {
           return range;
         }
 
-        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
+        /**
+         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
+         * retrieve values from.
+         */
         public Get setRange(java.lang.String range) {
           this.range = range;
           return this;
@@ -2635,7 +2658,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The A1 notation of the values to update.
+       * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update.
        * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
        * @return the request
        */
@@ -2661,7 +2684,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The A1 notation of the values to update.
+         * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update.
          * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
          * @since 1.13
          */
@@ -2742,17 +2765,17 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The A1 notation of the values to update. */
+        /** The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update. */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The A1 notation of the values to update.
+        /** The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update.
          */
         public java.lang.String getRange() {
           return range;
         }
 
-        /** The A1 notation of the values to update. */
+        /** The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update. */
         public Update setRange(java.lang.String range) {
           this.range = range;
           return this;

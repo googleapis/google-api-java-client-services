@@ -20,7 +20,7 @@ package com.google.api.services.storagetransfer.v1;
  * Service definition for Storagetransfer (v1).
  *
  * <p>
- * Transfers data from external data sources to a Google Cloud Storage bucket or between Google Cloud Storage buckets.
+ * Transfers data from external data sources to a Google Cloud Storage bucket or between Google Cloud Storage buckets. 
  * </p>
  *
  * <p>

@@ -1,6 +1,6 @@
 # Google Keep API Client Library for Java
 
-This API is an enterprise-only API used to create and manage the Keep notes within your domain, including resolving issues identified by CASB software.
+The Google Keep API is used in an enterprise environment to manage Google Keep content and resolve issues identified by cloud security software.
 
 This page contains information about getting started with the Google Keep API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-keep</artifactId>
-      <version>v1-rev20210629-1.32.1</version>
+      <version>v1-rev20220308-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-keep:v1-rev20210629-1.32.1'
+  implementation 'com.google.apis:google-api-services-keep:v1-rev20220308-1.32.1'
 }
 ```
 

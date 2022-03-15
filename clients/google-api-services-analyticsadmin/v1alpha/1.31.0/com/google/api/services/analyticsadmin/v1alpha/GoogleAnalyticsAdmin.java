@@ -8269,8 +8269,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. Resource name of this secret. This secret may be a child of any type of stream. Format:
-         *        properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measureme
-         *        ntProtocolSecret}
+         *        properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProt
+         *        ocolSecret}
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret}
          * @return the request
          */
@@ -8299,8 +8299,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. Resource name of this secret. This secret may be a child of any type of stream. Format:
-         *        properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measureme
-         *        ntProtocolSecret}
+         *        properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProt
+         *        ocolSecret}
            * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret}
            * @since 1.13
            */
@@ -8371,15 +8371,15 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
           /**
            * Output only. Resource name of this secret. This secret may be a child of any type of
-           * stream. Format: properties/{property}/webDataStreams/{webDataStream}/measurementProtoco
-           * lSecrets/{measurementProtocolSecret}
+           * stream. Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecre
+           * ts/{measurementProtocolSecret}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. Resource name of this secret. This secret may be a child of any type of stream.
-         Format: properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measuremen
-         tProtocolSecret}
+         Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProto
+         colSecret}
            */
           public java.lang.String getName() {
             return name;
@@ -8387,8 +8387,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
           /**
            * Output only. Resource name of this secret. This secret may be a child of any type of
-           * stream. Format: properties/{property}/webDataStreams/{webDataStream}/measurementProtoco
-           * lSecrets/{measurementProtocolSecret}
+           * stream. Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecre
+           * ts/{measurementProtocolSecret}
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

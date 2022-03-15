@@ -39,8 +39,8 @@ public final class GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret extends 
 
   /**
    * Output only. Resource name of this secret. This secret may be a child of any type of stream.
-   * Format: properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measur
-   * ementProtocolSecret}
+   * Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementP
+   * rotocolSecret}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret extends 
 
   /**
    * Output only. Resource name of this secret. This secret may be a child of any type of stream.
-   * Format: properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measur
-   * ementProtocolSecret}
+   * Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementP
+   * rotocolSecret}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -83,8 +83,8 @@ public final class GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret extends 
 
   /**
    * Output only. Resource name of this secret. This secret may be a child of any type of stream.
-   * Format: properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measur
-   * ementProtocolSecret}
+   * Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementP
+   * rotocolSecret}
    * @param name name or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret setName(java.lang.String name) {

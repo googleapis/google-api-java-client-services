@@ -38,12 +38,28 @@ public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google
   private java.lang.String displayName;
 
   /**
+   * Resource name of this property's logical parent. Note: The Property-Moving UI can be used to
+   * change the parent. Format: accounts/{account}, properties/{property} Example: "accounts/100",
+   * "properties/200"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * Resource name of property referred to by this property summary Format: properties/{property_id}
    * Example: "properties/1000"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String property;
+
+  /**
+   * The property's property type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String propertyType;
 
   /**
    * Display name for the property referred to in this property summary.
@@ -63,6 +79,27 @@ public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google
   }
 
   /**
+   * Resource name of this property's logical parent. Note: The Property-Moving UI can be used to
+   * change the parent. Format: accounts/{account}, properties/{property} Example: "accounts/100",
+   * "properties/200"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * Resource name of this property's logical parent. Note: The Property-Moving UI can be used to
+   * change the parent. Format: accounts/{account}, properties/{property} Example: "accounts/100",
+   * "properties/200"
+   * @param parent parent or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaPropertySummary setParent(java.lang.String parent) {
+    this.parent = parent;
+    return this;
+  }
+
+  /**
    * Resource name of property referred to by this property summary Format: properties/{property_id}
    * Example: "properties/1000"
    * @return value or {@code null} for none
@@ -78,6 +115,23 @@ public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google
    */
   public GoogleAnalyticsAdminV1alphaPropertySummary setProperty(java.lang.String property) {
     this.property = property;
+    return this;
+  }
+
+  /**
+   * The property's property type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPropertyType() {
+    return propertyType;
+  }
+
+  /**
+   * The property's property type.
+   * @param propertyType propertyType or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaPropertySummary setPropertyType(java.lang.String propertyType) {
+    this.propertyType = propertyType;
     return this;
   }
 

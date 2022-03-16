@@ -486,31 +486,31 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * A unique identifier for tracking visitors. For example, this could be implemented with
-           * an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
-           * This unique identifier should not change if the visitor logs in or out of the website.
-           * The field must be a UTF-8 encoded string with a length limit of 128 characters.
-           * Otherwise, an INVALID_ARGUMENT error is returned.
+           * Required field. A unique identifier for tracking visitors. For example, this could be
+           * implemented with an HTTP cookie, which should be able to uniquely identify a visitor on
+           * a single device. This unique identifier should not change if the visitor logs in or out
+           * of the website. The field must be a UTF-8 encoded string with a length limit of 128
+           * characters. Otherwise, an INVALID_ARGUMENT error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String visitorId;
 
-          /** A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-         cookie, which should be able to uniquely identify a visitor on a single device. This unique
-         identifier should not change if the visitor logs in or out of the website. The field must be a
-         UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is
-         returned.
+          /** Required field. A unique identifier for tracking visitors. For example, this could be implemented
+         with an HTTP cookie, which should be able to uniquely identify a visitor on a single device. This
+         unique identifier should not change if the visitor logs in or out of the website. The field must be
+         a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error
+         is returned.
            */
           public java.lang.String getVisitorId() {
             return visitorId;
           }
 
           /**
-           * A unique identifier for tracking visitors. For example, this could be implemented with
-           * an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
-           * This unique identifier should not change if the visitor logs in or out of the website.
-           * The field must be a UTF-8 encoded string with a length limit of 128 characters.
-           * Otherwise, an INVALID_ARGUMENT error is returned.
+           * Required field. A unique identifier for tracking visitors. For example, this could be
+           * implemented with an HTTP cookie, which should be able to uniquely identify a visitor on
+           * a single device. This unique identifier should not change if the visitor logs in or out
+           * of the website. The field must be a UTF-8 encoded string with a length limit of 128
+           * characters. Otherwise, an INVALID_ARGUMENT error is returned.
            */
           public CompleteQuery setVisitorId(java.lang.String visitorId) {
             this.visitorId = visitorId;
@@ -7159,12 +7159,12 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Triggers a user event rejoin operation with latest product catalog. Events will not be annotated
+           * Starts a user event rejoin operation with latest product catalog. Events will not be annotated
            * with detailed product information if product is missing from the catalog at the time the user
            * event is ingested, and these events are stored as unjoined events with a limited usage on
-           * training and serving. This API can be used to trigger a 'join' operation on specified events with
-           * latest version of product catalog. It can also be used to correct events joined with wrong
-           * product catalog.
+           * training and serving. This method can be used to start a join operation on specified events with
+           * latest version of product catalog. It can also be used to correct events joined with the wrong
+           * product catalog. A rejoin operation can take hours or days to complete.
            *
            * Create a request for the method "userEvents.rejoin".
            *
@@ -7190,12 +7190,12 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
 
             /**
-             * Triggers a user event rejoin operation with latest product catalog. Events will not be
-             * annotated with detailed product information if product is missing from the catalog at the time
-             * the user event is ingested, and these events are stored as unjoined events with a limited usage
-             * on training and serving. This API can be used to trigger a 'join' operation on specified events
-             * with latest version of product catalog. It can also be used to correct events joined with wrong
-             * product catalog.
+             * Starts a user event rejoin operation with latest product catalog. Events will not be annotated
+             * with detailed product information if product is missing from the catalog at the time the user
+             * event is ingested, and these events are stored as unjoined events with a limited usage on
+             * training and serving. This method can be used to start a join operation on specified events
+             * with latest version of product catalog. It can also be used to correct events joined with the
+             * wrong product catalog. A rejoin operation can take hours or days to complete.
              *
              * Create a request for the method "userEvents.rejoin".
              *

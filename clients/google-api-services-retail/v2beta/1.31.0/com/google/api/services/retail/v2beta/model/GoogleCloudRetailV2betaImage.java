@@ -17,7 +17,9 @@
 package com.google.api.services.retail.v2beta.model;
 
 /**
- * Product thumbnail/detail image.
+ * Product image. Recommendations AI and Retail Search do not use product images to improve
+ * prediction and search results. However, product images can be returned in results, and are shown
+ * in prediction or search previews in the console.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

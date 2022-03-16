@@ -94,11 +94,21 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
 
   /**
    * Immutable. Resource name of this property's logical parent. Note: The Property-Moving UI can be
-   * used to change the parent. Format: accounts/{account} Example: "accounts/100"
+   * used to change the parent. Format: accounts/{account}, properties/{property} Example:
+   * "accounts/100", "properties/101"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
+
+  /**
+   * Immutable. The property type for this Property resource. When creating a property, if the type
+   * is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and
+   * "ROLLUP_PROPERTY" types cannot yet be created via Google Analytics Admin API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String propertyType;
 
   /**
    * Output only. The Google Analytics service level that applies to this property.
@@ -274,7 +284,8 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
 
   /**
    * Immutable. Resource name of this property's logical parent. Note: The Property-Moving UI can be
-   * used to change the parent. Format: accounts/{account} Example: "accounts/100"
+   * used to change the parent. Format: accounts/{account}, properties/{property} Example:
+   * "accounts/100", "properties/101"
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -283,11 +294,33 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
 
   /**
    * Immutable. Resource name of this property's logical parent. Note: The Property-Moving UI can be
-   * used to change the parent. Format: accounts/{account} Example: "accounts/100"
+   * used to change the parent. Format: accounts/{account}, properties/{property} Example:
+   * "accounts/100", "properties/101"
    * @param parent parent or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaProperty setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Immutable. The property type for this Property resource. When creating a property, if the type
+   * is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and
+   * "ROLLUP_PROPERTY" types cannot yet be created via Google Analytics Admin API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPropertyType() {
+    return propertyType;
+  }
+
+  /**
+   * Immutable. The property type for this Property resource. When creating a property, if the type
+   * is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and
+   * "ROLLUP_PROPERTY" types cannot yet be created via Google Analytics Admin API.
+   * @param propertyType propertyType or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaProperty setPropertyType(java.lang.String propertyType) {
+    this.propertyType = propertyType;
     return this;
   }
 

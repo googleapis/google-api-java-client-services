@@ -214,8 +214,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   private java.lang.String id;
 
   /**
-   * Product images for the product.Highly recommended to put the main image to the first. A maximum
-   * of 300 images are allowed. Corresponding properties: Google Merchant Center property
+   * Product images for the product. We highly recommend putting the main image first. A maximum of
+   * 300 images are allowed. Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property
    * [Product.image](https://schema.org/image).
    * The value may be {@code null}.
@@ -806,8 +806,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   }
 
   /**
-   * Product images for the product.Highly recommended to put the main image to the first. A maximum
-   * of 300 images are allowed. Corresponding properties: Google Merchant Center property
+   * Product images for the product. We highly recommend putting the main image first. A maximum of
+   * 300 images are allowed. Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property
    * [Product.image](https://schema.org/image).
    * @return value or {@code null} for none
@@ -817,8 +817,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   }
 
   /**
-   * Product images for the product.Highly recommended to put the main image to the first. A maximum
-   * of 300 images are allowed. Corresponding properties: Google Merchant Center property
+   * Product images for the product. We highly recommend putting the main image first. A maximum of
+   * 300 images are allowed. Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property
    * [Product.image](https://schema.org/image).
    * @param images images or {@code null} for none

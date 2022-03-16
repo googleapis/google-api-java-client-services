@@ -50,11 +50,12 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   private java.lang.String branch;
 
   /**
-   * The filter applied to every search request when quality improvement such as query expansion is
-   * needed. For example, if a query does not have enough results, an expanded query with
-   * SearchRequest.canonical_filter will be returned as a supplement of the original query. This
-   * field is strongly recommended to achieve high search quality. See SearchRequest.filter for more
-   * details about filter syntax.
+   * The default filter that is applied when a user performs a search without checking any filters
+   * on the search page. The filter applied to every search request when quality improvement such as
+   * query expansion is needed. For example, if a query does not have enough results, an expanded
+   * query with SearchRequest.canonical_filter will be returned as a supplement of the original
+   * query. This field is strongly recommended to achieve high search quality. See
+   * SearchRequest.filter for more details about filter syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,11 +263,12 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   }
 
   /**
-   * The filter applied to every search request when quality improvement such as query expansion is
-   * needed. For example, if a query does not have enough results, an expanded query with
-   * SearchRequest.canonical_filter will be returned as a supplement of the original query. This
-   * field is strongly recommended to achieve high search quality. See SearchRequest.filter for more
-   * details about filter syntax.
+   * The default filter that is applied when a user performs a search without checking any filters
+   * on the search page. The filter applied to every search request when quality improvement such as
+   * query expansion is needed. For example, if a query does not have enough results, an expanded
+   * query with SearchRequest.canonical_filter will be returned as a supplement of the original
+   * query. This field is strongly recommended to achieve high search quality. See
+   * SearchRequest.filter for more details about filter syntax.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalFilter() {
@@ -274,11 +276,12 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   }
 
   /**
-   * The filter applied to every search request when quality improvement such as query expansion is
-   * needed. For example, if a query does not have enough results, an expanded query with
-   * SearchRequest.canonical_filter will be returned as a supplement of the original query. This
-   * field is strongly recommended to achieve high search quality. See SearchRequest.filter for more
-   * details about filter syntax.
+   * The default filter that is applied when a user performs a search without checking any filters
+   * on the search page. The filter applied to every search request when quality improvement such as
+   * query expansion is needed. For example, if a query does not have enough results, an expanded
+   * query with SearchRequest.canonical_filter will be returned as a supplement of the original
+   * query. This field is strongly recommended to achieve high search quality. See
+   * SearchRequest.filter for more details about filter syntax.
    * @param canonicalFilter canonicalFilter or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequest setCanonicalFilter(java.lang.String canonicalFilter) {

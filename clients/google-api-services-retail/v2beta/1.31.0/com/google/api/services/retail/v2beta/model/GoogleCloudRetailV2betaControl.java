@@ -71,6 +71,15 @@ public final class GoogleCloudRetailV2betaControl extends com.google.api.client.
   private GoogleCloudRetailV2betaRule rule;
 
   /**
+   * Required. Specifies the use case for the control. Affects what condition fields can be set.
+   * Only settable by search controls. Will default to SEARCH_SOLUTION_USE_CASE_SEARCH if not
+   * specified. Currently only allow one search_solution_use_case per control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> searchSolutionUseCase;
+
+  /**
    * Required. Immutable. The solution types that the serving config is used for. Currently we
    * support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value
    * is supported at the moment. If no solution type is provided at creation time, will default to
@@ -172,6 +181,27 @@ public final class GoogleCloudRetailV2betaControl extends com.google.api.client.
    */
   public GoogleCloudRetailV2betaControl setRule(GoogleCloudRetailV2betaRule rule) {
     this.rule = rule;
+    return this;
+  }
+
+  /**
+   * Required. Specifies the use case for the control. Affects what condition fields can be set.
+   * Only settable by search controls. Will default to SEARCH_SOLUTION_USE_CASE_SEARCH if not
+   * specified. Currently only allow one search_solution_use_case per control.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSearchSolutionUseCase() {
+    return searchSolutionUseCase;
+  }
+
+  /**
+   * Required. Specifies the use case for the control. Affects what condition fields can be set.
+   * Only settable by search controls. Will default to SEARCH_SOLUTION_USE_CASE_SEARCH if not
+   * specified. Currently only allow one search_solution_use_case per control.
+   * @param searchSolutionUseCase searchSolutionUseCase or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaControl setSearchSolutionUseCase(java.util.List<java.lang.String> searchSolutionUseCase) {
+    this.searchSolutionUseCase = searchSolutionUseCase;
     return this;
   }
 

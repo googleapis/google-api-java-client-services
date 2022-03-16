@@ -486,31 +486,31 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * A unique identifier for tracking visitors. For example, this could be implemented with
-           * an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
-           * This unique identifier should not change if the visitor logs in or out of the website.
-           * The field must be a UTF-8 encoded string with a length limit of 128 characters.
-           * Otherwise, an INVALID_ARGUMENT error is returned.
+           * Required field. A unique identifier for tracking visitors. For example, this could be
+           * implemented with an HTTP cookie, which should be able to uniquely identify a visitor on
+           * a single device. This unique identifier should not change if the visitor logs in or out
+           * of the website. The field must be a UTF-8 encoded string with a length limit of 128
+           * characters. Otherwise, an INVALID_ARGUMENT error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String visitorId;
 
-          /** A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-         cookie, which should be able to uniquely identify a visitor on a single device. This unique
-         identifier should not change if the visitor logs in or out of the website. The field must be a
-         UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is
-         returned.
+          /** Required field. A unique identifier for tracking visitors. For example, this could be implemented
+         with an HTTP cookie, which should be able to uniquely identify a visitor on a single device. This
+         unique identifier should not change if the visitor logs in or out of the website. The field must be
+         a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error
+         is returned.
            */
           public java.lang.String getVisitorId() {
             return visitorId;
           }
 
           /**
-           * A unique identifier for tracking visitors. For example, this could be implemented with
-           * an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
-           * This unique identifier should not change if the visitor logs in or out of the website.
-           * The field must be a UTF-8 encoded string with a length limit of 128 characters.
-           * Otherwise, an INVALID_ARGUMENT error is returned.
+           * Required field. A unique identifier for tracking visitors. For example, this could be
+           * implemented with an HTTP cookie, which should be able to uniquely identify a visitor on
+           * a single device. This unique identifier should not change if the visitor logs in or out
+           * of the website. The field must be a UTF-8 encoded string with a length limit of 128
+           * characters. Otherwise, an INVALID_ARGUMENT error is returned.
            */
           public CompleteQuery setVisitorId(java.lang.String visitorId) {
             this.visitorId = visitorId;
@@ -3660,6 +3660,157 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               @Override
               public Patch set(String parameterName, Object value) {
                 return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Permanently deletes all selected Products under a branch. This process is asynchronous. If the
+             * request is valid, the removal will be enqueued and processed offline. Depending on the number of
+             * Products, this operation could take hours to complete. Before the operation completes, some
+             * Products may still be returned by GetProduct or ListProducts. Depending on the number of
+             * Products, this operation could take hours to complete. To get a sample of Products that would be
+             * deleted, set PurgeProductsRequest.force to false.
+             *
+             * Create a request for the method "products.purge".
+             *
+             * This request holds the parameters needed by the retail server.  After setting any optional
+             * parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the branch under which the products are created. The format is
+             *        `projects/${projectId}/locations/global/catalogs/${catalogId}/branches/${branchId}`
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPurgeProductsRequest}
+             * @return the request
+             */
+            public Purge purge(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPurgeProductsRequest content) throws java.io.IOException {
+              Purge result = new Purge(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Purge extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v2alpha/{+parent}/products:purge";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+
+              /**
+               * Permanently deletes all selected Products under a branch. This process is asynchronous. If the
+               * request is valid, the removal will be enqueued and processed offline. Depending on the number
+               * of Products, this operation could take hours to complete. Before the operation completes, some
+               * Products may still be returned by GetProduct or ListProducts. Depending on the number of
+               * Products, this operation could take hours to complete. To get a sample of Products that would
+               * be deleted, set PurgeProductsRequest.force to false.
+               *
+               * Create a request for the method "products.purge".
+               *
+               * This request holds the parameters needed by the the retail server.  After setting any optional
+               * parameters, call the {@link Purge#execute()} method to invoke the remote operation. <p> {@link
+               * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the branch under which the products are created. The format is
+             *        `projects/${projectId}/locations/global/catalogs/${catalogId}/branches/${branchId}`
+               * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPurgeProductsRequest}
+               * @since 1.13
+               */
+              protected Purge(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPurgeProductsRequest content) {
+                super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+                }
+              }
+
+              @Override
+              public Purge set$Xgafv(java.lang.String $Xgafv) {
+                return (Purge) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Purge setAccessToken(java.lang.String accessToken) {
+                return (Purge) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Purge setAlt(java.lang.String alt) {
+                return (Purge) super.setAlt(alt);
+              }
+
+              @Override
+              public Purge setCallback(java.lang.String callback) {
+                return (Purge) super.setCallback(callback);
+              }
+
+              @Override
+              public Purge setFields(java.lang.String fields) {
+                return (Purge) super.setFields(fields);
+              }
+
+              @Override
+              public Purge setKey(java.lang.String key) {
+                return (Purge) super.setKey(key);
+              }
+
+              @Override
+              public Purge setOauthToken(java.lang.String oauthToken) {
+                return (Purge) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Purge) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Purge setQuotaUser(java.lang.String quotaUser) {
+                return (Purge) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Purge setUploadType(java.lang.String uploadType) {
+                return (Purge) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Purge) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the branch under which the products are created. The
+               * format is
+               * `projects/${projectId}/locations/global/catalogs/${catalogId}/branches/${branchId}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the branch under which the products are created. The format is
+             `projects/${projectId}/locations/global/catalogs/${catalogId}/branches/${branchId}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the branch under which the products are created. The
+               * format is
+               * `projects/${projectId}/locations/global/catalogs/${catalogId}/branches/${branchId}`
+               */
+              public Purge setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Purge set(String parameterName, Object value) {
+                return (Purge) super.set(parameterName, value);
               }
             }
             /**
@@ -7514,12 +7665,12 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Triggers a user event rejoin operation with latest product catalog. Events will not be annotated
+           * Starts a user event rejoin operation with latest product catalog. Events will not be annotated
            * with detailed product information if product is missing from the catalog at the time the user
            * event is ingested, and these events are stored as unjoined events with a limited usage on
-           * training and serving. This API can be used to trigger a 'join' operation on specified events with
-           * latest version of product catalog. It can also be used to correct events joined with wrong
-           * product catalog.
+           * training and serving. This method can be used to start a join operation on specified events with
+           * latest version of product catalog. It can also be used to correct events joined with the wrong
+           * product catalog. A rejoin operation can take hours or days to complete.
            *
            * Create a request for the method "userEvents.rejoin".
            *
@@ -7545,12 +7696,12 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
 
             /**
-             * Triggers a user event rejoin operation with latest product catalog. Events will not be
-             * annotated with detailed product information if product is missing from the catalog at the time
-             * the user event is ingested, and these events are stored as unjoined events with a limited usage
-             * on training and serving. This API can be used to trigger a 'join' operation on specified events
-             * with latest version of product catalog. It can also be used to correct events joined with wrong
-             * product catalog.
+             * Starts a user event rejoin operation with latest product catalog. Events will not be annotated
+             * with detailed product information if product is missing from the catalog at the time the user
+             * event is ingested, and these events are stored as unjoined events with a limited usage on
+             * training and serving. This method can be used to start a join operation on specified events
+             * with latest version of product catalog. It can also be used to correct events joined with the
+             * wrong product catalog. A rejoin operation can take hours or days to complete.
              *
              * Create a request for the method "userEvents.rejoin".
              *

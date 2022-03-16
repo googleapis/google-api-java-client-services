@@ -31,6 +31,13 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Encapsulates an App Check token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppcheckV1betaAppCheckToken appCheckToken;
+
+  /**
    * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
    */
   @com.google.api.client.util.Key
   private GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken;
+
+  /**
+   * Encapsulates an App Check token.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaAppCheckToken getAppCheckToken() {
+    return appCheckToken;
+  }
+
+  /**
+   * Encapsulates an App Check token.
+   * @param appCheckToken appCheckToken or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse setAppCheckToken(GoogleFirebaseAppcheckV1betaAppCheckToken appCheckToken) {
+    this.appCheckToken = appCheckToken;
+    return this;
+  }
 
   /**
    * An artifact that can be used in future calls to ExchangeAppAttestAssertion.

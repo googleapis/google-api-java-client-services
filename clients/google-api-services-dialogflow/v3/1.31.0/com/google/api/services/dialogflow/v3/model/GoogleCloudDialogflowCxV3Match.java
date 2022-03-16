@@ -64,11 +64,11 @@ public final class GoogleCloudDialogflowCxV3Match extends com.google.api.client.
   /**
    * The collection of parameters extracted from the query. Depending on your protocol or client
    * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: - MapKey type: string - MapKey value:
-   * parameter name - MapValue type: - If parameter's entity type is a composite entity: map - Else:
-   * depending on parameter value type, could be one of string, number, boolean, null, list or map -
-   * MapValue value: - If parameter's entity type is a composite entity: map from composite entity
-   * property names to property values - Else: parameter value
+   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
+   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
+   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
+   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
+   * map from composite entity property names to property values, otherwise, use parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,11 +161,11 @@ public final class GoogleCloudDialogflowCxV3Match extends com.google.api.client.
   /**
    * The collection of parameters extracted from the query. Depending on your protocol or client
    * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: - MapKey type: string - MapKey value:
-   * parameter name - MapValue type: - If parameter's entity type is a composite entity: map - Else:
-   * depending on parameter value type, could be one of string, number, boolean, null, list or map -
-   * MapValue value: - If parameter's entity type is a composite entity: map from composite entity
-   * property names to property values - Else: parameter value
+   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
+   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
+   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
+   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
+   * map from composite entity property names to property values, otherwise, use parameter value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -175,11 +175,11 @@ public final class GoogleCloudDialogflowCxV3Match extends com.google.api.client.
   /**
    * The collection of parameters extracted from the query. Depending on your protocol or client
    * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: - MapKey type: string - MapKey value:
-   * parameter name - MapValue type: - If parameter's entity type is a composite entity: map - Else:
-   * depending on parameter value type, could be one of string, number, boolean, null, list or map -
-   * MapValue value: - If parameter's entity type is a composite entity: map from composite entity
-   * property names to property values - Else: parameter value
+   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
+   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
+   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
+   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
+   * map from composite entity property names to property values, otherwise, use parameter value.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Match setParameters(java.util.Map<String, java.lang.Object> parameters) {

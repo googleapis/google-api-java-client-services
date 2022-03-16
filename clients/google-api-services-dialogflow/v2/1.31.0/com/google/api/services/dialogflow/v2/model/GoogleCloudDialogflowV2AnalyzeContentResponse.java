@@ -49,7 +49,10 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   /**
    * The suggestions for end user. The order is the same as
    * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.end_user_suggestion_config.
+   * HumanAgentAssistantConfig.end_user_suggestion_config. Same as human_agent_suggestion_results,
+   * any failure of Agent Assist features will not lead to the overall failure of an AnalyzeContent
+   * API call. Instead, the features will fail silently with the error field set in the
+   * corresponding SuggestionResult.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +61,9 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   /**
    * The suggestions for most recent human agent. The order is the same as
    * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.human_agent_suggestion_config.
+   * HumanAgentAssistantConfig.human_agent_suggestion_config. Note that any failure of Agent Assist
+   * features will not lead to the overall failure of an AnalyzeContent API call. Instead, the
+   * features will fail silently with the error field set in the corresponding SuggestionResult.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +138,10 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   /**
    * The suggestions for end user. The order is the same as
    * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.end_user_suggestion_config.
+   * HumanAgentAssistantConfig.end_user_suggestion_config. Same as human_agent_suggestion_results,
+   * any failure of Agent Assist features will not lead to the overall failure of an AnalyzeContent
+   * API call. Instead, the features will fail silently with the error field set in the
+   * corresponding SuggestionResult.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SuggestionResult> getEndUserSuggestionResults() {
@@ -143,7 +151,10 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   /**
    * The suggestions for end user. The order is the same as
    * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.end_user_suggestion_config.
+   * HumanAgentAssistantConfig.end_user_suggestion_config. Same as human_agent_suggestion_results,
+   * any failure of Agent Assist features will not lead to the overall failure of an AnalyzeContent
+   * API call. Instead, the features will fail silently with the error field set in the
+   * corresponding SuggestionResult.
    * @param endUserSuggestionResults endUserSuggestionResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentResponse setEndUserSuggestionResults(java.util.List<GoogleCloudDialogflowV2SuggestionResult> endUserSuggestionResults) {
@@ -154,7 +165,9 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   /**
    * The suggestions for most recent human agent. The order is the same as
    * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.human_agent_suggestion_config.
+   * HumanAgentAssistantConfig.human_agent_suggestion_config. Note that any failure of Agent Assist
+   * features will not lead to the overall failure of an AnalyzeContent API call. Instead, the
+   * features will fail silently with the error field set in the corresponding SuggestionResult.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SuggestionResult> getHumanAgentSuggestionResults() {
@@ -164,7 +177,9 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   /**
    * The suggestions for most recent human agent. The order is the same as
    * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.human_agent_suggestion_config.
+   * HumanAgentAssistantConfig.human_agent_suggestion_config. Note that any failure of Agent Assist
+   * features will not lead to the overall failure of an AnalyzeContent API call. Instead, the
+   * features will fail silently with the error field set in the corresponding SuggestionResult.
    * @param humanAgentSuggestionResults humanAgentSuggestionResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentResponse setHumanAgentSuggestionResults(java.util.List<GoogleCloudDialogflowV2SuggestionResult> humanAgentSuggestionResults) {

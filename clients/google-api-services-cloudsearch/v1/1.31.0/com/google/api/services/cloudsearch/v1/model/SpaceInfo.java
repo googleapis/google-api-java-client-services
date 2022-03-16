@@ -54,7 +54,7 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
   private GroupId groupId;
 
   /**
-   * Whether this is an external space outside of user's organization
+   * Whether this is a space that enables guest access
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this is an external space outside of user's organization
+   * Whether this is a space that enables guest access
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsExternal() {
@@ -148,7 +148,7 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this is an external space outside of user's organization
+   * Whether this is a space that enables guest access
    * @param isExternal isExternal or {@code null} for none
    */
   public SpaceInfo setIsExternal(java.lang.Boolean isExternal) {

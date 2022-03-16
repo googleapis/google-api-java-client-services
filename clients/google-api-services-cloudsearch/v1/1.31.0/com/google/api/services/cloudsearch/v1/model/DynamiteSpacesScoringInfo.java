@@ -34,6 +34,24 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Double affinityScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double commonContactCountAffinityScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double contactsIntersectionCount;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Double finalScore;
 
   /**
@@ -46,7 +64,25 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Double joinedSpacesAffinityScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Double messageScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double smallContactListAffinityScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double smallUnjoinedSpacesAffinityScore;
 
   /**
    * The value may be {@code null}.
@@ -59,6 +95,51 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.Double topicalityScore;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAffinityScore() {
+    return affinityScore;
+  }
+
+  /**
+   * @param affinityScore affinityScore or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setAffinityScore(java.lang.Double affinityScore) {
+    this.affinityScore = affinityScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getCommonContactCountAffinityScore() {
+    return commonContactCountAffinityScore;
+  }
+
+  /**
+   * @param commonContactCountAffinityScore commonContactCountAffinityScore or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setCommonContactCountAffinityScore(java.lang.Double commonContactCountAffinityScore) {
+    this.commonContactCountAffinityScore = commonContactCountAffinityScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getContactsIntersectionCount() {
+    return contactsIntersectionCount;
+  }
+
+  /**
+   * @param contactsIntersectionCount contactsIntersectionCount or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setContactsIntersectionCount(java.lang.Double contactsIntersectionCount) {
+    this.contactsIntersectionCount = contactsIntersectionCount;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -93,6 +174,21 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
   /**
    * @return value or {@code null} for none
    */
+  public java.lang.Double getJoinedSpacesAffinityScore() {
+    return joinedSpacesAffinityScore;
+  }
+
+  /**
+   * @param joinedSpacesAffinityScore joinedSpacesAffinityScore or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setJoinedSpacesAffinityScore(java.lang.Double joinedSpacesAffinityScore) {
+    this.joinedSpacesAffinityScore = joinedSpacesAffinityScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.Double getMessageScore() {
     return messageScore;
   }
@@ -102,6 +198,36 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    */
   public DynamiteSpacesScoringInfo setMessageScore(java.lang.Double messageScore) {
     this.messageScore = messageScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getSmallContactListAffinityScore() {
+    return smallContactListAffinityScore;
+  }
+
+  /**
+   * @param smallContactListAffinityScore smallContactListAffinityScore or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setSmallContactListAffinityScore(java.lang.Double smallContactListAffinityScore) {
+    this.smallContactListAffinityScore = smallContactListAffinityScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getSmallUnjoinedSpacesAffinityScore() {
+    return smallUnjoinedSpacesAffinityScore;
+  }
+
+  /**
+   * @param smallUnjoinedSpacesAffinityScore smallUnjoinedSpacesAffinityScore or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setSmallUnjoinedSpacesAffinityScore(java.lang.Double smallUnjoinedSpacesAffinityScore) {
+    this.smallUnjoinedSpacesAffinityScore = smallUnjoinedSpacesAffinityScore;
     return this;
   }
 

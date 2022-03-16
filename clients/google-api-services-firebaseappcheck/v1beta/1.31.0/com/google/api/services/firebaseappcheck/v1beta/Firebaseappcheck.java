@@ -348,8 +348,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
       /**
        * Accepts an App Attest assertion and an artifact previously obtained from
-       * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an App Check token
-       * encapsulated in an AttestationTokenResponse.
+       * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeAppAttestAssertion".
        *
@@ -370,7 +369,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class ExchangeAppAttestAssertion extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+      public class ExchangeAppAttestAssertion extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
 
         private static final String REST_PATH = "v1beta/{+app}:exchangeAppAttestAssertion";
 
@@ -379,8 +378,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
         /**
          * Accepts an App Attest assertion and an artifact previously obtained from
-         * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an App Check
-         * token encapsulated in an AttestationTokenResponse.
+         * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an AppCheckToken.
          *
          * Create a request for the method "apps.exchangeAppAttestAssertion".
          *
@@ -398,7 +396,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected ExchangeAppAttestAssertion(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -504,9 +502,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       /**
        * Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team
        * and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an
-       * AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and performance, this
-       * method's response object will also contain an App Check token encapsulated in an
-       * AttestationTokenResponse (if the verification is successful).
+       * AppCheckToken using ExchangeAppAttestAssertion. For convenience and performance, this method's
+       * response object will also contain an AppCheckToken (if the verification is successful).
        *
        * Create a request for the method "apps.exchangeAppAttestAttestation".
        *
@@ -537,9 +534,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team
          * and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an
-         * AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and performance,
-         * this method's response object will also contain an App Check token encapsulated in an
-         * AttestationTokenResponse (if the verification is successful).
+         * AppCheckToken using ExchangeAppAttestAssertion. For convenience and performance, this method's
+         * response object will also contain an AppCheckToken (if the verification is successful).
          *
          * Create a request for the method "apps.exchangeAppAttestAttestation".
          *
@@ -662,7 +658,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       }
       /**
        * Validates a custom token signed using your project's Admin SDK service account credentials. If
-       * valid, returns an App Check token encapsulated in an AttestationTokenResponse.
+       * valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeCustomToken".
        *
@@ -683,7 +679,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class ExchangeCustomToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+      public class ExchangeCustomToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
 
         private static final String REST_PATH = "v1beta/{+app}:exchangeCustomToken";
 
@@ -692,7 +688,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
         /**
          * Validates a custom token signed using your project's Admin SDK service account credentials. If
-         * valid, returns an App Check token encapsulated in an AttestationTokenResponse.
+         * valid, returns an AppCheckToken.
          *
          * Create a request for the method "apps.exchangeCustomToken".
          *
@@ -710,7 +706,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected ExchangeCustomToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -815,8 +811,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       }
       /**
        * Validates a debug token secret that you have previously created using CreateDebugToken. If valid,
-       * returns an App Check token encapsulated in an AttestationTokenResponse. Note that a restrictive
-       * quota is enforced on this method to prevent accidental exposure of the app to abuse.
+       * returns an AppCheckToken. Note that a restrictive quota is enforced on this method to prevent
+       * accidental exposure of the app to abuse.
        *
        * Create a request for the method "apps.exchangeDebugToken".
        *
@@ -837,7 +833,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class ExchangeDebugToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+      public class ExchangeDebugToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
 
         private static final String REST_PATH = "v1beta/{+app}:exchangeDebugToken";
 
@@ -846,9 +842,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
         /**
          * Validates a debug token secret that you have previously created using CreateDebugToken. If
-         * valid, returns an App Check token encapsulated in an AttestationTokenResponse. Note that a
-         * restrictive quota is enforced on this method to prevent accidental exposure of the app to
-         * abuse.
+         * valid, returns an AppCheckToken. Note that a restrictive quota is enforced on this method to
+         * prevent accidental exposure of the app to abuse.
          *
          * Create a request for the method "apps.exchangeDebugToken".
          *
@@ -866,7 +861,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected ExchangeDebugToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -971,8 +966,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       }
       /**
        * Accepts a [`device_token`](https://developer.apple.com/documentation/devicecheck/dcdevice) issued
-       * by DeviceCheck, and attempts to validate it with Apple. If valid, returns an App Check token
-       * encapsulated in an AttestationTokenResponse.
+       * by DeviceCheck, and attempts to validate it with Apple. If valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeDeviceCheckToken".
        *
@@ -993,7 +987,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class ExchangeDeviceCheckToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+      public class ExchangeDeviceCheckToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
 
         private static final String REST_PATH = "v1beta/{+app}:exchangeDeviceCheckToken";
 
@@ -1002,8 +996,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
         /**
          * Accepts a [`device_token`](https://developer.apple.com/documentation/devicecheck/dcdevice)
-         * issued by DeviceCheck, and attempts to validate it with Apple. If valid, returns an App Check
-         * token encapsulated in an AttestationTokenResponse.
+         * issued by DeviceCheck, and attempts to validate it with Apple. If valid, returns an
+         * AppCheckToken.
          *
          * Create a request for the method "apps.exchangeDeviceCheckToken".
          *
@@ -1021,7 +1015,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected ExchangeDeviceCheckToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -1127,7 +1121,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       /**
        * Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com/recaptcha-
        * enterprise/docs/create-assessment#retrieve_token). If valid, returns an App Check token
-       * encapsulated in an AttestationTokenResponse.
+       * AppCheckToken.
        *
        * Create a request for the method "apps.exchangeRecaptchaEnterpriseToken".
        *
@@ -1148,7 +1142,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class ExchangeRecaptchaEnterpriseToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+      public class ExchangeRecaptchaEnterpriseToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
 
         private static final String REST_PATH = "v1beta/{+app}:exchangeRecaptchaEnterpriseToken";
 
@@ -1158,7 +1152,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com/recaptcha-
          * enterprise/docs/create-assessment#retrieve_token). If valid, returns an App Check token
-         * encapsulated in an AttestationTokenResponse.
+         * AppCheckToken.
          *
          * Create a request for the method "apps.exchangeRecaptchaEnterpriseToken".
          *
@@ -1176,7 +1170,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected ExchangeRecaptchaEnterpriseToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeRecaptchaEnterpriseTokenRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -1281,7 +1275,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       }
       /**
        * Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If
-       * valid, returns an App Check token encapsulated in an AttestationTokenResponse.
+       * valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeRecaptchaToken".
        *
@@ -1302,7 +1296,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class ExchangeRecaptchaToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+      public class ExchangeRecaptchaToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
 
         private static final String REST_PATH = "v1beta/{+app}:exchangeRecaptchaToken";
 
@@ -1311,7 +1305,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
         /**
          * Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If
-         * valid, returns an App Check token encapsulated in an AttestationTokenResponse.
+         * valid, returns an AppCheckToken.
          *
          * Create a request for the method "apps.exchangeRecaptchaToken".
          *
@@ -1329,7 +1323,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected ExchangeRecaptchaToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeRecaptchaTokenRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -1433,9 +1427,161 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If
+       * valid, returns an AppCheckToken.
+       *
+       * Create a request for the method "apps.exchangeRecaptchaV3Token".
+       *
+       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link ExchangeRecaptchaV3Token#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param app Required. The relative resource name of the web app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest}
+       * @return the request
+       */
+      public ExchangeRecaptchaV3Token exchangeRecaptchaV3Token(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest content) throws java.io.IOException {
+        ExchangeRecaptchaV3Token result = new ExchangeRecaptchaV3Token(app, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ExchangeRecaptchaV3Token extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
+
+        private static final String REST_PATH = "v1beta/{+app}:exchangeRecaptchaV3Token";
+
+        private final java.util.regex.Pattern APP_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If
+         * valid, returns an AppCheckToken.
+         *
+         * Create a request for the method "apps.exchangeRecaptchaV3Token".
+         *
+         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link ExchangeRecaptchaV3Token#execute()} method to invoke the
+         * remote operation. <p> {@link ExchangeRecaptchaV3Token#initialize(com.google.api.client.googleap
+         * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param app Required. The relative resource name of the web app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest}
+         * @since 1.13
+         */
+        protected ExchangeRecaptchaV3Token(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest content) {
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
+          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token set$Xgafv(java.lang.String $Xgafv) {
+          return (ExchangeRecaptchaV3Token) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setAccessToken(java.lang.String accessToken) {
+          return (ExchangeRecaptchaV3Token) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setAlt(java.lang.String alt) {
+          return (ExchangeRecaptchaV3Token) super.setAlt(alt);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setCallback(java.lang.String callback) {
+          return (ExchangeRecaptchaV3Token) super.setCallback(callback);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setFields(java.lang.String fields) {
+          return (ExchangeRecaptchaV3Token) super.setFields(fields);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setKey(java.lang.String key) {
+          return (ExchangeRecaptchaV3Token) super.setKey(key);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setOauthToken(java.lang.String oauthToken) {
+          return (ExchangeRecaptchaV3Token) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExchangeRecaptchaV3Token) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setQuotaUser(java.lang.String quotaUser) {
+          return (ExchangeRecaptchaV3Token) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setUploadType(java.lang.String uploadType) {
+          return (ExchangeRecaptchaV3Token) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExchangeRecaptchaV3Token) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The relative resource name of the web app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The relative resource name of the web app, in the format: ```
+       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /**
+         * Required. The relative resource name of the web app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public ExchangeRecaptchaV3Token setApp(java.lang.String app) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.app = app;
+          return this;
+        }
+
+        @Override
+        public ExchangeRecaptchaV3Token set(String parameterName, Object value) {
+          return (ExchangeRecaptchaV3Token) super.set(parameterName, value);
+        }
+      }
+      /**
        * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
-       * #request-attestation-step). If valid, returns an App Check token encapsulated in an
-       * AttestationTokenResponse.
+       * #request-attestation-step). If valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeSafetyNetToken".
        *
@@ -1456,7 +1602,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class ExchangeSafetyNetToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+      public class ExchangeSafetyNetToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
 
         private static final String REST_PATH = "v1beta/{+app}:exchangeSafetyNetToken";
 
@@ -1465,8 +1611,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
         /**
          * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
-         * #request-attestation-step). If valid, returns an App Check token encapsulated in an
-         * AttestationTokenResponse.
+         * #request-attestation-step). If valid, returns an AppCheckToken.
          *
          * Create a request for the method "apps.exchangeSafetyNetToken".
          *
@@ -1484,7 +1629,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected ExchangeSafetyNetToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -1611,7 +1756,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         return result;
       }
 
-      public class GenerateAppAttestChallenge extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse> {
+      public class GenerateAppAttestChallenge extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse> {
 
         private static final String REST_PATH = "v1beta/{+app}:generateAppAttestChallenge";
 
@@ -1639,7 +1784,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * @since 1.13
          */
         protected GenerateAppAttestChallenge(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse.class);
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse.class);
           this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),

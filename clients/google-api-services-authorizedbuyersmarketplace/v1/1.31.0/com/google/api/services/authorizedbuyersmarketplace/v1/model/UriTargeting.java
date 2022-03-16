@@ -17,9 +17,9 @@
 package com.google.api.services.authorizedbuyersmarketplace.v1.model;
 
 /**
- * Represents a list of targeted and excluded URLs (e.g., google.com). For Private Auction Deals,
- * URLs are either included or excluded. For Programmatic Guaranteed and Preferred Deals, this
- * doesn't apply.
+ * Represents a list of targeted and excluded URLs (for example, google.com). For Private Auction
+ * Deals, URLs are either included or excluded. For Programmatic Guaranteed and Preferred Deals,
+ * this doesn't apply.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Authorized Buyers Marketplace API. For a detailed

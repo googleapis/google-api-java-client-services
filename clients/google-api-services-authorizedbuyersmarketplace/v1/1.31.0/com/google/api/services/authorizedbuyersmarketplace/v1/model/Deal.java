@@ -119,7 +119,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Proposed flight start time of the deal. This will generally be stored in the granularity of one
    * second since deal serving starts at seconds boundary. Any time specified with more granularity
-   * (e.g., in milliseconds) will be truncated towards the start of time in seconds.
+   * (for example, in milliseconds) will be truncated towards the start of time in seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -401,7 +401,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Proposed flight start time of the deal. This will generally be stored in the granularity of one
    * second since deal serving starts at seconds boundary. Any time specified with more granularity
-   * (e.g., in milliseconds) will be truncated towards the start of time in seconds.
+   * (for example, in milliseconds) will be truncated towards the start of time in seconds.
    * @return value or {@code null} for none
    */
   public String getFlightStartTime() {
@@ -411,7 +411,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   /**
    * Proposed flight start time of the deal. This will generally be stored in the granularity of one
    * second since deal serving starts at seconds boundary. Any time specified with more granularity
-   * (e.g., in milliseconds) will be truncated towards the start of time in seconds.
+   * (for example, in milliseconds) will be truncated towards the start of time in seconds.
    * @param flightStartTime flightStartTime or {@code null} for none
    */
   public Deal setFlightStartTime(String flightStartTime) {

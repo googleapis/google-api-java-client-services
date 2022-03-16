@@ -31,7 +31,7 @@ package com.google.api.services.authorizedbuyersmarketplace.v1.model;
 public final class DeliveryControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Specifies roadblocking in a master companion lineitem.
+   * Output only. Specifies roadblocking in a main companion lineitem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class DeliveryControl extends com.google.api.client.json.GenericJso
   private java.lang.String roadblockingType;
 
   /**
-   * Output only. Specifies roadblocking in a master companion lineitem.
+   * Output only. Specifies roadblocking in a main companion lineitem.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompanionDeliveryType() {
@@ -75,7 +75,7 @@ public final class DeliveryControl extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Specifies roadblocking in a master companion lineitem.
+   * Output only. Specifies roadblocking in a main companion lineitem.
    * @param companionDeliveryType companionDeliveryType or {@code null} for none
    */
   public DeliveryControl setCompanionDeliveryType(java.lang.String companionDeliveryType) {

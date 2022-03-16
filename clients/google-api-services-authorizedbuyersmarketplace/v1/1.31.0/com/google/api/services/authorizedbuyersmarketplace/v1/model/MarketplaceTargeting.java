@@ -54,21 +54,21 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   private InventorySizeTargeting inventorySizeTargeting;
 
   /**
-   * Output only. Placement targeting information, e.g., URL, mobile applications.
+   * Output only. Placement targeting information, for example, URL, mobile applications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PlacementTargeting placementTargeting;
 
   /**
-   * Output only. Technology targeting information, e.g., operating system, device category.
+   * Output only. Technology targeting information, for example, operating system, device category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TechnologyTargeting technologyTargeting;
 
   /**
-   * Buyer user list targeting information. User lists can be uploaded via
+   * Buyer user list targeting information. User lists can be uploaded using
    * https://developers.google.com/authorized-buyers/rtb/bulk-uploader.
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Placement targeting information, e.g., URL, mobile applications.
+   * Output only. Placement targeting information, for example, URL, mobile applications.
    * @return value or {@code null} for none
    */
   public PlacementTargeting getPlacementTargeting() {
@@ -142,7 +142,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Placement targeting information, e.g., URL, mobile applications.
+   * Output only. Placement targeting information, for example, URL, mobile applications.
    * @param placementTargeting placementTargeting or {@code null} for none
    */
   public MarketplaceTargeting setPlacementTargeting(PlacementTargeting placementTargeting) {
@@ -151,7 +151,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Technology targeting information, e.g., operating system, device category.
+   * Output only. Technology targeting information, for example, operating system, device category.
    * @return value or {@code null} for none
    */
   public TechnologyTargeting getTechnologyTargeting() {
@@ -159,7 +159,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Technology targeting information, e.g., operating system, device category.
+   * Output only. Technology targeting information, for example, operating system, device category.
    * @param technologyTargeting technologyTargeting or {@code null} for none
    */
   public MarketplaceTargeting setTechnologyTargeting(TechnologyTargeting technologyTargeting) {
@@ -168,7 +168,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Buyer user list targeting information. User lists can be uploaded via
+   * Buyer user list targeting information. User lists can be uploaded using
    * https://developers.google.com/authorized-buyers/rtb/bulk-uploader.
    * @return value or {@code null} for none
    */
@@ -177,7 +177,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Buyer user list targeting information. User lists can be uploaded via
+   * Buyer user list targeting information. User lists can be uploaded using
    * https://developers.google.com/authorized-buyers/rtb/bulk-uploader.
    * @param userListTargeting userListTargeting or {@code null} for none
    */

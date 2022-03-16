@@ -20,7 +20,7 @@ package com.google.api.services.authorizedbuyersmarketplace.v1;
  * Service definition for AuthorizedBuyersMarketplace (v1).
  *
  * <p>
- * The Authorized Buyers Marketplace API allows buyers programmatically discover inventory; propose, retrieve and negotiate deals with publishers.
+ * The Authorized Buyers Marketplace API lets buyers programmatically discover inventory; propose, retrieve and negotiate deals with publishers.
  * </p>
  *
  * <p>
@@ -2313,11 +2313,11 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * List of fields to be updated. If empty or unspecified, the service will update all fields
          * populated in the update request excluding the output only fields and primitive fields
          * with default value. Note that explicit field mask is required in order to reset a
-         * primitive field back to its default value, e.g. false for boolean fields, 0 for integer
-         * fields. A special field mask consisting of a single path "*" can be used to indicate full
-         * replacement(the equivalent of PUT method), updatable fields unset or unspecified in the
-         * input will be cleared or set to default value. Output only fields will be ignored
-         * regardless of the value of updateMask.
+         * primitive field back to its default value, for example, false for boolean fields, 0 for
+         * integer fields. A special field mask consisting of a single path "*" can be used to
+         * indicate full replacement(the equivalent of PUT method), updatable fields unset or
+         * unspecified in the input will be cleared or set to default value. Output only fields will
+         * be ignored regardless of the value of updateMask.
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -2325,10 +2325,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         /** List of fields to be updated. If empty or unspecified, the service will update all fields populated
        in the update request excluding the output only fields and primitive fields with default value.
        Note that explicit field mask is required in order to reset a primitive field back to its default
-       value, e.g. false for boolean fields, 0 for integer fields. A special field mask consisting of a
-       single path "*" can be used to indicate full replacement(the equivalent of PUT method), updatable
-       fields unset or unspecified in the input will be cleared or set to default value. Output only
-       fields will be ignored regardless of the value of updateMask.
+       value, for example, false for boolean fields, 0 for integer fields. A special field mask consisting
+       of a single path "*" can be used to indicate full replacement(the equivalent of PUT method),
+       updatable fields unset or unspecified in the input will be cleared or set to default value. Output
+       only fields will be ignored regardless of the value of updateMask.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -2338,11 +2338,11 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * List of fields to be updated. If empty or unspecified, the service will update all fields
          * populated in the update request excluding the output only fields and primitive fields
          * with default value. Note that explicit field mask is required in order to reset a
-         * primitive field back to its default value, e.g. false for boolean fields, 0 for integer
-         * fields. A special field mask consisting of a single path "*" can be used to indicate full
-         * replacement(the equivalent of PUT method), updatable fields unset or unspecified in the
-         * input will be cleared or set to default value. Output only fields will be ignored
-         * regardless of the value of updateMask.
+         * primitive field back to its default value, for example, false for boolean fields, 0 for
+         * integer fields. A special field mask consisting of a single path "*" can be used to
+         * indicate full replacement(the equivalent of PUT method), updatable fields unset or
+         * unspecified in the input will be cleared or set to default value. Output only fields will
+         * be ignored regardless of the value of updateMask.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -5208,11 +5208,11 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * List of fields to be updated. If empty or unspecified, the service will update all fields
          * populated in the update request excluding the output only fields and primitive fields
          * with default value. Note that explicit field mask is required in order to reset a
-         * primitive field back to its default value, e.g. false for boolean fields, 0 for integer
-         * fields. A special field mask consisting of a single path "*" can be used to indicate full
-         * replacement(the equivalent of PUT method), updatable fields unset or unspecified in the
-         * input will be cleared or set to default value. Output only fields will be ignored
-         * regardless of the value of updateMask.
+         * primitive field back to its default value, for example, false for boolean fields, 0 for
+         * integer fields. A special field mask consisting of a single path "*" can be used to
+         * indicate full replacement(the equivalent of PUT method), updatable fields unset or
+         * unspecified in the input will be cleared or set to default value. Output only fields will
+         * be ignored regardless of the value of updateMask.
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -5220,10 +5220,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         /** List of fields to be updated. If empty or unspecified, the service will update all fields populated
        in the update request excluding the output only fields and primitive fields with default value.
        Note that explicit field mask is required in order to reset a primitive field back to its default
-       value, e.g. false for boolean fields, 0 for integer fields. A special field mask consisting of a
-       single path "*" can be used to indicate full replacement(the equivalent of PUT method), updatable
-       fields unset or unspecified in the input will be cleared or set to default value. Output only
-       fields will be ignored regardless of the value of updateMask.
+       value, for example, false for boolean fields, 0 for integer fields. A special field mask consisting
+       of a single path "*" can be used to indicate full replacement(the equivalent of PUT method),
+       updatable fields unset or unspecified in the input will be cleared or set to default value. Output
+       only fields will be ignored regardless of the value of updateMask.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -5233,11 +5233,11 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * List of fields to be updated. If empty or unspecified, the service will update all fields
          * populated in the update request excluding the output only fields and primitive fields
          * with default value. Note that explicit field mask is required in order to reset a
-         * primitive field back to its default value, e.g. false for boolean fields, 0 for integer
-         * fields. A special field mask consisting of a single path "*" can be used to indicate full
-         * replacement(the equivalent of PUT method), updatable fields unset or unspecified in the
-         * input will be cleared or set to default value. Output only fields will be ignored
-         * regardless of the value of updateMask.
+         * primitive field back to its default value, for example, false for boolean fields, 0 for
+         * integer fields. A special field mask consisting of a single path "*" can be used to
+         * indicate full replacement(the equivalent of PUT method), updatable fields unset or
+         * unspecified in the input will be cleared or set to default value. Output only fields will
+         * be ignored regardless of the value of updateMask.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -5894,8 +5894,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * revision number is incremented by the server whenever the proposal or its constituent deals are
          * updated. Note: The revision number is kept at a proposal level. The buyer of the API is expected
          * to keep track of the revision number after the last update operation and send it in as part of
-         * the next update request. This way, if there are further changes on the server (e.g., seller
-         * making new updates), then the server can detect conflicts and reject the proposed changes.
+         * the next update request. This way, if there are further changes on the server (for example,
+         * seller making new updates), then the server can detect conflicts and reject the proposed changes.
          *
          * Create a request for the method "deals.patch".
          *
@@ -5927,9 +5927,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
            * revision number is incremented by the server whenever the proposal or its constituent deals are
            * updated. Note: The revision number is kept at a proposal level. The buyer of the API is
            * expected to keep track of the revision number after the last update operation and send it in as
-           * part of the next update request. This way, if there are further changes on the server (e.g.,
-           * seller making new updates), then the server can detect conflicts and reject the proposed
-           * changes.
+           * part of the next update request. This way, if there are further changes on the server (for
+           * example, seller making new updates), then the server can detect conflicts and reject the
+           * proposed changes.
            *
            * Create a request for the method "deals.patch".
            *
@@ -6041,8 +6041,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
            * List of fields to be updated. If empty or unspecified, the service will update all
            * fields populated in the update request excluding the output only fields and primitive
            * fields with default value. Note that explicit field mask is required in order to reset
-           * a primitive field back to its default value, e.g. false for boolean fields, 0 for
-           * integer fields. A special field mask consisting of a single path "*" can be used to
+           * a primitive field back to its default value, for example, false for boolean fields, 0
+           * for integer fields. A special field mask consisting of a single path "*" can be used to
            * indicate full replacement(the equivalent of PUT method), updatable fields unset or
            * unspecified in the input will be cleared or set to default value. Output only fields
            * will be ignored regardless of the value of updateMask.
@@ -6053,10 +6053,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
           /** List of fields to be updated. If empty or unspecified, the service will update all fields populated
          in the update request excluding the output only fields and primitive fields with default value.
          Note that explicit field mask is required in order to reset a primitive field back to its default
-         value, e.g. false for boolean fields, 0 for integer fields. A special field mask consisting of a
-         single path "*" can be used to indicate full replacement(the equivalent of PUT method), updatable
-         fields unset or unspecified in the input will be cleared or set to default value. Output only
-         fields will be ignored regardless of the value of updateMask.
+         value, for example, false for boolean fields, 0 for integer fields. A special field mask consisting
+         of a single path "*" can be used to indicate full replacement(the equivalent of PUT method),
+         updatable fields unset or unspecified in the input will be cleared or set to default value. Output
+         only fields will be ignored regardless of the value of updateMask.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -6066,8 +6066,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
            * List of fields to be updated. If empty or unspecified, the service will update all
            * fields populated in the update request excluding the output only fields and primitive
            * fields with default value. Note that explicit field mask is required in order to reset
-           * a primitive field back to its default value, e.g. false for boolean fields, 0 for
-           * integer fields. A special field mask consisting of a single path "*" can be used to
+           * a primitive field back to its default value, for example, false for boolean fields, 0
+           * for integer fields. A special field mask consisting of a single path "*" can be used to
            * indicate full replacement(the equivalent of PUT method), updatable fields unset or
            * unspecified in the input will be cleared or set to default value. Output only fields
            * will be ignored regardless of the value of updateMask.

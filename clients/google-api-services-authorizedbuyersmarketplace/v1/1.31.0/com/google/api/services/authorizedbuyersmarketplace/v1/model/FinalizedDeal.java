@@ -20,9 +20,9 @@ package com.google.api.services.authorizedbuyersmarketplace.v1.model;
  * A finalized deal is a snapshot of the deal when both buyer and seller accept the deal. The buyer
  * or seller can update the deal after it's been finalized and renegotiate on the deal targeting,
  * terms and other fields, while at the same time the finalized snapshot of the deal can still be
- * retrieved via this API. The finalized deal contains a copy of the deal as it existed when most
+ * retrieved using this API. The finalized deal contains a copy of the deal as it existed when most
  * recently finalized, as well as fields related to deal serving such as pause/resume status, RTB
- * metrics, etc.
+ * metrics, and more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Authorized Buyers Marketplace API. For a detailed

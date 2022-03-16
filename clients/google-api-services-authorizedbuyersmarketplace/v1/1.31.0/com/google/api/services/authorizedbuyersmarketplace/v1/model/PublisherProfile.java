@@ -145,7 +145,8 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
   private java.lang.String samplePageUrl;
 
   /**
-   * Up to three key metrics and rankings. For example "#1 Mobile News Site for 20 Straight Months".
+   * Up to three key metrics and rankings. For example, "#1 Mobile News Site for 20 Straight
+   * Months".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,7 +421,8 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Up to three key metrics and rankings. For example "#1 Mobile News Site for 20 Straight Months".
+   * Up to three key metrics and rankings. For example, "#1 Mobile News Site for 20 Straight
+   * Months".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTopHeadlines() {
@@ -428,7 +430,8 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Up to three key metrics and rankings. For example "#1 Mobile News Site for 20 Straight Months".
+   * Up to three key metrics and rankings. For example, "#1 Mobile News Site for 20 Straight
+   * Months".
    * @param topHeadlines topHeadlines or {@code null} for none
    */
   public PublisherProfile setTopHeadlines(java.util.List<java.lang.String> topHeadlines) {

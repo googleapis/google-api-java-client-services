@@ -17,7 +17,8 @@
 package com.google.api.services.prod_tt_sasportal.v1alpha1.model;
 
 /**
- * Information about National Radio Quiet Zone validation.
+ * Information about National Radio Quiet Zone validation. The presence of the field indicates the
+ * device has been validated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the SAS Portal API (Testing). For a detailed explanation
@@ -57,13 +58,6 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.Double longitude;
-
-  /**
-   * State of the NRQZ validation info.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
 
   /**
    * Validation case id.
@@ -130,23 +124,6 @@ public final class SasPortalNrqzValidation extends com.google.api.client.json.Ge
    */
   public SasPortalNrqzValidation setLongitude(java.lang.Double longitude) {
     this.longitude = longitude;
-    return this;
-  }
-
-  /**
-   * State of the NRQZ validation info.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * State of the NRQZ validation info.
-   * @param state state or {@code null} for none
-   */
-  public SasPortalNrqzValidation setState(java.lang.String state) {
-    this.state = state;
     return this;
   }
 

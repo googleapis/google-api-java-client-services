@@ -69,6 +69,14 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
   private java.lang.Long numResponseItems;
 
   /**
+   * Indicates the policy violations for this request. If the request is denied by the policy,
+   * violation information will be logged here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyViolationInfo policyViolationInfo;
+
+  /**
    * The operation request. This may not include all request parameters, such as those that are too
    * large, privacy-sensitive, or duplicated elsewhere in the log record. It should never include
    * user-generated data, such as file contents. When the JSON object represented here has a proto
@@ -234,6 +242,25 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
    */
   public AuditLog setNumResponseItems(java.lang.Long numResponseItems) {
     this.numResponseItems = numResponseItems;
+    return this;
+  }
+
+  /**
+   * Indicates the policy violations for this request. If the request is denied by the policy,
+   * violation information will be logged here.
+   * @return value or {@code null} for none
+   */
+  public PolicyViolationInfo getPolicyViolationInfo() {
+    return policyViolationInfo;
+  }
+
+  /**
+   * Indicates the policy violations for this request. If the request is denied by the policy,
+   * violation information will be logged here.
+   * @param policyViolationInfo policyViolationInfo or {@code null} for none
+   */
+  public AuditLog setPolicyViolationInfo(PolicyViolationInfo policyViolationInfo) {
+    this.policyViolationInfo = policyViolationInfo;
     return this;
   }
 

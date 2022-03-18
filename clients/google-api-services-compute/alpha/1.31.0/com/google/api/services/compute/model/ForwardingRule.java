@@ -242,6 +242,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String networkTier;
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a
+   * DNS zone or not. Non-PSC forwarding rules do not use this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean noAutomateDnsZone;
+
+  /**
    * This field can be used only if: - Load balancing scheme is one of EXTERNAL,
    * INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets
    * addressed to ports in the specified range will be forwarded to target or backend_service. You
@@ -901,6 +909,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setNetworkTier(java.lang.String networkTier) {
     this.networkTier = networkTier;
+    return this;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a
+   * DNS zone or not. Non-PSC forwarding rules do not use this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNoAutomateDnsZone() {
+    return noAutomateDnsZone;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a
+   * DNS zone or not. Non-PSC forwarding rules do not use this field.
+   * @param noAutomateDnsZone noAutomateDnsZone or {@code null} for none
+   */
+  public ForwardingRule setNoAutomateDnsZone(java.lang.Boolean noAutomateDnsZone) {
+    this.noAutomateDnsZone = noAutomateDnsZone;
     return this;
   }
 

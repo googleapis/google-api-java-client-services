@@ -2112,6 +2112,329 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * Lists documents.
+         *
+         * Create a request for the method "documents.listDocuments".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link ListDocuments#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+         * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+         * @return the request
+         */
+        public ListDocuments listDocuments(java.lang.String parent, java.lang.String collectionId) throws java.io.IOException {
+          ListDocuments result = new ListDocuments(parent, collectionId);
+          initialize(result);
+          return result;
+        }
+
+        public class ListDocuments extends FirestoreRequest<com.google.api.services.firestore.v1beta1.model.ListDocumentsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/{collectionId}";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents$");
+
+          /**
+           * Lists documents.
+           *
+           * Create a request for the method "documents.listDocuments".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link ListDocuments#execute()} method to invoke the remote
+           * operation. <p> {@link ListDocuments#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+           * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+           * @since 1.13
+           */
+          protected ListDocuments(java.lang.String parent, java.lang.String collectionId) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1beta1.model.ListDocumentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents$");
+            }
+            this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListDocuments set$Xgafv(java.lang.String $Xgafv) {
+            return (ListDocuments) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListDocuments setAccessToken(java.lang.String accessToken) {
+            return (ListDocuments) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListDocuments setAlt(java.lang.String alt) {
+            return (ListDocuments) super.setAlt(alt);
+          }
+
+          @Override
+          public ListDocuments setCallback(java.lang.String callback) {
+            return (ListDocuments) super.setCallback(callback);
+          }
+
+          @Override
+          public ListDocuments setFields(java.lang.String fields) {
+            return (ListDocuments) super.setFields(fields);
+          }
+
+          @Override
+          public ListDocuments setKey(java.lang.String key) {
+            return (ListDocuments) super.setKey(key);
+          }
+
+          @Override
+          public ListDocuments setOauthToken(java.lang.String oauthToken) {
+            return (ListDocuments) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListDocuments setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListDocuments) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListDocuments setQuotaUser(java.lang.String quotaUser) {
+            return (ListDocuments) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListDocuments setUploadType(java.lang.String uploadType) {
+            return (ListDocuments) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListDocuments setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListDocuments) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. In the format:
+         `projects/{project_id}/databases/{database_id}/documents` or
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
+         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         database/documents/chatrooms/my-chatroom`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          public ListDocuments setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String collectionId;
+
+          /** Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+           */
+          public java.lang.String getCollectionId() {
+            return collectionId;
+          }
+
+          /**
+           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`.
+           */
+          public ListDocuments setCollectionId(java.lang.String collectionId) {
+            this.collectionId = collectionId;
+            return this;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          @com.google.api.client.util.Key("mask.fieldPaths")
+          private java.util.List<java.lang.String> maskFieldPaths;
+
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+           */
+          public java.util.List<java.lang.String> getMaskFieldPaths() {
+            return maskFieldPaths;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          public ListDocuments setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
+            this.maskFieldPaths = maskFieldPaths;
+            return this;
+          }
+
+          /** The order to sort results by. For example: `priority desc, name`. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** The order to sort results by. For example: `priority desc, name`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** The order to sort results by. For example: `priority desc, name`. */
+          public ListDocuments setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** The maximum number of documents to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of documents to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of documents to return. */
+          public ListDocuments setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The `next_page_token` value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The `next_page_token` value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The `next_page_token` value returned from a previous List request, if any. */
+          public ListDocuments setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Reads documents as they were at the given time. This may not be older than 270 seconds.
+           */
+          @com.google.api.client.util.Key
+          private String readTime;
+
+          /** Reads documents as they were at the given time. This may not be older than 270 seconds.
+           */
+          public String getReadTime() {
+            return readTime;
+          }
+
+          /**
+           * Reads documents as they were at the given time. This may not be older than 270 seconds.
+           */
+          public ListDocuments setReadTime(String readTime) {
+            this.readTime = readTime;
+            return this;
+          }
+
+          /**
+           * If the list should show missing documents. A missing document is a document that does
+           * not exist but has sub-documents. These documents will be returned with a key but will
+           * not have fields, Document.create_time, or Document.update_time set. Requests with
+           * `show_missing` may not specify `where` or `order_by`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showMissing;
+
+          /** If the list should show missing documents. A missing document is a document that does not exist but
+         has sub-documents. These documents will be returned with a key but will not have fields,
+         Document.create_time, or Document.update_time set. Requests with `show_missing` may not specify
+         `where` or `order_by`.
+           */
+          public java.lang.Boolean getShowMissing() {
+            return showMissing;
+          }
+
+          /**
+           * If the list should show missing documents. A missing document is a document that does
+           * not exist but has sub-documents. These documents will be returned with a key but will
+           * not have fields, Document.create_time, or Document.update_time set. Requests with
+           * `show_missing` may not specify `where` or `order_by`.
+           */
+          public ListDocuments setShowMissing(java.lang.Boolean showMissing) {
+            this.showMissing = showMissing;
+            return this;
+          }
+
+          /** Reads documents in a transaction. */
+          @com.google.api.client.util.Key
+          private java.lang.String transaction;
+
+          /** Reads documents in a transaction.
+           */
+          public java.lang.String getTransaction() {
+            return transaction;
+          }
+
+          /** Reads documents in a transaction. */
+          public ListDocuments setTransaction(java.lang.String transaction) {
+            this.transaction = transaction;
+            return this;
+          }
+
+          @Override
+          public ListDocuments set(String parameterName, Object value) {
+            return (ListDocuments) super.set(parameterName, value);
+          }
+        }
+        /**
          * Listens to changes.
          *
          * Create a request for the method "documents.listen".

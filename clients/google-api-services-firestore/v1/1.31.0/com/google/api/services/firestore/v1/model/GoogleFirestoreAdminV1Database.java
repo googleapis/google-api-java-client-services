@@ -31,6 +31,13 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1Database extends com.google.api.client.json.GenericJson {
 
   /**
+   * The App Engine integration mode to use for this database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appEngineIntegrationMode;
+
+  /**
    * The concurrency control mode to use for this database.
    * The value may be {@code null}.
    */
@@ -44,6 +51,16 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Output only. The key_prefix for this database. This key_prefix is used, in combination with the
+   * project id ("~") to construct the application id that is returned from the Cloud Datastore APIs
+   * in Google App Engine first generation runtimes. This value may be empty in which case the appid
+   * to use for URL-encoded keys is the project_id (eg: foo instead of v~foo).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyPrefix;
 
   /**
    * The location of the database. Available databases are listed at
@@ -67,6 +84,23 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The App Engine integration mode to use for this database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppEngineIntegrationMode() {
+    return appEngineIntegrationMode;
+  }
+
+  /**
+   * The App Engine integration mode to use for this database.
+   * @param appEngineIntegrationMode appEngineIntegrationMode or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setAppEngineIntegrationMode(java.lang.String appEngineIntegrationMode) {
+    this.appEngineIntegrationMode = appEngineIntegrationMode;
+    return this;
+  }
 
   /**
    * The concurrency control mode to use for this database.
@@ -101,6 +135,29 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. The key_prefix for this database. This key_prefix is used, in combination with the
+   * project id ("~") to construct the application id that is returned from the Cloud Datastore APIs
+   * in Google App Engine first generation runtimes. This value may be empty in which case the appid
+   * to use for URL-encoded keys is the project_id (eg: foo instead of v~foo).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyPrefix() {
+    return keyPrefix;
+  }
+
+  /**
+   * Output only. The key_prefix for this database. This key_prefix is used, in combination with the
+   * project id ("~") to construct the application id that is returned from the Cloud Datastore APIs
+   * in Google App Engine first generation runtimes. This value may be empty in which case the appid
+   * to use for URL-encoded keys is the project_id (eg: foo instead of v~foo).
+   * @param keyPrefix keyPrefix or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setKeyPrefix(java.lang.String keyPrefix) {
+    this.keyPrefix = keyPrefix;
     return this;
   }
 

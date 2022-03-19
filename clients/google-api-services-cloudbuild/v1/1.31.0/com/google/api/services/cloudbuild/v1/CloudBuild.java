@@ -7625,7 +7625,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the `WorkerPool` to delete. Format:
-         *        `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+         *        `projects/{project}/locations/{location}/workerPools/{workerPool}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -7653,7 +7653,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the `WorkerPool` to delete. Format:
-         *        `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+         *        `projects/{project}/locations/{location}/workerPools/{workerPool}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -7723,13 +7723,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The name of the `WorkerPool` to delete. Format:
-           * `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+           * `projects/{project}/locations/{location}/workerPools/{workerPool}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the `WorkerPool` to delete. Format:
-         `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+         `projects/{project}/locations/{location}/workerPools/{workerPool}`.
            */
           public java.lang.String getName() {
             return name;
@@ -7737,7 +7737,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The name of the `WorkerPool` to delete. Format:
-           * `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+           * `projects/{project}/locations/{location}/workerPools/{workerPool}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -52,6 +52,18 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsKeyName;
 
   /**
+   * The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name format: "proje
+   * cts/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoKeyVersions/[VE
+   * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
+   * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
+   * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
+   * CMEK settings are bound to a single key version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyVersionName;
+
+  /**
    * Output only. The resource name of the CMEK settings.
    * The value may be {@code null}.
    */
@@ -106,6 +118,33 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    */
   public CmekSettings setKmsKeyName(java.lang.String kmsKeyName) {
     this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
+   * The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name format: "proje
+   * cts/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoKeyVersions/[VE
+   * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
+   * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
+   * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
+   * CMEK settings are bound to a single key version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyVersionName() {
+    return kmsKeyVersionName;
+  }
+
+  /**
+   * The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name format: "proje
+   * cts/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoKeyVersions/[VE
+   * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
+   * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
+   * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
+   * CMEK settings are bound to a single key version.
+   * @param kmsKeyVersionName kmsKeyVersionName or {@code null} for none
+   */
+  public CmekSettings setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {
+    this.kmsKeyVersionName = kmsKeyVersionName;
     return this;
   }
 

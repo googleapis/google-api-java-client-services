@@ -71,6 +71,16 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
+   * Output only. The max allowed expiration time of the backup, with microseconds granularity. A
+   * backup's expiration time can be configured in multiple APIs: CreateBackup, UpdateBackup,
+   * CopyBackup. When updating or copying an existing backup, the expiration time specified must be
+   * less than `Backup.max_expire_time`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxExpireTime;
+
+  /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
    * unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
@@ -81,6 +91,17 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The names of the destination backups being created by copying this source backup.
+   * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
+   * in different instances. The existence of any referencing backup prevents the backup from being
+   * deleted. When the copy operation is done (either successfully completed or cancelled or the
+   * destination backup is deleted), the reference to the backup is removed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> referencingBackups;
 
   /**
    * Output only. The names of the restored databases that reference the backup. The database names
@@ -214,6 +235,29 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The max allowed expiration time of the backup, with microseconds granularity. A
+   * backup's expiration time can be configured in multiple APIs: CreateBackup, UpdateBackup,
+   * CopyBackup. When updating or copying an existing backup, the expiration time specified must be
+   * less than `Backup.max_expire_time`.
+   * @return value or {@code null} for none
+   */
+  public String getMaxExpireTime() {
+    return maxExpireTime;
+  }
+
+  /**
+   * Output only. The max allowed expiration time of the backup, with microseconds granularity. A
+   * backup's expiration time can be configured in multiple APIs: CreateBackup, UpdateBackup,
+   * CopyBackup. When updating or copying an existing backup, the expiration time specified must be
+   * less than `Backup.max_expire_time`.
+   * @param maxExpireTime maxExpireTime or {@code null} for none
+   */
+  public Backup setMaxExpireTime(String maxExpireTime) {
+    this.maxExpireTime = maxExpireTime;
+    return this;
+  }
+
+  /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
    * unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
@@ -237,6 +281,31 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The names of the destination backups being created by copying this source backup.
+   * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
+   * in different instances. The existence of any referencing backup prevents the backup from being
+   * deleted. When the copy operation is done (either successfully completed or cancelled or the
+   * destination backup is deleted), the reference to the backup is removed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReferencingBackups() {
+    return referencingBackups;
+  }
+
+  /**
+   * Output only. The names of the destination backups being created by copying this source backup.
+   * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
+   * in different instances. The existence of any referencing backup prevents the backup from being
+   * deleted. When the copy operation is done (either successfully completed or cancelled or the
+   * destination backup is deleted), the reference to the backup is removed.
+   * @param referencingBackups referencingBackups or {@code null} for none
+   */
+  public Backup setReferencingBackups(java.util.List<java.lang.String> referencingBackups) {
+    this.referencingBackups = referencingBackups;
     return this;
   }
 

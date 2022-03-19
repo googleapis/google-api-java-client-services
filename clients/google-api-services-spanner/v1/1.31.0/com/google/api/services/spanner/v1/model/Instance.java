@@ -38,6 +38,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String config;
 
   /**
+   * Output only. The time at which the instance was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Required. The descriptive name for this instance as it appears in UIs. Must be unique per
    * project and between 4 and 30 characters in length.
    * The value may be {@code null}.
@@ -111,6 +118,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. The time at which the instance was most recently updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Required. The name of the instance's configuration. Values are of the form
    * `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
    * @return value or {@code null} for none
@@ -126,6 +140,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setConfig(java.lang.String config) {
     this.config = config;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the instance was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time at which the instance was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Instance setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -293,6 +324,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the instance was most recently updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The time at which the instance was most recently updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Instance setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

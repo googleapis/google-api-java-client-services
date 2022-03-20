@@ -94,6 +94,20 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   private TrainingOptions trainingOptions;
 
   /**
+   * The model id in Vertex AI Model Registry for this training run
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vertexAiModelId;
+
+  /**
+   * The model version in Vertex AI Model Registry for this training run
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vertexAiModelVersion;
+
+  /**
    * Global explanation contains the explanation of top features on the class level. Applies to
    * classification models only.
    * @return value or {@code null} for none
@@ -215,6 +229,40 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
    */
   public TrainingRun setTrainingOptions(TrainingOptions trainingOptions) {
     this.trainingOptions = trainingOptions;
+    return this;
+  }
+
+  /**
+   * The model id in Vertex AI Model Registry for this training run
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVertexAiModelId() {
+    return vertexAiModelId;
+  }
+
+  /**
+   * The model id in Vertex AI Model Registry for this training run
+   * @param vertexAiModelId vertexAiModelId or {@code null} for none
+   */
+  public TrainingRun setVertexAiModelId(java.lang.String vertexAiModelId) {
+    this.vertexAiModelId = vertexAiModelId;
+    return this;
+  }
+
+  /**
+   * The model version in Vertex AI Model Registry for this training run
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVertexAiModelVersion() {
+    return vertexAiModelVersion;
+  }
+
+  /**
+   * The model version in Vertex AI Model Registry for this training run
+   * @param vertexAiModelVersion vertexAiModelVersion or {@code null} for none
+   */
+  public TrainingRun setVertexAiModelVersion(java.lang.String vertexAiModelVersion) {
+    this.vertexAiModelVersion = vertexAiModelVersion;
     return this;
   }
 

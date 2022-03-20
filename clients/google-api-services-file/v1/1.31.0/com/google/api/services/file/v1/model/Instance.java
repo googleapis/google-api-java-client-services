@@ -116,7 +116,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
-   * Output only. field indicates all the reasons the instance is in "SUSPENDED" state.
+   * Output only. Field indicates all the reasons the instance is in "SUSPENDED" state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -323,7 +323,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. field indicates all the reasons the instance is in "SUSPENDED" state.
+   * Output only. Field indicates all the reasons the instance is in "SUSPENDED" state.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSuspensionReasons() {
@@ -331,7 +331,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. field indicates all the reasons the instance is in "SUSPENDED" state.
+   * Output only. Field indicates all the reasons the instance is in "SUSPENDED" state.
    * @param suspensionReasons suspensionReasons or {@code null} for none
    */
   public Instance setSuspensionReasons(java.util.List<java.lang.String> suspensionReasons) {

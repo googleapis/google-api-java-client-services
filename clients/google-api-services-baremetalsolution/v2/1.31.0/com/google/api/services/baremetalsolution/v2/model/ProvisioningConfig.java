@@ -38,7 +38,8 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   private java.lang.String cloudConsoleUri;
 
   /**
-   * Optional. Email provided to send a confirmation with provisioning config to.
+   * Email provided to send a confirmation with provisioning config to. Deprecated in favour of
+   * email field in request messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +139,8 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Email provided to send a confirmation with provisioning config to.
+   * Email provided to send a confirmation with provisioning config to. Deprecated in favour of
+   * email field in request messages.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -146,7 +148,8 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Email provided to send a confirmation with provisioning config to.
+   * Email provided to send a confirmation with provisioning config to. Deprecated in favour of
+   * email field in request messages.
    * @param email email or {@code null} for none
    */
   public ProvisioningConfig setEmail(java.lang.String email) {

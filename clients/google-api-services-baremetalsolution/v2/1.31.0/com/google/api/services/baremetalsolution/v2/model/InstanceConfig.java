@@ -31,6 +31,13 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class InstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true networks can be from different projects of the same vendor account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean accountNetworksEnabled;
+
+  /**
    * Client network address.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String userNote;
+
+  /**
+   * If true networks can be from different projects of the same vendor account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAccountNetworksEnabled() {
+    return accountNetworksEnabled;
+  }
+
+  /**
+   * If true networks can be from different projects of the same vendor account.
+   * @param accountNetworksEnabled accountNetworksEnabled or {@code null} for none
+   */
+  public InstanceConfig setAccountNetworksEnabled(java.lang.Boolean accountNetworksEnabled) {
+    this.accountNetworksEnabled = accountNetworksEnabled;
+    return this;
+  }
 
   /**
    * Client network address.

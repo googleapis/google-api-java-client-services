@@ -54,6 +54,15 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private GKE gke;
 
   /**
+   * The resource name of the Workflow whose Executions are triggered by the events. The Workflow
+   * resource should be deployed in the same project as the trigger. Format:
+   * `projects/{project}/locations/{location}/workflows/{workflow}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workflow;
+
+  /**
    * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
    * `projects/{project}/locations/{location}/functions/{function}`
    * @return value or {@code null} for none
@@ -107,6 +116,27 @@ public final class Destination extends com.google.api.client.json.GenericJson {
    */
   public Destination setGke(GKE gke) {
     this.gke = gke;
+    return this;
+  }
+
+  /**
+   * The resource name of the Workflow whose Executions are triggered by the events. The Workflow
+   * resource should be deployed in the same project as the trigger. Format:
+   * `projects/{project}/locations/{location}/workflows/{workflow}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkflow() {
+    return workflow;
+  }
+
+  /**
+   * The resource name of the Workflow whose Executions are triggered by the events. The Workflow
+   * resource should be deployed in the same project as the trigger. Format:
+   * `projects/{project}/locations/{location}/workflows/{workflow}`
+   * @param workflow workflow or {@code null} for none
+   */
+  public Destination setWorkflow(java.lang.String workflow) {
+    this.workflow = workflow;
     return this;
   }
 

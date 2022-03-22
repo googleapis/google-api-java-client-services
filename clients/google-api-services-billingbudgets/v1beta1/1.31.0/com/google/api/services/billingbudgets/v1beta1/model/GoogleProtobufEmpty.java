@@ -19,8 +19,7 @@ package com.google.api.services.billingbudgets.v1beta1.model;
 /**
  * A generic empty message that you can re-use to avoid defining duplicated empty messages in your
  * APIs. A typical example is to use it as the request or the response type of an API method. For
- * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The
- * JSON representation for `Empty` is empty JSON object `{}`.
+ * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing Budget API. For a detailed explanation

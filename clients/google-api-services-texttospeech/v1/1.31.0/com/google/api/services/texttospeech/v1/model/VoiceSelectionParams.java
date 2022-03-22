@@ -31,6 +31,14 @@ package com.google.api.services.texttospeech.v1.model;
 public final class VoiceSelectionParams extends com.google.api.client.json.GenericJson {
 
   /**
+   * The configuration for a custom voice. If [CustomVoiceParams.model] is set, the service will
+   * choose the custom voice matching the specified configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomVoiceParams customVoice;
+
+  /**
    * Required. The language (and potentially also the region) of the voice expressed as a
    * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag, e.g. "en-US". This should
    * not include a script tag (e.g. use "cmn-cn" rather than "cmn-Hant-cn"), because the script will
@@ -61,6 +69,25 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String ssmlGender;
+
+  /**
+   * The configuration for a custom voice. If [CustomVoiceParams.model] is set, the service will
+   * choose the custom voice matching the specified configuration.
+   * @return value or {@code null} for none
+   */
+  public CustomVoiceParams getCustomVoice() {
+    return customVoice;
+  }
+
+  /**
+   * The configuration for a custom voice. If [CustomVoiceParams.model] is set, the service will
+   * choose the custom voice matching the specified configuration.
+   * @param customVoice customVoice or {@code null} for none
+   */
+  public VoiceSelectionParams setCustomVoice(CustomVoiceParams customVoice) {
+    this.customVoice = customVoice;
+    return this;
+  }
 
   /**
    * Required. The language (and potentially also the region) of the voice expressed as a

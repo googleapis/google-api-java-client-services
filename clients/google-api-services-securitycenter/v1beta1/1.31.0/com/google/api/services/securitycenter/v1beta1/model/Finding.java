@@ -120,8 +120,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private MitreAttack mitreAttack;
 
   /**
-   * Indicates the mute state of a finding (either unspecified, muted, unmuted or undefined). Unlike
-   * other attributes of a finding, a finding provider shouldn't set the value of mute.
+   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
+   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -415,8 +415,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the mute state of a finding (either unspecified, muted, unmuted or undefined). Unlike
-   * other attributes of a finding, a finding provider shouldn't set the value of mute.
+   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
+   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * @return value or {@code null} for none
    */
   public java.lang.String getMute() {
@@ -424,8 +424,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the mute state of a finding (either unspecified, muted, unmuted or undefined). Unlike
-   * other attributes of a finding, a finding provider shouldn't set the value of mute.
+   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
+   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * @param mute mute or {@code null} for none
    */
   public Finding setMute(java.lang.String mute) {

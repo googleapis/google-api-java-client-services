@@ -60,6 +60,13 @@ public final class SasPortalDeviceGrant extends com.google.api.client.json.Gener
   private java.lang.String grantId;
 
   /**
+   * The transmit expiration time of the last heartbeat.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastHeartbeatTransmitExpireTime;
+
+  /**
    * Maximum Equivalent Isotropically Radiated Power (EIRP) permitted by the grant. The maximum EIRP
    * is in units of dBm/MHz. The value of `maxEirp` represents the average (RMS) EIRP that would be
    * measured by the procedure defined in FCC part 96.41(e)(3).
@@ -154,6 +161,23 @@ public final class SasPortalDeviceGrant extends com.google.api.client.json.Gener
    */
   public SasPortalDeviceGrant setGrantId(java.lang.String grantId) {
     this.grantId = grantId;
+    return this;
+  }
+
+  /**
+   * The transmit expiration time of the last heartbeat.
+   * @return value or {@code null} for none
+   */
+  public String getLastHeartbeatTransmitExpireTime() {
+    return lastHeartbeatTransmitExpireTime;
+  }
+
+  /**
+   * The transmit expiration time of the last heartbeat.
+   * @param lastHeartbeatTransmitExpireTime lastHeartbeatTransmitExpireTime or {@code null} for none
+   */
+  public SasPortalDeviceGrant setLastHeartbeatTransmitExpireTime(String lastHeartbeatTransmitExpireTime) {
+    this.lastHeartbeatTransmitExpireTime = lastHeartbeatTransmitExpireTime;
     return this;
   }
 

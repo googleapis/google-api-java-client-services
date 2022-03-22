@@ -17,7 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Parameters that describe the nodes in a cluster.
+ * Parameters that describe the nodes in a cluster. *Note:* GKE Autopilot clusters do not recognize
+ * parameters in `NodeConfig`. Use AutoprovisioningNodePoolDefaults instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -61,6 +62,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String bootDiskKmsKey;
+
+  /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialNodes confidentialNodes;
 
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
@@ -331,6 +339,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {
     this.bootDiskKmsKey = bootDiskKmsKey;
+    return this;
+  }
+
+  /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialNodes getConfidentialNodes() {
+    return confidentialNodes;
+  }
+
+  /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * @param confidentialNodes confidentialNodes or {@code null} for none
+   */
+  public NodeConfig setConfidentialNodes(ConfidentialNodes confidentialNodes) {
+    this.confidentialNodes = confidentialNodes;
     return this;
   }
 

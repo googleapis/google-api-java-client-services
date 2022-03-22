@@ -30,6 +30,13 @@ package com.google.api.services.youtube.model;
 public final class ChannelToStoreLinkDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Google Merchant Center id of the store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger merchantId;
+
+  /**
    * Name of the store.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class ChannelToStoreLinkDetails extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String storeUrl;
+
+  /**
+   * Google Merchant Center id of the store.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getMerchantId() {
+    return merchantId;
+  }
+
+  /**
+   * Google Merchant Center id of the store.
+   * @param merchantId merchantId or {@code null} for none
+   */
+  public ChannelToStoreLinkDetails setMerchantId(java.math.BigInteger merchantId) {
+    this.merchantId = merchantId;
+    return this;
+  }
 
   /**
    * Name of the store.

@@ -5203,7 +5203,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Testers {
 
       /**
-       * Gets testers.
+       * Gets testers. Note: Testers resource does not support email lists.
        *
        * Create a request for the method "testers.get".
        *
@@ -5226,7 +5226,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}";
 
         /**
-         * Gets testers.
+         * Gets testers. Note: Testers resource does not support email lists.
          *
          * Create a request for the method "testers.get".
          *
@@ -5366,7 +5366,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Patches testers.
+       * Patches testers. Note: Testers resource does not support email lists.
        *
        * Create a request for the method "testers.patch".
        *
@@ -5390,7 +5390,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}";
 
         /**
-         * Patches testers.
+         * Patches testers. Note: Testers resource does not support email lists.
          *
          * Create a request for the method "testers.patch".
          *
@@ -5522,7 +5522,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates testers.
+       * Updates testers. Note: Testers resource does not support email lists.
        *
        * Create a request for the method "testers.update".
        *
@@ -5546,7 +5546,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/testers/{track}";
 
         /**
-         * Updates testers.
+         * Updates testers. Note: Testers resource does not support email lists.
          *
          * Create a request for the method "testers.update".
          *

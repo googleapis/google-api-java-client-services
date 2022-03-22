@@ -82,7 +82,7 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   private java.lang.String project;
 
   /**
-   * The project id that the resource belongs to.
+   * The project ID that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +204,7 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The project id that the resource belongs to.
+   * The project ID that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectDisplayName() {
@@ -212,7 +212,7 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The project id that the resource belongs to.
+   * The project ID that the resource belongs to.
    * @param projectDisplayName projectDisplayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setProjectDisplayName(java.lang.String projectDisplayName) {

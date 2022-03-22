@@ -17,7 +17,8 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * The testers of an app. The resource for TestersService.
+ * The testers of an app. The resource for TestersService. Note: while it is possible in the Play
+ * Console UI to add testers via email lists, email lists are not supported by this resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

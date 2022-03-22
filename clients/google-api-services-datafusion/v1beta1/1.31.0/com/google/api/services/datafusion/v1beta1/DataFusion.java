@@ -1265,32 +1265,41 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-         must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset. To learn which resources support conditions in their IAM policies, see the
-         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -2295,24 +2304,24 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           /**
            * Add DNS peering on the given resource.
            *
-           * Create a request for the method "dnsPeerings.add".
+           * Create a request for the method "dnsPeerings.create".
            *
            * This request holds the parameters needed by the datafusion server.  After setting any optional
-           * parameters, call the {@link Add#execute()} method to invoke the remote operation.
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource on which DNS peering will be created.
-           * @param content the {@link com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest}
+           * @param content the {@link com.google.api.services.datafusion.v1beta1.model.DnsPeering}
            * @return the request
            */
-          public Add add(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest content) throws java.io.IOException {
-            Add result = new Add(parent, content);
+          public Create create(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.DnsPeering content) throws java.io.IOException {
+            Create result = new Create(parent, content);
             initialize(result);
             return result;
           }
 
-          public class Add extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringResponse> {
+          public class Create extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.DnsPeering> {
 
-            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings:add";
+            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
@@ -2320,19 +2329,20 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             /**
              * Add DNS peering on the given resource.
              *
-             * Create a request for the method "dnsPeerings.add".
+             * Create a request for the method "dnsPeerings.create".
              *
              * This request holds the parameters needed by the the datafusion server.  After setting any
-             * optional parameters, call the {@link Add#execute()} method to invoke the remote operation. <p>
-             * {@link Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource on which DNS peering will be created.
-             * @param content the {@link com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest}
+             * @param content the {@link com.google.api.services.datafusion.v1beta1.model.DnsPeering}
              * @since 1.13
              */
-            protected Add(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest content) {
-              super(DataFusion.this, "POST", REST_PATH, content, com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringResponse.class);
+            protected Create(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.DnsPeering content) {
+              super(DataFusion.this, "POST", REST_PATH, content, com.google.api.services.datafusion.v1beta1.model.DnsPeering.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2342,58 +2352,58 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Add set$Xgafv(java.lang.String $Xgafv) {
-              return (Add) super.set$Xgafv($Xgafv);
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
             }
 
             @Override
-            public Add setAccessToken(java.lang.String accessToken) {
-              return (Add) super.setAccessToken(accessToken);
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
             }
 
             @Override
-            public Add setAlt(java.lang.String alt) {
-              return (Add) super.setAlt(alt);
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
             }
 
             @Override
-            public Add setCallback(java.lang.String callback) {
-              return (Add) super.setCallback(callback);
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
-            public Add setFields(java.lang.String fields) {
-              return (Add) super.setFields(fields);
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
             }
 
             @Override
-            public Add setKey(java.lang.String key) {
-              return (Add) super.setKey(key);
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
             }
 
             @Override
-            public Add setOauthToken(java.lang.String oauthToken) {
-              return (Add) super.setOauthToken(oauthToken);
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
             }
 
             @Override
-            public Add setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Add) super.setPrettyPrint(prettyPrint);
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
             }
 
             @Override
-            public Add setQuotaUser(java.lang.String quotaUser) {
-              return (Add) super.setQuotaUser(quotaUser);
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
             }
 
             @Override
-            public Add setUploadType(java.lang.String uploadType) {
-              return (Add) super.setUploadType(uploadType);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
             }
 
             @Override
-            public Add setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Add) super.setUploadProtocol(uploadProtocol);
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /** Required. The resource on which DNS peering will be created. */
@@ -2407,7 +2417,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             }
 
             /** Required. The resource on which DNS peering will be created. */
-            public Add setParent(java.lang.String parent) {
+            public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                     "Parameter parent must conform to the pattern " +
@@ -2418,8 +2428,146 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Add set(String parameterName, Object value) {
-              return (Add) super.set(parameterName, value);
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Remove DNS peering on the given resource.
+           *
+           * Create a request for the method "dnsPeerings.delete".
+           *
+           * This request holds the parameters needed by the datafusion server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the DNS peering zone to delete. Format:
+           *        projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/dnsPeerings/[^/]+$");
+
+            /**
+             * Remove DNS peering on the given resource.
+             *
+             * Create a request for the method "dnsPeerings.delete".
+             *
+             * This request holds the parameters needed by the the datafusion server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the DNS peering zone to delete. Format:
+           *        projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(DataFusion.this, "DELETE", REST_PATH, null, com.google.api.services.datafusion.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/dnsPeerings/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the DNS peering zone to delete. Format: projects/{project}/loca
+             * tions/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the DNS peering zone to delete. Format:
+           projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the DNS peering zone to delete. Format: projects/{project}/loca
+             * tions/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/dnsPeerings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
             }
           }
           /**
@@ -2430,7 +2578,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the datafusion server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource on which dns peering will be listed.
+           * @param parent Required. The parent, which owns this collection of dns peerings. Format:
+           *        projects/{project}/locations/{location}/instances/{instance}
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2441,7 +2590,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
 
           public class List extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.ListDnsPeeringsResponse> {
 
-            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings:list";
+            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
@@ -2456,7 +2605,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource on which dns peering will be listed.
+             * @param parent Required. The parent, which owns this collection of dns peerings. Format:
+           *        projects/{project}/locations/{location}/instances/{instance}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2534,17 +2684,24 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The resource on which dns peering will be listed. */
+            /**
+             * Required. The parent, which owns this collection of dns peerings. Format:
+             * projects/{project}/locations/{location}/instances/{instance}
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource on which dns peering will be listed.
+            /** Required. The parent, which owns this collection of dns peerings. Format:
+           projects/{project}/locations/{location}/instances/{instance}
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The resource on which dns peering will be listed. */
+            /**
+             * Required. The parent, which owns this collection of dns peerings. Format:
+             * projects/{project}/locations/{location}/instances/{instance}
+             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2555,38 +2712,52 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** The maximum number of items to return. */
+            /**
+             * The maximum number of dns peerings to return. The service may return fewer than this
+             * value. If unspecified, at most 10 dns peerings will be returned. The maximum value is
+             * 50; values above 50 will be coerced to 50.
+             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return.
+            /** The maximum number of dns peerings to return. The service may return fewer than this value. If
+           unspecified, at most 10 dns peerings will be returned. The maximum value is 50; values above 50
+           will be coerced to 50.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of items to return. */
+            /**
+             * The maximum number of dns peerings to return. The service may return fewer than this
+             * value. If unspecified, at most 10 dns peerings will be returned. The maximum value is
+             * 50; values above 50 will be coerced to 50.
+             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
             /**
-             * The next_page_token value to use if there are additional results to retrieve for this
-             * list request.
+             * A page token, received from a previous `ListDnsPeerings` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListDnsPeerings` must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value to use if there are additional results to retrieve for this list request.
+            /** A page token, received from a previous `ListDnsPeerings` call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to `ListDnsPeerings` must match the
+           call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The next_page_token value to use if there are additional results to retrieve for this
-             * list request.
+             * A page token, received from a previous `ListDnsPeerings` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListDnsPeerings` must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -2596,137 +2767,6 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Remove DNS peering on the given resource.
-           *
-           * Create a request for the method "dnsPeerings.remove".
-           *
-           * This request holds the parameters needed by the datafusion server.  After setting any optional
-           * parameters, call the {@link Remove#execute()} method to invoke the remote operation.
-           *
-           * @param parent Required. The resource on which DNS peering will be removed.
-           * @param content the {@link com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest}
-           * @return the request
-           */
-          public Remove remove(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest content) throws java.io.IOException {
-            Remove result = new Remove(parent, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Remove extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringResponse> {
-
-            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings:remove";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-            /**
-             * Remove DNS peering on the given resource.
-             *
-             * Create a request for the method "dnsPeerings.remove".
-             *
-             * This request holds the parameters needed by the the datafusion server.  After setting any
-             * optional parameters, call the {@link Remove#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Remove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. The resource on which DNS peering will be removed.
-             * @param content the {@link com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest}
-             * @since 1.13
-             */
-            protected Remove(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest content) {
-              super(DataFusion.this, "POST", REST_PATH, content, com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringResponse.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-              }
-            }
-
-            @Override
-            public Remove set$Xgafv(java.lang.String $Xgafv) {
-              return (Remove) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Remove setAccessToken(java.lang.String accessToken) {
-              return (Remove) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Remove setAlt(java.lang.String alt) {
-              return (Remove) super.setAlt(alt);
-            }
-
-            @Override
-            public Remove setCallback(java.lang.String callback) {
-              return (Remove) super.setCallback(callback);
-            }
-
-            @Override
-            public Remove setFields(java.lang.String fields) {
-              return (Remove) super.setFields(fields);
-            }
-
-            @Override
-            public Remove setKey(java.lang.String key) {
-              return (Remove) super.setKey(key);
-            }
-
-            @Override
-            public Remove setOauthToken(java.lang.String oauthToken) {
-              return (Remove) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Remove setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Remove) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Remove setQuotaUser(java.lang.String quotaUser) {
-              return (Remove) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Remove setUploadType(java.lang.String uploadType) {
-              return (Remove) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Remove setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Remove) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Required. The resource on which DNS peering will be removed. */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. The resource on which DNS peering will be removed.
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /** Required. The resource on which DNS peering will be removed. */
-            public Remove setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            @Override
-            public Remove set(String parameterName, Object value) {
-              return (Remove) super.set(parameterName, value);
             }
           }
 
@@ -2897,32 +2937,41 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-           must specify version 3. Policies without any conditional bindings may specify any valid value or
-           leave the field unset. To learn which resources support conditions in their IAM policies, see the
-           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-             * Requests specifying an invalid value will be rejected. Requests for policies with any
-             * conditional bindings must specify version 3. Policies without any conditional
-             * bindings may specify any valid value or leave the field unset. To learn which
-             * resources support conditions in their IAM policies, see the [IAM
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {

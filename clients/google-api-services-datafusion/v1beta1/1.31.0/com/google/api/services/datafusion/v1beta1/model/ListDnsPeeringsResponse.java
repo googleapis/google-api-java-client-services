@@ -17,7 +17,7 @@
 package com.google.api.services.datafusion.v1beta1.model;
 
 /**
- * List dns peering response.
+ * Response message for list DNS peerings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.datafusion.v1beta1.model;
 public final class ListDnsPeeringsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of dns peering configs.
+   * List of dns peering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,15 @@ public final class ListDnsPeeringsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of dns peering configs.
+   * List of dns peering.
    * @return value or {@code null} for none
    */
   public java.util.List<DnsPeering> getDnsPeerings() {
@@ -59,7 +60,7 @@ public final class ListDnsPeeringsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of dns peering configs.
+   * List of dns peering.
    * @param dnsPeerings dnsPeerings or {@code null} for none
    */
   public ListDnsPeeringsResponse setDnsPeerings(java.util.List<DnsPeering> dnsPeerings) {
@@ -68,7 +69,8 @@ public final class ListDnsPeeringsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,7 +78,8 @@ public final class ListDnsPeeringsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListDnsPeeringsResponse setNextPageToken(java.lang.String nextPageToken) {

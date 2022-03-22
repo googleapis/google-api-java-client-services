@@ -135,17 +135,6 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   private java.lang.String requirePasswordUnlock;
 
   /**
-   * Controls whether a unified lock is allowed for the device and the work profile, on devices
-   * running Android 9 and above with a work profile. This has no effect on other devices. This can
-   * be set only if password_scope is set to SCOPE_PROFILE, the policy will be rejected otherwise.
-   * If user has not set a separate work lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a
-   * NonComplianceDetail is reported with nonComplianceReason set to USER_ACTION.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String unifiedLockSettings;
-
-  /**
    * Number of incorrect device-unlock passwords that can be entered before a device is wiped. A
    * value of 0 means there is no restriction.
    * @return value or {@code null} for none
@@ -389,31 +378,6 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
    */
   public PasswordRequirements setRequirePasswordUnlock(java.lang.String requirePasswordUnlock) {
     this.requirePasswordUnlock = requirePasswordUnlock;
-    return this;
-  }
-
-  /**
-   * Controls whether a unified lock is allowed for the device and the work profile, on devices
-   * running Android 9 and above with a work profile. This has no effect on other devices. This can
-   * be set only if password_scope is set to SCOPE_PROFILE, the policy will be rejected otherwise.
-   * If user has not set a separate work lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a
-   * NonComplianceDetail is reported with nonComplianceReason set to USER_ACTION.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUnifiedLockSettings() {
-    return unifiedLockSettings;
-  }
-
-  /**
-   * Controls whether a unified lock is allowed for the device and the work profile, on devices
-   * running Android 9 and above with a work profile. This has no effect on other devices. This can
-   * be set only if password_scope is set to SCOPE_PROFILE, the policy will be rejected otherwise.
-   * If user has not set a separate work lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a
-   * NonComplianceDetail is reported with nonComplianceReason set to USER_ACTION.
-   * @param unifiedLockSettings unifiedLockSettings or {@code null} for none
-   */
-  public PasswordRequirements setUnifiedLockSettings(java.lang.String unifiedLockSettings) {
-    this.unifiedLockSettings = unifiedLockSettings;
     return this;
   }
 

@@ -41,6 +41,21 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> accessibleTrackIds;
 
   /**
+   * Specifies whether the app is allowed networking when the VPN is not connected and
+   * alwaysOnVpnPackage.lockdownEnabled is enabled. If set to VPN_LOCKDOWN_ENFORCED, the app is not
+   * allowed networking, and if set to VPN_LOCKDOWN_EXEMPTION, the app is allowed networking. Only
+   * supported on devices running Android 10 and above. If this is not supported by the device, the
+   * device will contain a NonComplianceDetail with non_compliance_reason set to API_LEVEL and a
+   * fieldPath. If this is not applicable to the app, the device will contain a NonComplianceDetail
+   * with non_compliance_reason set to UNSUPPORTED and a fieldPath. The fieldPath is set to
+   * applications[i].alwaysOnVpnLockdownExemption, where i is the index of the package in the
+   * applications policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String alwaysOnVpnLockdownExemption;
+
+  /**
    * Controls the auto-update mode for the app.
    * The value may be {@code null}.
    */
@@ -166,6 +181,39 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setAccessibleTrackIds(java.util.List<java.lang.String> accessibleTrackIds) {
     this.accessibleTrackIds = accessibleTrackIds;
+    return this;
+  }
+
+  /**
+   * Specifies whether the app is allowed networking when the VPN is not connected and
+   * alwaysOnVpnPackage.lockdownEnabled is enabled. If set to VPN_LOCKDOWN_ENFORCED, the app is not
+   * allowed networking, and if set to VPN_LOCKDOWN_EXEMPTION, the app is allowed networking. Only
+   * supported on devices running Android 10 and above. If this is not supported by the device, the
+   * device will contain a NonComplianceDetail with non_compliance_reason set to API_LEVEL and a
+   * fieldPath. If this is not applicable to the app, the device will contain a NonComplianceDetail
+   * with non_compliance_reason set to UNSUPPORTED and a fieldPath. The fieldPath is set to
+   * applications[i].alwaysOnVpnLockdownExemption, where i is the index of the package in the
+   * applications policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlwaysOnVpnLockdownExemption() {
+    return alwaysOnVpnLockdownExemption;
+  }
+
+  /**
+   * Specifies whether the app is allowed networking when the VPN is not connected and
+   * alwaysOnVpnPackage.lockdownEnabled is enabled. If set to VPN_LOCKDOWN_ENFORCED, the app is not
+   * allowed networking, and if set to VPN_LOCKDOWN_EXEMPTION, the app is allowed networking. Only
+   * supported on devices running Android 10 and above. If this is not supported by the device, the
+   * device will contain a NonComplianceDetail with non_compliance_reason set to API_LEVEL and a
+   * fieldPath. If this is not applicable to the app, the device will contain a NonComplianceDetail
+   * with non_compliance_reason set to UNSUPPORTED and a fieldPath. The fieldPath is set to
+   * applications[i].alwaysOnVpnLockdownExemption, where i is the index of the package in the
+   * applications policy.
+   * @param alwaysOnVpnLockdownExemption alwaysOnVpnLockdownExemption or {@code null} for none
+   */
+  public ApplicationPolicy setAlwaysOnVpnLockdownExemption(java.lang.String alwaysOnVpnLockdownExemption) {
+    this.alwaysOnVpnLockdownExemption = alwaysOnVpnLockdownExemption;
     return this;
   }
 

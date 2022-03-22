@@ -39,11 +39,19 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Required. Name of the dns.
+   * Required. The dns name suffix of the zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
+
+  /**
+   * Required. The resource name of the dns peering zone. Format:
+   * projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
 
   /**
    * Optional. Optional target network to which dns peering should happen.
@@ -58,13 +66,6 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String targetProject;
-
-  /**
-   * Required. Name of the zone.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String zone;
 
   /**
    * Optional. Optional description of the dns zone.
@@ -84,7 +85,7 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the dns.
+   * Required. The dns name suffix of the zone.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -92,11 +93,30 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the dns.
+   * Required. The dns name suffix of the zone.
    * @param domain domain or {@code null} for none
    */
   public DnsPeering setDomain(java.lang.String domain) {
     this.domain = domain;
+    return this;
+  }
+
+  /**
+   * Required. The resource name of the dns peering zone. Format:
+   * projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Required. The resource name of the dns peering zone. Format:
+   * projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
+   * @param name name or {@code null} for none
+   */
+  public DnsPeering setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
@@ -131,23 +151,6 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
    */
   public DnsPeering setTargetProject(java.lang.String targetProject) {
     this.targetProject = targetProject;
-    return this;
-  }
-
-  /**
-   * Required. Name of the zone.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getZone() {
-    return zone;
-  }
-
-  /**
-   * Required. Name of the zone.
-   * @param zone zone or {@code null} for none
-   */
-  public DnsPeering setZone(java.lang.String zone) {
-    this.zone = zone;
     return this;
   }
 

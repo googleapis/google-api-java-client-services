@@ -39,14 +39,15 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   private ContentAdsSettings contentAdsSettings;
 
   /**
-   * Display name of the ad unit, as provided when the ad unit was created.
+   * Required. Display name of the ad unit, as provided when the ad unit was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Resource name of the ad unit. Format: accounts/{account}/adclients/{adclient}/adunits/{adunit}
+   * Required. Resource name of the ad unit. Format:
+   * accounts/{account}/adclients/{adclient}/adunits/{adunit}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,7 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display name of the ad unit, as provided when the ad unit was created.
+   * Required. Display name of the ad unit, as provided when the ad unit was created.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -92,7 +93,7 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display name of the ad unit, as provided when the ad unit was created.
+   * Required. Display name of the ad unit, as provided when the ad unit was created.
    * @param displayName displayName or {@code null} for none
    */
   public AdUnit setDisplayName(java.lang.String displayName) {
@@ -101,7 +102,8 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the ad unit. Format: accounts/{account}/adclients/{adclient}/adunits/{adunit}
+   * Required. Resource name of the ad unit. Format:
+   * accounts/{account}/adclients/{adclient}/adunits/{adunit}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -109,7 +111,8 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the ad unit. Format: accounts/{account}/adclients/{adclient}/adunits/{adunit}
+   * Required. Resource name of the ad unit. Format:
+   * accounts/{account}/adclients/{adclient}/adunits/{adunit}
    * @param name name or {@code null} for none
    */
   public AdUnit setName(java.lang.String name) {

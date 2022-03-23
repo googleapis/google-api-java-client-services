@@ -44,6 +44,20 @@ public final class SqlServerAuditConfig extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
+   * How long to keep generated audit files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String retentionInterval;
+
+  /**
+   * How often to upload generated audit files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String uploadInterval;
+
+  /**
    * The name of the destination bucket (e.g., gs://mybucket).
    * @return value or {@code null} for none
    */
@@ -74,6 +88,40 @@ public final class SqlServerAuditConfig extends com.google.api.client.json.Gener
    */
   public SqlServerAuditConfig setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * How long to keep generated audit files.
+   * @return value or {@code null} for none
+   */
+  public String getRetentionInterval() {
+    return retentionInterval;
+  }
+
+  /**
+   * How long to keep generated audit files.
+   * @param retentionInterval retentionInterval or {@code null} for none
+   */
+  public SqlServerAuditConfig setRetentionInterval(String retentionInterval) {
+    this.retentionInterval = retentionInterval;
+    return this;
+  }
+
+  /**
+   * How often to upload generated audit files.
+   * @return value or {@code null} for none
+   */
+  public String getUploadInterval() {
+    return uploadInterval;
+  }
+
+  /**
+   * How often to upload generated audit files.
+   * @param uploadInterval uploadInterval or {@code null} for none
+   */
+  public SqlServerAuditConfig setUploadInterval(String uploadInterval) {
+    this.uploadInterval = uploadInterval;
     return this;
   }
 

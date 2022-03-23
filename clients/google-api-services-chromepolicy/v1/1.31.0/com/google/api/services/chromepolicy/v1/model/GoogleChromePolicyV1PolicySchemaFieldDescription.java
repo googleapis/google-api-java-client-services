@@ -81,6 +81,14 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   private java.util.List<GoogleChromePolicyV1PolicySchemaFieldDescription> nestedFieldDescriptions;
 
   /**
+   * Output only. Provides a list of fields that are required to be set if this field has a certain
+   * value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromePolicyV1PolicySchemaRequiredItems> requiredItems;
+
+  /**
    * Output only. The description for the field.
    * @return value or {@code null} for none
    */
@@ -185,6 +193,25 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
    */
   public GoogleChromePolicyV1PolicySchemaFieldDescription setNestedFieldDescriptions(java.util.List<GoogleChromePolicyV1PolicySchemaFieldDescription> nestedFieldDescriptions) {
     this.nestedFieldDescriptions = nestedFieldDescriptions;
+    return this;
+  }
+
+  /**
+   * Output only. Provides a list of fields that are required to be set if this field has a certain
+   * value.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromePolicyV1PolicySchemaRequiredItems> getRequiredItems() {
+    return requiredItems;
+  }
+
+  /**
+   * Output only. Provides a list of fields that are required to be set if this field has a certain
+   * value.
+   * @param requiredItems requiredItems or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicySchemaFieldDescription setRequiredItems(java.util.List<GoogleChromePolicyV1PolicySchemaRequiredItems> requiredItems) {
+    this.requiredItems = requiredItems;
     return this;
   }
 

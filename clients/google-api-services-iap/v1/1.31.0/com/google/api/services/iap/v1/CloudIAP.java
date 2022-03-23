@@ -1412,6 +1412,886 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
       }
     }
+    /**
+     * An accessor for creating requests from the IapTunnel collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudIAP iap = new CloudIAP(...);}
+     *   {@code CloudIAP.IapTunnel.List request = iap.iapTunnel().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public IapTunnel iapTunnel() {
+      return new IapTunnel();
+    }
+
+    /**
+     * The "iap_tunnel" collection of methods.
+     */
+    public class IapTunnel {
+
+      /**
+       * An accessor for creating requests from the Locations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudIAP iap = new CloudIAP(...);}
+       *   {@code CloudIAP.Locations.List request = iap.locations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Locations locations() {
+        return new Locations();
+      }
+
+      /**
+       * The "locations" collection of methods.
+       */
+      public class Locations {
+
+        /**
+         * An accessor for creating requests from the DestGroups collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudIAP iap = new CloudIAP(...);}
+         *   {@code CloudIAP.DestGroups.List request = iap.destGroups().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DestGroups destGroups() {
+          return new DestGroups();
+        }
+
+        /**
+         * The "destGroups" collection of methods.
+         */
+        public class DestGroups {
+
+          /**
+           * Creates a new TunnelDestGroup.
+           *
+           * Create a request for the method "destGroups.create".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. GCP Project number/id and location. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}.
+           * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.iap.v1.model.TunnelDestGroup content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudIAPRequest<com.google.api.services.iap.v1.model.TunnelDestGroup> {
+
+            private static final String REST_PATH = "v1/{+parent}/destGroups";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/iap_tunnel/locations/[^/]+$");
+
+            /**
+             * Creates a new TunnelDestGroup.
+             *
+             * Create a request for the method "destGroups.create".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. GCP Project number/id and location. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}.
+             * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.iap.v1.model.TunnelDestGroup content) {
+              super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1.model.TunnelDestGroup.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. GCP Project number/id and location. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. GCP Project number/id and location. In the following format:
+           projects/{project_number/id}/iap_tunnel/locations/{location}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. GCP Project number/id and location. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the TunnelDestGroup, which will become the final
+             * component of the resource name. This value should be 4-63 characters, and valid
+             * characters are /a-z-/.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String tunnelDestGroupId;
+
+            /** Required. The ID to use for the TunnelDestGroup, which will become the final component of the
+           resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+             */
+            public java.lang.String getTunnelDestGroupId() {
+              return tunnelDestGroupId;
+            }
+
+            /**
+             * Required. The ID to use for the TunnelDestGroup, which will become the final
+             * component of the resource name. This value should be 4-63 characters, and valid
+             * characters are /a-z-/.
+             */
+            public Create setTunnelDestGroupId(java.lang.String tunnelDestGroupId) {
+              this.tunnelDestGroupId = tunnelDestGroupId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a TunnelDestGroup.
+           *
+           * Create a request for the method "destGroups.delete".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the TunnelDestGroup to be deleted. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudIAPRequest<com.google.api.services.iap.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+
+            /**
+             * Deletes a TunnelDestGroup.
+             *
+             * Create a request for the method "destGroups.delete".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the TunnelDestGroup to be deleted. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudIAP.this, "DELETE", REST_PATH, null, com.google.api.services.iap.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the TunnelDestGroup to be deleted. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the TunnelDestGroup to be deleted. In the following format:
+           projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the TunnelDestGroup to be deleted. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves an existing TunnelDestGroup.
+           *
+           * Create a request for the method "destGroups.get".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the TunnelDestGroup to be fetched. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudIAPRequest<com.google.api.services.iap.v1.model.TunnelDestGroup> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+
+            /**
+             * Retrieves an existing TunnelDestGroup.
+             *
+             * Create a request for the method "destGroups.get".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the TunnelDestGroup to be fetched. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudIAP.this, "GET", REST_PATH, null, com.google.api.services.iap.v1.model.TunnelDestGroup.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the TunnelDestGroup to be fetched. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the TunnelDestGroup to be fetched. In the following format:
+           projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the TunnelDestGroup to be fetched. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the existing TunnelDestGroups. To group across all locations, use a `-` as the location ID.
+           * For example: /v1/projects/123/iap_tunnel/locations/-/destGroups
+           *
+           * Create a request for the method "destGroups.list".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. GCP Project number/id and location. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for the
+           *        location to group across all locations.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudIAPRequest<com.google.api.services.iap.v1.model.ListTunnelDestGroupsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/destGroups";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/iap_tunnel/locations/[^/]+$");
+
+            /**
+             * Lists the existing TunnelDestGroups. To group across all locations, use a `-` as the location
+             * ID. For example: /v1/projects/123/iap_tunnel/locations/-/destGroups
+             *
+             * Create a request for the method "destGroups.list".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. GCP Project number/id and location. In the following format:
+           *        projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for the
+           *        location to group across all locations.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudIAP.this, "GET", REST_PATH, null, com.google.api.services.iap.v1.model.ListTunnelDestGroupsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. GCP Project number/id and location. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for
+             * the location to group across all locations.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. GCP Project number/id and location. In the following format:
+           projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for the location to
+           group across all locations.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. GCP Project number/id and location. In the following format:
+             * projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for
+             * the location to group across all locations.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of groups to return. The service may return fewer than this value.
+             * If unspecified, at most 100 groups will be returned. The maximum value is 1000;
+             * values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of groups to return. The service may return fewer than this value. If
+           unspecified, at most 100 groups will be returned. The maximum value is 1000; values above 1000 will
+           be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of groups to return. The service may return fewer than this value.
+             * If unspecified, at most 100 groups will be returned. The maximum value is 1000;
+             * values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListTunnelDestGroups` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListTunnelDestGroups` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListTunnelDestGroups` call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to `ListTunnelDestGroups` must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListTunnelDestGroups` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListTunnelDestGroups` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a TunnelDestGroup.
+           *
+           * Create a request for the method "destGroups.patch".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+           * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.iap.v1.model.TunnelDestGroup content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudIAPRequest<com.google.api.services.iap.v1.model.TunnelDestGroup> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+
+            /**
+             * Updates a TunnelDestGroup.
+             *
+             * Create a request for the method "destGroups.patch".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+             * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.iap.v1.model.TunnelDestGroup content) {
+              super(CloudIAP.this, "PATCH", REST_PATH, content, com.google.api.services.iap.v1.model.TunnelDestGroup.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the
+             * project.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the
+             * project.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/iap_tunnel/locations/[^/]+/destGroups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The field mask specifying which IAP settings should be updated. If omitted, then all
+             * of the settings are updated. See https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The field mask specifying which IAP settings should be updated. If omitted, then all of the
+           settings are updated. See https://developers.google.com/protocol-
+           buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The field mask specifying which IAP settings should be updated. If omitted, then all
+             * of the settings are updated. See https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
   }
 
   /**

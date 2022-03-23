@@ -30,6 +30,15 @@ package com.google.api.services.apikeys.v2.model;
 public final class V2Key extends com.google.api.client.json.GenericJson {
 
   /**
+   * Annotations is an unstructured key-value map stored with a policy that may be set by external
+   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
+   * when modifying objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Output only. A timestamp identifying the time this key was originally created.
    * The value may be {@code null}.
    */
@@ -99,6 +108,27 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Annotations is an unstructured key-value map stored with a policy that may be set by external
+   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
+   * when modifying objects.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Annotations is an unstructured key-value map stored with a policy that may be set by external
+   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
+   * when modifying objects.
+   * @param annotations annotations or {@code null} for none
+   */
+  public V2Key setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Output only. A timestamp identifying the time this key was originally created.

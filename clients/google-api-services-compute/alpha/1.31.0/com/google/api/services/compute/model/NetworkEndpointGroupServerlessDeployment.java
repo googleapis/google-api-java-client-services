@@ -32,9 +32,8 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroupServerlessDeployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway:
-   * apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions:
-   * cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+   * The platform of the backend target(s) of this NEG. The only supported value is API Gateway:
+   * apigateway.googleapis.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +70,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   private java.lang.String version;
 
   /**
-   * The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway:
-   * apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions:
-   * cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+   * The platform of the backend target(s) of this NEG. The only supported value is API Gateway:
+   * apigateway.googleapis.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -81,9 +79,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   }
 
   /**
-   * The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway:
-   * apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions:
-   * cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
+   * The platform of the backend target(s) of this NEG. The only supported value is API Gateway:
+   * apigateway.googleapis.com.
    * @param platform platform or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setPlatform(java.lang.String platform) {

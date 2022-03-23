@@ -41,12 +41,9 @@ public final class GlobalSetLabelsRequest extends com.google.api.client.json.Gen
   private java.lang.String labelFingerprint;
 
   /**
-   * A list of labels to apply for this resource. Each label key & value must comply with RFC1035.
-   * Specifically, the name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash. For example, "webserver-frontend": "images". A label value can also be
-   * empty (e.g. "my-label": "").
+   * A list of labels to apply for this resource. Each label must comply with the requirements for
+   * labels. For example, "webserver-frontend": "images". A label value can also be empty (e.g. "my-
+   * label": "").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,12 +111,9 @@ public final class GlobalSetLabelsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of labels to apply for this resource. Each label key & value must comply with RFC1035.
-   * Specifically, the name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash. For example, "webserver-frontend": "images". A label value can also be
-   * empty (e.g. "my-label": "").
+   * A list of labels to apply for this resource. Each label must comply with the requirements for
+   * labels. For example, "webserver-frontend": "images". A label value can also be empty (e.g. "my-
+   * label": "").
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -127,12 +121,9 @@ public final class GlobalSetLabelsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of labels to apply for this resource. Each label key & value must comply with RFC1035.
-   * Specifically, the name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash. For example, "webserver-frontend": "images". A label value can also be
-   * empty (e.g. "my-label": "").
+   * A list of labels to apply for this resource. Each label must comply with the requirements for
+   * labels. For example, "webserver-frontend": "images". A label value can also be empty (e.g. "my-
+   * label": "").
    * @param labels labels or {@code null} for none
    */
   public GlobalSetLabelsRequest setLabels(java.util.Map<String, java.lang.String> labels) {

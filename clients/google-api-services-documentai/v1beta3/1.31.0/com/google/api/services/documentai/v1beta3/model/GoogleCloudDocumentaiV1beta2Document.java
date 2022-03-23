@@ -17,9 +17,9 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Document represents the canonical document resource in Document Understanding AI. It is an
- * interchange format that provides insights into documents and allows for collaboration between
- * users and Document Understanding AI to iterate and optimize for quality.
+ * Document represents the canonical document resource in Document AI. It is an interchange format
+ * that provides insights into documents and allows for collaboration between users and Document AI
+ * to iterate and optimize for quality.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

@@ -61,6 +61,15 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   private java.lang.String mentionText;
 
   /**
+   * Optional. This attribute indicates that the processing didn't actually identify this entity,
+   * but a confidence score was assigned that represent the potential that this could be a false
+   * negative. A non-present entity should have an empty mention_text and text_anchor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean nonPresent;
+
+  /**
    * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
    * type (e.g. address) is not supported for certain parsers. This field is also only populated for
    * certain supported document types.
@@ -180,6 +189,27 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntity setMentionText(java.lang.String mentionText) {
     this.mentionText = mentionText;
+    return this;
+  }
+
+  /**
+   * Optional. This attribute indicates that the processing didn't actually identify this entity,
+   * but a confidence score was assigned that represent the potential that this could be a false
+   * negative. A non-present entity should have an empty mention_text and text_anchor.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNonPresent() {
+    return nonPresent;
+  }
+
+  /**
+   * Optional. This attribute indicates that the processing didn't actually identify this entity,
+   * but a confidence score was assigned that represent the potential that this could be a false
+   * negative. A non-present entity should have an empty mention_text and text_anchor.
+   * @param nonPresent nonPresent or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentEntity setNonPresent(java.lang.Boolean nonPresent) {
+    this.nonPresent = nonPresent;
     return this;
   }
 

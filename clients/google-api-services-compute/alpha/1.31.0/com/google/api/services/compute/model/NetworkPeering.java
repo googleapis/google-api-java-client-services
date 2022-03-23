@@ -118,6 +118,14 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Integer peerMtu;
 
   /**
+   * Which IP version(s) of traffic and routes are allowed to be imported or exported between peer
+   * networks. The default value is IPV4_ONLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
+
+  /**
    * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
    * when there's a matching configuration in the peer network.
    * The value may be {@code null}.
@@ -331,6 +339,25 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   public NetworkPeering setPeerMtu(java.lang.Integer peerMtu) {
     this.peerMtu = peerMtu;
+    return this;
+  }
+
+  /**
+   * Which IP version(s) of traffic and routes are allowed to be imported or exported between peer
+   * networks. The default value is IPV4_ONLY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * Which IP version(s) of traffic and routes are allowed to be imported or exported between peer
+   * networks. The default value is IPV4_ONLY.
+   * @param stackType stackType or {@code null} for none
+   */
+  public NetworkPeering setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

@@ -264,6 +264,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String expirationDate;
 
   /**
+   * Used by a marketplace to externally identify a seller.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalSellerId;
+
+  /**
    * Target gender of the item.
    * The value may be {@code null}.
    */
@@ -1235,6 +1242,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setExpirationDate(java.lang.String expirationDate) {
     this.expirationDate = expirationDate;
+    return this;
+  }
+
+  /**
+   * Used by a marketplace to externally identify a seller.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalSellerId() {
+    return externalSellerId;
+  }
+
+  /**
+   * Used by a marketplace to externally identify a seller.
+   * @param externalSellerId externalSellerId or {@code null} for none
+   */
+  public Product setExternalSellerId(java.lang.String externalSellerId) {
+    this.externalSellerId = externalSellerId;
     return this;
   }
 

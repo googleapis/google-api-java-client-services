@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class FreeListingsProgramStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * State of the program, It is set to enabled if there are offers for at least one region.
+   * State of the program. `ENABLED` if there are offers for at least one region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class FreeListingsProgramStatus extends com.google.api.client.json.
   private java.util.List<FreeListingsProgramStatusRegionStatus> regionStatuses;
 
   /**
-   * State of the program, It is set to enabled if there are offers for at least one region.
+   * State of the program. `ENABLED` if there are offers for at least one region.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlobalState() {
@@ -54,7 +54,7 @@ public final class FreeListingsProgramStatus extends com.google.api.client.json.
   }
 
   /**
-   * State of the program, It is set to enabled if there are offers for at least one region.
+   * State of the program. `ENABLED` if there are offers for at least one region.
    * @param globalState globalState or {@code null} for none
    */
   public FreeListingsProgramStatus setGlobalState(java.lang.String globalState) {

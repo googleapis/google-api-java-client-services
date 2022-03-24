@@ -3000,6 +3000,29 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /**
+       * Consistency token of the player id. The call returns a 'not found' result when the token is
+       * present and invalid. Empty value is ignored. See also GlobalPlayerIdConsistencyTokenProto
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String playerIdConsistencyToken;
+
+      /** Consistency token of the player id. The call returns a 'not found' result when the token is present
+     and invalid. Empty value is ignored. See also GlobalPlayerIdConsistencyTokenProto
+       */
+      public java.lang.String getPlayerIdConsistencyToken() {
+        return playerIdConsistencyToken;
+      }
+
+      /**
+       * Consistency token of the player id. The call returns a 'not found' result when the token is
+       * present and invalid. Empty value is ignored. See also GlobalPlayerIdConsistencyTokenProto
+       */
+      public Get setPlayerIdConsistencyToken(java.lang.String playerIdConsistencyToken) {
+        this.playerIdConsistencyToken = playerIdConsistencyToken;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);

@@ -62,10 +62,7 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
   private java.lang.String reconciliationMode;
 
   /**
-   * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
-   * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
-   * and must match the pattern: `[a-zA-Z0-9_]+`. This is returned as Operation.name in
-   * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,10 +153,7 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
   }
 
   /**
-   * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
-   * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
-   * and must match the pattern: `[a-zA-Z0-9_]+`. This is returned as Operation.name in
-   * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -167,10 +161,7 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
   }
 
   /**
-   * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
-   * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
-   * and must match the pattern: `[a-zA-Z0-9_]+`. This is returned as Operation.name in
-   * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * Deprecated. This field has no effect.
    * @param requestId requestId or {@code null} for none
    */
   public GoogleCloudRetailV2ImportProductsRequest setRequestId(java.lang.String requestId) {

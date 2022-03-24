@@ -38,7 +38,10 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
    * `user_event_ga360`: The schema is available here:
    * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: This feature is in
    * private preview. Please contact the support team for importing Google Analytics 4 events. The
-   * schema is available here: https://support.google.com/analytics/answer/7029846.
+   * schema is available here: https://support.google.com/analytics/answer/7029846. Supported values
+   * for auto-completion imports: * `suggestions` (default): One JSON completion suggestion per
+   * line. * `denylist`: One JSON deny suggestion per line. * `allowlist`: One JSON allow suggestion
+   * per line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +95,10 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
    * `user_event_ga360`: The schema is available here:
    * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: This feature is in
    * private preview. Please contact the support team for importing Google Analytics 4 events. The
-   * schema is available here: https://support.google.com/analytics/answer/7029846.
+   * schema is available here: https://support.google.com/analytics/answer/7029846. Supported values
+   * for auto-completion imports: * `suggestions` (default): One JSON completion suggestion per
+   * line. * `denylist`: One JSON deny suggestion per line. * `allowlist`: One JSON allow suggestion
+   * per line.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -108,7 +114,10 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
    * `user_event_ga360`: The schema is available here:
    * https://support.google.com/analytics/answer/3437719. * `user_event_ga4`: This feature is in
    * private preview. Please contact the support team for importing Google Analytics 4 events. The
-   * schema is available here: https://support.google.com/analytics/answer/7029846.
+   * schema is available here: https://support.google.com/analytics/answer/7029846. Supported values
+   * for auto-completion imports: * `suggestions` (default): One JSON completion suggestion per
+   * line. * `denylist`: One JSON deny suggestion per line. * `allowlist`: One JSON allow suggestion
+   * per line.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudRetailV2BigQuerySource setDataSchema(java.lang.String dataSchema) {

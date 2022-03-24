@@ -30,8 +30,9 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A unique complete token. This should be included in the SearchRequest resulting from this
-   * completion, which enables accurate attribution of complete model performance.
+   * A unique complete token. This should be included in the UserEvent.completion_detail for search
+   * events resulting from this completion, which enables accurate attribution of complete model
+   * performance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +60,9 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
   private java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseRecentSearchResult> recentSearchResults;
 
   /**
-   * A unique complete token. This should be included in the SearchRequest resulting from this
-   * completion, which enables accurate attribution of complete model performance.
+   * A unique complete token. This should be included in the UserEvent.completion_detail for search
+   * events resulting from this completion, which enables accurate attribution of complete model
+   * performance.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionToken() {
@@ -68,8 +70,9 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
   }
 
   /**
-   * A unique complete token. This should be included in the SearchRequest resulting from this
-   * completion, which enables accurate attribution of complete model performance.
+   * A unique complete token. This should be included in the UserEvent.completion_detail for search
+   * events resulting from this completion, which enables accurate attribution of complete model
+   * performance.
    * @param attributionToken attributionToken or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompleteQueryResponse setAttributionToken(java.lang.String attributionToken) {

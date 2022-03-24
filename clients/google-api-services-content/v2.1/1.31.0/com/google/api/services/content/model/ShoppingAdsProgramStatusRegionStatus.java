@@ -31,9 +31,9 @@ package com.google.api.services.content.model;
 public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date by which `eligibility_status` will go from `WARNING` to `DISAPPROVED`. It will be present
-   * when `eligibility_status` is `WARNING`. Date will be provided in [ISO
-   * 8601](https://en.wikipedia.org/wiki/ISO_8601) format: YYYY-MM-DD
+   * Date your `eligibilityStatus` will become `DISAPPROVED`. Only visible when your
+   * `eligibilityStatus` is `WARNING`. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+   * `YYYY-MM-DD`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   private java.lang.String eligibilityStatus;
 
   /**
-   * These issues must be fixed to become eligible for the review.
+   * Must be fixed to be eligible for review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   private java.util.List<java.lang.String> regionCodes;
 
   /**
-   * If a program in a given country is eligible for review. It will be present only if eligibility
-   * status is `DISAPPROVED`.
+   * If a program is eligible for review in a specific region. Only visible if `eligibilityStatus`
+   * is `DISAPPROVED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,33 +77,32 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   private java.lang.String reviewIneligibilityReason;
 
   /**
-   * Reason if a program in a given country is not eligible for review. Populated only if
-   * `review_eligibility_status` is `INELIGIBLE`.
+   * Reason a program in a specific region isn’t eligible for review. Only visible if
+   * `reviewEligibilityStatus` is `INELIGIBLE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reviewIneligibilityReasonDescription;
 
   /**
-   * This contains additional information specific to review ineligibility reasons. If review is
-   * ineligible because of `IN_COOLDOWN_PERIOD`, it will contain timestamp for cooldown period.
+   * Additional information for ineligibility. If `reviewIneligibilityReason` is
+   * `IN_COOLDOWN_PERIOD`, a timestamp for the end of the cooldown period is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ShoppingAdsProgramStatusReviewIneligibilityReasonDetails reviewIneligibilityReasonDetails;
 
   /**
-   * These issues will be evaluated in review process. Fix all the issues before requesting the
-   * review.
+   * Issues evaluated in the review process. Fix all issues before requesting a review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> reviewIssues;
 
   /**
-   * Date by which `eligibility_status` will go from `WARNING` to `DISAPPROVED`. It will be present
-   * when `eligibility_status` is `WARNING`. Date will be provided in [ISO
-   * 8601](https://en.wikipedia.org/wiki/ISO_8601) format: YYYY-MM-DD
+   * Date your `eligibilityStatus` will become `DISAPPROVED`. Only visible when your
+   * `eligibilityStatus` is `WARNING`. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+   * `YYYY-MM-DD`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisapprovalDate() {
@@ -111,9 +110,9 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * Date by which `eligibility_status` will go from `WARNING` to `DISAPPROVED`. It will be present
-   * when `eligibility_status` is `WARNING`. Date will be provided in [ISO
-   * 8601](https://en.wikipedia.org/wiki/ISO_8601) format: YYYY-MM-DD
+   * Date your `eligibilityStatus` will become `DISAPPROVED`. Only visible when your
+   * `eligibilityStatus` is `WARNING`. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+   * `YYYY-MM-DD`.
    * @param disapprovalDate disapprovalDate or {@code null} for none
    */
   public ShoppingAdsProgramStatusRegionStatus setDisapprovalDate(java.lang.String disapprovalDate) {
@@ -139,7 +138,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * These issues must be fixed to become eligible for the review.
+   * Must be fixed to be eligible for review.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOnboardingIssues() {
@@ -147,7 +146,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * These issues must be fixed to become eligible for the review.
+   * Must be fixed to be eligible for review.
    * @param onboardingIssues onboardingIssues or {@code null} for none
    */
   public ShoppingAdsProgramStatusRegionStatus setOnboardingIssues(java.util.List<java.lang.String> onboardingIssues) {
@@ -175,8 +174,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * If a program in a given country is eligible for review. It will be present only if eligibility
-   * status is `DISAPPROVED`.
+   * If a program is eligible for review in a specific region. Only visible if `eligibilityStatus`
+   * is `DISAPPROVED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReviewEligibilityStatus() {
@@ -184,8 +183,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * If a program in a given country is eligible for review. It will be present only if eligibility
-   * status is `DISAPPROVED`.
+   * If a program is eligible for review in a specific region. Only visible if `eligibilityStatus`
+   * is `DISAPPROVED`.
    * @param reviewEligibilityStatus reviewEligibilityStatus or {@code null} for none
    */
   public ShoppingAdsProgramStatusRegionStatus setReviewEligibilityStatus(java.lang.String reviewEligibilityStatus) {
@@ -211,8 +210,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * Reason if a program in a given country is not eligible for review. Populated only if
-   * `review_eligibility_status` is `INELIGIBLE`.
+   * Reason a program in a specific region isn’t eligible for review. Only visible if
+   * `reviewEligibilityStatus` is `INELIGIBLE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReviewIneligibilityReasonDescription() {
@@ -220,8 +219,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * Reason if a program in a given country is not eligible for review. Populated only if
-   * `review_eligibility_status` is `INELIGIBLE`.
+   * Reason a program in a specific region isn’t eligible for review. Only visible if
+   * `reviewEligibilityStatus` is `INELIGIBLE`.
    * @param reviewIneligibilityReasonDescription reviewIneligibilityReasonDescription or {@code null} for none
    */
   public ShoppingAdsProgramStatusRegionStatus setReviewIneligibilityReasonDescription(java.lang.String reviewIneligibilityReasonDescription) {
@@ -230,8 +229,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * This contains additional information specific to review ineligibility reasons. If review is
-   * ineligible because of `IN_COOLDOWN_PERIOD`, it will contain timestamp for cooldown period.
+   * Additional information for ineligibility. If `reviewIneligibilityReason` is
+   * `IN_COOLDOWN_PERIOD`, a timestamp for the end of the cooldown period is provided.
    * @return value or {@code null} for none
    */
   public ShoppingAdsProgramStatusReviewIneligibilityReasonDetails getReviewIneligibilityReasonDetails() {
@@ -239,8 +238,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * This contains additional information specific to review ineligibility reasons. If review is
-   * ineligible because of `IN_COOLDOWN_PERIOD`, it will contain timestamp for cooldown period.
+   * Additional information for ineligibility. If `reviewIneligibilityReason` is
+   * `IN_COOLDOWN_PERIOD`, a timestamp for the end of the cooldown period is provided.
    * @param reviewIneligibilityReasonDetails reviewIneligibilityReasonDetails or {@code null} for none
    */
   public ShoppingAdsProgramStatusRegionStatus setReviewIneligibilityReasonDetails(ShoppingAdsProgramStatusReviewIneligibilityReasonDetails reviewIneligibilityReasonDetails) {
@@ -249,8 +248,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * These issues will be evaluated in review process. Fix all the issues before requesting the
-   * review.
+   * Issues evaluated in the review process. Fix all issues before requesting a review.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReviewIssues() {
@@ -258,8 +256,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * These issues will be evaluated in review process. Fix all the issues before requesting the
-   * review.
+   * Issues evaluated in the review process. Fix all issues before requesting a review.
    * @param reviewIssues reviewIssues or {@code null} for none
    */
   public ShoppingAdsProgramStatusRegionStatus setReviewIssues(java.util.List<java.lang.String> reviewIssues) {

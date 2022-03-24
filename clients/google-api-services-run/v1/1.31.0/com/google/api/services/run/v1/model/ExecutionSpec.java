@@ -31,10 +31,11 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at any given
-   * time. Must be <= task_count. The actual number of tasks running in steady state will be less
-   * than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e. when
-   * the work left to do is less than max parallelism. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * time. Must be <= task_count. If not specified, defaults to -1. When the job is run, this field
+   * is passed to the execution, and if -1 it will be set to the maximum possible value. The actual
+   * number of tasks running in steady state will be less than this number when there are fewer
+   * tasks waiting to be completed remaining, i.e. when the work left to do is less than max
+   * parallelism. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,10 +60,11 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at any given
-   * time. Must be <= task_count. The actual number of tasks running in steady state will be less
-   * than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e. when
-   * the work left to do is less than max parallelism. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * time. Must be <= task_count. If not specified, defaults to -1. When the job is run, this field
+   * is passed to the execution, and if -1 it will be set to the maximum possible value. The actual
+   * number of tasks running in steady state will be less than this number when there are fewer
+   * tasks waiting to be completed remaining, i.e. when the work left to do is less than max
+   * parallelism. +optional
    * @return value or {@code null} for none
    */
   public java.lang.Integer getParallelism() {
@@ -71,10 +73,11 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at any given
-   * time. Must be <= task_count. The actual number of tasks running in steady state will be less
-   * than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e. when
-   * the work left to do is less than max parallelism. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * time. Must be <= task_count. If not specified, defaults to -1. When the job is run, this field
+   * is passed to the execution, and if -1 it will be set to the maximum possible value. The actual
+   * number of tasks running in steady state will be less than this number when there are fewer
+   * tasks waiting to be completed remaining, i.e. when the work left to do is less than max
+   * parallelism. +optional
    * @param parallelism parallelism or {@code null} for none
    */
   public ExecutionSpec setParallelism(java.lang.Integer parallelism) {

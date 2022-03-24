@@ -17,7 +17,9 @@
 package com.google.api.services.analyticsdata.v1beta.model;
 
 /**
- * The sort options.
+ * Order bys define how rows will be sorted in the response. For example, ordering rows by
+ * descending event count is one ordering, and ordering rows by the event name string is a different
+ * ordering.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation

@@ -46,6 +46,7 @@ public final class ProductstatusesCustomBatchRequestEntry extends com.google.api
   private java.util.List<java.lang.String> destinations;
 
   /**
+   * Deprecated: Setting this field has no effect and attributes are never included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,6 +110,7 @@ public final class ProductstatusesCustomBatchRequestEntry extends com.google.api
   }
 
   /**
+   * Deprecated: Setting this field has no effect and attributes are never included.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeAttributes() {
@@ -116,6 +118,7 @@ public final class ProductstatusesCustomBatchRequestEntry extends com.google.api
   }
 
   /**
+   * Deprecated: Setting this field has no effect and attributes are never included.
    * @param includeAttributes includeAttributes or {@code null} for none
    */
   public ProductstatusesCustomBatchRequestEntry setIncludeAttributes(java.lang.Boolean includeAttributes) {

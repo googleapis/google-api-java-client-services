@@ -77,6 +77,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * The maintenance policy for the instance. If not provided, the maintenance event will be
+   * performed based on Memorystore internal rollout schedule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMemcacheV1MaintenancePolicy maintenancePolicy;
+
+  /**
+   * Output only. Published maintenance schedule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceSchedule maintenanceSchedule;
+
+  /**
    * Output only. The full version of memcached server running on this instance. System
    * automatically determines the full memcached version for an instance based on the input
    * MemcacheVersion. The full version format will be "memcached-1.5.16".
@@ -263,6 +278,42 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * The maintenance policy for the instance. If not provided, the maintenance event will be
+   * performed based on Memorystore internal rollout schedule.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMemcacheV1MaintenancePolicy getMaintenancePolicy() {
+    return maintenancePolicy;
+  }
+
+  /**
+   * The maintenance policy for the instance. If not provided, the maintenance event will be
+   * performed based on Memorystore internal rollout schedule.
+   * @param maintenancePolicy maintenancePolicy or {@code null} for none
+   */
+  public Instance setMaintenancePolicy(GoogleCloudMemcacheV1MaintenancePolicy maintenancePolicy) {
+    this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * Output only. Published maintenance schedule.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceSchedule getMaintenanceSchedule() {
+    return maintenanceSchedule;
+  }
+
+  /**
+   * Output only. Published maintenance schedule.
+   * @param maintenanceSchedule maintenanceSchedule or {@code null} for none
+   */
+  public Instance setMaintenanceSchedule(MaintenanceSchedule maintenanceSchedule) {
+    this.maintenanceSchedule = maintenanceSchedule;
     return this;
   }
 

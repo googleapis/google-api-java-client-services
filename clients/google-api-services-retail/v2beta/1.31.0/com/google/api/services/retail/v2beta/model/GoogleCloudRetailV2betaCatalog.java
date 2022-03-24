@@ -38,6 +38,15 @@ public final class GoogleCloudRetailV2betaCatalog extends com.google.api.client.
   private java.lang.String displayName;
 
   /**
+   * The Merchant Center linking configuration. Once a link is added, the data stream from Merchant
+   * Center to Cloud Retail will be enabled automatically. The requester must have access to the
+   * merchant center account in order to make changes to this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaMerchantCenterLinkingConfig merchantCenterLinkingConfig;
+
+  /**
    * Required. Immutable. The fully qualified resource name of the catalog.
    * The value may be {@code null}.
    */
@@ -67,6 +76,27 @@ public final class GoogleCloudRetailV2betaCatalog extends com.google.api.client.
    */
   public GoogleCloudRetailV2betaCatalog setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The Merchant Center linking configuration. Once a link is added, the data stream from Merchant
+   * Center to Cloud Retail will be enabled automatically. The requester must have access to the
+   * merchant center account in order to make changes to this field.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaMerchantCenterLinkingConfig getMerchantCenterLinkingConfig() {
+    return merchantCenterLinkingConfig;
+  }
+
+  /**
+   * The Merchant Center linking configuration. Once a link is added, the data stream from Merchant
+   * Center to Cloud Retail will be enabled automatically. The requester must have access to the
+   * merchant center account in order to make changes to this field.
+   * @param merchantCenterLinkingConfig merchantCenterLinkingConfig or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaCatalog setMerchantCenterLinkingConfig(GoogleCloudRetailV2betaMerchantCenterLinkingConfig merchantCenterLinkingConfig) {
+    this.merchantCenterLinkingConfig = merchantCenterLinkingConfig;
     return this;
   }
 

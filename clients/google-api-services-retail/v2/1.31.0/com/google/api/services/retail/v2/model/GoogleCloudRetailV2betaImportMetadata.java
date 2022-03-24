@@ -54,8 +54,7 @@ public final class GoogleCloudRetailV2betaImportMetadata extends com.google.api.
   private java.lang.String notificationPubsubTopic;
 
   /**
-   * Id of the request / operation. This is parroting back the requestId that was passed in the
-   * request.
+   * Deprecated. This field is never set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +130,7 @@ public final class GoogleCloudRetailV2betaImportMetadata extends com.google.api.
   }
 
   /**
-   * Id of the request / operation. This is parroting back the requestId that was passed in the
-   * request.
+   * Deprecated. This field is never set.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -140,8 +138,7 @@ public final class GoogleCloudRetailV2betaImportMetadata extends com.google.api.
   }
 
   /**
-   * Id of the request / operation. This is parroting back the requestId that was passed in the
-   * request.
+   * Deprecated. This field is never set.
    * @param requestId requestId or {@code null} for none
    */
   public GoogleCloudRetailV2betaImportMetadata setRequestId(java.lang.String requestId) {

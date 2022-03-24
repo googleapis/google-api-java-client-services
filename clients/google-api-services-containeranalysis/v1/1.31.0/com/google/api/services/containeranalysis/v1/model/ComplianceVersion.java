@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1.model;
 public final class ComplianceVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name of the document that defines this benchmark, e.g. "CIS Container-Optimized OS".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String benchmarkDocument;
+
+  /**
    * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
    * The value may be {@code null}.
    */
@@ -44,6 +51,23 @@ public final class ComplianceVersion extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The name of the document that defines this benchmark, e.g. "CIS Container-Optimized OS".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBenchmarkDocument() {
+    return benchmarkDocument;
+  }
+
+  /**
+   * The name of the document that defines this benchmark, e.g. "CIS Container-Optimized OS".
+   * @param benchmarkDocument benchmarkDocument or {@code null} for none
+   */
+  public ComplianceVersion setBenchmarkDocument(java.lang.String benchmarkDocument) {
+    this.benchmarkDocument = benchmarkDocument;
+    return this;
+  }
 
   /**
    * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.

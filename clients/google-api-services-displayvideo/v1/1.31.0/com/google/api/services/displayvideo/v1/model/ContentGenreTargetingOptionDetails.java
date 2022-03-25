@@ -17,9 +17,8 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * A generic empty message that you can re-use to avoid defining duplicated empty messages in your
- * APIs. A typical example is to use it as the request or the response type of an API method. For
- * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
+ * Represents a targetable content genre. This will be populated in the content_genre_details field
+ * when targeting_type is `TARGETING_TYPE_CONTENT_GENRE`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -30,16 +29,40 @@ package com.google.api.services.displayvideo.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Empty extends com.google.api.client.json.GenericJson {
+public final class ContentGenreTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public Empty set(String fieldName, Object value) {
-    return (Empty) super.set(fieldName, value);
+  /**
+   * Output only. The display name of the content genre
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Output only. The display name of the content genre
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The display name of the content genre
+   * @param displayName displayName or {@code null} for none
+   */
+  public ContentGenreTargetingOptionDetails setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
   }
 
   @Override
-  public Empty clone() {
-    return (Empty) super.clone();
+  public ContentGenreTargetingOptionDetails set(String fieldName, Object value) {
+    return (ContentGenreTargetingOptionDetails) super.set(fieldName, value);
+  }
+
+  @Override
+  public ContentGenreTargetingOptionDetails clone() {
+    return (ContentGenreTargetingOptionDetails) super.clone();
   }
 
 }

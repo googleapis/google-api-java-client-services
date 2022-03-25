@@ -87,6 +87,20 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   private CategoryTargetingOptionDetails categoryDetails;
 
   /**
+   * Content duration resource details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentDurationTargetingOptionDetails contentDurationDetails;
+
+  /**
+   * Content genre resource details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentGenreTargetingOptionDetails contentGenreDetails;
+
+  /**
    * Content instream position details.
    * The value may be {@code null}.
    */
@@ -99,6 +113,13 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private ContentOutstreamPositionTargetingOptionDetails contentOutstreamPositionDetails;
+
+  /**
+   * Content stream type resource details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentStreamTypeTargetingOptionDetails contentStreamTypeDetails;
 
   /**
    * Device make and model resource details.
@@ -399,6 +420,40 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Content duration resource details.
+   * @return value or {@code null} for none
+   */
+  public ContentDurationTargetingOptionDetails getContentDurationDetails() {
+    return contentDurationDetails;
+  }
+
+  /**
+   * Content duration resource details.
+   * @param contentDurationDetails contentDurationDetails or {@code null} for none
+   */
+  public TargetingOption setContentDurationDetails(ContentDurationTargetingOptionDetails contentDurationDetails) {
+    this.contentDurationDetails = contentDurationDetails;
+    return this;
+  }
+
+  /**
+   * Content genre resource details.
+   * @return value or {@code null} for none
+   */
+  public ContentGenreTargetingOptionDetails getContentGenreDetails() {
+    return contentGenreDetails;
+  }
+
+  /**
+   * Content genre resource details.
+   * @param contentGenreDetails contentGenreDetails or {@code null} for none
+   */
+  public TargetingOption setContentGenreDetails(ContentGenreTargetingOptionDetails contentGenreDetails) {
+    this.contentGenreDetails = contentGenreDetails;
+    return this;
+  }
+
+  /**
    * Content instream position details.
    * @return value or {@code null} for none
    */
@@ -429,6 +484,23 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   public TargetingOption setContentOutstreamPositionDetails(ContentOutstreamPositionTargetingOptionDetails contentOutstreamPositionDetails) {
     this.contentOutstreamPositionDetails = contentOutstreamPositionDetails;
+    return this;
+  }
+
+  /**
+   * Content stream type resource details.
+   * @return value or {@code null} for none
+   */
+  public ContentStreamTypeTargetingOptionDetails getContentStreamTypeDetails() {
+    return contentStreamTypeDetails;
+  }
+
+  /**
+   * Content stream type resource details.
+   * @param contentStreamTypeDetails contentStreamTypeDetails or {@code null} for none
+   */
+  public TargetingOption setContentStreamTypeDetails(ContentStreamTypeTargetingOptionDetails contentStreamTypeDetails) {
+    this.contentStreamTypeDetails = contentStreamTypeDetails;
     return this;
   }
 

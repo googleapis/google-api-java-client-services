@@ -37,6 +37,15 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
   private java.lang.String attribute;
 
   /**
+   * Optional. The operator used for matching the events with the value of the filter. If not
+   * specified, only events that have an exact key-value pair specified in the filter are matched.
+   * The only allowed value is `match-path-pattern`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operator;
+
+  /**
    * Required. The value for the attribute.
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
    */
   public EventFilter setAttribute(java.lang.String attribute) {
     this.attribute = attribute;
+    return this;
+  }
+
+  /**
+   * Optional. The operator used for matching the events with the value of the filter. If not
+   * specified, only events that have an exact key-value pair specified in the filter are matched.
+   * The only allowed value is `match-path-pattern`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperator() {
+    return operator;
+  }
+
+  /**
+   * Optional. The operator used for matching the events with the value of the filter. If not
+   * specified, only events that have an exact key-value pair specified in the filter are matched.
+   * The only allowed value is `match-path-pattern`.
+   * @param operator operator or {@code null} for none
+   */
+  public EventFilter setOperator(java.lang.String operator) {
+    this.operator = operator;
     return this;
   }
 

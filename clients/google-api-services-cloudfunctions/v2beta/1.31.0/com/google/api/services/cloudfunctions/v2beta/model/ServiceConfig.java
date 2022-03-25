@@ -88,6 +88,13 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Integer minInstanceCount;
 
   /**
+   * Output only. The name of service revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String revision;
+
+  /**
    * Output only. Name of the service associated with a Function. The format of this field is
    * `projects/{project}/locations/{region}/services/{service}`
    * The value may be {@code null}.
@@ -264,6 +271,23 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   public ServiceConfig setMinInstanceCount(java.lang.Integer minInstanceCount) {
     this.minInstanceCount = minInstanceCount;
+    return this;
+  }
+
+  /**
+   * Output only. The name of service revision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRevision() {
+    return revision;
+  }
+
+  /**
+   * Output only. The name of service revision.
+   * @param revision revision or {@code null} for none
+   */
+  public ServiceConfig setRevision(java.lang.String revision) {
+    this.revision = revision;
     return this;
   }
 

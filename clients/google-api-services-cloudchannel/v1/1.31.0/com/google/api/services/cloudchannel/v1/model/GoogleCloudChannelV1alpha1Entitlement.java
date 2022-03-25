@@ -130,7 +130,8 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   /**
    * Optional. This purchase order (PO) information is for resellers to use for their company
    * tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows
-   * up in the invoice. The property accepts up to 80 plain text characters.
+   * up in the invoice. The property accepts up to 80 plain text characters. This is only supported
+   * for Google Workspace entitlements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -392,7 +393,8 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   /**
    * Optional. This purchase order (PO) information is for resellers to use for their company
    * tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows
-   * up in the invoice. The property accepts up to 80 plain text characters.
+   * up in the invoice. The property accepts up to 80 plain text characters. This is only supported
+   * for Google Workspace entitlements.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurchaseOrderId() {
@@ -402,7 +404,8 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   /**
    * Optional. This purchase order (PO) information is for resellers to use for their company
    * tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows
-   * up in the invoice. The property accepts up to 80 plain text characters.
+   * up in the invoice. The property accepts up to 80 plain text characters. This is only supported
+   * for Google Workspace entitlements.
    * @param purchaseOrderId purchaseOrderId or {@code null} for none
    */
   public GoogleCloudChannelV1alpha1Entitlement setPurchaseOrderId(java.lang.String purchaseOrderId) {

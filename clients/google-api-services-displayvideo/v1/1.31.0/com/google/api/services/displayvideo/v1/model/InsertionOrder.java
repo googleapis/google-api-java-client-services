@@ -45,6 +45,13 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private BiddingStrategy bidStrategy;
 
   /**
+   * Immutable. The billable outcome of the insertion order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billableOutcome;
+
+  /**
    * Required. The budget allocation settings of the insertion order.
    * The value may be {@code null}.
    */
@@ -182,6 +189,23 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
    */
   public InsertionOrder setBidStrategy(BiddingStrategy bidStrategy) {
     this.bidStrategy = bidStrategy;
+    return this;
+  }
+
+  /**
+   * Immutable. The billable outcome of the insertion order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillableOutcome() {
+    return billableOutcome;
+  }
+
+  /**
+   * Immutable. The billable outcome of the insertion order.
+   * @param billableOutcome billableOutcome or {@code null} for none
+   */
+  public InsertionOrder setBillableOutcome(java.lang.String billableOutcome) {
+    this.billableOutcome = billableOutcome;
     return this;
   }
 

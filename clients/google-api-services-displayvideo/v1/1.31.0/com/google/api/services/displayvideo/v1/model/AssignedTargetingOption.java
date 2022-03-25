@@ -131,6 +131,22 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ChannelAssignedTargetingOptionDetails channelDetails;
 
   /**
+   * Content duration details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_DURATION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentDurationAssignedTargetingOptionDetails contentDurationDetails;
+
+  /**
+   * Content genre details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_GENRE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentGenreAssignedTargetingOptionDetails contentGenreDetails;
+
+  /**
    * Content instream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION`.
    * The value may be {@code null}.
@@ -145,6 +161,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private ContentOutstreamPositionAssignedTargetingOptionDetails contentOutstreamPositionDetails;
+
+  /**
+   * Content duration details. This field will be populated when the TargetingType is
+   * `TARGETING_TYPE_CONTENT_STREAM_TYPE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentStreamTypeAssignedTargetingOptionDetails contentStreamTypeDetails;
 
   /**
    * Day and time details. This field will be populated when the targeting_type is
@@ -641,6 +665,44 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
+   * Content duration details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_DURATION`.
+   * @return value or {@code null} for none
+   */
+  public ContentDurationAssignedTargetingOptionDetails getContentDurationDetails() {
+    return contentDurationDetails;
+  }
+
+  /**
+   * Content duration details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_DURATION`.
+   * @param contentDurationDetails contentDurationDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setContentDurationDetails(ContentDurationAssignedTargetingOptionDetails contentDurationDetails) {
+    this.contentDurationDetails = contentDurationDetails;
+    return this;
+  }
+
+  /**
+   * Content genre details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_GENRE`.
+   * @return value or {@code null} for none
+   */
+  public ContentGenreAssignedTargetingOptionDetails getContentGenreDetails() {
+    return contentGenreDetails;
+  }
+
+  /**
+   * Content genre details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_GENRE`.
+   * @param contentGenreDetails contentGenreDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setContentGenreDetails(ContentGenreAssignedTargetingOptionDetails contentGenreDetails) {
+    this.contentGenreDetails = contentGenreDetails;
+    return this;
+  }
+
+  /**
    * Content instream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION`.
    * @return value or {@code null} for none
@@ -675,6 +737,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setContentOutstreamPositionDetails(ContentOutstreamPositionAssignedTargetingOptionDetails contentOutstreamPositionDetails) {
     this.contentOutstreamPositionDetails = contentOutstreamPositionDetails;
+    return this;
+  }
+
+  /**
+   * Content duration details. This field will be populated when the TargetingType is
+   * `TARGETING_TYPE_CONTENT_STREAM_TYPE`.
+   * @return value or {@code null} for none
+   */
+  public ContentStreamTypeAssignedTargetingOptionDetails getContentStreamTypeDetails() {
+    return contentStreamTypeDetails;
+  }
+
+  /**
+   * Content duration details. This field will be populated when the TargetingType is
+   * `TARGETING_TYPE_CONTENT_STREAM_TYPE`.
+   * @param contentStreamTypeDetails contentStreamTypeDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setContentStreamTypeDetails(ContentStreamTypeAssignedTargetingOptionDetails contentStreamTypeDetails) {
+    this.contentStreamTypeDetails = contentStreamTypeDetails;
     return this;
   }
 

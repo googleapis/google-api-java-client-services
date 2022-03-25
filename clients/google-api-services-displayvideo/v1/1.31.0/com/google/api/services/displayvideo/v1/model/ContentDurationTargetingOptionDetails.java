@@ -17,9 +17,8 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * A generic empty message that you can re-use to avoid defining duplicated empty messages in your
- * APIs. A typical example is to use it as the request or the response type of an API method. For
- * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
+ * Represents a targetable content duration. This will be populated in the content_duration_details
+ * field when targeting_type is `TARGETING_TYPE_CONTENT_DURATION`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -30,16 +29,40 @@ package com.google.api.services.displayvideo.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Empty extends com.google.api.client.json.GenericJson {
+public final class ContentDurationTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public Empty set(String fieldName, Object value) {
-    return (Empty) super.set(fieldName, value);
+  /**
+   * Output only. The content duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentDuration;
+
+  /**
+   * Output only. The content duration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentDuration() {
+    return contentDuration;
+  }
+
+  /**
+   * Output only. The content duration.
+   * @param contentDuration contentDuration or {@code null} for none
+   */
+  public ContentDurationTargetingOptionDetails setContentDuration(java.lang.String contentDuration) {
+    this.contentDuration = contentDuration;
+    return this;
   }
 
   @Override
-  public Empty clone() {
-    return (Empty) super.clone();
+  public ContentDurationTargetingOptionDetails set(String fieldName, Object value) {
+    return (ContentDurationTargetingOptionDetails) super.set(fieldName, value);
+  }
+
+  @Override
+  public ContentDurationTargetingOptionDetails clone() {
+    return (ContentDurationTargetingOptionDetails) super.clone();
   }
 
 }

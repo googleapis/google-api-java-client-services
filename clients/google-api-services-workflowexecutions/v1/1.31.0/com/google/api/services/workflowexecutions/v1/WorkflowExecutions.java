@@ -193,6 +193,150 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
       public class Workflows {
 
         /**
+         * Triggers a new execution using the latest revision of the given workflow by a Pub/Sub push
+         * notification.
+         *
+         * Create a request for the method "workflows.triggerPubsubExecution".
+         *
+         * This request holds the parameters needed by the workflowexecutions server.  After setting any
+         * optional parameters, call the {@link TriggerPubsubExecution#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param workflow Required. Name of the workflow for which an execution should be created. Format:
+         *        projects/{project}/locations/{location}/workflows/{workflow}
+         * @param content the {@link com.google.api.services.workflowexecutions.v1.model.TriggerPubsubExecutionRequest}
+         * @return the request
+         */
+        public TriggerPubsubExecution triggerPubsubExecution(java.lang.String workflow, com.google.api.services.workflowexecutions.v1.model.TriggerPubsubExecutionRequest content) throws java.io.IOException {
+          TriggerPubsubExecution result = new TriggerPubsubExecution(workflow, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TriggerPubsubExecution extends WorkflowExecutionsRequest<com.google.api.services.workflowexecutions.v1.model.Execution> {
+
+          private static final String REST_PATH = "v1/{+workflow}:triggerPubsubExecution";
+
+          private final java.util.regex.Pattern WORKFLOW_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+$");
+
+          /**
+           * Triggers a new execution using the latest revision of the given workflow by a Pub/Sub push
+           * notification.
+           *
+           * Create a request for the method "workflows.triggerPubsubExecution".
+           *
+           * This request holds the parameters needed by the the workflowexecutions server.  After setting
+           * any optional parameters, call the {@link TriggerPubsubExecution#execute()} method to invoke the
+           * remote operation. <p> {@link TriggerPubsubExecution#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param workflow Required. Name of the workflow for which an execution should be created. Format:
+         *        projects/{project}/locations/{location}/workflows/{workflow}
+           * @param content the {@link com.google.api.services.workflowexecutions.v1.model.TriggerPubsubExecutionRequest}
+           * @since 1.13
+           */
+          protected TriggerPubsubExecution(java.lang.String workflow, com.google.api.services.workflowexecutions.v1.model.TriggerPubsubExecutionRequest content) {
+            super(WorkflowExecutions.this, "POST", REST_PATH, content, com.google.api.services.workflowexecutions.v1.model.Execution.class);
+            this.workflow = com.google.api.client.util.Preconditions.checkNotNull(workflow, "Required parameter workflow must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(WORKFLOW_PATTERN.matcher(workflow).matches(),
+                  "Parameter workflow must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflows/[^/]+$");
+            }
+          }
+
+          @Override
+          public TriggerPubsubExecution set$Xgafv(java.lang.String $Xgafv) {
+            return (TriggerPubsubExecution) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TriggerPubsubExecution setAccessToken(java.lang.String accessToken) {
+            return (TriggerPubsubExecution) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TriggerPubsubExecution setAlt(java.lang.String alt) {
+            return (TriggerPubsubExecution) super.setAlt(alt);
+          }
+
+          @Override
+          public TriggerPubsubExecution setCallback(java.lang.String callback) {
+            return (TriggerPubsubExecution) super.setCallback(callback);
+          }
+
+          @Override
+          public TriggerPubsubExecution setFields(java.lang.String fields) {
+            return (TriggerPubsubExecution) super.setFields(fields);
+          }
+
+          @Override
+          public TriggerPubsubExecution setKey(java.lang.String key) {
+            return (TriggerPubsubExecution) super.setKey(key);
+          }
+
+          @Override
+          public TriggerPubsubExecution setOauthToken(java.lang.String oauthToken) {
+            return (TriggerPubsubExecution) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TriggerPubsubExecution setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TriggerPubsubExecution) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TriggerPubsubExecution setQuotaUser(java.lang.String quotaUser) {
+            return (TriggerPubsubExecution) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TriggerPubsubExecution setUploadType(java.lang.String uploadType) {
+            return (TriggerPubsubExecution) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TriggerPubsubExecution setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TriggerPubsubExecution) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the workflow for which an execution should be created. Format:
+           * projects/{project}/locations/{location}/workflows/{workflow}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String workflow;
+
+          /** Required. Name of the workflow for which an execution should be created. Format:
+         projects/{project}/locations/{location}/workflows/{workflow}
+           */
+          public java.lang.String getWorkflow() {
+            return workflow;
+          }
+
+          /**
+           * Required. Name of the workflow for which an execution should be created. Format:
+           * projects/{project}/locations/{location}/workflows/{workflow}
+           */
+          public TriggerPubsubExecution setWorkflow(java.lang.String workflow) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(WORKFLOW_PATTERN.matcher(workflow).matches(),
+                  "Parameter workflow must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflows/[^/]+$");
+            }
+            this.workflow = workflow;
+            return this;
+          }
+
+          @Override
+          public TriggerPubsubExecution set(String parameterName, Object value) {
+            return (TriggerPubsubExecution) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Executions collection.
          *
          * <p>The typical use is:</p>

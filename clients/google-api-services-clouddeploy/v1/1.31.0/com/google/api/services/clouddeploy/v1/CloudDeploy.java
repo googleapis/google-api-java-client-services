@@ -1650,17 +1650,17 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /** Filter builds to be returned. See https://google.aip.dev/160 for more details. */
+          /** Filter pipelines to be returned. See https://google.aip.dev/160 for more details. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter builds to be returned. See https://google.aip.dev/160 for more details.
+          /** Filter pipelines to be returned. See https://google.aip.dev/160 for more details.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter builds to be returned. See https://google.aip.dev/160 for more details. */
+          /** Filter pipelines to be returned. See https://google.aip.dev/160 for more details. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -2815,20 +2815,20 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+             * Optional. Filter releases to be returned. See https://google.aip.dev/160 for more
              * details.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter builds to be returned. See https://google.aip.dev/160 for more details.
+            /** Optional. Filter releases to be returned. See https://google.aip.dev/160 for more details.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+             * Optional. Filter releases to be returned. See https://google.aip.dev/160 for more
              * details.
              */
             public List setFilter(java.lang.String filter) {
@@ -3590,20 +3590,20 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+               * Optional. Filter rollouts to be returned. See https://google.aip.dev/160 for more
                * details.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. Filter builds to be returned. See https://google.aip.dev/160 for more details.
+              /** Optional. Filter rollouts to be returned. See https://google.aip.dev/160 for more details.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+               * Optional. Filter rollouts to be returned. See https://google.aip.dev/160 for more
                * details.
                */
               public List setFilter(java.lang.String filter) {
@@ -5306,20 +5306,20 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+           * Optional. Filter targets to be returned. See https://google.aip.dev/160 for more
            * details.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filter builds to be returned. See https://google.aip.dev/160 for more details.
+          /** Optional. Filter targets to be returned. See https://google.aip.dev/160 for more details.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+           * Optional. Filter targets to be returned. See https://google.aip.dev/160 for more
            * details.
            */
           public List setFilter(java.lang.String filter) {

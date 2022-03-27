@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class OracleSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Drop large object values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleDropLargeObjects dropLargeObjects;
+
+  /**
    * Oracle objects to exclude from the stream.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private OracleRdbms includeObjects;
+
+  /**
+   * Drop large object values.
+   * @return value or {@code null} for none
+   */
+  public OracleDropLargeObjects getDropLargeObjects() {
+    return dropLargeObjects;
+  }
+
+  /**
+   * Drop large object values.
+   * @param dropLargeObjects dropLargeObjects or {@code null} for none
+   */
+  public OracleSourceConfig setDropLargeObjects(OracleDropLargeObjects dropLargeObjects) {
+    this.dropLargeObjects = dropLargeObjects;
+    return this;
+  }
 
   /**
    * Oracle objects to exclude from the stream.

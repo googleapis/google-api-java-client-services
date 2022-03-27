@@ -37,6 +37,13 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   private OracleRdbms allowlist;
 
   /**
+   * Drop large object values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleDropLargeObjects dropLargeObjects;
+
+  /**
    * Oracle objects to exclude from the stream.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
    */
   public OracleSourceConfig setAllowlist(OracleRdbms allowlist) {
     this.allowlist = allowlist;
+    return this;
+  }
+
+  /**
+   * Drop large object values.
+   * @return value or {@code null} for none
+   */
+  public OracleDropLargeObjects getDropLargeObjects() {
+    return dropLargeObjects;
+  }
+
+  /**
+   * Drop large object values.
+   * @param dropLargeObjects dropLargeObjects or {@code null} for none
+   */
+  public OracleSourceConfig setDropLargeObjects(OracleDropLargeObjects dropLargeObjects) {
+    this.dropLargeObjects = dropLargeObjects;
     return this;
   }
 

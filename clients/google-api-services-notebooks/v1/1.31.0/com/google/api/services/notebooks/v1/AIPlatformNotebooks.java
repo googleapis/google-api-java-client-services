@@ -6596,6 +6596,144 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Gets an access token for the consumer service account that the customer attached to the runtime.
+         * Only accessible from the tenant instance.
+         *
+         * Create a request for the method "runtimes.refreshRuntimeTokenInternal".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link RefreshRuntimeTokenInternal#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.RefreshRuntimeTokenInternalRequest}
+         * @return the request
+         */
+        public RefreshRuntimeTokenInternal refreshRuntimeTokenInternal(java.lang.String name, com.google.api.services.notebooks.v1.model.RefreshRuntimeTokenInternalRequest content) throws java.io.IOException {
+          RefreshRuntimeTokenInternal result = new RefreshRuntimeTokenInternal(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RefreshRuntimeTokenInternal extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.RefreshRuntimeTokenInternalResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:refreshRuntimeTokenInternal";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+
+          /**
+           * Gets an access token for the consumer service account that the customer attached to the
+           * runtime. Only accessible from the tenant instance.
+           *
+           * Create a request for the method "runtimes.refreshRuntimeTokenInternal".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link RefreshRuntimeTokenInternal#execute()} method to invoke
+           * the remote operation. <p> {@link RefreshRuntimeTokenInternal#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.RefreshRuntimeTokenInternalRequest}
+           * @since 1.13
+           */
+          protected RefreshRuntimeTokenInternal(java.lang.String name, com.google.api.services.notebooks.v1.model.RefreshRuntimeTokenInternalRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.RefreshRuntimeTokenInternalResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal set$Xgafv(java.lang.String $Xgafv) {
+            return (RefreshRuntimeTokenInternal) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setAccessToken(java.lang.String accessToken) {
+            return (RefreshRuntimeTokenInternal) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setAlt(java.lang.String alt) {
+            return (RefreshRuntimeTokenInternal) super.setAlt(alt);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setCallback(java.lang.String callback) {
+            return (RefreshRuntimeTokenInternal) super.setCallback(callback);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setFields(java.lang.String fields) {
+            return (RefreshRuntimeTokenInternal) super.setFields(fields);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setKey(java.lang.String key) {
+            return (RefreshRuntimeTokenInternal) super.setKey(key);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setOauthToken(java.lang.String oauthToken) {
+            return (RefreshRuntimeTokenInternal) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RefreshRuntimeTokenInternal) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setQuotaUser(java.lang.String quotaUser) {
+            return (RefreshRuntimeTokenInternal) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setUploadType(java.lang.String uploadType) {
+            return (RefreshRuntimeTokenInternal) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RefreshRuntimeTokenInternal) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public RefreshRuntimeTokenInternal setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RefreshRuntimeTokenInternal set(String parameterName, Object value) {
+            return (RefreshRuntimeTokenInternal) super.set(parameterName, value);
+          }
+        }
+        /**
          * Report and process a runtime event.
          *
          * Create a request for the method "runtimes.reportEvent".

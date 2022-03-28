@@ -73,6 +73,27 @@ public final class ProvisioningQuota extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Network bandwidth, Gbps
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long networkBandwidth;
+
+  /**
+   * Server count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long serverCount;
+
+  /**
+   * Storage size (GB).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long storageGib;
+
+  /**
    * The asset type of this provisioning quota.
    * @return value or {@code null} for none
    */
@@ -171,6 +192,57 @@ public final class ProvisioningQuota extends com.google.api.client.json.GenericJ
    */
   public ProvisioningQuota setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Network bandwidth, Gbps
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNetworkBandwidth() {
+    return networkBandwidth;
+  }
+
+  /**
+   * Network bandwidth, Gbps
+   * @param networkBandwidth networkBandwidth or {@code null} for none
+   */
+  public ProvisioningQuota setNetworkBandwidth(java.lang.Long networkBandwidth) {
+    this.networkBandwidth = networkBandwidth;
+    return this;
+  }
+
+  /**
+   * Server count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getServerCount() {
+    return serverCount;
+  }
+
+  /**
+   * Server count.
+   * @param serverCount serverCount or {@code null} for none
+   */
+  public ProvisioningQuota setServerCount(java.lang.Long serverCount) {
+    this.serverCount = serverCount;
+    return this;
+  }
+
+  /**
+   * Storage size (GB).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getStorageGib() {
+    return storageGib;
+  }
+
+  /**
+   * Storage size (GB).
+   * @param storageGib storageGib or {@code null} for none
+   */
+  public ProvisioningQuota setStorageGib(java.lang.Long storageGib) {
+    this.storageGib = storageGib;
     return this;
   }
 

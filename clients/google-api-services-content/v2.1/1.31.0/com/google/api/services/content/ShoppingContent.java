@@ -8623,7 +8623,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review for free listings program in a specific region. Important: This method is only
+     * Requests a review of free listings in a specific region Important: This method is only
      * whitelisted for selected merchants.
      *
      * Create a request for the method "freelistingsprogram.requestreview".
@@ -8646,8 +8646,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/freelistingsprogram/requestreview";
 
       /**
-       * Requests a review for free listings program in a specific region. Important: This method is
-       * only whitelisted for selected merchants.
+       * Requests a review of free listings in a specific region Important: This method is only
+       * whitelisted for selected merchants.
        *
        * Create a request for the method "freelistingsprogram.requestreview".
        *
@@ -25101,7 +25101,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review for Shopping Ads program in a specific region.
+     * Requests a review of Shopping ads in a specific region.
      *
      * Create a request for the method "shoppingadsprogram.requestreview".
      *
@@ -25123,7 +25123,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/shoppingadsprogram/requestreview";
 
       /**
-       * Requests a review for Shopping Ads program in a specific region.
+       * Requests a review of Shopping ads in a specific region.
        *
        * Create a request for the method "shoppingadsprogram.requestreview".
        *

@@ -53,9 +53,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   /**
    * This filter specifies the company Company.display_name of the jobs to search against. The
    * company name must match the value exactly. Alternatively, if the value being searched for is
-   * wrapped in SUBSTRING_MATCH([value]), the company name must contain a case insensitive substring
-   * match of the value. Using this function may increase latency. Sample Value:
-   * SUBSTRING_MATCH(google) If a value isn't specified, jobs within the search results are
+   * wrapped in `SUBSTRING_MATCH([value])`, the company name must contain a case insensitive
+   * substring match of the value. Using this function may increase latency. Sample Value:
+   * `SUBSTRING_MATCH(google)` If a value isn't specified, jobs within the search results are
    * associated with any company. If multiple values are specified, jobs within the search results
    * may be associated with any of the specified companies. At most 20 company display name filters
    * are allowed.
@@ -221,9 +221,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   /**
    * This filter specifies the company Company.display_name of the jobs to search against. The
    * company name must match the value exactly. Alternatively, if the value being searched for is
-   * wrapped in SUBSTRING_MATCH([value]), the company name must contain a case insensitive substring
-   * match of the value. Using this function may increase latency. Sample Value:
-   * SUBSTRING_MATCH(google) If a value isn't specified, jobs within the search results are
+   * wrapped in `SUBSTRING_MATCH([value])`, the company name must contain a case insensitive
+   * substring match of the value. Using this function may increase latency. Sample Value:
+   * `SUBSTRING_MATCH(google)` If a value isn't specified, jobs within the search results are
    * associated with any company. If multiple values are specified, jobs within the search results
    * may be associated with any of the specified companies. At most 20 company display name filters
    * are allowed.
@@ -236,9 +236,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   /**
    * This filter specifies the company Company.display_name of the jobs to search against. The
    * company name must match the value exactly. Alternatively, if the value being searched for is
-   * wrapped in SUBSTRING_MATCH([value]), the company name must contain a case insensitive substring
-   * match of the value. Using this function may increase latency. Sample Value:
-   * SUBSTRING_MATCH(google) If a value isn't specified, jobs within the search results are
+   * wrapped in `SUBSTRING_MATCH([value])`, the company name must contain a case insensitive
+   * substring match of the value. Using this function may increase latency. Sample Value:
+   * `SUBSTRING_MATCH(google)` If a value isn't specified, jobs within the search results are
    * associated with any company. If multiple values are specified, jobs within the search results
    * may be associated with any of the specified companies. At most 20 company display name filters
    * are allowed.

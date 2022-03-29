@@ -50,7 +50,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> brandExclusion;
 
   /**
-   * Required. The content language used as part of the unique identifier.
+   * Required. The content language used as part of the unique identifier. Currently only en value
+   * is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,7 +287,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> shippingServiceNames;
 
   /**
-   * Required. The target country used as part of the unique identifier.
+   * Required. The target country used as part of the unique identifier. Currently only US and CA
+   * are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +329,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The content language used as part of the unique identifier.
+   * Required. The content language used as part of the unique identifier. Currently only en value
+   * is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -335,7 +338,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The content language used as part of the unique identifier.
+   * Required. The content language used as part of the unique identifier. Currently only en value
+   * is supported.
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public Promotion setContentLanguage(java.lang.String contentLanguage) {
@@ -898,7 +902,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target country used as part of the unique identifier.
+   * Required. The target country used as part of the unique identifier. Currently only US and CA
+   * are supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -906,7 +911,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target country used as part of the unique identifier.
+   * Required. The target country used as part of the unique identifier. Currently only US and CA
+   * are supported.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public Promotion setTargetCountry(java.lang.String targetCountry) {

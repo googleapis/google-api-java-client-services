@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date your `eligibilityStatus` will become `DISAPPROVED`. Only visible when your
-   * `eligibilityStatus` is `WARNING`. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+   * Date by which eligibilityStatus will go from `WARNING` to `DISAPPROVED`. Only visible when your
+   * eligibilityStatus is WARNING. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
    * `YYYY-MM-DD`.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   private java.lang.String eligibilityStatus;
 
   /**
-   * Must be fixed to be eligible for review.
+   * Issues that must be fixed to be eligible for review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +100,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   private java.util.List<java.lang.String> reviewIssues;
 
   /**
-   * Date your `eligibilityStatus` will become `DISAPPROVED`. Only visible when your
-   * `eligibilityStatus` is `WARNING`. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+   * Date by which eligibilityStatus will go from `WARNING` to `DISAPPROVED`. Only visible when your
+   * eligibilityStatus is WARNING. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
    * `YYYY-MM-DD`.
    * @return value or {@code null} for none
    */
@@ -110,8 +110,8 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * Date your `eligibilityStatus` will become `DISAPPROVED`. Only visible when your
-   * `eligibilityStatus` is `WARNING`. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+   * Date by which eligibilityStatus will go from `WARNING` to `DISAPPROVED`. Only visible when your
+   * eligibilityStatus is WARNING. In [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
    * `YYYY-MM-DD`.
    * @param disapprovalDate disapprovalDate or {@code null} for none
    */
@@ -138,7 +138,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * Must be fixed to be eligible for review.
+   * Issues that must be fixed to be eligible for review.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOnboardingIssues() {
@@ -146,7 +146,7 @@ public final class ShoppingAdsProgramStatusRegionStatus extends com.google.api.c
   }
 
   /**
-   * Must be fixed to be eligible for review.
+   * Issues that must be fixed to be eligible for review.
    * @param onboardingIssues onboardingIssues or {@code null} for none
    */
   public ShoppingAdsProgramStatusRegionStatus setOnboardingIssues(java.util.List<java.lang.String> onboardingIssues) {

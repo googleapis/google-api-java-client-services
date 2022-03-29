@@ -264,7 +264,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String expirationDate;
 
   /**
-   * Used by a marketplace to externally identify a seller.
+   * Required for multi-seller accounts. Use this attribute if you're a marketplace uploading
+   * products for various sellers to your multi-seller account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1246,7 +1247,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used by a marketplace to externally identify a seller.
+   * Required for multi-seller accounts. Use this attribute if you're a marketplace uploading
+   * products for various sellers to your multi-seller account.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalSellerId() {
@@ -1254,7 +1256,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used by a marketplace to externally identify a seller.
+   * Required for multi-seller accounts. Use this attribute if you're a marketplace uploading
+   * products for various sellers to your multi-seller account.
    * @param externalSellerId externalSellerId or {@code null} for none
    */
   public Product setExternalSellerId(java.lang.String externalSellerId) {

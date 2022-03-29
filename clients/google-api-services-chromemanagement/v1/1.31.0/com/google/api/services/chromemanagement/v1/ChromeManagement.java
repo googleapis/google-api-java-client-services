@@ -1897,13 +1897,13 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. Only include resources that match the filter. Supported filter fields: -
-           * org_unit_id - serial_number
+           * org_unit_id - serial_number - device_id
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Optional. Only include resources that match the filter. Supported filter fields: - org_unit_id -
-         serial_number
+         serial_number - device_id
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1911,7 +1911,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. Only include resources that match the filter. Supported filter fields: -
-           * org_unit_id - serial_number
+           * org_unit_id - serial_number - device_id
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

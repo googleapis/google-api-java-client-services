@@ -775,7 +775,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
      * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or for
      * access errors. * `NOT_FOUND` if no course exists with the requested ID. * `INVALID_ARGUMENT` if
      * invalid fields are specified in the update mask or if no update mask is supplied. *
-     * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable
+     * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable *
+     * InactiveCourseOwner
      *
      * Create a request for the method "courses.patch".
      *
@@ -802,7 +803,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or
        * for access errors. * `NOT_FOUND` if no course exists with the requested ID. *
        * `INVALID_ARGUMENT` if invalid fields are specified in the update mask or if no update mask is
-       * supplied. * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable
+       * supplied. * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable *
+       * InactiveCourseOwner
        *
        * Create a request for the method "courses.patch".
        *
@@ -6160,8 +6162,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * the requesting user is not permitted to create students in this course or for access errors. *
        * `NOT_FOUND` if the requested course ID does not exist. * `FAILED_PRECONDITION` if the requested
        * user's account is disabled, for the following request errors: * CourseMemberLimitReached *
-       * CourseNotModifiable * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is already
-       * a student or teacher in the course.
+       * CourseNotModifiable * UserGroupsMembershipLimitReached * InactiveCourseOwner * `ALREADY_EXISTS`
+       * if the user is already a student or teacher in the course.
        *
        * Create a request for the method "students.create".
        *
@@ -6192,7 +6194,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * * `NOT_FOUND` if the requested course ID does not exist. * `FAILED_PRECONDITION` if the
          * requested user's account is disabled, for the following request errors: *
          * CourseMemberLimitReached * CourseNotModifiable * UserGroupsMembershipLimitReached *
-         * `ALREADY_EXISTS` if the user is already a student or teacher in the course.
+         * InactiveCourseOwner * `ALREADY_EXISTS` if the user is already a student or teacher in the
+         * course.
          *
          * Create a request for the method "students.create".
          *
@@ -6875,8 +6878,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * permitted to create teachers in this course or for access errors. * `NOT_FOUND` if the requested
        * course ID does not exist. * `FAILED_PRECONDITION` if the requested user's account is disabled,
        * for the following request errors: * CourseMemberLimitReached * CourseNotModifiable *
-       * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is
-       * already a teacher or student in the course.
+       * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * InactiveCourseOwner *
+       * `ALREADY_EXISTS` if the user is already a teacher or student in the course.
        *
        * Create a request for the method "teachers.create".
        *
@@ -6906,8 +6909,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * not permitted to create teachers in this course or for access errors. * `NOT_FOUND` if the
          * requested course ID does not exist. * `FAILED_PRECONDITION` if the requested user's account is
          * disabled, for the following request errors: * CourseMemberLimitReached * CourseNotModifiable *
-         * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is
-         * already a teacher or student in the course.
+         * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * InactiveCourseOwner *
+         * `ALREADY_EXISTS` if the user is already a teacher or student in the course.
          *
          * Create a request for the method "teachers.create".
          *

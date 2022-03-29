@@ -30,38 +30,37 @@ package com.google.api.services.docs.v1.model;
 public final class WriteControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * The revision ID of the document that the write request will be applied to. If this is not the
-   * latest revision of the document, the request will not be processed and will return a 400 bad
-   * request error. When a required revision ID is returned in a response, it indicates the revision
-   * ID of the document after the request was applied.
+   * The optional revision ID of the document the write request is applied to. If this is not the
+   * latest revision of the document, the request is not processed and returns a 400 bad request
+   * error. When a required revision ID is returned in a response, it indicates the revision ID of
+   * the document after the request was applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requiredRevisionId;
 
   /**
-   * The target revision ID of the document that the write request will be applied to. If
+   * The optional target revision ID of the document the write request is applied to. If
    * collaborator changes have occurred after the document was read using the API, the changes
-   * produced by this write request will be transformed against the collaborator changes. This
-   * results in a new revision of the document which incorporates both the changes in the request
-   * and the collaborator changes, and the Docs server will resolve conflicting changes. When using
-   * `target_revision_id`, the API client can be thought of as another collaborator of the document.
-   * The target revision ID may only be used to write to recent versions of a document. If the
-   * target revision is too far behind the latest revision, the request will not be processed and
-   * will return a 400 bad request error and the request should be retried after reading the latest
-   * version of the document. In most cases a `revision_id` will remain valid for use as a target
-   * revision for several minutes after it is read, but for frequently-edited documents this window
-   * may be shorter.
+   * produced by this write request are applied against the collaborator changes. This results in a
+   * new revision of the document that incorporates both the collaborator changes and the changes in
+   * the request, with the Docs server resolving conflicting changes. When using target revision ID,
+   * the API client can be thought of as another collaborator of the document. The target revision
+   * ID can only be used to write to recent versions of a document. If the target revision is too
+   * far behind the latest revision, the request is not processed and returns a 400 bad request
+   * error. The request should be tried again after retrieving the latest version of the document.
+   * Usually a revision ID remains valid for use as a target revision for several minutes after it's
+   * read, but for frequently edited documents this window might be shorter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetRevisionId;
 
   /**
-   * The revision ID of the document that the write request will be applied to. If this is not the
-   * latest revision of the document, the request will not be processed and will return a 400 bad
-   * request error. When a required revision ID is returned in a response, it indicates the revision
-   * ID of the document after the request was applied.
+   * The optional revision ID of the document the write request is applied to. If this is not the
+   * latest revision of the document, the request is not processed and returns a 400 bad request
+   * error. When a required revision ID is returned in a response, it indicates the revision ID of
+   * the document after the request was applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequiredRevisionId() {
@@ -69,10 +68,10 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision ID of the document that the write request will be applied to. If this is not the
-   * latest revision of the document, the request will not be processed and will return a 400 bad
-   * request error. When a required revision ID is returned in a response, it indicates the revision
-   * ID of the document after the request was applied.
+   * The optional revision ID of the document the write request is applied to. If this is not the
+   * latest revision of the document, the request is not processed and returns a 400 bad request
+   * error. When a required revision ID is returned in a response, it indicates the revision ID of
+   * the document after the request was applied.
    * @param requiredRevisionId requiredRevisionId or {@code null} for none
    */
   public WriteControl setRequiredRevisionId(java.lang.String requiredRevisionId) {
@@ -81,18 +80,17 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target revision ID of the document that the write request will be applied to. If
+   * The optional target revision ID of the document the write request is applied to. If
    * collaborator changes have occurred after the document was read using the API, the changes
-   * produced by this write request will be transformed against the collaborator changes. This
-   * results in a new revision of the document which incorporates both the changes in the request
-   * and the collaborator changes, and the Docs server will resolve conflicting changes. When using
-   * `target_revision_id`, the API client can be thought of as another collaborator of the document.
-   * The target revision ID may only be used to write to recent versions of a document. If the
-   * target revision is too far behind the latest revision, the request will not be processed and
-   * will return a 400 bad request error and the request should be retried after reading the latest
-   * version of the document. In most cases a `revision_id` will remain valid for use as a target
-   * revision for several minutes after it is read, but for frequently-edited documents this window
-   * may be shorter.
+   * produced by this write request are applied against the collaborator changes. This results in a
+   * new revision of the document that incorporates both the collaborator changes and the changes in
+   * the request, with the Docs server resolving conflicting changes. When using target revision ID,
+   * the API client can be thought of as another collaborator of the document. The target revision
+   * ID can only be used to write to recent versions of a document. If the target revision is too
+   * far behind the latest revision, the request is not processed and returns a 400 bad request
+   * error. The request should be tried again after retrieving the latest version of the document.
+   * Usually a revision ID remains valid for use as a target revision for several minutes after it's
+   * read, but for frequently edited documents this window might be shorter.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetRevisionId() {
@@ -100,18 +98,17 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target revision ID of the document that the write request will be applied to. If
+   * The optional target revision ID of the document the write request is applied to. If
    * collaborator changes have occurred after the document was read using the API, the changes
-   * produced by this write request will be transformed against the collaborator changes. This
-   * results in a new revision of the document which incorporates both the changes in the request
-   * and the collaborator changes, and the Docs server will resolve conflicting changes. When using
-   * `target_revision_id`, the API client can be thought of as another collaborator of the document.
-   * The target revision ID may only be used to write to recent versions of a document. If the
-   * target revision is too far behind the latest revision, the request will not be processed and
-   * will return a 400 bad request error and the request should be retried after reading the latest
-   * version of the document. In most cases a `revision_id` will remain valid for use as a target
-   * revision for several minutes after it is read, but for frequently-edited documents this window
-   * may be shorter.
+   * produced by this write request are applied against the collaborator changes. This results in a
+   * new revision of the document that incorporates both the collaborator changes and the changes in
+   * the request, with the Docs server resolving conflicting changes. When using target revision ID,
+   * the API client can be thought of as another collaborator of the document. The target revision
+   * ID can only be used to write to recent versions of a document. If the target revision is too
+   * far behind the latest revision, the request is not processed and returns a 400 bad request
+   * error. The request should be tried again after retrieving the latest version of the document.
+   * Usually a revision ID remains valid for use as a target revision for several minutes after it's
+   * read, but for frequently edited documents this window might be shorter.
    * @param targetRevisionId targetRevisionId or {@code null} for none
    */
   public WriteControl setTargetRevisionId(java.lang.String targetRevisionId) {

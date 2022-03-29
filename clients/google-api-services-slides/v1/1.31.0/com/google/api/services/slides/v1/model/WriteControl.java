@@ -31,8 +31,9 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
 
   /**
    * The revision ID of the presentation required for the write request. If specified and the
-   * `required_revision_id` doesn't exactly match the presentation's current `revision_id`, the
-   * request will not be processed and will return a 400 bad request error.
+   * required revision ID doesn't match the presentation's current revision ID, the request is not
+   * processed and returns a 400 bad request error. When a required revision ID is returned in a
+   * response, it indicates the revision ID of the document after the request was applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +41,9 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
 
   /**
    * The revision ID of the presentation required for the write request. If specified and the
-   * `required_revision_id` doesn't exactly match the presentation's current `revision_id`, the
-   * request will not be processed and will return a 400 bad request error.
+   * required revision ID doesn't match the presentation's current revision ID, the request is not
+   * processed and returns a 400 bad request error. When a required revision ID is returned in a
+   * response, it indicates the revision ID of the document after the request was applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequiredRevisionId() {
@@ -50,8 +52,9 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
 
   /**
    * The revision ID of the presentation required for the write request. If specified and the
-   * `required_revision_id` doesn't exactly match the presentation's current `revision_id`, the
-   * request will not be processed and will return a 400 bad request error.
+   * required revision ID doesn't match the presentation's current revision ID, the request is not
+   * processed and returns a 400 bad request error. When a required revision ID is returned in a
+   * response, it indicates the revision ID of the document after the request was applied.
    * @param requiredRevisionId requiredRevisionId or {@code null} for none
    */
   public WriteControl setRequiredRevisionId(java.lang.String requiredRevisionId) {

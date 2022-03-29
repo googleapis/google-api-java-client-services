@@ -48,6 +48,13 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.String displayName;
 
   /**
+   * Denotes that this ProcessorVersion is managed by google.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean googleManaged;
+
+  /**
    * The KMS key name used for encryption.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Denotes that this ProcessorVersion is managed by google.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGoogleManaged() {
+    return googleManaged;
+  }
+
+  /**
+   * Denotes that this ProcessorVersion is managed by google.
+   * @param googleManaged googleManaged or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessorVersion setGoogleManaged(java.lang.Boolean googleManaged) {
+    this.googleManaged = googleManaged;
     return this;
   }
 

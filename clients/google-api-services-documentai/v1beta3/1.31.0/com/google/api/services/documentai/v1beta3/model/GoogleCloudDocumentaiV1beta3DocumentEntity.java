@@ -116,7 +116,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   private GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor;
 
   /**
-   * Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema e.g. `Address`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -324,7 +324,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   }
 
   /**
-   * Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema e.g. `Address`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -332,7 +332,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   }
 
   /**
-   * Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema e.g. `Address`.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentEntity setType(java.lang.String type) {

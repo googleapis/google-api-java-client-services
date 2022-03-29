@@ -61,7 +61,7 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   private java.lang.String repoType;
 
   /**
-   * The URI of the repo (required).
+   * The URI of the repo. Either uri or repository can be specified and is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URI of the repo (required).
+   * The URI of the repo. Either uri or repository can be specified and is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -150,7 +150,7 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URI of the repo (required).
+   * The URI of the repo. Either uri or repository can be specified and is required.
    * @param uri uri or {@code null} for none
    */
   public GitRepoSource setUri(java.lang.String uri) {

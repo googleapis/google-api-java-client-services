@@ -71,8 +71,9 @@ public final class GitFileSource extends com.google.api.client.json.GenericJson 
   private java.lang.String revision;
 
   /**
-   * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation
-   * originated is assumed to be the repo from which to read the specified path.
+   * The URI of the repo. Either uri or repository can be specified. If unspecified, the repo from
+   * which the trigger invocation originated is assumed to be the repo from which to read the
+   * specified path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,8 +177,9 @@ public final class GitFileSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation
-   * originated is assumed to be the repo from which to read the specified path.
+   * The URI of the repo. Either uri or repository can be specified. If unspecified, the repo from
+   * which the trigger invocation originated is assumed to be the repo from which to read the
+   * specified path.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -185,8 +187,9 @@ public final class GitFileSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation
-   * originated is assumed to be the repo from which to read the specified path.
+   * The URI of the repo. Either uri or repository can be specified. If unspecified, the repo from
+   * which the trigger invocation originated is assumed to be the repo from which to read the
+   * specified path.
    * @param uri uri or {@code null} for none
    */
   public GitFileSource setUri(java.lang.String uri) {

@@ -17,8 +17,7 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Specifies the metadata options for running a transfer. These options only apply to transfers
- * involving a POSIX filesystem and are ignored for other transfers.
+ * Specifies the metadata options for running a transfer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -40,7 +39,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's POSIX group ID (GID) attribute should be handled by the transfer. By
-   * default, GID is not preserved.
+   * default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and
+   * ignored for other transfers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's mode attribute should be handled by the transfer. By default, mode is
-   * not preserved.
+   * not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other
+   * transfers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how symlinks should be handled by the transfer. By default, symlinks are not
-   * preserved.
+   * preserved. Only applicable to transfers involving POSIX file systems, and ignored for other
+   * transfers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +101,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's POSIX user ID (UID) attribute should be handled by the transfer. By
-   * default, UID is not preserved.
+   * default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and
+   * ignored for other transfers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +129,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's POSIX group ID (GID) attribute should be handled by the transfer. By
-   * default, GID is not preserved.
+   * default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and
+   * ignored for other transfers.
    * @return value or {@code null} for none
    */
   public java.lang.String getGid() {
@@ -135,7 +139,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's POSIX group ID (GID) attribute should be handled by the transfer. By
-   * default, GID is not preserved.
+   * default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and
+   * ignored for other transfers.
    * @param gid gid or {@code null} for none
    */
   public MetadataOptions setGid(java.lang.String gid) {
@@ -166,7 +171,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's mode attribute should be handled by the transfer. By default, mode is
-   * not preserved.
+   * not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other
+   * transfers.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -175,7 +181,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's mode attribute should be handled by the transfer. By default, mode is
-   * not preserved.
+   * not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other
+   * transfers.
    * @param mode mode or {@code null} for none
    */
   public MetadataOptions setMode(java.lang.String mode) {
@@ -206,7 +213,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how symlinks should be handled by the transfer. By default, symlinks are not
-   * preserved.
+   * preserved. Only applicable to transfers involving POSIX file systems, and ignored for other
+   * transfers.
    * @return value or {@code null} for none
    */
   public java.lang.String getSymlink() {
@@ -215,7 +223,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how symlinks should be handled by the transfer. By default, symlinks are not
-   * preserved.
+   * preserved. Only applicable to transfers involving POSIX file systems, and ignored for other
+   * transfers.
    * @param symlink symlink or {@code null} for none
    */
   public MetadataOptions setSymlink(java.lang.String symlink) {
@@ -265,7 +274,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's POSIX user ID (UID) attribute should be handled by the transfer. By
-   * default, UID is not preserved.
+   * default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and
+   * ignored for other transfers.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -274,7 +284,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies how each file's POSIX user ID (UID) attribute should be handled by the transfer. By
-   * default, UID is not preserved.
+   * default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and
+   * ignored for other transfers.
    * @param uid uid or {@code null} for none
    */
   public MetadataOptions setUid(java.lang.String uid) {

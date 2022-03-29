@@ -62,6 +62,14 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean overwriteObjectsAlreadyExistingInSink;
 
   /**
+   * When to overwrite objects that already exist in the sink. If not set overwrite behavior is
+   * determined by overwrite_objects_already_existing_in_sink.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String overwriteWhen;
+
+  /**
    * Whether objects should be deleted from the source after they are transferred to the sink.
    * **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
    * @return value or {@code null} for none
@@ -134,6 +142,25 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
    */
   public TransferOptions setOverwriteObjectsAlreadyExistingInSink(java.lang.Boolean overwriteObjectsAlreadyExistingInSink) {
     this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
+    return this;
+  }
+
+  /**
+   * When to overwrite objects that already exist in the sink. If not set overwrite behavior is
+   * determined by overwrite_objects_already_existing_in_sink.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOverwriteWhen() {
+    return overwriteWhen;
+  }
+
+  /**
+   * When to overwrite objects that already exist in the sink. If not set overwrite behavior is
+   * determined by overwrite_objects_already_existing_in_sink.
+   * @param overwriteWhen overwriteWhen or {@code null} for none
+   */
+  public TransferOptions setOverwriteWhen(java.lang.String overwriteWhen) {
+    this.overwriteWhen = overwriteWhen;
     return this;
   }
 

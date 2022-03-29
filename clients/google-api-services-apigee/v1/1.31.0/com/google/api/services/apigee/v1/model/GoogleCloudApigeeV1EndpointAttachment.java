@@ -60,6 +60,14 @@ public final class GoogleCloudApigeeV1EndpointAttachment extends com.google.api.
   private java.lang.String serviceAttachment;
 
   /**
+   * Output only. State of the endpoint attachment. Values other than `ACTIVE` mean the resource is
+   * not ready to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Output only. Host that can be used in either the HTTP target endpoint directly or as the host
    * in target server.
    * @return value or {@code null} for none
@@ -128,6 +136,25 @@ public final class GoogleCloudApigeeV1EndpointAttachment extends com.google.api.
    */
   public GoogleCloudApigeeV1EndpointAttachment setServiceAttachment(java.lang.String serviceAttachment) {
     this.serviceAttachment = serviceAttachment;
+    return this;
+  }
+
+  /**
+   * Output only. State of the endpoint attachment. Values other than `ACTIVE` mean the resource is
+   * not ready to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the endpoint attachment. Values other than `ACTIVE` mean the resource is
+   * not ready to use.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EndpointAttachment setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

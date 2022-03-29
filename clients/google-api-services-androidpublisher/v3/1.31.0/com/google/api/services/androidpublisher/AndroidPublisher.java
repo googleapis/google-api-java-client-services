@@ -133,6 +133,489 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Applications collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Applications.List request = androidpublisher.applications().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Applications applications() {
+    return new Applications();
+  }
+
+  /**
+   * The "applications" collection of methods.
+   */
+  public class Applications {
+
+    /**
+     * An accessor for creating requests from the DeviceTierConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.DeviceTierConfigs.List request = androidpublisher.deviceTierConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DeviceTierConfigs deviceTierConfigs() {
+      return new DeviceTierConfigs();
+    }
+
+    /**
+     * The "deviceTierConfigs" collection of methods.
+     */
+    public class DeviceTierConfigs {
+
+      /**
+       * Creates a new device tier config for an app.
+       *
+       * Create a request for the method "deviceTierConfigs.create".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.DeviceTierConfig}
+       * @return the request
+       */
+      public Create create(java.lang.String packageName, com.google.api.services.androidpublisher.model.DeviceTierConfig content) throws java.io.IOException {
+        Create result = new Create(packageName, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.DeviceTierConfig> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/deviceTierConfigs";
+
+        /**
+         * Creates a new device tier config for an app.
+         *
+         * Create a request for the method "deviceTierConfigs.create".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Package name of the app.
+         * @param content the {@link com.google.api.services.androidpublisher.model.DeviceTierConfig}
+         * @since 1.13
+         */
+        protected Create(java.lang.String packageName, com.google.api.services.androidpublisher.model.DeviceTierConfig content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.DeviceTierConfig.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Package name of the app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Package name of the app. */
+        public Create setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a particular device tier config.
+       *
+       * Create a request for the method "deviceTierConfigs.get".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Package name of the app.
+       * @param deviceTierConfigId Required. Id of an existing device tier config.
+       * @return the request
+       */
+      public Get get(java.lang.String packageName, java.lang.Long deviceTierConfigId) throws java.io.IOException {
+        Get result = new Get(packageName, deviceTierConfigId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.DeviceTierConfig> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}";
+
+        /**
+         * Returns a particular device tier config.
+         *
+         * Create a request for the method "deviceTierConfigs.get".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Package name of the app.
+         * @param deviceTierConfigId Required. Id of an existing device tier config.
+         * @since 1.13
+         */
+        protected Get(java.lang.String packageName, java.lang.Long deviceTierConfigId) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.DeviceTierConfig.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.deviceTierConfigId = com.google.api.client.util.Preconditions.checkNotNull(deviceTierConfigId, "Required parameter deviceTierConfigId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Package name of the app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Package name of the app. */
+        public Get setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. Id of an existing device tier config. */
+        @com.google.api.client.util.Key
+        private java.lang.Long deviceTierConfigId;
+
+        /** Required. Id of an existing device tier config.
+         */
+        public java.lang.Long getDeviceTierConfigId() {
+          return deviceTierConfigId;
+        }
+
+        /** Required. Id of an existing device tier config. */
+        public Get setDeviceTierConfigId(java.lang.Long deviceTierConfigId) {
+          this.deviceTierConfigId = deviceTierConfigId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns created device tier configs, ordered by descending creation time.
+       *
+       * Create a request for the method "deviceTierConfigs.list".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Package name of the app.
+       * @return the request
+       */
+      public List list(java.lang.String packageName) throws java.io.IOException {
+        List result = new List(packageName);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListDeviceTierConfigsResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/deviceTierConfigs";
+
+        /**
+         * Returns created device tier configs, ordered by descending creation time.
+         *
+         * Create a request for the method "deviceTierConfigs.list".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Package name of the app.
+         * @since 1.13
+         */
+        protected List(java.lang.String packageName) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ListDeviceTierConfigsResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Package name of the app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Package name of the app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Package name of the app. */
+        public List setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * The maximum number of device tier configs to return. The service may return fewer than
+         * this value. If unspecified, at most 10 device tier configs will be returned. The maximum
+         * value for this field is 100; values above 100 will be coerced to 100. Device tier configs
+         * will be ordered by descending creation time.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of device tier configs to return. The service may return fewer than this value.
+       If unspecified, at most 10 device tier configs will be returned. The maximum value for this field
+       is 100; values above 100 will be coerced to 100. Device tier configs will be ordered by descending
+       creation time.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of device tier configs to return. The service may return fewer than
+         * this value. If unspecified, at most 10 device tier configs will be returned. The maximum
+         * value for this field is 100; values above 100 will be coerced to 100. Device tier configs
+         * will be ordered by descending creation time.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListDeviceTierConfigs` call. Provide this to
+         * retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListDeviceTierConfigs` call. Provide this to retrieve the
+       subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListDeviceTierConfigs` call. Provide this to
+         * retrieve the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Edits collection.
    *
    * <p>The typical use is:</p>

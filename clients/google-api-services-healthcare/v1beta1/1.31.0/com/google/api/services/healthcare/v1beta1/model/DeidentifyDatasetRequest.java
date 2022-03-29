@@ -46,6 +46,17 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   private java.lang.String destinationDataset;
 
   /**
+   * Cloud Storage location to read the JSON cloud.healthcare.deidentify.DeidentifyConfig from,
+   * overriding the default config. Must be of the form `gs://{bucket_id}/path/to/object`. The Cloud
+   * Storage location must grant the Cloud IAM role `roles/storage.objectViewer` to the project's
+   * Cloud Healthcare Service Agent service account. Only one of `config` and `gcs_config_uri` can
+   * be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcsConfigUri;
+
+  /**
    * Deidentify configuration.
    * @return value or {@code null} for none
    */
@@ -80,6 +91,31 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
    */
   public DeidentifyDatasetRequest setDestinationDataset(java.lang.String destinationDataset) {
     this.destinationDataset = destinationDataset;
+    return this;
+  }
+
+  /**
+   * Cloud Storage location to read the JSON cloud.healthcare.deidentify.DeidentifyConfig from,
+   * overriding the default config. Must be of the form `gs://{bucket_id}/path/to/object`. The Cloud
+   * Storage location must grant the Cloud IAM role `roles/storage.objectViewer` to the project's
+   * Cloud Healthcare Service Agent service account. Only one of `config` and `gcs_config_uri` can
+   * be specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcsConfigUri() {
+    return gcsConfigUri;
+  }
+
+  /**
+   * Cloud Storage location to read the JSON cloud.healthcare.deidentify.DeidentifyConfig from,
+   * overriding the default config. Must be of the form `gs://{bucket_id}/path/to/object`. The Cloud
+   * Storage location must grant the Cloud IAM role `roles/storage.objectViewer` to the project's
+   * Cloud Healthcare Service Agent service account. Only one of `config` and `gcs_config_uri` can
+   * be specified.
+   * @param gcsConfigUri gcsConfigUri or {@code null} for none
+   */
+  public DeidentifyDatasetRequest setGcsConfigUri(java.lang.String gcsConfigUri) {
+    this.gcsConfigUri = gcsConfigUri;
     return this;
   }
 

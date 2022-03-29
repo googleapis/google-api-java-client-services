@@ -56,6 +56,17 @@ public final class DeidentifyDicomStoreRequest extends com.google.api.client.jso
   private DicomFilterConfig filterConfig;
 
   /**
+   * Cloud Storage location to read the JSON cloud.healthcare.deidentify.DeidentifyConfig from,
+   * overriding the default config. Must be of the form `gs://{bucket_id}/path/to/object`. The Cloud
+   * Storage location must grant the Cloud IAM role `roles/storage.objectViewer` to the project's
+   * Cloud Healthcare Service Agent service account. Only one of `config` and `gcs_config_uri` can
+   * be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcsConfigUri;
+
+  /**
    * Deidentify configuration.
    * @return value or {@code null} for none
    */
@@ -113,6 +124,31 @@ public final class DeidentifyDicomStoreRequest extends com.google.api.client.jso
    */
   public DeidentifyDicomStoreRequest setFilterConfig(DicomFilterConfig filterConfig) {
     this.filterConfig = filterConfig;
+    return this;
+  }
+
+  /**
+   * Cloud Storage location to read the JSON cloud.healthcare.deidentify.DeidentifyConfig from,
+   * overriding the default config. Must be of the form `gs://{bucket_id}/path/to/object`. The Cloud
+   * Storage location must grant the Cloud IAM role `roles/storage.objectViewer` to the project's
+   * Cloud Healthcare Service Agent service account. Only one of `config` and `gcs_config_uri` can
+   * be specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcsConfigUri() {
+    return gcsConfigUri;
+  }
+
+  /**
+   * Cloud Storage location to read the JSON cloud.healthcare.deidentify.DeidentifyConfig from,
+   * overriding the default config. Must be of the form `gs://{bucket_id}/path/to/object`. The Cloud
+   * Storage location must grant the Cloud IAM role `roles/storage.objectViewer` to the project's
+   * Cloud Healthcare Service Agent service account. Only one of `config` and `gcs_config_uri` can
+   * be specified.
+   * @param gcsConfigUri gcsConfigUri or {@code null} for none
+   */
+  public DeidentifyDicomStoreRequest setGcsConfigUri(java.lang.String gcsConfigUri) {
+    this.gcsConfigUri = gcsConfigUri;
     return this;
   }
 

@@ -65,6 +65,13 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   private java.lang.Long partitionCount;
 
   /**
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String readTime;
+
+  /**
    * A structured query. Query must specify collection with all descendants and be ordered by name
    * ascending. Other filters, order bys, limits, offsets, and start/end cursors are not supported.
    * The value may be {@code null}.
@@ -148,6 +155,23 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
    */
   public PartitionQueryRequest setPartitionCount(java.lang.Long partitionCount) {
     this.partitionCount = partitionCount;
+    return this;
+  }
+
+  /**
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
+   * @return value or {@code null} for none
+   */
+  public String getReadTime() {
+    return readTime;
+  }
+
+  /**
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
+   * @param readTime readTime or {@code null} for none
+   */
+  public PartitionQueryRequest setReadTime(String readTime) {
+    this.readTime = readTime;
     return this;
   }
 

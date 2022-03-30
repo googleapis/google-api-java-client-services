@@ -38,6 +38,23 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> destIpRanges;
 
   /**
+   * Region codes whose IP addresses will be used to match for destination of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of dest region codes allowed is 5000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destRegionCodes;
+
+  /**
+   * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against
+   * traffic destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destThreatIntelligences;
+
+  /**
    * Pairs of IP protocols and ports that the rule should match.
    * The value may be {@code null}.
    */
@@ -52,6 +69,15 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> srcIpRanges;
 
   /**
+   * Region codes whose IP addresses will be used to match for source of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of source region codes allowed is 5000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcRegionCodes;
+
+  /**
    * List of secure tag values, which should be matched at the source of the traffic. For INGRESS
    * rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be
    * ignored. Maximum number of source tag values allowed is 256.
@@ -59,6 +85,14 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<FirewallPolicyRuleSecureTag> srcSecureTags;
+
+  /**
+   * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against
+   * traffic source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcThreatIntelligences;
 
   /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
@@ -74,6 +108,46 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
     this.destIpRanges = destIpRanges;
+    return this;
+  }
+
+  /**
+   * Region codes whose IP addresses will be used to match for destination of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of dest region codes allowed is 5000.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestRegionCodes() {
+    return destRegionCodes;
+  }
+
+  /**
+   * Region codes whose IP addresses will be used to match for destination of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of dest region codes allowed is 5000.
+   * @param destRegionCodes destRegionCodes or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestRegionCodes(java.util.List<java.lang.String> destRegionCodes) {
+    this.destRegionCodes = destRegionCodes;
+    return this;
+  }
+
+  /**
+   * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against
+   * traffic destination.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestThreatIntelligences() {
+    return destThreatIntelligences;
+  }
+
+  /**
+   * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against
+   * traffic destination.
+   * @param destThreatIntelligences destThreatIntelligences or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestThreatIntelligences(java.util.List<java.lang.String> destThreatIntelligences) {
+    this.destThreatIntelligences = destThreatIntelligences;
     return this;
   }
 
@@ -112,6 +186,27 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   }
 
   /**
+   * Region codes whose IP addresses will be used to match for source of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of source region codes allowed is 5000.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcRegionCodes() {
+    return srcRegionCodes;
+  }
+
+  /**
+   * Region codes whose IP addresses will be used to match for source of traffic. Should be
+   * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
+   * Maximum number of source region codes allowed is 5000.
+   * @param srcRegionCodes srcRegionCodes or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcRegionCodes(java.util.List<java.lang.String> srcRegionCodes) {
+    this.srcRegionCodes = srcRegionCodes;
+    return this;
+  }
+
+  /**
    * List of secure tag values, which should be matched at the source of the traffic. For INGRESS
    * rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be
    * ignored. Maximum number of source tag values allowed is 256.
@@ -129,6 +224,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcSecureTags(java.util.List<FirewallPolicyRuleSecureTag> srcSecureTags) {
     this.srcSecureTags = srcSecureTags;
+    return this;
+  }
+
+  /**
+   * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against
+   * traffic source.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcThreatIntelligences() {
+    return srcThreatIntelligences;
+  }
+
+  /**
+   * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against
+   * traffic source.
+   * @param srcThreatIntelligences srcThreatIntelligences or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcThreatIntelligences(java.util.List<java.lang.String> srcThreatIntelligences) {
+    this.srcThreatIntelligences = srcThreatIntelligences;
     return this;
   }
 

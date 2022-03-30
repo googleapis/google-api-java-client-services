@@ -223,6 +223,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String loadBalancingScheme;
 
   /**
+   * A list of locality load balancing policies to be used in order of preference. Either the policy
+   * or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field.
+   * localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is
+   * referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendServiceLocalityLoadBalancingPolicyConfig> localityLbPolicies;
+
+  /**
    * The load balancing algorithm used within the scope of the locality. The possible values are: -
    * ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin
    * order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy
@@ -852,6 +862,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
     this.loadBalancingScheme = loadBalancingScheme;
+    return this;
+  }
+
+  /**
+   * A list of locality load balancing policies to be used in order of preference. Either the policy
+   * or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field.
+   * localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is
+   * referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendServiceLocalityLoadBalancingPolicyConfig> getLocalityLbPolicies() {
+    return localityLbPolicies;
+  }
+
+  /**
+   * A list of locality load balancing policies to be used in order of preference. Either the policy
+   * or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field.
+   * localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is
+   * referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+   * @param localityLbPolicies localityLbPolicies or {@code null} for none
+   */
+  public BackendService setLocalityLbPolicies(java.util.List<BackendServiceLocalityLoadBalancingPolicyConfig> localityLbPolicies) {
+    this.localityLbPolicies = localityLbPolicies;
     return this;
   }
 

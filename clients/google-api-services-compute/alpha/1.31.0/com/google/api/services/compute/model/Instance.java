@@ -165,7 +165,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey instanceEncryptionKey;
 
   /**
-   * KeyRevocationActionType of the instance.
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
+   * value is "NONE" if it is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -788,7 +789,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * KeyRevocationActionType of the instance.
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
+   * value is "NONE" if it is not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyRevocationActionType() {
@@ -796,7 +798,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * KeyRevocationActionType of the instance.
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
+   * value is "NONE" if it is not specified.
    * @param keyRevocationActionType keyRevocationActionType or {@code null} for none
    */
   public Instance setKeyRevocationActionType(java.lang.String keyRevocationActionType) {

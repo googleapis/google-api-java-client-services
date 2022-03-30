@@ -56,6 +56,16 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Integer threadsPerCore;
 
   /**
+   * The number of physical cores to expose to an instance. Multiply by the number of threads per
+   * core to compute the total number of virtual CPUs to expose to the instance. If unset, the
+   * number of cores is inferred from the instance's nominal CPU count and the underlying platform's
+   * SMT width.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer visibleCoreCount;
+
+  /**
    * Whether to enable nested virtualization or not (default is false).
    * @return value or {@code null} for none
    */
@@ -107,6 +117,29 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setThreadsPerCore(java.lang.Integer threadsPerCore) {
     this.threadsPerCore = threadsPerCore;
+    return this;
+  }
+
+  /**
+   * The number of physical cores to expose to an instance. Multiply by the number of threads per
+   * core to compute the total number of virtual CPUs to expose to the instance. If unset, the
+   * number of cores is inferred from the instance's nominal CPU count and the underlying platform's
+   * SMT width.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVisibleCoreCount() {
+    return visibleCoreCount;
+  }
+
+  /**
+   * The number of physical cores to expose to an instance. Multiply by the number of threads per
+   * core to compute the total number of virtual CPUs to expose to the instance. If unset, the
+   * number of cores is inferred from the instance's nominal CPU count and the underlying platform's
+   * SMT width.
+   * @param visibleCoreCount visibleCoreCount or {@code null} for none
+   */
+  public AdvancedMachineFeatures setVisibleCoreCount(java.lang.Integer visibleCoreCount) {
+    this.visibleCoreCount = visibleCoreCount;
     return this;
   }
 

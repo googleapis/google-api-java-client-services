@@ -101,7 +101,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enablePrivateV6Access;
 
   /**
-   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +144,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
-   * is for general VM to VM communication, not to be confused with the ipv6_cidr_range field.
+   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,16 +163,14 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
-   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
-   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipv6AccessType;
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
-   * will be for private google access only eventually.
+   * [Output Only] This field is for internal use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,9 +230,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean privateIpGoogleAccess;
 
   /**
-   * The private IPv6 google access type for the VMs in this subnet. This is an expanded field of
-   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This
-   * field can be both set at resource creation time and updated using patch.
+   * This field is for internal use. This field can be both set at resource creation time and
+   * updated using patch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -503,7 +499,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIpv6Prefix() {
@@ -511,7 +507,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
    * @param externalIpv6Prefix externalIpv6Prefix or {@code null} for none
    */
   public Subnetwork setExternalIpv6Prefix(java.lang.String externalIpv6Prefix) {
@@ -640,8 +636,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
-   * is for general VM to VM communication, not to be confused with the ipv6_cidr_range field.
+   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalIpv6Prefix() {
@@ -649,8 +644,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
-   * is for general VM to VM communication, not to be confused with the ipv6_cidr_range field.
+   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
    * @param internalIpv6Prefix internalIpv6Prefix or {@code null} for none
    */
   public Subnetwork setInternalIpv6Prefix(java.lang.String internalIpv6Prefix) {
@@ -685,8 +679,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
-   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
-   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6AccessType() {
@@ -695,8 +688,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
-   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
-   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
    * @param ipv6AccessType ipv6AccessType or {@code null} for none
    */
   public Subnetwork setIpv6AccessType(java.lang.String ipv6AccessType) {
@@ -705,8 +697,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
-   * will be for private google access only eventually.
+   * [Output Only] This field is for internal use.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6CidrRange() {
@@ -714,8 +705,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork. Note this
-   * will be for private google access only eventually.
+   * [Output Only] This field is for internal use.
    * @param ipv6CidrRange ipv6CidrRange or {@code null} for none
    */
   public Subnetwork setIpv6CidrRange(java.lang.String ipv6CidrRange) {
@@ -848,9 +838,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The private IPv6 google access type for the VMs in this subnet. This is an expanded field of
-   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This
-   * field can be both set at resource creation time and updated using patch.
+   * This field is for internal use. This field can be both set at resource creation time and
+   * updated using patch.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateIpv6GoogleAccess() {
@@ -858,9 +847,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The private IPv6 google access type for the VMs in this subnet. This is an expanded field of
-   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This
-   * field can be both set at resource creation time and updated using patch.
+   * This field is for internal use. This field can be both set at resource creation time and
+   * updated using patch.
    * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
    */
   public Subnetwork setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {

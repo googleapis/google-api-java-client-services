@@ -4790,6 +4790,525 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
       }
       /**
+       * An accessor for creating requests from the RecaptchaV3Config collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firebaseappcheck firebaseappcheck = new Firebaseappcheck(...);}
+       *   {@code Firebaseappcheck.RecaptchaV3Config.List request = firebaseappcheck.recaptchaV3Config().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RecaptchaV3Config recaptchaV3Config() {
+        return new RecaptchaV3Config();
+      }
+
+      /**
+       * The "recaptchaV3Config" collection of methods.
+       */
+      public class RecaptchaV3Config {
+
+        /**
+         * Atomically gets the RecaptchaV3Configs for the specified list of apps. For security reasons, the
+         * `site_secret` field is never populated in the response.
+         *
+         * Create a request for the method "recaptchaV3Config.batchGet".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent project name shared by all RecaptchaV3Configs being retrieved, in the format
+         *        ``` projects/{project_number} ``` The parent collection in the `name` field of any
+         *        resource being retrieved must match this field, or the entire batch fails.
+         * @return the request
+         */
+        public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
+          BatchGet result = new BatchGet(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchGet extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchGetRecaptchaV3ConfigsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/apps/-/recaptchaV3Config:batchGet";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * Atomically gets the RecaptchaV3Configs for the specified list of apps. For security reasons,
+           * the `site_secret` field is never populated in the response.
+           *
+           * Create a request for the method "recaptchaV3Config.batchGet".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent project name shared by all RecaptchaV3Configs being retrieved, in the format
+         *        ``` projects/{project_number} ``` The parent collection in the `name` field of any
+         *        resource being retrieved must match this field, or the entire batch fails.
+           * @since 1.13
+           */
+          protected BatchGet(java.lang.String parent) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchGetRecaptchaV3ConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchGet) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchGet setAccessToken(java.lang.String accessToken) {
+            return (BatchGet) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchGet setAlt(java.lang.String alt) {
+            return (BatchGet) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchGet setCallback(java.lang.String callback) {
+            return (BatchGet) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchGet setFields(java.lang.String fields) {
+            return (BatchGet) super.setFields(fields);
+          }
+
+          @Override
+          public BatchGet setKey(java.lang.String key) {
+            return (BatchGet) super.setKey(key);
+          }
+
+          @Override
+          public BatchGet setOauthToken(java.lang.String oauthToken) {
+            return (BatchGet) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchGet) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchGet setQuotaUser(java.lang.String quotaUser) {
+            return (BatchGet) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchGet setUploadType(java.lang.String uploadType) {
+            return (BatchGet) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchGet) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent project name shared by all RecaptchaV3Configs being retrieved, in
+           * the format ``` projects/{project_number} ``` The parent collection in the `name` field
+           * of any resource being retrieved must match this field, or the entire batch fails.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent project name shared by all RecaptchaV3Configs being retrieved, in the format
+         ``` projects/{project_number} ``` The parent collection in the `name` field of any resource being
+         retrieved must match this field, or the entire batch fails.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent project name shared by all RecaptchaV3Configs being retrieved, in
+           * the format ``` projects/{project_number} ``` The parent collection in the `name` field
+           * of any resource being retrieved must match this field, or the entire batch fails.
+           */
+          public BatchGet setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The relative resource names of the RecaptchaV3Configs to retrieve, in the
+           * format: ``` projects/{project_number}/apps/{app_id}/recaptchaV3Config ``` A maximum of
+           * 100 objects can be retrieved in a batch.
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> names;
+
+          /** Required. The relative resource names of the RecaptchaV3Configs to retrieve, in the format: ```
+         projects/{project_number}/apps/{app_id}/recaptchaV3Config ``` A maximum of 100 objects can be
+         retrieved in a batch.
+           */
+          public java.util.List<java.lang.String> getNames() {
+            return names;
+          }
+
+          /**
+           * Required. The relative resource names of the RecaptchaV3Configs to retrieve, in the
+           * format: ``` projects/{project_number}/apps/{app_id}/recaptchaV3Config ``` A maximum of
+           * 100 objects can be retrieved in a batch.
+           */
+          public BatchGet setNames(java.util.List<java.lang.String> names) {
+            this.names = names;
+            return this;
+          }
+
+          @Override
+          public BatchGet set(String parameterName, Object value) {
+            return (BatchGet) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the RecaptchaV3Config for the specified app. For security reasons, the `site_secret` field
+         * is never populated in the response.
+         *
+         * Create a request for the method "recaptchaV3Config.get".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the RecaptchaV3Config, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/recaptchaV3Config$");
+
+          /**
+           * Gets the RecaptchaV3Config for the specified app. For security reasons, the `site_secret` field
+           * is never populated in the response.
+           *
+           * Create a request for the method "recaptchaV3Config.get".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the RecaptchaV3Config, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/recaptchaV3Config$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the RecaptchaV3Config, in the format: ```
+           * projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the RecaptchaV3Config, in the format: ```
+         projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the RecaptchaV3Config, in the format: ```
+           * projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/recaptchaV3Config$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the RecaptchaV3Config for the specified app. While this configuration is incomplete or
+         * invalid, the app will be unable to exchange reCAPTCHA V3 tokens for App Check tokens. For
+         * security reasons, the `site_secret` field is never populated in the response.
+         *
+         * Create a request for the method "recaptchaV3Config.patch".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/recaptchaV3Config$");
+
+          /**
+           * Updates the RecaptchaV3Config for the specified app. While this configuration is incomplete or
+           * invalid, the app will be unable to exchange reCAPTCHA V3 tokens for App Check tokens. For
+           * security reasons, the `site_secret` field is never populated in the response.
+           *
+           * Create a request for the method "recaptchaV3Config.patch".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config content) {
+            super(Firebaseappcheck.this, "PATCH", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaRecaptchaV3Config.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/recaptchaV3Config$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the
+           * format: ``` projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format: ```
+         projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the
+           * format: ``` projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/recaptchaV3Config$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the RecaptchaV3Config to update.
+           * Example: `site_secret`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A comma-separated list of names of fields in the RecaptchaV3Config to update. Example:
+         `site_secret`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the RecaptchaV3Config to update.
+           * Example: `site_secret`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the SafetyNetConfig collection.
        *
        * <p>The typical use is:</p>

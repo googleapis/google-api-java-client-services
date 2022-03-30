@@ -100,7 +100,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * KeyRevocationActionType of the instance.
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
+   * value is "NONE" if it is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -378,7 +379,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * KeyRevocationActionType of the instance.
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
+   * value is "NONE" if it is not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyRevocationActionType() {
@@ -386,7 +388,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * KeyRevocationActionType of the instance.
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
+   * value is "NONE" if it is not specified.
    * @param keyRevocationActionType keyRevocationActionType or {@code null} for none
    */
   public InstanceProperties setKeyRevocationActionType(java.lang.String keyRevocationActionType) {

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-genomics</artifactId>
-      <version>v2alpha1-rev20210811-1.32.1</version>
+      <version>v2alpha1-rev20220328-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-genomics:v2alpha1-rev20210811-1.32.1'
+  implementation 'com.google.apis:google-api-services-genomics:v2alpha1-rev20220328-1.32.1'
 }
 ```
 

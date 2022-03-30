@@ -30,6 +30,15 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class UserId extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Opaque, server-assigned ID of the user profile associated with App/user acting on
+   * behalf of the human user. This is currently only set when a 3P application is acting on the
+   * user's behalf.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String actingUserId;
+
+  /**
    * Opaque, server-assigned ID of the User.
    * The value may be {@code null}.
    */
@@ -56,6 +65,27 @@ public final class UserId extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Opaque, server-assigned ID of the user profile associated with App/user acting on
+   * behalf of the human user. This is currently only set when a 3P application is acting on the
+   * user's behalf.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActingUserId() {
+    return actingUserId;
+  }
+
+  /**
+   * Optional. Opaque, server-assigned ID of the user profile associated with App/user acting on
+   * behalf of the human user. This is currently only set when a 3P application is acting on the
+   * user's behalf.
+   * @param actingUserId actingUserId or {@code null} for none
+   */
+  public UserId setActingUserId(java.lang.String actingUserId) {
+    this.actingUserId = actingUserId;
+    return this;
+  }
 
   /**
    * Opaque, server-assigned ID of the User.

@@ -30,8 +30,6 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class RestrictItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * LINT.ThenChange(//depot/google3/java/com/google/apps/search/quality/itemsuggest/utils/SubtypeRe
-   * rankingUtils.java)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +42,7 @@ public final class RestrictItem extends com.google.api.client.json.GenericJson {
   private DriveLocationRestrict driveLocationRestrict;
 
   /**
-   * LINT.IfChange Drive Types.
+   * Drive Types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +62,6 @@ public final class RestrictItem extends com.google.api.client.json.GenericJson {
   private java.lang.String searchOperator;
 
   /**
-   * LINT.ThenChange(//depot/google3/java/com/google/apps/search/quality/itemsuggest/utils/SubtypeRe
-   * rankingUtils.java)
    * @return value or {@code null} for none
    */
   public DriveFollowUpRestrict getDriveFollowUpRestrict() {
@@ -73,8 +69,6 @@ public final class RestrictItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/java/com/google/apps/search/quality/itemsuggest/utils/SubtypeRe
-   * rankingUtils.java)
    * @param driveFollowUpRestrict driveFollowUpRestrict or {@code null} for none
    */
   public RestrictItem setDriveFollowUpRestrict(DriveFollowUpRestrict driveFollowUpRestrict) {
@@ -98,7 +92,7 @@ public final class RestrictItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * LINT.IfChange Drive Types.
+   * Drive Types.
    * @return value or {@code null} for none
    */
   public DriveMimeTypeRestrict getDriveMimeTypeRestrict() {
@@ -106,7 +100,7 @@ public final class RestrictItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * LINT.IfChange Drive Types.
+   * Drive Types.
    * @param driveMimeTypeRestrict driveMimeTypeRestrict or {@code null} for none
    */
   public RestrictItem setDriveMimeTypeRestrict(DriveMimeTypeRestrict driveMimeTypeRestrict) {

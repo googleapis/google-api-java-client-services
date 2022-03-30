@@ -69,8 +69,26 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long lastMessagePostedTimestampMicros;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double memberMetadataCount;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key
   private java.lang.Double messageScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numAucContacts;
 
   /**
    * The value may be {@code null}.
@@ -89,6 +107,12 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.Double spaceAgeInDays;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long spaceCreationTimestampMicros;
 
   /**
    * The value may be {@code null}.
@@ -189,6 +213,36 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
   /**
    * @return value or {@code null} for none
    */
+  public java.lang.Long getLastMessagePostedTimestampMicros() {
+    return lastMessagePostedTimestampMicros;
+  }
+
+  /**
+   * @param lastMessagePostedTimestampMicros lastMessagePostedTimestampMicros or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setLastMessagePostedTimestampMicros(java.lang.Long lastMessagePostedTimestampMicros) {
+    this.lastMessagePostedTimestampMicros = lastMessagePostedTimestampMicros;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMemberMetadataCount() {
+    return memberMetadataCount;
+  }
+
+  /**
+   * @param memberMetadataCount memberMetadataCount or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setMemberMetadataCount(java.lang.Double memberMetadataCount) {
+    this.memberMetadataCount = memberMetadataCount;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.Double getMessageScore() {
     return messageScore;
   }
@@ -198,6 +252,21 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    */
   public DynamiteSpacesScoringInfo setMessageScore(java.lang.Double messageScore) {
     this.messageScore = messageScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumAucContacts() {
+    return numAucContacts;
+  }
+
+  /**
+   * @param numAucContacts numAucContacts or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setNumAucContacts(java.lang.Long numAucContacts) {
+    this.numAucContacts = numAucContacts;
     return this;
   }
 
@@ -243,6 +312,21 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    */
   public DynamiteSpacesScoringInfo setSpaceAgeInDays(java.lang.Double spaceAgeInDays) {
     this.spaceAgeInDays = spaceAgeInDays;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSpaceCreationTimestampMicros() {
+    return spaceCreationTimestampMicros;
+  }
+
+  /**
+   * @param spaceCreationTimestampMicros spaceCreationTimestampMicros or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setSpaceCreationTimestampMicros(java.lang.Long spaceCreationTimestampMicros) {
+    this.spaceCreationTimestampMicros = spaceCreationTimestampMicros;
     return this;
   }
 

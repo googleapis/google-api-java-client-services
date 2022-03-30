@@ -285,6 +285,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
+        /**
+         * Whether the service should accept device IDs that are unknown to Play's device catalog.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowUnknownDevices;
+
+        /** Whether the service should accept device IDs that are unknown to Play's device catalog.
+         */
+        public java.lang.Boolean getAllowUnknownDevices() {
+          return allowUnknownDevices;
+        }
+
+        /**
+         * Whether the service should accept device IDs that are unknown to Play's device catalog.
+         */
+        public Create setAllowUnknownDevices(java.lang.Boolean allowUnknownDevices) {
+          this.allowUnknownDevices = allowUnknownDevices;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);

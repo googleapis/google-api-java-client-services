@@ -174,6 +174,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
+   * [Optional] Number of hours for the max time travel for all tables in the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxTimeTravelHours;
+
+  /**
    * [Output-only] Reserved for future use.
    * The value may be {@code null}.
    */
@@ -522,6 +529,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * [Optional] Number of hours for the max time travel for all tables in the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxTimeTravelHours() {
+    return maxTimeTravelHours;
+  }
+
+  /**
+   * [Optional] Number of hours for the max time travel for all tables in the dataset.
+   * @param maxTimeTravelHours maxTimeTravelHours or {@code null} for none
+   */
+  public Dataset setMaxTimeTravelHours(java.lang.Long maxTimeTravelHours) {
+    this.maxTimeTravelHours = maxTimeTravelHours;
     return this;
   }
 

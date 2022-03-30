@@ -72,15 +72,17 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Allows the client to return jobs without a set location, specifically, telecommuting
-   * jobs (telecommuting is considered by the service as a special location. Job.posting_region
+   * jobs (telecommuting is considered by the service as a special location). Job.posting_region
    * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
-   * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
-   * telecommute job are not searched. This filter can be used by itself to search exclusively for
-   * telecommuting jobs, or it can be combined with another location filter to search for a
-   * combination of job locations, such as "Mountain View" or "telecommuting" jobs. However, when
-   * used in combination with other location filters, telecommuting jobs can be treated as less
-   * relevant than other jobs in the search response.
+   * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED, the
+   * telecommute status of the jobs is ignored. Jobs that have PostingRegion.TELECOMMUTE and have
+   * additional Job.addresses may still be matched based on other location filters using address or
+   * latlng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
+   * can be combined with another location filter to search for a combination of job locations, such
+   * as "Mountain View" or "telecommuting" jobs. However, when used in combination with other
+   * location filters, telecommuting jobs can be treated as less relevant than other jobs in the
+   * search response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,15 +182,17 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Allows the client to return jobs without a set location, specifically, telecommuting
-   * jobs (telecommuting is considered by the service as a special location. Job.posting_region
+   * jobs (telecommuting is considered by the service as a special location). Job.posting_region
    * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
-   * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
-   * telecommute job are not searched. This filter can be used by itself to search exclusively for
-   * telecommuting jobs, or it can be combined with another location filter to search for a
-   * combination of job locations, such as "Mountain View" or "telecommuting" jobs. However, when
-   * used in combination with other location filters, telecommuting jobs can be treated as less
-   * relevant than other jobs in the search response.
+   * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED, the
+   * telecommute status of the jobs is ignored. Jobs that have PostingRegion.TELECOMMUTE and have
+   * additional Job.addresses may still be matched based on other location filters using address or
+   * latlng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
+   * can be combined with another location filter to search for a combination of job locations, such
+   * as "Mountain View" or "telecommuting" jobs. However, when used in combination with other
+   * location filters, telecommuting jobs can be treated as less relevant than other jobs in the
+   * search response.
    * @return value or {@code null} for none
    */
   public java.lang.String getTelecommutePreference() {
@@ -197,15 +201,17 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Allows the client to return jobs without a set location, specifically, telecommuting
-   * jobs (telecommuting is considered by the service as a special location. Job.posting_region
+   * jobs (telecommuting is considered by the service as a special location). Job.posting_region
    * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
-   * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
-   * telecommute job are not searched. This filter can be used by itself to search exclusively for
-   * telecommuting jobs, or it can be combined with another location filter to search for a
-   * combination of job locations, such as "Mountain View" or "telecommuting" jobs. However, when
-   * used in combination with other location filters, telecommuting jobs can be treated as less
-   * relevant than other jobs in the search response.
+   * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED, the
+   * telecommute status of the jobs is ignored. Jobs that have PostingRegion.TELECOMMUTE and have
+   * additional Job.addresses may still be matched based on other location filters using address or
+   * latlng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
+   * can be combined with another location filter to search for a combination of job locations, such
+   * as "Mountain View" or "telecommuting" jobs. However, when used in combination with other
+   * location filters, telecommuting jobs can be treated as less relevant than other jobs in the
+   * search response.
    * @param telecommutePreference telecommutePreference or {@code null} for none
    */
   public LocationFilter setTelecommutePreference(java.lang.String telecommutePreference) {

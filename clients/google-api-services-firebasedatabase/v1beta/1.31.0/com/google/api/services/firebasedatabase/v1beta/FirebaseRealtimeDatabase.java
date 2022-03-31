@@ -1028,6 +1028,22 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
             return this;
           }
 
+          /** Indicate that DatabaseInstances in the `DELETED` state should also be returned. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showDeleted;
+
+          /** Indicate that DatabaseInstances in the `DELETED` state should also be returned.
+           */
+          public java.lang.Boolean getShowDeleted() {
+            return showDeleted;
+          }
+
+          /** Indicate that DatabaseInstances in the `DELETED` state should also be returned. */
+          public List setShowDeleted(java.lang.Boolean showDeleted) {
+            this.showDeleted = showDeleted;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);

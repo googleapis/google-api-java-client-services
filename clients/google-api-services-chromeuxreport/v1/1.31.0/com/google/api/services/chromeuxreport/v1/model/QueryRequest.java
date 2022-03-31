@@ -53,8 +53,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * The metrics that should be included in the response. If none are specified then any metrics
    * found will be returned. Allowed values: ["first_contentful_paint", "first_input_delay",
-   * "largest_contentful_paint", "cumulative_layout_shift",
-   * "experimental_uncapped_cumulative_layout_shift"]
+   * "largest_contentful_paint", "cumulative_layout_shift"]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +124,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * The metrics that should be included in the response. If none are specified then any metrics
    * found will be returned. Allowed values: ["first_contentful_paint", "first_input_delay",
-   * "largest_contentful_paint", "cumulative_layout_shift",
-   * "experimental_uncapped_cumulative_layout_shift"]
+   * "largest_contentful_paint", "cumulative_layout_shift"]
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -136,8 +134,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * The metrics that should be included in the response. If none are specified then any metrics
    * found will be returned. Allowed values: ["first_contentful_paint", "first_input_delay",
-   * "largest_contentful_paint", "cumulative_layout_shift",
-   * "experimental_uncapped_cumulative_layout_shift"]
+   * "largest_contentful_paint", "cumulative_layout_shift"]
    * @param metrics metrics or {@code null} for none
    */
   public QueryRequest setMetrics(java.util.List<java.lang.String> metrics) {

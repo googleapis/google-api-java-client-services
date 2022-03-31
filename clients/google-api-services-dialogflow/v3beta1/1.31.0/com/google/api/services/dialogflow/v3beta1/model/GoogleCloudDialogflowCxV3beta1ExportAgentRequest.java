@@ -42,6 +42,13 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentRequest extends com.
   private java.lang.String agentUri;
 
   /**
+   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataFormat;
+
+  /**
    * Optional. Environment name. If not set, draft environment is assumed. Format:
    * `projects//locations//agents//environments/`.
    * The value may be {@code null}.
@@ -73,6 +80,23 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentRequest extends com.
    */
   public GoogleCloudDialogflowCxV3beta1ExportAgentRequest setAgentUri(java.lang.String agentUri) {
     this.agentUri = agentUri;
+    return this;
+  }
+
+  /**
+   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataFormat() {
+    return dataFormat;
+  }
+
+  /**
+   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
+   * @param dataFormat dataFormat or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ExportAgentRequest setDataFormat(java.lang.String dataFormat) {
+    this.dataFormat = dataFormat;
     return this;
   }
 

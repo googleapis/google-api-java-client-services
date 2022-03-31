@@ -17,9 +17,7 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * A generic empty message that you can re-use to avoid defining duplicated empty messages in your
- * APIs. A typical example is to use it as the request or the response type of an API method. For
- * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
+ * Metadata type for longrunning-operations, currently empty.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation
@@ -30,16 +28,16 @@ package com.google.api.services.artifactregistry.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Empty extends com.google.api.client.json.GenericJson {
+public final class OperationMetadata extends com.google.api.client.json.GenericJson {
 
   @Override
-  public Empty set(String fieldName, Object value) {
-    return (Empty) super.set(fieldName, value);
+  public OperationMetadata set(String fieldName, Object value) {
+    return (OperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public Empty clone() {
-    return (Empty) super.clone();
+  public OperationMetadata clone() {
+    return (OperationMetadata) super.clone();
   }
 
 }

@@ -78,6 +78,14 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The size, in bytes, of all artifact storage in this repository. Repositories that
+   * are generally available or in public preview use this to calculate storage costs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long sizeBytes;
+
+  /**
    * The time when the repository was last updated.
    * The value may be {@code null}.
    */
@@ -193,6 +201,25 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The size, in bytes, of all artifact storage in this repository. Repositories that
+   * are generally available or in public preview use this to calculate storage costs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSizeBytes() {
+    return sizeBytes;
+  }
+
+  /**
+   * Output only. The size, in bytes, of all artifact storage in this repository. Repositories that
+   * are generally available or in public preview use this to calculate storage costs.
+   * @param sizeBytes sizeBytes or {@code null} for none
+   */
+  public Repository setSizeBytes(java.lang.Long sizeBytes) {
+    this.sizeBytes = sizeBytes;
     return this;
   }
 

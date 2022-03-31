@@ -17,7 +17,7 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * The response message from importing artifacts.
+ * The response message from importing APT artifacts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class ImportAptArtifactsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Apt artifacts updated.
+   * The Apt artifacts imported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ImportAptArtifactsResponse extends com.google.api.client.json
   }
 
   /**
-   * The Apt artifacts updated.
+   * The Apt artifacts imported.
    * @return value or {@code null} for none
    */
   public java.util.List<AptArtifact> getAptArtifacts() {
@@ -65,7 +65,7 @@ public final class ImportAptArtifactsResponse extends com.google.api.client.json
   }
 
   /**
-   * The Apt artifacts updated.
+   * The Apt artifacts imported.
    * @param aptArtifacts aptArtifacts or {@code null} for none
    */
   public ImportAptArtifactsResponse setAptArtifacts(java.util.List<AptArtifact> aptArtifacts) {

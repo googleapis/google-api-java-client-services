@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2alpha.model;
+package com.google.api.services.retail.v2.model;
 
 /**
  * The inventory information at a place (e.g. a store) identified by a place ID.
@@ -27,7 +27,7 @@ package com.google.api.services.retail.v2alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2LocalInventory extends com.google.api.client.json.GenericJson {
 
   /**
    * Additional local inventory attributes, for example, store name, promotion tags, etc. This field
@@ -42,12 +42,12 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes;
+  private java.util.Map<String, GoogleCloudRetailV2CustomAttribute> attributes;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudRetailV2alphaCustomAttribute used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudRetailV2CustomAttribute used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaCustomAttribute.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2CustomAttribute.class);
   }
 
   /**
@@ -76,7 +76,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudRetailV2alphaPriceInfo priceInfo;
+  private GoogleCloudRetailV2PriceInfo priceInfo;
 
   /**
    * Additional local inventory attributes, for example, store name, promotion tags, etc. This field
@@ -90,7 +90,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * 5MiB.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> getAttributes() {
+  public java.util.Map<String, GoogleCloudRetailV2CustomAttribute> getAttributes() {
     return attributes;
   }
 
@@ -106,7 +106,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * 5MiB.
    * @param attributes attributes or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaLocalInventory setAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
+  public GoogleCloudRetailV2LocalInventory setAttributes(java.util.Map<String, GoogleCloudRetailV2CustomAttribute> attributes) {
     this.attributes = attributes;
     return this;
   }
@@ -135,7 +135,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * distinct. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param fulfillmentTypes fulfillmentTypes or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaLocalInventory setFulfillmentTypes(java.util.List<java.lang.String> fulfillmentTypes) {
+  public GoogleCloudRetailV2LocalInventory setFulfillmentTypes(java.util.List<java.lang.String> fulfillmentTypes) {
     this.fulfillmentTypes = fulfillmentTypes;
     return this;
   }
@@ -152,7 +152,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * The place ID for the current set of inventory information.
    * @param placeId placeId or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaLocalInventory setPlaceId(java.lang.String placeId) {
+  public GoogleCloudRetailV2LocalInventory setPlaceId(java.lang.String placeId) {
     this.placeId = placeId;
     return this;
   }
@@ -162,7 +162,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * [price](https://support.google.com/merchants/answer/6324371).
    * @return value or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaPriceInfo getPriceInfo() {
+  public GoogleCloudRetailV2PriceInfo getPriceInfo() {
     return priceInfo;
   }
 
@@ -171,19 +171,19 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * [price](https://support.google.com/merchants/answer/6324371).
    * @param priceInfo priceInfo or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaLocalInventory setPriceInfo(GoogleCloudRetailV2alphaPriceInfo priceInfo) {
+  public GoogleCloudRetailV2LocalInventory setPriceInfo(GoogleCloudRetailV2PriceInfo priceInfo) {
     this.priceInfo = priceInfo;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2alphaLocalInventory set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2alphaLocalInventory) super.set(fieldName, value);
+  public GoogleCloudRetailV2LocalInventory set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2LocalInventory) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2alphaLocalInventory clone() {
-    return (GoogleCloudRetailV2alphaLocalInventory) super.clone();
+  public GoogleCloudRetailV2LocalInventory clone() {
+    return (GoogleCloudRetailV2LocalInventory) super.clone();
   }
 
 }

@@ -41,12 +41,11 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   private java.lang.Boolean directUserRequest;
 
   /**
-   * The end user's IP address. Required for getting SearchResponse.sponsored_results. This field is
-   * used to extract location information for personalization. This field must be either an IPv4
-   * address (e.g. "104.133.9.80") or an IPv6 address (e.g.
-   * "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error is returned.
-   * This should not be set when using the JavaScript tag in UserEventService.CollectUserEvent or if
-   * direct_user_request is set.
+   * The end user's IP address. This field is used to extract location information for
+   * personalization. This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
+   * address (e.g. "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error
+   * is returned. This should not be set when: * setting SearchRequest.user_info. * using the
+   * JavaScript tag in UserEventService.CollectUserEvent or if direct_user_request is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +64,8 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
 
   /**
    * Highly recommended for logged-in users. Unique identifier for logged-in user, such as a user
-   * name. The field must be a UTF-8 encoded string with a length limit of 128 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * name. Always use a hashed value for this ID. The field must be a UTF-8 encoded string with a
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,12 +97,11 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   }
 
   /**
-   * The end user's IP address. Required for getting SearchResponse.sponsored_results. This field is
-   * used to extract location information for personalization. This field must be either an IPv4
-   * address (e.g. "104.133.9.80") or an IPv6 address (e.g.
-   * "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error is returned.
-   * This should not be set when using the JavaScript tag in UserEventService.CollectUserEvent or if
-   * direct_user_request is set.
+   * The end user's IP address. This field is used to extract location information for
+   * personalization. This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
+   * address (e.g. "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error
+   * is returned. This should not be set when: * setting SearchRequest.user_info. * using the
+   * JavaScript tag in UserEventService.CollectUserEvent or if direct_user_request is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -111,12 +109,11 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   }
 
   /**
-   * The end user's IP address. Required for getting SearchResponse.sponsored_results. This field is
-   * used to extract location information for personalization. This field must be either an IPv4
-   * address (e.g. "104.133.9.80") or an IPv6 address (e.g.
-   * "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error is returned.
-   * This should not be set when using the JavaScript tag in UserEventService.CollectUserEvent or if
-   * direct_user_request is set.
+   * The end user's IP address. This field is used to extract location information for
+   * personalization. This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
+   * address (e.g. "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error
+   * is returned. This should not be set when: * setting SearchRequest.user_info. * using the
+   * JavaScript tag in UserEventService.CollectUserEvent or if direct_user_request is set.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public GoogleCloudRetailV2alphaUserInfo setIpAddress(java.lang.String ipAddress) {
@@ -151,8 +148,8 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
 
   /**
    * Highly recommended for logged-in users. Unique identifier for logged-in user, such as a user
-   * name. The field must be a UTF-8 encoded string with a length limit of 128 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * name. Always use a hashed value for this ID. The field must be a UTF-8 encoded string with a
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -161,8 +158,8 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
 
   /**
    * Highly recommended for logged-in users. Unique identifier for logged-in user, such as a user
-   * name. The field must be a UTF-8 encoded string with a length limit of 128 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * name. Always use a hashed value for this ID. The field must be a UTF-8 encoded string with a
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param userId userId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaUserInfo setUserId(java.lang.String userId) {

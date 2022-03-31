@@ -62,9 +62,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   private java.lang.String canonicalFilter;
 
   /**
-   * The specification for dynamically generated facets. Notice that only textual facets can be
-   * dynamically generated. This feature requires additional allowlisting. Contact Retail Search
-   * support team if you are interested in using dynamic facet feature.
+   * Deprecated. Refer to https://cloud.google.com/retail/docs/configs#dynamic to enable dynamic
+   * facets. Do not set this field. The specification for dynamically generated facets. Notice that
+   * only textual facets can be dynamically generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,9 +290,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   }
 
   /**
-   * The specification for dynamically generated facets. Notice that only textual facets can be
-   * dynamically generated. This feature requires additional allowlisting. Contact Retail Search
-   * support team if you are interested in using dynamic facet feature.
+   * Deprecated. Refer to https://cloud.google.com/retail/docs/configs#dynamic to enable dynamic
+   * facets. Do not set this field. The specification for dynamically generated facets. Notice that
+   * only textual facets can be dynamically generated.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpec getDynamicFacetSpec() {
@@ -300,9 +300,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   }
 
   /**
-   * The specification for dynamically generated facets. Notice that only textual facets can be
-   * dynamically generated. This feature requires additional allowlisting. Contact Retail Search
-   * support team if you are interested in using dynamic facet feature.
+   * Deprecated. Refer to https://cloud.google.com/retail/docs/configs#dynamic to enable dynamic
+   * facets. Do not set this field. The specification for dynamically generated facets. Notice that
+   * only textual facets can be dynamically generated.
    * @param dynamicFacetSpec dynamicFacetSpec or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setDynamicFacetSpec(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpec dynamicFacetSpec) {

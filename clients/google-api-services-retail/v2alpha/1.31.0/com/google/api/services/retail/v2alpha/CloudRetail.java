@@ -194,8 +194,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
         /**
          * Completes the specified prefix with keyword suggestions. This feature is only available for users
-         * who have Retail Search enabled. Please submit a form [here](https://cloud.google.com/contact) to
-         * contact cloud sales if you are interested in using Retail Search.
+         * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+         * feature.
          *
          * Create a request for the method "catalogs.completeQuery".
          *
@@ -221,9 +221,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * Completes the specified prefix with keyword suggestions. This feature is only available for
-           * users who have Retail Search enabled. Please submit a form
-           * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-           * Retail Search.
+           * users who have Retail Search enabled. Please enable Retail Search on Cloud Console before using
+           * this feature.
            *
            * Create a request for the method "catalogs.completeQuery".
            *
@@ -2492,8 +2491,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * is valid, the update will be enqueued and processed downstream. As a consequence, when a response
              * is returned, the added place IDs are not immediately manifested in the Product queried by
              * GetProduct or ListProducts. This feature is only available for users who have Retail Search
-             * enabled. Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if
-             * you are interested in using Retail Search.
+             * enabled. Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.addFulfillmentPlaces".
              *
@@ -2527,8 +2525,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * If the request is valid, the update will be enqueued and processed downstream. As a
                * consequence, when a response is returned, the added place IDs are not immediately manifested in
                * the Product queried by GetProduct or ListProducts. This feature is only available for users who
-               * have Retail Search enabled. Please submit a form [here](https://cloud.google.com/contact) to
-               * contact cloud sales if you are interested in using Retail Search.
+               * have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+               * feature.
                *
                * Create a request for the method "products.addFulfillmentPlaces".
                *
@@ -2656,8 +2654,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * not immediately manifested in the Product queried by GetProduct or ListProducts. Local inventory
              * information can only be modified using this method. CreateProduct and UpdateProduct has no effect
              * on local inventories. This feature is only available for users who have Retail Search enabled.
-             * Please submit a form [here](https://cloud.google.com/contact) to contact Cloud sales if you are
-             * interested in using Retail Search.
+             * Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.addLocalInventories".
              *
@@ -2692,8 +2689,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * returned, updates are not immediately manifested in the Product queried by GetProduct or
                * ListProducts. Local inventory information can only be modified using this method. CreateProduct
                * and UpdateProduct has no effect on local inventories. This feature is only available for users
-               * who have Retail Search enabled. Please submit a form [here](https://cloud.google.com/contact)
-               * to contact Cloud sales if you are interested in using Retail Search.
+               * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+               * feature.
                *
                * Create a request for the method "products.addLocalInventories".
                *
@@ -4132,8 +4129,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * If the request is valid, the update will be enqueued and processed downstream. As a consequence,
              * when a response is returned, the removed place IDs are not immediately manifested in the Product
              * queried by GetProduct or ListProducts. This feature is only available for users who have Retail
-             * Search enabled. Please submit a form [here](https://cloud.google.com/contact) to contact cloud
-             * sales if you are interested in using Retail Search.
+             * Search enabled. Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.removeFulfillmentPlaces".
              *
@@ -4167,8 +4163,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * If the request is valid, the update will be enqueued and processed downstream. As a
                * consequence, when a response is returned, the removed place IDs are not immediately manifested
                * in the Product queried by GetProduct or ListProducts. This feature is only available for users
-               * who have Retail Search enabled. Please submit a form [here](https://cloud.google.com/contact)
-               * to contact cloud sales if you are interested in using Retail Search.
+               * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+               * feature.
                *
                * Create a request for the method "products.removeFulfillmentPlaces".
                *
@@ -4295,8 +4291,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * manifested in the Product queried by GetProduct or ListProducts. Local inventory information can
              * only be removed using this method. CreateProduct and UpdateProduct has no effect on local
              * inventories. This feature is only available for users who have Retail Search enabled. Please
-             * submit a form [here](https://cloud.google.com/contact) to contact Cloud sales if you are
-             * interested in using Retail Search.
+             * enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.removeLocalInventories".
              *
@@ -4331,8 +4326,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * immediately manifested in the Product queried by GetProduct or ListProducts. Local inventory
                * information can only be removed using this method. CreateProduct and UpdateProduct has no
                * effect on local inventories. This feature is only available for users who have Retail Search
-               * enabled. Please submit a form [here](https://cloud.google.com/contact) to contact Cloud sales
-               * if you are interested in using Retail Search.
+               * enabled. Please enable Retail Search on Cloud Console before using this feature.
                *
                * Create a request for the method "products.removeLocalInventories".
                *
@@ -4466,9 +4460,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
              * inventory information will be preserved. Pre-existing inventory information can only be updated
              * with SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature is only
-             * available for users who have Retail Search enabled. Please submit a form
-             * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-             * Retail Search.
+             * available for users who have Retail Search enabled. Please enable Retail Search on Cloud Console
+             * before using this feature.
              *
              * Create a request for the method "products.setInventory".
              *
@@ -4508,9 +4501,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
                * inventory information will be preserved. Pre-existing inventory information can only be updated
                * with SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature is only
-               * available for users who have Retail Search enabled. Please submit a form
-               * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-               * Retail Search.
+               * available for users who have Retail Search enabled. Please enable Retail Search on Cloud
+               * Console before using this feature.
                *
                * Create a request for the method "products.setInventory".
                *
@@ -4651,9 +4643,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * Bulk import of processed completion dataset. Request processing is asynchronous. Partial updating
            * is not supported. The operation is successfully finished only after the imported suggestions are
            * indexed successfully and ready for serving. The process takes hours. This feature is only
-           * available for users who have Retail Search enabled. Please submit a form
-           * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-           * Retail Search.
+           * available for users who have Retail Search enabled. Please enable Retail Search on Cloud Console
+           * before using this feature.
            *
            * Create a request for the method "completionData.import".
            *
@@ -4682,9 +4673,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Bulk import of processed completion dataset. Request processing is asynchronous. Partial
              * updating is not supported. The operation is successfully finished only after the imported
              * suggestions are indexed successfully and ready for serving. The process takes hours. This
-             * feature is only available for users who have Retail Search enabled. Please submit a form
-             * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-             * Retail Search.
+             * feature is only available for users who have Retail Search enabled. Please enable Retail Search
+             * on Cloud Console before using this feature.
              *
              * Create a request for the method "completionData.import".
              *
@@ -6200,8 +6190,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Performs a search. This feature is only available for users who have Retail Search enabled.
-           * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-           * interested in using Retail Search.
+           * Please enable Retail Search on Cloud Console before using this feature.
            *
            * Create a request for the method "placements.search".
            *
@@ -6231,8 +6220,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Performs a search. This feature is only available for users who have Retail Search enabled.
-             * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-             * interested in using Retail Search.
+             * Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "placements.search".
              *
@@ -7641,8 +7629,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Performs a search. This feature is only available for users who have Retail Search enabled.
-           * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-           * interested in using Retail Search.
+           * Please enable Retail Search on Cloud Console before using this feature.
            *
            * Create a request for the method "servingConfigs.search".
            *
@@ -7672,8 +7659,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Performs a search. This feature is only available for users who have Retail Search enabled.
-             * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-             * interested in using Retail Search.
+             * Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "servingConfigs.search".
              *

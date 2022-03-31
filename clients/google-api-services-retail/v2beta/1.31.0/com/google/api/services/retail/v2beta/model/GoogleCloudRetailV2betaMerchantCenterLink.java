@@ -54,7 +54,7 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
    * Language of the title/description and other string attributes. Use language tags defined by
    * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO 639-1. This specifies the language
    * of offers in Merchant Center that will be accepted. If empty no language filtering will be
-   * performed.
+   * performed. Example value: `en`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
    * Language of the title/description and other string attributes. Use language tags defined by
    * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO 639-1. This specifies the language
    * of offers in Merchant Center that will be accepted. If empty no language filtering will be
-   * performed.
+   * performed. Example value: `en`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -140,7 +140,7 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
    * Language of the title/description and other string attributes. Use language tags defined by
    * [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO 639-1. This specifies the language
    * of offers in Merchant Center that will be accepted. If empty no language filtering will be
-   * performed.
+   * performed. Example value: `en`.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudRetailV2betaMerchantCenterLink setLanguageCode(java.lang.String languageCode) {

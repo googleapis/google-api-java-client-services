@@ -194,8 +194,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
         /**
          * Completes the specified prefix with keyword suggestions. This feature is only available for users
-         * who have Retail Search enabled. Please submit a form [here](https://cloud.google.com/contact) to
-         * contact cloud sales if you are interested in using Retail Search.
+         * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+         * feature.
          *
          * Create a request for the method "catalogs.completeQuery".
          *
@@ -221,9 +221,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * Completes the specified prefix with keyword suggestions. This feature is only available for
-           * users who have Retail Search enabled. Please submit a form
-           * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-           * Retail Search.
+           * users who have Retail Search enabled. Please enable Retail Search on Cloud Console before using
+           * this feature.
            *
            * Create a request for the method "catalogs.completeQuery".
            *
@@ -2492,8 +2491,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * is valid, the update will be enqueued and processed downstream. As a consequence, when a response
              * is returned, the added place IDs are not immediately manifested in the Product queried by
              * GetProduct or ListProducts. This feature is only available for users who have Retail Search
-             * enabled. Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if
-             * you are interested in using Retail Search.
+             * enabled. Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.addFulfillmentPlaces".
              *
@@ -2527,8 +2525,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * If the request is valid, the update will be enqueued and processed downstream. As a
                * consequence, when a response is returned, the added place IDs are not immediately manifested in
                * the Product queried by GetProduct or ListProducts. This feature is only available for users who
-               * have Retail Search enabled. Please submit a form [here](https://cloud.google.com/contact) to
-               * contact cloud sales if you are interested in using Retail Search.
+               * have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+               * feature.
                *
                * Create a request for the method "products.addFulfillmentPlaces".
                *
@@ -2646,6 +2644,170 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               @Override
               public AddFulfillmentPlaces set(String parameterName, Object value) {
                 return (AddFulfillmentPlaces) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates local inventory information for a Product at a list of places, while respecting the last
+             * update timestamps of each inventory field. This process is asynchronous and does not require the
+             * Product to exist before updating inventory information. If the request is valid, the update will
+             * be enqueued and processed downstream. As a consequence, when a response is returned, updates are
+             * not immediately manifested in the Product queried by GetProduct or ListProducts. Local inventory
+             * information can only be modified using this method. CreateProduct and UpdateProduct has no effect
+             * on local inventories. This feature is only available for users who have Retail Search enabled.
+             * Please enable Retail Search on Cloud Console before using this feature.
+             *
+             * Create a request for the method "products.addLocalInventories".
+             *
+             * This request holds the parameters needed by the retail server.  After setting any optional
+             * parameters, call the {@link AddLocalInventories#execute()} method to invoke the remote operation.
+             *
+             * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+             * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaAddLocalInventoriesRequest}
+             * @return the request
+             */
+            public AddLocalInventories addLocalInventories(java.lang.String product, com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaAddLocalInventoriesRequest content) throws java.io.IOException {
+              AddLocalInventories result = new AddLocalInventories(product, content);
+              initialize(result);
+              return result;
+            }
+
+            public class AddLocalInventories extends CloudRetailRequest<com.google.api.services.retail.v2beta.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v2beta/{+product}:addLocalInventories";
+
+              private final java.util.regex.Pattern PRODUCT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+
+              /**
+               * Updates local inventory information for a Product at a list of places, while respecting the
+               * last update timestamps of each inventory field. This process is asynchronous and does not
+               * require the Product to exist before updating inventory information. If the request is valid,
+               * the update will be enqueued and processed downstream. As a consequence, when a response is
+               * returned, updates are not immediately manifested in the Product queried by GetProduct or
+               * ListProducts. Local inventory information can only be modified using this method. CreateProduct
+               * and UpdateProduct has no effect on local inventories. This feature is only available for users
+               * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+               * feature.
+               *
+               * Create a request for the method "products.addLocalInventories".
+               *
+               * This request holds the parameters needed by the the retail server.  After setting any optional
+               * parameters, call the {@link AddLocalInventories#execute()} method to invoke the remote
+               * operation. <p> {@link AddLocalInventories#initialize(com.google.api.client.googleapis.services.
+               * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+               * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaAddLocalInventoriesRequest}
+               * @since 1.13
+               */
+              protected AddLocalInventories(java.lang.String product, com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaAddLocalInventoriesRequest content) {
+                super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2beta.model.GoogleLongrunningOperation.class);
+                this.product = com.google.api.client.util.Preconditions.checkNotNull(product, "Required parameter product must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+              }
+
+              @Override
+              public AddLocalInventories set$Xgafv(java.lang.String $Xgafv) {
+                return (AddLocalInventories) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public AddLocalInventories setAccessToken(java.lang.String accessToken) {
+                return (AddLocalInventories) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public AddLocalInventories setAlt(java.lang.String alt) {
+                return (AddLocalInventories) super.setAlt(alt);
+              }
+
+              @Override
+              public AddLocalInventories setCallback(java.lang.String callback) {
+                return (AddLocalInventories) super.setCallback(callback);
+              }
+
+              @Override
+              public AddLocalInventories setFields(java.lang.String fields) {
+                return (AddLocalInventories) super.setFields(fields);
+              }
+
+              @Override
+              public AddLocalInventories setKey(java.lang.String key) {
+                return (AddLocalInventories) super.setKey(key);
+              }
+
+              @Override
+              public AddLocalInventories setOauthToken(java.lang.String oauthToken) {
+                return (AddLocalInventories) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public AddLocalInventories setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (AddLocalInventories) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public AddLocalInventories setQuotaUser(java.lang.String quotaUser) {
+                return (AddLocalInventories) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public AddLocalInventories setUploadType(java.lang.String uploadType) {
+                return (AddLocalInventories) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public AddLocalInventories setUploadProtocol(java.lang.String uploadProtocol) {
+                return (AddLocalInventories) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String product;
+
+              /** Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalo
+             g/branches/default_branch/products/some_product_id`. If the caller does not have permission to
+             access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+               */
+              public java.lang.String getProduct() {
+                return product;
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              public AddLocalInventories setProduct(java.lang.String product) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+                this.product = product;
+                return this;
+              }
+
+              @Override
+              public AddLocalInventories set(String parameterName, Object value) {
+                return (AddLocalInventories) super.set(parameterName, value);
               }
             }
             /**
@@ -3790,8 +3952,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * If the request is valid, the update will be enqueued and processed downstream. As a consequence,
              * when a response is returned, the removed place IDs are not immediately manifested in the Product
              * queried by GetProduct or ListProducts. This feature is only available for users who have Retail
-             * Search enabled. Please submit a form [here](https://cloud.google.com/contact) to contact cloud
-             * sales if you are interested in using Retail Search.
+             * Search enabled. Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.removeFulfillmentPlaces".
              *
@@ -3825,8 +3986,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * If the request is valid, the update will be enqueued and processed downstream. As a
                * consequence, when a response is returned, the removed place IDs are not immediately manifested
                * in the Product queried by GetProduct or ListProducts. This feature is only available for users
-               * who have Retail Search enabled. Please submit a form [here](https://cloud.google.com/contact)
-               * to contact cloud sales if you are interested in using Retail Search.
+               * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
+               * feature.
                *
                * Create a request for the method "products.removeFulfillmentPlaces".
                *
@@ -3947,6 +4108,168 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
+             * Remove local inventory information for a Product at a list of places at a removal timestamp. This
+             * process is asynchronous. If the request is valid, the removal will be enqueued and processed
+             * downstream. As a consequence, when a response is returned, removals are not immediately
+             * manifested in the Product queried by GetProduct or ListProducts. Local inventory information can
+             * only be removed using this method. CreateProduct and UpdateProduct has no effect on local
+             * inventories. This feature is only available for users who have Retail Search enabled. Please
+             * enable Retail Search on Cloud Console before using this feature.
+             *
+             * Create a request for the method "products.removeLocalInventories".
+             *
+             * This request holds the parameters needed by the retail server.  After setting any optional
+             * parameters, call the {@link RemoveLocalInventories#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+             * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaRemoveLocalInventoriesRequest}
+             * @return the request
+             */
+            public RemoveLocalInventories removeLocalInventories(java.lang.String product, com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaRemoveLocalInventoriesRequest content) throws java.io.IOException {
+              RemoveLocalInventories result = new RemoveLocalInventories(product, content);
+              initialize(result);
+              return result;
+            }
+
+            public class RemoveLocalInventories extends CloudRetailRequest<com.google.api.services.retail.v2beta.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v2beta/{+product}:removeLocalInventories";
+
+              private final java.util.regex.Pattern PRODUCT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+
+              /**
+               * Remove local inventory information for a Product at a list of places at a removal timestamp.
+               * This process is asynchronous. If the request is valid, the removal will be enqueued and
+               * processed downstream. As a consequence, when a response is returned, removals are not
+               * immediately manifested in the Product queried by GetProduct or ListProducts. Local inventory
+               * information can only be removed using this method. CreateProduct and UpdateProduct has no
+               * effect on local inventories. This feature is only available for users who have Retail Search
+               * enabled. Please enable Retail Search on Cloud Console before using this feature.
+               *
+               * Create a request for the method "products.removeLocalInventories".
+               *
+               * This request holds the parameters needed by the the retail server.  After setting any optional
+               * parameters, call the {@link RemoveLocalInventories#execute()} method to invoke the remote
+               * operation. <p> {@link RemoveLocalInventories#initialize(com.google.api.client.googleapis.servic
+               * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+               * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaRemoveLocalInventoriesRequest}
+               * @since 1.13
+               */
+              protected RemoveLocalInventories(java.lang.String product, com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaRemoveLocalInventoriesRequest content) {
+                super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2beta.model.GoogleLongrunningOperation.class);
+                this.product = com.google.api.client.util.Preconditions.checkNotNull(product, "Required parameter product must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+              }
+
+              @Override
+              public RemoveLocalInventories set$Xgafv(java.lang.String $Xgafv) {
+                return (RemoveLocalInventories) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RemoveLocalInventories setAccessToken(java.lang.String accessToken) {
+                return (RemoveLocalInventories) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RemoveLocalInventories setAlt(java.lang.String alt) {
+                return (RemoveLocalInventories) super.setAlt(alt);
+              }
+
+              @Override
+              public RemoveLocalInventories setCallback(java.lang.String callback) {
+                return (RemoveLocalInventories) super.setCallback(callback);
+              }
+
+              @Override
+              public RemoveLocalInventories setFields(java.lang.String fields) {
+                return (RemoveLocalInventories) super.setFields(fields);
+              }
+
+              @Override
+              public RemoveLocalInventories setKey(java.lang.String key) {
+                return (RemoveLocalInventories) super.setKey(key);
+              }
+
+              @Override
+              public RemoveLocalInventories setOauthToken(java.lang.String oauthToken) {
+                return (RemoveLocalInventories) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RemoveLocalInventories setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RemoveLocalInventories) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RemoveLocalInventories setQuotaUser(java.lang.String quotaUser) {
+                return (RemoveLocalInventories) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RemoveLocalInventories setUploadType(java.lang.String uploadType) {
+                return (RemoveLocalInventories) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RemoveLocalInventories setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RemoveLocalInventories) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String product;
+
+              /** Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalo
+             g/branches/default_branch/products/some_product_id`. If the caller does not have permission to
+             access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+               */
+              public java.lang.String getProduct() {
+                return product;
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              public RemoveLocalInventories setProduct(java.lang.String product) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+                this.product = product;
+                return this;
+              }
+
+              @Override
+              public RemoveLocalInventories set(String parameterName, Object value) {
+                return (RemoveLocalInventories) super.set(parameterName, value);
+              }
+            }
+            /**
              * Updates inventory information for a Product while respecting the last update timestamps of each
              * inventory field. This process is asynchronous and does not require the Product to exist before
              * updating fulfillment information. If the request is valid, the update will be enqueued and
@@ -3960,9 +4283,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
              * inventory information will be preserved. Pre-existing inventory information can only be updated
              * with SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature is only
-             * available for users who have Retail Search enabled. Please submit a form
-             * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-             * Retail Search.
+             * available for users who have Retail Search enabled. Please enable Retail Search on Cloud Console
+             * before using this feature.
              *
              * Create a request for the method "products.setInventory".
              *
@@ -4002,9 +4324,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
                * inventory information will be preserved. Pre-existing inventory information can only be updated
                * with SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature is only
-               * available for users who have Retail Search enabled. Please submit a form
-               * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-               * Retail Search.
+               * available for users who have Retail Search enabled. Please enable Retail Search on Cloud
+               * Console before using this feature.
                *
                * Create a request for the method "products.setInventory".
                *
@@ -4145,9 +4466,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * Bulk import of processed completion dataset. Request processing is asynchronous. Partial updating
            * is not supported. The operation is successfully finished only after the imported suggestions are
            * indexed successfully and ready for serving. The process takes hours. This feature is only
-           * available for users who have Retail Search enabled. Please submit a form
-           * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-           * Retail Search.
+           * available for users who have Retail Search enabled. Please enable Retail Search on Cloud Console
+           * before using this feature.
            *
            * Create a request for the method "completionData.import".
            *
@@ -4176,9 +4496,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Bulk import of processed completion dataset. Request processing is asynchronous. Partial
              * updating is not supported. The operation is successfully finished only after the imported
              * suggestions are indexed successfully and ready for serving. The process takes hours. This
-             * feature is only available for users who have Retail Search enabled. Please submit a form
-             * [here](https://cloud.google.com/contact) to contact cloud sales if you are interested in using
-             * Retail Search.
+             * feature is only available for users who have Retail Search enabled. Please enable Retail Search
+             * on Cloud Console before using this feature.
              *
              * Create a request for the method "completionData.import".
              *
@@ -5694,8 +6013,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Performs a search. This feature is only available for users who have Retail Search enabled.
-           * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-           * interested in using Retail Search.
+           * Please enable Retail Search on Cloud Console before using this feature.
            *
            * Create a request for the method "placements.search".
            *
@@ -5725,8 +6043,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Performs a search. This feature is only available for users who have Retail Search enabled.
-             * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-             * interested in using Retail Search.
+             * Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "placements.search".
              *
@@ -7135,8 +7452,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Performs a search. This feature is only available for users who have Retail Search enabled.
-           * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-           * interested in using Retail Search.
+           * Please enable Retail Search on Cloud Console before using this feature.
            *
            * Create a request for the method "servingConfigs.search".
            *
@@ -7166,8 +7482,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Performs a search. This feature is only available for users who have Retail Search enabled.
-             * Please submit a form [here](https://cloud.google.com/contact) to contact cloud sales if you are
-             * interested in using Retail Search.
+             * Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "servingConfigs.search".
              *

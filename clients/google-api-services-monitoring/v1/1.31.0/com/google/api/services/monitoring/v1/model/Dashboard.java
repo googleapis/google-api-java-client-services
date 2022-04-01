@@ -38,6 +38,13 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   private ColumnLayout columnLayout;
 
   /**
+   * Filters to reduce the amount of data charted based on the filter criteria.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DashboardFilter> dashboardFilters;
+
+  /**
    * Required. The mutable, human-readable name.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
    */
   public Dashboard setColumnLayout(ColumnLayout columnLayout) {
     this.columnLayout = columnLayout;
+    return this;
+  }
+
+  /**
+   * Filters to reduce the amount of data charted based on the filter criteria.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DashboardFilter> getDashboardFilters() {
+    return dashboardFilters;
+  }
+
+  /**
+   * Filters to reduce the amount of data charted based on the filter criteria.
+   * @param dashboardFilters dashboardFilters or {@code null} for none
+   */
+  public Dashboard setDashboardFilters(java.util.List<DashboardFilter> dashboardFilters) {
+    this.dashboardFilters = dashboardFilters;
     return this;
   }
 

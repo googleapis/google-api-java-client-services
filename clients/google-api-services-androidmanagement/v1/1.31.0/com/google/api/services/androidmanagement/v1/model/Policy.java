@@ -495,7 +495,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Specifies permitted accessibility services. If the field is not set, any accessibility service
    * can be used. If the field is set, only the accessibility services in this list and the system's
    * built-in accessibility service can be used. In particular, if the field is set to empty, only
-   * the system's built-in accessibility servicess can be used.
+   * the system's built-in accessibility servicess can be used. This can be set on fully managed
+   * devices and on work profiles. When applied to a work profile, this affects both the personal
+   * profile and the work profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1765,7 +1767,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Specifies permitted accessibility services. If the field is not set, any accessibility service
    * can be used. If the field is set, only the accessibility services in this list and the system's
    * built-in accessibility service can be used. In particular, if the field is set to empty, only
-   * the system's built-in accessibility servicess can be used.
+   * the system's built-in accessibility servicess can be used. This can be set on fully managed
+   * devices and on work profiles. When applied to a work profile, this affects both the personal
+   * profile and the work profile.
    * @return value or {@code null} for none
    */
   public PackageNameList getPermittedAccessibilityServices() {
@@ -1776,7 +1780,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Specifies permitted accessibility services. If the field is not set, any accessibility service
    * can be used. If the field is set, only the accessibility services in this list and the system's
    * built-in accessibility service can be used. In particular, if the field is set to empty, only
-   * the system's built-in accessibility servicess can be used.
+   * the system's built-in accessibility servicess can be used. This can be set on fully managed
+   * devices and on work profiles. When applied to a work profile, this affects both the personal
+   * profile and the work profile.
    * @param permittedAccessibilityServices permittedAccessibilityServices or {@code null} for none
    */
   public Policy setPermittedAccessibilityServices(PackageNameList permittedAccessibilityServices) {

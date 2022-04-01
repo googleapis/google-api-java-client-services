@@ -31,7 +31,7 @@ package com.google.api.services.composer.v1.model;
 public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults
+   * Optional. The disk size in GB used for node VMs. Minimum size is 30GB. If unspecified, defaults
    * to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in
    * versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
@@ -137,7 +137,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults
+   * Optional. The disk size in GB used for node VMs. Minimum size is 30GB. If unspecified, defaults
    * to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in
    * versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
@@ -147,7 +147,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults
+   * Optional. The disk size in GB used for node VMs. Minimum size is 30GB. If unspecified, defaults
    * to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in
    * versions composer-1.*.*-airflow-*.*.*.
    * @param diskSizeGb diskSizeGb or {@code null} for none

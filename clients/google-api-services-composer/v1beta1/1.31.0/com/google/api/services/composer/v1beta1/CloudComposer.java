@@ -930,6 +930,148 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of
+         * environment's specified in LoadSnapshotRequest is loaded into the environment.
+         *
+         * Create a request for the method "environments.loadSnapshot".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link LoadSnapshot#execute()} method to invoke the remote operation.
+         *
+         * @param environment The resource name of the target environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.LoadSnapshotRequest}
+         * @return the request
+         */
+        public LoadSnapshot loadSnapshot(java.lang.String environment, com.google.api.services.composer.v1beta1.model.LoadSnapshotRequest content) throws java.io.IOException {
+          LoadSnapshot result = new LoadSnapshot(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class LoadSnapshot extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:loadSnapshot";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of
+           * environment's specified in LoadSnapshotRequest is loaded into the environment.
+           *
+           * Create a request for the method "environments.loadSnapshot".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link LoadSnapshot#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * LoadSnapshot#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param environment The resource name of the target environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.LoadSnapshotRequest}
+           * @since 1.13
+           */
+          protected LoadSnapshot(java.lang.String environment, com.google.api.services.composer.v1beta1.model.LoadSnapshotRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.Operation.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public LoadSnapshot set$Xgafv(java.lang.String $Xgafv) {
+            return (LoadSnapshot) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public LoadSnapshot setAccessToken(java.lang.String accessToken) {
+            return (LoadSnapshot) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public LoadSnapshot setAlt(java.lang.String alt) {
+            return (LoadSnapshot) super.setAlt(alt);
+          }
+
+          @Override
+          public LoadSnapshot setCallback(java.lang.String callback) {
+            return (LoadSnapshot) super.setCallback(callback);
+          }
+
+          @Override
+          public LoadSnapshot setFields(java.lang.String fields) {
+            return (LoadSnapshot) super.setFields(fields);
+          }
+
+          @Override
+          public LoadSnapshot setKey(java.lang.String key) {
+            return (LoadSnapshot) super.setKey(key);
+          }
+
+          @Override
+          public LoadSnapshot setOauthToken(java.lang.String oauthToken) {
+            return (LoadSnapshot) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public LoadSnapshot setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (LoadSnapshot) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public LoadSnapshot setQuotaUser(java.lang.String quotaUser) {
+            return (LoadSnapshot) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public LoadSnapshot setUploadType(java.lang.String uploadType) {
+            return (LoadSnapshot) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public LoadSnapshot setUploadProtocol(java.lang.String uploadProtocol) {
+            return (LoadSnapshot) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the target environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** The resource name of the target environment in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * The resource name of the target environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public LoadSnapshot setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public LoadSnapshot set(String parameterName, Object value) {
+            return (LoadSnapshot) super.set(parameterName, value);
+          }
+        }
+        /**
          * Update an environment.
          *
          * Create a request for the method "environments.patch".
@@ -1447,6 +1589,148 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           @Override
           public RestartWebServer set(String parameterName, Object value) {
             return (RestartWebServer) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of
+         * environment's state is stored in a location specified in the SaveSnapshotRequest.
+         *
+         * Create a request for the method "environments.saveSnapshot".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link SaveSnapshot#execute()} method to invoke the remote operation.
+         *
+         * @param environment The resource name of the source environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.SaveSnapshotRequest}
+         * @return the request
+         */
+        public SaveSnapshot saveSnapshot(java.lang.String environment, com.google.api.services.composer.v1beta1.model.SaveSnapshotRequest content) throws java.io.IOException {
+          SaveSnapshot result = new SaveSnapshot(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SaveSnapshot extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:saveSnapshot";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of
+           * environment's state is stored in a location specified in the SaveSnapshotRequest.
+           *
+           * Create a request for the method "environments.saveSnapshot".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link SaveSnapshot#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SaveSnapshot#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param environment The resource name of the source environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.SaveSnapshotRequest}
+           * @since 1.13
+           */
+          protected SaveSnapshot(java.lang.String environment, com.google.api.services.composer.v1beta1.model.SaveSnapshotRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.Operation.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public SaveSnapshot set$Xgafv(java.lang.String $Xgafv) {
+            return (SaveSnapshot) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SaveSnapshot setAccessToken(java.lang.String accessToken) {
+            return (SaveSnapshot) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SaveSnapshot setAlt(java.lang.String alt) {
+            return (SaveSnapshot) super.setAlt(alt);
+          }
+
+          @Override
+          public SaveSnapshot setCallback(java.lang.String callback) {
+            return (SaveSnapshot) super.setCallback(callback);
+          }
+
+          @Override
+          public SaveSnapshot setFields(java.lang.String fields) {
+            return (SaveSnapshot) super.setFields(fields);
+          }
+
+          @Override
+          public SaveSnapshot setKey(java.lang.String key) {
+            return (SaveSnapshot) super.setKey(key);
+          }
+
+          @Override
+          public SaveSnapshot setOauthToken(java.lang.String oauthToken) {
+            return (SaveSnapshot) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SaveSnapshot setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SaveSnapshot) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SaveSnapshot setQuotaUser(java.lang.String quotaUser) {
+            return (SaveSnapshot) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SaveSnapshot setUploadType(java.lang.String uploadType) {
+            return (SaveSnapshot) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SaveSnapshot setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SaveSnapshot) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the source environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** The resource name of the source environment in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * The resource name of the source environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public SaveSnapshot setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public SaveSnapshot set(String parameterName, Object value) {
+            return (SaveSnapshot) super.set(parameterName, value);
           }
         }
 

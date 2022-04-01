@@ -33,9 +33,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
-   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
-   * combined length of the plaintext and additional_authenticated_data fields must be no larger
-   * than 8KiB.
+   * protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys the AAD must be no larger than
+   * 64KiB. For HSM keys, the combined length of the plaintext and additional_authenticated_data
+   * fields must be no larger than 8KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
-   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
-   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
-   * must be no larger than 8KiB.
+   * key version's protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys, the plaintext
+   * must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
+   * additional_authenticated_data fields must be no larger than 8KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,9 +85,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
-   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
-   * combined length of the plaintext and additional_authenticated_data fields must be no larger
-   * than 8KiB.
+   * protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys the AAD must be no larger than
+   * 64KiB. For HSM keys, the combined length of the plaintext and additional_authenticated_data
+   * fields must be no larger than 8KiB.
    * @see #decodeAdditionalAuthenticatedData()
    * @return value or {@code null} for none
    */
@@ -98,9 +98,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
-   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
-   * combined length of the plaintext and additional_authenticated_data fields must be no larger
-   * than 8KiB.
+   * protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys the AAD must be no larger than
+   * 64KiB. For HSM keys, the combined length of the plaintext and additional_authenticated_data
+   * fields must be no larger than 8KiB.
    * @see #getAdditionalAuthenticatedData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -113,9 +113,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
-   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
-   * combined length of the plaintext and additional_authenticated_data fields must be no larger
-   * than 8KiB.
+   * protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys the AAD must be no larger than
+   * 64KiB. For HSM keys, the combined length of the plaintext and additional_authenticated_data
+   * fields must be no larger than 8KiB.
    * @see #encodeAdditionalAuthenticatedData()
    * @param additionalAuthenticatedData additionalAuthenticatedData or {@code null} for none
    */
@@ -127,9 +127,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   /**
    * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data. The maximum size depends on the key version's
-   * protection_level. For SOFTWARE keys, the AAD must be no larger than 64KiB. For HSM keys, the
-   * combined length of the plaintext and additional_authenticated_data fields must be no larger
-   * than 8KiB.
+   * protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys the AAD must be no larger than
+   * 64KiB. For HSM keys, the combined length of the plaintext and additional_authenticated_data
+   * fields must be no larger than 8KiB.
    * @see #setAdditionalAuthenticatedData()
    *
    * <p>
@@ -180,9 +180,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
-   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
-   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
-   * must be no larger than 8KiB.
+   * key version's protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys, the plaintext
+   * must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
+   * additional_authenticated_data fields must be no larger than 8KiB.
    * @see #decodePlaintext()
    * @return value or {@code null} for none
    */
@@ -192,9 +192,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
-   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
-   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
-   * must be no larger than 8KiB.
+   * key version's protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys, the plaintext
+   * must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
+   * additional_authenticated_data fields must be no larger than 8KiB.
    * @see #getPlaintext()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -206,9 +206,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
-   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
-   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
-   * must be no larger than 8KiB.
+   * key version's protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys, the plaintext
+   * must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
+   * additional_authenticated_data fields must be no larger than 8KiB.
    * @see #encodePlaintext()
    * @param plaintext plaintext or {@code null} for none
    */
@@ -219,9 +219,9 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The data to encrypt. Must be no larger than 64KiB. The maximum size depends on the
-   * key version's protection_level. For SOFTWARE keys, the plaintext must be no larger than 64KiB.
-   * For HSM keys, the combined length of the plaintext and additional_authenticated_data fields
-   * must be no larger than 8KiB.
+   * key version's protection_level. For SOFTWARE, EXTERNAL, and EXTERNAL_VPC keys, the plaintext
+   * must be no larger than 64KiB. For HSM keys, the combined length of the plaintext and
+   * additional_authenticated_data fields must be no larger than 8KiB.
    * @see #setPlaintext()
    *
    * <p>

@@ -54,6 +54,13 @@ public final class AdClient extends com.google.api.client.json.GenericJson {
   private java.lang.String reportingDimensionId;
 
   /**
+   * Output only. State of the ad client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Resource name of the ad client. Format: accounts/{account}/adclients/{adclient}
    * @return value or {@code null} for none
    */
@@ -103,6 +110,23 @@ public final class AdClient extends com.google.api.client.json.GenericJson {
    */
   public AdClient setReportingDimensionId(java.lang.String reportingDimensionId) {
     this.reportingDimensionId = reportingDimensionId;
+    return this;
+  }
+
+  /**
+   * Output only. State of the ad client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the ad client.
+   * @param state state or {@code null} for none
+   */
+  public AdClient setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

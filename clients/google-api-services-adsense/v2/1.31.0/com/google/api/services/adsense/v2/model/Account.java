@@ -67,6 +67,13 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean premium;
 
   /**
+   * Output only. State of the account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The account time zone, as used by reporting. For more information, see [changing the time zone
    * of your reports](https://support.google.com/adsense/answer/9830725).
    * The value may be {@code null}.
@@ -158,6 +165,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setPremium(java.lang.Boolean premium) {
     this.premium = premium;
+    return this;
+  }
+
+  /**
+   * Output only. State of the account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the account.
+   * @param state state or {@code null} for none
+   */
+  public Account setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -32,6 +32,15 @@ public class FormsScopes {
   /** See and download all your Google Drive files. */
   public static final String DRIVE_READONLY = "https://www.googleapis.com/auth/drive.readonly";
 
+  /** See, edit, create, and delete all your Google Forms forms. */
+  public static final String FORMS_BODY = "https://www.googleapis.com/auth/forms.body";
+
+  /** See all your Google Forms forms. */
+  public static final String FORMS_BODY_READONLY = "https://www.googleapis.com/auth/forms.body.readonly";
+
+  /** See all responses to your Google Forms forms. */
+  public static final String FORMS_RESPONSES_READONLY = "https://www.googleapis.com/auth/forms.responses.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -42,6 +51,9 @@ public class FormsScopes {
     set.add(DRIVE);
     set.add(DRIVE_FILE);
     set.add(DRIVE_READONLY);
+    set.add(FORMS_BODY);
+    set.add(FORMS_BODY_READONLY);
+    set.add(FORMS_RESPONSES_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

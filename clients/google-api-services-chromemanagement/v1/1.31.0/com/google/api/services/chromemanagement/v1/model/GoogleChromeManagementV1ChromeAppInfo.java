@@ -46,11 +46,25 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
   private java.lang.Boolean isCwsHosted;
 
   /**
+   * Output only. Whether the app is only for Kiosk mode on Chrome OS devices
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isKioskOnly;
+
+  /**
    * Output only. Whether the app or extension is a theme.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isTheme;
+
+  /**
+   * Output only. Whether this app is enabled for Kiosk mode on Chrome OS devices
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean kioskEnabled;
 
   /**
    * Output only. The minimum number of users using this app.
@@ -122,6 +136,23 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
   }
 
   /**
+   * Output only. Whether the app is only for Kiosk mode on Chrome OS devices
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsKioskOnly() {
+    return isKioskOnly;
+  }
+
+  /**
+   * Output only. Whether the app is only for Kiosk mode on Chrome OS devices
+   * @param isKioskOnly isKioskOnly or {@code null} for none
+   */
+  public GoogleChromeManagementV1ChromeAppInfo setIsKioskOnly(java.lang.Boolean isKioskOnly) {
+    this.isKioskOnly = isKioskOnly;
+    return this;
+  }
+
+  /**
    * Output only. Whether the app or extension is a theme.
    * @return value or {@code null} for none
    */
@@ -135,6 +166,23 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
    */
   public GoogleChromeManagementV1ChromeAppInfo setIsTheme(java.lang.Boolean isTheme) {
     this.isTheme = isTheme;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this app is enabled for Kiosk mode on Chrome OS devices
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getKioskEnabled() {
+    return kioskEnabled;
+  }
+
+  /**
+   * Output only. Whether this app is enabled for Kiosk mode on Chrome OS devices
+   * @param kioskEnabled kioskEnabled or {@code null} for none
+   */
+  public GoogleChromeManagementV1ChromeAppInfo setKioskEnabled(java.lang.Boolean kioskEnabled) {
+    this.kioskEnabled = kioskEnabled;
     return this;
   }
 

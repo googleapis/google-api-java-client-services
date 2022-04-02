@@ -44,6 +44,13 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   private java.lang.Boolean disallowUsernameSubstring;
 
   /**
+   * Whether the password policy is enabled or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePasswordPolicy;
+
+  /**
    * Minimum number of characters allowed.
    * The value may be {@code null}.
    */
@@ -96,6 +103,23 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
    */
   public PasswordValidationPolicy setDisallowUsernameSubstring(java.lang.Boolean disallowUsernameSubstring) {
     this.disallowUsernameSubstring = disallowUsernameSubstring;
+    return this;
+  }
+
+  /**
+   * Whether the password policy is enabled or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePasswordPolicy() {
+    return enablePasswordPolicy;
+  }
+
+  /**
+   * Whether the password policy is enabled or not.
+   * @param enablePasswordPolicy enablePasswordPolicy or {@code null} for none
+   */
+  public PasswordValidationPolicy setEnablePasswordPolicy(java.lang.Boolean enablePasswordPolicy) {
+    this.enablePasswordPolicy = enablePasswordPolicy;
     return this;
   }
 

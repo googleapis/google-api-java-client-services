@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A matched url in a Chat message. Chat bots can unfurl matched URLs. For more information, refer
+ * A matched url in a Chat message. Chat apps can unfurl matched URLs. For more information, refer
  * to [Unfurl links](/chat/how-tos/link-unfurling).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

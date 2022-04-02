@@ -305,9 +305,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
@@ -315,7 +315,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /** Optional. Opaque thread identifier string that can be specified to group messages into a single
      thread. If this is the first message with a given thread identifier, a new thread is created.
      Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
      earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
      existing thread, is set in message.
        */
@@ -327,9 +327,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       public Messages setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -494,9 +494,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
@@ -504,7 +504,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /** Optional. Opaque thread identifier string that can be specified to group messages into a single
      thread. If this is the first message with a given thread identifier, a new thread is created.
      Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
      earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
      existing thread, is set in message.
        */
@@ -516,9 +516,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -704,9 +704,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves bots and webhooks from having to store the Google Chat thread
-         * ID of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
@@ -714,7 +714,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /** Optional. Opaque thread identifier string that can be specified to group messages into a single
        thread. If this is the first message with a given thread identifier, a new thread is created.
        Subsequent messages with the same thread identifier will be posted into the same thread. This
-       relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+       relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
        earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
        existing thread, is set in message.
          */
@@ -726,9 +726,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves bots and webhooks from having to store the Google Chat thread
-         * ID of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1095,9 +1095,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
@@ -1105,7 +1105,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /** Optional. Opaque thread identifier string that can be specified to group messages into a single
      thread. If this is the first message with a given thread identifier, a new thread is created.
      Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
      earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
      existing thread, is set in message.
        */
@@ -1117,9 +1117,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       public Messages setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -1284,9 +1284,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
@@ -1294,7 +1294,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /** Optional. Opaque thread identifier string that can be specified to group messages into a single
      thread. If this is the first message with a given thread identifier, a new thread is created.
      Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
      earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
      existing thread, is set in message.
        */
@@ -1306,9 +1306,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -1494,9 +1494,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves bots and webhooks from having to store the Google Chat thread
-         * ID of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
@@ -1504,7 +1504,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /** Optional. Opaque thread identifier string that can be specified to group messages into a single
        thread. If this is the first message with a given thread identifier, a new thread is created.
        Subsequent messages with the same thread identifier will be posted into the same thread. This
-       relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+       relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
        earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
        existing thread, is set in message.
          */
@@ -1516,9 +1516,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves bots and webhooks from having to store the Google Chat thread
-         * ID of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1555,7 +1555,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   public class Spaces {
 
     /**
-     * Returns a space.
+     * Returns a space. Requires [service account
+     * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
      *
      * Create a request for the method "spaces.get".
      *
@@ -1579,7 +1580,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
       /**
-       * Returns a space.
+       * Returns a space. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "spaces.get".
        *
@@ -1697,7 +1699,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Lists spaces the caller is a member of.
+     * Lists spaces the caller is a member of. Requires [service account
+     * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
      *
      * Create a request for the method "spaces.list".
      *
@@ -1717,7 +1720,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/spaces";
 
       /**
-       * Lists spaces the caller is a member of.
+       * Lists spaces the caller is a member of. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "spaces.list".
        *
@@ -1994,9 +1998,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
@@ -2004,7 +2008,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /** Optional. Opaque thread identifier string that can be specified to group messages into a single
      thread. If this is the first message with a given thread identifier, a new thread is created.
      Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
      earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
      existing thread, is set in message.
        */
@@ -2016,9 +2020,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves bots and webhooks from having to store the Google Chat thread ID of a
-       * thread (created earlier by them) to post further updates to it. Has no effect if thread
-       * field, corresponding to an existing thread, is set in message.
+       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
+       * of a thread (created earlier by them) to post further updates to it. Has no effect if
+       * thread field, corresponding to an existing thread, is set in message.
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -2052,7 +2056,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Members {
 
       /**
-       * Returns a membership.
+       * Returns a membership. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "members.get".
        *
@@ -2077,7 +2082,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/members/[^/]+$");
 
         /**
-         * Returns a membership.
+         * Returns a membership. Requires [service account
+         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "members.get".
          *
@@ -2199,7 +2205,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists human memberships in a space.
+       * Lists human memberships in a space. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "members.list".
        *
@@ -2224,7 +2231,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * Lists human memberships in a space.
+         * Lists human memberships in a space. Requires [service account
+         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "members.list".
          *
@@ -2407,7 +2415,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Messages {
 
       /**
-       * Creates a message.
+       * Creates a message. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "messages.create".
        *
@@ -2432,7 +2441,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * Creates a message.
+         * Creates a message. Requires [service account
+         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "messages.create".
          *
@@ -2558,9 +2568,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves bots and webhooks from having to store the Google Chat thread
-         * ID of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
@@ -2568,7 +2578,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /** Optional. Opaque thread identifier string that can be specified to group messages into a single
        thread. If this is the first message with a given thread identifier, a new thread is created.
        Subsequent messages with the same thread identifier will be posted into the same thread. This
-       relieves bots and webhooks from having to store the Google Chat thread ID of a thread (created
+       relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
        earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
        existing thread, is set in message.
          */
@@ -2580,9 +2590,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves bots and webhooks from having to store the Google Chat thread
-         * ID of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         public Create setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -2595,7 +2605,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes a message.
+       * Deletes a message. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "messages.delete".
        *
@@ -2620,7 +2631,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
 
         /**
-         * Deletes a message.
+         * Deletes a message. Requires [service account
+         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "messages.delete".
          *
@@ -2732,7 +2744,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Returns a message.
+       * Returns a message. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "messages.get".
        *
@@ -2757,7 +2770,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
 
         /**
-         * Returns a message.
+         * Returns a message. Requires [service account
+         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "messages.get".
          *
@@ -2879,7 +2893,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates a message.
+       * Updates a message. Requires [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
        *
        * Create a request for the method "messages.update".
        *
@@ -2905,7 +2920,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
 
         /**
-         * Updates a message.
+         * Updates a message. Requires [service account
+         * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
          *
          * Create a request for the method "messages.update".
          *
@@ -3063,6 +3079,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Gets the metadata of a message attachment. The attachment data is fetched using the media API.
+         * Requires [service account authentication](https://developers.google.com/chat/api/guides/auth
+         * /service-accounts).
          *
          * Create a request for the method "attachments.get".
          *
@@ -3087,6 +3105,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
           /**
            * Gets the metadata of a message attachment. The attachment data is fetched using the media API.
+           * Requires [service account authentication](https://developers.google.com/chat/api/guides/auth
+           * /service-accounts).
            *
            * Create a request for the method "attachments.get".
            *

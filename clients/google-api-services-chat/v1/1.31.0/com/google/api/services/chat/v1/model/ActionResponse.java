@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Parameters that a bot can use to configure how it's response is posted.
+ * Parameters that a Chat app can use to configure how it's response is posted.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,15 +30,15 @@ package com.google.api.services.chat.v1.model;
 public final class ActionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A response to an event related to a [dialog](https://developers.google.com/chat/how-tos/bot-
-   * dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * A response to an event related to a [dialog](https://developers.google.com/chat/how-
+   * tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DialogAction dialogAction;
 
   /**
-   * The type of bot response.
+   * The type of Chat app response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   private java.lang.String url;
 
   /**
-   * A response to an event related to a [dialog](https://developers.google.com/chat/how-tos/bot-
-   * dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * A response to an event related to a [dialog](https://developers.google.com/chat/how-
+   * tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
    * @return value or {@code null} for none
    */
   public DialogAction getDialogAction() {
@@ -61,8 +61,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A response to an event related to a [dialog](https://developers.google.com/chat/how-tos/bot-
-   * dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * A response to an event related to a [dialog](https://developers.google.com/chat/how-
+   * tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
    * @param dialogAction dialogAction or {@code null} for none
    */
   public ActionResponse setDialogAction(DialogAction dialogAction) {
@@ -71,7 +71,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of bot response.
+   * The type of Chat app response.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -79,7 +79,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of bot response.
+   * The type of Chat app response.
    * @param type type or {@code null} for none
    */
   public ActionResponse setType(java.lang.String type) {

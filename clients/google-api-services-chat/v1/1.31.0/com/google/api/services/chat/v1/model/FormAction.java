@@ -32,8 +32,8 @@ public final class FormAction extends com.google.api.client.json.GenericJson {
 
   /**
    * The method name is used to identify which part of the form triggered the form submission. This
-   * information is echoed back to the bot as part of the card click event. The same method name can
-   * be used for several elements that trigger a common behavior if desired.
+   * information is echoed back to the Chat app as part of the card click event. The same method
+   * name can be used for several elements that trigger a common behavior if desired.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class FormAction extends com.google.api.client.json.GenericJson {
 
   /**
    * The method name is used to identify which part of the form triggered the form submission. This
-   * information is echoed back to the bot as part of the card click event. The same method name can
-   * be used for several elements that trigger a common behavior if desired.
+   * information is echoed back to the Chat app as part of the card click event. The same method
+   * name can be used for several elements that trigger a common behavior if desired.
    * @return value or {@code null} for none
    */
   public java.lang.String getActionMethodName() {
@@ -64,8 +64,8 @@ public final class FormAction extends com.google.api.client.json.GenericJson {
 
   /**
    * The method name is used to identify which part of the form triggered the form submission. This
-   * information is echoed back to the bot as part of the card click event. The same method name can
-   * be used for several elements that trigger a common behavior if desired.
+   * information is echoed back to the Chat app as part of the card click event. The same method
+   * name can be used for several elements that trigger a common behavior if desired.
    * @param actionMethodName actionMethodName or {@code null} for none
    */
   public FormAction setActionMethodName(java.lang.String actionMethodName) {

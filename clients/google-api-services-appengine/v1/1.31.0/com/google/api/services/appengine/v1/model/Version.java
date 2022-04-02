@@ -40,6 +40,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private ApiConfigHandler apiConfig;
 
   /**
+   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean appEngineApis;
+
+  /**
    * Automatic scaling is based on request rate, response latencies, and other application metrics.
    * Instances are dynamically created and destroyed as needed in order to handle traffic.
    * The value may be {@code null}.
@@ -377,6 +384,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setApiConfig(ApiConfigHandler apiConfig) {
     this.apiConfig = apiConfig;
+    return this;
+  }
+
+  /**
+   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAppEngineApis() {
+    return appEngineApis;
+  }
+
+  /**
+   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
+   * @param appEngineApis appEngineApis or {@code null} for none
+   */
+  public Version setAppEngineApis(java.lang.Boolean appEngineApis) {
+    this.appEngineApis = appEngineApis;
     return this;
   }
 

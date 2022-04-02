@@ -1438,24 +1438,17 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
             return this;
           }
 
-          /**
-           * Optional. Indicate that keys are marked as deleted within 30 days should also be
-           * returned. Normally only active keys are returned.
-           */
+          /** Optional. Indicate that keys deleted in the past 30 days should also be returned. */
           @com.google.api.client.util.Key
           private java.lang.Boolean showDeleted;
 
-          /** Optional. Indicate that keys are marked as deleted within 30 days should also be returned. Normally
-         only active keys are returned.
+          /** Optional. Indicate that keys deleted in the past 30 days should also be returned.
            */
           public java.lang.Boolean getShowDeleted() {
             return showDeleted;
           }
 
-          /**
-           * Optional. Indicate that keys are marked as deleted within 30 days should also be
-           * returned. Normally only active keys are returned.
-           */
+          /** Optional. Indicate that keys deleted in the past 30 days should also be returned. */
           public List setShowDeleted(java.lang.Boolean showDeleted) {
             this.showDeleted = showDeleted;
             return this;

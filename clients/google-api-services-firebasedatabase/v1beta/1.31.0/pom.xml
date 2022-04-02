@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-firebasedatabase</artifactId>
-  <version>v1beta-rev20220328-1.32.1</version>
-  <name>Firebase Realtime Database Management API v1beta-rev20220328-1.32.1</name>
+  <version>v1beta-rev20220330-1.32.1</version>
+  <name>Firebase Realtime Database Management API v1beta-rev20220330-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

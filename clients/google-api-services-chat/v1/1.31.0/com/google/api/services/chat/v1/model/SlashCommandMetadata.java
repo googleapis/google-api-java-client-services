@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class SlashCommandMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The bot whose command was invoked.
+   * The Chat app whose command was invoked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   private java.lang.String type;
 
   /**
-   * The bot whose command was invoked.
+   * The Chat app whose command was invoked.
    * @return value or {@code null} for none
    */
   public User getBot() {
@@ -73,7 +73,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * The bot whose command was invoked.
+   * The Chat app whose command was invoked.
    * @param bot bot or {@code null} for none
    */
   public SlashCommandMetadata setBot(User bot) {

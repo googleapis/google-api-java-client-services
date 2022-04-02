@@ -19,7 +19,7 @@ package com.google.api.services.chat.v1.model;
 /**
  * Represents information about the user's client, such as locale, host app, and platform. For Chat
  * apps, `CommonEventObject` includes data submitted by users interacting with cards, like data
- * entered in [dialogs](https://developers.google.com/chat/how-tos/bot-dialogs).
+ * entered in [dialogs](https://developers.google.com/chat/how-tos/dialogs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
    * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
    * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
    * Corresponds with the data entered by a user on a card in a
-   * [dialog](https://developers.google.com/chat/how-tos/bot-dialogs).
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
    * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
    * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
    * Corresponds with the data entered by a user on a card in a
-   * [dialog](https://developers.google.com/chat/how-tos/bot-dialogs).
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Inputs> getFormInputs() {
@@ -111,7 +111,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
    * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
    * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
    * Corresponds with the data entered by a user on a card in a
-   * [dialog](https://developers.google.com/chat/how-tos/bot-dialogs).
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
    * @param formInputs formInputs or {@code null} for none
    */
   public CommonEventObject setFormInputs(java.util.Map<String, Inputs> formInputs) {

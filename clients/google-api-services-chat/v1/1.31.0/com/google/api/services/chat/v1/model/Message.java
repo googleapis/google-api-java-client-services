@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. Parameters that a bot can use to configure how its response is posted.
+   * Input only. Parameters that a Chat app can use to configure how its response is posted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message with all bot mentions stripped out.
+   * Plain-text body of the message with all Chat app mentions stripped out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,14 +124,6 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Text for generating preview chips. This text will not be displayed to the user, but any links
-   * to images, web pages, videos, etc. included here will generate preview chips.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String previewText;
-
-  /**
    * The user who created the message.
    * The value may be {@code null}.
    */
@@ -153,7 +145,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private Space space;
 
   /**
-   * Plain-text body of the message.
+   * Plain-text body of the message. The first link to an image, video, web page, or other preview-
+   * able item generates a preview chip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +160,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private Thread thread;
 
   /**
-   * Input only. Parameters that a bot can use to configure how its response is posted.
+   * Input only. Parameters that a Chat app can use to configure how its response is posted.
    * @return value or {@code null} for none
    */
   public ActionResponse getActionResponse() {
@@ -175,7 +168,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Parameters that a bot can use to configure how its response is posted.
+   * Input only. Parameters that a Chat app can use to configure how its response is posted.
    * @param actionResponse actionResponse or {@code null} for none
    */
   public Message setActionResponse(ActionResponse actionResponse) {
@@ -201,7 +194,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message with all bot mentions stripped out.
+   * Plain-text body of the message with all Chat app mentions stripped out.
    * @return value or {@code null} for none
    */
   public java.lang.String getArgumentText() {
@@ -209,7 +202,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message with all bot mentions stripped out.
+   * Plain-text body of the message with all Chat app mentions stripped out.
    * @param argumentText argumentText or {@code null} for none
    */
   public Message setArgumentText(java.lang.String argumentText) {
@@ -349,25 +342,6 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Text for generating preview chips. This text will not be displayed to the user, but any links
-   * to images, web pages, videos, etc. included here will generate preview chips.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPreviewText() {
-    return previewText;
-  }
-
-  /**
-   * Text for generating preview chips. This text will not be displayed to the user, but any links
-   * to images, web pages, videos, etc. included here will generate preview chips.
-   * @param previewText previewText or {@code null} for none
-   */
-  public Message setPreviewText(java.lang.String previewText) {
-    this.previewText = previewText;
-    return this;
-  }
-
-  /**
    * The user who created the message.
    * @return value or {@code null} for none
    */
@@ -419,7 +393,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message.
+   * Plain-text body of the message. The first link to an image, video, web page, or other preview-
+   * able item generates a preview chip.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -427,7 +402,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message.
+   * Plain-text body of the message. The first link to an image, video, web page, or other preview-
+   * able item generates a preview chip.
    * @param text text or {@code null} for none
    */
   public Message setText(java.lang.String text) {

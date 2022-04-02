@@ -18,7 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A space in Google Chat. Spaces are conversations between two or more users or 1:1 messages
- * between a user and a Chat bot.
+ * between a user and a Chat app.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -45,7 +45,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Whether the space is a DM between a bot and a single human.
+   * Output only. Whether the space is a DM between a Chat app and a single human.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the space is a DM between a bot and a single human.
+   * Output only. Whether the space is a DM between a Chat app and a single human.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSingleUserBotDm() {
@@ -108,7 +108,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the space is a DM between a bot and a single human.
+   * Output only. Whether the space is a DM between a Chat app and a single human.
    * @param singleUserBotDm singleUserBotDm or {@code null} for none
    */
   public Space setSingleUserBotDm(java.lang.Boolean singleUserBotDm) {

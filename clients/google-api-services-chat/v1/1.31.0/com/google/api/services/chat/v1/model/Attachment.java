@@ -53,7 +53,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The download URL which should be used to allow a human user to download the
-   * attachment. Bots should not use this URL to download attachment content.
+   * attachment. Chat apps should not use this URL to download attachment content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The thumbnail URL which should be used to preview the attachment to a human user.
-   * Bots should not use this URL to download attachment content.
+   * Chat apps should not use this URL to download attachment content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The download URL which should be used to allow a human user to download the
-   * attachment. Bots should not use this URL to download attachment content.
+   * attachment. Chat apps should not use this URL to download attachment content.
    * @return value or {@code null} for none
    */
   public java.lang.String getDownloadUri() {
@@ -152,7 +152,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The download URL which should be used to allow a human user to download the
-   * attachment. Bots should not use this URL to download attachment content.
+   * attachment. Chat apps should not use this URL to download attachment content.
    * @param downloadUri downloadUri or {@code null} for none
    */
   public Attachment setDownloadUri(java.lang.String downloadUri) {
@@ -213,7 +213,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The thumbnail URL which should be used to preview the attachment to a human user.
-   * Bots should not use this URL to download attachment content.
+   * Chat apps should not use this URL to download attachment content.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailUri() {
@@ -222,7 +222,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The thumbnail URL which should be used to preview the attachment to a human user.
-   * Bots should not use this URL to download attachment content.
+   * Chat apps should not use this URL to download attachment content.
    * @param thumbnailUri thumbnailUri or {@code null} for none
    */
   public Attachment setThumbnailUri(java.lang.String thumbnailUri) {

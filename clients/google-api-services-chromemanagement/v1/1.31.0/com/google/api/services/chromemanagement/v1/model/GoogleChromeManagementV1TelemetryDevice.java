@@ -31,6 +31,19 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1TelemetryDevice extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Audio reports collected periodically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1AudioStatusReport> audioStatusReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1AudioStatusReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1AudioStatusReport.class);
+  }
+
+  /**
    * Output only. Information on battery specs for the device.
    * The value may be {@code null}.
    */
@@ -203,6 +216,23 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
     // hack to force ProGuard to consider GoogleChromeManagementV1StorageStatusReport used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1StorageStatusReport.class);
+  }
+
+  /**
+   * Output only. Audio reports collected periodically.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1AudioStatusReport> getAudioStatusReport() {
+    return audioStatusReport;
+  }
+
+  /**
+   * Output only. Audio reports collected periodically.
+   * @param audioStatusReport audioStatusReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setAudioStatusReport(java.util.List<GoogleChromeManagementV1AudioStatusReport> audioStatusReport) {
+    this.audioStatusReport = audioStatusReport;
+    return this;
   }
 
   /**

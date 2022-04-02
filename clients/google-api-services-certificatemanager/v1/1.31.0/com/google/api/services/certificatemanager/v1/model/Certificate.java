@@ -82,7 +82,8 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of Subject Alternative Names of dnsName type defined in the certificate
-   * (see RFC 5280 4.2.1.6)
+   * (see RFC 5280 4.2.1.6). Managed certificates that haven't been provisioned yet have this field
+   * populated with a value of the managed.domains field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +233,8 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of Subject Alternative Names of dnsName type defined in the certificate
-   * (see RFC 5280 4.2.1.6)
+   * (see RFC 5280 4.2.1.6). Managed certificates that haven't been provisioned yet have this field
+   * populated with a value of the managed.domains field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSanDnsnames() {
@@ -241,7 +243,8 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of Subject Alternative Names of dnsName type defined in the certificate
-   * (see RFC 5280 4.2.1.6)
+   * (see RFC 5280 4.2.1.6). Managed certificates that haven't been provisioned yet have this field
+   * populated with a value of the managed.domains field.
    * @param sanDnsnames sanDnsnames or {@code null} for none
    */
   public Certificate setSanDnsnames(java.util.List<java.lang.String> sanDnsnames) {

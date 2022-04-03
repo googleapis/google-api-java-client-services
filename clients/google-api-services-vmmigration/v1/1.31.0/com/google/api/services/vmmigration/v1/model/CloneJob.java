@@ -51,6 +51,13 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. The time the clone job was ended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * Output only. Provides details for the errors that led to the Clone Job's state.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
    */
   public CloneJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The time the clone job was ended.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. The time the clone job was ended.
+   * @param endTime endTime or {@code null} for none
+   */
+  public CloneJob setEndTime(String endTime) {
+    this.endTime = endTime;
     return this;
   }
 

@@ -51,7 +51,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String startTime;
 
   /**
-   * The cycle's steps list reflecting its progress.
+   * The cycle's steps list representing its progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cycle's steps list reflecting its progress.
+   * The cycle's steps list representing its progress.
    * @return value or {@code null} for none
    */
   public java.util.List<CycleStep> getSteps() {
@@ -130,7 +130,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cycle's steps list reflecting its progress.
+   * The cycle's steps list representing its progress.
    * @param steps steps or {@code null} for none
    */
   public ReplicationCycle setSteps(java.util.List<CycleStep> steps) {

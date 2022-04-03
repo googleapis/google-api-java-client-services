@@ -46,6 +46,13 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. The time the cutover job had finished.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * Output only. Provides details for the errors that led to the Cutover Job's state.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
    */
   public CutoverJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The time the cutover job had finished.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. The time the cutover job had finished.
+   * @param endTime endTime or {@code null} for none
+   */
+  public CutoverJob setEndTime(String endTime) {
+    this.endTime = endTime;
     return this;
   }
 

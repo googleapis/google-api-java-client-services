@@ -20,7 +20,7 @@ package com.google.api.services.documentai.v1.model;
  * A processor version is an implementation of a processor. Each processor can have multiple
  * versions, pre-trained by Google internally or up-trained by the customer. At a time, a processor
  * can only have one default version version. So the processor's behavior (when processing
- * documents) is defined by a default version.
+ * documents) is defined by a default version
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

@@ -38,7 +38,7 @@ public final class InlineObject extends com.google.api.client.json.GenericJson {
   private InlineObjectProperties inlineObjectProperties;
 
   /**
-   * The ID of this inline object.
+   * The ID of this inline object. Can be used to update an object’s properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class InlineObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of this inline object.
+   * The ID of this inline object. Can be used to update an object’s properties.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -91,7 +91,7 @@ public final class InlineObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of this inline object.
+   * The ID of this inline object. Can be used to update an object’s properties.
    * @param objectId objectId or {@code null} for none
    */
   public InlineObject setObjectId(java.lang.String objectId) {

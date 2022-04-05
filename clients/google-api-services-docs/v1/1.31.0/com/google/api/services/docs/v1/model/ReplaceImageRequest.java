@@ -31,7 +31,8 @@ package com.google.api.services.docs.v1.model;
 public final class ReplaceImageRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the existing image that will be replaced.
+   * The ID of the existing image that will be replaced. The ID can be retrieved from the response
+   * of a get request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,17 +47,17 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
 
   /**
    * The URI of the new image. The image is fetched once at insertion time and a copy is stored for
-   * display inside the document. Images must be less than 50MB in size, cannot exceed 25
-   * megapixels, and must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2
-   * kB in length. The URI itself is saved with the image, and exposed via the
-   * ImageProperties.source_uri field.
+   * display inside the document. Images must be less than 50MB, cannot exceed 25 megapixels, and
+   * must be in PNG, JPEG, or GIF format. The provided URI can't surpass 2 KB in length. The URI is
+   * saved with the image, and exposed through the ImageProperties.source_uri field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * The ID of the existing image that will be replaced.
+   * The ID of the existing image that will be replaced. The ID can be retrieved from the response
+   * of a get request.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageObjectId() {
@@ -64,7 +65,8 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The ID of the existing image that will be replaced.
+   * The ID of the existing image that will be replaced. The ID can be retrieved from the response
+   * of a get request.
    * @param imageObjectId imageObjectId or {@code null} for none
    */
   public ReplaceImageRequest setImageObjectId(java.lang.String imageObjectId) {
@@ -91,10 +93,9 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
 
   /**
    * The URI of the new image. The image is fetched once at insertion time and a copy is stored for
-   * display inside the document. Images must be less than 50MB in size, cannot exceed 25
-   * megapixels, and must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2
-   * kB in length. The URI itself is saved with the image, and exposed via the
-   * ImageProperties.source_uri field.
+   * display inside the document. Images must be less than 50MB, cannot exceed 25 megapixels, and
+   * must be in PNG, JPEG, or GIF format. The provided URI can't surpass 2 KB in length. The URI is
+   * saved with the image, and exposed through the ImageProperties.source_uri field.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -103,10 +104,9 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
 
   /**
    * The URI of the new image. The image is fetched once at insertion time and a copy is stored for
-   * display inside the document. Images must be less than 50MB in size, cannot exceed 25
-   * megapixels, and must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2
-   * kB in length. The URI itself is saved with the image, and exposed via the
-   * ImageProperties.source_uri field.
+   * display inside the document. Images must be less than 50MB, cannot exceed 25 megapixels, and
+   * must be in PNG, JPEG, or GIF format. The provided URI can't surpass 2 KB in length. The URI is
+   * saved with the image, and exposed through the ImageProperties.source_uri field.
    * @param uri uri or {@code null} for none
    */
   public ReplaceImageRequest setUri(java.lang.String uri) {

@@ -103,6 +103,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String findingClass;
 
   /**
+   * Represents IAM bindings associated with the Finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IamBinding> iamBindings;
+
+  /**
    * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
    * This is an artifact observed on a network or in an operating system that, with high confidence,
    * indicates a computer intrusion. Reference:
@@ -151,6 +158,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Next steps associate to the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextSteps;
 
   /**
    * The relative resource name of the source the finding belongs to. See:
@@ -375,6 +389,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Represents IAM bindings associated with the Finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<IamBinding> getIamBindings() {
+    return iamBindings;
+  }
+
+  /**
+   * Represents IAM bindings associated with the Finding.
+   * @param iamBindings iamBindings or {@code null} for none
+   */
+  public Finding setIamBindings(java.util.List<IamBinding> iamBindings) {
+    this.iamBindings = iamBindings;
+    return this;
+  }
+
+  /**
    * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
    * This is an artifact observed on a network or in an operating system that, with high confidence,
    * indicates a computer intrusion. Reference:
@@ -489,6 +520,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Next steps associate to the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextSteps() {
+    return nextSteps;
+  }
+
+  /**
+   * Next steps associate to the finding.
+   * @param nextSteps nextSteps or {@code null} for none
+   */
+  public Finding setNextSteps(java.lang.String nextSteps) {
+    this.nextSteps = nextSteps;
     return this;
   }
 

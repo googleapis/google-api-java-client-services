@@ -475,6 +475,160 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Retrieve the OnboardingState of a resource.
+     *
+     * Create a request for the method "folders.getOnboardingState".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetOnboardingState#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the OnboardingState to retrieve. Formats: *
+     *        organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     *        projects/{project}/onboardingState
+     * @return the request
+     */
+    public GetOnboardingState getOnboardingState(java.lang.String name) throws java.io.IOException {
+      GetOnboardingState result = new GetOnboardingState(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetOnboardingState extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.OnboardingState> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/onboardingState$");
+
+      /**
+       * Retrieve the OnboardingState of a resource.
+       *
+       * Create a request for the method "folders.getOnboardingState".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetOnboardingState#execute()} method to invoke the remote
+       * operation. <p> {@link GetOnboardingState#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the OnboardingState to retrieve. Formats: *
+     *        organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     *        projects/{project}/onboardingState
+       * @since 1.13
+       */
+      protected GetOnboardingState(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.OnboardingState.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/onboardingState$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetOnboardingState set$Xgafv(java.lang.String $Xgafv) {
+        return (GetOnboardingState) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetOnboardingState setAccessToken(java.lang.String accessToken) {
+        return (GetOnboardingState) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetOnboardingState setAlt(java.lang.String alt) {
+        return (GetOnboardingState) super.setAlt(alt);
+      }
+
+      @Override
+      public GetOnboardingState setCallback(java.lang.String callback) {
+        return (GetOnboardingState) super.setCallback(callback);
+      }
+
+      @Override
+      public GetOnboardingState setFields(java.lang.String fields) {
+        return (GetOnboardingState) super.setFields(fields);
+      }
+
+      @Override
+      public GetOnboardingState setKey(java.lang.String key) {
+        return (GetOnboardingState) super.setKey(key);
+      }
+
+      @Override
+      public GetOnboardingState setOauthToken(java.lang.String oauthToken) {
+        return (GetOnboardingState) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetOnboardingState setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetOnboardingState) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetOnboardingState setQuotaUser(java.lang.String quotaUser) {
+        return (GetOnboardingState) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetOnboardingState setUploadType(java.lang.String uploadType) {
+        return (GetOnboardingState) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetOnboardingState setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetOnboardingState) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the OnboardingState to retrieve. Formats: *
+       * organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+       * projects/{project}/onboardingState
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the OnboardingState to retrieve. Formats: *
+     organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     projects/{project}/onboardingState
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the OnboardingState to retrieve. Formats: *
+       * organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+       * projects/{project}/onboardingState
+       */
+      public GetOnboardingState setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/onboardingState$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetOnboardingState set(String parameterName, Object value) {
+        return (GetOnboardingState) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the SecurityHealthAnalyticsSettings resource.
      *
      * Create a request for the method "folders.getSecurityHealthAnalyticsSettings".
@@ -3040,6 +3194,160 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public GetEventThreatDetectionSettings set(String parameterName, Object value) {
         return (GetEventThreatDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieve the OnboardingState of a resource.
+     *
+     * Create a request for the method "organizations.getOnboardingState".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetOnboardingState#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the OnboardingState to retrieve. Formats: *
+     *        organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     *        projects/{project}/onboardingState
+     * @return the request
+     */
+    public GetOnboardingState getOnboardingState(java.lang.String name) throws java.io.IOException {
+      GetOnboardingState result = new GetOnboardingState(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetOnboardingState extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.OnboardingState> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/onboardingState$");
+
+      /**
+       * Retrieve the OnboardingState of a resource.
+       *
+       * Create a request for the method "organizations.getOnboardingState".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetOnboardingState#execute()} method to invoke the remote
+       * operation. <p> {@link GetOnboardingState#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the OnboardingState to retrieve. Formats: *
+     *        organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     *        projects/{project}/onboardingState
+       * @since 1.13
+       */
+      protected GetOnboardingState(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.OnboardingState.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/onboardingState$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetOnboardingState set$Xgafv(java.lang.String $Xgafv) {
+        return (GetOnboardingState) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetOnboardingState setAccessToken(java.lang.String accessToken) {
+        return (GetOnboardingState) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetOnboardingState setAlt(java.lang.String alt) {
+        return (GetOnboardingState) super.setAlt(alt);
+      }
+
+      @Override
+      public GetOnboardingState setCallback(java.lang.String callback) {
+        return (GetOnboardingState) super.setCallback(callback);
+      }
+
+      @Override
+      public GetOnboardingState setFields(java.lang.String fields) {
+        return (GetOnboardingState) super.setFields(fields);
+      }
+
+      @Override
+      public GetOnboardingState setKey(java.lang.String key) {
+        return (GetOnboardingState) super.setKey(key);
+      }
+
+      @Override
+      public GetOnboardingState setOauthToken(java.lang.String oauthToken) {
+        return (GetOnboardingState) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetOnboardingState setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetOnboardingState) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetOnboardingState setQuotaUser(java.lang.String quotaUser) {
+        return (GetOnboardingState) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetOnboardingState setUploadType(java.lang.String uploadType) {
+        return (GetOnboardingState) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetOnboardingState setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetOnboardingState) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the OnboardingState to retrieve. Formats: *
+       * organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+       * projects/{project}/onboardingState
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the OnboardingState to retrieve. Formats: *
+     organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     projects/{project}/onboardingState
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the OnboardingState to retrieve. Formats: *
+       * organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+       * projects/{project}/onboardingState
+       */
+      public GetOnboardingState setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/onboardingState$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetOnboardingState set(String parameterName, Object value) {
+        return (GetOnboardingState) super.set(parameterName, value);
       }
     }
     /**
@@ -5906,6 +6214,160 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public GetEventThreatDetectionSettings set(String parameterName, Object value) {
         return (GetEventThreatDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieve the OnboardingState of a resource.
+     *
+     * Create a request for the method "projects.getOnboardingState".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetOnboardingState#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the OnboardingState to retrieve. Formats: *
+     *        organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     *        projects/{project}/onboardingState
+     * @return the request
+     */
+    public GetOnboardingState getOnboardingState(java.lang.String name) throws java.io.IOException {
+      GetOnboardingState result = new GetOnboardingState(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetOnboardingState extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.OnboardingState> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/onboardingState$");
+
+      /**
+       * Retrieve the OnboardingState of a resource.
+       *
+       * Create a request for the method "projects.getOnboardingState".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetOnboardingState#execute()} method to invoke the remote
+       * operation. <p> {@link GetOnboardingState#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the OnboardingState to retrieve. Formats: *
+     *        organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     *        projects/{project}/onboardingState
+       * @since 1.13
+       */
+      protected GetOnboardingState(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.OnboardingState.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/onboardingState$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetOnboardingState set$Xgafv(java.lang.String $Xgafv) {
+        return (GetOnboardingState) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetOnboardingState setAccessToken(java.lang.String accessToken) {
+        return (GetOnboardingState) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetOnboardingState setAlt(java.lang.String alt) {
+        return (GetOnboardingState) super.setAlt(alt);
+      }
+
+      @Override
+      public GetOnboardingState setCallback(java.lang.String callback) {
+        return (GetOnboardingState) super.setCallback(callback);
+      }
+
+      @Override
+      public GetOnboardingState setFields(java.lang.String fields) {
+        return (GetOnboardingState) super.setFields(fields);
+      }
+
+      @Override
+      public GetOnboardingState setKey(java.lang.String key) {
+        return (GetOnboardingState) super.setKey(key);
+      }
+
+      @Override
+      public GetOnboardingState setOauthToken(java.lang.String oauthToken) {
+        return (GetOnboardingState) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetOnboardingState setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetOnboardingState) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetOnboardingState setQuotaUser(java.lang.String quotaUser) {
+        return (GetOnboardingState) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetOnboardingState setUploadType(java.lang.String uploadType) {
+        return (GetOnboardingState) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetOnboardingState setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetOnboardingState) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the OnboardingState to retrieve. Formats: *
+       * organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+       * projects/{project}/onboardingState
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the OnboardingState to retrieve. Formats: *
+     organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+     projects/{project}/onboardingState
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the OnboardingState to retrieve. Formats: *
+       * organizations/{organization}/onboardingState * folders/{folder}/onboardingState *
+       * projects/{project}/onboardingState
+       */
+      public GetOnboardingState setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/onboardingState$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetOnboardingState set(String parameterName, Object value) {
+        return (GetOnboardingState) super.set(parameterName, value);
       }
     }
     /**

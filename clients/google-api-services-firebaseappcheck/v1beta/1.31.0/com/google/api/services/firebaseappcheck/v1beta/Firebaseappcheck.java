@@ -1119,6 +1119,161 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Validates an [integrity verdict response token from Play
+       * Integrity](https://developer.android.com/google/play/integrity/verdict#decrypt-verify). If valid,
+       * returns an AppCheckToken.
+       *
+       * Create a request for the method "apps.exchangePlayIntegrityToken".
+       *
+       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link ExchangePlayIntegrityToken#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param app Required. The relative resource name of the Android app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest}
+       * @return the request
+       */
+      public ExchangePlayIntegrityToken exchangePlayIntegrityToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest content) throws java.io.IOException {
+        ExchangePlayIntegrityToken result = new ExchangePlayIntegrityToken(app, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ExchangePlayIntegrityToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
+
+        private static final String REST_PATH = "v1beta/{+app}:exchangePlayIntegrityToken";
+
+        private final java.util.regex.Pattern APP_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Validates an [integrity verdict response token from Play
+         * Integrity](https://developer.android.com/google/play/integrity/verdict#decrypt-verify). If
+         * valid, returns an AppCheckToken.
+         *
+         * Create a request for the method "apps.exchangePlayIntegrityToken".
+         *
+         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link ExchangePlayIntegrityToken#execute()} method to invoke the
+         * remote operation. <p> {@link ExchangePlayIntegrityToken#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param app Required. The relative resource name of the Android app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest}
+         * @since 1.13
+         */
+        protected ExchangePlayIntegrityToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest content) {
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
+          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken set$Xgafv(java.lang.String $Xgafv) {
+          return (ExchangePlayIntegrityToken) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setAccessToken(java.lang.String accessToken) {
+          return (ExchangePlayIntegrityToken) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setAlt(java.lang.String alt) {
+          return (ExchangePlayIntegrityToken) super.setAlt(alt);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setCallback(java.lang.String callback) {
+          return (ExchangePlayIntegrityToken) super.setCallback(callback);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setFields(java.lang.String fields) {
+          return (ExchangePlayIntegrityToken) super.setFields(fields);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setKey(java.lang.String key) {
+          return (ExchangePlayIntegrityToken) super.setKey(key);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setOauthToken(java.lang.String oauthToken) {
+          return (ExchangePlayIntegrityToken) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExchangePlayIntegrityToken) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setQuotaUser(java.lang.String quotaUser) {
+          return (ExchangePlayIntegrityToken) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setUploadType(java.lang.String uploadType) {
+          return (ExchangePlayIntegrityToken) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExchangePlayIntegrityToken) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The relative resource name of the Android app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The relative resource name of the Android app, in the format: ```
+       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /**
+         * Required. The relative resource name of the Android app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public ExchangePlayIntegrityToken setApp(java.lang.String app) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.app = app;
+          return this;
+        }
+
+        @Override
+        public ExchangePlayIntegrityToken set(String parameterName, Object value) {
+          return (ExchangePlayIntegrityToken) super.set(parameterName, value);
+        }
+      }
+      /**
        * Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com/recaptcha-
        * enterprise/docs/create-assessment#retrieve_token). If valid, returns an App Check token
        * AppCheckToken.
@@ -1885,6 +2040,163 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         @Override
         public GenerateAppAttestChallenge set(String parameterName, Object value) {
           return (GenerateAppAttestChallenge) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Generates a challenge that protects the integrity of an immediately following integrity verdict
+       * request to the Play Integrity API. The next call to ExchangePlayIntegrityToken using the
+       * resulting integrity token will verify the presence and validity of the challenge. A challenge
+       * should not be reused for multiple calls.
+       *
+       * Create a request for the method "apps.generatePlayIntegrityChallenge".
+       *
+       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link GeneratePlayIntegrityChallenge#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param app Required. The relative resource name of the app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeRequest}
+       * @return the request
+       */
+      public GeneratePlayIntegrityChallenge generatePlayIntegrityChallenge(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeRequest content) throws java.io.IOException {
+        GeneratePlayIntegrityChallenge result = new GeneratePlayIntegrityChallenge(app, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GeneratePlayIntegrityChallenge extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse> {
+
+        private static final String REST_PATH = "v1beta/{+app}:generatePlayIntegrityChallenge";
+
+        private final java.util.regex.Pattern APP_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Generates a challenge that protects the integrity of an immediately following integrity verdict
+         * request to the Play Integrity API. The next call to ExchangePlayIntegrityToken using the
+         * resulting integrity token will verify the presence and validity of the challenge. A challenge
+         * should not be reused for multiple calls.
+         *
+         * Create a request for the method "apps.generatePlayIntegrityChallenge".
+         *
+         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link GeneratePlayIntegrityChallenge#execute()} method to invoke
+         * the remote operation. <p> {@link GeneratePlayIntegrityChallenge#initialize(com.google.api.clien
+         * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param app Required. The relative resource name of the app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeRequest}
+         * @since 1.13
+         */
+        protected GeneratePlayIntegrityChallenge(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeRequest content) {
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse.class);
+          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge set$Xgafv(java.lang.String $Xgafv) {
+          return (GeneratePlayIntegrityChallenge) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setAccessToken(java.lang.String accessToken) {
+          return (GeneratePlayIntegrityChallenge) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setAlt(java.lang.String alt) {
+          return (GeneratePlayIntegrityChallenge) super.setAlt(alt);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setCallback(java.lang.String callback) {
+          return (GeneratePlayIntegrityChallenge) super.setCallback(callback);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setFields(java.lang.String fields) {
+          return (GeneratePlayIntegrityChallenge) super.setFields(fields);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setKey(java.lang.String key) {
+          return (GeneratePlayIntegrityChallenge) super.setKey(key);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setOauthToken(java.lang.String oauthToken) {
+          return (GeneratePlayIntegrityChallenge) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GeneratePlayIntegrityChallenge) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setQuotaUser(java.lang.String quotaUser) {
+          return (GeneratePlayIntegrityChallenge) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setUploadType(java.lang.String uploadType) {
+          return (GeneratePlayIntegrityChallenge) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GeneratePlayIntegrityChallenge) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The relative resource name of the app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The relative resource name of the app, in the format: ```
+       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /**
+         * Required. The relative resource name of the app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public GeneratePlayIntegrityChallenge setApp(java.lang.String app) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.app = app;
+          return this;
+        }
+
+        @Override
+        public GeneratePlayIntegrityChallenge set(String parameterName, Object value) {
+          return (GeneratePlayIntegrityChallenge) super.set(parameterName, value);
         }
       }
 
@@ -3738,6 +4050,519 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           /**
            * Required. A comma-separated list of names of fields in the DeviceCheckConfig Gets to
            * update. Example: `key_id,private_key`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the PlayIntegrityConfig collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firebaseappcheck firebaseappcheck = new Firebaseappcheck(...);}
+       *   {@code Firebaseappcheck.PlayIntegrityConfig.List request = firebaseappcheck.playIntegrityConfig().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PlayIntegrityConfig playIntegrityConfig() {
+        return new PlayIntegrityConfig();
+      }
+
+      /**
+       * The "playIntegrityConfig" collection of methods.
+       */
+      public class PlayIntegrityConfig {
+
+        /**
+         * Atomically gets the PlayIntegrityConfigs for the specified list of apps.
+         *
+         * Create a request for the method "playIntegrityConfig.batchGet".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent project name shared by all PlayIntegrityConfigs being retrieved, in the format
+         *        ``` projects/{project_number} ``` The parent collection in the `name` field of any
+         *        resource being retrieved must match this field, or the entire batch fails.
+         * @return the request
+         */
+        public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
+          BatchGet result = new BatchGet(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchGet extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/apps/-/playIntegrityConfig:batchGet";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * Atomically gets the PlayIntegrityConfigs for the specified list of apps.
+           *
+           * Create a request for the method "playIntegrityConfig.batchGet".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent project name shared by all PlayIntegrityConfigs being retrieved, in the format
+         *        ``` projects/{project_number} ``` The parent collection in the `name` field of any
+         *        resource being retrieved must match this field, or the entire batch fails.
+           * @since 1.13
+           */
+          protected BatchGet(java.lang.String parent) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchGet) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchGet setAccessToken(java.lang.String accessToken) {
+            return (BatchGet) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchGet setAlt(java.lang.String alt) {
+            return (BatchGet) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchGet setCallback(java.lang.String callback) {
+            return (BatchGet) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchGet setFields(java.lang.String fields) {
+            return (BatchGet) super.setFields(fields);
+          }
+
+          @Override
+          public BatchGet setKey(java.lang.String key) {
+            return (BatchGet) super.setKey(key);
+          }
+
+          @Override
+          public BatchGet setOauthToken(java.lang.String oauthToken) {
+            return (BatchGet) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchGet) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchGet setQuotaUser(java.lang.String quotaUser) {
+            return (BatchGet) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchGet setUploadType(java.lang.String uploadType) {
+            return (BatchGet) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchGet) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent project name shared by all PlayIntegrityConfigs being retrieved,
+           * in the format ``` projects/{project_number} ``` The parent collection in the `name`
+           * field of any resource being retrieved must match this field, or the entire batch fails.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent project name shared by all PlayIntegrityConfigs being retrieved, in the format
+         ``` projects/{project_number} ``` The parent collection in the `name` field of any resource being
+         retrieved must match this field, or the entire batch fails.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent project name shared by all PlayIntegrityConfigs being retrieved,
+           * in the format ``` projects/{project_number} ``` The parent collection in the `name`
+           * field of any resource being retrieved must match this field, or the entire batch fails.
+           */
+          public BatchGet setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The relative resource names of the PlayIntegrityConfigs to retrieve, in the
+           * format ``` projects/{project_number}/apps/{app_id}/playIntegrityConfig ``` A maximum of
+           * 100 objects can be retrieved in a batch.
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> names;
+
+          /** Required. The relative resource names of the PlayIntegrityConfigs to retrieve, in the format ```
+         projects/{project_number}/apps/{app_id}/playIntegrityConfig ``` A maximum of 100 objects can be
+         retrieved in a batch.
+           */
+          public java.util.List<java.lang.String> getNames() {
+            return names;
+          }
+
+          /**
+           * Required. The relative resource names of the PlayIntegrityConfigs to retrieve, in the
+           * format ``` projects/{project_number}/apps/{app_id}/playIntegrityConfig ``` A maximum of
+           * 100 objects can be retrieved in a batch.
+           */
+          public BatchGet setNames(java.util.List<java.lang.String> names) {
+            this.names = names;
+            return this;
+          }
+
+          @Override
+          public BatchGet set(String parameterName, Object value) {
+            return (BatchGet) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the PlayIntegrityConfig for the specified app.
+         *
+         * Create a request for the method "playIntegrityConfig.get".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the PlayIntegrityConfig, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/playIntegrityConfig$");
+
+          /**
+           * Gets the PlayIntegrityConfig for the specified app.
+           *
+           * Create a request for the method "playIntegrityConfig.get".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the PlayIntegrityConfig, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/playIntegrityConfig$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the PlayIntegrityConfig, in the format: ```
+           * projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the PlayIntegrityConfig, in the format: ```
+         projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the PlayIntegrityConfig, in the format: ```
+           * projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/playIntegrityConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the PlayIntegrityConfig for the specified app. While this configuration is incomplete or
+         * invalid, the app will be unable to exchange Play Integrity tokens for App Check tokens.
+         *
+         * Create a request for the method "playIntegrityConfig.patch".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the Play Integrity configuration object, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/playIntegrityConfig$");
+
+          /**
+           * Updates the PlayIntegrityConfig for the specified app. While this configuration is incomplete
+           * or invalid, the app will be unable to exchange Play Integrity tokens for App Check tokens.
+           *
+           * Create a request for the method "playIntegrityConfig.patch".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the Play Integrity configuration object, in the format: ```
+         *        projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig content) {
+            super(Firebaseappcheck.this, "PATCH", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaPlayIntegrityConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/playIntegrityConfig$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the Play Integrity configuration object, in the
+           * format: ``` projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the Play Integrity configuration object, in the format: ```
+         projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the Play Integrity configuration object, in the
+           * format: ``` projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/playIntegrityConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to
+           * update. Example: `token_ttl`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to update.
+         Example: `token_ttl`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to
+           * update. Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

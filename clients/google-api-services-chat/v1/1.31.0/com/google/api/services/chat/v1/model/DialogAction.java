@@ -30,25 +30,25 @@ package com.google.api.services.chat.v1.model;
 public final class DialogAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Status for a request to either invoke or submit a [dialog](https://developers.google.com/chat
-   * /how-tos/dialogs). Displays a status and message to users, if necessary. For example, in case
-   * of an error or success.
+   * Input only. Status for a request to either invoke or submit a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Displays a status and message to
+   * users, if necessary. For example, in case of an error or success.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActionStatus actionStatus;
 
   /**
-   * [Dialog](https://developers.google.com/chat/how-tos/dialogs) for the request.
+   * Input only. [Dialog](https://developers.google.com/chat/how-tos/dialogs) for the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dialog dialog;
 
   /**
-   * Status for a request to either invoke or submit a [dialog](https://developers.google.com/chat
-   * /how-tos/dialogs). Displays a status and message to users, if necessary. For example, in case
-   * of an error or success.
+   * Input only. Status for a request to either invoke or submit a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Displays a status and message to
+   * users, if necessary. For example, in case of an error or success.
    * @return value or {@code null} for none
    */
   public ActionStatus getActionStatus() {
@@ -56,9 +56,9 @@ public final class DialogAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status for a request to either invoke or submit a [dialog](https://developers.google.com/chat
-   * /how-tos/dialogs). Displays a status and message to users, if necessary. For example, in case
-   * of an error or success.
+   * Input only. Status for a request to either invoke or submit a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Displays a status and message to
+   * users, if necessary. For example, in case of an error or success.
    * @param actionStatus actionStatus or {@code null} for none
    */
   public DialogAction setActionStatus(ActionStatus actionStatus) {
@@ -67,7 +67,7 @@ public final class DialogAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Dialog](https://developers.google.com/chat/how-tos/dialogs) for the request.
+   * Input only. [Dialog](https://developers.google.com/chat/how-tos/dialogs) for the request.
    * @return value or {@code null} for none
    */
   public Dialog getDialog() {
@@ -75,7 +75,7 @@ public final class DialogAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Dialog](https://developers.google.com/chat/how-tos/dialogs) for the request.
+   * Input only. [Dialog](https://developers.google.com/chat/how-tos/dialogs) for the request.
    * @param dialog dialog or {@code null} for none
    */
   public DialogAction setDialog(Dialog dialog) {

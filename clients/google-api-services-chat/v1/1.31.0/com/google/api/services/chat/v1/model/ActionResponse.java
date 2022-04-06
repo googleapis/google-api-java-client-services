@@ -30,30 +30,30 @@ package com.google.api.services.chat.v1.model;
 public final class ActionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A response to an event related to a [dialog](https://developers.google.com/chat/how-
-   * tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * Input only. A response to an event related to a [dialog](https://developers.google.com/chat
+   * /how-tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DialogAction dialogAction;
 
   /**
-   * The type of Chat app response.
+   * Input only. The type of Chat app response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
+   * Input only. URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * A response to an event related to a [dialog](https://developers.google.com/chat/how-
-   * tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * Input only. A response to an event related to a [dialog](https://developers.google.com/chat
+   * /how-tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
    * @return value or {@code null} for none
    */
   public DialogAction getDialogAction() {
@@ -61,8 +61,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A response to an event related to a [dialog](https://developers.google.com/chat/how-
-   * tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * Input only. A response to an event related to a [dialog](https://developers.google.com/chat
+   * /how-tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
    * @param dialogAction dialogAction or {@code null} for none
    */
   public ActionResponse setDialogAction(DialogAction dialogAction) {
@@ -71,7 +71,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of Chat app response.
+   * Input only. The type of Chat app response.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -79,7 +79,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of Chat app response.
+   * Input only. The type of Chat app response.
    * @param type type or {@code null} for none
    */
   public ActionResponse setType(java.lang.String type) {
@@ -88,7 +88,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
+   * Input only. URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -96,7 +96,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
+   * Input only. URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
    * @param url url or {@code null} for none
    */
   public ActionResponse setUrl(java.lang.String url) {

@@ -108,8 +108,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private String lastUpdateTime;
 
   /**
-   * A URL in `spaces.messages.text` that matches a link unfurling pattern. For more information,
-   * refer to [Unfurl links](/chat/how-tos/link-unfurling).
+   * Output only. A URL in `spaces.messages.text` that matches a link unfurling pattern. For more
+   * information, refer to [Unfurl links](https://developers.google.com/chat/how-tos/link-
+   * unfurling).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,14 +125,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The user who created the message.
+   * Output only. The user who created the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private User sender;
 
   /**
-   * Slash command information, if applicable.
+   * Output only. Slash command information, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,8 +305,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A URL in `spaces.messages.text` that matches a link unfurling pattern. For more information,
-   * refer to [Unfurl links](/chat/how-tos/link-unfurling).
+   * Output only. A URL in `spaces.messages.text` that matches a link unfurling pattern. For more
+   * information, refer to [Unfurl links](https://developers.google.com/chat/how-tos/link-
+   * unfurling).
    * @return value or {@code null} for none
    */
   public MatchedUrl getMatchedUrl() {
@@ -313,8 +315,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A URL in `spaces.messages.text` that matches a link unfurling pattern. For more information,
-   * refer to [Unfurl links](/chat/how-tos/link-unfurling).
+   * Output only. A URL in `spaces.messages.text` that matches a link unfurling pattern. For more
+   * information, refer to [Unfurl links](https://developers.google.com/chat/how-tos/link-
+   * unfurling).
    * @param matchedUrl matchedUrl or {@code null} for none
    */
   public Message setMatchedUrl(MatchedUrl matchedUrl) {
@@ -342,7 +345,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who created the message.
+   * Output only. The user who created the message.
    * @return value or {@code null} for none
    */
   public User getSender() {
@@ -350,7 +353,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who created the message.
+   * Output only. The user who created the message.
    * @param sender sender or {@code null} for none
    */
   public Message setSender(User sender) {
@@ -359,7 +362,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Slash command information, if applicable.
+   * Output only. Slash command information, if applicable.
    * @return value or {@code null} for none
    */
   public SlashCommand getSlashCommand() {
@@ -367,7 +370,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Slash command information, if applicable.
+   * Output only. Slash command information, if applicable.
    * @param slashCommand slashCommand or {@code null} for none
    */
   public Message setSlashCommand(SlashCommand slashCommand) {

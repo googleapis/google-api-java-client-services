@@ -38,8 +38,8 @@ public final class ManagedService extends com.google.api.client.json.GenericJson
   private java.lang.String producerProjectId;
 
   /**
-   * The name of the service. See the [overview](/service-management/overview) for naming
-   * requirements.
+   * The name of the service. See the [overview](https://cloud.google.com/service-
+   * management/overview) for naming requirements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class ManagedService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the service. See the [overview](/service-management/overview) for naming
-   * requirements.
+   * The name of the service. See the [overview](https://cloud.google.com/service-
+   * management/overview) for naming requirements.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceName() {
@@ -72,8 +72,8 @@ public final class ManagedService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the service. See the [overview](/service-management/overview) for naming
-   * requirements.
+   * The name of the service. See the [overview](https://cloud.google.com/service-
+   * management/overview) for naming requirements.
    * @param serviceName serviceName or {@code null} for none
    */
   public ManagedService setServiceName(java.lang.String serviceName) {

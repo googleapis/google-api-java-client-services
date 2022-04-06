@@ -275,26 +275,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Delete setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -449,26 +429,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Get setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -588,26 +548,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Name of a bucket. */
       public Insert setBucket(java.lang.String bucket) {
         this.bucket = bucket;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Insert setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -734,26 +674,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Name of a bucket. */
       public List setBucket(java.lang.String bucket) {
         this.bucket = bucket;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public List setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -903,26 +823,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Patch setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -1066,26 +966,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Update setEntity(java.lang.String entity) {
         this.entity = entity;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Update setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -1257,26 +1137,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** If set, only deletes the bucket if its metageneration does not match this value. */
       public Delete setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Delete setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -1468,26 +1328,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Get setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -1637,26 +1477,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
         this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public GetIamPolicy setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -1832,26 +1652,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Insert setProjection(java.lang.String projection) {
         this.projection = projection;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Insert setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -2056,26 +1856,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public List setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -2215,26 +1995,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public LockRetentionPolicy setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public LockRetentionPolicy setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -2452,26 +2212,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Patch setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -2588,26 +2328,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Name of a bucket. */
       public SetIamPolicy setBucket(java.lang.String bucket) {
         this.bucket = bucket;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public SetIamPolicy setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -2754,26 +2474,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Permissions to test. */
       public TestIamPermissions setPermissions(java.util.List<java.lang.String> permissions) {
         this.permissions = permissions;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public TestIamPermissions setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -2988,26 +2688,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Set of properties to return. Defaults to full. */
       public Update setProjection(java.lang.String projection) {
         this.projection = projection;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Update setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -3286,26 +2966,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Delete setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -3460,26 +3120,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Get setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -3599,26 +3239,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Name of a bucket. */
       public Insert setBucket(java.lang.String bucket) {
         this.bucket = bucket;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Insert setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -3794,26 +3414,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public List setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -3960,26 +3560,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Patch setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -4123,26 +3703,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Update setEntity(java.lang.String entity) {
         this.entity = entity;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Update setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -4304,26 +3864,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Delete setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -4469,26 +4009,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Get setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -4608,26 +4128,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** The parent bucket of the notification. */
       public Insert setBucket(java.lang.String bucket) {
         this.bucket = bucket;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Insert setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -4754,26 +4254,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Name of a Google Cloud Storage bucket. */
       public List setBucket(java.lang.String bucket) {
         this.bucket = bucket;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public List setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -4995,26 +4475,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Delete setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -5220,26 +4680,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Get setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -5410,26 +4850,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Insert setGeneration(java.lang.Long generation) {
         this.generation = generation;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Insert setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -5607,26 +5027,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setGeneration(java.lang.Long generation) {
         this.generation = generation;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public List setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -5827,26 +5227,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Patch setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -6041,26 +5421,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Update setGeneration(java.lang.Long generation) {
         this.generation = generation;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Update setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -6327,26 +5687,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Compose setKmsKeyName(java.lang.String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Compose setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -6813,26 +6153,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Copy setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
-      /**
        * If present, selects a specific revision of the source object (as opposed to the latest
        * version, the default).
        */
@@ -7118,26 +6438,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Delete setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Delete setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -7455,26 +6755,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Get setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -7650,26 +6930,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public GetIamPolicy setGeneration(java.lang.Long generation) {
         this.generation = generation;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public GetIamPolicy setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -8067,26 +7327,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Insert setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -8366,26 +7606,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Set of properties to return. Defaults to noAcl. */
       public List setProjection(java.lang.String projection) {
         this.projection = projection;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public List setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -8733,26 +7953,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Set of properties to return. Defaults to full. */
       public Patch setProjection(java.lang.String projection) {
         this.projection = projection;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Patch setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -9253,26 +8453,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Rewrite setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
-      /**
        * Include this field (from the previous rewrite response) on each rewrite request after the
        * first one, until the rewrite response 'done' flag is true. Calls that provide a
        * rewriteToken can omit all other request fields, but if included those fields must match the
@@ -9494,26 +8674,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public SetIamPolicy setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -9708,26 +8868,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public TestIamPermissions setGeneration(java.lang.Long generation) {
         this.generation = generation;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public TestIamPermissions setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -10029,26 +9169,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public Update setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
-        return this;
-      }
-
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -10321,26 +9441,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Set of properties to return. Defaults to noAcl. */
       public WatchAll setProjection(java.lang.String projection) {
         this.projection = projection;
-        return this;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String provisionalUserProject;
-
-      /** The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public java.lang.String getProvisionalUserProject() {
-        return provisionalUserProject;
-      }
-
-      /**
-       * The project to be billed for this request if the target bucket is requester-pays bucket.
-       */
-      public WatchAll setProvisionalUserProject(java.lang.String provisionalUserProject) {
-        this.provisionalUserProject = provisionalUserProject;
         return this;
       }
 
@@ -11343,26 +10443,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         /** Project ID */
         public Get setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
-          return this;
-        }
-
-        /**
-         * The project to be billed for this request if the target bucket is requester-pays bucket.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String provisionalUserProject;
-
-        /** The project to be billed for this request if the target bucket is requester-pays bucket.
-         */
-        public java.lang.String getProvisionalUserProject() {
-          return provisionalUserProject;
-        }
-
-        /**
-         * The project to be billed for this request if the target bucket is requester-pays bucket.
-         */
-        public Get setProvisionalUserProject(java.lang.String provisionalUserProject) {
-          this.provisionalUserProject = provisionalUserProject;
           return this;
         }
 

@@ -39,7 +39,7 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
 
   /**
    * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most
-   * efficient compression. The default is 21. *Note*: This field is not supported.
+   * efficient compression. The default is 21. **Note:** This field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
 
   /**
    * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most
-   * efficient compression. The default is 21. *Note*: This field is not supported.
+   * efficient compression. The default is 21. **Note:** This field is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCrfLevel() {
@@ -149,7 +149,7 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
 
   /**
    * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most
-   * efficient compression. The default is 21. *Note*: This field is not supported.
+   * efficient compression. The default is 21. **Note:** This field is not supported.
    * @param crfLevel crfLevel or {@code null} for none
    */
   public Vp9CodecSettings setCrfLevel(java.lang.Integer crfLevel) {

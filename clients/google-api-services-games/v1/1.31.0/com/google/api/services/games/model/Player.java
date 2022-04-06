@@ -74,6 +74,13 @@ public final class Player extends com.google.api.client.json.GenericJson {
   private java.lang.String friendStatus;
 
   /**
+   * Per-application unique player identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gamePlayerId;
+
+  /**
    * Uniquely identifies the type of this resource. Value is always the fixed string `games#player`
    * The value may be {@code null}.
    */
@@ -219,6 +226,23 @@ public final class Player extends com.google.api.client.json.GenericJson {
    */
   public Player setFriendStatus(java.lang.String friendStatus) {
     this.friendStatus = friendStatus;
+    return this;
+  }
+
+  /**
+   * Per-application unique player identifier.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGamePlayerId() {
+    return gamePlayerId;
+  }
+
+  /**
+   * Per-application unique player identifier.
+   * @param gamePlayerId gamePlayerId or {@code null} for none
+   */
+  public Player setGamePlayerId(java.lang.String gamePlayerId) {
+    this.gamePlayerId = gamePlayerId;
     return this;
   }
 

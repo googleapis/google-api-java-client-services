@@ -87,6 +87,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Unique identifier for the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceId;
+
+  /**
    * Output only. Type of device.
    * The value may be {@code null}.
    */
@@ -370,6 +377,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Unique identifier for the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceId() {
+    return deviceId;
+  }
+
+  /**
+   * Unique identifier for the device.
+   * @param deviceId deviceId or {@code null} for none
+   */
+  public Device setDeviceId(java.lang.String deviceId) {
+    this.deviceId = deviceId;
     return this;
   }
 

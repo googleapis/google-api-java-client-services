@@ -30,12 +30,11 @@ package com.google.api.services.run.v1.model;
 public final class ExecutionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the maximum desired number of tasks the execution should run at any given
-   * time. Must be <= task_count. If not specified, defaults to -1. When the job is run, this field
-   * is passed to the execution, and if -1 it will be set to the maximum possible value. The actual
-   * number of tasks running in steady state will be less than this number when there are fewer
-   * tasks waiting to be completed remaining, i.e. when the work left to do is less than max
-   * parallelism. +optional
+   * Optional. Specifies the maximum desired number of tasks the execution should run at given time.
+   * Must be <= task_count. When the job is run, if this field is 0 or unset, the maximum possible
+   * value will be used for that execution. The actual number of tasks running in steady state will
+   * be less than this number when there are fewer tasks waiting to be completed remaining, i.e.
+   * when the work left to do is less than max parallelism. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,12 +58,11 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   private TaskTemplateSpec template;
 
   /**
-   * Optional. Specifies the maximum desired number of tasks the execution should run at any given
-   * time. Must be <= task_count. If not specified, defaults to -1. When the job is run, this field
-   * is passed to the execution, and if -1 it will be set to the maximum possible value. The actual
-   * number of tasks running in steady state will be less than this number when there are fewer
-   * tasks waiting to be completed remaining, i.e. when the work left to do is less than max
-   * parallelism. +optional
+   * Optional. Specifies the maximum desired number of tasks the execution should run at given time.
+   * Must be <= task_count. When the job is run, if this field is 0 or unset, the maximum possible
+   * value will be used for that execution. The actual number of tasks running in steady state will
+   * be less than this number when there are fewer tasks waiting to be completed remaining, i.e.
+   * when the work left to do is less than max parallelism. +optional
    * @return value or {@code null} for none
    */
   public java.lang.Integer getParallelism() {
@@ -72,12 +70,11 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Specifies the maximum desired number of tasks the execution should run at any given
-   * time. Must be <= task_count. If not specified, defaults to -1. When the job is run, this field
-   * is passed to the execution, and if -1 it will be set to the maximum possible value. The actual
-   * number of tasks running in steady state will be less than this number when there are fewer
-   * tasks waiting to be completed remaining, i.e. when the work left to do is less than max
-   * parallelism. +optional
+   * Optional. Specifies the maximum desired number of tasks the execution should run at given time.
+   * Must be <= task_count. When the job is run, if this field is 0 or unset, the maximum possible
+   * value will be used for that execution. The actual number of tasks running in steady state will
+   * be less than this number when there are fewer tasks waiting to be completed remaining, i.e.
+   * when the work left to do is less than max parallelism. +optional
    * @param parallelism parallelism or {@code null} for none
    */
   public ExecutionSpec setParallelism(java.lang.Integer parallelism) {

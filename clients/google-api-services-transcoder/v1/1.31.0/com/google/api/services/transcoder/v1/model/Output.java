@@ -30,16 +30,18 @@ package com.google.api.services.transcoder.v1.model;
 public final class Output extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is
-   * populated from `Job.output_uri`.
+   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is
+   * populated from `Job.output_uri`. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is
-   * populated from `Job.output_uri`.
+   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is
+   * populated from `Job.output_uri`. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -47,8 +49,9 @@ public final class Output extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is
-   * populated from `Job.output_uri`.
+   * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is
+   * populated from `Job.output_uri`. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * @param uri uri or {@code null} for none
    */
   public Output setUri(java.lang.String uri) {

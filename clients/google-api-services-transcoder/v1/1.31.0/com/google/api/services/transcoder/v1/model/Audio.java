@@ -30,14 +30,16 @@ package com.google.api.services.transcoder.v1.model;
 public final class Audio extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable boosting high frequency components. The default is `false`.
+   * Enable boosting high frequency components. The default is `false`. **Note:** This field is not
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean highBoost;
 
   /**
-   * Enable boosting low frequency components. The default is `false`.
+   * Enable boosting low frequency components. The default is `false`. **Note:** This field is not
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +58,8 @@ public final class Audio extends com.google.api.client.json.GenericJson {
   private java.lang.Double lufs;
 
   /**
-   * Enable boosting high frequency components. The default is `false`.
+   * Enable boosting high frequency components. The default is `false`. **Note:** This field is not
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHighBoost() {
@@ -64,7 +67,8 @@ public final class Audio extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable boosting high frequency components. The default is `false`.
+   * Enable boosting high frequency components. The default is `false`. **Note:** This field is not
+   * supported.
    * @param highBoost highBoost or {@code null} for none
    */
   public Audio setHighBoost(java.lang.Boolean highBoost) {
@@ -73,7 +77,8 @@ public final class Audio extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable boosting low frequency components. The default is `false`.
+   * Enable boosting low frequency components. The default is `false`. **Note:** This field is not
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLowBoost() {
@@ -81,7 +86,8 @@ public final class Audio extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable boosting low frequency components. The default is `false`.
+   * Enable boosting low frequency components. The default is `false`. **Note:** This field is not
+   * supported.
    * @param lowBoost lowBoost or {@code null} for none
    */
   public Audio setLowBoost(java.lang.Boolean lowBoost) {

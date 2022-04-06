@@ -45,8 +45,9 @@ public final class Input extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud
-   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated
-   * from `Job.input_uri`.
+   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value is populated from
+   * `Job.input_uri`. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +89,9 @@ public final class Input extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud
-   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated
-   * from `Job.input_uri`.
+   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value is populated from
+   * `Job.input_uri`. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -98,8 +100,9 @@ public final class Input extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud
-   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated
-   * from `Job.input_uri`.
+   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value is populated from
+   * `Job.input_uri`. See [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * @param uri uri or {@code null} for none
    */
   public Input setUri(java.lang.String uri) {

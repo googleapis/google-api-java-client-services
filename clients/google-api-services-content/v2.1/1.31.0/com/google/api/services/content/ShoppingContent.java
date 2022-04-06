@@ -3456,6 +3456,175 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Accountsbyexternalsellerid collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Accountsbyexternalsellerid.List request = content.accountsbyexternalsellerid().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Accountsbyexternalsellerid accountsbyexternalsellerid() {
+    return new Accountsbyexternalsellerid();
+  }
+
+  /**
+   * The "accountsbyexternalsellerid" collection of methods.
+   */
+  public class Accountsbyexternalsellerid {
+
+    /**
+     * Gets data of the account with the specified external_seller_id belonging to the MCA with the
+     * specified merchant_id.
+     *
+     * Create a request for the method "accountsbyexternalsellerid.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the MCA containing the seller.
+     * @param externalSellerId Required. The External Seller ID of the seller account to be retrieved.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String externalSellerId) throws java.io.IOException {
+      Get result = new Get(merchantId, externalSellerId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Account> {
+
+      private static final String REST_PATH = "{merchantId}/accountsbyexternalsellerid/{externalSellerId}";
+
+      /**
+       * Gets data of the account with the specified external_seller_id belonging to the MCA with the
+       * specified merchant_id.
+       *
+       * Create a request for the method "accountsbyexternalsellerid.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the MCA containing the seller.
+       * @param externalSellerId Required. The External Seller ID of the seller account to be retrieved.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String externalSellerId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.Account.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.externalSellerId = com.google.api.client.util.Preconditions.checkNotNull(externalSellerId, "Required parameter externalSellerId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the MCA containing the seller. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the MCA containing the seller.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the MCA containing the seller. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The External Seller ID of the seller account to be retrieved. */
+      @com.google.api.client.util.Key
+      private java.lang.String externalSellerId;
+
+      /** Required. The External Seller ID of the seller account to be retrieved.
+       */
+      public java.lang.String getExternalSellerId() {
+        return externalSellerId;
+      }
+
+      /** Required. The External Seller ID of the seller account to be retrieved. */
+      public Get setExternalSellerId(java.lang.String externalSellerId) {
+        this.externalSellerId = externalSellerId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Accountstatuses collection.
    *
    * <p>The typical use is:</p>
@@ -3950,6 +4119,198 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Accountstatusesbyexternalsellerid collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Accountstatusesbyexternalsellerid.List request = content.accountstatusesbyexternalsellerid().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Accountstatusesbyexternalsellerid accountstatusesbyexternalsellerid() {
+    return new Accountstatusesbyexternalsellerid();
+  }
+
+  /**
+   * The "accountstatusesbyexternalsellerid" collection of methods.
+   */
+  public class Accountstatusesbyexternalsellerid {
+
+    /**
+     * Gets status of the account with the specified external_seller_id belonging to the MCA with the
+     * specified merchant_id.
+     *
+     * Create a request for the method "accountstatusesbyexternalsellerid.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the MCA containing the seller.
+     * @param externalSellerId Required. The External Seller ID of the seller account to be retrieved.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String externalSellerId) throws java.io.IOException {
+      Get result = new Get(merchantId, externalSellerId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.AccountStatus> {
+
+      private static final String REST_PATH = "{merchantId}/accountstatusesbyexternalsellerid/{externalSellerId}";
+
+      /**
+       * Gets status of the account with the specified external_seller_id belonging to the MCA with the
+       * specified merchant_id.
+       *
+       * Create a request for the method "accountstatusesbyexternalsellerid.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the MCA containing the seller.
+       * @param externalSellerId Required. The External Seller ID of the seller account to be retrieved.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String externalSellerId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.AccountStatus.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.externalSellerId = com.google.api.client.util.Preconditions.checkNotNull(externalSellerId, "Required parameter externalSellerId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the MCA containing the seller. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the MCA containing the seller.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the MCA containing the seller. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The External Seller ID of the seller account to be retrieved. */
+      @com.google.api.client.util.Key
+      private java.lang.String externalSellerId;
+
+      /** Required. The External Seller ID of the seller account to be retrieved.
+       */
+      public java.lang.String getExternalSellerId() {
+        return externalSellerId;
+      }
+
+      /** Required. The External Seller ID of the seller account to be retrieved. */
+      public Get setExternalSellerId(java.lang.String externalSellerId) {
+        this.externalSellerId = externalSellerId;
+        return this;
+      }
+
+      /**
+       * If set, only issues for the specified destinations are returned, otherwise only issues for
+       * the Shopping destination.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> destinations;
+
+      /** If set, only issues for the specified destinations are returned, otherwise only issues for the
+     Shopping destination.
+       */
+      public java.util.List<java.lang.String> getDestinations() {
+        return destinations;
+      }
+
+      /**
+       * If set, only issues for the specified destinations are returned, otherwise only issues for
+       * the Shopping destination.
+       */
+      public Get setDestinations(java.util.List<java.lang.String> destinations) {
+        this.destinations = destinations;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
       }
     }
 
@@ -4564,7 +4925,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     /**
      * Reactivates the BoG program in your Merchant Center account. Moves the program to the active
-     * state when allowed, e.g. when paused. Important: This method is only whitelisted for selected
+     * state when allowed, for example, when paused. This method is only available to selected
      * merchants.
      *
      * Create a request for the method "buyongoogleprograms.activate".
@@ -4591,7 +4952,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Reactivates the BoG program in your Merchant Center account. Moves the program to the active
-       * state when allowed, e.g. when paused. Important: This method is only whitelisted for selected
+       * state when allowed, for example, when paused. This method is only available to selected
        * merchants.
        *
        * Create a request for the method "buyongoogleprograms.activate".
@@ -5199,8 +5560,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Pauses the BoG program in your Merchant Center account. Important: This method is only
-     * whitelisted for selected merchants.
+     * Pauses the BoG program in your Merchant Center account. This method is only available to selected
+     * merchants.
      *
      * Create a request for the method "buyongoogleprograms.pause".
      *
@@ -5225,8 +5586,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}/pause";
 
       /**
-       * Pauses the BoG program in your Merchant Center account. Important: This method is only
-       * whitelisted for selected merchants.
+       * Pauses the BoG program in your Merchant Center account. This method is only available to
+       * selected merchants.
        *
        * Create a request for the method "buyongoogleprograms.pause".
        *
@@ -5349,8 +5710,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     }
     /**
      * Requests review and then activates the BoG program in your Merchant Center account for the first
-     * time. Moves the program to the REVIEW_PENDING state. Important: This method is only whitelisted
-     * for selected merchants.
+     * time. Moves the program to the REVIEW_PENDING state. This method is only available to selected
+     * merchants.
      *
      * Create a request for the method "buyongoogleprograms.requestreview".
      *
@@ -5376,8 +5737,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Requests review and then activates the BoG program in your Merchant Center account for the
-       * first time. Moves the program to the REVIEW_PENDING state. Important: This method is only
-       * whitelisted for selected merchants.
+       * first time. Moves the program to the REVIEW_PENDING state. This method is only available to
+       * selected merchants.
        *
        * Create a request for the method "buyongoogleprograms.requestreview".
        *
@@ -8623,8 +8984,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review of free listings in a specific region Important: This method is only
-     * whitelisted for selected merchants.
+     * Requests a review of free listings in a specific region. This method is only available to
+     * selected merchants.
      *
      * Create a request for the method "freelistingsprogram.requestreview".
      *
@@ -8646,8 +9007,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/freelistingsprogram/requestreview";
 
       /**
-       * Requests a review of free listings in a specific region Important: This method is only
-       * whitelisted for selected merchants.
+       * Requests a review of free listings in a specific region. This method is only available to
+       * selected merchants.
        *
        * Create a request for the method "freelistingsprogram.requestreview".
        *
@@ -25101,7 +25462,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review of Shopping ads in a specific region.
+     * Requests a review of Shopping ads in a specific region. This method is only available to selected
+     * merchants.
      *
      * Create a request for the method "shoppingadsprogram.requestreview".
      *
@@ -25123,7 +25485,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/shoppingadsprogram/requestreview";
 
       /**
-       * Requests a review of Shopping ads in a specific region.
+       * Requests a review of Shopping ads in a specific region. This method is only available to
+       * selected merchants.
        *
        * Create a request for the method "shoppingadsprogram.requestreview".
        *

@@ -9852,7 +9852,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Creates a ServiceAccountKey, using a public key that you provide.
+         * Uploads the public key portion of a key pair that you manage, and associates the public key with
+         * a ServiceAccount. After you upload the public key, you can use the private key from the key pair
+         * as a service account key.
          *
          * Create a request for the method "keys.upload".
          *
@@ -9880,7 +9882,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
 
           /**
-           * Creates a ServiceAccountKey, using a public key that you provide.
+           * Uploads the public key portion of a key pair that you manage, and associates the public key
+           * with a ServiceAccount. After you upload the public key, you can use the private key from the
+           * key pair as a service account key.
            *
            * Create a request for the method "keys.upload".
            *

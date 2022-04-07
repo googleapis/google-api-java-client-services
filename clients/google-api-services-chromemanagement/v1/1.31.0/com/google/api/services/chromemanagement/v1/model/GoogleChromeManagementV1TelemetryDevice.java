@@ -31,7 +31,7 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1TelemetryDevice extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Audio reports collected periodically.
+   * Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,8 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
-   * Output only. CPU status reports collected periodically.
+   * Output only. CPU status reports collected periodically sorted in a decreasing order of
+   * report_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +139,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   private GoogleChromeManagementV1MemoryInfo memoryInfo;
 
   /**
-   * Output only. Memory status reports collected periodically.
+   * Output only. Memory status reports collected periodically sorted decreasing by report_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +220,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
-   * Output only. Audio reports collected periodically.
+   * Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromeManagementV1AudioStatusReport> getAudioStatusReport() {
@@ -227,7 +228,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
-   * Output only. Audio reports collected periodically.
+   * Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
    * @param audioStatusReport audioStatusReport or {@code null} for none
    */
   public GoogleChromeManagementV1TelemetryDevice setAudioStatusReport(java.util.List<GoogleChromeManagementV1AudioStatusReport> audioStatusReport) {
@@ -287,7 +288,8 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
-   * Output only. CPU status reports collected periodically.
+   * Output only. CPU status reports collected periodically sorted in a decreasing order of
+   * report_time.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromeManagementV1CpuStatusReport> getCpuStatusReport() {
@@ -295,7 +297,8 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
-   * Output only. CPU status reports collected periodically.
+   * Output only. CPU status reports collected periodically sorted in a decreasing order of
+   * report_time.
    * @param cpuStatusReport cpuStatusReport or {@code null} for none
    */
   public GoogleChromeManagementV1TelemetryDevice setCpuStatusReport(java.util.List<GoogleChromeManagementV1CpuStatusReport> cpuStatusReport) {
@@ -391,7 +394,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
-   * Output only. Memory status reports collected periodically.
+   * Output only. Memory status reports collected periodically sorted decreasing by report_time.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromeManagementV1MemoryStatusReport> getMemoryStatusReport() {
@@ -399,7 +402,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
-   * Output only. Memory status reports collected periodically.
+   * Output only. Memory status reports collected periodically sorted decreasing by report_time.
    * @param memoryStatusReport memoryStatusReport or {@code null} for none
    */
   public GoogleChromeManagementV1TelemetryDevice setMemoryStatusReport(java.util.List<GoogleChromeManagementV1MemoryStatusReport> memoryStatusReport) {

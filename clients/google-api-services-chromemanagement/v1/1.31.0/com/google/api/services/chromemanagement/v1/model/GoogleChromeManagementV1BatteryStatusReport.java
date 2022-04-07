@@ -59,7 +59,7 @@ public final class GoogleChromeManagementV1BatteryStatusReport extends com.googl
   private String reportTime;
 
   /**
-   * Output only. Sampling data for the battery.
+   * Output only. Sampling data for the battery sorted in a decreasing order of report_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class GoogleChromeManagementV1BatteryStatusReport extends com.googl
   }
 
   /**
-   * Output only. Sampling data for the battery.
+   * Output only. Sampling data for the battery sorted in a decreasing order of report_time.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromeManagementV1BatterySampleReport> getSample() {
@@ -155,7 +155,7 @@ public final class GoogleChromeManagementV1BatteryStatusReport extends com.googl
   }
 
   /**
-   * Output only. Sampling data for the battery.
+   * Output only. Sampling data for the battery sorted in a decreasing order of report_time.
    * @param sample sample or {@code null} for none
    */
   public GoogleChromeManagementV1BatteryStatusReport setSample(java.util.List<GoogleChromeManagementV1BatterySampleReport> sample) {

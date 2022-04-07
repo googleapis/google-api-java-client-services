@@ -37,9 +37,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean anyoneCanAddSelf;
 
   /**
-   * File attachments for the event. Currently only Google Drive attachments are supported. In order
-   * to modify attachments the supportsAttachments request parameter should be set to true. There
-   * can be at most 25 attachments per event,
+   * File attachments for the event. In order to modify attachments the supportsAttachments request
+   * parameter should be set to true. There can be at most 25 attachments per event,
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -419,9 +418,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File attachments for the event. Currently only Google Drive attachments are supported. In order
-   * to modify attachments the supportsAttachments request parameter should be set to true. There
-   * can be at most 25 attachments per event,
+   * File attachments for the event. In order to modify attachments the supportsAttachments request
+   * parameter should be set to true. There can be at most 25 attachments per event,
    * @return value or {@code null} for none
    */
   public java.util.List<EventAttachment> getAttachments() {
@@ -429,9 +427,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File attachments for the event. Currently only Google Drive attachments are supported. In order
-   * to modify attachments the supportsAttachments request parameter should be set to true. There
-   * can be at most 25 attachments per event,
+   * File attachments for the event. In order to modify attachments the supportsAttachments request
+   * parameter should be set to true. There can be at most 25 attachments per event,
    * @param attachments attachments or {@code null} for none
    */
   public Event setAttachments(java.util.List<EventAttachment> attachments) {

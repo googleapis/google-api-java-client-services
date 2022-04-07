@@ -32,18 +32,18 @@ package com.google.api.services.fcmdata.v1beta1.model;
 public final class GoogleFirebaseFcmDataV1beta1MessageInsightPercents extends com.google.api.client.json.GenericJson {
 
   /**
-   * The percentage of accepted messages that had their priority lowered from high to normal due to
-   * [app standby buckets](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-
-   * the-priority-of-a-message).
+   * The percentage of accepted messages that had their priority lowered from high to normal. See
+   * [documentation for setting message priority](https://firebase.google.com/docs/cloud-
+   * messaging/android/message-priority).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float priorityLowered;
 
   /**
-   * The percentage of accepted messages that had their priority lowered from high to normal due to
-   * [app standby buckets](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-
-   * the-priority-of-a-message).
+   * The percentage of accepted messages that had their priority lowered from high to normal. See
+   * [documentation for setting message priority](https://firebase.google.com/docs/cloud-
+   * messaging/android/message-priority).
    * @return value or {@code null} for none
    */
   public java.lang.Float getPriorityLowered() {
@@ -51,9 +51,9 @@ public final class GoogleFirebaseFcmDataV1beta1MessageInsightPercents extends co
   }
 
   /**
-   * The percentage of accepted messages that had their priority lowered from high to normal due to
-   * [app standby buckets](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-
-   * the-priority-of-a-message).
+   * The percentage of accepted messages that had their priority lowered from high to normal. See
+   * [documentation for setting message priority](https://firebase.google.com/docs/cloud-
+   * messaging/android/message-priority).
    * @param priorityLowered priorityLowered or {@code null} for none
    */
   public GoogleFirebaseFcmDataV1beta1MessageInsightPercents setPriorityLowered(java.lang.Float priorityLowered) {

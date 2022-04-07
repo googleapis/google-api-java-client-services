@@ -37,7 +37,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
   private java.lang.Double attribution;
 
   /**
-   * Full name of the feature. For non-numerical features, will be formatted like .. Overall size of
+   * The full feature name. For non-numerical features, will be formatted like `.`. Overall size of
    * feature name will always be truncated to first 120 characters.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full name of the feature. For non-numerical features, will be formatted like .. Overall size of
+   * The full feature name. For non-numerical features, will be formatted like `.`. Overall size of
    * feature name will always be truncated to first 120 characters.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full name of the feature. For non-numerical features, will be formatted like .. Overall size of
+   * The full feature name. For non-numerical features, will be formatted like `.`. Overall size of
    * feature name will always be truncated to first 120 characters.
    * @param featureName featureName or {@code null} for none
    */

@@ -193,6 +193,68 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger numRows;
 
   /**
+   * [Output-only] Number of logical bytes that are less than 90 days old.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_active_logical_bytes") @com.google.api.client.json.JsonString
+  private java.lang.Long numActiveLogicalBytes;
+
+  /**
+   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_active_physical_bytes") @com.google.api.client.json.JsonString
+  private java.lang.Long numActivePhysicalBytes;
+
+  /**
+   * [Output-only] Number of logical bytes that are more than 90 days old.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_long_term_logical_bytes") @com.google.api.client.json.JsonString
+  private java.lang.Long numLongTermLogicalBytes;
+
+  /**
+   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_long_term_physical_bytes") @com.google.api.client.json.JsonString
+  private java.lang.Long numLongTermPhysicalBytes;
+
+  /**
+   * [Output-only] The number of partitions present in the table or materialized view. This data is
+   * not kept in real time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_partitions") @com.google.api.client.json.JsonString
+  private java.lang.Long numPartitions;
+
+  /**
+   * [Output-only] Number of physical bytes used by time travel storage (deleted or changed data).
+   * This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_time_travel_physical_bytes") @com.google.api.client.json.JsonString
+  private java.lang.Long numTimeTravelPhysicalBytes;
+
+  /**
+   * [Output-only] Total number of logical bytes in the table or materialized view.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_total_logical_bytes") @com.google.api.client.json.JsonString
+  private java.lang.Long numTotalLogicalBytes;
+
+  /**
+   * [Output-only] The physical size of this table in bytes. This also includes storage used for
+   * time travel. This data is not kept in real time, and might be delayed by a few seconds to a few
+   * minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("num_total_physical_bytes") @com.google.api.client.json.JsonString
+  private java.lang.Long numTotalPhysicalBytes;
+
+  /**
    * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * The value may be {@code null}.
@@ -657,6 +719,154 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setNumRows(java.math.BigInteger numRows) {
     this.numRows = numRows;
+    return this;
+  }
+
+  /**
+   * [Output-only] Number of logical bytes that are less than 90 days old.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumActiveLogicalBytes() {
+    return numActiveLogicalBytes;
+  }
+
+  /**
+   * [Output-only] Number of logical bytes that are less than 90 days old.
+   * @param numActiveLogicalBytes numActiveLogicalBytes or {@code null} for none
+   */
+  public Table setNumActiveLogicalBytes(java.lang.Long numActiveLogicalBytes) {
+    this.numActiveLogicalBytes = numActiveLogicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumActivePhysicalBytes() {
+    return numActivePhysicalBytes;
+  }
+
+  /**
+   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * @param numActivePhysicalBytes numActivePhysicalBytes or {@code null} for none
+   */
+  public Table setNumActivePhysicalBytes(java.lang.Long numActivePhysicalBytes) {
+    this.numActivePhysicalBytes = numActivePhysicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] Number of logical bytes that are more than 90 days old.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumLongTermLogicalBytes() {
+    return numLongTermLogicalBytes;
+  }
+
+  /**
+   * [Output-only] Number of logical bytes that are more than 90 days old.
+   * @param numLongTermLogicalBytes numLongTermLogicalBytes or {@code null} for none
+   */
+  public Table setNumLongTermLogicalBytes(java.lang.Long numLongTermLogicalBytes) {
+    this.numLongTermLogicalBytes = numLongTermLogicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumLongTermPhysicalBytes() {
+    return numLongTermPhysicalBytes;
+  }
+
+  /**
+   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * @param numLongTermPhysicalBytes numLongTermPhysicalBytes or {@code null} for none
+   */
+  public Table setNumLongTermPhysicalBytes(java.lang.Long numLongTermPhysicalBytes) {
+    this.numLongTermPhysicalBytes = numLongTermPhysicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] The number of partitions present in the table or materialized view. This data is
+   * not kept in real time, and might be delayed by a few seconds to a few minutes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumPartitions() {
+    return numPartitions;
+  }
+
+  /**
+   * [Output-only] The number of partitions present in the table or materialized view. This data is
+   * not kept in real time, and might be delayed by a few seconds to a few minutes.
+   * @param numPartitions numPartitions or {@code null} for none
+   */
+  public Table setNumPartitions(java.lang.Long numPartitions) {
+    this.numPartitions = numPartitions;
+    return this;
+  }
+
+  /**
+   * [Output-only] Number of physical bytes used by time travel storage (deleted or changed data).
+   * This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumTimeTravelPhysicalBytes() {
+    return numTimeTravelPhysicalBytes;
+  }
+
+  /**
+   * [Output-only] Number of physical bytes used by time travel storage (deleted or changed data).
+   * This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+   * @param numTimeTravelPhysicalBytes numTimeTravelPhysicalBytes or {@code null} for none
+   */
+  public Table setNumTimeTravelPhysicalBytes(java.lang.Long numTimeTravelPhysicalBytes) {
+    this.numTimeTravelPhysicalBytes = numTimeTravelPhysicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] Total number of logical bytes in the table or materialized view.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumTotalLogicalBytes() {
+    return numTotalLogicalBytes;
+  }
+
+  /**
+   * [Output-only] Total number of logical bytes in the table or materialized view.
+   * @param numTotalLogicalBytes numTotalLogicalBytes or {@code null} for none
+   */
+  public Table setNumTotalLogicalBytes(java.lang.Long numTotalLogicalBytes) {
+    this.numTotalLogicalBytes = numTotalLogicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] The physical size of this table in bytes. This also includes storage used for
+   * time travel. This data is not kept in real time, and might be delayed by a few seconds to a few
+   * minutes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumTotalPhysicalBytes() {
+    return numTotalPhysicalBytes;
+  }
+
+  /**
+   * [Output-only] The physical size of this table in bytes. This also includes storage used for
+   * time travel. This data is not kept in real time, and might be delayed by a few seconds to a few
+   * minutes.
+   * @param numTotalPhysicalBytes numTotalPhysicalBytes or {@code null} for none
+   */
+  public Table setNumTotalPhysicalBytes(java.lang.Long numTotalPhysicalBytes) {
+    this.numTotalPhysicalBytes = numTotalPhysicalBytes;
     return this;
   }
 

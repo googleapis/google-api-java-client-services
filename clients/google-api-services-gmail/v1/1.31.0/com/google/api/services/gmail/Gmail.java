@@ -7212,7 +7212,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Deletes a filter.
+         * Immediately and permanently deletes the specified filter.
          *
          * Create a request for the method "filters.delete".
          *
@@ -7235,7 +7235,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/filters/{id}";
 
           /**
-           * Deletes a filter.
+           * Immediately and permanently deletes the specified filter.
            *
            * Create a request for the method "filters.delete".
            *

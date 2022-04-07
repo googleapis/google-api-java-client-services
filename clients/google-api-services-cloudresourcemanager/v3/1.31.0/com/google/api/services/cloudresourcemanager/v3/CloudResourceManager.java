@@ -8240,6 +8240,588 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
 
+    /**
+     * An accessor for creating requests from the TagHolds collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+     *   {@code CloudResourceManager.TagHolds.List request = cloudresourcemanager.tagHolds().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public TagHolds tagHolds() {
+      return new TagHolds();
+    }
+
+    /**
+     * The "tagHolds" collection of methods.
+     */
+    public class TagHolds {
+
+      /**
+       * Creates a TagHold. Returns ALREADY_EXISTS if a TagHold with the same resource and origin exists
+       * under the same TagValue.
+       *
+       * Create a request for the method "tagHolds.create".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the TagHold's parent TagValue. Must be of the form: `tagValues/{tag-
+       *        value-id}`.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TagHold}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.cloudresourcemanager.v3.model.TagHold content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+parent}/tagHolds";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^tagValues/[^/]+$");
+
+        /**
+         * Creates a TagHold. Returns ALREADY_EXISTS if a TagHold with the same resource and origin exists
+         * under the same TagValue.
+         *
+         * Create a request for the method "tagHolds.create".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the TagHold's parent TagValue. Must be of the form: `tagValues/{tag-
+       *        value-id}`.
+         * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TagHold}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudresourcemanager.v3.model.TagHold content) {
+          super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tagValues/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the TagHold's parent TagValue. Must be of the form:
+         * `tagValues/{tag-value-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the TagHold's parent TagValue. Must be of the form: `tagValues/{tag-
+       value-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the TagHold's parent TagValue. Must be of the form:
+         * `tagValues/{tag-value-id}`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tagValues/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Set to true to perform the validations necessary for creating the resource, but
+         * not actually perform the action.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean validateOnly;
+
+        /** Optional. Set to true to perform the validations necessary for creating the resource, but not
+       actually perform the action.
+         */
+        public java.lang.Boolean getValidateOnly() {
+          return validateOnly;
+        }
+
+        /**
+         * Optional. Set to true to perform the validations necessary for creating the resource, but
+         * not actually perform the action.
+         */
+        public Create setValidateOnly(java.lang.Boolean validateOnly) {
+          this.validateOnly = validateOnly;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a TagHold.
+       *
+       * Create a request for the method "tagHolds.delete".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the TagHold to delete. Must be of the form: `tagValues/{tag-value-
+       *        id}/tagHolds/{tag-hold-id}`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^tagValues/[^/]+/tagHolds/[^/]+$");
+
+        /**
+         * Deletes a TagHold.
+         *
+         * Create a request for the method "tagHolds.delete".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the TagHold to delete. Must be of the form: `tagValues/{tag-value-
+       *        id}/tagHolds/{tag-hold-id}`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudResourceManager.this, "DELETE", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^tagValues/[^/]+/tagHolds/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the TagHold to delete. Must be of the form: `tagValues
+         * /{tag-value-id}/tagHolds/{tag-hold-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the TagHold to delete. Must be of the form: `tagValues/{tag-value-
+       id}/tagHolds/{tag-hold-id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the TagHold to delete. Must be of the form: `tagValues
+         * /{tag-value-id}/tagHolds/{tag-hold-id}`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^tagValues/[^/]+/tagHolds/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Set to true to perform the validations necessary for deleting the resource, but
+         * not actually perform the action.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean validateOnly;
+
+        /** Optional. Set to true to perform the validations necessary for deleting the resource, but not
+       actually perform the action.
+         */
+        public java.lang.Boolean getValidateOnly() {
+          return validateOnly;
+        }
+
+        /**
+         * Optional. Set to true to perform the validations necessary for deleting the resource, but
+         * not actually perform the action.
+         */
+        public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+          this.validateOnly = validateOnly;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists TagHolds under a TagValue.
+       *
+       * Create a request for the method "tagHolds.list".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the parent TagValue. Must be of the form: `tagValues/{tag-value-id}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.ListTagHoldsResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}/tagHolds";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^tagValues/[^/]+$");
+
+        /**
+         * Lists TagHolds under a TagValue.
+         *
+         * Create a request for the method "tagHolds.list".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the parent TagValue. Must be of the form: `tagValues/{tag-value-id}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.ListTagHoldsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tagValues/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the parent TagValue. Must be of the form: `tagValues/{tag-
+         * value-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the parent TagValue. Must be of the form: `tagValues/{tag-value-
+       id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the parent TagValue. Must be of the form: `tagValues/{tag-
+         * value-id}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tagValues/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Criteria used to select a subset of TagHolds parented by the TagValue to
+         * return. This field follows the syntax defined by aip.dev/160; the `holder` and `origin`
+         * fields are supported for filtering. Currently only `AND` syntax is supported. Some
+         * example queries are: * `holder =
+         * //compute.googleapis.com/compute/projects/myproject/regions/us-
+         * east-1/instanceGroupManagers/instance-group` * `origin = 35678234` * `holder =
+         * //compute.googleapis.com/compute/projects/myproject/regions/us-
+         * east-1/instanceGroupManagers/instance-group AND origin = 35678234`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Criteria used to select a subset of TagHolds parented by the TagValue to return. This
+       field follows the syntax defined by aip.dev/160; the `holder` and `origin` fields are supported for
+       filtering. Currently only `AND` syntax is supported. Some example queries are: * `holder =
+       //compute.googleapis.com/compute/projects/myproject/regions/us-east-1/instanceGroupManagers
+       /instance-group` * `origin = 35678234` * `holder =
+       //compute.googleapis.com/compute/projects/myproject/regions/us-east-1/instanceGroupManagers
+       /instance-group AND origin = 35678234`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Criteria used to select a subset of TagHolds parented by the TagValue to
+         * return. This field follows the syntax defined by aip.dev/160; the `holder` and `origin`
+         * fields are supported for filtering. Currently only `AND` syntax is supported. Some
+         * example queries are: * `holder =
+         * //compute.googleapis.com/compute/projects/myproject/regions/us-
+         * east-1/instanceGroupManagers/instance-group` * `origin = 35678234` * `holder =
+         * //compute.googleapis.com/compute/projects/myproject/regions/us-
+         * east-1/instanceGroupManagers/instance-group AND origin = 35678234`
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of TagHolds to return in the response. The server allows a
+         * maximum of 300 TagHolds to return. If unspecified, the server will use 100 as the
+         * default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of TagHolds to return in the response. The server allows a maximum of
+       300 TagHolds to return. If unspecified, the server will use 100 as the default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of TagHolds to return in the response. The server allows a
+         * maximum of 300 TagHolds to return. If unspecified, the server will use 100 as the
+         * default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A pagination token returned from a previous call to `ListTagHolds` that
+         * indicates where this listing should continue from.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A pagination token returned from a previous call to `ListTagHolds` that indicates where
+       this listing should continue from.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A pagination token returned from a previous call to `ListTagHolds` that
+         * indicates where this listing should continue from.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

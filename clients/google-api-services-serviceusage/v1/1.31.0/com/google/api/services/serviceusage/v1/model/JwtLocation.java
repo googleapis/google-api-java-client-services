@@ -30,6 +30,13 @@ package com.google.api.services.serviceusage.v1.model;
 public final class JwtLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies cookie name to extract JWT token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cookie;
+
+  /**
    * Specifies HTTP header name to extract JWT token.
    * The value may be {@code null}.
    */
@@ -53,6 +60,23 @@ public final class JwtLocation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String valuePrefix;
+
+  /**
+   * Specifies cookie name to extract JWT token.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCookie() {
+    return cookie;
+  }
+
+  /**
+   * Specifies cookie name to extract JWT token.
+   * @param cookie cookie or {@code null} for none
+   */
+  public JwtLocation setCookie(java.lang.String cookie) {
+    this.cookie = cookie;
+    return this;
+  }
 
   /**
    * Specifies HTTP header name to extract JWT token.

@@ -30,6 +30,15 @@ package com.google.api.services.vault.v1.model;
 public final class DriveOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set whether the results include only content encrypted with [Google Workspace Client-side
+   * encryption](https://support.google.com/a?p=cse_ov) content, only unencrypted content, or both.
+   * Defaults to both. Currently supported for Drive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientSideEncryptedOption;
+
+  /**
    * Set to **true** to include shared drives.
    * The value may be {@code null}.
    */
@@ -50,6 +59,27 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String versionDate;
+
+  /**
+   * Set whether the results include only content encrypted with [Google Workspace Client-side
+   * encryption](https://support.google.com/a?p=cse_ov) content, only unencrypted content, or both.
+   * Defaults to both. Currently supported for Drive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientSideEncryptedOption() {
+    return clientSideEncryptedOption;
+  }
+
+  /**
+   * Set whether the results include only content encrypted with [Google Workspace Client-side
+   * encryption](https://support.google.com/a?p=cse_ov) content, only unencrypted content, or both.
+   * Defaults to both. Currently supported for Drive.
+   * @param clientSideEncryptedOption clientSideEncryptedOption or {@code null} for none
+   */
+  public DriveOptions setClientSideEncryptedOption(java.lang.String clientSideEncryptedOption) {
+    this.clientSideEncryptedOption = clientSideEncryptedOption;
+    return this;
+  }
 
   /**
    * Set to **true** to include shared drives.

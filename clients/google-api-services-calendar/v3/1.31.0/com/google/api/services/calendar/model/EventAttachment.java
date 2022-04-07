@@ -47,7 +47,8 @@ public final class EventAttachment extends com.google.api.client.json.GenericJso
   private java.lang.String fileUrl;
 
   /**
-   * URL link to the attachment's icon. Read-only.
+   * URL link to the attachment's icon. This field can only be modified for custom third-party
+   * attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,8 @@ public final class EventAttachment extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * URL link to the attachment's icon. Read-only.
+   * URL link to the attachment's icon. This field can only be modified for custom third-party
+   * attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getIconLink() {
@@ -116,7 +118,8 @@ public final class EventAttachment extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * URL link to the attachment's icon. Read-only.
+   * URL link to the attachment's icon. This field can only be modified for custom third-party
+   * attachments.
    * @param iconLink iconLink or {@code null} for none
    */
   public EventAttachment setIconLink(java.lang.String iconLink) {

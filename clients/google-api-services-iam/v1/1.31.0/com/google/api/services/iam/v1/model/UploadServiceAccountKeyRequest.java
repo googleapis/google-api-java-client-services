@@ -31,18 +31,18 @@ package com.google.api.services.iam.v1.model;
 public final class UploadServiceAccountKeyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A field that allows clients to upload their own public key. If set, use this public key data to
-   * create a service account key for given service account. Please note, the expected format for
-   * this field is X509_PEM.
+   * The public key to associate with the service account. Must be an RSA public key that is wrapped
+   * in an X.509 v3 certificate. Include the first line, `-----BEGIN CERTIFICATE-----`, and the last
+   * line, `-----END CERTIFICATE-----`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publicKeyData;
 
   /**
-   * A field that allows clients to upload their own public key. If set, use this public key data to
-   * create a service account key for given service account. Please note, the expected format for
-   * this field is X509_PEM.
+   * The public key to associate with the service account. Must be an RSA public key that is wrapped
+   * in an X.509 v3 certificate. Include the first line, `-----BEGIN CERTIFICATE-----`, and the last
+   * line, `-----END CERTIFICATE-----`.
    * @see #decodePublicKeyData()
    * @return value or {@code null} for none
    */
@@ -51,9 +51,9 @@ public final class UploadServiceAccountKeyRequest extends com.google.api.client.
   }
 
   /**
-   * A field that allows clients to upload their own public key. If set, use this public key data to
-   * create a service account key for given service account. Please note, the expected format for
-   * this field is X509_PEM.
+   * The public key to associate with the service account. Must be an RSA public key that is wrapped
+   * in an X.509 v3 certificate. Include the first line, `-----BEGIN CERTIFICATE-----`, and the last
+   * line, `-----END CERTIFICATE-----`.
    * @see #getPublicKeyData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -64,9 +64,9 @@ public final class UploadServiceAccountKeyRequest extends com.google.api.client.
   }
 
   /**
-   * A field that allows clients to upload their own public key. If set, use this public key data to
-   * create a service account key for given service account. Please note, the expected format for
-   * this field is X509_PEM.
+   * The public key to associate with the service account. Must be an RSA public key that is wrapped
+   * in an X.509 v3 certificate. Include the first line, `-----BEGIN CERTIFICATE-----`, and the last
+   * line, `-----END CERTIFICATE-----`.
    * @see #encodePublicKeyData()
    * @param publicKeyData publicKeyData or {@code null} for none
    */
@@ -76,9 +76,9 @@ public final class UploadServiceAccountKeyRequest extends com.google.api.client.
   }
 
   /**
-   * A field that allows clients to upload their own public key. If set, use this public key data to
-   * create a service account key for given service account. Please note, the expected format for
-   * this field is X509_PEM.
+   * The public key to associate with the service account. Must be an RSA public key that is wrapped
+   * in an X.509 v3 certificate. Include the first line, `-----BEGIN CERTIFICATE-----`, and the last
+   * line, `-----END CERTIFICATE-----`.
    * @see #setPublicKeyData()
    *
    * <p>

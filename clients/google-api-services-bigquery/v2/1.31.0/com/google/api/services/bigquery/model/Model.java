@@ -45,8 +45,10 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The default trial_id to use in TVFs when the trial_id is not passed in. For
-   * single-objective hyperparameter tuning, this is the best trial id. For multi-objective
-   * hyperparameter tuning, this is the smallest trial id among all Pareto optimal trials.
+   * single-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-
+   * syntax-hp-tuning-overview) models, this is the best trial ID. For multi-objective
+   * [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-
+   * overview) models, this is the smallest trial ID among all Pareto optimal trials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -107,7 +109,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private HparamSearchSpaces hparamSearchSpaces;
 
   /**
-   * Output only. Trials of a hyperparameter tuning model sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,9 +171,10 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.String modelType;
 
   /**
-   * Output only. For single-objective hyperparameter tuning, it only contains the best trial. For
-   * multi-objective hyperparameter tuning, it contains all Pareto optimal trials sorted by
-   * trial_id.
+   * Output only. For single-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-
+   * sql/bigqueryml-syntax-hp-tuning-overview) models, it only contains the best trial. For multi-
+   * objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * hp-tuning-overview) models, it contains all Pareto optimal trials sorted by trial_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -219,8 +223,10 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The default trial_id to use in TVFs when the trial_id is not passed in. For
-   * single-objective hyperparameter tuning, this is the best trial id. For multi-objective
-   * hyperparameter tuning, this is the smallest trial id among all Pareto optimal trials.
+   * single-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-
+   * syntax-hp-tuning-overview) models, this is the best trial ID. For multi-objective
+   * [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-
+   * overview) models, this is the smallest trial ID among all Pareto optimal trials.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDefaultTrialId() {
@@ -229,8 +235,10 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The default trial_id to use in TVFs when the trial_id is not passed in. For
-   * single-objective hyperparameter tuning, this is the best trial id. For multi-objective
-   * hyperparameter tuning, this is the smallest trial id among all Pareto optimal trials.
+   * single-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-
+   * syntax-hp-tuning-overview) models, this is the best trial ID. For multi-objective
+   * [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-
+   * overview) models, this is the smallest trial ID among all Pareto optimal trials.
    * @param defaultTrialId defaultTrialId or {@code null} for none
    */
   public Model setDefaultTrialId(java.lang.Long defaultTrialId) {
@@ -368,7 +376,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Trials of a hyperparameter tuning model sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
    * @return value or {@code null} for none
    */
   public java.util.List<HparamTuningTrial> getHparamTrials() {
@@ -376,7 +385,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Trials of a hyperparameter tuning model sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
    * @param hparamTrials hparamTrials or {@code null} for none
    */
   public Model setHparamTrials(java.util.List<HparamTuningTrial> hparamTrials) {
@@ -499,9 +509,10 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. For single-objective hyperparameter tuning, it only contains the best trial. For
-   * multi-objective hyperparameter tuning, it contains all Pareto optimal trials sorted by
-   * trial_id.
+   * Output only. For single-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-
+   * sql/bigqueryml-syntax-hp-tuning-overview) models, it only contains the best trial. For multi-
+   * objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * hp-tuning-overview) models, it contains all Pareto optimal trials sorted by trial_id.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getOptimalTrialIds() {
@@ -509,9 +520,10 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. For single-objective hyperparameter tuning, it only contains the best trial. For
-   * multi-objective hyperparameter tuning, it contains all Pareto optimal trials sorted by
-   * trial_id.
+   * Output only. For single-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-
+   * sql/bigqueryml-syntax-hp-tuning-overview) models, it only contains the best trial. For multi-
+   * objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * hp-tuning-overview) models, it contains all Pareto optimal trials sorted by trial_id.
    * @param optimalTrialIds optimalTrialIds or {@code null} for none
    */
   public Model setOptimalTrialIds(java.util.List<java.lang.Long> optimalTrialIds) {

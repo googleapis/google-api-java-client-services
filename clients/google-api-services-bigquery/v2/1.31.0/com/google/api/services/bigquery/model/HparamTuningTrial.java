@@ -17,7 +17,8 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Training info of a trial in hyperparameter tuning.
+ * Training info of a trial in [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql
+ * /bigqueryml-syntax-hp-tuning-overview) models.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

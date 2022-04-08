@@ -17,7 +17,8 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A full, namespace-isolated deployment target for an existing GKE cluster.
+ * Deprecated. Used only for the deprecated beta. A full, namespace-isolated deployment target for
+ * an existing GKE cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

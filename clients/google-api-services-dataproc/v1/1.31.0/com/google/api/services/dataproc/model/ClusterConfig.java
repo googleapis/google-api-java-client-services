@@ -79,10 +79,10 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private GceClusterConfig gceClusterConfig;
 
   /**
-   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes.
-   * Setting this is considered mutually exclusive with Compute Engine-based options such as
-   * gce_cluster_config, master_config, worker_config, secondary_worker_config, and
-   * autoscaling_config.
+   * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes
+   * Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually
+   * exclusive with Compute Engine-based options such as gce_cluster_config, master_config,
+   * worker_config, secondary_worker_config, and autoscaling_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,10 +280,10 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes.
-   * Setting this is considered mutually exclusive with Compute Engine-based options such as
-   * gce_cluster_config, master_config, worker_config, secondary_worker_config, and
-   * autoscaling_config.
+   * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes
+   * Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually
+   * exclusive with Compute Engine-based options such as gce_cluster_config, master_config,
+   * worker_config, secondary_worker_config, and autoscaling_config.
    * @return value or {@code null} for none
    */
   public GkeClusterConfig getGkeClusterConfig() {
@@ -291,10 +291,10 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes.
-   * Setting this is considered mutually exclusive with Compute Engine-based options such as
-   * gce_cluster_config, master_config, worker_config, secondary_worker_config, and
-   * autoscaling_config.
+   * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes
+   * Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually
+   * exclusive with Compute Engine-based options such as gce_cluster_config, master_config,
+   * worker_config, secondary_worker_config, and autoscaling_config.
    * @param gkeClusterConfig gkeClusterConfig or {@code null} for none
    */
   public ClusterConfig setGkeClusterConfig(GkeClusterConfig gkeClusterConfig) {

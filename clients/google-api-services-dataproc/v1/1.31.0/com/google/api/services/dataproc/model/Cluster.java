@@ -47,7 +47,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
-   * set default values, and values may change when clusters are updated.
+   * set default values, and values may change when clusters are updated.Exactly one of
+   * ClusterConfig or VirtualClusterConfig must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +95,17 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<ClusterStatus> statusHistory;
 
   /**
+   * Optional. The virtual cluster config, used when creating a Dataproc cluster that does not
+   * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
+   * cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-
+   * on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters
+   * are updated. Exactly one of config or virtualClusterConfig must be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualClusterConfig virtualClusterConfig;
+
+  /**
    * Required. The cluster name. Cluster names within a project must be unique. Names of deleted
    * clusters can be reused.
    * @return value or {@code null} for none
@@ -133,7 +145,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
-   * set default values, and values may change when clusters are updated.
+   * set default values, and values may change when clusters are updated.Exactly one of
+   * ClusterConfig or VirtualClusterConfig must be specified.
    * @return value or {@code null} for none
    */
   public ClusterConfig getConfig() {
@@ -142,7 +155,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
-   * set default values, and values may change when clusters are updated.
+   * set default values, and values may change when clusters are updated.Exactly one of
+   * ClusterConfig or VirtualClusterConfig must be specified.
    * @param config config or {@code null} for none
    */
   public Cluster setConfig(ClusterConfig config) {
@@ -242,6 +256,31 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setStatusHistory(java.util.List<ClusterStatus> statusHistory) {
     this.statusHistory = statusHistory;
+    return this;
+  }
+
+  /**
+   * Optional. The virtual cluster config, used when creating a Dataproc cluster that does not
+   * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
+   * cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-
+   * on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters
+   * are updated. Exactly one of config or virtualClusterConfig must be specified.
+   * @return value or {@code null} for none
+   */
+  public VirtualClusterConfig getVirtualClusterConfig() {
+    return virtualClusterConfig;
+  }
+
+  /**
+   * Optional. The virtual cluster config, used when creating a Dataproc cluster that does not
+   * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
+   * cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-
+   * on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters
+   * are updated. Exactly one of config or virtualClusterConfig must be specified.
+   * @param virtualClusterConfig virtualClusterConfig or {@code null} for none
+   */
+  public Cluster setVirtualClusterConfig(VirtualClusterConfig virtualClusterConfig) {
+    this.virtualClusterConfig = virtualClusterConfig;
     return this;
   }
 

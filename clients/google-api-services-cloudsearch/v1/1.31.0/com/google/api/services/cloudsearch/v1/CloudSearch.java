@@ -193,8 +193,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Items {
 
         /**
-         * Checks whether an item is accessible by specified principal. **Note:** This API requires an admin
-         * account to execute.
+         * Checks whether an item is accessible by specified principal. Principal must be a user; groups and
+         * domain values aren't supported. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "items.checkAccess".
          *
@@ -219,8 +219,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
 
           /**
-           * Checks whether an item is accessible by specified principal. **Note:** This API requires an
-           * admin account to execute.
+           * Checks whether an item is accessible by specified principal. Principal must be a user; groups
+           * and domain values aren't supported. **Note:** This API requires an admin account to execute.
            *
            * Create a request for the method "items.checkAccess".
            *

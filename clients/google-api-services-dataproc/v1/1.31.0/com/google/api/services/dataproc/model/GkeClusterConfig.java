@@ -30,14 +30,56 @@ package com.google.api.services.dataproc.model;
 public final class GkeClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A target for the deployment.
+   * Optional. A target GKE cluster to deploy to. It must be in the same project and region as the
+   * Dataproc cluster (the GKE cluster can be zonal or regional). Format:
+   * 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gkeClusterTarget;
+
+  /**
+   * Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the
+   * deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget;
 
   /**
-   * Optional. A target for the deployment.
+   * Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be
+   * assigned the 'default' role. Each role can be given to only a single NodePoolTarget. All
+   * NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc
+   * constructs a default nodePoolTarget.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GkeNodePoolTarget> nodePoolTarget;
+
+  /**
+   * Optional. A target GKE cluster to deploy to. It must be in the same project and region as the
+   * Dataproc cluster (the GKE cluster can be zonal or regional). Format:
+   * 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGkeClusterTarget() {
+    return gkeClusterTarget;
+  }
+
+  /**
+   * Optional. A target GKE cluster to deploy to. It must be in the same project and region as the
+   * Dataproc cluster (the GKE cluster can be zonal or regional). Format:
+   * 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+   * @param gkeClusterTarget gkeClusterTarget or {@code null} for none
+   */
+  public GkeClusterConfig setGkeClusterTarget(java.lang.String gkeClusterTarget) {
+    this.gkeClusterTarget = gkeClusterTarget;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the
+   * deployment.
    * @return value or {@code null} for none
    */
   public NamespacedGkeDeploymentTarget getNamespacedGkeDeploymentTarget() {
@@ -45,11 +87,35 @@ public final class GkeClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A target for the deployment.
+   * Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the
+   * deployment.
    * @param namespacedGkeDeploymentTarget namespacedGkeDeploymentTarget or {@code null} for none
    */
   public GkeClusterConfig setNamespacedGkeDeploymentTarget(NamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
     this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
+    return this;
+  }
+
+  /**
+   * Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be
+   * assigned the 'default' role. Each role can be given to only a single NodePoolTarget. All
+   * NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc
+   * constructs a default nodePoolTarget.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GkeNodePoolTarget> getNodePoolTarget() {
+    return nodePoolTarget;
+  }
+
+  /**
+   * Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be
+   * assigned the 'default' role. Each role can be given to only a single NodePoolTarget. All
+   * NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc
+   * constructs a default nodePoolTarget.
+   * @param nodePoolTarget nodePoolTarget or {@code null} for none
+   */
+  public GkeClusterConfig setNodePoolTarget(java.util.List<GkeNodePoolTarget> nodePoolTarget) {
+    this.nodePoolTarget = nodePoolTarget;
     return this;
   }
 

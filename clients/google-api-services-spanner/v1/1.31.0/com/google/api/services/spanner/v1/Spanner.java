@@ -513,6 +513,638 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Spanner spanner = new Spanner(...);}
+       *   {@code Spanner.Operations.List request = spanner.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name) throws java.io.IOException {
+          Cancel result = new Cancel(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends SpannerRequest<com.google.api.services.spanner.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name) {
+            super(Spanner.this, "POST", REST_PATH, null, com.google.api.services.spanner.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a long-running operation. This method indicates that the client is no longer interested
+         * in the operation result. It does not cancel the operation. If the server doesn't support this
+         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+         *
+         * Create a request for the method "operations.delete".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SpannerRequest<com.google.api.services.spanner.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+
+          /**
+           * Deletes a long-running operation. This method indicates that the client is no longer interested
+           * in the operation result. It does not cancel the operation. If the server doesn't support this
+           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.delete".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Spanner.this, "DELETE", REST_PATH, null, com.google.api.services.spanner.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+/operations$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instanceConfigs/[^/]+/operations$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Instances collection.
@@ -2072,27 +2704,26 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
            * operation is complete. * `(metadata.@type=type.googleapis.com/google.spanner.admin.data
            * base.v1.CreateBackupMetadata) AND` \ `metadata.database:prod` - Returns operations
-           * where: * The operation's metadata type is CreateBackupMetadata. * The database the
-           * backup was taken from has a name containing the string "prod". * `(metadata.@type=type.
-           * googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
-           * `(metadata.name:howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\")
-           * AND` \ `(error:*)` - Returns operations where: * The operation's metadata type is
-           * CreateBackupMetadata. * The backup name contains the string "howl". * The operation
-           * started before 2018-03-28T14:50:00Z. * The operation resulted in an error. * `(metadata
-           * .@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
-           * `(metadata.source_backup:test) AND` \ `(metadata.progress.start_time <
-           * \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns operations where: * The
-           * operation's metadata type is CopyBackupMetadata. * The source backup of the copied
+           * where: * The operation's metadata type is CreateBackupMetadata. * The source database
+           * name of backup contains the string "prod". * `(metadata.@type=type.googleapis.com/googl
+           * e.spanner.admin.database.v1.CreateBackupMetadata) AND` \ `(metadata.name:howl) AND` \
+           * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Returns
+           * operations where: * The operation's metadata type is CreateBackupMetadata. * The backup
+           * name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
+           * The operation resulted in an error. * `(metadata.@type=type.googleapis.com/google.spann
+           * er.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test) AND` \
+           * `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns
+           * operations where: * The operation's metadata type is CopyBackupMetadata. * The source
            * backup name contains the string "test". * The operation started before
            * 2022-01-18T14:50:00Z. * The operation resulted in an error. * `((metadata.@type=type.go
            * ogleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
            * `(metadata.database:test_db)) OR` \ `((metadata.@type=type.googleapis.com/google.spanne
            * r.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test_bkp)) AND`
            * \ `(error:*)` - Returns operations where: * The operation's metadata matches either of
-           * criteria: * The operation's metadata type is CreateBackupMetadata AND the database the
-           * backup was taken from has name containing string "test_db" * The operation's metadata
-           * type is CopyBackupMetadata AND the backup the backup was copied from has name
-           * containing string "test_bkp" * The operation resulted in an error.
+           * criteria: * The operation's metadata type is CreateBackupMetadata AND the source
+           * database name of the backup contains the string "test_db" * The operation's metadata
+           * type is CopyBackupMetadata AND the source backup name contains the string "test_bkp" *
+           * The operation resulted in an error.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2113,8 +2744,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          operation is complete. *
          `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
          `metadata.database:prod` - Returns operations where: * The operation's metadata type is
-         CreateBackupMetadata. * The database the backup was taken from has a name containing the string
-         "prod". *
+         CreateBackupMetadata. * The source database name of backup contains the string "prod". *
          `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
          `(metadata.name:howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \
          `(error:*)` - Returns operations where: * The operation's metadata type is CreateBackupMetadata. *
@@ -2123,16 +2753,16 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
          `(metadata.source_backup:test) AND` \ `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\")
          AND` \ `(error:*)` - Returns operations where: * The operation's metadata type is
-         CopyBackupMetadata. * The source backup of the copied backup name contains the string "test". * The
-         operation started before 2022-01-18T14:50:00Z. * The operation resulted in an error. *
+         CopyBackupMetadata. * The source backup name contains the string "test". * The operation started
+         before 2022-01-18T14:50:00Z. * The operation resulted in an error. *
          `((metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
          `(metadata.database:test_db)) OR` \
          `((metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
          `(metadata.source_backup:test_bkp)) AND` \ `(error:*)` - Returns operations where: * The
          operation's metadata matches either of criteria: * The operation's metadata type is
-         CreateBackupMetadata AND the database the backup was taken from has name containing string
-         "test_db" * The operation's metadata type is CopyBackupMetadata AND the backup the backup was
-         copied from has name containing string "test_bkp" * The operation resulted in an error.
+         CreateBackupMetadata AND the source database name of the backup contains the string "test_db" * The
+         operation's metadata type is CopyBackupMetadata AND the source backup name contains the string
+         "test_bkp" * The operation resulted in an error.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -2156,27 +2786,26 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
            * operation is complete. * `(metadata.@type=type.googleapis.com/google.spanner.admin.data
            * base.v1.CreateBackupMetadata) AND` \ `metadata.database:prod` - Returns operations
-           * where: * The operation's metadata type is CreateBackupMetadata. * The database the
-           * backup was taken from has a name containing the string "prod". * `(metadata.@type=type.
-           * googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
-           * `(metadata.name:howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\")
-           * AND` \ `(error:*)` - Returns operations where: * The operation's metadata type is
-           * CreateBackupMetadata. * The backup name contains the string "howl". * The operation
-           * started before 2018-03-28T14:50:00Z. * The operation resulted in an error. * `(metadata
-           * .@type=type.googleapis.com/google.spanner.admin.database.v1.CopyBackupMetadata) AND` \
-           * `(metadata.source_backup:test) AND` \ `(metadata.progress.start_time <
-           * \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns operations where: * The
-           * operation's metadata type is CopyBackupMetadata. * The source backup of the copied
+           * where: * The operation's metadata type is CreateBackupMetadata. * The source database
+           * name of backup contains the string "prod". * `(metadata.@type=type.googleapis.com/googl
+           * e.spanner.admin.database.v1.CreateBackupMetadata) AND` \ `(metadata.name:howl) AND` \
+           * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Returns
+           * operations where: * The operation's metadata type is CreateBackupMetadata. * The backup
+           * name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
+           * The operation resulted in an error. * `(metadata.@type=type.googleapis.com/google.spann
+           * er.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test) AND` \
+           * `(metadata.progress.start_time < \"2022-01-18T14:50:00Z\") AND` \ `(error:*)` - Returns
+           * operations where: * The operation's metadata type is CopyBackupMetadata. * The source
            * backup name contains the string "test". * The operation started before
            * 2022-01-18T14:50:00Z. * The operation resulted in an error. * `((metadata.@type=type.go
            * ogleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
            * `(metadata.database:test_db)) OR` \ `((metadata.@type=type.googleapis.com/google.spanne
            * r.admin.database.v1.CopyBackupMetadata) AND` \ `(metadata.source_backup:test_bkp)) AND`
            * \ `(error:*)` - Returns operations where: * The operation's metadata matches either of
-           * criteria: * The operation's metadata type is CreateBackupMetadata AND the database the
-           * backup was taken from has name containing string "test_db" * The operation's metadata
-           * type is CopyBackupMetadata AND the backup the backup was copied from has name
-           * containing string "test_bkp" * The operation resulted in an error.
+           * criteria: * The operation's metadata type is CreateBackupMetadata AND the source
+           * database name of the backup contains the string "test_db" * The operation's metadata
+           * type is CopyBackupMetadata AND the source backup name contains the string "test_bkp" *
+           * The operation resulted in an error.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

@@ -44,6 +44,13 @@ public final class GoogleCloudDataplexV1DiscoveryEventPartitionDetails extends c
   private java.lang.String partition;
 
   /**
+   * The locations of the data items (e.g., a Cloud Storage objects) sampled for metadata inference.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sampledDataLocations;
+
+  /**
    * The type of the containing entity resource.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class GoogleCloudDataplexV1DiscoveryEventPartitionDetails extends c
    */
   public GoogleCloudDataplexV1DiscoveryEventPartitionDetails setPartition(java.lang.String partition) {
     this.partition = partition;
+    return this;
+  }
+
+  /**
+   * The locations of the data items (e.g., a Cloud Storage objects) sampled for metadata inference.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSampledDataLocations() {
+    return sampledDataLocations;
+  }
+
+  /**
+   * The locations of the data items (e.g., a Cloud Storage objects) sampled for metadata inference.
+   * @param sampledDataLocations sampledDataLocations or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DiscoveryEventPartitionDetails setSampledDataLocations(java.util.List<java.lang.String> sampledDataLocations) {
+    this.sampledDataLocations = sampledDataLocations;
     return this;
   }
 

@@ -433,136 +433,6 @@ public class MyBusinessQA extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes the answer written by the current user to a question.
-       *
-       * Create a request for the method "questions.deleteAnswers".
-       *
-       * This request holds the parameters needed by the mybusinessqanda server.  After setting any
-       * optional parameters, call the {@link DeleteAnswers#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param name Required. The name of the question to delete an answer for.
-       * @return the request
-       */
-      public DeleteAnswers deleteAnswers(java.lang.String name) throws java.io.IOException {
-        DeleteAnswers result = new DeleteAnswers(name);
-        initialize(result);
-        return result;
-      }
-
-      public class DeleteAnswers extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.Empty> {
-
-        private static final String REST_PATH = "v1/{+name}/answers";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^locations/[^/]+/questions/[^/]+$");
-
-        /**
-         * Deletes the answer written by the current user to a question.
-         *
-         * Create a request for the method "questions.deleteAnswers".
-         *
-         * This request holds the parameters needed by the the mybusinessqanda server.  After setting any
-         * optional parameters, call the {@link DeleteAnswers#execute()} method to invoke the remote
-         * operation. <p> {@link DeleteAnswers#initialize(com.google.api.client.googleapis.services.Abstra
-         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-         * the constructor. </p>
-         *
-         * @param name Required. The name of the question to delete an answer for.
-         * @since 1.13
-         */
-        protected DeleteAnswers(java.lang.String name) {
-          super(MyBusinessQA.this, "DELETE", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.Empty.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^locations/[^/]+/questions/[^/]+$");
-          }
-        }
-
-        @Override
-        public DeleteAnswers set$Xgafv(java.lang.String $Xgafv) {
-          return (DeleteAnswers) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public DeleteAnswers setAccessToken(java.lang.String accessToken) {
-          return (DeleteAnswers) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public DeleteAnswers setAlt(java.lang.String alt) {
-          return (DeleteAnswers) super.setAlt(alt);
-        }
-
-        @Override
-        public DeleteAnswers setCallback(java.lang.String callback) {
-          return (DeleteAnswers) super.setCallback(callback);
-        }
-
-        @Override
-        public DeleteAnswers setFields(java.lang.String fields) {
-          return (DeleteAnswers) super.setFields(fields);
-        }
-
-        @Override
-        public DeleteAnswers setKey(java.lang.String key) {
-          return (DeleteAnswers) super.setKey(key);
-        }
-
-        @Override
-        public DeleteAnswers setOauthToken(java.lang.String oauthToken) {
-          return (DeleteAnswers) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public DeleteAnswers setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (DeleteAnswers) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public DeleteAnswers setQuotaUser(java.lang.String quotaUser) {
-          return (DeleteAnswers) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public DeleteAnswers setUploadType(java.lang.String uploadType) {
-          return (DeleteAnswers) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public DeleteAnswers setUploadProtocol(java.lang.String uploadProtocol) {
-          return (DeleteAnswers) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The name of the question to delete an answer for. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The name of the question to delete an answer for.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Required. The name of the question to delete an answer for. */
-        public DeleteAnswers setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^locations/[^/]+/questions/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public DeleteAnswers set(String parameterName, Object value) {
-          return (DeleteAnswers) super.set(parameterName, value);
-        }
-      }
-      /**
        * Returns the paginated list of questions and some of its answers for a specified location. This
        * operation is only valid if the specified location is verified.
        *
@@ -990,6 +860,135 @@ public class MyBusinessQA extends com.google.api.client.googleapis.services.json
       public class Answers {
 
         /**
+         * Deletes the answer written by the current user to a question.
+         *
+         * Create a request for the method "answers.delete".
+         *
+         * This request holds the parameters needed by the mybusinessqanda server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the question to delete an answer for.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}/answers:delete";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^locations/[^/]+/questions/[^/]+$");
+
+          /**
+           * Deletes the answer written by the current user to a question.
+           *
+           * Create a request for the method "answers.delete".
+           *
+           * This request holds the parameters needed by the the mybusinessqanda server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the question to delete an answer for.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(MyBusinessQA.this, "DELETE", REST_PATH, null, com.google.api.services.mybusinessqanda.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/[^/]+/questions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the question to delete an answer for. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the question to delete an answer for.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the question to delete an answer for. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/[^/]+/questions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns the paginated list of answers for a specified question.
          *
          * Create a request for the method "answers.list".
@@ -1008,10 +1007,10 @@ public class MyBusinessQA extends com.google.api.client.googleapis.services.json
 
         public class List extends MyBusinessQARequest<com.google.api.services.mybusinessqanda.v1.model.ListAnswersResponse> {
 
-          private static final String REST_PATH = "v1/{+parent}";
+          private static final String REST_PATH = "v1/{+parent}/answers";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^locations/[^/]+/questions/[^/]+/answers$");
+              java.util.regex.Pattern.compile("^locations/[^/]+/questions/[^/]+$");
 
           /**
            * Returns the paginated list of answers for a specified question.
@@ -1032,7 +1031,7 @@ public class MyBusinessQA extends com.google.api.client.googleapis.services.json
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^locations/[^/]+/questions/[^/]+/answers$");
+                  "^locations/[^/]+/questions/[^/]+$");
             }
           }
 
@@ -1116,7 +1115,7 @@ public class MyBusinessQA extends com.google.api.client.googleapis.services.json
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^locations/[^/]+/questions/[^/]+/answers$");
+                  "^locations/[^/]+/questions/[^/]+$");
             }
             this.parent = parent;
             return this;

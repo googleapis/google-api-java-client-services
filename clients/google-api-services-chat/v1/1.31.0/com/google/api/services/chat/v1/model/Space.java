@@ -52,14 +52,14 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean singleUserBotDm;
 
   /**
-   * Output only. Whether the messages are threaded in this space.
+   * Output only. Output only. Whether the messages are threaded in this space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean threaded;
 
   /**
-   * Deprecated. Use `single_user_bot_dm` instead. Output only. The type of a space.
+   * Output only. Deprecated: Use `single_user_bot_dm` instead. Output only. The type of a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the messages are threaded in this space.
+   * Output only. Output only. Whether the messages are threaded in this space.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getThreaded() {
@@ -125,7 +125,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the messages are threaded in this space.
+   * Output only. Output only. Whether the messages are threaded in this space.
    * @param threaded threaded or {@code null} for none
    */
   public Space setThreaded(java.lang.Boolean threaded) {
@@ -134,7 +134,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Use `single_user_bot_dm` instead. Output only. The type of a space.
+   * Output only. Deprecated: Use `single_user_bot_dm` instead. Output only. The type of a space.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -142,7 +142,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Use `single_user_bot_dm` instead. Output only. The type of a space.
+   * Output only. Deprecated: Use `single_user_bot_dm` instead. Output only. The type of a space.
    * @param type type or {@code null} for none
    */
   public Space setType(java.lang.String type) {

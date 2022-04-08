@@ -18,7 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A matched url in a Chat message. Chat apps can unfurl matched URLs. For more information, refer
- * to [Unfurl links](/chat/how-tos/link-unfurling).
+ * to [Unfurl links](https://developers.google.com/chat/how-tos/link-unfurling).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,14 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class MatchedUrl extends com.google.api.client.json.GenericJson {
 
   /**
-   * The url that was matched.
+   * Output only. The url that was matched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * The url that was matched.
+   * Output only. The url that was matched.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -46,7 +46,7 @@ public final class MatchedUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The url that was matched.
+   * Output only. The url that was matched.
    * @param url url or {@code null} for none
    */
   public MatchedUrl setUrl(java.lang.String url) {

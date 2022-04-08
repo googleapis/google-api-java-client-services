@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user's display name.
+   * Output only. The user's display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String domainId;
 
   /**
-   * When `true`, the user is deleted or their profile is not visible.
+   * Output only. When `true`, the user is deleted or their profile is not visible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * The user's display name.
+   * Output only. The user's display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -76,7 +76,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's display name.
+   * Output only. The user's display name.
    * @param displayName displayName or {@code null} for none
    */
   public User setDisplayName(java.lang.String displayName) {
@@ -102,7 +102,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When `true`, the user is deleted or their profile is not visible.
+   * Output only. When `true`, the user is deleted or their profile is not visible.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAnonymous() {
@@ -110,7 +110,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When `true`, the user is deleted or their profile is not visible.
+   * Output only. When `true`, the user is deleted or their profile is not visible.
    * @param isAnonymous isAnonymous or {@code null} for none
    */
   public User setIsAnonymous(java.lang.Boolean isAnonymous) {

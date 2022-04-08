@@ -38,7 +38,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * A user in Google Chat. Represents a
+   * Output only. A user in Google Chat. Represents a
    * [person](https://developers.google.com/people/api/rest/v1/people) in the People API or a
    * [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Admin
    * SDK Directory API. Format: `users/{user}`
@@ -80,7 +80,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user in Google Chat. Represents a
+   * Output only. A user in Google Chat. Represents a
    * [person](https://developers.google.com/people/api/rest/v1/people) in the People API or a
    * [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Admin
    * SDK Directory API. Format: `users/{user}`
@@ -91,7 +91,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user in Google Chat. Represents a
+   * Output only. A user in Google Chat. Represents a
    * [person](https://developers.google.com/people/api/rest/v1/people) in the People API or a
    * [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Admin
    * SDK Directory API. Format: `users/{user}`

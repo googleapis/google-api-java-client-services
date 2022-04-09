@@ -44,7 +44,7 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
   private java.lang.String clientId;
 
   /**
-   * Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
+   * Input only. Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
   }
 
   /**
-   * Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
+   * Input only. Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecret() {
@@ -165,7 +165,7 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
   }
 
   /**
-   * Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
+   * Input only. Unencrypted OIDC client secret will be passed to the GKE Hub CLH.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public IdentityServiceOidcConfig setClientSecret(java.lang.String clientSecret) {

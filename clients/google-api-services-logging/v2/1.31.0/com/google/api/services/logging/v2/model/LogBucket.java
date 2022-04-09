@@ -55,6 +55,19 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * A list of indexed fields and related configuration data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IndexConfig> indexConfigs;
+
+  static {
+    // hack to force ProGuard to consider IndexConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IndexConfig.class);
+  }
+
+  /**
    * Output only. The bucket lifecycle state.
    * The value may be {@code null}.
    */
@@ -162,6 +175,23 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
    */
   public LogBucket setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * A list of indexed fields and related configuration data.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<IndexConfig> getIndexConfigs() {
+    return indexConfigs;
+  }
+
+  /**
+   * A list of indexed fields and related configuration data.
+   * @param indexConfigs indexConfigs or {@code null} for none
+   */
+  public LogBucket setIndexConfigs(java.util.List<IndexConfig> indexConfigs) {
+    this.indexConfigs = indexConfigs;
     return this;
   }
 

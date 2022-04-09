@@ -102,13 +102,13 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   private java.lang.String name;
 
   /**
-   * Optional. notification_parameters are information that service producers may like to include
+   * Optional. notification_parameter are information that service producers may like to include
    * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
    * for notification/logging purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> notificationParameters;
+  private java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter> notificationParameters;
 
   /**
    * Output only. Custom string attributes used primarily to expose producer-specific information in
@@ -340,22 +340,22 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   }
 
   /**
-   * Optional. notification_parameters are information that service producers may like to include
+   * Optional. notification_parameter are information that service producers may like to include
    * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
    * for notification/logging purpose.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getNotificationParameters() {
+  public java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter> getNotificationParameters() {
     return notificationParameters;
   }
 
   /**
-   * Optional. notification_parameters are information that service producers may like to include
+   * Optional. notification_parameter are information that service producers may like to include
    * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
    * for notification/logging purpose.
    * @param notificationParameters notificationParameters or {@code null} for none
    */
-  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setNotificationParameters(java.util.Map<String, java.lang.String> notificationParameters) {
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setNotificationParameters(java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter> notificationParameters) {
     this.notificationParameters = notificationParameters;
     return this;
   }

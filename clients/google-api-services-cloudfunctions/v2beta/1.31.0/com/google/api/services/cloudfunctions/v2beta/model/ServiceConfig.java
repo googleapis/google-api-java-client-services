@@ -95,6 +95,19 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String revision;
 
   /**
+   * Secret environment variables configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecretEnvVar> secretEnvironmentVariables;
+
+  static {
+    // hack to force ProGuard to consider SecretEnvVar used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SecretEnvVar.class);
+  }
+
+  /**
    * Output only. Name of the service associated with a Function. The format of this field is
    * `projects/{project}/locations/{region}/services/{service}`
    * The value may be {@code null}.
@@ -288,6 +301,23 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   public ServiceConfig setRevision(java.lang.String revision) {
     this.revision = revision;
+    return this;
+  }
+
+  /**
+   * Secret environment variables configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecretEnvVar> getSecretEnvironmentVariables() {
+    return secretEnvironmentVariables;
+  }
+
+  /**
+   * Secret environment variables configuration.
+   * @param secretEnvironmentVariables secretEnvironmentVariables or {@code null} for none
+   */
+  public ServiceConfig setSecretEnvironmentVariables(java.util.List<SecretEnvVar> secretEnvironmentVariables) {
+    this.secretEnvironmentVariables = secretEnvironmentVariables;
     return this;
   }
 

@@ -307,14 +307,14 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
-       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -322,7 +322,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {

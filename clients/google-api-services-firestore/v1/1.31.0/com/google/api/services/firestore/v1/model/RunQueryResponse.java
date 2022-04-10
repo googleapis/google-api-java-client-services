@@ -37,14 +37,6 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   private Document document;
 
   /**
-   * If present, Firestore has completely finished the request and no more documents will be
-   * returned.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean done;
-
-  /**
    * The time at which the document was read. This may be monotonically increasing; in this case,
    * the previous documents in the result stream are guaranteed not to have changed between their
    * `read_time` and this one. If the query returns no results, a response with `read_time` and no
@@ -85,25 +77,6 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
    */
   public RunQueryResponse setDocument(Document document) {
     this.document = document;
-    return this;
-  }
-
-  /**
-   * If present, Firestore has completely finished the request and no more documents will be
-   * returned.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDone() {
-    return done;
-  }
-
-  /**
-   * If present, Firestore has completely finished the request and no more documents will be
-   * returned.
-   * @param done done or {@code null} for none
-   */
-  public RunQueryResponse setDone(java.lang.Boolean done) {
-    this.done = done;
     return this;
   }
 

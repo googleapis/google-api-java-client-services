@@ -61,6 +61,14 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   private Entity update;
 
   /**
+   * The update time of the entity that this mutation is being applied to. If this does not match
+   * the current update time on the server, the mutation conflicts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * The entity to upsert. The entity may or may not already exist. The entity key's final path
    * element may be incomplete.
    * The value may be {@code null}.
@@ -139,6 +147,25 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    */
   public Mutation setUpdate(Entity update) {
     this.update = update;
+    return this;
+  }
+
+  /**
+   * The update time of the entity that this mutation is being applied to. If this does not match
+   * the current update time on the server, the mutation conflicts.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * The update time of the entity that this mutation is being applied to. If this does not match
+   * the current update time on the server, the mutation conflicts.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Mutation setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

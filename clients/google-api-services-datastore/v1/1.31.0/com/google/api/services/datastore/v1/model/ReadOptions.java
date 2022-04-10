@@ -37,6 +37,14 @@ public final class ReadOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String readConsistency;
 
   /**
+   * Reads entities as they were at the given time. This may not be older than 270 seconds. This
+   * value is only supported for Cloud Firestore in Datastore mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String readTime;
+
+  /**
    * The identifier of the transaction in which to read. A transaction identifier is returned by a
    * call to Datastore.BeginTransaction.
    * The value may be {@code null}.
@@ -58,6 +66,25 @@ public final class ReadOptions extends com.google.api.client.json.GenericJson {
    */
   public ReadOptions setReadConsistency(java.lang.String readConsistency) {
     this.readConsistency = readConsistency;
+    return this;
+  }
+
+  /**
+   * Reads entities as they were at the given time. This may not be older than 270 seconds. This
+   * value is only supported for Cloud Firestore in Datastore mode.
+   * @return value or {@code null} for none
+   */
+  public String getReadTime() {
+    return readTime;
+  }
+
+  /**
+   * Reads entities as they were at the given time. This may not be older than 270 seconds. This
+   * value is only supported for Cloud Firestore in Datastore mode.
+   * @param readTime readTime or {@code null} for none
+   */
+  public ReadOptions setReadTime(String readTime) {
+    this.readTime = readTime;
     return this;
   }
 

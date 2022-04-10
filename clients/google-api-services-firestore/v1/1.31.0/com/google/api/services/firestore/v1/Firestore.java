@@ -4833,6 +4833,167 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * Runs an aggregation query. Rather than producing Document results like Firestore.RunQuery, this
+         * API allows running an aggregation to produce a series of AggregationResult server-side. High-
+         * Level Example: ``` -- Return the number of documents in table given a filter. SELECT COUNT(*)
+         * FROM ( SELECT * FROM k where a = true ); ```
+         *
+         * Create a request for the method "documents.runAggregationQuery".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link RunAggregationQuery#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+         * @param content the {@link com.google.api.services.firestore.v1.model.RunAggregationQueryRequest}
+         * @return the request
+         */
+        public RunAggregationQuery runAggregationQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.RunAggregationQueryRequest content) throws java.io.IOException {
+          RunAggregationQuery result = new RunAggregationQuery(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RunAggregationQuery extends FirestoreRequest<com.google.api.services.firestore.v1.model.RunAggregationQueryResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:runAggregationQuery";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+
+          /**
+           * Runs an aggregation query. Rather than producing Document results like Firestore.RunQuery, this
+           * API allows running an aggregation to produce a series of AggregationResult server-side. High-
+           * Level Example: ``` -- Return the number of documents in table given a filter. SELECT COUNT(*)
+           * FROM ( SELECT * FROM k where a = true ); ```
+           *
+           * Create a request for the method "documents.runAggregationQuery".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link RunAggregationQuery#execute()} method to invoke the remote
+           * operation. <p> {@link RunAggregationQuery#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+           * @param content the {@link com.google.api.services.firestore.v1.model.RunAggregationQueryRequest}
+           * @since 1.13
+           */
+          protected RunAggregationQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.RunAggregationQueryRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.RunAggregationQueryResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+            }
+          }
+
+          @Override
+          public RunAggregationQuery set$Xgafv(java.lang.String $Xgafv) {
+            return (RunAggregationQuery) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RunAggregationQuery setAccessToken(java.lang.String accessToken) {
+            return (RunAggregationQuery) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RunAggregationQuery setAlt(java.lang.String alt) {
+            return (RunAggregationQuery) super.setAlt(alt);
+          }
+
+          @Override
+          public RunAggregationQuery setCallback(java.lang.String callback) {
+            return (RunAggregationQuery) super.setCallback(callback);
+          }
+
+          @Override
+          public RunAggregationQuery setFields(java.lang.String fields) {
+            return (RunAggregationQuery) super.setFields(fields);
+          }
+
+          @Override
+          public RunAggregationQuery setKey(java.lang.String key) {
+            return (RunAggregationQuery) super.setKey(key);
+          }
+
+          @Override
+          public RunAggregationQuery setOauthToken(java.lang.String oauthToken) {
+            return (RunAggregationQuery) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RunAggregationQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RunAggregationQuery) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RunAggregationQuery setQuotaUser(java.lang.String quotaUser) {
+            return (RunAggregationQuery) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RunAggregationQuery setUploadType(java.lang.String uploadType) {
+            return (RunAggregationQuery) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RunAggregationQuery setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RunAggregationQuery) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. In the format:
+         `projects/{project_id}/databases/{database_id}/documents` or
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
+         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         database/documents/chatrooms/my-chatroom`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          public RunAggregationQuery setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public RunAggregationQuery set(String parameterName, Object value) {
+            return (RunAggregationQuery) super.set(parameterName, value);
+          }
+        }
+        /**
          * Runs a query.
          *
          * Create a request for the method "documents.runQuery".
@@ -6061,14 +6222,14 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
-       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6076,7 +6237,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {

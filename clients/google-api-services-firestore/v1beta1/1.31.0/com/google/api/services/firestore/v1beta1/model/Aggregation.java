@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firestore.v1.model;
+package com.google.api.services.firestore.v1beta1.model;
 
 /**
- * A filter that merges multiple other filters using the given operator.
+ * Defines a aggregation that produces a single result.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,64 +27,70 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CompositeFilter extends com.google.api.client.json.GenericJson {
+public final class Aggregation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of filters to combine. Requires: * At least one filter is present.
+   * Required. The name of the field to store the result of the aggregation into. Requires: * Must
+   * be present. * Must be unique across all aggregation aliases. * Conform to existing document
+   * field name limitations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Filter> filters;
+  private java.lang.String alias;
 
   /**
-   * The operator for combining multiple filters.
+   * Count aggregator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String op;
+  private Count count;
 
   /**
-   * The list of filters to combine. Requires: * At least one filter is present.
+   * Required. The name of the field to store the result of the aggregation into. Requires: * Must
+   * be present. * Must be unique across all aggregation aliases. * Conform to existing document
+   * field name limitations.
    * @return value or {@code null} for none
    */
-  public java.util.List<Filter> getFilters() {
-    return filters;
+  public java.lang.String getAlias() {
+    return alias;
   }
 
   /**
-   * The list of filters to combine. Requires: * At least one filter is present.
-   * @param filters filters or {@code null} for none
+   * Required. The name of the field to store the result of the aggregation into. Requires: * Must
+   * be present. * Must be unique across all aggregation aliases. * Conform to existing document
+   * field name limitations.
+   * @param alias alias or {@code null} for none
    */
-  public CompositeFilter setFilters(java.util.List<Filter> filters) {
-    this.filters = filters;
+  public Aggregation setAlias(java.lang.String alias) {
+    this.alias = alias;
     return this;
   }
 
   /**
-   * The operator for combining multiple filters.
+   * Count aggregator.
    * @return value or {@code null} for none
    */
-  public java.lang.String getOp() {
-    return op;
+  public Count getCount() {
+    return count;
   }
 
   /**
-   * The operator for combining multiple filters.
-   * @param op op or {@code null} for none
+   * Count aggregator.
+   * @param count count or {@code null} for none
    */
-  public CompositeFilter setOp(java.lang.String op) {
-    this.op = op;
+  public Aggregation setCount(Count count) {
+    this.count = count;
     return this;
   }
 
   @Override
-  public CompositeFilter set(String fieldName, Object value) {
-    return (CompositeFilter) super.set(fieldName, value);
+  public Aggregation set(String fieldName, Object value) {
+    return (Aggregation) super.set(fieldName, value);
   }
 
   @Override
-  public CompositeFilter clone() {
-    return (CompositeFilter) super.clone();
+  public Aggregation clone() {
+    return (Aggregation) super.clone();
   }
 
 }

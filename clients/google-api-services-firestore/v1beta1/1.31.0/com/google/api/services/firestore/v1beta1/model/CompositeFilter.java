@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class CompositeFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of filters to combine. Must contain at least one filter.
+   * The list of filters to combine. Requires: * At least one filter is present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class CompositeFilter extends com.google.api.client.json.GenericJso
   private java.lang.String op;
 
   /**
-   * The list of filters to combine. Must contain at least one filter.
+   * The list of filters to combine. Requires: * At least one filter is present.
    * @return value or {@code null} for none
    */
   public java.util.List<Filter> getFilters() {
@@ -52,7 +52,7 @@ public final class CompositeFilter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The list of filters to combine. Must contain at least one filter.
+   * The list of filters to combine. Requires: * At least one filter is present.
    * @param filters filters or {@code null} for none
    */
   public CompositeFilter setFilters(java.util.List<Filter> filters) {

@@ -72,6 +72,13 @@ public final class LookupResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The time at which these entities were read or found missing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String readTime;
+
+  /**
    * A list of keys that were not looked up due to resource constraints. The order of results in
    * this field is undefined and has no relation to the order of the keys in the input.
    * @return value or {@code null} for none
@@ -125,6 +132,23 @@ public final class LookupResponse extends com.google.api.client.json.GenericJson
    */
   public LookupResponse setMissing(java.util.List<EntityResult> missing) {
     this.missing = missing;
+    return this;
+  }
+
+  /**
+   * The time at which these entities were read or found missing.
+   * @return value or {@code null} for none
+   */
+  public String getReadTime() {
+    return readTime;
+  }
+
+  /**
+   * The time at which these entities were read or found missing.
+   * @param readTime readTime or {@code null} for none
+   */
+  public LookupResponse setReadTime(String readTime) {
+    this.readTime = readTime;
     return this;
   }
 

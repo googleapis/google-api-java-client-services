@@ -30,6 +30,13 @@ package com.google.api.services.datastore.v1.model;
 public final class CommitResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The transaction commit timestamp. Not set for non-transactional commits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String commitTime;
+
+  /**
    * The number of index entries updated during the commit, or zero if none were updated.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<MutationResult> mutationResults;
+
+  /**
+   * The transaction commit timestamp. Not set for non-transactional commits.
+   * @return value or {@code null} for none
+   */
+  public String getCommitTime() {
+    return commitTime;
+  }
+
+  /**
+   * The transaction commit timestamp. Not set for non-transactional commits.
+   * @param commitTime commitTime or {@code null} for none
+   */
+  public CommitResponse setCommitTime(String commitTime) {
+    this.commitTime = commitTime;
+    return this;
+  }
 
   /**
    * The number of index entries updated during the commit, or zero if none were updated.

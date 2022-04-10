@@ -64,6 +64,18 @@ public final class QueryResultBatch extends com.google.api.client.json.GenericJs
   private java.lang.String moreResults;
 
   /**
+   * Read timestamp this batch was returned from. This applies to the range of results from the
+   * query's `start_cursor` (or the beginning of the query if no cursor was given) to this batch's
+   * `end_cursor` (not the query's `end_cursor`). In a single transaction, subsequent query result
+   * batches for the same query can have a greater timestamp. Each batch's read timestamp is valid
+   * for all preceding batches. This value will not be set for eventually consistent queries in
+   * Cloud Datastore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String readTime;
+
+  /**
    * A cursor that points to the position after the last skipped result. Will be set when
    * `skipped_results` != 0.
    * The value may be {@code null}.
@@ -183,6 +195,33 @@ public final class QueryResultBatch extends com.google.api.client.json.GenericJs
    */
   public QueryResultBatch setMoreResults(java.lang.String moreResults) {
     this.moreResults = moreResults;
+    return this;
+  }
+
+  /**
+   * Read timestamp this batch was returned from. This applies to the range of results from the
+   * query's `start_cursor` (or the beginning of the query if no cursor was given) to this batch's
+   * `end_cursor` (not the query's `end_cursor`). In a single transaction, subsequent query result
+   * batches for the same query can have a greater timestamp. Each batch's read timestamp is valid
+   * for all preceding batches. This value will not be set for eventually consistent queries in
+   * Cloud Datastore.
+   * @return value or {@code null} for none
+   */
+  public String getReadTime() {
+    return readTime;
+  }
+
+  /**
+   * Read timestamp this batch was returned from. This applies to the range of results from the
+   * query's `start_cursor` (or the beginning of the query if no cursor was given) to this batch's
+   * `end_cursor` (not the query's `end_cursor`). In a single transaction, subsequent query result
+   * batches for the same query can have a greater timestamp. Each batch's read timestamp is valid
+   * for all preceding batches. This value will not be set for eventually consistent queries in
+   * Cloud Datastore.
+   * @param readTime readTime or {@code null} for none
+   */
+  public QueryResultBatch setReadTime(String readTime) {
+    this.readTime = readTime;
     return this;
   }
 

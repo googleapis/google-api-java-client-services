@@ -45,6 +45,15 @@ public final class MutationResult extends com.google.api.client.json.GenericJson
   private Key key;
 
   /**
+   * The update time of the entity on the server after processing the mutation. If the mutation
+   * doesn't change anything on the server, then the timestamp will be the update timestamp of the
+   * current entity. This field will not be set after a 'delete'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * The version of the entity on the server after processing the mutation. If the mutation doesn't
    * change anything on the server, then the version will be the version of the current entity or,
    * if no entity is present, a version that is strictly greater than the version of any previous
@@ -87,6 +96,27 @@ public final class MutationResult extends com.google.api.client.json.GenericJson
    */
   public MutationResult setKey(Key key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * The update time of the entity on the server after processing the mutation. If the mutation
+   * doesn't change anything on the server, then the timestamp will be the update timestamp of the
+   * current entity. This field will not be set after a 'delete'.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * The update time of the entity on the server after processing the mutation. If the mutation
+   * doesn't change anything on the server, then the timestamp will be the update timestamp of the
+   * current entity. This field will not be set after a 'delete'.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public MutationResult setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

@@ -45,6 +45,14 @@ public final class EntityResult extends com.google.api.client.json.GenericJson {
   private Entity entity;
 
   /**
+   * The time at which the entity was last changed. This field is set for `FULL` entity results. If
+   * this entity is missing, this field will not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * The version of the entity, a strictly positive number that monotonically increases with changes
    * to the entity. This field is set for `FULL` entity results. For missing entities in
    * `LookupResponse`, this is the version of the snapshot that was used to look up the entity, and
@@ -117,6 +125,25 @@ public final class EntityResult extends com.google.api.client.json.GenericJson {
    */
   public EntityResult setEntity(Entity entity) {
     this.entity = entity;
+    return this;
+  }
+
+  /**
+   * The time at which the entity was last changed. This field is set for `FULL` entity results. If
+   * this entity is missing, this field will not be set.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * The time at which the entity was last changed. This field is set for `FULL` entity results. If
+   * this entity is missing, this field will not be set.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public EntityResult setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

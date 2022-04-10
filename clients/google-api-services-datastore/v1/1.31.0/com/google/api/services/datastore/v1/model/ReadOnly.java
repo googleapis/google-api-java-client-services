@@ -29,6 +29,30 @@ package com.google.api.services.datastore.v1.model;
 @SuppressWarnings("javadoc")
 public final class ReadOnly extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Reads entities at the given time. This may not be older than 60 seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String readTime;
+
+  /**
+   * Reads entities at the given time. This may not be older than 60 seconds.
+   * @return value or {@code null} for none
+   */
+  public String getReadTime() {
+    return readTime;
+  }
+
+  /**
+   * Reads entities at the given time. This may not be older than 60 seconds.
+   * @param readTime readTime or {@code null} for none
+   */
+  public ReadOnly setReadTime(String readTime) {
+    this.readTime = readTime;
+    return this;
+  }
+
   @Override
   public ReadOnly set(String fieldName, Object value) {
     return (ReadOnly) super.set(fieldName, value);

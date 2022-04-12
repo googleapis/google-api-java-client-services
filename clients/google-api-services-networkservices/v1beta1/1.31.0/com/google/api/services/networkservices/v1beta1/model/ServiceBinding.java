@@ -45,15 +45,6 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
-   * Optional. The endpoint filter associated with the Service Binding. The syntax is described in
-   * http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud
-   * .servicedirectory.v1.ResolveServiceRequest
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String endpointFilter;
-
-  /**
    * Optional. Set of label tags associated with the ServiceBinding resource.
    * The value may be {@code null}.
    */
@@ -114,27 +105,6 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
    */
   public ServiceBinding setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * Optional. The endpoint filter associated with the Service Binding. The syntax is described in
-   * http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud
-   * .servicedirectory.v1.ResolveServiceRequest
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEndpointFilter() {
-    return endpointFilter;
-  }
-
-  /**
-   * Optional. The endpoint filter associated with the Service Binding. The syntax is described in
-   * http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud
-   * .servicedirectory.v1.ResolveServiceRequest
-   * @param endpointFilter endpointFilter or {@code null} for none
-   */
-  public ServiceBinding setEndpointFilter(java.lang.String endpointFilter) {
-    this.endpointFilter = endpointFilter;
     return this;
   }
 

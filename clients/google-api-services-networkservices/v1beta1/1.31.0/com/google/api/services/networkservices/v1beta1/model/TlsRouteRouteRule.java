@@ -38,7 +38,7 @@ public final class TlsRouteRouteRule extends com.google.api.client.json.GenericJ
 
   /**
    * Required. RouteMatch defines the predicate used to match requests to a given action. Multiple
-   * match types are “OR”ed for evaluation.
+   * match types are "OR"ed for evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class TlsRouteRouteRule extends com.google.api.client.json.GenericJ
 
   /**
    * Required. RouteMatch defines the predicate used to match requests to a given action. Multiple
-   * match types are “OR”ed for evaluation.
+   * match types are "OR"ed for evaluation.
    * @return value or {@code null} for none
    */
   public java.util.List<TlsRouteRouteMatch> getMatches() {
@@ -78,7 +78,7 @@ public final class TlsRouteRouteRule extends com.google.api.client.json.GenericJ
 
   /**
    * Required. RouteMatch defines the predicate used to match requests to a given action. Multiple
-   * match types are “OR”ed for evaluation.
+   * match types are "OR"ed for evaluation.
    * @param matches matches or {@code null} for none
    */
   public TlsRouteRouteRule setMatches(java.util.List<TlsRouteRouteMatch> matches) {

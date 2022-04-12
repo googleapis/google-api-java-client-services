@@ -56,6 +56,13 @@ public final class GoogleCloudApigeeV1OperationMetadata extends com.google.api.c
   private java.lang.String targetResourceName;
 
   /**
+   * Warnings encountered while executing the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> warnings;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationType() {
@@ -116,6 +123,23 @@ public final class GoogleCloudApigeeV1OperationMetadata extends com.google.api.c
    */
   public GoogleCloudApigeeV1OperationMetadata setTargetResourceName(java.lang.String targetResourceName) {
     this.targetResourceName = targetResourceName;
+    return this;
+  }
+
+  /**
+   * Warnings encountered while executing the operation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * Warnings encountered while executing the operation.
+   * @param warnings warnings or {@code null} for none
+   */
+  public GoogleCloudApigeeV1OperationMetadata setWarnings(java.util.List<java.lang.String> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

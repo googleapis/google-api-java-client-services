@@ -41,6 +41,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   private String createTime;
 
   /**
+   * If set, information about the eventual deprecation of this version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3ProcessorVersionDeprecationInfo deprecationInfo;
+
+  /**
    * The display name of the processor version.
    * The value may be {@code null}.
    */
@@ -97,6 +104,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersion setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * If set, information about the eventual deprecation of this version.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessorVersionDeprecationInfo getDeprecationInfo() {
+    return deprecationInfo;
+  }
+
+  /**
+   * If set, information about the eventual deprecation of this version.
+   * @param deprecationInfo deprecationInfo or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessorVersion setDeprecationInfo(GoogleCloudDocumentaiV1beta3ProcessorVersionDeprecationInfo deprecationInfo) {
+    this.deprecationInfo = deprecationInfo;
     return this;
   }
 

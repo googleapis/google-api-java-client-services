@@ -44,6 +44,23 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   private java.lang.String autoUpdateMode;
 
   /**
+   * An authentication URL configuration for the authenticator app of an identity provider. This
+   * helps to launch the identity provider's authenticator app during the authentication happening
+   * in a private app using Android WebView. Authenticator app should already be the [default
+   * handler](https://developer.android.com/training/app-links/verify-site-associations) for the
+   * authentication url on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EnterpriseAuthenticationAppLinkConfig> enterpriseAuthenticationAppLinkConfigs;
+
+  static {
+    // hack to force ProGuard to consider EnterpriseAuthenticationAppLinkConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EnterpriseAuthenticationAppLinkConfig.class);
+  }
+
+  /**
    * The managed configuration for the product.
    * The value may be {@code null}.
    */
@@ -103,6 +120,31 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
    */
   public ProductPolicy setAutoUpdateMode(java.lang.String autoUpdateMode) {
     this.autoUpdateMode = autoUpdateMode;
+    return this;
+  }
+
+  /**
+   * An authentication URL configuration for the authenticator app of an identity provider. This
+   * helps to launch the identity provider's authenticator app during the authentication happening
+   * in a private app using Android WebView. Authenticator app should already be the [default
+   * handler](https://developer.android.com/training/app-links/verify-site-associations) for the
+   * authentication url on the device.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EnterpriseAuthenticationAppLinkConfig> getEnterpriseAuthenticationAppLinkConfigs() {
+    return enterpriseAuthenticationAppLinkConfigs;
+  }
+
+  /**
+   * An authentication URL configuration for the authenticator app of an identity provider. This
+   * helps to launch the identity provider's authenticator app during the authentication happening
+   * in a private app using Android WebView. Authenticator app should already be the [default
+   * handler](https://developer.android.com/training/app-links/verify-site-associations) for the
+   * authentication url on the device.
+   * @param enterpriseAuthenticationAppLinkConfigs enterpriseAuthenticationAppLinkConfigs or {@code null} for none
+   */
+  public ProductPolicy setEnterpriseAuthenticationAppLinkConfigs(java.util.List<EnterpriseAuthenticationAppLinkConfig> enterpriseAuthenticationAppLinkConfigs) {
+    this.enterpriseAuthenticationAppLinkConfigs = enterpriseAuthenticationAppLinkConfigs;
     return this;
   }
 

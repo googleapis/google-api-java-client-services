@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-androidenterprise</artifactId>
-  <version>v1-rev20210723-1.32.1</version>
-  <name>Google Play EMM API v1-rev20210723-1.32.1</name>
+  <version>v1-rev20220407-1.32.1</version>
+  <name>Google Play EMM API v1-rev20220407-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

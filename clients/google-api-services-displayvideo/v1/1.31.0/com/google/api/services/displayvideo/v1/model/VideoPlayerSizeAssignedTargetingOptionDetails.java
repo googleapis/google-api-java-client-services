@@ -42,7 +42,7 @@ public final class VideoPlayerSizeAssignedTargetingOptionDetails extends com.goo
   private java.lang.String targetingOptionId;
 
   /**
-   * The video player size. Output only in v1. Required in v2.
+   * The video player size. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class VideoPlayerSizeAssignedTargetingOptionDetails extends com.goo
   }
 
   /**
-   * The video player size. Output only in v1. Required in v2.
+   * The video player size. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoPlayerSize() {
@@ -76,7 +76,7 @@ public final class VideoPlayerSizeAssignedTargetingOptionDetails extends com.goo
   }
 
   /**
-   * The video player size. Output only in v1. Required in v2.
+   * The video player size. Output only in v1.
    * @param videoPlayerSize videoPlayerSize or {@code null} for none
    */
   public VideoPlayerSizeAssignedTargetingOptionDetails setVideoPlayerSize(java.lang.String videoPlayerSize) {

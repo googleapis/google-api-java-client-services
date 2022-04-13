@@ -58,7 +58,7 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
   private java.lang.String performanceGoalType;
 
   /**
-   * Controls whether the strategy takes deal floor prices into account.
+   * Whether the strategy takes deal floor prices into account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
   }
 
   /**
-   * Controls whether the strategy takes deal floor prices into account.
+   * Whether the strategy takes deal floor prices into account.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRaiseBidForDeals() {
@@ -134,7 +134,7 @@ public final class MaximizeSpendBidStrategy extends com.google.api.client.json.G
   }
 
   /**
-   * Controls whether the strategy takes deal floor prices into account.
+   * Whether the strategy takes deal floor prices into account.
    * @param raiseBidForDeals raiseBidForDeals or {@code null} for none
    */
   public MaximizeSpendBidStrategy setRaiseBidForDeals(java.lang.Boolean raiseBidForDeals) {

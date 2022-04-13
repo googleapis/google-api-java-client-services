@@ -9369,16 +9369,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
-         * "entityStatus" * “flight.dateRange.endDate” * "updateTime" The default sorting order is
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` * `flight.dateRange.endDate` * `updateTime` The default sorting order is
          * ascending. To specify descending order for a field, a suffix "desc" should be added to
          * the field name. Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are: * "displayName" (default) * "entityStatus"
-       * “flight.dateRange.endDate” * "updateTime" The default sorting order is ascending. To specify
+        /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
+       * `flight.dateRange.endDate` * `updateTime` The default sorting order is ascending. To specify
        descending order for a field, a suffix "desc" should be added to the field name. Example:
        `displayName desc`.
          */
@@ -9387,8 +9387,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
-         * "entityStatus" * “flight.dateRange.endDate” * "updateTime" The default sorting order is
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `entityStatus` * `flight.dateRange.endDate` * `updateTime` The default sorting order is
          * ascending. To specify descending order for a field, a suffix "desc" should be added to
          * the field name. Example: `displayName desc`.
          */

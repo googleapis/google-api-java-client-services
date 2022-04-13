@@ -40,7 +40,7 @@ public final class ViewabilityAssignedTargetingOptionDetails extends com.google.
   private java.lang.String targetingOptionId;
 
   /**
-   * The predicted viewability percentage. Output only in v1. Required in v2.
+   * The predicted viewability percentage. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class ViewabilityAssignedTargetingOptionDetails extends com.google.
   }
 
   /**
-   * The predicted viewability percentage. Output only in v1. Required in v2.
+   * The predicted viewability percentage. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getViewability() {
@@ -74,7 +74,7 @@ public final class ViewabilityAssignedTargetingOptionDetails extends com.google.
   }
 
   /**
-   * The predicted viewability percentage. Output only in v1. Required in v2.
+   * The predicted viewability percentage. Output only in v1.
    * @param viewability viewability or {@code null} for none
    */
   public ViewabilityAssignedTargetingOptionDetails setViewability(java.lang.String viewability) {

@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class OmidAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of Open Measurement enabled inventory. Output only in v1. Required in v2.
+   * The type of Open Measurement enabled inventory. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class OmidAssignedTargetingOptionDetails extends com.google.api.cli
   private java.lang.String targetingOptionId;
 
   /**
-   * The type of Open Measurement enabled inventory. Output only in v1. Required in v2.
+   * The type of Open Measurement enabled inventory. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getOmid() {
@@ -54,7 +54,7 @@ public final class OmidAssignedTargetingOptionDetails extends com.google.api.cli
   }
 
   /**
-   * The type of Open Measurement enabled inventory. Output only in v1. Required in v2.
+   * The type of Open Measurement enabled inventory. Output only in v1.
    * @param omid omid or {@code null} for none
    */
   public OmidAssignedTargetingOptionDetails setOmid(java.lang.String omid) {

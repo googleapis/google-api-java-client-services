@@ -44,7 +44,7 @@ public final class ContentInstreamPositionAssignedTargetingOptionDetails extends
   private java.lang.String adType;
 
   /**
-   * The content instream position for video or audio ads. Output only in v1. Required in v2.
+   * The content instream position for video or audio ads. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class ContentInstreamPositionAssignedTargetingOptionDetails extends
   }
 
   /**
-   * The content instream position for video or audio ads. Output only in v1. Required in v2.
+   * The content instream position for video or audio ads. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentInstreamPosition() {
@@ -92,7 +92,7 @@ public final class ContentInstreamPositionAssignedTargetingOptionDetails extends
   }
 
   /**
-   * The content instream position for video or audio ads. Output only in v1. Required in v2.
+   * The content instream position for video or audio ads. Output only in v1.
    * @param contentInstreamPosition contentInstreamPosition or {@code null} for none
    */
   public ContentInstreamPositionAssignedTargetingOptionDetails setContentInstreamPosition(java.lang.String contentInstreamPosition) {

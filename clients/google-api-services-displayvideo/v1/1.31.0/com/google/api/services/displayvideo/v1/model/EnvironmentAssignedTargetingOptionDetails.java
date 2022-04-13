@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class EnvironmentAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The serving environment. Output only in v1. Required in v2.
+   * The serving environment. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class EnvironmentAssignedTargetingOptionDetails extends com.google.
   private java.lang.String targetingOptionId;
 
   /**
-   * The serving environment. Output only in v1. Required in v2.
+   * The serving environment. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -55,7 +55,7 @@ public final class EnvironmentAssignedTargetingOptionDetails extends com.google.
   }
 
   /**
-   * The serving environment. Output only in v1. Required in v2.
+   * The serving environment. Output only in v1.
    * @param environment environment or {@code null} for none
    */
   public EnvironmentAssignedTargetingOptionDetails setEnvironment(java.lang.String environment) {

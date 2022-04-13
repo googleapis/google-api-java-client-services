@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the device type. Output only in v1. Required in v2.
+   * The display name of the device type. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.a
   private java.lang.String targetingOptionId;
 
   /**
-   * The display name of the device type. Output only in v1. Required in v2.
+   * The display name of the device type. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceType() {
@@ -54,7 +54,7 @@ public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.a
   }
 
   /**
-   * The display name of the device type. Output only in v1. Required in v2.
+   * The display name of the device type. Output only in v1.
    * @param deviceType deviceType or {@code null} for none
    */
   public DeviceTypeAssignedTargetingOptionDetails setDeviceType(java.lang.String deviceType) {

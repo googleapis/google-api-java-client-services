@@ -122,8 +122,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String fullDescription;
 
   /**
-   * A link to an image that can be used as an icon for the app. This image is suitable for use at
-   * up to 512px x 512px
+   * A link to an image that can be used as an icon for the app. This image is suitable for use up
+   * to a pixel size of 512 x 512.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +180,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * A link to a smaller image that can be used as an icon for the app. This image is suitable for
-   * use at up to 128px x 128px.
+   * use up to a pixel size of 128 x 128.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -392,8 +392,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to an image that can be used as an icon for the app. This image is suitable for use at
-   * up to 512px x 512px
+   * A link to an image that can be used as an icon for the app. This image is suitable for use up
+   * to a pixel size of 512 x 512.
    * @return value or {@code null} for none
    */
   public java.lang.String getIconUrl() {
@@ -401,8 +401,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to an image that can be used as an icon for the app. This image is suitable for use at
-   * up to 512px x 512px
+   * A link to an image that can be used as an icon for the app. This image is suitable for use up
+   * to a pixel size of 512 x 512.
    * @param iconUrl iconUrl or {@code null} for none
    */
   public Application setIconUrl(java.lang.String iconUrl) {
@@ -531,7 +531,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * A link to a smaller image that can be used as an icon for the app. This image is suitable for
-   * use at up to 128px x 128px.
+   * use up to a pixel size of 128 x 128.
    * @return value or {@code null} for none
    */
   public java.lang.String getSmallIconUrl() {
@@ -540,7 +540,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * A link to a smaller image that can be used as an icon for the app. This image is suitable for
-   * use at up to 128px x 128px.
+   * use up to a pixel size of 128 x 128.
    * @param smallIconUrl smallIconUrl or {@code null} for none
    */
   public Application setSmallIconUrl(java.lang.String smallIconUrl) {

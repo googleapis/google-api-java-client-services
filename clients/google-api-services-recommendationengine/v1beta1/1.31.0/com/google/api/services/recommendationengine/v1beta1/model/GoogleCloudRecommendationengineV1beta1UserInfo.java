@@ -62,7 +62,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
 
   /**
    * Optional. Unique identifier for logged-in user with a length limit of 128 bytes. Required only
-   * for logged-in users.
+   * for logged-in users. Don't set for anonymous users. Don't set the field to the same fixed ID
+   * for different users. This mixes the event history of those users together, which results in
+   * degraded model quality.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +74,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
    * Required. A unique identifier for tracking visitors with a length limit of 128 bytes. For
    * example, this could be implemented with an HTTP cookie, which should be able to uniquely
    * identify a visitor on a single device. This unique identifier should not change if the visitor
-   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty.
+   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty. Don't set the field
+   * to the same fixed ID for different users. This mixes the event history of those users together,
+   * which results in degraded model quality.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +153,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
 
   /**
    * Optional. Unique identifier for logged-in user with a length limit of 128 bytes. Required only
-   * for logged-in users.
+   * for logged-in users. Don't set for anonymous users. Don't set the field to the same fixed ID
+   * for different users. This mixes the event history of those users together, which results in
+   * degraded model quality.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -158,7 +164,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
 
   /**
    * Optional. Unique identifier for logged-in user with a length limit of 128 bytes. Required only
-   * for logged-in users.
+   * for logged-in users. Don't set for anonymous users. Don't set the field to the same fixed ID
+   * for different users. This mixes the event history of those users together, which results in
+   * degraded model quality.
    * @param userId userId or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1UserInfo setUserId(java.lang.String userId) {
@@ -170,7 +178,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
    * Required. A unique identifier for tracking visitors with a length limit of 128 bytes. For
    * example, this could be implemented with an HTTP cookie, which should be able to uniquely
    * identify a visitor on a single device. This unique identifier should not change if the visitor
-   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty.
+   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty. Don't set the field
+   * to the same fixed ID for different users. This mixes the event history of those users together,
+   * which results in degraded model quality.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisitorId() {
@@ -181,7 +191,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
    * Required. A unique identifier for tracking visitors with a length limit of 128 bytes. For
    * example, this could be implemented with an HTTP cookie, which should be able to uniquely
    * identify a visitor on a single device. This unique identifier should not change if the visitor
-   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty.
+   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty. Don't set the field
+   * to the same fixed ID for different users. This mixes the event history of those users together,
+   * which results in degraded model quality.
    * @param visitorId visitorId or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1UserInfo setVisitorId(java.lang.String visitorId) {

@@ -31,8 +31,8 @@ package com.google.api.services.servicemanagement.model;
 public final class TestIamPermissionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or
-   * 'storage.*') are not allowed. For more information see [IAM
+   * The set of permissions to check for the `resource`. Permissions with wildcards (such as `*` or
+   * `storage.*`) are not allowed. For more information see [IAM
    * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * The value may be {@code null}.
    */
@@ -40,8 +40,8 @@ public final class TestIamPermissionsRequest extends com.google.api.client.json.
   private java.util.List<java.lang.String> permissions;
 
   /**
-   * The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or
-   * 'storage.*') are not allowed. For more information see [IAM
+   * The set of permissions to check for the `resource`. Permissions with wildcards (such as `*` or
+   * `storage.*`) are not allowed. For more information see [IAM
    * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @return value or {@code null} for none
    */
@@ -50,8 +50,8 @@ public final class TestIamPermissionsRequest extends com.google.api.client.json.
   }
 
   /**
-   * The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or
-   * 'storage.*') are not allowed. For more information see [IAM
+   * The set of permissions to check for the `resource`. Permissions with wildcards (such as `*` or
+   * `storage.*`) are not allowed. For more information see [IAM
    * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @param permissions permissions or {@code null} for none
    */

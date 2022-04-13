@@ -7487,7 +7487,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param name Required. Resource name for this grant, following the pattern
-     *        "developers/{developer}/users/{email}/grants/{package_name}".
+     *        "developers/{developer}/users/{email}/grants/{package_name}". If this grant is for a draft
+     *        app, the app ID will be used in this resource name instead of the package name.
      * @param content the {@link com.google.api.services.androidpublisher.model.Grant}
      * @return the request
      */
@@ -7516,7 +7517,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. Resource name for this grant, following the pattern
-     *        "developers/{developer}/users/{email}/grants/{package_name}".
+     *        "developers/{developer}/users/{email}/grants/{package_name}". If this grant is for a draft
+     *        app, the app ID will be used in this resource name instead of the package name.
        * @param content the {@link com.google.api.services.androidpublisher.model.Grant}
        * @since 1.13
        */
@@ -7587,13 +7589,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       /**
        * Required. Resource name for this grant, following the pattern
-       * "developers/{developer}/users/{email}/grants/{package_name}".
+       * "developers/{developer}/users/{email}/grants/{package_name}". If this grant is for a draft
+       * app, the app ID will be used in this resource name instead of the package name.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. Resource name for this grant, following the pattern
-     "developers/{developer}/users/{email}/grants/{package_name}".
+     "developers/{developer}/users/{email}/grants/{package_name}". If this grant is for a draft app, the
+     app ID will be used in this resource name instead of the package name.
        */
       public java.lang.String getName() {
         return name;
@@ -7601,7 +7605,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
       /**
        * Required. Resource name for this grant, following the pattern
-       * "developers/{developer}/users/{email}/grants/{package_name}".
+       * "developers/{developer}/users/{email}/grants/{package_name}". If this grant is for a draft
+       * app, the app ID will be used in this resource name instead of the package name.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

@@ -52,7 +52,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String email;
 
   /**
-   * The time at which the user's access expires, if set.
+   * The time at which the user's access expires, if set. When setting this value, it must always be
+   * in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,6 +82,11 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether there are more permissions for the user that are not represented here.
+   * This can happen if the caller does not have permission to manage all apps in the account. This
+   * is also `true` if this user is the account owner. If this field is `true`, it should be taken
+   * as a signal that this user cannot be fully managed via the API. That is, the API caller is not
+   * be able to manage all of the permissions this user holds, either because it doesn't know about
+   * them or because the user is the account owner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +144,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the user's access expires, if set.
+   * The time at which the user's access expires, if set. When setting this value, it must always be
+   * in the future.
    * @return value or {@code null} for none
    */
   public String getExpirationTime() {
@@ -146,7 +153,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the user's access expires, if set.
+   * The time at which the user's access expires, if set. When setting this value, it must always be
+   * in the future.
    * @param expirationTime expirationTime or {@code null} for none
    */
   public User setExpirationTime(String expirationTime) {
@@ -192,6 +200,11 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether there are more permissions for the user that are not represented here.
+   * This can happen if the caller does not have permission to manage all apps in the account. This
+   * is also `true` if this user is the account owner. If this field is `true`, it should be taken
+   * as a signal that this user cannot be fully managed via the API. That is, the API caller is not
+   * be able to manage all of the permissions this user holds, either because it doesn't know about
+   * them or because the user is the account owner.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPartial() {
@@ -200,6 +213,11 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether there are more permissions for the user that are not represented here.
+   * This can happen if the caller does not have permission to manage all apps in the account. This
+   * is also `true` if this user is the account owner. If this field is `true`, it should be taken
+   * as a signal that this user cannot be fully managed via the API. That is, the API caller is not
+   * be able to manage all of the permissions this user holds, either because it doesn't know about
+   * them or because the user is the account owner.
    * @param partial partial or {@code null} for none
    */
   public User setPartial(java.lang.Boolean partial) {

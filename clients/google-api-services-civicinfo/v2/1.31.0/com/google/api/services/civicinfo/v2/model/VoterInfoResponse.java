@@ -142,6 +142,20 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
   private java.lang.String precinctId;
 
   /**
+   * The precincts that match this voter's address. Will only be returned for project IDs which have
+   * been whitelisted as "partner projects".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Precinct> precincts;
+
+  static {
+    // hack to force ProGuard to consider Precinct used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Precinct.class);
+  }
+
+  /**
    * Local Election Information for the state that the voter votes in. For the US, there will only
    * be one element in this array.
    * The value may be {@code null}.
@@ -344,6 +358,25 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    */
   public VoterInfoResponse setPrecinctId(java.lang.String precinctId) {
     this.precinctId = precinctId;
+    return this;
+  }
+
+  /**
+   * The precincts that match this voter's address. Will only be returned for project IDs which have
+   * been whitelisted as "partner projects".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Precinct> getPrecincts() {
+    return precincts;
+  }
+
+  /**
+   * The precincts that match this voter's address. Will only be returned for project IDs which have
+   * been whitelisted as "partner projects".
+   * @param precincts precincts or {@code null} for none
+   */
+  public VoterInfoResponse setPrecincts(java.util.List<Precinct> precincts) {
+    this.precincts = precincts;
     return this;
   }
 

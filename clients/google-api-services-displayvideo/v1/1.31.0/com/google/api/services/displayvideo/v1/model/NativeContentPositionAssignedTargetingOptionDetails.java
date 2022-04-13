@@ -34,7 +34,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class NativeContentPositionAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The content position. Output only in v1. Required in v2.
+   * The content position. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class NativeContentPositionAssignedTargetingOptionDetails extends c
   private java.lang.String targetingOptionId;
 
   /**
-   * The content position. Output only in v1. Required in v2.
+   * The content position. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentPosition() {
@@ -57,7 +57,7 @@ public final class NativeContentPositionAssignedTargetingOptionDetails extends c
   }
 
   /**
-   * The content position. Output only in v1. Required in v2.
+   * The content position. Output only in v1.
    * @param contentPosition contentPosition or {@code null} for none
    */
   public NativeContentPositionAssignedTargetingOptionDetails setContentPosition(java.lang.String contentPosition) {

@@ -39,7 +39,7 @@ public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.g
   private java.lang.String excludedTargetingOptionId;
 
   /**
-   * An enum for the DV360 Sensitive category content classifier. Output only in v1. Required in v2.
+   * An enum for the DV360 Sensitive category content classifier. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.g
   }
 
   /**
-   * An enum for the DV360 Sensitive category content classifier. Output only in v1. Required in v2.
+   * An enum for the DV360 Sensitive category content classifier. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getSensitiveCategory() {
@@ -71,7 +71,7 @@ public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.g
   }
 
   /**
-   * An enum for the DV360 Sensitive category content classifier. Output only in v1. Required in v2.
+   * An enum for the DV360 Sensitive category content classifier. Output only in v1.
    * @param sensitiveCategory sensitiveCategory or {@code null} for none
    */
   public SensitiveCategoryAssignedTargetingOptionDetails setSensitiveCategory(java.lang.String sensitiveCategory) {

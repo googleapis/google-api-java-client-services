@@ -35,7 +35,7 @@ public final class AgeRangeAssignedTargetingOptionDetails extends com.google.api
    * The age range of an audience. We only support targeting a continuous age range of an audience.
    * Thus, the age range represented in this field can be 1) targeted solely, or, 2) part of a
    * larger continuous age range. The reach of a continuous age range targeting can be expanded by
-   * also targeting an audience of an unknown age. Output only in v1. Required in v2.
+   * also targeting an audience of an unknown age. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class AgeRangeAssignedTargetingOptionDetails extends com.google.api
    * The age range of an audience. We only support targeting a continuous age range of an audience.
    * Thus, the age range represented in this field can be 1) targeted solely, or, 2) part of a
    * larger continuous age range. The reach of a continuous age range targeting can be expanded by
-   * also targeting an audience of an unknown age. Output only in v1. Required in v2.
+   * also targeting an audience of an unknown age. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgeRange() {
@@ -63,7 +63,7 @@ public final class AgeRangeAssignedTargetingOptionDetails extends com.google.api
    * The age range of an audience. We only support targeting a continuous age range of an audience.
    * Thus, the age range represented in this field can be 1) targeted solely, or, 2) part of a
    * larger continuous age range. The reach of a continuous age range targeting can be expanded by
-   * also targeting an audience of an unknown age. Output only in v1. Required in v2.
+   * also targeting an audience of an unknown age. Output only in v1.
    * @param ageRange ageRange or {@code null} for none
    */
   public AgeRangeAssignedTargetingOptionDetails setAgeRange(java.lang.String ageRange) {

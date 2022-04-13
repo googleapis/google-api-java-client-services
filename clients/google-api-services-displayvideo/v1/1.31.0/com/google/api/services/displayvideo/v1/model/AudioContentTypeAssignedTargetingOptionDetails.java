@@ -34,7 +34,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AudioContentTypeAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The audio content type. Output only in v1. Required in v2.
+   * The audio content type. Output only in v1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class AudioContentTypeAssignedTargetingOptionDetails extends com.go
   private java.lang.String targetingOptionId;
 
   /**
-   * The audio content type. Output only in v1. Required in v2.
+   * The audio content type. Output only in v1.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioContentType() {
@@ -57,7 +57,7 @@ public final class AudioContentTypeAssignedTargetingOptionDetails extends com.go
   }
 
   /**
-   * The audio content type. Output only in v1. Required in v2.
+   * The audio content type. Output only in v1.
    * @param audioContentType audioContentType or {@code null} for none
    */
   public AudioContentTypeAssignedTargetingOptionDetails setAudioContentType(java.lang.String audioContentType) {

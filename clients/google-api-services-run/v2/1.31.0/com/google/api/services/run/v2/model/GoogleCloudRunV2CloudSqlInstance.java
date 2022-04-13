@@ -37,7 +37,7 @@ public final class GoogleCloudRunV2CloudSqlInstance extends com.google.api.clien
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> connections;
+  private java.util.List<java.lang.String> instances;
 
   /**
    * The Cloud SQL instance connection names, as can be found in
@@ -46,8 +46,8 @@ public final class GoogleCloudRunV2CloudSqlInstance extends com.google.api.clien
    * {project}:{location}:{instance}
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getConnections() {
-    return connections;
+  public java.util.List<java.lang.String> getInstances() {
+    return instances;
   }
 
   /**
@@ -55,10 +55,10 @@ public final class GoogleCloudRunV2CloudSqlInstance extends com.google.api.clien
    * https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql
    * /connect-run for more information on how to connect Cloud SQL and Cloud Run. Format:
    * {project}:{location}:{instance}
-   * @param connections connections or {@code null} for none
+   * @param instances instances or {@code null} for none
    */
-  public GoogleCloudRunV2CloudSqlInstance setConnections(java.util.List<java.lang.String> connections) {
-    this.connections = connections;
+  public GoogleCloudRunV2CloudSqlInstance setInstances(java.util.List<java.lang.String> instances) {
+    this.instances = instances;
     return this;
   }
 

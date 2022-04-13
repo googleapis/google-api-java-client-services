@@ -706,6 +706,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean unmuteMicrophoneDisabled;
 
   /**
+   * Configuration of device activity logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UsageLog usageLog;
+
+  /**
    * Whether transferring files over USB is disabled.
    * The value may be {@code null}.
    */
@@ -2254,6 +2261,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setUnmuteMicrophoneDisabled(java.lang.Boolean unmuteMicrophoneDisabled) {
     this.unmuteMicrophoneDisabled = unmuteMicrophoneDisabled;
+    return this;
+  }
+
+  /**
+   * Configuration of device activity logging.
+   * @return value or {@code null} for none
+   */
+  public UsageLog getUsageLog() {
+    return usageLog;
+  }
+
+  /**
+   * Configuration of device activity logging.
+   * @param usageLog usageLog or {@code null} for none
+   */
+  public Policy setUsageLog(UsageLog usageLog) {
+    this.usageLog = usageLog;
     return this;
   }
 

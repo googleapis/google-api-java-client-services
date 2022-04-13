@@ -85,7 +85,7 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   private java.lang.Integer primaryColor;
 
   /**
-   * The topic that Cloud Pub/Sub notifications are published to, in the form
+   * The topic which Pub/Sub notifications are published to, in the form
    * projects/{project}/topics/{topic}. This field is only required if Pub/Sub notifications are
    * enabled.
    * The value may be {@code null}.
@@ -238,7 +238,7 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The topic that Cloud Pub/Sub notifications are published to, in the form
+   * The topic which Pub/Sub notifications are published to, in the form
    * projects/{project}/topics/{topic}. This field is only required if Pub/Sub notifications are
    * enabled.
    * @return value or {@code null} for none
@@ -248,7 +248,7 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The topic that Cloud Pub/Sub notifications are published to, in the form
+   * The topic which Pub/Sub notifications are published to, in the form
    * projects/{project}/topics/{topic}. This field is only required if Pub/Sub notifications are
    * enabled.
    * @param pubsubTopic pubsubTopic or {@code null} for none

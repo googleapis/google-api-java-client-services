@@ -31,15 +31,15 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class AppVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if this version is a production track.
+   * If the value is True, it indicates that this version is a production track.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean production;
 
   /**
-   * Track ids that the app version is published in. This doesn't include the production track (see
-   * production instead).
+   * Track identifiers that the app version is published in. This does not include the production
+   * track (see production instead).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   private java.lang.String versionString;
 
   /**
-   * True if this version is a production track.
+   * If the value is True, it indicates that this version is a production track.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProduction() {
@@ -69,7 +69,7 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if this version is a production track.
+   * If the value is True, it indicates that this version is a production track.
    * @param production production or {@code null} for none
    */
   public AppVersion setProduction(java.lang.Boolean production) {
@@ -78,8 +78,8 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Track ids that the app version is published in. This doesn't include the production track (see
-   * production instead).
+   * Track identifiers that the app version is published in. This does not include the production
+   * track (see production instead).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTrackIds() {
@@ -87,8 +87,8 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Track ids that the app version is published in. This doesn't include the production track (see
-   * production instead).
+   * Track identifiers that the app version is published in. This does not include the production
+   * track (see production instead).
    * @param trackIds trackIds or {@code null} for none
    */
   public AppVersion setTrackIds(java.util.List<java.lang.String> trackIds) {

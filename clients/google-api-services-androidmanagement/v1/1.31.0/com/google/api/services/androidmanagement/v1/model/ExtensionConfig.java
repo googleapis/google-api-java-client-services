@@ -40,7 +40,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String notificationReceiver;
 
   /**
-   * Hex-encoded SHA256 hash of the signing certificate of the extension app. Only hexadecimal
+   * Hex-encoded SHA-256 hash of the signing certificate of the extension app. Only hexadecimal
    * string representations of 64 characters are valid.If not specified, the signature for the
    * corresponding package name is obtained from the Play Store instead.If this list is empty, the
    * signature of the extension app on the device must match the signature obtained from the Play
@@ -73,7 +73,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Hex-encoded SHA256 hash of the signing certificate of the extension app. Only hexadecimal
+   * Hex-encoded SHA-256 hash of the signing certificate of the extension app. Only hexadecimal
    * string representations of 64 characters are valid.If not specified, the signature for the
    * corresponding package name is obtained from the Play Store instead.If this list is empty, the
    * signature of the extension app on the device must match the signature obtained from the Play
@@ -88,7 +88,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Hex-encoded SHA256 hash of the signing certificate of the extension app. Only hexadecimal
+   * Hex-encoded SHA-256 hash of the signing certificate of the extension app. Only hexadecimal
    * string representations of 64 characters are valid.If not specified, the signature for the
    * corresponding package name is obtained from the Play Store instead.If this list is empty, the
    * signature of the extension app on the device must match the signature obtained from the Play

@@ -248,16 +248,20 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * Whether the enterprise admin has seen and agreed to the managed Google Play Agreement
-       * (https://www.android.com/enterprise/terms/). Always set this to true when creating an EMM-
-       * managed enterprise. Do not create the enterprise until the admin has viewed and accepted
-       * the agreement.
+       * (https://www.android.com/enterprise/terms/). Do not set this field for any customer-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#customer-
+       * managed_enterprises). Set this to field to true for all EMM-managed enterprises
+       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed_enterprises).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean agreementAccepted;
 
       /** Whether the enterprise admin has seen and agreed to the managed Google Play Agreement
-     (https://www.android.com/enterprise/terms/). Always set this to true when creating an EMM-managed
-     enterprise. Do not create the enterprise until the admin has viewed and accepted the agreement.
+     (https://www.android.com/enterprise/terms/). Do not set this field for any customer-managed
+     enterprise (https://developers.google.com/android/management/create-enterprise#customer-
+     managed_enterprises). Set this to field to true for all EMM-managed enterprises
+     (https://developers.google.com/android/management/create-enterprise#emm-managed_enterprises).
        */
       public java.lang.Boolean getAgreementAccepted() {
         return agreementAccepted;
@@ -265,9 +269,11 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * Whether the enterprise admin has seen and agreed to the managed Google Play Agreement
-       * (https://www.android.com/enterprise/terms/). Always set this to true when creating an EMM-
-       * managed enterprise. Do not create the enterprise until the admin has viewed and accepted
-       * the agreement.
+       * (https://www.android.com/enterprise/terms/). Do not set this field for any customer-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#customer-
+       * managed_enterprises). Set this to field to true for all EMM-managed enterprises
+       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed_enterprises).
        */
       public Create setAgreementAccepted(java.lang.Boolean agreementAccepted) {
         this.agreementAccepted = agreementAccepted;
@@ -275,22 +281,30 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The enterprise token appended to the callback URL. Only set this when creating a customer-
-       * managed enterprise.
+       * The enterprise token appended to the callback URL. Set this when creating a customer-
+       * managed enterprise (https://developers.google.com/android/management/create-enterprise
+       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
+       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed_enterprises).
        */
       @com.google.api.client.util.Key
       private java.lang.String enterpriseToken;
 
-      /** The enterprise token appended to the callback URL. Only set this when creating a customer-managed
-     enterprise.
+      /** The enterprise token appended to the callback URL. Set this when creating a customer-managed
+     enterprise (https://developers.google.com/android/management/create-enterprise#customer-
+     managed_enterprises) and not when creating a deprecated EMM-managed enterprise
+     (https://developers.google.com/android/management/create-enterprise#emm-managed_enterprises).
        */
       public java.lang.String getEnterpriseToken() {
         return enterpriseToken;
       }
 
       /**
-       * The enterprise token appended to the callback URL. Only set this when creating a customer-
-       * managed enterprise.
+       * The enterprise token appended to the callback URL. Set this when creating a customer-
+       * managed enterprise (https://developers.google.com/android/management/create-enterprise
+       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
+       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed_enterprises).
        */
       public Create setEnterpriseToken(java.lang.String enterpriseToken) {
         this.enterpriseToken = enterpriseToken;
@@ -314,22 +328,30 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The name of the SignupUrl used to sign up for the enterprise. Only set this when creating a
-       * customer-managed enterprise.
+       * The name of the SignupUrl used to sign up for the enterprise. Set this when creating a
+       * customer-managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed_enterprises).
        */
       @com.google.api.client.util.Key
       private java.lang.String signupUrlName;
 
-      /** The name of the SignupUrl used to sign up for the enterprise. Only set this when creating a
-     customer-managed enterprise.
+      /** The name of the SignupUrl used to sign up for the enterprise. Set this when creating a customer-
+     managed enterprise (https://developers.google.com/android/management/create-enterprise#customer-
+     managed_enterprises) and not when creating a deprecated EMM-managed enterprise
+     (https://developers.google.com/android/management/create-enterprise#emm-managed_enterprises).
        */
       public java.lang.String getSignupUrlName() {
         return signupUrlName;
       }
 
       /**
-       * The name of the SignupUrl used to sign up for the enterprise. Only set this when creating a
-       * customer-managed enterprise.
+       * The name of the SignupUrl used to sign up for the enterprise. Set this when creating a
+       * customer-managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed_enterprises).
        */
       public Create setSignupUrlName(java.lang.String signupUrlName) {
         this.signupUrlName = signupUrlName;

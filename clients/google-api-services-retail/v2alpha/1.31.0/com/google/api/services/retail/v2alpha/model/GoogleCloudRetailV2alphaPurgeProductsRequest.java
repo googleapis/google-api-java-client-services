@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaPurgeProductsRequest extends com.goog
    * characters. Empty string filter is not allowed. "*" implies delete all items in a branch. The
    * eligible fields for filtering are: * `availability`: Double quoted Product.availability string.
    * * `create_time` : in ISO 8601 "zulu" format. Supported syntax: * Comparators (">", "<", ">=",
-   * "<=", "="). Examples: * create_time <= "2015-02-13T17:05:46Z" * availability = "IN_STOCK” *
+   * "<=", "="). Examples: * create_time <= "2015-02-13T17:05:46Z" * availability = "IN_STOCK" *
    * Conjunctions ("AND") Examples: * create_time <= "2015-02-13T17:05:46Z" AND availability =
    * "PREORDER" * Disjunctions ("OR") Examples: * create_time <= "2015-02-13T17:05:46Z" OR
    * availability = "IN_STOCK" * Can support nested queries. Examples: * (create_time <=
@@ -42,7 +42,7 @@ public final class GoogleCloudRetailV2alphaPurgeProductsRequest extends com.goog
    * AND availability = "IN_STOCK") * Filter Limits: * Filter should not contain more than 6
    * conditions. * Max nesting depth should not exceed 2 levels. Examples queries: * Delete back
    * order products created before a timestamp. create_time <= "2015-02-13T17:05:46Z" OR
-   * availability = "BACKORDER”
+   * availability = "BACKORDER"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudRetailV2alphaPurgeProductsRequest extends com.goog
    * characters. Empty string filter is not allowed. "*" implies delete all items in a branch. The
    * eligible fields for filtering are: * `availability`: Double quoted Product.availability string.
    * * `create_time` : in ISO 8601 "zulu" format. Supported syntax: * Comparators (">", "<", ">=",
-   * "<=", "="). Examples: * create_time <= "2015-02-13T17:05:46Z" * availability = "IN_STOCK” *
+   * "<=", "="). Examples: * create_time <= "2015-02-13T17:05:46Z" * availability = "IN_STOCK" *
    * Conjunctions ("AND") Examples: * create_time <= "2015-02-13T17:05:46Z" AND availability =
    * "PREORDER" * Disjunctions ("OR") Examples: * create_time <= "2015-02-13T17:05:46Z" OR
    * availability = "IN_STOCK" * Can support nested queries. Examples: * (create_time <=
@@ -69,7 +69,7 @@ public final class GoogleCloudRetailV2alphaPurgeProductsRequest extends com.goog
    * AND availability = "IN_STOCK") * Filter Limits: * Filter should not contain more than 6
    * conditions. * Max nesting depth should not exceed 2 levels. Examples queries: * Delete back
    * order products created before a timestamp. create_time <= "2015-02-13T17:05:46Z" OR
-   * availability = "BACKORDER”
+   * availability = "BACKORDER"
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -81,7 +81,7 @@ public final class GoogleCloudRetailV2alphaPurgeProductsRequest extends com.goog
    * characters. Empty string filter is not allowed. "*" implies delete all items in a branch. The
    * eligible fields for filtering are: * `availability`: Double quoted Product.availability string.
    * * `create_time` : in ISO 8601 "zulu" format. Supported syntax: * Comparators (">", "<", ">=",
-   * "<=", "="). Examples: * create_time <= "2015-02-13T17:05:46Z" * availability = "IN_STOCK” *
+   * "<=", "="). Examples: * create_time <= "2015-02-13T17:05:46Z" * availability = "IN_STOCK" *
    * Conjunctions ("AND") Examples: * create_time <= "2015-02-13T17:05:46Z" AND availability =
    * "PREORDER" * Disjunctions ("OR") Examples: * create_time <= "2015-02-13T17:05:46Z" OR
    * availability = "IN_STOCK" * Can support nested queries. Examples: * (create_time <=
@@ -89,7 +89,7 @@ public final class GoogleCloudRetailV2alphaPurgeProductsRequest extends com.goog
    * AND availability = "IN_STOCK") * Filter Limits: * Filter should not contain more than 6
    * conditions. * Max nesting depth should not exceed 2 levels. Examples queries: * Delete back
    * order products created before a timestamp. create_time <= "2015-02-13T17:05:46Z" OR
-   * availability = "BACKORDER”
+   * availability = "BACKORDER"
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudRetailV2alphaPurgeProductsRequest setFilter(java.lang.String filter) {

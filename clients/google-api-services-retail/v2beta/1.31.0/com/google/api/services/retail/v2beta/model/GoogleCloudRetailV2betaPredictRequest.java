@@ -105,7 +105,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   /**
    * Required. Context about the user, what they are looking at and what action they took to trigger
    * the predict request. Note that this user event detail won't be ingested to userEvent logs.
-   * Thus, a separate userEvent write request is required for event logging.
+   * Thus, a separate userEvent write request is required for event logging. Don't set
+   * UserEvent.visitor_id or UserInfo.user_id to the same fixed ID for different users. If you are
+   * trying to receive non-personalized recommendations (not recommended; this can negatively impact
+   * model performance), instead set UserEvent.visitor_id to a random unique ID and leave
+   * UserInfo.user_id unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,7 +288,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   /**
    * Required. Context about the user, what they are looking at and what action they took to trigger
    * the predict request. Note that this user event detail won't be ingested to userEvent logs.
-   * Thus, a separate userEvent write request is required for event logging.
+   * Thus, a separate userEvent write request is required for event logging. Don't set
+   * UserEvent.visitor_id or UserInfo.user_id to the same fixed ID for different users. If you are
+   * trying to receive non-personalized recommendations (not recommended; this can negatively impact
+   * model performance), instead set UserEvent.visitor_id to a random unique ID and leave
+   * UserInfo.user_id unset.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaUserEvent getUserEvent() {
@@ -294,7 +302,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   /**
    * Required. Context about the user, what they are looking at and what action they took to trigger
    * the predict request. Note that this user event detail won't be ingested to userEvent logs.
-   * Thus, a separate userEvent write request is required for event logging.
+   * Thus, a separate userEvent write request is required for event logging. Don't set
+   * UserEvent.visitor_id or UserInfo.user_id to the same fixed ID for different users. If you are
+   * trying to receive non-personalized recommendations (not recommended; this can negatively impact
+   * model performance), instead set UserEvent.visitor_id to a random unique ID and leave
+   * UserInfo.user_id unset.
    * @param userEvent userEvent or {@code null} for none
    */
   public GoogleCloudRetailV2betaPredictRequest setUserEvent(GoogleCloudRetailV2betaUserEvent userEvent) {

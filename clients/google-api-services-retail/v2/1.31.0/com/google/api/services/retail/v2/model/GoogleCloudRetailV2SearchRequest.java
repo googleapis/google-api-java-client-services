@@ -146,7 +146,8 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   private GoogleCloudRetailV2SearchRequestPersonalizationSpec personalizationSpec;
 
   /**
-   * Raw search query.
+   * Raw search query. If this field is empty, the request is considered a category browsing request
+   * and returned results are based on filter and page_categories.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -485,7 +486,8 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   }
 
   /**
-   * Raw search query.
+   * Raw search query. If this field is empty, the request is considered a category browsing request
+   * and returned results are based on filter and page_categories.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -493,7 +495,8 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   }
 
   /**
-   * Raw search query.
+   * Raw search query. If this field is empty, the request is considered a category browsing request
+   * and returned results are based on filter and page_categories.
    * @param query query or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequest setQuery(java.lang.String query) {

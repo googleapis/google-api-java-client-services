@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
- * Configuration for Binary Authorization.
+ * Collection of Kubernetes [node taints](https://kubernetes.io/docs/concepts/configuration/taint-
+ * and-toleration).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,43 +29,46 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BinaryAuthorization extends com.google.api.client.json.GenericJson {
+public final class NodeTaints extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
+   * List of node taints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.util.List<NodeTaint> taints;
 
-  /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  static {
+    // hack to force ProGuard to consider NodeTaint used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NodeTaint.class);
   }
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
-   * @param enabled enabled or {@code null} for none
+   * List of node taints.
+   * @return value or {@code null} for none
    */
-  public BinaryAuthorization setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public java.util.List<NodeTaint> getTaints() {
+    return taints;
+  }
+
+  /**
+   * List of node taints.
+   * @param taints taints or {@code null} for none
+   */
+  public NodeTaints setTaints(java.util.List<NodeTaint> taints) {
+    this.taints = taints;
     return this;
   }
 
   @Override
-  public BinaryAuthorization set(String fieldName, Object value) {
-    return (BinaryAuthorization) super.set(fieldName, value);
+  public NodeTaints set(String fieldName, Object value) {
+    return (NodeTaints) super.set(fieldName, value);
   }
 
   @Override
-  public BinaryAuthorization clone() {
-    return (BinaryAuthorization) super.clone();
+  public NodeTaints clone() {
+    return (NodeTaints) super.clone();
   }
 
 }

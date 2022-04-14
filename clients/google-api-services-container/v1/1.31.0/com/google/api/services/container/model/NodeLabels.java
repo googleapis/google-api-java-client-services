@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
- * Configuration for Binary Authorization.
+ * Collection of node-level [Kubernetes labels](https://kubernetes.io/docs/concepts/overview
+ * /working-with-objects/labels).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,43 +29,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BinaryAuthorization extends com.google.api.client.json.GenericJson {
+public final class NodeLabels extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
+   * Map of node label keys and node label values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
+   * Map of node label keys and node label values.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
   }
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
-   * @param enabled enabled or {@code null} for none
+   * Map of node label keys and node label values.
+   * @param labels labels or {@code null} for none
    */
-  public BinaryAuthorization setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public NodeLabels setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
   @Override
-  public BinaryAuthorization set(String fieldName, Object value) {
-    return (BinaryAuthorization) super.set(fieldName, value);
+  public NodeLabels set(String fieldName, Object value) {
+    return (NodeLabels) super.set(fieldName, value);
   }
 
   @Override
-  public BinaryAuthorization clone() {
-    return (BinaryAuthorization) super.clone();
+  public NodeLabels clone() {
+    return (NodeLabels) super.clone();
   }
 
 }

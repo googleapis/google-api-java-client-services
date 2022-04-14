@@ -63,6 +63,15 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.String cpuManagerPolicy;
 
   /**
+   * Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-
+   * limits Controls the maximum number of processes allowed to run in a pod. The value must be
+   * greater than or equal to 1024 and less than 4194304.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long podPidsLimit;
+
+  /**
    * Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled
    * by default which makes kubelet use CFS quota
    * (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU
@@ -132,6 +141,27 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setCpuManagerPolicy(java.lang.String cpuManagerPolicy) {
     this.cpuManagerPolicy = cpuManagerPolicy;
+    return this;
+  }
+
+  /**
+   * Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-
+   * limits Controls the maximum number of processes allowed to run in a pod. The value must be
+   * greater than or equal to 1024 and less than 4194304.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPodPidsLimit() {
+    return podPidsLimit;
+  }
+
+  /**
+   * Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-
+   * limits Controls the maximum number of processes allowed to run in a pod. The value must be
+   * greater than or equal to 1024 and less than 4194304.
+   * @param podPidsLimit podPidsLimit or {@code null} for none
+   */
+  public NodeKubeletConfig setPodPidsLimit(java.lang.Long podPidsLimit) {
+    this.podPidsLimit = podPidsLimit;
     return this;
   }
 

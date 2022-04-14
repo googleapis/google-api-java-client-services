@@ -67,6 +67,15 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private NodeKubeletConfig kubeletConfig;
 
   /**
+   * The desired node labels to be applied to all nodes in the node pool. If this field is not
+   * present, the labels will not be changed. Otherwise, the existing node labels will be *replaced*
+   * with the provided labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeLabels labels;
+
+  /**
    * Parameters that can be configured on Linux nodes.
    * The value may be {@code null}.
    */
@@ -120,6 +129,24 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * The desired network tags to be applied to all nodes in the node pool. If this field is not
+   * present, the tags will not be changed. Otherwise, the existing network tags will be *replaced*
+   * with the provided tags.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkTags tags;
+
+  /**
+   * The desired node taints to be applied to all nodes in the node pool. If this field is not
+   * present, the taints will not be changed. Otherwise, the existing node taints will be *replaced*
+   * with the provided taints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeTaints taints;
 
   /**
    * Upgrade settings control disruption and speed of the upgrade.
@@ -228,6 +255,27 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setKubeletConfig(NodeKubeletConfig kubeletConfig) {
     this.kubeletConfig = kubeletConfig;
+    return this;
+  }
+
+  /**
+   * The desired node labels to be applied to all nodes in the node pool. If this field is not
+   * present, the labels will not be changed. Otherwise, the existing node labels will be *replaced*
+   * with the provided labels.
+   * @return value or {@code null} for none
+   */
+  public NodeLabels getLabels() {
+    return labels;
+  }
+
+  /**
+   * The desired node labels to be applied to all nodes in the node pool. If this field is not
+   * present, the labels will not be changed. Otherwise, the existing node labels will be *replaced*
+   * with the provided labels.
+   * @param labels labels or {@code null} for none
+   */
+  public UpdateNodePoolRequest setLabels(NodeLabels labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -356,6 +404,48 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * The desired network tags to be applied to all nodes in the node pool. If this field is not
+   * present, the tags will not be changed. Otherwise, the existing network tags will be *replaced*
+   * with the provided tags.
+   * @return value or {@code null} for none
+   */
+  public NetworkTags getTags() {
+    return tags;
+  }
+
+  /**
+   * The desired network tags to be applied to all nodes in the node pool. If this field is not
+   * present, the tags will not be changed. Otherwise, the existing network tags will be *replaced*
+   * with the provided tags.
+   * @param tags tags or {@code null} for none
+   */
+  public UpdateNodePoolRequest setTags(NetworkTags tags) {
+    this.tags = tags;
+    return this;
+  }
+
+  /**
+   * The desired node taints to be applied to all nodes in the node pool. If this field is not
+   * present, the taints will not be changed. Otherwise, the existing node taints will be *replaced*
+   * with the provided taints.
+   * @return value or {@code null} for none
+   */
+  public NodeTaints getTaints() {
+    return taints;
+  }
+
+  /**
+   * The desired node taints to be applied to all nodes in the node pool. If this field is not
+   * present, the taints will not be changed. Otherwise, the existing node taints will be *replaced*
+   * with the provided taints.
+   * @param taints taints or {@code null} for none
+   */
+  public UpdateNodePoolRequest setTaints(NodeTaints taints) {
+    this.taints = taints;
     return this;
   }
 

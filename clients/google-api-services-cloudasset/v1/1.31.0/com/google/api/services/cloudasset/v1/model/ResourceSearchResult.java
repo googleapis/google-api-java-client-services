@@ -242,6 +242,35 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String state;
 
   /**
+   * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
+   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/e*"` - `tagKeys="123456789/env"`
+   * - `tagKeys:"env"` * use a free text query. Example: - `env`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tagKeys;
+
+  /**
+   * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
+   * use a field query. Example: - `tagValueIds:"456"` - `tagValueIds="tagValues/456"` * use a free
+   * text query. Example: - `456`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tagValueIds;
+
+  /**
+   * TagValue namespaced names, in the format of
+   * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * use
+   * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
+   * `tagValues:"123456789/env/pr*"` - `tagValues="123456789/env/prod"` * use a free text query.
+   * Example: - `prod`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tagValues;
+
+  /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
    * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
    * when the resource's Protobuf contains it. To search against `update_time`: * use a field query.
@@ -714,6 +743,73 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
+   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/e*"` - `tagKeys="123456789/env"`
+   * - `tagKeys:"env"` * use a free text query. Example: - `env`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTagKeys() {
+    return tagKeys;
+  }
+
+  /**
+   * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
+   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/e*"` - `tagKeys="123456789/env"`
+   * - `tagKeys:"env"` * use a free text query. Example: - `env`
+   * @param tagKeys tagKeys or {@code null} for none
+   */
+  public ResourceSearchResult setTagKeys(java.util.List<java.lang.String> tagKeys) {
+    this.tagKeys = tagKeys;
+    return this;
+  }
+
+  /**
+   * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
+   * use a field query. Example: - `tagValueIds:"456"` - `tagValueIds="tagValues/456"` * use a free
+   * text query. Example: - `456`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTagValueIds() {
+    return tagValueIds;
+  }
+
+  /**
+   * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
+   * use a field query. Example: - `tagValueIds:"456"` - `tagValueIds="tagValues/456"` * use a free
+   * text query. Example: - `456`
+   * @param tagValueIds tagValueIds or {@code null} for none
+   */
+  public ResourceSearchResult setTagValueIds(java.util.List<java.lang.String> tagValueIds) {
+    this.tagValueIds = tagValueIds;
+    return this;
+  }
+
+  /**
+   * TagValue namespaced names, in the format of
+   * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * use
+   * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
+   * `tagValues:"123456789/env/pr*"` - `tagValues="123456789/env/prod"` * use a free text query.
+   * Example: - `prod`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTagValues() {
+    return tagValues;
+  }
+
+  /**
+   * TagValue namespaced names, in the format of
+   * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * use
+   * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
+   * `tagValues:"123456789/env/pr*"` - `tagValues="123456789/env/prod"` * use a free text query.
+   * Example: - `prod`
+   * @param tagValues tagValues or {@code null} for none
+   */
+  public ResourceSearchResult setTagValues(java.util.List<java.lang.String> tagValues) {
+    this.tagValues = tagValues;
     return this;
   }
 

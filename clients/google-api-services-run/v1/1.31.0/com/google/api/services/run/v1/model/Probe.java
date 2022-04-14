@@ -56,8 +56,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Number of seconds after the container has started before liveness probes are
-   * initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max
+   * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
+   * /pod-lifecycle#container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Maximum value is 3600. Must be greater or equal than timeout_seconds.
+   * 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or
+   * equal than timeout_seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +157,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Number of seconds after the container has started before liveness probes are
-   * initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max
+   * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
+   * /pod-lifecycle#container-probes
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySeconds() {
@@ -165,8 +168,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Number of seconds after the container has started before liveness probes are
-   * initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max
+   * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
+   * /pod-lifecycle#container-probes
    * @param initialDelaySeconds initialDelaySeconds or {@code null} for none
    */
   public Probe setInitialDelaySeconds(java.lang.Integer initialDelaySeconds) {
@@ -176,7 +180,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Maximum value is 3600. Must be greater or equal than timeout_seconds.
+   * 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or
+   * equal than timeout_seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodSeconds() {
@@ -185,7 +190,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Maximum value is 3600. Must be greater or equal than timeout_seconds.
+   * 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or
+   * equal than timeout_seconds.
    * @param periodSeconds periodSeconds or {@code null} for none
    */
   public Probe setPeriodSeconds(java.lang.Integer periodSeconds) {

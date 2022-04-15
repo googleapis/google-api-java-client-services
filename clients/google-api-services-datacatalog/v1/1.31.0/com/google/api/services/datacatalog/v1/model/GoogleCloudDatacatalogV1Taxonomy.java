@@ -54,7 +54,8 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
   /**
    * Required. User-defined name of this taxonomy. The name can't start or end with spaces, must
    * contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200
-   * bytes long when encoded in UTF-8.
+   * bytes long when encoded in UTF-8. The taxonomy display name must be unique within an
+   * organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +126,8 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
   /**
    * Required. User-defined name of this taxonomy. The name can't start or end with spaces, must
    * contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200
-   * bytes long when encoded in UTF-8.
+   * bytes long when encoded in UTF-8. The taxonomy display name must be unique within an
+   * organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -135,7 +137,8 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
   /**
    * Required. User-defined name of this taxonomy. The name can't start or end with spaces, must
    * contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200
-   * bytes long when encoded in UTF-8.
+   * bytes long when encoded in UTF-8. The taxonomy display name must be unique within an
+   * organization.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Taxonomy setDisplayName(java.lang.String displayName) {

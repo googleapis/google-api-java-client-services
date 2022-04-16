@@ -9437,7 +9437,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Subscribe to changes on a file
+     * Subscribes to changes to a file. While you can establish a channel for changes to a file on a
+     * shared drive, a change to a shared drive file won't create a notification.
      *
      * Create a request for the method "files.watch".
      *
@@ -9459,7 +9460,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/watch";
 
       /**
-       * Subscribe to changes on a file
+       * Subscribes to changes to a file. While you can establish a channel for changes to a file on a
+       * shared drive, a change to a shared drive file won't create a notification.
        *
        * Create a request for the method "files.watch".
        *

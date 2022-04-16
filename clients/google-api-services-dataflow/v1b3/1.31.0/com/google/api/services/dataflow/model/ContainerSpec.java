@@ -44,6 +44,27 @@ public final class ContainerSpec extends com.google.api.client.json.GenericJson 
   private java.lang.String image;
 
   /**
+   * Cloud Storage path to self-signed certificate of private registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageRepositoryCertPath;
+
+  /**
+   * Secret Manager secret id for password to authenticate to private registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageRepositoryPasswordSecretId;
+
+  /**
+   * Secret Manager secret id for username to authenticate to private registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageRepositoryUsernameSecretId;
+
+  /**
    * Metadata describing a template including description and validation rules.
    * The value may be {@code null}.
    */
@@ -88,6 +109,57 @@ public final class ContainerSpec extends com.google.api.client.json.GenericJson 
    */
   public ContainerSpec setImage(java.lang.String image) {
     this.image = image;
+    return this;
+  }
+
+  /**
+   * Cloud Storage path to self-signed certificate of private registry.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageRepositoryCertPath() {
+    return imageRepositoryCertPath;
+  }
+
+  /**
+   * Cloud Storage path to self-signed certificate of private registry.
+   * @param imageRepositoryCertPath imageRepositoryCertPath or {@code null} for none
+   */
+  public ContainerSpec setImageRepositoryCertPath(java.lang.String imageRepositoryCertPath) {
+    this.imageRepositoryCertPath = imageRepositoryCertPath;
+    return this;
+  }
+
+  /**
+   * Secret Manager secret id for password to authenticate to private registry.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageRepositoryPasswordSecretId() {
+    return imageRepositoryPasswordSecretId;
+  }
+
+  /**
+   * Secret Manager secret id for password to authenticate to private registry.
+   * @param imageRepositoryPasswordSecretId imageRepositoryPasswordSecretId or {@code null} for none
+   */
+  public ContainerSpec setImageRepositoryPasswordSecretId(java.lang.String imageRepositoryPasswordSecretId) {
+    this.imageRepositoryPasswordSecretId = imageRepositoryPasswordSecretId;
+    return this;
+  }
+
+  /**
+   * Secret Manager secret id for username to authenticate to private registry.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageRepositoryUsernameSecretId() {
+    return imageRepositoryUsernameSecretId;
+  }
+
+  /**
+   * Secret Manager secret id for username to authenticate to private registry.
+   * @param imageRepositoryUsernameSecretId imageRepositoryUsernameSecretId or {@code null} for none
+   */
+  public ContainerSpec setImageRepositoryUsernameSecretId(java.lang.String imageRepositoryUsernameSecretId) {
+    this.imageRepositoryUsernameSecretId = imageRepositoryUsernameSecretId;
     return this;
   }
 

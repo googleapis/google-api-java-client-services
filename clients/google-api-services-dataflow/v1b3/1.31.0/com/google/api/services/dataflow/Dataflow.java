@@ -670,7 +670,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * Creates a Cloud Dataflow job. To create a job, we recommend using
        * `projects.locations.jobs.create` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-       * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+       * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not
+       * enter confidential information when you supply string values using the API.
        *
        * Create a request for the method "jobs.create".
        *
@@ -695,7 +696,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * Creates a Cloud Dataflow job. To create a job, we recommend using
          * `projects.locations.jobs.create` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-         * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+         * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do
+         * not enter confidential information when you supply string values using the API.
          *
          * Create a request for the method "jobs.create".
          *
@@ -3032,7 +3034,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * Creates a Cloud Dataflow job. To create a job, we recommend using
          * `projects.locations.jobs.create` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-         * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+         * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not
+         * enter confidential information when you supply string values using the API.
          *
          * Create a request for the method "jobs.create".
          *
@@ -3059,7 +3062,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * Creates a Cloud Dataflow job. To create a job, we recommend using
            * `projects.locations.jobs.create` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-           * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+           * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do
+           * not enter confidential information when you supply string values using the API.
            *
            * Create a request for the method "jobs.create".
            *
@@ -6616,7 +6620,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       public class Templates {
 
         /**
-         * Creates a Cloud Dataflow job from a template.
+         * Creates a Cloud Dataflow job from a template. Do not enter confidential information when you
+         * supply string values using the API.
          *
          * Create a request for the method "templates.create".
          *
@@ -6640,7 +6645,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/templates";
 
           /**
-           * Creates a Cloud Dataflow job from a template.
+           * Creates a Cloud Dataflow job from a template. Do not enter confidential information when you
+           * supply string values using the API.
            *
            * Create a request for the method "templates.create".
            *
@@ -7547,7 +7553,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
     public class Templates {
 
       /**
-       * Creates a Cloud Dataflow job from a template.
+       * Creates a Cloud Dataflow job from a template. Do not enter confidential information when you
+       * supply string values using the API.
        *
        * Create a request for the method "templates.create".
        *
@@ -7569,7 +7576,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/templates";
 
         /**
-         * Creates a Cloud Dataflow job from a template.
+         * Creates a Cloud Dataflow job from a template. Do not enter confidential information when you
+         * supply string values using the API.
          *
          * Create a request for the method "templates.create".
          *

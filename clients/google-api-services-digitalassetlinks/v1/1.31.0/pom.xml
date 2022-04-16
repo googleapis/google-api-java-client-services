@@ -90,9 +90,9 @@
           <windowtitle>Digital Asset Links API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.41.0/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.41.7/</link>
             <link>https://googleapis.dev/java/google-oauth-client/1.31.2/</link>
-            <link>https://googleapis.dev/java/google-api-client/1.33.1/</link>
+            <link>https://googleapis.dev/java/google-api-client/1.34.0/</link>
           </links>
         </configuration>
       </plugin>
@@ -125,7 +125,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.33.1</version>
+      <version>1.34.0</version>
     </dependency>
   </dependencies>
 

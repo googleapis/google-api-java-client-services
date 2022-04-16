@@ -67,8 +67,10 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   private java.util.List<GoogleCloudDialogflowCxV3FulfillmentSetParameterAction> setParameterActions;
 
   /**
-   * The tag used by the webhook to identify which fulfillment is being called. This field is
-   * required if `webhook` is specified.
+   * The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by
+   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
+   * service to identify which fulfillment is being called, but it could be used for other purposes.
+   * This field is required if `webhook` is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +160,10 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The tag used by the webhook to identify which fulfillment is being called. This field is
-   * required if `webhook` is specified.
+   * The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by
+   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
+   * service to identify which fulfillment is being called, but it could be used for other purposes.
+   * This field is required if `webhook` is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -167,8 +171,10 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The tag used by the webhook to identify which fulfillment is being called. This field is
-   * required if `webhook` is specified.
+   * The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by
+   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
+   * service to identify which fulfillment is being called, but it could be used for other purposes.
+   * This field is required if `webhook` is specified.
    * @param tag tag or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setTag(java.lang.String tag) {

@@ -3316,8 +3316,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Remove a Bitbucket Server repository from an given BitbucketServerConfig’s connected
-         * repositories. This API is experimental.
+         * Remove a Bitbucket Server repository from a given BitbucketServerConfig's connected repositories.
+         * This API is experimental.
          *
          * Create a request for the method
          * "bitbucketServerConfigs.removeBitbucketServerConnectedRepository".
@@ -3345,7 +3345,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/bitbucketServerConfigs/[^/]+$");
 
           /**
-           * Remove a Bitbucket Server repository from an given BitbucketServerConfig’s connected
+           * Remove a Bitbucket Server repository from a given BitbucketServerConfig's connected
            * repositories. This API is experimental.
            *
            * Create a request for the method

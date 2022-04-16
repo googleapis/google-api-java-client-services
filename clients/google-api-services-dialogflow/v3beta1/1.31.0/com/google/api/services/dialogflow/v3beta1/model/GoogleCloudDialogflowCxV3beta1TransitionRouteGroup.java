@@ -30,7 +30,7 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The human-readable name of the transition route group, unique within the Agent. The
+   * Required. The human-readable name of the transition route group, unique within the flow. The
    * display name can be no longer than 30 characters.
    * The value may be {@code null}.
    */
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroup extends co
   }
 
   /**
-   * Required. The human-readable name of the transition route group, unique within the Agent. The
+   * Required. The human-readable name of the transition route group, unique within the flow. The
    * display name can be no longer than 30 characters.
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroup extends co
   }
 
   /**
-   * Required. The human-readable name of the transition route group, unique within the Agent. The
+   * Required. The human-readable name of the transition route group, unique within the flow. The
    * display name can be no longer than 30 characters.
    * @param displayName displayName or {@code null} for none
    */

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * **Service Mesh**: Spec for a single Membership for the servicemesh feature
+ * Structured and human-readable details for a status.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class ServiceMeshStatusDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * A machine-readable code that further describes a broad status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String controlPlane;
+  private java.lang.String code;
 
   /**
-   * Determines which release channel to use for default injection and service mesh APIs.
+   * Human-readable explanation of code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String defaultChannel;
+  private java.lang.String details;
 
   /**
-   * Enables automatic control plane management.
+   * A machine-readable code that further describes a broad status.
    * @return value or {@code null} for none
    */
-  public java.lang.String getControlPlane() {
-    return controlPlane;
+  public java.lang.String getCode() {
+    return code;
   }
 
   /**
-   * Enables automatic control plane management.
-   * @param controlPlane controlPlane or {@code null} for none
+   * A machine-readable code that further describes a broad status.
+   * @param code code or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
-    this.controlPlane = controlPlane;
+  public ServiceMeshStatusDetails setCode(java.lang.String code) {
+    this.code = code;
     return this;
   }
 
   /**
-   * Determines which release channel to use for default injection and service mesh APIs.
+   * Human-readable explanation of code.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDefaultChannel() {
-    return defaultChannel;
+  public java.lang.String getDetails() {
+    return details;
   }
 
   /**
-   * Determines which release channel to use for default injection and service mesh APIs.
-   * @param defaultChannel defaultChannel or {@code null} for none
+   * Human-readable explanation of code.
+   * @param details details or {@code null} for none
    */
-  public ServiceMeshMembershipSpec setDefaultChannel(java.lang.String defaultChannel) {
-    this.defaultChannel = defaultChannel;
+  public ServiceMeshStatusDetails setDetails(java.lang.String details) {
+    this.details = details;
     return this;
   }
 
   @Override
-  public ServiceMeshMembershipSpec set(String fieldName, Object value) {
-    return (ServiceMeshMembershipSpec) super.set(fieldName, value);
+  public ServiceMeshStatusDetails set(String fieldName, Object value) {
+    return (ServiceMeshStatusDetails) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceMeshMembershipSpec clone() {
-    return (ServiceMeshMembershipSpec) super.clone();
+  public ServiceMeshStatusDetails clone() {
+    return (ServiceMeshStatusDetails) super.clone();
   }
 
 }

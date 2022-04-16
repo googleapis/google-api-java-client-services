@@ -17,7 +17,9 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Parameters to provide to the template being launched.
+ * Parameters to provide to the template being launched. Note that the [metadata in the pipeline
+ * code] (https://cloud.google.com/dataflow/docs/guides/templates/creating-templates#metadata)
+ * determines which runtime parameters are valid.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:

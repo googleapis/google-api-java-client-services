@@ -99,7 +99,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.String network;
 
   /**
-   * The initial number of Google Compute Engine instnaces for the job.
+   * The initial number of Google Compute Engine instances for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -326,7 +326,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The initial number of Google Compute Engine instnaces for the job.
+   * The initial number of Google Compute Engine instances for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumWorkers() {
@@ -334,7 +334,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The initial number of Google Compute Engine instnaces for the job.
+   * The initial number of Google Compute Engine instances for the job.
    * @param numWorkers numWorkers or {@code null} for none
    */
   public RuntimeEnvironment setNumWorkers(java.lang.Integer numWorkers) {

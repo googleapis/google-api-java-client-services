@@ -17,7 +17,8 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Defines a job to be run by the Cloud Dataflow service.
+ * Defines a job to be run by the Cloud Dataflow service. Do not enter confidential information when
+ * you supply string values using the API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:

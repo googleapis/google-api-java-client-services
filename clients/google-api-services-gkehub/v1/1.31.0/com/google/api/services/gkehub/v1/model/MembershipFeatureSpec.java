@@ -37,6 +37,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private ConfigManagementMembershipSpec configmanagement;
 
   /**
+   * Anthos Service Mesh-specific spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceMeshMembershipSpec mesh;
+
+  /**
    * Config Management-specific spec.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
     this.configmanagement = configmanagement;
+    return this;
+  }
+
+  /**
+   * Anthos Service Mesh-specific spec
+   * @return value or {@code null} for none
+   */
+  public ServiceMeshMembershipSpec getMesh() {
+    return mesh;
+  }
+
+  /**
+   * Anthos Service Mesh-specific spec
+   * @param mesh mesh or {@code null} for none
+   */
+  public MembershipFeatureSpec setMesh(ServiceMeshMembershipSpec mesh) {
+    this.mesh = mesh;
     return this;
   }
 

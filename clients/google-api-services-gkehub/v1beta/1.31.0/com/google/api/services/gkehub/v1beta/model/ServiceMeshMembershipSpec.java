@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v1beta.model;
 
 /**
  * **Service Mesh**: Spec for a single Membership for the servicemesh feature
@@ -37,13 +37,6 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   private java.lang.String controlPlane;
 
   /**
-   * Determines which release channel to use for default injection and service mesh APIs.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String defaultChannel;
-
-  /**
    * Enables automatic control plane management.
    * @return value or {@code null} for none
    */
@@ -57,23 +50,6 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
    */
   public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {
     this.controlPlane = controlPlane;
-    return this;
-  }
-
-  /**
-   * Determines which release channel to use for default injection and service mesh APIs.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDefaultChannel() {
-    return defaultChannel;
-  }
-
-  /**
-   * Determines which release channel to use for default injection and service mesh APIs.
-   * @param defaultChannel defaultChannel or {@code null} for none
-   */
-  public ServiceMeshMembershipSpec setDefaultChannel(java.lang.String defaultChannel) {
-    this.defaultChannel = defaultChannel;
     return this;
   }
 

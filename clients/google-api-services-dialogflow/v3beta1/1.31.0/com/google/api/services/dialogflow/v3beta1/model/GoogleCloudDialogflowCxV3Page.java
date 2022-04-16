@@ -39,7 +39,7 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The human-readable name of the page, unique within the agent.
+   * Required. The human-readable name of the page, unique within the flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
   private java.util.List<GoogleCloudDialogflowCxV3TransitionRoute> transitionRoutes;
 
   /**
-   * Required. The human-readable name of the page, unique within the agent.
+   * Required. The human-readable name of the page, unique within the flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -116,7 +116,7 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
   }
 
   /**
-   * Required. The human-readable name of the page, unique within the agent.
+   * Required. The human-readable name of the page, unique within the flow.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Page setDisplayName(java.lang.String displayName) {

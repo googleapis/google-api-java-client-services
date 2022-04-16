@@ -100,7 +100,7 @@ public final class GoogleCloudDialogflowCxV3Flow extends com.google.api.client.j
    * support use cases such as the user saying "help" or "can I talk to a human?", which can be
    * handled in a common way regardless of the current page. Transition routes defined in the page
    * have higher priority than those defined in the flow. TransitionRoutes are evalauted in the
-   * following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only
+   * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
    * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * The value may be {@code null}.
    */
@@ -233,7 +233,7 @@ public final class GoogleCloudDialogflowCxV3Flow extends com.google.api.client.j
    * support use cases such as the user saying "help" or "can I talk to a human?", which can be
    * handled in a common way regardless of the current page. Transition routes defined in the page
    * have higher priority than those defined in the flow. TransitionRoutes are evalauted in the
-   * following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only
+   * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
    * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * @return value or {@code null} for none
    */
@@ -247,7 +247,7 @@ public final class GoogleCloudDialogflowCxV3Flow extends com.google.api.client.j
    * support use cases such as the user saying "help" or "can I talk to a human?", which can be
    * handled in a common way regardless of the current page. Transition routes defined in the page
    * have higher priority than those defined in the flow. TransitionRoutes are evalauted in the
-   * following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only
+   * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
    * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * @param transitionRoutes transitionRoutes or {@code null} for none
    */

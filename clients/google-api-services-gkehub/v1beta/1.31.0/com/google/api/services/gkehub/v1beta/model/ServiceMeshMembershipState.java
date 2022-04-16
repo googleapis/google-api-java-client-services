@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v1beta.model;
 
 /**
  * **Service Mesh**: State for a single Membership, as analyzed by the Service Mesh Hub Controller.
@@ -30,68 +30,11 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ServiceMeshMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Results of running Service Mesh analyzers.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ServiceMeshAnalysisMessage> analysisMessages;
-
-  static {
-    // hack to force ProGuard to consider ServiceMeshAnalysisMessage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ServiceMeshAnalysisMessage.class);
-  }
-
-  /**
-   * The API version (i.e. Istio CRD version) for configuring service mesh in this cluster. This
-   * version is influenced by the `default_channel` field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String configApiVersion;
-
-  /**
    * Output only. Status of control plane management
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ServiceMeshControlPlaneManagement controlPlaneManagement;
-
-  /**
-   * Output only. Results of running Service Mesh analyzers.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ServiceMeshAnalysisMessage> getAnalysisMessages() {
-    return analysisMessages;
-  }
-
-  /**
-   * Output only. Results of running Service Mesh analyzers.
-   * @param analysisMessages analysisMessages or {@code null} for none
-   */
-  public ServiceMeshMembershipState setAnalysisMessages(java.util.List<ServiceMeshAnalysisMessage> analysisMessages) {
-    this.analysisMessages = analysisMessages;
-    return this;
-  }
-
-  /**
-   * The API version (i.e. Istio CRD version) for configuring service mesh in this cluster. This
-   * version is influenced by the `default_channel` field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getConfigApiVersion() {
-    return configApiVersion;
-  }
-
-  /**
-   * The API version (i.e. Istio CRD version) for configuring service mesh in this cluster. This
-   * version is influenced by the `default_channel` field.
-   * @param configApiVersion configApiVersion or {@code null} for none
-   */
-  public ServiceMeshMembershipState setConfigApiVersion(java.lang.String configApiVersion) {
-    this.configApiVersion = configApiVersion;
-    return this;
-  }
 
   /**
    * Output only. Status of control plane management

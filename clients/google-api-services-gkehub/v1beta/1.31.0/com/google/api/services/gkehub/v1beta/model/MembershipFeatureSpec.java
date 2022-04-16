@@ -58,6 +58,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private IdentityServiceMembershipSpec identityservice;
 
   /**
+   * Anthos Service Mesh-specific spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceMeshMembershipSpec mesh;
+
+  /**
    * Policy Controller spec.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setIdentityservice(IdentityServiceMembershipSpec identityservice) {
     this.identityservice = identityservice;
+    return this;
+  }
+
+  /**
+   * Anthos Service Mesh-specific spec
+   * @return value or {@code null} for none
+   */
+  public ServiceMeshMembershipSpec getMesh() {
+    return mesh;
+  }
+
+  /**
+   * Anthos Service Mesh-specific spec
+   * @param mesh mesh or {@code null} for none
+   */
+  public MembershipFeatureSpec setMesh(ServiceMeshMembershipSpec mesh) {
+    this.mesh = mesh;
     return this;
   }
 

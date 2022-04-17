@@ -30,7 +30,7 @@ package com.google.api.services.tpu.v2alpha1.model;
 public final class Node extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The type of hardware accelerators associated with this node.
+   * The type of hardware accelerators associated with this node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Required. The type of hardware accelerators associated with this node.
+   * The type of hardware accelerators associated with this node.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -199,7 +199,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of hardware accelerators associated with this node.
+   * The type of hardware accelerators associated with this node.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public Node setAcceleratorType(java.lang.String acceleratorType) {

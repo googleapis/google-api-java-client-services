@@ -3768,6 +3768,275 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
 
+          /**
+           * An accessor for creating requests from the Logs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Logging logging = new Logging(...);}
+           *   {@code Logging.Logs.List request = logging.logs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Logs logs() {
+            return new Logs();
+          }
+
+          /**
+           * The "logs" collection of methods.
+           */
+          public class Logs {
+
+            /**
+             * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+             * entries are listed.
+             *
+             * Create a request for the method "logs.list".
+             *
+             * This request holds the parameters needed by the logging server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListLogsResponse> {
+
+              private static final String REST_PATH = "v2/{+parent}/logs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+
+              /**
+               * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+               * entries are listed.
+               *
+               * Create a request for the method "logs.list".
+               *
+               * This request holds the parameters needed by the the logging server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListLogsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of results to return from this request. Non-positive values are
+             ignored. The presence of nextPageToken in the response indicates that more results might be
+             available.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+             method. pageToken must be the value of nextPageToken from the previous response. The values of
+             other method parameters should be identical to those in the previous call.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> resourceNames;
+
+              /** Optional. The resource name that owns the logs:
+             projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+             queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.util.List<java.lang.String> getResourceNames() {
+                return resourceNames;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+                this.resourceNames = resourceNames;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**
@@ -11013,6 +11282,275 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
 
+          /**
+           * An accessor for creating requests from the Logs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Logging logging = new Logging(...);}
+           *   {@code Logging.Logs.List request = logging.logs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Logs logs() {
+            return new Logs();
+          }
+
+          /**
+           * The "logs" collection of methods.
+           */
+          public class Logs {
+
+            /**
+             * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+             * entries are listed.
+             *
+             * Create a request for the method "logs.list".
+             *
+             * This request holds the parameters needed by the logging server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListLogsResponse> {
+
+              private static final String REST_PATH = "v2/{+parent}/logs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+
+              /**
+               * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+               * entries are listed.
+               *
+               * Create a request for the method "logs.list".
+               *
+               * This request holds the parameters needed by the the logging server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListLogsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^folders/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^folders/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of results to return from this request. Non-positive values are
+             ignored. The presence of nextPageToken in the response indicates that more results might be
+             available.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+             method. pageToken must be the value of nextPageToken from the previous response. The values of
+             other method parameters should be identical to those in the previous call.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> resourceNames;
+
+              /** Optional. The resource name that owns the logs:
+             projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+             queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.util.List<java.lang.String> getResourceNames() {
+                return resourceNames;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+                this.resourceNames = resourceNames;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**
@@ -20557,6 +21095,275 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
 
+          /**
+           * An accessor for creating requests from the Logs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Logging logging = new Logging(...);}
+           *   {@code Logging.Logs.List request = logging.logs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Logs logs() {
+            return new Logs();
+          }
+
+          /**
+           * The "logs" collection of methods.
+           */
+          public class Logs {
+
+            /**
+             * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+             * entries are listed.
+             *
+             * Create a request for the method "logs.list".
+             *
+             * This request holds the parameters needed by the logging server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListLogsResponse> {
+
+              private static final String REST_PATH = "v2/{+parent}/logs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+
+              /**
+               * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+               * entries are listed.
+               *
+               * Create a request for the method "logs.list".
+               *
+               * This request holds the parameters needed by the the logging server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListLogsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of results to return from this request. Non-positive values are
+             ignored. The presence of nextPageToken in the response indicates that more results might be
+             available.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+             method. pageToken must be the value of nextPageToken from the previous response. The values of
+             other method parameters should be identical to those in the previous call.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> resourceNames;
+
+              /** Optional. The resource name that owns the logs:
+             projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+             queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.util.List<java.lang.String> getResourceNames() {
+                return resourceNames;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+                this.resourceNames = resourceNames;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**
@@ -26275,6 +27082,275 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
 
+          /**
+           * An accessor for creating requests from the Logs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Logging logging = new Logging(...);}
+           *   {@code Logging.Logs.List request = logging.logs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Logs logs() {
+            return new Logs();
+          }
+
+          /**
+           * The "logs" collection of methods.
+           */
+          public class Logs {
+
+            /**
+             * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+             * entries are listed.
+             *
+             * Create a request for the method "logs.list".
+             *
+             * This request holds the parameters needed by the logging server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListLogsResponse> {
+
+              private static final String REST_PATH = "v2/{+parent}/logs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+
+              /**
+               * Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have
+               * entries are listed.
+               *
+               * Create a request for the method "logs.list".
+               *
+               * This request holds the parameters needed by the the logging server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListLogsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of results to return from this request. Non-positive values are
+             ignored. The presence of nextPageToken in the response indicates that more results might be
+             available.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of results to return from this request. Non-positive
+               * values are ignored. The presence of nextPageToken in the response indicates that
+               * more results might be available.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+             method. pageToken must be the value of nextPageToken from the previous response. The values of
+             other method parameters should be identical to those in the previous call.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. If present, then retrieve the next batch of results from the preceding
+               * call to this method. pageToken must be the value of nextPageToken from the previous
+               * response. The values of other method parameters should be identical to those in the
+               * previous call.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> resourceNames;
+
+              /** Optional. The resource name that owns the logs:
+             projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+             folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+             queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               */
+              public java.util.List<java.lang.String> getResourceNames() {
+                return resourceNames;
+              }
+
+              /**
+               * Optional. The resource name that owns the logs:
+               * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
+               * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
+               * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+               * T_ID]/views/[VIEW_ID]
+               * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+               * support legacy queries, it could also be: projects/[PROJECT_ID]
+               * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+               * folders/[FOLDER_ID]
+               */
+              public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+                this.resourceNames = resourceNames;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**

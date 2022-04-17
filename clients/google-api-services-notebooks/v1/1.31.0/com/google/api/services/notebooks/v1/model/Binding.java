@@ -42,8 +42,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   private Expr condition;
 
   /**
-   * Specifies the principals requesting access for a Cloud Platform resource. `members` can have
-   * the following values: * `allUsers`: A special identifier that represents anyone who is on the
+   * Specifies the principals requesting access for a Google Cloud resource. `members` can have the
+   * following values: * `allUsers`: A special identifier that represents anyone who is on the
    * internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier
    * that represents anyone who is authenticated with a Google account or a service account. *
    * `user:{emailid}`: An email address that represents a specific Google account. For example,
@@ -105,8 +105,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the principals requesting access for a Cloud Platform resource. `members` can have
-   * the following values: * `allUsers`: A special identifier that represents anyone who is on the
+   * Specifies the principals requesting access for a Google Cloud resource. `members` can have the
+   * following values: * `allUsers`: A special identifier that represents anyone who is on the
    * internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier
    * that represents anyone who is authenticated with a Google account or a service account. *
    * `user:{emailid}`: An email address that represents a specific Google account. For example,
@@ -134,8 +134,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the principals requesting access for a Cloud Platform resource. `members` can have
-   * the following values: * `allUsers`: A special identifier that represents anyone who is on the
+   * Specifies the principals requesting access for a Google Cloud resource. `members` can have the
+   * following values: * `allUsers`: A special identifier that represents anyone who is on the
    * internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier
    * that represents anyone who is authenticated with a Google account or a service account. *
    * `user:{emailid}`: An email address that represents a specific Google account. For example,

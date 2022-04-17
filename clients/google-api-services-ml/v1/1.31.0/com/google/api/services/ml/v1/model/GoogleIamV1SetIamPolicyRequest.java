@@ -32,8 +32,8 @@ public final class GoogleIamV1SetIamPolicyRequest extends com.google.api.client.
 
   /**
    * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform
-   * services (such as Projects) might reject them.
+   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
+   * (such as Projects) might reject them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class GoogleIamV1SetIamPolicyRequest extends com.google.api.client.
 
   /**
    * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform
-   * services (such as Projects) might reject them.
+   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
+   * (such as Projects) might reject them.
    * @return value or {@code null} for none
    */
   public GoogleIamV1Policy getPolicy() {
@@ -60,8 +60,8 @@ public final class GoogleIamV1SetIamPolicyRequest extends com.google.api.client.
 
   /**
    * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform
-   * services (such as Projects) might reject them.
+   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
+   * (such as Projects) might reject them.
    * @param policy policy or {@code null} for none
    */
   public GoogleIamV1SetIamPolicyRequest setPolicy(GoogleIamV1Policy policy) {

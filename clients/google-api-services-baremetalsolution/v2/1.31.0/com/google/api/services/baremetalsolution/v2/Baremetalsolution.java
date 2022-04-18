@@ -447,14 +447,14 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
-       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -462,7 +462,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {
@@ -515,6 +515,167 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
         }
       }
 
+      /**
+       * An accessor for creating requests from the InstanceProvisioningSettings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Baremetalsolution baremetalsolution = new Baremetalsolution(...);}
+       *   {@code Baremetalsolution.InstanceProvisioningSettings.List request = baremetalsolution.instanceProvisioningSettings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InstanceProvisioningSettings instanceProvisioningSettings() {
+        return new InstanceProvisioningSettings();
+      }
+
+      /**
+       * The "instanceProvisioningSettings" collection of methods.
+       */
+      public class InstanceProvisioningSettings {
+
+        /**
+         * Get instance provisioning settings for a given project. This is hidden method used by UI only.
+         *
+         * Create a request for the method "instanceProvisioningSettings.fetch".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+         *
+         * @param location Required. The parent project and location containing the ProvisioningSettings.
+         * @return the request
+         */
+        public Fetch fetch(java.lang.String location) throws java.io.IOException {
+          Fetch result = new Fetch(location);
+          initialize(result);
+          return result;
+        }
+
+        public class Fetch extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.FetchInstanceProvisioningSettingsResponse> {
+
+          private static final String REST_PATH = "v2/{+location}/instanceProvisioningSettings:fetch";
+
+          private final java.util.regex.Pattern LOCATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Get instance provisioning settings for a given project. This is hidden method used by UI only.
+           *
+           * Create a request for the method "instanceProvisioningSettings.fetch".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Fetch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param location Required. The parent project and location containing the ProvisioningSettings.
+           * @since 1.13
+           */
+          protected Fetch(java.lang.String location) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.FetchInstanceProvisioningSettingsResponse.class);
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Fetch set$Xgafv(java.lang.String $Xgafv) {
+            return (Fetch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Fetch setAccessToken(java.lang.String accessToken) {
+            return (Fetch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Fetch setAlt(java.lang.String alt) {
+            return (Fetch) super.setAlt(alt);
+          }
+
+          @Override
+          public Fetch setCallback(java.lang.String callback) {
+            return (Fetch) super.setCallback(callback);
+          }
+
+          @Override
+          public Fetch setFields(java.lang.String fields) {
+            return (Fetch) super.setFields(fields);
+          }
+
+          @Override
+          public Fetch setKey(java.lang.String key) {
+            return (Fetch) super.setKey(key);
+          }
+
+          @Override
+          public Fetch setOauthToken(java.lang.String oauthToken) {
+            return (Fetch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Fetch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Fetch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Fetch setQuotaUser(java.lang.String quotaUser) {
+            return (Fetch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Fetch setUploadType(java.lang.String uploadType) {
+            return (Fetch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Fetch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Fetch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent project and location containing the ProvisioningSettings. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. The parent project and location containing the ProvisioningSettings.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** Required. The parent project and location containing the ProvisioningSettings. */
+          public Fetch setLocation(java.lang.String location) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public Fetch set(String parameterName, Object value) {
+            return (Fetch) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the Instances collection.
        *

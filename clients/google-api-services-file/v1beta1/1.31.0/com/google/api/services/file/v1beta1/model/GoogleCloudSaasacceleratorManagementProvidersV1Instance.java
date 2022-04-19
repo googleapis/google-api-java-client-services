@@ -48,8 +48,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Optional. The instance_type of this instance of format:
-   * projects/{project_id}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance Type
-   * represents a high-level tier or SKU of the service that this instance belong to. When
+   * projects/{project_number}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance
+   * Type represents a high-level tier or SKU of the service that this instance belong to. When
    * enabled(eg: Maintenance Rollout), Rollout uses 'instance_type' along with 'software_versions'
    * to determine whether instance needs an update or not.
    * The value may be {@code null}.
@@ -92,22 +92,23 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Unique name of the resource. It uses the form:
-   * `projects/{project_id|project_number}/locations/{location_id}/instances/{instance_id}` Note:
-   * Either project_id or project_number can be used, but keep it consistent with other APIs (e.g.
-   * RescheduleUpdate)
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}` Note: This name is
+   * passed, stored and logged across the rollout system. So use of consumer project_id or any other
+   * consumer PII in the name is strongly discouraged for wipeout (go/wipeout) compliance. See
+   * go/elysium/project_ids#storage-guidance for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. notification_parameters are information that service producers may like to include
+   * Optional. notification_parameter are information that service producers may like to include
    * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
    * for notification/logging purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> notificationParameters;
+  private java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter> notificationParameters;
 
   /**
    * Output only. Custom string attributes used primarily to expose producer-specific information in
@@ -214,8 +215,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Optional. The instance_type of this instance of format:
-   * projects/{project_id}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance Type
-   * represents a high-level tier or SKU of the service that this instance belong to. When
+   * projects/{project_number}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance
+   * Type represents a high-level tier or SKU of the service that this instance belong to. When
    * enabled(eg: Maintenance Rollout), Rollout uses 'instance_type' along with 'software_versions'
    * to determine whether instance needs an update or not.
    * @return value or {@code null} for none
@@ -226,8 +227,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Optional. The instance_type of this instance of format:
-   * projects/{project_id}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance Type
-   * represents a high-level tier or SKU of the service that this instance belong to. When
+   * projects/{project_number}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance
+   * Type represents a high-level tier or SKU of the service that this instance belong to. When
    * enabled(eg: Maintenance Rollout), Rollout uses 'instance_type' along with 'software_versions'
    * to determine whether instance needs an update or not.
    * @param instanceType instanceType or {@code null} for none
@@ -317,9 +318,10 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Unique name of the resource. It uses the form:
-   * `projects/{project_id|project_number}/locations/{location_id}/instances/{instance_id}` Note:
-   * Either project_id or project_number can be used, but keep it consistent with other APIs (e.g.
-   * RescheduleUpdate)
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}` Note: This name is
+   * passed, stored and logged across the rollout system. So use of consumer project_id or any other
+   * consumer PII in the name is strongly discouraged for wipeout (go/wipeout) compliance. See
+   * go/elysium/project_ids#storage-guidance for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -328,9 +330,10 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Unique name of the resource. It uses the form:
-   * `projects/{project_id|project_number}/locations/{location_id}/instances/{instance_id}` Note:
-   * Either project_id or project_number can be used, but keep it consistent with other APIs (e.g.
-   * RescheduleUpdate)
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}` Note: This name is
+   * passed, stored and logged across the rollout system. So use of consumer project_id or any other
+   * consumer PII in the name is strongly discouraged for wipeout (go/wipeout) compliance. See
+   * go/elysium/project_ids#storage-guidance for more details.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setName(java.lang.String name) {
@@ -339,22 +342,22 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   }
 
   /**
-   * Optional. notification_parameters are information that service producers may like to include
+   * Optional. notification_parameter are information that service producers may like to include
    * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
    * for notification/logging purpose.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getNotificationParameters() {
+  public java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter> getNotificationParameters() {
     return notificationParameters;
   }
 
   /**
-   * Optional. notification_parameters are information that service producers may like to include
+   * Optional. notification_parameter are information that service producers may like to include
    * that is not relevant to Rollout. This parameter will only be passed to Gamma and Cloud Logging
    * for notification/logging purpose.
    * @param notificationParameters notificationParameters or {@code null} for none
    */
-  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setNotificationParameters(java.util.Map<String, java.lang.String> notificationParameters) {
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setNotificationParameters(java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter> notificationParameters) {
     this.notificationParameters = notificationParameters;
     return this;
   }

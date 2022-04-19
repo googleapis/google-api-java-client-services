@@ -31,6 +31,13 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class MigratingVm extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Details of the VM from an AWS source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsSourceVmDetails awsSourceVmDetails;
+
+  /**
    * Details of the target VM in Compute Engine.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Details of the VM from an AWS source.
+   * @return value or {@code null} for none
+   */
+  public AwsSourceVmDetails getAwsSourceVmDetails() {
+    return awsSourceVmDetails;
+  }
+
+  /**
+   * Output only. Details of the VM from an AWS source.
+   * @param awsSourceVmDetails awsSourceVmDetails or {@code null} for none
+   */
+  public MigratingVm setAwsSourceVmDetails(AwsSourceVmDetails awsSourceVmDetails) {
+    this.awsSourceVmDetails = awsSourceVmDetails;
+    return this;
+  }
 
   /**
    * Details of the target VM in Compute Engine.

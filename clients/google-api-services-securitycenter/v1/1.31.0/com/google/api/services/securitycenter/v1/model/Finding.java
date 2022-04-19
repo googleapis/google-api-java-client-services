@@ -61,11 +61,31 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
+   * Contains information about the IP connection associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Connection> connections;
+
+  static {
+    // hack to force ProGuard to consider Connection used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Connection.class);
+  }
+
+  /**
    * The time at which the finding was created in Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Contains more detail about the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
 
   /**
    * The time the finding was first detected. If an existing finding is updated, then this is the
@@ -290,6 +310,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Contains information about the IP connection associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Connection> getConnections() {
+    return connections;
+  }
+
+  /**
+   * Contains information about the IP connection associated with the finding.
+   * @param connections connections or {@code null} for none
+   */
+  public Finding setConnections(java.util.List<Connection> connections) {
+    this.connections = connections;
+    return this;
+  }
+
+  /**
    * The time at which the finding was created in Security Command Center.
    * @return value or {@code null} for none
    */
@@ -303,6 +340,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Contains more detail about the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Contains more detail about the finding.
+   * @param description description or {@code null} for none
+   */
+  public Finding setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

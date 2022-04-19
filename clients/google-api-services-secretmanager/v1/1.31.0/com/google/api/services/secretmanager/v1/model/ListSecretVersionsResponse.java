@@ -38,7 +38,7 @@ public final class ListSecretVersionsResponse extends com.google.api.client.json
   private java.lang.String nextPageToken;
 
   /**
-   * The total number of SecretVersions.
+   * The total number of SecretVersions but 0 when the ListSecretsRequest.filter field is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class ListSecretVersionsResponse extends com.google.api.client.json
   }
 
   /**
-   * The total number of SecretVersions.
+   * The total number of SecretVersions but 0 when the ListSecretsRequest.filter field is set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -79,7 +79,7 @@ public final class ListSecretVersionsResponse extends com.google.api.client.json
   }
 
   /**
-   * The total number of SecretVersions.
+   * The total number of SecretVersions but 0 when the ListSecretsRequest.filter field is set.
    * @param totalSize totalSize or {@code null} for none
    */
   public ListSecretVersionsResponse setTotalSize(java.lang.Integer totalSize) {

@@ -45,7 +45,7 @@ public final class ListSecretsResponse extends com.google.api.client.json.Generi
   private java.util.List<Secret> secrets;
 
   /**
-   * The total number of Secrets.
+   * The total number of Secrets but 0 when the ListSecretsRequest.filter field is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class ListSecretsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The total number of Secrets.
+   * The total number of Secrets but 0 when the ListSecretsRequest.filter field is set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -96,7 +96,7 @@ public final class ListSecretsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The total number of Secrets.
+   * The total number of Secrets but 0 when the ListSecretsRequest.filter field is set.
    * @param totalSize totalSize or {@code null} for none
    */
   public ListSecretsResponse setTotalSize(java.lang.Integer totalSize) {

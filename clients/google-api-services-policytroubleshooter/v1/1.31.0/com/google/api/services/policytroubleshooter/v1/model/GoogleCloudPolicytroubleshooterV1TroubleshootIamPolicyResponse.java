@@ -39,6 +39,13 @@ public final class GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRespons
   private java.lang.String access;
 
   /**
+   * The general errors contained in the troubleshooting response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleRpcStatus> errors;
+
+  /**
    * List of IAM policies that were evaluated to check the principal's permissions, with annotations
    * to indicate how each policy contributed to the final result. The list of policies can include
    * the policy for the resource itself. It can also include policies that are inherited from higher
@@ -72,6 +79,23 @@ public final class GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRespons
    */
   public GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse setAccess(java.lang.String access) {
     this.access = access;
+    return this;
+  }
+
+  /**
+   * The general errors contained in the troubleshooting response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleRpcStatus> getErrors() {
+    return errors;
+  }
+
+  /**
+   * The general errors contained in the troubleshooting response.
+   * @param errors errors or {@code null} for none
+   */
+  public GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse setErrors(java.util.List<GoogleRpcStatus> errors) {
+    this.errors = errors;
     return this;
   }
 

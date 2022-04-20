@@ -1447,19 +1447,20 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
 
           /**
            * The field mask specifies which fields to be updated as part of this request. All other
-           * fields are ignored. Mutable fields are: `display_name` and `restrictions`. If an update
-           * mask is not provided, the service treats it as an implied mask equivalent to all
-           * allowed fields that are set on the wire. If the field mask has a special value "*", the
-           * service treats it equivalent to replace all allowed mutable fields.
+           * fields are ignored. Mutable fields are: `display_name`,`restrictions` and
+           * `annotations`. If an update mask is not provided, the service treats it as an implied
+           * mask equivalent to all allowed fields that are set on the wire. If the field mask has a
+           * special value "*", the service treats it equivalent to replace all allowed mutable
+           * fields.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** The field mask specifies which fields to be updated as part of this request. All other fields are
-         ignored. Mutable fields are: `display_name` and `restrictions`. If an update mask is not provided,
-         the service treats it as an implied mask equivalent to all allowed fields that are set on the wire.
-         If the field mask has a special value "*", the service treats it equivalent to replace all allowed
-         mutable fields.
+         ignored. Mutable fields are: `display_name`,`restrictions` and `annotations`. If an update mask is
+         not provided, the service treats it as an implied mask equivalent to all allowed fields that are
+         set on the wire. If the field mask has a special value "*", the service treats it equivalent to
+         replace all allowed mutable fields.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1467,10 +1468,11 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
 
           /**
            * The field mask specifies which fields to be updated as part of this request. All other
-           * fields are ignored. Mutable fields are: `display_name` and `restrictions`. If an update
-           * mask is not provided, the service treats it as an implied mask equivalent to all
-           * allowed fields that are set on the wire. If the field mask has a special value "*", the
-           * service treats it equivalent to replace all allowed mutable fields.
+           * fields are ignored. Mutable fields are: `display_name`,`restrictions` and
+           * `annotations`. If an update mask is not provided, the service treats it as an implied
+           * mask equivalent to all allowed fields that are set on the wire. If the field mask has a
+           * special value "*", the service treats it equivalent to replace all allowed mutable
+           * fields.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

@@ -31,7 +31,7 @@ package com.google.api.services.adsense.v2.model;
 public final class CustomChannel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Display name of the custom channel.
+   * Required. Display name of the custom channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class CustomChannel extends com.google.api.client.json.GenericJson 
   private java.lang.String reportingDimensionId;
 
   /**
-   * Display name of the custom channel.
+   * Required. Display name of the custom channel.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -62,7 +62,7 @@ public final class CustomChannel extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Display name of the custom channel.
+   * Required. Display name of the custom channel.
    * @param displayName displayName or {@code null} for none
    */
   public CustomChannel setDisplayName(java.lang.String displayName) {

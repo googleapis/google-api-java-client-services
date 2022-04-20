@@ -31,21 +31,21 @@ package com.google.api.services.adsense.v2.model;
 public final class ContentAdsSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad units).
+   * Required. Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad units).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String size;
 
   /**
-   * Type of the ad unit.
+   * Required. Type of the ad unit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad units).
+   * Required. Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad units).
    * @return value or {@code null} for none
    */
   public java.lang.String getSize() {
@@ -53,7 +53,7 @@ public final class ContentAdsSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad units).
+   * Required. Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad units).
    * @param size size or {@code null} for none
    */
   public ContentAdsSettings setSize(java.lang.String size) {
@@ -62,7 +62,7 @@ public final class ContentAdsSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Type of the ad unit.
+   * Required. Type of the ad unit.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -70,7 +70,7 @@ public final class ContentAdsSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Type of the ad unit.
+   * Required. Type of the ad unit.
    * @param type type or {@code null} for none
    */
   public ContentAdsSettings setType(java.lang.String type) {

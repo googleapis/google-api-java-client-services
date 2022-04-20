@@ -173,6 +173,2509 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
+       * An accessor for creating requests from the Jobs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Jobs.List request = run.jobs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Jobs jobs() {
+        return new Jobs();
+      }
+
+      /**
+       * The "jobs" collection of methods.
+       */
+      public class Jobs {
+
+        /**
+         * Create a Job.
+         *
+         * Create a request for the method "jobs.create".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location and project in which this Job should be created. Format:
+         *        projects/{projectnumber}/locations/{location}
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Job}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2Job content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+parent}/jobs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a Job.
+           *
+           * Create a request for the method "jobs.create".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location and project in which this Job should be created. Format:
+         *        projects/{projectnumber}/locations/{location}
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Job}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2Job content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location and project in which this Job should be created. Format:
+           * projects/{projectnumber}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location and project in which this Job should be created. Format:
+         projects/{projectnumber}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location and project in which this Job should be created. Format:
+           * projects/{projectnumber}/locations/{location}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The unique identifier for the Job. The name of the job becomes
+           * {parent}/jobs/{job_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String jobId;
+
+          /** Required. The unique identifier for the Job. The name of the job becomes {parent}/jobs/{job_id}.
+           */
+          public java.lang.String getJobId() {
+            return jobId;
+          }
+
+          /**
+           * Required. The unique identifier for the Job. The name of the job becomes
+           * {parent}/jobs/{job_id}.
+           */
+          public Create setJobId(java.lang.String jobId) {
+            this.jobId = jobId;
+            return this;
+          }
+
+          /**
+           * Indicates that the request should be validated and default values populated, without
+           * persisting the request or creating any resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Indicates that the request should be validated and default values populated, without persisting the
+         request or creating any resources.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Indicates that the request should be validated and default values populated, without
+           * persisting the request or creating any resources.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Job.
+         *
+         * Create a request for the method "jobs.delete".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full name of the Job. Format: projects/{projectnumber}/locations/{location}/jobs/{job}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+          /**
+           * Deletes a Job.
+           *
+           * Create a request for the method "jobs.delete".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full name of the Job. Format: projects/{projectnumber}/locations/{location}/jobs/{job}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full name of the Job. Format:
+           * projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full name of the Job. Format:
+         projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full name of the Job. Format:
+           * projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * A system-generated fingerprint for this version of the resource. May be used to detect
+           * modification conflict during updates.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** A system-generated fingerprint for this version of the resource. May be used to detect modification
+         conflict during updates.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * A system-generated fingerprint for this version of the resource. May be used to detect
+           * modification conflict during updates.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * If set to true, the Job and its Executions will be deleted no matter whether any
+           * Executions are still running or not. If set to false or unset, the Job and its
+           * Executions can only be deleted if there are no running Executions. Any running
+           * Execution will fail the deletion.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** If set to true, the Job and its Executions will be deleted no matter whether any Executions are
+         still running or not. If set to false or unset, the Job and its Executions can only be deleted if
+         there are no running Executions. Any running Execution will fail the deletion.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * If set to true, the Job and its Executions will be deleted no matter whether any
+           * Executions are still running or not. If set to false or unset, the Job and its
+           * Executions can only be deleted if there are no running Executions. Any running
+           * Execution will fail the deletion.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
+           * Indicates that the request should be validated without actually deleting any resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Indicates that the request should be validated without actually deleting any resources.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Indicates that the request should be validated without actually deleting any resources.
+           */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about a Job.
+         *
+         * Create a request for the method "jobs.get".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full name of the Job. Format: projects/{projectnumber}/locations/{location}/jobs/{job}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Job> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+          /**
+           * Gets information about a Job.
+           *
+           * Create a request for the method "jobs.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full name of the Job. Format: projects/{projectnumber}/locations/{location}/jobs/{job}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Job.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full name of the Job. Format:
+           * projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full name of the Job. Format:
+         projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full name of the Job. Format:
+           * projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get the IAM Access Control policy currently in effect for the given Job. This result does not
+         * include any inherited policies.
+         *
+         * Create a request for the method "jobs.getIamPolicy".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         *        the appropriate value for this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v2/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+          /**
+           * Get the IAM Access Control policy currently in effect for the given Job. This result does not
+           * include any inherited policies.
+           *
+           * Create a request for the method "jobs.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         *        the appropriate value for this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List Jobs.
+         *
+         * Create a request for the method "jobs.list".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location and project to list resources on. Format:
+         *        projects/{projectnumber}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ListJobsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/jobs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List Jobs.
+           *
+           * Create a request for the method "jobs.list".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location and project to list resources on. Format:
+         *        projects/{projectnumber}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ListJobsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location and project to list resources on. Format:
+           * projects/{projectnumber}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location and project to list resources on. Format:
+         projects/{projectnumber}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location and project to list resources on. Format:
+           * projects/{projectnumber}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Maximum number of Jobs to return in this call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of Jobs to return in this call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of Jobs to return in this call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token received from a previous call to ListJobs. All other parameters must
+           * match.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token received from a previous call to ListJobs. All other parameters must match.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token received from a previous call to ListJobs. All other parameters must
+           * match.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** If true, returns deleted (but unexpired) resources along with active ones. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showDeleted;
+
+          /** If true, returns deleted (but unexpired) resources along with active ones.
+           */
+          public java.lang.Boolean getShowDeleted() {
+            return showDeleted;
+          }
+
+          /** If true, returns deleted (but unexpired) resources along with active ones. */
+          public List setShowDeleted(java.lang.Boolean showDeleted) {
+            this.showDeleted = showDeleted;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a Job.
+         *
+         * Create a request for the method "jobs.patch".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The fully qualified name of this Job. Format: projects/{project}/locations/{location}/jobs/{job}
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Job}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2Job content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+          /**
+           * Updates a Job.
+           *
+           * Create a request for the method "jobs.patch".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The fully qualified name of this Job. Format: projects/{project}/locations/{location}/jobs/{job}
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Job}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2Job content) {
+            super(CloudRun.this, "PATCH", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The fully qualified name of this Job. Format:
+           * projects/{project}/locations/{location}/jobs/{job}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The fully qualified name of this Job. Format: projects/{project}/locations/{location}/jobs/{job}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The fully qualified name of this Job. Format:
+           * projects/{project}/locations/{location}/jobs/{job}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * If set to true, and if the Job does not exist, it will create a new one. Caller must
+           * have both create and update permissions for this call if this is set to true.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** If set to true, and if the Job does not exist, it will create a new one. Caller must have both
+         create and update permissions for this call if this is set to true.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * If set to true, and if the Job does not exist, it will create a new one. Caller must
+           * have both create and update permissions for this call if this is set to true.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /** The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Indicates that the request should be validated and default values populated, without
+           * persisting the request or updating any resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Indicates that the request should be validated and default values populated, without persisting the
+         request or updating any resources.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Indicates that the request should be validated and default values populated, without
+           * persisting the request or updating any resources.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Triggers creation of a new Execution of this Job.
+         *
+         * Create a request for the method "jobs.run".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Run#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full name of the Job. Format: projects/{projectnumber}/locations/{location}/jobs/{job}
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2RunJobRequest}
+         * @return the request
+         */
+        public Run run(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2RunJobRequest content) throws java.io.IOException {
+          Run result = new Run(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Run extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:run";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+          /**
+           * Triggers creation of a new Execution of this Job.
+           *
+           * Create a request for the method "jobs.run".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Run#execute()} method to invoke the remote operation. <p> {@link
+           * Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full name of the Job. Format: projects/{projectnumber}/locations/{location}/jobs/{job}
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2RunJobRequest}
+           * @since 1.13
+           */
+          protected Run(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2RunJobRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Run set$Xgafv(java.lang.String $Xgafv) {
+            return (Run) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Run setAccessToken(java.lang.String accessToken) {
+            return (Run) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Run setAlt(java.lang.String alt) {
+            return (Run) super.setAlt(alt);
+          }
+
+          @Override
+          public Run setCallback(java.lang.String callback) {
+            return (Run) super.setCallback(callback);
+          }
+
+          @Override
+          public Run setFields(java.lang.String fields) {
+            return (Run) super.setFields(fields);
+          }
+
+          @Override
+          public Run setKey(java.lang.String key) {
+            return (Run) super.setKey(key);
+          }
+
+          @Override
+          public Run setOauthToken(java.lang.String oauthToken) {
+            return (Run) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Run) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Run setQuotaUser(java.lang.String quotaUser) {
+            return (Run) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Run setUploadType(java.lang.String uploadType) {
+            return (Run) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Run setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Run) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full name of the Job. Format:
+           * projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full name of the Job. Format:
+         projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full name of the Job. Format:
+           * projects/{projectnumber}/locations/{location}/jobs/{job}
+           */
+          public Run setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Run set(String parameterName, Object value) {
+            return (Run) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the IAM Access control policy for the specified Job. Overwrites any existing policy.
+         *
+         * Create a request for the method "jobs.setIamPolicy".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         *        the appropriate value for this field.
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleIamV1SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.run.v2.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v2/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+          /**
+           * Sets the IAM Access control policy for the specified Job. Overwrites any existing policy.
+           *
+           * Create a request for the method "jobs.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleIamV1SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.run.v2.model.GoogleIamV1SetIamPolicyRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified Project. There are no permissions required
+         * for making this API call.
+         *
+         * Create a request for the method "jobs.testIamPermissions".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+         *        documentation for the appropriate value for this field.
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleIamV1TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.run.v2.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleIamV1TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v2/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified Project. There are no permissions
+           * required for making this API call.
+           *
+           * Create a request for the method "jobs.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+         *        documentation for the appropriate value for this field.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleIamV1TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.run.v2.model.GoogleIamV1TestIamPermissionsRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleIamV1TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+         documentation for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Executions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRun run = new CloudRun(...);}
+         *   {@code CloudRun.Executions.List request = run.executions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Executions executions() {
+          return new Executions();
+        }
+
+        /**
+         * The "executions" collection of methods.
+         */
+        public class Executions {
+
+          /**
+           * Delete an Execution.
+           *
+           * Create a request for the method "executions.delete".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Execution to delete. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+
+            /**
+             * Delete an Execution.
+             *
+             * Create a request for the method "executions.delete".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Execution to delete. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Execution to delete. Format:
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Execution to delete. Format:
+           projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the Execution to delete. Format:
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * A system-generated fingerprint for this version of the resource. This may be used to
+             * detect modification conflict during updates.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** A system-generated fingerprint for this version of the resource. This may be used to detect
+           modification conflict during updates.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * A system-generated fingerprint for this version of the resource. This may be used to
+             * detect modification conflict during updates.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            /**
+             * Indicates that the request should be validated without actually deleting any
+             * resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Indicates that the request should be validated without actually deleting any resources.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Indicates that the request should be validated without actually deleting any
+             * resources.
+             */
+            public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets information about a Execution.
+           *
+           * Create a request for the method "executions.get".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The full name of the Execution. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Execution> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+
+            /**
+             * Gets information about a Execution.
+             *
+             * Create a request for the method "executions.get".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The full name of the Execution. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Execution.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The full name of the Execution. Format:
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The full name of the Execution. Format:
+           projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The full name of the Execution. Format:
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List Executions from a Job.
+           *
+           * Create a request for the method "executions.list".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The Execution from which the Executions should be listed. To list all Executions across
+           *        Jobs, use "-" instead of Job name. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ListExecutionsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/executions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+            /**
+             * List Executions from a Job.
+             *
+             * Create a request for the method "executions.list".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The Execution from which the Executions should be listed. To list all Executions across
+           *        Jobs, use "-" instead of Job name. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ListExecutionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The Execution from which the Executions should be listed. To list all
+             * Executions across Jobs, use "-" instead of Job name. Format:
+             * projects/{project}/locations/{location}/jobs/{job}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The Execution from which the Executions should be listed. To list all Executions across
+           Jobs, use "-" instead of Job name. Format: projects/{project}/locations/{location}/jobs/{job}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The Execution from which the Executions should be listed. To list all
+             * Executions across Jobs, use "-" instead of Job name. Format:
+             * projects/{project}/locations/{location}/jobs/{job}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Maximum number of Executions to return in this call. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum number of Executions to return in this call.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Maximum number of Executions to return in this call. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token received from a previous call to ListExecutions. All other parameters
+             * must match.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token received from a previous call to ListExecutions. All other parameters must match.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token received from a previous call to ListExecutions. All other parameters
+             * must match.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** If true, returns deleted (but unexpired) resources along with active ones. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean showDeleted;
+
+            /** If true, returns deleted (but unexpired) resources along with active ones.
+             */
+            public java.lang.Boolean getShowDeleted() {
+              return showDeleted;
+            }
+
+            /** If true, returns deleted (but unexpired) resources along with active ones. */
+            public List setShowDeleted(java.lang.Boolean showDeleted) {
+              this.showDeleted = showDeleted;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Tasks collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudRun run = new CloudRun(...);}
+           *   {@code CloudRun.Tasks.List request = run.tasks().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Tasks tasks() {
+            return new Tasks();
+          }
+
+          /**
+           * The "tasks" collection of methods.
+           */
+          public class Tasks {
+
+            /**
+             * Gets information about a Task.
+             *
+             * Create a request for the method "tasks.get".
+             *
+             * This request holds the parameters needed by the run server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The full name of the Task. Format:
+             *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}/tasks/{task}
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Task> {
+
+              private static final String REST_PATH = "v2/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+/tasks/[^/]+$");
+
+              /**
+               * Gets information about a Task.
+               *
+               * Create a request for the method "tasks.get".
+               *
+               * This request holds the parameters needed by the the run server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The full name of the Task. Format:
+             *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}/tasks/{task}
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Task.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+/tasks/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The full name of the Task. Format: projects/{project}/locations/{location
+               * }/jobs/{job}/executions/{execution}/tasks/{task}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The full name of the Task. Format:
+             projects/{project}/locations/{location}/jobs/{job}/executions/{execution}/tasks/{task}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The full name of the Task. Format: projects/{project}/locations/{location
+               * }/jobs/{job}/executions/{execution}/tasks/{task}
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+/tasks/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * List Tasks from an Execution of a Job.
+             *
+             * Create a request for the method "tasks.list".
+             *
+             * This request holds the parameters needed by the run server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The Execution from which the Tasks should be listed. To list all Tasks across Executions
+             *        of a Job, use "-" instead of Execution name. To list all Tasks across Jobs, use "-"
+             *        instead of Job name. Format:
+             *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ListTasksResponse> {
+
+              private static final String REST_PATH = "v2/{+parent}/tasks";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+
+              /**
+               * List Tasks from an Execution of a Job.
+               *
+               * Create a request for the method "tasks.list".
+               *
+               * This request holds the parameters needed by the the run server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The Execution from which the Tasks should be listed. To list all Tasks across Executions
+             *        of a Job, use "-" instead of Execution name. To list all Tasks across Jobs, use "-"
+             *        instead of Job name. Format:
+             *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ListTasksResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The Execution from which the Tasks should be listed. To list all Tasks
+               * across Executions of a Job, use "-" instead of Execution name. To list all Tasks
+               * across Jobs, use "-" instead of Job name. Format:
+               * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The Execution from which the Tasks should be listed. To list all Tasks across Executions
+             of a Job, use "-" instead of Execution name. To list all Tasks across Jobs, use "-" instead of Job
+             name. Format: projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The Execution from which the Tasks should be listed. To list all Tasks
+               * across Executions of a Job, use "-" instead of Execution name. To list all Tasks
+               * across Jobs, use "-" instead of Job name. Format:
+               * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Maximum number of Tasks to return in this call. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Maximum number of Tasks to return in this call.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** Maximum number of Tasks to return in this call. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token received from a previous call to ListTasks. All other parameters must
+               * match.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token received from a previous call to ListTasks. All other parameters must match.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token received from a previous call to ListTasks. All other parameters must
+               * match.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** If true, returns deleted (but unexpired) resources along with active ones. */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean showDeleted;
+
+              /** If true, returns deleted (but unexpired) resources along with active ones.
+               */
+              public java.lang.Boolean getShowDeleted() {
+                return showDeleted;
+              }
+
+              /** If true, returns deleted (but unexpired) resources along with active ones. */
+              public List setShowDeleted(java.lang.Boolean showDeleted) {
+                this.showDeleted = showDeleted;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>

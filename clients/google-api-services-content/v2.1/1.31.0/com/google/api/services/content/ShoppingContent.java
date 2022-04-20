@@ -17209,6 +17209,469 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Productdeliverytime collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Productdeliverytime.List request = content.productdeliverytime().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Productdeliverytime productdeliverytime() {
+    return new Productdeliverytime();
+  }
+
+  /**
+   * The "productdeliverytime" collection of methods.
+   */
+  public class Productdeliverytime {
+
+    /**
+     * Creates or updates the delivery time of a product.
+     *
+     * Create a request for the method "productdeliverytime.create".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The Google merchant ID of the account that contains the product. This account cannot be a multi-
+     *        client account.
+     * @param content the {@link com.google.api.services.content.model.ProductDeliveryTime}
+     * @return the request
+     */
+    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.ProductDeliveryTime content) throws java.io.IOException {
+      Create result = new Create(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.ProductDeliveryTime> {
+
+      private static final String REST_PATH = "{merchantId}/productdeliverytime";
+
+      /**
+       * Creates or updates the delivery time of a product.
+       *
+       * Create a request for the method "productdeliverytime.create".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The Google merchant ID of the account that contains the product. This account cannot be a multi-
+     *        client account.
+       * @param content the {@link com.google.api.services.content.model.ProductDeliveryTime}
+       * @since 1.13
+       */
+      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.ProductDeliveryTime content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.ProductDeliveryTime.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The Google merchant ID of the account that contains the product. This account cannot be a
+       * multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** The Google merchant ID of the account that contains the product. This account cannot be a multi-
+     client account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * The Google merchant ID of the account that contains the product. This account cannot be a
+       * multi-client account.
+       */
+      public Create setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes the delivery time of a product.
+     *
+     * Create a request for the method "productdeliverytime.delete".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
+     *        multi-client account.
+     * @param productId Required. The Content API ID of the product, in the form
+     *        channel:contentLanguage:targetCountry:offerId.
+     * @return the request
+     */
+    public Delete delete(java.lang.Long merchantId, java.lang.String productId) throws java.io.IOException {
+      Delete result = new Delete(merchantId, productId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/productdeliverytime/{productId}";
+
+      /**
+       * Deletes the delivery time of a product.
+       *
+       * Create a request for the method "productdeliverytime.delete".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
+     *        multi-client account.
+       * @param productId Required. The Content API ID of the product, in the form
+     *        channel:contentLanguage:targetCountry:offerId.
+       * @since 1.13
+       */
+      protected Delete(java.lang.Long merchantId, java.lang.String productId) {
+        super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The Google merchant ID of the account that contains the product. This account
+       * cannot be a multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The Google merchant ID of the account that contains the product. This account cannot be a
+     multi-client account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The Google merchant ID of the account that contains the product. This account
+       * cannot be a multi-client account.
+       */
+      public Delete setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Required. The Content API ID of the product, in the form
+       * channel:contentLanguage:targetCountry:offerId.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String productId;
+
+      /** Required. The Content API ID of the product, in the form
+     channel:contentLanguage:targetCountry:offerId.
+       */
+      public java.lang.String getProductId() {
+        return productId;
+      }
+
+      /**
+       * Required. The Content API ID of the product, in the form
+       * channel:contentLanguage:targetCountry:offerId.
+       */
+      public Delete setProductId(java.lang.String productId) {
+        this.productId = productId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets productDeliveryTime by productId
+     *
+     * Create a request for the method "productdeliverytime.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
+     *        multi-client account.
+     * @param productId Required. The Content API ID of the product, in the form
+     *        channel:contentLanguage:targetCountry:offerId.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String productId) throws java.io.IOException {
+      Get result = new Get(merchantId, productId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ProductDeliveryTime> {
+
+      private static final String REST_PATH = "{merchantId}/productdeliverytime/{productId}";
+
+      /**
+       * Gets productDeliveryTime by productId
+       *
+       * Create a request for the method "productdeliverytime.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
+     *        multi-client account.
+       * @param productId Required. The Content API ID of the product, in the form
+     *        channel:contentLanguage:targetCountry:offerId.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String productId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ProductDeliveryTime.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The Google merchant ID of the account that contains the product. This account
+       * cannot be a multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The Google merchant ID of the account that contains the product. This account cannot be a
+     multi-client account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The Google merchant ID of the account that contains the product. This account
+       * cannot be a multi-client account.
+       */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Required. The Content API ID of the product, in the form
+       * channel:contentLanguage:targetCountry:offerId.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String productId;
+
+      /** Required. The Content API ID of the product, in the form
+     channel:contentLanguage:targetCountry:offerId.
+       */
+      public java.lang.String getProductId() {
+        return productId;
+      }
+
+      /**
+       * Required. The Content API ID of the product, in the form
+       * channel:contentLanguage:targetCountry:offerId.
+       */
+      public Get setProductId(java.lang.String productId) {
+        this.productId = productId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Products collection.
    *
    * <p>The typical use is:</p>

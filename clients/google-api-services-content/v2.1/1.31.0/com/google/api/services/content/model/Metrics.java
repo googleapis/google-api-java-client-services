@@ -58,6 +58,36 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Long clicks;
 
   /**
+   * Number of conversions divided by the number of clicks, reported on the impression date. The
+   * metric is currently available only for the FREE_PRODUCT_LISTING program.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversionRate;
+
+  /**
+   * Value of conversions in micros attributed to the product, reported on the conversion date. The
+   * metric is currently available only for the FREE_PRODUCT_LISTING program. The currency of the
+   * returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long conversionValueMicros;
+
+  /**
+   * Number of conversions attributed to the product, reported on the conversion date. Depending on
+   * the attribution model, a conversion might be distributed across multiple clicks, where each
+   * click gets its own credit assigned. This metric is a sum of all such credits. The metric is
+   * currently available only for the FREE_PRODUCT_LISTING program.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversions;
+
+  /**
    * Click-through rate - the number of clicks merchant's products receive (clicks) divided by the
    * number of times the products are shown (impressions).
    * The value may be {@code null}.
@@ -262,6 +292,75 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    */
   public Metrics setClicks(java.lang.Long clicks) {
     this.clicks = clicks;
+    return this;
+  }
+
+  /**
+   * Number of conversions divided by the number of clicks, reported on the impression date. The
+   * metric is currently available only for the FREE_PRODUCT_LISTING program.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversionRate() {
+    return conversionRate;
+  }
+
+  /**
+   * Number of conversions divided by the number of clicks, reported on the impression date. The
+   * metric is currently available only for the FREE_PRODUCT_LISTING program.
+   * @param conversionRate conversionRate or {@code null} for none
+   */
+  public Metrics setConversionRate(java.lang.Double conversionRate) {
+    this.conversionRate = conversionRate;
+    return this;
+  }
+
+  /**
+   * Value of conversions in micros attributed to the product, reported on the conversion date. The
+   * metric is currently available only for the FREE_PRODUCT_LISTING program. The currency of the
+   * returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConversionValueMicros() {
+    return conversionValueMicros;
+  }
+
+  /**
+   * Value of conversions in micros attributed to the product, reported on the conversion date. The
+   * metric is currently available only for the FREE_PRODUCT_LISTING program. The currency of the
+   * returned value is stored in the currency_code segment. If this metric is selected,
+   * 'segments.currency_code' is automatically added to the SELECT clause in the search query
+   * (unless it is explicitly selected by the user) and the currency_code segment is populated in
+   * the response.
+   * @param conversionValueMicros conversionValueMicros or {@code null} for none
+   */
+  public Metrics setConversionValueMicros(java.lang.Long conversionValueMicros) {
+    this.conversionValueMicros = conversionValueMicros;
+    return this;
+  }
+
+  /**
+   * Number of conversions attributed to the product, reported on the conversion date. Depending on
+   * the attribution model, a conversion might be distributed across multiple clicks, where each
+   * click gets its own credit assigned. This metric is a sum of all such credits. The metric is
+   * currently available only for the FREE_PRODUCT_LISTING program.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversions() {
+    return conversions;
+  }
+
+  /**
+   * Number of conversions attributed to the product, reported on the conversion date. Depending on
+   * the attribution model, a conversion might be distributed across multiple clicks, where each
+   * click gets its own credit assigned. This metric is a sum of all such credits. The metric is
+   * currently available only for the FREE_PRODUCT_LISTING program.
+   * @param conversions conversions or {@code null} for none
+   */
+  public Metrics setConversions(java.lang.Double conversions) {
+    this.conversions = conversions;
     return this;
   }
 

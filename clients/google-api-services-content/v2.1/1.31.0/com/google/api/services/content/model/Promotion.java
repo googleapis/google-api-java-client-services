@@ -152,7 +152,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private PriceAmount limitValue;
 
   /**
-   * Long title for the promotion.
+   * Required. Long title for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -575,7 +575,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Long title for the promotion.
+   * Required. Long title for the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getLongTitle() {
@@ -583,7 +583,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Long title for the promotion.
+   * Required. Long title for the promotion.
    * @param longTitle longTitle or {@code null} for none
    */
   public Promotion setLongTitle(java.lang.String longTitle) {

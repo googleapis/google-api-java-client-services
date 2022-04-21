@@ -54,6 +54,15 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
   private GroupId groupId;
 
   /**
+   * The email address of the user that invited the calling user to the room, if available. This
+   * field will only be populated for direct invites, it will be empty if the user was indirectly
+   * invited to the group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inviterEmail;
+
+  /**
    * Whether this is a space that enables guest access
    * The value may be {@code null}.
    */
@@ -136,6 +145,27 @@ public final class SpaceInfo extends com.google.api.client.json.GenericJson {
    */
   public SpaceInfo setGroupId(GroupId groupId) {
     this.groupId = groupId;
+    return this;
+  }
+
+  /**
+   * The email address of the user that invited the calling user to the room, if available. This
+   * field will only be populated for direct invites, it will be empty if the user was indirectly
+   * invited to the group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInviterEmail() {
+    return inviterEmail;
+  }
+
+  /**
+   * The email address of the user that invited the calling user to the room, if available. This
+   * field will only be populated for direct invites, it will be empty if the user was indirectly
+   * invited to the group.
+   * @param inviterEmail inviterEmail or {@code null} for none
+   */
+  public SpaceInfo setInviterEmail(java.lang.String inviterEmail) {
+    this.inviterEmail = inviterEmail;
     return this;
   }
 

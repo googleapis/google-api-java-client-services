@@ -3477,16 +3477,15 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
         /**
          * Required. Use `filter` to return subset of rollouts. The following filters are supported:
-         * -- To limit the results to only those in status 'SUCCESS', use filter='status=SUCCESS' --
-         * To limit the results to those in status 'CANCELLED' or 'FAILED', use
-         * filter='status=CANCELLED OR status=FAILED'
+         * -- By status. For example, `filter='status=SUCCESS'` -- By strategy. For example,
+         * `filter='strategy=TrafficPercentStrategy'`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Required. Use `filter` to return subset of rollouts. The following filters are supported: -- To
-       limit the results to only those in status 'SUCCESS', use filter='status=SUCCESS' -- To limit the
-       results to those in status 'CANCELLED' or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
+        /** Required. Use `filter` to return subset of rollouts. The following filters are supported: -- By
+       status. For example, `filter='status=SUCCESS'` -- By strategy. For example,
+       `filter='strategy=TrafficPercentStrategy'`
          */
         public java.lang.String getFilter() {
           return filter;
@@ -3494,9 +3493,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
         /**
          * Required. Use `filter` to return subset of rollouts. The following filters are supported:
-         * -- To limit the results to only those in status 'SUCCESS', use filter='status=SUCCESS' --
-         * To limit the results to those in status 'CANCELLED' or 'FAILED', use
-         * filter='status=CANCELLED OR status=FAILED'
+         * -- By status. For example, `filter='status=SUCCESS'` -- By strategy. For example,
+         * `filter='strategy=TrafficPercentStrategy'`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

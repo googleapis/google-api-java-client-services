@@ -46,7 +46,7 @@ public final class GoogleIamV1BindingDelta extends com.google.api.client.json.Ge
   private GoogleTypeExpr condition;
 
   /**
-   * A single identity requesting access for a Cloud Platform resource. Follows the same format of
+   * A single identity requesting access for a Google Cloud resource. Follows the same format of
    * Binding.members. Required
    * The value may be {@code null}.
    */
@@ -96,7 +96,7 @@ public final class GoogleIamV1BindingDelta extends com.google.api.client.json.Ge
   }
 
   /**
-   * A single identity requesting access for a Cloud Platform resource. Follows the same format of
+   * A single identity requesting access for a Google Cloud resource. Follows the same format of
    * Binding.members. Required
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class GoogleIamV1BindingDelta extends com.google.api.client.json.Ge
   }
 
   /**
-   * A single identity requesting access for a Cloud Platform resource. Follows the same format of
+   * A single identity requesting access for a Google Cloud resource. Follows the same format of
    * Binding.members. Required
    * @param member member or {@code null} for none
    */

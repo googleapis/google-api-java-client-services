@@ -67,6 +67,14 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String packageType;
 
   /**
+   * The path to the jar file / go binary file. The same jar file can be in multiple locations - all
+   * of them will be listed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> pathToFile;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,6 +171,25 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setPackageType(java.lang.String packageType) {
     this.packageType = packageType;
+    return this;
+  }
+
+  /**
+   * The path to the jar file / go binary file. The same jar file can be in multiple locations - all
+   * of them will be listed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPathToFile() {
+    return pathToFile;
+  }
+
+  /**
+   * The path to the jar file / go binary file. The same jar file can be in multiple locations - all
+   * of them will be listed.
+   * @param pathToFile pathToFile or {@code null} for none
+   */
+  public PackageData setPathToFile(java.util.List<java.lang.String> pathToFile) {
+    this.pathToFile = pathToFile;
     return this;
   }
 

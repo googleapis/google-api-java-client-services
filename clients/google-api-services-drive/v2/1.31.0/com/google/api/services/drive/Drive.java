@@ -4003,6 +4003,111 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /**
+       * Whether any items inside the shared drive should also be deleted. This option is only
+       * supported when useDomainAdminAccess is also set to true.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean allowItemDeletion;
+
+      /** Whether any items inside the shared drive should also be deleted. This option is only supported
+     when useDomainAdminAccess is also set to true. [default: false]
+       */
+      public java.lang.Boolean getAllowItemDeletion() {
+        return allowItemDeletion;
+      }
+
+      /**
+       * Whether any items inside the shared drive should also be deleted. This option is only
+       * supported when useDomainAdminAccess is also set to true.
+       */
+      public Delete setAllowItemDeletion(java.lang.Boolean allowItemDeletion) {
+        this.allowItemDeletion = allowItemDeletion;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether any items inside the shared drive should also be deleted. This option is only supported
+     when useDomainAdminAccess is also set to true.
+       * </p>
+       */
+      public boolean isAllowItemDeletion() {
+        if (allowItemDeletion == null || allowItemDeletion == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return allowItemDeletion;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then the requester will be
+       * granted access if they are an administrator of the domain to which the shared drive
+       * belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useDomainAdminAccess;
+
+      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
+     access if they are an administrator of the domain to which the shared drive belongs. [default:
+     false]
+       */
+      public java.lang.Boolean getUseDomainAdminAccess() {
+        return useDomainAdminAccess;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then the requester will be
+       * granted access if they are an administrator of the domain to which the shared drive
+       * belongs.
+       */
+      public Delete setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
+        this.useDomainAdminAccess = useDomainAdminAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Issue the request as a domain administrator; if set to true, then the requester will be granted
+     access if they are an administrator of the domain to which the shared drive belongs.
+       * </p>
+       */
+      public boolean isUseDomainAdminAccess() {
+        if (useDomainAdminAccess == null || useDomainAdminAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return useDomainAdminAccess;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);

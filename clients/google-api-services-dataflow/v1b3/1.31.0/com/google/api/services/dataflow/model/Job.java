@@ -123,10 +123,11 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a
-   * project at any given time. If a caller attempts to create a Job with the same name as an
-   * already-existing Job, the attempt returns the existing Job. The name must match the regular
-   * expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * The user-specified Cloud Dataflow job name. Only one Job with a given name can exist in a
+   * project within one region at any given time. Jobs in different regions can have the same name.
+   * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
+   * returns the existing Job. The name must match the regular expression
+   * `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -464,10 +465,11 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a
-   * project at any given time. If a caller attempts to create a Job with the same name as an
-   * already-existing Job, the attempt returns the existing Job. The name must match the regular
-   * expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * The user-specified Cloud Dataflow job name. Only one Job with a given name can exist in a
+   * project within one region at any given time. Jobs in different regions can have the same name.
+   * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
+   * returns the existing Job. The name must match the regular expression
+   * `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -475,10 +477,11 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a
-   * project at any given time. If a caller attempts to create a Job with the same name as an
-   * already-existing Job, the attempt returns the existing Job. The name must match the regular
-   * expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * The user-specified Cloud Dataflow job name. Only one Job with a given name can exist in a
+   * project within one region at any given time. Jobs in different regions can have the same name.
+   * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
+   * returns the existing Job. The name must match the regular expression
+   * `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
   public Job setName(java.lang.String name) {

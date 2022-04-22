@@ -17,7 +17,7 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * Request message for `SetIamPolicy` method.
+ * The metadata of an LRO from deleting multiple versions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation
@@ -28,46 +28,40 @@ package com.google.api.services.artifactregistry.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class BatchDeleteVersionsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
-   * (such as Projects) might reject them.
+   * The versions the operation failed to delete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Policy policy;
+  private java.util.List<Version> failedVersions;
 
   /**
-   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
-   * (such as Projects) might reject them.
+   * The versions the operation failed to delete.
    * @return value or {@code null} for none
    */
-  public Policy getPolicy() {
-    return policy;
+  public java.util.List<Version> getFailedVersions() {
+    return failedVersions;
   }
 
   /**
-   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
-   * (such as Projects) might reject them.
-   * @param policy policy or {@code null} for none
+   * The versions the operation failed to delete.
+   * @param failedVersions failedVersions or {@code null} for none
    */
-  public SetIamPolicyRequest setPolicy(Policy policy) {
-    this.policy = policy;
+  public BatchDeleteVersionsMetadata setFailedVersions(java.util.List<Version> failedVersions) {
+    this.failedVersions = failedVersions;
     return this;
   }
 
   @Override
-  public SetIamPolicyRequest set(String fieldName, Object value) {
-    return (SetIamPolicyRequest) super.set(fieldName, value);
+  public BatchDeleteVersionsMetadata set(String fieldName, Object value) {
+    return (BatchDeleteVersionsMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public SetIamPolicyRequest clone() {
-    return (SetIamPolicyRequest) super.clone();
+  public BatchDeleteVersionsMetadata clone() {
+    return (BatchDeleteVersionsMetadata) super.clone();
   }
 
 }

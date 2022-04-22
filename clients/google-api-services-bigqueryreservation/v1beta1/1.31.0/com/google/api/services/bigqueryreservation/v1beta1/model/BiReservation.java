@@ -39,6 +39,13 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * Preferred tables to use BI capacity for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TableReference> preferredTables;
+
+  /**
    * Size of a reservation, in bytes.
    * The value may be {@code null}.
    */
@@ -68,6 +75,23 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
    */
   public BiReservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Preferred tables to use BI capacity for.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TableReference> getPreferredTables() {
+    return preferredTables;
+  }
+
+  /**
+   * Preferred tables to use BI capacity for.
+   * @param preferredTables preferredTables or {@code null} for none
+   */
+  public BiReservation setPreferredTables(java.util.List<TableReference> preferredTables) {
+    this.preferredTables = preferredTables;
     return this;
   }
 

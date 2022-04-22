@@ -69,9 +69,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only
-   * contain lower case alphanumeric characters or dashes.It must start with a letter and must not
-   * end with a dash. Its maximum length is 64 characters.
+   * `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain
+   * lower case alphanumeric characters or dashes. It must start with a letter and must not end with
+   * a dash. Its maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,9 +187,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only
-   * contain lower case alphanumeric characters or dashes.It must start with a letter and must not
-   * end with a dash. Its maximum length is 64 characters.
+   * `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain
+   * lower case alphanumeric characters or dashes. It must start with a letter and must not end with
+   * a dash. Its maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -198,9 +198,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The resource name of the capacity commitment, e.g.,
-   * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only
-   * contain lower case alphanumeric characters or dashes.It must start with a letter and must not
-   * end with a dash. Its maximum length is 64 characters.
+   * `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain
+   * lower case alphanumeric characters or dashes. It must start with a letter and must not end with
+   * a dash. Its maximum length is 64 characters.
    * @param name name or {@code null} for none
    */
   public CapacityCommitment setName(java.lang.String name) {

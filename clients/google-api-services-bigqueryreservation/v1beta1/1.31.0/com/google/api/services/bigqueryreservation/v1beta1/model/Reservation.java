@@ -67,9 +67,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean multiRegionAuxiliary;
 
   /**
-   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. For
-   * the reservation id, it must only contain lower case alphanumeric characters or dashes.It must
-   * start with a letter and must not end with a dash. Its maximum length is 64 characters.
+   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
+   * reservation_id must only contain lower case alphanumeric characters or dashes. It must start
+   * with a letter and must not end with a dash. Its maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +79,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * Minimum slots available to this reservation. A slot is a unit of computational power in
    * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
    * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
-   * capacity exceed the project's slot capacity or if total slot capacity of the new reservation
+   * capacity exceeds the project's slot capacity or if total slot capacity of the new reservation
    * and its siblings exceeds the project's slot capacity, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot
+   * `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot
    * capacity constraints are checked separately for default and auxiliary regions. See
    * multi_region_auxiliary flag for more details.
    * The value may be {@code null}.
@@ -181,9 +181,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. For
-   * the reservation id, it must only contain lower case alphanumeric characters or dashes.It must
-   * start with a letter and must not end with a dash. Its maximum length is 64 characters.
+   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
+   * reservation_id must only contain lower case alphanumeric characters or dashes. It must start
+   * with a letter and must not end with a dash. Its maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -191,9 +191,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. For
-   * the reservation id, it must only contain lower case alphanumeric characters or dashes.It must
-   * start with a letter and must not end with a dash. Its maximum length is 64 characters.
+   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
+   * reservation_id must only contain lower case alphanumeric characters or dashes. It must start
+   * with a letter and must not end with a dash. Its maximum length is 64 characters.
    * @param name name or {@code null} for none
    */
   public Reservation setName(java.lang.String name) {
@@ -205,9 +205,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * Minimum slots available to this reservation. A slot is a unit of computational power in
    * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
    * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
-   * capacity exceed the project's slot capacity or if total slot capacity of the new reservation
+   * capacity exceeds the project's slot capacity or if total slot capacity of the new reservation
    * and its siblings exceeds the project's slot capacity, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot
+   * `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot
    * capacity constraints are checked separately for default and auxiliary regions. See
    * multi_region_auxiliary flag for more details.
    * @return value or {@code null} for none
@@ -220,9 +220,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * Minimum slots available to this reservation. A slot is a unit of computational power in
    * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
    * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
-   * capacity exceed the project's slot capacity or if total slot capacity of the new reservation
+   * capacity exceeds the project's slot capacity or if total slot capacity of the new reservation
    * and its siblings exceeds the project's slot capacity, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot
+   * `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot
    * capacity constraints are checked separately for default and auxiliary regions. See
    * multi_region_auxiliary flag for more details.
    * @param slotCapacity slotCapacity or {@code null} for none

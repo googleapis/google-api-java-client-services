@@ -1560,9 +1560,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The resource name of the capacity commitment, e.g.,
-         *        `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must
-         *        only contain lower case alphanumeric characters or dashes.It must start with a letter and
-         *        must not end with a dash. Its maximum length is 64 characters.
+         *        `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only
+         *        contain lower case alphanumeric characters or dashes. It must start with a letter and must
+         *        not end with a dash. Its maximum length is 64 characters.
          * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment}
          * @return the request
          */
@@ -1594,9 +1594,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The resource name of the capacity commitment, e.g.,
-         *        `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must
-         *        only contain lower case alphanumeric characters or dashes.It must start with a letter and
-         *        must not end with a dash. Its maximum length is 64 characters.
+         *        `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only
+         *        contain lower case alphanumeric characters or dashes. It must start with a letter and must
+         *        not end with a dash. Its maximum length is 64 characters.
            * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment}
            * @since 1.13
            */
@@ -1667,17 +1667,17 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
           /**
            * Output only. The resource name of the capacity commitment, e.g.,
-           * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it
-           * must only contain lower case alphanumeric characters or dashes.It must start with a
-           * letter and must not end with a dash. Its maximum length is 64 characters.
+           * `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only
+           * contain lower case alphanumeric characters or dashes. It must start with a letter and
+           * must not end with a dash. Its maximum length is 64 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. The resource name of the capacity commitment, e.g.,
-         `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only
-         contain lower case alphanumeric characters or dashes.It must start with a letter and must not end
-         with a dash. Its maximum length is 64 characters.
+         `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower
+         case alphanumeric characters or dashes. It must start with a letter and must not end with a dash.
+         Its maximum length is 64 characters.
            */
           public java.lang.String getName() {
             return name;
@@ -1685,9 +1685,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
           /**
            * Output only. The resource name of the capacity commitment, e.g.,
-           * `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it
-           * must only contain lower case alphanumeric characters or dashes.It must start with a
-           * letter and must not end with a dash. Its maximum length is 64 characters.
+           * `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only
+           * contain lower case alphanumeric characters or dashes. It must start with a letter and
+           * must not end with a dash. Its maximum length is 64 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1724,7 +1724,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * Splits capacity commitment to two commitments of the same plan and `commitment_end_time`. A
          * common use case is to enable downgrading commitments. For example, in order to downgrade from
          * 10000 slots to 8000, you might split a 10000 capacity commitment into commitments of 2000 and
-         * 8000. Then, you would change the plan of the first one to `FLEX` and then delete it.
+         * 8000. Then, you delete the first one after the commitment end time passes.
          *
          * Create a request for the method "capacityCommitments.split".
          *
@@ -1752,7 +1752,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Splits capacity commitment to two commitments of the same plan and `commitment_end_time`. A
            * common use case is to enable downgrading commitments. For example, in order to downgrade from
            * 10000 slots to 8000, you might split a 10000 capacity commitment into commitments of 2000 and
-           * 8000. Then, you would change the plan of the first one to `FLEX` and then delete it.
+           * 8000. Then, you delete the first one after the commitment end time passes.
            *
            * Create a request for the method "capacityCommitments.split".
            *
@@ -2012,24 +2012,24 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * The reservation ID. It must only contain lower case alphanumeric characters or
-           * dashes.It must start with a letter and must not end with a dash. Its maximum length is
-           * 64 characters.
+           * The reservation ID. It must only contain lower case alphanumeric characters or dashes.
+           * It must start with a letter and must not end with a dash. Its maximum length is 64
+           * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String reservationId;
 
-          /** The reservation ID. It must only contain lower case alphanumeric characters or dashes.It must start
-         with a letter and must not end with a dash. Its maximum length is 64 characters.
+          /** The reservation ID. It must only contain lower case alphanumeric characters or dashes. It must
+         start with a letter and must not end with a dash. Its maximum length is 64 characters.
            */
           public java.lang.String getReservationId() {
             return reservationId;
           }
 
           /**
-           * The reservation ID. It must only contain lower case alphanumeric characters or
-           * dashes.It must start with a letter and must not end with a dash. Its maximum length is
-           * 64 characters.
+           * The reservation ID. It must only contain lower case alphanumeric characters or dashes.
+           * It must start with a letter and must not end with a dash. Its maximum length is 64
+           * characters.
            */
           public Create setReservationId(java.lang.String reservationId) {
             this.reservationId = reservationId;
@@ -2545,8 +2545,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. For the
-         *        reservation id, it must only contain lower case alphanumeric characters or dashes.It must
+         * @param name The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
+         *        reservation_id must only contain lower case alphanumeric characters or dashes. It must
          *        start with a letter and must not end with a dash. Its maximum length is 64 characters.
          * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Reservation}
          * @return the request
@@ -2575,8 +2575,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. For the
-         *        reservation id, it must only contain lower case alphanumeric characters or dashes.It must
+           * @param name The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
+         *        reservation_id must only contain lower case alphanumeric characters or dashes. It must
          *        start with a letter and must not end with a dash. Its maximum length is 64 characters.
            * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Reservation}
            * @since 1.13
@@ -2648,16 +2648,16 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
           /**
            * The resource name of the reservation, e.g.,
-           * `projects/locations/reservations/team1-prod`. For the reservation id, it must only
-           * contain lower case alphanumeric characters or dashes.It must start with a letter and
-           * must not end with a dash. Its maximum length is 64 characters.
+           * `projects/locations/reservations/team1-prod`. The reservation_id must only contain
+           * lower case alphanumeric characters or dashes. It must start with a letter and must not
+           * end with a dash. Its maximum length is 64 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. For the
-         reservation id, it must only contain lower case alphanumeric characters or dashes.It must start
-         with a letter and must not end with a dash. Its maximum length is 64 characters.
+          /** The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
+         reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a
+         letter and must not end with a dash. Its maximum length is 64 characters.
            */
           public java.lang.String getName() {
             return name;
@@ -2665,9 +2665,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
           /**
            * The resource name of the reservation, e.g.,
-           * `projects/locations/reservations/team1-prod`. For the reservation id, it must only
-           * contain lower case alphanumeric characters or dashes.It must start with a letter and
-           * must not end with a dash. Its maximum length is 64 characters.
+           * `projects/locations/reservations/team1-prod`. The reservation_id must only contain
+           * lower case alphanumeric characters or dashes. It must start with a letter and must not
+           * end with a dash. Its maximum length is 64 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3417,9 +3417,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Output only. Name of the resource. E.g.:
-           *        `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the
-           *        assignment id, it must only contain lower case alphanumeric characters or dashes and the
-           *        max length is 64 characters.
+           *        `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The
+           *        assignment_id must only contain lower case alphanumeric characters or dashes and the max
+           *        length is 64 characters.
            * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Assignment}
            * @return the request
            */
@@ -3448,9 +3448,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Output only. Name of the resource. E.g.:
-           *        `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the
-           *        assignment id, it must only contain lower case alphanumeric characters or dashes and the
-           *        max length is 64 characters.
+           *        `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The
+           *        assignment_id must only contain lower case alphanumeric characters or dashes and the max
+           *        length is 64 characters.
              * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Assignment}
              * @since 1.13
              */
@@ -3521,17 +3521,16 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
             /**
              * Output only. Name of the resource. E.g.:
-             * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the
-             * assignment id, it must only contain lower case alphanumeric characters or dashes and
-             * the max length is 64 characters.
+             * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The
+             * assignment_id must only contain lower case alphanumeric characters or dashes and the
+             * max length is 64 characters.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Output only. Name of the resource. E.g.:
-           `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the assignment id,
-           it must only contain lower case alphanumeric characters or dashes and the max length is 64
-           characters.
+           `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id must
+           only contain lower case alphanumeric characters or dashes and the max length is 64 characters.
              */
             public java.lang.String getName() {
               return name;
@@ -3539,9 +3538,9 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
             /**
              * Output only. Name of the resource. E.g.:
-             * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the
-             * assignment id, it must only contain lower case alphanumeric characters or dashes and
-             * the max length is 64 characters.
+             * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The
+             * assignment_id must only contain lower case alphanumeric characters or dashes and the
+             * max length is 64 characters.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

@@ -89,6 +89,22 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private java.lang.String filter;
 
   /**
+   * The labels applied to a resource must meet the following requirements: * Each resource can have
+   * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
+   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
+   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Products deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an INVALID_ARGUMENT is returned.
@@ -360,6 +376,41 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
    */
   public GoogleCloudRetailV2alphaSearchRequest setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * The labels applied to a resource must meet the following requirements: * Each resource can have
+   * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
+   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
+   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels applied to a resource must meet the following requirements: * Each resource can have
+   * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
+   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
+   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

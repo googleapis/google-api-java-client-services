@@ -44,10 +44,13 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
   private GoogleCloudRetailV2alphaProductInputConfig inputConfig;
 
   /**
-   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
-   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. Only supported
-   * when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
+   * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
+   * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
+   * has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-
+   * retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-
+   * retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic.
+   * Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +70,16 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * If true, will perform the FULL import even if it would delete a large proportion of the
+   * products in the default branch, which could potentially cause outages if you have live
+   * predict/search traffic. Only supported when ImportProductsRequest.reconciliation_mode is set to
+   * `FULL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipDefaultBranchProtection;
 
   /**
    * Indicates which fields in the provided imported 'products' to update. If not set, will by
@@ -111,10 +124,13 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
   }
 
   /**
-   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
-   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. Only supported
-   * when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
+   * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
+   * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
+   * has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-
+   * retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-
+   * retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic.
+   * Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPubsubTopic() {
@@ -122,10 +138,13 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
   }
 
   /**
-   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
-   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. Only supported
-   * when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
+   * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
+   * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
+   * has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-
+   * retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-
+   * retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic.
+   * Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */
   public GoogleCloudRetailV2alphaImportProductsRequest setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
@@ -166,6 +185,29 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
    */
   public GoogleCloudRetailV2alphaImportProductsRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * If true, will perform the FULL import even if it would delete a large proportion of the
+   * products in the default branch, which could potentially cause outages if you have live
+   * predict/search traffic. Only supported when ImportProductsRequest.reconciliation_mode is set to
+   * `FULL`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipDefaultBranchProtection() {
+    return skipDefaultBranchProtection;
+  }
+
+  /**
+   * If true, will perform the FULL import even if it would delete a large proportion of the
+   * products in the default branch, which could potentially cause outages if you have live
+   * predict/search traffic. Only supported when ImportProductsRequest.reconciliation_mode is set to
+   * `FULL`.
+   * @param skipDefaultBranchProtection skipDefaultBranchProtection or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaImportProductsRequest setSkipDefaultBranchProtection(java.lang.Boolean skipDefaultBranchProtection) {
+    this.skipDefaultBranchProtection = skipDefaultBranchProtection;
     return this;
   }
 

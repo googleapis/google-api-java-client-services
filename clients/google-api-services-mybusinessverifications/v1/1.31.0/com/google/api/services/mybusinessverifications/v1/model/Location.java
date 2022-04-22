@@ -58,6 +58,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Id of the category that best describes the core business this location engages in.
+   * e.g. gcid:bakery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,6 +135,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Id of the category that best describes the core business this location engages in.
+   * e.g. gcid:bakery.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryCategoryId() {
@@ -142,6 +144,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Id of the category that best describes the core business this location engages in.
+   * e.g. gcid:bakery.
    * @param primaryCategoryId primaryCategoryId or {@code null} for none
    */
   public Location setPrimaryCategoryId(java.lang.String primaryCategoryId) {

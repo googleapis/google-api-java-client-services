@@ -302,34 +302,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-     thread. If this is the first message with a given thread identifier, a new thread is created.
-     Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-     existing thread, is set in message.
+      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+     same thread.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       public Messages setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -491,34 +485,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-     thread. If this is the first message with a given thread identifier, a new thread is created.
-     Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-     existing thread, is set in message.
+      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+     same thread.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -701,34 +689,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Opaque thread identifier string that can be specified to group messages into a
-         * single thread. If this is the first message with a given thread identifier, a new thread
-         * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
-         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
-         * effect if thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+         * same `threadKey` post into the same thread.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-       thread. If this is the first message with a given thread identifier, a new thread is created.
-       Subsequent messages with the same thread identifier will be posted into the same thread. This
-       relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-       earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-       existing thread, is set in message.
+        /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+       `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+       given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+       same thread.
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Optional. Opaque thread identifier string that can be specified to group messages into a
-         * single thread. If this is the first message with a given thread identifier, a new thread
-         * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
-         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
-         * effect if thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+         * same `threadKey` post into the same thread.
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1092,34 +1074,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-     thread. If this is the first message with a given thread identifier, a new thread is created.
-     Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-     existing thread, is set in message.
+      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+     same thread.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       public Messages setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -1281,34 +1257,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-     thread. If this is the first message with a given thread identifier, a new thread is created.
-     Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-     existing thread, is set in message.
+      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+     same thread.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -1491,34 +1461,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Opaque thread identifier string that can be specified to group messages into a
-         * single thread. If this is the first message with a given thread identifier, a new thread
-         * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
-         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
-         * effect if thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+         * same `threadKey` post into the same thread.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-       thread. If this is the first message with a given thread identifier, a new thread is created.
-       Subsequent messages with the same thread identifier will be posted into the same thread. This
-       relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-       earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-       existing thread, is set in message.
+        /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+       `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+       given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+       same thread.
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Optional. Opaque thread identifier string that can be specified to group messages into a
-         * single thread. If this is the first message with a given thread identifier, a new thread
-         * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
-         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
-         * effect if thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+         * same `threadKey` post into the same thread.
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1995,34 +1959,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-     thread. If this is the first message with a given thread identifier, a new thread is created.
-     Subsequent messages with the same thread identifier will be posted into the same thread. This
-     relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-     existing thread, is set in message.
+      /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+     `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+     given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+     same thread.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Optional. Opaque thread identifier string that can be specified to group messages into a
-       * single thread. If this is the first message with a given thread identifier, a new thread is
-       * created. Subsequent messages with the same thread identifier will be posted into the same
-       * thread. This relieves Chat apps and webhooks from having to store the Google Chat thread ID
-       * of a thread (created earlier by them) to post further updates to it. Has no effect if
-       * thread field, corresponding to an existing thread, is set in message.
+       * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+       * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+       * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+       * same `threadKey` post into the same thread.
        */
       public Webhooks setThreadKey(java.lang.String threadKey) {
         this.threadKey = threadKey;
@@ -2565,34 +2523,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Opaque thread identifier string that can be specified to group messages into a
-         * single thread. If this is the first message with a given thread identifier, a new thread
-         * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
-         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
-         * effect if thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+         * same `threadKey` post into the same thread.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Optional. Opaque thread identifier string that can be specified to group messages into a single
-       thread. If this is the first message with a given thread identifier, a new thread is created.
-       Subsequent messages with the same thread identifier will be posted into the same thread. This
-       relieves Chat apps and webhooks from having to store the Google Chat thread ID of a thread (created
-       earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
-       existing thread, is set in message.
+        /** Optional. Opaque thread identifier. To start or add to a thread, create a message and specify a
+       `threadKey` instead of thread.name. (Setting thread.name has no effect.) The first message with a
+       given `threadKey` starts a new thread. Subsequent messages with the same `threadKey` post into the
+       same thread.
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Optional. Opaque thread identifier string that can be specified to group messages into a
-         * single thread. If this is the first message with a given thread identifier, a new thread
-         * is created. Subsequent messages with the same thread identifier will be posted into the
-         * same thread. This relieves Chat apps and webhooks from having to store the Google Chat
-         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
-         * effect if thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier. To start or add to a thread, create a message and
+         * specify a `threadKey` instead of thread.name. (Setting thread.name has no effect.) The
+         * first message with a given `threadKey` starts a new thread. Subsequent messages with the
+         * same `threadKey` post into the same thread.
          */
         public Create setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;

@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ManagedInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Instances config revision applied to this instance.
+   * [Output Only] Current all-instances configuration revision applied to this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstanceVersion version;
 
   /**
-   * [Output Only] Instances config revision applied to this instance.
+   * [Output Only] Current all-instances configuration revision applied to this instance.
    * @return value or {@code null} for none
    */
   public ManagedInstanceAllInstancesConfig getAllInstancesConfig() {
@@ -147,7 +147,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Instances config revision applied to this instance.
+   * [Output Only] Current all-instances configuration revision applied to this instance.
    * @param allInstancesConfig allInstancesConfig or {@code null} for none
    */
   public ManagedInstance setAllInstancesConfig(ManagedInstanceAllInstancesConfig allInstancesConfig) {

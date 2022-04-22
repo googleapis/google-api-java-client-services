@@ -48,8 +48,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the assignment
-   * id, it must only contain lower case alphanumeric characters or dashes and the max length is 64
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id
+   * must only contain lower case alphanumeric characters or dashes and the max length is 64
    * characters.
    * The value may be {@code null}.
    */
@@ -101,8 +101,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the assignment
-   * id, it must only contain lower case alphanumeric characters or dashes and the max length is 64
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id
+   * must only contain lower case alphanumeric characters or dashes and the max length is 64
    * characters.
    * @return value or {@code null} for none
    */
@@ -112,8 +112,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of the resource. E.g.:
-   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. For the assignment
-   * id, it must only contain lower case alphanumeric characters or dashes and the max length is 64
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id
+   * must only contain lower case alphanumeric characters or dashes and the max length is 64
    * characters.
    * @param name name or {@code null} for none
    */

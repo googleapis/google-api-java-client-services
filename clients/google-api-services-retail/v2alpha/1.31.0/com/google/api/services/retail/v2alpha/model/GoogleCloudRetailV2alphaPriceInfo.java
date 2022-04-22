@@ -49,7 +49,9 @@ public final class GoogleCloudRetailV2alphaPriceInfo extends com.google.api.clie
   private java.lang.String currencyCode;
 
   /**
-   * Price of the product without any discount. If zero, by default set to be the price.
+   * Price of the product without any discount. If zero, by default set to be the price. If set,
+   * original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is
+   * thrown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +140,9 @@ public final class GoogleCloudRetailV2alphaPriceInfo extends com.google.api.clie
   }
 
   /**
-   * Price of the product without any discount. If zero, by default set to be the price.
+   * Price of the product without any discount. If zero, by default set to be the price. If set,
+   * original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is
+   * thrown.
    * @return value or {@code null} for none
    */
   public java.lang.Float getOriginalPrice() {
@@ -146,7 +150,9 @@ public final class GoogleCloudRetailV2alphaPriceInfo extends com.google.api.clie
   }
 
   /**
-   * Price of the product without any discount. If zero, by default set to be the price.
+   * Price of the product without any discount. If zero, by default set to be the price. If set,
+   * original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is
+   * thrown.
    * @param originalPrice originalPrice or {@code null} for none
    */
   public GoogleCloudRetailV2alphaPriceInfo setOriginalPrice(java.lang.Float originalPrice) {

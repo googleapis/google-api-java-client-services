@@ -6040,7 +6040,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations]. (https://cloud.google.com/retail/docs
+           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
            *        /manage-configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPredictRequest}
@@ -6076,7 +6076,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations]. (https://cloud.google.com/retail/docs
+           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
            *        /manage-configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPredictRequest}
@@ -6154,7 +6154,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
              * Recommendations AI serving config or placement. Before you can request predictions
              * from your model, you must create at least one serving config or placement for it. For
-             * more information, see [Managing serving configurations].
+             * more information, see [Managing serving configurations]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
@@ -6168,7 +6168,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `servingConfigs` resource. `placements` is a legacy resource. The ID of the Recommendations AI
            serving config or placement. Before you can request predictions from your model, you must create at
            least one serving config or placement for it. For more information, see [Managing serving
-           configurations]. (https://cloud.google.com/retail/docs/manage-configs). The full list of available
+           configurations] (https://cloud.google.com/retail/docs/manage-configs). The full list of available
            serving configs can be seen at
            https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              */
@@ -6183,7 +6183,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
              * Recommendations AI serving config or placement. Before you can request predictions
              * from your model, you must create at least one serving config or placement for it. For
-             * more information, see [Managing serving configurations].
+             * more information, see [Managing serving configurations]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
@@ -7349,7 +7349,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations]. (https://cloud.google.com/retail/docs
+           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
            *        /manage-configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPredictRequest}
@@ -7385,7 +7385,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
            *        Recommendations AI serving config or placement. Before you can request predictions from
            *        your model, you must create at least one serving config or placement for it. For more
-           *        information, see [Managing serving configurations]. (https://cloud.google.com/retail/docs
+           *        information, see [Managing serving configurations] (https://cloud.google.com/retail/docs
            *        /manage-configs). The full list of available serving configs can be seen at
            *        https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaPredictRequest}
@@ -7463,7 +7463,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
              * Recommendations AI serving config or placement. Before you can request predictions
              * from your model, you must create at least one serving config or placement for it. For
-             * more information, see [Managing serving configurations].
+             * more information, see [Managing serving configurations]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
@@ -7477,7 +7477,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `servingConfigs` resource. `placements` is a legacy resource. The ID of the Recommendations AI
            serving config or placement. Before you can request predictions from your model, you must create at
            least one serving config or placement for it. For more information, see [Managing serving
-           configurations]. (https://cloud.google.com/retail/docs/manage-configs). The full list of available
+           configurations] (https://cloud.google.com/retail/docs/manage-configs). The full list of available
            serving configs can be seen at
            https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs
              */
@@ -7492,7 +7492,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * using the `servingConfigs` resource. `placements` is a legacy resource. The ID of the
              * Recommendations AI serving config or placement. Before you can request predictions
              * from your model, you must create at least one serving config or placement for it. For
-             * more information, see [Managing serving configurations].
+             * more information, see [Managing serving configurations]
              * (https://cloud.google.com/retail/docs/manage-configs). The full list of available
              * serving configs can be seen at
              * https://console.cloud.google.com/ai/retail/catalogs/default_catalog/configs

@@ -33,7 +33,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManager extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the instances configs overrides that should be applied for all instances in the MIG.
+   * Specifies configuration that overrides the instance template configuration for the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -281,7 +281,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String zone;
 
   /**
-   * Specifies the instances configs overrides that should be applied for all instances in the MIG.
+   * Specifies configuration that overrides the instance template configuration for the group.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerAllInstancesConfig getAllInstancesConfig() {
@@ -289,7 +289,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the instances configs overrides that should be applied for all instances in the MIG.
+   * Specifies configuration that overrides the instance template configuration for the group.
    * @param allInstancesConfig allInstancesConfig or {@code null} for none
    */
   public InstanceGroupManager setAllInstancesConfig(InstanceGroupManagerAllInstancesConfig allInstancesConfig) {

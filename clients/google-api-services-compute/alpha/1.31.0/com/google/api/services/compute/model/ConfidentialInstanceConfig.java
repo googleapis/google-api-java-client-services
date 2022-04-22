@@ -30,11 +30,35 @@ package com.google.api.services.compute.model;
 public final class ConfidentialInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Defines the type of technology used by the confidential instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String confidentialInstanceType;
+
+  /**
    * Defines whether the instance should have confidential compute enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConfidentialCompute;
+
+  /**
+   * Defines the type of technology used by the confidential instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfidentialInstanceType() {
+    return confidentialInstanceType;
+  }
+
+  /**
+   * Defines the type of technology used by the confidential instance.
+   * @param confidentialInstanceType confidentialInstanceType or {@code null} for none
+   */
+  public ConfidentialInstanceConfig setConfidentialInstanceType(java.lang.String confidentialInstanceType) {
+    this.confidentialInstanceType = confidentialInstanceType;
+    return this;
+  }
 
   /**
    * Defines whether the instance should have confidential compute enabled.

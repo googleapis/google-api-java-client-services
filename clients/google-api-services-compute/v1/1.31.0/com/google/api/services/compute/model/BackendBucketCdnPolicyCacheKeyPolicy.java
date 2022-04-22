@@ -37,8 +37,8 @@ public final class BackendBucketCdnPolicyCacheKeyPolicy extends com.google.api.c
   private java.util.List<java.lang.String> includeHttpHeaders;
 
   /**
-   * Names of query string parameters to include in cache keys. All other parameters will be
-   * excluded. '&' and '=' will be percent encoded and not treated as delimiters.
+   * Names of query string parameters to include in cache keys. Default parameters are always
+   * included. '&' and '=' will be percent encoded and not treated as delimiters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class BackendBucketCdnPolicyCacheKeyPolicy extends com.google.api.c
   }
 
   /**
-   * Names of query string parameters to include in cache keys. All other parameters will be
-   * excluded. '&' and '=' will be percent encoded and not treated as delimiters.
+   * Names of query string parameters to include in cache keys. Default parameters are always
+   * included. '&' and '=' will be percent encoded and not treated as delimiters.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getQueryStringWhitelist() {
@@ -71,8 +71,8 @@ public final class BackendBucketCdnPolicyCacheKeyPolicy extends com.google.api.c
   }
 
   /**
-   * Names of query string parameters to include in cache keys. All other parameters will be
-   * excluded. '&' and '=' will be percent encoded and not treated as delimiters.
+   * Names of query string parameters to include in cache keys. Default parameters are always
+   * included. '&' and '=' will be percent encoded and not treated as delimiters.
    * @param queryStringWhitelist queryStringWhitelist or {@code null} for none
    */
   public BackendBucketCdnPolicyCacheKeyPolicy setQueryStringWhitelist(java.util.List<java.lang.String> queryStringWhitelist) {

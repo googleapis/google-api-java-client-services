@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class ManagedInstance extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Current all-instances configuration revision applied to this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedInstanceAllInstancesConfig allInstancesConfig;
+
+  /**
    * [Output Only] The current action that the managed instance group has scheduled for the
    * instance. Possible values: - NONE The instance is running, and the managed instance group does
    * not have any scheduled actions for this instance. - CREATING The managed instance group is
@@ -107,6 +114,23 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private ManagedInstanceVersion version;
+
+  /**
+   * [Output Only] Current all-instances configuration revision applied to this instance.
+   * @return value or {@code null} for none
+   */
+  public ManagedInstanceAllInstancesConfig getAllInstancesConfig() {
+    return allInstancesConfig;
+  }
+
+  /**
+   * [Output Only] Current all-instances configuration revision applied to this instance.
+   * @param allInstancesConfig allInstancesConfig or {@code null} for none
+   */
+  public ManagedInstance setAllInstancesConfig(ManagedInstanceAllInstancesConfig allInstancesConfig) {
+    this.allInstancesConfig = allInstancesConfig;
+    return this;
+  }
 
   /**
    * [Output Only] The current action that the managed instance group has scheduled for the

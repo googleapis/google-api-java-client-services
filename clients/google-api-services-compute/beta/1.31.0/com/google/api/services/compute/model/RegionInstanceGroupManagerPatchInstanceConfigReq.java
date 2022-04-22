@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class RegionInstanceGroupManagerPatchInstanceConfigReq extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of per-instance configs to insert or patch on this managed instance group.
+   * The list of per-instance configurations to insert or patch on this managed instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class RegionInstanceGroupManagerPatchInstanceConfigReq extends com.
   }
 
   /**
-   * The list of per-instance configs to insert or patch on this managed instance group.
+   * The list of per-instance configurations to insert or patch on this managed instance group.
    * @return value or {@code null} for none
    */
   public java.util.List<PerInstanceConfig> getPerInstanceConfigs() {
@@ -51,7 +51,7 @@ public final class RegionInstanceGroupManagerPatchInstanceConfigReq extends com.
   }
 
   /**
-   * The list of per-instance configs to insert or patch on this managed instance group.
+   * The list of per-instance configurations to insert or patch on this managed instance group.
    * @param perInstanceConfigs perInstanceConfigs or {@code null} for none
    */
   public RegionInstanceGroupManagerPatchInstanceConfigReq setPerInstanceConfigs(java.util.List<PerInstanceConfig> perInstanceConfigs) {

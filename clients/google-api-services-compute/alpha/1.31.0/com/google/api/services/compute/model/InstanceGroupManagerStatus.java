@@ -30,8 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] A status of consistency of Instances' config applied to instances with Instances'
-   * config defined in managed instance group.
+   * [Output only] Status of all-instances configuration on the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +70,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   private InstanceGroupManagerStatusVersionTarget versionTarget;
 
   /**
-   * [Output Only] A status of consistency of Instances' config applied to instances with Instances'
-   * config defined in managed instance group.
+   * [Output only] Status of all-instances configuration on the group.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusAllInstancesConfig getAllInstancesConfig() {
@@ -80,8 +78,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] A status of consistency of Instances' config applied to instances with Instances'
-   * config defined in managed instance group.
+   * [Output only] Status of all-instances configuration on the group.
    * @param allInstancesConfig allInstancesConfig or {@code null} for none
    */
   public InstanceGroupManagerStatus setAllInstancesConfig(InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig) {

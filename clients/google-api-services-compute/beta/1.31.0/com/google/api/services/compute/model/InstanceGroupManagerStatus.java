@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output only] Status of all-instances configuration on the group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig;
+
+  /**
    * [Output Only] The URL of the Autoscaler that targets this instance group manager.
    * The value may be {@code null}.
    */
@@ -61,6 +68,23 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusVersionTarget versionTarget;
+
+  /**
+   * [Output only] Status of all-instances configuration on the group.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerStatusAllInstancesConfig getAllInstancesConfig() {
+    return allInstancesConfig;
+  }
+
+  /**
+   * [Output only] Status of all-instances configuration on the group.
+   * @param allInstancesConfig allInstancesConfig or {@code null} for none
+   */
+  public InstanceGroupManagerStatus setAllInstancesConfig(InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig) {
+    this.allInstancesConfig = allInstancesConfig;
+    return this;
+  }
 
   /**
    * [Output Only] The URL of the Autoscaler that targets this instance group manager.

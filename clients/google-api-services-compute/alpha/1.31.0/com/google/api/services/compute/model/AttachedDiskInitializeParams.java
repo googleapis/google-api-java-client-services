@@ -19,8 +19,9 @@ package com.google.api.services.compute.model;
 /**
  * [Input Only] Specifies the parameters for a new disk that will be created alongside the new
  * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
- * instance. This property is mutually exclusive with the source property; you can only define one
- * or the other, but not both.
+ * instance. This field is persisted and returned for instanceTemplate and not returned in the
+ * context of instance. This property is mutually exclusive with the source property; you can only
+ * define one or the other, but not both.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

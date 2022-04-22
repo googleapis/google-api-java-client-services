@@ -1680,12 +1680,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
-       * not set.
+       * not set. Possible values for this field are: * READ_SOURCE_TYPE_CONTACT *
+       * READ_SOURCE_TYPE_CONTACT,READ_SOURCE_TYPE_PROFILE Specifying READ_SOURCE_TYPE_PROFILE
+       * without specifying READ_SOURCE_TYPE_CONTACT is not permitted.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> sources;
 
       /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if not set.
+     Possible values for this field are: * READ_SOURCE_TYPE_CONTACT *
+     READ_SOURCE_TYPE_CONTACT,READ_SOURCE_TYPE_PROFILE Specifying READ_SOURCE_TYPE_PROFILE without
+     specifying READ_SOURCE_TYPE_CONTACT is not permitted.
        */
       public java.util.List<java.lang.String> getSources() {
         return sources;
@@ -1693,7 +1698,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
-       * not set.
+       * not set. Possible values for this field are: * READ_SOURCE_TYPE_CONTACT *
+       * READ_SOURCE_TYPE_CONTACT,READ_SOURCE_TYPE_PROFILE Specifying READ_SOURCE_TYPE_PROFILE
+       * without specifying READ_SOURCE_TYPE_CONTACT is not permitted.
        */
       public List setSources(java.util.List<java.lang.String> sources) {
         this.sources = sources;

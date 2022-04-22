@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Defines a SDK harness container for executing Dataflow pipelines.
+ * Defines an SDK harness container for executing Dataflow pipelines.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -30,8 +30,9 @@ package com.google.api.services.dataflow.model;
 public final class SdkHarnessContainerImage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of capabilities enumerated in the above Environment proto. See also
-   * https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+   * The set of capabilities enumerated in the above Environment proto. See also [beam_runner_api.pr
+   * oto](https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/org/apache/beam/m
+   * odel/pipeline/v1/beam_runner_api.proto)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +64,9 @@ public final class SdkHarnessContainerImage extends com.google.api.client.json.G
   private java.lang.Boolean useSingleCorePerContainer;
 
   /**
-   * The set of capabilities enumerated in the above Environment proto. See also
-   * https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+   * The set of capabilities enumerated in the above Environment proto. See also [beam_runner_api.pr
+   * oto](https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/org/apache/beam/m
+   * odel/pipeline/v1/beam_runner_api.proto)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCapabilities() {
@@ -72,8 +74,9 @@ public final class SdkHarnessContainerImage extends com.google.api.client.json.G
   }
 
   /**
-   * The set of capabilities enumerated in the above Environment proto. See also
-   * https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+   * The set of capabilities enumerated in the above Environment proto. See also [beam_runner_api.pr
+   * oto](https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/org/apache/beam/m
+   * odel/pipeline/v1/beam_runner_api.proto)
    * @param capabilities capabilities or {@code null} for none
    */
   public SdkHarnessContainerImage setCapabilities(java.util.List<java.lang.String> capabilities) {

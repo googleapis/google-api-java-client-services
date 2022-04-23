@@ -45,7 +45,7 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
   private TimeSeriesFilterRatio timeSeriesFilterRatio;
 
   /**
-   * A query used to fetch time series.
+   * A query used to fetch time series with MQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A query used to fetch time series.
+   * A query used to fetch time series with MQL.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeSeriesQueryLanguage() {
@@ -104,7 +104,7 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A query used to fetch time series.
+   * A query used to fetch time series with MQL.
    * @param timeSeriesQueryLanguage timeSeriesQueryLanguage or {@code null} for none
    */
   public TimeSeriesQuery setTimeSeriesQueryLanguage(java.lang.String timeSeriesQueryLanguage) {

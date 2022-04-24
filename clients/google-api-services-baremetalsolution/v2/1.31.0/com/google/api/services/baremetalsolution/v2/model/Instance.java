@@ -98,6 +98,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<Network> networks;
 
   /**
+   * The OS image currently installed on the server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String osImage;
+
+  /**
    * The state of the server.
    * The value may be {@code null}.
    */
@@ -269,6 +276,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworks(java.util.List<Network> networks) {
     this.networks = networks;
+    return this;
+  }
+
+  /**
+   * The OS image currently installed on the server.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOsImage() {
+    return osImage;
+  }
+
+  /**
+   * The OS image currently installed on the server.
+   * @param osImage osImage or {@code null} for none
+   */
+  public Instance setOsImage(java.lang.String osImage) {
+    this.osImage = osImage;
     return this;
   }
 

@@ -1169,17 +1169,24 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** The list of fields to update. The only currently supported fields are: `labels` */
+          /**
+           * The list of fields to update. The only currently supported fields are: `labels`
+           * `hyperthreading_enabled`
+           */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** The list of fields to update. The only currently supported fields are: `labels`
+         `hyperthreading_enabled`
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to update. The only currently supported fields are: `labels` */
+          /**
+           * The list of fields to update. The only currently supported fields are: `labels`
+           * `hyperthreading_enabled`
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -1452,6 +1459,137 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           @Override
           public Start set(String parameterName, Object value) {
             return (Start) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stop a running server.
+         *
+         * Create a request for the method "instances.stop".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.StopInstanceRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.StopInstanceRequest content) throws java.io.IOException {
+          Stop result = new Stop(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:stop";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Stop a running server.
+           *
+           * Create a request for the method "instances.stop".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.StopInstanceRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.StopInstanceRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource. */
+          public Stop setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
           }
         }
 

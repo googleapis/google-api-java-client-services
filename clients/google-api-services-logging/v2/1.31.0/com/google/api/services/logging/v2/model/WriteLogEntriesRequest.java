@@ -89,10 +89,11 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
   private java.lang.String logName;
 
   /**
-   * Optional. Whether valid entries should be written even if some other entries fail due to
-   * INVALID_ARGUMENT or PERMISSION_DENIED errors. If any entry is not written, then the response
-   * status is the error associated with one of the failed entries and the response includes error
-   * details keyed by the entries' zero-based index in the entries.write method.
+   * Optional. Whether a batch's valid entries should be written even if some other entry failed due
+   * to a permanent error such as INVALID_ARGUMENT or PERMISSION_DENIED. If any entry failed, then
+   * the response status is the response status is the status of one of the failed entries. The
+   * response will include error details keyed by the entries' zero-based index in the entries.write
+   * method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,10 +227,11 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Whether valid entries should be written even if some other entries fail due to
-   * INVALID_ARGUMENT or PERMISSION_DENIED errors. If any entry is not written, then the response
-   * status is the error associated with one of the failed entries and the response includes error
-   * details keyed by the entries' zero-based index in the entries.write method.
+   * Optional. Whether a batch's valid entries should be written even if some other entry failed due
+   * to a permanent error such as INVALID_ARGUMENT or PERMISSION_DENIED. If any entry failed, then
+   * the response status is the response status is the status of one of the failed entries. The
+   * response will include error details keyed by the entries' zero-based index in the entries.write
+   * method.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPartialSuccess() {
@@ -237,10 +239,11 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Whether valid entries should be written even if some other entries fail due to
-   * INVALID_ARGUMENT or PERMISSION_DENIED errors. If any entry is not written, then the response
-   * status is the error associated with one of the failed entries and the response includes error
-   * details keyed by the entries' zero-based index in the entries.write method.
+   * Optional. Whether a batch's valid entries should be written even if some other entry failed due
+   * to a permanent error such as INVALID_ARGUMENT or PERMISSION_DENIED. If any entry failed, then
+   * the response status is the response status is the status of one of the failed entries. The
+   * response will include error details keyed by the entries' zero-based index in the entries.write
+   * method.
    * @param partialSuccess partialSuccess or {@code null} for none
    */
   public WriteLogEntriesRequest setPartialSuccess(java.lang.Boolean partialSuccess) {

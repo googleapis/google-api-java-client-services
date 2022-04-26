@@ -74,7 +74,7 @@ public final class GoogleCloudApigeeV1ApiProxy extends com.google.api.client.jso
   private java.lang.Boolean readOnly;
 
   /**
-   * Output only. List of revisons defined for the API proxy.
+   * Output only. List of revisions defined for the API proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class GoogleCloudApigeeV1ApiProxy extends com.google.api.client.jso
   }
 
   /**
-   * Output only. List of revisons defined for the API proxy.
+   * Output only. List of revisions defined for the API proxy.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRevision() {
@@ -195,7 +195,7 @@ public final class GoogleCloudApigeeV1ApiProxy extends com.google.api.client.jso
   }
 
   /**
-   * Output only. List of revisons defined for the API proxy.
+   * Output only. List of revisions defined for the API proxy.
    * @param revision revision or {@code null} for none
    */
   public GoogleCloudApigeeV1ApiProxy setRevision(java.util.List<java.lang.String> revision) {

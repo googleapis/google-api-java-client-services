@@ -1194,6 +1194,180 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
     }
     /**
+     * Downloads a csv file(encoded in UTF-8) that contains ID mappings between legacy SA360 and new
+     * SA360. The file includes all children entities of the given advertiser(e.g. engine accounts,
+     * campaigns, ad groups, etc.) that exist in both legacy SA360 and new SA360.
+     *
+     * Create a request for the method "reports.getIdMappingFile".
+     *
+     * This request holds the parameters needed by the doubleclicksearch server.  After setting any
+     * optional parameters, call the {@link GetIdMappingFile#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param agencyId Legacy SA360 agency ID.
+     * @param advertiserId Legacy SA360 advertiser ID.
+     * @return the request
+     */
+    public GetIdMappingFile getIdMappingFile(java.lang.Long agencyId, java.lang.Long advertiserId) throws java.io.IOException {
+      GetIdMappingFile result = new GetIdMappingFile(agencyId, advertiserId);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIdMappingFile extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.IdMappingFile> {
+
+      private static final String REST_PATH = "doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/idmapping";
+
+      /**
+       * Downloads a csv file(encoded in UTF-8) that contains ID mappings between legacy SA360 and new
+       * SA360. The file includes all children entities of the given advertiser(e.g. engine accounts,
+       * campaigns, ad groups, etc.) that exist in both legacy SA360 and new SA360.
+       *
+       * Create a request for the method "reports.getIdMappingFile".
+       *
+       * This request holds the parameters needed by the the doubleclicksearch server.  After setting
+       * any optional parameters, call the {@link GetIdMappingFile#execute()} method to invoke the
+       * remote operation. <p> {@link GetIdMappingFile#initialize(com.google.api.client.googleapis.servi
+       * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param agencyId Legacy SA360 agency ID.
+       * @param advertiserId Legacy SA360 advertiser ID.
+       * @since 1.13
+       */
+      protected GetIdMappingFile(java.lang.Long agencyId, java.lang.Long advertiserId) {
+        super(Doubleclicksearch.this, "GET", REST_PATH, null, com.google.api.services.doubleclicksearch.model.IdMappingFile.class);
+        this.agencyId = com.google.api.client.util.Preconditions.checkNotNull(agencyId, "Required parameter agencyId must be specified.");
+        this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIdMappingFile set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIdMappingFile) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIdMappingFile setAccessToken(java.lang.String accessToken) {
+        return (GetIdMappingFile) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIdMappingFile setAlt(java.lang.String alt) {
+        return (GetIdMappingFile) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIdMappingFile setCallback(java.lang.String callback) {
+        return (GetIdMappingFile) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIdMappingFile setFields(java.lang.String fields) {
+        return (GetIdMappingFile) super.setFields(fields);
+      }
+
+      @Override
+      public GetIdMappingFile setKey(java.lang.String key) {
+        return (GetIdMappingFile) super.setKey(key);
+      }
+
+      @Override
+      public GetIdMappingFile setOauthToken(java.lang.String oauthToken) {
+        return (GetIdMappingFile) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIdMappingFile setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIdMappingFile) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIdMappingFile setQuotaUser(java.lang.String quotaUser) {
+        return (GetIdMappingFile) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIdMappingFile setUploadType(java.lang.String uploadType) {
+        return (GetIdMappingFile) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIdMappingFile setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIdMappingFile) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Legacy SA360 agency ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long agencyId;
+
+      /** Legacy SA360 agency ID.
+       */
+      public java.lang.Long getAgencyId() {
+        return agencyId;
+      }
+
+      /** Legacy SA360 agency ID. */
+      public GetIdMappingFile setAgencyId(java.lang.Long agencyId) {
+        this.agencyId = agencyId;
+        return this;
+      }
+
+      /** Legacy SA360 advertiser ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** Legacy SA360 advertiser ID.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** Legacy SA360 advertiser ID. */
+      public GetIdMappingFile setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      @Override
+      public GetIdMappingFile set(String parameterName, Object value) {
+        return (GetIdMappingFile) super.set(parameterName, value);
+      }
+    }
+    /**
      * Inserts a report request into the reporting system.
      *
      * Create a request for the method "reports.request".

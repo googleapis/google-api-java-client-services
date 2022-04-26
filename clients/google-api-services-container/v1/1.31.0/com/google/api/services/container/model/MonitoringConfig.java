@@ -38,6 +38,13 @@ public final class MonitoringConfig extends com.google.api.client.json.GenericJs
   private MonitoringComponentConfig componentConfig;
 
   /**
+   * Enable Google Cloud Managed Service for Prometheus in the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedPrometheusConfig managedPrometheusConfig;
+
+  /**
    * Monitoring components configuration
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class MonitoringConfig extends com.google.api.client.json.GenericJs
    */
   public MonitoringConfig setComponentConfig(MonitoringComponentConfig componentConfig) {
     this.componentConfig = componentConfig;
+    return this;
+  }
+
+  /**
+   * Enable Google Cloud Managed Service for Prometheus in the cluster.
+   * @return value or {@code null} for none
+   */
+  public ManagedPrometheusConfig getManagedPrometheusConfig() {
+    return managedPrometheusConfig;
+  }
+
+  /**
+   * Enable Google Cloud Managed Service for Prometheus in the cluster.
+   * @param managedPrometheusConfig managedPrometheusConfig or {@code null} for none
+   */
+  public MonitoringConfig setManagedPrometheusConfig(ManagedPrometheusConfig managedPrometheusConfig) {
+    this.managedPrometheusConfig = managedPrometheusConfig;
     return this;
   }
 

@@ -43,6 +43,13 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean createPodRange;
 
   /**
+   * Network bandwidth tier configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkPerformanceConfig networkPerformanceConfig;
+
+  /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
    * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
@@ -88,6 +95,23 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setCreatePodRange(java.lang.Boolean createPodRange) {
     this.createPodRange = createPodRange;
+    return this;
+  }
+
+  /**
+   * Network bandwidth tier configuration.
+   * @return value or {@code null} for none
+   */
+  public NetworkPerformanceConfig getNetworkPerformanceConfig() {
+    return networkPerformanceConfig;
+  }
+
+  /**
+   * Network bandwidth tier configuration.
+   * @param networkPerformanceConfig networkPerformanceConfig or {@code null} for none
+   */
+  public NodeNetworkConfig setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
+    this.networkPerformanceConfig = networkPerformanceConfig;
     return this;
   }
 

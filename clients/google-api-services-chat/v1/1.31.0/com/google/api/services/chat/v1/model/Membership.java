@@ -38,10 +38,12 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. A user in Google Chat. Represents a
-   * [person](https://developers.google.com/people/api/rest/v1/people) in the People API or a
-   * [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Admin
-   * SDK Directory API. Format: `users/{user}`
+   * A Google Chat user or app. Format: `users/{person}` or `users/app` When `users/{person}`,
+   * represents a [person](https://developers.google.com/people/api/rest/v1/people) in the People
+   * API or a [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
+   * the Admin SDK Directory API. Format: `users/{user}` When `users/app`, represents a Chat app
+   * creating membership for itself. Creating membership is available as a [developer
+   * preview](https://developers.google.com/workspace/preview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,10 +82,12 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A user in Google Chat. Represents a
-   * [person](https://developers.google.com/people/api/rest/v1/people) in the People API or a
-   * [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Admin
-   * SDK Directory API. Format: `users/{user}`
+   * A Google Chat user or app. Format: `users/{person}` or `users/app` When `users/{person}`,
+   * represents a [person](https://developers.google.com/people/api/rest/v1/people) in the People
+   * API or a [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
+   * the Admin SDK Directory API. Format: `users/{user}` When `users/app`, represents a Chat app
+   * creating membership for itself. Creating membership is available as a [developer
+   * preview](https://developers.google.com/workspace/preview).
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -91,10 +95,12 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A user in Google Chat. Represents a
-   * [person](https://developers.google.com/people/api/rest/v1/people) in the People API or a
-   * [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Admin
-   * SDK Directory API. Format: `users/{user}`
+   * A Google Chat user or app. Format: `users/{person}` or `users/app` When `users/{person}`,
+   * represents a [person](https://developers.google.com/people/api/rest/v1/people) in the People
+   * API or a [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
+   * the Admin SDK Directory API. Format: `users/{user}` When `users/app`, represents a Chat app
+   * creating membership for itself. Creating membership is available as a [developer
+   * preview](https://developers.google.com/workspace/preview).
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {

@@ -4707,14 +4707,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Indicates that the server should validate the request and populate default values without
          * persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cl
-         * oud/serverless/v1/internal_service.proto:create_internal_service_request)
+         * oud/serverless/internal/internal_service.proto:create_internal_service_request)
          */
         @com.google.api.client.util.Key
         private java.lang.String dryRun;
 
         /** Indicates that the server should validate the request and populate default values without
        persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/server
-       less/v1/internal_service.proto:create_internal_service_request)
+       less/internal/internal_service.proto:create_internal_service_request)
          */
         public java.lang.String getDryRun() {
           return dryRun;
@@ -4723,7 +4723,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Indicates that the server should validate the request and populate default values without
          * persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cl
-         * oud/serverless/v1/internal_service.proto:create_internal_service_request)
+         * oud/serverless/internal/internal_service.proto:create_internal_service_request)
          */
         public Create setDryRun(java.lang.String dryRun) {
           this.dryRun = dryRun;
@@ -5549,14 +5549,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Indicates that the server should validate the request and populate default values without
          * persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cl
-         * oud/serverless/v1/internal_service.proto:replace_internal_service_request)
+         * oud/serverless/internal/internal_service.proto:replace_internal_service_request)
          */
         @com.google.api.client.util.Key
         private java.lang.String dryRun;
 
         /** Indicates that the server should validate the request and populate default values without
        persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/server
-       less/v1/internal_service.proto:replace_internal_service_request)
+       less/internal/internal_service.proto:replace_internal_service_request)
          */
         public java.lang.String getDryRun() {
           return dryRun;
@@ -5565,7 +5565,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Indicates that the server should validate the request and populate default values without
          * persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cl
-         * oud/serverless/v1/internal_service.proto:replace_internal_service_request)
+         * oud/serverless/internal/internal_service.proto:replace_internal_service_request)
          */
         public ReplaceService setDryRun(java.lang.String dryRun) {
           this.dryRun = dryRun;
@@ -9791,14 +9791,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Indicates that the server should validate the request and populate default values
            * without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3
-           * /google/cloud/serverless/v1/internal_service.proto:create_internal_service_request)
+           * /google/cloud/serverless/internal/internal_service.proto:create_internal_service_reques
+           * t)
            */
           @com.google.api.client.util.Key
           private java.lang.String dryRun;
 
           /** Indicates that the server should validate the request and populate default values without
          persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/server
-         less/v1/internal_service.proto:create_internal_service_request)
+         less/internal/internal_service.proto:create_internal_service_request)
            */
           public java.lang.String getDryRun() {
             return dryRun;
@@ -9807,7 +9808,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Indicates that the server should validate the request and populate default values
            * without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3
-           * /google/cloud/serverless/v1/internal_service.proto:create_internal_service_request)
+           * /google/cloud/serverless/internal/internal_service.proto:create_internal_service_reques
+           * t)
            */
           public Create setDryRun(java.lang.String dryRun) {
             this.dryRun = dryRun;
@@ -10828,14 +10830,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Indicates that the server should validate the request and populate default values
            * without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3
-           * /google/cloud/serverless/v1/internal_service.proto:replace_internal_service_request)
+           * /google/cloud/serverless/internal/internal_service.proto:replace_internal_service_reque
+           * st)
            */
           @com.google.api.client.util.Key
           private java.lang.String dryRun;
 
           /** Indicates that the server should validate the request and populate default values without
          persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3/google/cloud/server
-         less/v1/internal_service.proto:replace_internal_service_request)
+         less/internal/internal_service.proto:replace_internal_service_request)
            */
           public java.lang.String getDryRun() {
             return dryRun;
@@ -10844,7 +10847,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Indicates that the server should validate the request and populate default values
            * without persisting the request. Supported values: `all` LINT.ThenChange(//depot/google3
-           * /google/cloud/serverless/v1/internal_service.proto:replace_internal_service_request)
+           * /google/cloud/serverless/internal/internal_service.proto:replace_internal_service_reque
+           * st)
            */
           public ReplaceService setDryRun(java.lang.String dryRun) {
             this.dryRun = dryRun;

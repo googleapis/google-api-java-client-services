@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata ex
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
+   * The list of response details of each document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus> individualBatchDeleteStatuses;
+
+  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata ex
    */
   public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
+    return this;
+  }
+
+  /**
+   * The list of response details of each document.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus> getIndividualBatchDeleteStatuses() {
+    return individualBatchDeleteStatuses;
+  }
+
+  /**
+   * The list of response details of each document.
+   * @param individualBatchDeleteStatuses individualBatchDeleteStatuses or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata setIndividualBatchDeleteStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus> individualBatchDeleteStatuses) {
+    this.individualBatchDeleteStatuses = individualBatchDeleteStatuses;
     return this;
   }
 

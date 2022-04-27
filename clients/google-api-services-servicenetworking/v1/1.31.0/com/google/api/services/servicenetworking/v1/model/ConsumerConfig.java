@@ -103,6 +103,13 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
   private java.util.List<GoogleCloudServicenetworkingV1ConsumerConfigReservedRange> reservedRanges;
 
   /**
+   * Output only. The IP ranges already in use by consumer or producer
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> usedIpRanges;
+
+  /**
    * Output only. Indicates whether the VPC Service Controls reference architecture is configured
    * for the producer VPC host network.
    * The value may be {@code null}.
@@ -281,6 +288,23 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
    */
   public ConsumerConfig setReservedRanges(java.util.List<GoogleCloudServicenetworkingV1ConsumerConfigReservedRange> reservedRanges) {
     this.reservedRanges = reservedRanges;
+    return this;
+  }
+
+  /**
+   * Output only. The IP ranges already in use by consumer or producer
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUsedIpRanges() {
+    return usedIpRanges;
+  }
+
+  /**
+   * Output only. The IP ranges already in use by consumer or producer
+   * @param usedIpRanges usedIpRanges or {@code null} for none
+   */
+  public ConsumerConfig setUsedIpRanges(java.util.List<java.lang.String> usedIpRanges) {
+    this.usedIpRanges = usedIpRanges;
     return this;
   }
 

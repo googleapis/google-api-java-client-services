@@ -1480,8 +1480,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the iap server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. GCP Project number/id and location. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}.
+           * @param parent Required. Google Cloud Project ID and location. In the following format:
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}`.
            * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
            * @return the request
            */
@@ -1508,8 +1508,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. GCP Project number/id and location. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}.
+             * @param parent Required. Google Cloud Project ID and location. In the following format:
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}`.
              * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
              * @since 1.13
              */
@@ -1579,22 +1579,22 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. GCP Project number/id and location. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}.
+             * Required. Google Cloud Project ID and location. In the following format:
+             * `projects/{project_number/id}/iap_tunnel/locations/{location}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. GCP Project number/id and location. In the following format:
-           projects/{project_number/id}/iap_tunnel/locations/{location}.
+            /** Required. Google Cloud Project ID and location. In the following format:
+           `projects/{project_number/id}/iap_tunnel/locations/{location}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. GCP Project number/id and location. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}.
+             * Required. Google Cloud Project ID and location. In the following format:
+             * `projects/{project_number/id}/iap_tunnel/locations/{location}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1607,24 +1607,24 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. The ID to use for the TunnelDestGroup, which will become the final
-             * component of the resource name. This value should be 4-63 characters, and valid
-             * characters are /a-z-/.
+             * Required. The ID to use for the TunnelDestGroup, which becomes the final component of
+             * the resource name. This value must be 4-63 characters, and valid characters are
+             * `a-z-`.
              */
             @com.google.api.client.util.Key
             private java.lang.String tunnelDestGroupId;
 
-            /** Required. The ID to use for the TunnelDestGroup, which will become the final component of the
-           resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+            /** Required. The ID to use for the TunnelDestGroup, which becomes the final component of the resource
+           name. This value must be 4-63 characters, and valid characters are `a-z-`.
              */
             public java.lang.String getTunnelDestGroupId() {
               return tunnelDestGroupId;
             }
 
             /**
-             * Required. The ID to use for the TunnelDestGroup, which will become the final
-             * component of the resource name. This value should be 4-63 characters, and valid
-             * characters are /a-z-/.
+             * Required. The ID to use for the TunnelDestGroup, which becomes the final component of
+             * the resource name. This value must be 4-63 characters, and valid characters are
+             * `a-z-`.
              */
             public Create setTunnelDestGroupId(java.lang.String tunnelDestGroupId) {
               this.tunnelDestGroupId = tunnelDestGroupId;
@@ -1644,8 +1644,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the iap server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the TunnelDestGroup to be deleted. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+           * @param name Required. Name of the TunnelDestGroup to delete. In the following format:
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1671,8 +1671,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the TunnelDestGroup to be deleted. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             * @param name Required. Name of the TunnelDestGroup to delete. In the following format:
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -1741,22 +1741,22 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. Name of the TunnelDestGroup to be deleted. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             * Required. Name of the TunnelDestGroup to delete. In the following format: `projects/{
+             * project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the TunnelDestGroup to be deleted. In the following format:
-           projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+            /** Required. Name of the TunnelDestGroup to delete. In the following format:
+           `projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the TunnelDestGroup to be deleted. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             * Required. Name of the TunnelDestGroup to delete. In the following format: `projects/{
+             * project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1782,7 +1782,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. Name of the TunnelDestGroup to be fetched. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -1809,7 +1809,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Name of the TunnelDestGroup to be fetched. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -1888,22 +1888,22 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. Name of the TunnelDestGroup to be fetched. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             * Required. Name of the TunnelDestGroup to be fetched. In the following format: `projec
+             * ts/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Name of the TunnelDestGroup to be fetched. In the following format:
-           projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+           `projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the TunnelDestGroup to be fetched. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}.
+             * Required. Name of the TunnelDestGroup to be fetched. In the following format: `projec
+             * ts/{project_number/id}/iap_tunnel/locations/{location}/destGroups/{dest_group}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1922,15 +1922,15 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
           }
           /**
            * Lists the existing TunnelDestGroups. To group across all locations, use a `-` as the location ID.
-           * For example: /v1/projects/123/iap_tunnel/locations/-/destGroups
+           * For example: `/v1/projects/123/iap_tunnel/locations/-/destGroups`
            *
            * Create a request for the method "destGroups.list".
            *
            * This request holds the parameters needed by the iap server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. GCP Project number/id and location. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for the
+           * @param parent Required. Google Cloud Project ID and location. In the following format:
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}`. A `-` can be used for the
            *        location to group across all locations.
            * @return the request
            */
@@ -1949,7 +1949,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Lists the existing TunnelDestGroups. To group across all locations, use a `-` as the location
-             * ID. For example: /v1/projects/123/iap_tunnel/locations/-/destGroups
+             * ID. For example: `/v1/projects/123/iap_tunnel/locations/-/destGroups`
              *
              * Create a request for the method "destGroups.list".
              *
@@ -1958,8 +1958,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. GCP Project number/id and location. In the following format:
-           *        projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for the
+             * @param parent Required. Google Cloud Project ID and location. In the following format:
+           *        `projects/{project_number/id}/iap_tunnel/locations/{location}`. A `-` can be used for the
            *        location to group across all locations.
              * @since 1.13
              */
@@ -2039,24 +2039,24 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. GCP Project number/id and location. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for
+             * Required. Google Cloud Project ID and location. In the following format:
+             * `projects/{project_number/id}/iap_tunnel/locations/{location}`. A `-` can be used for
              * the location to group across all locations.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. GCP Project number/id and location. In the following format:
-           projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for the location to
-           group across all locations.
+            /** Required. Google Cloud Project ID and location. In the following format:
+           `projects/{project_number/id}/iap_tunnel/locations/{location}`. A `-` can be used for the location
+           to group across all locations.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. GCP Project number/id and location. In the following format:
-             * projects/{project_number/id}/iap_tunnel/locations/{location}. A `-` can be used for
+             * Required. Google Cloud Project ID and location. In the following format:
+             * `projects/{project_number/id}/iap_tunnel/locations/{location}`. A `-` can be used for
              * the location to group across all locations.
              */
             public List setParent(java.lang.String parent) {
@@ -2070,25 +2070,25 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The maximum number of groups to return. The service may return fewer than this value.
-             * If unspecified, at most 100 groups will be returned. The maximum value is 1000;
-             * values above 1000 will be coerced to 1000.
+             * The maximum number of groups to return. The service might return fewer than this
+             * value. If unspecified, at most 100 groups are returned. The maximum value is 1000;
+             * values above 1000 are coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of groups to return. The service may return fewer than this value. If
-           unspecified, at most 100 groups will be returned. The maximum value is 1000; values above 1000 will
-           be coerced to 1000.
+            /** The maximum number of groups to return. The service might return fewer than this value. If
+           unspecified, at most 100 groups are returned. The maximum value is 1000; values above 1000 are
+           coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of groups to return. The service may return fewer than this value.
-             * If unspecified, at most 100 groups will be returned. The maximum value is 1000;
-             * values above 1000 will be coerced to 1000.
+             * The maximum number of groups to return. The service might return fewer than this
+             * value. If unspecified, at most 100 groups are returned. The maximum value is 1000;
+             * values above 1000 are coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -2258,15 +2258,15 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The field mask specifying which IAP settings should be updated. If omitted, then all
-             * of the settings are updated. See https://developers.google.com/protocol-
+             * A field mask that specifies which IAP settings to update. If omitted, then all of the
+             * settings are updated. See https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The field mask specifying which IAP settings should be updated. If omitted, then all of the
-           settings are updated. See https://developers.google.com/protocol-
+            /** A field mask that specifies which IAP settings to update. If omitted, then all of the settings are
+           updated. See https://developers.google.com/protocol-
            buffers/docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
@@ -2274,8 +2274,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The field mask specifying which IAP settings should be updated. If omitted, then all
-             * of the settings are updated. See https://developers.google.com/protocol-
+             * A field mask that specifies which IAP settings to update. If omitted, then all of the
+             * settings are updated. See https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             public Patch setUpdateMask(String updateMask) {

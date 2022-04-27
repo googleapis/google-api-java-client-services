@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class DeidentifyDatasetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deidentify configuration.
+   * Deidentify configuration. Only one of `config` and `gcs_config_uri` can be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   private java.lang.String gcsConfigUri;
 
   /**
-   * Deidentify configuration.
+   * Deidentify configuration. Only one of `config` and `gcs_config_uri` can be specified.
    * @return value or {@code null} for none
    */
   public DeidentifyConfig getConfig() {
@@ -65,7 +65,7 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Deidentify configuration.
+   * Deidentify configuration. Only one of `config` and `gcs_config_uri` can be specified.
    * @param config config or {@code null} for none
    */
   public DeidentifyDatasetRequest setConfig(DeidentifyConfig config) {

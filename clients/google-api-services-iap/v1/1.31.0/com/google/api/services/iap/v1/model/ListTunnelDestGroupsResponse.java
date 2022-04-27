@@ -31,7 +31,7 @@ package com.google.api.services.iap.v1.model;
 public final class ListTunnelDestGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be send as `page_token` to retrieve the next page. If this field is omitted,
+   * A token that you can send as `page_token` to retrieve the next page. If this field is omitted,
    * there are no subsequent pages.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class ListTunnelDestGroupsResponse extends com.google.api.client.js
   private java.util.List<TunnelDestGroup> tunnelDestGroups;
 
   /**
-   * A token, which can be send as `page_token` to retrieve the next page. If this field is omitted,
+   * A token that you can send as `page_token` to retrieve the next page. If this field is omitted,
    * there are no subsequent pages.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class ListTunnelDestGroupsResponse extends com.google.api.client.js
   }
 
   /**
-   * A token, which can be send as `page_token` to retrieve the next page. If this field is omitted,
+   * A token that you can send as `page_token` to retrieve the next page. If this field is omitted,
    * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

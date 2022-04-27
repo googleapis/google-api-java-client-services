@@ -446,6 +446,220 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     }
 
     /**
+     * An accessor for creating requests from the AdSources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdMob admob = new AdMob(...);}
+     *   {@code AdMob.AdSources.List request = admob.adSources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AdSources adSources() {
+      return new AdSources();
+    }
+
+    /**
+     * The "adSources" collection of methods.
+     */
+    public class AdSources {
+
+      /**
+       * List the ad sources.
+       *
+       * Create a request for the method "adSources.list".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent which owns this collection of ad sources. Format: accounts/{publisher_id}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdMobRequest<com.google.api.services.admob.v1beta.model.ListAdSourcesResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/adSources";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * List the ad sources.
+         *
+         * Create a request for the method "adSources.list".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent which owns this collection of ad sources. Format: accounts/{publisher_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AdMob.this, "GET", REST_PATH, null, com.google.api.services.admob.v1beta.model.ListAdSourcesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent which owns this collection of ad sources. Format:
+         * accounts/{publisher_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent which owns this collection of ad sources. Format: accounts/{publisher_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent which owns this collection of ad sources. Format:
+         * accounts/{publisher_id}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of ad sources to return. If unspecified or 0, at most 1000 ad sources
+         * will be returned. The maximum value is 10,000; values above 10,000 will be coerced to
+         * 10,000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of ad sources to return. If unspecified or 0, at most 1000 ad sources will be
+       returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of ad sources to return. If unspecified or 0, at most 1000 ad sources
+         * will be returned. The maximum value is 10,000; values above 10,000 will be coerced to
+         * 10,000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListAdSources` call. Provide this to retrieve the
+         * subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListAdSources` call. Provide this to retrieve the
+       subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListAdSources` call. Provide this to retrieve the
+         * subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the AdUnits collection.
      *
      * <p>The typical use is:</p>

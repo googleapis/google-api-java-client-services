@@ -105,7 +105,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
 
   /**
    * Output only. The unique Directory API ID of the device. This value is the same as the Admin
-   * Console's Directory API ID in the Chrome OS Devices tab
+   * Console's Directory API ID in the ChromeOS Devices tab
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +193,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
 
   /**
    * Output only. Device serial number. This value is the same as the Admin Console's Serial Number
-   * in the Chrome OS Devices tab.
+   * in the ChromeOS Devices tab.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +325,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
 
   /**
    * Output only. The unique Directory API ID of the device. This value is the same as the Admin
-   * Console's Directory API ID in the Chrome OS Devices tab
+   * Console's Directory API ID in the ChromeOS Devices tab
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceId() {
@@ -334,7 +334,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
 
   /**
    * Output only. The unique Directory API ID of the device. This value is the same as the Admin
-   * Console's Directory API ID in the Chrome OS Devices tab
+   * Console's Directory API ID in the ChromeOS Devices tab
    * @param deviceId deviceId or {@code null} for none
    */
   public GoogleChromeManagementV1TelemetryDevice setDeviceId(java.lang.String deviceId) {
@@ -480,7 +480,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
 
   /**
    * Output only. Device serial number. This value is the same as the Admin Console's Serial Number
-   * in the Chrome OS Devices tab.
+   * in the ChromeOS Devices tab.
    * @return value or {@code null} for none
    */
   public java.lang.String getSerialNumber() {
@@ -489,7 +489,7 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
 
   /**
    * Output only. Device serial number. This value is the same as the Admin Console's Serial Number
-   * in the Chrome OS Devices tab.
+   * in the ChromeOS Devices tab.
    * @param serialNumber serialNumber or {@code null} for none
    */
   public GoogleChromeManagementV1TelemetryDevice setSerialNumber(java.lang.String serialNumber) {

@@ -44,7 +44,7 @@ public final class Shard extends com.google.api.client.json.GenericJson {
   private java.lang.Integer shardIndex;
 
   /**
-   * Output only. Test targets for each shard.
+   * Output only. Test targets for each shard. Only set for manual sharding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class Shard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Test targets for each shard.
+   * Output only. Test targets for each shard. Only set for manual sharding.
    * @return value or {@code null} for none
    */
   public TestTargetsForShard getTestTargetsForShard() {
@@ -93,7 +93,7 @@ public final class Shard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Test targets for each shard.
+   * Output only. Test targets for each shard. Only set for manual sharding.
    * @param testTargetsForShard testTargetsForShard or {@code null} for none
    */
   public Shard setTestTargetsForShard(TestTargetsForShard testTargetsForShard) {

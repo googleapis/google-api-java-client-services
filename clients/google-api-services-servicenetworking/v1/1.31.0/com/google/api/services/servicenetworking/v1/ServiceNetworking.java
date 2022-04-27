@@ -3270,6 +3270,35 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
               return this;
             }
 
+            /**
+             * Optional. When true, include the used IP ranges as part of the GetConsumerConfig
+             * output. This includes routes created inside the service networking network, consumer
+             * network, peers of the consumer network, and reserved ranges inside the service
+             * networking network. By default, this is false
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean includeUsedIpRanges;
+
+            /** Optional. When true, include the used IP ranges as part of the GetConsumerConfig output. This
+           includes routes created inside the service networking network, consumer network, peers of the
+           consumer network, and reserved ranges inside the service networking network. By default, this is
+           false
+             */
+            public java.lang.Boolean getIncludeUsedIpRanges() {
+              return includeUsedIpRanges;
+            }
+
+            /**
+             * Optional. When true, include the used IP ranges as part of the GetConsumerConfig
+             * output. This includes routes created inside the service networking network, consumer
+             * network, peers of the consumer network, and reserved ranges inside the service
+             * networking network. By default, this is false
+             */
+            public Get setIncludeUsedIpRanges(java.lang.Boolean includeUsedIpRanges) {
+              this.includeUsedIpRanges = includeUsedIpRanges;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);

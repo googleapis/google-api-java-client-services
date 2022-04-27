@@ -243,8 +243,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
-   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/e*"` - `tagKeys="123456789/env"`
-   * - `tagKeys:"env"` * use a free text query. Example: - `env`
+   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * `tagKeys="123456789/env"` - `tagKeys:"env"` * use a free text query. Example: - `env`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,7 +263,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
-   * `tagValues:"123456789/env/pr*"` - `tagValues="123456789/env/prod"` * use a free text query.
+   * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * use a free text query.
    * Example: - `prod`
    * The value may be {@code null}.
    */
@@ -748,8 +748,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
-   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/e*"` - `tagKeys="123456789/env"`
-   * - `tagKeys:"env"` * use a free text query. Example: - `env`
+   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * `tagKeys="123456789/env"` - `tagKeys:"env"` * use a free text query. Example: - `env`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTagKeys() {
@@ -758,8 +758,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
-   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/e*"` - `tagKeys="123456789/env"`
-   * - `tagKeys:"env"` * use a free text query. Example: - `env`
+   * `tagKeys`: * use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * `tagKeys="123456789/env"` - `tagKeys:"env"` * use a free text query. Example: - `env`
    * @param tagKeys tagKeys or {@code null} for none
    */
   public ResourceSearchResult setTagKeys(java.util.List<java.lang.String> tagKeys) {
@@ -792,7 +792,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
-   * `tagValues:"123456789/env/pr*"` - `tagValues="123456789/env/prod"` * use a free text query.
+   * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * use a free text query.
    * Example: - `prod`
    * @return value or {@code null} for none
    */
@@ -804,7 +804,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
-   * `tagValues:"123456789/env/pr*"` - `tagValues="123456789/env/prod"` * use a free text query.
+   * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * use a free text query.
    * Example: - `prod`
    * @param tagValues tagValues or {@code null} for none
    */

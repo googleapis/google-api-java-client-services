@@ -133,8 +133,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
-   * URL of a thumbnail image (photo) of the device. e.g.
-   * https://lh3.googleusercontent.com/90WcauuJiCYABEl8U0lcZeuS5STUbf2yW...
+   * URL of a thumbnail image (photo) of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,8 +388,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of a thumbnail image (photo) of the device. e.g.
-   * https://lh3.googleusercontent.com/90WcauuJiCYABEl8U0lcZeuS5STUbf2yW...
+   * URL of a thumbnail image (photo) of the device.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailUrl() {
@@ -398,8 +396,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of a thumbnail image (photo) of the device. e.g.
-   * https://lh3.googleusercontent.com/90WcauuJiCYABEl8U0lcZeuS5STUbf2yW...
+   * URL of a thumbnail image (photo) of the device.
    * @param thumbnailUrl thumbnailUrl or {@code null} for none
    */
   public AndroidModel setThumbnailUrl(java.lang.String thumbnailUrl) {

@@ -116,6 +116,13 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private SharedDriveInfo sharedDriveInfo;
 
   /**
+   * Required when **SearchMethod** is **SITES_URL**.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SitesUrlInfo sitesUrlInfo;
+
+  /**
    * The start time for the search query. Specify in GMT. The value is rounded to 12 AM on the
    * specified date.
    * The value may be {@code null}.
@@ -360,6 +367,23 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setSharedDriveInfo(SharedDriveInfo sharedDriveInfo) {
     this.sharedDriveInfo = sharedDriveInfo;
+    return this;
+  }
+
+  /**
+   * Required when **SearchMethod** is **SITES_URL**.
+   * @return value or {@code null} for none
+   */
+  public SitesUrlInfo getSitesUrlInfo() {
+    return sitesUrlInfo;
+  }
+
+  /**
+   * Required when **SearchMethod** is **SITES_URL**.
+   * @param sitesUrlInfo sitesUrlInfo or {@code null} for none
+   */
+  public Query setSitesUrlInfo(SitesUrlInfo sitesUrlInfo) {
+    this.sitesUrlInfo = sitesUrlInfo;
     return this;
   }
 

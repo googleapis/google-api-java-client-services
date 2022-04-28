@@ -161,7 +161,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link CreatePolicy#execute()} method to invoke the remote operation.
      *
      * @param parent Required. The resource that the policy is attached to, along with the kind of policy to create.
-     *        Format: `policies/{attachment-point}/denypolicies` The attachment point is identified by
+     *        Format: `policies/{attachment_point}/denypolicies` The attachment point is identified by
      *        its URL-encoded full resource name, which means that the forward-slash character, `/`,
      *        must be written as `%2F`. For example,
      *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -195,7 +195,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param parent Required. The resource that the policy is attached to, along with the kind of policy to create.
-     *        Format: `policies/{attachment-point}/denypolicies` The attachment point is identified by
+     *        Format: `policies/{attachment_point}/denypolicies` The attachment point is identified by
      *        its URL-encoded full resource name, which means that the forward-slash character, `/`,
      *        must be written as `%2F`. For example,
      *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -271,7 +271,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Required. The resource that the policy is attached to, along with the kind of policy to
-       * create. Format: `policies/{attachment-point}/denypolicies` The attachment point is
+       * create. Format: `policies/{attachment_point}/denypolicies` The attachment point is
        * identified by its URL-encoded full resource name, which means that the forward-slash
        * character, `/`, must be written as `%2F`. For example,
        * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -282,7 +282,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       private java.lang.String parent;
 
       /** Required. The resource that the policy is attached to, along with the kind of policy to create.
-     Format: `policies/{attachment-point}/denypolicies` The attachment point is identified by its URL-
+     Format: `policies/{attachment_point}/denypolicies` The attachment point is identified by its URL-
      encoded full resource name, which means that the forward-slash character, `/`, must be written as
      `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
      project/denypolicies`. For organizations and folders, use the numeric ID in the full resource name.
@@ -294,7 +294,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Required. The resource that the policy is attached to, along with the kind of policy to
-       * create. Format: `policies/{attachment-point}/denypolicies` The attachment point is
+       * create. Format: `policies/{attachment_point}/denypolicies` The attachment point is
        * identified by its URL-encoded full resource name, which means that the forward-slash
        * character, `/`, must be written as `%2F`. For example,
        * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -352,12 +352,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      * This request holds the parameters needed by the iam server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the policy to delete. Format: `policies/{attachment-
-     *        point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-     *        the forward-slash character, `/`, must be written as `%2F`. For example,
-     *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-     *        policy`. For organizations and folders, use the numeric ID in the full resource name. For
-     *        projects, you can use the alphanumeric or the numeric ID.
+     * @param name Required. The resource name of the policy to delete. Format:
+     *        `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+     *        name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+     *        example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+     *        project/denypolicies/my-policy`. For organizations and folders, use the numeric ID in the
+     *        full resource name. For projects, you can use the alphanumeric or the numeric ID.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -383,12 +383,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the policy to delete. Format: `policies/{attachment-
-     *        point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-     *        the forward-slash character, `/`, must be written as `%2F`. For example,
-     *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-     *        policy`. For organizations and folders, use the numeric ID in the full resource name. For
-     *        projects, you can use the alphanumeric or the numeric ID.
+       * @param name Required. The resource name of the policy to delete. Format:
+     *        `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+     *        name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+     *        example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+     *        project/denypolicies/my-policy`. For organizations and folders, use the numeric ID in the
+     *        full resource name. For projects, you can use the alphanumeric or the numeric ID.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -457,19 +457,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Required. The resource name of the policy to delete. Format: `policies/{attachment-
-       * point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-       * the forward-slash character, `/`, must be written as `%2F`. For example,
-       * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-       * policy`. For organizations and folders, use the numeric ID in the full resource name. For
-       * projects, you can use the alphanumeric or the numeric ID.
+       * Required. The resource name of the policy to delete. Format:
+       * `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+       * name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+       * example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies
+       * /my-policy`. For organizations and folders, use the numeric ID in the full resource name.
+       * For projects, you can use the alphanumeric or the numeric ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the policy to delete. Format: `policies/{attachment-
-     point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that the
-     forward-slash character, `/`, must be written as `%2F`. For example,
+      /** Required. The resource name of the policy to delete. Format:
+     `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource name,
+     which means that the forward-slash character, `/`, must be written as `%2F`. For example,
      `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-policy`. For
      organizations and folders, use the numeric ID in the full resource name. For projects, you can use
      the alphanumeric or the numeric ID.
@@ -479,12 +479,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Required. The resource name of the policy to delete. Format: `policies/{attachment-
-       * point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-       * the forward-slash character, `/`, must be written as `%2F`. For example,
-       * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-       * policy`. For organizations and folders, use the numeric ID in the full resource name. For
-       * projects, you can use the alphanumeric or the numeric ID.
+       * Required. The resource name of the policy to delete. Format:
+       * `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+       * name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+       * example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies
+       * /my-policy`. For organizations and folders, use the numeric ID in the full resource name.
+       * For projects, you can use the alphanumeric or the numeric ID.
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -535,12 +535,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      * This request holds the parameters needed by the iam server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the policy to retrieve. Format: `policies/{attachment-
-     *        point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-     *        the forward-slash character, `/`, must be written as `%2F`. For example,
-     *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-     *        policy`. For organizations and folders, use the numeric ID in the full resource name. For
-     *        projects, you can use the alphanumeric or the numeric ID.
+     * @param name Required. The resource name of the policy to retrieve. Format:
+     *        `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+     *        name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+     *        example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+     *        project/denypolicies/my-policy`. For organizations and folders, use the numeric ID in the
+     *        full resource name. For projects, you can use the alphanumeric or the numeric ID.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -566,12 +566,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the policy to retrieve. Format: `policies/{attachment-
-     *        point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-     *        the forward-slash character, `/`, must be written as `%2F`. For example,
-     *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-     *        policy`. For organizations and folders, use the numeric ID in the full resource name. For
-     *        projects, you can use the alphanumeric or the numeric ID.
+       * @param name Required. The resource name of the policy to retrieve. Format:
+     *        `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+     *        name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+     *        example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+     *        project/denypolicies/my-policy`. For organizations and folders, use the numeric ID in the
+     *        full resource name. For projects, you can use the alphanumeric or the numeric ID.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -650,19 +650,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Required. The resource name of the policy to retrieve. Format: `policies/{attachment-
-       * point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-       * the forward-slash character, `/`, must be written as `%2F`. For example,
-       * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-       * policy`. For organizations and folders, use the numeric ID in the full resource name. For
-       * projects, you can use the alphanumeric or the numeric ID.
+       * Required. The resource name of the policy to retrieve. Format:
+       * `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+       * name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+       * example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies
+       * /my-policy`. For organizations and folders, use the numeric ID in the full resource name.
+       * For projects, you can use the alphanumeric or the numeric ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the policy to retrieve. Format: `policies/{attachment-
-     point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that the
-     forward-slash character, `/`, must be written as `%2F`. For example,
+      /** Required. The resource name of the policy to retrieve. Format:
+     `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource name,
+     which means that the forward-slash character, `/`, must be written as `%2F`. For example,
      `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-policy`. For
      organizations and folders, use the numeric ID in the full resource name. For projects, you can use
      the alphanumeric or the numeric ID.
@@ -672,12 +672,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Required. The resource name of the policy to retrieve. Format: `policies/{attachment-
-       * point}/denypolicies/{policy-id}` Use the URL-encoded full resource name, which means that
-       * the forward-slash character, `/`, must be written as `%2F`. For example,
-       * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-       * policy`. For organizations and folders, use the numeric ID in the full resource name. For
-       * projects, you can use the alphanumeric or the numeric ID.
+       * Required. The resource name of the policy to retrieve. Format:
+       * `policies/{attachment_point}/denypolicies/{policy_id}` Use the URL-encoded full resource
+       * name, which means that the forward-slash character, `/`, must be written as `%2F`. For
+       * example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies
+       * /my-policy`. For organizations and folders, use the numeric ID in the full resource name.
+       * For projects, you can use the alphanumeric or the numeric ID.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -704,7 +704,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link ListPolicies#execute()} method to invoke the remote operation.
      *
      * @param parent Required. The resource that the policy is attached to, along with the kind of policy to list.
-     *        Format: `policies/{attachment-point}/denypolicies` The attachment point is identified by
+     *        Format: `policies/{attachment_point}/denypolicies` The attachment point is identified by
      *        its URL-encoded full resource name, which means that the forward-slash character, `/`,
      *        must be written as `%2F`. For example,
      *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -738,7 +738,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param parent Required. The resource that the policy is attached to, along with the kind of policy to list.
-     *        Format: `policies/{attachment-point}/denypolicies` The attachment point is identified by
+     *        Format: `policies/{attachment_point}/denypolicies` The attachment point is identified by
      *        its URL-encoded full resource name, which means that the forward-slash character, `/`,
      *        must be written as `%2F`. For example,
      *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -823,7 +823,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Required. The resource that the policy is attached to, along with the kind of policy to
-       * list. Format: `policies/{attachment-point}/denypolicies` The attachment point is identified
+       * list. Format: `policies/{attachment_point}/denypolicies` The attachment point is identified
        * by its URL-encoded full resource name, which means that the forward-slash character, `/`,
        * must be written as `%2F`. For example,
        * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -834,7 +834,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       private java.lang.String parent;
 
       /** Required. The resource that the policy is attached to, along with the kind of policy to list.
-     Format: `policies/{attachment-point}/denypolicies` The attachment point is identified by its URL-
+     Format: `policies/{attachment_point}/denypolicies` The attachment point is identified by its URL-
      encoded full resource name, which means that the forward-slash character, `/`, must be written as
      `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
      project/denypolicies`. For organizations and folders, use the numeric ID in the full resource name.
@@ -846,7 +846,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Required. The resource that the policy is attached to, along with the kind of policy to
-       * list. Format: `policies/{attachment-point}/denypolicies` The attachment point is identified
+       * list. Format: `policies/{attachment_point}/denypolicies` The attachment point is identified
        * by its URL-encoded full resource name, which means that the forward-slash character, `/`,
        * must be written as `%2F`. For example,
        * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies`. For
@@ -921,13 +921,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      * This request holds the parameters needed by the iam server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param name Immutable. The resource name of the `Policy`, which must be unique. Format: `policies/{attachment-
-     *        point}/denypolicies/{policy-id}` The attachment point is identified by its URL-encoded
-     *        full resource name, which means that the forward-slash character, `/`, must be written as
-     *        `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
-     *        project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric ID in
-     *        the full resource name. For projects, requests can use the alphanumeric or the numeric ID.
-     *        Responses always contain the numeric ID.
+     * @param name Immutable. The resource name of the `Policy`, which must be unique. Format:
+     *        `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified
+     *        by its URL-encoded full resource name, which means that the forward-slash character, `/`,
+     *        must be written as `%2F`. For example,
+     *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
+     *        deny-policy`. For organizations and folders, use the numeric ID in the full resource name.
+     *        For projects, requests can use the alphanumeric or the numeric ID. Responses always
+     *        contain the numeric ID.
      * @param content the {@link com.google.api.services.iam.v2beta.model.GoogleIamV2betaPolicy}
      * @return the request
      */
@@ -957,13 +958,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Immutable. The resource name of the `Policy`, which must be unique. Format: `policies/{attachment-
-     *        point}/denypolicies/{policy-id}` The attachment point is identified by its URL-encoded
-     *        full resource name, which means that the forward-slash character, `/`, must be written as
-     *        `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
-     *        project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric ID in
-     *        the full resource name. For projects, requests can use the alphanumeric or the numeric ID.
-     *        Responses always contain the numeric ID.
+       * @param name Immutable. The resource name of the `Policy`, which must be unique. Format:
+     *        `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified
+     *        by its URL-encoded full resource name, which means that the forward-slash character, `/`,
+     *        must be written as `%2F`. For example,
+     *        `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
+     *        deny-policy`. For organizations and folders, use the numeric ID in the full resource name.
+     *        For projects, requests can use the alphanumeric or the numeric ID. Responses always
+     *        contain the numeric ID.
        * @param content the {@link com.google.api.services.iam.v2beta.model.GoogleIamV2betaPolicy}
        * @since 1.13
        */
@@ -1033,37 +1035,39 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Immutable. The resource name of the `Policy`, which must be unique. Format: `policies
-       * /{attachment-point}/denypolicies/{policy-id}` The attachment point is identified by its
-       * URL-encoded full resource name, which means that the forward-slash character, `/`, must be
-       * written as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects
-       * %2Fmy-project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric
-       * ID in the full resource name. For projects, requests can use the alphanumeric or the
-       * numeric ID. Responses always contain the numeric ID.
+       * Immutable. The resource name of the `Policy`, which must be unique. Format:
+       * `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified
+       * by its URL-encoded full resource name, which means that the forward-slash character, `/`,
+       * must be written as `%2F`. For example,
+       * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-deny-
+       * policy`. For organizations and folders, use the numeric ID in the full resource name. For
+       * projects, requests can use the alphanumeric or the numeric ID. Responses always contain the
+       * numeric ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Immutable. The resource name of the `Policy`, which must be unique. Format: `policies/{attachment-
-     point}/denypolicies/{policy-id}` The attachment point is identified by its URL-encoded full
-     resource name, which means that the forward-slash character, `/`, must be written as `%2F`. For
-     example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-
-     deny-policy`. For organizations and folders, use the numeric ID in the full resource name. For
-     projects, requests can use the alphanumeric or the numeric ID. Responses always contain the numeric
-     ID.
+      /** Immutable. The resource name of the `Policy`, which must be unique. Format:
+     `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified by its
+     URL-encoded full resource name, which means that the forward-slash character, `/`, must be written
+     as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+     project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric ID in the full
+     resource name. For projects, requests can use the alphanumeric or the numeric ID. Responses always
+     contain the numeric ID.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Immutable. The resource name of the `Policy`, which must be unique. Format: `policies
-       * /{attachment-point}/denypolicies/{policy-id}` The attachment point is identified by its
-       * URL-encoded full resource name, which means that the forward-slash character, `/`, must be
-       * written as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects
-       * %2Fmy-project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric
-       * ID in the full resource name. For projects, requests can use the alphanumeric or the
-       * numeric ID. Responses always contain the numeric ID.
+       * Immutable. The resource name of the `Policy`, which must be unique. Format:
+       * `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified
+       * by its URL-encoded full resource name, which means that the forward-slash character, `/`,
+       * must be written as `%2F`. For example,
+       * `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-project/denypolicies/my-deny-
+       * policy`. For organizations and folders, use the numeric ID in the full resource name. For
+       * projects, requests can use the alphanumeric or the numeric ID. Responses always contain the
+       * numeric ID.
        */
       public Update setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

@@ -126,6 +126,13 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
   private Oidc oidc;
 
   /**
+   * An SAML 2.0 identity provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Saml saml;
+
+  /**
    * Output only. The state of the provider.
    * The value may be {@code null}.
    */
@@ -343,6 +350,23 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
    */
   public WorkloadIdentityPoolProvider setOidc(Oidc oidc) {
     this.oidc = oidc;
+    return this;
+  }
+
+  /**
+   * An SAML 2.0 identity provider.
+   * @return value or {@code null} for none
+   */
+  public Saml getSaml() {
+    return saml;
+  }
+
+  /**
+   * An SAML 2.0 identity provider.
+   * @param saml saml or {@code null} for none
+   */
+  public WorkloadIdentityPoolProvider setSaml(Saml saml) {
+    this.saml = saml;
     return this;
   }
 

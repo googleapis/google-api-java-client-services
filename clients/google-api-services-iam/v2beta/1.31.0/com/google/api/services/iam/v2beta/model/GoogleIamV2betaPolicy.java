@@ -76,10 +76,10 @@ public final class GoogleIamV2betaPolicy extends com.google.api.client.json.Gene
   private java.lang.String kind;
 
   /**
-   * Immutable. The resource name of the `Policy`, which must be unique. Format: `policies
-   * /{attachment-point}/denypolicies/{policy-id}` The attachment point is identified by its URL-
-   * encoded full resource name, which means that the forward-slash character, `/`, must be written
-   * as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+   * Immutable. The resource name of the `Policy`, which must be unique. Format:
+   * `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified by
+   * its URL-encoded full resource name, which means that the forward-slash character, `/`, must be
+   * written as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
    * project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric ID in the
    * full resource name. For projects, requests can use the alphanumeric or the numeric ID.
    * Responses always contain the numeric ID.
@@ -220,10 +220,10 @@ public final class GoogleIamV2betaPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. The resource name of the `Policy`, which must be unique. Format: `policies
-   * /{attachment-point}/denypolicies/{policy-id}` The attachment point is identified by its URL-
-   * encoded full resource name, which means that the forward-slash character, `/`, must be written
-   * as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+   * Immutable. The resource name of the `Policy`, which must be unique. Format:
+   * `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified by
+   * its URL-encoded full resource name, which means that the forward-slash character, `/`, must be
+   * written as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
    * project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric ID in the
    * full resource name. For projects, requests can use the alphanumeric or the numeric ID.
    * Responses always contain the numeric ID.
@@ -234,10 +234,10 @@ public final class GoogleIamV2betaPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. The resource name of the `Policy`, which must be unique. Format: `policies
-   * /{attachment-point}/denypolicies/{policy-id}` The attachment point is identified by its URL-
-   * encoded full resource name, which means that the forward-slash character, `/`, must be written
-   * as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
+   * Immutable. The resource name of the `Policy`, which must be unique. Format:
+   * `policies/{attachment_point}/denypolicies/{policy_id}` The attachment point is identified by
+   * its URL-encoded full resource name, which means that the forward-slash character, `/`, must be
+   * written as `%2F`. For example, `policies/cloudresourcemanager.googleapis.com%2Fprojects%2Fmy-
    * project/denypolicies/my-deny-policy`. For organizations and folders, use the numeric ID in the
    * full resource name. For projects, requests can use the alphanumeric or the numeric ID.
    * Responses always contain the numeric ID.

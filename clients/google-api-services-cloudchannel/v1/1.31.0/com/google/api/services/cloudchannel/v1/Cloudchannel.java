@@ -1840,6 +1840,928 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * An accessor for creating requests from the ChannelPartnerRepricingConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Cloudchannel cloudchannel = new Cloudchannel(...);}
+       *   {@code Cloudchannel.ChannelPartnerRepricingConfigs.List request = cloudchannel.channelPartnerRepricingConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ChannelPartnerRepricingConfigs channelPartnerRepricingConfigs() {
+        return new ChannelPartnerRepricingConfigs();
+      }
+
+      /**
+       * The "channelPartnerRepricingConfigs" collection of methods.
+       */
+      public class ChannelPartnerRepricingConfigs {
+
+        /**
+         * Creates a ChannelPartnerRepricingConfig. Call this method to set modifications for a specific
+         * ChannelPartner's bill. You can only create configs if the RepricingConfig.effective_invoice_month
+         * is a future month. If needed, you can create a config for the current month, with some
+         * restrictions. When creating a config for a future month, make sure there are no existing configs
+         * for that RepricingConfig.effective_invoice_month. The following restrictions are for creating
+         * configs in the current month. * This functionality is reserved for recovering from an erroneous
+         * config, and should not be used for regular business cases. * The new config will not modify
+         * exports used with other configs. Changes to the config may be immediate, but may take up to 24
+         * hours. * There is a limit of ten configs for any ChannelPartner or
+         * RepricingConfig.effective_invoice_month. * The contained
+         * ChannelPartnerRepricingConfig.repricing_config vaule must be different from the value used in the
+         * current config for a ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account
+         * making the request and the account being queried are different. * INVALID_ARGUMENT: Missing or
+         * invalid required parameters in the request. Also displays if the updated config is for the
+         * current month or past months. * NOT_FOUND: The ChannelPartnerRepricingConfig specified does not
+         * exist or is not associated with the given account. * INTERNAL: Any non-user error related to
+         * technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If
+         * successful, the updated ChannelPartnerRepricingConfig resource, otherwise returns an error.
+         *
+         * Create a request for the method "channelPartnerRepricingConfigs.create".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the ChannelPartner that will receive the repricing config. Parent
+         *        uses the format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+         * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig> {
+
+          private static final String REST_PATH = "v1/{+parent}/channelPartnerRepricingConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+
+          /**
+           * Creates a ChannelPartnerRepricingConfig. Call this method to set modifications for a specific
+           * ChannelPartner's bill. You can only create configs if the
+           * RepricingConfig.effective_invoice_month is a future month. If needed, you can create a config
+           * for the current month, with some restrictions. When creating a config for a future month, make
+           * sure there are no existing configs for that RepricingConfig.effective_invoice_month. The
+           * following restrictions are for creating configs in the current month. * This functionality is
+           * reserved for recovering from an erroneous config, and should not be used for regular business
+           * cases. * The new config will not modify exports used with other configs. Changes to the config
+           * may be immediate, but may take up to 24 hours. * There is a limit of ten configs for any
+           * ChannelPartner or RepricingConfig.effective_invoice_month. * The contained
+           * ChannelPartnerRepricingConfig.repricing_config vaule must be different from the value used in
+           * the current config for a ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the
+           * account making the request and the account being queried are different. * INVALID_ARGUMENT:
+           * Missing or invalid required parameters in the request. Also displays if the updated config is
+           * for the current month or past months. * NOT_FOUND: The ChannelPartnerRepricingConfig specified
+           * does not exist or is not associated with the given account. * INTERNAL: Any non-user error
+           * related to technical issues in the backend. In this case, contact Cloud Channel support. Return
+           * Value: If successful, the updated ChannelPartnerRepricingConfig resource, otherwise returns an
+           * error.
+           *
+           * Create a request for the method "channelPartnerRepricingConfigs.create".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the ChannelPartner that will receive the repricing config. Parent
+         *        uses the format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig content) {
+            super(Cloudchannel.this, "POST", REST_PATH, content, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the ChannelPartner that will receive the repricing
+           * config. Parent uses the format:
+           * accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the ChannelPartner that will receive the repricing config. Parent
+         uses the format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the ChannelPartner that will receive the repricing
+           * config. Parent uses the format:
+           * accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the given ChannelPartnerRepricingConfig permanently. You can only delete configs if their
+         * RepricingConfig.effective_invoice_month is set to a date after the current month. Possible error
+         * codes: * PERMISSION_DENIED: The account making the request does not own this customer. *
+         * INVALID_ARGUMENT: Required request parameters are missing or invalid. * FAILED_PRECONDITION: The
+         * ChannelPartnerRepricingConfig is active or in the past. * NOT_FOUND: No
+         * ChannelPartnerRepricingConfig found for the name in the request.
+         *
+         * Create a request for the method "channelPartnerRepricingConfigs.delete".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the channel partner repricing config rule to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+
+          /**
+           * Deletes the given ChannelPartnerRepricingConfig permanently. You can only delete configs if
+           * their RepricingConfig.effective_invoice_month is set to a date after the current month.
+           * Possible error codes: * PERMISSION_DENIED: The account making the request does not own this
+           * customer. * INVALID_ARGUMENT: Required request parameters are missing or invalid. *
+           * FAILED_PRECONDITION: The ChannelPartnerRepricingConfig is active or in the past. * NOT_FOUND:
+           * No ChannelPartnerRepricingConfig found for the name in the request.
+           *
+           * Create a request for the method "channelPartnerRepricingConfigs.delete".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the channel partner repricing config rule to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Cloudchannel.this, "DELETE", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the channel partner repricing config rule to delete.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the channel partner repricing config rule to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the channel partner repricing config rule to delete.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about how a Distributor modifies their bill before sending it to a
+         * ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account making the request and
+         * the account being queried are different. * NOT_FOUND: The ChannelPartnerRepricingConfig was not
+         * found. * INTERNAL: Any non-user error related to technical issues in the backend. In this case,
+         * contact Cloud Channel support. Return Value: If successful, the ChannelPartnerRepricingConfig
+         * resource, otherwise returns an error.
+         *
+         * Create a request for the method "channelPartnerRepricingConfigs.get".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the ChannelPartnerRepricingConfig Format:
+         *        accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConf
+         *        igs/{id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+
+          /**
+           * Gets information about how a Distributor modifies their bill before sending it to a
+           * ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account making the request
+           * and the account being queried are different. * NOT_FOUND: The ChannelPartnerRepricingConfig was
+           * not found. * INTERNAL: Any non-user error related to technical issues in the backend. In this
+           * case, contact Cloud Channel support. Return Value: If successful, the
+           * ChannelPartnerRepricingConfig resource, otherwise returns an error.
+           *
+           * Create a request for the method "channelPartnerRepricingConfigs.get".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the ChannelPartnerRepricingConfig Format:
+         *        accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConf
+         *        igs/{id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the ChannelPartnerRepricingConfig Format: accounts/{acco
+           * unt_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the ChannelPartnerRepricingConfig Format:
+         accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the ChannelPartnerRepricingConfig Format: accounts/{acco
+           * unt_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists information about how a Reseller modifies their bill before sending it to a ChannelPartner.
+         * Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account
+         * being queried are different. * NOT_FOUND: The ChannelPartnerRepricingConfig specified does not
+         * exist or is not associated with the given account. * INTERNAL: Any non-user error related to
+         * technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If
+         * successful, the ChannelPartnerRepricingConfig resources. The data for each resource is displayed
+         * in the ascending order of: * channel partner ID * RepricingConfig.effective_invoice_month *
+         * ChannelPartnerRepricingConfig.update_time If unsuccessful, returns an error.
+         *
+         * Create a request for the method "channelPartnerRepricingConfigs.list".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the account's ChannelPartnerLink. Parent uses the format:
+         *        accounts/{account_id}/channelPartnerLinks/{channel_partner_id}. Supports
+         *        accounts/{account_id}/channelPartnerLinks/- to retrieve configs for all channel partners.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/channelPartnerRepricingConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+
+          /**
+           * Lists information about how a Reseller modifies their bill before sending it to a
+           * ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account making the request
+           * and the account being queried are different. * NOT_FOUND: The ChannelPartnerRepricingConfig
+           * specified does not exist or is not associated with the given account. * INTERNAL: Any non-user
+           * error related to technical issues in the backend. In this case, contact Cloud Channel support.
+           * Return Value: If successful, the ChannelPartnerRepricingConfig resources. The data for each
+           * resource is displayed in the ascending order of: * channel partner ID *
+           * RepricingConfig.effective_invoice_month * ChannelPartnerRepricingConfig.update_time If
+           * unsuccessful, returns an error.
+           *
+           * Create a request for the method "channelPartnerRepricingConfigs.list".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the account's ChannelPartnerLink. Parent uses the format:
+         *        accounts/{account_id}/channelPartnerLinks/{channel_partner_id}. Supports
+         *        accounts/{account_id}/channelPartnerLinks/- to retrieve configs for all channel partners.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the account's ChannelPartnerLink. Parent uses the
+           * format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}. Supports
+           * accounts/{account_id}/channelPartnerLinks/- to retrieve configs for all channel
+           * partners.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the account's ChannelPartnerLink. Parent uses the format:
+         accounts/{account_id}/channelPartnerLinks/{channel_partner_id}. Supports
+         accounts/{account_id}/channelPartnerLinks/- to retrieve configs for all channel partners.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the account's ChannelPartnerLink. Parent uses the
+           * format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}. Supports
+           * accounts/{account_id}/channelPartnerLinks/- to retrieve configs for all channel
+           * partners.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter for [CloudChannelService.ListChannelPartnerRepricingConfigs] results
+           * (channel_partner_link only). You can use this filter when you support a BatchGet-like
+           * query. To use the filter, you must set
+           * `parent=accounts/{account_id}/channelPartnerLinks/-`. Example: `channel_partner_link =
+           * accounts/account_id/channelPartnerLinks/c1` OR `channel_partner_link =
+           * accounts/account_id/channelPartnerLinks/c2`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter for [CloudChannelService.ListChannelPartnerRepricingConfigs] results
+         (channel_partner_link only). You can use this filter when you support a BatchGet-like query. To use
+         the filter, you must set `parent=accounts/{account_id}/channelPartnerLinks/-`. Example:
+         `channel_partner_link = accounts/account_id/channelPartnerLinks/c1` OR `channel_partner_link =
+         accounts/account_id/channelPartnerLinks/c2`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter for [CloudChannelService.ListChannelPartnerRepricingConfigs] results
+           * (channel_partner_link only). You can use this filter when you support a BatchGet-like
+           * query. To use the filter, you must set
+           * `parent=accounts/{account_id}/channelPartnerLinks/-`. Example: `channel_partner_link =
+           * accounts/account_id/channelPartnerLinks/c1` OR `channel_partner_link =
+           * accounts/account_id/channelPartnerLinks/c2`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of repricing configs to return. The service may return
+           * fewer than this value. If unspecified, returns a maximum of 50 rules. The maximum value
+           * is 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of repricing configs to return. The service may return fewer than this
+         value. If unspecified, returns a maximum of 50 rules. The maximum value is 100; values above 100
+         will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of repricing configs to return. The service may return
+           * fewer than this value. If unspecified, returns a maximum of 50 rules. The maximum value
+           * is 100; values above 100 will be coerced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying a page of results beyond the first page. Obtained through
+           * ListChannelPartnerRepricingConfigsResponse.next_page_token of the previous
+           * CloudChannelService.ListChannelPartnerRepricingConfigs call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results beyond the first page. Obtained through
+         ListChannelPartnerRepricingConfigsResponse.next_page_token of the previous
+         CloudChannelService.ListChannelPartnerRepricingConfigs call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying a page of results beyond the first page. Obtained through
+           * ListChannelPartnerRepricingConfigsResponse.next_page_token of the previous
+           * CloudChannelService.ListChannelPartnerRepricingConfigs call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a ChannelPartnerRepricingConfig. Call this method to set modifications for a specific
+         * ChannelPartner's bill. This method overwrites the existing CustomerRepricingConfig. You can only
+         * update configs if the RepricingConfig.effective_invoice_month is a future month. To make changes
+         * to configs for the current month, use CreateChannelPartnerRepricingConfig, taking note of its
+         * restrictions. You cannot update the RepricingConfig.effective_invoice_month. When updating a
+         * config in the future: * This config must already exist. Possible Error Codes: *
+         * PERMISSION_DENIED: If the account making the request and the account being queried are different.
+         * * INVALID_ARGUMENT: Missing or invalid required parameters in the request. Also displays if the
+         * updated config is for the current month or past months. * NOT_FOUND: The
+         * ChannelPartnerRepricingConfig specified does not exist or is not associated with the given
+         * account. * INTERNAL: Any non-user error related to technical issues in the backend. In this case,
+         * contact Cloud Channel support. Return Value: If successful, the updated
+         * ChannelPartnerRepricingConfig resource, otherwise returns an error.
+         *
+         * Create a request for the method "channelPartnerRepricingConfigs.patch".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the ChannelPartnerRepricingConfig. Format:
+         *        accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConf
+         *        igs/{id}.
+         * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+
+          /**
+           * Updates a ChannelPartnerRepricingConfig. Call this method to set modifications for a specific
+           * ChannelPartner's bill. This method overwrites the existing CustomerRepricingConfig. You can
+           * only update configs if the RepricingConfig.effective_invoice_month is a future month. To make
+           * changes to configs for the current month, use CreateChannelPartnerRepricingConfig, taking note
+           * of its restrictions. You cannot update the RepricingConfig.effective_invoice_month. When
+           * updating a config in the future: * This config must already exist. Possible Error Codes: *
+           * PERMISSION_DENIED: If the account making the request and the account being queried are
+           * different. * INVALID_ARGUMENT: Missing or invalid required parameters in the request. Also
+           * displays if the updated config is for the current month or past months. * NOT_FOUND: The
+           * ChannelPartnerRepricingConfig specified does not exist or is not associated with the given
+           * account. * INTERNAL: Any non-user error related to technical issues in the backend. In this
+           * case, contact Cloud Channel support. Return Value: If successful, the updated
+           * ChannelPartnerRepricingConfig resource, otherwise returns an error.
+           *
+           * Create a request for the method "channelPartnerRepricingConfigs.patch".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the ChannelPartnerRepricingConfig. Format:
+         *        accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConf
+         *        igs/{id}.
+           * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig content) {
+            super(Cloudchannel.this, "PATCH", REST_PATH, content, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ChannelPartnerRepricingConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the ChannelPartnerRepricingConfig. Format: accounts/{acco
+           * unt_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the ChannelPartnerRepricingConfig. Format:
+         accounts/{account_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the ChannelPartnerRepricingConfig. Format: accounts/{acco
+           * unt_id}/channelPartnerLinks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+/channelPartnerRepricingConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Customers collection.
        *
        * <p>The typical use is:</p>
@@ -4896,6 +5818,921 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         }
       }
 
+      /**
+       * An accessor for creating requests from the CustomerRepricingConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Cloudchannel cloudchannel = new Cloudchannel(...);}
+       *   {@code Cloudchannel.CustomerRepricingConfigs.List request = cloudchannel.customerRepricingConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CustomerRepricingConfigs customerRepricingConfigs() {
+        return new CustomerRepricingConfigs();
+      }
+
+      /**
+       * The "customerRepricingConfigs" collection of methods.
+       */
+      public class CustomerRepricingConfigs {
+
+        /**
+         * Creates a CustomerRepricingConfig. Call this method to set modifications for a specific
+         * customer's bill. You can only create configs if the RepricingConfig.effective_invoice_month is a
+         * future month. If needed, you can create a config for the current month, with some restrictions.
+         * When creating a config for a future month, make sure there are no existing configs for that
+         * RepricingConfig.effective_invoice_month. The following restrictions are for creating configs in
+         * the current month. * This functionality is reserved for recovering from an erroneous config, and
+         * should not be used for regular business cases. * The new config will not modify exports used with
+         * other configs. Changes to the config may be immediate, but may take up to 24 hours. * There is a
+         * limit of ten configs for any RepricingConfig.EntitlementGranularity.entitlement or
+         * RepricingConfig.effective_invoice_month. * The contained CustomerRepricingConfig.repricing_config
+         * vaule must be different from the value used in the current config for a
+         * RepricingConfig.EntitlementGranularity.entitlement. Possible Error Codes: * PERMISSION_DENIED: If
+         * the account making the request and the account being queried are different. * INVALID_ARGUMENT:
+         * Missing or invalid required parameters in the request. Also displays if the updated config is for
+         * the current month or past months. * NOT_FOUND: The CustomerRepricingConfig specified does not
+         * exist or is not associated with the given account. * INTERNAL: Any non-user error related to
+         * technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If
+         * successful, the updated CustomerRepricingConfig resource, otherwise returns an error.
+         *
+         * Create a request for the method "customerRepricingConfigs.create".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the customer that will receive this repricing config. Parent uses the
+         *        format: accounts/{account_id}/customers/{customer_id}
+         * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig> {
+
+          private static final String REST_PATH = "v1/{+parent}/customerRepricingConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+$");
+
+          /**
+           * Creates a CustomerRepricingConfig. Call this method to set modifications for a specific
+           * customer's bill. You can only create configs if the RepricingConfig.effective_invoice_month is
+           * a future month. If needed, you can create a config for the current month, with some
+           * restrictions. When creating a config for a future month, make sure there are no existing
+           * configs for that RepricingConfig.effective_invoice_month. The following restrictions are for
+           * creating configs in the current month. * This functionality is reserved for recovering from an
+           * erroneous config, and should not be used for regular business cases. * The new config will not
+           * modify exports used with other configs. Changes to the config may be immediate, but may take up
+           * to 24 hours. * There is a limit of ten configs for any
+           * RepricingConfig.EntitlementGranularity.entitlement or RepricingConfig.effective_invoice_month.
+           * * The contained CustomerRepricingConfig.repricing_config vaule must be different from the value
+           * used in the current config for a RepricingConfig.EntitlementGranularity.entitlement. Possible
+           * Error Codes: * PERMISSION_DENIED: If the account making the request and the account being
+           * queried are different. * INVALID_ARGUMENT: Missing or invalid required parameters in the
+           * request. Also displays if the updated config is for the current month or past months. *
+           * NOT_FOUND: The CustomerRepricingConfig specified does not exist or is not associated with the
+           * given account. * INTERNAL: Any non-user error related to technical issues in the backend. In
+           * this case, contact Cloud Channel support. Return Value: If successful, the updated
+           * CustomerRepricingConfig resource, otherwise returns an error.
+           *
+           * Create a request for the method "customerRepricingConfigs.create".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the customer that will receive this repricing config. Parent uses the
+         *        format: accounts/{account_id}/customers/{customer_id}
+           * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig content) {
+            super(Cloudchannel.this, "POST", REST_PATH, content, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the customer that will receive this repricing config.
+           * Parent uses the format: accounts/{account_id}/customers/{customer_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the customer that will receive this repricing config. Parent uses
+         the format: accounts/{account_id}/customers/{customer_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the customer that will receive this repricing config.
+           * Parent uses the format: accounts/{account_id}/customers/{customer_id}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the given CustomerRepricingConfig permanently. You can only delete configs if their
+         * RepricingConfig.effective_invoice_month is set to a date after the current month. Possible error
+         * codes: * PERMISSION_DENIED: The account making the request does not own this customer. *
+         * INVALID_ARGUMENT: Required request parameters are missing or invalid. * FAILED_PRECONDITION: The
+         * CustomerRepricingConfig is active or in the past. * NOT_FOUND: No CustomerRepricingConfig found
+         * for the name in the request.
+         *
+         * Create a request for the method "customerRepricingConfigs.delete".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the customer repricing config rule to delete. Format:
+         *        accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+
+          /**
+           * Deletes the given CustomerRepricingConfig permanently. You can only delete configs if their
+           * RepricingConfig.effective_invoice_month is set to a date after the current month. Possible
+           * error codes: * PERMISSION_DENIED: The account making the request does not own this customer. *
+           * INVALID_ARGUMENT: Required request parameters are missing or invalid. * FAILED_PRECONDITION:
+           * The CustomerRepricingConfig is active or in the past. * NOT_FOUND: No CustomerRepricingConfig
+           * found for the name in the request.
+           *
+           * Create a request for the method "customerRepricingConfigs.delete".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the customer repricing config rule to delete. Format:
+         *        accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Cloudchannel.this, "DELETE", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the customer repricing config rule to delete. Format:
+           * accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the customer repricing config rule to delete. Format:
+         accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the customer repricing config rule to delete. Format:
+           * accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about how a Reseller modifies their bill before sending it to a Customer.
+         * Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account
+         * being queried are different. * NOT_FOUND: The CustomerRepricingConfig was not found. * INTERNAL:
+         * Any non-user error related to technical issues in the backend. In this case, contact Cloud
+         * Channel support. Return Value: If successful, the CustomerRepricingConfig resource, otherwise
+         * returns an error.
+         *
+         * Create a request for the method "customerRepricingConfigs.get".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the CustomerRepricingConfig. Format:
+         *        accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+
+          /**
+           * Gets information about how a Reseller modifies their bill before sending it to a Customer.
+           * Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account
+           * being queried are different. * NOT_FOUND: The CustomerRepricingConfig was not found. *
+           * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact
+           * Cloud Channel support. Return Value: If successful, the CustomerRepricingConfig resource,
+           * otherwise returns an error.
+           *
+           * Create a request for the method "customerRepricingConfigs.get".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the CustomerRepricingConfig. Format:
+         *        accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the CustomerRepricingConfig. Format:
+           * accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the CustomerRepricingConfig. Format:
+         accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the CustomerRepricingConfig. Format:
+           * accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists information about how a Reseller modifies their bill before sending it to a Customer.
+         * Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account
+         * being queried are different. * NOT_FOUND: The CustomerRepricingConfig specified does not exist or
+         * is not associated with the given account. * INTERNAL: Any non-user error related to technical
+         * issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful,
+         * the CustomerRepricingConfig resources. The data for each resource is displayed in the ascending
+         * order of: * customer ID * RepricingConfig.EntitlementGranularity.entitlement *
+         * RepricingConfig.effective_invoice_month * CustomerRepricingConfig.update_time If unsuccessful,
+         * returns an error.
+         *
+         * Create a request for the method "customerRepricingConfigs.list".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the customer. Parent uses the format:
+         *        accounts/{account_id}/customers/{customer_id}. Supports accounts/{account_id}/customers/-
+         *        to retrieve configs for all customers.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListCustomerRepricingConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/customerRepricingConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+$");
+
+          /**
+           * Lists information about how a Reseller modifies their bill before sending it to a Customer.
+           * Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account
+           * being queried are different. * NOT_FOUND: The CustomerRepricingConfig specified does not exist
+           * or is not associated with the given account. * INTERNAL: Any non-user error related to
+           * technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If
+           * successful, the CustomerRepricingConfig resources. The data for each resource is displayed in
+           * the ascending order of: * customer ID * RepricingConfig.EntitlementGranularity.entitlement *
+           * RepricingConfig.effective_invoice_month * CustomerRepricingConfig.update_time If unsuccessful,
+           * returns an error.
+           *
+           * Create a request for the method "customerRepricingConfigs.list".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the customer. Parent uses the format:
+         *        accounts/{account_id}/customers/{customer_id}. Supports accounts/{account_id}/customers/-
+         *        to retrieve configs for all customers.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListCustomerRepricingConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the customer. Parent uses the format:
+           * accounts/{account_id}/customers/{customer_id}. Supports
+           * accounts/{account_id}/customers/- to retrieve configs for all customers.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the customer. Parent uses the format:
+         accounts/{account_id}/customers/{customer_id}. Supports accounts/{account_id}/customers/- to
+         retrieve configs for all customers.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the customer. Parent uses the format:
+           * accounts/{account_id}/customers/{customer_id}. Supports
+           * accounts/{account_id}/customers/- to retrieve configs for all customers.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter for [CloudChannelService.ListCustomerRepricingConfigs] results
+           * (customer only). You can use this filter when you support a BatchGet-like query. To use
+           * the filter, you must set `parent=accounts/{account_id}/customers/-`. Example: customer
+           * = accounts/account_id/customers/c1 OR customer = accounts/account_id/customers/c2.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter for [CloudChannelService.ListCustomerRepricingConfigs] results (customer only).
+         You can use this filter when you support a BatchGet-like query. To use the filter, you must set
+         `parent=accounts/{account_id}/customers/-`. Example: customer = accounts/account_id/customers/c1 OR
+         customer = accounts/account_id/customers/c2.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter for [CloudChannelService.ListCustomerRepricingConfigs] results
+           * (customer only). You can use this filter when you support a BatchGet-like query. To use
+           * the filter, you must set `parent=accounts/{account_id}/customers/-`. Example: customer
+           * = accounts/account_id/customers/c1 OR customer = accounts/account_id/customers/c2.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of repricing configs to return. The service may return
+           * fewer than this value. If unspecified, returns a maximum of 50 rules. The maximum value
+           * is 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of repricing configs to return. The service may return fewer than this
+         value. If unspecified, returns a maximum of 50 rules. The maximum value is 100; values above 100
+         will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of repricing configs to return. The service may return
+           * fewer than this value. If unspecified, returns a maximum of 50 rules. The maximum value
+           * is 100; values above 100 will be coerced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying a page of results beyond the first page. Obtained through
+           * ListCustomerRepricingConfigsResponse.next_page_token of the previous
+           * CloudChannelService.ListCustomerRepricingConfigs call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results beyond the first page. Obtained through
+         ListCustomerRepricingConfigsResponse.next_page_token of the previous
+         CloudChannelService.ListCustomerRepricingConfigs call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying a page of results beyond the first page. Obtained through
+           * ListCustomerRepricingConfigsResponse.next_page_token of the previous
+           * CloudChannelService.ListCustomerRepricingConfigs call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a CustomerRepricingConfig. Call this method to set modifications for a specific
+         * customer's bill. This method overwrites the existing CustomerRepricingConfig. You can only update
+         * configs if the RepricingConfig.effective_invoice_month is a future month. To make changes to
+         * configs for the current month, use CreateCustomerRepricingConfig, taking note of its
+         * restrictions. You cannot update the RepricingConfig.effective_invoice_month. When updating a
+         * config in the future: * This config must already exist. Possible Error Codes: *
+         * PERMISSION_DENIED: If the account making the request and the account being queried are different.
+         * * INVALID_ARGUMENT: Missing or invalid required parameters in the request. Also displays if the
+         * updated config is for the current month or past months. * NOT_FOUND: The CustomerRepricingConfig
+         * specified does not exist or is not associated with the given account. * INTERNAL: Any non-user
+         * error related to technical issues in the backend. In this case, contact Cloud Channel support.
+         * Return Value: If successful, the updated CustomerRepricingConfig resource, otherwise returns an
+         * error.
+         *
+         * Create a request for the method "customerRepricingConfigs.patch".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the CustomerRepricingConfig. Format:
+         *        accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+         * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+
+          /**
+           * Updates a CustomerRepricingConfig. Call this method to set modifications for a specific
+           * customer's bill. This method overwrites the existing CustomerRepricingConfig. You can only
+           * update configs if the RepricingConfig.effective_invoice_month is a future month. To make
+           * changes to configs for the current month, use CreateCustomerRepricingConfig, taking note of its
+           * restrictions. You cannot update the RepricingConfig.effective_invoice_month. When updating a
+           * config in the future: * This config must already exist. Possible Error Codes: *
+           * PERMISSION_DENIED: If the account making the request and the account being queried are
+           * different. * INVALID_ARGUMENT: Missing or invalid required parameters in the request. Also
+           * displays if the updated config is for the current month or past months. * NOT_FOUND: The
+           * CustomerRepricingConfig specified does not exist or is not associated with the given account. *
+           * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact
+           * Cloud Channel support. Return Value: If successful, the updated CustomerRepricingConfig
+           * resource, otherwise returns an error.
+           *
+           * Create a request for the method "customerRepricingConfigs.patch".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the CustomerRepricingConfig. Format:
+         *        accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig content) {
+            super(Cloudchannel.this, "PATCH", REST_PATH, content, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1CustomerRepricingConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the CustomerRepricingConfig. Format:
+           * accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the CustomerRepricingConfig. Format:
+         accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the CustomerRepricingConfig. Format:
+           * accounts/{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/customerRepricingConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the Entitlements collection.
        *

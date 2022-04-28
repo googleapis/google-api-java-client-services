@@ -40,8 +40,9 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional. Used to prevent updating the attestor when another request has updated it since it
-   * was retrieved.
+   * Optional. A checksum, returned by the server, that can be sent on update requests to ensure the
+   * attestor has an up-to-date value before attempting to update it. See
+   * https://google.aip.dev/154.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +90,9 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Used to prevent updating the attestor when another request has updated it since it
-   * was retrieved.
+   * Optional. A checksum, returned by the server, that can be sent on update requests to ensure the
+   * attestor has an up-to-date value before attempting to update it. See
+   * https://google.aip.dev/154.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -98,8 +100,9 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Used to prevent updating the attestor when another request has updated it since it
-   * was retrieved.
+   * Optional. A checksum, returned by the server, that can be sent on update requests to ensure the
+   * attestor has an up-to-date value before attempting to update it. See
+   * https://google.aip.dev/154.
    * @param etag etag or {@code null} for none
    */
   public Attestor setEtag(java.lang.String etag) {

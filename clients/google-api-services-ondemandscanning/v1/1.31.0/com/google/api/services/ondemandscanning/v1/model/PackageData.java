@@ -39,6 +39,27 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String cpeUri;
 
   /**
+   * The path to the jar file / go binary file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FileLocation> fileLocation;
+
+  static {
+    // hack to force ProGuard to consider FileLocation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FileLocation.class);
+  }
+
+  /**
+   * HashDigest stores the SHA512 hash digest of the jar file if the package is of type Maven. This
+   * field will be unset for non Maven packages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hashDigest;
+
+  /**
    * The OS affected by a vulnerability This field is deprecated and the information is in cpe_uri
    * The value may be {@code null}.
    */
@@ -65,14 +86,6 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String packageType;
-
-  /**
-   * The path to the jar file / go binary file. The same jar file can be in multiple locations - all
-   * of them will be listed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> pathToFile;
 
   /**
    * The value may be {@code null}.
@@ -103,6 +116,42 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setCpeUri(java.lang.String cpeUri) {
     this.cpeUri = cpeUri;
+    return this;
+  }
+
+  /**
+   * The path to the jar file / go binary file.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FileLocation> getFileLocation() {
+    return fileLocation;
+  }
+
+  /**
+   * The path to the jar file / go binary file.
+   * @param fileLocation fileLocation or {@code null} for none
+   */
+  public PackageData setFileLocation(java.util.List<FileLocation> fileLocation) {
+    this.fileLocation = fileLocation;
+    return this;
+  }
+
+  /**
+   * HashDigest stores the SHA512 hash digest of the jar file if the package is of type Maven. This
+   * field will be unset for non Maven packages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHashDigest() {
+    return hashDigest;
+  }
+
+  /**
+   * HashDigest stores the SHA512 hash digest of the jar file if the package is of type Maven. This
+   * field will be unset for non Maven packages.
+   * @param hashDigest hashDigest or {@code null} for none
+   */
+  public PackageData setHashDigest(java.lang.String hashDigest) {
+    this.hashDigest = hashDigest;
     return this;
   }
 
@@ -171,25 +220,6 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setPackageType(java.lang.String packageType) {
     this.packageType = packageType;
-    return this;
-  }
-
-  /**
-   * The path to the jar file / go binary file. The same jar file can be in multiple locations - all
-   * of them will be listed.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getPathToFile() {
-    return pathToFile;
-  }
-
-  /**
-   * The path to the jar file / go binary file. The same jar file can be in multiple locations - all
-   * of them will be listed.
-   * @param pathToFile pathToFile or {@code null} for none
-   */
-  public PackageData setPathToFile(java.util.List<java.lang.String> pathToFile) {
-    this.pathToFile = pathToFile;
     return this;
   }
 

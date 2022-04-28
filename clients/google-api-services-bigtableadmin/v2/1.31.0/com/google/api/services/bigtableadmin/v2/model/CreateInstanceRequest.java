@@ -33,8 +33,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   /**
    * Required. The clusters to be created within the instance, mapped by desired cluster ID, e.g.,
    * just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`.
-   * Fields marked `OutputOnly` must be left blank. Currently, at most four clusters can be
-   * specified.
+   * Fields marked `OutputOnly` must be left blank.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +71,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   /**
    * Required. The clusters to be created within the instance, mapped by desired cluster ID, e.g.,
    * just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`.
-   * Fields marked `OutputOnly` must be left blank. Currently, at most four clusters can be
-   * specified.
+   * Fields marked `OutputOnly` must be left blank.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Cluster> getClusters() {
@@ -83,8 +81,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   /**
    * Required. The clusters to be created within the instance, mapped by desired cluster ID, e.g.,
    * just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`.
-   * Fields marked `OutputOnly` must be left blank. Currently, at most four clusters can be
-   * specified.
+   * Fields marked `OutputOnly` must be left blank.
    * @param clusters clusters or {@code null} for none
    */
   public CreateInstanceRequest setClusters(java.util.Map<String, Cluster> clusters) {

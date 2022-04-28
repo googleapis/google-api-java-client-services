@@ -46,7 +46,9 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
   private java.lang.String attributionToken;
 
   /**
-   * If spell correction applies, the corrected query. Otherwise, empty.
+   * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
+   * the search results will be based on corrected_query, otherwise the original query will be used
+   * for search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +151,9 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
   }
 
   /**
-   * If spell correction applies, the corrected query. Otherwise, empty.
+   * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
+   * the search results will be based on corrected_query, otherwise the original query will be used
+   * for search.
    * @return value or {@code null} for none
    */
   public java.lang.String getCorrectedQuery() {
@@ -157,7 +161,9 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
   }
 
   /**
-   * If spell correction applies, the corrected query. Otherwise, empty.
+   * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
+   * the search results will be based on corrected_query, otherwise the original query will be used
+   * for search.
    * @param correctedQuery correctedQuery or {@code null} for none
    */
   public GoogleCloudRetailV2SearchResponse setCorrectedQuery(java.lang.String correctedQuery) {

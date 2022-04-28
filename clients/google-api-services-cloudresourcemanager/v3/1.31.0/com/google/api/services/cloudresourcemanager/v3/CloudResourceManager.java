@@ -133,6 +133,208 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   }
 
   /**
+   * An accessor for creating requests from the EffectiveTags collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+   *   {@code CloudResourceManager.EffectiveTags.List request = cloudresourcemanager.effectiveTags().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public EffectiveTags effectiveTags() {
+    return new EffectiveTags();
+  }
+
+  /**
+   * The "effectiveTags" collection of methods.
+   */
+  public class EffectiveTags {
+
+    /**
+     * Return a list of effective tags for the given cloud resource, as specified in `parent`.
+     *
+     * Create a request for the method "effectiveTags.list".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.ListEffectiveTagsResponse> {
+
+      private static final String REST_PATH = "v3/effectiveTags";
+
+      /**
+       * Return a list of effective tags for the given cloud resource, as specified in `parent`.
+       *
+       * Create a request for the method "effectiveTags.list".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.ListEffectiveTagsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of effective tags to return in the response. The server allows
+       * a maximum of 300 effective tags to return in a single page. If unspecified, the server will
+       * use 100 as the default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of effective tags to return in the response. The server allows a
+     maximum of 300 effective tags to return in a single page. If unspecified, the server will use 100
+     as the default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of effective tags to return in the response. The server allows
+       * a maximum of 300 effective tags to return in a single page. If unspecified, the server will
+       * use 100 as the default.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `ListEffectiveTags` that
+       * indicates from where this listing should continue.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A pagination token returned from a previous call to `ListEffectiveTags` that indicates
+     from where this listing should continue.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `ListEffectiveTags` that
+       * indicates from where this listing should continue.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. The full resource name of a resource for which you want to list the effective
+       * tags. E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The full resource name of a resource for which you want to list the effective tags. E.g.
+     "//cloudresourcemanager.googleapis.com/projects/123"
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The full resource name of a resource for which you want to list the effective
+       * tags. E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Folders collection.
    *
    * <p>The typical use is:</p>

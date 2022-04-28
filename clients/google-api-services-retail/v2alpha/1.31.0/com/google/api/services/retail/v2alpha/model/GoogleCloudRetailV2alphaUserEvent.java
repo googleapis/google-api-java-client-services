@@ -171,10 +171,10 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   private java.lang.String pageViewId;
 
   /**
-   * The main product details related to the event. This field is required for the following event
-   * types: * `add-to-cart` * `detail-page-view` * `purchase-complete` * `search` In a `search`
-   * event, this field represents the products returned to the end user on the current page (the end
-   * user may have not finished browsing the whole page yet). When a new page is returned to the end
+   * The main product details related to the event. This field is optional except for the following
+   * event types: * `add-to-cart` * `detail-page-view` * `purchase-complete` In a `search` event,
+   * this field represents the products returned to the end user on the current page (the end user
+   * may have not finished browsing the whole page yet). When a new page is returned to the end
    * user, after pagination/filtering/ordering even for the same query, a new `search` event with
    * different product_details is desired. The end user may have not finished browsing the whole
    * page yet.
@@ -562,10 +562,10 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   }
 
   /**
-   * The main product details related to the event. This field is required for the following event
-   * types: * `add-to-cart` * `detail-page-view` * `purchase-complete` * `search` In a `search`
-   * event, this field represents the products returned to the end user on the current page (the end
-   * user may have not finished browsing the whole page yet). When a new page is returned to the end
+   * The main product details related to the event. This field is optional except for the following
+   * event types: * `add-to-cart` * `detail-page-view` * `purchase-complete` In a `search` event,
+   * this field represents the products returned to the end user on the current page (the end user
+   * may have not finished browsing the whole page yet). When a new page is returned to the end
    * user, after pagination/filtering/ordering even for the same query, a new `search` event with
    * different product_details is desired. The end user may have not finished browsing the whole
    * page yet.
@@ -576,10 +576,10 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   }
 
   /**
-   * The main product details related to the event. This field is required for the following event
-   * types: * `add-to-cart` * `detail-page-view` * `purchase-complete` * `search` In a `search`
-   * event, this field represents the products returned to the end user on the current page (the end
-   * user may have not finished browsing the whole page yet). When a new page is returned to the end
+   * The main product details related to the event. This field is optional except for the following
+   * event types: * `add-to-cart` * `detail-page-view` * `purchase-complete` In a `search` event,
+   * this field represents the products returned to the end user on the current page (the end user
+   * may have not finished browsing the whole page yet). When a new page is returned to the end
    * user, after pagination/filtering/ordering even for the same query, a new `search` event with
    * different product_details is desired. The end user may have not finished browsing the whole
    * page yet.

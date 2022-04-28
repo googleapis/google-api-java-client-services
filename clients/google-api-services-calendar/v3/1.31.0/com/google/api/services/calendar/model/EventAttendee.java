@@ -89,9 +89,12 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
 
   /**
    * The attendee's response status. Possible values are: - "needsAction" - The attendee has not
-   * responded to the invitation.  - "declined" - The attendee has declined the invitation.  -
-   * "tentative" - The attendee has tentatively accepted the invitation.  - "accepted" - The
-   * attendee has accepted the invitation.
+   * responded to the invitation (recommended for new events).  - "declined" - The attendee has
+   * declined the invitation.  - "tentative" - The attendee has tentatively accepted the invitation.
+   * - "accepted" - The attendee has accepted the invitation.  Warning: If you add an event using
+   * the values declined, tentative, or accepted, attendees with the "Add invitations to my
+   * calendar" setting set to "When I respond to invitation in email" won't see an event on their
+   * calendar unless they choose to change their invitation response in the event invitation email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -302,9 +305,12 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
 
   /**
    * The attendee's response status. Possible values are: - "needsAction" - The attendee has not
-   * responded to the invitation.  - "declined" - The attendee has declined the invitation.  -
-   * "tentative" - The attendee has tentatively accepted the invitation.  - "accepted" - The
-   * attendee has accepted the invitation.
+   * responded to the invitation (recommended for new events).  - "declined" - The attendee has
+   * declined the invitation.  - "tentative" - The attendee has tentatively accepted the invitation.
+   * - "accepted" - The attendee has accepted the invitation.  Warning: If you add an event using
+   * the values declined, tentative, or accepted, attendees with the "Add invitations to my
+   * calendar" setting set to "When I respond to invitation in email" won't see an event on their
+   * calendar unless they choose to change their invitation response in the event invitation email.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseStatus() {
@@ -313,9 +319,12 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
 
   /**
    * The attendee's response status. Possible values are: - "needsAction" - The attendee has not
-   * responded to the invitation.  - "declined" - The attendee has declined the invitation.  -
-   * "tentative" - The attendee has tentatively accepted the invitation.  - "accepted" - The
-   * attendee has accepted the invitation.
+   * responded to the invitation (recommended for new events).  - "declined" - The attendee has
+   * declined the invitation.  - "tentative" - The attendee has tentatively accepted the invitation.
+   * - "accepted" - The attendee has accepted the invitation.  Warning: If you add an event using
+   * the values declined, tentative, or accepted, attendees with the "Add invitations to my
+   * calendar" setting set to "When I respond to invitation in email" won't see an event on their
+   * calendar unless they choose to change their invitation response in the event invitation email.
    * @param responseStatus responseStatus or {@code null} for none
    */
   public EventAttendee setResponseStatus(java.lang.String responseStatus) {

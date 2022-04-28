@@ -5426,6 +5426,277 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
 
         }
+        /**
+         * An accessor for creating requests from the HotTablets collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BigtableAdmin bigtableadmin = new BigtableAdmin(...);}
+         *   {@code BigtableAdmin.HotTablets.List request = bigtableadmin.hotTablets().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public HotTablets hotTablets() {
+          return new HotTablets();
+        }
+
+        /**
+         * The "hotTablets" collection of methods.
+         */
+        public class HotTablets {
+
+          /**
+           * Lists hot tablets in a cluster, within the time range provided. Hot tablets are ordered based on
+           * CPU usage.
+           *
+           * Create a request for the method "hotTablets.list".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The cluster name to list hot tablets. Value is in the following form:
+           *        `projects/{project}/instances/{instance}/clusters/{cluster}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.ListHotTabletsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/hotTablets";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+
+            /**
+             * Lists hot tablets in a cluster, within the time range provided. Hot tablets are ordered based
+             * on CPU usage.
+             *
+             * Create a request for the method "hotTablets.list".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The cluster name to list hot tablets. Value is in the following form:
+           *        `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(BigtableAdmin.this, "GET", REST_PATH, null, com.google.api.services.bigtableadmin.v2.model.ListHotTabletsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The cluster name to list hot tablets. Value is in the following form:
+             * `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The cluster name to list hot tablets. Value is in the following form:
+           `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The cluster name to list hot tablets. Value is in the following form:
+             * `projects/{project}/instances/{instance}/clusters/{cluster}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** The end time to list hot tablets. */
+            @com.google.api.client.util.Key
+            private String endTime;
+
+            /** The end time to list hot tablets.
+             */
+            public String getEndTime() {
+              return endTime;
+            }
+
+            /** The end time to list hot tablets. */
+            public List setEndTime(String endTime) {
+              this.endTime = endTime;
+              return this;
+            }
+
+            /**
+             * Maximum number of results per page. A page_size that is empty or zero lets the server
+             * choose the number of items to return. A page_size which is strictly positive will
+             * return at most that many items. A negative page_size will cause an error. Following
+             * the first request, subsequent paginated calls do not need a page_size field. If a
+             * page_size is set in subsequent calls, it must match the page_size given in the first
+             * request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum number of results per page. A page_size that is empty or zero lets the server choose the
+           number of items to return. A page_size which is strictly positive will return at most that many
+           items. A negative page_size will cause an error. Following the first request, subsequent paginated
+           calls do not need a page_size field. If a page_size is set in subsequent calls, it must match the
+           page_size given in the first request.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Maximum number of results per page. A page_size that is empty or zero lets the server
+             * choose the number of items to return. A page_size which is strictly positive will
+             * return at most that many items. A negative page_size will cause an error. Following
+             * the first request, subsequent paginated calls do not need a page_size field. If a
+             * page_size is set in subsequent calls, it must match the page_size given in the first
+             * request.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The value of `next_page_token` returned by a previous call. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The value of `next_page_token` returned by a previous call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The value of `next_page_token` returned by a previous call. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * The start time to list hot tablets. The hot tablets in the response will have start
+             * times between the requested start time and end time. Start time defaults to Now if it
+             * is unset, and end time defaults to Now - 24 hours if it is unset. The start time
+             * should be less than the end time, and the maximum allowed time range between start
+             * time and end time is 48 hours. Start time and end time should have values between Now
+             * and Now - 14 days.
+             */
+            @com.google.api.client.util.Key
+            private String startTime;
+
+            /** The start time to list hot tablets. The hot tablets in the response will have start times between
+           the requested start time and end time. Start time defaults to Now if it is unset, and end time
+           defaults to Now - 24 hours if it is unset. The start time should be less than the end time, and the
+           maximum allowed time range between start time and end time is 48 hours. Start time and end time
+           should have values between Now and Now - 14 days.
+             */
+            public String getStartTime() {
+              return startTime;
+            }
+
+            /**
+             * The start time to list hot tablets. The hot tablets in the response will have start
+             * times between the requested start time and end time. Start time defaults to Now if it
+             * is unset, and end time defaults to Now - 24 hours if it is unset. The start time
+             * should be less than the end time, and the maximum allowed time range between start
+             * time and end time is 48 hours. Start time and end time should have values between Now
+             * and Now - 14 days.
+             */
+            public List setStartTime(String startTime) {
+              this.startTime = startTime;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Tables collection.
@@ -7554,14 +7825,14 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
-       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -7569,7 +7840,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {

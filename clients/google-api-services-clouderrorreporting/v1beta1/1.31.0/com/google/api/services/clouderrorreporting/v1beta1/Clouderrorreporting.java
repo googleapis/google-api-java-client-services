@@ -1039,22 +1039,22 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. A `next_page_token` provided by a previous response. To view additional
-         * results, pass this token along with the identical query parameters as the first request.
+         * Optional. A next_page_token provided by a previous response. To view additional results,
+         * pass this token along with the identical query parameters as the first request.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. A `next_page_token` provided by a previous response. To view additional results, pass
-       this token along with the identical query parameters as the first request.
+        /** Optional. A next_page_token provided by a previous response. To view additional results, pass this
+       token along with the identical query parameters as the first request.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional. A `next_page_token` provided by a previous response. To view additional
-         * results, pass this token along with the identical query parameters as the first request.
+         * Optional. A next_page_token provided by a previous response. To view additional results,
+         * pass this token along with the identical query parameters as the first request.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -1147,21 +1147,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The preferred duration for a single returned `TimedCount`. If not set, no timed
+         * Optional. The preferred duration for a single returned TimedCount. If not set, no timed
          * counts are returned.
          */
         @com.google.api.client.util.Key
         private String timedCountDuration;
 
-        /** Optional. The preferred duration for a single returned `TimedCount`. If not set, no timed counts
-       are returned.
+        /** Optional. The preferred duration for a single returned TimedCount. If not set, no timed counts are
+       returned.
          */
         public String getTimedCountDuration() {
           return timedCountDuration;
         }
 
         /**
-         * Optional. The preferred duration for a single returned `TimedCount`. If not set, no timed
+         * Optional. The preferred duration for a single returned TimedCount. If not set, no timed
          * counts are returned.
          */
         public List setTimedCountDuration(String timedCountDuration) {
@@ -1205,9 +1205,8 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param groupName Required. The group resource name. Written as `projects/{projectID}/groups/{group_name}`. Call
-       *        [`groupStats.list`](https://cloud.google.com/error-
-       *        reporting/reference/rest/v1beta1/projects.groupStats/list) to return a list of groups
-       *        belonging to this project. Example: `projects/my-project-123/groups/my-group`
+       *        groupStats.list to return a list of groups belonging to this project. Example: `projects
+       *        /my-project-123/groups/my-group`
        * @return the request
        */
       public Get get(java.lang.String groupName) throws java.io.IOException {
@@ -1235,9 +1234,8 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param groupName Required. The group resource name. Written as `projects/{projectID}/groups/{group_name}`. Call
-       *        [`groupStats.list`](https://cloud.google.com/error-
-       *        reporting/reference/rest/v1beta1/projects.groupStats/list) to return a list of groups
-       *        belonging to this project. Example: `projects/my-project-123/groups/my-group`
+       *        groupStats.list to return a list of groups belonging to this project. Example: `projects
+       *        /my-project-123/groups/my-group`
          * @since 1.13
          */
         protected Get(java.lang.String groupName) {
@@ -1317,17 +1315,15 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
         /**
          * Required. The group resource name. Written as `projects/{projectID}/groups/{group_name}`.
-         * Call [`groupStats.list`](https://cloud.google.com/error-
-         * reporting/reference/rest/v1beta1/projects.groupStats/list) to return a list of groups
-         * belonging to this project. Example: `projects/my-project-123/groups/my-group`
+         * Call groupStats.list to return a list of groups belonging to this project. Example:
+         * `projects/my-project-123/groups/my-group`
          */
         @com.google.api.client.util.Key
         private java.lang.String groupName;
 
         /** Required. The group resource name. Written as `projects/{projectID}/groups/{group_name}`. Call
-       [`groupStats.list`](https://cloud.google.com/error-
-       reporting/reference/rest/v1beta1/projects.groupStats/list) to return a list of groups belonging to
-       this project. Example: `projects/my-project-123/groups/my-group`
+       groupStats.list to return a list of groups belonging to this project. Example: `projects/my-
+       project-123/groups/my-group`
          */
         public java.lang.String getGroupName() {
           return groupName;
@@ -1335,9 +1331,8 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
         /**
          * Required. The group resource name. Written as `projects/{projectID}/groups/{group_name}`.
-         * Call [`groupStats.list`](https://cloud.google.com/error-
-         * reporting/reference/rest/v1beta1/projects.groupStats/list) to return a list of groups
-         * belonging to this project. Example: `projects/my-project-123/groups/my-group`
+         * Call groupStats.list to return a list of groups belonging to this project. Example:
+         * `projects/my-project-123/groups/my-group`
          */
         public Get setGroupName(java.lang.String groupName) {
           if (!getSuppressPatternChecks()) {

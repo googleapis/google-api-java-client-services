@@ -41,7 +41,7 @@ public final class ErrorGroupStats extends com.google.api.client.json.GenericJso
 
   /**
    * Approximate number of affected users in the given group that match the filter criteria. Users
-   * are distinguished by data in the `ErrorContext` of the individual error events, such as their
+   * are distinguished by data in the ErrorContext of the individual error events, such as their
    * login name or their remote IP address in case of HTTP requests. The number of affected users
    * can be zero even if the number of errors is non-zero if no data was provided from which the
    * affected user could be deduced. Users are counted based on data in the request context that was
@@ -130,7 +130,7 @@ public final class ErrorGroupStats extends com.google.api.client.json.GenericJso
 
   /**
    * Approximate number of affected users in the given group that match the filter criteria. Users
-   * are distinguished by data in the `ErrorContext` of the individual error events, such as their
+   * are distinguished by data in the ErrorContext of the individual error events, such as their
    * login name or their remote IP address in case of HTTP requests. The number of affected users
    * can be zero even if the number of errors is non-zero if no data was provided from which the
    * affected user could be deduced. Users are counted based on data in the request context that was
@@ -144,7 +144,7 @@ public final class ErrorGroupStats extends com.google.api.client.json.GenericJso
 
   /**
    * Approximate number of affected users in the given group that match the filter criteria. Users
-   * are distinguished by data in the `ErrorContext` of the individual error events, such as their
+   * are distinguished by data in the ErrorContext of the individual error events, such as their
    * login name or their remote IP address in case of HTTP requests. The number of affected users
    * can be zero even if the number of errors is non-zero if no data was provided from which the
    * affected user could be deduced. Users are counted based on data in the request context that was

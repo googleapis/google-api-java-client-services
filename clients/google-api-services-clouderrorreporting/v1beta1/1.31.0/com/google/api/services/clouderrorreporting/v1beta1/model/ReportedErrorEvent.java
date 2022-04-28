@@ -60,9 +60,9 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * Must contain frames returned by [`Exception.backtrace`](https://ruby-
    * doc.org/core-2.2.0/Exception.html#method-i-backtrace). * **C#**: Must be the return value of
    * [`Exception.ToString()`](https://msdn.microsoft.com/en-
-   * us/library/system.exception.tostring.aspx). * **PHP**: Must start with `PHP (Notice|Parse
-   * error|Fatal error|Warning)` and contain the result of
-   * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
+   * us/library/system.exception.tostring.aspx). * **PHP**: Must be prefixed with `"PHP
+   * (Notice|Parse error|Fatal error|Warning): "` and contain the result of
+   * [`(string)$exception`](https://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
    * return value of [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
    * The value may be {@code null}.
    */
@@ -131,9 +131,9 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * Must contain frames returned by [`Exception.backtrace`](https://ruby-
    * doc.org/core-2.2.0/Exception.html#method-i-backtrace). * **C#**: Must be the return value of
    * [`Exception.ToString()`](https://msdn.microsoft.com/en-
-   * us/library/system.exception.tostring.aspx). * **PHP**: Must start with `PHP (Notice|Parse
-   * error|Fatal error|Warning)` and contain the result of
-   * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
+   * us/library/system.exception.tostring.aspx). * **PHP**: Must be prefixed with `"PHP
+   * (Notice|Parse error|Fatal error|Warning): "` and contain the result of
+   * [`(string)$exception`](https://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
    * return value of [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
    * @return value or {@code null} for none
    */
@@ -154,9 +154,9 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * Must contain frames returned by [`Exception.backtrace`](https://ruby-
    * doc.org/core-2.2.0/Exception.html#method-i-backtrace). * **C#**: Must be the return value of
    * [`Exception.ToString()`](https://msdn.microsoft.com/en-
-   * us/library/system.exception.tostring.aspx). * **PHP**: Must start with `PHP (Notice|Parse
-   * error|Fatal error|Warning)` and contain the result of
-   * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
+   * us/library/system.exception.tostring.aspx). * **PHP**: Must be prefixed with `"PHP
+   * (Notice|Parse error|Fatal error|Warning): "` and contain the result of
+   * [`(string)$exception`](https://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
    * return value of [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
    * @param message message or {@code null} for none
    */

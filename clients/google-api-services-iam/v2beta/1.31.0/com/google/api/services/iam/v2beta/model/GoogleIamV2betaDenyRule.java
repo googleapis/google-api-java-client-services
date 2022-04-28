@@ -44,7 +44,7 @@ public final class GoogleIamV2betaDenyRule extends com.google.api.client.json.Ge
 
   /**
    * The permissions that are explicitly denied by this rule. Each permission uses the format
-   * `{service-fqdn}/{resource}.{verb}`, where `{service-fqdn}` is the fully qualified domain name
+   * `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain name
    * for the service. For example, `iam.googleapis.com/roles.list`.
    * The value may be {@code null}.
    */
@@ -55,26 +55,28 @@ public final class GoogleIamV2betaDenyRule extends com.google.api.client.json.Ge
    * The identities that are prevented from using one or more permissions on Google Cloud resources.
    * This field can contain the following values: * `principalSet://goog/public:all`: A special
    * identifier that represents any user who is on the internet, even if they do not have a Google
-   * Account or are not logged in. * `principal://goog/subject/{email-id}`: A specific Google
+   * Account or are not logged in. * `principal://goog/subject/{email_id}`: A specific Google
    * Account. Includes Gmail, Cloud Identity, and Google Workspace user accounts. For example,
-   * `principal://goog/subject/alice@example.com`. * `deleted:principal://goog/subject/{email-
-   * id}?uid={uid}`: A specific Google Account that was deleted recently. For example,
+   * `principal://goog/subject/alice@example.com`. *
+   * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific Google Account that was
+   * deleted recently. For example,
    * `deleted:principal://goog/subject/alice@example.com?uid=1234567890`. If the Google Account is
    * recovered, this identifier reverts to the standard identifier for a Google Account. *
-   * `principalSet://goog/group/{group-id}`: A Google group. For example,
-   * `principalSet://goog/group/admins@example.com`. * `deleted:principalSet://goog/group/{group-
-   * id}?uid={uid}`: A Google group that was deleted recently. For example,
-   * `deleted:principalSet://goog/group/admins@example.com?uid=1234567890`. If the Google group is
-   * restored, this identifier reverts to the standard identifier for a Google group. *
-   * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service-account-id}`: A Google
+   * `principalSet://goog/group/{group_id}`: A Google group. For example,
+   * `principalSet://goog/group/admins@example.com`. *
+   * `deleted:principalSet://goog/group/{group_id}?uid={uid}`: A Google group that was deleted
+   * recently. For example, `deleted:principalSet://goog/group/admins@example.com?uid=1234567890`.
+   * If the Google group is restored, this identifier reverts to the standard identifier for a
+   * Google group. *
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service_account_id}`: A Google
    * Cloud service account. For example, `principal://iam.googleapis.com/projects/-/serviceAccounts
-   * /my-service-account@iam.gserviceaccount.com`. *
-   * `deleted:principal://iam.googleapis.com/projects/-/serviceAccounts/{service-account-
-   * id}?uid={uid}`: A Google Cloud service account that was deleted recently. For example,
+   * /my-service-account@iam.gserviceaccount.com`. * `deleted:principal://iam.googleapis.com/project
+   * s/-/serviceAccounts/{service_account_id}?uid={uid}`: A Google Cloud service account that was
+   * deleted recently. For example,
    * `deleted:principal://iam.googleapis.com/projects/-/serviceAccounts/my-service-
    * account@iam.gserviceaccount.com?uid=1234567890`. If the service account is undeleted, this
    * identifier reverts to the standard identifier for a service account. *
-   * `principalSet://goog/cloudIdentityCustomerId/{customer-id}`: All of the principals associated
+   * `principalSet://goog/cloudIdentityCustomerId/{customer_id}`: All of the principals associated
    * with the specified Google Workspace or Cloud Identity customer ID. For example,
    * `principalSet://goog/cloudIdentityCustomerId/C01Abc35`.
    * The value may be {@code null}.
@@ -132,7 +134,7 @@ public final class GoogleIamV2betaDenyRule extends com.google.api.client.json.Ge
 
   /**
    * The permissions that are explicitly denied by this rule. Each permission uses the format
-   * `{service-fqdn}/{resource}.{verb}`, where `{service-fqdn}` is the fully qualified domain name
+   * `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain name
    * for the service. For example, `iam.googleapis.com/roles.list`.
    * @return value or {@code null} for none
    */
@@ -142,7 +144,7 @@ public final class GoogleIamV2betaDenyRule extends com.google.api.client.json.Ge
 
   /**
    * The permissions that are explicitly denied by this rule. Each permission uses the format
-   * `{service-fqdn}/{resource}.{verb}`, where `{service-fqdn}` is the fully qualified domain name
+   * `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain name
    * for the service. For example, `iam.googleapis.com/roles.list`.
    * @param deniedPermissions deniedPermissions or {@code null} for none
    */
@@ -155,26 +157,28 @@ public final class GoogleIamV2betaDenyRule extends com.google.api.client.json.Ge
    * The identities that are prevented from using one or more permissions on Google Cloud resources.
    * This field can contain the following values: * `principalSet://goog/public:all`: A special
    * identifier that represents any user who is on the internet, even if they do not have a Google
-   * Account or are not logged in. * `principal://goog/subject/{email-id}`: A specific Google
+   * Account or are not logged in. * `principal://goog/subject/{email_id}`: A specific Google
    * Account. Includes Gmail, Cloud Identity, and Google Workspace user accounts. For example,
-   * `principal://goog/subject/alice@example.com`. * `deleted:principal://goog/subject/{email-
-   * id}?uid={uid}`: A specific Google Account that was deleted recently. For example,
+   * `principal://goog/subject/alice@example.com`. *
+   * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific Google Account that was
+   * deleted recently. For example,
    * `deleted:principal://goog/subject/alice@example.com?uid=1234567890`. If the Google Account is
    * recovered, this identifier reverts to the standard identifier for a Google Account. *
-   * `principalSet://goog/group/{group-id}`: A Google group. For example,
-   * `principalSet://goog/group/admins@example.com`. * `deleted:principalSet://goog/group/{group-
-   * id}?uid={uid}`: A Google group that was deleted recently. For example,
-   * `deleted:principalSet://goog/group/admins@example.com?uid=1234567890`. If the Google group is
-   * restored, this identifier reverts to the standard identifier for a Google group. *
-   * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service-account-id}`: A Google
+   * `principalSet://goog/group/{group_id}`: A Google group. For example,
+   * `principalSet://goog/group/admins@example.com`. *
+   * `deleted:principalSet://goog/group/{group_id}?uid={uid}`: A Google group that was deleted
+   * recently. For example, `deleted:principalSet://goog/group/admins@example.com?uid=1234567890`.
+   * If the Google group is restored, this identifier reverts to the standard identifier for a
+   * Google group. *
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service_account_id}`: A Google
    * Cloud service account. For example, `principal://iam.googleapis.com/projects/-/serviceAccounts
-   * /my-service-account@iam.gserviceaccount.com`. *
-   * `deleted:principal://iam.googleapis.com/projects/-/serviceAccounts/{service-account-
-   * id}?uid={uid}`: A Google Cloud service account that was deleted recently. For example,
+   * /my-service-account@iam.gserviceaccount.com`. * `deleted:principal://iam.googleapis.com/project
+   * s/-/serviceAccounts/{service_account_id}?uid={uid}`: A Google Cloud service account that was
+   * deleted recently. For example,
    * `deleted:principal://iam.googleapis.com/projects/-/serviceAccounts/my-service-
    * account@iam.gserviceaccount.com?uid=1234567890`. If the service account is undeleted, this
    * identifier reverts to the standard identifier for a service account. *
-   * `principalSet://goog/cloudIdentityCustomerId/{customer-id}`: All of the principals associated
+   * `principalSet://goog/cloudIdentityCustomerId/{customer_id}`: All of the principals associated
    * with the specified Google Workspace or Cloud Identity customer ID. For example,
    * `principalSet://goog/cloudIdentityCustomerId/C01Abc35`.
    * @return value or {@code null} for none
@@ -187,26 +191,28 @@ public final class GoogleIamV2betaDenyRule extends com.google.api.client.json.Ge
    * The identities that are prevented from using one or more permissions on Google Cloud resources.
    * This field can contain the following values: * `principalSet://goog/public:all`: A special
    * identifier that represents any user who is on the internet, even if they do not have a Google
-   * Account or are not logged in. * `principal://goog/subject/{email-id}`: A specific Google
+   * Account or are not logged in. * `principal://goog/subject/{email_id}`: A specific Google
    * Account. Includes Gmail, Cloud Identity, and Google Workspace user accounts. For example,
-   * `principal://goog/subject/alice@example.com`. * `deleted:principal://goog/subject/{email-
-   * id}?uid={uid}`: A specific Google Account that was deleted recently. For example,
+   * `principal://goog/subject/alice@example.com`. *
+   * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific Google Account that was
+   * deleted recently. For example,
    * `deleted:principal://goog/subject/alice@example.com?uid=1234567890`. If the Google Account is
    * recovered, this identifier reverts to the standard identifier for a Google Account. *
-   * `principalSet://goog/group/{group-id}`: A Google group. For example,
-   * `principalSet://goog/group/admins@example.com`. * `deleted:principalSet://goog/group/{group-
-   * id}?uid={uid}`: A Google group that was deleted recently. For example,
-   * `deleted:principalSet://goog/group/admins@example.com?uid=1234567890`. If the Google group is
-   * restored, this identifier reverts to the standard identifier for a Google group. *
-   * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service-account-id}`: A Google
+   * `principalSet://goog/group/{group_id}`: A Google group. For example,
+   * `principalSet://goog/group/admins@example.com`. *
+   * `deleted:principalSet://goog/group/{group_id}?uid={uid}`: A Google group that was deleted
+   * recently. For example, `deleted:principalSet://goog/group/admins@example.com?uid=1234567890`.
+   * If the Google group is restored, this identifier reverts to the standard identifier for a
+   * Google group. *
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service_account_id}`: A Google
    * Cloud service account. For example, `principal://iam.googleapis.com/projects/-/serviceAccounts
-   * /my-service-account@iam.gserviceaccount.com`. *
-   * `deleted:principal://iam.googleapis.com/projects/-/serviceAccounts/{service-account-
-   * id}?uid={uid}`: A Google Cloud service account that was deleted recently. For example,
+   * /my-service-account@iam.gserviceaccount.com`. * `deleted:principal://iam.googleapis.com/project
+   * s/-/serviceAccounts/{service_account_id}?uid={uid}`: A Google Cloud service account that was
+   * deleted recently. For example,
    * `deleted:principal://iam.googleapis.com/projects/-/serviceAccounts/my-service-
    * account@iam.gserviceaccount.com?uid=1234567890`. If the service account is undeleted, this
    * identifier reverts to the standard identifier for a service account. *
-   * `principalSet://goog/cloudIdentityCustomerId/{customer-id}`: All of the principals associated
+   * `principalSet://goog/cloudIdentityCustomerId/{customer_id}`: All of the principals associated
    * with the specified Google Workspace or Cloud Identity customer ID. For example,
    * `principalSet://goog/cloudIdentityCustomerId/C01Abc35`.
    * @param deniedPrincipals deniedPrincipals or {@code null} for none

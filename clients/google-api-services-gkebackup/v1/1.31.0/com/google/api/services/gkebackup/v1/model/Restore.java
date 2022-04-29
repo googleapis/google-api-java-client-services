@@ -31,8 +31,8 @@ package com.google.api.services.gkebackup.v1.model;
 public final class Restore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. The Backup used as the source from which this Restore will restore. Note
-   * that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
+   * Required. Immutable. A reference to the Backup used as the source from which this Restore will
+   * restore. Note that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
    * projects/locations/backupPlans/backups.
    * The value may be {@code null}.
    */
@@ -40,24 +40,23 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.lang.String backup;
 
   /**
-   * Output only. The target cluster into which this Restore will restore data. Possible formats: 1.
-   * projects/locations/clusters 2. projects/zones/clusters Inherited from parent RestorePlan's
-   * cluster field.
+   * Output only. The target cluster into which this Restore will restore data. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters Inherited from parent RestorePlan's
+   * cluster value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cluster;
 
   /**
-   * Output only. When the restore operation either successfully completed or failed.
+   * Output only. Timestamp of when the restore operation completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String completeTime;
 
   /**
-   * Output only. [Output Only] The timestamp when this Restore resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Restore resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,15 +74,15 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a restore from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform restore updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetRestore`, and
-   * systems are expected to put that etag in the request to `UpdateRestore` to ensure that their
-   * change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateRestore` or `DeleteRestore` to
+   * ensure that their change will be applied to the same version of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * GCP Labels.
+   * A set of custom labels supplied by user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,21 +97,21 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Number of resources excluded in this restore action.
+   * Output only. Number of resources excluded during the restore execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer resourcesExcludedCount;
 
   /**
-   * Output only. Number of resources failed to be restored in this restore action.
+   * Output only. Number of resources that failed to be restored during the restore execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer resourcesFailedCount;
 
   /**
-   * Output only. Number of resources restored in this restore action.
+   * Output only. Number of resources restored during the restore execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +139,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.lang.String stateReason;
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * The value may be {@code null}.
    */
@@ -148,23 +147,22 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Output only. [Output Only] The timestamp when this Restore resource was last updated - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Restore resource was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Number of volumes restored in this restore action.
+   * Output only. Number of volumes restored during the restore execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer volumesRestoredCount;
 
   /**
-   * Required. Immutable. The Backup used as the source from which this Restore will restore. Note
-   * that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
+   * Required. Immutable. A reference to the Backup used as the source from which this Restore will
+   * restore. Note that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
    * projects/locations/backupPlans/backups.
    * @return value or {@code null} for none
    */
@@ -173,8 +171,8 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The Backup used as the source from which this Restore will restore. Note
-   * that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
+   * Required. Immutable. A reference to the Backup used as the source from which this Restore will
+   * restore. Note that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
    * projects/locations/backupPlans/backups.
    * @param backup backup or {@code null} for none
    */
@@ -184,9 +182,9 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The target cluster into which this Restore will restore data. Possible formats: 1.
-   * projects/locations/clusters 2. projects/zones/clusters Inherited from parent RestorePlan's
-   * cluster field.
+   * Output only. The target cluster into which this Restore will restore data. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters Inherited from parent RestorePlan's
+   * cluster value.
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -194,9 +192,9 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The target cluster into which this Restore will restore data. Possible formats: 1.
-   * projects/locations/clusters 2. projects/zones/clusters Inherited from parent RestorePlan's
-   * cluster field.
+   * Output only. The target cluster into which this Restore will restore data. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters Inherited from parent RestorePlan's
+   * cluster value.
    * @param cluster cluster or {@code null} for none
    */
   public Restore setCluster(java.lang.String cluster) {
@@ -205,7 +203,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. When the restore operation either successfully completed or failed.
+   * Output only. Timestamp of when the restore operation completed.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -213,7 +211,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. When the restore operation either successfully completed or failed.
+   * Output only. Timestamp of when the restore operation completed.
    * @param completeTime completeTime or {@code null} for none
    */
   public Restore setCompleteTime(String completeTime) {
@@ -222,8 +220,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Restore resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Restore resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -231,8 +228,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Restore resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Restore resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public Restore setCreateTime(String createTime) {
@@ -262,8 +258,8 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a restore from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform restore updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetRestore`, and
-   * systems are expected to put that etag in the request to `UpdateRestore` to ensure that their
-   * change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateRestore` or `DeleteRestore` to
+   * ensure that their change will be applied to the same version of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -275,8 +271,8 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a restore from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform restore updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetRestore`, and
-   * systems are expected to put that etag in the request to `UpdateRestore` to ensure that their
-   * change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateRestore` or `DeleteRestore` to
+   * ensure that their change will be applied to the same version of the resource.
    * @param etag etag or {@code null} for none
    */
   public Restore setEtag(java.lang.String etag) {
@@ -285,7 +281,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCP Labels.
+   * A set of custom labels supplied by user.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -293,7 +289,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCP Labels.
+   * A set of custom labels supplied by user.
    * @param labels labels or {@code null} for none
    */
   public Restore setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -321,7 +317,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of resources excluded in this restore action.
+   * Output only. Number of resources excluded during the restore execution.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getResourcesExcludedCount() {
@@ -329,7 +325,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of resources excluded in this restore action.
+   * Output only. Number of resources excluded during the restore execution.
    * @param resourcesExcludedCount resourcesExcludedCount or {@code null} for none
    */
   public Restore setResourcesExcludedCount(java.lang.Integer resourcesExcludedCount) {
@@ -338,7 +334,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of resources failed to be restored in this restore action.
+   * Output only. Number of resources that failed to be restored during the restore execution.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getResourcesFailedCount() {
@@ -346,7 +342,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of resources failed to be restored in this restore action.
+   * Output only. Number of resources that failed to be restored during the restore execution.
    * @param resourcesFailedCount resourcesFailedCount or {@code null} for none
    */
   public Restore setResourcesFailedCount(java.lang.Integer resourcesFailedCount) {
@@ -355,7 +351,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of resources restored in this restore action.
+   * Output only. Number of resources restored during the restore execution.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getResourcesRestoredCount() {
@@ -363,7 +359,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of resources restored in this restore action.
+   * Output only. Number of resources restored during the restore execution.
    * @param resourcesRestoredCount resourcesRestoredCount or {@code null} for none
    */
   public Restore setResourcesRestoredCount(java.lang.Integer resourcesRestoredCount) {
@@ -423,7 +419,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @return value or {@code null} for none
    */
@@ -432,7 +428,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @param uid uid or {@code null} for none
    */
@@ -442,8 +438,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Restore resource was last updated - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Restore resource was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -451,8 +446,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Restore resource was last updated - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Restore resource was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Restore setUpdateTime(String updateTime) {
@@ -461,7 +455,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of volumes restored in this restore action.
+   * Output only. Number of volumes restored during the restore execution.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVolumesRestoredCount() {
@@ -469,7 +463,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of volumes restored in this restore action.
+   * Output only. Number of volumes restored during the restore execution.
    * @param volumesRestoredCount volumesRestoredCount or {@code null} for none
    */
   public Restore setVolumesRestoredCount(java.lang.Integer volumesRestoredCount) {

@@ -44,9 +44,9 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> backupCrdVersions;
 
   /**
-   * The source cluster from which this Backup was created. Possible formats: 1.
-   * projects/locations/clusters 2. projects/zones/clusters This will be the same value as the
-   * parent BackupPlan's cluster field.
+   * The source cluster from which this Backup was created. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters This is inherited from the parent
+   * BackupPlan's cluster field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +101,9 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The source cluster from which this Backup was created. Possible formats: 1.
-   * projects/locations/clusters 2. projects/zones/clusters This will be the same value as the
-   * parent BackupPlan's cluster field.
+   * The source cluster from which this Backup was created. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters This is inherited from the parent
+   * BackupPlan's cluster field.
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -111,9 +111,9 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The source cluster from which this Backup was created. Possible formats: 1.
-   * projects/locations/clusters 2. projects/zones/clusters This will be the same value as the
-   * parent BackupPlan's cluster field.
+   * The source cluster from which this Backup was created. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters This is inherited from the parent
+   * BackupPlan's cluster field.
    * @param cluster cluster or {@code null} for none
    */
   public ClusterMetadata setCluster(java.lang.String cluster) {

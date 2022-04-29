@@ -30,7 +30,7 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ListBackupPlansResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of BackupPlans.
+   * The list of BackupPlans matching the given criteria.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,8 +43,8 @@ public final class ListBackupPlansResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListBackupPlans` call to retrieve
-   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * A token which may be sent as page_token in a subsequent `ListBackupPlans` call to retrieve the
+   * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class ListBackupPlansResponse extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of BackupPlans.
+   * The list of BackupPlans matching the given criteria.
    * @return value or {@code null} for none
    */
   public java.util.List<BackupPlan> getBackupPlans() {
@@ -67,7 +67,7 @@ public final class ListBackupPlansResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The list of BackupPlans.
+   * The list of BackupPlans matching the given criteria.
    * @param backupPlans backupPlans or {@code null} for none
    */
   public ListBackupPlansResponse setBackupPlans(java.util.List<BackupPlan> backupPlans) {
@@ -76,8 +76,8 @@ public final class ListBackupPlansResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListBackupPlans` call to retrieve
-   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * A token which may be sent as page_token in a subsequent `ListBackupPlans` call to retrieve the
+   * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * @return value or {@code null} for none
    */
@@ -86,8 +86,8 @@ public final class ListBackupPlansResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListBackupPlans` call to retrieve
-   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * A token which may be sent as page_token in a subsequent `ListBackupPlans` call to retrieve the
+   * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

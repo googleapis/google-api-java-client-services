@@ -30,8 +30,8 @@ package com.google.api.services.gkebackup.v1.model;
 public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * A standard cron-style string that defines a repeating schedule for creating Backups via this
-   * BackupPlan.
+   * A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating schedule for
+   * creating Backups via this BackupPlan. Default (empty): no automatic backup creation will occur.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean paused;
 
   /**
-   * A standard cron-style string that defines a repeating schedule for creating Backups via this
-   * BackupPlan.
+   * A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating schedule for
+   * creating Backups via this BackupPlan. Default (empty): no automatic backup creation will occur.
    * @return value or {@code null} for none
    */
   public java.lang.String getCronSchedule() {
@@ -55,8 +55,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A standard cron-style string that defines a repeating schedule for creating Backups via this
-   * BackupPlan.
+   * A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating schedule for
+   * creating Backups via this BackupPlan. Default (empty): no automatic backup creation will occur.
    * @param cronSchedule cronSchedule or {@code null} for none
    */
   public Schedule setCronSchedule(java.lang.String cronSchedule) {

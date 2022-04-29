@@ -17,10 +17,7 @@
 package com.google.api.services.gkebackup.v1.model;
 
 /**
- * RentionPolicy is an inner message type to define: 1. Minimum age for Backups created via this
- * BackupPlan - deletion (either manual or automatic) of Backups younger than this age will be
- * blocked 2. Default maximum age of Backups created via this BackupPlan, after which automatic
- * deletion will occur 3. Lock to disallow any changes to any RetentionPolicy settings
+ * RetentionPolicy defines a Backup retention policy for a BackupPlan.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:
@@ -34,8 +31,8 @@ public final class RetentionPolicy extends com.google.api.client.json.GenericJso
 
   /**
    * Minimum age for Backups created via this BackupPlan (in days). This field MUST be an integer
-   * value between 0-90(inclusive). A Backup created under this BackupPlan will NOT be deletable
-   * until it reaches Backup's create_time + backup_delete_lock_days. Updating this field of a
+   * value between 0-90 (inclusive). A Backup created under this BackupPlan will NOT be deletable
+   * until it reaches Backup's (create_time + backup_delete_lock_days). Updating this field of a
    * BackupPlan does NOT affect existing Backups under it. Backups created AFTER a successful update
    * will inherit the new value. Default: 0 (no delete blocking)
    * The value may be {@code null}.
@@ -46,12 +43,11 @@ public final class RetentionPolicy extends com.google.api.client.json.GenericJso
   /**
    * The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer
    * value >= 0. If specified, a Backup created under this BackupPlan will be automatically deleted
-   * after its age reaches create_time + backup_retain_days. If not specified, Backups created under
-   * this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect
-   * existing Backups under it. Backups created AFTER a successful update will automatically pick up
-   * the new value. NOTE: Specifying a backup_retain_days smaller than backup_delete_lock_days at
-   * creation/updating time will be considered as invalid, and the request will be rejected
-   * immediately. Default: 0 (no automatic deletion)
+   * after its age reaches (create_time + backup_retain_days). If not specified, Backups created
+   * under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT
+   * affect existing Backups under it. Backups created AFTER a successful update will automatically
+   * pick up the new value. NOTE: backup_retain_days must be >= backup_delete_lock_days. Default: 0
+   * (no automatic deletion)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +63,8 @@ public final class RetentionPolicy extends com.google.api.client.json.GenericJso
 
   /**
    * Minimum age for Backups created via this BackupPlan (in days). This field MUST be an integer
-   * value between 0-90(inclusive). A Backup created under this BackupPlan will NOT be deletable
-   * until it reaches Backup's create_time + backup_delete_lock_days. Updating this field of a
+   * value between 0-90 (inclusive). A Backup created under this BackupPlan will NOT be deletable
+   * until it reaches Backup's (create_time + backup_delete_lock_days). Updating this field of a
    * BackupPlan does NOT affect existing Backups under it. Backups created AFTER a successful update
    * will inherit the new value. Default: 0 (no delete blocking)
    * @return value or {@code null} for none
@@ -79,8 +75,8 @@ public final class RetentionPolicy extends com.google.api.client.json.GenericJso
 
   /**
    * Minimum age for Backups created via this BackupPlan (in days). This field MUST be an integer
-   * value between 0-90(inclusive). A Backup created under this BackupPlan will NOT be deletable
-   * until it reaches Backup's create_time + backup_delete_lock_days. Updating this field of a
+   * value between 0-90 (inclusive). A Backup created under this BackupPlan will NOT be deletable
+   * until it reaches Backup's (create_time + backup_delete_lock_days). Updating this field of a
    * BackupPlan does NOT affect existing Backups under it. Backups created AFTER a successful update
    * will inherit the new value. Default: 0 (no delete blocking)
    * @param backupDeleteLockDays backupDeleteLockDays or {@code null} for none
@@ -93,12 +89,11 @@ public final class RetentionPolicy extends com.google.api.client.json.GenericJso
   /**
    * The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer
    * value >= 0. If specified, a Backup created under this BackupPlan will be automatically deleted
-   * after its age reaches create_time + backup_retain_days. If not specified, Backups created under
-   * this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect
-   * existing Backups under it. Backups created AFTER a successful update will automatically pick up
-   * the new value. NOTE: Specifying a backup_retain_days smaller than backup_delete_lock_days at
-   * creation/updating time will be considered as invalid, and the request will be rejected
-   * immediately. Default: 0 (no automatic deletion)
+   * after its age reaches (create_time + backup_retain_days). If not specified, Backups created
+   * under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT
+   * affect existing Backups under it. Backups created AFTER a successful update will automatically
+   * pick up the new value. NOTE: backup_retain_days must be >= backup_delete_lock_days. Default: 0
+   * (no automatic deletion)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBackupRetainDays() {
@@ -108,12 +103,11 @@ public final class RetentionPolicy extends com.google.api.client.json.GenericJso
   /**
    * The default maximum age of a Backup created via this BackupPlan. This field MUST be an integer
    * value >= 0. If specified, a Backup created under this BackupPlan will be automatically deleted
-   * after its age reaches create_time + backup_retain_days. If not specified, Backups created under
-   * this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT affect
-   * existing Backups under it. Backups created AFTER a successful update will automatically pick up
-   * the new value. NOTE: Specifying a backup_retain_days smaller than backup_delete_lock_days at
-   * creation/updating time will be considered as invalid, and the request will be rejected
-   * immediately. Default: 0 (no automatic deletion)
+   * after its age reaches (create_time + backup_retain_days). If not specified, Backups created
+   * under this BackupPlan will NOT be subject to automatic deletion. Updating this field does NOT
+   * affect existing Backups under it. Backups created AFTER a successful update will automatically
+   * pick up the new value. NOTE: backup_retain_days must be >= backup_delete_lock_days. Default: 0
+   * (no automatic deletion)
    * @param backupRetainDays backupRetainDays or {@code null} for none
    */
   public RetentionPolicy setBackupRetainDays(java.lang.Integer backupRetainDays) {

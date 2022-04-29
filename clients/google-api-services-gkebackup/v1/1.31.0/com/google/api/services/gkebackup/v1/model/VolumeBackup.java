@@ -31,16 +31,14 @@ package com.google.api.services.gkebackup.v1.model;
 public final class VolumeBackup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The timestamp when the associated underlying volume backup operation
-   * completes - can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when the associated underlying volume backup operation completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String completeTime;
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeBackup resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeBackup resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +55,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
    * Output only. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of a volume backup from overwriting each other. It is strongly suggested
    * that systems make use of the `etag` in the read-modify-write cycle to perform volume backup
-   * updates in order to avoid race conditions: An `etag` is returned in the response to
-   * `GetVolumeBackup', and systems are expected to put that etag in the request to
-   * `UpdateVolumeBackup` to ensure that their change will be applied to the same version.
+   * updates in order to avoid race conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +69,8 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   private java.lang.String format;
 
   /**
-   * Output only. [Output Only] The full name of the VolumeBackup resource. Format:
-   * projects/locations/backupPlans/backups/volumeBackups Note that the last segment of the name
-   * will have the format: 'pvc-'.
+   * Output only. The full name of the VolumeBackup resource. Format:
+   * projects/locations/backupPlans/backups/volumeBackups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +108,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageBytes;
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * The value may be {@code null}.
    */
@@ -121,25 +116,21 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeBackup resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeBackup resource was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. A storage system-specific opaque handle to the underlying volume backup. This
-   * field is interpreted by the volume backup and restore drivers running in the GKE cluster and
-   * not by the service.
+   * Output only. A storage system-specific opaque handle to the underlying volume backup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String volumeBackupHandle;
 
   /**
-   * Output only. [Output Only] The timestamp when the associated underlying volume backup operation
-   * completes - can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when the associated underlying volume backup operation completed.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -147,8 +138,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when the associated underlying volume backup operation
-   * completes - can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when the associated underlying volume backup operation completed.
    * @param completeTime completeTime or {@code null} for none
    */
   public VolumeBackup setCompleteTime(String completeTime) {
@@ -157,8 +147,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeBackup resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeBackup resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -166,8 +155,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeBackup resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeBackup resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public VolumeBackup setCreateTime(String createTime) {
@@ -196,9 +184,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
    * Output only. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of a volume backup from overwriting each other. It is strongly suggested
    * that systems make use of the `etag` in the read-modify-write cycle to perform volume backup
-   * updates in order to avoid race conditions: An `etag` is returned in the response to
-   * `GetVolumeBackup', and systems are expected to put that etag in the request to
-   * `UpdateVolumeBackup` to ensure that their change will be applied to the same version.
+   * updates in order to avoid race conditions.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -209,9 +195,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
    * Output only. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of a volume backup from overwriting each other. It is strongly suggested
    * that systems make use of the `etag` in the read-modify-write cycle to perform volume backup
-   * updates in order to avoid race conditions: An `etag` is returned in the response to
-   * `GetVolumeBackup', and systems are expected to put that etag in the request to
-   * `UpdateVolumeBackup` to ensure that their change will be applied to the same version.
+   * updates in order to avoid race conditions.
    * @param etag etag or {@code null} for none
    */
   public VolumeBackup setEtag(java.lang.String etag) {
@@ -237,9 +221,8 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The full name of the VolumeBackup resource. Format:
-   * projects/locations/backupPlans/backups/volumeBackups Note that the last segment of the name
-   * will have the format: 'pvc-'.
+   * Output only. The full name of the VolumeBackup resource. Format:
+   * projects/locations/backupPlans/backups/volumeBackups.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -247,9 +230,8 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The full name of the VolumeBackup resource. Format:
-   * projects/locations/backupPlans/backups/volumeBackups Note that the last segment of the name
-   * will have the format: 'pvc-'.
+   * Output only. The full name of the VolumeBackup resource. Format:
+   * projects/locations/backupPlans/backups/volumeBackups.
    * @param name name or {@code null} for none
    */
   public VolumeBackup setName(java.lang.String name) {
@@ -332,7 +314,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @return value or {@code null} for none
    */
@@ -341,7 +323,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @param uid uid or {@code null} for none
    */
@@ -351,8 +333,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeBackup resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeBackup resource was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -360,8 +341,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeBackup resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeBackup resource was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public VolumeBackup setUpdateTime(String updateTime) {
@@ -370,9 +350,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A storage system-specific opaque handle to the underlying volume backup. This
-   * field is interpreted by the volume backup and restore drivers running in the GKE cluster and
-   * not by the service.
+   * Output only. A storage system-specific opaque handle to the underlying volume backup.
    * @return value or {@code null} for none
    */
   public java.lang.String getVolumeBackupHandle() {
@@ -380,9 +358,7 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A storage system-specific opaque handle to the underlying volume backup. This
-   * field is interpreted by the volume backup and restore drivers running in the GKE cluster and
-   * not by the service.
+   * Output only. A storage system-specific opaque handle to the underlying volume backup.
    * @param volumeBackupHandle volumeBackupHandle or {@code null} for none
    */
   public VolumeBackup setVolumeBackupHandle(java.lang.String volumeBackupHandle) {

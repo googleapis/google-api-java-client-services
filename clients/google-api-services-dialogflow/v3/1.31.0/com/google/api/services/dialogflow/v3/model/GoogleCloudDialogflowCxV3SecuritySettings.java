@@ -32,6 +32,19 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls audio export settings for post-conversation analytics when ingesting audio to
+   * conversations via Participants.AnalyzeContent or Participants.StreamingAnalyzeContent. If
+   * retention_strategy is set to REMOVE_AFTER_CONVERSATION or audio_export_settings.gcs_bucket is
+   * empty, audio export is disabled. If audio export is enabled, audio is recorded and saved to
+   * audio_export_settings.gcs_bucket, subject to retention policy of
+   * audio_export_settings.gcs_bucket. This setting won't effect audio input for implicit sessions
+   * via Sessions.DetectIntent or Sessions.StreamingDetectIntent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings audioExportSettings;
+
+  /**
    * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define
    * de-identification configuration for the content. The `DLP De-identify Templates Reader` role is
    * needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER
@@ -115,6 +128,35 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer retentionWindowDays;
+
+  /**
+   * Controls audio export settings for post-conversation analytics when ingesting audio to
+   * conversations via Participants.AnalyzeContent or Participants.StreamingAnalyzeContent. If
+   * retention_strategy is set to REMOVE_AFTER_CONVERSATION or audio_export_settings.gcs_bucket is
+   * empty, audio export is disabled. If audio export is enabled, audio is recorded and saved to
+   * audio_export_settings.gcs_bucket, subject to retention policy of
+   * audio_export_settings.gcs_bucket. This setting won't effect audio input for implicit sessions
+   * via Sessions.DetectIntent or Sessions.StreamingDetectIntent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings getAudioExportSettings() {
+    return audioExportSettings;
+  }
+
+  /**
+   * Controls audio export settings for post-conversation analytics when ingesting audio to
+   * conversations via Participants.AnalyzeContent or Participants.StreamingAnalyzeContent. If
+   * retention_strategy is set to REMOVE_AFTER_CONVERSATION or audio_export_settings.gcs_bucket is
+   * empty, audio export is disabled. If audio export is enabled, audio is recorded and saved to
+   * audio_export_settings.gcs_bucket, subject to retention policy of
+   * audio_export_settings.gcs_bucket. This setting won't effect audio input for implicit sessions
+   * via Sessions.DetectIntent or Sessions.StreamingDetectIntent.
+   * @param audioExportSettings audioExportSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3SecuritySettings setAudioExportSettings(GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings audioExportSettings) {
+    this.audioExportSettings = audioExportSettings;
+    return this;
+  }
 
   /**
    * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define

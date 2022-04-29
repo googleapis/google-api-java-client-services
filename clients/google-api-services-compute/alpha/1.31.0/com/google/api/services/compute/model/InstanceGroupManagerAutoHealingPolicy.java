@@ -70,12 +70,6 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
   private FixedOrPercent maxUnavailable;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String updateInstances;
-
-  /**
    * Restricts what triggers autohealing.
    * @return value or {@code null} for none
    */
@@ -164,21 +158,6 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
    */
   public InstanceGroupManagerAutoHealingPolicy setMaxUnavailable(FixedOrPercent maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUpdateInstances() {
-    return updateInstances;
-  }
-
-  /**
-   * @param updateInstances updateInstances or {@code null} for none
-   */
-  public InstanceGroupManagerAutoHealingPolicy setUpdateInstances(java.lang.String updateInstances) {
-    this.updateInstances = updateInstances;
     return this;
   }
 

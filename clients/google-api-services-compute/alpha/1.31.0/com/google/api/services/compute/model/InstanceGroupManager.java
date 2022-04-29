@@ -119,7 +119,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String instanceGroup;
 
   /**
-   * Instance lifecycle policy for this Instance Group Manager.
+   * The repair policy for this managed instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -522,7 +522,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Instance lifecycle policy for this Instance Group Manager.
+   * The repair policy for this managed instance group.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerInstanceLifecyclePolicy getInstanceLifecyclePolicy() {
@@ -530,7 +530,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Instance lifecycle policy for this Instance Group Manager.
+   * The repair policy for this managed instance group.
    * @param instanceLifecyclePolicy instanceLifecyclePolicy or {@code null} for none
    */
   public InstanceGroupManager setInstanceLifecyclePolicy(InstanceGroupManagerInstanceLifecyclePolicy instanceLifecyclePolicy) {

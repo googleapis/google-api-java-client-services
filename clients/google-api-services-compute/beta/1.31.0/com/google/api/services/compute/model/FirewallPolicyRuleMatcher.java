@@ -31,6 +31,14 @@ package com.google.api.services.compute.model;
 public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.GenericJson {
 
   /**
+   * Address groups which should be matched against the traffic destination. Maximum number of
+   * destination address groups is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destAddressGroups;
+
+  /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
    * The value may be {@code null}.
    */
@@ -60,6 +68,14 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<FirewallPolicyRuleMatcherLayer4Config> layer4Configs;
+
+  /**
+   * Address groups which should be matched against the traffic source. Maximum number of source
+   * address groups is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcAddressGroups;
 
   /**
    * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
@@ -93,6 +109,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcThreatIntelligences;
+
+  /**
+   * Address groups which should be matched against the traffic destination. Maximum number of
+   * destination address groups is 10.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestAddressGroups() {
+    return destAddressGroups;
+  }
+
+  /**
+   * Address groups which should be matched against the traffic destination. Maximum number of
+   * destination address groups is 10.
+   * @param destAddressGroups destAddressGroups or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestAddressGroups(java.util.List<java.lang.String> destAddressGroups) {
+    this.destAddressGroups = destAddressGroups;
+    return this;
+  }
 
   /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
@@ -165,6 +200,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setLayer4Configs(java.util.List<FirewallPolicyRuleMatcherLayer4Config> layer4Configs) {
     this.layer4Configs = layer4Configs;
+    return this;
+  }
+
+  /**
+   * Address groups which should be matched against the traffic source. Maximum number of source
+   * address groups is 10.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcAddressGroups() {
+    return srcAddressGroups;
+  }
+
+  /**
+   * Address groups which should be matched against the traffic source. Maximum number of source
+   * address groups is 10.
+   * @param srcAddressGroups srcAddressGroups or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcAddressGroups(java.util.List<java.lang.String> srcAddressGroups) {
+    this.srcAddressGroups = srcAddressGroups;
     return this;
   }
 

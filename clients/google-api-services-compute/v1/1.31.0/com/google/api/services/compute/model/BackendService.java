@@ -365,6 +365,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
+   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
+   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> serviceBindings;
+
+  /**
    * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
    * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true. For more details, see: [Session
@@ -1169,6 +1177,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
+   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getServiceBindings() {
+    return serviceBindings;
+  }
+
+  /**
+   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
+   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * @param serviceBindings serviceBindings or {@code null} for none
+   */
+  public BackendService setServiceBindings(java.util.List<java.lang.String> serviceBindings) {
+    this.serviceBindings = serviceBindings;
     return this;
   }
 

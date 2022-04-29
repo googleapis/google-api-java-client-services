@@ -37,8 +37,9 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allNamespaces;
 
   /**
-   * This defines a customer managed encryption key that will be used to encrypt the Backup
-   * artifacts for Backups created via this BackupPlan.
+   * This defines a customer managed encryption key that will be used to encrypt the "config"
+   * portion (the Kubernetes resources) of Backups created via this plan. Default (empty): Config
+   * backup artifacts will not be encrypted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   private NamespacedNames selectedApplications;
 
   /**
-   * If set, include just the resources in the listed namespaces
+   * If set, include just the resources in the listed namespaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +93,9 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This defines a customer managed encryption key that will be used to encrypt the Backup
-   * artifacts for Backups created via this BackupPlan.
+   * This defines a customer managed encryption key that will be used to encrypt the "config"
+   * portion (the Kubernetes resources) of Backups created via this plan. Default (empty): Config
+   * backup artifacts will not be encrypted.
    * @return value or {@code null} for none
    */
   public EncryptionKey getEncryptionKey() {
@@ -101,8 +103,9 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This defines a customer managed encryption key that will be used to encrypt the Backup
-   * artifacts for Backups created via this BackupPlan.
+   * This defines a customer managed encryption key that will be used to encrypt the "config"
+   * portion (the Kubernetes resources) of Backups created via this plan. Default (empty): Config
+   * backup artifacts will not be encrypted.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
   public BackupConfig setEncryptionKey(EncryptionKey encryptionKey) {
@@ -166,7 +169,7 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, include just the resources in the listed namespaces
+   * If set, include just the resources in the listed namespaces.
    * @return value or {@code null} for none
    */
   public Namespaces getSelectedNamespaces() {
@@ -174,7 +177,7 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, include just the resources in the listed namespaces
+   * If set, include just the resources in the listed namespaces.
    * @param selectedNamespaces selectedNamespaces or {@code null} for none
    */
   public BackupConfig setSelectedNamespaces(Namespaces selectedNamespaces) {

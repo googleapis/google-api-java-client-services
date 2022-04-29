@@ -30,7 +30,7 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ListBackupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of restore resources within the parent.
+   * The list of Backups matching the given criteria.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,16 +43,15 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListBackups` call to retrieve the
-   * next page of results. If this field is omitted or empty, then there are no more results to
-   * return.
+   * A token which may be sent as page_token in a subsequent `ListBackups` call to retrieve the next
+   * page of results. If this field is omitted or empty, then there are no more results to return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of restore resources within the parent.
+   * The list of Backups matching the given criteria.
    * @return value or {@code null} for none
    */
   public java.util.List<Backup> getBackups() {
@@ -60,7 +59,7 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The list of restore resources within the parent.
+   * The list of Backups matching the given criteria.
    * @param backups backups or {@code null} for none
    */
   public ListBackupsResponse setBackups(java.util.List<Backup> backups) {
@@ -69,9 +68,8 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListBackups` call to retrieve the
-   * next page of results. If this field is omitted or empty, then there are no more results to
-   * return.
+   * A token which may be sent as page_token in a subsequent `ListBackups` call to retrieve the next
+   * page of results. If this field is omitted or empty, then there are no more results to return.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -79,9 +77,8 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListBackups` call to retrieve the
-   * next page of results. If this field is omitted or empty, then there are no more results to
-   * return.
+   * A token which may be sent as page_token in a subsequent `ListBackups` call to retrieve the next
+   * page of results. If this field is omitted or empty, then there are no more results to return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListBackupsResponse setNextPageToken(java.lang.String nextPageToken) {

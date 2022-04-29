@@ -31,8 +31,8 @@ package com.google.api.services.gkebackup.v1.model;
 public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. The BackupPlan from which Backups may be used as the source for Restores
-   * created via this RestorePlan. Format: projects/locations/backupPlans.
+   * Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source
+   * for Restores created via this RestorePlan. Format: projects/locations/backupPlans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,16 +40,15 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The target cluster into which Restores created via this RestorePlan will
-   * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Possible formats:
-   * 1. projects/locations/clusters 2. projects/zones/clusters
+   * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cluster;
 
   /**
-   * Output only. [Output Only] The timestamp when this RestorePlan resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this RestorePlan resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +66,9 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a restore from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform restore updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetRestorePlan`, and
-   * systems are expected to put that etag in the request to `UpdateRestorePlan` to ensure that
-   * their change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateRestorePlan` or
+   * `DeleteRestorePlan` to ensure that their change will be applied to the same version of the
+   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,8 +82,8 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. [Output Only] The full name of the RestorePlan resource. Format:
-   * projects/locations/restorePlans
+   * Output only. The full name of the RestorePlan resource. Format:
+   * projects/locations/restorePlans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private RestoreConfig restoreConfig;
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * The value may be {@code null}.
    */
@@ -105,16 +105,15 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Output only. [Output Only] The timestamp when this RestorePlan resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this RestorePlan resource was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Required. Immutable. The BackupPlan from which Backups may be used as the source for Restores
-   * created via this RestorePlan. Format: projects/locations/backupPlans.
+   * Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source
+   * for Restores created via this RestorePlan. Format: projects/locations/backupPlans.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupPlan() {
@@ -122,8 +121,8 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The BackupPlan from which Backups may be used as the source for Restores
-   * created via this RestorePlan. Format: projects/locations/backupPlans.
+   * Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source
+   * for Restores created via this RestorePlan. Format: projects/locations/backupPlans.
    * @param backupPlan backupPlan or {@code null} for none
    */
   public RestorePlan setBackupPlan(java.lang.String backupPlan) {
@@ -133,8 +132,8 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The target cluster into which Restores created via this RestorePlan will
-   * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Possible formats:
-   * 1. projects/locations/clusters 2. projects/zones/clusters
+   * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -143,8 +142,8 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The target cluster into which Restores created via this RestorePlan will
-   * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Possible formats:
-   * 1. projects/locations/clusters 2. projects/zones/clusters
+   * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Valid formats: -
+   * projects/locations/clusters - projects/zones/clusters
    * @param cluster cluster or {@code null} for none
    */
   public RestorePlan setCluster(java.lang.String cluster) {
@@ -153,8 +152,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this RestorePlan resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this RestorePlan resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -162,8 +160,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this RestorePlan resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this RestorePlan resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public RestorePlan setCreateTime(String createTime) {
@@ -193,8 +190,9 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a restore from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform restore updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetRestorePlan`, and
-   * systems are expected to put that etag in the request to `UpdateRestorePlan` to ensure that
-   * their change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateRestorePlan` or
+   * `DeleteRestorePlan` to ensure that their change will be applied to the same version of the
+   * resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -206,8 +204,9 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a restore from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform restore updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetRestorePlan`, and
-   * systems are expected to put that etag in the request to `UpdateRestorePlan` to ensure that
-   * their change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateRestorePlan` or
+   * `DeleteRestorePlan` to ensure that their change will be applied to the same version of the
+   * resource.
    * @param etag etag or {@code null} for none
    */
   public RestorePlan setEtag(java.lang.String etag) {
@@ -233,8 +232,8 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The full name of the RestorePlan resource. Format:
-   * projects/locations/restorePlans
+   * Output only. The full name of the RestorePlan resource. Format:
+   * projects/locations/restorePlans.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -242,8 +241,8 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The full name of the RestorePlan resource. Format:
-   * projects/locations/restorePlans
+   * Output only. The full name of the RestorePlan resource. Format:
+   * projects/locations/restorePlans.
    * @param name name or {@code null} for none
    */
   public RestorePlan setName(java.lang.String name) {
@@ -269,7 +268,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @return value or {@code null} for none
    */
@@ -278,7 +277,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @param uid uid or {@code null} for none
    */
@@ -288,8 +287,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this RestorePlan resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this RestorePlan resource was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -297,8 +295,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this RestorePlan resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this RestorePlan resource was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public RestorePlan setUpdateTime(String updateTime) {

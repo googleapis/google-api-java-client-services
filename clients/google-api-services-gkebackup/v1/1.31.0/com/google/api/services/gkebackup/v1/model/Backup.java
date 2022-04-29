@@ -53,31 +53,30 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String completeTime;
 
   /**
-   * Output only. cluster config backup size in bytes.
+   * Output only. The size of the config backup in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long configBackupSizeBytes;
 
   /**
-   * Output only. Whether or not the Backup contains Kubernetes Secrets. Inherited from the parent
-   * BackupPlan's backup_config.include_secrets.
+   * Output only. Whether or not the Backup contains Kubernetes Secrets. Controlled by the parent
+   * BackupPlan's include_secrets value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean containsSecrets;
 
   /**
-   * Output only. Whether or not the Backup contains volume data. Inherited from the parent
-   * BackupPlan's backup_config.include_volume_data.
+   * Output only. Whether or not the Backup contains volume data. Controlled by the parent
+   * BackupPlan's include_volume_data value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean containsVolumeData;
 
   /**
-   * Output only. [Output Only] The timestamp when this Backup resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Backup resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,10 +85,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Minimum age for this Backup (in days). If this field is set to a non-zero value, the Backup
    * will be "locked" against deletion (either manual or automatic deletion) for the number of days
-   * provided (measured from the creation time of the Backup). This value is inherited from the
-   * parent BackupPlan's retention_policy.backup_delete_lock_days value and may only be increased
-   * (either at creation time or in a subsequent update). This field MUST be an integer value
-   * between 0-90 (inclusive). Default: inherited from BackupPlan.
+   * provided (measured from the creation time of the Backup). MUST be an integer value between 0-90
+   * (inclusive). Defaults to parent BackupPlan's backup_delete_lock_days setting and may only be
+   * increased (either at creation time or in a subsequent update).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +110,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The customer managed encryption key that was used to encrypt the Backup's
-   * artifacts. Inherited from the parent BackupPlan's backup_config.encryption_key.
+   * artifacts. Inherited from the parent BackupPlan's encryption_key value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +121,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a backup from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform backup updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetBackup`, and
-   * systems are expected to put that etag in the request to `UpdateBackup` to ensure that their
-   * change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateBackup` or `DeleteBackup` to
+   * ensure that their change will be applied to the same version of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,11 +165,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Integer resourceCount;
 
   /**
-   * The age (in days) after which this Backup will be automatically deleted. If not specified at
-   * Backup creation time, this value is inherited from the parent BackupPlan's
-   * retention_policy.backup_retain_days value. Once a Backup is created, this value may only be
-   * increased. This must be an integer value >= 0. If 0, no automatic deletion will occur for this
-   * Backup. If not 0, this must be >= delete_lock_days. Default: inherited from BackupPlan.
+   * The age (in days) after which this Backup will be automatically deleted. Must be an integer
+   * value >= 0: - If 0, no automatic deletion will occur for this Backup. - If not 0, this must be
+   * >= delete_lock_days. Once a Backup is created, this value may only be increased. Defaults to
+   * the parent BackupPlan's backup_retain_days value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,7 +220,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String stateReason;
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
    * The value may be {@code null}.
    */
@@ -231,8 +228,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Output only. [Output Only] The timestamp when this Backup resource was last updated - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Backup resource was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,7 +293,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. cluster config backup size in bytes.
+   * Output only. The size of the config backup in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConfigBackupSizeBytes() {
@@ -305,7 +301,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. cluster config backup size in bytes.
+   * Output only. The size of the config backup in bytes.
    * @param configBackupSizeBytes configBackupSizeBytes or {@code null} for none
    */
   public Backup setConfigBackupSizeBytes(java.lang.Long configBackupSizeBytes) {
@@ -314,8 +310,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether or not the Backup contains Kubernetes Secrets. Inherited from the parent
-   * BackupPlan's backup_config.include_secrets.
+   * Output only. Whether or not the Backup contains Kubernetes Secrets. Controlled by the parent
+   * BackupPlan's include_secrets value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getContainsSecrets() {
@@ -323,8 +319,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether or not the Backup contains Kubernetes Secrets. Inherited from the parent
-   * BackupPlan's backup_config.include_secrets.
+   * Output only. Whether or not the Backup contains Kubernetes Secrets. Controlled by the parent
+   * BackupPlan's include_secrets value.
    * @param containsSecrets containsSecrets or {@code null} for none
    */
   public Backup setContainsSecrets(java.lang.Boolean containsSecrets) {
@@ -333,8 +329,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether or not the Backup contains volume data. Inherited from the parent
-   * BackupPlan's backup_config.include_volume_data.
+   * Output only. Whether or not the Backup contains volume data. Controlled by the parent
+   * BackupPlan's include_volume_data value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getContainsVolumeData() {
@@ -342,8 +338,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether or not the Backup contains volume data. Inherited from the parent
-   * BackupPlan's backup_config.include_volume_data.
+   * Output only. Whether or not the Backup contains volume data. Controlled by the parent
+   * BackupPlan's include_volume_data value.
    * @param containsVolumeData containsVolumeData or {@code null} for none
    */
   public Backup setContainsVolumeData(java.lang.Boolean containsVolumeData) {
@@ -352,8 +348,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Backup resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Backup resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -361,8 +356,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Backup resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Backup resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public Backup setCreateTime(String createTime) {
@@ -373,10 +367,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Minimum age for this Backup (in days). If this field is set to a non-zero value, the Backup
    * will be "locked" against deletion (either manual or automatic deletion) for the number of days
-   * provided (measured from the creation time of the Backup). This value is inherited from the
-   * parent BackupPlan's retention_policy.backup_delete_lock_days value and may only be increased
-   * (either at creation time or in a subsequent update). This field MUST be an integer value
-   * between 0-90 (inclusive). Default: inherited from BackupPlan.
+   * provided (measured from the creation time of the Backup). MUST be an integer value between 0-90
+   * (inclusive). Defaults to parent BackupPlan's backup_delete_lock_days setting and may only be
+   * increased (either at creation time or in a subsequent update).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDeleteLockDays() {
@@ -386,10 +379,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Minimum age for this Backup (in days). If this field is set to a non-zero value, the Backup
    * will be "locked" against deletion (either manual or automatic deletion) for the number of days
-   * provided (measured from the creation time of the Backup). This value is inherited from the
-   * parent BackupPlan's retention_policy.backup_delete_lock_days value and may only be increased
-   * (either at creation time or in a subsequent update). This field MUST be an integer value
-   * between 0-90 (inclusive). Default: inherited from BackupPlan.
+   * provided (measured from the creation time of the Backup). MUST be an integer value between 0-90
+   * (inclusive). Defaults to parent BackupPlan's backup_delete_lock_days setting and may only be
+   * increased (either at creation time or in a subsequent update).
    * @param deleteLockDays deleteLockDays or {@code null} for none
    */
   public Backup setDeleteLockDays(java.lang.Integer deleteLockDays) {
@@ -435,7 +427,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The customer managed encryption key that was used to encrypt the Backup's
-   * artifacts. Inherited from the parent BackupPlan's backup_config.encryption_key.
+   * artifacts. Inherited from the parent BackupPlan's encryption_key value.
    * @return value or {@code null} for none
    */
   public EncryptionKey getEncryptionKey() {
@@ -444,7 +436,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The customer managed encryption key that was used to encrypt the Backup's
-   * artifacts. Inherited from the parent BackupPlan's backup_config.encryption_key.
+   * artifacts. Inherited from the parent BackupPlan's encryption_key value.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
   public Backup setEncryptionKey(EncryptionKey encryptionKey) {
@@ -457,8 +449,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a backup from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform backup updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetBackup`, and
-   * systems are expected to put that etag in the request to `UpdateBackup` to ensure that their
-   * change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateBackup` or `DeleteBackup` to
+   * ensure that their change will be applied to the same version of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -470,8 +462,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    * simultaneous updates of a backup from overwriting each other. It is strongly suggested that
    * systems make use of the `etag` in the read-modify-write cycle to perform backup updates in
    * order to avoid race conditions: An `etag` is returned in the response to `GetBackup`, and
-   * systems are expected to put that etag in the request to `UpdateBackup` to ensure that their
-   * change will be applied to the same version.
+   * systems are expected to put that etag in the request to `UpdateBackup` or `DeleteBackup` to
+   * ensure that their change will be applied to the same version of the resource.
    * @param etag etag or {@code null} for none
    */
   public Backup setEtag(java.lang.String etag) {
@@ -567,11 +559,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The age (in days) after which this Backup will be automatically deleted. If not specified at
-   * Backup creation time, this value is inherited from the parent BackupPlan's
-   * retention_policy.backup_retain_days value. Once a Backup is created, this value may only be
-   * increased. This must be an integer value >= 0. If 0, no automatic deletion will occur for this
-   * Backup. If not 0, this must be >= delete_lock_days. Default: inherited from BackupPlan.
+   * The age (in days) after which this Backup will be automatically deleted. Must be an integer
+   * value >= 0: - If 0, no automatic deletion will occur for this Backup. - If not 0, this must be
+   * >= delete_lock_days. Once a Backup is created, this value may only be increased. Defaults to
+   * the parent BackupPlan's backup_retain_days value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetainDays() {
@@ -579,11 +570,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The age (in days) after which this Backup will be automatically deleted. If not specified at
-   * Backup creation time, this value is inherited from the parent BackupPlan's
-   * retention_policy.backup_retain_days value. Once a Backup is created, this value may only be
-   * increased. This must be an integer value >= 0. If 0, no automatic deletion will occur for this
-   * Backup. If not 0, this must be >= delete_lock_days. Default: inherited from BackupPlan.
+   * The age (in days) after which this Backup will be automatically deleted. Must be an integer
+   * value >= 0: - If 0, no automatic deletion will occur for this Backup. - If not 0, this must be
+   * >= delete_lock_days. Once a Backup is created, this value may only be increased. Defaults to
+   * the parent BackupPlan's backup_retain_days value.
    * @param retainDays retainDays or {@code null} for none
    */
   public Backup setRetainDays(java.lang.Integer retainDays) {
@@ -700,7 +690,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
    * @return value or {@code null} for none
    */
@@ -709,7 +699,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
    * @param uid uid or {@code null} for none
    */
@@ -719,8 +709,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Backup resource was last updated - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Backup resource was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -728,8 +717,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this Backup resource was last updated - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this Backup resource was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Backup setUpdateTime(String updateTime) {

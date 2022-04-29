@@ -57,8 +57,7 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   /**
    * Defines the behavior for handling the situation where sets of namespaced resources being
    * restored already exist in the target cluster. This MUST be set to a value other than
-   * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED if any namespaced restoration is configured via
-   * namespaced_resource_restore_scope .
+   * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,8 +159,7 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   /**
    * Defines the behavior for handling the situation where sets of namespaced resources being
    * restored already exist in the target cluster. This MUST be set to a value other than
-   * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED if any namespaced restoration is configured via
-   * namespaced_resource_restore_scope .
+   * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespacedResourceRestoreMode() {
@@ -171,8 +169,7 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   /**
    * Defines the behavior for handling the situation where sets of namespaced resources being
    * restored already exist in the target cluster. This MUST be set to a value other than
-   * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED if any namespaced restoration is configured via
-   * namespaced_resource_restore_scope .
+   * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
    * @param namespacedResourceRestoreMode namespacedResourceRestoreMode or {@code null} for none
    */
   public RestoreConfig setNamespacedResourceRestoreMode(java.lang.String namespacedResourceRestoreMode) {

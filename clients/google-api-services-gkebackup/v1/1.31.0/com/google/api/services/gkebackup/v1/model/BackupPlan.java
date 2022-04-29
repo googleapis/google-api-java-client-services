@@ -45,15 +45,14 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The source cluster from which Backups will be created via this BackupPlan.
-   * Possible formats: 1. projects/locations/clusters 2. projects/zones/clusters
+   * Valid formats: - projects/locations/clusters - projects/zones/clusters
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cluster;
 
   /**
-   * Output only. [Output Only] The timestamp when this BackupPlan resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this BackupPlan resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +60,9 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * This flag indicates whether this BackupPlan has been deactivated. Setting this field to True
-   * locks the BackupPlan such that no further updates will be allowed, including the deactivated
-   * field. It also prevents any new Backups from being created via this BackupPlan (including
-   * scheduled Backups). Default: False
+   * locks the BackupPlan such that no further updates will be allowed (except deletes), including
+   * the deactivated field itself. It also prevents any new Backups from being created via this
+   * BackupPlan (including scheduled Backups). Default: False
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +81,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    * that systems make use of the 'etag' in the read-modify-write cycle to perform BackupPlan
    * updates in order to avoid race conditions: An `etag` is returned in the response to
    * `GetBackupPlan`, and systems are expected to put that etag in the request to `UpdateBackupPlan`
-   * to ensure that their change will be applied to the same version.
+   * or `DeleteBackupPlan` to ensure that their change will be applied to the same version of the
+   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,16 +96,15 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. [Output Only] The full name of the BackupPlan resource. Format:
-   * projects/locations/backupPlans
+   * Output only. The full name of the BackupPlan resource. Format: projects/locations/backupPlans
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Represents the number of Kubernetes Pods backed up in the last
-   * successful Backup created underneath this BackupPlan.
+   * Output only. The number of Kubernetes Pods backed up in the last successful Backup created via
+   * this BackupPlan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +118,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private RetentionPolicy retentionPolicy;
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * The value may be {@code null}.
    */
@@ -127,8 +126,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Output only. [Output Only] The timestamp when this BackupPlan resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this BackupPlan resource was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +168,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The source cluster from which Backups will be created via this BackupPlan.
-   * Possible formats: 1. projects/locations/clusters 2. projects/zones/clusters
+   * Valid formats: - projects/locations/clusters - projects/zones/clusters
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -179,7 +177,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The source cluster from which Backups will be created via this BackupPlan.
-   * Possible formats: 1. projects/locations/clusters 2. projects/zones/clusters
+   * Valid formats: - projects/locations/clusters - projects/zones/clusters
    * @param cluster cluster or {@code null} for none
    */
   public BackupPlan setCluster(java.lang.String cluster) {
@@ -188,8 +186,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this BackupPlan resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this BackupPlan resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -197,8 +194,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this BackupPlan resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this BackupPlan resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public BackupPlan setCreateTime(String createTime) {
@@ -208,9 +204,9 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * This flag indicates whether this BackupPlan has been deactivated. Setting this field to True
-   * locks the BackupPlan such that no further updates will be allowed, including the deactivated
-   * field. It also prevents any new Backups from being created via this BackupPlan (including
-   * scheduled Backups). Default: False
+   * locks the BackupPlan such that no further updates will be allowed (except deletes), including
+   * the deactivated field itself. It also prevents any new Backups from being created via this
+   * BackupPlan (including scheduled Backups). Default: False
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeactivated() {
@@ -219,9 +215,9 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * This flag indicates whether this BackupPlan has been deactivated. Setting this field to True
-   * locks the BackupPlan such that no further updates will be allowed, including the deactivated
-   * field. It also prevents any new Backups from being created via this BackupPlan (including
-   * scheduled Backups). Default: False
+   * locks the BackupPlan such that no further updates will be allowed (except deletes), including
+   * the deactivated field itself. It also prevents any new Backups from being created via this
+   * BackupPlan (including scheduled Backups). Default: False
    * @param deactivated deactivated or {@code null} for none
    */
   public BackupPlan setDeactivated(java.lang.Boolean deactivated) {
@@ -252,7 +248,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    * that systems make use of the 'etag' in the read-modify-write cycle to perform BackupPlan
    * updates in order to avoid race conditions: An `etag` is returned in the response to
    * `GetBackupPlan`, and systems are expected to put that etag in the request to `UpdateBackupPlan`
-   * to ensure that their change will be applied to the same version.
+   * or `DeleteBackupPlan` to ensure that their change will be applied to the same version of the
+   * resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -265,7 +262,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    * that systems make use of the 'etag' in the read-modify-write cycle to perform BackupPlan
    * updates in order to avoid race conditions: An `etag` is returned in the response to
    * `GetBackupPlan`, and systems are expected to put that etag in the request to `UpdateBackupPlan`
-   * to ensure that their change will be applied to the same version.
+   * or `DeleteBackupPlan` to ensure that their change will be applied to the same version of the
+   * resource.
    * @param etag etag or {@code null} for none
    */
   public BackupPlan setEtag(java.lang.String etag) {
@@ -291,8 +289,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The full name of the BackupPlan resource. Format:
-   * projects/locations/backupPlans
+   * Output only. The full name of the BackupPlan resource. Format: projects/locations/backupPlans
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -300,8 +297,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The full name of the BackupPlan resource. Format:
-   * projects/locations/backupPlans
+   * Output only. The full name of the BackupPlan resource. Format: projects/locations/backupPlans
    * @param name name or {@code null} for none
    */
   public BackupPlan setName(java.lang.String name) {
@@ -310,8 +306,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Represents the number of Kubernetes Pods backed up in the last
-   * successful Backup created underneath this BackupPlan.
+   * Output only. The number of Kubernetes Pods backed up in the last successful Backup created via
+   * this BackupPlan.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProtectedPodCount() {
@@ -319,8 +315,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Represents the number of Kubernetes Pods backed up in the last
-   * successful Backup created underneath this BackupPlan.
+   * Output only. The number of Kubernetes Pods backed up in the last successful Backup created via
+   * this BackupPlan.
    * @param protectedPodCount protectedPodCount or {@code null} for none
    */
   public BackupPlan setProtectedPodCount(java.lang.Integer protectedPodCount) {
@@ -346,7 +342,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @return value or {@code null} for none
    */
@@ -355,7 +351,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @param uid uid or {@code null} for none
    */
@@ -365,8 +361,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this BackupPlan resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this BackupPlan resource was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -374,8 +369,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this BackupPlan resource was last updated - can
-   * be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this BackupPlan resource was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public BackupPlan setUpdateTime(String updateTime) {

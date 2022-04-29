@@ -30,16 +30,14 @@ package com.google.api.services.gkebackup.v1.model;
 public final class VolumeRestore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The timestamp when the associated underlying volume restoration
-   * completed - can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when the associated underlying volume restoration completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String completeTime;
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeRestore resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeRestore resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +47,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
    * Output only. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of a volume restore from overwriting each other. It is strongly suggested
    * that systems make use of the `etag` in the read-modify-write cycle to perform volume restore
-   * updates in order to avoid race conditions: An `etag` is returned in the response to
-   * `GetVolumeRestore', and systems are expected to put that etag in the request to
-   * `UpdateVolumeRestore` to ensure that their change will be applied to the same version.
+   * updates in order to avoid race conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,15 +55,14 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Full name of the VolumeRestore resource. Format:
-   * projects/locations/restorePlans/restores/volumeRestores Note that the last segment of the name
-   * will have the format: 'pvc-'.
+   * projects/locations/restorePlans/restores/volumeRestores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The current state of this VolumeRestore
+   * Output only. The current state of this VolumeRestore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +83,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   private NamespacedName targetPvc;
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * The value may be {@code null}.
    */
@@ -96,8 +91,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   private java.lang.String uid;
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeRestore resource was last updated -
-   * can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeRestore resource was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +99,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The full name of the VolumeBackup from which the volume will be restored. Format:
-   * projects/locations/backupPlans/backups/volumeBackups
+   * projects/locations/backupPlans/backups/volumeBackups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +107,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. A storage system-specific opaque handler to the underlying volume created for the
-   * target PVC from the volume backup. This field is interpreted by the volume backup and restore
-   * drivers running in the GKE cluster and not by the service.
+   * target PVC from the volume backup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +121,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   private java.lang.String volumeType;
 
   /**
-   * Output only. [Output Only] The timestamp when the associated underlying volume restoration
-   * completed - can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when the associated underlying volume restoration completed.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -137,8 +129,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] The timestamp when the associated underlying volume restoration
-   * completed - can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when the associated underlying volume restoration completed.
    * @param completeTime completeTime or {@code null} for none
    */
   public VolumeRestore setCompleteTime(String completeTime) {
@@ -147,8 +138,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeRestore resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeRestore resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -156,8 +146,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeRestore resource was created - can be
-   * converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeRestore resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public VolumeRestore setCreateTime(String createTime) {
@@ -169,9 +158,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
    * Output only. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of a volume restore from overwriting each other. It is strongly suggested
    * that systems make use of the `etag` in the read-modify-write cycle to perform volume restore
-   * updates in order to avoid race conditions: An `etag` is returned in the response to
-   * `GetVolumeRestore', and systems are expected to put that etag in the request to
-   * `UpdateVolumeRestore` to ensure that their change will be applied to the same version.
+   * updates in order to avoid race conditions.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -182,9 +169,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
    * Output only. `etag` is used for optimistic concurrency control as a way to help prevent
    * simultaneous updates of a volume restore from overwriting each other. It is strongly suggested
    * that systems make use of the `etag` in the read-modify-write cycle to perform volume restore
-   * updates in order to avoid race conditions: An `etag` is returned in the response to
-   * `GetVolumeRestore', and systems are expected to put that etag in the request to
-   * `UpdateVolumeRestore` to ensure that their change will be applied to the same version.
+   * updates in order to avoid race conditions.
    * @param etag etag or {@code null} for none
    */
   public VolumeRestore setEtag(java.lang.String etag) {
@@ -194,8 +179,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Full name of the VolumeRestore resource. Format:
-   * projects/locations/restorePlans/restores/volumeRestores Note that the last segment of the name
-   * will have the format: 'pvc-'.
+   * projects/locations/restorePlans/restores/volumeRestores.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -204,8 +188,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Full name of the VolumeRestore resource. Format:
-   * projects/locations/restorePlans/restores/volumeRestores Note that the last segment of the name
-   * will have the format: 'pvc-'.
+   * projects/locations/restorePlans/restores/volumeRestores.
    * @param name name or {@code null} for none
    */
   public VolumeRestore setName(java.lang.String name) {
@@ -214,7 +197,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The current state of this VolumeRestore
+   * Output only. The current state of this VolumeRestore.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -222,7 +205,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The current state of this VolumeRestore
+   * Output only. The current state of this VolumeRestore.
    * @param state state or {@code null} for none
    */
   public VolumeRestore setState(java.lang.String state) {
@@ -265,7 +248,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @return value or {@code null} for none
    */
@@ -274,7 +257,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server generated global unique identifier of
+   * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * @param uid uid or {@code null} for none
    */
@@ -284,8 +267,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeRestore resource was last updated -
-   * can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeRestore resource was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -293,8 +275,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] The timestamp when this VolumeRestore resource was last updated -
-   * can be converted to and from [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * Output only. The timestamp when this VolumeRestore resource was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public VolumeRestore setUpdateTime(String updateTime) {
@@ -304,7 +285,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The full name of the VolumeBackup from which the volume will be restored. Format:
-   * projects/locations/backupPlans/backups/volumeBackups
+   * projects/locations/backupPlans/backups/volumeBackups.
    * @return value or {@code null} for none
    */
   public java.lang.String getVolumeBackup() {
@@ -313,7 +294,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The full name of the VolumeBackup from which the volume will be restored. Format:
-   * projects/locations/backupPlans/backups/volumeBackups
+   * projects/locations/backupPlans/backups/volumeBackups.
    * @param volumeBackup volumeBackup or {@code null} for none
    */
   public VolumeRestore setVolumeBackup(java.lang.String volumeBackup) {
@@ -323,8 +304,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. A storage system-specific opaque handler to the underlying volume created for the
-   * target PVC from the volume backup. This field is interpreted by the volume backup and restore
-   * drivers running in the GKE cluster and not by the service.
+   * target PVC from the volume backup.
    * @return value or {@code null} for none
    */
   public java.lang.String getVolumeHandle() {
@@ -333,8 +313,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. A storage system-specific opaque handler to the underlying volume created for the
-   * target PVC from the volume backup. This field is interpreted by the volume backup and restore
-   * drivers running in the GKE cluster and not by the service.
+   * target PVC from the volume backup.
    * @param volumeHandle volumeHandle or {@code null} for none
    */
   public VolumeRestore setVolumeHandle(java.lang.String volumeHandle) {

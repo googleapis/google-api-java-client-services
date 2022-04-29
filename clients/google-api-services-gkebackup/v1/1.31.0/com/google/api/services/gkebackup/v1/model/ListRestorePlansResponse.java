@@ -30,8 +30,8 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ListRestorePlansResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListRestorePlans` call to retrieve
-   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * A token which may be sent as page_token in a subsequent `ListRestorePlans` call to retrieve the
+   * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class ListRestorePlansResponse extends com.google.api.client.json.G
   private java.lang.String nextPageToken;
 
   /**
-   * The list of RestorePlans.
+   * The list of RestorePlans matching the given criteria.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class ListRestorePlansResponse extends com.google.api.client.json.G
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListRestorePlans` call to retrieve
-   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * A token which may be sent as page_token in a subsequent `ListRestorePlans` call to retrieve the
+   * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * @return value or {@code null} for none
    */
@@ -63,8 +63,8 @@ public final class ListRestorePlansResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListRestorePlans` call to retrieve
-   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * A token which may be sent as page_token in a subsequent `ListRestorePlans` call to retrieve the
+   * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class ListRestorePlansResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The list of RestorePlans.
+   * The list of RestorePlans matching the given criteria.
    * @return value or {@code null} for none
    */
   public java.util.List<RestorePlan> getRestorePlans() {
@@ -82,7 +82,7 @@ public final class ListRestorePlansResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The list of RestorePlans.
+   * The list of RestorePlans matching the given criteria.
    * @param restorePlans restorePlans or {@code null} for none
    */
   public ListRestorePlansResponse setRestorePlans(java.util.List<RestorePlan> restorePlans) {

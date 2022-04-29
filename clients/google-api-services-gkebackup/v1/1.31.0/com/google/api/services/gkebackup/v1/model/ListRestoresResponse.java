@@ -30,7 +30,7 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ListRestoresResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListRestores` call to retrieve the
+   * A token which may be sent as page_token in a subsequent `ListRestores` call to retrieve the
    * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class ListRestoresResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * The list of restore resources within the parent.
+   * The list of Restores matching the given criteria.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class ListRestoresResponse extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListRestores` call to retrieve the
+   * A token which may be sent as page_token in a subsequent `ListRestores` call to retrieve the
    * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * @return value or {@code null} for none
@@ -63,7 +63,7 @@ public final class ListRestoresResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token which may be sent as `page_token` in a subsequent `ListRestores` call to retrieve the
+   * A token which may be sent as page_token in a subsequent `ListRestores` call to retrieve the
    * next page of results. If this field is omitted or empty, then there are no more results to
    * return.
    * @param nextPageToken nextPageToken or {@code null} for none
@@ -74,7 +74,7 @@ public final class ListRestoresResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The list of restore resources within the parent.
+   * The list of Restores matching the given criteria.
    * @return value or {@code null} for none
    */
   public java.util.List<Restore> getRestores() {
@@ -82,7 +82,7 @@ public final class ListRestoresResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The list of restore resources within the parent.
+   * The list of Restores matching the given criteria.
    * @param restores restores or {@code null} for none
    */
   public ListRestoresResponse setRestores(java.util.List<Restore> restores) {

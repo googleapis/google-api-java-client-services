@@ -44,6 +44,13 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   private ConfigManagementMembershipState configmanagement;
 
   /**
+   * Identity Service-specific state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceMembershipState identityservice;
+
+  /**
    * Service Mesh-specific state.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   public MembershipFeatureState setConfigmanagement(ConfigManagementMembershipState configmanagement) {
     this.configmanagement = configmanagement;
+    return this;
+  }
+
+  /**
+   * Identity Service-specific state.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceMembershipState getIdentityservice() {
+    return identityservice;
+  }
+
+  /**
+   * Identity Service-specific state.
+   * @param identityservice identityservice or {@code null} for none
+   */
+  public MembershipFeatureState setIdentityservice(IdentityServiceMembershipState identityservice) {
+    this.identityservice = identityservice;
     return this;
   }
 

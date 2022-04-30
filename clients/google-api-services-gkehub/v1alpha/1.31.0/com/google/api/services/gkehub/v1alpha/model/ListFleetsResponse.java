@@ -44,7 +44,7 @@ public final class ListFleetsResponse extends com.google.api.client.json.Generic
 
   /**
    * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * there are no subsequent pages. The token is only valid for 1h.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class ListFleetsResponse extends com.google.api.client.json.Generic
 
   /**
    * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * there are no subsequent pages. The token is only valid for 1h.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,7 +78,7 @@ public final class ListFleetsResponse extends com.google.api.client.json.Generic
 
   /**
    * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * there are no subsequent pages. The token is only valid for 1h.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListFleetsResponse setNextPageToken(java.lang.String nextPageToken) {

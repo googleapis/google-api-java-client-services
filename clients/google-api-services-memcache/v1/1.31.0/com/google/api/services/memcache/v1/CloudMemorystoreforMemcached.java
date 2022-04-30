@@ -445,14 +445,14 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
-       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -460,7 +460,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {
@@ -1548,6 +1548,152 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Reschedules upcoming maintenance event.
+         *
+         * Create a request for the method "instances.rescheduleMaintenance".
+         *
+         * This request holds the parameters needed by the memcache server.  After setting any optional
+         * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param instance Required. Memcache instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+         *        `location_id` refers to a GCP region.
+         * @param content the {@link com.google.api.services.memcache.v1.model.RescheduleMaintenanceRequest}
+         * @return the request
+         */
+        public RescheduleMaintenance rescheduleMaintenance(java.lang.String instance, com.google.api.services.memcache.v1.model.RescheduleMaintenanceRequest content) throws java.io.IOException {
+          RescheduleMaintenance result = new RescheduleMaintenance(instance, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RescheduleMaintenance extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+instance}:rescheduleMaintenance";
+
+          private final java.util.regex.Pattern INSTANCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Reschedules upcoming maintenance event.
+           *
+           * Create a request for the method "instances.rescheduleMaintenance".
+           *
+           * This request holds the parameters needed by the the memcache server.  After setting any
+           * optional parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the
+           * remote operation. <p> {@link RescheduleMaintenance#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param instance Required. Memcache instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+         *        `location_id` refers to a GCP region.
+           * @param content the {@link com.google.api.services.memcache.v1.model.RescheduleMaintenanceRequest}
+           * @since 1.13
+           */
+          protected RescheduleMaintenance(java.lang.String instance, com.google.api.services.memcache.v1.model.RescheduleMaintenanceRequest content) {
+            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1.model.Operation.class);
+            this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+                  "Parameter instance must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public RescheduleMaintenance set$Xgafv(java.lang.String $Xgafv) {
+            return (RescheduleMaintenance) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RescheduleMaintenance setAccessToken(java.lang.String accessToken) {
+            return (RescheduleMaintenance) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RescheduleMaintenance setAlt(java.lang.String alt) {
+            return (RescheduleMaintenance) super.setAlt(alt);
+          }
+
+          @Override
+          public RescheduleMaintenance setCallback(java.lang.String callback) {
+            return (RescheduleMaintenance) super.setCallback(callback);
+          }
+
+          @Override
+          public RescheduleMaintenance setFields(java.lang.String fields) {
+            return (RescheduleMaintenance) super.setFields(fields);
+          }
+
+          @Override
+          public RescheduleMaintenance setKey(java.lang.String key) {
+            return (RescheduleMaintenance) super.setKey(key);
+          }
+
+          @Override
+          public RescheduleMaintenance setOauthToken(java.lang.String oauthToken) {
+            return (RescheduleMaintenance) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RescheduleMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RescheduleMaintenance) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RescheduleMaintenance setQuotaUser(java.lang.String quotaUser) {
+            return (RescheduleMaintenance) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RescheduleMaintenance setUploadType(java.lang.String uploadType) {
+            return (RescheduleMaintenance) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RescheduleMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RescheduleMaintenance) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Memcache instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String instance;
+
+          /** Required. Memcache instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
+         to a GCP region.
+           */
+          public java.lang.String getInstance() {
+            return instance;
+          }
+
+          /**
+           * Required. Memcache instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public RescheduleMaintenance setInstance(java.lang.String instance) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+                  "Parameter instance must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.instance = instance;
+            return this;
+          }
+
+          @Override
+          public RescheduleMaintenance set(String parameterName, Object value) {
+            return (RescheduleMaintenance) super.set(parameterName, value);
           }
         }
         /**

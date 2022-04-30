@@ -46,6 +46,14 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   private java.lang.Long lastRefreshTime;
 
   /**
+   * [Optional] Max staleness of data that could be returned when materizlized view is queried
+   * (formatted as Google SQL Interval type).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maxStaleness;
+
+  /**
    * [Required] A query whose result is persisted.
    * The value may be {@code null}.
    */
@@ -95,6 +103,55 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
    */
   public MaterializedViewDefinition setLastRefreshTime(java.lang.Long lastRefreshTime) {
     this.lastRefreshTime = lastRefreshTime;
+    return this;
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when materizlized view is queried
+   * (formatted as Google SQL Interval type).
+   * @see #decodeMaxStaleness()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaxStaleness() {
+    return maxStaleness;
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when materizlized view is queried
+   * (formatted as Google SQL Interval type).
+   * @see #getMaxStaleness()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeMaxStaleness() {
+    return com.google.api.client.util.Base64.decodeBase64(maxStaleness);
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when materizlized view is queried
+   * (formatted as Google SQL Interval type).
+   * @see #encodeMaxStaleness()
+   * @param maxStaleness maxStaleness or {@code null} for none
+   */
+  public MaterializedViewDefinition setMaxStaleness(java.lang.String maxStaleness) {
+    this.maxStaleness = maxStaleness;
+    return this;
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when materizlized view is queried
+   * (formatted as Google SQL Interval type).
+   * @see #setMaxStaleness()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public MaterializedViewDefinition encodeMaxStaleness(byte[] maxStaleness) {
+    this.maxStaleness = com.google.api.client.util.Base64.encodeBase64URLSafeString(maxStaleness);
     return this;
   }
 

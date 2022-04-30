@@ -107,6 +107,13 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.Long lastModifiedTime;
 
   /**
+   * Optional. Remote function specific options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoteFunctionOptions remoteFunctionOptions;
+
+  /**
    * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return
    * table type is inferred from definition_body at query time in each query that references this
    * routine. If present, then the columns in the evaluated table result will be cast to match the
@@ -323,6 +330,23 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setLastModifiedTime(java.lang.Long lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
+    return this;
+  }
+
+  /**
+   * Optional. Remote function specific options.
+   * @return value or {@code null} for none
+   */
+  public RemoteFunctionOptions getRemoteFunctionOptions() {
+    return remoteFunctionOptions;
+  }
+
+  /**
+   * Optional. Remote function specific options.
+   * @param remoteFunctionOptions remoteFunctionOptions or {@code null} for none
+   */
+  public Routine setRemoteFunctionOptions(RemoteFunctionOptions remoteFunctionOptions) {
+    this.remoteFunctionOptions = remoteFunctionOptions;
     return this;
   }
 

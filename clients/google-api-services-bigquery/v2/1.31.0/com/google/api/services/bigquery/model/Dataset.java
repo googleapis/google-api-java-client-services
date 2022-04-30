@@ -185,7 +185,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean satisfiesPZS;
+  private java.lang.Boolean satisfiesPzs;
 
   /**
    * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
@@ -553,16 +553,16 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    * [Output-only] Reserved for future use.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getSatisfiesPZS() {
-    return satisfiesPZS;
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
   }
 
   /**
    * [Output-only] Reserved for future use.
-   * @param satisfiesPZS satisfiesPZS or {@code null} for none
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
-  public Dataset setSatisfiesPZS(java.lang.Boolean satisfiesPZS) {
-    this.satisfiesPZS = satisfiesPZS;
+  public Dataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

@@ -335,25 +335,51 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
-           * match the call that provided the page token.
+           * Optional. The maximum number of fleets to return. The service may return fewer than
+           * this value. If unspecified, at most 200 fleets will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of fleets to return. The service may return fewer than this value. If
+         unspecified, at most 200 fleets will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of fleets to return. The service may return fewer than
+           * this value. If unspecified, at most 200 fleets will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListFleets` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFleets` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListFleets` call. Provide this to retrieve the subsequent
-         page. When paginating, all other parameters provided to `ListFleets` must match the call that
-         provided the page token.
+          /** Optional. A page token, received from a previous `ListFleets` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListFleets` must match the call
+         that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
-           * match the call that provided the page token.
+           * Optional. A page token, received from a previous `ListFleets` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFleets` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -2791,25 +2817,51 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
-           * match the call that provided the page token.
+           * Optional. The maximum number of fleets to return. The service may return fewer than
+           * this value. If unspecified, at most 200 fleets will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of fleets to return. The service may return fewer than this value. If
+         unspecified, at most 200 fleets will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of fleets to return. The service may return fewer than
+           * this value. If unspecified, at most 200 fleets will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListFleets` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFleets` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListFleets` call. Provide this to retrieve the subsequent
-         page. When paginating, all other parameters provided to `ListFleets` must match the call that
-         provided the page token.
+          /** Optional. A page token, received from a previous `ListFleets` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListFleets` must match the call
+         that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A page token, received from a previous `ListFleets` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to `ListFleets` must
-           * match the call that provided the page token.
+           * Optional. A page token, received from a previous `ListFleets` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFleets` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

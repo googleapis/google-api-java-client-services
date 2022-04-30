@@ -17,7 +17,8 @@
 package com.google.api.services.gkehub.v1.model;
 
 /**
- * MembershipFeatureSpec contains configuration information for a single Membership.
+ * Configuration of an auth method for a member/cluster. Only one authentication method (e.g., OIDC
+ * and LDAP) can be set per AuthMethod.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,88 +28,88 @@ package com.google.api.services.gkehub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MembershipFeatureSpec extends com.google.api.client.json.GenericJson {
+public final class IdentityServiceAuthMethod extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config Management-specific spec.
+   * Identifier for auth config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ConfigManagementMembershipSpec configmanagement;
+  private java.lang.String name;
 
   /**
-   * Identity Service-specific spec.
+   * OIDC specific configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private IdentityServiceMembershipSpec identityservice;
+  private IdentityServiceOidcConfig oidcConfig;
 
   /**
-   * Anthos Service Mesh-specific spec
+   * Proxy server address to use for auth method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ServiceMeshMembershipSpec mesh;
+  private java.lang.String proxy;
 
   /**
-   * Config Management-specific spec.
+   * Identifier for auth config.
    * @return value or {@code null} for none
    */
-  public ConfigManagementMembershipSpec getConfigmanagement() {
-    return configmanagement;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Config Management-specific spec.
-   * @param configmanagement configmanagement or {@code null} for none
+   * Identifier for auth config.
+   * @param name name or {@code null} for none
    */
-  public MembershipFeatureSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
-    this.configmanagement = configmanagement;
+  public IdentityServiceAuthMethod setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Identity Service-specific spec.
+   * OIDC specific configuration.
    * @return value or {@code null} for none
    */
-  public IdentityServiceMembershipSpec getIdentityservice() {
-    return identityservice;
+  public IdentityServiceOidcConfig getOidcConfig() {
+    return oidcConfig;
   }
 
   /**
-   * Identity Service-specific spec.
-   * @param identityservice identityservice or {@code null} for none
+   * OIDC specific configuration.
+   * @param oidcConfig oidcConfig or {@code null} for none
    */
-  public MembershipFeatureSpec setIdentityservice(IdentityServiceMembershipSpec identityservice) {
-    this.identityservice = identityservice;
+  public IdentityServiceAuthMethod setOidcConfig(IdentityServiceOidcConfig oidcConfig) {
+    this.oidcConfig = oidcConfig;
     return this;
   }
 
   /**
-   * Anthos Service Mesh-specific spec
+   * Proxy server address to use for auth method.
    * @return value or {@code null} for none
    */
-  public ServiceMeshMembershipSpec getMesh() {
-    return mesh;
+  public java.lang.String getProxy() {
+    return proxy;
   }
 
   /**
-   * Anthos Service Mesh-specific spec
-   * @param mesh mesh or {@code null} for none
+   * Proxy server address to use for auth method.
+   * @param proxy proxy or {@code null} for none
    */
-  public MembershipFeatureSpec setMesh(ServiceMeshMembershipSpec mesh) {
-    this.mesh = mesh;
+  public IdentityServiceAuthMethod setProxy(java.lang.String proxy) {
+    this.proxy = proxy;
     return this;
   }
 
   @Override
-  public MembershipFeatureSpec set(String fieldName, Object value) {
-    return (MembershipFeatureSpec) super.set(fieldName, value);
+  public IdentityServiceAuthMethod set(String fieldName, Object value) {
+    return (IdentityServiceAuthMethod) super.set(fieldName, value);
   }
 
   @Override
-  public MembershipFeatureSpec clone() {
-    return (MembershipFeatureSpec) super.clone();
+  public IdentityServiceAuthMethod clone() {
+    return (IdentityServiceAuthMethod) super.clone();
   }
 
 }

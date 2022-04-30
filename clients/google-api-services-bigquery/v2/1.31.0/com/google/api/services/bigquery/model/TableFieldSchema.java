@@ -41,7 +41,20 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String collationSpec;
+  private java.lang.String collation;
+
+  /**
+   * Optional. A SQL expression to specify the default value for this field. It can only be set for
+   * top level fields (columns). You can use struct or array expression to specify default value for
+   * the entire struct or array. The valid SQL expressions are: - Literals for all data types,
+   * including STRUCT and ARRAY. - Following functions: - CURRENT_TIMESTAMP - CURRENT_TIME -
+   * CURRENT_DATE - CURRENT_DATETIME - GENERATE_UUID - RAND - SESSION_USER - ST_GEOGPOINT - Struct
+   * or array composed with the above allowed functions, for example, [CURRENT_DATE(), DATE
+   * '2020-01-01']
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultValueExpression;
 
   /**
    * [Optional] The field description. The maximum length is 1,024 characters.
@@ -148,16 +161,45 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    * Optional. Collation specification of the field. It only can be set on string type field.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCollationSpec() {
-    return collationSpec;
+  public java.lang.String getCollation() {
+    return collation;
   }
 
   /**
    * Optional. Collation specification of the field. It only can be set on string type field.
-   * @param collationSpec collationSpec or {@code null} for none
+   * @param collation collation or {@code null} for none
    */
-  public TableFieldSchema setCollationSpec(java.lang.String collationSpec) {
-    this.collationSpec = collationSpec;
+  public TableFieldSchema setCollation(java.lang.String collation) {
+    this.collation = collation;
+    return this;
+  }
+
+  /**
+   * Optional. A SQL expression to specify the default value for this field. It can only be set for
+   * top level fields (columns). You can use struct or array expression to specify default value for
+   * the entire struct or array. The valid SQL expressions are: - Literals for all data types,
+   * including STRUCT and ARRAY. - Following functions: - CURRENT_TIMESTAMP - CURRENT_TIME -
+   * CURRENT_DATE - CURRENT_DATETIME - GENERATE_UUID - RAND - SESSION_USER - ST_GEOGPOINT - Struct
+   * or array composed with the above allowed functions, for example, [CURRENT_DATE(), DATE
+   * '2020-01-01']
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultValueExpression() {
+    return defaultValueExpression;
+  }
+
+  /**
+   * Optional. A SQL expression to specify the default value for this field. It can only be set for
+   * top level fields (columns). You can use struct or array expression to specify default value for
+   * the entire struct or array. The valid SQL expressions are: - Literals for all data types,
+   * including STRUCT and ARRAY. - Following functions: - CURRENT_TIMESTAMP - CURRENT_TIME -
+   * CURRENT_DATE - CURRENT_DATETIME - GENERATE_UUID - RAND - SESSION_USER - ST_GEOGPOINT - Struct
+   * or array composed with the above allowed functions, for example, [CURRENT_DATE(), DATE
+   * '2020-01-01']
+   * @param defaultValueExpression defaultValueExpression or {@code null} for none
+   */
+  public TableFieldSchema setDefaultValueExpression(java.lang.String defaultValueExpression) {
+    this.defaultValueExpression = defaultValueExpression;
     return this;
   }
 

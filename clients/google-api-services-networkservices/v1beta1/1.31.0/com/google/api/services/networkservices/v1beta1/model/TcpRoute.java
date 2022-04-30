@@ -44,15 +44,6 @@ public final class TcpRoute extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional. Gateways defines a list of gateways this TcpRoute is attached to, as one of the
-   * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> gateways;
-
-  /**
    * Optional. Set of label tags associated with the TcpRoute resource.
    * The value may be {@code null}.
    */
@@ -129,27 +120,6 @@ public final class TcpRoute extends com.google.api.client.json.GenericJson {
    */
   public TcpRoute setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * Optional. Gateways defines a list of gateways this TcpRoute is attached to, as one of the
-   * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getGateways() {
-    return gateways;
-  }
-
-  /**
-   * Optional. Gateways defines a list of gateways this TcpRoute is attached to, as one of the
-   * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
-   * @param gateways gateways or {@code null} for none
-   */
-  public TcpRoute setGateways(java.util.List<java.lang.String> gateways) {
-    this.gateways = gateways;
     return this;
   }
 

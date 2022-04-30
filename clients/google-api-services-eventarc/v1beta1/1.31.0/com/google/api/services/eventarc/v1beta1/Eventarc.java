@@ -20,7 +20,7 @@ package com.google.api.services.eventarc.v1beta1;
  * Service definition for Eventarc (v1beta1).
  *
  * <p>
- * 
+ * Build event-driven applications on Google Cloud Platform.
  * </p>
  *
  * <p>

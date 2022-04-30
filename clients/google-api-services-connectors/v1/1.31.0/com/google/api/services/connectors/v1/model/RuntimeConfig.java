@@ -85,9 +85,7 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String schemaGcsBucket;
 
   /**
-   * Output only. The name of the Service Directory service name. Used for Private Harpoon to
-   * resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-
-   * central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
+   * Output only. The name of the Service Directory service name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,9 +226,7 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The name of the Service Directory service name. Used for Private Harpoon to
-   * resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-
-   * central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
+   * Output only. The name of the Service Directory service name.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceDirectory() {
@@ -238,9 +234,7 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The name of the Service Directory service name. Used for Private Harpoon to
-   * resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-
-   * central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
+   * Output only. The name of the Service Directory service name.
    * @param serviceDirectory serviceDirectory or {@code null} for none
    */
   public RuntimeConfig setServiceDirectory(java.lang.String serviceDirectory) {

@@ -30,6 +30,15 @@ package com.google.api.services.cloudfunctions.v2beta.model;
 public final class EventTrigger extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel
+   * to receive events from Eventarc SaaS partners.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channel;
+
+  /**
    * Criteria used to filter events.
    * The value may be {@code null}.
    */
@@ -93,6 +102,27 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerRegion;
+
+  /**
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel
+   * to receive events from Eventarc SaaS partners.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannel() {
+    return channel;
+  }
+
+  /**
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel
+   * to receive events from Eventarc SaaS partners.
+   * @param channel channel or {@code null} for none
+   */
+  public EventTrigger setChannel(java.lang.String channel) {
+    this.channel = channel;
+    return this;
+  }
 
   /**
    * Criteria used to filter events.

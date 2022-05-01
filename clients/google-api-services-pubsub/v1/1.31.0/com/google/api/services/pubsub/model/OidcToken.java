@@ -18,7 +18,10 @@ package com.google.api.services.pubsub.model;
 
 /**
  * Contains information needed for generating an [OpenID Connect
- * token](https://developers.google.com/identity/protocols/OpenIDConnect).
+ * token](https://developers.google.com/identity/protocols/OpenIDConnect). [Service account
+ * email](https://cloud.google.com/iam/docs/service-accounts) used for generating the OIDC token.
+ * For more information on setting up authentication, see [Push
+ * subscriptions](https://cloud.google.com/pubsub/docs/push).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:
@@ -42,9 +45,6 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
   private java.lang.String audience;
 
   /**
-   * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for
-   * generating the OIDC token. See [Setting up push
-   * authentication](/pubsub/docs/push#setting_up_for_push_authentication) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,9 +76,6 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for
-   * generating the OIDC token. See [Setting up push
-   * authentication](/pubsub/docs/push#setting_up_for_push_authentication) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmail() {
@@ -86,9 +83,6 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for
-   * generating the OIDC token. See [Setting up push
-   * authentication](/pubsub/docs/push#setting_up_for_push_authentication) for more details.
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */
   public OidcToken setServiceAccountEmail(java.lang.String serviceAccountEmail) {

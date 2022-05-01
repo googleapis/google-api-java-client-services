@@ -65,7 +65,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
    * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
    * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
    * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
-   * specify the same `ordering_key` value.
+   * specify the same `ordering_key` value. For more information, see [ordering
+   * messages](https://cloud.google.com/pubsub/docs/ordering).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +176,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
    * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
    * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
    * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
-   * specify the same `ordering_key` value.
+   * specify the same `ordering_key` value. For more information, see [ordering
+   * messages](https://cloud.google.com/pubsub/docs/ordering).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderingKey() {
@@ -187,7 +189,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
    * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
    * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
    * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
-   * specify the same `ordering_key` value.
+   * specify the same `ordering_key` value. For more information, see [ordering
+   * messages](https://cloud.google.com/pubsub/docs/ordering).
    * @param orderingKey orderingKey or {@code null} for none
    */
   public PubsubMessage setOrderingKey(java.lang.String orderingKey) {

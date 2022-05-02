@@ -20,7 +20,7 @@ package com.google.api.services.licensing;
  * Service definition for Licensing (v1).
  *
  * <p>
- * The Google Enterprise License Manager API's allows you to license apps for all the users of a domain managed by you.
+ * The Google Enterprise License Manager API lets you manage Google Workspace and related licenses for all users of a customer that you manage.
  * </p>
  *
  * <p>
@@ -708,8 +708,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param productId A product's unique identifier. For more information about products in this version of the API, see
      *        Products and SKUs.
-     * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
-     *        for this field. If the customer is suspended, the server returns an error.
+     * @param customerId The customer's unique ID as defined in the Admin console, such as `C00000000`. If the customer is
+     *        suspended, the server returns an error.
      * @return the request
      */
     public ListForProduct listForProduct(java.lang.String productId, java.lang.String customerId) throws java.io.IOException {
@@ -735,8 +735,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param productId A product's unique identifier. For more information about products in this version of the API, see
      *        Products and SKUs.
-       * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
-     *        for this field. If the customer is suspended, the server returns an error.
+       * @param customerId The customer's unique ID as defined in the Admin console, such as `C00000000`. If the customer is
+     *        suspended, the server returns an error.
        * @since 1.13
        */
       protected ListForProduct(java.lang.String productId, java.lang.String customerId) {
@@ -834,22 +834,22 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
-       * a value for this field. If the customer is suspended, the server returns an error.
+       * The customer's unique ID as defined in the Admin console, such as `C00000000`. If the
+       * customer is suspended, the server returns an error.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
-     for this field. If the customer is suspended, the server returns an error.
+      /** The customer's unique ID as defined in the Admin console, such as `C00000000`. If the customer is
+     suspended, the server returns an error.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
-       * a value for this field. If the customer is suspended, the server returns an error.
+       * The customer's unique ID as defined in the Admin console, such as `C00000000`. If the
+       * customer is suspended, the server returns an error.
        */
       public ListForProduct setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -924,8 +924,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      *        Products and SKUs.
      * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
-     * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
-     *        for this field. If the customer is suspended, the server returns an error.
+     * @param customerId The customer's unique ID as defined in the Admin console, such as `C00000000`. If the customer is
+     *        suspended, the server returns an error.
      * @return the request
      */
     public ListForProductAndSku listForProductAndSku(java.lang.String productId, java.lang.String skuId, java.lang.String customerId) throws java.io.IOException {
@@ -953,8 +953,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      *        Products and SKUs.
        * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
-       * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
-     *        for this field. If the customer is suspended, the server returns an error.
+       * @param customerId The customer's unique ID as defined in the Admin console, such as `C00000000`. If the customer is
+     *        suspended, the server returns an error.
        * @since 1.13
        */
       protected ListForProductAndSku(java.lang.String productId, java.lang.String skuId, java.lang.String customerId) {
@@ -1076,22 +1076,22 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
-       * a value for this field. If the customer is suspended, the server returns an error.
+       * The customer's unique ID as defined in the Admin console, such as `C00000000`. If the
+       * customer is suspended, the server returns an error.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
-     for this field. If the customer is suspended, the server returns an error.
+      /** The customer's unique ID as defined in the Admin console, such as `C00000000`. If the customer is
+     suspended, the server returns an error.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
-       * a value for this field. If the customer is suspended, the server returns an error.
+       * The customer's unique ID as defined in the Admin console, such as `C00000000`. If the
+       * customer is suspended, the server returns an error.
        */
       public ListForProductAndSku setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;

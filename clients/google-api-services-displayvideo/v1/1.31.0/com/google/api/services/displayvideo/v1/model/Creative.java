@@ -448,7 +448,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private UniversalAdId universalAdId;
 
   /**
-   * Output only. The timestamp when the creative was last updated. Assigned by the system.
+   * Output only. The timestamp when the creative was last updated, either by the user or system
+   * (e.g. creative review). Assigned by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1417,7 +1418,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp when the creative was last updated. Assigned by the system.
+   * Output only. The timestamp when the creative was last updated, either by the user or system
+   * (e.g. creative review). Assigned by the system.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -1425,7 +1427,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp when the creative was last updated. Assigned by the system.
+   * Output only. The timestamp when the creative was last updated, either by the user or system
+   * (e.g. creative review). Assigned by the system.
    * @param updateTime updateTime or {@code null} for none
    */
   public Creative setUpdateTime(String updateTime) {

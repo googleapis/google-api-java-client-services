@@ -5693,13 +5693,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * there can only be restrictions combined by `OR` for the same field. * A restriction has
          * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)` for the
          * following fields: - `entityStatus` - `creativeType`. - `dimensions` - `minDuration` -
-         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` *
-         * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * For
-         * `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may be at most one
+         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` -
+         * `minModifiedTime` - `maxModifiedTime` * The operator must be `HAS (:)` for the following
+         * fields: - `lineItemIds` * For `entityStatus`, `minDuration`, `maxDuration`,
+         * `minModifiedTime`, `maxModifiedTime`, and `dynamic`, there may be at most one
          * restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
          * `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
          * `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only
-         * seconds are supported with millisecond granularity. * There may be multiple `lineItemIds`
+         * seconds are supported with millisecond granularity. * For `minModifiedTime` and
+         * `maxModifiedTime`, the value is a unix timestamp (GMT) in seconds. The time filtered is
+         * against the update_time field in the creative, which includes system updates to the
+         * creative (e.g. creative review updates). * There may be multiple `lineItemIds`
          * restrictions in order to search against multiple possible line item IDs. * There may be
          * multiple `creativeId` restrictions in order to search against multiple possible creative
          * IDs. Examples: * All native creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active
@@ -5722,13 +5726,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        combined by `OR` for the same field. * A restriction has the form of `{field} {operator} {value}`.
        * The operator must be `EQUALS (=)` for the following fields: - `entityStatus` - `creativeType`. -
        `dimensions` - `minDuration` - `maxDuration` - `approvalStatus` - `exchangeReviewStatus` -
-       `dynamic` - `creativeId` * The operator must be `HAS (:)` for the following fields: - `lineItemIds`
-       * For `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may be at most one
-       restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
-       `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
-       `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only seconds are
-       supported with millisecond granularity. * There may be multiple `lineItemIds` restrictions in order
-       to search against multiple possible line item IDs. * There may be multiple `creativeId`
+       `dynamic` - `creativeId` - `minModifiedTime` - `maxModifiedTime` * The operator must be `HAS (:)`
+       for the following fields: - `lineItemIds` * For `entityStatus`, `minDuration`, `maxDuration`,
+       `minModifiedTime`, `maxModifiedTime`, and `dynamic`, there may be at most one restriction. * For
+       `dimensions`, the value is in the form of `"{width}x{height}"`. * For `exchangeReviewStatus`, the
+       value is in the form of `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the
+       value is in the form of `"{duration}s"`. Only seconds are supported with millisecond granularity. *
+       For `minModifiedTime` and `maxModifiedTime`, the value is a unix timestamp (GMT) in seconds. The
+       time filtered is against the update_time field in the creative, which includes system updates to
+       the creative (e.g. creative review updates). * There may be multiple `lineItemIds` restrictions in
+       order to search against multiple possible line item IDs. * There may be multiple `creativeId`
        restrictions in order to search against multiple possible creative IDs. Examples: * All native
        creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with 300x400 or 50x100
        dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND (dimensions="300x400" OR dimensions="50x100")`
@@ -5751,13 +5758,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * there can only be restrictions combined by `OR` for the same field. * A restriction has
          * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)` for the
          * following fields: - `entityStatus` - `creativeType`. - `dimensions` - `minDuration` -
-         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` *
-         * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * For
-         * `entityStatus`, `minDuration`, `maxDuration`, and `dynamic` there may be at most one
+         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` -
+         * `minModifiedTime` - `maxModifiedTime` * The operator must be `HAS (:)` for the following
+         * fields: - `lineItemIds` * For `entityStatus`, `minDuration`, `maxDuration`,
+         * `minModifiedTime`, `maxModifiedTime`, and `dynamic`, there may be at most one
          * restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
          * `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
          * `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only
-         * seconds are supported with millisecond granularity. * There may be multiple `lineItemIds`
+         * seconds are supported with millisecond granularity. * For `minModifiedTime` and
+         * `maxModifiedTime`, the value is a unix timestamp (GMT) in seconds. The time filtered is
+         * against the update_time field in the creative, which includes system updates to the
+         * creative (e.g. creative review updates). * There may be multiple `lineItemIds`
          * restrictions in order to search against multiple possible line item IDs. * There may be
          * multiple `creativeId` restrictions in order to search against multiple possible creative
          * IDs. Examples: * All native creatives: `creativeType="CREATIVE_TYPE_NATIVE"` * All active

@@ -42,7 +42,7 @@ public final class AdTechnologyProviders extends com.google.api.client.json.Gene
 
   /**
    * The detected IAB Global Vendor List (GVL) IDs for this creative. See the IAB Global Vendor List
-   * at https://vendorlist.consensu.org/v2/vendor-list.json for details about the vendors.
+   * at https://vendor-list.consensu.org/v2/vendor-list.json for details about the vendors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -70,7 +70,7 @@ public final class AdTechnologyProviders extends com.google.api.client.json.Gene
 
   /**
    * The detected IAB Global Vendor List (GVL) IDs for this creative. See the IAB Global Vendor List
-   * at https://vendorlist.consensu.org/v2/vendor-list.json for details about the vendors.
+   * at https://vendor-list.consensu.org/v2/vendor-list.json for details about the vendors.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getDetectedGvlIds() {
@@ -79,7 +79,7 @@ public final class AdTechnologyProviders extends com.google.api.client.json.Gene
 
   /**
    * The detected IAB Global Vendor List (GVL) IDs for this creative. See the IAB Global Vendor List
-   * at https://vendorlist.consensu.org/v2/vendor-list.json for details about the vendors.
+   * at https://vendor-list.consensu.org/v2/vendor-list.json for details about the vendors.
    * @param detectedGvlIds detectedGvlIds or {@code null} for none
    */
   public AdTechnologyProviders setDetectedGvlIds(java.util.List<java.lang.Long> detectedGvlIds) {

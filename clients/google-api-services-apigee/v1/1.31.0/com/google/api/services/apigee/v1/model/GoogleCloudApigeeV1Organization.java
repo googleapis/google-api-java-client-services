@@ -46,6 +46,14 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String analyticsRegion;
 
   /**
+   * Output only. Apigee Project ID associated with the organization. Use this project to allowlist
+   * Apigee in the Service Attachment when using private service connect with Apigee.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apigeeProjectId;
+
+  /**
    * Not used by Apigee.
    * The value may be {@code null}.
    */
@@ -241,6 +249,25 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   public GoogleCloudApigeeV1Organization setAnalyticsRegion(java.lang.String analyticsRegion) {
     this.analyticsRegion = analyticsRegion;
+    return this;
+  }
+
+  /**
+   * Output only. Apigee Project ID associated with the organization. Use this project to allowlist
+   * Apigee in the Service Attachment when using private service connect with Apigee.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApigeeProjectId() {
+    return apigeeProjectId;
+  }
+
+  /**
+   * Output only. Apigee Project ID associated with the organization. Use this project to allowlist
+   * Apigee in the Service Attachment when using private service connect with Apigee.
+   * @param apigeeProjectId apigeeProjectId or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setApigeeProjectId(java.lang.String apigeeProjectId) {
+    this.apigeeProjectId = apigeeProjectId;
     return this;
   }
 

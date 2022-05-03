@@ -1654,6 +1654,150 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * Tests the permissions of a user on an organization, and returns a subset of permissions that the
+     * user has on the organization. If the organization does not exist, an empty permission set is
+     * returned (a NOT_FOUND error is not returned).
+     *
+     * Create a request for the method "organizations.testIamPermissions".
+     *
+     * This request holds the parameters needed by the apigee server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+     * @param content the {@link com.google.api.services.apigee.v1.model.GoogleIamV1TestIamPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.apigee.v1.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleIamV1TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/.*$");
+
+      /**
+       * Tests the permissions of a user on an organization, and returns a subset of permissions that
+       * the user has on the organization. If the organization does not exist, an empty permission set
+       * is returned (a NOT_FOUND error is not returned).
+       *
+       * Create a request for the method "organizations.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the apigee server.  After setting any optional
+       * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleIamV1TestIamPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.apigee.v1.model.GoogleIamV1TestIamPermissionsRequest content) {
+        super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleIamV1TestIamPermissionsResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/.*$");
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+     documentation for the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/.*$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the properties for an Apigee organization. No other fields in the organization profile
      * will be updated.
      *

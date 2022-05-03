@@ -48,8 +48,8 @@ public final class CompleteIPRotationRequest extends com.google.api.client.json.
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-   * deprecated and replaced by the name field.
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
+   * has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +104,8 @@ public final class CompleteIPRotationRequest extends com.google.api.client.json.
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-   * deprecated and replaced by the name field.
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
+   * has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -114,8 +114,8 @@ public final class CompleteIPRotationRequest extends com.google.api.client.json.
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-   * deprecated and replaced by the name field.
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
+   * has been deprecated and replaced by the name field.
    * @param projectId projectId or {@code null} for none
    */
   public CompleteIPRotationRequest setProjectId(java.lang.String projectId) {

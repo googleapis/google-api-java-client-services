@@ -55,8 +55,8 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-   * deprecated and replaced by the parent field.
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
+   * has been deprecated and replaced by the parent field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +128,8 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-   * deprecated and replaced by the parent field.
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
+   * has been deprecated and replaced by the parent field.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -138,8 +138,8 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-   * deprecated and replaced by the parent field.
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
+   * has been deprecated and replaced by the parent field.
    * @param projectId projectId or {@code null} for none
    */
   public CreateNodePoolRequest setProjectId(java.lang.String projectId) {

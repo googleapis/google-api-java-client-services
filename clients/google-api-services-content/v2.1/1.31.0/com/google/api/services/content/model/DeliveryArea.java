@@ -17,8 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * A delivery area for the product. Only one of administrativeAreaCode or postalCodeRange must be
- * set.
+ * A delivery area for the product. Only one of `countryCode` or `postalCodeRange` must be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -32,8 +31,8 @@ package com.google.api.services.content.model;
 public final class DeliveryArea extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The country that the product can be delivered to. Submit an [unicode CLDR
-   * region](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) such as US or CH.
+   * Required. The country that the product can be delivered to. Submit a [unicode CLDR
+   * region](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) such as `US` or `CH`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,16 +51,16 @@ public final class DeliveryArea extends com.google.api.client.json.GenericJson {
    * Japan. Provide a subdivision code from the ISO 3166-2 code tables
    * ([US](https://en.wikipedia.org/wiki/ISO_3166-2:US),
    * [AU](https://en.wikipedia.org/wiki/ISO_3166-2:AU), or
-   * [JP](https://en.wikipedia.org/wiki/ISO_3166-2:JP)) without country prefix (for example, NY,
-   * NSW, 03).
+   * [JP](https://en.wikipedia.org/wiki/ISO_3166-2:JP)) without country prefix (for example, `"NY"`,
+   * `"NSW"`, `"03"`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * Required. The country that the product can be delivered to. Submit an [unicode CLDR
-   * region](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) such as US or CH.
+   * Required. The country that the product can be delivered to. Submit a [unicode CLDR
+   * region](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) such as `US` or `CH`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -69,8 +68,8 @@ public final class DeliveryArea extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The country that the product can be delivered to. Submit an [unicode CLDR
-   * region](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) such as US or CH.
+   * Required. The country that the product can be delivered to. Submit a [unicode CLDR
+   * region](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) such as `US` or `CH`.
    * @param countryCode countryCode or {@code null} for none
    */
   public DeliveryArea setCountryCode(java.lang.String countryCode) {
@@ -102,8 +101,8 @@ public final class DeliveryArea extends com.google.api.client.json.GenericJson {
    * Japan. Provide a subdivision code from the ISO 3166-2 code tables
    * ([US](https://en.wikipedia.org/wiki/ISO_3166-2:US),
    * [AU](https://en.wikipedia.org/wiki/ISO_3166-2:AU), or
-   * [JP](https://en.wikipedia.org/wiki/ISO_3166-2:JP)) without country prefix (for example, NY,
-   * NSW, 03).
+   * [JP](https://en.wikipedia.org/wiki/ISO_3166-2:JP)) without country prefix (for example, `"NY"`,
+   * `"NSW"`, `"03"`).
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -115,8 +114,8 @@ public final class DeliveryArea extends com.google.api.client.json.GenericJson {
    * Japan. Provide a subdivision code from the ISO 3166-2 code tables
    * ([US](https://en.wikipedia.org/wiki/ISO_3166-2:US),
    * [AU](https://en.wikipedia.org/wiki/ISO_3166-2:AU), or
-   * [JP](https://en.wikipedia.org/wiki/ISO_3166-2:JP)) without country prefix (for example, NY,
-   * NSW, 03).
+   * [JP](https://en.wikipedia.org/wiki/ISO_3166-2:JP)) without country prefix (for example, `"NY"`,
+   * `"NSW"`, `"03"`).
    * @param regionCode regionCode or {@code null} for none
    */
   public DeliveryArea setRegionCode(java.lang.String regionCode) {

@@ -17365,7 +17365,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
      *        multi-client account.
      * @param productId Required. The Content API ID of the product, in the form
-     *        channel:contentLanguage:targetCountry:offerId.
+     *        `channel:contentLanguage:targetCountry:offerId`.
      * @return the request
      */
     public Delete delete(java.lang.Long merchantId, java.lang.String productId) throws java.io.IOException {
@@ -17391,7 +17391,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
      *        multi-client account.
        * @param productId Required. The Content API ID of the product, in the form
-     *        channel:contentLanguage:targetCountry:offerId.
+     *        `channel:contentLanguage:targetCountry:offerId`.
        * @since 1.13
        */
       protected Delete(java.lang.Long merchantId, java.lang.String productId) {
@@ -17480,13 +17480,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. The Content API ID of the product, in the form
-       * channel:contentLanguage:targetCountry:offerId.
+       * `channel:contentLanguage:targetCountry:offerId`.
        */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
       /** Required. The Content API ID of the product, in the form
-     channel:contentLanguage:targetCountry:offerId.
+     `channel:contentLanguage:targetCountry:offerId`.
        */
       public java.lang.String getProductId() {
         return productId;
@@ -17494,7 +17494,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. The Content API ID of the product, in the form
-       * channel:contentLanguage:targetCountry:offerId.
+       * `channel:contentLanguage:targetCountry:offerId`.
        */
       public Delete setProductId(java.lang.String productId) {
         this.productId = productId;
@@ -17507,7 +17507,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Gets productDeliveryTime by productId
+     * Gets `productDeliveryTime` by `productId`.
      *
      * Create a request for the method "productdeliverytime.get".
      *
@@ -17517,7 +17517,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
      *        multi-client account.
      * @param productId Required. The Content API ID of the product, in the form
-     *        channel:contentLanguage:targetCountry:offerId.
+     *        `channel:contentLanguage:targetCountry:offerId`.
      * @return the request
      */
     public Get get(java.lang.Long merchantId, java.lang.String productId) throws java.io.IOException {
@@ -17531,7 +17531,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/productdeliverytime/{productId}";
 
       /**
-       * Gets productDeliveryTime by productId
+       * Gets `productDeliveryTime` by `productId`.
        *
        * Create a request for the method "productdeliverytime.get".
        *
@@ -17543,7 +17543,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * @param merchantId Required. The Google merchant ID of the account that contains the product. This account cannot be a
      *        multi-client account.
        * @param productId Required. The Content API ID of the product, in the form
-     *        channel:contentLanguage:targetCountry:offerId.
+     *        `channel:contentLanguage:targetCountry:offerId`.
        * @since 1.13
        */
       protected Get(java.lang.Long merchantId, java.lang.String productId) {
@@ -17642,13 +17642,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. The Content API ID of the product, in the form
-       * channel:contentLanguage:targetCountry:offerId.
+       * `channel:contentLanguage:targetCountry:offerId`.
        */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
       /** Required. The Content API ID of the product, in the form
-     channel:contentLanguage:targetCountry:offerId.
+     `channel:contentLanguage:targetCountry:offerId`.
        */
       public java.lang.String getProductId() {
         return productId;
@@ -17656,7 +17656,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. The Content API ID of the product, in the form
-       * channel:contentLanguage:targetCountry:offerId.
+       * `channel:contentLanguage:targetCountry:offerId`.
        */
       public Get setProductId(java.lang.String productId) {
         this.productId = productId;

@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * A pairing of DeliveryArea associated with a DeliveryTime for this product.
+ * A pairing of `DeliveryArea` associated with a `DeliveryTime` for this product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.content.model;
 public final class ProductDeliveryTimeAreaDeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The delivery area associated with deliveryTime for this product.
+   * Required. The delivery area associated with `deliveryTime` for this product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeliveryArea deliveryArea;
 
   /**
-   * Required. The delivery time associated with deliveryArea for this product.
+   * Required. The delivery time associated with `deliveryArea` for this product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductDeliveryTimeAreaDeliveryTimeDeliveryTime deliveryTime;
 
   /**
-   * Required. The delivery area associated with deliveryTime for this product.
+   * Required. The delivery area associated with `deliveryTime` for this product.
    * @return value or {@code null} for none
    */
   public DeliveryArea getDeliveryArea() {
@@ -53,7 +53,7 @@ public final class ProductDeliveryTimeAreaDeliveryTime extends com.google.api.cl
   }
 
   /**
-   * Required. The delivery area associated with deliveryTime for this product.
+   * Required. The delivery area associated with `deliveryTime` for this product.
    * @param deliveryArea deliveryArea or {@code null} for none
    */
   public ProductDeliveryTimeAreaDeliveryTime setDeliveryArea(DeliveryArea deliveryArea) {
@@ -62,7 +62,7 @@ public final class ProductDeliveryTimeAreaDeliveryTime extends com.google.api.cl
   }
 
   /**
-   * Required. The delivery time associated with deliveryArea for this product.
+   * Required. The delivery time associated with `deliveryArea` for this product.
    * @return value or {@code null} for none
    */
   public ProductDeliveryTimeAreaDeliveryTimeDeliveryTime getDeliveryTime() {
@@ -70,7 +70,7 @@ public final class ProductDeliveryTimeAreaDeliveryTime extends com.google.api.cl
   }
 
   /**
-   * Required. The delivery time associated with deliveryArea for this product.
+   * Required. The delivery time associated with `deliveryArea` for this product.
    * @param deliveryTime deliveryTime or {@code null} for none
    */
   public ProductDeliveryTimeAreaDeliveryTime setDeliveryTime(ProductDeliveryTimeAreaDeliveryTimeDeliveryTime deliveryTime) {

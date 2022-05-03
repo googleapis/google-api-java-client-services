@@ -17,8 +17,8 @@
 package com.google.api.services.content.model;
 
 /**
- * A range of postal codes that defines the delivery area. Only set firstPostalCode when specifying
- * a single postal code.
+ * A range of postal codes that defines the delivery area. Only set `firstPostalCode` when
+ * specifying a single postal code.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -33,7 +33,7 @@ public final class DeliveryAreaPostalCodeRange extends com.google.api.client.jso
 
   /**
    * Required. A postal code or a pattern of the form prefix* denoting the inclusive lower bound of
-   * the range defining the area. Examples values: "94108", "9410*", "9*".
+   * the range defining the area. Examples values: `"94108"`, `"9410*"`, `"9*"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,10 +42,10 @@ public final class DeliveryAreaPostalCodeRange extends com.google.api.client.jso
   /**
    * A postal code or a pattern of the form prefix* denoting the inclusive upper bound of the range
    * defining the area (for example [070* - 078*] results in the range [07000 - 07899]). It must
-   * have the same length as firstPostalCode: if firstPostalCode is a postal code then
-   * lastPostalCode must be a postal code too; if firstPostalCode is a pattern then lastPostalCode
-   * must be a pattern with the same prefix length. Ignored if not set, then the area is defined as
-   * being all the postal codes matching firstPostalCode.
+   * have the same length as `firstPostalCode`: if `firstPostalCode` is a postal code then
+   * `lastPostalCode` must be a postal code too; if firstPostalCode is a pattern then
+   * `lastPostalCode` must be a pattern with the same prefix length. Ignored if not set, then the
+   * area is defined as being all the postal codes matching `firstPostalCode`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class DeliveryAreaPostalCodeRange extends com.google.api.client.jso
 
   /**
    * Required. A postal code or a pattern of the form prefix* denoting the inclusive lower bound of
-   * the range defining the area. Examples values: "94108", "9410*", "9*".
+   * the range defining the area. Examples values: `"94108"`, `"9410*"`, `"9*"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstPostalCode() {
@@ -62,7 +62,7 @@ public final class DeliveryAreaPostalCodeRange extends com.google.api.client.jso
 
   /**
    * Required. A postal code or a pattern of the form prefix* denoting the inclusive lower bound of
-   * the range defining the area. Examples values: "94108", "9410*", "9*".
+   * the range defining the area. Examples values: `"94108"`, `"9410*"`, `"9*"`.
    * @param firstPostalCode firstPostalCode or {@code null} for none
    */
   public DeliveryAreaPostalCodeRange setFirstPostalCode(java.lang.String firstPostalCode) {
@@ -73,10 +73,10 @@ public final class DeliveryAreaPostalCodeRange extends com.google.api.client.jso
   /**
    * A postal code or a pattern of the form prefix* denoting the inclusive upper bound of the range
    * defining the area (for example [070* - 078*] results in the range [07000 - 07899]). It must
-   * have the same length as firstPostalCode: if firstPostalCode is a postal code then
-   * lastPostalCode must be a postal code too; if firstPostalCode is a pattern then lastPostalCode
-   * must be a pattern with the same prefix length. Ignored if not set, then the area is defined as
-   * being all the postal codes matching firstPostalCode.
+   * have the same length as `firstPostalCode`: if `firstPostalCode` is a postal code then
+   * `lastPostalCode` must be a postal code too; if firstPostalCode is a pattern then
+   * `lastPostalCode` must be a pattern with the same prefix length. Ignored if not set, then the
+   * area is defined as being all the postal codes matching `firstPostalCode`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastPostalCode() {
@@ -86,10 +86,10 @@ public final class DeliveryAreaPostalCodeRange extends com.google.api.client.jso
   /**
    * A postal code or a pattern of the form prefix* denoting the inclusive upper bound of the range
    * defining the area (for example [070* - 078*] results in the range [07000 - 07899]). It must
-   * have the same length as firstPostalCode: if firstPostalCode is a postal code then
-   * lastPostalCode must be a postal code too; if firstPostalCode is a pattern then lastPostalCode
-   * must be a pattern with the same prefix length. Ignored if not set, then the area is defined as
-   * being all the postal codes matching firstPostalCode.
+   * have the same length as `firstPostalCode`: if `firstPostalCode` is a postal code then
+   * `lastPostalCode` must be a postal code too; if firstPostalCode is a pattern then
+   * `lastPostalCode` must be a pattern with the same prefix length. Ignored if not set, then the
+   * area is defined as being all the postal codes matching `firstPostalCode`.
    * @param lastPostalCode lastPostalCode or {@code null} for none
    */
   public DeliveryAreaPostalCodeRange setLastPostalCode(java.lang.String lastPostalCode) {

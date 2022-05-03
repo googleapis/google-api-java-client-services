@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firebaseappcheck.v1beta.model;
+package com.google.api.services.firebaseappcheck.v1.model;
 
 /**
  * An app's DeviceCheck configuration object. This configuration is used by ExchangeDeviceCheckToken
@@ -22,7 +22,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
  * the returned `AppCheckToken`, such as its ttl. Note that the Team ID registered with your app is
  * used as part of the validation process. Please register it via the Firebase Console or
  * programmatically via the [Firebase Management Service](https://firebase.google.com/docs/projects/
- * api/reference/rest/v1beta1/projects.iosApps/patch).
+ * api/reference/rest/v11/projects.iosApps/patch).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -33,7 +33,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppcheckV1DeviceCheckConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The key identifier of a private key enabled with DeviceCheck, created in your Apple
@@ -91,7 +91,7 @@ public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.goo
    * Developer account.
    * @param keyId keyId or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig setKeyId(java.lang.String keyId) {
+  public GoogleFirebaseAppcheckV1DeviceCheckConfig setKeyId(java.lang.String keyId) {
     this.keyId = keyId;
     return this;
   }
@@ -110,7 +110,7 @@ public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.goo
    * ``` projects/{project_number}/apps/{app_id}/deviceCheckConfig ```
    * @param name name or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig setName(java.lang.String name) {
+  public GoogleFirebaseAppcheckV1DeviceCheckConfig setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -131,7 +131,7 @@ public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.goo
    * response.
    * @param privateKey privateKey or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig setPrivateKey(java.lang.String privateKey) {
+  public GoogleFirebaseAppcheckV1DeviceCheckConfig setPrivateKey(java.lang.String privateKey) {
     this.privateKey = privateKey;
     return this;
   }
@@ -150,7 +150,7 @@ public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.goo
    * `private_key` field, this field is the only way to find out whether it was previously set.
    * @param privateKeySet privateKeySet or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig setPrivateKeySet(java.lang.Boolean privateKeySet) {
+  public GoogleFirebaseAppcheckV1DeviceCheckConfig setPrivateKeySet(java.lang.Boolean privateKeySet) {
     this.privateKeySet = privateKeySet;
     return this;
   }
@@ -171,19 +171,19 @@ public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.goo
    * inclusive.
    * @param tokenTtl tokenTtl or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig setTokenTtl(String tokenTtl) {
+  public GoogleFirebaseAppcheckV1DeviceCheckConfig setTokenTtl(String tokenTtl) {
     this.tokenTtl = tokenTtl;
     return this;
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig set(String fieldName, Object value) {
-    return (GoogleFirebaseAppcheckV1betaDeviceCheckConfig) super.set(fieldName, value);
+  public GoogleFirebaseAppcheckV1DeviceCheckConfig set(String fieldName, Object value) {
+    return (GoogleFirebaseAppcheckV1DeviceCheckConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig clone() {
-    return (GoogleFirebaseAppcheckV1betaDeviceCheckConfig) super.clone();
+  public GoogleFirebaseAppcheckV1DeviceCheckConfig clone() {
+    return (GoogleFirebaseAppcheckV1DeviceCheckConfig) super.clone();
   }
 
 }

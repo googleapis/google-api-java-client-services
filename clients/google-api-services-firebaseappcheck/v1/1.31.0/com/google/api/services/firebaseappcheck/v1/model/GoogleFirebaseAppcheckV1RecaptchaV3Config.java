@@ -14,13 +14,12 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firebaseappcheck.v1beta.model;
+package com.google.api.services.firebaseappcheck.v1.model;
 
 /**
- * This REST resource has been renamed to RecaptchaV3Config. An app's reCAPTCHA v3 configuration
- * object. This configuration is used by ExchangeRecaptchaToken to validate reCAPTCHA tokens issued
- * to apps by reCAPTCHA v3. It also controls certain properties of the returned `AppCheckToken`,
- * such as its ttl.
+ * An app's reCAPTCHA v3 configuration object. This configuration is used by
+ * ExchangeRecaptchaV3Token to validate reCAPTCHA tokens issued to apps by reCAPTCHA v3. It also
+ * controls certain properties of the returned `AppCheckToken`, such as its ttl.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -31,11 +30,11 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppcheckV1RecaptchaV3Config extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format:
-   * ``` projects/{project_number}/apps/{app_id}/recaptchaConfig ```
+   * ``` projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +67,7 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
 
   /**
    * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format:
-   * ``` projects/{project_number}/apps/{app_id}/recaptchaConfig ```
+   * ``` projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,10 +76,10 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
 
   /**
    * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format:
-   * ``` projects/{project_number}/apps/{app_id}/recaptchaConfig ```
+   * ``` projects/{project_number}/apps/{app_id}/recaptchaV3Config ```
    * @param name name or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaRecaptchaConfig setName(java.lang.String name) {
+  public GoogleFirebaseAppcheckV1RecaptchaV3Config setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -99,7 +98,7 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
    * verification. For security reasons, this field will never be populated in any response.
    * @param siteSecret siteSecret or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaRecaptchaConfig setSiteSecret(java.lang.String siteSecret) {
+  public GoogleFirebaseAppcheckV1RecaptchaV3Config setSiteSecret(java.lang.String siteSecret) {
     this.siteSecret = siteSecret;
     return this;
   }
@@ -118,7 +117,7 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
    * `site_secret` field, this field is the only way to find out whether it was previously set.
    * @param siteSecretSet siteSecretSet or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaRecaptchaConfig setSiteSecretSet(java.lang.Boolean siteSecretSet) {
+  public GoogleFirebaseAppcheckV1RecaptchaV3Config setSiteSecretSet(java.lang.Boolean siteSecretSet) {
     this.siteSecretSet = siteSecretSet;
     return this;
   }
@@ -139,19 +138,19 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
    * inclusive.
    * @param tokenTtl tokenTtl or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaRecaptchaConfig setTokenTtl(String tokenTtl) {
+  public GoogleFirebaseAppcheckV1RecaptchaV3Config setTokenTtl(String tokenTtl) {
     this.tokenTtl = tokenTtl;
     return this;
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaRecaptchaConfig set(String fieldName, Object value) {
-    return (GoogleFirebaseAppcheckV1betaRecaptchaConfig) super.set(fieldName, value);
+  public GoogleFirebaseAppcheckV1RecaptchaV3Config set(String fieldName, Object value) {
+    return (GoogleFirebaseAppcheckV1RecaptchaV3Config) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaRecaptchaConfig clone() {
-    return (GoogleFirebaseAppcheckV1betaRecaptchaConfig) super.clone();
+  public GoogleFirebaseAppcheckV1RecaptchaV3Config clone() {
+    return (GoogleFirebaseAppcheckV1RecaptchaV3Config) super.clone();
   }
 
 }

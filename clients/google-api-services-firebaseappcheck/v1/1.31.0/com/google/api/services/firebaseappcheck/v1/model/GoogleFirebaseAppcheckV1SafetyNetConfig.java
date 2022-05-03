@@ -14,15 +14,14 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firebaseappcheck.v1beta.model;
+package com.google.api.services.firebaseappcheck.v1.model;
 
 /**
- * An app's App Attest configuration object. This configuration controls certain properties of the
- * `AppCheckToken` returned by ExchangeAppAttestAttestation and ExchangeAppAttestAssertion, such as
- * its ttl. Note that the Team ID registered with your app is used as part of the validation
- * process. Please register it via the Firebase Console or programmatically via the [Firebase
- * Management Service](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects
- * .iosApps/patch).
+ * An app's SafetyNet configuration object. This configuration controls certain properties of the
+ * `AppCheckToken` returned by ExchangeSafetyNetToken, such as its ttl. Note that your registered
+ * SHA-256 certificate fingerprints are used to validate tokens issued by SafetyNet; please register
+ * them via the Firebase Console or programmatically via the [Firebase Management Service](https://f
+ * irebase.google.com/docs/projects/api/reference/rest/v11/projects.androidApps.sha/create).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -33,18 +32,18 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppcheckV1betaAppAttestConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppcheckV1SafetyNetConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The relative resource name of the App Attest configuration object, in the format: ```
-   * projects/{project_number}/apps/{app_id}/appAttestConfig ```
+   * Required. The relative resource name of the SafetyNet configuration object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/safetyNetConfig ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Specifies the duration for which App Check tokens exchanged from App Attest artifacts will be
+   * Specifies the duration for which App Check tokens exchanged from SafetyNet tokens will be
    * valid. If unset, a default value of 1 hour is assumed. Must be between 30 minutes and 7 days,
    * inclusive.
    * The value may be {@code null}.
@@ -53,8 +52,8 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestConfig extends com.googl
   private String tokenTtl;
 
   /**
-   * Required. The relative resource name of the App Attest configuration object, in the format: ```
-   * projects/{project_number}/apps/{app_id}/appAttestConfig ```
+   * Required. The relative resource name of the SafetyNet configuration object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/safetyNetConfig ```
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -62,17 +61,17 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestConfig extends com.googl
   }
 
   /**
-   * Required. The relative resource name of the App Attest configuration object, in the format: ```
-   * projects/{project_number}/apps/{app_id}/appAttestConfig ```
+   * Required. The relative resource name of the SafetyNet configuration object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/safetyNetConfig ```
    * @param name name or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaAppAttestConfig setName(java.lang.String name) {
+  public GoogleFirebaseAppcheckV1SafetyNetConfig setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Specifies the duration for which App Check tokens exchanged from App Attest artifacts will be
+   * Specifies the duration for which App Check tokens exchanged from SafetyNet tokens will be
    * valid. If unset, a default value of 1 hour is assumed. Must be between 30 minutes and 7 days,
    * inclusive.
    * @return value or {@code null} for none
@@ -82,24 +81,24 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestConfig extends com.googl
   }
 
   /**
-   * Specifies the duration for which App Check tokens exchanged from App Attest artifacts will be
+   * Specifies the duration for which App Check tokens exchanged from SafetyNet tokens will be
    * valid. If unset, a default value of 1 hour is assumed. Must be between 30 minutes and 7 days,
    * inclusive.
    * @param tokenTtl tokenTtl or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaAppAttestConfig setTokenTtl(String tokenTtl) {
+  public GoogleFirebaseAppcheckV1SafetyNetConfig setTokenTtl(String tokenTtl) {
     this.tokenTtl = tokenTtl;
     return this;
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaAppAttestConfig set(String fieldName, Object value) {
-    return (GoogleFirebaseAppcheckV1betaAppAttestConfig) super.set(fieldName, value);
+  public GoogleFirebaseAppcheckV1SafetyNetConfig set(String fieldName, Object value) {
+    return (GoogleFirebaseAppcheckV1SafetyNetConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaAppAttestConfig clone() {
-    return (GoogleFirebaseAppcheckV1betaAppAttestConfig) super.clone();
+  public GoogleFirebaseAppcheckV1SafetyNetConfig clone() {
+    return (GoogleFirebaseAppcheckV1SafetyNetConfig) super.clone();
   }
 
 }

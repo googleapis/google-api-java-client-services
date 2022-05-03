@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firebaseappcheck.v1beta.model;
+package com.google.api.services.firebaseappcheck.v1.model;
 
 /**
  * Response message for the ExchangeAppAttestAttestation method.
@@ -28,14 +28,14 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Encapsulates an App Check token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleFirebaseAppcheckV1betaAppCheckToken appCheckToken;
+  private GoogleFirebaseAppcheckV1AppCheckToken appCheckToken;
 
   /**
    * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
@@ -45,17 +45,10 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   private java.lang.String artifact;
 
   /**
-   * This field has been renamed to `app_check_token`. Encapsulates an App Check token.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken;
-
-  /**
    * Encapsulates an App Check token.
    * @return value or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaAppCheckToken getAppCheckToken() {
+  public GoogleFirebaseAppcheckV1AppCheckToken getAppCheckToken() {
     return appCheckToken;
   }
 
@@ -63,7 +56,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
    * Encapsulates an App Check token.
    * @param appCheckToken appCheckToken or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse setAppCheckToken(GoogleFirebaseAppcheckV1betaAppCheckToken appCheckToken) {
+  public GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse setAppCheckToken(GoogleFirebaseAppcheckV1AppCheckToken appCheckToken) {
     this.appCheckToken = appCheckToken;
     return this;
   }
@@ -93,7 +86,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
    * @see #encodeArtifact()
    * @param artifact artifact or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse setArtifact(java.lang.String artifact) {
+  public GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse setArtifact(java.lang.String artifact) {
     this.artifact = artifact;
     return this;
   }
@@ -108,36 +101,19 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
    *
    * @since 1.14
    */
-  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse encodeArtifact(byte[] artifact) {
+  public GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse encodeArtifact(byte[] artifact) {
     this.artifact = com.google.api.client.util.Base64.encodeBase64URLSafeString(artifact);
     return this;
   }
 
-  /**
-   * This field has been renamed to `app_check_token`. Encapsulates an App Check token.
-   * @return value or {@code null} for none
-   */
-  public GoogleFirebaseAppcheckV1betaAttestationTokenResponse getAttestationToken() {
-    return attestationToken;
-  }
-
-  /**
-   * This field has been renamed to `app_check_token`. Encapsulates an App Check token.
-   * @param attestationToken attestationToken or {@code null} for none
-   */
-  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse setAttestationToken(GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken) {
-    this.attestationToken = attestationToken;
-    return this;
+  @Override
+  public GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse set(String fieldName, Object value) {
+    return (GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse set(String fieldName, Object value) {
-    return (GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse clone() {
-    return (GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse) super.clone();
+  public GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse clone() {
+    return (GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse) super.clone();
   }
 
 }

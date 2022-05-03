@@ -514,6 +514,1496 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
       }
 
       /**
+       * An accessor for creating requests from the Federations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataprocMetastore metastore = new DataprocMetastore(...);}
+       *   {@code DataprocMetastore.Federations.List request = metastore.federations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Federations federations() {
+        return new Federations();
+      }
+
+      /**
+       * The "federations" collection of methods.
+       */
+      public class Federations {
+
+        /**
+         * Creates a metastore federation in a project and location.
+         *
+         * Create a request for the method "federations.create".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the location in which to create a federation service, in the
+         *        following form:projects/{project_number}/locations/{location_id}.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.Federation}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.metastore.v1alpha.model.Federation content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/federations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a metastore federation in a project and location.
+           *
+           * Create a request for the method "federations.create".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the location in which to create a federation service, in the
+         *        following form:projects/{project_number}/locations/{location_id}.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.Federation}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.metastore.v1alpha.model.Federation content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the location in which to create a federation
+           * service, in the following form:projects/{project_number}/locations/{location_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the location in which to create a federation service, in
+         the following form:projects/{project_number}/locations/{location_id}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the location in which to create a federation
+           * service, in the following form:projects/{project_number}/locations/{location_id}.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the metastore federation, which is used as the final component of
+           * the metastore federation's name.This value must be between 2 and 63 characters long
+           * inclusive, begin with a letter, end with a letter or number, and consist of alpha-
+           * numeric ASCII characters or hyphens.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String federationId;
+
+          /** Required. The ID of the metastore federation, which is used as the final component of the metastore
+         federation's name.This value must be between 2 and 63 characters long inclusive, begin with a
+         letter, end with a letter or number, and consist of alpha-numeric ASCII characters or hyphens.
+           */
+          public java.lang.String getFederationId() {
+            return federationId;
+          }
+
+          /**
+           * Required. The ID of the metastore federation, which is used as the final component of
+           * the metastore federation's name.This value must be between 2 and 63 characters long
+           * inclusive, begin with a letter, end with a letter or number, and consist of alpha-
+           * numeric ASCII characters or hyphens.
+           */
+          public Create setFederationId(java.lang.String federationId) {
+            this.federationId = federationId;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+           * request if it has completed. The server will ignore subsequent requests that provide a
+           * duplicate request ID for at least 60 minutes after the first request.For example, if an
+           * initial request times out, followed by another request with the same request ID, the
+           * server ignores the second request to prevent the creation of duplicate commitments.The
+           * request ID must be a valid UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           * (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID. Specify a unique request ID to allow the server to ignore the request if it
+         has completed. The server will ignore subsequent requests that provide a duplicate request ID for
+         at least 60 minutes after the first request.For example, if an initial request times out, followed
+         by another request with the same request ID, the server ignores the second request to prevent the
+         creation of duplicate commitments.The request ID must be a valid UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+         (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+           * request if it has completed. The server will ignore subsequent requests that provide a
+           * duplicate request ID for at least 60 minutes after the first request.For example, if an
+           * initial request times out, followed by another request with the same request ID, the
+           * server ignores the second request to prevent the creation of duplicate commitments.The
+           * request ID must be a valid UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           * (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single federation.
+         *
+         * Create a request for the method "federations.delete".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the metastore federation to delete, in the following
+         *        form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+
+          /**
+           * Deletes a single federation.
+           *
+           * Create a request for the method "federations.delete".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the metastore federation to delete, in the following
+         *        form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DataprocMetastore.this, "DELETE", REST_PATH, null, com.google.api.services.metastore.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore federation to delete, in the
+           * following
+           * form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the metastore federation to delete, in the following
+         form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore federation to delete, in the
+           * following
+           * form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+           * request if it has completed. The server will ignore subsequent requests that provide a
+           * duplicate request ID for at least 60 minutes after the first request.For example, if an
+           * initial request times out, followed by another request with the same request ID, the
+           * server ignores the second request to prevent the creation of duplicate commitments.The
+           * request ID must be a valid UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           * (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID. Specify a unique request ID to allow the server to ignore the request if it
+         has completed. The server will ignore subsequent requests that provide a duplicate request ID for
+         at least 60 minutes after the first request.For example, if an initial request times out, followed
+         by another request with the same request ID, the server ignores the second request to prevent the
+         creation of duplicate commitments.The request ID must be a valid UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+         (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+           * request if it has completed. The server will ignore subsequent requests that provide a
+           * duplicate request ID for at least 60 minutes after the first request.For example, if an
+           * initial request times out, followed by another request with the same request ID, the
+           * server ignores the second request to prevent the creation of duplicate commitments.The
+           * request ID must be a valid UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           * (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the details of a single federation.
+         *
+         * Create a request for the method "federations.get".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the metastore federation to retrieve, in the following
+         *        form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Federation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+
+          /**
+           * Gets the details of a single federation.
+           *
+           * Create a request for the method "federations.get".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the metastore federation to retrieve, in the following
+         *        form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DataprocMetastore.this, "GET", REST_PATH, null, com.google.api.services.metastore.v1alpha.model.Federation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore federation to retrieve, in the
+           * following
+           * form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the metastore federation to retrieve, in the following
+         form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore federation to retrieve, in the
+           * following
+           * form:projects/{project_number}/locations/{location_id}/federations/{federation_id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
+         *
+         * Create a request for the method "federations.getIamPolicy".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         *        the appropriate value for this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Policy> {
+
+          private static final String REST_PATH = "v1alpha/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+           * and does not have a policy set.
+           *
+           * Create a request for the method "federations.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         *        the appropriate value for this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(DataprocMetastore.this, "GET", REST_PATH, null, com.google.api.services.metastore.v1alpha.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy.Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset.The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy.Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected.Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset.The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1.To learn
+         which resources support conditions in their IAM policies, see the IAM documentation
+         (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy.Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset.The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists federations in a project and location.
+         *
+         * Create a request for the method "federations.list".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the location of metastore federations to list, in the
+         *        following form: projects/{project_number}/locations/{location_id}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.ListFederationsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/federations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists federations in a project and location.
+           *
+           * Create a request for the method "federations.list".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the location of metastore federations to list, in the
+         *        following form: projects/{project_number}/locations/{location_id}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DataprocMetastore.this, "GET", REST_PATH, null, com.google.api.services.metastore.v1alpha.model.ListFederationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the location of metastore federations to list,
+           * in the following form: projects/{project_number}/locations/{location_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the location of metastore federations to list, in the
+         following form: projects/{project_number}/locations/{location_id}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the location of metastore federations to list,
+           * in the following form: projects/{project_number}/locations/{location_id}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The filter to apply to list results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter to apply to list results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. The filter to apply to list results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Specify the ordering of results as described in Sorting Order
+           * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified,
+           * the results will be sorted in the default order.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Specify the ordering of results as described in Sorting Order
+         (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified, the results
+         will be sorted in the default order.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Specify the ordering of results as described in Sorting Order
+           * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified,
+           * the results will be sorted in the default order.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of federations to return. The response may contain less
+           * than the maximum number. If unspecified, no more than 500 services are returned. The
+           * maximum value is 1000; values above 1000 are changed to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of federations to return. The response may contain less than the
+         maximum number. If unspecified, no more than 500 services are returned. The maximum value is 1000;
+         values above 1000 are changed to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of federations to return. The response may contain less
+           * than the maximum number. If unspecified, no more than 500 services are returned. The
+           * maximum value is 1000; values above 1000 are changed to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous ListFederationServices call. Provide
+           * this token to retrieve the subsequent page.To retrieve the first page, supply an empty
+           * page token.When paginating, other parameters provided to ListFederationServices must
+           * match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous ListFederationServices call. Provide this token to
+         retrieve the subsequent page.To retrieve the first page, supply an empty page token.When
+         paginating, other parameters provided to ListFederationServices must match the call that provided
+         the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous ListFederationServices call. Provide
+           * this token to retrieve the subsequent page.To retrieve the first page, supply an empty
+           * page token.When paginating, other parameters provided to ListFederationServices must
+           * match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the fields of a federation.
+         *
+         * Create a request for the method "federations.patch".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. The relative resource name of the federation, of the form:
+         *        projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.Federation}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.metastore.v1alpha.model.Federation content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+
+          /**
+           * Updates the fields of a federation.
+           *
+           * Create a request for the method "federations.patch".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. The relative resource name of the federation, of the form:
+         *        projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.Federation}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.metastore.v1alpha.model.Federation content) {
+            super(DataprocMetastore.this, "PATCH", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. The relative resource name of the federation, of the form:
+           * projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. The relative resource name of the federation, of the form:
+         projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. The relative resource name of the federation, of the form:
+           * projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+           * request if it has completed. The server will ignore subsequent requests that provide a
+           * duplicate request ID for at least 60 minutes after the first request.For example, if an
+           * initial request times out, followed by another request with the same request ID, the
+           * server ignores the second request to prevent the creation of duplicate commitments.The
+           * request ID must be a valid UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           * (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID. Specify a unique request ID to allow the server to ignore the request if it
+         has completed. The server will ignore subsequent requests that provide a duplicate request ID for
+         at least 60 minutes after the first request.For example, if an initial request times out, followed
+         by another request with the same request ID, the server ignores the second request to prevent the
+         creation of duplicate commitments.The request ID must be a valid UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+         (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+           * request if it has completed. The server will ignore subsequent requests that provide a
+           * duplicate request ID for at least 60 minutes after the first request.For example, if an
+           * initial request times out, followed by another request with the same request ID, the
+           * server ignores the second request to prevent the creation of duplicate commitments.The
+           * request ID must be a valid UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           * (00000000-0000-0000-0000-000000000000) is not supported.
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. A field mask used to specify the fields to be overwritten in the metastore
+           * federation resource by the update. Fields specified in the update_mask are relative to
+           * the resource (not to the full request). A field is overwritten if it is in the mask.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A field mask used to specify the fields to be overwritten in the metastore federation
+         resource by the update. Fields specified in the update_mask are relative to the resource (not to
+         the full request). A field is overwritten if it is in the mask.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A field mask used to specify the fields to be overwritten in the metastore
+           * federation resource by the update. Fields specified in the update_mask are relative to
+           * the resource (not to the full request). A field is overwritten if it is in the mask.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+         *
+         * Create a request for the method "federations.setIamPolicy".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         *        the appropriate value for this field.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.metastore.v1alpha.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Policy> {
+
+          private static final String REST_PATH = "v1alpha/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+           *
+           * Create a request for the method "federations.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.metastore.v1alpha.model.SetIamPolicyRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+         * this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "federations.testIamPermissions".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+         *        documentation for the appropriate value for this field.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.metastore.v1alpha.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not
+           * exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation
+           * is designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "federations.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+         *        documentation for the appropriate value for this field.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.metastore.v1alpha.model.TestIamPermissionsRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+         documentation for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/federations/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>

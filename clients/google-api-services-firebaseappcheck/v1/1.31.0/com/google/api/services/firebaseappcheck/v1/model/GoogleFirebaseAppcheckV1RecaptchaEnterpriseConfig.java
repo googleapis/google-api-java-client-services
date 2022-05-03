@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firebaseappcheck.v1beta.model;
+package com.google.api.services.firebaseappcheck.v1.model;
 
 /**
  * An app's reCAPTCHA Enterprise configuration object. This configuration is used by
@@ -30,7 +30,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The relative resource name of the reCAPTCHA Enterprise configuration object, in the
@@ -74,7 +74,7 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig extends
    * format: ``` projects/{project_number}/apps/{app_id}/recaptchaEnterpriseConfig ```
    * @param name name or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig setName(java.lang.String name) {
+  public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -99,7 +99,7 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig extends
    * rather your score-based reCAPTCHA Enterprise site key.
    * @param siteKey siteKey or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig setSiteKey(java.lang.String siteKey) {
+  public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig setSiteKey(java.lang.String siteKey) {
     this.siteKey = siteKey;
     return this;
   }
@@ -120,19 +120,19 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig extends
    * days, inclusive.
    * @param tokenTtl tokenTtl or {@code null} for none
    */
-  public GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig setTokenTtl(String tokenTtl) {
+  public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig setTokenTtl(String tokenTtl) {
     this.tokenTtl = tokenTtl;
     return this;
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig set(String fieldName, Object value) {
-    return (GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig) super.set(fieldName, value);
+  public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig set(String fieldName, Object value) {
+    return (GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig clone() {
-    return (GoogleFirebaseAppcheckV1betaRecaptchaEnterpriseConfig) super.clone();
+  public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig clone() {
+    return (GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig) super.clone();
   }
 
 }

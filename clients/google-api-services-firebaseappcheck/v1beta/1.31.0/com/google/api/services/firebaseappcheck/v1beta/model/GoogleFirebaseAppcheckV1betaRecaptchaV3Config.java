@@ -19,7 +19,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 /**
  * An app's reCAPTCHA v3 configuration object. This configuration is used by
  * ExchangeRecaptchaV3Token to validate reCAPTCHA tokens issued to apps by reCAPTCHA v3. It also
- * controls certain properties of the returned App Check token, such as its ttl.
+ * controls certain properties of the returned `AppCheckToken`, such as its ttl.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation

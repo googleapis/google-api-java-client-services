@@ -173,8 +173,8 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
     public class Products {
 
       /**
-       * Used by partners to list products that can be resold to their customers. It should be called
-       * directly by the partner using service accounts.
+       * To retrieve the products that can be resold by the partner. It should be autenticated with a
+       * service account.
        *
        * Create a request for the method "products.list".
        *
@@ -199,8 +199,8 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
             java.util.regex.Pattern.compile("^partners/[^/]+$");
 
         /**
-         * Used by partners to list products that can be resold to their customers. It should be called
-         * directly by the partner using service accounts.
+         * To retrieve the products that can be resold by the partner. It should be autenticated with a
+         * service account.
          *
          * Create a request for the method "products.list".
          *
@@ -310,6 +310,40 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
 
         /**
+         * Optional. Specifies the filters for the products results. The syntax defined in the EBNF
+         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
+         * if any specified parameter is not supported. Currently, it can only be used by Youtube
+         * partners. Allowed parameters are: - regionCodes - zipCode - eligibilityId Multiple
+         * parameters can be specified, for example: "regionCodes=US zipCode=94043
+         * eligibilityId=2022H1Campaign"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Specifies the filters for the products results. The syntax defined in the EBNF grammar:
+       https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown if any specified
+       parameter is not supported. Currently, it can only be used by Youtube partners. Allowed parameters
+       are: - regionCodes - zipCode - eligibilityId Multiple parameters can be specified, for example:
+       "regionCodes=US zipCode=94043 eligibilityId=2022H1Campaign"
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Specifies the filters for the products results. The syntax defined in the EBNF
+         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
+         * if any specified parameter is not supported. Currently, it can only be used by Youtube
+         * partners. Allowed parameters are: - regionCodes - zipCode - eligibilityId Multiple
+         * parameters can be specified, for example: "regionCodes=US zipCode=94043
+         * eligibilityId=2022H1Campaign"
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Optional. The maximum number of products to return. The service may return fewer than
          * this value. If unspecified, at most 50 products will be returned. The maximum value is
          * 1000; values above 1000 will be coerced to 1000.
@@ -389,8 +423,142 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
     public class Promotions {
 
       /**
-       * Used by partners to list promotions, such as free trial, that can be applied on subscriptions. It
-       * should be called directly by the partner using service accounts.
+       * To find eligible promotions for the current user. The API requires user authorization via OAuth.
+       * The user is inferred from the authenticated OAuth credential.
+       *
+       * Create a request for the method "promotions.findEligible".
+       *
+       * This request holds the parameters needed by the paymentsresellersubscription server.  After
+       * setting any optional parameters, call the {@link FindEligible#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest}
+       * @return the request
+       */
+      public FindEligible findEligible(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest content) throws java.io.IOException {
+        FindEligible result = new FindEligible(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class FindEligible extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/promotions:findEligible";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^partners/[^/]+$");
+
+        /**
+         * To find eligible promotions for the current user. The API requires user authorization via
+         * OAuth. The user is inferred from the authenticated OAuth credential.
+         *
+         * Create a request for the method "promotions.findEligible".
+         *
+         * This request holds the parameters needed by the the paymentsresellersubscription server.  After
+         * setting any optional parameters, call the {@link FindEligible#execute()} method to invoke the
+         * remote operation. <p> {@link
+         * FindEligible#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest}
+         * @since 1.13
+         */
+        protected FindEligible(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^partners/[^/]+$");
+          }
+        }
+
+        @Override
+        public FindEligible set$Xgafv(java.lang.String $Xgafv) {
+          return (FindEligible) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FindEligible setAccessToken(java.lang.String accessToken) {
+          return (FindEligible) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FindEligible setAlt(java.lang.String alt) {
+          return (FindEligible) super.setAlt(alt);
+        }
+
+        @Override
+        public FindEligible setCallback(java.lang.String callback) {
+          return (FindEligible) super.setCallback(callback);
+        }
+
+        @Override
+        public FindEligible setFields(java.lang.String fields) {
+          return (FindEligible) super.setFields(fields);
+        }
+
+        @Override
+        public FindEligible setKey(java.lang.String key) {
+          return (FindEligible) super.setKey(key);
+        }
+
+        @Override
+        public FindEligible setOauthToken(java.lang.String oauthToken) {
+          return (FindEligible) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FindEligible setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FindEligible) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FindEligible setQuotaUser(java.lang.String quotaUser) {
+          return (FindEligible) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FindEligible setUploadType(java.lang.String uploadType) {
+          return (FindEligible) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FindEligible setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FindEligible) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent, the partner that can resell. Format: partners/{partner} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, the partner that can resell. Format: partners/{partner}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent, the partner that can resell. Format: partners/{partner} */
+        public FindEligible setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^partners/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public FindEligible set(String parameterName, Object value) {
+          return (FindEligible) super.set(parameterName, value);
+        }
+      }
+      /**
+       * To retrieve the promotions, such as free trial, that can be used by the partner. It should be
+       * autenticated with a service account.
        *
        * Create a request for the method "promotions.list".
        *
@@ -415,8 +583,8 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
             java.util.regex.Pattern.compile("^partners/[^/]+$");
 
         /**
-         * Used by partners to list promotions, such as free trial, that can be applied on subscriptions.
-         * It should be called directly by the partner using service accounts.
+         * To retrieve the promotions, such as free trial, that can be used by the partner. It should be
+         * autenticated with a service account.
          *
          * Create a request for the method "promotions.list".
          *
@@ -527,16 +695,21 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. Specifies the filters for the promotion results. The syntax defined in the EBNF
-         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. Examples: -
-         * applicable_products: "sku1" - region_codes: "US" - applicable_products: "sku1" AND
-         * region_codes: "US"
+         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
+         * if the specified parameter(s) is not supported. Currently, it can only be used by Youtube
+         * partners. Allowed parameters are: - region_codes: "US" - zip_code: "94043" -
+         * eligibility_id: "2022H1Campaign" Multiple parameters can be specified, for example:
+         * "region_codes=US zip_code=94043 eligibility_id=2022H1Campaign"
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional. Specifies the filters for the promotion results. The syntax defined in the EBNF grammar:
-       https://google.aip.dev/assets/misc/ebnf-filtering.txt. Examples: - applicable_products: "sku1" -
-       region_codes: "US" - applicable_products: "sku1" AND region_codes: "US"
+       https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown if the specified
+       parameter(s) is not supported. Currently, it can only be used by Youtube partners. Allowed
+       parameters are: - region_codes: "US" - zip_code: "94043" - eligibility_id: "2022H1Campaign"
+       Multiple parameters can be specified, for example: "region_codes=US zip_code=94043
+       eligibility_id=2022H1Campaign"
          */
         public java.lang.String getFilter() {
           return filter;
@@ -544,9 +717,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. Specifies the filters for the promotion results. The syntax defined in the EBNF
-         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. Examples: -
-         * applicable_products: "sku1" - region_codes: "US" - applicable_products: "sku1" AND
-         * region_codes: "US"
+         * grammar: https://google.aip.dev/assets/misc/ebnf-filtering.txt. An error will be thrown
+         * if the specified parameter(s) is not supported. Currently, it can only be used by Youtube
+         * partners. Allowed parameters are: - region_codes: "US" - zip_code: "94043" -
+         * eligibility_id: "2022H1Campaign" Multiple parameters can be specified, for example:
+         * "region_codes=US zip_code=94043 eligibility_id=2022H1Campaign"
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

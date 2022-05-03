@@ -460,6 +460,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String pattern;
 
   /**
+   * Publication of this item should be temporarily paused. Acceptable values are: - "`ads`"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pause;
+
+  /**
    * The pick up option for the item. Acceptable values are: - "`buy`" - "`reserve`" - "`ship to
    * store`" - "`not supported`"
    * The value may be {@code null}.
@@ -1713,6 +1720,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setPattern(java.lang.String pattern) {
     this.pattern = pattern;
+    return this;
+  }
+
+  /**
+   * Publication of this item should be temporarily paused. Acceptable values are: - "`ads`"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPause() {
+    return pause;
+  }
+
+  /**
+   * Publication of this item should be temporarily paused. Acceptable values are: - "`ads`"
+   * @param pause pause or {@code null} for none
+   */
+  public Product setPause(java.lang.String pause) {
+    this.pause = pause;
     return this;
   }
 

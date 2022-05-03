@@ -31,14 +31,14 @@ package com.google.api.services.content.model;
 public final class ProductId extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Content API ID of the product, in the form channel:contentLanguage:targetCountry:offerId.
+   * The Content API ID of the product, in the form `channel:contentLanguage:targetCountry:offerId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productId;
 
   /**
-   * The Content API ID of the product, in the form channel:contentLanguage:targetCountry:offerId.
+   * The Content API ID of the product, in the form `channel:contentLanguage:targetCountry:offerId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -46,7 +46,7 @@ public final class ProductId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Content API ID of the product, in the form channel:contentLanguage:targetCountry:offerId.
+   * The Content API ID of the product, in the form `channel:contentLanguage:targetCountry:offerId`.
    * @param productId productId or {@code null} for none
    */
   public ProductId setProductId(java.lang.String productId) {

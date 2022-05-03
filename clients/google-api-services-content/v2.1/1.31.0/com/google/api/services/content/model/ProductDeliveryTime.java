@@ -17,10 +17,10 @@
 package com.google.api.services.content.model;
 
 /**
- * The estimated days to deliver for this product. These methods are intended for authorized
- * partners working with a merchant. Merchants should use the [product
- * API](https://developers.google.com/shopping-content/reference/rest/v2.1/products#productshipping)
- * instead. To obtain authorization from a merchant refer to
+ * The estimated days to deliver a product after an order is placed. Only authorized shipping
+ * signals partners working with a merchant can use this resource. Merchants should use the
+ * [`products`](https://developers.google.com/shopping-
+ * content/reference/rest/v2.1/products#productshipping) resource instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -34,23 +34,23 @@ package com.google.api.services.content.model;
 public final class ProductDeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A set of associations between DeliveryAreas and DeliveryTimes. The total number of
-   * areaDeliveryTimes can be at most 100.
+   * Required. A set of associations between `DeliveryArea` and `DeliveryTime` entries. The total
+   * number of `areaDeliveryTimes` can be at most 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ProductDeliveryTimeAreaDeliveryTime> areaDeliveryTimes;
 
   /**
-   * Required. The id of the product.
+   * Required. The `id` of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductId productId;
 
   /**
-   * Required. A set of associations between DeliveryAreas and DeliveryTimes. The total number of
-   * areaDeliveryTimes can be at most 100.
+   * Required. A set of associations between `DeliveryArea` and `DeliveryTime` entries. The total
+   * number of `areaDeliveryTimes` can be at most 100.
    * @return value or {@code null} for none
    */
   public java.util.List<ProductDeliveryTimeAreaDeliveryTime> getAreaDeliveryTimes() {
@@ -58,8 +58,8 @@ public final class ProductDeliveryTime extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. A set of associations between DeliveryAreas and DeliveryTimes. The total number of
-   * areaDeliveryTimes can be at most 100.
+   * Required. A set of associations between `DeliveryArea` and `DeliveryTime` entries. The total
+   * number of `areaDeliveryTimes` can be at most 100.
    * @param areaDeliveryTimes areaDeliveryTimes or {@code null} for none
    */
   public ProductDeliveryTime setAreaDeliveryTimes(java.util.List<ProductDeliveryTimeAreaDeliveryTime> areaDeliveryTimes) {
@@ -68,7 +68,7 @@ public final class ProductDeliveryTime extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The id of the product.
+   * Required. The `id` of the product.
    * @return value or {@code null} for none
    */
   public ProductId getProductId() {
@@ -76,7 +76,7 @@ public final class ProductDeliveryTime extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The id of the product.
+   * Required. The `id` of the product.
    * @param productId productId or {@code null} for none
    */
   public ProductDeliveryTime setProductId(ProductId productId) {

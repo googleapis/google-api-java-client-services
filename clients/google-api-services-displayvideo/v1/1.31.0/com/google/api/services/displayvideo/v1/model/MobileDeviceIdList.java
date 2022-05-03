@@ -31,14 +31,16 @@ package com.google.api.services.displayvideo.v1.model;
 public final class MobileDeviceIdList extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members.
+   * A list of mobile device IDs defining Customer Match audience members. The size of
+   * mobile_device_ids mustn't be greater than 500,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> mobileDeviceIds;
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members.
+   * A list of mobile device IDs defining Customer Match audience members. The size of
+   * mobile_device_ids mustn't be greater than 500,000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMobileDeviceIds() {
@@ -46,7 +48,8 @@ public final class MobileDeviceIdList extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members.
+   * A list of mobile device IDs defining Customer Match audience members. The size of
+   * mobile_device_ids mustn't be greater than 500,000.
    * @param mobileDeviceIds mobileDeviceIds or {@code null} for none
    */
   public MobileDeviceIdList setMobileDeviceIds(java.util.List<java.lang.String> mobileDeviceIds) {

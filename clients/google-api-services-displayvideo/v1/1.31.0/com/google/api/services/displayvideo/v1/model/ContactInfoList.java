@@ -31,7 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ContactInfoList extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of ContactInfo objects defining Customer Match audience members.
+   * A list of ContactInfo objects defining Customer Match audience members. The size of
+   * contact_infos mustn't be greater than 500,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class ContactInfoList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of ContactInfo objects defining Customer Match audience members.
+   * A list of ContactInfo objects defining Customer Match audience members. The size of
+   * contact_infos mustn't be greater than 500,000.
    * @return value or {@code null} for none
    */
   public java.util.List<ContactInfo> getContactInfos() {
@@ -52,7 +54,8 @@ public final class ContactInfoList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of ContactInfo objects defining Customer Match audience members.
+   * A list of ContactInfo objects defining Customer Match audience members. The size of
+   * contact_infos mustn't be greater than 500,000.
    * @param contactInfos contactInfos or {@code null} for none
    */
   public ContactInfoList setContactInfos(java.util.List<ContactInfo> contactInfos) {

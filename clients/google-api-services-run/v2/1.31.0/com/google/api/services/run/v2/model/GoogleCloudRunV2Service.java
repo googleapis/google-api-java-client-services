@@ -124,7 +124,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Output only. A number that monotonically increases every time the user modifies the desired
-   * state.
+   * state. Please note that unlike v1, this is an int64 value. As with most Google APIs, its JSON
+   * representation will be a `string` instead of an `integer`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -194,7 +195,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Output only. The generation of this Service currently serving traffic. See comments in
-   * `reconciling` for additional information on reconciliation process in Cloud Run.
+   * `reconciling` for additional information on reconciliation process in Cloud Run. Please note
+   * that unlike v1, this is an int64 value. As with most Google APIs, its JSON representation will
+   * be a `string` instead of an `integer`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -477,7 +480,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Output only. A number that monotonically increases every time the user modifies the desired
-   * state.
+   * state. Please note that unlike v1, this is an int64 value. As with most Google APIs, its JSON
+   * representation will be a `string` instead of an `integer`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getGeneration() {
@@ -486,7 +490,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Output only. A number that monotonically increases every time the user modifies the desired
-   * state.
+   * state. Please note that unlike v1, this is an int64 value. As with most Google APIs, its JSON
+   * representation will be a `string` instead of an `integer`.
    * @param generation generation or {@code null} for none
    */
   public GoogleCloudRunV2Service setGeneration(java.lang.Long generation) {
@@ -641,7 +646,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Output only. The generation of this Service currently serving traffic. See comments in
-   * `reconciling` for additional information on reconciliation process in Cloud Run.
+   * `reconciling` for additional information on reconciliation process in Cloud Run. Please note
+   * that unlike v1, this is an int64 value. As with most Google APIs, its JSON representation will
+   * be a `string` instead of an `integer`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getObservedGeneration() {
@@ -650,7 +657,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Output only. The generation of this Service currently serving traffic. See comments in
-   * `reconciling` for additional information on reconciliation process in Cloud Run.
+   * `reconciling` for additional information on reconciliation process in Cloud Run. Please note
+   * that unlike v1, this is an int64 value. As with most Google APIs, its JSON representation will
+   * be a `string` instead of an `integer`.
    * @param observedGeneration observedGeneration or {@code null} for none
    */
   public GoogleCloudRunV2Service setObservedGeneration(java.lang.Long observedGeneration) {

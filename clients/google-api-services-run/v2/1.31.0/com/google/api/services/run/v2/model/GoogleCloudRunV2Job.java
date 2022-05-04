@@ -78,19 +78,6 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Status information for each of the containers specified.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRunV2ContainerStatus> containerStatuses;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudRunV2ContainerStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudRunV2ContainerStatus.class);
-  }
-
-  /**
    * Output only. The creation time.
    * The value may be {@code null}.
    */
@@ -335,23 +322,6 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    */
   public GoogleCloudRunV2Job setConditions(java.util.List<GoogleCloudRunV2Condition> conditions) {
     this.conditions = conditions;
-    return this;
-  }
-
-  /**
-   * Output only. Status information for each of the containers specified.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudRunV2ContainerStatus> getContainerStatuses() {
-    return containerStatuses;
-  }
-
-  /**
-   * Output only. Status information for each of the containers specified.
-   * @param containerStatuses containerStatuses or {@code null} for none
-   */
-  public GoogleCloudRunV2Job setContainerStatuses(java.util.List<GoogleCloudRunV2ContainerStatus> containerStatuses) {
-    this.containerStatuses = containerStatuses;
     return this;
   }
 

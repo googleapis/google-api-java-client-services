@@ -37,20 +37,6 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Enables Confidential Cloud Run in Revisions created using this template.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean confidential;
-
-  /**
-   * Sets the maximum number of requests that each serving instance can receive.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer containerConcurrency;
-
-  /**
    * Holds the single container that defines the unit of execution for this Revision.
    * The value may be {@code null}.
    */
@@ -84,6 +70,13 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Sets the maximum number of requests that each serving instance can receive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceRequestConcurrency;
 
   /**
    * The unique name for the revision. If this field is omitted, it will be automatically generated
@@ -146,40 +139,6 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
-    return this;
-  }
-
-  /**
-   * Enables Confidential Cloud Run in Revisions created using this template.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getConfidential() {
-    return confidential;
-  }
-
-  /**
-   * Enables Confidential Cloud Run in Revisions created using this template.
-   * @param confidential confidential or {@code null} for none
-   */
-  public GoogleCloudRunV2RevisionTemplate setConfidential(java.lang.Boolean confidential) {
-    this.confidential = confidential;
-    return this;
-  }
-
-  /**
-   * Sets the maximum number of requests that each serving instance can receive.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getContainerConcurrency() {
-    return containerConcurrency;
-  }
-
-  /**
-   * Sets the maximum number of requests that each serving instance can receive.
-   * @param containerConcurrency containerConcurrency or {@code null} for none
-   */
-  public GoogleCloudRunV2RevisionTemplate setContainerConcurrency(java.lang.Integer containerConcurrency) {
-    this.containerConcurrency = containerConcurrency;
     return this;
   }
 
@@ -250,6 +209,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Sets the maximum number of requests that each serving instance can receive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceRequestConcurrency() {
+    return maxInstanceRequestConcurrency;
+  }
+
+  /**
+   * Sets the maximum number of requests that each serving instance can receive.
+   * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
+    this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
     return this;
   }
 

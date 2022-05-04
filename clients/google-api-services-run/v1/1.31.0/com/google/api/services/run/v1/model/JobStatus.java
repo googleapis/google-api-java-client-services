@@ -44,20 +44,6 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status information for each of the specified containers. The status includes the resolved
-   * digest for specified images, which occurs during creation of the job.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ContainerStatus> containerStatuses;
-
-  static {
-    // hack to force ProGuard to consider ContainerStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContainerStatus.class);
-  }
-
-  /**
    * Number of executions created for this job.
    * The value may be {@code null}.
    */
@@ -95,25 +81,6 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
    */
   public JobStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {
     this.conditions = conditions;
-    return this;
-  }
-
-  /**
-   * Status information for each of the specified containers. The status includes the resolved
-   * digest for specified images, which occurs during creation of the job.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ContainerStatus> getContainerStatuses() {
-    return containerStatuses;
-  }
-
-  /**
-   * Status information for each of the specified containers. The status includes the resolved
-   * digest for specified images, which occurs during creation of the job.
-   * @param containerStatuses containerStatuses or {@code null} for none
-   */
-  public JobStatus setContainerStatuses(java.util.List<ContainerStatus> containerStatuses) {
-    this.containerStatuses = containerStatuses;
     return this;
   }
 

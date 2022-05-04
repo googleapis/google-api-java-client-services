@@ -30,25 +30,11 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Condition extends com.google.api.client.json.GenericJson {
 
   /**
-   * A reason for the domain mapping condition.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String domainMappingReason;
-
-  /**
    * A reason for the execution condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String executionReason;
-
-  /**
-   * A reason for the internal condition.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String internalReason;
 
   /**
    * Last time the condition transitioned from one status to another.
@@ -102,23 +88,6 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   private java.lang.String type;
 
   /**
-   * A reason for the domain mapping condition.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDomainMappingReason() {
-    return domainMappingReason;
-  }
-
-  /**
-   * A reason for the domain mapping condition.
-   * @param domainMappingReason domainMappingReason or {@code null} for none
-   */
-  public GoogleCloudRunV2Condition setDomainMappingReason(java.lang.String domainMappingReason) {
-    this.domainMappingReason = domainMappingReason;
-    return this;
-  }
-
-  /**
    * A reason for the execution condition.
    * @return value or {@code null} for none
    */
@@ -132,23 +101,6 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Condition setExecutionReason(java.lang.String executionReason) {
     this.executionReason = executionReason;
-    return this;
-  }
-
-  /**
-   * A reason for the internal condition.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInternalReason() {
-    return internalReason;
-  }
-
-  /**
-   * A reason for the internal condition.
-   * @param internalReason internalReason or {@code null} for none
-   */
-  public GoogleCloudRunV2Condition setInternalReason(java.lang.String internalReason) {
-    this.internalReason = internalReason;
     return this;
   }
 

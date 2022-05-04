@@ -665,6 +665,150 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
     public class Adclients {
 
       /**
+       * Gets the ad client from the given resource name.
+       *
+       * Create a request for the method "adclients.get".
+       *
+       * This request holds the parameters needed by the adsense server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the ad client to retrieve. Format: accounts/{account}/adclients/{adclient}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AdsenseRequest<com.google.api.services.adsense.v2.model.AdClient> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/adclients/[^/]+$");
+
+        /**
+         * Gets the ad client from the given resource name.
+         *
+         * Create a request for the method "adclients.get".
+         *
+         * This request holds the parameters needed by the the adsense server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the ad client to retrieve. Format: accounts/{account}/adclients/{adclient}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Adsense.this, "GET", REST_PATH, null, com.google.api.services.adsense.v2.model.AdClient.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/adclients/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the ad client to retrieve. Format:
+         * accounts/{account}/adclients/{adclient}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the ad client to retrieve. Format: accounts/{account}/adclients/{adclient}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the ad client to retrieve. Format:
+         * accounts/{account}/adclients/{adclient}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/adclients/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets the AdSense code for a given ad client. This returns what was previously known as the 'auto
        * ad code'. This is only supported for ad clients with a product_code of AFC. For more information,
        * see [About the AdSense code](https://support.google.com/adsense/answer/9274634).
@@ -2317,6 +2461,153 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
       public class Urlchannels {
 
         /**
+         * Gets information about the selected url channel.
+         *
+         * Create a request for the method "urlchannels.get".
+         *
+         * This request holds the parameters needed by the adsense server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the url channel to retrieve. Format:
+         *        accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AdsenseRequest<com.google.api.services.adsense.v2.model.UrlChannel> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adclients/[^/]+/urlchannels/[^/]+$");
+
+          /**
+           * Gets information about the selected url channel.
+           *
+           * Create a request for the method "urlchannels.get".
+           *
+           * This request holds the parameters needed by the the adsense server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the url channel to retrieve. Format:
+         *        accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Adsense.this, "GET", REST_PATH, null, com.google.api.services.adsense.v2.model.UrlChannel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/urlchannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the url channel to retrieve. Format:
+           * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the url channel to retrieve. Format:
+         accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the url channel to retrieve. Format:
+           * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/adclients/[^/]+/urlchannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists active url channels.
          *
          * Create a request for the method "urlchannels.list".
@@ -3815,6 +4106,151 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public GenerateCsv set(String parameterName, Object value) {
           return (GenerateCsv) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets the saved report from the given resource name.
+       *
+       * Create a request for the method "reports.getSaved".
+       *
+       * This request holds the parameters needed by the adsense server.  After setting any optional
+       * parameters, call the {@link GetSaved#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the saved report to retrieve. Format: accounts/{account}/reports/{report}
+       * @return the request
+       */
+      public GetSaved getSaved(java.lang.String name) throws java.io.IOException {
+        GetSaved result = new GetSaved(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSaved extends AdsenseRequest<com.google.api.services.adsense.v2.model.SavedReport> {
+
+        private static final String REST_PATH = "v2/{+name}/saved";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/reports/[^/]+$");
+
+        /**
+         * Gets the saved report from the given resource name.
+         *
+         * Create a request for the method "reports.getSaved".
+         *
+         * This request holds the parameters needed by the the adsense server.  After setting any optional
+         * parameters, call the {@link GetSaved#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * GetSaved#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the saved report to retrieve. Format: accounts/{account}/reports/{report}
+         * @since 1.13
+         */
+        protected GetSaved(java.lang.String name) {
+          super(Adsense.this, "GET", REST_PATH, null, com.google.api.services.adsense.v2.model.SavedReport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/reports/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetSaved set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSaved) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSaved setAccessToken(java.lang.String accessToken) {
+          return (GetSaved) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSaved setAlt(java.lang.String alt) {
+          return (GetSaved) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSaved setCallback(java.lang.String callback) {
+          return (GetSaved) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSaved setFields(java.lang.String fields) {
+          return (GetSaved) super.setFields(fields);
+        }
+
+        @Override
+        public GetSaved setKey(java.lang.String key) {
+          return (GetSaved) super.setKey(key);
+        }
+
+        @Override
+        public GetSaved setOauthToken(java.lang.String oauthToken) {
+          return (GetSaved) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSaved setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSaved) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSaved setQuotaUser(java.lang.String quotaUser) {
+          return (GetSaved) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSaved setUploadType(java.lang.String uploadType) {
+          return (GetSaved) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSaved setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSaved) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the saved report to retrieve. Format:
+         * accounts/{account}/reports/{report}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the saved report to retrieve. Format: accounts/{account}/reports/{report}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the saved report to retrieve. Format:
+         * accounts/{account}/reports/{report}
+         */
+        public GetSaved setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/reports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetSaved set(String parameterName, Object value) {
+          return (GetSaved) super.set(parameterName, value);
         }
       }
 

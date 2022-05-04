@@ -49,13 +49,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
-   * Unimplemented.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.util.Map<String, java.lang.Object>> extensions;
-
-  /**
    * DO NOT USE. This is an experimental field.
    * The value may be {@code null}.
    */
@@ -206,23 +199,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setEndTime(String endTime) {
     this.endTime = endTime;
-    return this;
-  }
-
-  /**
-   * Unimplemented.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.util.Map<String, java.lang.Object>> getExtensions() {
-    return extensions;
-  }
-
-  /**
-   * Unimplemented.
-   * @param extensions extensions or {@code null} for none
-   */
-  public Operation setExtensions(java.util.List<java.util.Map<String, java.lang.Object>> extensions) {
-    this.extensions = extensions;
     return this;
   }
 

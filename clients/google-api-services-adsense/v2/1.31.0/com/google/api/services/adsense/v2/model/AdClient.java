@@ -39,7 +39,9 @@ public final class AdClient extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Product code of the ad client. For example, "AFC" for AdSense for Content.
+   * Output only. Reporting product code of the ad client. For example, "AFC" for AdSense for
+   * Content. Corresponds to the `PRODUCT_CODE` dimension, and present only if the ad client
+   * supports reporting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +80,9 @@ public final class AdClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Product code of the ad client. For example, "AFC" for AdSense for Content.
+   * Output only. Reporting product code of the ad client. For example, "AFC" for AdSense for
+   * Content. Corresponds to the `PRODUCT_CODE` dimension, and present only if the ad client
+   * supports reporting.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductCode() {
@@ -86,7 +90,9 @@ public final class AdClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Product code of the ad client. For example, "AFC" for AdSense for Content.
+   * Output only. Reporting product code of the ad client. For example, "AFC" for AdSense for
+   * Content. Corresponds to the `PRODUCT_CODE` dimension, and present only if the ad client
+   * supports reporting.
    * @param productCode productCode or {@code null} for none
    */
   public AdClient setProductCode(java.lang.String productCode) {

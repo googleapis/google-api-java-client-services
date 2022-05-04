@@ -86,7 +86,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.String orderId;
 
   /**
-   * The inapp product SKU.
+   * The inapp product SKU. May not be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.Long purchaseTimeMillis;
 
   /**
-   * The purchase token generated to identify this purchase.
+   * The purchase token generated to identify this purchase. May not be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.Integer purchaseType;
 
   /**
-   * The quantity associated with the purchase of the inapp product.
+   * The quantity associated with the purchase of the inapp product. If not present, the quantity is
+   * 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -269,7 +270,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The inapp product SKU.
+   * The inapp product SKU. May not be present.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -277,7 +278,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The inapp product SKU.
+   * The inapp product SKU. May not be present.
    * @param productId productId or {@code null} for none
    */
   public ProductPurchase setProductId(java.lang.String productId) {
@@ -320,7 +321,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The purchase token generated to identify this purchase.
+   * The purchase token generated to identify this purchase. May not be present.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurchaseToken() {
@@ -328,7 +329,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The purchase token generated to identify this purchase.
+   * The purchase token generated to identify this purchase. May not be present.
    * @param purchaseToken purchaseToken or {@code null} for none
    */
   public ProductPurchase setPurchaseToken(java.lang.String purchaseToken) {
@@ -360,7 +361,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The quantity associated with the purchase of the inapp product.
+   * The quantity associated with the purchase of the inapp product. If not present, the quantity is
+   * 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQuantity() {
@@ -368,7 +370,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The quantity associated with the purchase of the inapp product.
+   * The quantity associated with the purchase of the inapp product. If not present, the quantity is
+   * 1.
    * @param quantity quantity or {@code null} for none
    */
   public ProductPurchase setQuantity(java.lang.Integer quantity) {

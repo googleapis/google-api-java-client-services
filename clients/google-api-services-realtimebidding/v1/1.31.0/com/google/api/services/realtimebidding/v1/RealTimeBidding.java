@@ -3363,6 +3363,724 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
       }
 
     }
+    /**
+     * An accessor for creating requests from the PublisherConnections collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code RealTimeBidding realtimebidding = new RealTimeBidding(...);}
+     *   {@code RealTimeBidding.PublisherConnections.List request = realtimebidding.publisherConnections().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PublisherConnections publisherConnections() {
+      return new PublisherConnections();
+    }
+
+    /**
+     * The "publisherConnections" collection of methods.
+     */
+    public class PublisherConnections {
+
+      /**
+       * Batch approves multiple publisher connections.
+       *
+       * Create a request for the method "publisherConnections.batchApprove".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link BatchApprove#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The bidder for whom publisher connections will be approved. Format: `bidders/{bidder}`
+       *        where `{bidder}` is the account ID of the bidder.
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.BatchApprovePublisherConnectionsRequest}
+       * @return the request
+       */
+      public BatchApprove batchApprove(java.lang.String parent, com.google.api.services.realtimebidding.v1.model.BatchApprovePublisherConnectionsRequest content) throws java.io.IOException {
+        BatchApprove result = new BatchApprove(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchApprove extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.BatchApprovePublisherConnectionsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/publisherConnections:batchApprove";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+        /**
+         * Batch approves multiple publisher connections.
+         *
+         * Create a request for the method "publisherConnections.batchApprove".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link BatchApprove#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchApprove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The bidder for whom publisher connections will be approved. Format: `bidders/{bidder}`
+       *        where `{bidder}` is the account ID of the bidder.
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.BatchApprovePublisherConnectionsRequest}
+         * @since 1.13
+         */
+        protected BatchApprove(java.lang.String parent, com.google.api.services.realtimebidding.v1.model.BatchApprovePublisherConnectionsRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.BatchApprovePublisherConnectionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchApprove set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchApprove) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchApprove setAccessToken(java.lang.String accessToken) {
+          return (BatchApprove) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchApprove setAlt(java.lang.String alt) {
+          return (BatchApprove) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchApprove setCallback(java.lang.String callback) {
+          return (BatchApprove) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchApprove setFields(java.lang.String fields) {
+          return (BatchApprove) super.setFields(fields);
+        }
+
+        @Override
+        public BatchApprove setKey(java.lang.String key) {
+          return (BatchApprove) super.setKey(key);
+        }
+
+        @Override
+        public BatchApprove setOauthToken(java.lang.String oauthToken) {
+          return (BatchApprove) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchApprove setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchApprove) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchApprove setQuotaUser(java.lang.String quotaUser) {
+          return (BatchApprove) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchApprove setUploadType(java.lang.String uploadType) {
+          return (BatchApprove) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchApprove setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchApprove) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The bidder for whom publisher connections will be approved. Format:
+         * `bidders/{bidder}` where `{bidder}` is the account ID of the bidder.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The bidder for whom publisher connections will be approved. Format: `bidders/{bidder}`
+       where `{bidder}` is the account ID of the bidder.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The bidder for whom publisher connections will be approved. Format:
+         * `bidders/{bidder}` where `{bidder}` is the account ID of the bidder.
+         */
+        public BatchApprove setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchApprove set(String parameterName, Object value) {
+          return (BatchApprove) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Batch rejects multiple publisher connections.
+       *
+       * Create a request for the method "publisherConnections.batchReject".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link BatchReject#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The bidder for whom publisher connections will be rejected. Format: `bidders/{bidder}`
+       *        where `{bidder}` is the account ID of the bidder.
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.BatchRejectPublisherConnectionsRequest}
+       * @return the request
+       */
+      public BatchReject batchReject(java.lang.String parent, com.google.api.services.realtimebidding.v1.model.BatchRejectPublisherConnectionsRequest content) throws java.io.IOException {
+        BatchReject result = new BatchReject(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchReject extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.BatchRejectPublisherConnectionsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/publisherConnections:batchReject";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+        /**
+         * Batch rejects multiple publisher connections.
+         *
+         * Create a request for the method "publisherConnections.batchReject".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link BatchReject#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchReject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The bidder for whom publisher connections will be rejected. Format: `bidders/{bidder}`
+       *        where `{bidder}` is the account ID of the bidder.
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.BatchRejectPublisherConnectionsRequest}
+         * @since 1.13
+         */
+        protected BatchReject(java.lang.String parent, com.google.api.services.realtimebidding.v1.model.BatchRejectPublisherConnectionsRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.BatchRejectPublisherConnectionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchReject set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchReject) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchReject setAccessToken(java.lang.String accessToken) {
+          return (BatchReject) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchReject setAlt(java.lang.String alt) {
+          return (BatchReject) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchReject setCallback(java.lang.String callback) {
+          return (BatchReject) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchReject setFields(java.lang.String fields) {
+          return (BatchReject) super.setFields(fields);
+        }
+
+        @Override
+        public BatchReject setKey(java.lang.String key) {
+          return (BatchReject) super.setKey(key);
+        }
+
+        @Override
+        public BatchReject setOauthToken(java.lang.String oauthToken) {
+          return (BatchReject) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchReject setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchReject) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchReject setQuotaUser(java.lang.String quotaUser) {
+          return (BatchReject) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchReject setUploadType(java.lang.String uploadType) {
+          return (BatchReject) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchReject setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchReject) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The bidder for whom publisher connections will be rejected. Format:
+         * `bidders/{bidder}` where `{bidder}` is the account ID of the bidder.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The bidder for whom publisher connections will be rejected. Format: `bidders/{bidder}`
+       where `{bidder}` is the account ID of the bidder.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The bidder for whom publisher connections will be rejected. Format:
+         * `bidders/{bidder}` where `{bidder}` is the account ID of the bidder.
+         */
+        public BatchReject setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchReject set(String parameterName, Object value) {
+          return (BatchReject) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a publisher connection.
+       *
+       * Create a request for the method "publisherConnections.get".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the publisher whose connection information is to be retrieved. In the pattern
+       *        `bidders/{bidder}/publisherConnections/{publisher}` where `{bidder}` is the account ID of
+       *        the bidder, and `{publisher}` is the ads.txt/app-ads.txt publisher ID. See
+       *        publisherConnection.name.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PublisherConnection> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/publisherConnections/[^/]+$");
+
+        /**
+         * Gets a publisher connection.
+         *
+         * Create a request for the method "publisherConnections.get".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the publisher whose connection information is to be retrieved. In the pattern
+       *        `bidders/{bidder}/publisherConnections/{publisher}` where `{bidder}` is the account ID of
+       *        the bidder, and `{publisher}` is the ads.txt/app-ads.txt publisher ID. See
+       *        publisherConnection.name.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.PublisherConnection.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/publisherConnections/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the publisher whose connection information is to be retrieved. In the
+         * pattern `bidders/{bidder}/publisherConnections/{publisher}` where `{bidder}` is the
+         * account ID of the bidder, and `{publisher}` is the ads.txt/app-ads.txt publisher ID. See
+         * publisherConnection.name.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the publisher whose connection information is to be retrieved. In the pattern
+       `bidders/{bidder}/publisherConnections/{publisher}` where `{bidder}` is the account ID of the
+       bidder, and `{publisher}` is the ads.txt/app-ads.txt publisher ID. See publisherConnection.name.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the publisher whose connection information is to be retrieved. In the
+         * pattern `bidders/{bidder}/publisherConnections/{publisher}` where `{bidder}` is the
+         * account ID of the bidder, and `{publisher}` is the ads.txt/app-ads.txt publisher ID. See
+         * publisherConnection.name.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/publisherConnections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists publisher connections for a given bidder.
+       *
+       * Create a request for the method "publisherConnections.list".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the bidder for which publishers have initiated connections. The pattern for this
+       *        resource is `bidders/{bidder}` where `{bidder}` represents the account ID of the bidder.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.ListPublisherConnectionsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/publisherConnections";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+        /**
+         * Lists publisher connections for a given bidder.
+         *
+         * Create a request for the method "publisherConnections.list".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the bidder for which publishers have initiated connections. The pattern for this
+       *        resource is `bidders/{bidder}` where `{bidder}` represents the account ID of the bidder.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.ListPublisherConnectionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the bidder for which publishers have initiated connections. The pattern
+         * for this resource is `bidders/{bidder}` where `{bidder}` represents the account ID of the
+         * bidder.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the bidder for which publishers have initiated connections. The pattern for this
+       resource is `bidders/{bidder}` where `{bidder}` represents the account ID of the bidder.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the bidder for which publishers have initiated connections. The pattern
+         * for this resource is `bidders/{bidder}` where `{bidder}` represents the account ID of the
+         * bidder.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Query string to filter publisher connections. Connections can be filtered by
+         * `displayName`, `publisherPlatform`, and `biddingState`. If no filter is specified, all
+         * publisher connections will be returned. Example: 'displayName="Great Publisher*" AND
+         * publisherPlatform=ADMOB AND biddingState != PENDING' See https://google.aip.dev/160 for
+         * more information about filtering syntax.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Query string to filter publisher connections. Connections can be filtered by `displayName`,
+       `publisherPlatform`, and `biddingState`. If no filter is specified, all publisher connections will
+       be returned. Example: 'displayName="Great Publisher*" AND publisherPlatform=ADMOB AND biddingState
+       != PENDING' See https://google.aip.dev/160 for more information about filtering syntax.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Query string to filter publisher connections. Connections can be filtered by
+         * `displayName`, `publisherPlatform`, and `biddingState`. If no filter is specified, all
+         * publisher connections will be returned. Example: 'displayName="Great Publisher*" AND
+         * publisherPlatform=ADMOB AND biddingState != PENDING' See https://google.aip.dev/160 for
+         * more information about filtering syntax.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Order specification by which results should be sorted. If no sort order is specified, the
+         * results will be returned in an arbitrary order. Currently results can be sorted by
+         * `createTime`. Example: 'createTime DESC'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Order specification by which results should be sorted. If no sort order is specified, the results
+       will be returned in an arbitrary order. Currently results can be sorted by `createTime`. Example:
+       'createTime DESC'.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Order specification by which results should be sorted. If no sort order is specified, the
+         * results will be returned in an arbitrary order. Currently results can be sorted by
+         * `createTime`. Example: 'createTime DESC'.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested (due to timeout
+         * constraint) even if more are available via another call. If unspecified, the server will
+         * pick an appropriate default. Acceptable values are 1 to 5000, inclusive.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested (due to timeout constraint)
+       even if more are available via another call. If unspecified, the server will pick an appropriate
+       default. Acceptable values are 1 to 5000, inclusive.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested (due to timeout
+         * constraint) even if more are available via another call. If unspecified, the server will
+         * pick an appropriate default. Acceptable values are 1 to 5000, inclusive.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of ListPublisherConnectionsResponse.nextPageToken returned from the previous call
+         * to the 'ListPublisherConnections' method.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       ListPublisherConnectionsResponse.nextPageToken returned from the previous call to the
+       'ListPublisherConnections' method.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of ListPublisherConnectionsResponse.nextPageToken returned from the previous call
+         * to the 'ListPublisherConnections' method.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

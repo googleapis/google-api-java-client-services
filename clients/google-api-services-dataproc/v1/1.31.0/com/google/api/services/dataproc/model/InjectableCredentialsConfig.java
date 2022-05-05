@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Dataproc metric config.
+ * Specific injectable credentials authentication parameters
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.dataproc.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DataprocMetricConfig extends com.google.api.client.json.GenericJson {
+public final class InjectableCredentialsConfig extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Required. Metrics to enable.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Metric> metrics;
-
-  /**
-   * Required. Metrics to enable.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Metric> getMetrics() {
-    return metrics;
-  }
-
-  /**
-   * Required. Metrics to enable.
-   * @param metrics metrics or {@code null} for none
-   */
-  public DataprocMetricConfig setMetrics(java.util.List<Metric> metrics) {
-    this.metrics = metrics;
-    return this;
+  @Override
+  public InjectableCredentialsConfig set(String fieldName, Object value) {
+    return (InjectableCredentialsConfig) super.set(fieldName, value);
   }
 
   @Override
-  public DataprocMetricConfig set(String fieldName, Object value) {
-    return (DataprocMetricConfig) super.set(fieldName, value);
-  }
-
-  @Override
-  public DataprocMetricConfig clone() {
-    return (DataprocMetricConfig) super.clone();
+  public InjectableCredentialsConfig clone() {
+    return (InjectableCredentialsConfig) super.clone();
   }
 
 }

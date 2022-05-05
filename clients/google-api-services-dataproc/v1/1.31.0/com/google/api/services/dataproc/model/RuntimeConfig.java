@@ -46,6 +46,13 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> properties;
 
   /**
+   * Optional. Authentication configuration for the session execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthenticationConfig sessionAuthenticationConfig;
+
+  /**
    * Optional. Version of the batch runtime.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
    */
   public RuntimeConfig setProperties(java.util.Map<String, java.lang.String> properties) {
     this.properties = properties;
+    return this;
+  }
+
+  /**
+   * Optional. Authentication configuration for the session execution.
+   * @return value or {@code null} for none
+   */
+  public AuthenticationConfig getSessionAuthenticationConfig() {
+    return sessionAuthenticationConfig;
+  }
+
+  /**
+   * Optional. Authentication configuration for the session execution.
+   * @param sessionAuthenticationConfig sessionAuthenticationConfig or {@code null} for none
+   */
+  public RuntimeConfig setSessionAuthenticationConfig(AuthenticationConfig sessionAuthenticationConfig) {
+    this.sessionAuthenticationConfig = sessionAuthenticationConfig;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class ClusterMetrics extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.Long> hdfsMetrics;
 
   /**
-   * The YARN metrics.
+   * YARN metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -62,7 +62,7 @@ public final class ClusterMetrics extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The YARN metrics.
+   * YARN metrics.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Long> getYarnMetrics() {
@@ -70,7 +70,7 @@ public final class ClusterMetrics extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The YARN metrics.
+   * YARN metrics.
    * @param yarnMetrics yarnMetrics or {@code null} for none
    */
   public ClusterMetrics setYarnMetrics(java.util.Map<String, java.lang.Long> yarnMetrics) {

@@ -44,6 +44,14 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   private GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff liveAgentHandoff;
 
   /**
+   * An audio response message composed of both the synthesized Dialogflow agent responses and the
+   * audios hosted in places known to the client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio mixedAudio;
+
+  /**
    * Returns a response containing a custom, platform-specific payload.
    * The value may be {@code null}.
    */
@@ -96,6 +104,25 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
    */
   public GoogleCloudDialogflowV2beta1ResponseMessage setLiveAgentHandoff(GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff liveAgentHandoff) {
     this.liveAgentHandoff = liveAgentHandoff;
+    return this;
+  }
+
+  /**
+   * An audio response message composed of both the synthesized Dialogflow agent responses and the
+   * audios hosted in places known to the client.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio getMixedAudio() {
+    return mixedAudio;
+  }
+
+  /**
+   * An audio response message composed of both the synthesized Dialogflow agent responses and the
+   * audios hosted in places known to the client.
+   * @param mixedAudio mixedAudio or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ResponseMessage setMixedAudio(GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio mixedAudio) {
+    this.mixedAudio = mixedAudio;
     return this;
   }
 

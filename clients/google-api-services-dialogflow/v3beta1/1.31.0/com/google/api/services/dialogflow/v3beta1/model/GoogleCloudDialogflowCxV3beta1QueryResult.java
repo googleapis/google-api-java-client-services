@@ -39,7 +39,15 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
 
   /**
    * The free-form diagnostic info. For example, this field could contain webhook call latency. The
-   * string keys of the Struct's fields map can change without notice.
+   * fields of this data can change without notice, so you should not write code that depends on its
+   * structure. One of the fields is called "Alternative Matched Intents", which may aid with
+   * debugging. The following describes these intent results: - The list is empty if no intent was
+   * matched to end-user input. - Only intents that are referenced in the currently active flow are
+   * included. - The matched intent is included. - Other intents that could have matched end-user
+   * input, but did not match because they are referenced by intent routes that are out of
+   * [scope](https://cloud.google.com/dialogflow/cx/docs/concept/handler#scope), are included. -
+   * Other intents referenced by intent routes in scope that matched end-user input, but had a lower
+   * confidence score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +191,15 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
 
   /**
    * The free-form diagnostic info. For example, this field could contain webhook call latency. The
-   * string keys of the Struct's fields map can change without notice.
+   * fields of this data can change without notice, so you should not write code that depends on its
+   * structure. One of the fields is called "Alternative Matched Intents", which may aid with
+   * debugging. The following describes these intent results: - The list is empty if no intent was
+   * matched to end-user input. - Only intents that are referenced in the currently active flow are
+   * included. - The matched intent is included. - Other intents that could have matched end-user
+   * input, but did not match because they are referenced by intent routes that are out of
+   * [scope](https://cloud.google.com/dialogflow/cx/docs/concept/handler#scope), are included. -
+   * Other intents referenced by intent routes in scope that matched end-user input, but had a lower
+   * confidence score.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getDiagnosticInfo() {
@@ -192,7 +208,15 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
 
   /**
    * The free-form diagnostic info. For example, this field could contain webhook call latency. The
-   * string keys of the Struct's fields map can change without notice.
+   * fields of this data can change without notice, so you should not write code that depends on its
+   * structure. One of the fields is called "Alternative Matched Intents", which may aid with
+   * debugging. The following describes these intent results: - The list is empty if no intent was
+   * matched to end-user input. - Only intents that are referenced in the currently active flow are
+   * included. - The matched intent is included. - Other intents that could have matched end-user
+   * input, but did not match because they are referenced by intent routes that are out of
+   * [scope](https://cloud.google.com/dialogflow/cx/docs/concept/handler#scope), are included. -
+   * Other intents referenced by intent routes in scope that matched end-user input, but had a lower
+   * confidence score.
    * @param diagnosticInfo diagnosticInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setDiagnosticInfo(java.util.Map<String, java.lang.Object> diagnosticInfo) {

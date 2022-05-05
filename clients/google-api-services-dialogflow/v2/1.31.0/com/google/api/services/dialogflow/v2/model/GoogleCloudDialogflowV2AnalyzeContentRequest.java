@@ -37,6 +37,15 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   private GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
 
   /**
+   * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
+   * from the session, clients should explicitly set the parameter value to null. Note: this field
+   * should only be used if you are connecting to a Dialogflow CX agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> cxParameters;
+
+  /**
    * An input event to send to Dialogflow.
    * The value may be {@code null}.
    */
@@ -88,6 +97,27 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
     this.assistQueryParams = assistQueryParams;
+    return this;
+  }
+
+  /**
+   * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
+   * from the session, clients should explicitly set the parameter value to null. Note: this field
+   * should only be used if you are connecting to a Dialogflow CX agent.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getCxParameters() {
+    return cxParameters;
+  }
+
+  /**
+   * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
+   * from the session, clients should explicitly set the parameter value to null. Note: this field
+   * should only be used if you are connecting to a Dialogflow CX agent.
+   * @param cxParameters cxParameters or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AnalyzeContentRequest setCxParameters(java.util.Map<String, java.lang.Object> cxParameters) {
+    this.cxParameters = cxParameters;
     return this;
   }
 

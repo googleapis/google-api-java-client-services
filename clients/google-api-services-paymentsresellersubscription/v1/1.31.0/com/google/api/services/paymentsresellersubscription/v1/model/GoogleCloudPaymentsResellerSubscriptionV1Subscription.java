@@ -70,6 +70,13 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private String freeTrialEndTime;
 
   /**
+   * Required. The line items of the subscription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem> lineItems;
+
+  /**
    * Output only. Response only. Resource name of the subscription. It will have the format of
    * "partners/{partner_id}/subscriptions/{subscription_id}"
    * The value may be {@code null}.
@@ -96,7 +103,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.lang.String processingState;
 
   /**
-   * Required. Required. Resource name that identifies the purchased products. The format will be
+   * Required. Deprecated: consider using `line_items` as the input. Required. Resource name that
+   * identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
    */
@@ -104,8 +112,18 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.util.List<java.lang.String> products;
 
   /**
-   * Optional. Optional. Resource name that identifies one or more promotions that can be applied on
-   * the product. A typical promotion for a subscription is Free trial. The format will be
+   * Optional. Subscription-level promotions. Only free trial is supported on this level. It
+   * determines the first renewal time of the subscription to be the end of the free trial period.
+   * Specify the promotion resource name only when used as input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec> promotionSpecs;
+
+  /**
+   * Optional. Deprecated: consider using the top-level `promotion_specs` as the input. Optional.
+   * Resource name that identifies one or more promotions that can be applied on the product. A
+   * typical promotion for a subscription is Free trial. The format will be
    * 'partners/{partner_id}/promotions/{promotion_id}'.
    * The value may be {@code null}.
    */
@@ -259,6 +277,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
+   * Required. The line items of the subscription.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem> getLineItems() {
+    return lineItems;
+  }
+
+  /**
+   * Required. The line items of the subscription.
+   * @param lineItems lineItems or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Subscription setLineItems(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem> lineItems) {
+    this.lineItems = lineItems;
+    return this;
+  }
+
+  /**
    * Output only. Response only. Resource name of the subscription. It will have the format of
    * "partners/{partner_id}/subscriptions/{subscription_id}"
    * @return value or {@code null} for none
@@ -320,7 +355,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Required. Resource name that identifies the purchased products. The format will be
+   * Required. Deprecated: consider using `line_items` as the input. Required. Resource name that
+   * identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * @return value or {@code null} for none
    */
@@ -329,7 +365,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Required. Resource name that identifies the purchased products. The format will be
+   * Required. Deprecated: consider using `line_items` as the input. Required. Resource name that
+   * identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * @param products products or {@code null} for none
    */
@@ -339,8 +376,30 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Optional. Optional. Resource name that identifies one or more promotions that can be applied on
-   * the product. A typical promotion for a subscription is Free trial. The format will be
+   * Optional. Subscription-level promotions. Only free trial is supported on this level. It
+   * determines the first renewal time of the subscription to be the end of the free trial period.
+   * Specify the promotion resource name only when used as input.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec> getPromotionSpecs() {
+    return promotionSpecs;
+  }
+
+  /**
+   * Optional. Subscription-level promotions. Only free trial is supported on this level. It
+   * determines the first renewal time of the subscription to be the end of the free trial period.
+   * Specify the promotion resource name only when used as input.
+   * @param promotionSpecs promotionSpecs or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Subscription setPromotionSpecs(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec> promotionSpecs) {
+    this.promotionSpecs = promotionSpecs;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated: consider using the top-level `promotion_specs` as the input. Optional.
+   * Resource name that identifies one or more promotions that can be applied on the product. A
+   * typical promotion for a subscription is Free trial. The format will be
    * 'partners/{partner_id}/promotions/{promotion_id}'.
    * @return value or {@code null} for none
    */
@@ -349,8 +408,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Optional. Optional. Resource name that identifies one or more promotions that can be applied on
-   * the product. A typical promotion for a subscription is Free trial. The format will be
+   * Optional. Deprecated: consider using the top-level `promotion_specs` as the input. Optional.
+   * Resource name that identifies one or more promotions that can be applied on the product. A
+   * typical promotion for a subscription is Free trial. The format will be
    * 'partners/{partner_id}/promotions/{promotion_id}'.
    * @param promotions promotions or {@code null} for none
    */

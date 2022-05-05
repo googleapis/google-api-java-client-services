@@ -47,6 +47,14 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   private java.lang.Integer failureThreshold;
 
   /**
+   * (Optional) GRPCAction specifies an action involving a GRPC port. A field inlined from the
+   * Handler message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GRPCAction grpc;
+
+  /**
    * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler
    * message.
    * The value may be {@code null}.
@@ -133,6 +141,25 @@ public final class Probe extends com.google.api.client.json.GenericJson {
    */
   public Probe setFailureThreshold(java.lang.Integer failureThreshold) {
     this.failureThreshold = failureThreshold;
+    return this;
+  }
+
+  /**
+   * (Optional) GRPCAction specifies an action involving a GRPC port. A field inlined from the
+   * Handler message.
+   * @return value or {@code null} for none
+   */
+  public GRPCAction getGrpc() {
+    return grpc;
+  }
+
+  /**
+   * (Optional) GRPCAction specifies an action involving a GRPC port. A field inlined from the
+   * Handler message.
+   * @param grpc grpc or {@code null} for none
+   */
+  public Probe setGrpc(GRPCAction grpc) {
+    this.grpc = grpc;
     return this;
   }
 

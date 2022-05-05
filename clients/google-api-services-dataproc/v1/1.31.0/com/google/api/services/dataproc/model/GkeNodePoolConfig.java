@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * The configuration of a GKE NodePool used by a Dataproc-on-GKE cluster
+ * The configuration of a GKE node pool used by a Dataproc-on-GKE cluster
  * (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-
  * cluster).
  *
@@ -32,8 +32,8 @@ package com.google.api.services.dataproc.model;
 public final class GkeNodePoolConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The autoscaler configuration for this NodePool. The autoscaler is enabled only when a
-   * valid configuration is present.
+   * Optional. The autoscaler configuration for this node pool. The autoscaler is enabled only when
+   * a valid configuration is present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,17 +48,19 @@ public final class GkeNodePoolConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The list of Compute Engine zones
-   * (https://cloud.google.com/compute/docs/zones#available) where NodePool's nodes will be
-   * located.Note: Currently, only one zone may be specified.If a location is not specified during
-   * NodePool creation, Dataproc will choose a location.
+   * (https://cloud.google.com/compute/docs/zones#available) where node pool nodes associated with a
+   * Dataproc on GKE virtual cluster will be located.Note: All node pools associated with a virtual
+   * cluster must be located in the same region as the virtual cluster, and they must be located in
+   * the same zone within that region.If a location is not specified during node pool creation,
+   * Dataproc on GKE will choose the zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> locations;
 
   /**
-   * Optional. The autoscaler configuration for this NodePool. The autoscaler is enabled only when a
-   * valid configuration is present.
+   * Optional. The autoscaler configuration for this node pool. The autoscaler is enabled only when
+   * a valid configuration is present.
    * @return value or {@code null} for none
    */
   public GkeNodePoolAutoscalingConfig getAutoscaling() {
@@ -66,8 +68,8 @@ public final class GkeNodePoolConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The autoscaler configuration for this NodePool. The autoscaler is enabled only when a
-   * valid configuration is present.
+   * Optional. The autoscaler configuration for this node pool. The autoscaler is enabled only when
+   * a valid configuration is present.
    * @param autoscaling autoscaling or {@code null} for none
    */
   public GkeNodePoolConfig setAutoscaling(GkeNodePoolAutoscalingConfig autoscaling) {
@@ -94,9 +96,11 @@ public final class GkeNodePoolConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The list of Compute Engine zones
-   * (https://cloud.google.com/compute/docs/zones#available) where NodePool's nodes will be
-   * located.Note: Currently, only one zone may be specified.If a location is not specified during
-   * NodePool creation, Dataproc will choose a location.
+   * (https://cloud.google.com/compute/docs/zones#available) where node pool nodes associated with a
+   * Dataproc on GKE virtual cluster will be located.Note: All node pools associated with a virtual
+   * cluster must be located in the same region as the virtual cluster, and they must be located in
+   * the same zone within that region.If a location is not specified during node pool creation,
+   * Dataproc on GKE will choose the zone.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -105,9 +109,11 @@ public final class GkeNodePoolConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The list of Compute Engine zones
-   * (https://cloud.google.com/compute/docs/zones#available) where NodePool's nodes will be
-   * located.Note: Currently, only one zone may be specified.If a location is not specified during
-   * NodePool creation, Dataproc will choose a location.
+   * (https://cloud.google.com/compute/docs/zones#available) where node pool nodes associated with a
+   * Dataproc on GKE virtual cluster will be located.Note: All node pools associated with a virtual
+   * cluster must be located in the same region as the virtual cluster, and they must be located in
+   * the same zone within that region.If a location is not specified during node pool creation,
+   * Dataproc on GKE will choose the zone.
    * @param locations locations or {@code null} for none
    */
   public GkeNodePoolConfig setLocations(java.util.List<java.lang.String> locations) {

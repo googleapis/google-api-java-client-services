@@ -66,7 +66,9 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Whether the nodes are created as preemptible VM instances
-   * (https://cloud.google.com/compute/docs/instances/preemptible).
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Preemptible nodes cannot be used
+   * in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is
+   * not assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +165,9 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Whether the nodes are created as preemptible VM instances
-   * (https://cloud.google.com/compute/docs/instances/preemptible).
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Preemptible nodes cannot be used
+   * in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is
+   * not assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreemptible() {
@@ -172,7 +176,9 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Whether the nodes are created as preemptible VM instances
-   * (https://cloud.google.com/compute/docs/instances/preemptible).
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Preemptible nodes cannot be used
+   * in a node pool with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role is
+   * not assigned (the DEFAULT node pool will assume the CONTROLLER role).
    * @param preemptible preemptible or {@code null} for none
    */
   public GkeNodeConfig setPreemptible(java.lang.Boolean preemptible) {

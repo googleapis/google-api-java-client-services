@@ -31,23 +31,23 @@ package com.google.api.services.dataproc.model;
 public final class GkeNodePoolAutoscalingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of nodes in the NodePool. Must be >= min_node_count. Note: Quota must be
-   * sufficient to scale up the cluster.
+   * The maximum number of nodes in the node pool. Must be >= min_node_count, and must be > 0. Note:
+   * Quota must be sufficient to scale up the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxNodeCount;
 
   /**
-   * The minimum number of nodes in the NodePool. Must be >= 0 and <= max_node_count.
+   * The minimum number of nodes in the node pool. Must be >= 0 and <= max_node_count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodeCount;
 
   /**
-   * The maximum number of nodes in the NodePool. Must be >= min_node_count. Note: Quota must be
-   * sufficient to scale up the cluster.
+   * The maximum number of nodes in the node pool. Must be >= min_node_count, and must be > 0. Note:
+   * Quota must be sufficient to scale up the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxNodeCount() {
@@ -55,8 +55,8 @@ public final class GkeNodePoolAutoscalingConfig extends com.google.api.client.js
   }
 
   /**
-   * The maximum number of nodes in the NodePool. Must be >= min_node_count. Note: Quota must be
-   * sufficient to scale up the cluster.
+   * The maximum number of nodes in the node pool. Must be >= min_node_count, and must be > 0. Note:
+   * Quota must be sufficient to scale up the cluster.
    * @param maxNodeCount maxNodeCount or {@code null} for none
    */
   public GkeNodePoolAutoscalingConfig setMaxNodeCount(java.lang.Integer maxNodeCount) {
@@ -65,7 +65,7 @@ public final class GkeNodePoolAutoscalingConfig extends com.google.api.client.js
   }
 
   /**
-   * The minimum number of nodes in the NodePool. Must be >= 0 and <= max_node_count.
+   * The minimum number of nodes in the node pool. Must be >= 0 and <= max_node_count.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinNodeCount() {
@@ -73,7 +73,7 @@ public final class GkeNodePoolAutoscalingConfig extends com.google.api.client.js
   }
 
   /**
-   * The minimum number of nodes in the NodePool. Must be >= 0 and <= max_node_count.
+   * The minimum number of nodes in the node pool. Must be >= 0 and <= max_node_count.
    * @param minNodeCount minNodeCount or {@code null} for none
    */
   public GkeNodePoolAutoscalingConfig setMinNodeCount(java.lang.Integer minNodeCount) {

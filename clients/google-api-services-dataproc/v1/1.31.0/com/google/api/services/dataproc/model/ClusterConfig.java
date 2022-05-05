@@ -51,7 +51,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String configBucket;
 
   /**
-   * Optional. The configuration(s) for a dataproc metric(s).
+   * Optional. The config for Dataproc metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +79,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private GceClusterConfig gceClusterConfig;
 
   /**
-   * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes
-   * Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually
-   * exclusive with Compute Engine-based options such as gce_cluster_config, master_config,
+   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to The Kubernetes
+   * Engine config for Dataproc clusters deployed to Kubernetes. These config settings are mutually
+   * exclusive with Compute Engine-based options, such as gce_cluster_config, master_config,
    * worker_config, secondary_worker_config, and autoscaling_config.
    * The value may be {@code null}.
    */
@@ -212,7 +212,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The configuration(s) for a dataproc metric(s).
+   * Optional. The config for Dataproc metrics.
    * @return value or {@code null} for none
    */
   public DataprocMetricConfig getDataprocMetricConfig() {
@@ -220,7 +220,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The configuration(s) for a dataproc metric(s).
+   * Optional. The config for Dataproc metrics.
    * @param dataprocMetricConfig dataprocMetricConfig or {@code null} for none
    */
   public ClusterConfig setDataprocMetricConfig(DataprocMetricConfig dataprocMetricConfig) {
@@ -280,9 +280,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes
-   * Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually
-   * exclusive with Compute Engine-based options such as gce_cluster_config, master_config,
+   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to The Kubernetes
+   * Engine config for Dataproc clusters deployed to Kubernetes. These config settings are mutually
+   * exclusive with Compute Engine-based options, such as gce_cluster_config, master_config,
    * worker_config, secondary_worker_config, and autoscaling_config.
    * @return value or {@code null} for none
    */
@@ -291,9 +291,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes
-   * Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually
-   * exclusive with Compute Engine-based options such as gce_cluster_config, master_config,
+   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to The Kubernetes
+   * Engine config for Dataproc clusters deployed to Kubernetes. These config settings are mutually
+   * exclusive with Compute Engine-based options, such as gce_cluster_config, master_config,
    * worker_config, secondary_worker_config, and autoscaling_config.
    * @param gkeClusterConfig gkeClusterConfig or {@code null} for none
    */

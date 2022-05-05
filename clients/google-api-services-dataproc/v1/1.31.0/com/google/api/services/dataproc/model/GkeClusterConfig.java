@@ -47,10 +47,10 @@ public final class GkeClusterConfig extends com.google.api.client.json.GenericJs
   private NamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget;
 
   /**
-   * Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be
-   * assigned the 'default' role. Each role can be given to only a single NodePoolTarget. All
-   * NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc
-   * constructs a default nodePoolTarget.
+   * Optional. GKE node pools where workloads will be scheduled. At least one node pool must be
+   * assigned the DEFAULT GkeNodePoolTarget.Role. If a GkeNodePoolTarget is not specified, Dataproc
+   * constructs a DEFAULT GkeNodePoolTarget. Each role can be given to only one GkeNodePoolTarget.
+   * All node pools must have the same location settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,10 +97,10 @@ public final class GkeClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be
-   * assigned the 'default' role. Each role can be given to only a single NodePoolTarget. All
-   * NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc
-   * constructs a default nodePoolTarget.
+   * Optional. GKE node pools where workloads will be scheduled. At least one node pool must be
+   * assigned the DEFAULT GkeNodePoolTarget.Role. If a GkeNodePoolTarget is not specified, Dataproc
+   * constructs a DEFAULT GkeNodePoolTarget. Each role can be given to only one GkeNodePoolTarget.
+   * All node pools must have the same location settings.
    * @return value or {@code null} for none
    */
   public java.util.List<GkeNodePoolTarget> getNodePoolTarget() {
@@ -108,10 +108,10 @@ public final class GkeClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be
-   * assigned the 'default' role. Each role can be given to only a single NodePoolTarget. All
-   * NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc
-   * constructs a default nodePoolTarget.
+   * Optional. GKE node pools where workloads will be scheduled. At least one node pool must be
+   * assigned the DEFAULT GkeNodePoolTarget.Role. If a GkeNodePoolTarget is not specified, Dataproc
+   * constructs a DEFAULT GkeNodePoolTarget. Each role can be given to only one GkeNodePoolTarget.
+   * All node pools must have the same location settings.
    * @param nodePoolTarget nodePoolTarget or {@code null} for none
    */
   public GkeClusterConfig setNodePoolTarget(java.util.List<GkeNodePoolTarget> nodePoolTarget) {

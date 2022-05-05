@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * The metric source to enable, with any optional metrics, to override Dataproc default metrics.
+ * Configuration for using injectable credentials or service account
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.dataproc.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Metric extends com.google.api.client.json.GenericJson {
+public final class AuthenticationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Optional Metrics to override the Dataproc default metrics configured for the metric
-   * source.
+   * Authentication type for session execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> metricOverrides;
+  private java.lang.String authenticationType;
 
   /**
-   * Required. MetricSource to enable.
+   * Configuration for using end user authentication
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String metricSource;
+  private InjectableCredentialsConfig injectableCredentialsConfig;
 
   /**
-   * Optional. Optional Metrics to override the Dataproc default metrics configured for the metric
-   * source.
+   * Authentication type for session execution.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getMetricOverrides() {
-    return metricOverrides;
+  public java.lang.String getAuthenticationType() {
+    return authenticationType;
   }
 
   /**
-   * Optional. Optional Metrics to override the Dataproc default metrics configured for the metric
-   * source.
-   * @param metricOverrides metricOverrides or {@code null} for none
+   * Authentication type for session execution.
+   * @param authenticationType authenticationType or {@code null} for none
    */
-  public Metric setMetricOverrides(java.util.List<java.lang.String> metricOverrides) {
-    this.metricOverrides = metricOverrides;
+  public AuthenticationConfig setAuthenticationType(java.lang.String authenticationType) {
+    this.authenticationType = authenticationType;
     return this;
   }
 
   /**
-   * Required. MetricSource to enable.
+   * Configuration for using end user authentication
    * @return value or {@code null} for none
    */
-  public java.lang.String getMetricSource() {
-    return metricSource;
+  public InjectableCredentialsConfig getInjectableCredentialsConfig() {
+    return injectableCredentialsConfig;
   }
 
   /**
-   * Required. MetricSource to enable.
-   * @param metricSource metricSource or {@code null} for none
+   * Configuration for using end user authentication
+   * @param injectableCredentialsConfig injectableCredentialsConfig or {@code null} for none
    */
-  public Metric setMetricSource(java.lang.String metricSource) {
-    this.metricSource = metricSource;
+  public AuthenticationConfig setInjectableCredentialsConfig(InjectableCredentialsConfig injectableCredentialsConfig) {
+    this.injectableCredentialsConfig = injectableCredentialsConfig;
     return this;
   }
 
   @Override
-  public Metric set(String fieldName, Object value) {
-    return (Metric) super.set(fieldName, value);
+  public AuthenticationConfig set(String fieldName, Object value) {
+    return (AuthenticationConfig) super.set(fieldName, value);
   }
 
   @Override
-  public Metric clone() {
-    return (Metric) super.clone();
+  public AuthenticationConfig clone() {
+    return (AuthenticationConfig) super.clone();
   }
 
 }

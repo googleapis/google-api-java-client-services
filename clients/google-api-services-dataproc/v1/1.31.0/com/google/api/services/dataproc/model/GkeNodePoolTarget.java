@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * GKE NodePools that Dataproc workloads run on.
+ * GKE node pools that Dataproc workloads run on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.model;
 public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The target GKE NodePool. Format:
+   * Required. The target GKE node pool. Format:
    * 'projects/{project}/locations/{location}/clusters/{cluster}/nodePools/{node_pool}'
    * The value may be {@code null}.
    */
@@ -38,11 +38,11 @@ public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJ
   private java.lang.String nodePool;
 
   /**
-   * Input only. The configuration for the GKE NodePool.If specified, Dataproc attempts to create a
-   * NodePool with the specified shape. If one with the same name already exists, it is verified
+   * Input only. The configuration for the GKE node pool.If specified, Dataproc attempts to create a
+   * node pool with the specified shape. If one with the same name already exists, it is verified
    * against all specified fields. If a field differs, the virtual cluster creation will fail.If
-   * omitted, any NodePool with the specified name is used. If a NodePool with the specified name
-   * does not exist, Dataproc create a NodePool with default values.This is an input only field. It
+   * omitted, any node pool with the specified name is used. If a node pool with the specified name
+   * does not exist, Dataproc create a node pool with default values.This is an input only field. It
    * will not be returned by the API.
    * The value may be {@code null}.
    */
@@ -50,14 +50,14 @@ public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJ
   private GkeNodePoolConfig nodePoolConfig;
 
   /**
-   * Required. The types of role for a GKE NodePool
+   * Required. The roles associated with the GKE node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> roles;
 
   /**
-   * Required. The target GKE NodePool. Format:
+   * Required. The target GKE node pool. Format:
    * 'projects/{project}/locations/{location}/clusters/{cluster}/nodePools/{node_pool}'
    * @return value or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The target GKE NodePool. Format:
+   * Required. The target GKE node pool. Format:
    * 'projects/{project}/locations/{location}/clusters/{cluster}/nodePools/{node_pool}'
    * @param nodePool nodePool or {@code null} for none
    */
@@ -76,11 +76,11 @@ public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Input only. The configuration for the GKE NodePool.If specified, Dataproc attempts to create a
-   * NodePool with the specified shape. If one with the same name already exists, it is verified
+   * Input only. The configuration for the GKE node pool.If specified, Dataproc attempts to create a
+   * node pool with the specified shape. If one with the same name already exists, it is verified
    * against all specified fields. If a field differs, the virtual cluster creation will fail.If
-   * omitted, any NodePool with the specified name is used. If a NodePool with the specified name
-   * does not exist, Dataproc create a NodePool with default values.This is an input only field. It
+   * omitted, any node pool with the specified name is used. If a node pool with the specified name
+   * does not exist, Dataproc create a node pool with default values.This is an input only field. It
    * will not be returned by the API.
    * @return value or {@code null} for none
    */
@@ -89,11 +89,11 @@ public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Input only. The configuration for the GKE NodePool.If specified, Dataproc attempts to create a
-   * NodePool with the specified shape. If one with the same name already exists, it is verified
+   * Input only. The configuration for the GKE node pool.If specified, Dataproc attempts to create a
+   * node pool with the specified shape. If one with the same name already exists, it is verified
    * against all specified fields. If a field differs, the virtual cluster creation will fail.If
-   * omitted, any NodePool with the specified name is used. If a NodePool with the specified name
-   * does not exist, Dataproc create a NodePool with default values.This is an input only field. It
+   * omitted, any node pool with the specified name is used. If a node pool with the specified name
+   * does not exist, Dataproc create a node pool with default values.This is an input only field. It
    * will not be returned by the API.
    * @param nodePoolConfig nodePoolConfig or {@code null} for none
    */
@@ -103,7 +103,7 @@ public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The types of role for a GKE NodePool
+   * Required. The roles associated with the GKE node pool.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRoles() {
@@ -111,7 +111,7 @@ public final class GkeNodePoolTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The types of role for a GKE NodePool
+   * Required. The roles associated with the GKE node pool.
    * @param roles roles or {@code null} for none
    */
   public GkeNodePoolTarget setRoles(java.util.List<java.lang.String> roles) {

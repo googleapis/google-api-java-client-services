@@ -31,7 +31,7 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1StorageStatusReport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Reports on disk
+   * Output only. Reports on disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleChromeManagementV1StorageStatusReport extends com.googl
   private String reportTime;
 
   /**
-   * Output only. Reports on disk
+   * Output only. Reports on disk.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromeManagementV1DiskInfo> getDisk() {
@@ -59,7 +59,7 @@ public final class GoogleChromeManagementV1StorageStatusReport extends com.googl
   }
 
   /**
-   * Output only. Reports on disk
+   * Output only. Reports on disk.
    * @param disk disk or {@code null} for none
    */
   public GoogleChromeManagementV1StorageStatusReport setDisk(java.util.List<GoogleChromeManagementV1DiskInfo> disk) {

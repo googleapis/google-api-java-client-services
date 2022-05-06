@@ -981,9 +981,11 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * The Google Analytics Realtime API returns a customized report of realtime event data for your
-     * property. These reports show events and usage from the last 30 minutes. For a guide to
-     * constructing realtime requests & understanding responses, see [Creating a Realtime
+     * Returns a customized report of realtime event data for your property. Events appear in realtime
+     * reports seconds after they have been sent to the Google Analytics. Realtime reports show events
+     * and usage data for the periods of time ranging from the present moment to 30 minutes ago (up to
+     * 60 minutes for Google Analytics 360 properties). For a guide to constructing realtime requests &
+     * understanding responses, see [Creating a Realtime
      * Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
      *
      * Create a request for the method "properties.runRealtimeReport".
@@ -1012,9 +1014,11 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^properties/[^/]+$");
 
       /**
-       * The Google Analytics Realtime API returns a customized report of realtime event data for your
-       * property. These reports show events and usage from the last 30 minutes. For a guide to
-       * constructing realtime requests & understanding responses, see [Creating a Realtime
+       * Returns a customized report of realtime event data for your property. Events appear in realtime
+       * reports seconds after they have been sent to the Google Analytics. Realtime reports show events
+       * and usage data for the periods of time ranging from the present moment to 30 minutes ago (up to
+       * 60 minutes for Google Analytics 360 properties). For a guide to constructing realtime requests
+       * & understanding responses, see [Creating a Realtime
        * Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
        *
        * Create a request for the method "properties.runRealtimeReport".

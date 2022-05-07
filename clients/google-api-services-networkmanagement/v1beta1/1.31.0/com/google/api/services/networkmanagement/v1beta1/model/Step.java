@@ -43,7 +43,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppEngineVersionInfo appEngineVersionInfo;
+  private AppEngineVersionInfo appEngineVersion;
 
   /**
    * This is a step that leads to the final state Drop.
@@ -208,16 +208,16 @@ public final class Step extends com.google.api.client.json.GenericJson {
    * Display information of an App Engine service version.
    * @return value or {@code null} for none
    */
-  public AppEngineVersionInfo getAppEngineVersionInfo() {
-    return appEngineVersionInfo;
+  public AppEngineVersionInfo getAppEngineVersion() {
+    return appEngineVersion;
   }
 
   /**
    * Display information of an App Engine service version.
-   * @param appEngineVersionInfo appEngineVersionInfo or {@code null} for none
+   * @param appEngineVersion appEngineVersion or {@code null} for none
    */
-  public Step setAppEngineVersionInfo(AppEngineVersionInfo appEngineVersionInfo) {
-    this.appEngineVersionInfo = appEngineVersionInfo;
+  public Step setAppEngineVersion(AppEngineVersionInfo appEngineVersion) {
+    this.appEngineVersion = appEngineVersion;
     return this;
   }
 

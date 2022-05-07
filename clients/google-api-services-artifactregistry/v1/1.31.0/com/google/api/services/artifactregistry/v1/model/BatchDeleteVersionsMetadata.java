@@ -35,13 +35,13 @@ public final class BatchDeleteVersionsMetadata extends com.google.api.client.jso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Version> failedVersions;
+  private java.util.List<java.lang.String> failedVersions;
 
   /**
    * The versions the operation failed to delete.
    * @return value or {@code null} for none
    */
-  public java.util.List<Version> getFailedVersions() {
+  public java.util.List<java.lang.String> getFailedVersions() {
     return failedVersions;
   }
 
@@ -49,7 +49,7 @@ public final class BatchDeleteVersionsMetadata extends com.google.api.client.jso
    * The versions the operation failed to delete.
    * @param failedVersions failedVersions or {@code null} for none
    */
-  public BatchDeleteVersionsMetadata setFailedVersions(java.util.List<Version> failedVersions) {
+  public BatchDeleteVersionsMetadata setFailedVersions(java.util.List<java.lang.String> failedVersions) {
     this.failedVersions = failedVersions;
     return this;
   }

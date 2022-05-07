@@ -75,6 +75,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * List of IP address reservations in this network. When updating this field, an error will be
+   * generated if a reservation conflicts with an IP address already allocated to a physical server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkAddressReservation> reservations;
+
+  /**
    * IP range for reserved for services (e.g. NFS).
    * The value may be {@code null}.
    */
@@ -212,6 +220,25 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * List of IP address reservations in this network. When updating this field, an error will be
+   * generated if a reservation conflicts with an IP address already allocated to a physical server.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkAddressReservation> getReservations() {
+    return reservations;
+  }
+
+  /**
+   * List of IP address reservations in this network. When updating this field, an error will be
+   * generated if a reservation conflicts with an IP address already allocated to a physical server.
+   * @param reservations reservations or {@code null} for none
+   */
+  public Network setReservations(java.util.List<NetworkAddressReservation> reservations) {
+    this.reservations = reservations;
     return this;
   }
 

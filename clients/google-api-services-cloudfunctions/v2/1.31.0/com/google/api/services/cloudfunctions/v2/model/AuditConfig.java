@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudfunctions.v2beta.model;
+package com.google.api.services.cloudfunctions.v2.model;
 
 /**
  * Specifies the audit configuration for a service. The configuration determines which permission

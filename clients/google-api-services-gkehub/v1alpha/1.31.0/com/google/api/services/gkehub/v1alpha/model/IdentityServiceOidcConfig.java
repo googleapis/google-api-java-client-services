@@ -59,6 +59,13 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
   private java.lang.Boolean deployCloudConsoleProxy;
 
   /**
+   * Enable access token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAccessToken;
+
+  /**
    * Output only. Encrypted OIDC Client secret
    * The value may be {@code null}.
    */
@@ -189,6 +196,23 @@ public final class IdentityServiceOidcConfig extends com.google.api.client.json.
    */
   public IdentityServiceOidcConfig setDeployCloudConsoleProxy(java.lang.Boolean deployCloudConsoleProxy) {
     this.deployCloudConsoleProxy = deployCloudConsoleProxy;
+    return this;
+  }
+
+  /**
+   * Enable access token.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAccessToken() {
+    return enableAccessToken;
+  }
+
+  /**
+   * Enable access token.
+   * @param enableAccessToken enableAccessToken or {@code null} for none
+   */
+  public IdentityServiceOidcConfig setEnableAccessToken(java.lang.Boolean enableAccessToken) {
+    this.enableAccessToken = enableAccessToken;
     return this;
   }
 

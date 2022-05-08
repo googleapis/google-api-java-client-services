@@ -30,7 +30,7 @@ package com.google.api.services.datastore.v1.model;
 public final class RunQueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The GQL query to run.
+   * The GQL query to run. This query must be a non-aggregation query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   private ReadOptions readOptions;
 
   /**
-   * The GQL query to run.
+   * The GQL query to run. This query must be a non-aggregation query.
    * @return value or {@code null} for none
    */
   public GqlQuery getGqlQuery() {
@@ -68,7 +68,7 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The GQL query to run.
+   * The GQL query to run. This query must be a non-aggregation query.
    * @param gqlQuery gqlQuery or {@code null} for none
    */
   public RunQueryRequest setGqlQuery(GqlQuery gqlQuery) {

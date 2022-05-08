@@ -1037,6 +1037,452 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
       public class Channels {
 
         /**
+         * Create a new channel in a particular project and location.
+         *
+         * Create a request for the method "channels.create".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection in which to add this channel.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.Channel}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.eventarc.v1.model.Channel content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/channels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a new channel in a particular project and location.
+           *
+           * Create a request for the method "channels.create".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection in which to add this channel.
+           * @param content the {@link com.google.api.services.eventarc.v1.model.Channel}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.eventarc.v1.model.Channel content) {
+            super(Eventarc.this, "POST", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection in which to add this channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection in which to add this channel.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection in which to add this channel. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The user-provided ID to be assigned to the channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String channelId;
+
+          /** Required. The user-provided ID to be assigned to the channel.
+           */
+          public java.lang.String getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The user-provided ID to be assigned to the channel. */
+          public Create setChannelId(java.lang.String channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          /** Required. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Required. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Required. If set, validate the request and preview the review, but do not post it. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a single channel.
+         *
+         * Create a request for the method "channels.delete".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the channel to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+
+          /**
+           * Delete a single channel.
+           *
+           * Create a request for the method "channels.delete".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the channel to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Eventarc.this, "DELETE", REST_PATH, null, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the channel to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the channel to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the channel to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Required. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Required. If set, validate the request and preview the review, but do not post it. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a single Channel.
+         *
+         * Create a request for the method "channels.get".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the channel to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends EventarcRequest<com.google.api.services.eventarc.v1.model.Channel> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+
+          /**
+           * Get a single Channel.
+           *
+           * Create a request for the method "channels.get".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the channel to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.Channel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the channel to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the channel to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the channel to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -1227,6 +1673,402 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List channels.
+         *
+         * Create a request for the method "channels.list".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection to list channels on.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends EventarcRequest<com.google.api.services.eventarc.v1.model.ListChannelsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/channels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List channels.
+           *
+           * Create a request for the method "channels.list".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection to list channels on.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.ListChannelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection to list channels on. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection to list channels on.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection to list channels on. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The sorting order of the resources returned. Value should be a comma-separated list of
+           * fields. The default sorting order is ascending. To specify descending order for a
+           * field, append a `desc` suffix; for example: `name desc, channel_id`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** The sorting order of the resources returned. Value should be a comma-separated list of fields. The
+         default sorting order is ascending. To specify descending order for a field, append a `desc`
+         suffix; for example: `name desc, channel_id`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * The sorting order of the resources returned. Value should be a comma-separated list of
+           * fields. The default sorting order is ascending. To specify descending order for a
+           * field, append a `desc` suffix; for example: `name desc, channel_id`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * The maximum number of channels to return on each page. Note: The service may send
+           * fewer.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of channels to return on each page. Note: The service may send fewer.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of channels to return on each page. Note: The service may send
+           * fewer.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The page token; provide the value from the `next_page_token` field in a previous
+           * `ListChannels` call to retrieve the subsequent page. When paginating, all other
+           * parameters provided to `ListChannels` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The page token; provide the value from the `next_page_token` field in a previous `ListChannels`
+         call to retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListChannels` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The page token; provide the value from the `next_page_token` field in a previous
+           * `ListChannels` call to retrieve the subsequent page. When paginating, all other
+           * parameters provided to `ListChannels` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a single channel.
+         *
+         * Create a request for the method "channels.patch".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the channel. Must be unique within the location on the project and
+         *        must be in `projects/{project}/locations/{location}/channels/{channel_id}` format.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.Channel}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.eventarc.v1.model.Channel content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+
+          /**
+           * Update a single channel.
+           *
+           * Create a request for the method "channels.patch".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the channel. Must be unique within the location on the project and
+         *        must be in `projects/{project}/locations/{location}/channels/{channel_id}` format.
+           * @param content the {@link com.google.api.services.eventarc.v1.model.Channel}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.eventarc.v1.model.Channel content) {
+            super(Eventarc.this, "PATCH", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the channel. Must be unique within the location on the
+           * project and must be in `projects/{project}/locations/{location}/channels/{channel_id}`
+           * format.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the channel. Must be unique within the location on the project and
+         must be in `projects/{project}/locations/{location}/channels/{channel_id}` format.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the channel. Must be unique within the location on the
+           * project and must be in `projects/{project}/locations/{location}/channels/{channel_id}`
+           * format.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The fields to be updated; only fields explicitly provided are updated. If no field mask
+           * is provided, all provided fields in the request are updated. To update all fields,
+           * provide a field mask of "*".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The fields to be updated; only fields explicitly provided are updated. If no field mask is
+         provided, all provided fields in the request are updated. To update all fields, provide a field
+         mask of "*".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The fields to be updated; only fields explicitly provided are updated. If no field mask
+           * is provided, all provided fields in the request are updated. To update all fields,
+           * provide a field mask of "*".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /** Required. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Required. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Required. If set, validate the request and preview the review, but do not post it. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**

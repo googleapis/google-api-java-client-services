@@ -30,6 +30,15 @@ package com.google.api.services.eventarc.v1.model;
 public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel
+   * to receive events from Eventarc SaaS partners.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channel;
+
+  /**
    * Output only. The creation time.
    * The value may be {@code null}.
    */
@@ -119,6 +128,27 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel
+   * to receive events from Eventarc SaaS partners.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannel() {
+    return channel;
+  }
+
+  /**
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel
+   * to receive events from Eventarc SaaS partners.
+   * @param channel channel or {@code null} for none
+   */
+  public Trigger setChannel(java.lang.String channel) {
+    this.channel = channel;
+    return this;
+  }
 
   /**
    * Output only. The creation time.

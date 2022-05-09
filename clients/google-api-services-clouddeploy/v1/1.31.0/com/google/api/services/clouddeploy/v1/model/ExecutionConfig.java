@@ -47,6 +47,14 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private DefaultPool defaultPool;
 
   /**
+   * Optional. Execution timeout for a Cloud Build Execution. This must be between 10m and 24h in
+   * seconds format. If unspecified, a default timeout of 1h is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String executionTimeout;
+
+  /**
    * Optional. Use private Cloud Build pool.
    * The value may be {@code null}.
    */
@@ -112,6 +120,25 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    */
   public ExecutionConfig setDefaultPool(DefaultPool defaultPool) {
     this.defaultPool = defaultPool;
+    return this;
+  }
+
+  /**
+   * Optional. Execution timeout for a Cloud Build Execution. This must be between 10m and 24h in
+   * seconds format. If unspecified, a default timeout of 1h is used.
+   * @return value or {@code null} for none
+   */
+  public String getExecutionTimeout() {
+    return executionTimeout;
+  }
+
+  /**
+   * Optional. Execution timeout for a Cloud Build Execution. This must be between 10m and 24h in
+   * seconds format. If unspecified, a default timeout of 1h is used.
+   * @param executionTimeout executionTimeout or {@code null} for none
+   */
+  public ExecutionConfig setExecutionTimeout(String executionTimeout) {
+    this.executionTimeout = executionTimeout;
     return this;
   }
 

@@ -50,6 +50,15 @@ public final class GoogleCloudDataplexV1TaskExecutionSpec extends com.google.api
   private String maxJobExecutionLifetime;
 
   /**
+   * Optional. The project in which jobs are run. By default, the project containing the Lake is
+   * used. If a project is provided, the executionspec.service_account must belong to this same
+   * project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String project;
+
+  /**
    * Required. Service account to use to execute a task. If not provided, the default Compute
    * service account for the project is used.
    * The value may be {@code null}.
@@ -100,6 +109,27 @@ public final class GoogleCloudDataplexV1TaskExecutionSpec extends com.google.api
    */
   public GoogleCloudDataplexV1TaskExecutionSpec setMaxJobExecutionLifetime(String maxJobExecutionLifetime) {
     this.maxJobExecutionLifetime = maxJobExecutionLifetime;
+    return this;
+  }
+
+  /**
+   * Optional. The project in which jobs are run. By default, the project containing the Lake is
+   * used. If a project is provided, the executionspec.service_account must belong to this same
+   * project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProject() {
+    return project;
+  }
+
+  /**
+   * Optional. The project in which jobs are run. By default, the project containing the Lake is
+   * used. If a project is provided, the executionspec.service_account must belong to this same
+   * project.
+   * @param project project or {@code null} for none
+   */
+  public GoogleCloudDataplexV1TaskExecutionSpec setProject(java.lang.String project) {
+    this.project = project;
     return this;
   }
 

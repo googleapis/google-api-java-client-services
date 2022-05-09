@@ -58,6 +58,13 @@ public final class GoogleCloudDataplexV1Task extends com.google.api.client.json.
   private GoogleCloudDataplexV1TaskExecutionSpec executionSpec;
 
   /**
+   * Output only. Status of the latest task executions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1TaskExecutionStatus executionStatus;
+
+  /**
    * Optional. User-defined labels for the task.
    * The value may be {@code null}.
    */
@@ -173,6 +180,23 @@ public final class GoogleCloudDataplexV1Task extends com.google.api.client.json.
    */
   public GoogleCloudDataplexV1Task setExecutionSpec(GoogleCloudDataplexV1TaskExecutionSpec executionSpec) {
     this.executionSpec = executionSpec;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the latest task executions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1TaskExecutionStatus getExecutionStatus() {
+    return executionStatus;
+  }
+
+  /**
+   * Output only. Status of the latest task executions.
+   * @param executionStatus executionStatus or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Task setExecutionStatus(GoogleCloudDataplexV1TaskExecutionStatus executionStatus) {
+    this.executionStatus = executionStatus;
     return this;
   }
 

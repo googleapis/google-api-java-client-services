@@ -629,6 +629,160 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Get the SecurityCenterSettings resource.
+     *
+     * Create a request for the method "folders.getSecurityCenterSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetSecurityCenterSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
+     *        organizations/{organization}/securityCenterSettings Format:
+     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+     * @return the request
+     */
+    public GetSecurityCenterSettings getSecurityCenterSettings(java.lang.String name) throws java.io.IOException {
+      GetSecurityCenterSettings result = new GetSecurityCenterSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSecurityCenterSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.SecurityCenterSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/securityCenterSettings$");
+
+      /**
+       * Get the SecurityCenterSettings resource.
+       *
+       * Create a request for the method "folders.getSecurityCenterSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetSecurityCenterSettings#execute()} method to invoke the
+       * remote operation. <p> {@link GetSecurityCenterSettings#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
+     *        organizations/{organization}/securityCenterSettings Format:
+     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       * @since 1.13
+       */
+      protected GetSecurityCenterSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.SecurityCenterSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/securityCenterSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSecurityCenterSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSecurityCenterSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSecurityCenterSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setAlt(java.lang.String alt) {
+        return (GetSecurityCenterSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setCallback(java.lang.String callback) {
+        return (GetSecurityCenterSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setFields(java.lang.String fields) {
+        return (GetSecurityCenterSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setKey(java.lang.String key) {
+        return (GetSecurityCenterSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSecurityCenterSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSecurityCenterSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSecurityCenterSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setUploadType(java.lang.String uploadType) {
+        return (GetSecurityCenterSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSecurityCenterSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the SecurityCenterSettings to retrieve. Format:
+       * organizations/{organization}/securityCenterSettings Format:
+       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the SecurityCenterSettings to retrieve. Format:
+     organizations/{organization}/securityCenterSettings Format: folders/{folder}/securityCenterSettings
+     Format: projects/{project}/securityCenterSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the SecurityCenterSettings to retrieve. Format:
+       * organizations/{organization}/securityCenterSettings Format:
+       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       */
+      public GetSecurityCenterSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/securityCenterSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSecurityCenterSettings set(String parameterName, Object value) {
+        return (GetSecurityCenterSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the SecurityHealthAnalyticsSettings resource.
      *
      * Create a request for the method "folders.getSecurityHealthAnalyticsSettings".
@@ -3360,7 +3514,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * remote operation.
      *
      * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings
+     *        organizations/{organization}/securityCenterSettings Format:
+     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
      * @return the request
      */
     public GetSecurityCenterSettings getSecurityCenterSettings(java.lang.String name) throws java.io.IOException {
@@ -3388,7 +3543,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * immediately after invoking the constructor. </p>
        *
        * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings
+     *        organizations/{organization}/securityCenterSettings Format:
+     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
        * @since 1.13
        */
       protected GetSecurityCenterSettings(java.lang.String name) {
@@ -3468,13 +3624,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings
+       * organizations/{organization}/securityCenterSettings Format:
+       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The name of the SecurityCenterSettings to retrieve. Format:
-     organizations/{organization}/securityCenterSettings
+     organizations/{organization}/securityCenterSettings Format: folders/{folder}/securityCenterSettings
+     Format: projects/{project}/securityCenterSettings
        */
       public java.lang.String getName() {
         return name;
@@ -3482,7 +3640,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings
+       * organizations/{organization}/securityCenterSettings Format:
+       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
        */
       public GetSecurityCenterSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -6368,6 +6527,160 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public GetOnboardingState set(String parameterName, Object value) {
         return (GetOnboardingState) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get the SecurityCenterSettings resource.
+     *
+     * Create a request for the method "projects.getSecurityCenterSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetSecurityCenterSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
+     *        organizations/{organization}/securityCenterSettings Format:
+     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+     * @return the request
+     */
+    public GetSecurityCenterSettings getSecurityCenterSettings(java.lang.String name) throws java.io.IOException {
+      GetSecurityCenterSettings result = new GetSecurityCenterSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSecurityCenterSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.SecurityCenterSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/securityCenterSettings$");
+
+      /**
+       * Get the SecurityCenterSettings resource.
+       *
+       * Create a request for the method "projects.getSecurityCenterSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetSecurityCenterSettings#execute()} method to invoke the
+       * remote operation. <p> {@link GetSecurityCenterSettings#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
+     *        organizations/{organization}/securityCenterSettings Format:
+     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       * @since 1.13
+       */
+      protected GetSecurityCenterSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.SecurityCenterSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/securityCenterSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSecurityCenterSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSecurityCenterSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSecurityCenterSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setAlt(java.lang.String alt) {
+        return (GetSecurityCenterSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setCallback(java.lang.String callback) {
+        return (GetSecurityCenterSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setFields(java.lang.String fields) {
+        return (GetSecurityCenterSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setKey(java.lang.String key) {
+        return (GetSecurityCenterSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSecurityCenterSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSecurityCenterSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSecurityCenterSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setUploadType(java.lang.String uploadType) {
+        return (GetSecurityCenterSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSecurityCenterSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSecurityCenterSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the SecurityCenterSettings to retrieve. Format:
+       * organizations/{organization}/securityCenterSettings Format:
+       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the SecurityCenterSettings to retrieve. Format:
+     organizations/{organization}/securityCenterSettings Format: folders/{folder}/securityCenterSettings
+     Format: projects/{project}/securityCenterSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the SecurityCenterSettings to retrieve. Format:
+       * organizations/{organization}/securityCenterSettings Format:
+       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       */
+      public GetSecurityCenterSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/securityCenterSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSecurityCenterSettings set(String parameterName, Object value) {
+        return (GetSecurityCenterSettings) super.set(parameterName, value);
       }
     }
     /**

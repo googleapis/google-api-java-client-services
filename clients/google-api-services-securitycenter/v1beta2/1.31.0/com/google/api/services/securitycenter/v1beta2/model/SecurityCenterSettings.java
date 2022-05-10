@@ -42,7 +42,8 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the SecurityCenterSettings. Format:
-   * organizations/{organization}/securityCenterSettings
+   * organizations/{organization}/securityCenterSettings Format:
+   * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,8 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the SecurityCenterSettings. Format:
-   * organizations/{organization}/securityCenterSettings
+   * organizations/{organization}/securityCenterSettings Format:
+   * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -89,7 +91,8 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the SecurityCenterSettings. Format:
-   * organizations/{organization}/securityCenterSettings
+   * organizations/{organization}/securityCenterSettings Format:
+   * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
    * @param name name or {@code null} for none
    */
   public SecurityCenterSettings setName(java.lang.String name) {

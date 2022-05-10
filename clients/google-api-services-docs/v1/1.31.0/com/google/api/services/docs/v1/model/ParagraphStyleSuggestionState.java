@@ -143,6 +143,13 @@ public final class ParagraphStyleSuggestionState extends com.google.api.client.j
   private java.lang.Boolean namedStyleTypeSuggested;
 
   /**
+   * Indicates if there was a suggested change to page_break_before.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pageBreakBeforeSuggested;
+
+  /**
    * A mask that indicates which of the fields in shading have been changed in this suggestion.
    * The value may be {@code null}.
    */
@@ -439,6 +446,23 @@ public final class ParagraphStyleSuggestionState extends com.google.api.client.j
    */
   public ParagraphStyleSuggestionState setNamedStyleTypeSuggested(java.lang.Boolean namedStyleTypeSuggested) {
     this.namedStyleTypeSuggested = namedStyleTypeSuggested;
+    return this;
+  }
+
+  /**
+   * Indicates if there was a suggested change to page_break_before.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPageBreakBeforeSuggested() {
+    return pageBreakBeforeSuggested;
+  }
+
+  /**
+   * Indicates if there was a suggested change to page_break_before.
+   * @param pageBreakBeforeSuggested pageBreakBeforeSuggested or {@code null} for none
+   */
+  public ParagraphStyleSuggestionState setPageBreakBeforeSuggested(java.lang.Boolean pageBreakBeforeSuggested) {
+    this.pageBreakBeforeSuggested = pageBreakBeforeSuggested;
     return this;
   }
 

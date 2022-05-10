@@ -83,7 +83,7 @@ public final class TestOrderAddress extends com.google.api.client.json.GenericJs
   private java.lang.String region;
 
   /**
-   * Street-level part of the address.
+   * Street-level part of the address. Use `\n` to add a second line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +215,7 @@ public final class TestOrderAddress extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Street-level part of the address.
+   * Street-level part of the address. Use `\n` to add a second line.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStreetAddress() {
@@ -223,7 +223,7 @@ public final class TestOrderAddress extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Street-level part of the address.
+   * Street-level part of the address. Use `\n` to add a second line.
    * @param streetAddress streetAddress or {@code null} for none
    */
   public TestOrderAddress setStreetAddress(java.util.List<java.lang.String> streetAddress) {

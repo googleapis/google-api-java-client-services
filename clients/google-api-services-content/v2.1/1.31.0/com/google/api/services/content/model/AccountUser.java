@@ -66,6 +66,13 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean paymentsManager;
 
   /**
+   * Whether user is a reporting manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reportingManager;
+
+  /**
    * Whether user is an admin.
    * @return value or {@code null} for none
    */
@@ -147,6 +154,23 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
    */
   public AccountUser setPaymentsManager(java.lang.Boolean paymentsManager) {
     this.paymentsManager = paymentsManager;
+    return this;
+  }
+
+  /**
+   * Whether user is a reporting manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReportingManager() {
+    return reportingManager;
+  }
+
+  /**
+   * Whether user is a reporting manager.
+   * @param reportingManager reportingManager or {@code null} for none
+   */
+  public AccountUser setReportingManager(java.lang.Boolean reportingManager) {
+    this.reportingManager = reportingManager;
     return this;
   }
 

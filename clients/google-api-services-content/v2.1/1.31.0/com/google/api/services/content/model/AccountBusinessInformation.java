@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class AccountBusinessInformation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The address of the business.
+   * The address of the business. Use `\n` to add a second address line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   private java.lang.String phoneVerificationStatus;
 
   /**
-   * The address of the business.
+   * The address of the business. Use `\n` to add a second address line.
    * @return value or {@code null} for none
    */
   public AccountAddress getAddress() {
@@ -80,7 +80,7 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   }
 
   /**
-   * The address of the business.
+   * The address of the business. Use `\n` to add a second address line.
    * @param address address or {@code null} for none
    */
   public AccountBusinessInformation setAddress(AccountAddress address) {

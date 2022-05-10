@@ -39,6 +39,14 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
   private java.lang.Boolean enabled;
 
   /**
+   * Mode of operation for binauthz policy evaluation. Currently the only options are equivalent to
+   * enable/disable. If unspecified, defaults to DISABLED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationMode;
+
+  /**
    * Enable Binary Authorization for this cluster. If enabled, all container images will be
    * validated by Binary Authorization.
    * @return value or {@code null} for none
@@ -54,6 +62,25 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
    */
   public BinaryAuthorization setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Mode of operation for binauthz policy evaluation. Currently the only options are equivalent to
+   * enable/disable. If unspecified, defaults to DISABLED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationMode() {
+    return evaluationMode;
+  }
+
+  /**
+   * Mode of operation for binauthz policy evaluation. Currently the only options are equivalent to
+   * enable/disable. If unspecified, defaults to DISABLED.
+   * @param evaluationMode evaluationMode or {@code null} for none
+   */
+  public BinaryAuthorization setEvaluationMode(java.lang.String evaluationMode) {
+    this.evaluationMode = evaluationMode;
     return this;
   }
 

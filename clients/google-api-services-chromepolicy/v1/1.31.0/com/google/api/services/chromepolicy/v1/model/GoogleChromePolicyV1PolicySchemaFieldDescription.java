@@ -44,8 +44,8 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   private java.lang.String field;
 
   /**
-   * Output only. Provides a list of fields and the values they must have for this field to be
-   * allowed to be set.
+   * Output only. Provides a list of fields and values. At least one of the fields must have the
+   * corresponding value in order for this field to be allowed to be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   }
 
   /**
-   * Output only. Provides a list of fields and the values they must have for this field to be
-   * allowed to be set.
+   * Output only. Provides a list of fields and values. At least one of the fields must have the
+   * corresponding value in order for this field to be allowed to be set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromePolicyV1PolicySchemaFieldDependencies> getFieldDependencies() {
@@ -132,8 +132,8 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   }
 
   /**
-   * Output only. Provides a list of fields and the values they must have for this field to be
-   * allowed to be set.
+   * Output only. Provides a list of fields and values. At least one of the fields must have the
+   * corresponding value in order for this field to be allowed to be set.
    * @param fieldDependencies fieldDependencies or {@code null} for none
    */
   public GoogleChromePolicyV1PolicySchemaFieldDescription setFieldDependencies(java.util.List<GoogleChromePolicyV1PolicySchemaFieldDependencies> fieldDependencies) {

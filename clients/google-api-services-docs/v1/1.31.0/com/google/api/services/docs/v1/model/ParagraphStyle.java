@@ -176,6 +176,14 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   private java.lang.String namedStyleType;
 
   /**
+   * Whether the current paragraph should always start at the beginning of a page. If unset, the
+   * value is inherited from the parent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pageBreakBefore;
+
+  /**
    * The shading of the paragraph. If unset, the value is inherited from the parent.
    * The value may be {@code null}.
    */
@@ -534,6 +542,25 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
    */
   public ParagraphStyle setNamedStyleType(java.lang.String namedStyleType) {
     this.namedStyleType = namedStyleType;
+    return this;
+  }
+
+  /**
+   * Whether the current paragraph should always start at the beginning of a page. If unset, the
+   * value is inherited from the parent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPageBreakBefore() {
+    return pageBreakBefore;
+  }
+
+  /**
+   * Whether the current paragraph should always start at the beginning of a page. If unset, the
+   * value is inherited from the parent.
+   * @param pageBreakBefore pageBreakBefore or {@code null} for none
+   */
+  public ParagraphStyle setPageBreakBefore(java.lang.Boolean pageBreakBefore) {
+    this.pageBreakBefore = pageBreakBefore;
     return this;
   }
 

@@ -9135,6 +9135,3105 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
 
+    /**
+     * An accessor for creating requests from the Subscriptions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Subscriptions.List request = androidpublisher.subscriptions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Subscriptions subscriptions() {
+      return new Subscriptions();
+    }
+
+    /**
+     * The "subscriptions" collection of methods.
+     */
+    public class Subscriptions {
+
+      /**
+       * Archives a subscription. Can only be done if at least one base plan was active in the past, and
+       * no base plan is available for new or existing subscribers currently. This action is irreversible,
+       * and the subscription ID will remain reserved.
+       *
+       * Create a request for the method "subscriptions.archive".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) of the app of the subscription to delete.
+       * @param productId Required. The unique product ID of the subscription to delete.
+       * @param content the {@link com.google.api.services.androidpublisher.model.ArchiveSubscriptionRequest}
+       * @return the request
+       */
+      public Archive archive(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.ArchiveSubscriptionRequest content) throws java.io.IOException {
+        Archive result = new Archive(packageName, productId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Archive extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Subscription> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}:archive";
+
+        /**
+         * Archives a subscription. Can only be done if at least one base plan was active in the past, and
+         * no base plan is available for new or existing subscribers currently. This action is
+         * irreversible, and the subscription ID will remain reserved.
+         *
+         * Create a request for the method "subscriptions.archive".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Archive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) of the app of the subscription to delete.
+         * @param productId Required. The unique product ID of the subscription to delete.
+         * @param content the {@link com.google.api.services.androidpublisher.model.ArchiveSubscriptionRequest}
+         * @since 1.13
+         */
+        protected Archive(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.ArchiveSubscriptionRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Subscription.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public Archive set$Xgafv(java.lang.String $Xgafv) {
+          return (Archive) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Archive setAccessToken(java.lang.String accessToken) {
+          return (Archive) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Archive setAlt(java.lang.String alt) {
+          return (Archive) super.setAlt(alt);
+        }
+
+        @Override
+        public Archive setCallback(java.lang.String callback) {
+          return (Archive) super.setCallback(callback);
+        }
+
+        @Override
+        public Archive setFields(java.lang.String fields) {
+          return (Archive) super.setFields(fields);
+        }
+
+        @Override
+        public Archive setKey(java.lang.String key) {
+          return (Archive) super.setKey(key);
+        }
+
+        @Override
+        public Archive setOauthToken(java.lang.String oauthToken) {
+          return (Archive) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Archive setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Archive) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Archive setQuotaUser(java.lang.String quotaUser) {
+          return (Archive) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Archive setUploadType(java.lang.String uploadType) {
+          return (Archive) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Archive setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Archive) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent app (package name) of the app of the subscription to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) of the app of the subscription to delete.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. The parent app (package name) of the app of the subscription to delete. */
+        public Archive setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. The unique product ID of the subscription to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. The unique product ID of the subscription to delete.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** Required. The unique product ID of the subscription to delete. */
+        public Archive setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        @Override
+        public Archive set(String parameterName, Object value) {
+          return (Archive) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a new subscription. Newly added base plans will remain in draft state until activated.
+       *
+       * Create a request for the method "subscriptions.create".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the subscription should be created. Must be equal
+       *        to the package_name field on the Subscription resource.
+       * @param content the {@link com.google.api.services.androidpublisher.model.Subscription}
+       * @return the request
+       */
+      public Create create(java.lang.String packageName, com.google.api.services.androidpublisher.model.Subscription content) throws java.io.IOException {
+        Create result = new Create(packageName, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Subscription> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions";
+
+        /**
+         * Creates a new subscription. Newly added base plans will remain in draft state until activated.
+         *
+         * Create a request for the method "subscriptions.create".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the subscription should be created. Must be equal
+       *        to the package_name field on the Subscription resource.
+         * @param content the {@link com.google.api.services.androidpublisher.model.Subscription}
+         * @since 1.13
+         */
+        protected Create(java.lang.String packageName, com.google.api.services.androidpublisher.model.Subscription content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Subscription.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent app (package name) for which the subscription should be created.
+         * Must be equal to the package_name field on the Subscription resource.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the subscription should be created. Must be equal
+       to the package_name field on the Subscription resource.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The parent app (package name) for which the subscription should be created.
+         * Must be equal to the package_name field on the Subscription resource.
+         */
+        public Create setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. The ID to use for the subscription. For the requirements on this format, see
+         * the documentation of the product_id field on the Subscription resource.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. The ID to use for the subscription. For the requirements on this format, see the
+       documentation of the product_id field on the Subscription resource.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /**
+         * Required. The ID to use for the subscription. For the requirements on this format, see
+         * the documentation of the product_id field on the Subscription resource.
+         */
+        public Create setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        /**
+         * Required. A string representing version of the available regions being used for the
+         * specified resource.
+         */
+        @com.google.api.client.util.Key("regionsVersion.version")
+        private java.lang.String regionsVersionVersion;
+
+        /** Required. A string representing version of the available regions being used for the specified
+       resource.
+         */
+        public java.lang.String getRegionsVersionVersion() {
+          return regionsVersionVersion;
+        }
+
+        /**
+         * Required. A string representing version of the available regions being used for the
+         * specified resource.
+         */
+        public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
+          this.regionsVersionVersion = regionsVersionVersion;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a subscription. A subscription can only be deleted if it has never had a base plan
+       * published.
+       *
+       * Create a request for the method "subscriptions.delete".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) of the app of the subscription to delete.
+       * @param productId Required. The unique product ID of the subscription to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.String packageName, java.lang.String productId) throws java.io.IOException {
+        Delete result = new Delete(packageName, productId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}";
+
+        /**
+         * Deletes a subscription. A subscription can only be deleted if it has never had a base plan
+         * published.
+         *
+         * Create a request for the method "subscriptions.delete".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) of the app of the subscription to delete.
+         * @param productId Required. The unique product ID of the subscription to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String packageName, java.lang.String productId) {
+          super(AndroidPublisher.this, "DELETE", REST_PATH, null, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent app (package name) of the app of the subscription to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) of the app of the subscription to delete.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. The parent app (package name) of the app of the subscription to delete. */
+        public Delete setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. The unique product ID of the subscription to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. The unique product ID of the subscription to delete.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** Required. The unique product ID of the subscription to delete. */
+        public Delete setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Reads a single subscription.
+       *
+       * Create a request for the method "subscriptions.get".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) of the subscription to get.
+       * @param productId Required. The unique product ID of the subscription to get.
+       * @return the request
+       */
+      public Get get(java.lang.String packageName, java.lang.String productId) throws java.io.IOException {
+        Get result = new Get(packageName, productId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Subscription> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}";
+
+        /**
+         * Reads a single subscription.
+         *
+         * Create a request for the method "subscriptions.get".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) of the subscription to get.
+         * @param productId Required. The unique product ID of the subscription to get.
+         * @since 1.13
+         */
+        protected Get(java.lang.String packageName, java.lang.String productId) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.Subscription.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent app (package name) of the subscription to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) of the subscription to get.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. The parent app (package name) of the subscription to get. */
+        public Get setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. The unique product ID of the subscription to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. The unique product ID of the subscription to get.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** Required. The unique product ID of the subscription to get. */
+        public Get setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all subscriptions under a given app.
+       *
+       * Create a request for the method "subscriptions.list".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the subscriptions should be read.
+       * @return the request
+       */
+      public List list(java.lang.String packageName) throws java.io.IOException {
+        List result = new List(packageName);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListSubscriptionsResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions";
+
+        /**
+         * Lists all subscriptions under a given app.
+         *
+         * Create a request for the method "subscriptions.list".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the subscriptions should be read.
+         * @since 1.13
+         */
+        protected List(java.lang.String packageName) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ListSubscriptionsResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent app (package name) for which the subscriptions should be read. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the subscriptions should be read.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. The parent app (package name) for which the subscriptions should be read. */
+        public List setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * The maximum number of subscriptions to return. The service may return fewer than this
+         * value. If unspecified, at most 50 subscriptions will be returned. The maximum value is
+         * 1000; values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of subscriptions to return. The service may return fewer than this value. If
+       unspecified, at most 50 subscriptions will be returned. The maximum value is 1000; values above
+       1000 will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of subscriptions to return. The service may return fewer than this
+         * value. If unspecified, at most 50 subscriptions will be returned. The maximum value is
+         * 1000; values above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListSubscriptions` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `ListSubscriptions` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListSubscriptions` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListSubscriptions` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListSubscriptions` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `ListSubscriptions` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Whether archived subscriptions should be included in the response. Defaults to false.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showArchived;
+
+        /** Whether archived subscriptions should be included in the response. Defaults to false.
+         */
+        public java.lang.Boolean getShowArchived() {
+          return showArchived;
+        }
+
+        /**
+         * Whether archived subscriptions should be included in the response. Defaults to false.
+         */
+        public List setShowArchived(java.lang.Boolean showArchived) {
+          this.showArchived = showArchived;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an existing subscription.
+       *
+       * Create a request for the method "subscriptions.patch".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Immutable. Package name of the parent app.
+       * @param productId Immutable. Unique product ID of the product. Unique within the parent app. Product IDs must be
+       *        composed of lower-case letters (a-z), numbers (0-9), underscores (_) and dots (.). It must
+       *        start with a lower-case letter or number, and be between 1 and 40 (inclusive) characters
+       *        in length.
+       * @param content the {@link com.google.api.services.androidpublisher.model.Subscription}
+       * @return the request
+       */
+      public Patch patch(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.Subscription content) throws java.io.IOException {
+        Patch result = new Patch(packageName, productId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Subscription> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}";
+
+        /**
+         * Updates an existing subscription.
+         *
+         * Create a request for the method "subscriptions.patch".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Immutable. Package name of the parent app.
+         * @param productId Immutable. Unique product ID of the product. Unique within the parent app. Product IDs must be
+       *        composed of lower-case letters (a-z), numbers (0-9), underscores (_) and dots (.). It must
+       *        start with a lower-case letter or number, and be between 1 and 40 (inclusive) characters
+       *        in length.
+         * @param content the {@link com.google.api.services.androidpublisher.model.Subscription}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.Subscription content) {
+          super(AndroidPublisher.this, "PATCH", REST_PATH, content, com.google.api.services.androidpublisher.model.Subscription.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Immutable. Package name of the parent app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Immutable. Package name of the parent app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Immutable. Package name of the parent app. */
+        public Patch setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Immutable. Unique product ID of the product. Unique within the parent app. Product IDs
+         * must be composed of lower-case letters (a-z), numbers (0-9), underscores (_) and dots
+         * (.). It must start with a lower-case letter or number, and be between 1 and 40
+         * (inclusive) characters in length.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Immutable. Unique product ID of the product. Unique within the parent app. Product IDs must be
+       composed of lower-case letters (a-z), numbers (0-9), underscores (_) and dots (.). It must start
+       with a lower-case letter or number, and be between 1 and 40 (inclusive) characters in length.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /**
+         * Immutable. Unique product ID of the product. Unique within the parent app. Product IDs
+         * must be composed of lower-case letters (a-z), numbers (0-9), underscores (_) and dots
+         * (.). It must start with a lower-case letter or number, and be between 1 and 40
+         * (inclusive) characters in length.
+         */
+        public Patch setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        /**
+         * Required. A string representing version of the available regions being used for the
+         * specified resource.
+         */
+        @com.google.api.client.util.Key("regionsVersion.version")
+        private java.lang.String regionsVersionVersion;
+
+        /** Required. A string representing version of the available regions being used for the specified
+       resource.
+         */
+        public java.lang.String getRegionsVersionVersion() {
+          return regionsVersionVersion;
+        }
+
+        /**
+         * Required. A string representing version of the available regions being used for the
+         * specified resource.
+         */
+        public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
+          this.regionsVersionVersion = regionsVersionVersion;
+          return this;
+        }
+
+        /** Required. The list of fields to be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The list of fields to be updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the BasePlans collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+       *   {@code AndroidPublisher.BasePlans.List request = androidpublisher.basePlans().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BasePlans basePlans() {
+        return new BasePlans();
+      }
+
+      /**
+       * The "basePlans" collection of methods.
+       */
+      public class BasePlans {
+
+        /**
+         * Activates a base plan. Once activated, base plans will be available to new subscribers.
+         *
+         * Create a request for the method "basePlans.activate".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+         *
+         * @param packageName Required. The parent app (package name) of the base plan to activate.
+         * @param productId Required. The parent subscription (ID) of the base plan to activate.
+         * @param basePlanId Required. The unique base plan ID of the base plan to activate.
+         * @param content the {@link com.google.api.services.androidpublisher.model.ActivateBasePlanRequest}
+         * @return the request
+         */
+        public Activate activate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.ActivateBasePlanRequest content) throws java.io.IOException {
+          Activate result = new Activate(packageName, productId, basePlanId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Activate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Subscription> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:activate";
+
+          /**
+           * Activates a base plan. Once activated, base plans will be available to new subscribers.
+           *
+           * Create a request for the method "basePlans.activate".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param packageName Required. The parent app (package name) of the base plan to activate.
+           * @param productId Required. The parent subscription (ID) of the base plan to activate.
+           * @param basePlanId Required. The unique base plan ID of the base plan to activate.
+           * @param content the {@link com.google.api.services.androidpublisher.model.ActivateBasePlanRequest}
+           * @since 1.13
+           */
+          protected Activate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.ActivateBasePlanRequest content) {
+            super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Subscription.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+            this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+          }
+
+          @Override
+          public Activate set$Xgafv(java.lang.String $Xgafv) {
+            return (Activate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Activate setAccessToken(java.lang.String accessToken) {
+            return (Activate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Activate setAlt(java.lang.String alt) {
+            return (Activate) super.setAlt(alt);
+          }
+
+          @Override
+          public Activate setCallback(java.lang.String callback) {
+            return (Activate) super.setCallback(callback);
+          }
+
+          @Override
+          public Activate setFields(java.lang.String fields) {
+            return (Activate) super.setFields(fields);
+          }
+
+          @Override
+          public Activate setKey(java.lang.String key) {
+            return (Activate) super.setKey(key);
+          }
+
+          @Override
+          public Activate setOauthToken(java.lang.String oauthToken) {
+            return (Activate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Activate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Activate setQuotaUser(java.lang.String quotaUser) {
+            return (Activate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Activate setUploadType(java.lang.String uploadType) {
+            return (Activate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Activate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent app (package name) of the base plan to activate. */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. The parent app (package name) of the base plan to activate.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /** Required. The parent app (package name) of the base plan to activate. */
+          public Activate setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /** Required. The parent subscription (ID) of the base plan to activate. */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The parent subscription (ID) of the base plan to activate.
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /** Required. The parent subscription (ID) of the base plan to activate. */
+          public Activate setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          /** Required. The unique base plan ID of the base plan to activate. */
+          @com.google.api.client.util.Key
+          private java.lang.String basePlanId;
+
+          /** Required. The unique base plan ID of the base plan to activate.
+           */
+          public java.lang.String getBasePlanId() {
+            return basePlanId;
+          }
+
+          /** Required. The unique base plan ID of the base plan to activate. */
+          public Activate setBasePlanId(java.lang.String basePlanId) {
+            this.basePlanId = basePlanId;
+            return this;
+          }
+
+          @Override
+          public Activate set(String parameterName, Object value) {
+            return (Activate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deactivates a base plan. Once deactivated, the base plan will become unavailable to new
+         * subscribers, but existing subscribers will maintain their subscription
+         *
+         * Create a request for the method "basePlans.deactivate".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
+         *
+         * @param packageName Required. The parent app (package name) of the base plan to deactivate.
+         * @param productId Required. The parent subscription (ID) of the base plan to deactivate.
+         * @param basePlanId Required. The unique base plan ID of the base plan to deactivate.
+         * @param content the {@link com.google.api.services.androidpublisher.model.DeactivateBasePlanRequest}
+         * @return the request
+         */
+        public Deactivate deactivate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.DeactivateBasePlanRequest content) throws java.io.IOException {
+          Deactivate result = new Deactivate(packageName, productId, basePlanId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Deactivate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Subscription> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:deactivate";
+
+          /**
+           * Deactivates a base plan. Once deactivated, the base plan will become unavailable to new
+           * subscribers, but existing subscribers will maintain their subscription
+           *
+           * Create a request for the method "basePlans.deactivate".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param packageName Required. The parent app (package name) of the base plan to deactivate.
+           * @param productId Required. The parent subscription (ID) of the base plan to deactivate.
+           * @param basePlanId Required. The unique base plan ID of the base plan to deactivate.
+           * @param content the {@link com.google.api.services.androidpublisher.model.DeactivateBasePlanRequest}
+           * @since 1.13
+           */
+          protected Deactivate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.DeactivateBasePlanRequest content) {
+            super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Subscription.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+            this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+          }
+
+          @Override
+          public Deactivate set$Xgafv(java.lang.String $Xgafv) {
+            return (Deactivate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Deactivate setAccessToken(java.lang.String accessToken) {
+            return (Deactivate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Deactivate setAlt(java.lang.String alt) {
+            return (Deactivate) super.setAlt(alt);
+          }
+
+          @Override
+          public Deactivate setCallback(java.lang.String callback) {
+            return (Deactivate) super.setCallback(callback);
+          }
+
+          @Override
+          public Deactivate setFields(java.lang.String fields) {
+            return (Deactivate) super.setFields(fields);
+          }
+
+          @Override
+          public Deactivate setKey(java.lang.String key) {
+            return (Deactivate) super.setKey(key);
+          }
+
+          @Override
+          public Deactivate setOauthToken(java.lang.String oauthToken) {
+            return (Deactivate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Deactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Deactivate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Deactivate setQuotaUser(java.lang.String quotaUser) {
+            return (Deactivate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Deactivate setUploadType(java.lang.String uploadType) {
+            return (Deactivate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Deactivate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Deactivate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent app (package name) of the base plan to deactivate. */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. The parent app (package name) of the base plan to deactivate.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /** Required. The parent app (package name) of the base plan to deactivate. */
+          public Deactivate setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /** Required. The parent subscription (ID) of the base plan to deactivate. */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The parent subscription (ID) of the base plan to deactivate.
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /** Required. The parent subscription (ID) of the base plan to deactivate. */
+          public Deactivate setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          /** Required. The unique base plan ID of the base plan to deactivate. */
+          @com.google.api.client.util.Key
+          private java.lang.String basePlanId;
+
+          /** Required. The unique base plan ID of the base plan to deactivate.
+           */
+          public java.lang.String getBasePlanId() {
+            return basePlanId;
+          }
+
+          /** Required. The unique base plan ID of the base plan to deactivate. */
+          public Deactivate setBasePlanId(java.lang.String basePlanId) {
+            this.basePlanId = basePlanId;
+            return this;
+          }
+
+          @Override
+          public Deactivate set(String parameterName, Object value) {
+            return (Deactivate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a base plan. Can only be done for draft base plans. This action is irreversible.
+         *
+         * Create a request for the method "basePlans.delete".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param packageName Required. The parent app (package name) of the base plan to delete.
+         * @param productId Required. The parent subscription (ID) of the base plan to delete.
+         * @param basePlanId Required. The unique offer ID of the base plan to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId) throws java.io.IOException {
+          Delete result = new Delete(packageName, productId, basePlanId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AndroidPublisherRequest<Void> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}";
+
+          /**
+           * Deletes a base plan. Can only be done for draft base plans. This action is irreversible.
+           *
+           * Create a request for the method "basePlans.delete".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param packageName Required. The parent app (package name) of the base plan to delete.
+           * @param productId Required. The parent subscription (ID) of the base plan to delete.
+           * @param basePlanId Required. The unique offer ID of the base plan to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId) {
+            super(AndroidPublisher.this, "DELETE", REST_PATH, null, Void.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+            this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent app (package name) of the base plan to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. The parent app (package name) of the base plan to delete.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /** Required. The parent app (package name) of the base plan to delete. */
+          public Delete setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /** Required. The parent subscription (ID) of the base plan to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The parent subscription (ID) of the base plan to delete.
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /** Required. The parent subscription (ID) of the base plan to delete. */
+          public Delete setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          /** Required. The unique offer ID of the base plan to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String basePlanId;
+
+          /** Required. The unique offer ID of the base plan to delete.
+           */
+          public java.lang.String getBasePlanId() {
+            return basePlanId;
+          }
+
+          /** Required. The unique offer ID of the base plan to delete. */
+          public Delete setBasePlanId(java.lang.String basePlanId) {
+            this.basePlanId = basePlanId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Migrates subscribers who are receiving an historical subscription price to the currently-offered
+         * price for the specified region. Requests will cause price change notifications to be sent to
+         * users who are currently receiving an historical price older than the supplied timestamp.
+         * Subscribers who do not agree to the new price will have their subscription ended at the next
+         * renewal.
+         *
+         * Create a request for the method "basePlans.migratePrices".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link MigratePrices#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param packageName Required. Package name of the parent app. Must be equal to the package_name field on the
+         *        Subscription resource.
+         * @param productId Required. The ID of the subscription to update. Must be equal to the product_id field on the
+         *        Subscription resource.
+         * @param basePlanId Required. The unique base plan ID of the base plan to update prices on.
+         * @param content the {@link com.google.api.services.androidpublisher.model.MigrateBasePlanPricesRequest}
+         * @return the request
+         */
+        public MigratePrices migratePrices(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.MigrateBasePlanPricesRequest content) throws java.io.IOException {
+          MigratePrices result = new MigratePrices(packageName, productId, basePlanId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class MigratePrices extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.MigrateBasePlanPricesResponse> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:migratePrices";
+
+          /**
+           * Migrates subscribers who are receiving an historical subscription price to the currently-
+           * offered price for the specified region. Requests will cause price change notifications to be
+           * sent to users who are currently receiving an historical price older than the supplied
+           * timestamp. Subscribers who do not agree to the new price will have their subscription ended at
+           * the next renewal.
+           *
+           * Create a request for the method "basePlans.migratePrices".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link MigratePrices#execute()} method to invoke the remote
+           * operation. <p> {@link MigratePrices#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param packageName Required. Package name of the parent app. Must be equal to the package_name field on the
+         *        Subscription resource.
+           * @param productId Required. The ID of the subscription to update. Must be equal to the product_id field on the
+         *        Subscription resource.
+           * @param basePlanId Required. The unique base plan ID of the base plan to update prices on.
+           * @param content the {@link com.google.api.services.androidpublisher.model.MigrateBasePlanPricesRequest}
+           * @since 1.13
+           */
+          protected MigratePrices(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.MigrateBasePlanPricesRequest content) {
+            super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.MigrateBasePlanPricesResponse.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+            this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+          }
+
+          @Override
+          public MigratePrices set$Xgafv(java.lang.String $Xgafv) {
+            return (MigratePrices) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public MigratePrices setAccessToken(java.lang.String accessToken) {
+            return (MigratePrices) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public MigratePrices setAlt(java.lang.String alt) {
+            return (MigratePrices) super.setAlt(alt);
+          }
+
+          @Override
+          public MigratePrices setCallback(java.lang.String callback) {
+            return (MigratePrices) super.setCallback(callback);
+          }
+
+          @Override
+          public MigratePrices setFields(java.lang.String fields) {
+            return (MigratePrices) super.setFields(fields);
+          }
+
+          @Override
+          public MigratePrices setKey(java.lang.String key) {
+            return (MigratePrices) super.setKey(key);
+          }
+
+          @Override
+          public MigratePrices setOauthToken(java.lang.String oauthToken) {
+            return (MigratePrices) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public MigratePrices setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (MigratePrices) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public MigratePrices setQuotaUser(java.lang.String quotaUser) {
+            return (MigratePrices) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public MigratePrices setUploadType(java.lang.String uploadType) {
+            return (MigratePrices) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public MigratePrices setUploadProtocol(java.lang.String uploadProtocol) {
+            return (MigratePrices) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Package name of the parent app. Must be equal to the package_name field on
+           * the Subscription resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. Package name of the parent app. Must be equal to the package_name field on the
+         Subscription resource.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /**
+           * Required. Package name of the parent app. Must be equal to the package_name field on
+           * the Subscription resource.
+           */
+          public MigratePrices setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the subscription to update. Must be equal to the product_id field
+           * on the Subscription resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The ID of the subscription to update. Must be equal to the product_id field on the
+         Subscription resource.
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /**
+           * Required. The ID of the subscription to update. Must be equal to the product_id field
+           * on the Subscription resource.
+           */
+          public MigratePrices setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          /** Required. The unique base plan ID of the base plan to update prices on. */
+          @com.google.api.client.util.Key
+          private java.lang.String basePlanId;
+
+          /** Required. The unique base plan ID of the base plan to update prices on.
+           */
+          public java.lang.String getBasePlanId() {
+            return basePlanId;
+          }
+
+          /** Required. The unique base plan ID of the base plan to update prices on. */
+          public MigratePrices setBasePlanId(java.lang.String basePlanId) {
+            this.basePlanId = basePlanId;
+            return this;
+          }
+
+          @Override
+          public MigratePrices set(String parameterName, Object value) {
+            return (MigratePrices) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Offers collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+         *   {@code AndroidPublisher.Offers.List request = androidpublisher.offers().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Offers offers() {
+          return new Offers();
+        }
+
+        /**
+         * The "offers" collection of methods.
+         */
+        public class Offers {
+
+          /**
+           * Activates a subscription offer. Once activated, subscription offers will be available to new
+           * subscribers.
+           *
+           * Create a request for the method "offers.activate".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offer to activate.
+           * @param productId Required. The parent subscription (ID) of the offer to activate.
+           * @param basePlanId Required. The parent base plan (ID) of the offer to activate.
+           * @param offerId Required. The unique offer ID of the offer to activate.
+           * @param content the {@link com.google.api.services.androidpublisher.model.ActivateSubscriptionOfferRequest}
+           * @return the request
+           */
+          public Activate activate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId, com.google.api.services.androidpublisher.model.ActivateSubscriptionOfferRequest content) throws java.io.IOException {
+            Activate result = new Activate(packageName, productId, basePlanId, offerId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Activate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:activate";
+
+            /**
+             * Activates a subscription offer. Once activated, subscription offers will be available to new
+             * subscribers.
+             *
+             * Create a request for the method "offers.activate".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offer to activate.
+             * @param productId Required. The parent subscription (ID) of the offer to activate.
+             * @param basePlanId Required. The parent base plan (ID) of the offer to activate.
+             * @param offerId Required. The unique offer ID of the offer to activate.
+             * @param content the {@link com.google.api.services.androidpublisher.model.ActivateSubscriptionOfferRequest}
+             * @since 1.13
+             */
+            protected Activate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId, com.google.api.services.androidpublisher.model.ActivateSubscriptionOfferRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.SubscriptionOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public Activate set$Xgafv(java.lang.String $Xgafv) {
+              return (Activate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Activate setAccessToken(java.lang.String accessToken) {
+              return (Activate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Activate setAlt(java.lang.String alt) {
+              return (Activate) super.setAlt(alt);
+            }
+
+            @Override
+            public Activate setCallback(java.lang.String callback) {
+              return (Activate) super.setCallback(callback);
+            }
+
+            @Override
+            public Activate setFields(java.lang.String fields) {
+              return (Activate) super.setFields(fields);
+            }
+
+            @Override
+            public Activate setKey(java.lang.String key) {
+              return (Activate) super.setKey(key);
+            }
+
+            @Override
+            public Activate setOauthToken(java.lang.String oauthToken) {
+              return (Activate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Activate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Activate setQuotaUser(java.lang.String quotaUser) {
+              return (Activate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Activate setUploadType(java.lang.String uploadType) {
+              return (Activate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Activate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offer to activate.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the offer to activate. */
+            public Activate setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent subscription (ID) of the offer to activate.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to activate. */
+            public Activate setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) of the offer to activate.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to activate. */
+            public Activate setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            /** Required. The unique offer ID of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The unique offer ID of the offer to activate.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /** Required. The unique offer ID of the offer to activate. */
+            public Activate setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            @Override
+            public Activate set(String parameterName, Object value) {
+              return (Activate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new subscription offer. Only auto-renewing base plans can have subscription offers. The
+           * offer state will be DRAFT until it is activated.
+           *
+           * Create a request for the method "offers.create".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) for which the offer should be created. Must be equal to the
+           *        package_name field on the Subscription resource.
+           * @param productId Required. The parent subscription (ID) for which the offer should be created. Must be equal to the
+           *        product_id field on the SubscriptionOffer resource.
+           * @param basePlanId Required. The parent base plan (ID) for which the offer should be created. Must be equal to the
+           *        base_plan_id field on the SubscriptionOffer resource.
+           * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionOffer}
+           * @return the request
+           */
+          public Create create(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.SubscriptionOffer content) throws java.io.IOException {
+            Create result = new Create(packageName, productId, basePlanId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers";
+
+            /**
+             * Creates a new subscription offer. Only auto-renewing base plans can have subscription offers.
+             * The offer state will be DRAFT until it is activated.
+             *
+             * Create a request for the method "offers.create".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) for which the offer should be created. Must be equal to the
+           *        package_name field on the Subscription resource.
+             * @param productId Required. The parent subscription (ID) for which the offer should be created. Must be equal to the
+           *        product_id field on the SubscriptionOffer resource.
+             * @param basePlanId Required. The parent base plan (ID) for which the offer should be created. Must be equal to the
+           *        base_plan_id field on the SubscriptionOffer resource.
+             * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionOffer}
+             * @since 1.13
+             */
+            protected Create(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.SubscriptionOffer content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.SubscriptionOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) for which the offer should be created. Must
+             * be equal to the package_name field on the Subscription resource.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) for which the offer should be created. Must be equal to the
+           package_name field on the Subscription resource.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) for which the offer should be created. Must
+             * be equal to the package_name field on the Subscription resource.
+             */
+            public Create setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The parent subscription (ID) for which the offer should be created. Must be
+             * equal to the product_id field on the SubscriptionOffer resource.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent subscription (ID) for which the offer should be created. Must be equal to the
+           product_id field on the SubscriptionOffer resource.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The parent subscription (ID) for which the offer should be created. Must be
+             * equal to the product_id field on the SubscriptionOffer resource.
+             */
+            public Create setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offer should be created. Must be
+             * equal to the base_plan_id field on the SubscriptionOffer resource.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) for which the offer should be created. Must be equal to the
+           base_plan_id field on the SubscriptionOffer resource.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offer should be created. Must be
+             * equal to the base_plan_id field on the SubscriptionOffer resource.
+             */
+            public Create setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the offer. For the requirements on this format, see the
+             * documentation of the offer_id field on the SubscriptionOffer resource.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The ID to use for the offer. For the requirements on this format, see the documentation
+           of the offer_id field on the SubscriptionOffer resource.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /**
+             * Required. The ID to use for the offer. For the requirements on this format, see the
+             * documentation of the offer_id field on the SubscriptionOffer resource.
+             */
+            public Create setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            /**
+             * Required. A string representing version of the available regions being used for the
+             * specified resource.
+             */
+            @com.google.api.client.util.Key("regionsVersion.version")
+            private java.lang.String regionsVersionVersion;
+
+            /** Required. A string representing version of the available regions being used for the specified
+           resource.
+             */
+            public java.lang.String getRegionsVersionVersion() {
+              return regionsVersionVersion;
+            }
+
+            /**
+             * Required. A string representing version of the available regions being used for the
+             * specified resource.
+             */
+            public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
+              this.regionsVersionVersion = regionsVersionVersion;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deactivates a subscription offer. Once deactivated, existing subscribers will maintain their
+           * subscription, but the offer will become unavailable to new subscribers.
+           *
+           * Create a request for the method "offers.deactivate".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offer to deactivate.
+           * @param productId Required. The parent subscription (ID) of the offer to deactivate.
+           * @param basePlanId Required. The parent base plan (ID) of the offer to deactivate.
+           * @param offerId Required. The unique offer ID of the offer to deactivate.
+           * @param content the {@link com.google.api.services.androidpublisher.model.DeactivateSubscriptionOfferRequest}
+           * @return the request
+           */
+          public Deactivate deactivate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId, com.google.api.services.androidpublisher.model.DeactivateSubscriptionOfferRequest content) throws java.io.IOException {
+            Deactivate result = new Deactivate(packageName, productId, basePlanId, offerId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Deactivate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:deactivate";
+
+            /**
+             * Deactivates a subscription offer. Once deactivated, existing subscribers will maintain their
+             * subscription, but the offer will become unavailable to new subscribers.
+             *
+             * Create a request for the method "offers.deactivate".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offer to deactivate.
+             * @param productId Required. The parent subscription (ID) of the offer to deactivate.
+             * @param basePlanId Required. The parent base plan (ID) of the offer to deactivate.
+             * @param offerId Required. The unique offer ID of the offer to deactivate.
+             * @param content the {@link com.google.api.services.androidpublisher.model.DeactivateSubscriptionOfferRequest}
+             * @since 1.13
+             */
+            protected Deactivate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId, com.google.api.services.androidpublisher.model.DeactivateSubscriptionOfferRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.SubscriptionOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public Deactivate set$Xgafv(java.lang.String $Xgafv) {
+              return (Deactivate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Deactivate setAccessToken(java.lang.String accessToken) {
+              return (Deactivate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Deactivate setAlt(java.lang.String alt) {
+              return (Deactivate) super.setAlt(alt);
+            }
+
+            @Override
+            public Deactivate setCallback(java.lang.String callback) {
+              return (Deactivate) super.setCallback(callback);
+            }
+
+            @Override
+            public Deactivate setFields(java.lang.String fields) {
+              return (Deactivate) super.setFields(fields);
+            }
+
+            @Override
+            public Deactivate setKey(java.lang.String key) {
+              return (Deactivate) super.setKey(key);
+            }
+
+            @Override
+            public Deactivate setOauthToken(java.lang.String oauthToken) {
+              return (Deactivate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Deactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Deactivate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Deactivate setQuotaUser(java.lang.String quotaUser) {
+              return (Deactivate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Deactivate setUploadType(java.lang.String uploadType) {
+              return (Deactivate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Deactivate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Deactivate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offer to deactivate.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the offer to deactivate. */
+            public Deactivate setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent subscription (ID) of the offer to deactivate.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to deactivate. */
+            public Deactivate setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) of the offer to deactivate.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to deactivate. */
+            public Deactivate setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            /** Required. The unique offer ID of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The unique offer ID of the offer to deactivate.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /** Required. The unique offer ID of the offer to deactivate. */
+            public Deactivate setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            @Override
+            public Deactivate set(String parameterName, Object value) {
+              return (Deactivate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a subscription offer. Can only be done for draft offers. This action is irreversible.
+           *
+           * Create a request for the method "offers.delete".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offer to delete.
+           * @param productId Required. The parent subscription (ID) of the offer to delete.
+           * @param basePlanId Required. The parent base plan (ID) of the offer to delete.
+           * @param offerId Required. The unique offer ID of the offer to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId) throws java.io.IOException {
+            Delete result = new Delete(packageName, productId, basePlanId, offerId);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AndroidPublisherRequest<Void> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}";
+
+            /**
+             * Deletes a subscription offer. Can only be done for draft offers. This action is irreversible.
+             *
+             * Create a request for the method "offers.delete".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offer to delete.
+             * @param productId Required. The parent subscription (ID) of the offer to delete.
+             * @param basePlanId Required. The parent base plan (ID) of the offer to delete.
+             * @param offerId Required. The unique offer ID of the offer to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId) {
+              super(AndroidPublisher.this, "DELETE", REST_PATH, null, Void.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the offer to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offer to delete.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the offer to delete. */
+            public Delete setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent subscription (ID) of the offer to delete.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to delete. */
+            public Delete setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) of the offer to delete.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to delete. */
+            public Delete setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            /** Required. The unique offer ID of the offer to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The unique offer ID of the offer to delete.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /** Required. The unique offer ID of the offer to delete. */
+            public Delete setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Reads a single offer
+           *
+           * Create a request for the method "offers.get".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offer to get.
+           * @param productId Required. The parent subscription (ID) of the offer to get.
+           * @param basePlanId Required. The parent base plan (ID) of the offer to get.
+           * @param offerId Required. The unique offer ID of the offer to get.
+           * @return the request
+           */
+          public Get get(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId) throws java.io.IOException {
+            Get result = new Get(packageName, productId, basePlanId, offerId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}";
+
+            /**
+             * Reads a single offer
+             *
+             * Create a request for the method "offers.get".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offer to get.
+             * @param productId Required. The parent subscription (ID) of the offer to get.
+             * @param basePlanId Required. The parent base plan (ID) of the offer to get.
+             * @param offerId Required. The unique offer ID of the offer to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId) {
+              super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.SubscriptionOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the offer to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offer to get.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the offer to get. */
+            public Get setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent subscription (ID) of the offer to get.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent subscription (ID) of the offer to get. */
+            public Get setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) of the offer to get.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /** Required. The parent base plan (ID) of the offer to get. */
+            public Get setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            /** Required. The unique offer ID of the offer to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The unique offer ID of the offer to get.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /** Required. The unique offer ID of the offer to get. */
+            public Get setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all offers under a given subscription.
+           *
+           * Create a request for the method "offers.list".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) for which the subscriptions should be read.
+           * @param productId Required. The parent subscription (ID) for which the offers should be read.
+           * @param basePlanId Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
+           *        read all offers under a subscription.
+           * @return the request
+           */
+          public List list(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId) throws java.io.IOException {
+            List result = new List(packageName, productId, basePlanId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListSubscriptionOffersResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers";
+
+            /**
+             * Lists all offers under a given subscription.
+             *
+             * Create a request for the method "offers.list".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) for which the subscriptions should be read.
+             * @param productId Required. The parent subscription (ID) for which the offers should be read.
+             * @param basePlanId Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
+           *        read all offers under a subscription.
+             * @since 1.13
+             */
+            protected List(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId) {
+              super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ListSubscriptionOffersResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) for which the subscriptions should be read.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) for which the subscriptions should be read.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) for which the subscriptions should be read.
+             */
+            public List setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent subscription (ID) for which the offers should be read. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent subscription (ID) for which the offers should be read.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent subscription (ID) for which the offers should be read. */
+            public List setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be read. May be
+             * specified as '-' to read all offers under a subscription.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
+           read all offers under a subscription.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be read. May be
+             * specified as '-' to read all offers under a subscription.
+             */
+            public List setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            /**
+             * The maximum number of subscriptions to return. The service may return fewer than this
+             * value. If unspecified, at most 50 subscriptions will be returned. The maximum value
+             * is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of subscriptions to return. The service may return fewer than this value. If
+           unspecified, at most 50 subscriptions will be returned. The maximum value is 1000; values above
+           1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of subscriptions to return. The service may return fewer than this
+             * value. If unspecified, at most 50 subscriptions will be returned. The maximum value
+             * is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListSubscriptionsOffers` call. Provide this
+             * to retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListSubscriptionOffers` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListSubscriptionsOffers` call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to `ListSubscriptionOffers` must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListSubscriptionsOffers` call. Provide this
+             * to retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListSubscriptionOffers` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing subscription offer.
+           *
+           * Create a request for the method "offers.patch".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. Immutable. The package name of the app the parent subscription belongs to.
+           * @param productId Required. Immutable. The ID of the parent subscription this offer belongs to.
+           * @param basePlanId Required. Immutable. The ID of the base plan to which this offer is an extension.
+           * @param offerId Required. Immutable. Unique ID of this subscription offer. Must be unique within the base plan.
+           * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionOffer}
+           * @return the request
+           */
+          public Patch patch(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId, com.google.api.services.androidpublisher.model.SubscriptionOffer content) throws java.io.IOException {
+            Patch result = new Patch(packageName, productId, basePlanId, offerId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}";
+
+            /**
+             * Updates an existing subscription offer.
+             *
+             * Create a request for the method "offers.patch".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. Immutable. The package name of the app the parent subscription belongs to.
+             * @param productId Required. Immutable. The ID of the parent subscription this offer belongs to.
+             * @param basePlanId Required. Immutable. The ID of the base plan to which this offer is an extension.
+             * @param offerId Required. Immutable. Unique ID of this subscription offer. Must be unique within the base plan.
+             * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionOffer}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, java.lang.String offerId, com.google.api.services.androidpublisher.model.SubscriptionOffer content) {
+              super(AndroidPublisher.this, "PATCH", REST_PATH, content, com.google.api.services.androidpublisher.model.SubscriptionOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Immutable. The package name of the app the parent subscription belongs to.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. Immutable. The package name of the app the parent subscription belongs to.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. Immutable. The package name of the app the parent subscription belongs to.
+             */
+            public Patch setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. Immutable. The ID of the parent subscription this offer belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. Immutable. The ID of the parent subscription this offer belongs to.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. Immutable. The ID of the parent subscription this offer belongs to. */
+            public Patch setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. Immutable. The ID of the base plan to which this offer is an extension.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. Immutable. The ID of the base plan to which this offer is an extension.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /**
+             * Required. Immutable. The ID of the base plan to which this offer is an extension.
+             */
+            public Patch setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            /**
+             * Required. Immutable. Unique ID of this subscription offer. Must be unique within the
+             * base plan.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. Immutable. Unique ID of this subscription offer. Must be unique within the base plan.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /**
+             * Required. Immutable. Unique ID of this subscription offer. Must be unique within the
+             * base plan.
+             */
+            public Patch setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            /**
+             * Required. A string representing version of the available regions being used for the
+             * specified resource.
+             */
+            @com.google.api.client.util.Key("regionsVersion.version")
+            private java.lang.String regionsVersionVersion;
+
+            /** Required. A string representing version of the available regions being used for the specified
+           resource.
+             */
+            public java.lang.String getRegionsVersionVersion() {
+              return regionsVersionVersion;
+            }
+
+            /**
+             * Required. A string representing version of the available regions being used for the
+             * specified resource.
+             */
+            public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
+              this.regionsVersionVersion = regionsVersionVersion;
+              return this;
+            }
+
+            /** Required. The list of fields to be updated. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The list of fields to be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. The list of fields to be updated. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
   }
 
   /**
@@ -10725,6 +13824,185 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         @Override
         public Revoke set(String parameterName, Object value) {
           return (Revoke) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Subscriptionsv2 collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Subscriptionsv2.List request = androidpublisher.subscriptionsv2().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Subscriptionsv2 subscriptionsv2() {
+      return new Subscriptionsv2();
+    }
+
+    /**
+     * The "subscriptionsv2" collection of methods.
+     */
+    public class Subscriptionsv2 {
+
+      /**
+       * Get metadata about a subscription
+       *
+       * Create a request for the method "subscriptionsv2.get".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param packageName The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+       * @param token Required. The token provided to the user's device when the subscription was purchased.
+       * @return the request
+       */
+      public Get get(java.lang.String packageName, java.lang.String token) throws java.io.IOException {
+        Get result = new Get(packageName, token);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionPurchaseV2> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}";
+
+        /**
+         * Get metadata about a subscription
+         *
+         * Create a request for the method "subscriptionsv2.get".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+         * @param token Required. The token provided to the user's device when the subscription was purchased.
+         * @since 1.13
+         */
+        protected Get(java.lang.String packageName, java.lang.String token) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.SubscriptionPurchaseV2.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The package of the application for which this subscription was purchased (for example,
+         * 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** The package of the application for which this subscription was purchased (for example,
+       'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * The package of the application for which this subscription was purchased (for example,
+         * 'com.some.thing').
+         */
+        public Get setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public Get setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
         }
       }
 

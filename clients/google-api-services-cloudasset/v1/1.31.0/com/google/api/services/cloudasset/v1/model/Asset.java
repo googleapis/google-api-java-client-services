@@ -111,14 +111,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private Inventory osInventory;
 
   /**
-   * The related assets of the asset of one relationship type. One asset only represents one type of
-   * relationship.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RelatedAssets relatedAssets;
-
-  /**
    * A representation of the resource.
    * The value may be {@code null}.
    */
@@ -314,25 +306,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setOsInventory(Inventory osInventory) {
     this.osInventory = osInventory;
-    return this;
-  }
-
-  /**
-   * The related assets of the asset of one relationship type. One asset only represents one type of
-   * relationship.
-   * @return value or {@code null} for none
-   */
-  public RelatedAssets getRelatedAssets() {
-    return relatedAssets;
-  }
-
-  /**
-   * The related assets of the asset of one relationship type. One asset only represents one type of
-   * relationship.
-   * @param relatedAssets relatedAssets or {@code null} for none
-   */
-  public Asset setRelatedAssets(RelatedAssets relatedAssets) {
-    this.relatedAssets = relatedAssets;
     return this;
   }
 

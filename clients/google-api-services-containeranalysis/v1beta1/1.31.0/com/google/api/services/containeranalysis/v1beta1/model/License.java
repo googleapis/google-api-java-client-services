@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * License information: https://spdx.github.io/spdx-spec/3-package-information/#315-declared-license
+ * License information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -38,7 +38,10 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.lang.String comments;
 
   /**
-   * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+   * Often a single license can be used to represent the licensing terms. Sometimes it is necessary
+   * to include a choice of one or more licenses or some combination of license identifiers.
+   * Examples: "LGPL-2.1-only OR MIT", "LGPL-2.1-only AND MIT", "GPL-2.0-or-later WITH Bison-
+   * exception-2.2".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +65,10 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+   * Often a single license can be used to represent the licensing terms. Sometimes it is necessary
+   * to include a choice of one or more licenses or some combination of license identifiers.
+   * Examples: "LGPL-2.1-only OR MIT", "LGPL-2.1-only AND MIT", "GPL-2.0-or-later WITH Bison-
+   * exception-2.2".
    * @return value or {@code null} for none
    */
   public java.lang.String getExpression() {
@@ -70,7 +76,10 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+   * Often a single license can be used to represent the licensing terms. Sometimes it is necessary
+   * to include a choice of one or more licenses or some combination of license identifiers.
+   * Examples: "LGPL-2.1-only OR MIT", "LGPL-2.1-only AND MIT", "GPL-2.0-or-later WITH Bison-
+   * exception-2.2".
    * @param expression expression or {@code null} for none
    */
   public License setExpression(java.lang.String expression) {

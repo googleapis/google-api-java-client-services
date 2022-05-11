@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.containeranalysis.v1alpha1.model;
+package com.google.api.services.containeranalysis.v1.model;
 
 /**
  * License information.

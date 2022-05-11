@@ -32,7 +32,7 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
+   * Deprecated. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
    * package manager version distributing a package.
    * The value may be {@code null}.
    */
@@ -47,14 +47,14 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * The version installed at this location.
+   * Deprecated. The version installed at this location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Version version;
 
   /**
-   * Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
+   * Deprecated. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
    * package manager version distributing a package.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
+   * Deprecated. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
    * package manager version distributing a package.
    * @param cpeUri cpeUri or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version installed at this location.
+   * Deprecated. The version installed at this location.
    * @return value or {@code null} for none
    */
   public Version getVersion() {
@@ -98,7 +98,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version installed at this location.
+   * Deprecated. The version installed at this location.
    * @param version version or {@code null} for none
    */
   public Location setVersion(Version version) {

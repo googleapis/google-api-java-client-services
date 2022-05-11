@@ -31,6 +31,30 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class Installation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The CPU architecture for which packages in this distribution channel were built.
+   * Architecture will be blank for language packages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
+   * Output only. The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the
+   * package manager version distributing a package. The cpe_uri will be blank for language
+   * packages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cpeUri;
+
+  /**
+   * Licenses that have been declared by the authors of the package.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private License license;
+
+  /**
    * All of the places within the filesystem versions of this package have been found.
    * The value may be {@code null}.
    */
@@ -43,6 +67,78 @@ public final class Installation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The type of package; whether native or non native (e.g., ruby gems, node.js
+   * packages, etc.).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageType;
+
+  /**
+   * Output only. The version of the package.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Version version;
+
+  /**
+   * Output only. The CPU architecture for which packages in this distribution channel were built.
+   * Architecture will be blank for language packages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * Output only. The CPU architecture for which packages in this distribution channel were built.
+   * Architecture will be blank for language packages.
+   * @param architecture architecture or {@code null} for none
+   */
+  public Installation setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
+    return this;
+  }
+
+  /**
+   * Output only. The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the
+   * package manager version distributing a package. The cpe_uri will be blank for language
+   * packages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCpeUri() {
+    return cpeUri;
+  }
+
+  /**
+   * Output only. The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the
+   * package manager version distributing a package. The cpe_uri will be blank for language
+   * packages.
+   * @param cpeUri cpeUri or {@code null} for none
+   */
+  public Installation setCpeUri(java.lang.String cpeUri) {
+    this.cpeUri = cpeUri;
+    return this;
+  }
+
+  /**
+   * Licenses that have been declared by the authors of the package.
+   * @return value or {@code null} for none
+   */
+  public License getLicense() {
+    return license;
+  }
+
+  /**
+   * Licenses that have been declared by the authors of the package.
+   * @param license license or {@code null} for none
+   */
+  public Installation setLicense(License license) {
+    this.license = license;
+    return this;
+  }
 
   /**
    * All of the places within the filesystem versions of this package have been found.
@@ -75,6 +171,42 @@ public final class Installation extends com.google.api.client.json.GenericJson {
    */
   public Installation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The type of package; whether native or non native (e.g., ruby gems, node.js
+   * packages, etc.).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageType() {
+    return packageType;
+  }
+
+  /**
+   * Output only. The type of package; whether native or non native (e.g., ruby gems, node.js
+   * packages, etc.).
+   * @param packageType packageType or {@code null} for none
+   */
+  public Installation setPackageType(java.lang.String packageType) {
+    this.packageType = packageType;
+    return this;
+  }
+
+  /**
+   * Output only. The version of the package.
+   * @return value or {@code null} for none
+   */
+  public Version getVersion() {
+    return version;
+  }
+
+  /**
+   * Output only. The version of the package.
+   * @param version version or {@code null} for none
+   */
+  public Installation setVersion(Version version) {
+    this.version = version;
     return this;
   }
 

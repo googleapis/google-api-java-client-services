@@ -32,8 +32,7 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
-   * package manager version distributing a package.
+   * Deprecated. The CPE URI in [CPE format](https://cpe.mitre.org/specification/)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,15 +46,14 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * The version installed at this location.
+   * Deprecated. The version installed at this location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Version version;
 
   /**
-   * Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
-   * package manager version distributing a package.
+   * Deprecated. The CPE URI in [CPE format](https://cpe.mitre.org/specification/)
    * @return value or {@code null} for none
    */
   public java.lang.String getCpeUri() {
@@ -63,8 +61,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the
-   * package manager version distributing a package.
+   * Deprecated. The CPE URI in [CPE format](https://cpe.mitre.org/specification/)
    * @param cpeUri cpeUri or {@code null} for none
    */
   public Location setCpeUri(java.lang.String cpeUri) {
@@ -90,7 +87,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version installed at this location.
+   * Deprecated. The version installed at this location.
    * @return value or {@code null} for none
    */
   public Version getVersion() {
@@ -98,7 +95,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version installed at this location.
+   * Deprecated. The version installed at this location.
    * @param version version or {@code null} for none
    */
   public Location setVersion(Version version) {

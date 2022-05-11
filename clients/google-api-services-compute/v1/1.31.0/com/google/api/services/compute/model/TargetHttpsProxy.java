@@ -48,6 +48,15 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.lang.String authorizationPolicy;
 
   /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String certificateMap;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -199,6 +208,27 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   public TargetHttpsProxy setAuthorizationPolicy(java.lang.String authorizationPolicy) {
     this.authorizationPolicy = authorizationPolicy;
+    return this;
+  }
+
+  /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCertificateMap() {
+    return certificateMap;
+  }
+
+  /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * @param certificateMap certificateMap or {@code null} for none
+   */
+  public TargetHttpsProxy setCertificateMap(java.lang.String certificateMap) {
+    this.certificateMap = certificateMap;
     return this;
   }
 

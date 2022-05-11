@@ -44,7 +44,7 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
   /**
    * The cryptographic fingerprint of the key used to generate the signature, as output by, e.g.
    * `gpg --list-keys`. This should be the version 4, full 160-bit fingerprint, expressed as a 40
-   * character hexidecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
+   * character hexadecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
    * Implementations may choose to acknowledge "LONG", "SHORT", or other abbreviated key IDs, but
    * only the full fingerprint is guaranteed to work. In gpg, the full fingerprint can be retrieved
    * from the `fpr` field returned when calling --list-keys with --with-colons. For example: ``` gpg
@@ -93,7 +93,7 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
   /**
    * The cryptographic fingerprint of the key used to generate the signature, as output by, e.g.
    * `gpg --list-keys`. This should be the version 4, full 160-bit fingerprint, expressed as a 40
-   * character hexidecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
+   * character hexadecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
    * Implementations may choose to acknowledge "LONG", "SHORT", or other abbreviated key IDs, but
    * only the full fingerprint is guaranteed to work. In gpg, the full fingerprint can be retrieved
    * from the `fpr` field returned when calling --list-keys with --with-colons. For example: ``` gpg
@@ -109,7 +109,7 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
   /**
    * The cryptographic fingerprint of the key used to generate the signature, as output by, e.g.
    * `gpg --list-keys`. This should be the version 4, full 160-bit fingerprint, expressed as a 40
-   * character hexidecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
+   * character hexadecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
    * Implementations may choose to acknowledge "LONG", "SHORT", or other abbreviated key IDs, but
    * only the full fingerprint is guaranteed to work. In gpg, the full fingerprint can be retrieved
    * from the `fpr` field returned when calling --list-keys with --with-colons. For example: ``` gpg

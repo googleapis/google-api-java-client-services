@@ -17,8 +17,8 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * Deprecated. Common Vulnerability Scoring System version 3. For details, see
- * https://www.first.org/cvss/specification-document
+ * Common Vulnerability Scoring System. For details, see https://www.first.org/cvss/specification-
+ * document
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -29,7 +29,7 @@ package com.google.api.services.containeranalysis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CVSSv3 extends com.google.api.client.json.GenericJson {
+public final class CVSS extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
@@ -44,6 +44,12 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String attackVector;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authentication;
 
   /**
    * The value may be {@code null}.
@@ -110,7 +116,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param attackComplexity attackComplexity or {@code null} for none
    */
-  public CVSSv3 setAttackComplexity(java.lang.String attackComplexity) {
+  public CVSS setAttackComplexity(java.lang.String attackComplexity) {
     this.attackComplexity = attackComplexity;
     return this;
   }
@@ -129,8 +135,23 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
    * time and across user environments.
    * @param attackVector attackVector or {@code null} for none
    */
-  public CVSSv3 setAttackVector(java.lang.String attackVector) {
+  public CVSS setAttackVector(java.lang.String attackVector) {
     this.attackVector = attackVector;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthentication() {
+    return authentication;
+  }
+
+  /**
+   * @param authentication authentication or {@code null} for none
+   */
+  public CVSS setAuthentication(java.lang.String authentication) {
+    this.authentication = authentication;
     return this;
   }
 
@@ -144,7 +165,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param availabilityImpact availabilityImpact or {@code null} for none
    */
-  public CVSSv3 setAvailabilityImpact(java.lang.String availabilityImpact) {
+  public CVSS setAvailabilityImpact(java.lang.String availabilityImpact) {
     this.availabilityImpact = availabilityImpact;
     return this;
   }
@@ -161,7 +182,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
    * The base score is a function of the base metric scores.
    * @param baseScore baseScore or {@code null} for none
    */
-  public CVSSv3 setBaseScore(java.lang.Float baseScore) {
+  public CVSS setBaseScore(java.lang.Float baseScore) {
     this.baseScore = baseScore;
     return this;
   }
@@ -176,7 +197,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param confidentialityImpact confidentialityImpact or {@code null} for none
    */
-  public CVSSv3 setConfidentialityImpact(java.lang.String confidentialityImpact) {
+  public CVSS setConfidentialityImpact(java.lang.String confidentialityImpact) {
     this.confidentialityImpact = confidentialityImpact;
     return this;
   }
@@ -191,7 +212,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param exploitabilityScore exploitabilityScore or {@code null} for none
    */
-  public CVSSv3 setExploitabilityScore(java.lang.Float exploitabilityScore) {
+  public CVSS setExploitabilityScore(java.lang.Float exploitabilityScore) {
     this.exploitabilityScore = exploitabilityScore;
     return this;
   }
@@ -206,7 +227,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param impactScore impactScore or {@code null} for none
    */
-  public CVSSv3 setImpactScore(java.lang.Float impactScore) {
+  public CVSS setImpactScore(java.lang.Float impactScore) {
     this.impactScore = impactScore;
     return this;
   }
@@ -221,7 +242,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param integrityImpact integrityImpact or {@code null} for none
    */
-  public CVSSv3 setIntegrityImpact(java.lang.String integrityImpact) {
+  public CVSS setIntegrityImpact(java.lang.String integrityImpact) {
     this.integrityImpact = integrityImpact;
     return this;
   }
@@ -236,7 +257,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param privilegesRequired privilegesRequired or {@code null} for none
    */
-  public CVSSv3 setPrivilegesRequired(java.lang.String privilegesRequired) {
+  public CVSS setPrivilegesRequired(java.lang.String privilegesRequired) {
     this.privilegesRequired = privilegesRequired;
     return this;
   }
@@ -251,7 +272,7 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param scope scope or {@code null} for none
    */
-  public CVSSv3 setScope(java.lang.String scope) {
+  public CVSS setScope(java.lang.String scope) {
     this.scope = scope;
     return this;
   }
@@ -266,19 +287,19 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   /**
    * @param userInteraction userInteraction or {@code null} for none
    */
-  public CVSSv3 setUserInteraction(java.lang.String userInteraction) {
+  public CVSS setUserInteraction(java.lang.String userInteraction) {
     this.userInteraction = userInteraction;
     return this;
   }
 
   @Override
-  public CVSSv3 set(String fieldName, Object value) {
-    return (CVSSv3) super.set(fieldName, value);
+  public CVSS set(String fieldName, Object value) {
+    return (CVSS) super.set(fieldName, value);
   }
 
   @Override
-  public CVSSv3 clone() {
-    return (CVSSv3) super.clone();
+  public CVSS clone() {
+    return (CVSS) super.clone();
   }
 
 }

@@ -70,7 +70,13 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long lastMessagePostedTimestampMicros;
+  private java.lang.Long lastMessagePostedTimestampSecs;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long lastReadTimestampSecs;
 
   /**
    * The value may be {@code null}.
@@ -112,7 +118,7 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long spaceCreationTimestampMicros;
+  private java.lang.Long spaceCreationTimestampSecs;
 
   /**
    * The value may be {@code null}.
@@ -213,15 +219,30 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.Long getLastMessagePostedTimestampMicros() {
-    return lastMessagePostedTimestampMicros;
+  public java.lang.Long getLastMessagePostedTimestampSecs() {
+    return lastMessagePostedTimestampSecs;
   }
 
   /**
-   * @param lastMessagePostedTimestampMicros lastMessagePostedTimestampMicros or {@code null} for none
+   * @param lastMessagePostedTimestampSecs lastMessagePostedTimestampSecs or {@code null} for none
    */
-  public DynamiteSpacesScoringInfo setLastMessagePostedTimestampMicros(java.lang.Long lastMessagePostedTimestampMicros) {
-    this.lastMessagePostedTimestampMicros = lastMessagePostedTimestampMicros;
+  public DynamiteSpacesScoringInfo setLastMessagePostedTimestampSecs(java.lang.Long lastMessagePostedTimestampSecs) {
+    this.lastMessagePostedTimestampSecs = lastMessagePostedTimestampSecs;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLastReadTimestampSecs() {
+    return lastReadTimestampSecs;
+  }
+
+  /**
+   * @param lastReadTimestampSecs lastReadTimestampSecs or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setLastReadTimestampSecs(java.lang.Long lastReadTimestampSecs) {
+    this.lastReadTimestampSecs = lastReadTimestampSecs;
     return this;
   }
 
@@ -318,15 +339,15 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.Long getSpaceCreationTimestampMicros() {
-    return spaceCreationTimestampMicros;
+  public java.lang.Long getSpaceCreationTimestampSecs() {
+    return spaceCreationTimestampSecs;
   }
 
   /**
-   * @param spaceCreationTimestampMicros spaceCreationTimestampMicros or {@code null} for none
+   * @param spaceCreationTimestampSecs spaceCreationTimestampSecs or {@code null} for none
    */
-  public DynamiteSpacesScoringInfo setSpaceCreationTimestampMicros(java.lang.Long spaceCreationTimestampMicros) {
-    this.spaceCreationTimestampMicros = spaceCreationTimestampMicros;
+  public DynamiteSpacesScoringInfo setSpaceCreationTimestampSecs(java.lang.Long spaceCreationTimestampSecs) {
+    this.spaceCreationTimestampSecs = spaceCreationTimestampSecs;
     return this;
   }
 

@@ -31,8 +31,8 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of availability domains instances will be spread across. If two instances are in
-   * different availability domain, they will not be put in the same low latency network
+   * The number of availability domains to spread instances across. If two instances are in
+   * different availability domain, they are not in the same low latency network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,15 +46,17 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String collocation;
 
   /**
-   * Number of vms in this placement group
+   * Number of VMs in this placement group. Google does not recommend that you use this field unless
+   * you use a compact policy and you want your policy to work only if it contains this exact number
+   * of VMs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer vmCount;
 
   /**
-   * The number of availability domains instances will be spread across. If two instances are in
-   * different availability domain, they will not be put in the same low latency network
+   * The number of availability domains to spread instances across. If two instances are in
+   * different availability domain, they are not in the same low latency network.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAvailabilityDomainCount() {
@@ -62,8 +64,8 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   }
 
   /**
-   * The number of availability domains instances will be spread across. If two instances are in
-   * different availability domain, they will not be put in the same low latency network
+   * The number of availability domains to spread instances across. If two instances are in
+   * different availability domain, they are not in the same low latency network.
    * @param availabilityDomainCount availabilityDomainCount or {@code null} for none
    */
   public ResourcePolicyGroupPlacementPolicy setAvailabilityDomainCount(java.lang.Integer availabilityDomainCount) {
@@ -89,7 +91,9 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   }
 
   /**
-   * Number of vms in this placement group
+   * Number of VMs in this placement group. Google does not recommend that you use this field unless
+   * you use a compact policy and you want your policy to work only if it contains this exact number
+   * of VMs.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVmCount() {
@@ -97,7 +101,9 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   }
 
   /**
-   * Number of vms in this placement group
+   * Number of VMs in this placement group. Google does not recommend that you use this field unless
+   * you use a compact policy and you want your policy to work only if it contains this exact number
+   * of VMs.
    * @param vmCount vmCount or {@code null} for none
    */
   public ResourcePolicyGroupPlacementPolicy setVmCount(java.lang.Integer vmCount) {

@@ -57,6 +57,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String chainName;
 
   /**
+   * [Output Only] Size in bytes of the snapshot at creation time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long creationSizeBytes;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -376,6 +383,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setChainName(java.lang.String chainName) {
     this.chainName = chainName;
+    return this;
+  }
+
+  /**
+   * [Output Only] Size in bytes of the snapshot at creation time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCreationSizeBytes() {
+    return creationSizeBytes;
+  }
+
+  /**
+   * [Output Only] Size in bytes of the snapshot at creation time.
+   * @param creationSizeBytes creationSizeBytes or {@code null} for none
+   */
+  public Snapshot setCreationSizeBytes(java.lang.Long creationSizeBytes) {
+    this.creationSizeBytes = creationSizeBytes;
     return this;
   }
 

@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2betaExportUserEventsResponse extends com.g
   private java.util.List<GoogleRpcStatus> errorSamples;
 
   /**
-   * Echoes the destination for the complete errors if this field was set in the request.
+   * This field is never set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleCloudRetailV2betaExportUserEventsResponse extends com.g
   }
 
   /**
-   * Echoes the destination for the complete errors if this field was set in the request.
+   * This field is never set.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaExportErrorsConfig getErrorsConfig() {
@@ -71,7 +71,7 @@ public final class GoogleCloudRetailV2betaExportUserEventsResponse extends com.g
   }
 
   /**
-   * Echoes the destination for the complete errors if this field was set in the request.
+   * This field is never set.
    * @param errorsConfig errorsConfig or {@code null} for none
    */
   public GoogleCloudRetailV2betaExportUserEventsResponse setErrorsConfig(GoogleCloudRetailV2betaExportErrorsConfig errorsConfig) {

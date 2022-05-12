@@ -17,8 +17,8 @@
 package com.google.api.services.retail.v2.model;
 
 /**
- * Response of the AddLocalInventories API. Currently empty because there is no meaningful response
- * populated from the AddLocalInventories method.
+ * Response of the ProductService.AddLocalInventories API. Currently empty because there is no
+ * meaningful response populated from the ProductService.AddLocalInventories method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

@@ -18,7 +18,7 @@ package com.google.api.services.retail.v2.model;
 
 /**
  * Metadata related to the progress of the AddFulfillmentPlaces operation. Currently empty because
- * there is no meaningful metadata populated from the AddFulfillmentPlaces method.
+ * there is no meaningful metadata populated from the ProductService.AddFulfillmentPlaces method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

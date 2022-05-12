@@ -32,9 +32,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * Boost specification to boost certain products. See more details at this [user
    * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
-   * ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions
-   * from both places are evaluated. If a search request matches multiple boost conditions, the
-   * final boost score is equal to the sum of the boost scores from all matched boost conditions.
+   * ServingConfig.boost_control_ids and SearchRequest.boost_spec are set, the boost conditions from
+   * both places are evaluated. If a search request matches multiple boost conditions, the final
+   * boost score is equal to the sum of the boost scores from all matched boost conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,10 +91,10 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The labels applied to a resource must meet the following requirements: * Each resource can have
    * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
-   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
-   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
-   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
-   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * minimum length of 1 character and a maximum length of 63 characters and cannot be empty. Values
+   * can be empty and have a maximum length of 63 characters. * Keys and values can contain only
+   * lowercase letters, numeric characters, underscores, and dashes. All characters must use UTF-8
+   * encoding, and international characters are allowed. * The key portion of a label must be
    * unique. However, you can use the same key with multiple resources. * Keys must start with a
    * lowercase letter or international character. See [Google Cloud
    * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
@@ -187,6 +187,14 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   private java.lang.String searchMode;
 
   /**
+   * The spell correction specification that specifies the mode under which spell correction will
+   * take effect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpec spellCorrectionSpec;
+
+  /**
    * User information.
    * The value may be {@code null}.
    */
@@ -202,21 +210,21 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * "pickupInStore.store123", "pickupInStore" is fulfillment type and "store123" is the store ID.
    * Supported keys are: * colorFamilies * price * originalPrice * discount * variantId *
    * inventory(place_id,price) * inventory(place_id,original_price) *
-   * inventory(place_id,attributes.key), where key is any key in the Product.inventories.attributes
-   * map. * attributes.key, where key is any key in the Product.attributes map. * pickupInStore.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-in-store". *
-   * shipToStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-
-   * store". * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "same-day-delivery". * nextDayDelivery.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "next-day-delivery". *
-   * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-1". * customFulfillment2.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-2". * customFulfillment3.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". * customFulfillment4.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-4". *
-   * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-5". If this field is set to an invalid value other than these, an INVALID_ARGUMENT
-   * error is returned.
+   * inventory(place_id,attributes.key), where key is any key in the
+   * Product.local_inventories.attributes map. * attributes.key, where key is any key in the
+   * Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
+   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
+   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
+   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
+   * these, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,9 +244,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * Boost specification to boost certain products. See more details at this [user
    * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
-   * ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions
-   * from both places are evaluated. If a search request matches multiple boost conditions, the
-   * final boost score is equal to the sum of the boost scores from all matched boost conditions.
+   * ServingConfig.boost_control_ids and SearchRequest.boost_spec are set, the boost conditions from
+   * both places are evaluated. If a search request matches multiple boost conditions, the final
+   * boost score is equal to the sum of the boost scores from all matched boost conditions.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestBoostSpec getBoostSpec() {
@@ -248,9 +256,9 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * Boost specification to boost certain products. See more details at this [user
    * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
-   * ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions
-   * from both places are evaluated. If a search request matches multiple boost conditions, the
-   * final boost score is equal to the sum of the boost scores from all matched boost conditions.
+   * ServingConfig.boost_control_ids and SearchRequest.boost_spec are set, the boost conditions from
+   * both places are evaluated. If a search request matches multiple boost conditions, the final
+   * boost score is equal to the sum of the boost scores from all matched boost conditions.
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setBoostSpec(GoogleCloudRetailV2betaSearchRequestBoostSpec boostSpec) {
@@ -372,10 +380,10 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The labels applied to a resource must meet the following requirements: * Each resource can have
    * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
-   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
-   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
-   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
-   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * minimum length of 1 character and a maximum length of 63 characters and cannot be empty. Values
+   * can be empty and have a maximum length of 63 characters. * Keys and values can contain only
+   * lowercase letters, numeric characters, underscores, and dashes. All characters must use UTF-8
+   * encoding, and international characters are allowed. * The key portion of a label must be
    * unique. However, you can use the same key with multiple resources. * Keys must start with a
    * lowercase letter or international character. See [Google Cloud
    * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
@@ -389,10 +397,10 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The labels applied to a resource must meet the following requirements: * Each resource can have
    * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
-   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
-   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
-   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
-   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * minimum length of 1 character and a maximum length of 63 characters and cannot be empty. Values
+   * can be empty and have a maximum length of 63 characters. * Keys and values can contain only
+   * lowercase letters, numeric characters, underscores, and dashes. All characters must use UTF-8
+   * encoding, and international characters are allowed. * The key portion of a label must be
    * unique. However, you can use the same key with multiple resources. * Keys must start with a
    * lowercase letter or international character. See [Google Cloud
    * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
@@ -596,6 +604,25 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   }
 
   /**
+   * The spell correction specification that specifies the mode under which spell correction will
+   * take effect.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpec getSpellCorrectionSpec() {
+    return spellCorrectionSpec;
+  }
+
+  /**
+   * The spell correction specification that specifies the mode under which spell correction will
+   * take effect.
+   * @param spellCorrectionSpec spellCorrectionSpec or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequest setSpellCorrectionSpec(GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpec spellCorrectionSpec) {
+    this.spellCorrectionSpec = spellCorrectionSpec;
+    return this;
+  }
+
+  /**
    * User information.
    * @return value or {@code null} for none
    */
@@ -621,21 +648,21 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * "pickupInStore.store123", "pickupInStore" is fulfillment type and "store123" is the store ID.
    * Supported keys are: * colorFamilies * price * originalPrice * discount * variantId *
    * inventory(place_id,price) * inventory(place_id,original_price) *
-   * inventory(place_id,attributes.key), where key is any key in the Product.inventories.attributes
-   * map. * attributes.key, where key is any key in the Product.attributes map. * pickupInStore.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-in-store". *
-   * shipToStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-
-   * store". * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "same-day-delivery". * nextDayDelivery.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "next-day-delivery". *
-   * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-1". * customFulfillment2.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-2". * customFulfillment3.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". * customFulfillment4.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-4". *
-   * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-5". If this field is set to an invalid value other than these, an INVALID_ARGUMENT
-   * error is returned.
+   * inventory(place_id,attributes.key), where key is any key in the
+   * Product.local_inventories.attributes map. * attributes.key, where key is any key in the
+   * Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
+   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
+   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
+   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
+   * these, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getVariantRollupKeys() {
@@ -651,21 +678,21 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * "pickupInStore.store123", "pickupInStore" is fulfillment type and "store123" is the store ID.
    * Supported keys are: * colorFamilies * price * originalPrice * discount * variantId *
    * inventory(place_id,price) * inventory(place_id,original_price) *
-   * inventory(place_id,attributes.key), where key is any key in the Product.inventories.attributes
-   * map. * attributes.key, where key is any key in the Product.attributes map. * pickupInStore.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-in-store". *
-   * shipToStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-
-   * store". * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "same-day-delivery". * nextDayDelivery.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "next-day-delivery". *
-   * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-1". * customFulfillment2.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-2". * customFulfillment3.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". * customFulfillment4.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-4". *
-   * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-5". If this field is set to an invalid value other than these, an INVALID_ARGUMENT
-   * error is returned.
+   * inventory(place_id,attributes.key), where key is any key in the
+   * Product.local_inventories.attributes map. * attributes.key, where key is any key in the
+   * Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
+   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
+   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
+   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
+   * these, an INVALID_ARGUMENT error is returned.
    * @param variantRollupKeys variantRollupKeys or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setVariantRollupKeys(java.util.List<java.lang.String> variantRollupKeys) {

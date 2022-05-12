@@ -35,9 +35,9 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
    * Condition boost specifications. If a product matches multiple conditions in the specifications,
    * boost scores from these specifications are all applied and combined in a non-linear way.
    * Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids
-   * and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If
-   * a search request matches multiple boost conditions, the final boost score is equal to the sum
-   * of the boost scores from all matched boost conditions. Can only be set if solution_types is
+   * and SearchRequest.boost_spec are set, the boost conditions from both places are evaluated. If a
+   * search request matches multiple boost conditions, the final boost score is equal to the sum of
+   * the boost scores from all matched boost conditions. Can only be set if solution_types is
    * SOLUTION_TYPE_SEARCH.
    * The value may be {@code null}.
    */
@@ -201,9 +201,9 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
    * Condition boost specifications. If a product matches multiple conditions in the specifications,
    * boost scores from these specifications are all applied and combined in a non-linear way.
    * Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids
-   * and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If
-   * a search request matches multiple boost conditions, the final boost score is equal to the sum
-   * of the boost scores from all matched boost conditions. Can only be set if solution_types is
+   * and SearchRequest.boost_spec are set, the boost conditions from both places are evaluated. If a
+   * search request matches multiple boost conditions, the final boost score is equal to the sum of
+   * the boost scores from all matched boost conditions. Can only be set if solution_types is
    * SOLUTION_TYPE_SEARCH.
    * @return value or {@code null} for none
    */
@@ -215,9 +215,9 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
    * Condition boost specifications. If a product matches multiple conditions in the specifications,
    * boost scores from these specifications are all applied and combined in a non-linear way.
    * Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids
-   * and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If
-   * a search request matches multiple boost conditions, the final boost score is equal to the sum
-   * of the boost scores from all matched boost conditions. Can only be set if solution_types is
+   * and SearchRequest.boost_spec are set, the boost conditions from both places are evaluated. If a
+   * search request matches multiple boost conditions, the final boost score is equal to the sum of
+   * the boost scores from all matched boost conditions. Can only be set if solution_types is
    * SOLUTION_TYPE_SEARCH.
    * @param boostControlIds boostControlIds or {@code null} for none
    */

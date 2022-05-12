@@ -38,8 +38,8 @@ public final class GoogleCloudRetailV2betaPredictResponsePredictionResult extend
 
   /**
    * Additional product metadata / annotations. Possible values: * `product`: JSON representation of
-   * the product. Will be set if `returnProduct` is set to true in `PredictRequest.params`. *
-   * `score`: Prediction score in double value. Will be set if `returnScore` is set to true in
+   * the product. Is set if `returnProduct` is set to true in `PredictRequest.params`. * `score`:
+   * Prediction score in double value. Is set if `returnScore` is set to true in
    * `PredictRequest.params`.
    * The value may be {@code null}.
    */
@@ -65,8 +65,8 @@ public final class GoogleCloudRetailV2betaPredictResponsePredictionResult extend
 
   /**
    * Additional product metadata / annotations. Possible values: * `product`: JSON representation of
-   * the product. Will be set if `returnProduct` is set to true in `PredictRequest.params`. *
-   * `score`: Prediction score in double value. Will be set if `returnScore` is set to true in
+   * the product. Is set if `returnProduct` is set to true in `PredictRequest.params`. * `score`:
+   * Prediction score in double value. Is set if `returnScore` is set to true in
    * `PredictRequest.params`.
    * @return value or {@code null} for none
    */
@@ -76,8 +76,8 @@ public final class GoogleCloudRetailV2betaPredictResponsePredictionResult extend
 
   /**
    * Additional product metadata / annotations. Possible values: * `product`: JSON representation of
-   * the product. Will be set if `returnProduct` is set to true in `PredictRequest.params`. *
-   * `score`: Prediction score in double value. Will be set if `returnScore` is set to true in
+   * the product. Is set if `returnProduct` is set to true in `PredictRequest.params`. * `score`:
+   * Prediction score in double value. Is set if `returnScore` is set to true in
    * `PredictRequest.params`.
    * @param metadata metadata or {@code null} for none
    */

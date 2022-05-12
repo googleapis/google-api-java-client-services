@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2betaExportProductsResponse extends com.goo
   private java.util.List<GoogleRpcStatus> errorSamples;
 
   /**
-   * Echoes the destination for the complete errors in the request if set.
+   * This field is never set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudRetailV2betaExportProductsResponse extends com.goo
   }
 
   /**
-   * Echoes the destination for the complete errors in the request if set.
+   * This field is never set.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaExportErrorsConfig getErrorsConfig() {
@@ -70,7 +70,7 @@ public final class GoogleCloudRetailV2betaExportProductsResponse extends com.goo
   }
 
   /**
-   * Echoes the destination for the complete errors in the request if set.
+   * This field is never set.
    * @param errorsConfig errorsConfig or {@code null} for none
    */
   public GoogleCloudRetailV2betaExportProductsResponse setErrorsConfig(GoogleCloudRetailV2betaExportErrorsConfig errorsConfig) {

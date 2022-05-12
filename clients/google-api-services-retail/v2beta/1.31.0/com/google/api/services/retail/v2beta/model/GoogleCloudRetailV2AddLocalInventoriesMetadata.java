@@ -18,7 +18,7 @@ package com.google.api.services.retail.v2beta.model;
 
 /**
  * Metadata related to the progress of the AddLocalInventories operation. Currently empty because
- * there is no meaningful metadata populated from the AddLocalInventories method.
+ * there is no meaningful metadata populated from the ProductService.AddLocalInventories method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

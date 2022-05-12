@@ -614,6 +614,13 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canRenameDrive;
 
     /**
+     * Whether the current user can reset the shared drive restrictions to defaults.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canResetDriveRestrictions;
+
+    /**
      * Whether the current user can share files or folders in this shared drive.
      * The value may be {@code null}.
      */
@@ -902,6 +909,23 @@ public final class Drive extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanRenameDrive(java.lang.Boolean canRenameDrive) {
       this.canRenameDrive = canRenameDrive;
+      return this;
+    }
+
+    /**
+     * Whether the current user can reset the shared drive restrictions to defaults.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanResetDriveRestrictions() {
+      return canResetDriveRestrictions;
+    }
+
+    /**
+     * Whether the current user can reset the shared drive restrictions to defaults.
+     * @param canResetDriveRestrictions canResetDriveRestrictions or {@code null} for none
+     */
+    public Capabilities setCanResetDriveRestrictions(java.lang.Boolean canResetDriveRestrictions) {
+      this.canResetDriveRestrictions = canResetDriveRestrictions;
       return this;
     }
 

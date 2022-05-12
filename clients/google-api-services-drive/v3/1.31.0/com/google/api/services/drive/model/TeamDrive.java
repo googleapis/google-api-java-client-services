@@ -597,6 +597,13 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canRenameTeamDrive;
 
     /**
+     * Whether the current user can reset the Team Drive restrictions to defaults.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canResetTeamDriveRestrictions;
+
+    /**
      * Whether the current user can share files or folders in this Team Drive.
      * The value may be {@code null}.
      */
@@ -902,6 +909,23 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanRenameTeamDrive(java.lang.Boolean canRenameTeamDrive) {
       this.canRenameTeamDrive = canRenameTeamDrive;
+      return this;
+    }
+
+    /**
+     * Whether the current user can reset the Team Drive restrictions to defaults.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanResetTeamDriveRestrictions() {
+      return canResetTeamDriveRestrictions;
+    }
+
+    /**
+     * Whether the current user can reset the Team Drive restrictions to defaults.
+     * @param canResetTeamDriveRestrictions canResetTeamDriveRestrictions or {@code null} for none
+     */
+    public Capabilities setCanResetTeamDriveRestrictions(java.lang.Boolean canResetTeamDriveRestrictions) {
+      this.canResetTeamDriveRestrictions = canResetTeamDriveRestrictions;
       return this;
     }
 

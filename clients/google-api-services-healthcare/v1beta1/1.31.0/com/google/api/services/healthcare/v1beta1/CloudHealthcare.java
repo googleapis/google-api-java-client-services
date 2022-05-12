@@ -20029,17 +20029,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** A profile that this resource should be validated against. */
+              /**
+               * The canonical URL of a profile that this resource should be validated against. For
+               * example, to validate a Patient resource against the US Core Patient profile this
+               * parameter would be `http://hl7.org/fhir/us/core/StructureDefinition/us-core-
+               * patient`. A StructureDefinition with this canonical URL must exist in the FHIR
+               * store.
+               */
               @com.google.api.client.util.Key
               private java.lang.String profile;
 
-              /** A profile that this resource should be validated against.
+              /** The canonical URL of a profile that this resource should be validated against. For example, to
+             validate a Patient resource against the US Core Patient profile this parameter would be
+             `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A StructureDefinition with this
+             canonical URL must exist in the FHIR store.
                */
               public java.lang.String getProfile() {
                 return profile;
               }
 
-              /** A profile that this resource should be validated against. */
+              /**
+               * The canonical URL of a profile that this resource should be validated against. For
+               * example, to validate a Patient resource against the US Core Patient profile this
+               * parameter would be `http://hl7.org/fhir/us/core/StructureDefinition/us-core-
+               * patient`. A StructureDefinition with this canonical URL must exist in the FHIR
+               * store.
+               */
               public ResourceValidate setProfile(java.lang.String profile) {
                 this.profile = profile;
                 return this;

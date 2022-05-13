@@ -6,7 +6,7 @@ This page contains information about getting started with the Admin Directory AP
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Admin Directory API][javadoc]
+* Use dropdown to browse the [Javadoc reference for the Admin Directory API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
 * Interact with this API in your browser using the [APIs Explorer for the Admin Directory API][api-explorer]
 

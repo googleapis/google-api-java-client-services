@@ -6,7 +6,7 @@ This page contains information about getting started with the Admin SDK API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Admin SDK API][javadoc]
+* Use dropdown to browse the [Javadoc reference for the Admin SDK API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
 * Interact with this API in your browser using the [APIs Explorer for the Admin SDK API][api-explorer]
 
@@ -39,6 +39,6 @@ dependencies {
 }
 ```
 
-[javadoc]: https://googleapis.dev/java/google-api-services-admin-directory/latest/index.html
+[javadoc]: https://googleapis.dev/java/google-api-services-admin/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
 [api-explorer]: https://developers.google.com/apis-explorer/#p/admin/v1/

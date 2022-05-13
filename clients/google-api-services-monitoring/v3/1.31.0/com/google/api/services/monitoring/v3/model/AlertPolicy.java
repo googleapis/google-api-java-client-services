@@ -104,8 +104,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Required if the policy exists. The resource name for this policy. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
-   * by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
-   * method, do not include the name field in the alerting policy passed as part of the request.
+   * by Cloud Monitoring when the policy is created. When calling the alertPolicies.create method,
+   * do not include the name field in the alerting policy passed as part of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,8 +307,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Required if the policy exists. The resource name for this policy. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
-   * by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
-   * method, do not include the name field in the alerting policy passed as part of the request.
+   * by Cloud Monitoring when the policy is created. When calling the alertPolicies.create method,
+   * do not include the name field in the alerting policy passed as part of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -318,8 +318,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Required if the policy exists. The resource name for this policy. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
-   * by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
-   * method, do not include the name field in the alerting policy passed as part of the request.
+   * by Cloud Monitoring when the policy is created. When calling the alertPolicies.create method,
+   * do not include the name field in the alerting policy passed as part of the request.
    * @param name name or {@code null} for none
    */
   public AlertPolicy setName(java.lang.String name) {

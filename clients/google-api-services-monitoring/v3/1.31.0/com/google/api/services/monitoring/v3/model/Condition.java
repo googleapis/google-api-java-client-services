@@ -71,16 +71,15 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   /**
    * Required if the condition exists. The unique resource name for this condition. Its format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
-   * [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a
-   * new or updated alerting policy.When calling the alertPolicies.create method, do not include the
-   * name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates
-   * the condition identifiers and includes them in the new policy.When calling the
-   * alertPolicies.update method to update a policy, including a condition name causes the existing
-   * condition to be updated. Conditions without names are added to the updated policy. Existing
-   * conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if
-   * you make only small changes, such as those to condition thresholds, durations, or trigger
-   * values. Otherwise, treat the change as a new condition and let the existing condition be
-   * deleted.
+   * [CONDITION_ID] is assigned by Cloud Monitoring when the condition is created as part of a new
+   * or updated alerting policy.When calling the alertPolicies.create method, do not include the
+   * name field in the conditions of the requested alerting policy. Cloud Monitoring creates the
+   * condition identifiers and includes them in the new policy.When calling the alertPolicies.update
+   * method to update a policy, including a condition name causes the existing condition to be
+   * updated. Conditions without names are added to the updated policy. Existing conditions are
+   * deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only
+   * small changes, such as those to condition thresholds, durations, or trigger values. Otherwise,
+   * treat the change as a new condition and let the existing condition be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,16 +179,15 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   /**
    * Required if the condition exists. The unique resource name for this condition. Its format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
-   * [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a
-   * new or updated alerting policy.When calling the alertPolicies.create method, do not include the
-   * name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates
-   * the condition identifiers and includes them in the new policy.When calling the
-   * alertPolicies.update method to update a policy, including a condition name causes the existing
-   * condition to be updated. Conditions without names are added to the updated policy. Existing
-   * conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if
-   * you make only small changes, such as those to condition thresholds, durations, or trigger
-   * values. Otherwise, treat the change as a new condition and let the existing condition be
-   * deleted.
+   * [CONDITION_ID] is assigned by Cloud Monitoring when the condition is created as part of a new
+   * or updated alerting policy.When calling the alertPolicies.create method, do not include the
+   * name field in the conditions of the requested alerting policy. Cloud Monitoring creates the
+   * condition identifiers and includes them in the new policy.When calling the alertPolicies.update
+   * method to update a policy, including a condition name causes the existing condition to be
+   * updated. Conditions without names are added to the updated policy. Existing conditions are
+   * deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only
+   * small changes, such as those to condition thresholds, durations, or trigger values. Otherwise,
+   * treat the change as a new condition and let the existing condition be deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -199,16 +197,15 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   /**
    * Required if the condition exists. The unique resource name for this condition. Its format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
-   * [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a
-   * new or updated alerting policy.When calling the alertPolicies.create method, do not include the
-   * name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates
-   * the condition identifiers and includes them in the new policy.When calling the
-   * alertPolicies.update method to update a policy, including a condition name causes the existing
-   * condition to be updated. Conditions without names are added to the updated policy. Existing
-   * conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if
-   * you make only small changes, such as those to condition thresholds, durations, or trigger
-   * values. Otherwise, treat the change as a new condition and let the existing condition be
-   * deleted.
+   * [CONDITION_ID] is assigned by Cloud Monitoring when the condition is created as part of a new
+   * or updated alerting policy.When calling the alertPolicies.create method, do not include the
+   * name field in the conditions of the requested alerting policy. Cloud Monitoring creates the
+   * condition identifiers and includes them in the new policy.When calling the alertPolicies.update
+   * method to update a policy, including a condition name causes the existing condition to be
+   * updated. Conditions without names are added to the updated policy. Existing conditions are
+   * deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only
+   * small changes, such as those to condition thresholds, durations, or trigger values. Otherwise,
+   * treat the change as a new condition and let the existing condition be deleted.
    * @param name name or {@code null} for none
    */
   public Condition setName(java.lang.String name) {

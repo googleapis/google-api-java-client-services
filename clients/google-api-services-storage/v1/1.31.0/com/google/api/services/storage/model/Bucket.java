@@ -1575,6 +1575,14 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private java.lang.String matchesPattern;
 
         /**
+         * List of object name prefixes. This condition will be satisfied when at least one of the
+         * prefixes exactly matches the beginning of the object name.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> matchesPrefix;
+
+        /**
          * Objects having any of the storage classes specified by this condition will be matched. Values
          * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and
          * DURABLE_REDUCED_AVAILABILITY.
@@ -1582,6 +1590,14 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> matchesStorageClass;
+
+        /**
+         * List of object name suffixes. This condition will be satisfied when at least one of the
+         * suffixes exactly matches the end of the object name.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> matchesSuffix;
 
         /**
          * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition
@@ -1744,6 +1760,25 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * List of object name prefixes. This condition will be satisfied when at least one of the
+         * prefixes exactly matches the beginning of the object name.
+         * @return value or {@code null} for none
+         */
+        public java.util.List<java.lang.String> getMatchesPrefix() {
+          return matchesPrefix;
+        }
+
+        /**
+         * List of object name prefixes. This condition will be satisfied when at least one of the
+         * prefixes exactly matches the beginning of the object name.
+         * @param matchesPrefix matchesPrefix or {@code null} for none
+         */
+        public Condition setMatchesPrefix(java.util.List<java.lang.String> matchesPrefix) {
+          this.matchesPrefix = matchesPrefix;
+          return this;
+        }
+
+        /**
          * Objects having any of the storage classes specified by this condition will be matched. Values
          * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and
          * DURABLE_REDUCED_AVAILABILITY.
@@ -1761,6 +1796,25 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
          */
         public Condition setMatchesStorageClass(java.util.List<java.lang.String> matchesStorageClass) {
           this.matchesStorageClass = matchesStorageClass;
+          return this;
+        }
+
+        /**
+         * List of object name suffixes. This condition will be satisfied when at least one of the
+         * suffixes exactly matches the end of the object name.
+         * @return value or {@code null} for none
+         */
+        public java.util.List<java.lang.String> getMatchesSuffix() {
+          return matchesSuffix;
+        }
+
+        /**
+         * List of object name suffixes. This condition will be satisfied when at least one of the
+         * suffixes exactly matches the end of the object name.
+         * @param matchesSuffix matchesSuffix or {@code null} for none
+         */
+        public Condition setMatchesSuffix(java.util.List<java.lang.String> matchesSuffix) {
+          this.matchesSuffix = matchesSuffix;
           return this;
         }
 

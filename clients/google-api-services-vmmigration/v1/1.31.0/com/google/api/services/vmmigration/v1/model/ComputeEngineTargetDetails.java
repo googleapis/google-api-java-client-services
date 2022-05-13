@@ -66,6 +66,13 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private java.lang.String diskType;
 
   /**
+   * The hostname to assign to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hostname;
+
+  /**
    * A map of labels to associate with the VM.
    * The value may be {@code null}.
    */
@@ -232,6 +239,23 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
    */
   public ComputeEngineTargetDetails setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * The hostname to assign to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHostname() {
+    return hostname;
+  }
+
+  /**
+   * The hostname to assign to the VM.
+   * @param hostname hostname or {@code null} for none
+   */
+  public ComputeEngineTargetDetails setHostname(java.lang.String hostname) {
+    this.hostname = hostname;
     return this;
   }
 

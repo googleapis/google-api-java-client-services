@@ -31,7 +31,7 @@ package com.google.api.services.chat.v1.model;
 public final class ChatAppLogEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The deployment that caused the error. For Chat bots built in Apps Script, this is the
+   * The deployment that caused the error. For Chat apps built in Apps Script, this is the
    * deployment ID defined by Apps Script.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class ChatAppLogEntry extends com.google.api.client.json.GenericJso
   private Status error;
 
   /**
-   * The deployment that caused the error. For Chat bots built in Apps Script, this is the
+   * The deployment that caused the error. For Chat apps built in Apps Script, this is the
    * deployment ID defined by Apps Script.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class ChatAppLogEntry extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The deployment that caused the error. For Chat bots built in Apps Script, this is the
+   * The deployment that caused the error. For Chat apps built in Apps Script, this is the
    * deployment ID defined by Apps Script.
    * @param deployment deployment or {@code null} for none
    */

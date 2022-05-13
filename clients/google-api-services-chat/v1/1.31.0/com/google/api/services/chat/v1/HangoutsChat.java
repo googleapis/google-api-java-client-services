@@ -1527,7 +1527,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
+     * @param name Required. Resource name of the space, in the form "spaces". Format: spaces/{space}
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1554,7 +1554,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
+       * @param name Required. Resource name of the space, in the form "spaces". Format: spaces/{space}
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1632,21 +1632,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
-       */
+      /** Required. Resource name of the space, in the form "spaces". Format: spaces/{space} */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
+      /** Required. Resource name of the space, in the form "spaces". Format: spaces/{space}
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
-       */
+      /** Required. Resource name of the space, in the form "spaces". Format: spaces/{space} */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2022,8 +2018,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
-       *        spaces/AAAAAAAAAAAA/members/111111111111111111111
+       * @param name Required. Resource name of the membership to retrieve. Format: spaces/{space}/members/{member}
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2050,8 +2045,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
-       *        spaces/AAAAAAAAAAAA/members/111111111111111111111
+         * @param name Required. Resource name of the membership to retrieve. Format: spaces/{space}/members/{member}
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2130,22 +2124,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the membership to be retrieved, in the form "spaces/members".
-         * Example: spaces/AAAAAAAAAAAA/members/111111111111111111111
+         * Required. Resource name of the membership to retrieve. Format:
+         * spaces/{space}/members/{member}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
-       spaces/AAAAAAAAAAAA/members/111111111111111111111
+        /** Required. Resource name of the membership to retrieve. Format: spaces/{space}/members/{member}
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name of the membership to be retrieved, in the form "spaces/members".
-         * Example: spaces/AAAAAAAAAAAA/members/111111111111111111111
+         * Required. Resource name of the membership to retrieve. Format:
+         * spaces/{space}/members/{member}
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2171,8 +2164,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the space for which membership list is to be fetched, in the form
-       *        "spaces". Example: spaces/AAAAAAAAAAAA
+       * @param parent Required. The resource name of the space for which to fetch a membership list. Format:
+       *        spaces/{space}
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2199,8 +2192,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the space for which membership list is to be fetched, in the form
-       *        "spaces". Example: spaces/AAAAAAAAAAAA
+         * @param parent Required. The resource name of the space for which to fetch a membership list. Format:
+       *        spaces/{space}
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2279,22 +2272,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. The resource name of the space for which membership list is to be fetched, in
-         * the form "spaces". Example: spaces/AAAAAAAAAAAA
+         * Required. The resource name of the space for which to fetch a membership list. Format:
+         * spaces/{space}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the space for which membership list is to be fetched, in the form
-       "spaces". Example: spaces/AAAAAAAAAAAA
+        /** Required. The resource name of the space for which to fetch a membership list. Format:
+       spaces/{space}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name of the space for which membership list is to be fetched, in
-         * the form "spaces". Example: spaces/AAAAAAAAAAAA
+         * Required. The resource name of the space for which to fetch a membership list. Format:
+         * spaces/{space}
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

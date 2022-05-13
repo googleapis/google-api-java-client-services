@@ -38,7 +38,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
+   * Resource name of the space. Format: spaces/{space}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +52,15 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean singleUserBotDm;
 
   /**
-   * Output only. Output only. Whether the messages are threaded in this space.
+   * Output only. Whether messages are threaded in this space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean threaded;
 
   /**
-   * Output only. Deprecated: Use `single_user_bot_dm` instead. Output only. The type of a space.
+   * Output only. Deprecated: Use `single_user_bot_dm` or `space_type` (developer preview) instead.
+   * The type of a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
+   * Resource name of the space. Format: spaces/{space}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -91,7 +92,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
+   * Resource name of the space. Format: spaces/{space}
    * @param name name or {@code null} for none
    */
   public Space setName(java.lang.String name) {
@@ -117,7 +118,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output only. Whether the messages are threaded in this space.
+   * Output only. Whether messages are threaded in this space.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getThreaded() {
@@ -125,7 +126,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output only. Whether the messages are threaded in this space.
+   * Output only. Whether messages are threaded in this space.
    * @param threaded threaded or {@code null} for none
    */
   public Space setThreaded(java.lang.Boolean threaded) {
@@ -134,7 +135,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated: Use `single_user_bot_dm` instead. Output only. The type of a space.
+   * Output only. Deprecated: Use `single_user_bot_dm` or `space_type` (developer preview) instead.
+   * The type of a space.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -142,7 +144,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated: Use `single_user_bot_dm` instead. Output only. The type of a space.
+   * Output only. Deprecated: Use `single_user_bot_dm` or `space_type` (developer preview) instead.
+   * The type of a space.
    * @param type type or {@code null} for none
    */
   public Space setType(java.lang.String type) {

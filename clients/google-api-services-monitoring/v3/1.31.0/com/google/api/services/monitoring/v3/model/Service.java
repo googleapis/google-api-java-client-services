@@ -46,6 +46,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private CloudEndpoints cloudEndpoints;
 
   /**
+   * Type used for Cloud Run services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRun cloudRun;
+
+  /**
    * Type used for Istio services that live in a Kubernetes cluster.
    * The value may be {@code null}.
    */
@@ -65,6 +72,27 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Type used for GKE Namespaces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeNamespace gkeNamespace;
+
+  /**
+   * Type used for GKE Services (the Kubernetes concept of a service).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeService gkeService;
+
+  /**
+   * Type used for GKE Workloads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeWorkload gkeWorkload;
 
   /**
    * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here
@@ -142,6 +170,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Type used for Cloud Run services.
+   * @return value or {@code null} for none
+   */
+  public CloudRun getCloudRun() {
+    return cloudRun;
+  }
+
+  /**
+   * Type used for Cloud Run services.
+   * @param cloudRun cloudRun or {@code null} for none
+   */
+  public Service setCloudRun(CloudRun cloudRun) {
+    this.cloudRun = cloudRun;
+    return this;
+  }
+
+  /**
    * Type used for Istio services that live in a Kubernetes cluster.
    * @return value or {@code null} for none
    */
@@ -189,6 +234,57 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Type used for GKE Namespaces.
+   * @return value or {@code null} for none
+   */
+  public GkeNamespace getGkeNamespace() {
+    return gkeNamespace;
+  }
+
+  /**
+   * Type used for GKE Namespaces.
+   * @param gkeNamespace gkeNamespace or {@code null} for none
+   */
+  public Service setGkeNamespace(GkeNamespace gkeNamespace) {
+    this.gkeNamespace = gkeNamespace;
+    return this;
+  }
+
+  /**
+   * Type used for GKE Services (the Kubernetes concept of a service).
+   * @return value or {@code null} for none
+   */
+  public GkeService getGkeService() {
+    return gkeService;
+  }
+
+  /**
+   * Type used for GKE Services (the Kubernetes concept of a service).
+   * @param gkeService gkeService or {@code null} for none
+   */
+  public Service setGkeService(GkeService gkeService) {
+    this.gkeService = gkeService;
+    return this;
+  }
+
+  /**
+   * Type used for GKE Workloads.
+   * @return value or {@code null} for none
+   */
+  public GkeWorkload getGkeWorkload() {
+    return gkeWorkload;
+  }
+
+  /**
+   * Type used for GKE Workloads.
+   * @param gkeWorkload gkeWorkload or {@code null} for none
+   */
+  public Service setGkeWorkload(GkeWorkload gkeWorkload) {
+    this.gkeWorkload = gkeWorkload;
     return this;
   }
 

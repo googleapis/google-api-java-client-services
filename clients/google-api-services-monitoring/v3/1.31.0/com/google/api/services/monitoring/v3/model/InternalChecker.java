@@ -30,8 +30,8 @@ package com.google.api.services.monitoring.v3.model;
 public final class InternalChecker extends com.google.api.client.json.GenericJson {
 
   /**
-   * The checker's human-readable name. The display name should be unique within a Stackdriver
-   * Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+   * The checker's human-readable name. The display name should be unique within a Cloud Monitoring
+   * Metrics Scope in order to make it easier to identify; however, uniqueness is not enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   /**
    * A unique resource name for this InternalChecker. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER]
-   * is the Stackdriver Workspace project for the Uptime check config associated with the internal
-   * checker.
+   * is the Cloud Monitoring Metrics Scope project for the Uptime check config associated with the
+   * internal checker.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   private java.lang.String network;
 
   /**
-   * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace
-   * project.
+   * The GCP project ID where the internal checker lives. Not necessary the same as the Metrics
+   * Scope project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   private java.lang.String state;
 
   /**
-   * The checker's human-readable name. The display name should be unique within a Stackdriver
-   * Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+   * The checker's human-readable name. The display name should be unique within a Cloud Monitoring
+   * Metrics Scope in order to make it easier to identify; however, uniqueness is not enforced.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -88,8 +88,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The checker's human-readable name. The display name should be unique within a Stackdriver
-   * Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+   * The checker's human-readable name. The display name should be unique within a Cloud Monitoring
+   * Metrics Scope in order to make it easier to identify; however, uniqueness is not enforced.
    * @param displayName displayName or {@code null} for none
    */
   public InternalChecker setDisplayName(java.lang.String displayName) {
@@ -119,8 +119,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   /**
    * A unique resource name for this InternalChecker. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER]
-   * is the Stackdriver Workspace project for the Uptime check config associated with the internal
-   * checker.
+   * is the Cloud Monitoring Metrics Scope project for the Uptime check config associated with the
+   * internal checker.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -130,8 +130,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   /**
    * A unique resource name for this InternalChecker. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER]
-   * is the Stackdriver Workspace project for the Uptime check config associated with the internal
-   * checker.
+   * is the Cloud Monitoring Metrics Scope project for the Uptime check config associated with the
+   * internal checker.
    * @param name name or {@code null} for none
    */
   public InternalChecker setName(java.lang.String name) {
@@ -159,8 +159,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace
-   * project.
+   * The GCP project ID where the internal checker lives. Not necessary the same as the Metrics
+   * Scope project.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerProjectId() {
@@ -168,8 +168,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace
-   * project.
+   * The GCP project ID where the internal checker lives. Not necessary the same as the Metrics
+   * Scope project.
    * @param peerProjectId peerProjectId or {@code null} for none
    */
   public InternalChecker setPeerProjectId(java.lang.String peerProjectId) {

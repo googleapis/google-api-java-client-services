@@ -40,7 +40,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private ApiConfigHandler apiConfig;
 
   /**
-   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
+   * Allows App Engine second generation runtimes to access the legacy bundled services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -388,7 +388,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
+   * Allows App Engine second generation runtimes to access the legacy bundled services.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAppEngineApis() {
@@ -396,7 +396,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
+   * Allows App Engine second generation runtimes to access the legacy bundled services.
    * @param appEngineApis appEngineApis or {@code null} for none
    */
   public Version setAppEngineApis(java.lang.Boolean appEngineApis) {

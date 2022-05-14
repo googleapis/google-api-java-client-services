@@ -39,8 +39,8 @@ public final class SecretEnvVar extends com.google.api.client.json.GenericJson {
 
   /**
    * Project identifier (preferably project number but can also be the project ID) of the project
-   * that contains the secret. If not set, it will be populated with the function's project assuming
-   * that the secret exists in the same project as of the function.
+   * that contains the secret. If not set, it is assumed that the secret is in the same project as
+   * the function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +81,8 @@ public final class SecretEnvVar extends com.google.api.client.json.GenericJson {
 
   /**
    * Project identifier (preferably project number but can also be the project ID) of the project
-   * that contains the secret. If not set, it will be populated with the function's project assuming
-   * that the secret exists in the same project as of the function.
+   * that contains the secret. If not set, it is assumed that the secret is in the same project as
+   * the function.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -91,8 +91,8 @@ public final class SecretEnvVar extends com.google.api.client.json.GenericJson {
 
   /**
    * Project identifier (preferably project number but can also be the project ID) of the project
-   * that contains the secret. If not set, it will be populated with the function's project assuming
-   * that the secret exists in the same project as of the function.
+   * that contains the secret. If not set, it is assumed that the secret is in the same project as
+   * the function.
    * @param projectId projectId or {@code null} for none
    */
   public SecretEnvVar setProjectId(java.lang.String projectId) {

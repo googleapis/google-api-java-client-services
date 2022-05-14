@@ -1772,7 +1772,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The ID to use for the GithubEnterpriseConfig, which will become the final
-         * component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the
+         * component of the GithubEnterpriseConfig's resource name. ghe_config_id must meet the
          * following requirements: + They must contain only alphanumeric characters and dashes. +
          * They can be 1-64 characters long. + They must begin and end with an alphanumeric
          * character
@@ -1781,7 +1781,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private java.lang.String gheConfigId;
 
         /** Optional. The ID to use for the GithubEnterpriseConfig, which will become the final component of
-       the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the following requirements: +
+       the GithubEnterpriseConfig's resource name. ghe_config_id must meet the following requirements: +
        They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. +
        They must begin and end with an alphanumeric character
          */
@@ -1791,7 +1791,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The ID to use for the GithubEnterpriseConfig, which will become the final
-         * component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the
+         * component of the GithubEnterpriseConfig's resource name. ghe_config_id must meet the
          * following requirements: + They must contain only alphanumeric characters and dashes. +
          * They can be 1-64 characters long. + They must begin and end with an alphanumeric
          * character
@@ -5015,7 +5015,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The ID to use for the GithubEnterpriseConfig, which will become the final
-           * component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the
+           * component of the GithubEnterpriseConfig's resource name. ghe_config_id must meet the
            * following requirements: + They must contain only alphanumeric characters and dashes. +
            * They can be 1-64 characters long. + They must begin and end with an alphanumeric
            * character
@@ -5024,7 +5024,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           private java.lang.String gheConfigId;
 
           /** Optional. The ID to use for the GithubEnterpriseConfig, which will become the final component of
-         the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the following requirements: +
+         the GithubEnterpriseConfig's resource name. ghe_config_id must meet the following requirements: +
          They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. +
          They must begin and end with an alphanumeric character
            */
@@ -5034,7 +5034,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The ID to use for the GithubEnterpriseConfig, which will become the final
-           * component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the
+           * component of the GithubEnterpriseConfig's resource name. ghe_config_id must meet the
            * following requirements: + They must contain only alphanumeric characters and dashes. +
            * They can be 1-64 characters long. + They must begin and end with an alphanumeric
            * character

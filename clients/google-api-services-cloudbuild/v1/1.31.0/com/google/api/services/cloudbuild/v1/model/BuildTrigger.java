@@ -138,6 +138,15 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ignoredFiles;
 
   /**
+   * If set to INCLUDE_BUILD_LOGS_WITH_STATUS, log url will be shown on GitHub page when build
+   * status is final. Setting this field to INCLUDE_BUILD_LOGS_WITH_STATUS for non GitHub triggers
+   * results in INVALID_ARGUMENT error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String includeBuildLogs;
+
+  /**
    * If any of the files altered in the commit pass the ignored_files filter and included_files is
    * empty, then as far as this filter is concerned, we should trigger the build. If any of the
    * files altered in the commit pass the ignored_files filter and included_files is not empty, then
@@ -480,6 +489,27 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setIgnoredFiles(java.util.List<java.lang.String> ignoredFiles) {
     this.ignoredFiles = ignoredFiles;
+    return this;
+  }
+
+  /**
+   * If set to INCLUDE_BUILD_LOGS_WITH_STATUS, log url will be shown on GitHub page when build
+   * status is final. Setting this field to INCLUDE_BUILD_LOGS_WITH_STATUS for non GitHub triggers
+   * results in INVALID_ARGUMENT error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIncludeBuildLogs() {
+    return includeBuildLogs;
+  }
+
+  /**
+   * If set to INCLUDE_BUILD_LOGS_WITH_STATUS, log url will be shown on GitHub page when build
+   * status is final. Setting this field to INCLUDE_BUILD_LOGS_WITH_STATUS for non GitHub triggers
+   * results in INVALID_ARGUMENT error.
+   * @param includeBuildLogs includeBuildLogs or {@code null} for none
+   */
+  public BuildTrigger setIncludeBuildLogs(java.lang.String includeBuildLogs) {
+    this.includeBuildLogs = includeBuildLogs;
     return this;
   }
 

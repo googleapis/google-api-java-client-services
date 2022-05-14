@@ -639,8 +639,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @return the request
        */
       public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -668,8 +669,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @since 1.13
          */
         protected GetIamPolicy(java.lang.String resource) {
@@ -748,22 +750,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public GetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -1040,8 +1045,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
        * @return the request
        */
@@ -1070,8 +1076,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
          * @since 1.13
          */
@@ -1141,22 +1148,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being specified. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public SetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -1184,8 +1194,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
        * @return the request
        */
@@ -1216,8 +1227,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
          * @since 1.13
          */
@@ -1287,22 +1299,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-       documentation for the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public TestIamPermissions setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -2091,8 +2106,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @return the request
        */
       public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -2120,8 +2136,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @since 1.13
          */
         protected GetIamPolicy(java.lang.String resource) {
@@ -2200,22 +2217,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public GetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -2611,8 +2631,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
        * @return the request
        */
@@ -2641,8 +2662,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
          * @since 1.13
          */
@@ -2712,22 +2734,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being specified. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public SetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -2755,8 +2780,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
        * @return the request
        */
@@ -2787,8 +2813,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
          * @since 1.13
          */
@@ -2858,22 +2885,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-       documentation for the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public TestIamPermissions setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -3655,8 +3685,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @return the request
        */
       public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -3684,8 +3715,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @since 1.13
          */
         protected GetIamPolicy(java.lang.String resource) {
@@ -3764,22 +3796,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public GetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -4755,8 +4790,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
        * @return the request
        */
@@ -4785,8 +4821,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
          * @since 1.13
          */
@@ -4856,22 +4893,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being specified. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public SetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -4899,8 +4939,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
        * @return the request
        */
@@ -4931,8 +4972,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
          * @since 1.13
          */
@@ -5002,22 +5044,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-       documentation for the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public TestIamPermissions setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -5500,8 +5545,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @return the request
        */
       public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -5529,8 +5575,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @since 1.13
          */
         protected GetIamPolicy(java.lang.String resource) {
@@ -5609,22 +5656,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public GetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -6171,8 +6221,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
        * @return the request
        */
@@ -6201,8 +6252,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
          * @since 1.13
          */
@@ -6272,22 +6324,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-       the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy is being specified. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy is being specified. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy is being specified. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public SetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -6315,8 +6370,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
        * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
        * @return the request
        */
@@ -6347,8 +6403,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-       *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       *        this field.
          * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
          * @since 1.13
          */
@@ -6418,22 +6475,25 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-       documentation for the appropriate value for this field.
+        /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+       field.
          */
         public java.lang.String getResource() {
           return resource;
         }
 
         /**
-         * REQUIRED: The resource for which the policy detail is being requested. See the operation
-         * documentation for the appropriate value for this field.
+         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         * this field.
          */
         public TestIamPermissions setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {

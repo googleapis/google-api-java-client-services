@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Total number of job executors.
+   * Optional. Total number of job executors. Executor Count should be between 2 and 100. Default=2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,14 +38,14 @@ public final class GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResour
 
   /**
    * Optional. Max configurable executors. If max_executors_count > executors_count, then auto-
-   * scaling is enabled.
+   * scaling is enabled. Max Executor Count should be between 2 and 1000. Default=1000
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxExecutorsCount;
 
   /**
-   * Optional. Total number of job executors.
+   * Optional. Total number of job executors. Executor Count should be between 2 and 100. Default=2
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExecutorsCount() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResour
   }
 
   /**
-   * Optional. Total number of job executors.
+   * Optional. Total number of job executors. Executor Count should be between 2 and 100. Default=2
    * @param executorsCount executorsCount or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources setExecutorsCount(java.lang.Integer executorsCount) {
@@ -63,7 +63,7 @@ public final class GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResour
 
   /**
    * Optional. Max configurable executors. If max_executors_count > executors_count, then auto-
-   * scaling is enabled.
+   * scaling is enabled. Max Executor Count should be between 2 and 1000. Default=1000
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxExecutorsCount() {
@@ -72,7 +72,7 @@ public final class GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResour
 
   /**
    * Optional. Max configurable executors. If max_executors_count > executors_count, then auto-
-   * scaling is enabled.
+   * scaling is enabled. Max Executor Count should be between 2 and 1000. Default=1000
    * @param maxExecutorsCount maxExecutorsCount or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources setMaxExecutorsCount(java.lang.Integer maxExecutorsCount) {

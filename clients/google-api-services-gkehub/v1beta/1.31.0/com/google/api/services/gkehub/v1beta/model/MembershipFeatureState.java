@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class MembershipFeatureState extends com.google.api.client.json.GenericJson {
 
   /**
+   * AnthosVM state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnthosVMMembershipState anthosvm;
+
+  /**
    * Appdevexperience specific state.
    * The value may be {@code null}.
    */
@@ -77,6 +84,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private FeatureState state;
+
+  /**
+   * AnthosVM state.
+   * @return value or {@code null} for none
+   */
+  public AnthosVMMembershipState getAnthosvm() {
+    return anthosvm;
+  }
+
+  /**
+   * AnthosVM state.
+   * @param anthosvm anthosvm or {@code null} for none
+   */
+  public MembershipFeatureState setAnthosvm(AnthosVMMembershipState anthosvm) {
+    this.anthosvm = anthosvm;
+    return this;
+  }
 
   /**
    * Appdevexperience specific state.

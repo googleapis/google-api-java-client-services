@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1.model;
 public final class MembershipFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * AnthosVM spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnthosVMMembershipSpec anthosvm;
+
+  /**
    * Config Management-specific spec.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private ServiceMeshMembershipSpec mesh;
+
+  /**
+   * AnthosVM spec.
+   * @return value or {@code null} for none
+   */
+  public AnthosVMMembershipSpec getAnthosvm() {
+    return anthosvm;
+  }
+
+  /**
+   * AnthosVM spec.
+   * @param anthosvm anthosvm or {@code null} for none
+   */
+  public MembershipFeatureSpec setAnthosvm(AnthosVMMembershipSpec anthosvm) {
+    this.anthosvm = anthosvm;
+    return this;
+  }
 
   /**
    * Config Management-specific spec.

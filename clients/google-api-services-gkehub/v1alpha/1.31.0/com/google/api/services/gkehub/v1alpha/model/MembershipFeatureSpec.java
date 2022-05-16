@@ -37,6 +37,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private AnthosObservabilityMembershipSpec anthosobservability;
 
   /**
+   * AnthosVM spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnthosVMMembershipSpec anthosvm;
+
+  /**
    * Cloud Build-specific spec
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setAnthosobservability(AnthosObservabilityMembershipSpec anthosobservability) {
     this.anthosobservability = anthosobservability;
+    return this;
+  }
+
+  /**
+   * AnthosVM spec.
+   * @return value or {@code null} for none
+   */
+  public AnthosVMMembershipSpec getAnthosvm() {
+    return anthosvm;
+  }
+
+  /**
+   * AnthosVM spec.
+   * @param anthosvm anthosvm or {@code null} for none
+   */
+  public MembershipFeatureSpec setAnthosvm(AnthosVMMembershipSpec anthosvm) {
+    this.anthosvm = anthosvm;
     return this;
   }
 

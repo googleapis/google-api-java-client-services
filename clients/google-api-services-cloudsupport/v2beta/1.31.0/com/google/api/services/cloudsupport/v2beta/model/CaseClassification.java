@@ -38,7 +38,8 @@ public final class CaseClassification extends com.google.api.client.json.Generic
   private java.lang.String displayName;
 
   /**
-   * The unique ID for a classification. Must be specified for case creation.
+   * The unique ID for a classification. Must be specified for case creation. To retrieve valid
+   * classification IDs for case creation, use `caseClassifications.search`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class CaseClassification extends com.google.api.client.json.Generic
   }
 
   /**
-   * The unique ID for a classification. Must be specified for case creation.
+   * The unique ID for a classification. Must be specified for case creation. To retrieve valid
+   * classification IDs for case creation, use `caseClassifications.search`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -70,7 +72,8 @@ public final class CaseClassification extends com.google.api.client.json.Generic
   }
 
   /**
-   * The unique ID for a classification. Must be specified for case creation.
+   * The unique ID for a classification. Must be specified for case creation. To retrieve valid
+   * classification IDs for case creation, use `caseClassifications.search`.
    * @param id id or {@code null} for none
    */
   public CaseClassification setId(java.lang.String id) {

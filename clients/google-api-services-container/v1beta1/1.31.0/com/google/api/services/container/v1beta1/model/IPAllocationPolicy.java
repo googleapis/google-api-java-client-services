@@ -82,6 +82,13 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.Boolean createSubnetwork;
 
   /**
+   * The ipv6 access type (internal or external) when create_subnetwork is true
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
    * This field is deprecated, use node_ipv4_cidr_block.
    * The value may be {@code null}.
    */
@@ -129,6 +136,13 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String servicesSecondaryRangeName;
+
+  /**
+   * IP stack type
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
 
   /**
    * A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty,
@@ -287,6 +301,23 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
+   * The ipv6 access type (internal or external) when create_subnetwork is true
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * The ipv6 access type (internal or external) when create_subnetwork is true
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public IPAllocationPolicy setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
+    return this;
+  }
+
+  /**
    * This field is deprecated, use node_ipv4_cidr_block.
    * @return value or {@code null} for none
    */
@@ -396,6 +427,23 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   public IPAllocationPolicy setServicesSecondaryRangeName(java.lang.String servicesSecondaryRangeName) {
     this.servicesSecondaryRangeName = servicesSecondaryRangeName;
+    return this;
+  }
+
+  /**
+   * IP stack type
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * IP stack type
+   * @param stackType stackType or {@code null} for none
+   */
+  public IPAllocationPolicy setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

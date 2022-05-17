@@ -62,7 +62,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean overwriteObjectsAlreadyExistingInSink;
 
   /**
-   * When to overwrite objects that already exist in the sink. If not set overwrite behavior is
+   * When to overwrite objects that already exist in the sink. If not set, overwrite behavior is
    * determined by overwrite_objects_already_existing_in_sink.
    * The value may be {@code null}.
    */
@@ -146,7 +146,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * When to overwrite objects that already exist in the sink. If not set overwrite behavior is
+   * When to overwrite objects that already exist in the sink. If not set, overwrite behavior is
    * determined by overwrite_objects_already_existing_in_sink.
    * @return value or {@code null} for none
    */
@@ -155,7 +155,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * When to overwrite objects that already exist in the sink. If not set overwrite behavior is
+   * When to overwrite objects that already exist in the sink. If not set, overwrite behavior is
    * determined by overwrite_objects_already_existing_in_sink.
    * @param overwriteWhen overwriteWhen or {@code null} for none
    */

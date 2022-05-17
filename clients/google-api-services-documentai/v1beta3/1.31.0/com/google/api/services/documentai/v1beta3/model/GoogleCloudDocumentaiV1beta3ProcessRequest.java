@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   private GoogleCloudDocumentaiV1beta3Document document;
 
   /**
+   * Specifies which fields to include in ProcessResponse's document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String fieldMask;
+
+  /**
    * An inline document proto.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
    */
   public GoogleCloudDocumentaiV1beta3ProcessRequest setDocument(GoogleCloudDocumentaiV1beta3Document document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * Specifies which fields to include in ProcessResponse's document.
+   * @return value or {@code null} for none
+   */
+  public String getFieldMask() {
+    return fieldMask;
+  }
+
+  /**
+   * Specifies which fields to include in ProcessResponse's document.
+   * @param fieldMask fieldMask or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessRequest setFieldMask(String fieldMask) {
+    this.fieldMask = fieldMask;
     return this;
   }
 

@@ -475,6 +475,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private PrivateClusterConfig privateClusterConfig;
 
   /**
+   * Enable/Disable Protect API features for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProtectConfig protectConfig;
+
+  /**
    * Release channel configuration.
    * The value may be {@code null}.
    */
@@ -1641,6 +1648,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
     this.privateClusterConfig = privateClusterConfig;
+    return this;
+  }
+
+  /**
+   * Enable/Disable Protect API features for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ProtectConfig getProtectConfig() {
+    return protectConfig;
+  }
+
+  /**
+   * Enable/Disable Protect API features for the cluster.
+   * @param protectConfig protectConfig or {@code null} for none
+   */
+  public Cluster setProtectConfig(ProtectConfig protectConfig) {
+    this.protectConfig = protectConfig;
     return this;
   }
 

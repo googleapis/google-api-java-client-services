@@ -31,6 +31,16 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class MetricRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metrics to update when the selected methods are called. The key of the map is the metric name,
+   * the value is the DynamicCostType to specify how to calculate the cost from the request. The
+   * cost amount will be increased for the metric against which the quota limits are defined. It is
+   * only implemented in CloudESF(go/cloudesf)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> dynamicMetricCosts;
+
+  /**
    * Metrics to update when the selected methods are called, and the associated cost applied to each
    * metric. The key of the map is the metric name, and the values are the amount increased for the
    * metric against which the quota limits are defined. The value must not be negative.
@@ -45,6 +55,29 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selector;
+
+  /**
+   * Metrics to update when the selected methods are called. The key of the map is the metric name,
+   * the value is the DynamicCostType to specify how to calculate the cost from the request. The
+   * cost amount will be increased for the metric against which the quota limits are defined. It is
+   * only implemented in CloudESF(go/cloudesf)
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getDynamicMetricCosts() {
+    return dynamicMetricCosts;
+  }
+
+  /**
+   * Metrics to update when the selected methods are called. The key of the map is the metric name,
+   * the value is the DynamicCostType to specify how to calculate the cost from the request. The
+   * cost amount will be increased for the metric against which the quota limits are defined. It is
+   * only implemented in CloudESF(go/cloudesf)
+   * @param dynamicMetricCosts dynamicMetricCosts or {@code null} for none
+   */
+  public MetricRule setDynamicMetricCosts(java.util.Map<String, java.lang.String> dynamicMetricCosts) {
+    this.dynamicMetricCosts = dynamicMetricCosts;
+    return this;
+  }
 
   /**
    * Metrics to update when the selected methods are called, and the associated cost applied to each

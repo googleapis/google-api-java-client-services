@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies which fields to include in ProcessResponse's document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String fieldMask;
+
+  /**
    * An inline document proto.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean skipHumanReview;
+
+  /**
+   * Specifies which fields to include in ProcessResponse's document.
+   * @return value or {@code null} for none
+   */
+  public String getFieldMask() {
+    return fieldMask;
+  }
+
+  /**
+   * Specifies which fields to include in ProcessResponse's document.
+   * @param fieldMask fieldMask or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessRequest setFieldMask(String fieldMask) {
+    this.fieldMask = fieldMask;
+    return this;
+  }
 
   /**
    * An inline document proto.

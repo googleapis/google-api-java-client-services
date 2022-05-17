@@ -800,7 +800,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        *
        * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
        *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
-       *        the [Google Cloud Console](https://support.google.com/cloud/answer/6158840). Examples:
+       *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). Examples:
        *        `projects/my-project-123`, `projects/5551234`.
        * @return the request
        */
@@ -830,7 +830,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          *
          * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
        *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
-       *        the [Google Cloud Console](https://support.google.com/cloud/answer/6158840). Examples:
+       *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). Examples:
        *        `projects/my-project-123`, `projects/5551234`.
          * @since 1.13
          */
@@ -913,7 +913,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Required. The resource name of the Google Cloud Platform project. Written as
          * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
          * `{projectNumber}` can be found in the [Google Cloud
-         * Console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
+         * console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
          * project-123`, `projects/5551234`.
          */
         @com.google.api.client.util.Key
@@ -921,7 +921,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
         /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in the
-       [Google Cloud Console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
+       [Google Cloud console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
        project-123`, `projects/5551234`.
          */
         public java.lang.String getProjectName() {
@@ -932,7 +932,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Required. The resource name of the Google Cloud Platform project. Written as
          * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
          * `{projectNumber}` can be found in the [Google Cloud
-         * Console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
+         * console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
          * project-123`, `projects/5551234`.
          */
         public List setProjectName(java.lang.String projectName) {

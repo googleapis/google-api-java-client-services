@@ -62,6 +62,12 @@ public final class Election extends com.google.api.client.json.GenericJson {
   private java.lang.String ocdDivisionId;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shapeLookupBehavior;
+
+  /**
    * Day of the election in YYYY-MM-DD format.
    * @return value or {@code null} for none
    */
@@ -132,6 +138,21 @@ public final class Election extends com.google.api.client.json.GenericJson {
    */
   public Election setOcdDivisionId(java.lang.String ocdDivisionId) {
     this.ocdDivisionId = ocdDivisionId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShapeLookupBehavior() {
+    return shapeLookupBehavior;
+  }
+
+  /**
+   * @param shapeLookupBehavior shapeLookupBehavior or {@code null} for none
+   */
+  public Election setShapeLookupBehavior(java.lang.String shapeLookupBehavior) {
+    this.shapeLookupBehavior = shapeLookupBehavior;
     return this;
   }
 

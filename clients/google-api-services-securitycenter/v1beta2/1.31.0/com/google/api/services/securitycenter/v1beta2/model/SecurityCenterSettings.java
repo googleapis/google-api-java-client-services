@@ -50,6 +50,13 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Timestamp of when the customer organization was onboarded to SCC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String onboardingTime;
+
+  /**
    * The organization level service account to be used for security center components.
    * The value may be {@code null}.
    */
@@ -97,6 +104,23 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
    */
   public SecurityCenterSettings setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Timestamp of when the customer organization was onboarded to SCC.
+   * @return value or {@code null} for none
+   */
+  public String getOnboardingTime() {
+    return onboardingTime;
+  }
+
+  /**
+   * Timestamp of when the customer organization was onboarded to SCC.
+   * @param onboardingTime onboardingTime or {@code null} for none
+   */
+  public SecurityCenterSettings setOnboardingTime(String onboardingTime) {
+    this.onboardingTime = onboardingTime;
     return this;
   }
 

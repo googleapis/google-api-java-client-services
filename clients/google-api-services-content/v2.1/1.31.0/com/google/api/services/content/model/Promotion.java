@@ -17,12 +17,12 @@
 package com.google.api.services.content.model;
 
 /**
- * The Promotions feature is publicly available for the US and CA locale (en language only) in
- * Content API for Shopping. Represents a promotion. See the following articles for more details. *
- * [Promotions feed specification](https://support.google.com/merchants/answer/2906014) * [Local
- * promotions feed specification](https://support.google.com/merchants/answer/10146130) *
- * [Promotions on Buy on Google product data
- * specification](https://support.google.com/merchants/answer/9173673)
+ * The Promotions feature is publicly available for the US, CA, IN, UK, AU target countries (en
+ * language only) in Content API for Shopping. Represents a promotion. See the following articles
+ * for more details. * [Promotions feed
+ * specification](https://support.google.com/merchants/answer/2906014) * [Local promotions feed
+ * specification](https://support.google.com/merchants/answer/10146130) * [Promotions on Buy on
+ * Google product data specification](https://support.google.com/merchants/answer/9173673)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

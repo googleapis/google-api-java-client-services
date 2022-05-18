@@ -950,6 +950,145 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * Gets the project ID and region for an Apigee organization.
+     *
+     * Create a request for the method "organizations.getProjectMapping".
+     *
+     * This request holds the parameters needed by the apigee server.  After setting any optional
+     * parameters, call the {@link GetProjectMapping#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Apigee organization name in the following format: `organizations/{org}`
+     * @return the request
+     */
+    public GetProjectMapping getProjectMapping(java.lang.String name) throws java.io.IOException {
+      GetProjectMapping result = new GetProjectMapping(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetProjectMapping extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1OrganizationProjectMapping> {
+
+      private static final String REST_PATH = "v1/{+name}:getProjectMapping";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Gets the project ID and region for an Apigee organization.
+       *
+       * Create a request for the method "organizations.getProjectMapping".
+       *
+       * This request holds the parameters needed by the the apigee server.  After setting any optional
+       * parameters, call the {@link GetProjectMapping#execute()} method to invoke the remote operation.
+       * <p> {@link GetProjectMapping#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. Apigee organization name in the following format: `organizations/{org}`
+       * @since 1.13
+       */
+      protected GetProjectMapping(java.lang.String name) {
+        super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1OrganizationProjectMapping.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetProjectMapping set$Xgafv(java.lang.String $Xgafv) {
+        return (GetProjectMapping) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetProjectMapping setAccessToken(java.lang.String accessToken) {
+        return (GetProjectMapping) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetProjectMapping setAlt(java.lang.String alt) {
+        return (GetProjectMapping) super.setAlt(alt);
+      }
+
+      @Override
+      public GetProjectMapping setCallback(java.lang.String callback) {
+        return (GetProjectMapping) super.setCallback(callback);
+      }
+
+      @Override
+      public GetProjectMapping setFields(java.lang.String fields) {
+        return (GetProjectMapping) super.setFields(fields);
+      }
+
+      @Override
+      public GetProjectMapping setKey(java.lang.String key) {
+        return (GetProjectMapping) super.setKey(key);
+      }
+
+      @Override
+      public GetProjectMapping setOauthToken(java.lang.String oauthToken) {
+        return (GetProjectMapping) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetProjectMapping setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetProjectMapping) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetProjectMapping setQuotaUser(java.lang.String quotaUser) {
+        return (GetProjectMapping) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetProjectMapping setUploadType(java.lang.String uploadType) {
+        return (GetProjectMapping) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetProjectMapping setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetProjectMapping) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Apigee organization name in the following format: `organizations/{org}` */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Apigee organization name in the following format: `organizations/{org}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Apigee organization name in the following format: `organizations/{org}` */
+      public GetProjectMapping setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetProjectMapping set(String parameterName, Object value) {
+        return (GetProjectMapping) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get runtime config for an organization.
      *
      * Create a request for the method "organizations.getRuntimeConfig".

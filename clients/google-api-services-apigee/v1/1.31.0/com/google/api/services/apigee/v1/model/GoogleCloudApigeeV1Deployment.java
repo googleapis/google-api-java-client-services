@@ -51,24 +51,24 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   private java.lang.String environment;
 
   /**
-   * Errors reported for this deployment. Populated only when state == ERROR. This field is not
-   * populated in List APIs.
+   * Errors reported for this deployment. Populated only when state == ERROR. **Note**: This field
+   * is displayed only when viewing deployment status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> errors;
 
   /**
-   * Status reported by each runtime instance. This field is not populated in List APIs.
+   * Status reported by each runtime instance. **Note**: This field is displayed only when viewing
+   * deployment status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudApigeeV1InstanceDeploymentStatus> instances;
 
   /**
-   * Status reported by runtime pods. This field is not populated for List APIs. **Note**: **This
-   * field is deprecated**. Runtime versions 1.3 and above report instance level status rather than
-   * pod status.
+   * Status reported by runtime pods. **Note**: **This field is deprecated**. Runtime versions 1.3
+   * and above report instance level status rather than pod status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
    * Conflicts in the desired state routing configuration. The presence of conflicts does not cause
    * the state to be `ERROR`, but it will mean that some of the deployment's base paths are not
    * routed to its environment. If the conflicts change, the state will transition to `PROGRESSING`
-   * until the latest configuration is rolled out to all instances. This field is not populated in
-   * List APIs.
+   * until the latest configuration is rolled out to all instances. **Note**: This field is
+   * displayed only when viewing deployment status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   private java.lang.String serviceAccount;
 
   /**
-   * Current state of the deployment. This field is not populated in List APIs.
+   * Current state of the deployment. **Note**: This field is displayed only when viewing deployment
+   * status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,8 +160,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Errors reported for this deployment. Populated only when state == ERROR. This field is not
-   * populated in List APIs.
+   * Errors reported for this deployment. Populated only when state == ERROR. **Note**: This field
+   * is displayed only when viewing deployment status.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleRpcStatus> getErrors() {
@@ -168,8 +169,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Errors reported for this deployment. Populated only when state == ERROR. This field is not
-   * populated in List APIs.
+   * Errors reported for this deployment. Populated only when state == ERROR. **Note**: This field
+   * is displayed only when viewing deployment status.
    * @param errors errors or {@code null} for none
    */
   public GoogleCloudApigeeV1Deployment setErrors(java.util.List<GoogleRpcStatus> errors) {
@@ -178,7 +179,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Status reported by each runtime instance. This field is not populated in List APIs.
+   * Status reported by each runtime instance. **Note**: This field is displayed only when viewing
+   * deployment status.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1InstanceDeploymentStatus> getInstances() {
@@ -186,7 +188,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Status reported by each runtime instance. This field is not populated in List APIs.
+   * Status reported by each runtime instance. **Note**: This field is displayed only when viewing
+   * deployment status.
    * @param instances instances or {@code null} for none
    */
   public GoogleCloudApigeeV1Deployment setInstances(java.util.List<GoogleCloudApigeeV1InstanceDeploymentStatus> instances) {
@@ -195,9 +198,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Status reported by runtime pods. This field is not populated for List APIs. **Note**: **This
-   * field is deprecated**. Runtime versions 1.3 and above report instance level status rather than
-   * pod status.
+   * Status reported by runtime pods. **Note**: **This field is deprecated**. Runtime versions 1.3
+   * and above report instance level status rather than pod status.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1PodStatus> getPods() {
@@ -205,9 +207,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Status reported by runtime pods. This field is not populated for List APIs. **Note**: **This
-   * field is deprecated**. Runtime versions 1.3 and above report instance level status rather than
-   * pod status.
+   * Status reported by runtime pods. **Note**: **This field is deprecated**. Runtime versions 1.3
+   * and above report instance level status rather than pod status.
    * @param pods pods or {@code null} for none
    */
   public GoogleCloudApigeeV1Deployment setPods(java.util.List<GoogleCloudApigeeV1PodStatus> pods) {
@@ -236,8 +237,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
    * Conflicts in the desired state routing configuration. The presence of conflicts does not cause
    * the state to be `ERROR`, but it will mean that some of the deployment's base paths are not
    * routed to its environment. If the conflicts change, the state will transition to `PROGRESSING`
-   * until the latest configuration is rolled out to all instances. This field is not populated in
-   * List APIs.
+   * until the latest configuration is rolled out to all instances. **Note**: This field is
+   * displayed only when viewing deployment status.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict> getRouteConflicts() {
@@ -248,8 +249,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
    * Conflicts in the desired state routing configuration. The presence of conflicts does not cause
    * the state to be `ERROR`, but it will mean that some of the deployment's base paths are not
    * routed to its environment. If the conflicts change, the state will transition to `PROGRESSING`
-   * until the latest configuration is rolled out to all instances. This field is not populated in
-   * List APIs.
+   * until the latest configuration is rolled out to all instances. **Note**: This field is
+   * displayed only when viewing deployment status.
    * @param routeConflicts routeConflicts or {@code null} for none
    */
   public GoogleCloudApigeeV1Deployment setRouteConflicts(java.util.List<GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict> routeConflicts) {
@@ -277,7 +278,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Current state of the deployment. This field is not populated in List APIs.
+   * Current state of the deployment. **Note**: This field is displayed only when viewing deployment
+   * status.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -285,7 +287,8 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Current state of the deployment. This field is not populated in List APIs.
+   * Current state of the deployment. **Note**: This field is displayed only when viewing deployment
+   * status.
    * @param state state or {@code null} for none
    */
   public GoogleCloudApigeeV1Deployment setState(java.lang.String state) {

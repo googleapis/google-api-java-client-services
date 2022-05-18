@@ -75,6 +75,14 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   private java.lang.Boolean enablePrivateEnvironment;
 
   /**
+   * Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for
+   * `IPAllocationPolicy.cluster_ipv4_cidr_block` and `IPAllocationPolicy.service_ipv4_cidr_block`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePrivatelyUsedPublicIps;
+
+  /**
    * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer
    * environment.
    * The value may be {@code null}.
@@ -202,6 +210,25 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    */
   public PrivateEnvironmentConfig setEnablePrivateEnvironment(java.lang.Boolean enablePrivateEnvironment) {
     this.enablePrivateEnvironment = enablePrivateEnvironment;
+    return this;
+  }
+
+  /**
+   * Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for
+   * `IPAllocationPolicy.cluster_ipv4_cidr_block` and `IPAllocationPolicy.service_ipv4_cidr_block`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePrivatelyUsedPublicIps() {
+    return enablePrivatelyUsedPublicIps;
+  }
+
+  /**
+   * Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for
+   * `IPAllocationPolicy.cluster_ipv4_cidr_block` and `IPAllocationPolicy.service_ipv4_cidr_block`.
+   * @param enablePrivatelyUsedPublicIps enablePrivatelyUsedPublicIps or {@code null} for none
+   */
+  public PrivateEnvironmentConfig setEnablePrivatelyUsedPublicIps(java.lang.Boolean enablePrivatelyUsedPublicIps) {
+    this.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
     return this;
   }
 

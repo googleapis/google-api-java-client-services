@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.composer.v1beta1.model;
+package com.google.api.services.composer.v1.model;
 
 /**
  * CIDR block with an optional name.

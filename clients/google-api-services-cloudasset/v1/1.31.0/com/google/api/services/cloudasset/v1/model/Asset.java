@@ -111,6 +111,22 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private Inventory osInventory;
 
   /**
+   * One related asset of the current asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RelatedAsset relatedAsset;
+
+  /**
+   * DEPRECATED. This field only presents for the purpose of backward-compatibility. The server will
+   * never generate responses with this field. The related assets of the asset of one relationship
+   * type. One asset only represents one type of relationship.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RelatedAssets relatedAssets;
+
+  /**
    * A representation of the resource.
    * The value may be {@code null}.
    */
@@ -306,6 +322,44 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setOsInventory(Inventory osInventory) {
     this.osInventory = osInventory;
+    return this;
+  }
+
+  /**
+   * One related asset of the current asset.
+   * @return value or {@code null} for none
+   */
+  public RelatedAsset getRelatedAsset() {
+    return relatedAsset;
+  }
+
+  /**
+   * One related asset of the current asset.
+   * @param relatedAsset relatedAsset or {@code null} for none
+   */
+  public Asset setRelatedAsset(RelatedAsset relatedAsset) {
+    this.relatedAsset = relatedAsset;
+    return this;
+  }
+
+  /**
+   * DEPRECATED. This field only presents for the purpose of backward-compatibility. The server will
+   * never generate responses with this field. The related assets of the asset of one relationship
+   * type. One asset only represents one type of relationship.
+   * @return value or {@code null} for none
+   */
+  public RelatedAssets getRelatedAssets() {
+    return relatedAssets;
+  }
+
+  /**
+   * DEPRECATED. This field only presents for the purpose of backward-compatibility. The server will
+   * never generate responses with this field. The related assets of the asset of one relationship
+   * type. One asset only represents one type of relationship.
+   * @param relatedAssets relatedAssets or {@code null} for none
+   */
+  public Asset setRelatedAssets(RelatedAssets relatedAssets) {
+    this.relatedAssets = relatedAssets;
     return this;
   }
 

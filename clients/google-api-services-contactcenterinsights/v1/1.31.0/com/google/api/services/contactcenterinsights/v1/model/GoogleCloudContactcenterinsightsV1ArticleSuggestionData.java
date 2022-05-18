@@ -47,8 +47,8 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionData exten
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Name of the query record. Format:
-   * projects/{project}/locations/{location}/queryRecords/{query_record}
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +115,8 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionData exten
   }
 
   /**
-   * Name of the query record. Format:
-   * projects/{project}/locations/{location}/queryRecords/{query_record}
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryRecord() {
@@ -124,8 +124,8 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionData exten
   }
 
   /**
-   * Name of the query record. Format:
-   * projects/{project}/locations/{location}/queryRecords/{query_record}
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
    * @param queryRecord queryRecord or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1ArticleSuggestionData setQueryRecord(java.lang.String queryRecord) {

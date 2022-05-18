@@ -30,6 +30,14 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The Google Cloud region where control plane data is located. For more information,
+   * see https://cloud.google.com/about/locations/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Name of the Apigee organization.
    * The value may be {@code null}.
    */
@@ -49,6 +57,25 @@ public final class GoogleCloudApigeeV1OrganizationProjectMapping extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> projectIds;
+
+  /**
+   * Output only. The Google Cloud region where control plane data is located. For more information,
+   * see https://cloud.google.com/about/locations/.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Output only. The Google Cloud region where control plane data is located. For more information,
+   * see https://cloud.google.com/about/locations/.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudApigeeV1OrganizationProjectMapping setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
 
   /**
    * Name of the Apigee organization.

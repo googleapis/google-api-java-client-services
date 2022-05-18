@@ -17,8 +17,9 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * The relationship attributes which include `type`, `source_resource_type`, `target_resource_type`
- * and `action`.
+ * DEPRECATED. This message only presents for the purpose of backward-compatibility. The server will
+ * never populate this message in responses. The relationship attributes which include `type`,
+ * `source_resource_type`, `target_resource_type` and `action`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

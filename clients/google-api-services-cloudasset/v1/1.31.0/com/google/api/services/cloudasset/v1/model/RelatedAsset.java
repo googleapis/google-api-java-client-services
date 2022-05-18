@@ -64,6 +64,13 @@ public final class RelatedAsset extends com.google.api.client.json.GenericJson {
   private java.lang.String assetType;
 
   /**
+   * The unique identifier of the relationship type. Example: `INSTANCE_TO_INSTANCEGROUP`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String relationshipType;
+
+  /**
    * The ancestors of an asset in Google Cloud [resource hierarchy](https://cloud.google.com
    * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
    * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
@@ -127,6 +134,23 @@ public final class RelatedAsset extends com.google.api.client.json.GenericJson {
    */
   public RelatedAsset setAssetType(java.lang.String assetType) {
     this.assetType = assetType;
+    return this;
+  }
+
+  /**
+   * The unique identifier of the relationship type. Example: `INSTANCE_TO_INSTANCEGROUP`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelationshipType() {
+    return relationshipType;
+  }
+
+  /**
+   * The unique identifier of the relationship type. Example: `INSTANCE_TO_INSTANCEGROUP`
+   * @param relationshipType relationshipType or {@code null} for none
+   */
+  public RelatedAsset setRelationshipType(java.lang.String relationshipType) {
+    this.relationshipType = relationshipType;
     return this;
   }
 

@@ -39,6 +39,13 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
   private java.util.Map<String, LocationPolicyLocation> locations;
 
   /**
+   * Strategy for distributing VMs across zones in a region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetShape;
+
+  /**
    * Location configurations mapped by location name. Currently only zone names are supported and
    * must be represented as valid internal URLs, such as zones/us-central1-a.
    * @return value or {@code null} for none
@@ -54,6 +61,23 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
    */
   public LocationPolicy setLocations(java.util.Map<String, LocationPolicyLocation> locations) {
     this.locations = locations;
+    return this;
+  }
+
+  /**
+   * Strategy for distributing VMs across zones in a region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetShape() {
+    return targetShape;
+  }
+
+  /**
+   * Strategy for distributing VMs across zones in a region.
+   * @param targetShape targetShape or {@code null} for none
+   */
+  public LocationPolicy setTargetShape(java.lang.String targetShape) {
+    this.targetShape = targetShape;
     return this;
   }
 

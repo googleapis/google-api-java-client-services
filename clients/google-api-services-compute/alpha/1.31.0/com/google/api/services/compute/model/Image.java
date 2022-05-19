@@ -315,7 +315,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceSnapshotId;
 
   /**
-   * The type of the image used to create this disk. The default and only value is RAW
+   * The type of the image used to create this disk. The default and only valid value is RAW.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1038,7 +1038,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the image used to create this disk. The default and only value is RAW
+   * The type of the image used to create this disk. The default and only valid value is RAW.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceType() {
@@ -1046,7 +1046,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the image used to create this disk. The default and only value is RAW
+   * The type of the image used to create this disk. The default and only valid value is RAW.
    * @param sourceType sourceType or {@code null} for none
    */
   public Image setSourceType(java.lang.String sourceType) {

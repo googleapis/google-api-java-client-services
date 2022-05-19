@@ -20,7 +20,7 @@ package com.google.api.services.alertcenter.v1beta1;
  * Service definition for AlertCenter (v1beta1).
  *
  * <p>
- * Manages alerts on issues affecting your domain.
+ * Manages alerts on issues affecting your domain. Note: The current version of this API (v1beta1) is available to all Google Workspace customers. 
  * </p>
  *
  * <p>

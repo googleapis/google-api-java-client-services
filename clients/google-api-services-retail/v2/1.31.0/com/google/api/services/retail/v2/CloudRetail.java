@@ -2221,9 +2221,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * Bulk import of multiple Products. Request processing may be synchronous. No partial updating is
-             * supported. Non-existing items are created. Note that it is possible for a subset of the Products
-             * to be successfully updated.
+             * Bulk import of multiple Products. Request processing may be synchronous. Non-existing items are
+             * created. Note that it is possible for a subset of the Products to be successfully updated.
              *
              * Create a request for the method "products.import".
              *
@@ -2250,9 +2249,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
 
               /**
-               * Bulk import of multiple Products. Request processing may be synchronous. No partial updating is
-               * supported. Non-existing items are created. Note that it is possible for a subset of the
-               * Products to be successfully updated.
+               * Bulk import of multiple Products. Request processing may be synchronous. Non-existing items are
+               * created. Note that it is possible for a subset of the Products to be successfully updated.
                *
                * Create a request for the method "products.import".
                *

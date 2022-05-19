@@ -52,13 +52,18 @@ public final class GoogleCloudRetailV2SearchRequestFacetSpec extends com.google.
 
   /**
    * List of keys to exclude when faceting. By default, FacetKey.key is not excluded from the filter
-   * unless it is listed in this field. For example, suppose there are 100 products with color facet
-   * "Red" and 200 products with color facet "Blue". A query containing the filter
-   * "colorFamilies:ANY("Red")" and have "colorFamilies" as FacetKey.key will by default return the
-   * "Red" with count 100. If this field contains "colorFamilies", then the query returns both the
-   * "Red" with count 100 and "Blue" with count 200, because the "colorFamilies" key is now excluded
-   * from the filter. A maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * unless it is listed in this field. Listing a facet key in this field allows its values to
+   * appear as facet results, even when they are filtered out of search results. Using this field
+   * does not affect what search results are returned. For example, suppose there are 100 products
+   * with the color facet "Red" and 200 products with the color facet "Blue". A query containing the
+   * filter "colorFamilies:ANY("Red")" and having "colorFamilies" as FacetKey.key would by default
+   * return only "Red" products in the search results, and also return "Red" with count 100 as the
+   * only color facet. Although there are also blue products available, "Blue" would not be shown as
+   * an available facet value. If "colorFamilies" is listed in "excludedFilterKeys", then the query
+   * returns the facet values "Red" with count 100 and "Blue" with count 200, because the
+   * "colorFamilies" key is now excluded from the filter. Because this field doesn't affect search
+   * results, the search results are still correctly filtered to return only "Red" products. A
+   * maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,13 +132,18 @@ public final class GoogleCloudRetailV2SearchRequestFacetSpec extends com.google.
 
   /**
    * List of keys to exclude when faceting. By default, FacetKey.key is not excluded from the filter
-   * unless it is listed in this field. For example, suppose there are 100 products with color facet
-   * "Red" and 200 products with color facet "Blue". A query containing the filter
-   * "colorFamilies:ANY("Red")" and have "colorFamilies" as FacetKey.key will by default return the
-   * "Red" with count 100. If this field contains "colorFamilies", then the query returns both the
-   * "Red" with count 100 and "Blue" with count 200, because the "colorFamilies" key is now excluded
-   * from the filter. A maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * unless it is listed in this field. Listing a facet key in this field allows its values to
+   * appear as facet results, even when they are filtered out of search results. Using this field
+   * does not affect what search results are returned. For example, suppose there are 100 products
+   * with the color facet "Red" and 200 products with the color facet "Blue". A query containing the
+   * filter "colorFamilies:ANY("Red")" and having "colorFamilies" as FacetKey.key would by default
+   * return only "Red" products in the search results, and also return "Red" with count 100 as the
+   * only color facet. Although there are also blue products available, "Blue" would not be shown as
+   * an available facet value. If "colorFamilies" is listed in "excludedFilterKeys", then the query
+   * returns the facet values "Red" with count 100 and "Blue" with count 200, because the
+   * "colorFamilies" key is now excluded from the filter. Because this field doesn't affect search
+   * results, the search results are still correctly filtered to return only "Red" products. A
+   * maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedFilterKeys() {
@@ -142,13 +152,18 @@ public final class GoogleCloudRetailV2SearchRequestFacetSpec extends com.google.
 
   /**
    * List of keys to exclude when faceting. By default, FacetKey.key is not excluded from the filter
-   * unless it is listed in this field. For example, suppose there are 100 products with color facet
-   * "Red" and 200 products with color facet "Blue". A query containing the filter
-   * "colorFamilies:ANY("Red")" and have "colorFamilies" as FacetKey.key will by default return the
-   * "Red" with count 100. If this field contains "colorFamilies", then the query returns both the
-   * "Red" with count 100 and "Blue" with count 200, because the "colorFamilies" key is now excluded
-   * from the filter. A maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * unless it is listed in this field. Listing a facet key in this field allows its values to
+   * appear as facet results, even when they are filtered out of search results. Using this field
+   * does not affect what search results are returned. For example, suppose there are 100 products
+   * with the color facet "Red" and 200 products with the color facet "Blue". A query containing the
+   * filter "colorFamilies:ANY("Red")" and having "colorFamilies" as FacetKey.key would by default
+   * return only "Red" products in the search results, and also return "Red" with count 100 as the
+   * only color facet. Although there are also blue products available, "Blue" would not be shown as
+   * an available facet value. If "colorFamilies" is listed in "excludedFilterKeys", then the query
+   * returns the facet values "Red" with count 100 and "Blue" with count 200, because the
+   * "colorFamilies" key is now excluded from the filter. Because this field doesn't affect search
+   * results, the search results are still correctly filtered to return only "Red" products. A
+   * maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param excludedFilterKeys excludedFilterKeys or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequestFacetSpec setExcludedFilterKeys(java.util.List<java.lang.String> excludedFilterKeys) {

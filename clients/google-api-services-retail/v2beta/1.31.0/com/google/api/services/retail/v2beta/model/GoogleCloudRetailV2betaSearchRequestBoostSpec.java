@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2betaSearchRequestBoostSpec extends com.goo
   /**
    * Condition boost specifications. If a product matches multiple conditions in the specifictions,
    * boost scores from these specifications are all applied and combined in a non-linear way.
-   * Maximum number of specifications is 10.
+   * Maximum number of specifications is 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2betaSearchRequestBoostSpec extends com.goo
   /**
    * Condition boost specifications. If a product matches multiple conditions in the specifictions,
    * boost scores from these specifications are all applied and combined in a non-linear way.
-   * Maximum number of specifications is 10.
+   * Maximum number of specifications is 20.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec> getConditionBoostSpecs() {
@@ -60,7 +60,7 @@ public final class GoogleCloudRetailV2betaSearchRequestBoostSpec extends com.goo
   /**
    * Condition boost specifications. If a product matches multiple conditions in the specifictions,
    * boost scores from these specifications are all applied and combined in a non-linear way.
-   * Maximum number of specifications is 10.
+   * Maximum number of specifications is 20.
    * @param conditionBoostSpecs conditionBoostSpecs or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestBoostSpec setConditionBoostSpecs(java.util.List<GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec> conditionBoostSpecs) {

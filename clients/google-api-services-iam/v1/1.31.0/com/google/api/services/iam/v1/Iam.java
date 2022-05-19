@@ -9206,7 +9206,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Disable a ServiceAccountKey. A disabled service account key can be enabled through
+         * Disable a ServiceAccountKey. A disabled service account key can be re-enabled with
          * EnableServiceAccountKey.
          *
          * Create a request for the method "keys.disable".
@@ -9235,7 +9235,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
 
           /**
-           * Disable a ServiceAccountKey. A disabled service account key can be enabled through
+           * Disable a ServiceAccountKey. A disabled service account key can be re-enabled with
            * EnableServiceAccountKey.
            *
            * Create a request for the method "keys.disable".

@@ -62,6 +62,12 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private SlsaProvenance02 slsaProvenance02;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<Subject> subject;
 
   /**
@@ -125,6 +131,21 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
    */
   public InTotoStatement setSlsaProvenance(SlsaProvenance slsaProvenance) {
     this.slsaProvenance = slsaProvenance;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SlsaProvenance02 getSlsaProvenance02() {
+    return slsaProvenance02;
+  }
+
+  /**
+   * @param slsaProvenance02 slsaProvenance02 or {@code null} for none
+   */
+  public InTotoStatement setSlsaProvenance02(SlsaProvenance02 slsaProvenance02) {
+    this.slsaProvenance02 = slsaProvenance02;
     return this;
   }
 

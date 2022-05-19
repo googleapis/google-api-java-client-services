@@ -17,7 +17,10 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * Common Vulnerability Scoring System.
+ * Common Vulnerability Scoring System. This message is compatible with CVSS v2 and v3. For CVSS v2
+ * details, see https://www.first.org/cvss/v2/guide CVSS v2 calculator: https://nvd.nist.gov/vuln-
+ * metrics/cvss/v2-calculator For CVSS v3 details, see https://www.first.org/cvss/specification-
+ * document CVSS v3 calculator: https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -31,6 +34,7 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class CVSS extends com.google.api.client.json.GenericJson {
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,19 +42,21 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
 
   /**
    * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments.
+   * time and across user environments. Defined in CVSS v3, CVSS v2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attackVector;
 
   /**
+   * Defined in CVSS v2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authentication;
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,6 +70,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   private java.lang.Float baseScore;
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,30 +89,35 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   private java.lang.Float impactScore;
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String integrityImpact;
 
   /**
+   * Defined in CVSS v3
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privilegesRequired;
 
   /**
+   * Defined in CVSS v3
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scope;
 
   /**
+   * Defined in CVSS v3
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userInteraction;
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackComplexity() {
@@ -113,6 +125,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @param attackComplexity attackComplexity or {@code null} for none
    */
   public CVSS setAttackComplexity(java.lang.String attackComplexity) {
@@ -122,7 +135,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
 
   /**
    * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments.
+   * time and across user environments. Defined in CVSS v3, CVSS v2
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackVector() {
@@ -131,7 +144,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
 
   /**
    * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments.
+   * time and across user environments. Defined in CVSS v3, CVSS v2
    * @param attackVector attackVector or {@code null} for none
    */
   public CVSS setAttackVector(java.lang.String attackVector) {
@@ -140,6 +153,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v2
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthentication() {
@@ -147,6 +161,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v2
    * @param authentication authentication or {@code null} for none
    */
   public CVSS setAuthentication(java.lang.String authentication) {
@@ -155,6 +170,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityImpact() {
@@ -162,6 +178,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @param availabilityImpact availabilityImpact or {@code null} for none
    */
   public CVSS setAvailabilityImpact(java.lang.String availabilityImpact) {
@@ -187,6 +204,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @return value or {@code null} for none
    */
   public java.lang.String getConfidentialityImpact() {
@@ -194,6 +212,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @param confidentialityImpact confidentialityImpact or {@code null} for none
    */
   public CVSS setConfidentialityImpact(java.lang.String confidentialityImpact) {
@@ -232,6 +251,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegrityImpact() {
@@ -239,6 +259,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3, CVSS v2
    * @param integrityImpact integrityImpact or {@code null} for none
    */
   public CVSS setIntegrityImpact(java.lang.String integrityImpact) {
@@ -247,6 +268,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivilegesRequired() {
@@ -254,6 +276,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3
    * @param privilegesRequired privilegesRequired or {@code null} for none
    */
   public CVSS setPrivilegesRequired(java.lang.String privilegesRequired) {
@@ -262,6 +285,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -269,6 +293,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3
    * @param scope scope or {@code null} for none
    */
   public CVSS setScope(java.lang.String scope) {
@@ -277,6 +302,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3
    * @return value or {@code null} for none
    */
   public java.lang.String getUserInteraction() {
@@ -284,6 +310,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defined in CVSS v3
    * @param userInteraction userInteraction or {@code null} for none
    */
   public CVSS setUserInteraction(java.lang.String userInteraction) {

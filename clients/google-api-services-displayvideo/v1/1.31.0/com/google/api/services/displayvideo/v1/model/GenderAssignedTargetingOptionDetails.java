@@ -18,7 +18,7 @@ package com.google.api.services.displayvideo.v1.model;
 
 /**
  * Details for assigned gender targeting option. This will be populated in the details field of an
- * AssignedTargetingOption when targeting_type is `TARTGETING_TYPE_GENDER`.
+ * AssignedTargetingOption when targeting_type is `TARGETING_TYPE_GENDER`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

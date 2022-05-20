@@ -192,16 +192,17 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
-   * queries such as voice commands or voice search. phone_call Best for audio that originated from
-   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
-   * originated from video or includes multiple speakers. Ideally the audio is recorded at a 16khz
-   * or greater sampling rate. This is a premium model that costs more than the standard rate.
-   * default Best for audio that is not one of the specific audio models. For example, long-form
-   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
-   * medical_conversation Best for audio that originated from a conversation between a medical
-   * provider and patient. medical_dictation Best for audio that originated from dictation notes by
-   * a medical provider.
+   * parameters in the RecognitionConfig. *Model* *Description* latest_long Best for long form
+   * content like media or conversation. latest_short Best for short form content like commands or
+   * single shot directed speech. command_and_search Best for short queries such as voice commands
+   * or voice search. phone_call Best for audio that originated from a phone call (typically
+   * recorded at an 8khz sampling rate). video Best for audio that originated from video or includes
+   * multiple speakers. Ideally the audio is recorded at a 16khz or greater sampling rate. This is a
+   * premium model that costs more than the standard rate. default Best for audio that is not one of
+   * the specific audio models. For example, long-form audio. Ideally the audio is high-fidelity,
+   * recorded at a 16khz or greater sampling rate. medical_conversation Best for audio that
+   * originated from a conversation between a medical provider and patient. medical_dictation Best
+   * for audio that originated from dictation notes by a medical provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -624,16 +625,17 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
-   * queries such as voice commands or voice search. phone_call Best for audio that originated from
-   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
-   * originated from video or includes multiple speakers. Ideally the audio is recorded at a 16khz
-   * or greater sampling rate. This is a premium model that costs more than the standard rate.
-   * default Best for audio that is not one of the specific audio models. For example, long-form
-   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
-   * medical_conversation Best for audio that originated from a conversation between a medical
-   * provider and patient. medical_dictation Best for audio that originated from dictation notes by
-   * a medical provider.
+   * parameters in the RecognitionConfig. *Model* *Description* latest_long Best for long form
+   * content like media or conversation. latest_short Best for short form content like commands or
+   * single shot directed speech. command_and_search Best for short queries such as voice commands
+   * or voice search. phone_call Best for audio that originated from a phone call (typically
+   * recorded at an 8khz sampling rate). video Best for audio that originated from video or includes
+   * multiple speakers. Ideally the audio is recorded at a 16khz or greater sampling rate. This is a
+   * premium model that costs more than the standard rate. default Best for audio that is not one of
+   * the specific audio models. For example, long-form audio. Ideally the audio is high-fidelity,
+   * recorded at a 16khz or greater sampling rate. medical_conversation Best for audio that
+   * originated from a conversation between a medical provider and patient. medical_dictation Best
+   * for audio that originated from dictation notes by a medical provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -643,16 +645,17 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
-   * queries such as voice commands or voice search. phone_call Best for audio that originated from
-   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
-   * originated from video or includes multiple speakers. Ideally the audio is recorded at a 16khz
-   * or greater sampling rate. This is a premium model that costs more than the standard rate.
-   * default Best for audio that is not one of the specific audio models. For example, long-form
-   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
-   * medical_conversation Best for audio that originated from a conversation between a medical
-   * provider and patient. medical_dictation Best for audio that originated from dictation notes by
-   * a medical provider.
+   * parameters in the RecognitionConfig. *Model* *Description* latest_long Best for long form
+   * content like media or conversation. latest_short Best for short form content like commands or
+   * single shot directed speech. command_and_search Best for short queries such as voice commands
+   * or voice search. phone_call Best for audio that originated from a phone call (typically
+   * recorded at an 8khz sampling rate). video Best for audio that originated from video or includes
+   * multiple speakers. Ideally the audio is recorded at a 16khz or greater sampling rate. This is a
+   * premium model that costs more than the standard rate. default Best for audio that is not one of
+   * the specific audio models. For example, long-form audio. Ideally the audio is high-fidelity,
+   * recorded at a 16khz or greater sampling rate. medical_conversation Best for audio that
+   * originated from a conversation between a medical provider and patient. medical_dictation Best
+   * for audio that originated from dictation notes by a medical provider.
    * @param model model or {@code null} for none
    */
   public RecognitionConfig setModel(java.lang.String model) {

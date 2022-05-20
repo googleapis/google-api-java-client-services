@@ -41,6 +41,13 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   private java.lang.String content;
 
   /**
+   * Matcher information for MATCHES_JSON_PATH and NOT_MATCHES_JSON_PATH
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonPathMatcher jsonPathMatcher;
+
+  /**
    * The type of content matcher that will be applied to the server output, compared to the content
    * string when the check is run.
    * The value may be {@code null}.
@@ -64,6 +71,23 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
    */
   public ContentMatcher setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Matcher information for MATCHES_JSON_PATH and NOT_MATCHES_JSON_PATH
+   * @return value or {@code null} for none
+   */
+  public JsonPathMatcher getJsonPathMatcher() {
+    return jsonPathMatcher;
+  }
+
+  /**
+   * Matcher information for MATCHES_JSON_PATH and NOT_MATCHES_JSON_PATH
+   * @param jsonPathMatcher jsonPathMatcher or {@code null} for none
+   */
+  public ContentMatcher setJsonPathMatcher(JsonPathMatcher jsonPathMatcher) {
+    this.jsonPathMatcher = jsonPathMatcher;
     return this;
   }
 

@@ -48,6 +48,15 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ackDeadlineSeconds;
 
   /**
+   * If delivery to BigQuery is used with this subscription, this field is used to configure it. At
+   * most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the
+   * subscriber will pull and ack messages using API methods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryConfig bigqueryConfig;
+
+  /**
    * A policy that specifies the conditions for dead lettering messages in this subscription. If
    * dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account
    * associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-
@@ -234,6 +243,27 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {
     this.ackDeadlineSeconds = ackDeadlineSeconds;
+    return this;
+  }
+
+  /**
+   * If delivery to BigQuery is used with this subscription, this field is used to configure it. At
+   * most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the
+   * subscriber will pull and ack messages using API methods.
+   * @return value or {@code null} for none
+   */
+  public BigQueryConfig getBigqueryConfig() {
+    return bigqueryConfig;
+  }
+
+  /**
+   * If delivery to BigQuery is used with this subscription, this field is used to configure it. At
+   * most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the
+   * subscriber will pull and ack messages using API methods.
+   * @param bigqueryConfig bigqueryConfig or {@code null} for none
+   */
+  public Subscription setBigqueryConfig(BigQueryConfig bigqueryConfig) {
+    this.bigqueryConfig = bigqueryConfig;
     return this;
   }
 

@@ -108,6 +108,19 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Secret volumes configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecretVolume> secretVolumes;
+
+  static {
+    // hack to force ProGuard to consider SecretVolume used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SecretVolume.class);
+  }
+
+  /**
    * Output only. Name of the service associated with a Function. The format of this field is
    * `projects/{project}/locations/{region}/services/{service}`
    * The value may be {@code null}.
@@ -318,6 +331,23 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   public ServiceConfig setSecretEnvironmentVariables(java.util.List<SecretEnvVar> secretEnvironmentVariables) {
     this.secretEnvironmentVariables = secretEnvironmentVariables;
+    return this;
+  }
+
+  /**
+   * Secret volumes configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecretVolume> getSecretVolumes() {
+    return secretVolumes;
+  }
+
+  /**
+   * Secret volumes configuration.
+   * @param secretVolumes secretVolumes or {@code null} for none
+   */
+  public ServiceConfig setSecretVolumes(java.util.List<SecretVolume> secretVolumes) {
+    this.secretVolumes = secretVolumes;
     return this;
   }
 

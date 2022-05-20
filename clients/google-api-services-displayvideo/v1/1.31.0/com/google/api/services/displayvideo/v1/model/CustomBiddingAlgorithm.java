@@ -75,6 +75,17 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   private java.lang.String entityStatus;
 
   /**
+   * Output only. The custom bidding model readiness state for each advertiser who have access. This
+   * field may only include the state of the queried advertiser if the algorithm [`owner`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
+   * is a partner and is being retrieved using an advertiser [`accessor`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomBiddingModelReadinessState> modelReadiness;
+
+  /**
    * Output only. The resource name of the custom bidding algorithm.
    * The value may be {@code null}.
    */
@@ -203,6 +214,31 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
    */
   public CustomBiddingAlgorithm setEntityStatus(java.lang.String entityStatus) {
     this.entityStatus = entityStatus;
+    return this;
+  }
+
+  /**
+   * Output only. The custom bidding model readiness state for each advertiser who have access. This
+   * field may only include the state of the queried advertiser if the algorithm [`owner`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
+   * is a partner and is being retrieved using an advertiser [`accessor`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomBiddingModelReadinessState> getModelReadiness() {
+    return modelReadiness;
+  }
+
+  /**
+   * Output only. The custom bidding model readiness state for each advertiser who have access. This
+   * field may only include the state of the queried advertiser if the algorithm [`owner`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
+   * is a partner and is being retrieved using an advertiser [`accessor`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
+   * @param modelReadiness modelReadiness or {@code null} for none
+   */
+  public CustomBiddingAlgorithm setModelReadiness(java.util.List<CustomBiddingModelReadinessState> modelReadiness) {
+    this.modelReadiness = modelReadiness;
     return this;
   }
 

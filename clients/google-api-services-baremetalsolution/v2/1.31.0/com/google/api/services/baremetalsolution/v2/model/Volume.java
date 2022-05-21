@@ -79,6 +79,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Immutable. Pod name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pod;
+
+  /**
    * The space remaining in the storage volume for new LUNs, in GiB, excluding space reserved for
    * snapshots.
    * The value may be {@code null}.
@@ -246,6 +253,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Immutable. Pod name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPod() {
+    return pod;
+  }
+
+  /**
+   * Immutable. Pod name.
+   * @param pod pod or {@code null} for none
+   */
+  public Volume setPod(java.lang.String pod) {
+    this.pod = pod;
     return this;
   }
 

@@ -61,9 +61,11 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.Integer diskSizeGb;
 
   /**
-   * If true, save a heap dump before killing a thread or process which is GC thrashing or out of
-   * memory. The location of the heap file will either be echoed back to the user, or the user will
-   * be given the opportunity to download the heap file.
+   * If true, when processing time is spent almost entirely on garbage collection (GC), saves a heap
+   * dump before ending the thread or process. If false, ends the thread or process without saving a
+   * heap dump. Does not save a heap dump when the Java Virtual Machine (JVM) has an out of memory
+   * error during processing. The location of the heap file is either echoed back to the user, or
+   * the user is given the opportunity to download the heap file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,8 +138,8 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.Integer numWorkers;
 
   /**
-   * Cloud Storage bucket (directory) to upload heap dumps to the given location. Enabling this
-   * implies that heap dumps should be generated on OOM (dump_heap_on_oom is set to true).
+   * Cloud Storage bucket (directory) to upload heap dumps to. Enabling this field implies that
+   * `dump_heap_on_oom` is set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,9 +291,11 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
-   * If true, save a heap dump before killing a thread or process which is GC thrashing or out of
-   * memory. The location of the heap file will either be echoed back to the user, or the user will
-   * be given the opportunity to download the heap file.
+   * If true, when processing time is spent almost entirely on garbage collection (GC), saves a heap
+   * dump before ending the thread or process. If false, ends the thread or process without saving a
+   * heap dump. Does not save a heap dump when the Java Virtual Machine (JVM) has an out of memory
+   * error during processing. The location of the heap file is either echoed back to the user, or
+   * the user is given the opportunity to download the heap file.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDumpHeapOnOom() {
@@ -299,9 +303,11 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
-   * If true, save a heap dump before killing a thread or process which is GC thrashing or out of
-   * memory. The location of the heap file will either be echoed back to the user, or the user will
-   * be given the opportunity to download the heap file.
+   * If true, when processing time is spent almost entirely on garbage collection (GC), saves a heap
+   * dump before ending the thread or process. If false, ends the thread or process without saving a
+   * heap dump. Does not save a heap dump when the Java Virtual Machine (JVM) has an out of memory
+   * error during processing. The location of the heap file is either echoed back to the user, or
+   * the user is given the opportunity to download the heap file.
    * @param dumpHeapOnOom dumpHeapOnOom or {@code null} for none
    */
   public FlexTemplateRuntimeEnvironment setDumpHeapOnOom(java.lang.Boolean dumpHeapOnOom) {
@@ -469,8 +475,8 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
-   * Cloud Storage bucket (directory) to upload heap dumps to the given location. Enabling this
-   * implies that heap dumps should be generated on OOM (dump_heap_on_oom is set to true).
+   * Cloud Storage bucket (directory) to upload heap dumps to. Enabling this field implies that
+   * `dump_heap_on_oom` is set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getSaveHeapDumpsToGcsPath() {
@@ -478,8 +484,8 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
-   * Cloud Storage bucket (directory) to upload heap dumps to the given location. Enabling this
-   * implies that heap dumps should be generated on OOM (dump_heap_on_oom is set to true).
+   * Cloud Storage bucket (directory) to upload heap dumps to. Enabling this field implies that
+   * `dump_heap_on_oom` is set to true.
    * @param saveHeapDumpsToGcsPath saveHeapDumpsToGcsPath or {@code null} for none
    */
   public FlexTemplateRuntimeEnvironment setSaveHeapDumpsToGcsPath(java.lang.String saveHeapDumpsToGcsPath) {

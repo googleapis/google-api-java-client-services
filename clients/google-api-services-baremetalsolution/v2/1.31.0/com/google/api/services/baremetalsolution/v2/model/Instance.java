@@ -105,6 +105,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String osImage;
 
   /**
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Instance can be connected to
+   * the assets (networks, volumes) allocated in the same pod only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pod;
+
+  /**
    * The state of the server.
    * The value may be {@code null}.
    */
@@ -293,6 +301,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setOsImage(java.lang.String osImage) {
     this.osImage = osImage;
+    return this;
+  }
+
+  /**
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Instance can be connected to
+   * the assets (networks, volumes) allocated in the same pod only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPod() {
+    return pod;
+  }
+
+  /**
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Instance can be connected to
+   * the assets (networks, volumes) allocated in the same pod only.
+   * @param pod pod or {@code null} for none
+   */
+  public Instance setPod(java.lang.String pod) {
+    this.pod = pod;
     return this;
   }
 

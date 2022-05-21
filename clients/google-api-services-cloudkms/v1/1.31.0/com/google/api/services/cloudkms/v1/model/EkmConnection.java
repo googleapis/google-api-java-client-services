@@ -40,8 +40,8 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   private String createTime;
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +81,8 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update requests to ensure the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -90,8 +90,8 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update requests to ensure the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public EkmConnection setEtag(java.lang.String etag) {

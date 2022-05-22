@@ -2261,8 +2261,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @return the request
          */
         public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -2290,8 +2291,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @since 1.13
            */
           protected GetIamPolicy(java.lang.String resource) {
@@ -2370,22 +2372,25 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public GetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -3618,8 +3623,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.notebooks.v1.model.SetIamPolicyRequest}
          * @return the request
          */
@@ -3648,8 +3654,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.notebooks.v1.model.SetIamPolicyRequest}
            * @since 1.13
            */
@@ -3719,22 +3726,25 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public SetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -4301,8 +4311,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.notebooks.v1.model.TestIamPermissionsRequest}
          * @return the request
          */
@@ -4333,8 +4344,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.notebooks.v1.model.TestIamPermissionsRequest}
            * @since 1.13
            */
@@ -4404,22 +4416,25 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-         documentation for the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public TestIamPermissions setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -6235,8 +6250,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @return the request
          */
         public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -6264,8 +6280,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @since 1.13
            */
           protected GetIamPolicy(java.lang.String resource) {
@@ -6344,22 +6361,25 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public GetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -6593,6 +6613,203 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update Notebook Runtime configuration.
+         *
+         * Create a request for the method "runtimes.patch".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The resource name of the runtime. Format:
+         *        `projects/{project}/locations/{location}/runtimes/{runtimeId}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.Runtime}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.notebooks.v1.model.Runtime content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+
+          /**
+           * Update Notebook Runtime configuration.
+           *
+           * Create a request for the method "runtimes.patch".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The resource name of the runtime. Format:
+         *        `projects/{project}/locations/{location}/runtimes/{runtimeId}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.Runtime}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.notebooks.v1.model.Runtime content) {
+            super(AIPlatformNotebooks.this, "PATCH", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The resource name of the runtime. Format:
+           * `projects/{project}/locations/{location}/runtimes/{runtimeId}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The resource name of the runtime. Format:
+         `projects/{project}/locations/{location}/runtimes/{runtimeId}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The resource name of the runtime. Format:
+           * `projects/{project}/locations/{location}/runtimes/{runtimeId}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Idempotent request UUID. */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Specifies the path, relative to `Runtime`, of the field to update. For
+           * example, to change the software configuration kernels, the `update_mask` parameter
+           * would be specified as `software_config.kernels`, and the `PATCH` request body would
+           * specify the new value, as follows: { "software_config":{ "kernels": [{ 'repository':
+           * 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag': 'latest' }], } } Currently,
+           * only the following fields can be updated: - software_config.kernels -
+           * software_config.post_startup_script - software_config.custom_gpu_driver_path -
+           * software_config.idle_shutdown - software_config.idle_shutdown_timeout
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Specifies the path, relative to `Runtime`, of the field to update. For example, to change
+         the software configuration kernels, the `update_mask` parameter would be specified as
+         `software_config.kernels`, and the `PATCH` request body would specify the new value, as follows: {
+         "software_config":{ "kernels": [{ 'repository': 'gcr.io/deeplearning-platform-release/pytorch-gpu',
+         'tag': 'latest' }], } } Currently, only the following fields can be updated: -
+         software_config.kernels - software_config.post_startup_script -
+         software_config.custom_gpu_driver_path - software_config.idle_shutdown -
+         software_config.idle_shutdown_timeout
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Specifies the path, relative to `Runtime`, of the field to update. For
+           * example, to change the software configuration kernels, the `update_mask` parameter
+           * would be specified as `software_config.kernels`, and the `PATCH` request body would
+           * specify the new value, as follows: { "software_config":{ "kernels": [{ 'repository':
+           * 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag': 'latest' }], } } Currently,
+           * only the following fields can be updated: - software_config.kernels -
+           * software_config.post_startup_script - software_config.custom_gpu_driver_path -
+           * software_config.idle_shutdown - software_config.idle_shutdown_timeout
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -7012,8 +7229,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.notebooks.v1.model.SetIamPolicyRequest}
          * @return the request
          */
@@ -7042,8 +7260,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.notebooks.v1.model.SetIamPolicyRequest}
            * @since 1.13
            */
@@ -7113,22 +7332,25 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public SetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -7569,8 +7791,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.notebooks.v1.model.TestIamPermissionsRequest}
          * @return the request
          */
@@ -7601,8 +7824,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.notebooks.v1.model.TestIamPermissionsRequest}
            * @since 1.13
            */
@@ -7672,22 +7896,25 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-         documentation for the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public TestIamPermissions setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {

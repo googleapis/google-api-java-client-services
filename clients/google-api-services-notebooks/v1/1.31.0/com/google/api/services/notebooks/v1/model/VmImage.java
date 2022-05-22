@@ -46,7 +46,7 @@ public final class VmImage extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the Google Cloud project that this VM image belongs to. Format:
-   * `projects/{project_id}`
+   * `{project_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class VmImage extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the Google Cloud project that this VM image belongs to. Format:
-   * `projects/{project_id}`
+   * `{project_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -97,7 +97,7 @@ public final class VmImage extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the Google Cloud project that this VM image belongs to. Format:
-   * `projects/{project_id}`
+   * `{project_id}`
    * @param project project or {@code null} for none
    */
   public VmImage setProject(java.lang.String project) {

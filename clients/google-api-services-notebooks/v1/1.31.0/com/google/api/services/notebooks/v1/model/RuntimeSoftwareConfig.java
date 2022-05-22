@@ -97,6 +97,13 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   private java.lang.String postStartupScript;
 
   /**
+   * Behavior for the post startup script.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String postStartupScriptBehavior;
+
+  /**
    * Output only. Bool indicating whether an newer image is available in an image family.
    * The value may be {@code null}.
    */
@@ -242,6 +249,23 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
    */
   public RuntimeSoftwareConfig setPostStartupScript(java.lang.String postStartupScript) {
     this.postStartupScript = postStartupScript;
+    return this;
+  }
+
+  /**
+   * Behavior for the post startup script.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPostStartupScriptBehavior() {
+    return postStartupScriptBehavior;
+  }
+
+  /**
+   * Behavior for the post startup script.
+   * @param postStartupScriptBehavior postStartupScriptBehavior or {@code null} for none
+   */
+  public RuntimeSoftwareConfig setPostStartupScriptBehavior(java.lang.String postStartupScriptBehavior) {
+    this.postStartupScriptBehavior = postStartupScriptBehavior;
     return this;
   }
 

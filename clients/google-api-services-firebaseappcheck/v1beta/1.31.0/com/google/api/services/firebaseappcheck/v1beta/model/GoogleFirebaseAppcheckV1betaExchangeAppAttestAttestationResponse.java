@@ -45,7 +45,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   private java.lang.String artifact;
 
   /**
-   * This field has been renamed to `app_check_token`. Encapsulates an App Check token.
+   * Encapsulates an App Check token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   }
 
   /**
-   * This field has been renamed to `app_check_token`. Encapsulates an App Check token.
+   * Encapsulates an App Check token.
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaAttestationTokenResponse getAttestationToken() {
@@ -122,7 +122,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   }
 
   /**
-   * This field has been renamed to `app_check_token`. Encapsulates an App Check token.
+   * Encapsulates an App Check token.
    * @param attestationToken attestationToken or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse setAttestationToken(GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken) {

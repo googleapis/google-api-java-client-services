@@ -1864,7 +1864,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the Gateway. Must be in the format `projects/locations/global`.
+         * @param parent Required. The parent resource of the Gateway. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Gateway}
          * @return the request
          */
@@ -1892,7 +1892,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the Gateway. Must be in the format `projects/locations/global`.
+           * @param parent Required. The parent resource of the Gateway. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Gateway}
            * @since 1.13
            */
@@ -1963,12 +1963,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the Gateway. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the Gateway. Must be in the format `projects/locations/global`.
+          /** Required. The parent resource of the Gateway. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1976,7 +1976,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the Gateway. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2017,8 +2017,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the Gateway to delete. Must be in the format
-         *        `projects/locations/global/gateways`.
+         * @param name Required. A name of the Gateway to delete. Must be in the format `projects/locations/gateways`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2045,8 +2044,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the Gateway to delete. Must be in the format
-         *        `projects/locations/global/gateways`.
+           * @param name Required. A name of the Gateway to delete. Must be in the format `projects/locations/gateways`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2116,13 +2114,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the Gateway to delete. Must be in the format
-           * `projects/locations/global/gateways`.
+           * `projects/locations/gateways`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the Gateway to delete. Must be in the format
-         `projects/locations/global/gateways`.
+          /** Required. A name of the Gateway to delete. Must be in the format `projects/locations/gateways`.
            */
           public java.lang.String getName() {
             return name;
@@ -2130,7 +2127,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the Gateway to delete. Must be in the format
-           * `projects/locations/global/gateways`.
+           * `projects/locations/gateways`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2155,7 +2152,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the Gateway to get. Must be in the format `projects/locations/global/gateways`.
+         * @param name Required. A name of the Gateway to get. Must be in the format `projects/locations/gateways`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2181,7 +2178,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the Gateway to get. Must be in the format `projects/locations/global/gateways`.
+           * @param name Required. A name of the Gateway to get. Must be in the format `projects/locations/gateways`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2261,12 +2258,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the Gateway to get. Must be in the format
-           * `projects/locations/global/gateways`.
+           * `projects/locations/gateways`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the Gateway to get. Must be in the format `projects/locations/global/gateways`.
+          /** Required. A name of the Gateway to get. Must be in the format `projects/locations/gateways`.
            */
           public java.lang.String getName() {
             return name;
@@ -2274,7 +2271,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the Gateway to get. Must be in the format
-           * `projects/locations/global/gateways`.
+           * `projects/locations/gateways`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2499,7 +2496,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the Gateways should be listed, specified in the format
-         *        `projects/locations/global`.
+         *        `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2526,7 +2523,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the Gateways should be listed, specified in the format
-         *        `projects/locations/global`.
+         *        `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2606,13 +2603,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the Gateways should be listed, specified
-           * in the format `projects/locations/global`.
+           * in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the Gateways should be listed, specified in the
-         format `projects/locations/global`.
+         format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2620,7 +2617,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the Gateways should be listed, specified
-           * in the format `projects/locations/global`.
+           * in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2686,7 +2683,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the Gateway resource. It matches pattern `projects/locations/global/gateways/`.
+         * @param name Required. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Gateway}
          * @return the request
          */
@@ -2714,7 +2711,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the Gateway resource. It matches pattern `projects/locations/global/gateways/`.
+           * @param name Required. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Gateway}
            * @since 1.13
            */
@@ -2785,12 +2782,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Name of the Gateway resource. It matches pattern
-           * `projects/locations/global/gateways/`.
+           * `projects/locations/gateways/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the Gateway resource. It matches pattern `projects/locations/global/gateways/`.
+          /** Required. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
            */
           public java.lang.String getName() {
             return name;
@@ -2798,7 +2795,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Name of the Gateway resource. It matches pattern
-           * `projects/locations/global/gateways/`.
+           * `projects/locations/gateways/`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

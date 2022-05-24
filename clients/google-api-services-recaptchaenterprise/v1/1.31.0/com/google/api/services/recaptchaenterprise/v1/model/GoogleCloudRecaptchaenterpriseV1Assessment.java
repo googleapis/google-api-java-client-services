@@ -53,6 +53,14 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private java.lang.String name;
 
   /**
+   * The private password leak verification field contains the parameters used to check for leaks
+   * privately without sharing user credentials.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification privatePasswordLeakVerification;
+
+  /**
    * Output only. The risk analysis result for the event being assessed.
    * The value may be {@code null}.
    */
@@ -116,6 +124,25 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The private password leak verification field contains the parameters used to check for leaks
+   * privately without sharing user credentials.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification getPrivatePasswordLeakVerification() {
+    return privatePasswordLeakVerification;
+  }
+
+  /**
+   * The private password leak verification field contains the parameters used to check for leaks
+   * privately without sharing user credentials.
+   * @param privatePasswordLeakVerification privatePasswordLeakVerification or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setPrivatePasswordLeakVerification(GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification privatePasswordLeakVerification) {
+    this.privatePasswordLeakVerification = privatePasswordLeakVerification;
     return this;
   }
 

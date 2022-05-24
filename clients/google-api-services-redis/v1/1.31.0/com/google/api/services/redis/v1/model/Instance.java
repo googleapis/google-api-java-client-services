@@ -82,6 +82,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String currentLocationId;
 
   /**
+   * Optional. The KMS key reference that the customer provides when trying to create the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerManagedKey;
+
+  /**
    * An arbitrary and optional user-provided name for the instance.
    * The value may be {@code null}.
    */
@@ -127,14 +134,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private MaintenanceSchedule maintenanceSchedule;
-
-  /**
-   * Optional. The self service update maintenance version. The version is date based such as
-   * "20210712_00_00".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String maintenanceVersion;
 
   /**
    * Required. Redis memory size in GiB.
@@ -284,6 +283,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> suspensionReasons;
+
+  /**
    * Required. The service tier of the instance.
    * The value may be {@code null}.
    */
@@ -419,6 +425,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The KMS key reference that the customer provides when trying to create the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerManagedKey() {
+    return customerManagedKey;
+  }
+
+  /**
+   * Optional. The KMS key reference that the customer provides when trying to create the instance.
+   * @param customerManagedKey customerManagedKey or {@code null} for none
+   */
+  public Instance setCustomerManagedKey(java.lang.String customerManagedKey) {
+    this.customerManagedKey = customerManagedKey;
+    return this;
+  }
+
+  /**
    * An arbitrary and optional user-provided name for the instance.
    * @return value or {@code null} for none
    */
@@ -527,25 +550,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setMaintenanceSchedule(MaintenanceSchedule maintenanceSchedule) {
     this.maintenanceSchedule = maintenanceSchedule;
-    return this;
-  }
-
-  /**
-   * Optional. The self service update maintenance version. The version is date based such as
-   * "20210712_00_00".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMaintenanceVersion() {
-    return maintenanceVersion;
-  }
-
-  /**
-   * Optional. The self service update maintenance version. The version is date based such as
-   * "20210712_00_00".
-   * @param maintenanceVersion maintenanceVersion or {@code null} for none
-   */
-  public Instance setMaintenanceVersion(java.lang.String maintenanceVersion) {
-    this.maintenanceVersion = maintenanceVersion;
     return this;
   }
 
@@ -891,6 +895,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSuspensionReasons() {
+    return suspensionReasons;
+  }
+
+  /**
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   * @param suspensionReasons suspensionReasons or {@code null} for none
+   */
+  public Instance setSuspensionReasons(java.util.List<java.lang.String> suspensionReasons) {
+    this.suspensionReasons = suspensionReasons;
     return this;
   }
 

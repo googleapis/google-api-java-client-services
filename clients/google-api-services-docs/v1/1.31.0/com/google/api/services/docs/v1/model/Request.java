@@ -177,6 +177,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private MergeTableCellsRequest mergeTableCells;
 
   /**
+   * Updates the number of pinned header rows in a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PinTableHeaderRowsRequest pinTableHeaderRows;
+
+  /**
    * Replaces all instances of the specified text.
    * The value may be {@code null}.
    */
@@ -607,6 +614,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setMergeTableCells(MergeTableCellsRequest mergeTableCells) {
     this.mergeTableCells = mergeTableCells;
+    return this;
+  }
+
+  /**
+   * Updates the number of pinned header rows in a table.
+   * @return value or {@code null} for none
+   */
+  public PinTableHeaderRowsRequest getPinTableHeaderRows() {
+    return pinTableHeaderRows;
+  }
+
+  /**
+   * Updates the number of pinned header rows in a table.
+   * @param pinTableHeaderRows pinTableHeaderRows or {@code null} for none
+   */
+  public Request setPinTableHeaderRows(PinTableHeaderRowsRequest pinTableHeaderRows) {
+    this.pinTableHeaderRows = pinTableHeaderRows;
     return this;
   }
 

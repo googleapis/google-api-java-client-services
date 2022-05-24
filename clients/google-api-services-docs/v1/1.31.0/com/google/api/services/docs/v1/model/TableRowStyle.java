@@ -38,6 +38,20 @@ public final class TableRowStyle extends com.google.api.client.json.GenericJson 
   private Dimension minRowHeight;
 
   /**
+   * Whether the row cannot overflow across page or column boundaries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preventOverflow;
+
+  /**
+   * Whether the row is a table header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean tableHeader;
+
+  /**
    * The minimum height of the row. The row will be rendered in the Docs editor at a height equal to
    * or greater than this value in order to show all the content in the row's cells.
    * @return value or {@code null} for none
@@ -53,6 +67,40 @@ public final class TableRowStyle extends com.google.api.client.json.GenericJson 
    */
   public TableRowStyle setMinRowHeight(Dimension minRowHeight) {
     this.minRowHeight = minRowHeight;
+    return this;
+  }
+
+  /**
+   * Whether the row cannot overflow across page or column boundaries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreventOverflow() {
+    return preventOverflow;
+  }
+
+  /**
+   * Whether the row cannot overflow across page or column boundaries.
+   * @param preventOverflow preventOverflow or {@code null} for none
+   */
+  public TableRowStyle setPreventOverflow(java.lang.Boolean preventOverflow) {
+    this.preventOverflow = preventOverflow;
+    return this;
+  }
+
+  /**
+   * Whether the row is a table header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTableHeader() {
+    return tableHeader;
+  }
+
+  /**
+   * Whether the row is a table header.
+   * @param tableHeader tableHeader or {@code null} for none
+   */
+  public TableRowStyle setTableHeader(java.lang.Boolean tableHeader) {
+    this.tableHeader = tableHeader;
     return this;
   }
 

@@ -7814,7 +7814,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id]" or "projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -7843,7 +7843,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id]" or "projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -7914,13 +7914,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id]" or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new notification config's parent. Its format is
-       "organizations/[organization_id]".
+       "organizations/[organization_id]" or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -7928,7 +7928,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id]" or "projects/[project_id]".
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8264,7 +8264,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Name of the organization to list notification configs. Its format is
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id]" or "projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8291,7 +8291,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Name of the organization to list notification configs. Its format is
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id]" or "projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8371,13 +8371,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization to list notification configs. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id]" or "projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Name of the organization to list notification configs. Its format is
-       "organizations/[organization_id]".
+       "organizations/[organization_id]" or "projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -8385,7 +8385,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization to list notification configs. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id]" or "projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

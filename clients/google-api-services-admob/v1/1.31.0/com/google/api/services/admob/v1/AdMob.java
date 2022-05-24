@@ -605,22 +605,24 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will
-         * be returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         * The maximum number of ad units to return. If unspecified or 0, at most 10,000 ad units
+         * will be returned. The maximum value is 20,000; values above 20,000 will be coerced to
+         * 20,000.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will be
-       returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+        /** The maximum number of ad units to return. If unspecified or 0, at most 10,000 ad units will be
+       returned. The maximum value is 20,000; values above 20,000 will be coerced to 20,000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will
-         * be returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         * The maximum number of ad units to return. If unspecified or 0, at most 10,000 ad units
+         * will be returned. The maximum value is 20,000; values above 20,000 will be coerced to
+         * 20,000.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -819,22 +821,22 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The maximum number of apps to return. If unspecified or 0, at most 1000 apps will be
-         * returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         * The maximum number of apps to return. If unspecified or 0, at most 10,000 apps will be
+         * returned. The maximum value is 20,000; values above 20,000 will be coerced to 20,000.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of apps to return. If unspecified or 0, at most 1000 apps will be returned. The
-       maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+        /** The maximum number of apps to return. If unspecified or 0, at most 10,000 apps will be returned.
+       The maximum value is 20,000; values above 20,000 will be coerced to 20,000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of apps to return. If unspecified or 0, at most 1000 apps will be
-         * returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         * The maximum number of apps to return. If unspecified or 0, at most 10,000 apps will be
+         * returned. The maximum value is 20,000; values above 20,000 will be coerced to 20,000.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

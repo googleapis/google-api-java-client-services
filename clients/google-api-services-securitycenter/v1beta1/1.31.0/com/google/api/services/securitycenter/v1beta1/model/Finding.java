@@ -61,6 +61,19 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
+   * Contains compliance information for security standards associated to the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Compliance> compliances;
+
+  static {
+    // hack to force ProGuard to consider Compliance used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Compliance.class);
+  }
+
+  /**
    * Contains information about the IP connection associated with the finding.
    * The value may be {@code null}.
    */
@@ -71,6 +84,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider Connection used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Connection.class);
+  }
+
+  /**
+   * Output only. Map containing the point of contacts for the given finding. The key represents the
+   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
+   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
+   * categories { “security”: {contact: {email: “person1@company.com”} contact: {email:
+   * “person2@company.com”} }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ContactDetails> contacts;
+
+  static {
+    // hack to force ProGuard to consider ContactDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContactDetails.class);
   }
 
   /**
@@ -97,6 +127,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String eventTime;
+
+  /**
+   * Represents exfiltrations associated with the Finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Exfiltration exfiltration;
 
   /**
    * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
@@ -195,6 +232,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
+
+  /**
+   * Represents operating system processes associated with the Finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Process> processes;
 
   /**
    * For findings on Google Cloud resources, the full resource name of the Google Cloud resource
@@ -310,6 +354,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Contains compliance information for security standards associated to the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Compliance> getCompliances() {
+    return compliances;
+  }
+
+  /**
+   * Contains compliance information for security standards associated to the finding.
+   * @param compliances compliances or {@code null} for none
+   */
+  public Finding setCompliances(java.util.List<Compliance> compliances) {
+    this.compliances = compliances;
+    return this;
+  }
+
+  /**
    * Contains information about the IP connection associated with the finding.
    * @return value or {@code null} for none
    */
@@ -323,6 +384,31 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setConnections(java.util.List<Connection> connections) {
     this.connections = connections;
+    return this;
+  }
+
+  /**
+   * Output only. Map containing the point of contacts for the given finding. The key represents the
+   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
+   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
+   * categories { “security”: {contact: {email: “person1@company.com”} contact: {email:
+   * “person2@company.com”} }
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ContactDetails> getContacts() {
+    return contacts;
+  }
+
+  /**
+   * Output only. Map containing the point of contacts for the given finding. The key represents the
+   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
+   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
+   * categories { “security”: {contact: {email: “person1@company.com”} contact: {email:
+   * “person2@company.com”} }
+   * @param contacts contacts or {@code null} for none
+   */
+  public Finding setContacts(java.util.Map<String, ContactDetails> contacts) {
+    this.contacts = contacts;
     return this;
   }
 
@@ -382,6 +468,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setEventTime(String eventTime) {
     this.eventTime = eventTime;
+    return this;
+  }
+
+  /**
+   * Represents exfiltrations associated with the Finding.
+   * @return value or {@code null} for none
+   */
+  public Exfiltration getExfiltration() {
+    return exfiltration;
+  }
+
+  /**
+   * Represents exfiltrations associated with the Finding.
+   * @param exfiltration exfiltration or {@code null} for none
+   */
+  public Finding setExfiltration(Exfiltration exfiltration) {
+    this.exfiltration = exfiltration;
     return this;
   }
 
@@ -614,6 +717,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Represents operating system processes associated with the Finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Process> getProcesses() {
+    return processes;
+  }
+
+  /**
+   * Represents operating system processes associated with the Finding.
+   * @param processes processes or {@code null} for none
+   */
+  public Finding setProcesses(java.util.List<Process> processes) {
+    this.processes = processes;
     return this;
   }
 

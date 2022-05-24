@@ -58,6 +58,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String authorizedNetwork;
 
   /**
+   * Optional. The available maintenance versions that an instance could update to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableMaintenanceVersions;
+
+  /**
    * Optional. The network connect mode of the Redis instance. If not provided, the connect mode
    * defaults to DIRECT_PEERING.
    * The value may be {@code null}.
@@ -80,6 +87,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String currentLocationId;
+
+  /**
+   * Optional. The KMS key reference that the customer provides when trying to create the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerManagedKey;
 
   /**
    * An arbitrary and optional user-provided name for the instance.
@@ -284,6 +298,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> suspensionReasons;
+
+  /**
    * Required. The service tier of the instance.
    * The value may be {@code null}.
    */
@@ -362,6 +383,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The available maintenance versions that an instance could update to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableMaintenanceVersions() {
+    return availableMaintenanceVersions;
+  }
+
+  /**
+   * Optional. The available maintenance versions that an instance could update to.
+   * @param availableMaintenanceVersions availableMaintenanceVersions or {@code null} for none
+   */
+  public Instance setAvailableMaintenanceVersions(java.util.List<java.lang.String> availableMaintenanceVersions) {
+    this.availableMaintenanceVersions = availableMaintenanceVersions;
+    return this;
+  }
+
+  /**
    * Optional. The network connect mode of the Redis instance. If not provided, the connect mode
    * defaults to DIRECT_PEERING.
    * @return value or {@code null} for none
@@ -415,6 +453,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCurrentLocationId(java.lang.String currentLocationId) {
     this.currentLocationId = currentLocationId;
+    return this;
+  }
+
+  /**
+   * Optional. The KMS key reference that the customer provides when trying to create the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerManagedKey() {
+    return customerManagedKey;
+  }
+
+  /**
+   * Optional. The KMS key reference that the customer provides when trying to create the instance.
+   * @param customerManagedKey customerManagedKey or {@code null} for none
+   */
+  public Instance setCustomerManagedKey(java.lang.String customerManagedKey) {
+    this.customerManagedKey = customerManagedKey;
     return this;
   }
 
@@ -891,6 +946,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSuspensionReasons() {
+    return suspensionReasons;
+  }
+
+  /**
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   * @param suspensionReasons suspensionReasons or {@code null} for none
+   */
+  public Instance setSuspensionReasons(java.util.List<java.lang.String> suspensionReasons) {
+    this.suspensionReasons = suspensionReasons;
     return this;
   }
 

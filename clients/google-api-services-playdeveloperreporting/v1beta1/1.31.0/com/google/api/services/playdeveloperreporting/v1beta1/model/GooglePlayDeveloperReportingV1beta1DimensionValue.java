@@ -52,6 +52,16 @@ public final class GooglePlayDeveloperReportingV1beta1DimensionValue extends com
   private java.lang.String stringValue;
 
   /**
+   * Optional. Human-friendly label for the value, always in English. For example, 'Spain' for the
+   * 'ES' country code. Whereas the dimension value is stable, this value label is subject to
+   * change. Do not assume that the (value, value_label) relationship is stable. For example, the
+   * ISO country code 'MK' changed its name recently to 'North Macedonia'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String valueLabel;
+
+  /**
    * Name of the dimension.
    * @return value or {@code null} for none
    */
@@ -99,6 +109,29 @@ public final class GooglePlayDeveloperReportingV1beta1DimensionValue extends com
    */
   public GooglePlayDeveloperReportingV1beta1DimensionValue setStringValue(java.lang.String stringValue) {
     this.stringValue = stringValue;
+    return this;
+  }
+
+  /**
+   * Optional. Human-friendly label for the value, always in English. For example, 'Spain' for the
+   * 'ES' country code. Whereas the dimension value is stable, this value label is subject to
+   * change. Do not assume that the (value, value_label) relationship is stable. For example, the
+   * ISO country code 'MK' changed its name recently to 'North Macedonia'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValueLabel() {
+    return valueLabel;
+  }
+
+  /**
+   * Optional. Human-friendly label for the value, always in English. For example, 'Spain' for the
+   * 'ES' country code. Whereas the dimension value is stable, this value label is subject to
+   * change. Do not assume that the (value, value_label) relationship is stable. For example, the
+   * ISO country code 'MK' changed its name recently to 'North Macedonia'.
+   * @param valueLabel valueLabel or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1beta1DimensionValue setValueLabel(java.lang.String valueLabel) {
+    this.valueLabel = valueLabel;
     return this;
   }
 

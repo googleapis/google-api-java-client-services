@@ -51,6 +51,13 @@ public final class ApproveDecision extends com.google.api.client.json.GenericJso
   private String expireTime;
 
   /**
+   * If set, denotes the timestamp at which the approval is invalidated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String invalidateTime;
+
+  /**
    * The signature for the ApprovalRequest and details on how it was signed.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class ApproveDecision extends com.google.api.client.json.GenericJso
    */
   public ApproveDecision setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * If set, denotes the timestamp at which the approval is invalidated.
+   * @return value or {@code null} for none
+   */
+  public String getInvalidateTime() {
+    return invalidateTime;
+  }
+
+  /**
+   * If set, denotes the timestamp at which the approval is invalidated.
+   * @param invalidateTime invalidateTime or {@code null} for none
+   */
+  public ApproveDecision setInvalidateTime(String invalidateTime) {
+    this.invalidateTime = invalidateTime;
     return this;
   }
 

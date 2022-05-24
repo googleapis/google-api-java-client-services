@@ -1203,6 +1203,143 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
+       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not
+       * deny access to the resource if another request has been made and approved. It only invalidates a
+       * single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved
+       * state.
+       *
+       * Create a request for the method "approvalRequests.invalidate".
+       *
+       * This request holds the parameters needed by the accessapproval server.  After setting any
+       * optional parameters, call the {@link Invalidate#execute()} method to invoke the remote operation.
+       *
+       * @param name Name of the ApprovalRequest to invalidate.
+       * @param content the {@link com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage}
+       * @return the request
+       */
+      public Invalidate invalidate(java.lang.String name, com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage content) throws java.io.IOException {
+        Invalidate result = new Invalidate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Invalidate extends AccessApprovalRequest<com.google.api.services.accessapproval.v1.model.ApprovalRequest> {
+
+        private static final String REST_PATH = "v1/{+name}:invalidate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/approvalRequests/[^/]+$");
+
+        /**
+         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does
+         * not deny access to the resource if another request has been made and approved. It only
+         * invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in
+         * an approved state.
+         *
+         * Create a request for the method "approvalRequests.invalidate".
+         *
+         * This request holds the parameters needed by the the accessapproval server.  After setting any
+         * optional parameters, call the {@link Invalidate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Invalidate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Name of the ApprovalRequest to invalidate.
+         * @param content the {@link com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage}
+         * @since 1.13
+         */
+        protected Invalidate(java.lang.String name, com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage content) {
+          super(AccessApproval.this, "POST", REST_PATH, content, com.google.api.services.accessapproval.v1.model.ApprovalRequest.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/approvalRequests/[^/]+$");
+          }
+        }
+
+        @Override
+        public Invalidate set$Xgafv(java.lang.String $Xgafv) {
+          return (Invalidate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Invalidate setAccessToken(java.lang.String accessToken) {
+          return (Invalidate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Invalidate setAlt(java.lang.String alt) {
+          return (Invalidate) super.setAlt(alt);
+        }
+
+        @Override
+        public Invalidate setCallback(java.lang.String callback) {
+          return (Invalidate) super.setCallback(callback);
+        }
+
+        @Override
+        public Invalidate setFields(java.lang.String fields) {
+          return (Invalidate) super.setFields(fields);
+        }
+
+        @Override
+        public Invalidate setKey(java.lang.String key) {
+          return (Invalidate) super.setKey(key);
+        }
+
+        @Override
+        public Invalidate setOauthToken(java.lang.String oauthToken) {
+          return (Invalidate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Invalidate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Invalidate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Invalidate setQuotaUser(java.lang.String quotaUser) {
+          return (Invalidate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Invalidate setUploadType(java.lang.String uploadType) {
+          return (Invalidate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Invalidate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Invalidate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Name of the ApprovalRequest to invalidate. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the ApprovalRequest to invalidate.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Name of the ApprovalRequest to invalidate. */
+        public Invalidate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/approvalRequests/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Invalidate set(String parameterName, Object value) {
+          return (Invalidate) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists approval requests associated with a project, folder, or organization. Approval requests can
        * be filtered by state (pending, active, dismissed). The order is reverse chronological.
        *
@@ -2493,6 +2630,143 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
+       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not
+       * deny access to the resource if another request has been made and approved. It only invalidates a
+       * single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved
+       * state.
+       *
+       * Create a request for the method "approvalRequests.invalidate".
+       *
+       * This request holds the parameters needed by the accessapproval server.  After setting any
+       * optional parameters, call the {@link Invalidate#execute()} method to invoke the remote operation.
+       *
+       * @param name Name of the ApprovalRequest to invalidate.
+       * @param content the {@link com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage}
+       * @return the request
+       */
+      public Invalidate invalidate(java.lang.String name, com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage content) throws java.io.IOException {
+        Invalidate result = new Invalidate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Invalidate extends AccessApprovalRequest<com.google.api.services.accessapproval.v1.model.ApprovalRequest> {
+
+        private static final String REST_PATH = "v1/{+name}:invalidate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/approvalRequests/[^/]+$");
+
+        /**
+         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does
+         * not deny access to the resource if another request has been made and approved. It only
+         * invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in
+         * an approved state.
+         *
+         * Create a request for the method "approvalRequests.invalidate".
+         *
+         * This request holds the parameters needed by the the accessapproval server.  After setting any
+         * optional parameters, call the {@link Invalidate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Invalidate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Name of the ApprovalRequest to invalidate.
+         * @param content the {@link com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage}
+         * @since 1.13
+         */
+        protected Invalidate(java.lang.String name, com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage content) {
+          super(AccessApproval.this, "POST", REST_PATH, content, com.google.api.services.accessapproval.v1.model.ApprovalRequest.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/approvalRequests/[^/]+$");
+          }
+        }
+
+        @Override
+        public Invalidate set$Xgafv(java.lang.String $Xgafv) {
+          return (Invalidate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Invalidate setAccessToken(java.lang.String accessToken) {
+          return (Invalidate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Invalidate setAlt(java.lang.String alt) {
+          return (Invalidate) super.setAlt(alt);
+        }
+
+        @Override
+        public Invalidate setCallback(java.lang.String callback) {
+          return (Invalidate) super.setCallback(callback);
+        }
+
+        @Override
+        public Invalidate setFields(java.lang.String fields) {
+          return (Invalidate) super.setFields(fields);
+        }
+
+        @Override
+        public Invalidate setKey(java.lang.String key) {
+          return (Invalidate) super.setKey(key);
+        }
+
+        @Override
+        public Invalidate setOauthToken(java.lang.String oauthToken) {
+          return (Invalidate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Invalidate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Invalidate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Invalidate setQuotaUser(java.lang.String quotaUser) {
+          return (Invalidate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Invalidate setUploadType(java.lang.String uploadType) {
+          return (Invalidate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Invalidate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Invalidate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Name of the ApprovalRequest to invalidate. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the ApprovalRequest to invalidate.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Name of the ApprovalRequest to invalidate. */
+        public Invalidate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/approvalRequests/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Invalidate set(String parameterName, Object value) {
+          return (Invalidate) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists approval requests associated with a project, folder, or organization. Approval requests can
        * be filtered by state (pending, active, dismissed). The order is reverse chronological.
        *
@@ -3780,6 +4054,143 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not
+       * deny access to the resource if another request has been made and approved. It only invalidates a
+       * single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved
+       * state.
+       *
+       * Create a request for the method "approvalRequests.invalidate".
+       *
+       * This request holds the parameters needed by the accessapproval server.  After setting any
+       * optional parameters, call the {@link Invalidate#execute()} method to invoke the remote operation.
+       *
+       * @param name Name of the ApprovalRequest to invalidate.
+       * @param content the {@link com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage}
+       * @return the request
+       */
+      public Invalidate invalidate(java.lang.String name, com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage content) throws java.io.IOException {
+        Invalidate result = new Invalidate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Invalidate extends AccessApprovalRequest<com.google.api.services.accessapproval.v1.model.ApprovalRequest> {
+
+        private static final String REST_PATH = "v1/{+name}:invalidate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/approvalRequests/[^/]+$");
+
+        /**
+         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does
+         * not deny access to the resource if another request has been made and approved. It only
+         * invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in
+         * an approved state.
+         *
+         * Create a request for the method "approvalRequests.invalidate".
+         *
+         * This request holds the parameters needed by the the accessapproval server.  After setting any
+         * optional parameters, call the {@link Invalidate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Invalidate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Name of the ApprovalRequest to invalidate.
+         * @param content the {@link com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage}
+         * @since 1.13
+         */
+        protected Invalidate(java.lang.String name, com.google.api.services.accessapproval.v1.model.InvalidateApprovalRequestMessage content) {
+          super(AccessApproval.this, "POST", REST_PATH, content, com.google.api.services.accessapproval.v1.model.ApprovalRequest.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/approvalRequests/[^/]+$");
+          }
+        }
+
+        @Override
+        public Invalidate set$Xgafv(java.lang.String $Xgafv) {
+          return (Invalidate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Invalidate setAccessToken(java.lang.String accessToken) {
+          return (Invalidate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Invalidate setAlt(java.lang.String alt) {
+          return (Invalidate) super.setAlt(alt);
+        }
+
+        @Override
+        public Invalidate setCallback(java.lang.String callback) {
+          return (Invalidate) super.setCallback(callback);
+        }
+
+        @Override
+        public Invalidate setFields(java.lang.String fields) {
+          return (Invalidate) super.setFields(fields);
+        }
+
+        @Override
+        public Invalidate setKey(java.lang.String key) {
+          return (Invalidate) super.setKey(key);
+        }
+
+        @Override
+        public Invalidate setOauthToken(java.lang.String oauthToken) {
+          return (Invalidate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Invalidate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Invalidate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Invalidate setQuotaUser(java.lang.String quotaUser) {
+          return (Invalidate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Invalidate setUploadType(java.lang.String uploadType) {
+          return (Invalidate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Invalidate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Invalidate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Name of the ApprovalRequest to invalidate. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the ApprovalRequest to invalidate.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Name of the ApprovalRequest to invalidate. */
+        public Invalidate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/approvalRequests/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Invalidate set(String parameterName, Object value) {
+          return (Invalidate) super.set(parameterName, value);
         }
       }
       /**

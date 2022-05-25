@@ -75,7 +75,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * their granted access scope from any policies set on parent resources in the resource hierarchy.
    * Therefore, the effectively policy is the union of both the policy set on this resource and each
    * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
-   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
+   * topic](https://cloud.google.com/iam/help/allow-policies/inheritance) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +205,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * their granted access scope from any policies set on parent resources in the resource hierarchy.
    * Therefore, the effectively policy is the union of both the policy set on this resource and each
    * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
-   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
+   * topic](https://cloud.google.com/iam/help/allow-policies/inheritance) for more information.
    * @return value or {@code null} for none
    */
   public Policy getIamPolicy() {
@@ -218,7 +218,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * their granted access scope from any policies set on parent resources in the resource hierarchy.
    * Therefore, the effectively policy is the union of both the policy set on this resource and each
    * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
-   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
+   * topic](https://cloud.google.com/iam/help/allow-policies/inheritance) for more information.
    * @param iamPolicy iamPolicy or {@code null} for none
    */
   public Asset setIamPolicy(Policy iamPolicy) {

@@ -40,6 +40,17 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
   private java.lang.Integer cpuUtilizationPercent;
 
   /**
+   * The storage utilization that the Autoscaler should be trying to achieve. This number is limited
+   * between 2560 (2.5TiB) and 5120 (5TiB) for a SSD cluster and between 8192 (8TiB) and 16384
+   * (16TiB) for an HDD cluster, otherwise it will return INVALID_ARGUMENT error. If this value is
+   * set to 0, it will be treated as if it were set to the default value: 2560 for SSD, 8192 for
+   * HDD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer storageUtilizationGibPerNode;
+
+  /**
    * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale
    * from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80, otherwise
    * it will return INVALID_ARGUMENT error.
@@ -57,6 +68,31 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
    */
   public AutoscalingTargets setCpuUtilizationPercent(java.lang.Integer cpuUtilizationPercent) {
     this.cpuUtilizationPercent = cpuUtilizationPercent;
+    return this;
+  }
+
+  /**
+   * The storage utilization that the Autoscaler should be trying to achieve. This number is limited
+   * between 2560 (2.5TiB) and 5120 (5TiB) for a SSD cluster and between 8192 (8TiB) and 16384
+   * (16TiB) for an HDD cluster, otherwise it will return INVALID_ARGUMENT error. If this value is
+   * set to 0, it will be treated as if it were set to the default value: 2560 for SSD, 8192 for
+   * HDD.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getStorageUtilizationGibPerNode() {
+    return storageUtilizationGibPerNode;
+  }
+
+  /**
+   * The storage utilization that the Autoscaler should be trying to achieve. This number is limited
+   * between 2560 (2.5TiB) and 5120 (5TiB) for a SSD cluster and between 8192 (8TiB) and 16384
+   * (16TiB) for an HDD cluster, otherwise it will return INVALID_ARGUMENT error. If this value is
+   * set to 0, it will be treated as if it were set to the default value: 2560 for SSD, 8192 for
+   * HDD.
+   * @param storageUtilizationGibPerNode storageUtilizationGibPerNode or {@code null} for none
+   */
+  public AutoscalingTargets setStorageUtilizationGibPerNode(java.lang.Integer storageUtilizationGibPerNode) {
+    this.storageUtilizationGibPerNode = storageUtilizationGibPerNode;
     return this;
   }
 

@@ -40,6 +40,15 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer diskSizeGb;
 
   /**
+   * Optional. Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs
+   * equals to pod IP range so IP masquerading is used for all destination addresses, except between
+   * pods traffic. See: https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIpMasqAgent;
+
+  /**
    * Optional. The configuration for controlling how IPs are allocated in the GKE cluster.
    * The value may be {@code null}.
    */
@@ -154,6 +163,27 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskSizeGb(java.lang.Integer diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs
+   * equals to pod IP range so IP masquerading is used for all destination addresses, except between
+   * pods traffic. See: https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIpMasqAgent() {
+    return enableIpMasqAgent;
+  }
+
+  /**
+   * Optional. Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs
+   * equals to pod IP range so IP masquerading is used for all destination addresses, except between
+   * pods traffic. See: https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent
+   * @param enableIpMasqAgent enableIpMasqAgent or {@code null} for none
+   */
+  public NodeConfig setEnableIpMasqAgent(java.lang.Boolean enableIpMasqAgent) {
+    this.enableIpMasqAgent = enableIpMasqAgent;
     return this;
   }
 

@@ -29,30 +29,6 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class SendUserInvitationRequest extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Optional. First admin invitation info for customers
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private FirstAdminInvitationInfo firstAdminInvitationInfo;
-
-  /**
-   * Optional. First admin invitation info for customers
-   * @return value or {@code null} for none
-   */
-  public FirstAdminInvitationInfo getFirstAdminInvitationInfo() {
-    return firstAdminInvitationInfo;
-  }
-
-  /**
-   * Optional. First admin invitation info for customers
-   * @param firstAdminInvitationInfo firstAdminInvitationInfo or {@code null} for none
-   */
-  public SendUserInvitationRequest setFirstAdminInvitationInfo(FirstAdminInvitationInfo firstAdminInvitationInfo) {
-    this.firstAdminInvitationInfo = firstAdminInvitationInfo;
-    return this;
-  }
-
   @Override
   public SendUserInvitationRequest set(String fieldName, Object value) {
     return (SendUserInvitationRequest) super.set(fieldName, value);

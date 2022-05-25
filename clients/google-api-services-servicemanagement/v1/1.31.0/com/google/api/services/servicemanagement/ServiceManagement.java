@@ -1455,13 +1455,13 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
       /**
        * The max number of items to include in the response list. Page size is 50 if not specified.
-       * Maximum value is 100.
+       * Maximum value is 500.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** The max number of items to include in the response list. Page size is 50 if not specified. Maximum
-     value is 100.
+     value is 500.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -1469,7 +1469,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
       /**
        * The max number of items to include in the response list. Page size is 50 if not specified.
-       * Maximum value is 100.
+       * Maximum value is 500.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

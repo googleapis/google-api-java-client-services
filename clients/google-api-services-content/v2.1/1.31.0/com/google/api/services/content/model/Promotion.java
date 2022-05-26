@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * The Promotions feature is publicly available for the US, CA, IN, UK, AU target countries (en
+ * The Promotions feature is publicly available for the US, CA, IN, GB, AU target countries (en
  * language only) in Content API for Shopping. Represents a promotion. See the following articles
  * for more details. * [Promotions feed
  * specification](https://support.google.com/merchants/answer/2906014) * [Local promotions feed

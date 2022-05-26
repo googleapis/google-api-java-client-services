@@ -47,18 +47,25 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   private java.lang.String predicateType;
 
   /**
-   * provenance is a predicate of type intotoprovenance
+   * Generic Grafeas provenance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InTotoProvenance provenance;
 
   /**
-   * slsa_provenance is a predicate of type slsaProvenance
+   * SLSA 0.1 provenance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SlsaProvenance slsaProvenance;
+
+  /**
+   * SLSA 0.2 provenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SlsaProvenanceZeroTwo slsaProvenanceZeroTwo;
 
   /**
    * subject is the subjects of the intoto statement
@@ -102,7 +109,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * provenance is a predicate of type intotoprovenance
+   * Generic Grafeas provenance.
    * @return value or {@code null} for none
    */
   public InTotoProvenance getProvenance() {
@@ -110,7 +117,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * provenance is a predicate of type intotoprovenance
+   * Generic Grafeas provenance.
    * @param provenance provenance or {@code null} for none
    */
   public InTotoStatement setProvenance(InTotoProvenance provenance) {
@@ -119,7 +126,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * slsa_provenance is a predicate of type slsaProvenance
+   * SLSA 0.1 provenance.
    * @return value or {@code null} for none
    */
   public SlsaProvenance getSlsaProvenance() {
@@ -127,11 +134,28 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * slsa_provenance is a predicate of type slsaProvenance
+   * SLSA 0.1 provenance.
    * @param slsaProvenance slsaProvenance or {@code null} for none
    */
   public InTotoStatement setSlsaProvenance(SlsaProvenance slsaProvenance) {
     this.slsaProvenance = slsaProvenance;
+    return this;
+  }
+
+  /**
+   * SLSA 0.2 provenance.
+   * @return value or {@code null} for none
+   */
+  public SlsaProvenanceZeroTwo getSlsaProvenanceZeroTwo() {
+    return slsaProvenanceZeroTwo;
+  }
+
+  /**
+   * SLSA 0.2 provenance.
+   * @param slsaProvenanceZeroTwo slsaProvenanceZeroTwo or {@code null} for none
+   */
+  public InTotoStatement setSlsaProvenanceZeroTwo(SlsaProvenanceZeroTwo slsaProvenanceZeroTwo) {
+    this.slsaProvenanceZeroTwo = slsaProvenanceZeroTwo;
     return this;
   }
 

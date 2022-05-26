@@ -4655,22 +4655,22 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Free text search terms to find events that match these terms in any field, except for
-       * extended properties. Optional.
+       * Free text search terms to find events that match these terms in the following fields:
+       * summary, description, location, attendee's displayName, attendee's email. Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String q;
 
-      /** Free text search terms to find events that match these terms in any field, except for extended
-     properties. Optional.
+      /** Free text search terms to find events that match these terms in the following fields: summary,
+     description, location, attendee's displayName, attendee's email. Optional.
        */
       public java.lang.String getQ() {
         return q;
       }
 
       /**
-       * Free text search terms to find events that match these terms in any field, except for
-       * extended properties. Optional.
+       * Free text search terms to find events that match these terms in the following fields:
+       * summary, description, location, attendee's displayName, attendee's email. Optional.
        */
       public List setQ(java.lang.String q) {
         this.q = q;
@@ -6124,22 +6124,22 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Free text search terms to find events that match these terms in any field, except for
-       * extended properties. Optional.
+       * Free text search terms to find events that match these terms in the following fields:
+       * summary, description, location, attendee's displayName, attendee's email. Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String q;
 
-      /** Free text search terms to find events that match these terms in any field, except for extended
-     properties. Optional.
+      /** Free text search terms to find events that match these terms in the following fields: summary,
+     description, location, attendee's displayName, attendee's email. Optional.
        */
       public java.lang.String getQ() {
         return q;
       }
 
       /**
-       * Free text search terms to find events that match these terms in any field, except for
-       * extended properties. Optional.
+       * Free text search terms to find events that match these terms in the following fields:
+       * summary, description, location, attendee's displayName, attendee's email. Optional.
        */
       public Watch setQ(java.lang.String q) {
         this.q = q;

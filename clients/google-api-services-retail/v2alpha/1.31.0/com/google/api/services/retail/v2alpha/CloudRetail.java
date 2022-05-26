@@ -1506,7 +1506,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
          * operation.
          *
          * @param name Required. Immutable. The fully qualified resource name of the attribute config. Format:
-         *        "projects/locations/catalogs/attributesConfig"
+         *        `projects/locations/catalogs/attributesConfig`
          * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAttributesConfig}
          * @return the request
          */
@@ -1540,7 +1540,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * invoking the constructor. </p>
            *
            * @param name Required. Immutable. The fully qualified resource name of the attribute config. Format:
-         *        "projects/locations/catalogs/attributesConfig"
+         *        `projects/locations/catalogs/attributesConfig`
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAttributesConfig}
            * @since 1.13
            */
@@ -1611,13 +1611,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Immutable. The fully qualified resource name of the attribute config. Format:
-           * "projects/locations/catalogs/attributesConfig"
+           * `projects/locations/catalogs/attributesConfig`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Immutable. The fully qualified resource name of the attribute config. Format:
-         "projects/locations/catalogs/attributesConfig"
+         `projects/locations/catalogs/attributesConfig`
            */
           public java.lang.String getName() {
             return name;
@@ -1625,7 +1625,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Immutable. The fully qualified resource name of the attribute config. Format:
-           * "projects/locations/catalogs/attributesConfig"
+           * `projects/locations/catalogs/attributesConfig`
            */
           public UpdateAttributesConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1677,7 +1677,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+         * @param name Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
          * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaCompletionConfig}
          * @return the request
          */
@@ -1705,7 +1705,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+           * @param name Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaCompletionConfig}
            * @since 1.13
            */
@@ -1775,19 +1775,21 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+           * Required. Immutable. Fully qualified name
+           * `projects/locations/catalogs/completionConfig`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+          /** Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+           * Required. Immutable. Fully qualified name
+           * `projects/locations/catalogs/completionConfig`
            */
           public UpdateCompletionConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

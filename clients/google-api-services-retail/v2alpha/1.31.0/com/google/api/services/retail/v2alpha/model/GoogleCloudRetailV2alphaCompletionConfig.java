@@ -106,7 +106,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   private java.lang.Integer minPrefixLength;
 
   /**
-   * Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+   * Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +300,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+   * Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -308,7 +308,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * Required. Immutable. Fully qualified name projects/locations/catalogs/completionConfig
+   * Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
    * @param name name or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionConfig setName(java.lang.String name) {

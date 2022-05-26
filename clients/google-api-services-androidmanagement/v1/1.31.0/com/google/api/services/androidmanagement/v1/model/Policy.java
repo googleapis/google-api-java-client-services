@@ -472,6 +472,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
    * DEPRECATED - Use passwordPolicies.Note:Complexity-based values of PasswordQuality, that is,
    * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
+   * unified_lock_settings cannot be used here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1734,6 +1735,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
    * DEPRECATED - Use passwordPolicies.Note:Complexity-based values of PasswordQuality, that is,
    * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
+   * unified_lock_settings cannot be used here.
    * @return value or {@code null} for none
    */
   public PasswordRequirements getPasswordRequirements() {
@@ -1744,6 +1746,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
    * DEPRECATED - Use passwordPolicies.Note:Complexity-based values of PasswordQuality, that is,
    * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
+   * unified_lock_settings cannot be used here.
    * @param passwordRequirements passwordRequirements or {@code null} for none
    */
   public Policy setPasswordRequirements(PasswordRequirements passwordRequirements) {

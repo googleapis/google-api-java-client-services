@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2betaAttributesConfig extends com.google.ap
 
   /**
    * Required. Immutable. The fully qualified resource name of the attribute config. Format:
-   * "projects/locations/catalogs/attributesConfig"
+   * `projects/locations/catalogs/attributesConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleCloudRetailV2betaAttributesConfig extends com.google.ap
 
   /**
    * Required. Immutable. The fully qualified resource name of the attribute config. Format:
-   * "projects/locations/catalogs/attributesConfig"
+   * `projects/locations/catalogs/attributesConfig`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,7 +105,7 @@ public final class GoogleCloudRetailV2betaAttributesConfig extends com.google.ap
 
   /**
    * Required. Immutable. The fully qualified resource name of the attribute config. Format:
-   * "projects/locations/catalogs/attributesConfig"
+   * `projects/locations/catalogs/attributesConfig`
    * @param name name or {@code null} for none
    */
   public GoogleCloudRetailV2betaAttributesConfig setName(java.lang.String name) {

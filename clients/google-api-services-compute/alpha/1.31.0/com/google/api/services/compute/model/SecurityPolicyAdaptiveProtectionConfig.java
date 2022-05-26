@@ -30,11 +30,32 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyAdaptiveProtectionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig autoDeployConfig;
+
+  /**
    * If set to true, enables Cloud Armor Machine Learning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig getAutoDeployConfig() {
+    return autoDeployConfig;
+  }
+
+  /**
+   * @param autoDeployConfig autoDeployConfig or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfig setAutoDeployConfig(SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig autoDeployConfig) {
+    this.autoDeployConfig = autoDeployConfig;
+    return this;
+  }
 
   /**
    * If set to true, enables Cloud Armor Machine Learning.

@@ -41,8 +41,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
    * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
    * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
-   * session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the
-   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * session (or equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when
+   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true.
    * The value may be {@code null}.
    */
@@ -404,8 +404,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
    * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
    * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
-   * session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the
-   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * session (or equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when
+   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
@@ -417,8 +417,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
    * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
    * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
-   * session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the
-   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * session (or equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when
+   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true.
    * @param affinityCookieTtlSec affinityCookieTtlSec or {@code null} for none
    */

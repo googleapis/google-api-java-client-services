@@ -31,8 +31,8 @@ public final class AppEngine extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the App Engine module underlying this service. Corresponds to the module_id resource
-   * label in the gae_app monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_gae_app
+   * label in the gae_app monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_gae_app).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class AppEngine extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the App Engine module underlying this service. Corresponds to the module_id resource
-   * label in the gae_app monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_gae_app
+   * label in the gae_app monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_gae_app).
    * @return value or {@code null} for none
    */
   public java.lang.String getModuleId() {
@@ -50,8 +50,8 @@ public final class AppEngine extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the App Engine module underlying this service. Corresponds to the module_id resource
-   * label in the gae_app monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_gae_app
+   * label in the gae_app monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_gae_app).
    * @param moduleId moduleId or {@code null} for none
    */
   public AppEngine setModuleId(java.lang.String moduleId) {

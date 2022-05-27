@@ -18,7 +18,7 @@ package com.google.api.services.monitoring.v3.model;
 
 /**
  * A GKE Workload (Deployment, StatefulSet, etc). The field names correspond to the metadata labels
- * on monitored resources that fall under a workload (e.g. k8s_container, k8s_pod).
+ * on monitored resources that fall under a workload (for example, k8s_container or k8s_pod).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
@@ -67,7 +67,7 @@ public final class GkeWorkload extends com.google.api.client.json.GenericJson {
   private java.lang.String topLevelControllerName;
 
   /**
-   * The type of this workload (e.g. "Deployment" or "DaemonSet")
+   * The type of this workload (for example, "Deployment" or "DaemonSet")
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +161,7 @@ public final class GkeWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this workload (e.g. "Deployment" or "DaemonSet")
+   * The type of this workload (for example, "Deployment" or "DaemonSet")
    * @return value or {@code null} for none
    */
   public java.lang.String getTopLevelControllerType() {
@@ -169,7 +169,7 @@ public final class GkeWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this workload (e.g. "Deployment" or "DaemonSet")
+   * The type of this workload (for example, "Deployment" or "DaemonSet")
    * @param topLevelControllerType topLevelControllerType or {@code null} for none
    */
   public GkeWorkload setTopLevelControllerType(java.lang.String topLevelControllerType) {

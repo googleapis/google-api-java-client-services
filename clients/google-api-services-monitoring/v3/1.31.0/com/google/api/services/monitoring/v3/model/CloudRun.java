@@ -31,8 +31,8 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * The location the service is run. Corresponds to the location resource label in the
-   * cloud_run_revision monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision
+   * cloud_run_revision monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Cloud Run service. Corresponds to the service_name resource label in the
-   * cloud_run_revision monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision
+   * cloud_run_revision monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +49,8 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * The location the service is run. Corresponds to the location resource label in the
-   * cloud_run_revision monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision
+   * cloud_run_revision monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -59,8 +59,8 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * The location the service is run. Corresponds to the location resource label in the
-   * cloud_run_revision monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision
+   * cloud_run_revision monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
    * @param location location or {@code null} for none
    */
   public CloudRun setLocation(java.lang.String location) {
@@ -70,8 +70,8 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Cloud Run service. Corresponds to the service_name resource label in the
-   * cloud_run_revision monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision
+   * cloud_run_revision monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceName() {
@@ -80,8 +80,8 @@ public final class CloudRun extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Cloud Run service. Corresponds to the service_name resource label in the
-   * cloud_run_revision monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision
+   * cloud_run_revision monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
    * @param serviceName serviceName or {@code null} for none
    */
   public CloudRun setServiceName(java.lang.String serviceName) {

@@ -19,8 +19,8 @@ package com.google.api.services.monitoring.v3.model;
 /**
  * GKE Service. The "service" here represents a Kubernetes service object
  * (https://kubernetes.io/docs/concepts/services-networking/service). The field names correspond to
- * the resource labels on k8s_service monitored resources:
- * https://cloud.google.com/monitoring/api/resources#tag_k8s_service
+ * the resource labels on k8s_service monitored resources
+ * (https://cloud.google.com/monitoring/api/resources#tag_k8s_service).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

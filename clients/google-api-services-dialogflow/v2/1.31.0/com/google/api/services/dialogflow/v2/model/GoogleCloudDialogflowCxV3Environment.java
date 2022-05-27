@@ -81,6 +81,13 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   private java.util.List<GoogleCloudDialogflowCxV3EnvironmentVersionConfig> versionConfigs;
 
   /**
+   * The webhook configuration for this environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3EnvironmentWebhookConfig webhookConfig;
+
+  /**
    * The human-readable description of the environment. The maximum length is 500 characters. If
    * exceeded, the request is rejected.
    * @return value or {@code null} for none
@@ -187,6 +194,23 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3Environment setVersionConfigs(java.util.List<GoogleCloudDialogflowCxV3EnvironmentVersionConfig> versionConfigs) {
     this.versionConfigs = versionConfigs;
+    return this;
+  }
+
+  /**
+   * The webhook configuration for this environment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3EnvironmentWebhookConfig getWebhookConfig() {
+    return webhookConfig;
+  }
+
+  /**
+   * The webhook configuration for this environment.
+   * @param webhookConfig webhookConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Environment setWebhookConfig(GoogleCloudDialogflowCxV3EnvironmentWebhookConfig webhookConfig) {
+    this.webhookConfig = webhookConfig;
     return this;
   }
 

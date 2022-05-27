@@ -30,6 +30,14 @@ package com.google.api.services.vmmigration.v1.model;
 public final class FetchInventoryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * Output only. The timestamp when the source was last queried (if the result is from the cache).
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class FetchInventoryResponse extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private VmwareVmsDetails vmwareVms;
+
+  /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public FetchInventoryResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
+  }
 
   /**
    * Output only. The timestamp when the source was last queried (if the result is from the cache).

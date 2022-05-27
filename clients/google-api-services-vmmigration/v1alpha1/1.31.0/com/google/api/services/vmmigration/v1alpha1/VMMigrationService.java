@@ -2904,6 +2904,61 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
             return this;
           }
 
+          /**
+           * The maximum number of VMs to return. The service may return fewer than this value. For
+           * AWS source: If unspecified, at most 500 VMs will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000. For VMWare source: If unspecified, all
+           * VMs will be returned. There is no limit for maximum value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of VMs to return. The service may return fewer than this value. For AWS source:
+         If unspecified, at most 500 VMs will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000. For VMWare source: If unspecified, all VMs will be returned. There is no limit
+         for maximum value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of VMs to return. The service may return fewer than this value. For
+           * AWS source: If unspecified, at most 500 VMs will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000. For VMWare source: If unspecified, all
+           * VMs will be returned. There is no limit for maximum value.
+           */
+          public FetchInventory setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `FetchInventory` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to `FetchInventory`
+           * must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `FetchInventory` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `FetchInventory` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `FetchInventory` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to `FetchInventory`
+           * must match the call that provided the page token.
+           */
+          public FetchInventory setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
           @Override
           public FetchInventory set(String parameterName, Object value) {
             return (FetchInventory) super.set(parameterName, value);

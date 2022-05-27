@@ -31,8 +31,8 @@ public final class CloudEndpoints extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the Cloud Endpoints service underlying this service. Corresponds to the service
-   * resource label in the api monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_api
+   * resource label in the api monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_api).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class CloudEndpoints extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the Cloud Endpoints service underlying this service. Corresponds to the service
-   * resource label in the api monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_api
+   * resource label in the api monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_api).
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -50,8 +50,8 @@ public final class CloudEndpoints extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the Cloud Endpoints service underlying this service. Corresponds to the service
-   * resource label in the api monitored resource:
-   * https://cloud.google.com/monitoring/api/resources#tag_api
+   * resource label in the api monitored resource
+   * (https://cloud.google.com/monitoring/api/resources#tag_api).
    * @param service service or {@code null} for none
    */
   public CloudEndpoints setService(java.lang.String service) {

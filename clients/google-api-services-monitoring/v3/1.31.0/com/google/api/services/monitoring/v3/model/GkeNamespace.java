@@ -18,7 +18,7 @@ package com.google.api.services.monitoring.v3.model;
 
 /**
  * GKE Namespace. The field names correspond to the resource metadata labels on monitored resources
- * that fall under a namespace (e.g. k8s_container, k8s_pod).
+ * that fall under a namespace (for example, k8s_container or k8s_pod).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

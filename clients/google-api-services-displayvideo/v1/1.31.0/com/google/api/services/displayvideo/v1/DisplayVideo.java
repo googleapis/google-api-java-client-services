@@ -19563,6 +19563,928 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the GuaranteedOrders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+   *   {@code DisplayVideo.GuaranteedOrders.List request = displayvideo.guaranteedOrders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public GuaranteedOrders guaranteedOrders() {
+    return new GuaranteedOrders();
+  }
+
+  /**
+   * The "guaranteedOrders" collection of methods.
+   */
+  public class GuaranteedOrders {
+
+    /**
+     * Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
+     *
+     * Create a request for the method "guaranteedOrders.create".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.GuaranteedOrder}
+     * @return the request
+     */
+    public Create create(com.google.api.services.displayvideo.v1.model.GuaranteedOrder content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.GuaranteedOrder> {
+
+      private static final String REST_PATH = "v1/guaranteedOrders";
+
+      /**
+       * Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
+       *
+       * Create a request for the method "guaranteedOrders.create".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.GuaranteedOrder}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.displayvideo.v1.model.GuaranteedOrder content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.GuaranteedOrder.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that the request is being made within.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      public Create setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that the request is being made within.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      public Create setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Edits read advertisers of a guaranteed order.
+     *
+     * Create a request for the method "guaranteedOrders.editGuaranteedOrderReadAccessors".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link EditGuaranteedOrderReadAccessors#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param guaranteedOrderId Required. The ID of the guaranteed order to edit. The ID is of the format
+     *        `{exchange}-{legacy_guaranteed_order_id}`
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.EditGuaranteedOrderReadAccessorsRequest}
+     * @return the request
+     */
+    public EditGuaranteedOrderReadAccessors editGuaranteedOrderReadAccessors(java.lang.String guaranteedOrderId, com.google.api.services.displayvideo.v1.model.EditGuaranteedOrderReadAccessorsRequest content) throws java.io.IOException {
+      EditGuaranteedOrderReadAccessors result = new EditGuaranteedOrderReadAccessors(guaranteedOrderId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class EditGuaranteedOrderReadAccessors extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.EditGuaranteedOrderReadAccessorsResponse> {
+
+      private static final String REST_PATH = "v1/guaranteedOrders/{+guaranteedOrderId}:editGuaranteedOrderReadAccessors";
+
+      private final java.util.regex.Pattern GUARANTEED_ORDER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Edits read advertisers of a guaranteed order.
+       *
+       * Create a request for the method "guaranteedOrders.editGuaranteedOrderReadAccessors".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link EditGuaranteedOrderReadAccessors#execute()} method to
+       * invoke the remote operation. <p> {@link EditGuaranteedOrderReadAccessors#initialize(com.google.
+       * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param guaranteedOrderId Required. The ID of the guaranteed order to edit. The ID is of the format
+     *        `{exchange}-{legacy_guaranteed_order_id}`
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.EditGuaranteedOrderReadAccessorsRequest}
+       * @since 1.13
+       */
+      protected EditGuaranteedOrderReadAccessors(java.lang.String guaranteedOrderId, com.google.api.services.displayvideo.v1.model.EditGuaranteedOrderReadAccessorsRequest content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.EditGuaranteedOrderReadAccessorsResponse.class);
+        this.guaranteedOrderId = com.google.api.client.util.Preconditions.checkNotNull(guaranteedOrderId, "Required parameter guaranteedOrderId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(GUARANTEED_ORDER_ID_PATTERN.matcher(guaranteedOrderId).matches(),
+              "Parameter guaranteedOrderId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors set$Xgafv(java.lang.String $Xgafv) {
+        return (EditGuaranteedOrderReadAccessors) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setAccessToken(java.lang.String accessToken) {
+        return (EditGuaranteedOrderReadAccessors) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setAlt(java.lang.String alt) {
+        return (EditGuaranteedOrderReadAccessors) super.setAlt(alt);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setCallback(java.lang.String callback) {
+        return (EditGuaranteedOrderReadAccessors) super.setCallback(callback);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setFields(java.lang.String fields) {
+        return (EditGuaranteedOrderReadAccessors) super.setFields(fields);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setKey(java.lang.String key) {
+        return (EditGuaranteedOrderReadAccessors) super.setKey(key);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setOauthToken(java.lang.String oauthToken) {
+        return (EditGuaranteedOrderReadAccessors) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (EditGuaranteedOrderReadAccessors) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setQuotaUser(java.lang.String quotaUser) {
+        return (EditGuaranteedOrderReadAccessors) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setUploadType(java.lang.String uploadType) {
+        return (EditGuaranteedOrderReadAccessors) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EditGuaranteedOrderReadAccessors) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the guaranteed order to edit. The ID is of the format
+       * `{exchange}-{legacy_guaranteed_order_id}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String guaranteedOrderId;
+
+      /** Required. The ID of the guaranteed order to edit. The ID is of the format
+     `{exchange}-{legacy_guaranteed_order_id}`
+       */
+      public java.lang.String getGuaranteedOrderId() {
+        return guaranteedOrderId;
+      }
+
+      /**
+       * Required. The ID of the guaranteed order to edit. The ID is of the format
+       * `{exchange}-{legacy_guaranteed_order_id}`
+       */
+      public EditGuaranteedOrderReadAccessors setGuaranteedOrderId(java.lang.String guaranteedOrderId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(GUARANTEED_ORDER_ID_PATTERN.matcher(guaranteedOrderId).matches(),
+              "Parameter guaranteedOrderId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.guaranteedOrderId = guaranteedOrderId;
+        return this;
+      }
+
+      @Override
+      public EditGuaranteedOrderReadAccessors set(String parameterName, Object value) {
+        return (EditGuaranteedOrderReadAccessors) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets a guaranteed order.
+     *
+     * Create a request for the method "guaranteedOrders.get".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param guaranteedOrderId Required. The ID of the guaranteed order to fetch. The ID is of the format
+     *        `{exchange}-{legacy_guaranteed_order_id}`
+     * @return the request
+     */
+    public Get get(java.lang.String guaranteedOrderId) throws java.io.IOException {
+      Get result = new Get(guaranteedOrderId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.GuaranteedOrder> {
+
+      private static final String REST_PATH = "v1/guaranteedOrders/{+guaranteedOrderId}";
+
+      private final java.util.regex.Pattern GUARANTEED_ORDER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets a guaranteed order.
+       *
+       * Create a request for the method "guaranteedOrders.get".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param guaranteedOrderId Required. The ID of the guaranteed order to fetch. The ID is of the format
+     *        `{exchange}-{legacy_guaranteed_order_id}`
+       * @since 1.13
+       */
+      protected Get(java.lang.String guaranteedOrderId) {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.GuaranteedOrder.class);
+        this.guaranteedOrderId = com.google.api.client.util.Preconditions.checkNotNull(guaranteedOrderId, "Required parameter guaranteedOrderId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(GUARANTEED_ORDER_ID_PATTERN.matcher(guaranteedOrderId).matches(),
+              "Parameter guaranteedOrderId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the guaranteed order to fetch. The ID is of the format
+       * `{exchange}-{legacy_guaranteed_order_id}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String guaranteedOrderId;
+
+      /** Required. The ID of the guaranteed order to fetch. The ID is of the format
+     `{exchange}-{legacy_guaranteed_order_id}`
+       */
+      public java.lang.String getGuaranteedOrderId() {
+        return guaranteedOrderId;
+      }
+
+      /**
+       * Required. The ID of the guaranteed order to fetch. The ID is of the format
+       * `{exchange}-{legacy_guaranteed_order_id}`
+       */
+      public Get setGuaranteedOrderId(java.lang.String guaranteedOrderId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(GUARANTEED_ORDER_ID_PATTERN.matcher(guaranteedOrderId).matches(),
+              "Parameter guaranteedOrderId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.guaranteedOrderId = guaranteedOrderId;
+        return this;
+      }
+
+      /** The ID of the advertiser that has access to the guaranteed order. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that has access to the guaranteed order.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the advertiser that has access to the guaranteed order. */
+      public Get setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** The ID of the partner that has access to the guaranteed order. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that has access to the guaranteed order.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the partner that has access to the guaranteed order. */
+      public Get setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists guaranteed orders that are accessible to the current user. The order is defined by the
+     * order_by parameter. If a filter by entity_status is not specified, guaranteed orders with entity
+     * status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+     *
+     * Create a request for the method "guaranteedOrders.list".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListGuaranteedOrdersResponse> {
+
+      private static final String REST_PATH = "v1/guaranteedOrders";
+
+      /**
+       * Lists guaranteed orders that are accessible to the current user. The order is defined by the
+       * order_by parameter. If a filter by entity_status is not specified, guaranteed orders with
+       * entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+       *
+       * Create a request for the method "guaranteedOrders.list".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListGuaranteedOrdersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the advertiser that has access to the guaranteed order. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that has access to the guaranteed order.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the advertiser that has access to the guaranteed order. */
+      public List setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /**
+       * Allows filtering by guaranteed order properties. * Filter expressions are made up of one or
+       * more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+       * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+       * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `guaranteed_order_id` - `exchange` - `display_name` - `status.entityStatus` Examples: * All
+       * active guaranteed orders: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Guaranteed orders
+       * belonging to Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER"
+       * OR exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
+       * characters.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Allows filtering by guaranteed order properties. * Filter expressions are made up of one or more
+     restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
+     restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+     The operator must be `EQUALS (=)`. * Supported fields: - `guaranteed_order_id` - `exchange` -
+     `display_name` - `status.entityStatus` Examples: * All active guaranteed orders:
+     `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Guaranteed orders belonging to Google Ad Manager or
+     Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR exchange="EXCHANGE_RUBICON"` The
+     length of this field should be no more than 500 characters.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Allows filtering by guaranteed order properties. * Filter expressions are made up of one or
+       * more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+       * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+       * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `guaranteed_order_id` - `exchange` - `display_name` - `status.entityStatus` Examples: * All
+       * active guaranteed orders: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Guaranteed orders
+       * belonging to Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER"
+       * OR exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
+       * characters.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
+       * "desc" should be added to the field name. For example, `displayName desc`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Field by which to sort the list. Acceptable values are: * `displayName` (default) The default
+     sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+     added to the field name. For example, `displayName desc`.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Field by which to sort the list. Acceptable values are: * `displayName` (default) The
+       * default sorting order is ascending. To specify descending order for a field, a suffix
+       * "desc" should be added to the field name. For example, `displayName desc`.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified or greater than `100`
+       * will default to `100`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested page size. Must be between `1` and `100`. If unspecified or greater than `100` will
+     default to `100`.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Requested page size. Must be between `1` and `100`. If unspecified or greater than `100`
+       * will default to `100`.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListGuaranteedOrders` method.
+       * If not specified, the first page of results will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results the server should return. Typically, this is the value of
+     next_page_token returned from the previous call to `ListGuaranteedOrders` method. If not specified,
+     the first page of results will be returned.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of next_page_token returned from the previous call to `ListGuaranteedOrders` method.
+       * If not specified, the first page of results will be returned.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** The ID of the partner that has access to the guaranteed order. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that has access to the guaranteed order.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the partner that has access to the guaranteed order. */
+      public List setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
+     *
+     * Create a request for the method "guaranteedOrders.patch".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param guaranteedOrderId Output only. The unique identifier of the guaranteed order. The guaranteed order IDs have the format
+     *        `{exchange}-{legacy_guaranteed_order_id}`.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.GuaranteedOrder}
+     * @return the request
+     */
+    public Patch patch(java.lang.String guaranteedOrderId, com.google.api.services.displayvideo.v1.model.GuaranteedOrder content) throws java.io.IOException {
+      Patch result = new Patch(guaranteedOrderId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.GuaranteedOrder> {
+
+      private static final String REST_PATH = "v1/guaranteedOrders/{+guaranteedOrderId}";
+
+      private final java.util.regex.Pattern GUARANTEED_ORDER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
+       *
+       * Create a request for the method "guaranteedOrders.patch".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param guaranteedOrderId Output only. The unique identifier of the guaranteed order. The guaranteed order IDs have the format
+     *        `{exchange}-{legacy_guaranteed_order_id}`.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.GuaranteedOrder}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String guaranteedOrderId, com.google.api.services.displayvideo.v1.model.GuaranteedOrder content) {
+        super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.GuaranteedOrder.class);
+        this.guaranteedOrderId = com.google.api.client.util.Preconditions.checkNotNull(guaranteedOrderId, "Required parameter guaranteedOrderId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(GUARANTEED_ORDER_ID_PATTERN.matcher(guaranteedOrderId).matches(),
+              "Parameter guaranteedOrderId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. The unique identifier of the guaranteed order. The guaranteed order IDs have
+       * the format `{exchange}-{legacy_guaranteed_order_id}`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String guaranteedOrderId;
+
+      /** Output only. The unique identifier of the guaranteed order. The guaranteed order IDs have the
+     format `{exchange}-{legacy_guaranteed_order_id}`.
+       */
+      public java.lang.String getGuaranteedOrderId() {
+        return guaranteedOrderId;
+      }
+
+      /**
+       * Output only. The unique identifier of the guaranteed order. The guaranteed order IDs have
+       * the format `{exchange}-{legacy_guaranteed_order_id}`.
+       */
+      public Patch setGuaranteedOrderId(java.lang.String guaranteedOrderId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(GUARANTEED_ORDER_ID_PATTERN.matcher(guaranteedOrderId).matches(),
+              "Parameter guaranteedOrderId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.guaranteedOrderId = guaranteedOrderId;
+        return this;
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that the request is being made within.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      public Patch setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that the request is being made within.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      public Patch setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The mask to control which fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the InventorySourceGroups collection.
    *
    * <p>The typical use is:</p>
@@ -21346,6 +22268,261 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class InventorySources {
 
     /**
+     * Creates a new inventory source. Returns the newly created inventory source if successful.
+     *
+     * Create a request for the method "inventorySources.create".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySource}
+     * @return the request
+     */
+    public Create create(com.google.api.services.displayvideo.v1.model.InventorySource content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.InventorySource> {
+
+      private static final String REST_PATH = "v1/inventorySources";
+
+      /**
+       * Creates a new inventory source. Returns the newly created inventory source if successful.
+       *
+       * Create a request for the method "inventorySources.create".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySource}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.displayvideo.v1.model.InventorySource content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.InventorySource.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that the request is being made within.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      public Create setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that the request is being made within.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      public Create setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for
+     * the inventory source.
+     *
+     * Create a request for the method "inventorySources.editInventorySourceReadWriteAccessors".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link EditInventorySourceReadWriteAccessors#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param inventorySourceId Required. The ID of inventory source to update.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.EditInventorySourceReadWriteAccessorsRequest}
+     * @return the request
+     */
+    public EditInventorySourceReadWriteAccessors editInventorySourceReadWriteAccessors(java.lang.Long inventorySourceId, com.google.api.services.displayvideo.v1.model.EditInventorySourceReadWriteAccessorsRequest content) throws java.io.IOException {
+      EditInventorySourceReadWriteAccessors result = new EditInventorySourceReadWriteAccessors(inventorySourceId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class EditInventorySourceReadWriteAccessors extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.InventorySourceAccessors> {
+
+      private static final String REST_PATH = "v1/inventorySources/{+inventorySourceId}:editInventorySourceReadWriteAccessors";
+
+      private final java.util.regex.Pattern INVENTORY_SOURCE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for
+       * the inventory source.
+       *
+       * Create a request for the method "inventorySources.editInventorySourceReadWriteAccessors".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link EditInventorySourceReadWriteAccessors#execute()} method to
+       * invoke the remote operation. <p> {@link EditInventorySourceReadWriteAccessors#initialize(com.go
+       * ogle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+       * this instance immediately after invoking the constructor. </p>
+       *
+       * @param inventorySourceId Required. The ID of inventory source to update.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.EditInventorySourceReadWriteAccessorsRequest}
+       * @since 1.13
+       */
+      protected EditInventorySourceReadWriteAccessors(java.lang.Long inventorySourceId, com.google.api.services.displayvideo.v1.model.EditInventorySourceReadWriteAccessorsRequest content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.InventorySourceAccessors.class);
+        this.inventorySourceId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceId, "Required parameter inventorySourceId must be specified.");
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors set$Xgafv(java.lang.String $Xgafv) {
+        return (EditInventorySourceReadWriteAccessors) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setAccessToken(java.lang.String accessToken) {
+        return (EditInventorySourceReadWriteAccessors) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setAlt(java.lang.String alt) {
+        return (EditInventorySourceReadWriteAccessors) super.setAlt(alt);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setCallback(java.lang.String callback) {
+        return (EditInventorySourceReadWriteAccessors) super.setCallback(callback);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setFields(java.lang.String fields) {
+        return (EditInventorySourceReadWriteAccessors) super.setFields(fields);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setKey(java.lang.String key) {
+        return (EditInventorySourceReadWriteAccessors) super.setKey(key);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setOauthToken(java.lang.String oauthToken) {
+        return (EditInventorySourceReadWriteAccessors) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (EditInventorySourceReadWriteAccessors) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setQuotaUser(java.lang.String quotaUser) {
+        return (EditInventorySourceReadWriteAccessors) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setUploadType(java.lang.String uploadType) {
+        return (EditInventorySourceReadWriteAccessors) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EditInventorySourceReadWriteAccessors) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of inventory source to update. */
+      @com.google.api.client.util.Key
+      private java.lang.Long inventorySourceId;
+
+      /** Required. The ID of inventory source to update.
+       */
+      public java.lang.Long getInventorySourceId() {
+        return inventorySourceId;
+      }
+
+      /** Required. The ID of inventory source to update. */
+      public EditInventorySourceReadWriteAccessors setInventorySourceId(java.lang.Long inventorySourceId) {
+        this.inventorySourceId = inventorySourceId;
+        return this;
+      }
+
+      @Override
+      public EditInventorySourceReadWriteAccessors set(String parameterName, Object value) {
+        return (EditInventorySourceReadWriteAccessors) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets an inventory source.
      *
      * Create a request for the method "inventorySources.get".
@@ -21752,6 +22929,175 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing inventory source. Returns the updated inventory source if successful.
+     *
+     * Create a request for the method "inventorySources.patch".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param inventorySourceId Output only. The unique ID of the inventory source. Assigned by the system.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySource}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long inventorySourceId, com.google.api.services.displayvideo.v1.model.InventorySource content) throws java.io.IOException {
+      Patch result = new Patch(inventorySourceId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.InventorySource> {
+
+      private static final String REST_PATH = "v1/inventorySources/{+inventorySourceId}";
+
+      private final java.util.regex.Pattern INVENTORY_SOURCE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates an existing inventory source. Returns the updated inventory source if successful.
+       *
+       * Create a request for the method "inventorySources.patch".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param inventorySourceId Output only. The unique ID of the inventory source. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.InventorySource}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long inventorySourceId, com.google.api.services.displayvideo.v1.model.InventorySource content) {
+        super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.InventorySource.class);
+        this.inventorySourceId = com.google.api.client.util.Preconditions.checkNotNull(inventorySourceId, "Required parameter inventorySourceId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Output only. The unique ID of the inventory source. Assigned by the system. */
+      @com.google.api.client.util.Key
+      private java.lang.Long inventorySourceId;
+
+      /** Output only. The unique ID of the inventory source. Assigned by the system.
+       */
+      public java.lang.Long getInventorySourceId() {
+        return inventorySourceId;
+      }
+
+      /** Output only. The unique ID of the inventory source. Assigned by the system. */
+      public Patch setInventorySourceId(java.lang.Long inventorySourceId) {
+        this.inventorySourceId = inventorySourceId;
+        return this;
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that the request is being made within.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the advertiser that the request is being made within. */
+      public Patch setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that the request is being made within.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /** The ID of the partner that the request is being made within. */
+      public Patch setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The mask to control which fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
       }
     }
 

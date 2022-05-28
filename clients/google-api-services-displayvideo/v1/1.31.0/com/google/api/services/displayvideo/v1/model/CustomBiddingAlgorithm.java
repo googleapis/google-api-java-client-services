@@ -75,8 +75,9 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   private java.lang.String entityStatus;
 
   /**
-   * Output only. The custom bidding model readiness state for each advertiser who have access. This
-   * field may only include the state of the queried advertiser if the algorithm [`owner`](/display-
+   * Output only. The state of custom bidding model readiness for each advertiser who has access.
+   * This field may only include the state of the queried advertiser if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
@@ -218,8 +219,9 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The custom bidding model readiness state for each advertiser who have access. This
-   * field may only include the state of the queried advertiser if the algorithm [`owner`](/display-
+   * Output only. The state of custom bidding model readiness for each advertiser who has access.
+   * This field may only include the state of the queried advertiser if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
@@ -230,8 +232,9 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The custom bidding model readiness state for each advertiser who have access. This
-   * field may only include the state of the queried advertiser if the algorithm [`owner`](/display-
+   * Output only. The state of custom bidding model readiness for each advertiser who has access.
+   * This field may only include the state of the queried advertiser if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).

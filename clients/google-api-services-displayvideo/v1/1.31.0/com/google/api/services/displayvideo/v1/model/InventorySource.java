@@ -84,11 +84,27 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   private java.lang.String exchange;
 
   /**
+   * Immutable. The ID of the guaranteed order that this inventory source belongs to. Only
+   * applicable when commitment is `INVENTORY_SOURCE_COMMITMENT_GUARANTEED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String guaranteedOrderId;
+
+  /**
    * Output only. The unique ID of the inventory source. Assigned by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long inventorySourceId;
+
+  /**
+   * Output only. The product type of the inventory source, denoting the way through which it sells
+   * inventory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inventorySourceProductType;
 
   /**
    * Denotes the type of the inventory source.
@@ -119,11 +135,46 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   private RateDetails rateDetails;
 
   /**
+   * Output only. The IDs of advertisers with read-only access to the inventory source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> readAdvertiserIds;
+
+  /**
+   * Output only. The IDs of partners with read-only access to the inventory source. All advertisers
+   * of partners in this field inherit read-only access to the inventory source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> readPartnerIds;
+
+  /**
+   * The partner or advertisers that have read/write access to the inventory source. Output only
+   * when commitment is `INVENTORY_SOURCE_COMMITMENT_GUARANTEED`, in which case the read/write
+   * accessors are inherited from the parent guaranteed order. Required when commitment is
+   * `INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED`. If commitment is
+   * `INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED` and a partner is set in this field, all
+   * advertisers under this partner will automatically have read-only access to the inventory
+   * source. These advertisers will not be included in read_advertiser_ids.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InventorySourceAccessors readWriteAccessors;
+
+  /**
    * The status settings of the inventory source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InventorySourceStatus status;
+
+  /**
+   * Immutable. The unique ID of the sub-site property assigned to this inventory source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long subSitePropertyId;
 
   /**
    * The time range when this inventory source starts and stops serving.
@@ -252,6 +303,25 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Immutable. The ID of the guaranteed order that this inventory source belongs to. Only
+   * applicable when commitment is `INVENTORY_SOURCE_COMMITMENT_GUARANTEED`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGuaranteedOrderId() {
+    return guaranteedOrderId;
+  }
+
+  /**
+   * Immutable. The ID of the guaranteed order that this inventory source belongs to. Only
+   * applicable when commitment is `INVENTORY_SOURCE_COMMITMENT_GUARANTEED`.
+   * @param guaranteedOrderId guaranteedOrderId or {@code null} for none
+   */
+  public InventorySource setGuaranteedOrderId(java.lang.String guaranteedOrderId) {
+    this.guaranteedOrderId = guaranteedOrderId;
+    return this;
+  }
+
+  /**
    * Output only. The unique ID of the inventory source. Assigned by the system.
    * @return value or {@code null} for none
    */
@@ -265,6 +335,25 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
    */
   public InventorySource setInventorySourceId(java.lang.Long inventorySourceId) {
     this.inventorySourceId = inventorySourceId;
+    return this;
+  }
+
+  /**
+   * Output only. The product type of the inventory source, denoting the way through which it sells
+   * inventory.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInventorySourceProductType() {
+    return inventorySourceProductType;
+  }
+
+  /**
+   * Output only. The product type of the inventory source, denoting the way through which it sells
+   * inventory.
+   * @param inventorySourceProductType inventorySourceProductType or {@code null} for none
+   */
+  public InventorySource setInventorySourceProductType(java.lang.String inventorySourceProductType) {
+    this.inventorySourceProductType = inventorySourceProductType;
     return this;
   }
 
@@ -337,6 +426,71 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Output only. The IDs of advertisers with read-only access to the inventory source.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getReadAdvertiserIds() {
+    return readAdvertiserIds;
+  }
+
+  /**
+   * Output only. The IDs of advertisers with read-only access to the inventory source.
+   * @param readAdvertiserIds readAdvertiserIds or {@code null} for none
+   */
+  public InventorySource setReadAdvertiserIds(java.util.List<java.lang.Long> readAdvertiserIds) {
+    this.readAdvertiserIds = readAdvertiserIds;
+    return this;
+  }
+
+  /**
+   * Output only. The IDs of partners with read-only access to the inventory source. All advertisers
+   * of partners in this field inherit read-only access to the inventory source.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getReadPartnerIds() {
+    return readPartnerIds;
+  }
+
+  /**
+   * Output only. The IDs of partners with read-only access to the inventory source. All advertisers
+   * of partners in this field inherit read-only access to the inventory source.
+   * @param readPartnerIds readPartnerIds or {@code null} for none
+   */
+  public InventorySource setReadPartnerIds(java.util.List<java.lang.Long> readPartnerIds) {
+    this.readPartnerIds = readPartnerIds;
+    return this;
+  }
+
+  /**
+   * The partner or advertisers that have read/write access to the inventory source. Output only
+   * when commitment is `INVENTORY_SOURCE_COMMITMENT_GUARANTEED`, in which case the read/write
+   * accessors are inherited from the parent guaranteed order. Required when commitment is
+   * `INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED`. If commitment is
+   * `INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED` and a partner is set in this field, all
+   * advertisers under this partner will automatically have read-only access to the inventory
+   * source. These advertisers will not be included in read_advertiser_ids.
+   * @return value or {@code null} for none
+   */
+  public InventorySourceAccessors getReadWriteAccessors() {
+    return readWriteAccessors;
+  }
+
+  /**
+   * The partner or advertisers that have read/write access to the inventory source. Output only
+   * when commitment is `INVENTORY_SOURCE_COMMITMENT_GUARANTEED`, in which case the read/write
+   * accessors are inherited from the parent guaranteed order. Required when commitment is
+   * `INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED`. If commitment is
+   * `INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED` and a partner is set in this field, all
+   * advertisers under this partner will automatically have read-only access to the inventory
+   * source. These advertisers will not be included in read_advertiser_ids.
+   * @param readWriteAccessors readWriteAccessors or {@code null} for none
+   */
+  public InventorySource setReadWriteAccessors(InventorySourceAccessors readWriteAccessors) {
+    this.readWriteAccessors = readWriteAccessors;
+    return this;
+  }
+
+  /**
    * The status settings of the inventory source.
    * @return value or {@code null} for none
    */
@@ -350,6 +504,23 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
    */
   public InventorySource setStatus(InventorySourceStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Immutable. The unique ID of the sub-site property assigned to this inventory source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSubSitePropertyId() {
+    return subSitePropertyId;
+  }
+
+  /**
+   * Immutable. The unique ID of the sub-site property assigned to this inventory source.
+   * @param subSitePropertyId subSitePropertyId or {@code null} for none
+   */
+  public InventorySource setSubSitePropertyId(java.lang.Long subSitePropertyId) {
+    this.subSitePropertyId = subSitePropertyId;
     return this;
   }
 

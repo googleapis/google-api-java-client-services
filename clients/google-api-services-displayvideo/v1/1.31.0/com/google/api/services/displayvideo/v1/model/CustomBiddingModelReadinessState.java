@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class CustomBiddingModelReadinessState extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique ID of the advertiser with access to the custom bidding algorithm.
+   * The unique ID of the relevant advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -45,7 +45,7 @@ public final class CustomBiddingModelReadinessState extends com.google.api.clien
   private java.lang.String readinessState;
 
   /**
-   * The unique ID of the advertiser with access to the custom bidding algorithm.
+   * The unique ID of the relevant advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserId() {
@@ -53,7 +53,7 @@ public final class CustomBiddingModelReadinessState extends com.google.api.clien
   }
 
   /**
-   * The unique ID of the advertiser with access to the custom bidding algorithm.
+   * The unique ID of the relevant advertiser.
    * @param advertiserId advertiserId or {@code null} for none
    */
   public CustomBiddingModelReadinessState setAdvertiserId(java.lang.Long advertiserId) {

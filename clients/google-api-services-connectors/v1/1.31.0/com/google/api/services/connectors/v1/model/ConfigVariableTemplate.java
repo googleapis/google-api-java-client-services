@@ -44,6 +44,13 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.lang.String displayName;
 
   /**
+   * Enum options. To be populated if `ValueType` is `ENUM`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EnumOption> enumOptions;
+
+  /**
    * Key of the config variable.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Enum options. To be populated if `ValueType` is `ENUM`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EnumOption> getEnumOptions() {
+    return enumOptions;
+  }
+
+  /**
+   * Enum options. To be populated if `ValueType` is `ENUM`
+   * @param enumOptions enumOptions or {@code null} for none
+   */
+  public ConfigVariableTemplate setEnumOptions(java.util.List<EnumOption> enumOptions) {
+    this.enumOptions = enumOptions;
     return this;
   }
 

@@ -48,7 +48,7 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
-   * The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
+   * The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
+   * The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
    * @return value or {@code null} for none
    */
   public java.lang.String getTable() {
@@ -122,7 +122,7 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
+   * The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
    * @param table table or {@code null} for none
    */
   public BigQueryConfig setTable(java.lang.String table) {

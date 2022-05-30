@@ -67,6 +67,24 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * List of logical interfaces for the instance. The number of logical interfaces will be the same
+   * as number of hardware bond/nic on the chosen network template. For the non-multivlan
+   * configurations (for eg, existing servers) that use existing default network template (bondaa-
+   * bondaa), both the Instance.networks field and the Instance.logical_interfaces fields will be
+   * filled to ensure backward compatibility. For the others, only Instance.logical_interfaces will
+   * be filled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudBaremetalsolutionV2LogicalInterface> logicalInterfaces;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudBaremetalsolutionV2LogicalInterface used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudBaremetalsolutionV2LogicalInterface.class);
+  }
+
+  /**
    * List of LUNs associated with this server.
    * The value may be {@code null}.
    */
@@ -89,6 +107,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Instance network template name. For eg, bondaa-bondaa, bondab-nic, etc. Generally, the template
+   * name follows the syntax of "bond" or "nic".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkTemplate;
 
   /**
    * List of networks associated with this server.
@@ -214,6 +240,33 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * List of logical interfaces for the instance. The number of logical interfaces will be the same
+   * as number of hardware bond/nic on the chosen network template. For the non-multivlan
+   * configurations (for eg, existing servers) that use existing default network template (bondaa-
+   * bondaa), both the Instance.networks field and the Instance.logical_interfaces fields will be
+   * filled to ensure backward compatibility. For the others, only Instance.logical_interfaces will
+   * be filled.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudBaremetalsolutionV2LogicalInterface> getLogicalInterfaces() {
+    return logicalInterfaces;
+  }
+
+  /**
+   * List of logical interfaces for the instance. The number of logical interfaces will be the same
+   * as number of hardware bond/nic on the chosen network template. For the non-multivlan
+   * configurations (for eg, existing servers) that use existing default network template (bondaa-
+   * bondaa), both the Instance.networks field and the Instance.logical_interfaces fields will be
+   * filled to ensure backward compatibility. For the others, only Instance.logical_interfaces will
+   * be filled.
+   * @param logicalInterfaces logicalInterfaces or {@code null} for none
+   */
+  public Instance setLogicalInterfaces(java.util.List<GoogleCloudBaremetalsolutionV2LogicalInterface> logicalInterfaces) {
+    this.logicalInterfaces = logicalInterfaces;
+    return this;
+  }
+
+  /**
    * List of LUNs associated with this server.
    * @return value or {@code null} for none
    */
@@ -267,6 +320,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Instance network template name. For eg, bondaa-bondaa, bondab-nic, etc. Generally, the template
+   * name follows the syntax of "bond" or "nic".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkTemplate() {
+    return networkTemplate;
+  }
+
+  /**
+   * Instance network template name. For eg, bondaa-bondaa, bondab-nic, etc. Generally, the template
+   * name follows the syntax of "bond" or "nic".
+   * @param networkTemplate networkTemplate or {@code null} for none
+   */
+  public Instance setNetworkTemplate(java.lang.String networkTemplate) {
+    this.networkTemplate = networkTemplate;
     return this;
   }
 

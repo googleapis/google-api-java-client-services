@@ -38,7 +38,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean accountNetworksEnabled;
 
   /**
-   * Client network address.
+   * Client network address. Filled if InstanceConfig.multivlan_config is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,11 +67,40 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String instanceType;
 
   /**
+   * List of logical interfaces for the instance. The number of logical interfaces will be the same
+   * as number of hardware bond/nic on the chosen network template. Filled if
+   * InstanceConfig.multivlan_config is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudBaremetalsolutionV2LogicalInterface> logicalInterfaces;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudBaremetalsolutionV2LogicalInterface used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudBaremetalsolutionV2LogicalInterface.class);
+  }
+
+  /**
    * Output only. The name of the instance config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The type of network configuration on the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkConfig;
+
+  /**
+   * Server network template name. Filled if InstanceConfig.multivlan_config is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkTemplate;
 
   /**
    * OS image to initialize the instance. [Available images](https://cloud.google.com/bare-
@@ -82,7 +111,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String osImage;
 
   /**
-   * Private network address, if any.
+   * Private network address, if any. Filled if InstanceConfig.multivlan_config is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +143,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Client network address.
+   * Client network address. Filled if InstanceConfig.multivlan_config is false.
    * @return value or {@code null} for none
    */
   public NetworkAddress getClientNetwork() {
@@ -122,7 +151,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Client network address.
+   * Client network address. Filled if InstanceConfig.multivlan_config is false.
    * @param clientNetwork clientNetwork or {@code null} for none
    */
   public InstanceConfig setClientNetwork(NetworkAddress clientNetwork) {
@@ -184,6 +213,27 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * List of logical interfaces for the instance. The number of logical interfaces will be the same
+   * as number of hardware bond/nic on the chosen network template. Filled if
+   * InstanceConfig.multivlan_config is true.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudBaremetalsolutionV2LogicalInterface> getLogicalInterfaces() {
+    return logicalInterfaces;
+  }
+
+  /**
+   * List of logical interfaces for the instance. The number of logical interfaces will be the same
+   * as number of hardware bond/nic on the chosen network template. Filled if
+   * InstanceConfig.multivlan_config is true.
+   * @param logicalInterfaces logicalInterfaces or {@code null} for none
+   */
+  public InstanceConfig setLogicalInterfaces(java.util.List<GoogleCloudBaremetalsolutionV2LogicalInterface> logicalInterfaces) {
+    this.logicalInterfaces = logicalInterfaces;
+    return this;
+  }
+
+  /**
    * Output only. The name of the instance config.
    * @return value or {@code null} for none
    */
@@ -197,6 +247,40 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The type of network configuration on the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkConfig() {
+    return networkConfig;
+  }
+
+  /**
+   * The type of network configuration on the instance.
+   * @param networkConfig networkConfig or {@code null} for none
+   */
+  public InstanceConfig setNetworkConfig(java.lang.String networkConfig) {
+    this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
+   * Server network template name. Filled if InstanceConfig.multivlan_config is true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkTemplate() {
+    return networkTemplate;
+  }
+
+  /**
+   * Server network template name. Filled if InstanceConfig.multivlan_config is true.
+   * @param networkTemplate networkTemplate or {@code null} for none
+   */
+  public InstanceConfig setNetworkTemplate(java.lang.String networkTemplate) {
+    this.networkTemplate = networkTemplate;
     return this;
   }
 
@@ -220,7 +304,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Private network address, if any.
+   * Private network address, if any. Filled if InstanceConfig.multivlan_config is false.
    * @return value or {@code null} for none
    */
   public NetworkAddress getPrivateNetwork() {
@@ -228,7 +312,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Private network address, if any.
+   * Private network address, if any. Filled if InstanceConfig.multivlan_config is false.
    * @param privateNetwork privateNetwork or {@code null} for none
    */
   public InstanceConfig setPrivateNetwork(NetworkAddress privateNetwork) {

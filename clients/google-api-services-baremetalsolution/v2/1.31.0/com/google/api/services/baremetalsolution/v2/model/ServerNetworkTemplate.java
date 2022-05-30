@@ -42,16 +42,18 @@ public final class ServerNetworkTemplate extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<LogicalInterface> logicalInterfaces;
+  private java.util.List<GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface> logicalInterfaces;
 
   static {
-    // hack to force ProGuard to consider LogicalInterface used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LogicalInterface.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface.class);
   }
 
   /**
-   * Output only. Template's unique name.
+   * Output only. Template's unique name. The full resource name follows the pattern:
+   * `projects/{project}/locations/{location}/serverNetworkTemplate/{server_network_template}`
+   * Generally, the {server_network_template} follows the syntax of "bond" or "nic".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +80,7 @@ public final class ServerNetworkTemplate extends com.google.api.client.json.Gene
    * Logical interfaces.
    * @return value or {@code null} for none
    */
-  public java.util.List<LogicalInterface> getLogicalInterfaces() {
+  public java.util.List<GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface> getLogicalInterfaces() {
     return logicalInterfaces;
   }
 
@@ -86,13 +88,15 @@ public final class ServerNetworkTemplate extends com.google.api.client.json.Gene
    * Logical interfaces.
    * @param logicalInterfaces logicalInterfaces or {@code null} for none
    */
-  public ServerNetworkTemplate setLogicalInterfaces(java.util.List<LogicalInterface> logicalInterfaces) {
+  public ServerNetworkTemplate setLogicalInterfaces(java.util.List<GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface> logicalInterfaces) {
     this.logicalInterfaces = logicalInterfaces;
     return this;
   }
 
   /**
-   * Output only. Template's unique name.
+   * Output only. Template's unique name. The full resource name follows the pattern:
+   * `projects/{project}/locations/{location}/serverNetworkTemplate/{server_network_template}`
+   * Generally, the {server_network_template} follows the syntax of "bond" or "nic".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -100,7 +104,9 @@ public final class ServerNetworkTemplate extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Template's unique name.
+   * Output only. Template's unique name. The full resource name follows the pattern:
+   * `projects/{project}/locations/{location}/serverNetworkTemplate/{server_network_template}`
+   * Generally, the {server_network_template} follows the syntax of "bond" or "nic".
    * @param name name or {@code null} for none
    */
   public ServerNetworkTemplate setName(java.lang.String name) {

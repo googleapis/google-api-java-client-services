@@ -101,7 +101,7 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   private java.lang.String state;
 
   /**
-   * A generated buganizer id to track provisioning request.
+   * A generated ticket id to track provisioning request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,7 +262,7 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * A generated buganizer id to track provisioning request.
+   * A generated ticket id to track provisioning request.
    * @return value or {@code null} for none
    */
   public java.lang.String getTicketId() {
@@ -270,7 +270,7 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * A generated buganizer id to track provisioning request.
+   * A generated ticket id to track provisioning request.
    * @param ticketId ticketId or {@code null} for none
    */
   public ProvisioningConfig setTicketId(java.lang.String ticketId) {

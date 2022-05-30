@@ -2360,17 +2360,23 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** The list of fields to update. The only currently supported fields are: `labels` */
+          /**
+           * The list of fields to update. The only currently supported fields are: `labels`,
+           * `reservations`
+           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to update. The only currently supported fields are: `labels`
+          /** The list of fields to update. The only currently supported fields are: `labels`, `reservations`
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to update. The only currently supported fields are: `labels` */
+          /**
+           * The list of fields to update. The only currently supported fields are: `labels`,
+           * `reservations`
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

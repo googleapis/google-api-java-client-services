@@ -115,7 +115,7 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * User note field, it can be used by customers to add additional information for the BMS Ops team
-   * (b/194021617).
+   * .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,7 +295,7 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * User note field, it can be used by customers to add additional information for the BMS Ops team
-   * (b/194021617).
+   * .
    * @return value or {@code null} for none
    */
   public java.lang.String getUserNote() {
@@ -304,7 +304,7 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * User note field, it can be used by customers to add additional information for the BMS Ops team
-   * (b/194021617).
+   * .
    * @param userNote userNote or {@code null} for none
    */
   public VolumeConfig setUserNote(java.lang.String userNote) {

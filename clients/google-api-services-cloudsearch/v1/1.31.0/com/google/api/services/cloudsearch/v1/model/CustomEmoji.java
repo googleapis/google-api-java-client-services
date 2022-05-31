@@ -19,7 +19,7 @@ package com.google.api.services.cloudsearch.v1.model;
 /**
  * Proto representation of a custom emoji. May be used in both APIs and in Spanner, but certain
  * fields should be restricted to one or the other. See the per-field documentation for details.
- * NEXT_TAG: 13
+ * NEXT_TAG: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -61,6 +61,14 @@ public final class CustomEmoji extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UserId creatorUserId;
+
+  /**
+   * Time when the emoji was deleted, in microseconds. This field may be present in Spanner, within
+   * the server, or in public APIs. Only present if the emoji has been deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long deleteTimeMicros;
 
   /**
    * Output only. A short-lived URL clients can use for directly accessing a custom emoji image.
@@ -187,6 +195,25 @@ public final class CustomEmoji extends com.google.api.client.json.GenericJson {
    */
   public CustomEmoji setCreatorUserId(UserId creatorUserId) {
     this.creatorUserId = creatorUserId;
+    return this;
+  }
+
+  /**
+   * Time when the emoji was deleted, in microseconds. This field may be present in Spanner, within
+   * the server, or in public APIs. Only present if the emoji has been deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDeleteTimeMicros() {
+    return deleteTimeMicros;
+  }
+
+  /**
+   * Time when the emoji was deleted, in microseconds. This field may be present in Spanner, within
+   * the server, or in public APIs. Only present if the emoji has been deleted.
+   * @param deleteTimeMicros deleteTimeMicros or {@code null} for none
+   */
+  public CustomEmoji setDeleteTimeMicros(java.lang.Long deleteTimeMicros) {
+    this.deleteTimeMicros = deleteTimeMicros;
     return this;
   }
 

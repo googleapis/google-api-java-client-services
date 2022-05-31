@@ -39,6 +39,20 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.Boolean checkServiceNetworkingUsePermission;
 
   /**
+   * Optional. Specifies a custom time bucket for Arcus subnetwork request idempotency. If two
+   * equivalent concurrent requests are made, Arcus will know to ignore the request if it has
+   * already been completed or is in progress. Only requests with matching
+   * compute_idempotency_window have guaranteed idempotency. Changing this time window between
+   * requests results in undefined behavior. Zero (or empty) value with
+   * custom_compute_idempotency_window=true specifies no idempotency (i.e. no request ID is provided
+   * to Arcus). Maximum value of 14 days (enforced by Arcus limit). For more information on how to
+   * use, see: go/revisit-sn-idempotency-window
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String computeIdempotencyWindow;
+
+  /**
    * Required. A resource that represents the service consumer, such as `projects/123456`. The
    * project number can be different from the value in the consumer network parameter. For example,
    * the network might be part of a Shared VPC network. In those cases, Service Networking validates
@@ -147,11 +161,23 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String subnetwork;
 
   /**
-   * A list of members that are granted the `compute.networkUser` role on the subnet.
+   * A list of members that are granted the `roles/servicenetworking.subnetworkAdmin` role on the
+   * subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subnetworkUsers;
+
+  /**
+   * Optional. Specifies if Service Networking should use a custom time bucket for Arcus
+   * idempotency. If false, Service Networking uses a 300 second (5 minute) Arcus idempotency
+   * window. If true, Service Networking uses a custom idempotency window provided by the user in
+   * field compute_idempotency_window. For more information on how to use, see: go/revisit-sn-
+   * idempotency-window
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useCustomComputeIdempotencyWindow;
 
   /**
    * Optional. The IAM permission check determines whether the consumer project has
@@ -169,6 +195,37 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setCheckServiceNetworkingUsePermission(java.lang.Boolean checkServiceNetworkingUsePermission) {
     this.checkServiceNetworkingUsePermission = checkServiceNetworkingUsePermission;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies a custom time bucket for Arcus subnetwork request idempotency. If two
+   * equivalent concurrent requests are made, Arcus will know to ignore the request if it has
+   * already been completed or is in progress. Only requests with matching
+   * compute_idempotency_window have guaranteed idempotency. Changing this time window between
+   * requests results in undefined behavior. Zero (or empty) value with
+   * custom_compute_idempotency_window=true specifies no idempotency (i.e. no request ID is provided
+   * to Arcus). Maximum value of 14 days (enforced by Arcus limit). For more information on how to
+   * use, see: go/revisit-sn-idempotency-window
+   * @return value or {@code null} for none
+   */
+  public String getComputeIdempotencyWindow() {
+    return computeIdempotencyWindow;
+  }
+
+  /**
+   * Optional. Specifies a custom time bucket for Arcus subnetwork request idempotency. If two
+   * equivalent concurrent requests are made, Arcus will know to ignore the request if it has
+   * already been completed or is in progress. Only requests with matching
+   * compute_idempotency_window have guaranteed idempotency. Changing this time window between
+   * requests results in undefined behavior. Zero (or empty) value with
+   * custom_compute_idempotency_window=true specifies no idempotency (i.e. no request ID is provided
+   * to Arcus). Maximum value of 14 days (enforced by Arcus limit). For more information on how to
+   * use, see: go/revisit-sn-idempotency-window
+   * @param computeIdempotencyWindow computeIdempotencyWindow or {@code null} for none
+   */
+  public AddSubnetworkRequest setComputeIdempotencyWindow(String computeIdempotencyWindow) {
+    this.computeIdempotencyWindow = computeIdempotencyWindow;
     return this;
   }
 
@@ -425,7 +482,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list of members that are granted the `compute.networkUser` role on the subnet.
+   * A list of members that are granted the `roles/servicenetworking.subnetworkAdmin` role on the
+   * subnet.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubnetworkUsers() {
@@ -433,11 +491,37 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list of members that are granted the `compute.networkUser` role on the subnet.
+   * A list of members that are granted the `roles/servicenetworking.subnetworkAdmin` role on the
+   * subnet.
    * @param subnetworkUsers subnetworkUsers or {@code null} for none
    */
   public AddSubnetworkRequest setSubnetworkUsers(java.util.List<java.lang.String> subnetworkUsers) {
     this.subnetworkUsers = subnetworkUsers;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies if Service Networking should use a custom time bucket for Arcus
+   * idempotency. If false, Service Networking uses a 300 second (5 minute) Arcus idempotency
+   * window. If true, Service Networking uses a custom idempotency window provided by the user in
+   * field compute_idempotency_window. For more information on how to use, see: go/revisit-sn-
+   * idempotency-window
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseCustomComputeIdempotencyWindow() {
+    return useCustomComputeIdempotencyWindow;
+  }
+
+  /**
+   * Optional. Specifies if Service Networking should use a custom time bucket for Arcus
+   * idempotency. If false, Service Networking uses a 300 second (5 minute) Arcus idempotency
+   * window. If true, Service Networking uses a custom idempotency window provided by the user in
+   * field compute_idempotency_window. For more information on how to use, see: go/revisit-sn-
+   * idempotency-window
+   * @param useCustomComputeIdempotencyWindow useCustomComputeIdempotencyWindow or {@code null} for none
+   */
+  public AddSubnetworkRequest setUseCustomComputeIdempotencyWindow(java.lang.Boolean useCustomComputeIdempotencyWindow) {
+    this.useCustomComputeIdempotencyWindow = useCustomComputeIdempotencyWindow;
     return this;
   }
 

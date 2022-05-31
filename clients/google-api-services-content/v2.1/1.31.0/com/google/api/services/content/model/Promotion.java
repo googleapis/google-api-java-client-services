@@ -17,12 +17,12 @@
 package com.google.api.services.content.model;
 
 /**
- * The Promotions feature is publicly available for the US, CA, IN, GB, AU target countries (en
- * language only) in Content API for Shopping. Represents a promotion. See the following articles
- * for more details. * [Promotions feed
- * specification](https://support.google.com/merchants/answer/2906014) * [Local promotions feed
- * specification](https://support.google.com/merchants/answer/10146130) * [Promotions on Buy on
- * Google product data specification](https://support.google.com/merchants/answer/9173673)
+ * The Promotions feature is available for `AU`, `CA`, `DE`, `FR`, `GB`, `IN` and `US` target
+ * countries, and `en` content language. Represents a promotion. See the following articles for more
+ * details. * [Promotions feed specification](https://support.google.com/merchants/answer/2906014) *
+ * [Local promotions feed specification](https://support.google.com/merchants/answer/10146130) *
+ * [Promotions on Buy on Google product data
+ * specification](https://support.google.com/merchants/answer/9173673)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -50,7 +50,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> brandExclusion;
 
   /**
-   * Required. The content language used as part of the unique identifier. Currently only en value
+   * Required. The content language used as part of the unique identifier. Currently only `en` value
    * is supported.
    * The value may be {@code null}.
    */
@@ -72,7 +72,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String freeGiftDescription;
 
   /**
-   * Free gift item id for the promotion.
+   * Free gift item ID for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private PriceAmount freeGiftValue;
 
   /**
-   * Generic redemption code for the promotion. To be used with the above field.
+   * Generic redemption code for the promotion. To be used with the `offerType` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,38 +100,38 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.Integer getThisQuantityDiscounted;
 
   /**
-   * Required. Output only. The REST promotion id to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their promotionId parameter. The REST ID for a
-   * promotion is of the form [channel]:contentLanguage:targetCountry:promotionId The channel field
-   * will have a value of "online", "in_store", or "online_in_store".
+   * Required. Output only. The REST promotion ID to uniquely identify the promotion. Content API
+   * methods that operate on promotions take this as their `promotionId` parameter. The REST ID for
+   * a promotion is of the form channel:contentLanguage:targetCountry:promotionId The `channel`
+   * field has a value of `"online"`, `"in_store"`, or `"online_in_store"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Product filter by item group id for the promotion.
+   * Product filter by item group ID for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> itemGroupId;
 
   /**
-   * Product filter by item group id exclusion for the promotion.
+   * Product filter by item group ID exclusion for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> itemGroupIdExclusion;
 
   /**
-   * Product filter by item id for the promotion.
+   * Product filter by item ID for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> itemId;
 
   /**
-   * Product filter by item id exclusion for the promotion.
+   * Product filter by item ID exclusion for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.Integer minimumPurchaseQuantity;
 
   /**
-   * Promotion cost cap of the promotion.
+   * Cost cap for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,37 +236,37 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> promotionDestinationIds;
 
   /**
-   * String representation of the promotion display dates (deprecated: Use
-   * promotion_display_time_period instead).
+   * String representation of the promotion display dates. Deprecated. Use
+   * `promotion_display_time_period` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promotionDisplayDates;
 
   /**
-   * TimePeriod representation of the promotion display dates.
+   * `TimePeriod` representation of the promotion's display dates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimePeriod promotionDisplayTimePeriod;
 
   /**
-   * String representation of the promotion effective dates (deprecated: Use
-   * promotion_effective_time_period instead).
+   * String representation of the promotion effective dates. Deprecated. Use
+   * `promotion_effective_time_period` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promotionEffectiveDates;
 
   /**
-   * Required. TimePeriod representation of the promotion effective dates.
+   * Required. `TimePeriod` representation of the promotion's effective dates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimePeriod promotionEffectiveTimePeriod;
 
   /**
-   * Required. The user provided promotion id to uniquely identify the promotion.
+   * Required. The user provided promotion ID to uniquely identify the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,15 +280,15 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> redemptionChannel;
 
   /**
-   * Shipping service names for thse promotion.
+   * Shipping service names for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> shippingServiceNames;
 
   /**
-   * Required. The target country used as part of the unique identifier. Currently only US and CA
-   * are supported.
+   * Required. The target country used as part of the unique identifier. Can be `AU`, `CA`, `DE`,
+   * `FR`, `GB`, `IN` or `US`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,7 +329,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The content language used as part of the unique identifier. Currently only en value
+   * Required. The content language used as part of the unique identifier. Currently only `en` value
    * is supported.
    * @return value or {@code null} for none
    */
@@ -338,7 +338,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The content language used as part of the unique identifier. Currently only en value
+   * Required. The content language used as part of the unique identifier. Currently only `en` value
    * is supported.
    * @param contentLanguage contentLanguage or {@code null} for none
    */
@@ -382,7 +382,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Free gift item id for the promotion.
+   * Free gift item ID for the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getFreeGiftItemId() {
@@ -390,7 +390,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Free gift item id for the promotion.
+   * Free gift item ID for the promotion.
    * @param freeGiftItemId freeGiftItemId or {@code null} for none
    */
   public Promotion setFreeGiftItemId(java.lang.String freeGiftItemId) {
@@ -416,7 +416,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Generic redemption code for the promotion. To be used with the above field.
+   * Generic redemption code for the promotion. To be used with the `offerType` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getGenericRedemptionCode() {
@@ -424,7 +424,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Generic redemption code for the promotion. To be used with the above field.
+   * Generic redemption code for the promotion. To be used with the `offerType` field.
    * @param genericRedemptionCode genericRedemptionCode or {@code null} for none
    */
   public Promotion setGenericRedemptionCode(java.lang.String genericRedemptionCode) {
@@ -450,10 +450,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Output only. The REST promotion id to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their promotionId parameter. The REST ID for a
-   * promotion is of the form [channel]:contentLanguage:targetCountry:promotionId The channel field
-   * will have a value of "online", "in_store", or "online_in_store".
+   * Required. Output only. The REST promotion ID to uniquely identify the promotion. Content API
+   * methods that operate on promotions take this as their `promotionId` parameter. The REST ID for
+   * a promotion is of the form channel:contentLanguage:targetCountry:promotionId The `channel`
+   * field has a value of `"online"`, `"in_store"`, or `"online_in_store"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -461,10 +461,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Output only. The REST promotion id to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their promotionId parameter. The REST ID for a
-   * promotion is of the form [channel]:contentLanguage:targetCountry:promotionId The channel field
-   * will have a value of "online", "in_store", or "online_in_store".
+   * Required. Output only. The REST promotion ID to uniquely identify the promotion. Content API
+   * methods that operate on promotions take this as their `promotionId` parameter. The REST ID for
+   * a promotion is of the form channel:contentLanguage:targetCountry:promotionId The `channel`
+   * field has a value of `"online"`, `"in_store"`, or `"online_in_store"`.
    * @param id id or {@code null} for none
    */
   public Promotion setId(java.lang.String id) {
@@ -473,7 +473,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item group id for the promotion.
+   * Product filter by item group ID for the promotion.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemGroupId() {
@@ -481,7 +481,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item group id for the promotion.
+   * Product filter by item group ID for the promotion.
    * @param itemGroupId itemGroupId or {@code null} for none
    */
   public Promotion setItemGroupId(java.util.List<java.lang.String> itemGroupId) {
@@ -490,7 +490,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item group id exclusion for the promotion.
+   * Product filter by item group ID exclusion for the promotion.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemGroupIdExclusion() {
@@ -498,7 +498,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item group id exclusion for the promotion.
+   * Product filter by item group ID exclusion for the promotion.
    * @param itemGroupIdExclusion itemGroupIdExclusion or {@code null} for none
    */
   public Promotion setItemGroupIdExclusion(java.util.List<java.lang.String> itemGroupIdExclusion) {
@@ -507,7 +507,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item id for the promotion.
+   * Product filter by item ID for the promotion.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemId() {
@@ -515,7 +515,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item id for the promotion.
+   * Product filter by item ID for the promotion.
    * @param itemId itemId or {@code null} for none
    */
   public Promotion setItemId(java.util.List<java.lang.String> itemId) {
@@ -524,7 +524,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item id exclusion for the promotion.
+   * Product filter by item ID exclusion for the promotion.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemIdExclusion() {
@@ -532,7 +532,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product filter by item id exclusion for the promotion.
+   * Product filter by item ID exclusion for the promotion.
    * @param itemIdExclusion itemIdExclusion or {@code null} for none
    */
   public Promotion setItemIdExclusion(java.util.List<java.lang.String> itemIdExclusion) {
@@ -626,7 +626,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Promotion cost cap of the promotion.
+   * Cost cap for the promotion.
    * @return value or {@code null} for none
    */
   public PriceAmount getMoneyBudget() {
@@ -634,7 +634,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Promotion cost cap of the promotion.
+   * Cost cap for the promotion.
    * @param moneyBudget moneyBudget or {@code null} for none
    */
   public Promotion setMoneyBudget(PriceAmount moneyBudget) {
@@ -779,8 +779,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String representation of the promotion display dates (deprecated: Use
-   * promotion_display_time_period instead).
+   * String representation of the promotion display dates. Deprecated. Use
+   * `promotion_display_time_period` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionDisplayDates() {
@@ -788,8 +788,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String representation of the promotion display dates (deprecated: Use
-   * promotion_display_time_period instead).
+   * String representation of the promotion display dates. Deprecated. Use
+   * `promotion_display_time_period` instead.
    * @param promotionDisplayDates promotionDisplayDates or {@code null} for none
    */
   public Promotion setPromotionDisplayDates(java.lang.String promotionDisplayDates) {
@@ -798,7 +798,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimePeriod representation of the promotion display dates.
+   * `TimePeriod` representation of the promotion's display dates.
    * @return value or {@code null} for none
    */
   public TimePeriod getPromotionDisplayTimePeriod() {
@@ -806,7 +806,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimePeriod representation of the promotion display dates.
+   * `TimePeriod` representation of the promotion's display dates.
    * @param promotionDisplayTimePeriod promotionDisplayTimePeriod or {@code null} for none
    */
   public Promotion setPromotionDisplayTimePeriod(TimePeriod promotionDisplayTimePeriod) {
@@ -815,8 +815,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String representation of the promotion effective dates (deprecated: Use
-   * promotion_effective_time_period instead).
+   * String representation of the promotion effective dates. Deprecated. Use
+   * `promotion_effective_time_period` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionEffectiveDates() {
@@ -824,8 +824,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String representation of the promotion effective dates (deprecated: Use
-   * promotion_effective_time_period instead).
+   * String representation of the promotion effective dates. Deprecated. Use
+   * `promotion_effective_time_period` instead.
    * @param promotionEffectiveDates promotionEffectiveDates or {@code null} for none
    */
   public Promotion setPromotionEffectiveDates(java.lang.String promotionEffectiveDates) {
@@ -834,7 +834,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. TimePeriod representation of the promotion effective dates.
+   * Required. `TimePeriod` representation of the promotion's effective dates.
    * @return value or {@code null} for none
    */
   public TimePeriod getPromotionEffectiveTimePeriod() {
@@ -842,7 +842,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. TimePeriod representation of the promotion effective dates.
+   * Required. `TimePeriod` representation of the promotion's effective dates.
    * @param promotionEffectiveTimePeriod promotionEffectiveTimePeriod or {@code null} for none
    */
   public Promotion setPromotionEffectiveTimePeriod(TimePeriod promotionEffectiveTimePeriod) {
@@ -851,7 +851,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user provided promotion id to uniquely identify the promotion.
+   * Required. The user provided promotion ID to uniquely identify the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionId() {
@@ -859,7 +859,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user provided promotion id to uniquely identify the promotion.
+   * Required. The user provided promotion ID to uniquely identify the promotion.
    * @param promotionId promotionId or {@code null} for none
    */
   public Promotion setPromotionId(java.lang.String promotionId) {
@@ -885,7 +885,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shipping service names for thse promotion.
+   * Shipping service names for the promotion.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getShippingServiceNames() {
@@ -893,7 +893,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shipping service names for thse promotion.
+   * Shipping service names for the promotion.
    * @param shippingServiceNames shippingServiceNames or {@code null} for none
    */
   public Promotion setShippingServiceNames(java.util.List<java.lang.String> shippingServiceNames) {
@@ -902,8 +902,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target country used as part of the unique identifier. Currently only US and CA
-   * are supported.
+   * Required. The target country used as part of the unique identifier. Can be `AU`, `CA`, `DE`,
+   * `FR`, `GB`, `IN` or `US`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -911,8 +911,8 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target country used as part of the unique identifier. Currently only US and CA
-   * are supported.
+   * Required. The target country used as part of the unique identifier. Can be `AU`, `CA`, `DE`,
+   * `FR`, `GB`, `IN` or `US`.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public Promotion setTargetCountry(java.lang.String targetCountry) {

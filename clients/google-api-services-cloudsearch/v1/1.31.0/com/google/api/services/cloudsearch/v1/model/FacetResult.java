@@ -30,7 +30,8 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class FacetResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * FacetBuckets for values in response containing at least a single result.
+   * FacetBuckets for values in response containing at least a single result with the corresponding
+   * filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class FacetResult extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceName;
 
   /**
-   * FacetBuckets for values in response containing at least a single result.
+   * FacetBuckets for values in response containing at least a single result with the corresponding
+   * filter.
    * @return value or {@code null} for none
    */
   public java.util.List<FacetBucket> getBuckets() {
@@ -72,7 +74,8 @@ public final class FacetResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * FacetBuckets for values in response containing at least a single result.
+   * FacetBuckets for values in response containing at least a single result with the corresponding
+   * filter.
    * @param buckets buckets or {@code null} for none
    */
   public FacetResult setBuckets(java.util.List<FacetBucket> buckets) {

@@ -76,6 +76,25 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
+   * Optional. A purpose denotes that this Tag is intended for use in policies of a specific policy
+   * engine, and will involve that policy engine in management operations involving this Tag. A
+   * purpose does not grant a policy engine exclusive rights to the Tag, and it may be referenced by
+   * other policy engines. A purpose cannot be changed once set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
+
+  /**
+   * Optional. Purpose data corresponds to the policy system that the tag is intended for. See
+   * documentation for `Purpose` for formatting of this field. Purpose data cannot be changed once
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> purposeData;
+
+  /**
    * Required. Immutable. The user friendly name for a TagKey. The short name should be unique for
    * TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and
    * ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.),
@@ -197,6 +216,50 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
    */
   public TagKey setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Optional. A purpose denotes that this Tag is intended for use in policies of a specific policy
+   * engine, and will involve that policy engine in management operations involving this Tag. A
+   * purpose does not grant a policy engine exclusive rights to the Tag, and it may be referenced by
+   * other policy engines. A purpose cannot be changed once set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * Optional. A purpose denotes that this Tag is intended for use in policies of a specific policy
+   * engine, and will involve that policy engine in management operations involving this Tag. A
+   * purpose does not grant a policy engine exclusive rights to the Tag, and it may be referenced by
+   * other policy engines. A purpose cannot be changed once set.
+   * @param purpose purpose or {@code null} for none
+   */
+  public TagKey setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
+    return this;
+  }
+
+  /**
+   * Optional. Purpose data corresponds to the policy system that the tag is intended for. See
+   * documentation for `Purpose` for formatting of this field. Purpose data cannot be changed once
+   * set.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getPurposeData() {
+    return purposeData;
+  }
+
+  /**
+   * Optional. Purpose data corresponds to the policy system that the tag is intended for. See
+   * documentation for `Purpose` for formatting of this field. Purpose data cannot be changed once
+   * set.
+   * @param purposeData purposeData or {@code null} for none
+   */
+  public TagKey setPurposeData(java.util.Map<String, java.lang.String> purposeData) {
+    this.purposeData = purposeData;
     return this;
   }
 

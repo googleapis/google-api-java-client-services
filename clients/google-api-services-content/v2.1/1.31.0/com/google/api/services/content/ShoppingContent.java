@@ -7626,7 +7626,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     }
     /**
      * Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this method
-     * more than once per day, we recommend you use the Products service to update your product data.
+     * more than once per day, we recommend you use the [Products service](https://developers.google.com
+     * /shopping-content/reference/rest/v2.1/products) to update your product data.
      *
      * Create a request for the method "datafeeds.fetchnow".
      *
@@ -7649,8 +7650,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this
-       * method more than once per day, we recommend you use the Products service to update your product
-       * data.
+       * method more than once per day, we recommend you use the [Products
+       * service](https://developers.google.com/shopping-content/reference/rest/v2.1/products) to update
+       * your product data.
        *
        * Create a request for the method "datafeeds.fetchnow".
        *
@@ -19395,7 +19397,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     /**
      * Inserts a promotion for your Merchant Center account. If the promotion already exists, then it
-     * will update the promotion instead.
+     * updates the promotion instead.
      *
      * Create a request for the method "promotions.create".
      *
@@ -19418,7 +19420,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Inserts a promotion for your Merchant Center account. If the promotion already exists, then it
-       * will update the promotion instead.
+       * updates the promotion instead.
        *
        * Create a request for the method "promotions.create".
        *
@@ -20046,7 +20048,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Update the regional inventory of a product in your Merchant Center account. If a regional
+     * Updates the regional inventory of a product in your Merchant Center account. If a regional
      * inventory with the same region ID already exists, this method updates that entry.
      *
      * Create a request for the method "regionalinventory.insert".
@@ -20070,7 +20072,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/products/{productId}/regionalinventory";
 
       /**
-       * Update the regional inventory of a product in your Merchant Center account. If a regional
+       * Updates the regional inventory of a product in your Merchant Center account. If a regional
        * inventory with the same region ID already exists, this method updates that entry.
        *
        * Create a request for the method "regionalinventory.insert".

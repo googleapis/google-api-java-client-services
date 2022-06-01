@@ -108,6 +108,19 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * Specifies where and whether to send notifications upon changes to a Fhir store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FhirNotificationConfig> notificationConfigs;
+
+  static {
+    // hack to force ProGuard to consider FhirNotificationConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FhirNotificationConfig.class);
+  }
+
+  /**
    * Configuration for how FHIR resources can be searched.
    * The value may be {@code null}.
    */
@@ -319,6 +332,23 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * Specifies where and whether to send notifications upon changes to a Fhir store.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FhirNotificationConfig> getNotificationConfigs() {
+    return notificationConfigs;
+  }
+
+  /**
+   * Specifies where and whether to send notifications upon changes to a Fhir store.
+   * @param notificationConfigs notificationConfigs or {@code null} for none
+   */
+  public FhirStore setNotificationConfigs(java.util.List<FhirNotificationConfig> notificationConfigs) {
+    this.notificationConfigs = notificationConfigs;
     return this;
   }
 

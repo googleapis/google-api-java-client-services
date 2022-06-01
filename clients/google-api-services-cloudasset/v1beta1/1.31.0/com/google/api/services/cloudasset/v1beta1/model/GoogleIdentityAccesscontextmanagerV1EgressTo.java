@@ -35,6 +35,14 @@ package com.google.api.services.cloudasset.v1beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of external resources that are allowed to be accessed. A request matches if it contains
+   * an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> externalResources;
+
+  /**
    * A list of ApiOperations allowed to be performed by the sources specified in the corresponding
    * EgressFrom. A request matches if it uses an operation/service in this list.
    * The value may be {@code null}.
@@ -57,6 +65,25 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
+
+  /**
+   * A list of external resources that are allowed to be accessed. A request matches if it contains
+   * an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExternalResources() {
+    return externalResources;
+  }
+
+  /**
+   * A list of external resources that are allowed to be accessed. A request matches if it contains
+   * an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
+   * @param externalResources externalResources or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1EgressTo setExternalResources(java.util.List<java.lang.String> externalResources) {
+    this.externalResources = externalResources;
+    return this;
+  }
 
   /**
    * A list of ApiOperations allowed to be performed by the sources specified in the corresponding

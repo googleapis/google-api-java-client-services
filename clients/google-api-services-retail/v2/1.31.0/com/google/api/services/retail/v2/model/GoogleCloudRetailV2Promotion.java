@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2.model;
 
 /**
- * Promotion information.
+ * Promotion specification.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -30,20 +30,26 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2Promotion extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the promotion. For example, "free gift". The value must be a UTF-8 encoded string with a
-   * length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or
-   * ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center
-   * property [promotion](https://support.google.com/merchants/answer/7050148).
+   * Promotion identifier, which is the final component of name. For example, this field is
+   * "free_gift", if name is
+   * `projects/locations/global/catalogs/default_catalog/promotions/free_gift`. The value must be a
+   * UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`.
+   * For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned.
+   * Corresponds to Google Merchant Center property
+   * [promotion_id](https://support.google.com/merchants/answer/7050148).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promotionId;
 
   /**
-   * ID of the promotion. For example, "free gift". The value must be a UTF-8 encoded string with a
-   * length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or
-   * ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center
-   * property [promotion](https://support.google.com/merchants/answer/7050148).
+   * Promotion identifier, which is the final component of name. For example, this field is
+   * "free_gift", if name is
+   * `projects/locations/global/catalogs/default_catalog/promotions/free_gift`. The value must be a
+   * UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`.
+   * For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned.
+   * Corresponds to Google Merchant Center property
+   * [promotion_id](https://support.google.com/merchants/answer/7050148).
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionId() {
@@ -51,10 +57,13 @@ public final class GoogleCloudRetailV2Promotion extends com.google.api.client.js
   }
 
   /**
-   * ID of the promotion. For example, "free gift". The value must be a UTF-8 encoded string with a
-   * length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or
-   * ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center
-   * property [promotion](https://support.google.com/merchants/answer/7050148).
+   * Promotion identifier, which is the final component of name. For example, this field is
+   * "free_gift", if name is
+   * `projects/locations/global/catalogs/default_catalog/promotions/free_gift`. The value must be a
+   * UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`.
+   * For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned.
+   * Corresponds to Google Merchant Center property
+   * [promotion_id](https://support.google.com/merchants/answer/7050148).
    * @param promotionId promotionId or {@code null} for none
    */
   public GoogleCloudRetailV2Promotion setPromotionId(java.lang.String promotionId) {

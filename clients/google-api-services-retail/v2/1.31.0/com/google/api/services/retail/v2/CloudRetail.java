@@ -3921,7 +3921,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Predict#execute()} method to invoke the remote operation.
            *
            * @param placement Required. Full resource name of the format:
-           *        {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+           *        `{name=projects/locations/global/catalogs/default_catalog/placements}` The ID of the
            *        Recommendations AI placement. Before you can request predictions from your model, you must
            *        create at least one placement for it. For more information, see [Managing
            *        placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-placements).
@@ -3955,7 +3955,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param placement Required. Full resource name of the format:
-           *        {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+           *        `{name=projects/locations/global/catalogs/default_catalog/placements}` The ID of the
            *        Recommendations AI placement. Before you can request predictions from your model, you must
            *        create at least one placement for it. For more information, see [Managing
            *        placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-placements).
@@ -4031,7 +4031,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. Full resource name of the format:
-             * {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+             * `{name=projects/locations/global/catalogs/default_catalog/placements}` The ID of the
              * Recommendations AI placement. Before you can request predictions from your model, you
              * must create at least one placement for it. For more information, see [Managing
              * placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-
@@ -4042,10 +4042,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             private java.lang.String placement;
 
             /** Required. Full resource name of the format:
-           {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the Recommendations
-           AI placement. Before you can request predictions from your model, you must create at least one
-           placement for it. For more information, see [Managing placements](https://cloud.google.com/retail
-           /recommendations-ai/docs/manage-placements). The full list of available placements can be seen at
+           `{name=projects/locations/global/catalogs/default_catalog/placements}` The ID of the
+           Recommendations AI placement. Before you can request predictions from your model, you must create
+           at least one placement for it. For more information, see [Managing
+           placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-placements). The full
+           list of available placements can be seen at
            https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
              */
             public java.lang.String getPlacement() {
@@ -4054,7 +4055,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. Full resource name of the format:
-             * {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+             * `{name=projects/locations/global/catalogs/default_catalog/placements}` The ID of the
              * Recommendations AI placement. Before you can request predictions from your model, you
              * must create at least one placement for it. For more information, see [Managing
              * placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-

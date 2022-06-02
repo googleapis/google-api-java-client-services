@@ -64,6 +64,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String bootDiskKmsKey;
 
   /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialNodes confidentialNodes;
+
+  /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
    * 10GB. If unspecified, the default disk size is 100GB.
    * The value may be {@code null}.
@@ -324,6 +331,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {
     this.bootDiskKmsKey = bootDiskKmsKey;
+    return this;
+  }
+
+  /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialNodes getConfidentialNodes() {
+    return confidentialNodes;
+  }
+
+  /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * @param confidentialNodes confidentialNodes or {@code null} for none
+   */
+  public NodeConfig setConfidentialNodes(ConfidentialNodes confidentialNodes) {
+    this.confidentialNodes = confidentialNodes;
     return this;
   }
 

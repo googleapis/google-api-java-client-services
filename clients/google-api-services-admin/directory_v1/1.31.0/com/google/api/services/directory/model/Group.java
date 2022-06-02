@@ -32,14 +32,14 @@ package com.google.api.services.directory.model;
 public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value is `true` if this group was created by an administrator rather than a user.
+   * Read-only. Value is `true` if this group was created by an administrator rather than a user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean adminCreated;
 
   /**
-   * List of a group's alias email addresses.
+   * Read-only. A list of a group's alias email addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The unique ID of a group. A group `id` can be used as a group request URI's `groupKey`.
+   * Read-only. The unique ID of a group. A group `id` can be used as a group request URI's
+   * `groupKey`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,17 +103,17 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * List of the group's non-editable alias email addresses that are outside of the account's
-   * primary domain or subdomains. These are functioning email addresses used by the group. This is
-   * a read-only property returned in the API's response for a group. If edited in a group's POST or
-   * PUT request, the edit is ignored by the API service.
+   * Read-only. A list of the group's non-editable alias email addresses that are outside of the
+   * account's primary domain or subdomains. These are functioning email addresses used by the
+   * group. This is a read-only property returned in the API's response for a group. If edited in a
+   * group's POST or PUT request, the edit is ignored by the API service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> nonEditableAliases;
 
   /**
-   * Value is `true` if this group was created by an administrator rather than a user.
+   * Read-only. Value is `true` if this group was created by an administrator rather than a user.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdminCreated() {
@@ -120,7 +121,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value is `true` if this group was created by an administrator rather than a user.
+   * Read-only. Value is `true` if this group was created by an administrator rather than a user.
    * @param adminCreated adminCreated or {@code null} for none
    */
   public Group setAdminCreated(java.lang.Boolean adminCreated) {
@@ -129,7 +130,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of a group's alias email addresses.
+   * Read-only. A list of a group's alias email addresses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAliases() {
@@ -137,7 +138,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of a group's alias email addresses.
+   * Read-only. A list of a group's alias email addresses.
    * @param aliases aliases or {@code null} for none
    */
   public Group setAliases(java.util.List<java.lang.String> aliases) {
@@ -228,7 +229,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of a group. A group `id` can be used as a group request URI's `groupKey`.
+   * Read-only. The unique ID of a group. A group `id` can be used as a group request URI's
+   * `groupKey`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -236,7 +238,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of a group. A group `id` can be used as a group request URI's `groupKey`.
+   * Read-only. The unique ID of a group. A group `id` can be used as a group request URI's
+   * `groupKey`.
    * @param id id or {@code null} for none
    */
   public Group setId(java.lang.String id) {
@@ -279,10 +282,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of the group's non-editable alias email addresses that are outside of the account's
-   * primary domain or subdomains. These are functioning email addresses used by the group. This is
-   * a read-only property returned in the API's response for a group. If edited in a group's POST or
-   * PUT request, the edit is ignored by the API service.
+   * Read-only. A list of the group's non-editable alias email addresses that are outside of the
+   * account's primary domain or subdomains. These are functioning email addresses used by the
+   * group. This is a read-only property returned in the API's response for a group. If edited in a
+   * group's POST or PUT request, the edit is ignored by the API service.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNonEditableAliases() {
@@ -290,10 +293,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of the group's non-editable alias email addresses that are outside of the account's
-   * primary domain or subdomains. These are functioning email addresses used by the group. This is
-   * a read-only property returned in the API's response for a group. If edited in a group's POST or
-   * PUT request, the edit is ignored by the API service.
+   * Read-only. A list of the group's non-editable alias email addresses that are outside of the
+   * account's primary domain or subdomains. These are functioning email addresses used by the
+   * group. This is a read-only property returned in the API's response for a group. If edited in a
+   * group's POST or PUT request, the edit is ignored by the API service.
    * @param nonEditableAliases nonEditableAliases or {@code null} for none
    */
   public Group setNonEditableAliases(java.util.List<java.lang.String> nonEditableAliases) {

@@ -3029,6 +3029,113 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
+     * Retrieves scoped player identifiers for currently authenticated user.
+     *
+     * Create a request for the method "players.getScopedPlayerIds".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link GetScopedPlayerIds#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetScopedPlayerIds getScopedPlayerIds() throws java.io.IOException {
+      GetScopedPlayerIds result = new GetScopedPlayerIds();
+      initialize(result);
+      return result;
+    }
+
+    public class GetScopedPlayerIds extends GamesRequest<com.google.api.services.games.model.ScopedPlayerIds> {
+
+      private static final String REST_PATH = "games/v1/players/me/scopedIds";
+
+      /**
+       * Retrieves scoped player identifiers for currently authenticated user.
+       *
+       * Create a request for the method "players.getScopedPlayerIds".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link GetScopedPlayerIds#execute()} method to invoke the remote
+       * operation. <p> {@link GetScopedPlayerIds#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetScopedPlayerIds() {
+        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.ScopedPlayerIds.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetScopedPlayerIds set$Xgafv(java.lang.String $Xgafv) {
+        return (GetScopedPlayerIds) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetScopedPlayerIds setAccessToken(java.lang.String accessToken) {
+        return (GetScopedPlayerIds) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetScopedPlayerIds setAlt(java.lang.String alt) {
+        return (GetScopedPlayerIds) super.setAlt(alt);
+      }
+
+      @Override
+      public GetScopedPlayerIds setCallback(java.lang.String callback) {
+        return (GetScopedPlayerIds) super.setCallback(callback);
+      }
+
+      @Override
+      public GetScopedPlayerIds setFields(java.lang.String fields) {
+        return (GetScopedPlayerIds) super.setFields(fields);
+      }
+
+      @Override
+      public GetScopedPlayerIds setKey(java.lang.String key) {
+        return (GetScopedPlayerIds) super.setKey(key);
+      }
+
+      @Override
+      public GetScopedPlayerIds setOauthToken(java.lang.String oauthToken) {
+        return (GetScopedPlayerIds) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetScopedPlayerIds setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetScopedPlayerIds) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetScopedPlayerIds setQuotaUser(java.lang.String quotaUser) {
+        return (GetScopedPlayerIds) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetScopedPlayerIds setUploadType(java.lang.String uploadType) {
+        return (GetScopedPlayerIds) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetScopedPlayerIds setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetScopedPlayerIds) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetScopedPlayerIds set(String parameterName, Object value) {
+        return (GetScopedPlayerIds) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the collection of players for the currently authenticated user.
      *
      * Create a request for the method "players.list".

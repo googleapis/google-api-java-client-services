@@ -39,6 +39,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String clusterId;
 
   /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialNodes confidentialNodes;
+
+  /**
    * GCFS config.
    * The value may be {@code null}.
    */
@@ -187,6 +194,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setClusterId(java.lang.String clusterId) {
     this.clusterId = clusterId;
+    return this;
+  }
+
+  /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialNodes getConfidentialNodes() {
+    return confidentialNodes;
+  }
+
+  /**
+   * Confidential nodes config. All the nodes in the node pool will be Confidential VM once enabled.
+   * @param confidentialNodes confidentialNodes or {@code null} for none
+   */
+  public UpdateNodePoolRequest setConfidentialNodes(ConfidentialNodes confidentialNodes) {
+    this.confidentialNodes = confidentialNodes;
     return this;
   }
 

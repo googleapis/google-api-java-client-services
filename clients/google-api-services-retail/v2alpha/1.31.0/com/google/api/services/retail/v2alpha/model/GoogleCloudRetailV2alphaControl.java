@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   private GoogleCloudRetailV2alphaSearchRequestFacetSpec facetSpec;
 
   /**
-   * Immutable. Fully qualified name projects/locations/global/catalogs/controls
+   * Immutable. Fully qualified name `projects/locations/global/catalogs/controls`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   }
 
   /**
-   * Immutable. Fully qualified name projects/locations/global/catalogs/controls
+   * Immutable. Fully qualified name `projects/locations/global/catalogs/controls`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -148,7 +148,7 @@ public final class GoogleCloudRetailV2alphaControl extends com.google.api.client
   }
 
   /**
-   * Immutable. Fully qualified name projects/locations/global/catalogs/controls
+   * Immutable. Fully qualified name `projects/locations/global/catalogs/controls`
    * @param name name or {@code null} for none
    */
   public GoogleCloudRetailV2alphaControl setName(java.lang.String name) {

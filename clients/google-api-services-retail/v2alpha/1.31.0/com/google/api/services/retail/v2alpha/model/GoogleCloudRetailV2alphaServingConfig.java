@@ -134,7 +134,7 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
   private java.lang.String modelId;
 
   /**
-   * Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig
+   * Immutable. Fully qualified name `projects/locations/global/catalogs/servingConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -432,7 +432,7 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
   }
 
   /**
-   * Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig
+   * Immutable. Fully qualified name `projects/locations/global/catalogs/servingConfig`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -440,7 +440,7 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
   }
 
   /**
-   * Immutable. Fully qualified name projects/locations/global/catalogs/servingConfig
+   * Immutable. Fully qualified name `projects/locations/global/catalogs/servingConfig`
    * @param name name or {@code null} for none
    */
   public GoogleCloudRetailV2alphaServingConfig setName(java.lang.String name) {

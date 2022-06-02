@@ -41,8 +41,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String apiKeyId;
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier
-   * should be treated as an opaque token, as the data format is not specified.
+   * Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
+   * This identifier should be treated as an opaque token, as the data format is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
+   * Output only. Immutable. A user-assigned unique identifier of the parent FirebaseProject for the
+   * `WebApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +118,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier
-   * should be treated as an opaque token, as the data format is not specified.
+   * Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
+   * This identifier should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -126,8 +127,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier
-   * should be treated as an opaque token, as the data format is not specified.
+   * Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
+   * This identifier should be treated as an opaque token, as the data format is not specified.
    * @param appId appId or {@code null} for none
    */
   public WebApp setAppId(java.lang.String appId) {
@@ -201,7 +202,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
+   * Output only. Immutable. A user-assigned unique identifier of the parent FirebaseProject for the
+   * `WebApp`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -209,7 +211,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
+   * Output only. Immutable. A user-assigned unique identifier of the parent FirebaseProject for the
+   * `WebApp`.
    * @param projectId projectId or {@code null} for none
    */
   public WebApp setProjectId(java.lang.String projectId) {

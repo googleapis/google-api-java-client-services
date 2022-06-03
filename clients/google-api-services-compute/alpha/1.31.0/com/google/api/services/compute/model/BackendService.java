@@ -426,6 +426,18 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Integer timeoutSec;
 
   /**
+   * The network scope of the backends that can be added to the backend service. This field can be
+   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A backend service with the VPC scope set to
+   * GLOBAL_VPC_NETWORK is only allowed to have backends in global VPC networks. When the VPC scope
+   * is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have backends in regional
+   * networks in the same scope as the backend service. Note: if not specified then
+   * GLOBAL_VPC_NETWORK will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vpcNetworkScope;
+
+  /**
    * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
    * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
    * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
@@ -1345,6 +1357,33 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {
     this.timeoutSec = timeoutSec;
+    return this;
+  }
+
+  /**
+   * The network scope of the backends that can be added to the backend service. This field can be
+   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A backend service with the VPC scope set to
+   * GLOBAL_VPC_NETWORK is only allowed to have backends in global VPC networks. When the VPC scope
+   * is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have backends in regional
+   * networks in the same scope as the backend service. Note: if not specified then
+   * GLOBAL_VPC_NETWORK will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVpcNetworkScope() {
+    return vpcNetworkScope;
+  }
+
+  /**
+   * The network scope of the backends that can be added to the backend service. This field can be
+   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A backend service with the VPC scope set to
+   * GLOBAL_VPC_NETWORK is only allowed to have backends in global VPC networks. When the VPC scope
+   * is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have backends in regional
+   * networks in the same scope as the backend service. Note: if not specified then
+   * GLOBAL_VPC_NETWORK will be used.
+   * @param vpcNetworkScope vpcNetworkScope or {@code null} for none
+   */
+  public BackendService setVpcNetworkScope(java.lang.String vpcNetworkScope) {
+    this.vpcNetworkScope = vpcNetworkScope;
     return this;
   }
 

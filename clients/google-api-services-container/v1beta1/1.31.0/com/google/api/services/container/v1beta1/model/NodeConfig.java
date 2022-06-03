@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Parameters that describe the nodes in a cluster. *Note:* GKE Autopilot clusters do not recognize
+ * Parameters that describe the nodes in a cluster. GKE Autopilot clusters do not recognize
  * parameters in `NodeConfig`. Use AutoprovisioningNodePoolDefaults instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

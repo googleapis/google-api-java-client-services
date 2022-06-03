@@ -46,6 +46,14 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   private java.lang.String function;
 
   /**
+   * Optional. Specify a Cloud region for rewritten Functions invocations. If not provided, defaults
+   * to us-central1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String functionRegion;
+
+  /**
    * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-
    * config#glob_pattern_matching) to match against the request URL path.
    * The value may be {@code null}.
@@ -105,6 +113,25 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
    */
   public Rewrite setFunction(java.lang.String function) {
     this.function = function;
+    return this;
+  }
+
+  /**
+   * Optional. Specify a Cloud region for rewritten Functions invocations. If not provided, defaults
+   * to us-central1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFunctionRegion() {
+    return functionRegion;
+  }
+
+  /**
+   * Optional. Specify a Cloud region for rewritten Functions invocations. If not provided, defaults
+   * to us-central1.
+   * @param functionRegion functionRegion or {@code null} for none
+   */
+  public Rewrite setFunctionRegion(java.lang.String functionRegion) {
+    this.functionRegion = functionRegion;
     return this;
   }
 

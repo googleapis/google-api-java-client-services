@@ -30,11 +30,33 @@ package com.google.api.services.compute.model;
 public final class UsableSubnetwork extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalIpv6Prefix;
+
+  /**
+   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalIpv6Prefix;
+
+  /**
    * The range of internal addresses that are owned by this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipCidrRange;
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
 
   /**
    * Network URL.
@@ -44,6 +66,28 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
+   * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
+   * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
+   * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
+
+  /**
+   * The role of subnetwork. Currently, this field is only used when purpose =
+   * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
+   * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
+   * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
+   * with a patch request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String role;
+
+  /**
    * Secondary IP ranges.
    * The value may be {@code null}.
    */
@@ -51,11 +95,55 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   private java.util.List<UsableSubnetworkSecondaryRange> secondaryIpRanges;
 
   /**
+   * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
+   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
+   * time and updated using patch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
+
+  /**
    * Subnetwork URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalIpv6Prefix() {
+    return externalIpv6Prefix;
+  }
+
+  /**
+   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * @param externalIpv6Prefix externalIpv6Prefix or {@code null} for none
+   */
+  public UsableSubnetwork setExternalIpv6Prefix(java.lang.String externalIpv6Prefix) {
+    this.externalIpv6Prefix = externalIpv6Prefix;
+    return this;
+  }
+
+  /**
+   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalIpv6Prefix() {
+    return internalIpv6Prefix;
+  }
+
+  /**
+   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * @param internalIpv6Prefix internalIpv6Prefix or {@code null} for none
+   */
+  public UsableSubnetwork setInternalIpv6Prefix(java.lang.String internalIpv6Prefix) {
+    this.internalIpv6Prefix = internalIpv6Prefix;
+    return this;
+  }
 
   /**
    * The range of internal addresses that are owned by this subnetwork.
@@ -71,6 +159,25 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
    */
   public UsableSubnetwork setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public UsableSubnetwork setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
     return this;
   }
 
@@ -92,6 +199,56 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
+   * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
+   * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
+   * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
+   * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+   * @param purpose purpose or {@code null} for none
+   */
+  public UsableSubnetwork setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
+    return this;
+  }
+
+  /**
+   * The role of subnetwork. Currently, this field is only used when purpose =
+   * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
+   * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
+   * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
+   * with a patch request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRole() {
+    return role;
+  }
+
+  /**
+   * The role of subnetwork. Currently, this field is only used when purpose =
+   * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
+   * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
+   * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
+   * with a patch request.
+   * @param role role or {@code null} for none
+   */
+  public UsableSubnetwork setRole(java.lang.String role) {
+    this.role = role;
+    return this;
+  }
+
+  /**
    * Secondary IP ranges.
    * @return value or {@code null} for none
    */
@@ -105,6 +262,29 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
    */
   public UsableSubnetwork setSecondaryIpRanges(java.util.List<UsableSubnetworkSecondaryRange> secondaryIpRanges) {
     this.secondaryIpRanges = secondaryIpRanges;
+    return this;
+  }
+
+  /**
+   * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
+   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
+   * time and updated using patch.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
+   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
+   * time and updated using patch.
+   * @param stackType stackType or {@code null} for none
+   */
+  public UsableSubnetwork setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

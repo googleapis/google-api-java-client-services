@@ -54,6 +54,13 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   private java.lang.String gpuPartitionSize;
 
   /**
+   * The configuration for GPU sharing options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GPUSharingConfig gpuSharingConfig;
+
+  /**
    * The number of the accelerator cards exposed to an instance.
    * @return value or {@code null} for none
    */
@@ -105,6 +112,23 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
    */
   public AcceleratorConfig setGpuPartitionSize(java.lang.String gpuPartitionSize) {
     this.gpuPartitionSize = gpuPartitionSize;
+    return this;
+  }
+
+  /**
+   * The configuration for GPU sharing options.
+   * @return value or {@code null} for none
+   */
+  public GPUSharingConfig getGpuSharingConfig() {
+    return gpuSharingConfig;
+  }
+
+  /**
+   * The configuration for GPU sharing options.
+   * @param gpuSharingConfig gpuSharingConfig or {@code null} for none
+   */
+  public AcceleratorConfig setGpuSharingConfig(GPUSharingConfig gpuSharingConfig) {
+    this.gpuSharingConfig = gpuSharingConfig;
     return this;
   }
 

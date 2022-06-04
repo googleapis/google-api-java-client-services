@@ -5451,6 +5451,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Specifies the view that determines which table information is returned. By default, basic
+       * table information and storage statistics (STORAGE_STATS) are returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Specifies the view that determines which table information is returned. By default, basic table
+     information and storage statistics (STORAGE_STATS) are returned.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Specifies the view that determines which table information is returned. By default, basic
+       * table information and storage statistics (STORAGE_STATS) are returned.
+       */
+      public Get setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);

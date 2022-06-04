@@ -210,6 +210,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private TableSchema schema;
 
   /**
+   * [Output-only] Search query specific statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SearchStatistics searchStatistics;
+
+  /**
    * The type of query statement, if valid. Possible values (new values might be added in the
    * future): "SELECT": SELECT query. "INSERT": INSERT query; see
    * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
@@ -681,6 +688,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setSchema(TableSchema schema) {
     this.schema = schema;
+    return this;
+  }
+
+  /**
+   * [Output-only] Search query specific statistics.
+   * @return value or {@code null} for none
+   */
+  public SearchStatistics getSearchStatistics() {
+    return searchStatistics;
+  }
+
+  /**
+   * [Output-only] Search query specific statistics.
+   * @param searchStatistics searchStatistics or {@code null} for none
+   */
+  public JobStatistics2 setSearchStatistics(SearchStatistics searchStatistics) {
+    this.searchStatistics = searchStatistics;
     return this;
   }
 

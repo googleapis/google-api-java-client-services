@@ -32,7 +32,7 @@ package com.google.api.services.firebasedatabase.v1beta.model;
 public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The globally unique hostname of the database.
+   * Output only. Output Only. The globally unique hostname of the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,30 +47,30 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * The resource name of the project this instance belongs to. For example: `projects/{project-
-   * number}`.
+   * Output only. The resource name of the project this instance belongs to. For example: `projects
+   * /{project-number}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * The database's lifecycle state. Read-only.
+   * Output only. The database's lifecycle state. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The database instance type. On creation only USER_DATABASE is allowed, which is also the
-   * default when omitted.
+   * Immutable. The database instance type. On creation only USER_DATABASE is allowed, which is also
+   * the default when omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Immutable. The globally unique hostname of the database.
+   * Output only. Output Only. The globally unique hostname of the database.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseUrl() {
@@ -78,7 +78,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. The globally unique hostname of the database.
+   * Output only. Output Only. The globally unique hostname of the database.
    * @param databaseUrl databaseUrl or {@code null} for none
    */
   public DatabaseInstance setDatabaseUrl(java.lang.String databaseUrl) {
@@ -106,8 +106,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the project this instance belongs to. For example: `projects/{project-
-   * number}`.
+   * Output only. The resource name of the project this instance belongs to. For example: `projects
+   * /{project-number}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -115,8 +115,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the project this instance belongs to. For example: `projects/{project-
-   * number}`.
+   * Output only. The resource name of the project this instance belongs to. For example: `projects
+   * /{project-number}`.
    * @param project project or {@code null} for none
    */
   public DatabaseInstance setProject(java.lang.String project) {
@@ -125,7 +125,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database's lifecycle state. Read-only.
+   * Output only. The database's lifecycle state. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -133,7 +133,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database's lifecycle state. Read-only.
+   * Output only. The database's lifecycle state. Read-only.
    * @param state state or {@code null} for none
    */
   public DatabaseInstance setState(java.lang.String state) {
@@ -142,8 +142,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database instance type. On creation only USER_DATABASE is allowed, which is also the
-   * default when omitted.
+   * Immutable. The database instance type. On creation only USER_DATABASE is allowed, which is also
+   * the default when omitted.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -151,8 +151,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database instance type. On creation only USER_DATABASE is allowed, which is also the
-   * default when omitted.
+   * Immutable. The database instance type. On creation only USER_DATABASE is allowed, which is also
+   * the default when omitted.
    * @param type type or {@code null} for none
    */
   public DatabaseInstance setType(java.lang.String type) {

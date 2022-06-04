@@ -207,6 +207,13 @@ public final class RequestLog extends com.google.api.client.json.GenericJson {
   private java.util.List<SourceReference> sourceReference;
 
   /**
+   * Stackdriver Trace span identifier for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spanId;
+
+  /**
    * Time when the request started.
    * The value may be {@code null}.
    */
@@ -684,6 +691,23 @@ public final class RequestLog extends com.google.api.client.json.GenericJson {
    */
   public RequestLog setSourceReference(java.util.List<SourceReference> sourceReference) {
     this.sourceReference = sourceReference;
+    return this;
+  }
+
+  /**
+   * Stackdriver Trace span identifier for this request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpanId() {
+    return spanId;
+  }
+
+  /**
+   * Stackdriver Trace span identifier for this request.
+   * @param spanId spanId or {@code null} for none
+   */
+  public RequestLog setSpanId(java.lang.String spanId) {
+    this.spanId = spanId;
     return this;
   }
 

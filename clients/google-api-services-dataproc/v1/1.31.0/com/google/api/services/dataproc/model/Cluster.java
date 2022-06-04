@@ -30,8 +30,9 @@ package com.google.api.services.dataproc.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The cluster name. Cluster names within a project must be unique. Names of deleted
-   * clusters can be reused.
+   * Required. The cluster name, which must be unique within a project. The name must start with a
+   * lowercase letter, and can contain up to 51 lowercase letters, numbers, and hyphens. It cannot
+   * end with a hyphen. The name of a deleted cluster can be reused.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,8 +107,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private VirtualClusterConfig virtualClusterConfig;
 
   /**
-   * Required. The cluster name. Cluster names within a project must be unique. Names of deleted
-   * clusters can be reused.
+   * Required. The cluster name, which must be unique within a project. The name must start with a
+   * lowercase letter, and can contain up to 51 lowercase letters, numbers, and hyphens. It cannot
+   * end with a hyphen. The name of a deleted cluster can be reused.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterName() {
@@ -115,8 +117,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The cluster name. Cluster names within a project must be unique. Names of deleted
-   * clusters can be reused.
+   * Required. The cluster name, which must be unique within a project. The name must start with a
+   * lowercase letter, and can contain up to 51 lowercase letters, numbers, and hyphens. It cannot
+   * end with a hyphen. The name of a deleted cluster can be reused.
    * @param clusterName clusterName or {@code null} for none
    */
   public Cluster setClusterName(java.lang.String clusterName) {

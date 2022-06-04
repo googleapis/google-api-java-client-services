@@ -38,6 +38,20 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String clusterUuid;
 
   /**
+   * Optional. Node pools and corresponding repair action to be taken. All node pools should be
+   * unique in this request. i.e. Multiple entries for the same node pool id are not allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NodePool> nodePools;
+
+  static {
+    // hack to force ProGuard to consider NodePool used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NodePool.class);
+  }
+
+  /**
    * Optional. A unique ID used to identify the request. If the server receives two
    * RepairClusterRequests with the same ID, the second request is ignored, and the first
    * google.longrunning.Operation created and stored in the backend is returned.Recommendation: Set
@@ -65,6 +79,25 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    */
   public RepairClusterRequest setClusterUuid(java.lang.String clusterUuid) {
     this.clusterUuid = clusterUuid;
+    return this;
+  }
+
+  /**
+   * Optional. Node pools and corresponding repair action to be taken. All node pools should be
+   * unique in this request. i.e. Multiple entries for the same node pool id are not allowed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NodePool> getNodePools() {
+    return nodePools;
+  }
+
+  /**
+   * Optional. Node pools and corresponding repair action to be taken. All node pools should be
+   * unique in this request. i.e. Multiple entries for the same node pool id are not allowed.
+   * @param nodePools nodePools or {@code null} for none
+   */
+  public RepairClusterRequest setNodePools(java.util.List<NodePool> nodePools) {
+    this.nodePools = nodePools;
     return this;
   }
 

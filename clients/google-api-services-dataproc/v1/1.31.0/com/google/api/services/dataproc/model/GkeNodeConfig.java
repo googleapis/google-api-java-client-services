@@ -38,6 +38,16 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   private java.util.List<GkeNodePoolAcceleratorConfig> accelerators;
 
   /**
+   * Optional. The Customer Managed Encryption Key (CMEK)
+   * (https://cloud.google.com/compute/docs/disks/customer-managed-encryption) used to encrypt the
+   * boot disk attached to each node in the node pool. Specify the key using the following format:
+   * projects/KEY_PROJECT_ID /locations/LOCATION/keyRings/RING_NAME/cryptoKeys/KEY_NAME.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootDiskKmsKey;
+
+  /**
    * Optional. The number of local SSD disks to attach to the node, which is limited by the maximum
    * number of disks allowable per zone (see Adding Local SSDs
    * (https://cloud.google.com/compute/docs/disks/local-ssd)).
@@ -97,6 +107,29 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
    */
   public GkeNodeConfig setAccelerators(java.util.List<GkeNodePoolAcceleratorConfig> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * Optional. The Customer Managed Encryption Key (CMEK)
+   * (https://cloud.google.com/compute/docs/disks/customer-managed-encryption) used to encrypt the
+   * boot disk attached to each node in the node pool. Specify the key using the following format:
+   * projects/KEY_PROJECT_ID /locations/LOCATION/keyRings/RING_NAME/cryptoKeys/KEY_NAME.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootDiskKmsKey() {
+    return bootDiskKmsKey;
+  }
+
+  /**
+   * Optional. The Customer Managed Encryption Key (CMEK)
+   * (https://cloud.google.com/compute/docs/disks/customer-managed-encryption) used to encrypt the
+   * boot disk attached to each node in the node pool. Specify the key using the following format:
+   * projects/KEY_PROJECT_ID /locations/LOCATION/keyRings/RING_NAME/cryptoKeys/KEY_NAME.
+   * @param bootDiskKmsKey bootDiskKmsKey or {@code null} for none
+   */
+  public GkeNodeConfig setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {
+    this.bootDiskKmsKey = bootDiskKmsKey;
     return this;
   }
 

@@ -40,7 +40,9 @@ public final class PathElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The kind of the entity. A kind matching regex `__.*__` is reserved/read-only. A kind must not
-   * contain more than 1500 bytes when UTF-8 encoded. Cannot be `""`.
+   * contain more than 1500 bytes when UTF-8 encoded. Cannot be `""`. Must be valid UTF-8 bytes.
+   * Legacy values that are not valid UTF-8 are encoded as `__bytes__` where `` is the base-64
+   * encoding of the bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +50,9 @@ public final class PathElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the entity. A name matching regex `__.*__` is reserved/read-only. A name must not
-   * be more than 1500 bytes when UTF-8 encoded. Cannot be `""`.
+   * be more than 1500 bytes when UTF-8 encoded. Cannot be `""`. Must be valid UTF-8 bytes. Legacy
+   * values that are not valid UTF-8 are encoded as `__bytes__` where `` is the base-64 encoding of
+   * the bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +79,9 @@ public final class PathElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The kind of the entity. A kind matching regex `__.*__` is reserved/read-only. A kind must not
-   * contain more than 1500 bytes when UTF-8 encoded. Cannot be `""`.
+   * contain more than 1500 bytes when UTF-8 encoded. Cannot be `""`. Must be valid UTF-8 bytes.
+   * Legacy values that are not valid UTF-8 are encoded as `__bytes__` where `` is the base-64
+   * encoding of the bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -84,7 +90,9 @@ public final class PathElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The kind of the entity. A kind matching regex `__.*__` is reserved/read-only. A kind must not
-   * contain more than 1500 bytes when UTF-8 encoded. Cannot be `""`.
+   * contain more than 1500 bytes when UTF-8 encoded. Cannot be `""`. Must be valid UTF-8 bytes.
+   * Legacy values that are not valid UTF-8 are encoded as `__bytes__` where `` is the base-64
+   * encoding of the bytes.
    * @param kind kind or {@code null} for none
    */
   public PathElement setKind(java.lang.String kind) {
@@ -94,7 +102,9 @@ public final class PathElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the entity. A name matching regex `__.*__` is reserved/read-only. A name must not
-   * be more than 1500 bytes when UTF-8 encoded. Cannot be `""`.
+   * be more than 1500 bytes when UTF-8 encoded. Cannot be `""`. Must be valid UTF-8 bytes. Legacy
+   * values that are not valid UTF-8 are encoded as `__bytes__` where `` is the base-64 encoding of
+   * the bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +113,9 @@ public final class PathElement extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the entity. A name matching regex `__.*__` is reserved/read-only. A name must not
-   * be more than 1500 bytes when UTF-8 encoded. Cannot be `""`.
+   * be more than 1500 bytes when UTF-8 encoded. Cannot be `""`. Must be valid UTF-8 bytes. Legacy
+   * values that are not valid UTF-8 are encoded as `__bytes__` where `` is the base-64 encoding of
+   * the bytes.
    * @param name name or {@code null} for none
    */
   public PathElement setName(java.lang.String name) {

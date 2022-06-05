@@ -38,6 +38,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. A short description of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Optional. Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. A short description of the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. A short description of the backup.
+   * @param description description or {@code null} for none
+   */
+  public Backup setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.gkehub.v1beta1.model;
 public final class MembershipEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specific information for a GDC Edge Appliance cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApplianceCluster applianceCluster;
+
+  /**
    * Optional. Specific information for a Google Edge cluster.
    * The value may be {@code null}.
    */
@@ -76,6 +83,23 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private OnPremCluster onPremCluster;
+
+  /**
+   * Optional. Specific information for a GDC Edge Appliance cluster.
+   * @return value or {@code null} for none
+   */
+  public ApplianceCluster getApplianceCluster() {
+    return applianceCluster;
+  }
+
+  /**
+   * Optional. Specific information for a GDC Edge Appliance cluster.
+   * @param applianceCluster applianceCluster or {@code null} for none
+   */
+  public MembershipEndpoint setApplianceCluster(ApplianceCluster applianceCluster) {
+    this.applianceCluster = applianceCluster;
+    return this;
+  }
 
   /**
    * Optional. Specific information for a Google Edge cluster.

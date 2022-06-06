@@ -30,6 +30,21 @@ package com.google.api.services.file.v1beta1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * The storage capacity of the instance in gigabytes (GB = 1024^3 bytes). This capacity can be
+   * increased up to `max_capacity_gb` GB in multipliers of `capacity_step_size_gb` GB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long capacityGb;
+
+  /**
+   * Output only. The increase/decrease capacity step size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long capacityStepSizeGb;
+
+  /**
    * Output only. The time when the instance was created.
    * The value may be {@code null}.
    */
@@ -77,6 +92,29 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Output only. The max capacity of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxCapacityGb;
+
+  /**
+   * Output only. The max number of shares allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxShareCount;
+
+  /**
+   * Indicates whether this instance uses a multi-share configuration with which it can have more
+   * than one file-share or none at all. File-shares are added, updated and removed through the
+   * separate file-share APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multiShareEnabled;
 
   /**
    * Output only. The resource name of the instance, in the format
@@ -128,6 +166,42 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String tier;
+
+  /**
+   * The storage capacity of the instance in gigabytes (GB = 1024^3 bytes). This capacity can be
+   * increased up to `max_capacity_gb` GB in multipliers of `capacity_step_size_gb` GB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCapacityGb() {
+    return capacityGb;
+  }
+
+  /**
+   * The storage capacity of the instance in gigabytes (GB = 1024^3 bytes). This capacity can be
+   * increased up to `max_capacity_gb` GB in multipliers of `capacity_step_size_gb` GB.
+   * @param capacityGb capacityGb or {@code null} for none
+   */
+  public Instance setCapacityGb(java.lang.Long capacityGb) {
+    this.capacityGb = capacityGb;
+    return this;
+  }
+
+  /**
+   * Output only. The increase/decrease capacity step size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCapacityStepSizeGb() {
+    return capacityStepSizeGb;
+  }
+
+  /**
+   * Output only. The increase/decrease capacity step size.
+   * @param capacityStepSizeGb capacityStepSizeGb or {@code null} for none
+   */
+  public Instance setCapacityStepSizeGb(java.lang.Long capacityStepSizeGb) {
+    this.capacityStepSizeGb = capacityStepSizeGb;
+    return this;
+  }
 
   /**
    * Output only. The time when the instance was created.
@@ -230,6 +304,61 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The max capacity of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxCapacityGb() {
+    return maxCapacityGb;
+  }
+
+  /**
+   * Output only. The max capacity of the instance.
+   * @param maxCapacityGb maxCapacityGb or {@code null} for none
+   */
+  public Instance setMaxCapacityGb(java.lang.Long maxCapacityGb) {
+    this.maxCapacityGb = maxCapacityGb;
+    return this;
+  }
+
+  /**
+   * Output only. The max number of shares allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxShareCount() {
+    return maxShareCount;
+  }
+
+  /**
+   * Output only. The max number of shares allowed.
+   * @param maxShareCount maxShareCount or {@code null} for none
+   */
+  public Instance setMaxShareCount(java.lang.Long maxShareCount) {
+    this.maxShareCount = maxShareCount;
+    return this;
+  }
+
+  /**
+   * Indicates whether this instance uses a multi-share configuration with which it can have more
+   * than one file-share or none at all. File-shares are added, updated and removed through the
+   * separate file-share APIs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultiShareEnabled() {
+    return multiShareEnabled;
+  }
+
+  /**
+   * Indicates whether this instance uses a multi-share configuration with which it can have more
+   * than one file-share or none at all. File-shares are added, updated and removed through the
+   * separate file-share APIs.
+   * @param multiShareEnabled multiShareEnabled or {@code null} for none
+   */
+  public Instance setMultiShareEnabled(java.lang.Boolean multiShareEnabled) {
+    this.multiShareEnabled = multiShareEnabled;
     return this;
   }
 

@@ -59,6 +59,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long downloadBytes;
 
   /**
+   * Immutable. KMS key name used for data encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
@@ -186,6 +193,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setDownloadBytes(java.lang.Long downloadBytes) {
     this.downloadBytes = downloadBytes;
+    return this;
+  }
+
+  /**
+   * Immutable. KMS key name used for data encryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Immutable. KMS key name used for data encryption.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public Backup setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 

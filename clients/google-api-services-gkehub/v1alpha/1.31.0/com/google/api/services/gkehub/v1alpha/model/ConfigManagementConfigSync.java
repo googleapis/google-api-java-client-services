@@ -47,6 +47,13 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   private ConfigManagementGitConfig git;
 
   /**
+   * OCI repo configuration for the cluster
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigManagementOciConfig oci;
+
+  /**
    * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`,
    * disables the Config Sync admission webhook and does not prevent drifts.
    * The value may be {@code null}.
@@ -98,6 +105,23 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   public ConfigManagementConfigSync setGit(ConfigManagementGitConfig git) {
     this.git = git;
+    return this;
+  }
+
+  /**
+   * OCI repo configuration for the cluster
+   * @return value or {@code null} for none
+   */
+  public ConfigManagementOciConfig getOci() {
+    return oci;
+  }
+
+  /**
+   * OCI repo configuration for the cluster
+   * @param oci oci or {@code null} for none
+   */
+  public ConfigManagementConfigSync setOci(ConfigManagementOciConfig oci) {
+    this.oci = oci;
     return this;
   }
 

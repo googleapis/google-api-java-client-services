@@ -61,6 +61,13 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
   private java.lang.Boolean logDeniesEnabled;
 
   /**
+   * Monitoring specifies the configuration of monitoring.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigManagementPolicyControllerMonitoring monitoring;
+
+  /**
    * Enable users to try out mutation for PolicyController.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
    */
   public ConfigManagementPolicyController setLogDeniesEnabled(java.lang.Boolean logDeniesEnabled) {
     this.logDeniesEnabled = logDeniesEnabled;
+    return this;
+  }
+
+  /**
+   * Monitoring specifies the configuration of monitoring.
+   * @return value or {@code null} for none
+   */
+  public ConfigManagementPolicyControllerMonitoring getMonitoring() {
+    return monitoring;
+  }
+
+  /**
+   * Monitoring specifies the configuration of monitoring.
+   * @param monitoring monitoring or {@code null} for none
+   */
+  public ConfigManagementPolicyController setMonitoring(ConfigManagementPolicyControllerMonitoring monitoring) {
+    this.monitoring = monitoring;
     return this;
   }
 

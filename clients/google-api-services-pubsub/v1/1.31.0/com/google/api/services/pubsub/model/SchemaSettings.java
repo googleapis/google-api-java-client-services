@@ -37,6 +37,22 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
   private java.lang.String encoding;
 
   /**
+   * The minimum (inclusive) revision allowed for validating messages. If empty or not present,
+   * allow any revision to be validated against last_revision or any revision created before.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firstRevisionId;
+
+  /**
+   * The maximum (inclusive) revision allowed for validating messages. If empty or not present,
+   * allow any revision to be validated against first_revision or any revision created after.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastRevisionId;
+
+  /**
    * Required. The name of the schema that messages published should be validated against. Format is
    * `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if
    * the schema has been deleted.
@@ -59,6 +75,44 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
    */
   public SchemaSettings setEncoding(java.lang.String encoding) {
     this.encoding = encoding;
+    return this;
+  }
+
+  /**
+   * The minimum (inclusive) revision allowed for validating messages. If empty or not present,
+   * allow any revision to be validated against last_revision or any revision created before.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirstRevisionId() {
+    return firstRevisionId;
+  }
+
+  /**
+   * The minimum (inclusive) revision allowed for validating messages. If empty or not present,
+   * allow any revision to be validated against last_revision or any revision created before.
+   * @param firstRevisionId firstRevisionId or {@code null} for none
+   */
+  public SchemaSettings setFirstRevisionId(java.lang.String firstRevisionId) {
+    this.firstRevisionId = firstRevisionId;
+    return this;
+  }
+
+  /**
+   * The maximum (inclusive) revision allowed for validating messages. If empty or not present,
+   * allow any revision to be validated against first_revision or any revision created after.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastRevisionId() {
+    return lastRevisionId;
+  }
+
+  /**
+   * The maximum (inclusive) revision allowed for validating messages. If empty or not present,
+   * allow any revision to be validated against first_revision or any revision created after.
+   * @param lastRevisionId lastRevisionId or {@code null} for none
+   */
+  public SchemaSettings setLastRevisionId(java.lang.String lastRevisionId) {
+    this.lastRevisionId = lastRevisionId;
     return this;
   }
 

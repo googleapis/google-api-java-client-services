@@ -48,8 +48,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ackDeadlineSeconds;
 
   /**
-   * If delivery to BigQuery is used with this subscription, this field is used to configure it. At
-   * most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the
+   * If delivery to BigQuery is used with this subscription, this field is used to configure it.
+   * Either `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
    * subscriber will pull and ack messages using API methods.
    * The value may be {@code null}.
    */
@@ -150,9 +150,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. At most
-   * one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber
-   * will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it. Either
+   * `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
+   * subscriber will pull and ack messages using API methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,8 +247,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If delivery to BigQuery is used with this subscription, this field is used to configure it. At
-   * most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the
+   * If delivery to BigQuery is used with this subscription, this field is used to configure it.
+   * Either `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
    * subscriber will pull and ack messages using API methods.
    * @return value or {@code null} for none
    */
@@ -257,8 +257,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If delivery to BigQuery is used with this subscription, this field is used to configure it. At
-   * most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the
+   * If delivery to BigQuery is used with this subscription, this field is used to configure it.
+   * Either `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
    * subscriber will pull and ack messages using API methods.
    * @param bigqueryConfig bigqueryConfig or {@code null} for none
    */
@@ -481,9 +481,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. At most
-   * one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber
-   * will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it. Either
+   * `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
+   * subscriber will pull and ack messages using API methods.
    * @return value or {@code null} for none
    */
   public PushConfig getPushConfig() {
@@ -491,9 +491,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. At most
-   * one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber
-   * will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it. Either
+   * `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
+   * subscriber will pull and ack messages using API methods.
    * @param pushConfig pushConfig or {@code null} for none
    */
   public Subscription setPushConfig(PushConfig pushConfig) {

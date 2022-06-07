@@ -1457,7 +1457,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private java.lang.String storageClass;
 
         /**
-         * Type of the action. Currently, only Delete and SetStorageClass are supported.
+         * Type of the action. Currently, only Delete, SetStorageClass, and AbortIncompleteMultipartUpload
+         * are supported.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
@@ -1481,7 +1482,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * Type of the action. Currently, only Delete and SetStorageClass are supported.
+         * Type of the action. Currently, only Delete, SetStorageClass, and AbortIncompleteMultipartUpload
+         * are supported.
          * @return value or {@code null} for none
          */
         public java.lang.String getType() {
@@ -1489,7 +1491,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * Type of the action. Currently, only Delete and SetStorageClass are supported.
+         * Type of the action. Currently, only Delete, SetStorageClass, and AbortIncompleteMultipartUpload
+         * are supported.
          * @param type type or {@code null} for none
          */
         public Action setType(java.lang.String type) {

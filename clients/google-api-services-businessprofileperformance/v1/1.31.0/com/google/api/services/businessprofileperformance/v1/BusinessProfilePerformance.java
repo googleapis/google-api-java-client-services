@@ -20,7 +20,7 @@ package com.google.api.services.businessprofileperformance.v1;
  * Service definition for BusinessProfilePerformance (v1).
  *
  * <p>
- * The Business Profile Performance API allows merchants to fetch performance insights about their business profile on Google.
+ * The Business Profile Performance API allows merchants to fetch performance reports about their business profile on Google.
  * </p>
  *
  * <p>
@@ -154,10 +154,10 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
 
     /**
      * Returns the values for each date from a given time range that are associated with the specific
-     * daily metric. Example request: GET https://businessprofileperformance.googleapis.com/v1/locations
-     * /12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS_range.start_date.year=2022_range.star
-     * t_date.month=1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range.end_d
-     * ate.day=31
+     * daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/location
+     * s/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS_range.start_date.year=2022_range.sta
+     * rt_date.month=1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range.end_
+     * date.day=31`
      *
      * Create a request for the method "locations.getDailyMetricsTimeSeries".
      *
@@ -184,10 +184,10 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
 
       /**
        * Returns the values for each date from a given time range that are associated with the specific
-       * daily metric. Example request: GET https://businessprofileperformance.googleapis.com/v1/locatio
-       * ns/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS_range.start_date.year=2022_range.
-       * start_date.month=1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range
-       * .end_date.day=31
+       * daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locati
+       * ons/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS_range.start_date.year=2022_range
+       * .start_date.month=1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_rang
+       * e.end_date.day=31`
        *
        * Create a request for the method "locations.getDailyMetricsTimeSeries".
        *
@@ -592,10 +592,10 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
 
           /**
            * Returns the search keywords used to find a business in search or maps. Each search keyword is
-           * accompanied by impressions which are aggregated on a monthly basis. Example request: GET https://
-           * businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/monthly?m
-           * onthly_range.start_month.year=2022_range.start_month.month=1_range.end_month.year=2022_range.end_
-           * month.month=3
+           * accompanied by impressions which are aggregated on a monthly basis. Example request: `GET https:/
+           * /businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/monthly?
+           * monthly_range.start_month.year=2022_range.start_month.month=1_range.end_month.year=2022_range.end
+           * _month.month=3`
            *
            * Create a request for the method "monthly.list".
            *
@@ -621,10 +621,10 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
 
             /**
              * Returns the search keywords used to find a business in search or maps. Each search keyword is
-             * accompanied by impressions which are aggregated on a monthly basis. Example request: GET https:
-             * //businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/month
-             * ly?monthly_range.start_month.year=2022_range.start_month.month=1_range.end_month.year=2022_rang
-             * e.end_month.month=3
+             * accompanied by impressions which are aggregated on a monthly basis. Example request: `GET https
+             * ://businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/mont
+             * hly?monthly_range.start_month.year=2022_range.start_month.month=1_range.end_month.year=2022_ran
+             * ge.end_month.month=3`
              *
              * Create a request for the method "monthly.list".
              *

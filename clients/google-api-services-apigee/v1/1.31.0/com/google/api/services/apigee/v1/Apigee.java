@@ -6677,17 +6677,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         public class Entries {
 
           /**
-           * Creates key value entries in a org, env or apis scoped key value map.
+           * Creates key value entries in a key value map scoped to an organization, environment, or API
+           * proxy.
            *
            * Create a request for the method "entries.create".
            *
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
            * @return the request
@@ -6706,7 +6707,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
 
             /**
-             * Creates key value entries in a org, env or apis scoped key value map.
+             * Creates key value entries in a key value map scoped to an organization, environment, or API
+             * proxy.
              *
              * Create a request for the method "entries.create".
              *
@@ -6715,10 +6717,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
              * @since 1.13
@@ -6790,18 +6792,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to create the key value map entry.
-             * Use one of the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-           following formats in your request:
-           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+            /** Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public java.lang.String getParent() {
@@ -6810,10 +6812,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to create the key value map entry.
-             * Use one of the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6831,18 +6833,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Deletes a key value entry from an org, environment or apis scoped key value map.
+           * Deletes a key value entry from a key value map scoped to an organization, environment, or API
+           * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
+           * continue to function with its cached values for a few minutes. This is expected behavior.
            *
            * Create a request for the method "entries.delete".
            *
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6859,7 +6863,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
 
             /**
-             * Deletes a key value entry from an org, environment or apis scoped key value map.
+             * Deletes a key value entry from a key value map scoped to an organization, environment, or API
+             * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
+             * continue to function with its cached values for a few minutes. This is expected behavior.
              *
              * Create a request for the method "entries.delete".
              *
@@ -6868,11 +6874,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+             * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6942,19 +6948,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to delete the key value map entry.
-             * Use one of the following formats in your request:
+             * Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-           following formats in your request:
-           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `organization
-           s/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}`
+            /** Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+           the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `organizati
+           ons/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public java.lang.String getName() {
@@ -6963,10 +6969,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to delete the key value map entry.
-             * Use one of the following formats in your request:
+             * Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public Delete setName(java.lang.String name) {
@@ -6992,11 +6998,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-           *        the following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use **one**
+           *        of the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -7022,11 +7028,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-           *        the following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+             * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use **one**
+           *        of the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -7106,19 +7112,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to fetch the key value map
-             * entry/value. Use one of the following formats in your request:
+             * entry/value. Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-           the following formats in your request:
-           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `organization
-           s/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}`
+            /** Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use
+           **one** of the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `organizati
+           ons/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public java.lang.String getName() {
@@ -7127,10 +7133,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to fetch the key value map
-             * entry/value. Use one of the following formats in your request:
+             * entry/value. Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public Get setName(java.lang.String name) {
@@ -7156,10 +7162,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-           *        formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+           *        following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            * @return the request
            */
@@ -7187,10 +7193,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-           *        formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+           *        following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              * @since 1.13
              */
@@ -7270,18 +7276,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. Scope as indicated by the URI in which to list key value maps. Use one of
-             * the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Required. Scope as indicated by the URI in which to list key value maps. Use **one**
+             * of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-           formats in your request: `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+            /** Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+           following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public java.lang.String getParent() {
@@ -7289,11 +7296,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. Scope as indicated by the URI in which to list key value maps. Use one of
-             * the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Required. Scope as indicated by the URI in which to list key value maps. Use **one**
+             * of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -7329,22 +7336,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Optional. Page token, a key value entry returned from a previous call that can use to
-             * retrieve the next page.
+             * Optional. Page token. If provides, must be a valid key value entry returned from a
+             * previous call that can be used to retrieve the next page.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. Page token, a key value entry returned from a previous call that can use to retrieve the
-           next page.
+            /** Optional. Page token. If provides, must be a valid key value entry returned from a previous call
+           that can be used to retrieve the next page.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. Page token, a key value entry returned from a previous call that can use to
-             * retrieve the next page.
+             * Optional. Page token. If provides, must be a valid key value entry returned from a
+             * previous call that can be used to retrieve the next page.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -18193,7 +18200,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Deletes an environment from an organization.
+       * Deletes an environment from an organization. **Note**: You must delete all key value maps and key
+       * value entries before you can delete an environment.
        *
        * Create a request for the method "environments.delete".
        *
@@ -18218,7 +18226,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
 
         /**
-         * Deletes an environment from an organization.
+         * Deletes an environment from an organization. **Note**: You must delete all key value maps and
+         * key value entries before you can delete an environment.
          *
          * Create a request for the method "environments.delete".
          *
@@ -26785,17 +26794,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         public class Entries {
 
           /**
-           * Creates key value entries in a org, env or apis scoped key value map.
+           * Creates key value entries in a key value map scoped to an organization, environment, or API
+           * proxy.
            *
            * Create a request for the method "entries.create".
            *
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
            * @return the request
@@ -26814,7 +26824,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
 
             /**
-             * Creates key value entries in a org, env or apis scoped key value map.
+             * Creates key value entries in a key value map scoped to an organization, environment, or API
+             * proxy.
              *
              * Create a request for the method "entries.create".
              *
@@ -26823,10 +26834,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
              * @since 1.13
@@ -26898,18 +26909,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to create the key value map entry.
-             * Use one of the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-           following formats in your request:
-           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+            /** Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public java.lang.String getParent() {
@@ -26918,10 +26929,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to create the key value map entry.
-             * Use one of the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -26939,18 +26950,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Deletes a key value entry from an org, environment or apis scoped key value map.
+           * Deletes a key value entry from a key value map scoped to an organization, environment, or API
+           * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
+           * continue to function with its cached values for a few minutes. This is expected behavior.
            *
            * Create a request for the method "entries.delete".
            *
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -26967,7 +26980,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
 
             /**
-             * Deletes a key value entry from an org, environment or apis scoped key value map.
+             * Deletes a key value entry from a key value map scoped to an organization, environment, or API
+             * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
+             * continue to function with its cached values for a few minutes. This is expected behavior.
              *
              * Create a request for the method "entries.delete".
              *
@@ -26976,11 +26991,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-           *        following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+             * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -27050,19 +27065,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to delete the key value map entry.
-             * Use one of the following formats in your request:
+             * Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-           following formats in your request:
-           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `organization
-           s/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}`
+            /** Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+           the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `organizati
+           ons/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public java.lang.String getName() {
@@ -27071,10 +27086,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to delete the key value map entry.
-             * Use one of the following formats in your request:
+             * Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public Delete setName(java.lang.String name) {
@@ -27100,11 +27115,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-           *        the following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use **one**
+           *        of the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -27130,11 +27145,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-           *        the following formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-           *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-           *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+             * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use **one**
+           *        of the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+           *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+           *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -27214,19 +27229,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to fetch the key value map
-             * entry/value. Use one of the following formats in your request:
+             * entry/value. Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-           the following formats in your request:
-           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `organization
-           s/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}`
+            /** Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use
+           **one** of the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `organizati
+           ons/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public java.lang.String getName() {
@@ -27235,10 +27250,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Required. Scope as indicated by the URI in which to fetch the key value map
-             * entry/value. Use one of the following formats in your request:
+             * entry/value. Use **one** of the following structures in your request: *
              * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
-             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/e
-             * ntries/{entry}`
+             * * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}
+             * /entries/{entry}` *
              * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
              */
             public Get setName(java.lang.String name) {
@@ -27264,10 +27279,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apigee server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-           *        formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+           *        following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            * @return the request
            */
@@ -27295,10 +27310,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-           *        formats in your request:
-           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+           *        following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              * @since 1.13
              */
@@ -27378,18 +27393,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. Scope as indicated by the URI in which to list key value maps. Use one of
-             * the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Required. Scope as indicated by the URI in which to list key value maps. Use **one**
+             * of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-           formats in your request: `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+            /** Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+           following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public java.lang.String getParent() {
@@ -27397,11 +27413,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. Scope as indicated by the URI in which to list key value maps. Use one of
-             * the following formats in your request:
-             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
+             * Required. Scope as indicated by the URI in which to list key value maps. Use **one**
+             * of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
              * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
-             * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -27437,22 +27453,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Optional. Page token, a key value entry returned from a previous call that can use to
-             * retrieve the next page.
+             * Optional. Page token. If provides, must be a valid key value entry returned from a
+             * previous call that can be used to retrieve the next page.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. Page token, a key value entry returned from a previous call that can use to retrieve the
-           next page.
+            /** Optional. Page token. If provides, must be a valid key value entry returned from a previous call
+           that can be used to retrieve the next page.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. Page token, a key value entry returned from a previous call that can use to
-             * retrieve the next page.
+             * Optional. Page token. If provides, must be a valid key value entry returned from a
+             * previous call that can be used to retrieve the next page.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -37468,17 +37484,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       public class Entries {
 
         /**
-         * Creates key value entries in a org, env or apis scoped key value map.
+         * Creates key value entries in a key value map scoped to an organization, environment, or API
+         * proxy.
          *
          * Create a request for the method "entries.create".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-         *        following formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+         * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+         *        the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
          *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
          * @return the request
@@ -37497,7 +37514,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/keyvaluemaps/[^/]+$");
 
           /**
-           * Creates key value entries in a org, env or apis scoped key value map.
+           * Creates key value entries in a key value map scoped to an organization, environment, or API
+           * proxy.
            *
            * Create a request for the method "entries.create".
            *
@@ -37506,10 +37524,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-         *        following formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * @param parent Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+         *        the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
          *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
            * @since 1.13
@@ -37581,18 +37599,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. Scope as indicated by the URI in which to create the key value map entry. Use
-           * one of the following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Scope as indicated by the URI in which to create the key value map entry. Use one of the
-         following formats in your request:
-         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+          /** Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+         the following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
          `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            */
           public java.lang.String getParent() {
@@ -37601,9 +37619,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. Scope as indicated by the URI in which to create the key value map entry. Use
-           * one of the following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            */
           public Create setParent(java.lang.String parent) {
@@ -37622,18 +37640,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Deletes a key value entry from an org, environment or apis scoped key value map.
+         * Deletes a key value entry from a key value map scoped to an organization, environment, or API
+         * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
+         * continue to function with its cached values for a few minutes. This is expected behavior.
          *
          * Create a request for the method "entries.delete".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-         *        following formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-         *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-         *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+         * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+         *        the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+         *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+         *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -37650,7 +37670,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
 
           /**
-           * Deletes a key value entry from an org, environment or apis scoped key value map.
+           * Deletes a key value entry from a key value map scoped to an organization, environment, or API
+           * proxy. **Note:** After you delete the key value entry, the policy consuming the entry will
+           * continue to function with its cached values for a few minutes. This is expected behavior.
            *
            * Create a request for the method "entries.delete".
            *
@@ -37659,11 +37681,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-         *        following formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-         *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-         *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * @param name Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+         *        the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+         *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+         *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -37733,18 +37755,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. Scope as indicated by the URI in which to delete the key value map entry. Use
-           * one of the following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `
-           * organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entr
-           * ies/{entry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/ent
+           * ries/{entry}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Scope as indicated by the URI in which to delete the key value map entry. Use one of the
-         following formats in your request:
-         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `organization
-         s/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}`
+          /** Required. Scope as indicated by the URI in which to delete the key value map entry. Use **one** of
+         the following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `organizati
+         ons/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}` *
          `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            */
           public java.lang.String getName() {
@@ -37753,10 +37776,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. Scope as indicated by the URI in which to delete the key value map entry. Use
-           * one of the following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `
-           * organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entr
-           * ies/{entry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/ent
+           * ries/{entry}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -37781,11 +37805,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-         *        the following formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-         *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-         *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+         * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use **one**
+         *        of the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+         *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+         *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -37811,11 +37835,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-         *        the following formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `org
-         *        anizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{e
-         *        ntry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * @param name Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use **one**
+         *        of the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `o
+         *        rganizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/
+         *        {entry}` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -37895,18 +37919,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. Scope as indicated by the URI in which to fetch the key value map
-           * entry/value. Use one of the following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `
-           * organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entr
-           * ies/{entry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * entry/value. Use **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/ent
+           * ries/{entry}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use one of
-         the following formats in your request:
-         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `organization
-         s/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}`
+          /** Required. Scope as indicated by the URI in which to fetch the key value map entry/value. Use
+         **one** of the following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. * `organizati
+         ons/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entries/{entry}` *
          `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            */
           public java.lang.String getName() {
@@ -37915,10 +37940,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Required. Scope as indicated by the URI in which to fetch the key value map
-           * entry/value. Use one of the following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. `
-           * organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/entr
-           * ies/{entry}` `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
+           * entry/value. Use **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}/entries/{entry}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}/ent
+           * ries/{entry}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -37943,10 +37969,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-         *        formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+         * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
          *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
          * @return the request
          */
@@ -37974,10 +38000,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-         *        formats in your request:
-         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * @param parent Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
          *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            * @since 1.13
            */
@@ -38057,18 +38083,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Scope as indicated by the URI in which to list key value maps. Use one of the
-           * following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * Required. Scope as indicated by the URI in which to list key value maps. Use **one** of
+           * the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Scope as indicated by the URI in which to list key value maps. Use one of the following
-         formats in your request: `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+          /** Required. Scope as indicated by the URI in which to list key value maps. Use **one** of the
+         following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
          `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            */
           public java.lang.String getParent() {
@@ -38076,10 +38103,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Scope as indicated by the URI in which to list key value maps. Use one of the
-           * following formats in your request:
-           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`.
-           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+           * Required. Scope as indicated by the URI in which to list key value maps. Use **one** of
+           * the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
            * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
            */
           public List setParent(java.lang.String parent) {
@@ -38116,22 +38143,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. Page token, a key value entry returned from a previous call that can use to
-           * retrieve the next page.
+           * Optional. Page token. If provides, must be a valid key value entry returned from a
+           * previous call that can be used to retrieve the next page.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. Page token, a key value entry returned from a previous call that can use to retrieve the
-         next page.
+          /** Optional. Page token. If provides, must be a valid key value entry returned from a previous call
+         that can be used to retrieve the next page.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. Page token, a key value entry returned from a previous call that can use to
-           * retrieve the next page.
+           * Optional. Page token. If provides, must be a valid key value entry returned from a
+           * previous call that can be used to retrieve the next page.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

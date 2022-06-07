@@ -30,6 +30,13 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1alpha1SubscriberEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Channel Partner event sent as part of Pub/Sub event to partners.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudChannelV1alpha1ChannelPartnerEvent channelPartnerEvent;
+
+  /**
    * Customer event sent as part of Pub/Sub event to partners.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudChannelV1alpha1SubscriberEvent extends com.google.
    */
   @com.google.api.client.util.Key
   private GoogleCloudChannelV1alpha1EntitlementEvent entitlementEvent;
+
+  /**
+   * Channel Partner event sent as part of Pub/Sub event to partners.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1ChannelPartnerEvent getChannelPartnerEvent() {
+    return channelPartnerEvent;
+  }
+
+  /**
+   * Channel Partner event sent as part of Pub/Sub event to partners.
+   * @param channelPartnerEvent channelPartnerEvent or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1SubscriberEvent setChannelPartnerEvent(GoogleCloudChannelV1alpha1ChannelPartnerEvent channelPartnerEvent) {
+    this.channelPartnerEvent = channelPartnerEvent;
+    return this;
+  }
 
   /**
    * Customer event sent as part of Pub/Sub event to partners.

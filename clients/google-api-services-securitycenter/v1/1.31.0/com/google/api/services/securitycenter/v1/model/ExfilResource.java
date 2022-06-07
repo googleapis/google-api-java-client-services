@@ -40,7 +40,7 @@ public final class ExfilResource extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> components;
 
   /**
-   * Resource’s URI (https://google.aip.dev/122#full-resource-names)
+   * Resource's URI (https://google.aip.dev/122#full-resource-names)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ExfilResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Resource’s URI (https://google.aip.dev/122#full-resource-names)
+   * Resource's URI (https://google.aip.dev/122#full-resource-names)
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -76,7 +76,7 @@ public final class ExfilResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Resource’s URI (https://google.aip.dev/122#full-resource-names)
+   * Resource's URI (https://google.aip.dev/122#full-resource-names)
    * @param name name or {@code null} for none
    */
   public ExfilResource setName(java.lang.String name) {

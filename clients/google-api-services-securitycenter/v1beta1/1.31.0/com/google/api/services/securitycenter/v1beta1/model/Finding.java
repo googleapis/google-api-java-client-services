@@ -129,7 +129,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String eventTime;
 
   /**
-   * Represents exfiltrations associated with the Finding.
+   * Represents exfiltration associated with the Finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -472,7 +472,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents exfiltrations associated with the Finding.
+   * Represents exfiltration associated with the Finding.
    * @return value or {@code null} for none
    */
   public Exfiltration getExfiltration() {
@@ -480,7 +480,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents exfiltrations associated with the Finding.
+   * Represents exfiltration associated with the Finding.
    * @param exfiltration exfiltration or {@code null} for none
    */
   public Finding setExfiltration(Exfiltration exfiltration) {

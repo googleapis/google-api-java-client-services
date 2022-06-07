@@ -38,7 +38,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> args;
 
   /**
-   * True if arguments is incomplete.
+   * True if `args` is incomplete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if env_variables is incomplete.
+   * True if `env_variables` is incomplete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +99,8 @@ public final class Process extends com.google.api.client.json.GenericJson {
   private java.lang.Long pid;
 
   /**
-   * When the process represents the invocation of a script, binary provides information about the
-   * interpreter while script provides information about the script file provided to the
+   * When the process represents the invocation of a script, `binary` provides information about the
+   * interpreter while `script` provides information about the script file provided to the
    * interpreter.
    * The value may be {@code null}.
    */
@@ -125,7 +125,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if arguments is incomplete.
+   * True if `args` is incomplete.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getArgumentsTruncated() {
@@ -133,7 +133,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if arguments is incomplete.
+   * True if `args` is incomplete.
    * @param argumentsTruncated argumentsTruncated or {@code null} for none
    */
   public Process setArgumentsTruncated(java.lang.Boolean argumentsTruncated) {
@@ -176,7 +176,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if env_variables is incomplete.
+   * True if `env_variables` is incomplete.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnvVariablesTruncated() {
@@ -184,7 +184,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if env_variables is incomplete.
+   * True if `env_variables` is incomplete.
    * @param envVariablesTruncated envVariablesTruncated or {@code null} for none
    */
   public Process setEnvVariablesTruncated(java.lang.Boolean envVariablesTruncated) {
@@ -244,8 +244,8 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When the process represents the invocation of a script, binary provides information about the
-   * interpreter while script provides information about the script file provided to the
+   * When the process represents the invocation of a script, `binary` provides information about the
+   * interpreter while `script` provides information about the script file provided to the
    * interpreter.
    * @return value or {@code null} for none
    */
@@ -254,8 +254,8 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When the process represents the invocation of a script, binary provides information about the
-   * interpreter while script provides information about the script file provided to the
+   * When the process represents the invocation of a script, `binary` provides information about the
+   * interpreter while `script` provides information about the script file provided to the
    * interpreter.
    * @param script script or {@code null} for none
    */

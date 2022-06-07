@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Individual line item definition of a subscription. Next id: 5
+ * Individual line item definition of a subscription. Next id: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -29,6 +29,13 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Output only. Description of this line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
 
   /**
    * Output only. It is set only if the line item has its own free trial applied. End time of the
@@ -62,6 +69,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. Description of this line item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. Description of this line item.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * Output only. It is set only if the line item has its own free trial applied. End time of the

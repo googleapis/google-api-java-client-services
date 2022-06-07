@@ -7131,6 +7131,221 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * An accessor for creating requests from the DatabaseRoles collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Spanner spanner = new Spanner(...);}
+         *   {@code Spanner.DatabaseRoles.List request = spanner.databaseRoles().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DatabaseRoles databaseRoles() {
+          return new DatabaseRoles();
+        }
+
+        /**
+         * The "databaseRoles" collection of methods.
+         */
+        public class DatabaseRoles {
+
+          /**
+           * Lists Cloud Spanner database roles.
+           *
+           * Create a request for the method "databaseRoles.list".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The database whose roles should be listed. Values are of the form
+           *        `projects//instances//databases//databaseRoles`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListDatabaseRolesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/databaseRoles";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+            /**
+             * Lists Cloud Spanner database roles.
+             *
+             * Create a request for the method "databaseRoles.list".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The database whose roles should be listed. Values are of the form
+           *        `projects//instances//databases//databaseRoles`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListDatabaseRolesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The database whose roles should be listed. Values are of the form
+             * `projects//instances//databases//databaseRoles`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The database whose roles should be listed. Values are of the form
+           `projects//instances//databases//databaseRoles`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The database whose roles should be listed. Values are of the form
+             * `projects//instances//databases//databaseRoles`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Number of database roles to be returned in the response. If 0 or less, defaults to
+             * the server's maximum allowed page size.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Number of database roles to be returned in the response. If 0 or less, defaults to the server's
+           maximum allowed page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Number of database roles to be returned in the response. If 0 or less, defaults to
+             * the server's maximum allowed page size.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * If non-empty, `page_token` should contain a next_page_token from a previous
+             * ListDatabaseRolesResponse.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** If non-empty, `page_token` should contain a next_page_token from a previous
+           ListDatabaseRolesResponse.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * If non-empty, `page_token` should contain a next_page_token from a previous
+             * ListDatabaseRolesResponse.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>

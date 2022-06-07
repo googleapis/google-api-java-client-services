@@ -30,8 +30,8 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Flag that specifies whether entry values will be encrypted. Enable to encrypt entry
-   * values.
+   * Optional. Flag that specifies whether entry values will be encrypted. You must set this value
+   * to `true`. Apigee X and hybrid do not support unencrytped key value maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.
   private java.lang.String name;
 
   /**
-   * Optional. Flag that specifies whether entry values will be encrypted. Enable to encrypt entry
-   * values.
+   * Optional. Flag that specifies whether entry values will be encrypted. You must set this value
+   * to `true`. Apigee X and hybrid do not support unencrytped key value maps.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEncrypted() {
@@ -54,8 +54,8 @@ public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.
   }
 
   /**
-   * Optional. Flag that specifies whether entry values will be encrypted. Enable to encrypt entry
-   * values.
+   * Optional. Flag that specifies whether entry values will be encrypted. You must set this value
+   * to `true`. Apigee X and hybrid do not support unencrytped key value maps.
    * @param encrypted encrypted or {@code null} for none
    */
   public GoogleCloudApigeeV1KeyValueMap setEncrypted(java.lang.Boolean encrypted) {

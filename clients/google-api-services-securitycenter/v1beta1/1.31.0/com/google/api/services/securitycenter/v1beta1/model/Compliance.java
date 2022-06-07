@@ -31,28 +31,28 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Compliance extends com.google.api.client.json.GenericJson {
 
   /**
-   * e.g. A.12.4.1
+   * Policies within the standard/benchmark e.g. A.12.4.1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ids;
 
   /**
-   * e.g. "cis", "pci", "owasp", etc.
+   * Refers to industry wide standards or benchmarks e.g. "cis", "pci", "owasp", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String standard;
 
   /**
-   * e.g. 1.1
+   * Version of the standard/benchmark e.g. 1.1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * e.g. A.12.4.1
+   * Policies within the standard/benchmark e.g. A.12.4.1
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIds() {
@@ -60,7 +60,7 @@ public final class Compliance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * e.g. A.12.4.1
+   * Policies within the standard/benchmark e.g. A.12.4.1
    * @param ids ids or {@code null} for none
    */
   public Compliance setIds(java.util.List<java.lang.String> ids) {
@@ -69,7 +69,7 @@ public final class Compliance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * e.g. "cis", "pci", "owasp", etc.
+   * Refers to industry wide standards or benchmarks e.g. "cis", "pci", "owasp", etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getStandard() {
@@ -77,7 +77,7 @@ public final class Compliance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * e.g. "cis", "pci", "owasp", etc.
+   * Refers to industry wide standards or benchmarks e.g. "cis", "pci", "owasp", etc.
    * @param standard standard or {@code null} for none
    */
   public Compliance setStandard(java.lang.String standard) {
@@ -86,7 +86,7 @@ public final class Compliance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * e.g. 1.1
+   * Version of the standard/benchmark e.g. 1.1
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -94,7 +94,7 @@ public final class Compliance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * e.g. 1.1
+   * Version of the standard/benchmark e.g. 1.1
    * @param version version or {@code null} for none
    */
   public Compliance setVersion(java.lang.String version) {

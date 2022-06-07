@@ -63,7 +63,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * SHA256 hash of the first hashed_size bytes of the file encoded as a hex string. If hashed_size
-   * == size, hash_sha256 represents the SHA256 hash of the entire file.
+   * == size, sha256 represents the SHA256 hash of the entire file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * SHA256 hash of the first hashed_size bytes of the file encoded as a hex string. If hashed_size
-   * == size, hash_sha256 represents the SHA256 hash of the entire file.
+   * == size, sha256 represents the SHA256 hash of the entire file.
    * @return value or {@code null} for none
    */
   public java.lang.String getSha256() {
@@ -159,7 +159,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * SHA256 hash of the first hashed_size bytes of the file encoded as a hex string. If hashed_size
-   * == size, hash_sha256 represents the SHA256 hash of the entire file.
+   * == size, sha256 represents the SHA256 hash of the entire file.
    * @param sha256 sha256 or {@code null} for none
    */
   public File setSha256(java.lang.String sha256) {

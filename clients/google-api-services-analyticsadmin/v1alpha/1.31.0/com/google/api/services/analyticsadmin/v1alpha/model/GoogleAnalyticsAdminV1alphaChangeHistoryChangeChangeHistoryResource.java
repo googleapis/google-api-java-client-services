@@ -38,6 +38,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaAccount account;
 
   /**
+   * A snapshot of AttributionSettings resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings;
+
+  /**
    * A snapshot of a ConversionEvent resource in change history.
    * The value may be {@code null}.
    */
@@ -135,6 +142,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAccount(GoogleAnalyticsAdminV1alphaAccount account) {
     this.account = account;
+    return this;
+  }
+
+  /**
+   * A snapshot of AttributionSettings resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAttributionSettings getAttributionSettings() {
+    return attributionSettings;
+  }
+
+  /**
+   * A snapshot of AttributionSettings resource in change history.
+   * @param attributionSettings attributionSettings or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAttributionSettings(GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings) {
+    this.attributionSettings = attributionSettings;
     return this;
   }
 

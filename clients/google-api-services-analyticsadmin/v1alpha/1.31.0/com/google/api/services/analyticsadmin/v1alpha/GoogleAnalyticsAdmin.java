@@ -3422,6 +3422,155 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Lookup for a AttributionSettings singleton.
+     *
+     * Create a request for the method "properties.getAttributionSettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link GetAttributionSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the attribution settings to retrieve. Format:
+     *        properties/{property}/attributionSettings
+     * @return the request
+     */
+    public GetAttributionSettings getAttributionSettings(java.lang.String name) throws java.io.IOException {
+      GetAttributionSettings result = new GetAttributionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetAttributionSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/attributionSettings$");
+
+      /**
+       * Lookup for a AttributionSettings singleton.
+       *
+       * Create a request for the method "properties.getAttributionSettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetAttributionSettings#execute()} method to invoke the
+       * remote operation. <p> {@link GetAttributionSettings#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the attribution settings to retrieve. Format:
+     *        properties/{property}/attributionSettings
+       * @since 1.13
+       */
+      protected GetAttributionSettings(java.lang.String name) {
+        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/attributionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetAttributionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAttributionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAttributionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetAttributionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetAttributionSettings setAlt(java.lang.String alt) {
+        return (GetAttributionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAttributionSettings setCallback(java.lang.String callback) {
+        return (GetAttributionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetAttributionSettings setFields(java.lang.String fields) {
+        return (GetAttributionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetAttributionSettings setKey(java.lang.String key) {
+        return (GetAttributionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetAttributionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetAttributionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetAttributionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetAttributionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetAttributionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetAttributionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetAttributionSettings setUploadType(java.lang.String uploadType) {
+        return (GetAttributionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAttributionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAttributionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the attribution settings to retrieve. Format:
+       * properties/{property}/attributionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the attribution settings to retrieve. Format:
+     properties/{property}/attributionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the attribution settings to retrieve. Format:
+       * properties/{property}/attributionSettings
+       */
+      public GetAttributionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/attributionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetAttributionSettings set(String parameterName, Object value) {
+        return (GetAttributionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns the singleton data retention settings for this property.
      *
      * Create a request for the method "properties.getDataRetentionSettings".
@@ -4116,6 +4265,175 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates attribution settings on a property.
+     *
+     * Create a request for the method "properties.updateAttributionSettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link UpdateAttributionSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Output only. Resource name of this attribution settings resource. Format:
+     *        properties/{property_id}/attributionSettings Example:
+     *        "properties/1000/attributionSettings"
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings}
+     * @return the request
+     */
+    public UpdateAttributionSettings updateAttributionSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings content) throws java.io.IOException {
+      UpdateAttributionSettings result = new UpdateAttributionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateAttributionSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/attributionSettings$");
+
+      /**
+       * Updates attribution settings on a property.
+       *
+       * Create a request for the method "properties.updateAttributionSettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link UpdateAttributionSettings#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateAttributionSettings#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. Resource name of this attribution settings resource. Format:
+     *        properties/{property_id}/attributionSettings Example:
+     *        "properties/1000/attributionSettings"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings}
+       * @since 1.13
+       */
+      protected UpdateAttributionSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings content) {
+        super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAttributionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/attributionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateAttributionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateAttributionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateAttributionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateAttributionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateAttributionSettings setAlt(java.lang.String alt) {
+        return (UpdateAttributionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateAttributionSettings setCallback(java.lang.String callback) {
+        return (UpdateAttributionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateAttributionSettings setFields(java.lang.String fields) {
+        return (UpdateAttributionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateAttributionSettings setKey(java.lang.String key) {
+        return (UpdateAttributionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateAttributionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateAttributionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateAttributionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateAttributionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateAttributionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateAttributionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateAttributionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateAttributionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateAttributionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateAttributionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. Resource name of this attribution settings resource. Format:
+       * properties/{property_id}/attributionSettings Example: "properties/1000/attributionSettings"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. Resource name of this attribution settings resource. Format:
+     properties/{property_id}/attributionSettings Example: "properties/1000/attributionSettings"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. Resource name of this attribution settings resource. Format:
+       * properties/{property_id}/attributionSettings Example: "properties/1000/attributionSettings"
+       */
+      public UpdateAttributionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/attributionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+     "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+     with the string "*" to match all fields.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields.
+       */
+      public UpdateAttributionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateAttributionSettings set(String parameterName, Object value) {
+        return (UpdateAttributionSettings) super.set(parameterName, value);
       }
     }
     /**

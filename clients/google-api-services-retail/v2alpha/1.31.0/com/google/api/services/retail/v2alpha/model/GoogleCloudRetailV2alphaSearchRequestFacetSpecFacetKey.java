@@ -30,6 +30,14 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether to make facet keys case insensitive when getting faceting values with prefixes or
+   * contains.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean caseInsensitive;
+
+  /**
    * Only get facet values that contains the given strings. For example, suppose "categories" has
    * three values "Women > Shoe", "Women > Dress" and "Men > Shoe". If set "contains" to "Shoe", the
    * "categories" facet will give only "Women > Shoe" and "Men > Shoe". Only supported on textual
@@ -117,6 +125,25 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey extend
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> restrictedValues;
+
+  /**
+   * Whether to make facet keys case insensitive when getting faceting values with prefixes or
+   * contains.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCaseInsensitive() {
+    return caseInsensitive;
+  }
+
+  /**
+   * Whether to make facet keys case insensitive when getting faceting values with prefixes or
+   * contains.
+   * @param caseInsensitive caseInsensitive or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey setCaseInsensitive(java.lang.Boolean caseInsensitive) {
+    this.caseInsensitive = caseInsensitive;
+    return this;
+  }
 
   /**
    * Only get facet values that contains the given strings. For example, suppose "categories" has

@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class CustomerIndexStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date for which statistics were calculated.
+   * The date for which statistics were calculated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class CustomerIndexStats extends com.google.api.client.json.Generic
   private java.util.List<ItemCountByStatus> itemCountByStatus;
 
   /**
-   * Date for which statistics were calculated.
+   * The date for which statistics were calculated.
    * @return value or {@code null} for none
    */
   public Date getDate() {
@@ -52,7 +52,7 @@ public final class CustomerIndexStats extends com.google.api.client.json.Generic
   }
 
   /**
-   * Date for which statistics were calculated.
+   * The date for which statistics were calculated.
    * @param date date or {@code null} for none
    */
   public CustomerIndexStats setDate(Date date) {

@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class ObjectOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Options that determine how the object is displayed in the Cloud Search results page.
+   * The options that determine how the object is displayed in the Cloud Search results page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ObjectOptions extends com.google.api.client.json.GenericJson 
   private FreshnessOptions freshnessOptions;
 
   /**
-   * Options that determine how the object is displayed in the Cloud Search results page.
+   * The options that determine how the object is displayed in the Cloud Search results page.
    * @return value or {@code null} for none
    */
   public ObjectDisplayOptions getDisplayOptions() {
@@ -52,7 +52,7 @@ public final class ObjectOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options that determine how the object is displayed in the Cloud Search results page.
+   * The options that determine how the object is displayed in the Cloud Search results page.
    * @param displayOptions displayOptions or {@code null} for none
    */
   public ObjectOptions setDisplayOptions(ObjectDisplayOptions displayOptions) {

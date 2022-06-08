@@ -30,8 +30,8 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SearchApplicationQueryStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date for which query stats were calculated. Stats calculated on the next day close to midnight
-   * are returned.
+   * The date for which query stats were calculated. Stats calculated on the next day close to
+   * midnight are returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class SearchApplicationQueryStats extends com.google.api.client.jso
   }
 
   /**
-   * Date for which query stats were calculated. Stats calculated on the next day close to midnight
-   * are returned.
+   * The date for which query stats were calculated. Stats calculated on the next day close to
+   * midnight are returned.
    * @return value or {@code null} for none
    */
   public Date getDate() {
@@ -59,8 +59,8 @@ public final class SearchApplicationQueryStats extends com.google.api.client.jso
   }
 
   /**
-   * Date for which query stats were calculated. Stats calculated on the next day close to midnight
-   * are returned.
+   * The date for which query stats were calculated. Stats calculated on the next day close to
+   * midnight are returned.
    * @param date date or {@code null} for none
    */
   public SearchApplicationQueryStats setDate(Date date) {

@@ -30,8 +30,8 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SortOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the operator corresponding to the field to sort on. The corresponding property must be
-   * marked as sortable.
+   * The name of the operator corresponding to the field to sort on. The corresponding property must
+   * be marked as sortable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class SortOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String sortOrder;
 
   /**
-   * Name of the operator corresponding to the field to sort on. The corresponding property must be
-   * marked as sortable.
+   * The name of the operator corresponding to the field to sort on. The corresponding property must
+   * be marked as sortable.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperatorName() {
@@ -54,8 +54,8 @@ public final class SortOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the operator corresponding to the field to sort on. The corresponding property must be
-   * marked as sortable.
+   * The name of the operator corresponding to the field to sort on. The corresponding property must
+   * be marked as sortable.
    * @param operatorName operatorName or {@code null} for none
    */
   public SortOptions setOperatorName(java.lang.String operatorName) {

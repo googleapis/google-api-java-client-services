@@ -96,8 +96,8 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   private java.lang.String lessThanOperatorName;
 
   /**
-   * Name of the object corresponding to the operator. This field is only filled for schema-specific
-   * operators, and is unset for common operators.
+   * The name of the object corresponding to the operator. This field is only filled for schema-
+   * specific operators, and is unset for common operators.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   private java.lang.String operatorName;
 
   /**
-   * Type of the operator.
+   * The type of the operator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,8 +277,8 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the object corresponding to the operator. This field is only filled for schema-specific
-   * operators, and is unset for common operators.
+   * The name of the object corresponding to the operator. This field is only filled for schema-
+   * specific operators, and is unset for common operators.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectType() {
@@ -286,8 +286,8 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the object corresponding to the operator. This field is only filled for schema-specific
-   * operators, and is unset for common operators.
+   * The name of the object corresponding to the operator. This field is only filled for schema-
+   * specific operators, and is unset for common operators.
    * @param objectType objectType or {@code null} for none
    */
   public QueryOperator setObjectType(java.lang.String objectType) {
@@ -313,7 +313,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Type of the operator.
+   * The type of the operator.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -321,7 +321,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Type of the operator.
+   * The type of the operator.
    * @param type type or {@code null} for none
    */
   public QueryOperator setType(java.lang.String type) {

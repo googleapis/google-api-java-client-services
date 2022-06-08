@@ -45,22 +45,22 @@ public final class Item extends com.google.api.client.json.GenericJson {
   private ItemContent content;
 
   /**
-   * Type for this item.
+   * The type for this item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String itemType;
 
   /**
-   * Metadata information.
+   * The metadata information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ItemMetadata metadata;
 
   /**
-   * Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
-   * maximum length is 1536 characters.
+   * The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field.
+   * The maximum length is 1536 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type for this item.
+   * The type for this item.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemType() {
@@ -151,7 +151,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type for this item.
+   * The type for this item.
    * @param itemType itemType or {@code null} for none
    */
   public Item setItemType(java.lang.String itemType) {
@@ -160,7 +160,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata information.
+   * The metadata information.
    * @return value or {@code null} for none
    */
   public ItemMetadata getMetadata() {
@@ -168,7 +168,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata information.
+   * The metadata information.
    * @param metadata metadata or {@code null} for none
    */
   public Item setMetadata(ItemMetadata metadata) {
@@ -177,8 +177,8 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
-   * maximum length is 1536 characters.
+   * The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field.
+   * The maximum length is 1536 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -186,8 +186,8 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
-   * maximum length is 1536 characters.
+   * The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field.
+   * The maximum length is 1536 characters.
    * @param name name or {@code null} for none
    */
   public Item setName(java.lang.String name) {

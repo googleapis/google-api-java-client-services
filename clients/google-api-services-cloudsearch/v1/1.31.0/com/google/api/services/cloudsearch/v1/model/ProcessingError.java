@@ -37,7 +37,7 @@ public final class ProcessingError extends com.google.api.client.json.GenericJso
   private java.lang.String code;
 
   /**
-   * Description of the error.
+   * The description of the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class ProcessingError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Description of the error.
+   * The description of the error.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorMessage() {
@@ -83,7 +83,7 @@ public final class ProcessingError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Description of the error.
+   * The description of the error.
    * @param errorMessage errorMessage or {@code null} for none
    */
   public ProcessingError setErrorMessage(java.lang.String errorMessage) {

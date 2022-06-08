@@ -34,7 +34,7 @@ public final class TextOperatorOptions extends com.google.api.client.json.Generi
    * If true, the text value is tokenized as one atomic value in operator searches and facet
    * matches. For example, if the operator name is "genre" and the value is "science-fiction" the
    * query restrictions "genre:science" and "genre:fiction" doesn't match the item; "genre:science-
-   * fiction" does. Value matching is case-sensitive and does not remove special characters. If
+   * fiction" does. Text value matching is case-sensitive and does not remove special characters. If
    * false, the text is tokenized. For example, if the value is "science-fiction" the queries
    * "genre:science" and "genre:fiction" matches the item.
    * The value may be {@code null}.
@@ -58,7 +58,7 @@ public final class TextOperatorOptions extends com.google.api.client.json.Generi
    * If true, the text value is tokenized as one atomic value in operator searches and facet
    * matches. For example, if the operator name is "genre" and the value is "science-fiction" the
    * query restrictions "genre:science" and "genre:fiction" doesn't match the item; "genre:science-
-   * fiction" does. Value matching is case-sensitive and does not remove special characters. If
+   * fiction" does. Text value matching is case-sensitive and does not remove special characters. If
    * false, the text is tokenized. For example, if the value is "science-fiction" the queries
    * "genre:science" and "genre:fiction" matches the item.
    * @return value or {@code null} for none
@@ -71,7 +71,7 @@ public final class TextOperatorOptions extends com.google.api.client.json.Generi
    * If true, the text value is tokenized as one atomic value in operator searches and facet
    * matches. For example, if the operator name is "genre" and the value is "science-fiction" the
    * query restrictions "genre:science" and "genre:fiction" doesn't match the item; "genre:science-
-   * fiction" does. Value matching is case-sensitive and does not remove special characters. If
+   * fiction" does. Text value matching is case-sensitive and does not remove special characters. If
    * false, the text is tokenized. For example, if the value is "science-fiction" the queries
    * "genre:science" and "genre:fiction" matches the item.
    * @param exactMatchWithOperator exactMatchWithOperator or {@code null} for none

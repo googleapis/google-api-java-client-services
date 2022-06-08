@@ -39,9 +39,9 @@ public final class PushItem extends com.google.api.client.json.GenericJson {
   private java.lang.String contentHash;
 
   /**
-   * Metadata hash of the item according to the repository. If specified, this is used to determine
-   * how to modify this item's status. Setting this field and the type field results in argument
-   * error. The maximum length is 2048 characters.
+   * The metadata hash of the item according to the repository. If specified, this is used to
+   * determine how to modify this item's status. Setting this field and the type field results in
+   * argument error. The maximum length is 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class PushItem extends com.google.api.client.json.GenericJson {
   private java.lang.String payload;
 
   /**
-   * Queue to which this item belongs to. The default queue is chosen if this field is not
-   * specified. The maximum length is 512 characters.
+   * Queue to which this item belongs. The `default` queue is chosen if this field is not specified.
+   * The maximum length is 512 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +110,9 @@ public final class PushItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata hash of the item according to the repository. If specified, this is used to determine
-   * how to modify this item's status. Setting this field and the type field results in argument
-   * error. The maximum length is 2048 characters.
+   * The metadata hash of the item according to the repository. If specified, this is used to
+   * determine how to modify this item's status. Setting this field and the type field results in
+   * argument error. The maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetadataHash() {
@@ -120,9 +120,9 @@ public final class PushItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata hash of the item according to the repository. If specified, this is used to determine
-   * how to modify this item's status. Setting this field and the type field results in argument
-   * error. The maximum length is 2048 characters.
+   * The metadata hash of the item according to the repository. If specified, this is used to
+   * determine how to modify this item's status. Setting this field and the type field results in
+   * argument error. The maximum length is 2048 characters.
    * @param metadataHash metadataHash or {@code null} for none
    */
   public PushItem setMetadataHash(java.lang.String metadataHash) {
@@ -180,8 +180,8 @@ public final class PushItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Queue to which this item belongs to. The default queue is chosen if this field is not
-   * specified. The maximum length is 512 characters.
+   * Queue to which this item belongs. The `default` queue is chosen if this field is not specified.
+   * The maximum length is 512 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueue() {
@@ -189,8 +189,8 @@ public final class PushItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Queue to which this item belongs to. The default queue is chosen if this field is not
-   * specified. The maximum length is 512 characters.
+   * Queue to which this item belongs. The `default` queue is chosen if this field is not specified.
+   * The maximum length is 512 characters.
    * @param queue queue or {@code null} for none
    */
   public PushItem setQueue(java.lang.String queue) {

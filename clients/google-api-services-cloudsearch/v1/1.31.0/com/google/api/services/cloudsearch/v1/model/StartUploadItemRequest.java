@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class StartUploadItemRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class StartUploadItemRequest extends com.google.api.client.json.Gen
   private DebugOptions debugOptions;
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectorName() {
@@ -52,7 +52,7 @@ public final class StartUploadItemRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * @param connectorName connectorName or {@code null} for none
    */
   public StartUploadItemRequest setConnectorName(java.lang.String connectorName) {

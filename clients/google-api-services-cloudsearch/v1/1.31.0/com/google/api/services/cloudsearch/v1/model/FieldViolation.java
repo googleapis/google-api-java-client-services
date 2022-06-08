@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class FieldViolation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Description of the error.
+   * The description of the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
   private java.lang.String field;
 
   /**
-   * Description of the error.
+   * The description of the error.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -52,7 +52,7 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Description of the error.
+   * The description of the error.
    * @param description description or {@code null} for none
    */
   public FieldViolation setDescription(java.lang.String description) {

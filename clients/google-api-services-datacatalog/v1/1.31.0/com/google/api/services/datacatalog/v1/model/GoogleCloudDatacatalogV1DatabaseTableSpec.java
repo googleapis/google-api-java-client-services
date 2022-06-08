@@ -31,7 +31,8 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fields specific to a Dataplex table and present only in the Dataplex table entries.
+   * Output only. Fields specific to a Dataplex table and present only in the Dataplex table
+   * entries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
   private java.lang.String type;
 
   /**
-   * Fields specific to a Dataplex table and present only in the Dataplex table entries.
+   * Output only. Fields specific to a Dataplex table and present only in the Dataplex table
+   * entries.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexTableSpec getDataplexTable() {
@@ -53,7 +55,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
   }
 
   /**
-   * Fields specific to a Dataplex table and present only in the Dataplex table entries.
+   * Output only. Fields specific to a Dataplex table and present only in the Dataplex table
+   * entries.
    * @param dataplexTable dataplexTable or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DatabaseTableSpec setDataplexTable(GoogleCloudDatacatalogV1DataplexTableSpec dataplexTable) {

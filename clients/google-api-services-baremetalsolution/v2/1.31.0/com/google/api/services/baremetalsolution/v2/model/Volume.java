@@ -70,6 +70,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Maximum size volume can be expanded to in case of evergency, in GiB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxSizeGib;
+
+  /**
    * Output only. The resource name of this `Volume`. Resource names are schemeless URIs that follow
    * the conventions in https://cloud.google.com/apis/design/resource_names. Format:
    * `projects/{project}/locations/{location}/volumes/{volume}`
@@ -77,6 +84,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Originally requested size, in GiB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long originallyRequestedSizeGib;
 
   /**
    * Immutable. Pod name.
@@ -236,6 +250,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum size volume can be expanded to in case of evergency, in GiB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxSizeGib() {
+    return maxSizeGib;
+  }
+
+  /**
+   * Maximum size volume can be expanded to in case of evergency, in GiB.
+   * @param maxSizeGib maxSizeGib or {@code null} for none
+   */
+  public Volume setMaxSizeGib(java.lang.Long maxSizeGib) {
+    this.maxSizeGib = maxSizeGib;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of this `Volume`. Resource names are schemeless URIs that follow
    * the conventions in https://cloud.google.com/apis/design/resource_names. Format:
    * `projects/{project}/locations/{location}/volumes/{volume}`
@@ -253,6 +284,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Originally requested size, in GiB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOriginallyRequestedSizeGib() {
+    return originallyRequestedSizeGib;
+  }
+
+  /**
+   * Originally requested size, in GiB.
+   * @param originallyRequestedSizeGib originallyRequestedSizeGib or {@code null} for none
+   */
+  public Volume setOriginallyRequestedSizeGib(java.lang.Long originallyRequestedSizeGib) {
+    this.originallyRequestedSizeGib = originallyRequestedSizeGib;
     return this;
   }
 

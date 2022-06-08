@@ -65,6 +65,13 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   private java.lang.String nfsShareId;
 
   /**
+   * The requested size, in GiB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long requestedSizeGib;
+
+  /**
    * The state of the NFS share.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
    */
   public NfsShare setNfsShareId(java.lang.String nfsShareId) {
     this.nfsShareId = nfsShareId;
+    return this;
+  }
+
+  /**
+   * The requested size, in GiB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRequestedSizeGib() {
+    return requestedSizeGib;
+  }
+
+  /**
+   * The requested size, in GiB.
+   * @param requestedSizeGib requestedSizeGib or {@code null} for none
+   */
+  public NfsShare setRequestedSizeGib(java.lang.Long requestedSizeGib) {
+    this.requestedSizeGib = requestedSizeGib;
     return this;
   }
 

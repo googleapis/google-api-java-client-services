@@ -34,7 +34,7 @@ public final class GoogleCloudBaremetalsolutionV2LogicalInterface extends com.go
 
   /**
    * The index of the logical interface mapping to the index of the hardware bond or nic on the
-   * chosen network template.
+   * chosen network template. This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class GoogleCloudBaremetalsolutionV2LogicalInterface extends com.go
 
   /**
    * The index of the logical interface mapping to the index of the hardware bond or nic on the
-   * chosen network template.
+   * chosen network template. This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInterfaceIndex() {
@@ -65,7 +65,7 @@ public final class GoogleCloudBaremetalsolutionV2LogicalInterface extends com.go
 
   /**
    * The index of the logical interface mapping to the index of the hardware bond or nic on the
-   * chosen network template.
+   * chosen network template. This field is deprecated.
    * @param interfaceIndex interfaceIndex or {@code null} for none
    */
   public GoogleCloudBaremetalsolutionV2LogicalInterface setInterfaceIndex(java.lang.Integer interfaceIndex) {

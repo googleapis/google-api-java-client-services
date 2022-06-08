@@ -35,16 +35,17 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more
-   * information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs
-   * /partitioned-tables#partitioning_versus_sharding).
+   * Output only. Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name
+   * pattern. For more information, see [Introduction to partitioned tables]
+   * (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1BigQueryDateShardedSpec bigqueryDateShardedSpec;
 
   /**
-   * Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
+   * Output only. Specification that applies to a BigQuery table. Valid only for entries with the
+   * `TABLE` type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,9 +239,9 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String userSpecifiedType;
 
   /**
-   * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more
-   * information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs
-   * /partitioned-tables#partitioning_versus_sharding).
+   * Output only. Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name
+   * pattern. For more information, see [Introduction to partitioned tables]
+   * (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1BigQueryDateShardedSpec getBigqueryDateShardedSpec() {
@@ -248,9 +249,9 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more
-   * information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs
-   * /partitioned-tables#partitioning_versus_sharding).
+   * Output only. Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name
+   * pattern. For more information, see [Introduction to partitioned tables]
+   * (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
    * @param bigqueryDateShardedSpec bigqueryDateShardedSpec or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setBigqueryDateShardedSpec(GoogleCloudDatacatalogV1BigQueryDateShardedSpec bigqueryDateShardedSpec) {
@@ -259,7 +260,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
+   * Output only. Specification that applies to a BigQuery table. Valid only for entries with the
+   * `TABLE` type.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1BigQueryTableSpec getBigqueryTableSpec() {
@@ -267,7 +269,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
+   * Output only. Specification that applies to a BigQuery table. Valid only for entries with the
+   * `TABLE` type.
    * @param bigqueryTableSpec bigqueryTableSpec or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setBigqueryTableSpec(GoogleCloudDatacatalogV1BigQueryTableSpec bigqueryTableSpec) {

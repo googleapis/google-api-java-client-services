@@ -1609,13 +1609,13 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The ID to use for the TunnelDestGroup, which becomes the final component of
              * the resource name. This value must be 4-63 characters, and valid characters are
-             * `a-z-`.
+             * `[a-z]-`.
              */
             @com.google.api.client.util.Key
             private java.lang.String tunnelDestGroupId;
 
             /** Required. The ID to use for the TunnelDestGroup, which becomes the final component of the resource
-           name. This value must be 4-63 characters, and valid characters are `a-z-`.
+           name. This value must be 4-63 characters, and valid characters are `[a-z]-`.
              */
             public java.lang.String getTunnelDestGroupId() {
               return tunnelDestGroupId;
@@ -1624,7 +1624,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The ID to use for the TunnelDestGroup, which becomes the final component of
              * the resource name. This value must be 4-63 characters, and valid characters are
-             * `a-z-`.
+             * `[a-z]-`.
              */
             public Create setTunnelDestGroupId(java.lang.String tunnelDestGroupId) {
               this.tunnelDestGroupId = tunnelDestGroupId;
@@ -2134,7 +2134,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the iap server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+           * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
+           *        contain only lower case letters (a-z) and dashes (-).
            * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
            * @return the request
            */
@@ -2161,7 +2162,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+             * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
+           *        contain only lower case letters (a-z) and dashes (-).
              * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
              * @since 1.13
              */
@@ -2232,12 +2234,13 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the
-             * project.
+             * project and contain only lower case letters (a-z) and dashes (-).
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+            /** Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
+           contain only lower case letters (a-z) and dashes (-).
              */
             public java.lang.String getName() {
               return name;
@@ -2245,7 +2248,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the
-             * project.
+             * project and contain only lower case letters (a-z) and dashes (-).
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

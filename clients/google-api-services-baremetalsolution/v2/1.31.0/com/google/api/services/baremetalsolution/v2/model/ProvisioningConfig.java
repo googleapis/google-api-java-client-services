@@ -122,6 +122,13 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   private java.util.List<VolumeConfig> volumes;
 
   /**
+   * If true, VPC SC is enabled for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean vpcScEnabled;
+
+  /**
    * Output only. URI to Cloud Console UI view of this provisioning config.
    * @return value or {@code null} for none
    */
@@ -309,6 +316,23 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
    */
   public ProvisioningConfig setVolumes(java.util.List<VolumeConfig> volumes) {
     this.volumes = volumes;
+    return this;
+  }
+
+  /**
+   * If true, VPC SC is enabled for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVpcScEnabled() {
+    return vpcScEnabled;
+  }
+
+  /**
+   * If true, VPC SC is enabled for the cluster.
+   * @param vpcScEnabled vpcScEnabled or {@code null} for none
+   */
+  public ProvisioningConfig setVpcScEnabled(java.lang.Boolean vpcScEnabled) {
+    this.vpcScEnabled = vpcScEnabled;
     return this;
   }
 

@@ -4194,15 +4194,14 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           /**
            * The list of fields to update. The only currently supported fields are:
            * `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels'
-           * 'requested_size_gib' 'snapshot_enabled'
-           * 'snapshot_reservation_detail.reserved_space_percent'
+           * 'snapshot_enabled' 'snapshot_reservation_detail.reserved_space_percent'
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** The list of fields to update. The only currently supported fields are:
-         `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels' 'requested_size_gib'
-         'snapshot_enabled' 'snapshot_reservation_detail.reserved_space_percent'
+         `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels' 'snapshot_enabled'
+         'snapshot_reservation_detail.reserved_space_percent'
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4211,8 +4210,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           /**
            * The list of fields to update. The only currently supported fields are:
            * `snapshot_auto_delete_behavior` `snapshot_schedule_policy_name` 'labels'
-           * 'requested_size_gib' 'snapshot_enabled'
-           * 'snapshot_reservation_detail.reserved_space_percent'
+           * 'snapshot_enabled' 'snapshot_reservation_detail.reserved_space_percent'
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -4222,6 +4220,137 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Emergency Volume resize.
+         *
+         * Create a request for the method "volumes.resize".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Resize#execute()} method to invoke the remote operation.
+         *
+         * @param volume Required. Volume to resize.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.ResizeVolumeRequest}
+         * @return the request
+         */
+        public Resize resize(java.lang.String volume, com.google.api.services.baremetalsolution.v2.model.ResizeVolumeRequest content) throws java.io.IOException {
+          Resize result = new Resize(volume, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Resize extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+volume}:resize";
+
+          private final java.util.regex.Pattern VOLUME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+
+          /**
+           * Emergency Volume resize.
+           *
+           * Create a request for the method "volumes.resize".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Resize#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Resize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param volume Required. Volume to resize.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.ResizeVolumeRequest}
+           * @since 1.13
+           */
+          protected Resize(java.lang.String volume, com.google.api.services.baremetalsolution.v2.model.ResizeVolumeRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.volume = com.google.api.client.util.Preconditions.checkNotNull(volume, "Required parameter volume must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(VOLUME_PATTERN.matcher(volume).matches(),
+                  "Parameter volume must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Resize set$Xgafv(java.lang.String $Xgafv) {
+            return (Resize) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Resize setAccessToken(java.lang.String accessToken) {
+            return (Resize) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Resize setAlt(java.lang.String alt) {
+            return (Resize) super.setAlt(alt);
+          }
+
+          @Override
+          public Resize setCallback(java.lang.String callback) {
+            return (Resize) super.setCallback(callback);
+          }
+
+          @Override
+          public Resize setFields(java.lang.String fields) {
+            return (Resize) super.setFields(fields);
+          }
+
+          @Override
+          public Resize setKey(java.lang.String key) {
+            return (Resize) super.setKey(key);
+          }
+
+          @Override
+          public Resize setOauthToken(java.lang.String oauthToken) {
+            return (Resize) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Resize setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Resize) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Resize setQuotaUser(java.lang.String quotaUser) {
+            return (Resize) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Resize setUploadType(java.lang.String uploadType) {
+            return (Resize) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Resize setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Resize) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Volume to resize. */
+          @com.google.api.client.util.Key
+          private java.lang.String volume;
+
+          /** Required. Volume to resize.
+           */
+          public java.lang.String getVolume() {
+            return volume;
+          }
+
+          /** Required. Volume to resize. */
+          public Resize setVolume(java.lang.String volume) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(VOLUME_PATTERN.matcher(volume).matches(),
+                  "Parameter volume must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+            this.volume = volume;
+            return this;
+          }
+
+          @Override
+          public Resize set(String parameterName, Object value) {
+            return (Resize) super.set(parameterName, value);
           }
         }
 

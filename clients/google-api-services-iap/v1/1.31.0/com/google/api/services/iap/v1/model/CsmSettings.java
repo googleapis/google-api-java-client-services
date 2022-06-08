@@ -17,9 +17,10 @@
 package com.google.api.services.iap.v1.model;
 
 /**
- * Configuration for RCTokens generated for CSM workloads protected by IAP. RCTokens are IAP
- * generated JWTs that can be verified at the application. The RCToken is primarily used for ISTIO
- * deployments, and can be scoped to a single mesh by configuring the audience field accordingly
+ * Configuration for RCTokens generated for service mesh workloads protected by IAP. RCTokens are
+ * IAP generated JWTs that can be verified at the application. The RCToken is primarily used for
+ * service mesh deployments, and can be scoped to a single mesh by configuring the audience field
+ * accordingly
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity-Aware Proxy API. For a detailed

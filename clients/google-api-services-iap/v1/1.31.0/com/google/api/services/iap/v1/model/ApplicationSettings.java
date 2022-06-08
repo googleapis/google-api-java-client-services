@@ -46,7 +46,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   private java.lang.String cookieDomain;
 
   /**
-   * Settings to configure IAP's behavior for a CSM mesh.
+   * Settings to configure IAP's behavior for a service mesh.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure IAP's behavior for a CSM mesh.
+   * Settings to configure IAP's behavior for a service mesh.
    * @return value or {@code null} for none
    */
   public CsmSettings getCsmSettings() {
@@ -97,7 +97,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure IAP's behavior for a CSM mesh.
+   * Settings to configure IAP's behavior for a service mesh.
    * @param csmSettings csmSettings or {@code null} for none
    */
   public ApplicationSettings setCsmSettings(CsmSettings csmSettings) {

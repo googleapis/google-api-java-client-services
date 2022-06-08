@@ -45,7 +45,8 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> fqdns;
 
   /**
-   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
+   * contain only lower case letters (a-z) and dashes (-).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
+   * contain only lower case letters (a-z) and dashes (-).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -94,7 +96,8 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project.
+   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
+   * contain only lower case letters (a-z) and dashes (-).
    * @param name name or {@code null} for none
    */
   public TunnelDestGroup setName(java.lang.String name) {

@@ -17,7 +17,7 @@
 package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
- * Next ID: 15
+ * Next ID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -152,6 +152,15 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Boolean> forcedRollouts;
+
+  /**
+   * If set to ALL_OFF, organic selection will be disabled; if set to ALL_ON, organic selection will
+   * be disabled, and only select launch experiments will receive traffic. See go/mendel-aoao-
+   * runtime-design.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String testingMode;
 
   /**
    * Set of experiment names to be absolutely forced. These experiments will be forced without
@@ -438,6 +447,27 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
    */
   public NamespacedDebugInput setForcedRollouts(java.util.Map<String, java.lang.Boolean> forcedRollouts) {
     this.forcedRollouts = forcedRollouts;
+    return this;
+  }
+
+  /**
+   * If set to ALL_OFF, organic selection will be disabled; if set to ALL_ON, organic selection will
+   * be disabled, and only select launch experiments will receive traffic. See go/mendel-aoao-
+   * runtime-design.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTestingMode() {
+    return testingMode;
+  }
+
+  /**
+   * If set to ALL_OFF, organic selection will be disabled; if set to ALL_ON, organic selection will
+   * be disabled, and only select launch experiments will receive traffic. See go/mendel-aoao-
+   * runtime-design.
+   * @param testingMode testingMode or {@code null} for none
+   */
+  public NamespacedDebugInput setTestingMode(java.lang.String testingMode) {
+    this.testingMode = testingMode;
     return this;
   }
 

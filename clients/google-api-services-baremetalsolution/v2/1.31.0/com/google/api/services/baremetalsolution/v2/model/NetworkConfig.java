@@ -60,6 +60,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String id;
 
   /**
+   * The JumboFramesEnabled option for customer to set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean jumboFramesEnabled;
+
+  /**
    * Output only. The name of the network config.
    * The value may be {@code null}.
    */
@@ -176,6 +183,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The JumboFramesEnabled option for customer to set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getJumboFramesEnabled() {
+    return jumboFramesEnabled;
+  }
+
+  /**
+   * The JumboFramesEnabled option for customer to set.
+   * @param jumboFramesEnabled jumboFramesEnabled or {@code null} for none
+   */
+  public NetworkConfig setJumboFramesEnabled(java.lang.Boolean jumboFramesEnabled) {
+    this.jumboFramesEnabled = jumboFramesEnabled;
     return this;
   }
 

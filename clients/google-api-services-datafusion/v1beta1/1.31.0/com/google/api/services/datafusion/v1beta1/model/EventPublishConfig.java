@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.datafusion.v1.model;
+package com.google.api.services.datafusion.v1beta1.model;
 
 /**
  * Confirguration of PubSubEventWriter.

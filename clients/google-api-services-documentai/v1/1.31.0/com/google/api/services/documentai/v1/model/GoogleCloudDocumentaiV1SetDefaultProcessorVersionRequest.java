@@ -31,14 +31,16 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of child ProcessorVersion to use as default.
+   * Required. The resource name of child ProcessorVersion to use as default. Format:
+   * `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultProcessorVersion;
 
   /**
-   * Required. The resource name of child ProcessorVersion to use as default.
+   * Required. The resource name of child ProcessorVersion to use as default. Format:
+   * `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultProcessorVersion() {
@@ -46,7 +48,8 @@ public final class GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest exte
   }
 
   /**
-   * Required. The resource name of child ProcessorVersion to use as default.
+   * Required. The resource name of child ProcessorVersion to use as default. Format:
+   * `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{version}`
    * @param defaultProcessorVersion defaultProcessorVersion or {@code null} for none
    */
   public GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest setDefaultProcessorVersion(java.lang.String defaultProcessorVersion) {

@@ -32,15 +32,6 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentPageMatrix extends com.google.api.client.json.GenericJson {
 
   /**
-   * Has the transformation already been applied to the current Document? Needed to disambiguate
-   * pre-processing transformations already applied vs transformations added at annotation time by
-   * HITL operators.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean applied;
-
-  /**
    * Number of columns in the matrix.
    * The value may be {@code null}.
    */
@@ -69,27 +60,6 @@ public final class GoogleCloudDocumentaiV1DocumentPageMatrix extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer type;
-
-  /**
-   * Has the transformation already been applied to the current Document? Needed to disambiguate
-   * pre-processing transformations already applied vs transformations added at annotation time by
-   * HITL operators.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getApplied() {
-    return applied;
-  }
-
-  /**
-   * Has the transformation already been applied to the current Document? Needed to disambiguate
-   * pre-processing transformations already applied vs transformations added at annotation time by
-   * HITL operators.
-   * @param applied applied or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1DocumentPageMatrix setApplied(java.lang.Boolean applied) {
-    this.applied = applied;
-    return this;
-  }
 
   /**
    * Number of columns in the matrix.

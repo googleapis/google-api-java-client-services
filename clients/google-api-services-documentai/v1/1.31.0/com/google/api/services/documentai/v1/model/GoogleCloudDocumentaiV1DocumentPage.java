@@ -127,8 +127,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   private java.util.List<GoogleCloudDocumentaiV1DocumentPageToken> tokens;
 
   /**
-   * Transformation matrices (both already applied and not) to the original document image to
-   * produce Page.image.
+   * Transformation matrices that were applied to the original document image to produce Page.image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -373,8 +372,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   }
 
   /**
-   * Transformation matrices (both already applied and not) to the original document image to
-   * produce Page.image.
+   * Transformation matrices that were applied to the original document image to produce Page.image.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1DocumentPageMatrix> getTransforms() {
@@ -382,8 +380,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   }
 
   /**
-   * Transformation matrices (both already applied and not) to the original document image to
-   * produce Page.image.
+   * Transformation matrices that were applied to the original document image to produce Page.image.
    * @param transforms transforms or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPage setTransforms(java.util.List<GoogleCloudDocumentaiV1DocumentPageMatrix> transforms) {

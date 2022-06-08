@@ -80,6 +80,20 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
   private java.lang.String settingName;
 
   /**
+   * Additional context for specific_non_compliance_reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpecificNonComplianceContext specificNonComplianceContext;
+
+  /**
+   * The policy-specific reason the device is not in compliance with the setting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String specificNonComplianceReason;
+
+  /**
    * If the policy setting could not be applied, the current value of the setting on the device.
    * @return value or {@code null} for none
    */
@@ -192,6 +206,40 @@ public final class NonComplianceDetail extends com.google.api.client.json.Generi
    */
   public NonComplianceDetail setSettingName(java.lang.String settingName) {
     this.settingName = settingName;
+    return this;
+  }
+
+  /**
+   * Additional context for specific_non_compliance_reason.
+   * @return value or {@code null} for none
+   */
+  public SpecificNonComplianceContext getSpecificNonComplianceContext() {
+    return specificNonComplianceContext;
+  }
+
+  /**
+   * Additional context for specific_non_compliance_reason.
+   * @param specificNonComplianceContext specificNonComplianceContext or {@code null} for none
+   */
+  public NonComplianceDetail setSpecificNonComplianceContext(SpecificNonComplianceContext specificNonComplianceContext) {
+    this.specificNonComplianceContext = specificNonComplianceContext;
+    return this;
+  }
+
+  /**
+   * The policy-specific reason the device is not in compliance with the setting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpecificNonComplianceReason() {
+    return specificNonComplianceReason;
+  }
+
+  /**
+   * The policy-specific reason the device is not in compliance with the setting.
+   * @param specificNonComplianceReason specificNonComplianceReason or {@code null} for none
+   */
+  public NonComplianceDetail setSpecificNonComplianceReason(java.lang.String specificNonComplianceReason) {
+    this.specificNonComplianceReason = specificNonComplianceReason;
     return this;
   }
 

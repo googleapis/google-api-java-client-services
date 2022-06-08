@@ -57,7 +57,7 @@ public final class QuerySource extends com.google.api.client.json.GenericJson {
   private java.lang.String shortName;
 
   /**
-   * Name of the source
+   * The name of the source
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class QuerySource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the source
+   * The name of the source
    * @return value or {@code null} for none
    */
   public Source getSource() {
@@ -123,7 +123,7 @@ public final class QuerySource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the source
+   * The name of the source
    * @param source source or {@code null} for none
    */
   public QuerySource setSource(Source source) {

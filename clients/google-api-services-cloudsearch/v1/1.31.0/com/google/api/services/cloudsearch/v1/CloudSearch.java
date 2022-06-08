@@ -1263,7 +1263,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link DeleteSchema#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source to delete Schema. Format: datasources/{source_id}
+       * @param name The name of the data source to delete Schema. Format: datasources/{source_id}
        * @return the request
        */
       public DeleteSchema deleteSchema(java.lang.String name) throws java.io.IOException {
@@ -1291,7 +1291,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * DeleteSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source to delete Schema. Format: datasources/{source_id}
+         * @param name The name of the data source to delete Schema. Format: datasources/{source_id}
          * @since 1.13
          */
         protected DeleteSchema(java.lang.String name) {
@@ -1359,17 +1359,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (DeleteSchema) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the data source to delete Schema. Format: datasources/{source_id} */
+        /** The name of the data source to delete Schema. Format: datasources/{source_id} */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source to delete Schema. Format: datasources/{source_id}
+        /** The name of the data source to delete Schema. Format: datasources/{source_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the data source to delete Schema. Format: datasources/{source_id} */
+        /** The name of the data source to delete Schema. Format: datasources/{source_id} */
         public DeleteSchema setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1416,7 +1416,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link GetSchema#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source to get Schema. Format: datasources/{source_id}
+       * @param name The name of the data source to get Schema. Format: datasources/{source_id}
        * @return the request
        */
       public GetSchema getSchema(java.lang.String name) throws java.io.IOException {
@@ -1444,7 +1444,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * GetSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source to get Schema. Format: datasources/{source_id}
+         * @param name The name of the data source to get Schema. Format: datasources/{source_id}
          * @since 1.13
          */
         protected GetSchema(java.lang.String name) {
@@ -1522,17 +1522,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (GetSchema) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the data source to get Schema. Format: datasources/{source_id} */
+        /** The name of the data source to get Schema. Format: datasources/{source_id} */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source to get Schema. Format: datasources/{source_id}
+        /** The name of the data source to get Schema. Format: datasources/{source_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the data source to get Schema. Format: datasources/{source_id} */
+        /** The name of the data source to get Schema. Format: datasources/{source_id} */
         public GetSchema setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1580,7 +1580,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link UpdateSchema#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source to update Schema. Format: datasources/{source_id}
+       * @param name The name of the data source to update Schema. Format: datasources/{source_id}
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateSchemaRequest}
        * @return the request
        */
@@ -1610,7 +1610,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * UpdateSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source to update Schema. Format: datasources/{source_id}
+         * @param name The name of the data source to update Schema. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateSchemaRequest}
          * @since 1.13
          */
@@ -1679,17 +1679,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (UpdateSchema) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the data source to update Schema. Format: datasources/{source_id} */
+        /** The name of the data source to update Schema. Format: datasources/{source_id} */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source to update Schema. Format: datasources/{source_id}
+        /** The name of the data source to update Schema. Format: datasources/{source_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the data source to update Schema. Format: datasources/{source_id} */
+        /** The name of the data source to update Schema. Format: datasources/{source_id} */
         public UpdateSchema setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1736,7 +1736,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the item to delete. Format: datasources/{source_id}/items/{item_id}
+         * @param name Required. The name of the item to delete. Format: datasources/{source_id}/items/{item_id}
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1765,7 +1765,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the item to delete. Format: datasources/{source_id}/items/{item_id}
+           * @param name Required. The name of the item to delete. Format: datasources/{source_id}/items/{item_id}
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1834,19 +1834,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. Name of the item to delete. Format: datasources/{source_id}/items/{item_id}
+           * Required. The name of the item to delete. Format:
+           * datasources/{source_id}/items/{item_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the item to delete. Format: datasources/{source_id}/items/{item_id}
+          /** Required. The name of the item to delete. Format: datasources/{source_id}/items/{item_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the item to delete. Format: datasources/{source_id}/items/{item_id}
+           * Required. The name of the item to delete. Format:
+           * datasources/{source_id}/items/{item_id}
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1859,19 +1861,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+           * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           @com.google.api.client.util.Key
           private java.lang.String connectorName;
 
-          /** Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+          /** The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           public java.lang.String getConnectorName() {
             return connectorName;
           }
 
           /**
-           * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+           * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           public Delete setConnectorName(java.lang.String connectorName) {
             this.connectorName = connectorName;
@@ -1971,7 +1973,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link DeleteQueueItems#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to delete items in a queue. Format: datasources/{source_id}
+         * @param name The name of the Data Source to delete items in a queue. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.DeleteQueueItemsRequest}
          * @return the request
          */
@@ -2001,7 +2003,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to delete items in a queue. Format: datasources/{source_id}
+           * @param name The name of the Data Source to delete items in a queue. Format: datasources/{source_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.DeleteQueueItemsRequest}
            * @since 1.13
            */
@@ -2071,19 +2073,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of the Data Source to delete items in a queue. Format: datasources/{source_id}
+           * The name of the Data Source to delete items in a queue. Format: datasources/{source_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Data Source to delete items in a queue. Format: datasources/{source_id}
+          /** The name of the Data Source to delete items in a queue. Format: datasources/{source_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Name of the Data Source to delete items in a queue. Format: datasources/{source_id}
+           * The name of the Data Source to delete items in a queue. Format: datasources/{source_id}
            */
           public DeleteQueueItems setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2109,7 +2111,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the item to get info. Format: datasources/{source_id}/items/{item_id}
+         * @param name The name of the item to get info. Format: datasources/{source_id}/items/{item_id}
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2136,7 +2138,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the item to get info. Format: datasources/{source_id}/items/{item_id}
+           * @param name The name of the item to get info. Format: datasources/{source_id}/items/{item_id}
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2214,17 +2216,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Name of the item to get info. Format: datasources/{source_id}/items/{item_id} */
+          /** The name of the item to get info. Format: datasources/{source_id}/items/{item_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the item to get info. Format: datasources/{source_id}/items/{item_id}
+          /** The name of the item to get info. Format: datasources/{source_id}/items/{item_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Name of the item to get info. Format: datasources/{source_id}/items/{item_id} */
+          /** The name of the item to get info. Format: datasources/{source_id}/items/{item_id} */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2236,19 +2238,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+           * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           @com.google.api.client.util.Key
           private java.lang.String connectorName;
 
-          /** Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+          /** The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           public java.lang.String getConnectorName() {
             return connectorName;
           }
 
           /**
-           * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+           * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           public Get setConnectorName(java.lang.String connectorName) {
             this.connectorName = connectorName;
@@ -2293,7 +2295,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Index#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
+         * @param name The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
          *        maximum length is 1536 characters.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.IndexItemRequest}
          * @return the request
@@ -2325,7 +2327,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Index#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
+           * @param name The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
          *        maximum length is 1536 characters.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.IndexItemRequest}
            * @since 1.13
@@ -2396,13 +2398,13 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required
-           * field. The maximum length is 1536 characters.
+           * The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a
+           * required field. The maximum length is 1536 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
+          /** The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
          maximum length is 1536 characters.
            */
           public java.lang.String getName() {
@@ -2410,8 +2412,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required
-           * field. The maximum length is 1536 characters.
+           * The name of the Item. Format: datasources/{source_id}/items/{item_id} This is a
+           * required field. The maximum length is 1536 characters.
            */
           public Index setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2437,7 +2439,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to list Items. Format: datasources/{source_id}
+         * @param name The name of the Data Source to list Items. Format: datasources/{source_id}
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -2464,7 +2466,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to list Items. Format: datasources/{source_id}
+           * @param name The name of the Data Source to list Items. Format: datasources/{source_id}
            * @since 1.13
            */
           protected List(java.lang.String name) {
@@ -2542,17 +2544,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Name of the Data Source to list Items. Format: datasources/{source_id} */
+          /** The name of the Data Source to list Items. Format: datasources/{source_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Data Source to list Items. Format: datasources/{source_id}
+          /** The name of the Data Source to list Items. Format: datasources/{source_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Name of the Data Source to list Items. Format: datasources/{source_id} */
+          /** The name of the Data Source to list Items. Format: datasources/{source_id} */
           public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2600,19 +2602,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+           * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           @com.google.api.client.util.Key
           private java.lang.String connectorName;
 
-          /** Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+          /** The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           public java.lang.String getConnectorName() {
             return connectorName;
           }
 
           /**
-           * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+           * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
            */
           public List setConnectorName(java.lang.String connectorName) {
             this.connectorName = connectorName;
@@ -2700,7 +2702,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Poll#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to poll items. Format: datasources/{source_id}
+         * @param name The name of the Data Source to poll items. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.PollItemsRequest}
          * @return the request
          */
@@ -2734,7 +2736,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Poll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to poll items. Format: datasources/{source_id}
+           * @param name The name of the Data Source to poll items. Format: datasources/{source_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.PollItemsRequest}
            * @since 1.13
            */
@@ -2803,17 +2805,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (Poll) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Name of the Data Source to poll items. Format: datasources/{source_id} */
+          /** The name of the Data Source to poll items. Format: datasources/{source_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Data Source to poll items. Format: datasources/{source_id}
+          /** The name of the Data Source to poll items. Format: datasources/{source_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Name of the Data Source to poll items. Format: datasources/{source_id} */
+          /** The name of the Data Source to poll items. Format: datasources/{source_id} */
           public Poll setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2839,8 +2841,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Push#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID} This is
-         *        a required field. The maximum length is 1536 characters.
+         * @param name The name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID}
+         *        This is a required field. The maximum length is 1536 characters.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.PushItemRequest}
          * @return the request
          */
@@ -2869,8 +2871,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Push#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID} This is
-         *        a required field. The maximum length is 1536 characters.
+           * @param name The name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID}
+         *        This is a required field. The maximum length is 1536 characters.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.PushItemRequest}
            * @since 1.13
            */
@@ -2940,22 +2942,22 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of the item to push into the indexing queue. Format:
+           * The name of the item to push into the indexing queue. Format:
            * datasources/{source_id}/items/{ID} This is a required field. The maximum length is 1536
            * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID} This
-         is a required field. The maximum length is 1536 characters.
+          /** The name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID}
+         This is a required field. The maximum length is 1536 characters.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Name of the item to push into the indexing queue. Format:
+           * The name of the item to push into the indexing queue. Format:
            * datasources/{source_id}/items/{ID} This is a required field. The maximum length is 1536
            * characters.
            */
@@ -2985,7 +2987,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Unreserve#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to unreserve all items. Format: datasources/{source_id}
+         * @param name The name of the Data Source to unreserve all items. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.UnreserveItemsRequest}
          * @return the request
          */
@@ -3016,7 +3018,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Unreserve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to unreserve all items. Format: datasources/{source_id}
+           * @param name The name of the Data Source to unreserve all items. Format: datasources/{source_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.UnreserveItemsRequest}
            * @since 1.13
            */
@@ -3085,17 +3087,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (Unreserve) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Name of the Data Source to unreserve all items. Format: datasources/{source_id} */
+          /**
+           * The name of the Data Source to unreserve all items. Format: datasources/{source_id}
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Data Source to unreserve all items. Format: datasources/{source_id}
+          /** The name of the Data Source to unreserve all items. Format: datasources/{source_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Name of the Data Source to unreserve all items. Format: datasources/{source_id} */
+          /**
+           * The name of the Data Source to unreserve all items. Format: datasources/{source_id}
+           */
           public Unreserve setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3122,8 +3128,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}. The
-         *        maximum length is 1536 bytes.
+         * @param name The name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}.
+         *        The maximum length is 1536 bytes.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
          * @return the request
          */
@@ -3154,8 +3160,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}. The
-         *        maximum length is 1536 bytes.
+           * @param name The name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}.
+         *        The maximum length is 1536 bytes.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
            * @since 1.13
            */
@@ -3225,21 +3231,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of the Item to start a resumable upload. Format:
+           * The name of the Item to start a resumable upload. Format:
            * datasources/{source_id}/items/{item_id}. The maximum length is 1536 bytes.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}. The
-         maximum length is 1536 bytes.
+          /** The name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}.
+         The maximum length is 1536 bytes.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Name of the Item to start a resumable upload. Format:
+           * The name of the Item to start a resumable upload. Format:
            * datasources/{source_id}/items/{item_id}. The maximum length is 1536 bytes.
            */
           public Upload setName(java.lang.String name) {
@@ -4783,7 +4789,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the datasource. Format: datasources/{source_id}.
+       * @param name The name of the datasource. Format: datasources/{source_id}.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4810,7 +4816,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the datasource. Format: datasources/{source_id}.
+         * @param name The name of the datasource. Format: datasources/{source_id}.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -4878,17 +4884,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the datasource. Format: datasources/{source_id}. */
+        /** The name of the datasource. Format: datasources/{source_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the datasource. Format: datasources/{source_id}.
+        /** The name of the datasource. Format: datasources/{source_id}.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the datasource. Format: datasources/{source_id}. */
+        /** The name of the datasource. Format: datasources/{source_id}. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4934,7 +4940,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the datasource resource. Format: datasources/{source_id}.
+       * @param name The name of the datasource resource. Format: datasources/{source_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4960,7 +4966,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the datasource resource. Format: datasources/{source_id}.
+         * @param name The name of the datasource resource. Format: datasources/{source_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5038,17 +5044,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the datasource resource. Format: datasources/{source_id}. */
+        /** The name of the datasource resource. Format: datasources/{source_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the datasource resource. Format: datasources/{source_id}.
+        /** The name of the datasource resource. Format: datasources/{source_id}.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the datasource resource. Format: datasources/{source_id}. */
+        /** The name of the datasource resource. Format: datasources/{source_id}. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5261,8 +5267,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating
-       *        a datasource.
+       * @param name The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+       *        creating a datasource.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateDataSourceRequest}
        * @return the request
        */
@@ -5290,8 +5296,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating
-       *        a datasource.
+         * @param name The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+       *        creating a datasource.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateDataSourceRequest}
          * @since 1.13
          */
@@ -5361,21 +5367,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored
+         * The name of the datasource resource. Format: datasources/{source_id}. The name is ignored
          * when creating a datasource.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating
-       a datasource.
+        /** The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+       creating a datasource.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored
+         * The name of the datasource resource. Format: datasources/{source_id}. The name is ignored
          * when creating a datasource.
          */
         public Update setName(java.lang.String name) {
@@ -5677,7 +5683,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the search application. Format: searchapplications/{application_id}.
+       * @param name The name of the search application. Format: searchapplications/{application_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5703,7 +5709,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the search application. Format: searchapplications/{application_id}.
+         * @param name The name of the search application. Format: searchapplications/{application_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5781,17 +5787,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the search application. Format: searchapplications/{application_id}. */
+        /** The name of the search application. Format: searchapplications/{application_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the search application. Format: searchapplications/{application_id}.
+        /** The name of the search application. Format: searchapplications/{application_id}.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the search application. Format: searchapplications/{application_id}. */
+        /** The name of the search application. Format: searchapplications/{application_id}. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6140,7 +6146,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the Search Application. Format: searchapplications/{application_id}.
+       * @param name The name of the Search Application. Format: searchapplications/{application_id}.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchApplication}
        * @return the request
        */
@@ -6168,7 +6174,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the Search Application. Format: searchapplications/{application_id}.
+         * @param name The name of the Search Application. Format: searchapplications/{application_id}.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchApplication}
          * @since 1.13
          */
@@ -6237,17 +6243,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the Search Application. Format: searchapplications/{application_id}. */
+        /** The name of the Search Application. Format: searchapplications/{application_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the Search Application. Format: searchapplications/{application_id}.
+        /** The name of the Search Application. Format: searchapplications/{application_id}.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the Search Application. Format: searchapplications/{application_id}. */
+        /** The name of the Search Application. Format: searchapplications/{application_id}. */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SearchApplicationUserStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date for which session stats were calculated. Stats calculated on the next day close to
+   * The date for which session stats were calculated. Stats calculated on the next day close to
    * midnight are returned.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class SearchApplicationUserStats extends com.google.api.client.json
   private java.lang.Long thirtyDaysActiveUsersCount;
 
   /**
-   * Date for which session stats were calculated. Stats calculated on the next day close to
+   * The date for which session stats were calculated. Stats calculated on the next day close to
    * midnight are returned.
    * @return value or {@code null} for none
    */
@@ -68,7 +68,7 @@ public final class SearchApplicationUserStats extends com.google.api.client.json
   }
 
   /**
-   * Date for which session stats were calculated. Stats calculated on the next day close to
+   * The date for which session stats were calculated. Stats calculated on the next day close to
    * midnight are returned.
    * @param date date or {@code null} for none
    */

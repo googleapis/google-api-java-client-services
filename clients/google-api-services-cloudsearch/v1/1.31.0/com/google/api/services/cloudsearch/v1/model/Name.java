@@ -31,7 +31,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
 
   /**
    * The read-only display name formatted according to the locale specified by the viewer's account
-   * or the Accept-Language HTTP header.
+   * or the `Accept-Language` HTTP header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
 
   /**
    * The read-only display name formatted according to the locale specified by the viewer's account
-   * or the Accept-Language HTTP header.
+   * or the `Accept-Language` HTTP header.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -48,7 +48,7 @@ public final class Name extends com.google.api.client.json.GenericJson {
 
   /**
    * The read-only display name formatted according to the locale specified by the viewer's account
-   * or the Accept-Language HTTP header.
+   * or the `Accept-Language` HTTP header.
    * @param displayName displayName or {@code null} for none
    */
   public Name setDisplayName(java.lang.String displayName) {

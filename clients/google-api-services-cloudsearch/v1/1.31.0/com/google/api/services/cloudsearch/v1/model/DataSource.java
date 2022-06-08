@@ -72,7 +72,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.util.List<GSuitePrincipal> itemsVisibility;
 
   /**
-   * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+   * The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
    * creating a datasource.
    * The value may be {@code null}.
    */
@@ -203,7 +203,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+   * The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
    * creating a datasource.
    * @return value or {@code null} for none
    */
@@ -212,7 +212,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+   * The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
    * creating a datasource.
    * @param name name or {@code null} for none
    */

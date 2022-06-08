@@ -79,7 +79,7 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableAuditLog;
 
   /**
-   * Name of the Search Application. Format: searchapplications/{application_id}.
+   * The name of the Search Application. Format: searchapplications/{application_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +211,7 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the Search Application. Format: searchapplications/{application_id}.
+   * The name of the Search Application. Format: searchapplications/{application_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -219,7 +219,7 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the Search Application. Format: searchapplications/{application_id}.
+   * The name of the Search Application. Format: searchapplications/{application_id}.
    * @param name name or {@code null} for none
    */
   public SearchApplication setName(java.lang.String name) {

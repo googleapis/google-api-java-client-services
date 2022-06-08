@@ -45,7 +45,7 @@ public final class RepositoryError extends com.google.api.client.json.GenericJso
   private java.lang.Integer httpStatusCode;
 
   /**
-   * Type of error.
+   * The type of error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class RepositoryError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Type of error.
+   * The type of error.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -96,7 +96,7 @@ public final class RepositoryError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Type of error.
+   * The type of error.
    * @param type type or {@code null} for none
    */
   public RepositoryError setType(java.lang.String type) {

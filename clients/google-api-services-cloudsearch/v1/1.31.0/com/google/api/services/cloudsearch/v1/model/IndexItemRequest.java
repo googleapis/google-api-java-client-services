@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class IndexItemRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   private IndexItemOptions indexItemOptions;
 
   /**
-   * Name of the item. Format: datasources/{source_id}/items/{item_id}
+   * The name of the item. Format: datasources/{source_id}/items/{item_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   private java.lang.String mode;
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectorName() {
@@ -72,7 +72,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * @param connectorName connectorName or {@code null} for none
    */
   public IndexItemRequest setConnectorName(java.lang.String connectorName) {
@@ -113,7 +113,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Name of the item. Format: datasources/{source_id}/items/{item_id}
+   * The name of the item. Format: datasources/{source_id}/items/{item_id}
    * @return value or {@code null} for none
    */
   public Item getItem() {
@@ -121,7 +121,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Name of the item. Format: datasources/{source_id}/items/{item_id}
+   * The name of the item. Format: datasources/{source_id}/items/{item_id}
    * @param item item or {@code null} for none
    */
   public IndexItemRequest setItem(Item item) {

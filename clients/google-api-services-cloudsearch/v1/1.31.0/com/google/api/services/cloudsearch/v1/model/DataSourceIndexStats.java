@@ -30,9 +30,9 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DataSourceIndexStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date for which index stats were calculated. If the date of request is not the current date then
-   * stats calculated on the next day are returned. Stats are calculated close to mid night in this
-   * case. If date of request is current date, then real time stats are returned.
+   * The date for which index stats were calculated. If the date of request is not the current date
+   * then stats calculated on the next day are returned. Stats are calculated close to mid night in
+   * this case. If date of request is current date, then real time stats are returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,9 @@ public final class DataSourceIndexStats extends com.google.api.client.json.Gener
   private java.util.List<ItemCountByStatus> itemCountByStatus;
 
   /**
-   * Date for which index stats were calculated. If the date of request is not the current date then
-   * stats calculated on the next day are returned. Stats are calculated close to mid night in this
-   * case. If date of request is current date, then real time stats are returned.
+   * The date for which index stats were calculated. If the date of request is not the current date
+   * then stats calculated on the next day are returned. Stats are calculated close to mid night in
+   * this case. If date of request is current date, then real time stats are returned.
    * @return value or {@code null} for none
    */
   public Date getDate() {
@@ -56,9 +56,9 @@ public final class DataSourceIndexStats extends com.google.api.client.json.Gener
   }
 
   /**
-   * Date for which index stats were calculated. If the date of request is not the current date then
-   * stats calculated on the next day are returned. Stats are calculated close to mid night in this
-   * case. If date of request is current date, then real time stats are returned.
+   * The date for which index stats were calculated. If the date of request is not the current date
+   * then stats calculated on the next day are returned. Stats are calculated close to mid night in
+   * this case. If date of request is current date, then real time stats are returned.
    * @param date date or {@code null} for none
    */
   public DataSourceIndexStats setDate(Date date) {

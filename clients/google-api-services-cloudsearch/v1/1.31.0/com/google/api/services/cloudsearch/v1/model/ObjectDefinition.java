@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class ObjectDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name for the object, which then defines its type. Item indexing requests should set the
+   * The name for the object, which then defines its type. Item indexing requests should set the
    * objectType field equal to this value. For example, if *name* is *Document*, then indexing
    * requests for items of type Document should set objectType equal to *Document*. Each object
    * definition must be uniquely named within a schema. The name must start with a letter and can
@@ -55,7 +55,7 @@ public final class ObjectDefinition extends com.google.api.client.json.GenericJs
   private java.util.List<PropertyDefinition> propertyDefinitions;
 
   /**
-   * Name for the object, which then defines its type. Item indexing requests should set the
+   * The name for the object, which then defines its type. Item indexing requests should set the
    * objectType field equal to this value. For example, if *name* is *Document*, then indexing
    * requests for items of type Document should set objectType equal to *Document*. Each object
    * definition must be uniquely named within a schema. The name must start with a letter and can
@@ -67,7 +67,7 @@ public final class ObjectDefinition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Name for the object, which then defines its type. Item indexing requests should set the
+   * The name for the object, which then defines its type. Item indexing requests should set the
    * objectType field equal to this value. For example, if *name* is *Document*, then indexing
    * requests for items of type Document should set objectType equal to *Document*. Each object
    * definition must be uniquely named within a schema. The name must start with a letter and can

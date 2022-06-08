@@ -42,8 +42,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   private DatePropertyOptions datePropertyOptions;
 
   /**
-   * Options that determine how the property is displayed in the Cloud Search results page if it is
-   * specified to be displayed in the object's display options .
+   * The options that determine how the property is displayed in the Cloud Search results page if
+   * it's specified to be displayed in the object's display options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
 
   /**
    * Indicates that the property can be used for generating facets. Cannot be true for properties
-   * whose type is object. IsReturnable must be true to set this option. Only supported for Boolean,
-   * Enum, and Text properties.
+   * whose type is object. IsReturnable must be true to set this option. Only supported for boolean,
+   * enum, and text properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   /**
    * Indicates that the property can be used for sorting. Cannot be true for properties that are
    * repeatable. Cannot be true for properties whose type is object. IsReturnable must be true to
-   * set this option. Only supported for Boolean, Date, Double, Integer, and Timestamp properties.
+   * set this option. Only supported for boolean, date, double, integer, and timestamp properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,8 +190,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   }
 
   /**
-   * Options that determine how the property is displayed in the Cloud Search results page if it is
-   * specified to be displayed in the object's display options .
+   * The options that determine how the property is displayed in the Cloud Search results page if
+   * it's specified to be displayed in the object's display options.
    * @return value or {@code null} for none
    */
   public PropertyDisplayOptions getDisplayOptions() {
@@ -199,8 +199,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   }
 
   /**
-   * Options that determine how the property is displayed in the Cloud Search results page if it is
-   * specified to be displayed in the object's display options .
+   * The options that determine how the property is displayed in the Cloud Search results page if
+   * it's specified to be displayed in the object's display options.
    * @param displayOptions displayOptions or {@code null} for none
    */
   public PropertyDefinition setDisplayOptions(PropertyDisplayOptions displayOptions) {
@@ -270,8 +270,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
 
   /**
    * Indicates that the property can be used for generating facets. Cannot be true for properties
-   * whose type is object. IsReturnable must be true to set this option. Only supported for Boolean,
-   * Enum, and Text properties.
+   * whose type is object. IsReturnable must be true to set this option. Only supported for boolean,
+   * enum, and text properties.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsFacetable() {
@@ -280,8 +280,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
 
   /**
    * Indicates that the property can be used for generating facets. Cannot be true for properties
-   * whose type is object. IsReturnable must be true to set this option. Only supported for Boolean,
-   * Enum, and Text properties.
+   * whose type is object. IsReturnable must be true to set this option. Only supported for boolean,
+   * enum, and text properties.
    * @param isFacetable isFacetable or {@code null} for none
    */
   public PropertyDefinition setIsFacetable(java.lang.Boolean isFacetable) {
@@ -340,7 +340,7 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   /**
    * Indicates that the property can be used for sorting. Cannot be true for properties that are
    * repeatable. Cannot be true for properties whose type is object. IsReturnable must be true to
-   * set this option. Only supported for Boolean, Date, Double, Integer, and Timestamp properties.
+   * set this option. Only supported for boolean, date, double, integer, and timestamp properties.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSortable() {
@@ -350,7 +350,7 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   /**
    * Indicates that the property can be used for sorting. Cannot be true for properties that are
    * repeatable. Cannot be true for properties whose type is object. IsReturnable must be true to
-   * set this option. Only supported for Boolean, Date, Double, Integer, and Timestamp properties.
+   * set this option. Only supported for boolean, date, double, integer, and timestamp properties.
    * @param isSortable isSortable or {@code null} for none
    */
   public PropertyDefinition setIsSortable(java.lang.Boolean isSortable) {

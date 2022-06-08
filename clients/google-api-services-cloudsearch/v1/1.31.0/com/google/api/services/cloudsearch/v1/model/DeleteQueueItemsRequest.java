@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DeleteQueueItemsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class DeleteQueueItemsRequest extends com.google.api.client.json.Ge
   private DebugOptions debugOptions;
 
   /**
-   * Name of a queue to delete items from.
+   * The name of a queue to delete items from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String queue;
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectorName() {
@@ -59,7 +59,7 @@ public final class DeleteQueueItemsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
+   * The name of connector making this call. Format: datasources/{source_id}/connectors/{ID}
    * @param connectorName connectorName or {@code null} for none
    */
   public DeleteQueueItemsRequest setConnectorName(java.lang.String connectorName) {
@@ -85,7 +85,7 @@ public final class DeleteQueueItemsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Name of a queue to delete items from.
+   * The name of a queue to delete items from.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueue() {
@@ -93,7 +93,7 @@ public final class DeleteQueueItemsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Name of a queue to delete items from.
+   * The name of a queue to delete items from.
    * @param queue queue or {@code null} for none
    */
   public DeleteQueueItemsRequest setQueue(java.lang.String queue) {

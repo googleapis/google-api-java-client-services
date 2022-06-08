@@ -47,7 +47,7 @@ public final class FacetOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String objectType;
 
   /**
-   * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+   * The name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class FacetOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+   * The name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
    * @return value or {@code null} for none
    */
   public java.lang.String getOperatorName() {
@@ -108,7 +108,7 @@ public final class FacetOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+   * The name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
    * @param operatorName operatorName or {@code null} for none
    */
   public FacetOptions setOperatorName(java.lang.String operatorName) {

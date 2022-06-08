@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Access control list information for the item. For more information see [Map ACLs](/cloud-
- * search/docs/guides/acls).
+ * Access control list information for the item. For more information see [Map
+ * ACLs](https://developers.google.com/cloud-search/docs/guides/acls).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -49,13 +49,13 @@ public final class ItemAcl extends com.google.api.client.json.GenericJson {
   private java.util.List<Principal> deniedReaders;
 
   /**
-   * Name of the item to inherit the Access Permission List (ACL) from. Note: ACL inheritance *only*
-   * provides access permissions to child items and does not define structural relationships, nor
-   * does it provide convenient ways to delete large groups of items. Deleting an ACL parent from
-   * the index only alters the access permissions of child items that reference the parent in the
-   * inheritAclFrom field. The item is still in the index, but may not visible in search results. By
-   * contrast, deletion of a container item also deletes all items that reference the container via
-   * the containerName field. The maximum length for this field is 1536 characters.
+   * The name of the item to inherit the Access Permission List (ACL) from. Note: ACL inheritance
+   * *only* provides access permissions to child items and does not define structural relationships,
+   * nor does it provide convenient ways to delete large groups of items. Deleting an ACL parent
+   * from the index only alters the access permissions of child items that reference the parent in
+   * the inheritAclFrom field. The item is still in the index, but may not visible in search
+   * results. By contrast, deletion of a container item also deletes all items that reference the
+   * container via the containerName field. The maximum length for this field is 1536 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,13 +122,13 @@ public final class ItemAcl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the item to inherit the Access Permission List (ACL) from. Note: ACL inheritance *only*
-   * provides access permissions to child items and does not define structural relationships, nor
-   * does it provide convenient ways to delete large groups of items. Deleting an ACL parent from
-   * the index only alters the access permissions of child items that reference the parent in the
-   * inheritAclFrom field. The item is still in the index, but may not visible in search results. By
-   * contrast, deletion of a container item also deletes all items that reference the container via
-   * the containerName field. The maximum length for this field is 1536 characters.
+   * The name of the item to inherit the Access Permission List (ACL) from. Note: ACL inheritance
+   * *only* provides access permissions to child items and does not define structural relationships,
+   * nor does it provide convenient ways to delete large groups of items. Deleting an ACL parent
+   * from the index only alters the access permissions of child items that reference the parent in
+   * the inheritAclFrom field. The item is still in the index, but may not visible in search
+   * results. By contrast, deletion of a container item also deletes all items that reference the
+   * container via the containerName field. The maximum length for this field is 1536 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getInheritAclFrom() {
@@ -136,13 +136,13 @@ public final class ItemAcl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the item to inherit the Access Permission List (ACL) from. Note: ACL inheritance *only*
-   * provides access permissions to child items and does not define structural relationships, nor
-   * does it provide convenient ways to delete large groups of items. Deleting an ACL parent from
-   * the index only alters the access permissions of child items that reference the parent in the
-   * inheritAclFrom field. The item is still in the index, but may not visible in search results. By
-   * contrast, deletion of a container item also deletes all items that reference the container via
-   * the containerName field. The maximum length for this field is 1536 characters.
+   * The name of the item to inherit the Access Permission List (ACL) from. Note: ACL inheritance
+   * *only* provides access permissions to child items and does not define structural relationships,
+   * nor does it provide convenient ways to delete large groups of items. Deleting an ACL parent
+   * from the index only alters the access permissions of child items that reference the parent in
+   * the inheritAclFrom field. The item is still in the index, but may not visible in search
+   * results. By contrast, deletion of a container item also deletes all items that reference the
+   * container via the containerName field. The maximum length for this field is 1536 characters.
    * @param inheritAclFrom inheritAclFrom or {@code null} for none
    */
   public ItemAcl setInheritAclFrom(java.lang.String inheritAclFrom) {

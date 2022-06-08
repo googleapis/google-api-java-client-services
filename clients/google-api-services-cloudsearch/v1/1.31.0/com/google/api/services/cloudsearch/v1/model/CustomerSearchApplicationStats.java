@@ -37,7 +37,7 @@ public final class CustomerSearchApplicationStats extends com.google.api.client.
   private java.lang.Long count;
 
   /**
-   * Date for which search application stats were calculated.
+   * The date for which search application stats were calculated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class CustomerSearchApplicationStats extends com.google.api.client.
   }
 
   /**
-   * Date for which search application stats were calculated.
+   * The date for which search application stats were calculated.
    * @return value or {@code null} for none
    */
   public Date getDate() {
@@ -69,7 +69,7 @@ public final class CustomerSearchApplicationStats extends com.google.api.client.
   }
 
   /**
-   * Date for which search application stats were calculated.
+   * The date for which search application stats were calculated.
    * @param date date or {@code null} for none
    */
   public CustomerSearchApplicationStats setDate(Date date) {

@@ -32,14 +32,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class UploadItemRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the content reference. The maximum length is 2048 characters.
+   * The name of the content reference. The maximum length is 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Name of the content reference. The maximum length is 2048 characters.
+   * The name of the content reference. The maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -47,7 +47,7 @@ public final class UploadItemRef extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the content reference. The maximum length is 2048 characters.
+   * The name of the content reference. The maximum length is 2048 characters.
    * @param name name or {@code null} for none
    */
   public UploadItemRef setName(java.lang.String name) {

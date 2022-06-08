@@ -1886,6 +1886,22 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
             return this;
           }
 
+          /** Required. Read mask to specify which fields to return. */
+          @com.google.api.client.util.Key
+          private String readMask;
+
+          /** Required. Read mask to specify which fields to return.
+           */
+          public String getReadMask() {
+            return readMask;
+          }
+
+          /** Required. Read mask to specify which fields to return. */
+          public Get setReadMask(String readMask) {
+            this.readMask = readMask;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);

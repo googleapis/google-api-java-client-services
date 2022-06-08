@@ -2592,7 +2592,11 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
     public class EnrollmentTokens {
 
       /**
-       * Creates an enrollment token for a given enterprise.
+       * Creates an enrollment token for a given enterprise. It's up to the caller's responsibility to
+       * manage the lifecycle of newly created tokens and deleting them when they're not intended to be
+       * used anymore. Once an enrollment token has been created, it's not possible to retrieve the
+       * token's content anymore using AM API. It is recommended for EMMs to securely store the token if
+       * it's intended to be reused.
        *
        * Create a request for the method "enrollmentTokens.create".
        *
@@ -2617,7 +2621,11 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^enterprises/[^/]+$");
 
         /**
-         * Creates an enrollment token for a given enterprise.
+         * Creates an enrollment token for a given enterprise. It's up to the caller's responsibility to
+         * manage the lifecycle of newly created tokens and deleting them when they're not intended to be
+         * used anymore. Once an enrollment token has been created, it's not possible to retrieve the
+         * token's content anymore using AM API. It is recommended for EMMs to securely store the token if
+         * it's intended to be reused.
          *
          * Create a request for the method "enrollmentTokens.create".
          *
@@ -2858,6 +2866,348 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets an active, unexpired enrollment token. Only a partial view of EnrollmentToken is returned:
+       * all the fields but name and expiration_timestamp are empty. This method is meant to help manage
+       * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
+       * enrollment tokens as soon as they're not intended to be used anymore.
+       *
+       * Create a request for the method "enrollmentTokens.get".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the enrollment token in the form
+       *        enterprises/{enterpriseId}/enrollmentTokens/{enrollmentTokenId}.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.EnrollmentToken> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+/enrollmentTokens/[^/]+$");
+
+        /**
+         * Gets an active, unexpired enrollment token. Only a partial view of EnrollmentToken is returned:
+         * all the fields but name and expiration_timestamp are empty. This method is meant to help manage
+         * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
+         * enrollment tokens as soon as they're not intended to be used anymore.
+         *
+         * Create a request for the method "enrollmentTokens.get".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the enrollment token in the form
+       *        enterprises/{enterpriseId}/enrollmentTokens/{enrollmentTokenId}.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(AndroidManagement.this, "GET", REST_PATH, null, com.google.api.services.androidmanagement.v1.model.EnrollmentToken.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/enrollmentTokens/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the enrollment token in the form
+         * enterprises/{enterpriseId}/enrollmentTokens/{enrollmentTokenId}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the enrollment token in the form
+       enterprises/{enterpriseId}/enrollmentTokens/{enrollmentTokenId}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the enrollment token in the form
+         * enterprises/{enterpriseId}/enrollmentTokens/{enrollmentTokenId}.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/enrollmentTokens/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a
+       * partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty. This
+       * method is meant to help manage active enrollment tokens lifecycle. For security reasons, it's
+       * recommended to delete active enrollment tokens as soon as they're not intended to be used
+       * anymore.
+       *
+       * Create a request for the method "enrollmentTokens.list".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the enterprise in the form enterprises/{enterpriseId}.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.ListEnrollmentTokensResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/enrollmentTokens";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+$");
+
+        /**
+         * Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a
+         * partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty.
+         * This method is meant to help manage active enrollment tokens lifecycle. For security reasons,
+         * it's recommended to delete active enrollment tokens as soon as they're not intended to be used
+         * anymore.
+         *
+         * Create a request for the method "enrollmentTokens.list".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the enterprise in the form enterprises/{enterpriseId}.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AndroidManagement.this, "GET", REST_PATH, null, com.google.api.services.androidmanagement.v1.model.ListEnrollmentTokensResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^enterprises/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the enterprise in the form enterprises/{enterpriseId}. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the enterprise in the form enterprises/{enterpriseId}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The name of the enterprise in the form enterprises/{enterpriseId}. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^enterprises/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The requested page size. The service may return fewer than this value. If unspecified, at
+         * most 10 items will be returned. The maximum value is 100; values above 100 will be
+         * coerced to 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The requested page size. The service may return fewer than this value. If unspecified, at most 10
+       items will be returned. The maximum value is 100; values above 100 will be coerced to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The requested page size. The service may return fewer than this value. If unspecified, at
+         * most 10 items will be returned. The maximum value is 100; values above 100 will be
+         * coerced to 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results returned by the server.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 

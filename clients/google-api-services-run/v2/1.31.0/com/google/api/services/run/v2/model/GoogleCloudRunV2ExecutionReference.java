@@ -35,6 +35,13 @@ public final class GoogleCloudRunV2ExecutionReference extends com.google.api.cli
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private String completionTime;
+
+  /**
+   * Creation timestamp of the execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private String createTime;
 
   /**
@@ -43,6 +50,23 @@ public final class GoogleCloudRunV2ExecutionReference extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Creation timestamp of the execution.
+   * @return value or {@code null} for none
+   */
+  public String getCompletionTime() {
+    return completionTime;
+  }
+
+  /**
+   * Creation timestamp of the execution.
+   * @param completionTime completionTime or {@code null} for none
+   */
+  public GoogleCloudRunV2ExecutionReference setCompletionTime(String completionTime) {
+    this.completionTime = completionTime;
+    return this;
+  }
 
   /**
    * Creation timestamp of the execution.

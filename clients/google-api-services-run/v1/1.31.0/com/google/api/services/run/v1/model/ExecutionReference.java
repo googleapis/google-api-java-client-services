@@ -31,6 +31,13 @@ package com.google.api.services.run.v1.model;
 public final class ExecutionReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Completion timestamp of the execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String completionTimestamp;
+
+  /**
    * Optional. Creation timestamp of the execution.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class ExecutionReference extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Completion timestamp of the execution.
+   * @return value or {@code null} for none
+   */
+  public String getCompletionTimestamp() {
+    return completionTimestamp;
+  }
+
+  /**
+   * Optional. Completion timestamp of the execution.
+   * @param completionTimestamp completionTimestamp or {@code null} for none
+   */
+  public ExecutionReference setCompletionTimestamp(String completionTimestamp) {
+    this.completionTimestamp = completionTimestamp;
+    return this;
+  }
 
   /**
    * Optional. Creation timestamp of the execution.

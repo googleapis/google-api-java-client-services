@@ -37,6 +37,25 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
   private GoogleCloudDialogflowV2beta1AssistQueryParameters assistQueryParams;
 
   /**
+   * The natural language speech audio to be processed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1AudioInput audioInput;
+
+  /**
+   * The unique identifier of the CX page to override the `current_page` in the session. Format:
+   * `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the previous
+   * state of the session will be ignored by Dialogflow CX, including the previous page and the
+   * previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
+   * configured together to direct a session to a specific state. Note: this field should only be
+   * used if you are connecting to a Dialogflow CX agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cxCurrentPage;
+
+  /**
    * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
    * from the session, clients should explicitly set the parameter value to null. Note: this field
    * should only be used if you are connecting to a Dialogflow CX agent.
@@ -111,6 +130,50 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setAssistQueryParams(GoogleCloudDialogflowV2beta1AssistQueryParameters assistQueryParams) {
     this.assistQueryParams = assistQueryParams;
+    return this;
+  }
+
+  /**
+   * The natural language speech audio to be processed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AudioInput getAudioInput() {
+    return audioInput;
+  }
+
+  /**
+   * The natural language speech audio to be processed.
+   * @param audioInput audioInput or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setAudioInput(GoogleCloudDialogflowV2beta1AudioInput audioInput) {
+    this.audioInput = audioInput;
+    return this;
+  }
+
+  /**
+   * The unique identifier of the CX page to override the `current_page` in the session. Format:
+   * `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the previous
+   * state of the session will be ignored by Dialogflow CX, including the previous page and the
+   * previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
+   * configured together to direct a session to a specific state. Note: this field should only be
+   * used if you are connecting to a Dialogflow CX agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCxCurrentPage() {
+    return cxCurrentPage;
+  }
+
+  /**
+   * The unique identifier of the CX page to override the `current_page` in the session. Format:
+   * `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the previous
+   * state of the session will be ignored by Dialogflow CX, including the previous page and the
+   * previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
+   * configured together to direct a session to a specific state. Note: this field should only be
+   * used if you are connecting to a Dialogflow CX agent.
+   * @param cxCurrentPage cxCurrentPage or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setCxCurrentPage(java.lang.String cxCurrentPage) {
+    this.cxCurrentPage = cxCurrentPage;
     return this;
   }
 

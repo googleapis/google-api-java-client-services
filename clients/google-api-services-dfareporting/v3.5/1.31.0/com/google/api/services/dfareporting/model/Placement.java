@@ -186,7 +186,7 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private LookbackConfiguration lookbackConfiguration;
 
   /**
-   * Name of this placement.This is a required field and must be less than or equal to 256
+   * Name of this placement.This is a required field and must be less than or equal to 512
    * characters long.
    * The value may be {@code null}.
    */
@@ -739,7 +739,7 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of this placement.This is a required field and must be less than or equal to 256
+   * Name of this placement.This is a required field and must be less than or equal to 512
    * characters long.
    * @return value or {@code null} for none
    */
@@ -748,7 +748,7 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of this placement.This is a required field and must be less than or equal to 256
+   * Name of this placement.This is a required field and must be less than or equal to 512
    * characters long.
    * @param name name or {@code null} for none
    */

@@ -5616,18 +5616,20 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, fill this field instead of domain. As an
-       * account administrator, you can also use the `my_customer` alias to represent your account's
-       * `customerId`. The `customerId` is also returned as part of the [Users](/admin-
-       * sdk/directory/v1/reference/users)
+       * account, to fetch all groups for a customer, fill in this field instead of `domain`. You
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users](/admin-
+       * sdk/directory/v1/reference/users) resource. Either the `customer` or the `domain` parameter
+       * must be provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
-     fetch all groups for a customer, fill this field instead of domain. As an account administrator,
-     you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-     is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users)
+     fetch all groups for a customer, fill in this field instead of `domain`. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. Either the `customer` or the
+     `domain` parameter must be provided.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -5635,10 +5637,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, fill this field instead of domain. As an
-       * account administrator, you can also use the `my_customer` alias to represent your account's
-       * `customerId`. The `customerId` is also returned as part of the [Users](/admin-
-       * sdk/directory/v1/reference/users)
+       * account, to fetch all groups for a customer, fill in this field instead of `domain`. You
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users](/admin-
+       * sdk/directory/v1/reference/users) resource. Either the `customer` or the `domain` parameter
+       * must be provided.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;

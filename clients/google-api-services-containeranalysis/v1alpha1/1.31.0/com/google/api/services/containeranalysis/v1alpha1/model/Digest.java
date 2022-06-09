@@ -38,11 +38,11 @@ public final class Digest extends com.google.api.client.json.GenericJson {
   private java.lang.String algo;
 
   /**
-   * Value of the digest encoded. For example: SHA512 - base64 encoding, SHA1 - hex encoding.
+   * Value of the digest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String digestValue;
+  private java.lang.String digestBytes;
 
   /**
    * `SHA1`, `SHA512` etc.
@@ -62,19 +62,47 @@ public final class Digest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value of the digest encoded. For example: SHA512 - base64 encoding, SHA1 - hex encoding.
+   * Value of the digest.
+   * @see #decodeDigestBytes()
    * @return value or {@code null} for none
    */
-  public java.lang.String getDigestValue() {
-    return digestValue;
+  public java.lang.String getDigestBytes() {
+    return digestBytes;
   }
 
   /**
-   * Value of the digest encoded. For example: SHA512 - base64 encoding, SHA1 - hex encoding.
-   * @param digestValue digestValue or {@code null} for none
+   * Value of the digest.
+   * @see #getDigestBytes()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
    */
-  public Digest setDigestValue(java.lang.String digestValue) {
-    this.digestValue = digestValue;
+  public byte[] decodeDigestBytes() {
+    return com.google.api.client.util.Base64.decodeBase64(digestBytes);
+  }
+
+  /**
+   * Value of the digest.
+   * @see #encodeDigestBytes()
+   * @param digestBytes digestBytes or {@code null} for none
+   */
+  public Digest setDigestBytes(java.lang.String digestBytes) {
+    this.digestBytes = digestBytes;
+    return this;
+  }
+
+  /**
+   * Value of the digest.
+   * @see #setDigestBytes()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public Digest encodeDigestBytes(byte[] digestBytes) {
+    this.digestBytes = com.google.api.client.util.Base64.encodeBase64URLSafeString(digestBytes);
     return this;
   }
 

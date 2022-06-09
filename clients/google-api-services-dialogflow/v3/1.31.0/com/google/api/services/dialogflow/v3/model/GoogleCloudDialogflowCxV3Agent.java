@@ -90,8 +90,8 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private java.lang.Boolean enableStackdriverLogging;
 
   /**
-   * Indiciates whether the agent is locked for changes. If the agent is locked, modifications to
-   * the agent will be rejected except for RestoreAgent.
+   * Indicates whether the agent is locked for changes. If the agent is locked, modifications to the
+   * agent will be rejected except for RestoreAgent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -278,8 +278,8 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   }
 
   /**
-   * Indiciates whether the agent is locked for changes. If the agent is locked, modifications to
-   * the agent will be rejected except for RestoreAgent.
+   * Indicates whether the agent is locked for changes. If the agent is locked, modifications to the
+   * agent will be rejected except for RestoreAgent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -287,8 +287,8 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   }
 
   /**
-   * Indiciates whether the agent is locked for changes. If the agent is locked, modifications to
-   * the agent will be rejected except for RestoreAgent.
+   * Indicates whether the agent is locked for changes. If the agent is locked, modifications to the
+   * agent will be rejected except for RestoreAgent.
    * @param locked locked or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Agent setLocked(java.lang.Boolean locked) {

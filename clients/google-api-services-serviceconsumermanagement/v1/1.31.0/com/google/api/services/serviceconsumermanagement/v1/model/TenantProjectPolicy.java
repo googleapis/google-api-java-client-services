@@ -17,7 +17,7 @@
 package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
- * Describes policy settings that need to be applied to a newly created tenant project.
+ * Describes policy settings that can be applied to a newly created tenant project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -32,8 +32,7 @@ public final class TenantProjectPolicy extends com.google.api.client.json.Generi
 
   /**
    * Policy bindings to be applied to the tenant project, in addition to the 'roles/owner' role
-   * granted to the Service Consumer Management service account. At least one binding must have the
-   * role `roles/owner`.
+   * granted to the Service Consumer Management service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,7 @@ public final class TenantProjectPolicy extends com.google.api.client.json.Generi
 
   /**
    * Policy bindings to be applied to the tenant project, in addition to the 'roles/owner' role
-   * granted to the Service Consumer Management service account. At least one binding must have the
-   * role `roles/owner`.
+   * granted to the Service Consumer Management service account.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyBinding> getPolicyBindings() {
@@ -57,8 +55,7 @@ public final class TenantProjectPolicy extends com.google.api.client.json.Generi
 
   /**
    * Policy bindings to be applied to the tenant project, in addition to the 'roles/owner' role
-   * granted to the Service Consumer Management service account. At least one binding must have the
-   * role `roles/owner`.
+   * granted to the Service Consumer Management service account.
    * @param policyBindings policyBindings or {@code null} for none
    */
   public TenantProjectPolicy setPolicyBindings(java.util.List<PolicyBinding> policyBindings) {

@@ -74,7 +74,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> services;
 
   /**
-   * Describes ownership and policies for the new tenant project. Required.
+   * Describes ownership and policies for the new tenant project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Describes ownership and policies for the new tenant project. Required.
+   * Describes ownership and policies for the new tenant project.
    * @return value or {@code null} for none
    */
   public TenantProjectPolicy getTenantProjectPolicy() {
@@ -184,7 +184,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Describes ownership and policies for the new tenant project. Required.
+   * Describes ownership and policies for the new tenant project.
    * @param tenantProjectPolicy tenantProjectPolicy or {@code null} for none
    */
   public TenantProjectConfig setTenantProjectPolicy(TenantProjectPolicy tenantProjectPolicy) {

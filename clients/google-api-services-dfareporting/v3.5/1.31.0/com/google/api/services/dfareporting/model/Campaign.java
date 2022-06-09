@@ -206,7 +206,7 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   private MeasurementPartnerCampaignLink measurementPartnerLink;
 
   /**
-   * Name of this campaign. This is a required field and must be less than 256 characters long and
+   * Name of this campaign. This is a required field and must be less than 512 characters long and
    * unique among campaigns of the same advertiser.
    * The value may be {@code null}.
    */
@@ -651,7 +651,7 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of this campaign. This is a required field and must be less than 256 characters long and
+   * Name of this campaign. This is a required field and must be less than 512 characters long and
    * unique among campaigns of the same advertiser.
    * @return value or {@code null} for none
    */
@@ -660,7 +660,7 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of this campaign. This is a required field and must be less than 256 characters long and
+   * Name of this campaign. This is a required field and must be less than 512 characters long and
    * unique among campaigns of the same advertiser.
    * @param name name or {@code null} for none
    */

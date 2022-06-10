@@ -9443,13 +9443,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing version of the available regions being used for the
-         * specified resource.
+         * specified resource. The current version is 2022/01.
          */
         @com.google.api.client.util.Key("regionsVersion.version")
         private java.lang.String regionsVersionVersion;
 
         /** Required. A string representing version of the available regions being used for the specified
-       resource.
+       resource. The current version is 2022/01.
          */
         public java.lang.String getRegionsVersionVersion() {
           return regionsVersionVersion;
@@ -9457,7 +9457,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing version of the available regions being used for the
-         * specified resource.
+         * specified resource. The current version is 2022/01.
          */
         public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
           this.regionsVersionVersion = regionsVersionVersion;
@@ -10099,13 +10099,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing version of the available regions being used for the
-         * specified resource.
+         * specified resource. The current version is 2022/01.
          */
         @com.google.api.client.util.Key("regionsVersion.version")
         private java.lang.String regionsVersionVersion;
 
         /** Required. A string representing version of the available regions being used for the specified
-       resource.
+       resource. The current version is 2022/01.
          */
         public java.lang.String getRegionsVersionVersion() {
           return regionsVersionVersion;
@@ -10113,7 +10113,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing version of the available regions being used for the
-         * specified resource.
+         * specified resource. The current version is 2022/01.
          */
         public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
           this.regionsVersionVersion = regionsVersionVersion;
@@ -11216,13 +11216,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing version of the available regions being used for the
-             * specified resource.
+             * specified resource. The current version is 2022/01.
              */
             @com.google.api.client.util.Key("regionsVersion.version")
             private java.lang.String regionsVersionVersion;
 
             /** Required. A string representing version of the available regions being used for the specified
-           resource.
+           resource. The current version is 2022/01.
              */
             public java.lang.String getRegionsVersionVersion() {
               return regionsVersionVersion;
@@ -11230,7 +11230,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing version of the available regions being used for the
-             * specified resource.
+             * specified resource. The current version is 2022/01.
              */
             public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
               this.regionsVersionVersion = regionsVersionVersion;
@@ -12188,13 +12188,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing version of the available regions being used for the
-             * specified resource.
+             * specified resource. The current version is 2022/01.
              */
             @com.google.api.client.util.Key("regionsVersion.version")
             private java.lang.String regionsVersionVersion;
 
             /** Required. A string representing version of the available regions being used for the specified
-           resource.
+           resource. The current version is 2022/01.
              */
             public java.lang.String getRegionsVersionVersion() {
               return regionsVersionVersion;
@@ -12202,7 +12202,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing version of the available regions being used for the
-             * specified resource.
+             * specified resource. The current version is 2022/01.
              */
             public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
               this.regionsVersionVersion = regionsVersionVersion;

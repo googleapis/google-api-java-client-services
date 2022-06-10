@@ -64,8 +64,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String messageType;
 
   /**
-   * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Sto
-   * res/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+   * Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datase
+   * ts/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,8 +214,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Sto
-   * res/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+   * Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datase
+   * ts/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -223,8 +223,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Sto
-   * res/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+   * Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datase
+   * ts/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
    * @param name name or {@code null} for none
    */
   public Message setName(java.lang.String name) {

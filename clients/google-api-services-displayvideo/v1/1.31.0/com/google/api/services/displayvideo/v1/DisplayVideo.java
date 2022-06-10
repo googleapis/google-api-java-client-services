@@ -5697,7 +5697,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * The operator
          * must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` for the following
          * fields: - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) * For
-         * `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, `and `dynamic`, there may be
+         * `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic`, there may be
          * at most one restriction. * For `dimensions`, the value is in the form of
          * `"{width}x{height}"`. * For `exchangeReviewStatus`, the value is in the form of
          * `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the value is in the
@@ -5731,8 +5731,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        `dynamic` - `creativeId` * The operator must be `HAS (:)` for the following fields: - `lineItemIds`
        * The operator must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` for the
        following fields: - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) * For
-       `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, `and `dynamic`, there may be at most
-       one restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
+       `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic`, there may be at most one
+       restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
        `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
        `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only seconds are
        supported with millisecond granularity. * For `updateTime`, a creative resource's field value
@@ -5766,7 +5766,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * The operator
          * must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` for the following
          * fields: - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) * For
-         * `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, `and `dynamic`, there may be
+         * `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic`, there may be
          * at most one restriction. * For `dimensions`, the value is in the form of
          * `"{width}x{height}"`. * For `exchangeReviewStatus`, the value is in the form of
          * `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the value is in the

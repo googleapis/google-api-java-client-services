@@ -137,6 +137,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
+   * Pagination behavior of the listManagedInstances API method for this managed instance group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String listManagedInstancesResults;
+
+  /**
    * The name of the managed instance group. The name must be 1-63 characters long, and comply with
    * RFC1035.
    * The value may be {@code null}.
@@ -514,6 +521,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Pagination behavior of the listManagedInstances API method for this managed instance group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getListManagedInstancesResults() {
+    return listManagedInstancesResults;
+  }
+
+  /**
+   * Pagination behavior of the listManagedInstances API method for this managed instance group.
+   * @param listManagedInstancesResults listManagedInstancesResults or {@code null} for none
+   */
+  public InstanceGroupManager setListManagedInstancesResults(java.lang.String listManagedInstancesResults) {
+    this.listManagedInstancesResults = listManagedInstancesResults;
     return this;
   }
 

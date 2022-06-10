@@ -144,7 +144,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
-   * Pagination behavior of listManagedInstances API method for this Managed Instance Group.
+   * Pagination behavior of the listManagedInstances API method for this managed instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -581,7 +581,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Pagination behavior of listManagedInstances API method for this Managed Instance Group.
+   * Pagination behavior of the listManagedInstances API method for this managed instance group.
    * @return value or {@code null} for none
    */
   public java.lang.String getListManagedInstancesResults() {
@@ -589,7 +589,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Pagination behavior of listManagedInstances API method for this Managed Instance Group.
+   * Pagination behavior of the listManagedInstances API method for this managed instance group.
    * @param listManagedInstancesResults listManagedInstancesResults or {@code null} for none
    */
   public InstanceGroupManager setListManagedInstancesResults(java.lang.String listManagedInstancesResults) {

@@ -238,17 +238,6 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String privateIpv6GoogleAccess;
 
   /**
-   * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service
-   * accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary
-   * service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess
-   * is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
-   * ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> privateIpv6GoogleAccessServiceAccounts;
-
-  /**
    * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
    * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
    * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
@@ -853,31 +842,6 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
     this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
-    return this;
-  }
-
-  /**
-   * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service
-   * accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary
-   * service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess
-   * is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
-   * ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getPrivateIpv6GoogleAccessServiceAccounts() {
-    return privateIpv6GoogleAccessServiceAccounts;
-  }
-
-  /**
-   * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service
-   * accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary
-   * service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess
-   * is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
-   * ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
-   * @param privateIpv6GoogleAccessServiceAccounts privateIpv6GoogleAccessServiceAccounts or {@code null} for none
-   */
-  public Subnetwork setPrivateIpv6GoogleAccessServiceAccounts(java.util.List<java.lang.String> privateIpv6GoogleAccessServiceAccounts) {
-    this.privateIpv6GoogleAccessServiceAccounts = privateIpv6GoogleAccessServiceAccounts;
     return this;
   }
 

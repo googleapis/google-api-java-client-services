@@ -16668,6 +16668,385 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+      /**
+       * An accessor for creating requests from the LiveBroadcasts collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code YouTube youtube = new YouTube(...);}
+       *   {@code YouTube.LiveBroadcasts.List request = youtube.liveBroadcasts().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LiveBroadcasts liveBroadcasts() {
+        return new LiveBroadcasts();
+      }
+
+      /**
+       * The "liveBroadcasts" collection of methods.
+       */
+      public class LiveBroadcasts {
+
+        /**
+         * An accessor for creating requests from the Cuepoint collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code YouTube youtube = new YouTube(...);}
+         *   {@code YouTube.Cuepoint.List request = youtube.cuepoint().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Cuepoint cuepoint() {
+          return new Cuepoint();
+        }
+
+        /**
+         * The "cuepoint" collection of methods.
+         */
+        public class Cuepoint {
+
+          /**
+           * Insert cuepoints in a broadcast
+           *
+           * Create a request for the method "cuepoint.create".
+           *
+           * This request holds the parameters needed by the youtube server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @return the request
+           */
+          public Create create() throws java.io.IOException {
+            Create result = new Create();
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends YouTubeRequest<com.google.api.services.youtube.model.Cuepoint> {
+
+            private static final String REST_PATH = "youtube/v3/liveBroadcasts/cuepoint";
+
+            /**
+             * Insert cuepoints in a broadcast
+             *
+             * Create a request for the method "cuepoint.create".
+             *
+             * This request holds the parameters needed by the the youtube server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @since 1.13
+             */
+            protected Create() {
+              super(YouTube.this, "POST", REST_PATH, null, com.google.api.services.youtube.model.Cuepoint.class);
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Broadcast to insert ads to, or equivalently `external_video_id` for internal use.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String id;
+
+            /** Broadcast to insert ads to, or equivalently `external_video_id` for internal use.
+             */
+            public java.lang.String getId() {
+              return id;
+            }
+
+            /**
+             * Broadcast to insert ads to, or equivalently `external_video_id` for internal use.
+             */
+            public Create setId(java.lang.String id) {
+              this.id = id;
+              return this;
+            }
+
+            /**
+             * *Note:* This parameter is intended exclusively for YouTube content partners. The
+             * *onBehalfOfContentOwner* parameter indicates that the request's authorization
+             * credentials identify a YouTube CMS user who is acting on behalf of the content owner
+             * specified in the parameter value. This parameter is intended for YouTube content
+             * partners that own and manage many different YouTube channels. It allows content
+             * owners to authenticate once and get access to all their video and channel data,
+             * without having to provide authentication credentials for each individual channel. The
+             * CMS account that the user authenticates with must be linked to the specified YouTube
+             * content owner.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String onBehalfOfContentOwner;
+
+            /*** Note:* This parameter is intended exclusively for YouTube content partners. The
+          * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify
+          * a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value.
+          * This parameter is intended for YouTube content partners that own and manage many different YouTube
+          * channels. It allows content owners to authenticate once and get access to all their video and
+          * channel data, without having to provide authentication credentials for each individual channel.
+          * The CMS account that the user authenticates with must be linked to the specified YouTube content
+          * owner.
+          *
+
+             */
+            public java.lang.String getOnBehalfOfContentOwner() {
+              return onBehalfOfContentOwner;
+            }
+
+            /**
+             * *Note:* This parameter is intended exclusively for YouTube content partners. The
+             * *onBehalfOfContentOwner* parameter indicates that the request's authorization
+             * credentials identify a YouTube CMS user who is acting on behalf of the content owner
+             * specified in the parameter value. This parameter is intended for YouTube content
+             * partners that own and manage many different YouTube channels. It allows content
+             * owners to authenticate once and get access to all their video and channel data,
+             * without having to provide authentication credentials for each individual channel. The
+             * CMS account that the user authenticates with must be linked to the specified YouTube
+             * content owner.
+             */
+            public Create setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+              this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+              return this;
+            }
+
+            /**
+             * This parameter can only be used in a properly authorized request. *Note:* This
+             * parameter is intended exclusively for YouTube content partners. The
+             * *onBehalfOfContentOwnerChannel* parameter specifies the YouTube channel ID of the
+             * channel to which a video is being added. This parameter is required when a request
+             * specifies a value for the onBehalfOfContentOwner parameter, and it can only be used
+             * in conjunction with that parameter. In addition, the request must be authorized using
+             * a CMS account that is linked to the content owner that the onBehalfOfContentOwner
+             * parameter specifies. Finally, the channel that the onBehalfOfContentOwnerChannel
+             * parameter value specifies must be linked to the content owner that the
+             * onBehalfOfContentOwner parameter specifies. This parameter is intended for YouTube
+             * content partners that own and manage many different YouTube channels. It allows
+             * content owners to authenticate once and perform actions on behalf of the channel
+             * specified in the parameter value, without having to provide authentication
+             * credentials for each separate channel.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String onBehalfOfContentOwnerChannel;
+
+            /** This parameter can only be used in a properly authorized request. *Note:* This parameter is
+           intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel* parameter
+           specifies the YouTube channel ID of the channel to which a video is being added. This parameter is
+           required when a request specifies a value for the onBehalfOfContentOwner parameter, and it can only
+           be used in conjunction with that parameter. In addition, the request must be authorized using a CMS
+           account that is linked to the content owner that the onBehalfOfContentOwner parameter specifies.
+           Finally, the channel that the onBehalfOfContentOwnerChannel parameter value specifies must be
+           linked to the content owner that the onBehalfOfContentOwner parameter specifies. This parameter is
+           intended for YouTube content partners that own and manage many different YouTube channels. It
+           allows content owners to authenticate once and perform actions on behalf of the channel specified
+           in the parameter value, without having to provide authentication credentials for each separate
+           channel.
+             */
+            public java.lang.String getOnBehalfOfContentOwnerChannel() {
+              return onBehalfOfContentOwnerChannel;
+            }
+
+            /**
+             * This parameter can only be used in a properly authorized request. *Note:* This
+             * parameter is intended exclusively for YouTube content partners. The
+             * *onBehalfOfContentOwnerChannel* parameter specifies the YouTube channel ID of the
+             * channel to which a video is being added. This parameter is required when a request
+             * specifies a value for the onBehalfOfContentOwner parameter, and it can only be used
+             * in conjunction with that parameter. In addition, the request must be authorized using
+             * a CMS account that is linked to the content owner that the onBehalfOfContentOwner
+             * parameter specifies. Finally, the channel that the onBehalfOfContentOwnerChannel
+             * parameter value specifies must be linked to the content owner that the
+             * onBehalfOfContentOwner parameter specifies. This parameter is intended for YouTube
+             * content partners that own and manage many different YouTube channels. It allows
+             * content owners to authenticate once and perform actions on behalf of the channel
+             * specified in the parameter value, without having to provide authentication
+             * credentials for each separate channel.
+             */
+            public Create setOnBehalfOfContentOwnerChannel(java.lang.String onBehalfOfContentOwnerChannel) {
+              this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
+              return this;
+            }
+
+            /**
+             * The *part* parameter specifies a comma-separated list of one or more liveBroadcast
+             * resource properties that the API response will include. The part names that you can
+             * include in the parameter value are id, snippet, contentDetails, and status.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> part;
+
+            /** The *part* parameter specifies a comma-separated list of one or more liveBroadcast resource
+           properties that the API response will include. The part names that you can include in the parameter
+           value are id, snippet, contentDetails, and status.
+             */
+            public java.util.List<java.lang.String> getPart() {
+              return part;
+            }
+
+            /**
+             * The *part* parameter specifies a comma-separated list of one or more liveBroadcast
+             * resource properties that the API response will include. The part names that you can
+             * include in the parameter value are id, snippet, contentDetails, and status.
+             */
+            public Create setPart(java.util.List<java.lang.String> part) {
+              this.part = part;
+              return this;
+            }
+
+            @com.google.api.client.util.Key("resource.cueType")
+            private java.lang.String resourceCueType;
+
+            /**
+
+             */
+            public java.lang.String getResourceCueType() {
+              return resourceCueType;
+            }
+
+            public Create setResourceCueType(java.lang.String resourceCueType) {
+              this.resourceCueType = resourceCueType;
+              return this;
+            }
+
+            /** The duration of this cuepoint. */
+            @com.google.api.client.util.Key("resource.durationSecs")
+            private java.lang.Long resourceDurationSecs;
+
+            /** The duration of this cuepoint.
+             */
+            public java.lang.Long getResourceDurationSecs() {
+              return resourceDurationSecs;
+            }
+
+            /** The duration of this cuepoint. */
+            public Create setResourceDurationSecs(java.lang.Long resourceDurationSecs) {
+              this.resourceDurationSecs = resourceDurationSecs;
+              return this;
+            }
+
+            /** The identifier for cuepoint resource. */
+            @com.google.api.client.util.Key("resource.id")
+            private java.lang.String resourceId;
+
+            /** The identifier for cuepoint resource.
+             */
+            public java.lang.String getResourceId() {
+              return resourceId;
+            }
+
+            /** The identifier for cuepoint resource. */
+            public Create setResourceId(java.lang.String resourceId) {
+              this.resourceId = resourceId;
+              return this;
+            }
+
+            /**
+             * The time when the cuepoint should be inserted by offset to the broadcast actual start
+             * time.
+             */
+            @com.google.api.client.util.Key("resource.insertionOffsetTimeMs")
+            private java.lang.Long resourceInsertionOffsetTimeMs;
+
+            /** The time when the cuepoint should be inserted by offset to the broadcast actual start time.
+             */
+            public java.lang.Long getResourceInsertionOffsetTimeMs() {
+              return resourceInsertionOffsetTimeMs;
+            }
+
+            /**
+             * The time when the cuepoint should be inserted by offset to the broadcast actual start
+             * time.
+             */
+            public Create setResourceInsertionOffsetTimeMs(java.lang.Long resourceInsertionOffsetTimeMs) {
+              this.resourceInsertionOffsetTimeMs = resourceInsertionOffsetTimeMs;
+              return this;
+            }
+
+            /**
+             * The wall clock time at which the cuepoint should be inserted. Only one of
+             * insertion_offset_time_ms and walltime_ms may be set at a time.
+             */
+            @com.google.api.client.util.Key("resource.walltimeMs")
+            private java.math.BigInteger resourceWalltimeMs;
+
+            /** The wall clock time at which the cuepoint should be inserted. Only one of insertion_offset_time_ms
+           and walltime_ms may be set at a time.
+             */
+            public java.math.BigInteger getResourceWalltimeMs() {
+              return resourceWalltimeMs;
+            }
+
+            /**
+             * The wall clock time at which the cuepoint should be inserted. Only one of
+             * insertion_offset_time_ms and walltime_ms may be set at a time.
+             */
+            public Create setResourceWalltimeMs(java.math.BigInteger resourceWalltimeMs) {
+              this.resourceWalltimeMs = resourceWalltimeMs;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
   }
 

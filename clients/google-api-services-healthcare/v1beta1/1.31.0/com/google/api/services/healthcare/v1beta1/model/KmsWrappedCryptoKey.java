@@ -34,7 +34,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class KmsWrappedCryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping. For example,
+   * `projects/{project_id}/locations/{location_id}/keyRings/{keyring}/cryptoKeys/{key}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class KmsWrappedCryptoKey extends com.google.api.client.json.Generi
   private java.lang.String wrappedKey;
 
   /**
-   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping. For example,
+   * `projects/{project_id}/locations/{location_id}/keyRings/{keyring}/cryptoKeys/{key}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKey() {
@@ -56,7 +58,8 @@ public final class KmsWrappedCryptoKey extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping. For example,
+   * `projects/{project_id}/locations/{location_id}/keyRings/{keyring}/cryptoKeys/{key}`.
    * @param cryptoKey cryptoKey or {@code null} for none
    */
   public KmsWrappedCryptoKey setCryptoKey(java.lang.String cryptoKey) {

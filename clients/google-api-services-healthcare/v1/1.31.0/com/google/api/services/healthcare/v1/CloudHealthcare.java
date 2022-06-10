@@ -19873,7 +19873,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Resource name of the HL7v2 store, of the form
-           *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
+           *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.Hl7V2Store}
            * @return the request
            */
@@ -19902,7 +19903,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Resource name of the HL7v2 store, of the form
-           *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
+           *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.Hl7V2Store}
              * @since 1.13
              */
@@ -19972,22 +19974,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Resource name of the HL7v2 store, of the form
-             * `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             * Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Resource name of the HL7v2 store, of the form
-           `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Resource name of the HL7v2 store, of the form
-             * `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             * Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -21281,9 +21283,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Resource name of the Message, of the form
-             *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{messa
-             *        ge_id}`. Assigned by the server.
+             * @param name Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
+             *        ataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
              * @param content the {@link com.google.api.services.healthcare.v1.model.Message}
              * @return the request
              */
@@ -21314,9 +21315,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Resource name of the Message, of the form
-             *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{messa
-             *        ge_id}`. Assigned by the server.
+               * @param name Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
+             *        ataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
                * @param content the {@link com.google.api.services.healthcare.v1.model.Message}
                * @since 1.13
                */
@@ -21386,23 +21386,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_
-               * id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+               * Resource name of the Message, of the form `projects/{project_id}/locations/{locatio
+               * n_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
+               * Assigned by the server.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Resource name of the Message, of the form
-             `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
-             Assigned by the server.
+              /** Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datasets/{
+             dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_
-               * id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+               * Resource name of the Message, of the form `projects/{project_id}/locations/{locatio
+               * n_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
+               * Assigned by the server.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

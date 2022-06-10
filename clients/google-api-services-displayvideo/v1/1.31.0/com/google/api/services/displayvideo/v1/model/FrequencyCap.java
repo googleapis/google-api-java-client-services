@@ -33,7 +33,7 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum number of times a user may be shown the same ad during this period. Must be greater
-   * than 0. Required when unlimited is `false`.
+   * than 0. Required when unlimited is `false` and max_views is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum number of times a user may be shown the same ad during this period. Must be greater
-   * than 0. Required when unlimited is `false`.
+   * than 0. Required when unlimited is `false` and max_views is not set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxImpressions() {
@@ -76,7 +76,7 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum number of times a user may be shown the same ad during this period. Must be greater
-   * than 0. Required when unlimited is `false`.
+   * than 0. Required when unlimited is `false` and max_views is not set.
    * @param maxImpressions maxImpressions or {@code null} for none
    */
   public FrequencyCap setMaxImpressions(java.lang.Integer maxImpressions) {

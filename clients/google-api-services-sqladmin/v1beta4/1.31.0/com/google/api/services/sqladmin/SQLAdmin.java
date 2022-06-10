@@ -3634,17 +3634,24 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The maximum number of results to return per response. */
+      /**
+       * The maximum number of instances to return. The service may return fewer than this value.
+       * The maximum value is 1000; values above 1000 are coerced to 1000.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maximum number of results to return per response.
+      /** The maximum number of instances to return. The service may return fewer than this value. The
+     maximum value is 1000; values above 1000 are coerced to 1000.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of results to return per response. */
+      /**
+       * The maximum number of instances to return. The service may return fewer than this value.
+       * The maximum value is 1000; values above 1000 are coerced to 1000.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;

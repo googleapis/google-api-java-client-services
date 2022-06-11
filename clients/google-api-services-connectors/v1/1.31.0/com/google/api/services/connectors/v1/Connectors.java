@@ -1823,28 +1823,28 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Field mask is used to specify the fields to be overwritten in the Connection resource
-           * by the update. The fields specified in the update_mask are relative to the resource,
-           * not the full request. A field will be overwritten if it is in the mask. If the user
-           * does not provide a mask then all fields will be overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten in the Connection
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Field mask is used to specify the fields to be overwritten in the Connection resource by the
-         update. The fields specified in the update_mask are relative to the resource, not the full request.
-         A field will be overwritten if it is in the mask. If the user does not provide a mask then all
-         fields will be overwritten.
+          /** Required. Field mask is used to specify the fields to be overwritten in the Connection resource by
+         the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Field mask is used to specify the fields to be overwritten in the Connection resource
-           * by the update. The fields specified in the update_mask are relative to the resource,
-           * not the full request. A field will be overwritten if it is in the mask. If the user
-           * does not provide a mask then all fields will be overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten in the Connection
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

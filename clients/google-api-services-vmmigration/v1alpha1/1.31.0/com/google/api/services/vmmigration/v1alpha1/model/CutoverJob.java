@@ -54,6 +54,13 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. The time the cutover job had finished.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * Output only. Provides details for the errors that led to the Cutover Job's state.
    * The value may be {@code null}.
    */
@@ -101,6 +108,13 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String stateTime;
+
+  /**
+   * Output only. The cutover steps list representing its progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CutoverStep> steps;
 
   /**
    * Output only. Details of the VM to create as the target of this cutover job. Deprecated: Use
@@ -162,6 +176,23 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
    */
   public CutoverJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The time the cutover job had finished.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. The time the cutover job had finished.
+   * @param endTime endTime or {@code null} for none
+   */
+  public CutoverJob setEndTime(String endTime) {
+    this.endTime = endTime;
     return this;
   }
 
@@ -281,6 +312,23 @@ public final class CutoverJob extends com.google.api.client.json.GenericJson {
    */
   public CutoverJob setStateTime(String stateTime) {
     this.stateTime = stateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The cutover steps list representing its progress.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CutoverStep> getSteps() {
+    return steps;
+  }
+
+  /**
+   * Output only. The cutover steps list representing its progress.
+   * @param steps steps or {@code null} for none
+   */
+  public CutoverJob setSteps(java.util.List<CutoverStep> steps) {
+    this.steps = steps;
     return this;
   }
 

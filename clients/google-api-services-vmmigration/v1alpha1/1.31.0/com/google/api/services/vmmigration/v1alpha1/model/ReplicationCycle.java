@@ -30,6 +30,20 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class ReplicationCycle extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time the replication cycle has ended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
+   * The identifier of the ReplicationCycle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The current progress in percentage of this cycle.
    * The value may be {@code null}.
    */
@@ -69,6 +83,40 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private String totalPauseDuration;
+
+  /**
+   * The time the replication cycle has ended.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * The time the replication cycle has ended.
+   * @param endTime endTime or {@code null} for none
+   */
+  public ReplicationCycle setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The identifier of the ReplicationCycle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The identifier of the ReplicationCycle.
+   * @param name name or {@code null} for none
+   */
+  public ReplicationCycle setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
 
   /**
    * The current progress in percentage of this cycle.

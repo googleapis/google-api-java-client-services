@@ -71,6 +71,13 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String locationId;
 
   /**
+   * Output only. Resource name of the form: `projects/locations/runtimeConfig`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Output only. The endpoint of the connectors runtime ingress.
    * The value may be {@code null}.
    */
@@ -188,6 +195,23 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
    */
   public RuntimeConfig setLocationId(java.lang.String locationId) {
     this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * Output only. Resource name of the form: `projects/locations/runtimeConfig`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. Resource name of the form: `projects/locations/runtimeConfig`
+   * @param name name or {@code null} for none
+   */
+  public RuntimeConfig setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

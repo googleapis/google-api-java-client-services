@@ -58,6 +58,13 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
   private Oauth2JwtBearer oauth2JwtBearer;
 
   /**
+   * SSH Public Key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SshPublicKey sshPublicKey;
+
+  /**
    * UserPassword.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    */
   public AuthConfig setOauth2JwtBearer(Oauth2JwtBearer oauth2JwtBearer) {
     this.oauth2JwtBearer = oauth2JwtBearer;
+    return this;
+  }
+
+  /**
+   * SSH Public Key.
+   * @return value or {@code null} for none
+   */
+  public SshPublicKey getSshPublicKey() {
+    return sshPublicKey;
+  }
+
+  /**
+   * SSH Public Key.
+   * @param sshPublicKey sshPublicKey or {@code null} for none
+   */
+  public AuthConfig setSshPublicKey(SshPublicKey sshPublicKey) {
+    this.sshPublicKey = sshPublicKey;
     return this;
   }
 

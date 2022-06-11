@@ -117,7 +117,7 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
   private PubsubDestination pubsubDestination;
 
   /**
-   * List of output sprite sheets.
+   * List of output sprite sheets. Spritesheets require at least one VideoStream in the Jobconfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,7 +277,7 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of output sprite sheets.
+   * List of output sprite sheets. Spritesheets require at least one VideoStream in the Jobconfig.
    * @return value or {@code null} for none
    */
   public java.util.List<SpriteSheet> getSpriteSheets() {
@@ -285,7 +285,7 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of output sprite sheets.
+   * List of output sprite sheets. Spritesheets require at least one VideoStream in the Jobconfig.
    * @param spriteSheets spriteSheets or {@code null} for none
    */
   public JobConfig setSpriteSheets(java.util.List<SpriteSheet> spriteSheets) {

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-dfareporting</artifactId>
-      <version>v4-rev20220607-1.32.1</version>
+      <version>v4-rev20220611-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-dfareporting:v4-rev20220607-1.32.1'
+  implementation 'com.google.apis:google-api-services-dfareporting:v4-rev20220611-1.32.1'
 }
 ```
 

@@ -39,6 +39,19 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String channel;
 
   /**
+   * Output only. The reason(s) why a trigger is in FAILED state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, StateCondition> conditions;
+
+  static {
+    // hack to force ProGuard to consider StateCondition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StateCondition.class);
+  }
+
+  /**
    * Output only. The creation time.
    * The value may be {@code null}.
    */
@@ -147,6 +160,23 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    */
   public Trigger setChannel(java.lang.String channel) {
     this.channel = channel;
+    return this;
+  }
+
+  /**
+   * Output only. The reason(s) why a trigger is in FAILED state.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, StateCondition> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * Output only. The reason(s) why a trigger is in FAILED state.
+   * @param conditions conditions or {@code null} for none
+   */
+  public Trigger setConditions(java.util.Map<String, StateCondition> conditions) {
+    this.conditions = conditions;
     return this;
   }
 

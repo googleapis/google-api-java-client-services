@@ -31,6 +31,7 @@ public final class HistogramSeries extends com.google.api.client.json.GenericJso
 
   /**
    * The color of the column representing this series in each bucket. This field is optional.
+   * Deprecated: Use bar_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +54,7 @@ public final class HistogramSeries extends com.google.api.client.json.GenericJso
 
   /**
    * The color of the column representing this series in each bucket. This field is optional.
+   * Deprecated: Use bar_color_style.
    * @return value or {@code null} for none
    */
   public Color getBarColor() {
@@ -61,6 +63,7 @@ public final class HistogramSeries extends com.google.api.client.json.GenericJso
 
   /**
    * The color of the column representing this series in each bucket. This field is optional.
+   * Deprecated: Use bar_color_style.
    * @param barColor barColor or {@code null} for none
    */
   public HistogramSeries setBarColor(Color barColor) {

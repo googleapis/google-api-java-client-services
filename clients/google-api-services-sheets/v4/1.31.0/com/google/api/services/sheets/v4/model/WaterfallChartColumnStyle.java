@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class WaterfallChartColumnStyle extends com.google.api.client.json.GenericJson {
 
   /**
-   * The color of the column.
+   * The color of the column. Deprecated: Use color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class WaterfallChartColumnStyle extends com.google.api.client.json.
   private java.lang.String label;
 
   /**
-   * The color of the column.
+   * The color of the column. Deprecated: Use color_style.
    * @return value or {@code null} for none
    */
   public Color getColor() {
@@ -59,7 +59,7 @@ public final class WaterfallChartColumnStyle extends com.google.api.client.json.
   }
 
   /**
-   * The color of the column.
+   * The color of the column. Deprecated: Use color_style.
    * @param color color or {@code null} for none
    */
   public WaterfallChartColumnStyle setColor(Color color) {

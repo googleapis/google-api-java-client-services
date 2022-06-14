@@ -45,7 +45,7 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
 
   /**
    * Color to be used, in case baseline value represents a negative change for key value. This field
-   * is optional.
+   * is optional. Deprecated: Use negative_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
 
   /**
    * Color to be used, in case baseline value represents a positive change for key value. This field
-   * is optional.
+   * is optional. Deprecated: Use positive_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
 
   /**
    * Color to be used, in case baseline value represents a negative change for key value. This field
-   * is optional.
+   * is optional. Deprecated: Use negative_color_style.
    * @return value or {@code null} for none
    */
   public Color getNegativeColor() {
@@ -135,7 +135,7 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
 
   /**
    * Color to be used, in case baseline value represents a negative change for key value. This field
-   * is optional.
+   * is optional. Deprecated: Use negative_color_style.
    * @param negativeColor negativeColor or {@code null} for none
    */
   public BaselineValueFormat setNegativeColor(Color negativeColor) {
@@ -183,7 +183,7 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
 
   /**
    * Color to be used, in case baseline value represents a positive change for key value. This field
-   * is optional.
+   * is optional. Deprecated: Use positive_color_style.
    * @return value or {@code null} for none
    */
   public Color getPositiveColor() {
@@ -192,7 +192,7 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
 
   /**
    * Color to be used, in case baseline value represents a positive change for key value. This field
-   * is optional.
+   * is optional. Deprecated: Use positive_color_style.
    * @param positiveColor positiveColor or {@code null} for none
    */
   public BaselineValueFormat setPositiveColor(Color positiveColor) {

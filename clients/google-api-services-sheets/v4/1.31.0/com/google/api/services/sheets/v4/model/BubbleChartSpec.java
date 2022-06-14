@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class BubbleChartSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The bubble border color.
+   * The bubble border color. Deprecated: Use bubble_border_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   private ChartData series;
 
   /**
-   * The bubble border color.
+   * The bubble border color. Deprecated: Use bubble_border_color_style.
    * @return value or {@code null} for none
    */
   public Color getBubbleBorderColor() {
@@ -131,7 +131,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bubble border color.
+   * The bubble border color. Deprecated: Use bubble_border_color_style.
    * @param bubbleBorderColor bubbleBorderColor or {@code null} for none
    */
   public BubbleChartSpec setBubbleBorderColor(Color bubbleBorderColor) {

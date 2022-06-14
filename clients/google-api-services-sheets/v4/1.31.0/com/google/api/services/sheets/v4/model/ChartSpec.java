@@ -37,7 +37,8 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String altText;
 
   /**
-   * The background color of the entire chart. Not applicable to Org charts.
+   * The background color of the entire chart. Not applicable to Org charts. Deprecated: Use
+   * background_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +221,8 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The background color of the entire chart. Not applicable to Org charts.
+   * The background color of the entire chart. Not applicable to Org charts. Deprecated: Use
+   * background_color_style.
    * @return value or {@code null} for none
    */
   public Color getBackgroundColor() {
@@ -228,7 +230,8 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The background color of the entire chart. Not applicable to Org charts.
+   * The background color of the entire chart. Not applicable to Org charts. Deprecated: Use
+   * background_color_style.
    * @param backgroundColor backgroundColor or {@code null} for none
    */
   public ChartSpec setBackgroundColor(Color backgroundColor) {

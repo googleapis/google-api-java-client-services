@@ -31,7 +31,7 @@ package com.google.api.services.sheets.v4.model;
 public final class InterpolationPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * The color this interpolation point should use.
+   * The color this interpolation point should use. Deprecated: Use color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class InterpolationPoint extends com.google.api.client.json.Generic
   private java.lang.String value;
 
   /**
-   * The color this interpolation point should use.
+   * The color this interpolation point should use. Deprecated: Use color_style.
    * @return value or {@code null} for none
    */
   public Color getColor() {
@@ -68,7 +68,7 @@ public final class InterpolationPoint extends com.google.api.client.json.Generic
   }
 
   /**
-   * The color this interpolation point should use.
+   * The color this interpolation point should use. Deprecated: Use color_style.
    * @param color color or {@code null} for none
    */
   public InterpolationPoint setColor(Color color) {

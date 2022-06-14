@@ -89,7 +89,7 @@ public final class SheetProperties extends com.google.api.client.json.GenericJso
   private java.lang.String sheetType;
 
   /**
-   * The color of the tab in the UI.
+   * The color of the tab in the UI. Deprecated: Use tab_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +249,7 @@ public final class SheetProperties extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The color of the tab in the UI.
+   * The color of the tab in the UI. Deprecated: Use tab_color_style.
    * @return value or {@code null} for none
    */
   public Color getTabColor() {
@@ -257,7 +257,7 @@ public final class SheetProperties extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The color of the tab in the UI.
+   * The color of the tab in the UI. Deprecated: Use tab_color_style.
    * @param tabColor tabColor or {@code null} for none
    */
   public SheetProperties setTabColor(Color tabColor) {

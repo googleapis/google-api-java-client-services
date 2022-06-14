@@ -54,7 +54,7 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
   private TreemapChartColorScale colorScale;
 
   /**
-   * The background color for header cells.
+   * The background color for header cells. Deprecated: Use header_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +196,7 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The background color for header cells.
+   * The background color for header cells. Deprecated: Use header_color_style.
    * @return value or {@code null} for none
    */
   public Color getHeaderColor() {
@@ -204,7 +204,7 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The background color for header cells.
+   * The background color for header cells. Deprecated: Use header_color_style.
    * @param headerColor headerColor or {@code null} for none
    */
   public TreemapChartSpec setHeaderColor(Color headerColor) {

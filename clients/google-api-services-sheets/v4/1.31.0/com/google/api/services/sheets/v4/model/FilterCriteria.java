@@ -46,7 +46,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with visible_foreground_color.
+   * exclusive with visible_foreground_color. Deprecated: Use visible_background_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The foreground color to filter by; only cells with this foreground color are shown. Mutually
-   * exclusive with visible_background_color.
+   * exclusive with visible_background_color. Deprecated: Use visible_foreground_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with visible_foreground_color.
+   * exclusive with visible_foreground_color. Deprecated: Use visible_background_color_style.
    * @return value or {@code null} for none
    */
   public Color getVisibleBackgroundColor() {
@@ -125,7 +125,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with visible_foreground_color.
+   * exclusive with visible_foreground_color. Deprecated: Use visible_background_color_style.
    * @param visibleBackgroundColor visibleBackgroundColor or {@code null} for none
    */
   public FilterCriteria setVisibleBackgroundColor(Color visibleBackgroundColor) {
@@ -156,7 +156,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The foreground color to filter by; only cells with this foreground color are shown. Mutually
-   * exclusive with visible_background_color.
+   * exclusive with visible_background_color. Deprecated: Use visible_foreground_color_style.
    * @return value or {@code null} for none
    */
   public Color getVisibleForegroundColor() {
@@ -165,7 +165,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The foreground color to filter by; only cells with this foreground color are shown. Mutually
-   * exclusive with visible_background_color.
+   * exclusive with visible_background_color. Deprecated: Use visible_foreground_color_style.
    * @param visibleForegroundColor visibleForegroundColor or {@code null} for none
    */
   public FilterCriteria setVisibleForegroundColor(Color visibleForegroundColor) {

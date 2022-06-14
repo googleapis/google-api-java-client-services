@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class CellFormat extends com.google.api.client.json.GenericJson {
 
   /**
-   * The background color of the cell.
+   * The background color of the cell. Deprecated: Use background_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   private java.lang.String wrapStrategy;
 
   /**
-   * The background color of the cell.
+   * The background color of the cell. Deprecated: Use background_color_style.
    * @return value or {@code null} for none
    */
   public Color getBackgroundColor() {
@@ -124,7 +124,7 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The background color of the cell.
+   * The background color of the cell. Deprecated: Use background_color_style.
    * @param backgroundColor backgroundColor or {@code null} for none
    */
   public CellFormat setBackgroundColor(Color backgroundColor) {

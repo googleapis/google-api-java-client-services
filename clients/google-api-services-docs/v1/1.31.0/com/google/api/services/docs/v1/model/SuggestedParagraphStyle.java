@@ -31,7 +31,8 @@ public final class SuggestedParagraphStyle extends com.google.api.client.json.Ge
 
   /**
    * A ParagraphStyle that only includes the changes made in this suggestion. This can be used along
-   * with the paragraph_suggestion_state to see which fields have changed and their new values.
+   * with the paragraph_style_suggestion_state to see which fields have changed and their new
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class SuggestedParagraphStyle extends com.google.api.client.json.Ge
 
   /**
    * A ParagraphStyle that only includes the changes made in this suggestion. This can be used along
-   * with the paragraph_suggestion_state to see which fields have changed and their new values.
+   * with the paragraph_style_suggestion_state to see which fields have changed and their new
+   * values.
    * @return value or {@code null} for none
    */
   public ParagraphStyle getParagraphStyle() {
@@ -56,7 +58,8 @@ public final class SuggestedParagraphStyle extends com.google.api.client.json.Ge
 
   /**
    * A ParagraphStyle that only includes the changes made in this suggestion. This can be used along
-   * with the paragraph_suggestion_state to see which fields have changed and their new values.
+   * with the paragraph_style_suggestion_state to see which fields have changed and their new
+   * values.
    * @param paragraphStyle paragraphStyle or {@code null} for none
    */
   public SuggestedParagraphStyle setParagraphStyle(ParagraphStyle paragraphStyle) {

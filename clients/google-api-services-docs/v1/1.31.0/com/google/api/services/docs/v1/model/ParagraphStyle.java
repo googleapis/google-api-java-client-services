@@ -177,7 +177,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * Whether the current paragraph should always start at the beginning of a page. If unset, the
-   * value is inherited from the parent.
+   * value is inherited from the parent. Attempting to update page_break_before for paragraphs in
+   * unsupported regions, including Table, Header, Footer and Footnote, can result in an invalid
+   * document state which returns a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -547,7 +549,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * Whether the current paragraph should always start at the beginning of a page. If unset, the
-   * value is inherited from the parent.
+   * value is inherited from the parent. Attempting to update page_break_before for paragraphs in
+   * unsupported regions, including Table, Header, Footer and Footnote, can result in an invalid
+   * document state which returns a 400 bad request error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPageBreakBefore() {
@@ -556,7 +560,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
 
   /**
    * Whether the current paragraph should always start at the beginning of a page. If unset, the
-   * value is inherited from the parent.
+   * value is inherited from the parent. Attempting to update page_break_before for paragraphs in
+   * unsupported regions, including Table, Header, Footer and Footnote, can result in an invalid
+   * document state which returns a 400 bad request error.
    * @param pageBreakBefore pageBreakBefore or {@code null} for none
    */
   public ParagraphStyle setPageBreakBefore(java.lang.Boolean pageBreakBefore) {

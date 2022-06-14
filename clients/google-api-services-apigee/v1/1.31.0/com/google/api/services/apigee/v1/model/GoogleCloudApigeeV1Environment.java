@@ -71,6 +71,15 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
   private java.lang.String displayName;
 
   /**
+   * Optional. Url of the forward proxy to be applied to the runtime instances in this environment.
+   * Must be in the format of {scheme}://{hostname}:{port}. Note that scheme must be one of "http"
+   * or "https", and port must be supplied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardProxyUri;
+
+  /**
    * Output only. Last modification time of this environment as milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -194,6 +203,27 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
    */
   public GoogleCloudApigeeV1Environment setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Url of the forward proxy to be applied to the runtime instances in this environment.
+   * Must be in the format of {scheme}://{hostname}:{port}. Note that scheme must be one of "http"
+   * or "https", and port must be supplied.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardProxyUri() {
+    return forwardProxyUri;
+  }
+
+  /**
+   * Optional. Url of the forward proxy to be applied to the runtime instances in this environment.
+   * Must be in the format of {scheme}://{hostname}:{port}. Note that scheme must be one of "http"
+   * or "https", and port must be supplied.
+   * @param forwardProxyUri forwardProxyUri or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Environment setForwardProxyUri(java.lang.String forwardProxyUri) {
+    this.forwardProxyUri = forwardProxyUri;
     return this;
   }
 

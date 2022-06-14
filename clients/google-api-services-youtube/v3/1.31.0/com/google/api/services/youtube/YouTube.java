@@ -13529,7 +13529,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       return result;
     }
 
-    public class List extends YouTubeRequest<com.google.api.services.youtube.model.ThirdPartyLink> {
+    public class List extends YouTubeRequest<com.google.api.services.youtube.model.ThirdPartyLinkListResponse> {
 
       private static final String REST_PATH = "youtube/v3/thirdPartyLinks";
 
@@ -13548,7 +13548,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * @since 1.13
        */
       protected List(java.util.List<java.lang.String> part) {
-        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.ThirdPartyLink.class);
+        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.ThirdPartyLinkListResponse.class);
         this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
       }
 

@@ -47,6 +47,13 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ipAddresses;
 
   /**
+   * The list of matched signatures indicating that the given process is present in the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ProcessSignature> signatures;
+
+  /**
    * List of domains associated to the Finding.
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class Indicator extends com.google.api.client.json.GenericJson {
    */
   public Indicator setIpAddresses(java.util.List<java.lang.String> ipAddresses) {
     this.ipAddresses = ipAddresses;
+    return this;
+  }
+
+  /**
+   * The list of matched signatures indicating that the given process is present in the environment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ProcessSignature> getSignatures() {
+    return signatures;
+  }
+
+  /**
+   * The list of matched signatures indicating that the given process is present in the environment.
+   * @param signatures signatures or {@code null} for none
+   */
+  public Indicator setSignatures(java.util.List<ProcessSignature> signatures) {
+    this.signatures = signatures;
     return this;
   }
 

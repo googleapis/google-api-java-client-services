@@ -92,6 +92,14 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
   private java.util.List<GoogleCloudApigeeV1FlowHookConfig> flowhooks;
 
   /**
+   * The forward proxy's url to be used by the runtime. When set, runtime will send requests to the
+   * target via the given forward proxy. This is only used by programmable gateways.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardProxyUri;
+
+  /**
    * The location for the gateway config blob as a URI, e.g. a Cloud Storage URI. This is only used
    * by Envoy-based gateways.
    * The value may be {@code null}.
@@ -299,6 +307,25 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
    */
   public GoogleCloudApigeeV1EnvironmentConfig setFlowhooks(java.util.List<GoogleCloudApigeeV1FlowHookConfig> flowhooks) {
     this.flowhooks = flowhooks;
+    return this;
+  }
+
+  /**
+   * The forward proxy's url to be used by the runtime. When set, runtime will send requests to the
+   * target via the given forward proxy. This is only used by programmable gateways.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardProxyUri() {
+    return forwardProxyUri;
+  }
+
+  /**
+   * The forward proxy's url to be used by the runtime. When set, runtime will send requests to the
+   * target via the given forward proxy. This is only used by programmable gateways.
+   * @param forwardProxyUri forwardProxyUri or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentConfig setForwardProxyUri(java.lang.String forwardProxyUri) {
+    this.forwardProxyUri = forwardProxyUri;
     return this;
   }
 

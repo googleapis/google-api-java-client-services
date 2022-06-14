@@ -23,8 +23,8 @@ package com.google.api.services.prod_tt_sasportal.v1alpha1;
  */
 public class SASPortalTestingScopes {
 
-  /** See your primary Google Account email address. */
-  public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
+  /** Read, create, update, and delete your SAS Portal data.. */
+  public static final String SASPORTAL = "https://www.googleapis.com/auth/sasportal";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -33,7 +33,7 @@ public class SASPortalTestingScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(USERINFO_EMAIL);
+    set.add(SASPORTAL);
     return java.util.Collections.unmodifiableSet(set);
   }
 

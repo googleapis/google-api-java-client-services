@@ -23,7 +23,7 @@ package com.google.api.services.localservices.v1;
  */
 public class LocalservicesScopes {
 
-  /** Manage your AdWords campaigns. */
+  /** See, edit, create, and delete your Google Ads accounts and data.. */
   public static final String ADWORDS = "https://www.googleapis.com/auth/adwords";
 
   /**

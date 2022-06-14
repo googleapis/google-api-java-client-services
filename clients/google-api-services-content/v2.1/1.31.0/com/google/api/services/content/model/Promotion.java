@@ -17,12 +17,10 @@
 package com.google.api.services.content.model;
 
 /**
- * The Promotions feature is available for `AU`, `CA`, `DE`, `FR`, `GB`, `IN` and `US` target
- * countries, and `en` content language. Represents a promotion. See the following articles for more
- * details. * [Promotions feed specification](https://support.google.com/merchants/answer/2906014) *
- * [Local promotions feed specification](https://support.google.com/merchants/answer/10146130) *
- * [Promotions on Buy on Google product data
- * specification](https://support.google.com/merchants/answer/9173673)
+ * Represents a promotion. See the following articles for more details. * [Promotions feed
+ * specification](https://support.google.com/merchants/answer/2906014) * [Local promotions feed
+ * specification](https://support.google.com/merchants/answer/10146130) * [Promotions on Buy on
+ * Google product data specification](https://support.google.com/merchants/answer/9173673)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -50,8 +48,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> brandExclusion;
 
   /**
-   * Required. The content language used as part of the unique identifier. Currently only `en` value
-   * is supported.
+   * Required. The content language used as part of the unique identifier. `en` content language is
+   * available for all target countries. `fr` content language is available for `CA` and `FR` target
+   * countries, and `de` content language is available for `DE` target country.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,8 +328,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The content language used as part of the unique identifier. Currently only `en` value
-   * is supported.
+   * Required. The content language used as part of the unique identifier. `en` content language is
+   * available for all target countries. `fr` content language is available for `CA` and `FR` target
+   * countries, and `de` content language is available for `DE` target country.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -338,8 +338,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The content language used as part of the unique identifier. Currently only `en` value
-   * is supported.
+   * Required. The content language used as part of the unique identifier. `en` content language is
+   * available for all target countries. `fr` content language is available for `CA` and `FR` target
+   * countries, and `de` content language is available for `DE` target country.
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public Promotion setContentLanguage(java.lang.String contentLanguage) {

@@ -38,14 +38,16 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   private java.util.List<IpConfig> ipConfigs;
 
   /**
-   * A name must be in the format `projects/locations/targetHttpsProxies`.
+   * This field returns the resource name in the following format:
+   * `//compute.googleapis.com/projects/global/targetHttpsProxies`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetHttpsProxy;
 
   /**
-   * A name must be in the format `projects/locations/targetSslProxies`.
+   * This field returns the resource name in the following format:
+   * `//compute.googleapis.com/projects/global/targetSslProxies`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +71,8 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A name must be in the format `projects/locations/targetHttpsProxies`.
+   * This field returns the resource name in the following format:
+   * `//compute.googleapis.com/projects/global/targetHttpsProxies`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetHttpsProxy() {
@@ -77,7 +80,8 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A name must be in the format `projects/locations/targetHttpsProxies`.
+   * This field returns the resource name in the following format:
+   * `//compute.googleapis.com/projects/global/targetHttpsProxies`.
    * @param targetHttpsProxy targetHttpsProxy or {@code null} for none
    */
   public GclbTarget setTargetHttpsProxy(java.lang.String targetHttpsProxy) {
@@ -86,7 +90,8 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A name must be in the format `projects/locations/targetSslProxies`.
+   * This field returns the resource name in the following format:
+   * `//compute.googleapis.com/projects/global/targetSslProxies`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetSslProxy() {
@@ -94,7 +99,8 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A name must be in the format `projects/locations/targetSslProxies`.
+   * This field returns the resource name in the following format:
+   * `//compute.googleapis.com/projects/global/targetSslProxies`.
    * @param targetSslProxy targetSslProxy or {@code null} for none
    */
   public GclbTarget setTargetSslProxy(java.lang.String targetSslProxy) {

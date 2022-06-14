@@ -47,7 +47,7 @@ public final class GoogleChromePolicyV1ResolveRequest extends com.google.api.cli
    * The schema filter to apply to the resolve request. Specify a schema name to view a particular
    * schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only in the
    * leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please read
-   * https://developers.google.com/chrome/chrome-management/guides/policyapi for details on schema
+   * https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
    * namepsaces. For example: Valid: "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*"
    * Invalid: "*", "*.users", "chrome.*", "chrome.*.apps.*"
    * The value may be {@code null}.
@@ -101,7 +101,7 @@ public final class GoogleChromePolicyV1ResolveRequest extends com.google.api.cli
    * The schema filter to apply to the resolve request. Specify a schema name to view a particular
    * schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only in the
    * leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please read
-   * https://developers.google.com/chrome/chrome-management/guides/policyapi for details on schema
+   * https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
    * namepsaces. For example: Valid: "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*"
    * Invalid: "*", "*.users", "chrome.*", "chrome.*.apps.*"
    * @return value or {@code null} for none
@@ -114,7 +114,7 @@ public final class GoogleChromePolicyV1ResolveRequest extends com.google.api.cli
    * The schema filter to apply to the resolve request. Specify a schema name to view a particular
    * schema, for example: chrome.users.ShowLogoutButton Wildcards are supported, but only in the
    * leaf portion of the schema name. Wildcards cannot be used in namespace directly. Please read
-   * https://developers.google.com/chrome/chrome-management/guides/policyapi for details on schema
+   * https://developers.google.com/chrome/policy/guides/policy-schemas for details on schema
    * namepsaces. For example: Valid: "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*"
    * Invalid: "*", "*.users", "chrome.*", "chrome.*.apps.*"
    * @param policySchemaFilter policySchemaFilter or {@code null} for none

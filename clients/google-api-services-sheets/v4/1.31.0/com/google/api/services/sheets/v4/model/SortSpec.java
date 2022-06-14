@@ -31,7 +31,7 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * The background fill color to sort by; cells with this fill color are sorted to the top.
-   * Mutually exclusive with foreground_color.
+   * Mutually exclusive with foreground_color. Deprecated: Use background_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * The foreground color to sort by; cells with this foreground color are sorted to the top.
-   * Mutually exclusive with background_color.
+   * Mutually exclusive with background_color. Deprecated: Use foreground_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * The background fill color to sort by; cells with this fill color are sorted to the top.
-   * Mutually exclusive with foreground_color.
+   * Mutually exclusive with foreground_color. Deprecated: Use background_color_style.
    * @return value or {@code null} for none
    */
   public Color getBackgroundColor() {
@@ -95,7 +95,7 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * The background fill color to sort by; cells with this fill color are sorted to the top.
-   * Mutually exclusive with foreground_color.
+   * Mutually exclusive with foreground_color. Deprecated: Use background_color_style.
    * @param backgroundColor backgroundColor or {@code null} for none
    */
   public SortSpec setBackgroundColor(Color backgroundColor) {
@@ -160,7 +160,7 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * The foreground color to sort by; cells with this foreground color are sorted to the top.
-   * Mutually exclusive with background_color.
+   * Mutually exclusive with background_color. Deprecated: Use foreground_color_style.
    * @return value or {@code null} for none
    */
   public Color getForegroundColor() {
@@ -169,7 +169,7 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * The foreground color to sort by; cells with this foreground color are sorted to the top.
-   * Mutually exclusive with background_color.
+   * Mutually exclusive with background_color. Deprecated: Use foreground_color_style.
    * @param foregroundColor foregroundColor or {@code null} for none
    */
   public SortSpec setForegroundColor(Color foregroundColor) {

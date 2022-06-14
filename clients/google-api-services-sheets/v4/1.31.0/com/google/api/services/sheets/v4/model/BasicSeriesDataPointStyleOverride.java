@@ -30,7 +30,8 @@ package com.google.api.services.sheets.v4.model;
 public final class BasicSeriesDataPointStyleOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Color of the series data point. If empty, the series default is used.
+   * Color of the series data point. If empty, the series default is used. Deprecated: Use
+   * color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class BasicSeriesDataPointStyleOverride extends com.google.api.clie
   private PointStyle pointStyle;
 
   /**
-   * Color of the series data point. If empty, the series default is used.
+   * Color of the series data point. If empty, the series default is used. Deprecated: Use
+   * color_style.
    * @return value or {@code null} for none
    */
   public Color getColor() {
@@ -69,7 +71,8 @@ public final class BasicSeriesDataPointStyleOverride extends com.google.api.clie
   }
 
   /**
-   * Color of the series data point. If empty, the series default is used.
+   * Color of the series data point. If empty, the series default is used. Deprecated: Use
+   * color_style.
    * @param color color or {@code null} for none
    */
   public BasicSeriesDataPointStyleOverride setColor(Color color) {

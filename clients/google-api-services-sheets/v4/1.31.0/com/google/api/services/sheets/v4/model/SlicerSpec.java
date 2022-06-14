@@ -37,7 +37,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean applyToPivotTables;
 
   /**
-   * The background color of the slicer.
+   * The background color of the slicer. Deprecated: Use background_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The background color of the slicer.
+   * The background color of the slicer. Deprecated: Use background_color_style.
    * @return value or {@code null} for none
    */
   public Color getBackgroundColor() {
@@ -119,7 +119,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The background color of the slicer.
+   * The background color of the slicer. Deprecated: Use background_color_style.
    * @param backgroundColor backgroundColor or {@code null} for none
    */
   public SlicerSpec setBackgroundColor(Color backgroundColor) {

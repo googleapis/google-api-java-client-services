@@ -32,7 +32,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The color for elements (such as bars, lines, and points) associated with this series. If empty,
-   * a default color is used.
+   * a default color is used. Deprecated: Use color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The color for elements (such as bars, lines, and points) associated with this series. If empty,
-   * a default color is used.
+   * a default color is used. Deprecated: Use color_style.
    * @return value or {@code null} for none
    */
   public Color getColor() {
@@ -113,7 +113,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The color for elements (such as bars, lines, and points) associated with this series. If empty,
-   * a default color is used.
+   * a default color is used. Deprecated: Use color_style.
    * @param color color or {@code null} for none
    */
   public BasicChartSeries setColor(Color color) {

@@ -42,7 +42,7 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   private ChartData labels;
 
   /**
-   * The color of the org chart nodes.
+   * The color of the org chart nodes. Deprecated: Use node_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   private ChartData parentLabels;
 
   /**
-   * The color of the selected org chart nodes.
+   * The color of the selected org chart nodes. Deprecated: Use selected_node_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color of the org chart nodes.
+   * The color of the org chart nodes. Deprecated: Use node_color_style.
    * @return value or {@code null} for none
    */
   public Color getNodeColor() {
@@ -119,7 +119,7 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color of the org chart nodes.
+   * The color of the org chart nodes. Deprecated: Use node_color_style.
    * @param nodeColor nodeColor or {@code null} for none
    */
   public OrgChartSpec setNodeColor(Color nodeColor) {
@@ -181,7 +181,7 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color of the selected org chart nodes.
+   * The color of the selected org chart nodes. Deprecated: Use selected_node_color_style.
    * @return value or {@code null} for none
    */
   public Color getSelectedNodeColor() {
@@ -189,7 +189,7 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color of the selected org chart nodes.
+   * The color of the selected org chart nodes. Deprecated: Use selected_node_color_style.
    * @param selectedNodeColor selectedNodeColor or {@code null} for none
    */
   public OrgChartSpec setSelectedNodeColor(Color selectedNodeColor) {

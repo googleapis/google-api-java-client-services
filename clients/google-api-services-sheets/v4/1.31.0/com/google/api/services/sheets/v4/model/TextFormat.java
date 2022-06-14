@@ -51,7 +51,7 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   private java.lang.Integer fontSize;
 
   /**
-   * The foreground color of the text.
+   * The foreground color of the text. Deprecated: Use foreground_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The foreground color of the text.
+   * The foreground color of the text. Deprecated: Use foreground_color_style.
    * @return value or {@code null} for none
    */
   public Color getForegroundColor() {
@@ -156,7 +156,7 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The foreground color of the text.
+   * The foreground color of the text. Deprecated: Use foreground_color_style.
    * @param foregroundColor foregroundColor or {@code null} for none
    */
   public TextFormat setForegroundColor(Color foregroundColor) {

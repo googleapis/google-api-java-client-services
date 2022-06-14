@@ -31,7 +31,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value greater than or equal to maxValue. Defaults
-   * to #109618 if not specified.
+   * to #109618 if not specified. Deprecated: Use max_value_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value at the midpoint between minValue and
-   * maxValue. Defaults to #efe6dc if not specified.
+   * maxValue. Defaults to #efe6dc if not specified. Deprecated: Use mid_value_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value less than or equal to minValue. Defaults to
-   * #dc3912 if not specified.
+   * #dc3912 if not specified. Deprecated: Use min_value_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells that have no color data associated with them. Defaults to
-   * #000000 if not specified.
+   * #000000 if not specified. Deprecated: Use no_data_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value greater than or equal to maxValue. Defaults
-   * to #109618 if not specified.
+   * to #109618 if not specified. Deprecated: Use max_value_color_style.
    * @return value or {@code null} for none
    */
   public Color getMaxValueColor() {
@@ -105,7 +105,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value greater than or equal to maxValue. Defaults
-   * to #109618 if not specified.
+   * to #109618 if not specified. Deprecated: Use max_value_color_style.
    * @param maxValueColor maxValueColor or {@code null} for none
    */
   public TreemapChartColorScale setMaxValueColor(Color maxValueColor) {
@@ -134,7 +134,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value at the midpoint between minValue and
-   * maxValue. Defaults to #efe6dc if not specified.
+   * maxValue. Defaults to #efe6dc if not specified. Deprecated: Use mid_value_color_style.
    * @return value or {@code null} for none
    */
   public Color getMidValueColor() {
@@ -143,7 +143,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value at the midpoint between minValue and
-   * maxValue. Defaults to #efe6dc if not specified.
+   * maxValue. Defaults to #efe6dc if not specified. Deprecated: Use mid_value_color_style.
    * @param midValueColor midValueColor or {@code null} for none
    */
   public TreemapChartColorScale setMidValueColor(Color midValueColor) {
@@ -174,7 +174,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value less than or equal to minValue. Defaults to
-   * #dc3912 if not specified.
+   * #dc3912 if not specified. Deprecated: Use min_value_color_style.
    * @return value or {@code null} for none
    */
   public Color getMinValueColor() {
@@ -183,7 +183,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells with a color value less than or equal to minValue. Defaults to
-   * #dc3912 if not specified.
+   * #dc3912 if not specified. Deprecated: Use min_value_color_style.
    * @param minValueColor minValueColor or {@code null} for none
    */
   public TreemapChartColorScale setMinValueColor(Color minValueColor) {
@@ -212,7 +212,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells that have no color data associated with them. Defaults to
-   * #000000 if not specified.
+   * #000000 if not specified. Deprecated: Use no_data_color_style.
    * @return value or {@code null} for none
    */
   public Color getNoDataColor() {
@@ -221,7 +221,7 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
 
   /**
    * The background color for cells that have no color data associated with them. Defaults to
-   * #000000 if not specified.
+   * #000000 if not specified. Deprecated: Use no_data_color_style.
    * @param noDataColor noDataColor or {@code null} for none
    */
   public TreemapChartColorScale setNoDataColor(Color noDataColor) {

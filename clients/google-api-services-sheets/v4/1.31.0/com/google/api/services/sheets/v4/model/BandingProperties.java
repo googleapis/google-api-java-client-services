@@ -37,7 +37,7 @@ package com.google.api.services.sheets.v4.model;
 public final class BandingProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The first color that is alternating. (Required)
+   * The first color that is alternating. (Required) Deprecated: Use first_band_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   /**
    * The color of the last row or column. If this field is not set, the last row or column is filled
    * with either first_band_color or second_band_color, depending on the color of the previous row
-   * or column.
+   * or column. Deprecated: Use footer_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,8 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
    * The color of the first row or column. If this field is set, the first row or column is filled
    * with this color and the colors alternate between first_band_color and second_band_color
    * starting from the second row or column. Otherwise, the first row or column is filled with
-   * first_band_color and the colors proceed to alternate as they normally would.
+   * first_band_color and the colors proceed to alternate as they normally would. Deprecated: Use
+   * header_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +92,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   private ColorStyle headerColorStyle;
 
   /**
-   * The second color that is alternating. (Required)
+   * The second color that is alternating. (Required) Deprecated: Use second_band_color_style.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +107,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   private ColorStyle secondBandColorStyle;
 
   /**
-   * The first color that is alternating. (Required)
+   * The first color that is alternating. (Required) Deprecated: Use first_band_color_style.
    * @return value or {@code null} for none
    */
   public Color getFirstBandColor() {
@@ -114,7 +115,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The first color that is alternating. (Required)
+   * The first color that is alternating. (Required) Deprecated: Use first_band_color_style.
    * @param firstBandColor firstBandColor or {@code null} for none
    */
   public BandingProperties setFirstBandColor(Color firstBandColor) {
@@ -144,7 +145,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   /**
    * The color of the last row or column. If this field is not set, the last row or column is filled
    * with either first_band_color or second_band_color, depending on the color of the previous row
-   * or column.
+   * or column. Deprecated: Use footer_color_style.
    * @return value or {@code null} for none
    */
   public Color getFooterColor() {
@@ -154,7 +155,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   /**
    * The color of the last row or column. If this field is not set, the last row or column is filled
    * with either first_band_color or second_band_color, depending on the color of the previous row
-   * or column.
+   * or column. Deprecated: Use footer_color_style.
    * @param footerColor footerColor or {@code null} for none
    */
   public BandingProperties setFooterColor(Color footerColor) {
@@ -187,7 +188,8 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
    * The color of the first row or column. If this field is set, the first row or column is filled
    * with this color and the colors alternate between first_band_color and second_band_color
    * starting from the second row or column. Otherwise, the first row or column is filled with
-   * first_band_color and the colors proceed to alternate as they normally would.
+   * first_band_color and the colors proceed to alternate as they normally would. Deprecated: Use
+   * header_color_style.
    * @return value or {@code null} for none
    */
   public Color getHeaderColor() {
@@ -198,7 +200,8 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
    * The color of the first row or column. If this field is set, the first row or column is filled
    * with this color and the colors alternate between first_band_color and second_band_color
    * starting from the second row or column. Otherwise, the first row or column is filled with
-   * first_band_color and the colors proceed to alternate as they normally would.
+   * first_band_color and the colors proceed to alternate as they normally would. Deprecated: Use
+   * header_color_style.
    * @param headerColor headerColor or {@code null} for none
    */
   public BandingProperties setHeaderColor(Color headerColor) {
@@ -232,7 +235,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The second color that is alternating. (Required)
+   * The second color that is alternating. (Required) Deprecated: Use second_band_color_style.
    * @return value or {@code null} for none
    */
   public Color getSecondBandColor() {
@@ -240,7 +243,7 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The second color that is alternating. (Required)
+   * The second color that is alternating. (Required) Deprecated: Use second_band_color_style.
    * @param secondBandColor secondBandColor or {@code null} for none
    */
   public BandingProperties setSecondBandColor(Color secondBandColor) {

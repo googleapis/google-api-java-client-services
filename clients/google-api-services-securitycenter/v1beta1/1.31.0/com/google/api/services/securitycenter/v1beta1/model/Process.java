@@ -85,6 +85,14 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The process name visible in utilities like top and ps; it can be accessed via /proc/[pid]/comm
+   * and changed with prctl(PR_SET_NAME).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The parent process id.
    * The value may be {@code null}.
    */
@@ -206,6 +214,25 @@ public final class Process extends com.google.api.client.json.GenericJson {
    */
   public Process setLibraries(java.util.List<File> libraries) {
     this.libraries = libraries;
+    return this;
+  }
+
+  /**
+   * The process name visible in utilities like top and ps; it can be accessed via /proc/[pid]/comm
+   * and changed with prctl(PR_SET_NAME).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The process name visible in utilities like top and ps; it can be accessed via /proc/[pid]/comm
+   * and changed with prctl(PR_SET_NAME).
+   * @param name name or {@code null} for none
+   */
+  public Process setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

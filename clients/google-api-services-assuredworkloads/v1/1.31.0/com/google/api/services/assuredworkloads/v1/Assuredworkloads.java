@@ -1408,6 +1408,162 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Restrict the list of resources allowed in the Workload environment. The current list of allowed
+         * products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In
+         * addition to assuredworkloads.workload.update permission, the user should also have
+         * orgpolicy.policy.set permission on the folder resource to use this functionality.
+         *
+         * Create a request for the method "workloads.restrictAllowedResources".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link RestrictAllowedResources#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The resource name of the Workload. This is the workloads's relative path in the API,
+         *        formatted as
+         *        "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
+         *        example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
+         * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest}
+         * @return the request
+         */
+        public RestrictAllowedResources restrictAllowedResources(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest content) throws java.io.IOException {
+          RestrictAllowedResources result = new RestrictAllowedResources(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RestrictAllowedResources extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:restrictAllowedResources";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+          /**
+           * Restrict the list of resources allowed in the Workload environment. The current list of allowed
+           * products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In
+           * addition to assuredworkloads.workload.update permission, the user should also have
+           * orgpolicy.policy.set permission on the folder resource to use this functionality.
+           *
+           * Create a request for the method "workloads.restrictAllowedResources".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link RestrictAllowedResources#execute()} method to invoke the
+           * remote operation. <p> {@link RestrictAllowedResources#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Workload. This is the workloads's relative path in the API,
+         *        formatted as
+         *        "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
+         *        example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
+           * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest}
+           * @since 1.13
+           */
+          protected RestrictAllowedResources(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest content) {
+            super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+          }
+
+          @Override
+          public RestrictAllowedResources set$Xgafv(java.lang.String $Xgafv) {
+            return (RestrictAllowedResources) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RestrictAllowedResources setAccessToken(java.lang.String accessToken) {
+            return (RestrictAllowedResources) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RestrictAllowedResources setAlt(java.lang.String alt) {
+            return (RestrictAllowedResources) super.setAlt(alt);
+          }
+
+          @Override
+          public RestrictAllowedResources setCallback(java.lang.String callback) {
+            return (RestrictAllowedResources) super.setCallback(callback);
+          }
+
+          @Override
+          public RestrictAllowedResources setFields(java.lang.String fields) {
+            return (RestrictAllowedResources) super.setFields(fields);
+          }
+
+          @Override
+          public RestrictAllowedResources setKey(java.lang.String key) {
+            return (RestrictAllowedResources) super.setKey(key);
+          }
+
+          @Override
+          public RestrictAllowedResources setOauthToken(java.lang.String oauthToken) {
+            return (RestrictAllowedResources) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RestrictAllowedResources setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RestrictAllowedResources) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RestrictAllowedResources setQuotaUser(java.lang.String quotaUser) {
+            return (RestrictAllowedResources) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RestrictAllowedResources setUploadType(java.lang.String uploadType) {
+            return (RestrictAllowedResources) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RestrictAllowedResources setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RestrictAllowedResources) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Workload. This is the workloads's relative path in
+           * the API, formatted as
+           * "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
+           * example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Workload. This is the workloads's relative path in the API,
+         formatted as "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
+         example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the Workload. This is the workloads's relative path in
+           * the API, formatted as
+           * "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}". For
+           * example, "organizations/123/locations/us-east1/workloads/assured-workload-1".
+           */
+          public RestrictAllowedResources setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RestrictAllowedResources set(String parameterName, Object value) {
+            return (RestrictAllowedResources) super.set(parameterName, value);
+          }
+        }
 
       }
     }

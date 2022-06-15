@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ReviewDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The document schema of the human review task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1DocumentSchema documentSchema;
+
+  /**
    * Whether the validation should be performed on the ad-hoc review request.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDocumentaiV1ReviewDocumentRequest extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.String priority;
+
+  /**
+   * The document schema of the human review task.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentSchema getDocumentSchema() {
+    return documentSchema;
+  }
+
+  /**
+   * The document schema of the human review task.
+   * @param documentSchema documentSchema or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ReviewDocumentRequest setDocumentSchema(GoogleCloudDocumentaiV1DocumentSchema documentSchema) {
+    this.documentSchema = documentSchema;
+    return this;
+  }
 
   /**
    * Whether the validation should be performed on the ad-hoc review request.

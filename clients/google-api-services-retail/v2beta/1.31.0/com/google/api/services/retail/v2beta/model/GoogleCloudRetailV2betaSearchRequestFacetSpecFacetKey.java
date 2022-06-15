@@ -30,8 +30,8 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to make facet keys case insensitive when getting faceting values with prefixes or
-   * contains.
+   * True to make facet keys case insensitive when getting faceting values with prefixes or
+   * contains; false otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +127,8 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   private java.util.List<java.lang.String> restrictedValues;
 
   /**
-   * Whether to make facet keys case insensitive when getting faceting values with prefixes or
-   * contains.
+   * True to make facet keys case insensitive when getting faceting values with prefixes or
+   * contains; false otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCaseInsensitive() {
@@ -136,8 +136,8 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   }
 
   /**
-   * Whether to make facet keys case insensitive when getting faceting values with prefixes or
-   * contains.
+   * True to make facet keys case insensitive when getting faceting values with prefixes or
+   * contains; false otherwise.
    * @param caseInsensitive caseInsensitive or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey setCaseInsensitive(java.lang.Boolean caseInsensitive) {

@@ -31,14 +31,28 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1ReviewDocumentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Cloud Storage uri for the human reviewed document.
+   * The Cloud Storage uri for the human reviewed document if the review is succeeded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsDestination;
 
   /**
-   * The Cloud Storage uri for the human reviewed document.
+   * The reason why the review is rejected by reviewer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rejectionReason;
+
+  /**
+   * The state of the review operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * The Cloud Storage uri for the human reviewed document if the review is succeeded.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsDestination() {
@@ -46,11 +60,45 @@ public final class GoogleCloudDocumentaiV1ReviewDocumentResponse extends com.goo
   }
 
   /**
-   * The Cloud Storage uri for the human reviewed document.
+   * The Cloud Storage uri for the human reviewed document if the review is succeeded.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ReviewDocumentResponse setGcsDestination(java.lang.String gcsDestination) {
     this.gcsDestination = gcsDestination;
+    return this;
+  }
+
+  /**
+   * The reason why the review is rejected by reviewer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRejectionReason() {
+    return rejectionReason;
+  }
+
+  /**
+   * The reason why the review is rejected by reviewer.
+   * @param rejectionReason rejectionReason or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ReviewDocumentResponse setRejectionReason(java.lang.String rejectionReason) {
+    this.rejectionReason = rejectionReason;
+    return this;
+  }
+
+  /**
+   * The state of the review operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * The state of the review operation.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ReviewDocumentResponse setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

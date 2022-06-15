@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest extends com
   private GoogleCloudDocumentaiV1beta3Document document;
 
   /**
+   * The document schema of the human review task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema;
+
+  /**
    * Whether the validation should be performed on the ad-hoc review request.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest extends com
    */
   public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest setDocument(GoogleCloudDocumentaiV1beta3Document document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * The document schema of the human review task.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentSchema getDocumentSchema() {
+    return documentSchema;
+  }
+
+  /**
+   * The document schema of the human review task.
+   * @param documentSchema documentSchema or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest setDocumentSchema(GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema) {
+    this.documentSchema = documentSchema;
     return this;
   }
 

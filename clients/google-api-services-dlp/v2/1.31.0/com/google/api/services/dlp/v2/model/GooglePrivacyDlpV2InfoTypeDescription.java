@@ -31,6 +31,19 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.client.json.GenericJson {
 
   /**
+   * The category of the infoType.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2InfoTypeCategory> categories;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2InfoTypeCategory used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2InfoTypeCategory.class);
+  }
+
+  /**
    * Description of the infotype. Translated when language is provided in the request.
    * The value may be {@code null}.
    */
@@ -57,6 +70,23 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedBy;
+
+  /**
+   * The category of the infoType.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2InfoTypeCategory> getCategories() {
+    return categories;
+  }
+
+  /**
+   * The category of the infoType.
+   * @param categories categories or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeDescription setCategories(java.util.List<GooglePrivacyDlpV2InfoTypeCategory> categories) {
+    this.categories = categories;
+    return this;
+  }
 
   /**
    * Description of the infotype. Translated when language is provided in the request.

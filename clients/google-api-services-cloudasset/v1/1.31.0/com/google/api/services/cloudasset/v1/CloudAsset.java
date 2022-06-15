@@ -4770,18 +4770,24 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
        * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
        * that have a label "env". * `kmsKey:key` to find Cloud resources encrypted with a customer-
-       * managed encryption key whose name contains the word "key". * `state:ACTIVE` to find Cloud
-       * resources whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to find Cloud
-       * resources whose state doesn't contain "ACTIVE" as a word. * `createTime<1609459200` to find
-       * Cloud resources that were created before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
-       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Cloud
-       * resources that were updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
-       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find Cloud resources
-       * that contain "Important" as a word in any of the searchable fields. * `Impor*` to find
-       * Cloud resources that contain "Impor" as a prefix of any word in any of the searchable
-       * fields. * `Important location:(us-west1 OR global)` to find Cloud resources that contain
-       * "Important" as a word in any of the searchable fields and are also located in the "us-
-       * west1" region or the "global" location.
+       * managed encryption key whose name contains the word "key". * `relationships:instance-
+       * group-1` to find Cloud resources that have relationships with "instance-group-1" in the
+       * related resource name. * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute
+       * instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP". *
+       * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find compute instances that
+       * have relationships with "instance-group-1" in the compute instance group resource name, for
+       * relationship type "INSTANCE_TO_INSTANCEGROUP". * `state:ACTIVE` to find Cloud resources
+       * whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to find Cloud resources whose
+       * state doesn't contain "ACTIVE" as a word. * `createTime<1609459200` to find Cloud resources
+       * that were created before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+       * "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Cloud resources
+       * that were updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+       * "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find Cloud resources that contain
+       * "Important" as a word in any of the searchable fields. * `Impor*` to find Cloud resources
+       * that contain "Impor" as a prefix of any word in any of the searchable fields. * `Important
+       * location:(us-west1 OR global)` to find Cloud resources that contain "Important" as a word
+       * in any of the searchable fields and are also located in the "us-west1" region or the
+       * "global" location.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -4797,17 +4803,22 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      key or value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
      "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `kmsKey:key` to find
      Cloud resources encrypted with a customer-managed encryption key whose name contains the word
-     "key". * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a word. * `NOT
-     state:ACTIVE` to find Cloud resources whose state doesn't contain "ACTIVE" as a word. *
-     `createTime<1609459200` to find Cloud resources that were created before "2021-01-01 00:00:00 UTC".
-     1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
-     `updateTime>1609459200` to find Cloud resources that were updated after "2021-01-01 00:00:00 UTC".
-     1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find
-     Cloud resources that contain "Important" as a word in any of the searchable fields. * `Impor*` to
-     find Cloud resources that contain "Impor" as a prefix of any word in any of the searchable fields.
-     * `Important location:(us-west1 OR global)` to find Cloud resources that contain "Important" as a
-     word in any of the searchable fields and are also located in the "us-west1" region or the "global"
-     location.
+     "key". * `relationships:instance-group-1` to find Cloud resources that have relationships with
+     "instance-group-1" in the related resource name. * `relationships:INSTANCE_TO_INSTANCEGROUP` to
+     find compute instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP". *
+     `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find compute instances that have
+     relationships with "instance-group-1" in the compute instance group resource name, for relationship
+     type "INSTANCE_TO_INSTANCEGROUP". * `state:ACTIVE` to find Cloud resources whose state contains
+     "ACTIVE" as a word. * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
+     "ACTIVE" as a word. * `createTime<1609459200` to find Cloud resources that were created before
+     "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in
+     seconds. * `updateTime>1609459200` to find Cloud resources that were updated after "2021-01-01
+     00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
+     `Important` to find Cloud resources that contain "Important" as a word in any of the searchable
+     fields. * `Impor*` to find Cloud resources that contain "Impor" as a prefix of any word in any of
+     the searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
+     contain "Important" as a word in any of the searchable fields and are also located in the "us-
+     west1" region or the "global" location.
        */
       public java.lang.String getQuery() {
         return query;
@@ -4825,18 +4836,24 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
        * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
        * that have a label "env". * `kmsKey:key` to find Cloud resources encrypted with a customer-
-       * managed encryption key whose name contains the word "key". * `state:ACTIVE` to find Cloud
-       * resources whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to find Cloud
-       * resources whose state doesn't contain "ACTIVE" as a word. * `createTime<1609459200` to find
-       * Cloud resources that were created before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
-       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Cloud
-       * resources that were updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
-       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find Cloud resources
-       * that contain "Important" as a word in any of the searchable fields. * `Impor*` to find
-       * Cloud resources that contain "Impor" as a prefix of any word in any of the searchable
-       * fields. * `Important location:(us-west1 OR global)` to find Cloud resources that contain
-       * "Important" as a word in any of the searchable fields and are also located in the "us-
-       * west1" region or the "global" location.
+       * managed encryption key whose name contains the word "key". * `relationships:instance-
+       * group-1` to find Cloud resources that have relationships with "instance-group-1" in the
+       * related resource name. * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute
+       * instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP". *
+       * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find compute instances that
+       * have relationships with "instance-group-1" in the compute instance group resource name, for
+       * relationship type "INSTANCE_TO_INSTANCEGROUP". * `state:ACTIVE` to find Cloud resources
+       * whose state contains "ACTIVE" as a word. * `NOT state:ACTIVE` to find Cloud resources whose
+       * state doesn't contain "ACTIVE" as a word. * `createTime<1609459200` to find Cloud resources
+       * that were created before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+       * "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Cloud resources
+       * that were updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
+       * "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find Cloud resources that contain
+       * "Important" as a word in any of the searchable fields. * `Impor*` to find Cloud resources
+       * that contain "Impor" as a prefix of any word in any of the searchable fields. * `Important
+       * location:(us-west1 OR global)` to find Cloud resources that contain "Important" as a word
+       * in any of the searchable fields and are also located in the "us-west1" region or the
+       * "global" location.
        */
       public SearchAllResources setQuery(java.lang.String query) {
         this.query = query;

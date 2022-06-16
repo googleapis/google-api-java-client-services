@@ -39,6 +39,21 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String cpeUri;
 
   /**
+   * The dependency chain between this package and the user's artifact. List in order from the
+   * customer's package under review first, to the current package last. Inclusive of the original
+   * package and the current package.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LanguagePackageDependency> dependencyChain;
+
+  static {
+    // hack to force ProGuard to consider LanguagePackageDependency used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LanguagePackageDependency.class);
+  }
+
+  /**
    * The path to the jar file / go binary file.
    * The value may be {@code null}.
    */
@@ -123,6 +138,27 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setCpeUri(java.lang.String cpeUri) {
     this.cpeUri = cpeUri;
+    return this;
+  }
+
+  /**
+   * The dependency chain between this package and the user's artifact. List in order from the
+   * customer's package under review first, to the current package last. Inclusive of the original
+   * package and the current package.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LanguagePackageDependency> getDependencyChain() {
+    return dependencyChain;
+  }
+
+  /**
+   * The dependency chain between this package and the user's artifact. List in order from the
+   * customer's package under review first, to the current package last. Inclusive of the original
+   * package and the current package.
+   * @param dependencyChain dependencyChain or {@code null} for none
+   */
+  public PackageData setDependencyChain(java.util.List<LanguagePackageDependency> dependencyChain) {
+    this.dependencyChain = dependencyChain;
     return this;
   }
 

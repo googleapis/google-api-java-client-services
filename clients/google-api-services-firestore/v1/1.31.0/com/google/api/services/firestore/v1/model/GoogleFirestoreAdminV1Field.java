@@ -61,6 +61,14 @@ public final class GoogleFirestoreAdminV1Field extends com.google.api.client.jso
   private java.lang.String name;
 
   /**
+   * The TTL configuration for this `Field`. Setting or unsetting this will enable or disable the
+   * TTL for documents that have this `Field`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirestoreAdminV1TtlConfig ttlConfig;
+
+  /**
    * The index configuration for this field. If unset, field indexing will revert to the
    * configuration defined by the `ancestor_field`. To explicitly remove all indexes for this field,
    * specify an index config with an empty list of indexes.
@@ -123,6 +131,25 @@ public final class GoogleFirestoreAdminV1Field extends com.google.api.client.jso
    */
   public GoogleFirestoreAdminV1Field setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The TTL configuration for this `Field`. Setting or unsetting this will enable or disable the
+   * TTL for documents that have this `Field`.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1TtlConfig getTtlConfig() {
+    return ttlConfig;
+  }
+
+  /**
+   * The TTL configuration for this `Field`. Setting or unsetting this will enable or disable the
+   * TTL for documents that have this `Field`.
+   * @param ttlConfig ttlConfig or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Field setTtlConfig(GoogleFirestoreAdminV1TtlConfig ttlConfig) {
+    this.ttlConfig = ttlConfig;
     return this;
   }
 

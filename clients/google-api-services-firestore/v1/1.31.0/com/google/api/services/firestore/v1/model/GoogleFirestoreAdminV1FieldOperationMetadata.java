@@ -80,6 +80,13 @@ public final class GoogleFirestoreAdminV1FieldOperationMetadata extends com.goog
   private java.lang.String state;
 
   /**
+   * Describes the deltas of TTL configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirestoreAdminV1TtlConfigDelta ttlConfigDelta;
+
+  /**
    * The time this operation completed. Will be unset if operation still in progress.
    * @return value or {@code null} for none
    */
@@ -197,6 +204,23 @@ public final class GoogleFirestoreAdminV1FieldOperationMetadata extends com.goog
    */
   public GoogleFirestoreAdminV1FieldOperationMetadata setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Describes the deltas of TTL configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1TtlConfigDelta getTtlConfigDelta() {
+    return ttlConfigDelta;
+  }
+
+  /**
+   * Describes the deltas of TTL configuration.
+   * @param ttlConfigDelta ttlConfigDelta or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1FieldOperationMetadata setTtlConfigDelta(GoogleFirestoreAdminV1TtlConfigDelta ttlConfigDelta) {
+    this.ttlConfigDelta = ttlConfigDelta;
     return this;
   }
 

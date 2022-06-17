@@ -38,6 +38,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> forwardedPorts;
 
   /**
+   * The IP mode for instances. Only applicable in the App Engine flexible environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceIpMode;
+
+  /**
    * Tag to apply to the instance during creation. Only applicable in the App Engine flexible
    * environment.
    * The value may be {@code null}.
@@ -93,6 +100,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setForwardedPorts(java.util.List<java.lang.String> forwardedPorts) {
     this.forwardedPorts = forwardedPorts;
+    return this;
+  }
+
+  /**
+   * The IP mode for instances. Only applicable in the App Engine flexible environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceIpMode() {
+    return instanceIpMode;
+  }
+
+  /**
+   * The IP mode for instances. Only applicable in the App Engine flexible environment.
+   * @param instanceIpMode instanceIpMode or {@code null} for none
+   */
+  public Network setInstanceIpMode(java.lang.String instanceIpMode) {
+    this.instanceIpMode = instanceIpMode;
     return this;
   }
 

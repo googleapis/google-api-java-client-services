@@ -30,11 +30,35 @@ package com.google.api.services.datastore.v1.model;
 public final class RollbackRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * If not empty, the ID of the database against which to make the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseId;
+
+  /**
    * Required. The transaction identifier, returned by a call to Datastore.BeginTransaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
+
+  /**
+   * If not empty, the ID of the database against which to make the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseId() {
+    return databaseId;
+  }
+
+  /**
+   * If not empty, the ID of the database against which to make the request.
+   * @param databaseId databaseId or {@code null} for none
+   */
+  public RollbackRequest setDatabaseId(java.lang.String databaseId) {
+    this.databaseId = databaseId;
+    return this;
+  }
 
   /**
    * Required. The transaction identifier, returned by a call to Datastore.BeginTransaction.

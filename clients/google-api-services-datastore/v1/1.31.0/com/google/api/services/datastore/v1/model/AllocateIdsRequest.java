@@ -30,12 +30,36 @@ package com.google.api.services.datastore.v1.model;
 public final class AllocateIdsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * If not empty, the ID of the database against which to make the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseId;
+
+  /**
    * Required. A list of keys with incomplete key paths for which to allocate IDs. No key may be
    * reserved/read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Key> keys;
+
+  /**
+   * If not empty, the ID of the database against which to make the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseId() {
+    return databaseId;
+  }
+
+  /**
+   * If not empty, the ID of the database against which to make the request.
+   * @param databaseId databaseId or {@code null} for none
+   */
+  public AllocateIdsRequest setDatabaseId(java.lang.String databaseId) {
+    this.databaseId = databaseId;
+    return this;
+  }
 
   /**
    * Required. A list of keys with incomplete key paths for which to allocate IDs. No key may be

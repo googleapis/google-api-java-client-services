@@ -30,6 +30,13 @@ package com.google.api.services.datastore.v1.model;
 public final class RunQueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * If not empty, the ID of the database against which to make the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseId;
+
+  /**
    * The GQL query to run. This query must be a non-aggregation query.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private ReadOptions readOptions;
+
+  /**
+   * If not empty, the ID of the database against which to make the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseId() {
+    return databaseId;
+  }
+
+  /**
+   * If not empty, the ID of the database against which to make the request.
+   * @param databaseId databaseId or {@code null} for none
+   */
+  public RunQueryRequest setDatabaseId(java.lang.String databaseId) {
+    this.databaseId = databaseId;
+    return this;
+  }
 
   /**
    * The GQL query to run. This query must be a non-aggregation query.

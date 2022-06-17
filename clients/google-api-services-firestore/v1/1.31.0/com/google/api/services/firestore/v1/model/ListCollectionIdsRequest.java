@@ -44,6 +44,13 @@ public final class ListCollectionIdsRequest extends com.google.api.client.json.G
   private java.lang.String pageToken;
 
   /**
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String readTime;
+
+  /**
    * The maximum number of results to return.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ListCollectionIdsRequest extends com.google.api.client.json.G
    */
   public ListCollectionIdsRequest setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
+   * @return value or {@code null} for none
+   */
+  public String getReadTime() {
+    return readTime;
+  }
+
+  /**
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
+   * @param readTime readTime or {@code null} for none
+   */
+  public ListCollectionIdsRequest setReadTime(String readTime) {
+    this.readTime = readTime;
     return this;
   }
 

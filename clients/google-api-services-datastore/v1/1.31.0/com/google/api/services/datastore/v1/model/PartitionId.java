@@ -37,6 +37,13 @@ package com.google.api.services.datastore.v1.model;
 public final class PartitionId extends com.google.api.client.json.GenericJson {
 
   /**
+   * If not empty, the ID of the database to which the entities belong.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseId;
+
+  /**
    * If not empty, the ID of the namespace to which the entities belong.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class PartitionId extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * If not empty, the ID of the database to which the entities belong.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseId() {
+    return databaseId;
+  }
+
+  /**
+   * If not empty, the ID of the database to which the entities belong.
+   * @param databaseId databaseId or {@code null} for none
+   */
+  public PartitionId setDatabaseId(java.lang.String databaseId) {
+    this.databaseId = databaseId;
+    return this;
+  }
 
   /**
    * If not empty, the ID of the namespace to which the entities belong.

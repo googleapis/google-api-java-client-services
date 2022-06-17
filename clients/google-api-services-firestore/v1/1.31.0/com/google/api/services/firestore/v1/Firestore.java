@@ -173,6 +173,188 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
     public class Databases {
 
       /**
+       * Create a database.
+       *
+       * Create a request for the method "databases.create".
+       *
+       * This request holds the parameters needed by the firestore server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. A parent name of the form `projects/{project_id}`
+       * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Database}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Database content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}/databases";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Create a database.
+         *
+         * Create a request for the method "databases.create".
+         *
+         * This request holds the parameters needed by the the firestore server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. A parent name of the form `projects/{project_id}`
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Database}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Database content) {
+          super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. A parent name of the form `projects/{project_id}` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. A parent name of the form `projects/{project_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. A parent name of the form `projects/{project_id}` */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The ID to use for the database, which will become the final component of the
+         * database's resource name. This value should be 4-63 characters. Valid characters are
+         * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String databaseId;
+
+        /** Required. The ID to use for the database, which will become the final component of the database's
+       resource name. This value should be 4-63 characters. Valid characters are /a-z-/ with first
+       character a letter and the last a letter or a number. Must not be UUID-like
+       /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+         */
+        public java.lang.String getDatabaseId() {
+          return databaseId;
+        }
+
+        /**
+         * Required. The ID to use for the database, which will become the final component of the
+         * database's resource name. This value should be 4-63 characters. Valid characters are
+         * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+         */
+        public Create setDatabaseId(java.lang.String databaseId) {
+          this.databaseId = databaseId;
+          return this;
+        }
+
+        /**
+         * If set, validate the request and preview the response, but do not actually create the
+         * database.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean validateOnly;
+
+        /** If set, validate the request and preview the response, but do not actually create the database.
+         */
+        public java.lang.Boolean getValidateOnly() {
+          return validateOnly;
+        }
+
+        /**
+         * If set, validate the request and preview the response, but do not actually create the
+         * database.
+         */
+        public Create setValidateOnly(java.lang.Boolean validateOnly) {
+          this.validateOnly = validateOnly;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
        * Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage
        * system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the
        * export. The export occurs in the background and its progress can be monitored and managed via the

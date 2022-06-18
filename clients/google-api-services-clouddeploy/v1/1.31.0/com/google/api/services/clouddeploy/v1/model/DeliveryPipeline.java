@@ -97,6 +97,13 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private SerialPipeline serialPipeline;
 
   /**
+   * When suspended, no new releases or rollouts can be created, but in-progress ones will complete.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean suspended;
+
+  /**
    * Output only. Unique identifier of the `DeliveryPipeline`.
    * The value may be {@code null}.
    */
@@ -261,6 +268,23 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
    */
   public DeliveryPipeline setSerialPipeline(SerialPipeline serialPipeline) {
     this.serialPipeline = serialPipeline;
+    return this;
+  }
+
+  /**
+   * When suspended, no new releases or rollouts can be created, but in-progress ones will complete.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSuspended() {
+    return suspended;
+  }
+
+  /**
+   * When suspended, no new releases or rollouts can be created, but in-progress ones will complete.
+   * @param suspended suspended or {@code null} for none
+   */
+  public DeliveryPipeline setSuspended(java.lang.Boolean suspended) {
+    this.suspended = suspended;
     return this;
   }
 

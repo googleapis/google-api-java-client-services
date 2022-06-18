@@ -2322,6 +2322,150 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
         public class Releases {
 
           /**
+           * Abandons a Release in the Delivery Pipeline.
+           *
+           * Create a request for the method "releases.abandon".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link Abandon#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the Release. Format is
+           *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+           *        releases/{release}.
+           * @param content the {@link com.google.api.services.clouddeploy.v1.model.AbandonReleaseRequest}
+           * @return the request
+           */
+          public Abandon abandon(java.lang.String name, com.google.api.services.clouddeploy.v1.model.AbandonReleaseRequest content) throws java.io.IOException {
+            Abandon result = new Abandon(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Abandon extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.AbandonReleaseResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:abandon";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+$");
+
+            /**
+             * Abandons a Release in the Delivery Pipeline.
+             *
+             * Create a request for the method "releases.abandon".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link Abandon#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Abandon#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the Release. Format is
+           *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+           *        releases/{release}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.AbandonReleaseRequest}
+             * @since 1.13
+             */
+            protected Abandon(java.lang.String name, com.google.api.services.clouddeploy.v1.model.AbandonReleaseRequest content) {
+              super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.AbandonReleaseResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+$");
+              }
+            }
+
+            @Override
+            public Abandon set$Xgafv(java.lang.String $Xgafv) {
+              return (Abandon) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Abandon setAccessToken(java.lang.String accessToken) {
+              return (Abandon) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Abandon setAlt(java.lang.String alt) {
+              return (Abandon) super.setAlt(alt);
+            }
+
+            @Override
+            public Abandon setCallback(java.lang.String callback) {
+              return (Abandon) super.setCallback(callback);
+            }
+
+            @Override
+            public Abandon setFields(java.lang.String fields) {
+              return (Abandon) super.setFields(fields);
+            }
+
+            @Override
+            public Abandon setKey(java.lang.String key) {
+              return (Abandon) super.setKey(key);
+            }
+
+            @Override
+            public Abandon setOauthToken(java.lang.String oauthToken) {
+              return (Abandon) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Abandon setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Abandon) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Abandon setQuotaUser(java.lang.String quotaUser) {
+              return (Abandon) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Abandon setUploadType(java.lang.String uploadType) {
+              return (Abandon) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Abandon setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Abandon) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the Release. Format is
+             * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             * releases/{release}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the Release. Format is
+           projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the Release. Format is
+             * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             * releases/{release}.
+             */
+            public Abandon setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Abandon set(String parameterName, Object value) {
+              return (Abandon) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a new Release in a given project and location.
            *
            * Create a request for the method "releases.create".

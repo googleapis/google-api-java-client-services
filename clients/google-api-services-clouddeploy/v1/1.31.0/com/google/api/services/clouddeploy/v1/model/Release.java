@@ -32,6 +32,13 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Indicates whether this is an abandoned release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean abandoned;
+
+  /**
    * User annotations. These attributes can only be set and used by the user, and not by Google
    * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
    * size limitations.
@@ -173,6 +180,23 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Output only. Indicates whether this is an abandoned release.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAbandoned() {
+    return abandoned;
+  }
+
+  /**
+   * Output only. Indicates whether this is an abandoned release.
+   * @param abandoned abandoned or {@code null} for none
+   */
+  public Release setAbandoned(java.lang.Boolean abandoned) {
+    this.abandoned = abandoned;
+    return this;
+  }
 
   /**
    * User annotations. These attributes can only be set and used by the user, and not by Google

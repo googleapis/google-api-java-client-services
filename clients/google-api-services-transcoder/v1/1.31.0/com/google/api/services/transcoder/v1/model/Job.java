@@ -70,6 +70,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String inputUri;
 
   /**
+   * The labels associated with this job. You can use these to organize and group your jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The resource name of the job. Format:
    * `projects/{project_number}/locations/{location}/jobs/{job}`
    * The value may be {@code null}.
@@ -210,6 +217,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setInputUri(java.lang.String inputUri) {
     this.inputUri = inputUri;
+    return this;
+  }
+
+  /**
+   * The labels associated with this job. You can use these to organize and group your jobs.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels associated with this job. You can use these to organize and group your jobs.
+   * @param labels labels or {@code null} for none
+   */
+  public Job setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

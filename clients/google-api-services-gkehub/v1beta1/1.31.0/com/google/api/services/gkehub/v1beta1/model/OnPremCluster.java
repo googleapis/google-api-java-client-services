@@ -45,6 +45,13 @@ public final class OnPremCluster extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean clusterMissing;
 
   /**
+   * Immutable. The on prem cluster's type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterType;
+
+  /**
    * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example:
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-
@@ -87,6 +94,23 @@ public final class OnPremCluster extends com.google.api.client.json.GenericJson 
    */
   public OnPremCluster setClusterMissing(java.lang.Boolean clusterMissing) {
     this.clusterMissing = clusterMissing;
+    return this;
+  }
+
+  /**
+   * Immutable. The on prem cluster's type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterType() {
+    return clusterType;
+  }
+
+  /**
+   * Immutable. The on prem cluster's type.
+   * @param clusterType clusterType or {@code null} for none
+   */
+  public OnPremCluster setClusterType(java.lang.String clusterType) {
+    this.clusterType = clusterType;
     return this;
   }
 

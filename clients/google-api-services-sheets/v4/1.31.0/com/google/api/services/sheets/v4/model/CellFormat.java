@@ -58,7 +58,7 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   private java.lang.String horizontalAlignment;
 
   /**
-   * How a hyperlink, if it exists, should be displayed in the cell.
+   * If one exists, how a hyperlink should be displayed in the cell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,15 +87,15 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
 
   /**
    * The format of the text in the cell (unless overridden by a format run). Setting a cell-level
-   * link here will clear the cell's existing links. Setting the link field in a TextFormatRun will
-   * take precedence over the cell-level link.
+   * link here clears the cell's existing links. Setting the link field in a TextFormatRun takes
+   * precedence over the cell-level link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TextFormat textFormat;
 
   /**
-   * The rotation applied to text in a cell
+   * The rotation applied to text in the cell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +184,7 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * How a hyperlink, if it exists, should be displayed in the cell.
+   * If one exists, how a hyperlink should be displayed in the cell.
    * @return value or {@code null} for none
    */
   public java.lang.String getHyperlinkDisplayType() {
@@ -192,7 +192,7 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * How a hyperlink, if it exists, should be displayed in the cell.
+   * If one exists, how a hyperlink should be displayed in the cell.
    * @param hyperlinkDisplayType hyperlinkDisplayType or {@code null} for none
    */
   public CellFormat setHyperlinkDisplayType(java.lang.String hyperlinkDisplayType) {
@@ -253,8 +253,8 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
 
   /**
    * The format of the text in the cell (unless overridden by a format run). Setting a cell-level
-   * link here will clear the cell's existing links. Setting the link field in a TextFormatRun will
-   * take precedence over the cell-level link.
+   * link here clears the cell's existing links. Setting the link field in a TextFormatRun takes
+   * precedence over the cell-level link.
    * @return value or {@code null} for none
    */
   public TextFormat getTextFormat() {
@@ -263,8 +263,8 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
 
   /**
    * The format of the text in the cell (unless overridden by a format run). Setting a cell-level
-   * link here will clear the cell's existing links. Setting the link field in a TextFormatRun will
-   * take precedence over the cell-level link.
+   * link here clears the cell's existing links. Setting the link field in a TextFormatRun takes
+   * precedence over the cell-level link.
    * @param textFormat textFormat or {@code null} for none
    */
   public CellFormat setTextFormat(TextFormat textFormat) {
@@ -273,7 +273,7 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The rotation applied to text in a cell
+   * The rotation applied to text in the cell.
    * @return value or {@code null} for none
    */
   public TextRotation getTextRotation() {
@@ -281,7 +281,7 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The rotation applied to text in a cell
+   * The rotation applied to text in the cell.
    * @param textRotation textRotation or {@code null} for none
    */
   public CellFormat setTextRotation(TextRotation textRotation) {

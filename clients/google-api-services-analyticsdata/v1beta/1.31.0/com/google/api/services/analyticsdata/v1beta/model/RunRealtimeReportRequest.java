@@ -31,8 +31,7 @@ package com.google.api.services.analyticsdata.v1beta.model;
 public final class RunRealtimeReportRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The filter clause of dimensions. Dimensions must be requested to be used in this filter.
-   * Metrics cannot be used in this filter.
+   * The filter clause of dimensions. Metrics cannot be used in this filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +72,7 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
 
   /**
    * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Metrics must be requested to be used in this filter. Dimensions cannot be used in this filter.
+   * Dimensions cannot be used in this filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +129,7 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   private java.lang.Boolean returnPropertyQuota;
 
   /**
-   * The filter clause of dimensions. Dimensions must be requested to be used in this filter.
-   * Metrics cannot be used in this filter.
+   * The filter clause of dimensions. Metrics cannot be used in this filter.
    * @return value or {@code null} for none
    */
   public FilterExpression getDimensionFilter() {
@@ -139,8 +137,7 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The filter clause of dimensions. Dimensions must be requested to be used in this filter.
-   * Metrics cannot be used in this filter.
+   * The filter clause of dimensions. Metrics cannot be used in this filter.
    * @param dimensionFilter dimensionFilter or {@code null} for none
    */
   public RunRealtimeReportRequest setDimensionFilter(FilterExpression dimensionFilter) {
@@ -213,7 +210,7 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
 
   /**
    * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Metrics must be requested to be used in this filter. Dimensions cannot be used in this filter.
+   * Dimensions cannot be used in this filter.
    * @return value or {@code null} for none
    */
   public FilterExpression getMetricFilter() {
@@ -222,7 +219,7 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
 
   /**
    * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Metrics must be requested to be used in this filter. Dimensions cannot be used in this filter.
+   * Dimensions cannot be used in this filter.
    * @param metricFilter metricFilter or {@code null} for none
    */
   public RunRealtimeReportRequest setMetricFilter(FilterExpression metricFilter) {

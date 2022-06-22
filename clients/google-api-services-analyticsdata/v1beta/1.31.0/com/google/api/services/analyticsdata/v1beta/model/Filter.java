@@ -38,7 +38,9 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private BetweenFilter betweenFilter;
 
   /**
-   * The dimension name or metric name. Must be a name defined in dimensions or metrics.
+   * The dimension name or metric name. In most methods, dimensions & metrics can be used for the
+   * first time in this field. However in a RunPivotReportRequest, this field must be additionally
+   * specified by name in the RunPivotReportRequest's dimensions or metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +85,9 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimension name or metric name. Must be a name defined in dimensions or metrics.
+   * The dimension name or metric name. In most methods, dimensions & metrics can be used for the
+   * first time in this field. However in a RunPivotReportRequest, this field must be additionally
+   * specified by name in the RunPivotReportRequest's dimensions or metrics.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -91,7 +95,9 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimension name or metric name. Must be a name defined in dimensions or metrics.
+   * The dimension name or metric name. In most methods, dimensions & metrics can be used for the
+   * first time in this field. However in a RunPivotReportRequest, this field must be additionally
+   * specified by name in the RunPivotReportRequest's dimensions or metrics.
    * @param fieldName fieldName or {@code null} for none
    */
   public Filter setFieldName(java.lang.String fieldName) {

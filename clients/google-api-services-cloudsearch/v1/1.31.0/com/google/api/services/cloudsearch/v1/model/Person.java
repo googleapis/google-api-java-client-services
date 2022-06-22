@@ -72,6 +72,13 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The person's phone numbers
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PhoneNumber> phoneNumbers;
+
+  /**
    * A person's read-only photo. A picture shown next to the person's name to help others recognize
    * the person in search results.
    * The value may be {@code null}.
@@ -148,6 +155,23 @@ public final class Person extends com.google.api.client.json.GenericJson {
    */
   public Person setPersonNames(java.util.List<Name> personNames) {
     this.personNames = personNames;
+    return this;
+  }
+
+  /**
+   * The person's phone numbers
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PhoneNumber> getPhoneNumbers() {
+    return phoneNumbers;
+  }
+
+  /**
+   * The person's phone numbers
+   * @param phoneNumbers phoneNumbers or {@code null} for none
+   */
+  public Person setPhoneNumbers(java.util.List<PhoneNumber> phoneNumbers) {
+    this.phoneNumbers = phoneNumbers;
     return this;
   }
 

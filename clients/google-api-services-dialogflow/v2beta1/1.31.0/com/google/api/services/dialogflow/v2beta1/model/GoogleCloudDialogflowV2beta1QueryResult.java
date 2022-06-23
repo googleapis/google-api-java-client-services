@@ -46,7 +46,9 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   private java.lang.Boolean allRequiredParamsPresent;
 
   /**
-   * Indicates whether the conversational query triggers a cancellation for slot filling.
+   * Indicates whether the conversational query triggers a cancellation for slot filling. For more
+   * information, see the [cancel slot filling
+   * documentation](https://cloud.google.com/dialogflow/es/docs/intents-actions-parameters#cancel).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +234,9 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * Indicates whether the conversational query triggers a cancellation for slot filling.
+   * Indicates whether the conversational query triggers a cancellation for slot filling. For more
+   * information, see the [cancel slot filling
+   * documentation](https://cloud.google.com/dialogflow/es/docs/intents-actions-parameters#cancel).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCancelsSlotFilling() {
@@ -240,7 +244,9 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * Indicates whether the conversational query triggers a cancellation for slot filling.
+   * Indicates whether the conversational query triggers a cancellation for slot filling. For more
+   * information, see the [cancel slot filling
+   * documentation](https://cloud.google.com/dialogflow/es/docs/intents-actions-parameters#cancel).
    * @param cancelsSlotFilling cancelsSlotFilling or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryResult setCancelsSlotFilling(java.lang.Boolean cancelsSlotFilling) {

@@ -18,7 +18,8 @@ package com.google.api.services.dialogflow.v2.model;
 
 /**
  * The request message for a webhook call. The request is sent as a JSON object and the field names
- * will be presented in camel cases.
+ * will be presented in camel cases. You may see undocumented fields in an actual request. These
+ * fields are used internally by Dialogflow and should be ignored.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

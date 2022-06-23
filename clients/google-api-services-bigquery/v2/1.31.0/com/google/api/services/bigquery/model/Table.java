@@ -155,6 +155,14 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private MaterializedViewDefinition materializedView;
 
   /**
+   * [Optional] Max staleness of data that could be returned when table or materialized view is
+   * queried (formatted as Google SQL Interval type).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maxStaleness;
+
+  /**
    * [Output-only, Beta] Present iff this table represents a ML model. Describes the training
    * information for the model, and it is required to run 'PREDICT' queries.
    * The value may be {@code null}.
@@ -628,6 +636,55 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setMaterializedView(MaterializedViewDefinition materializedView) {
     this.materializedView = materializedView;
+    return this;
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when table or materialized view is
+   * queried (formatted as Google SQL Interval type).
+   * @see #decodeMaxStaleness()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaxStaleness() {
+    return maxStaleness;
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when table or materialized view is
+   * queried (formatted as Google SQL Interval type).
+   * @see #getMaxStaleness()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeMaxStaleness() {
+    return com.google.api.client.util.Base64.decodeBase64(maxStaleness);
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when table or materialized view is
+   * queried (formatted as Google SQL Interval type).
+   * @see #encodeMaxStaleness()
+   * @param maxStaleness maxStaleness or {@code null} for none
+   */
+  public Table setMaxStaleness(java.lang.String maxStaleness) {
+    this.maxStaleness = maxStaleness;
+    return this;
+  }
+
+  /**
+   * [Optional] Max staleness of data that could be returned when table or materialized view is
+   * queried (formatted as Google SQL Interval type).
+   * @see #setMaxStaleness()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public Table encodeMaxStaleness(byte[] maxStaleness) {
+    this.maxStaleness = com.google.api.client.util.Base64.encodeBase64URLSafeString(maxStaleness);
     return this;
   }
 

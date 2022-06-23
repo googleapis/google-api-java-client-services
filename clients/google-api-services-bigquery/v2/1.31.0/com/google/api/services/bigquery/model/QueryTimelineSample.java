@@ -52,6 +52,15 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
   private java.lang.Long elapsedMs;
 
   /**
+   * Units of work that can be scheduled immediately. Providing additional slots for these units of
+   * work will speed up the query, provided no other query in the reservation needs additional
+   * slots.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long estimatedRunnableUnits;
+
+  /**
    * Total parallel units of work remaining for the active stages.
    * The value may be {@code null}.
    */
@@ -115,6 +124,27 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
    */
   public QueryTimelineSample setElapsedMs(java.lang.Long elapsedMs) {
     this.elapsedMs = elapsedMs;
+    return this;
+  }
+
+  /**
+   * Units of work that can be scheduled immediately. Providing additional slots for these units of
+   * work will speed up the query, provided no other query in the reservation needs additional
+   * slots.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEstimatedRunnableUnits() {
+    return estimatedRunnableUnits;
+  }
+
+  /**
+   * Units of work that can be scheduled immediately. Providing additional slots for these units of
+   * work will speed up the query, provided no other query in the reservation needs additional
+   * slots.
+   * @param estimatedRunnableUnits estimatedRunnableUnits or {@code null} for none
+   */
+  public QueryTimelineSample setEstimatedRunnableUnits(java.lang.Long estimatedRunnableUnits) {
+    this.estimatedRunnableUnits = estimatedRunnableUnits;
     return this;
   }
 

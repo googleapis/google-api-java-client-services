@@ -5988,7 +5988,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
     /**
      * Creates a new TagKey. If another request with the same parameters is sent while the original
-     * request is in process, the second request will receive an error. A maximum of 300 TagKeys can
+     * request is in process, the second request will receive an error. A maximum of 1000 TagKeys can
      * exist under a parent at any given time.
      *
      * Create a request for the method "tagKeys.create".
@@ -6011,7 +6011,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Creates a new TagKey. If another request with the same parameters is sent while the original
-       * request is in process, the second request will receive an error. A maximum of 300 TagKeys can
+       * request is in process, the second request will receive an error. A maximum of 1000 TagKeys can
        * exist under a parent at any given time.
        *
        * Create a request for the method "tagKeys.create".
@@ -7277,7 +7277,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     /**
      * Creates a TagValue as a child of the specified TagKey. If a another request with the same
      * parameters is sent while the original request is in process the second request will receive an
-     * error. A maximum of 300 TagValues can exist under a TagKey at any given time.
+     * error. A maximum of 1000 TagValues can exist under a TagKey at any given time.
      *
      * Create a request for the method "tagValues.create".
      *
@@ -7300,7 +7300,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Creates a TagValue as a child of the specified TagKey. If a another request with the same
        * parameters is sent while the original request is in process the second request will receive an
-       * error. A maximum of 300 TagValues can exist under a TagKey at any given time.
+       * error. A maximum of 1000 TagValues can exist under a TagKey at any given time.
        *
        * Create a request for the method "tagValues.create".
        *

@@ -1911,23 +1911,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the recommendationengine server.  After setting any
              * optional parameters, call the {@link Predict#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Full resource name of the format: `{name=projects/locations/global/catalogs/default_catalo
-             *        g/eventStores/default_event_store/placements}` The id of the recommendation engine
-             *        placement. This id is used to identify the set of models that will be used to make the
-             *        prediction. We currently support three placements with the following IDs by default: *
-             *        `shopping_cart`: Predicts items frequently bought together with one or more catalog items
-             *        in the same shopping session. Commonly displayed after `add-to-cart` events, on product
-             *        detail pages, or on the shopping cart page. * `home_page`: Predicts the next product that
-             *        a user will most likely engage with or purchase based on the shopping or viewing history
-             *        of the specified `userId` or `visitorId`. For example - Recommendations for you. *
-             *        `product_detail`: Predicts the next product that a user will most likely engage with or
-             *        purchase. The prediction is based on the shopping or viewing history of the specified
-             *        `userId` or `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
-             *        product detail pages. For example - More items like this. * `recently_viewed_default`:
-             *        Returns up to 75 items recently viewed by the specified `userId` or `visitorId`, most
-             *        recent ones first. Returns nothing if neither of them has viewed any items yet. For
-             *        example - Recently viewed. The full list of available placements can be seen at
-             *        https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
+             * @param name
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PredictRequest}
              * @return the request
              */
@@ -1957,23 +1941,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * Predict#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Full resource name of the format: `{name=projects/locations/global/catalogs/default_catalo
-             *        g/eventStores/default_event_store/placements}` The id of the recommendation engine
-             *        placement. This id is used to identify the set of models that will be used to make the
-             *        prediction. We currently support three placements with the following IDs by default: *
-             *        `shopping_cart`: Predicts items frequently bought together with one or more catalog items
-             *        in the same shopping session. Commonly displayed after `add-to-cart` events, on product
-             *        detail pages, or on the shopping cart page. * `home_page`: Predicts the next product that
-             *        a user will most likely engage with or purchase based on the shopping or viewing history
-             *        of the specified `userId` or `visitorId`. For example - Recommendations for you. *
-             *        `product_detail`: Predicts the next product that a user will most likely engage with or
-             *        purchase. The prediction is based on the shopping or viewing history of the specified
-             *        `userId` or `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
-             *        product detail pages. For example - More items like this. * `recently_viewed_default`:
-             *        Returns up to 75 items recently viewed by the specified `userId` or `visitorId`, most
-             *        recent ones first. Returns nothing if neither of them has viewed any items yet. For
-             *        example - Recently viewed. The full list of available placements can be seen at
-             *        https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
+               * @param name
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PredictRequest}
                * @since 1.13
                */
@@ -2042,72 +2010,16 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                 return (Predict) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. Full resource name of the format: `{name=projects/locations/global/catalo
-               * gs/default_catalog/eventStores/default_event_store/placements}` The id of the
-               * recommendation engine placement. This id is used to identify the set of models that
-               * will be used to make the prediction. We currently support three placements with the
-               * following IDs by default: * `shopping_cart`: Predicts items frequently bought
-               * together with one or more catalog items in the same shopping session. Commonly
-               * displayed after `add-to-cart` events, on product detail pages, or on the shopping
-               * cart page. * `home_page`: Predicts the next product that a user will most likely
-               * engage with or purchase based on the shopping or viewing history of the specified
-               * `userId` or `visitorId`. For example - Recommendations for you. * `product_detail`:
-               * Predicts the next product that a user will most likely engage with or purchase. The
-               * prediction is based on the shopping or viewing history of the specified `userId` or
-               * `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
-               * product detail pages. For example - More items like this. *
-               * `recently_viewed_default`: Returns up to 75 items recently viewed by the specified
-               * `userId` or `visitorId`, most recent ones first. Returns nothing if neither of them
-               * has viewed any items yet. For example - Recently viewed. The full list of available
-               * placements can be seen at
-               * https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Full resource name of the format: `{name=projects/locations/global/catalogs/default_catal
-             og/eventStores/default_event_store/placements}` The id of the recommendation engine placement. This
-             id is used to identify the set of models that will be used to make the prediction. We currently
-             support three placements with the following IDs by default: * `shopping_cart`: Predicts items
-             frequently bought together with one or more catalog items in the same shopping session. Commonly
-             displayed after `add-to-cart` events, on product detail pages, or on the shopping cart page. *
-             `home_page`: Predicts the next product that a user will most likely engage with or purchase based
-             on the shopping or viewing history of the specified `userId` or `visitorId`. For example -
-             Recommendations for you. * `product_detail`: Predicts the next product that a user will most likely
-             engage with or purchase. The prediction is based on the shopping or viewing history of the
-             specified `userId` or `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
-             product detail pages. For example - More items like this. * `recently_viewed_default`: Returns up
-             to 75 items recently viewed by the specified `userId` or `visitorId`, most recent ones first.
-             Returns nothing if neither of them has viewed any items yet. For example - Recently viewed. The
-             full list of available placements can be seen at
-             https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. Full resource name of the format: `{name=projects/locations/global/catalo
-               * gs/default_catalog/eventStores/default_event_store/placements}` The id of the
-               * recommendation engine placement. This id is used to identify the set of models that
-               * will be used to make the prediction. We currently support three placements with the
-               * following IDs by default: * `shopping_cart`: Predicts items frequently bought
-               * together with one or more catalog items in the same shopping session. Commonly
-               * displayed after `add-to-cart` events, on product detail pages, or on the shopping
-               * cart page. * `home_page`: Predicts the next product that a user will most likely
-               * engage with or purchase based on the shopping or viewing history of the specified
-               * `userId` or `visitorId`. For example - Recommendations for you. * `product_detail`:
-               * Predicts the next product that a user will most likely engage with or purchase. The
-               * prediction is based on the shopping or viewing history of the specified `userId` or
-               * `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
-               * product detail pages. For example - More items like this. *
-               * `recently_viewed_default`: Returns up to 75 items recently viewed by the specified
-               * `userId` or `visitorId`, most recent ones first. Returns nothing if neither of them
-               * has viewed any items yet. For example - Recently viewed. The full list of available
-               * placements can be seen at
-               * https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
-               */
               public Predict setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

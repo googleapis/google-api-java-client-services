@@ -31,8 +31,8 @@ package com.google.api.services.run.v1.model;
 public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) One and only one of the following should be specified. Exec specifies the action to
-   * take. A field inlined from the Handler message.
+   * (Optional) Not supported by Cloud Run One and only one of the following should be specified.
+   * Exec specifies the action to take. A field inlined from the Handler message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   private HTTPGetAction httpGet;
 
   /**
-   * (Optional) Number of seconds after the container has started before liveness probes are
-   * initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max
+   * (Optional) Number of seconds after the container has started before the probe is initiated.
+   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
    * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
    * /pod-lifecycle#container-probes
    * The value may be {@code null}.
@@ -74,8 +74,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds.
+   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
+   * greater or equal than timeout_seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Defaults to 1. Must be 1 for liveness and startup Probes.
+   * failed. Must be 1 if set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +107,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   private java.lang.Integer timeoutSeconds;
 
   /**
-   * (Optional) One and only one of the following should be specified. Exec specifies the action to
-   * take. A field inlined from the Handler message.
+   * (Optional) Not supported by Cloud Run One and only one of the following should be specified.
+   * Exec specifies the action to take. A field inlined from the Handler message.
    * @return value or {@code null} for none
    */
   public ExecAction getExec() {
@@ -116,8 +116,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) One and only one of the following should be specified. Exec specifies the action to
-   * take. A field inlined from the Handler message.
+   * (Optional) Not supported by Cloud Run One and only one of the following should be specified.
+   * Exec specifies the action to take. A field inlined from the Handler message.
    * @param exec exec or {@code null} for none
    */
   public Probe setExec(ExecAction exec) {
@@ -183,8 +183,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Number of seconds after the container has started before liveness probes are
-   * initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max
+   * (Optional) Number of seconds after the container has started before the probe is initiated.
+   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
    * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
    * /pod-lifecycle#container-probes
    * @return value or {@code null} for none
@@ -194,8 +194,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Number of seconds after the container has started before liveness probes are
-   * initiated. Defaults to 0 seconds. Minimum value is 0. Max value for liveness probe is 3600. Max
+   * (Optional) Number of seconds after the container has started before the probe is initiated.
+   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
    * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
    * /pod-lifecycle#container-probes
    * @param initialDelaySeconds initialDelaySeconds or {@code null} for none
@@ -207,8 +207,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds.
+   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
+   * greater or equal than timeout_seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodSeconds() {
@@ -217,8 +217,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Max value for liveness probe is 3600. Max value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds.
+   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
+   * greater or equal than timeout_seconds.
    * @param periodSeconds periodSeconds or {@code null} for none
    */
   public Probe setPeriodSeconds(java.lang.Integer periodSeconds) {
@@ -228,7 +228,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Defaults to 1. Must be 1 for liveness and startup Probes.
+   * failed. Must be 1 if set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessThreshold() {
@@ -237,7 +237,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Defaults to 1. Must be 1 for liveness and startup Probes.
+   * failed. Must be 1 if set.
    * @param successThreshold successThreshold or {@code null} for none
    */
   public Probe setSuccessThreshold(java.lang.Integer successThreshold) {

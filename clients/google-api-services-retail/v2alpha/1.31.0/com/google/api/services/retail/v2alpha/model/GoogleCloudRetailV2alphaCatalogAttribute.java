@@ -72,6 +72,16 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
 
   /**
    * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
+   * RECOMMENDATIONS_FILTERING_ENABLED, attribute values are filterable for recommendations. This
+   * option works for categorical features only, does not work for numerical features, inventory
+   * filtering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recommendationsFilteringOption;
+
+  /**
+   * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
    * SEARCHABLE_ENABLED, attribute values are searchable by text queries in SearchService.Search. If
    * SEARCHABLE_ENABLED but attribute type is numerical, attribute values will not be searchable by
    * text queries in SearchService.Search, as there are no text values associated to numerical
@@ -178,6 +188,29 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setKey(java.lang.String key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
+   * RECOMMENDATIONS_FILTERING_ENABLED, attribute values are filterable for recommendations. This
+   * option works for categorical features only, does not work for numerical features, inventory
+   * filtering.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecommendationsFilteringOption() {
+    return recommendationsFilteringOption;
+  }
+
+  /**
+   * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
+   * RECOMMENDATIONS_FILTERING_ENABLED, attribute values are filterable for recommendations. This
+   * option works for categorical features only, does not work for numerical features, inventory
+   * filtering.
+   * @param recommendationsFilteringOption recommendationsFilteringOption or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaCatalogAttribute setRecommendationsFilteringOption(java.lang.String recommendationsFilteringOption) {
+    this.recommendationsFilteringOption = recommendationsFilteringOption;
     return this;
   }
 

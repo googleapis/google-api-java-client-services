@@ -43,7 +43,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * prediction results, the API will return generic (unfiltered) popular products. If you only want
    * results strictly matching the filters, set `strictFiltering` to True in `PredictRequest.params`
    * to receive empty results instead. Note that the API will never return items with storageStatus
-   * of "EXPIRED" or "DELETED" regardless of filter choices.
+   * of "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true
+   * under the `params` field, then attribute based expressions are expected instead of the above
+   * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
+   * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
+   * ANY("Phones"))
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +100,8 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * price. * `diversityLevel`: String. Default empty. If set to be non-empty, then it needs to be
    * one of {'no-diversity', 'low-diversity', 'medium-diversity', 'high-diversity', 'auto-
    * diversity'}. This gives request-level control and adjusts prediction results based on product
-   * category.
+   * category. * `filterSyntaxV2`: Boolean. False by default. If set to true, the `filter` field
+   * will be interpreteted according to the new, attribute-based syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +143,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * prediction results, the API will return generic (unfiltered) popular products. If you only want
    * results strictly matching the filters, set `strictFiltering` to True in `PredictRequest.params`
    * to receive empty results instead. Note that the API will never return items with storageStatus
-   * of "EXPIRED" or "DELETED" regardless of filter choices.
+   * of "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true
+   * under the `params` field, then attribute based expressions are expected instead of the above
+   * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
+   * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
+   * ANY("Phones"))
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -159,7 +168,11 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * prediction results, the API will return generic (unfiltered) popular products. If you only want
    * results strictly matching the filters, set `strictFiltering` to True in `PredictRequest.params`
    * to receive empty results instead. Note that the API will never return items with storageStatus
-   * of "EXPIRED" or "DELETED" regardless of filter choices.
+   * of "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true
+   * under the `params` field, then attribute based expressions are expected instead of the above
+   * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
+   * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
+   * ANY("Phones"))
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudRetailV2betaPredictRequest setFilter(java.lang.String filter) {
@@ -255,7 +268,8 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * price. * `diversityLevel`: String. Default empty. If set to be non-empty, then it needs to be
    * one of {'no-diversity', 'low-diversity', 'medium-diversity', 'high-diversity', 'auto-
    * diversity'}. This gives request-level control and adjusts prediction results based on product
-   * category.
+   * category. * `filterSyntaxV2`: Boolean. False by default. If set to true, the `filter` field
+   * will be interpreteted according to the new, attribute-based syntax.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -277,7 +291,8 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
    * price. * `diversityLevel`: String. Default empty. If set to be non-empty, then it needs to be
    * one of {'no-diversity', 'low-diversity', 'medium-diversity', 'high-diversity', 'auto-
    * diversity'}. This gives request-level control and adjusts prediction results based on product
-   * category.
+   * category. * `filterSyntaxV2`: Boolean. False by default. If set to true, the `filter` field
+   * will be interpreteted according to the new, attribute-based syntax.
    * @param params params or {@code null} for none
    */
   public GoogleCloudRetailV2betaPredictRequest setParams(java.util.Map<String, java.lang.Object> params) {

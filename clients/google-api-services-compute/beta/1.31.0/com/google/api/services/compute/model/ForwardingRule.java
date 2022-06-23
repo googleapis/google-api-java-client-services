@@ -133,8 +133,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This
-   * can only be specified for an external global forwarding rule.
+   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -614,8 +613,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This
-   * can only be specified for an external global forwarding rule.
+   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpVersion() {
@@ -623,8 +621,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This
-   * can only be specified for an external global forwarding rule.
+   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6.
    * @param ipVersion ipVersion or {@code null} for none
    */
   public ForwardingRule setIpVersion(java.lang.String ipVersion) {

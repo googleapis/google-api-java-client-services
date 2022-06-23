@@ -109,6 +109,16 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer ruleTupleCount;
 
   /**
+   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
+   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
+   * profile-group Must be specified if action = 'apply_profile_group' and cannot be specified for
+   * other actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityProfileGroup;
+
+  /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
@@ -320,6 +330,29 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setRuleTupleCount(java.lang.Integer ruleTupleCount) {
     this.ruleTupleCount = ruleTupleCount;
+    return this;
+  }
+
+  /**
+   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
+   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
+   * profile-group Must be specified if action = 'apply_profile_group' and cannot be specified for
+   * other actions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityProfileGroup() {
+    return securityProfileGroup;
+  }
+
+  /**
+   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
+   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
+   * profile-group Must be specified if action = 'apply_profile_group' and cannot be specified for
+   * other actions.
+   * @param securityProfileGroup securityProfileGroup or {@code null} for none
+   */
+  public FirewallPolicyRule setSecurityProfileGroup(java.lang.String securityProfileGroup) {
+    this.securityProfileGroup = securityProfileGroup;
     return this;
   }
 

@@ -93,6 +93,14 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   private java.lang.String exceedAction;
 
   /**
+   * Specified gRPC response status for proxyless gRPC requests that are above the configured rate
+   * limit threshold
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleRateLimitOptionsRpcStatus exceedActionRpcStatus;
+
+  /**
    * Parameters defining the redirect action that is used as the exceed action. Cannot be specified
    * if the exceed action is not redirect.
    * The value may be {@code null}.
@@ -248,6 +256,25 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    */
   public SecurityPolicyRuleRateLimitOptions setExceedAction(java.lang.String exceedAction) {
     this.exceedAction = exceedAction;
+    return this;
+  }
+
+  /**
+   * Specified gRPC response status for proxyless gRPC requests that are above the configured rate
+   * limit threshold
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptionsRpcStatus getExceedActionRpcStatus() {
+    return exceedActionRpcStatus;
+  }
+
+  /**
+   * Specified gRPC response status for proxyless gRPC requests that are above the configured rate
+   * limit threshold
+   * @param exceedActionRpcStatus exceedActionRpcStatus or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptions setExceedActionRpcStatus(SecurityPolicyRuleRateLimitOptionsRpcStatus exceedActionRpcStatus) {
+    this.exceedActionRpcStatus = exceedActionRpcStatus;
     return this;
   }
 

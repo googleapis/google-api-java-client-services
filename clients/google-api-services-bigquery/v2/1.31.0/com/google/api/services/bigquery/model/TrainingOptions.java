@@ -323,6 +323,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long maxParallelTrials;
 
   /**
+   * Get truncated length by last n points in time series. Use separately from
+   * time_series_length_fraction and min_time_series_length.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxTimeSeriesLength;
+
+  /**
    * Maximum depth of a tree for boosted tree models.
    * The value may be {@code null}.
    */
@@ -343,6 +351,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Double minSplitLoss;
+
+  /**
+   * Set fast trend ARIMA_PLUS model minimum training length. Use in pair with
+   * time_series_length_fraction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minTimeSeriesLength;
 
   /**
    * Minimum sum of instance weight needed in a child for boosted tree models.
@@ -448,6 +464,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> timeSeriesIdColumns;
 
   /**
+   * Get truncated length by fraction in time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double timeSeriesLengthFraction;
+
+  /**
    * Column to be designated as time series timestamp for ARIMA model.
    * The value may be {@code null}.
    */
@@ -460,6 +483,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String treeMethod;
+
+  /**
+   * The smoothing window size for the trend component of the time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long trendSmoothingWindowSize;
 
   /**
    * User column specified for matrix factorization models.
@@ -1189,6 +1219,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Get truncated length by last n points in time series. Use separately from
+   * time_series_length_fraction and min_time_series_length.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxTimeSeriesLength() {
+    return maxTimeSeriesLength;
+  }
+
+  /**
+   * Get truncated length by last n points in time series. Use separately from
+   * time_series_length_fraction and min_time_series_length.
+   * @param maxTimeSeriesLength maxTimeSeriesLength or {@code null} for none
+   */
+  public TrainingOptions setMaxTimeSeriesLength(java.lang.Long maxTimeSeriesLength) {
+    this.maxTimeSeriesLength = maxTimeSeriesLength;
+    return this;
+  }
+
+  /**
    * Maximum depth of a tree for boosted tree models.
    * @return value or {@code null} for none
    */
@@ -1238,6 +1287,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setMinSplitLoss(java.lang.Double minSplitLoss) {
     this.minSplitLoss = minSplitLoss;
+    return this;
+  }
+
+  /**
+   * Set fast trend ARIMA_PLUS model minimum training length. Use in pair with
+   * time_series_length_fraction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinTimeSeriesLength() {
+    return minTimeSeriesLength;
+  }
+
+  /**
+   * Set fast trend ARIMA_PLUS model minimum training length. Use in pair with
+   * time_series_length_fraction.
+   * @param minTimeSeriesLength minTimeSeriesLength or {@code null} for none
+   */
+  public TrainingOptions setMinTimeSeriesLength(java.lang.Long minTimeSeriesLength) {
+    this.minTimeSeriesLength = minTimeSeriesLength;
     return this;
   }
 
@@ -1490,6 +1558,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Get truncated length by fraction in time series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getTimeSeriesLengthFraction() {
+    return timeSeriesLengthFraction;
+  }
+
+  /**
+   * Get truncated length by fraction in time series.
+   * @param timeSeriesLengthFraction timeSeriesLengthFraction or {@code null} for none
+   */
+  public TrainingOptions setTimeSeriesLengthFraction(java.lang.Double timeSeriesLengthFraction) {
+    this.timeSeriesLengthFraction = timeSeriesLengthFraction;
+    return this;
+  }
+
+  /**
    * Column to be designated as time series timestamp for ARIMA model.
    * @return value or {@code null} for none
    */
@@ -1520,6 +1605,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setTreeMethod(java.lang.String treeMethod) {
     this.treeMethod = treeMethod;
+    return this;
+  }
+
+  /**
+   * The smoothing window size for the trend component of the time series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTrendSmoothingWindowSize() {
+    return trendSmoothingWindowSize;
+  }
+
+  /**
+   * The smoothing window size for the trend component of the time series.
+   * @param trendSmoothingWindowSize trendSmoothingWindowSize or {@code null} for none
+   */
+  public TrainingOptions setTrendSmoothingWindowSize(java.lang.Long trendSmoothingWindowSize) {
+    this.trendSmoothingWindowSize = trendSmoothingWindowSize;
     return this;
   }
 

@@ -55,16 +55,16 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
   private GoogleCloudRetailV2betaCompletionDataInputConfig denylistInputConfig;
 
   /**
-   * Output only. LRO corresponding to the latest allowlist import. Can use GetOperation API to
-   * retrieve the latest state of the Long Running Operation.
+   * Output only. Name of the LRO corresponding to the latest allowlist import. Can use GetOperation
+   * API to retrieve the latest state of the Long Running Operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastAllowlistImportOperation;
 
   /**
-   * Output only. LRO corresponding to the latest denylist import. Can use GetOperation API to
-   * retrieve the latest state of the Long Running Operation.
+   * Output only. Name of the LRO corresponding to the latest denylist import. Can use GetOperation
+   * API to retrieve the latest state of the Long Running Operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,8 +180,8 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
   }
 
   /**
-   * Output only. LRO corresponding to the latest allowlist import. Can use GetOperation API to
-   * retrieve the latest state of the Long Running Operation.
+   * Output only. Name of the LRO corresponding to the latest allowlist import. Can use GetOperation
+   * API to retrieve the latest state of the Long Running Operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastAllowlistImportOperation() {
@@ -189,8 +189,8 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
   }
 
   /**
-   * Output only. LRO corresponding to the latest allowlist import. Can use GetOperation API to
-   * retrieve the latest state of the Long Running Operation.
+   * Output only. Name of the LRO corresponding to the latest allowlist import. Can use GetOperation
+   * API to retrieve the latest state of the Long Running Operation.
    * @param lastAllowlistImportOperation lastAllowlistImportOperation or {@code null} for none
    */
   public GoogleCloudRetailV2betaCompletionConfig setLastAllowlistImportOperation(java.lang.String lastAllowlistImportOperation) {
@@ -199,8 +199,8 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
   }
 
   /**
-   * Output only. LRO corresponding to the latest denylist import. Can use GetOperation API to
-   * retrieve the latest state of the Long Running Operation.
+   * Output only. Name of the LRO corresponding to the latest denylist import. Can use GetOperation
+   * API to retrieve the latest state of the Long Running Operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastDenylistImportOperation() {
@@ -208,8 +208,8 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
   }
 
   /**
-   * Output only. LRO corresponding to the latest denylist import. Can use GetOperation API to
-   * retrieve the latest state of the Long Running Operation.
+   * Output only. Name of the LRO corresponding to the latest denylist import. Can use GetOperation
+   * API to retrieve the latest state of the Long Running Operation.
    * @param lastDenylistImportOperation lastDenylistImportOperation or {@code null} for none
    */
   public GoogleCloudRetailV2betaCompletionConfig setLastDenylistImportOperation(java.lang.String lastDenylistImportOperation) {

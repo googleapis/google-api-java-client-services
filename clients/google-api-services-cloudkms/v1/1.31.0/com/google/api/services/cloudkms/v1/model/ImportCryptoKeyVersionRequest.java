@@ -60,7 +60,8 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
   private java.lang.String importJob;
 
   /**
-   * Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or RSA_OAEP_4096_SHA1_AES_256.
+   * Optional. Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256.
    * This field contains the concatenation of two wrapped keys: 1. An ephemeral AES-256 wrapping key
    * wrapped with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and
    * an empty label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP
@@ -72,6 +73,23 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String rsaAesWrappedKey;
+
+  /**
+   * Optional. Wrapped key material produced with (RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256) for
+   * which, this field contains the concatenation of: 1. An ephemeral AES-256 wrapping key wrapped
+   * with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and an empty
+   * label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP (RFC
+   * 5649), or (RSA_OAEP_3072_SHA256 or RSA_OAEP_4096_SHA256) for which, this field contains the key
+   * to be imported, wrapped with the public_key using RSAES-OAEP with SHA-256, MGF1 with SHA-256,
+   * and an empty label. If importing symmetric key material, it is expected that the unwrapped key
+   * contains plain bytes. If importing asymmetric key material, it is expected that the unwrapped
+   * key is in PKCS#8-encoded DER format (the PrivateKeyInfo structure from RFC 5208). This format
+   * is the same as the format produced by PKCS#11 mechanism CKM_RSA_AES_KEY_WRAP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String wrappedKey;
 
   /**
    * Required. The algorithm of the key being imported. This does not need to match the
@@ -141,7 +159,8 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
   }
 
   /**
-   * Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or RSA_OAEP_4096_SHA1_AES_256.
+   * Optional. Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256.
    * This field contains the concatenation of two wrapped keys: 1. An ephemeral AES-256 wrapping key
    * wrapped with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and
    * an empty label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP
@@ -157,7 +176,8 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
   }
 
   /**
-   * Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or RSA_OAEP_4096_SHA1_AES_256.
+   * Optional. Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256.
    * This field contains the concatenation of two wrapped keys: 1. An ephemeral AES-256 wrapping key
    * wrapped with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and
    * an empty label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP
@@ -175,7 +195,8 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
   }
 
   /**
-   * Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or RSA_OAEP_4096_SHA1_AES_256.
+   * Optional. Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256.
    * This field contains the concatenation of two wrapped keys: 1. An ephemeral AES-256 wrapping key
    * wrapped with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and
    * an empty label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP
@@ -192,7 +213,8 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
   }
 
   /**
-   * Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or RSA_OAEP_4096_SHA1_AES_256.
+   * Optional. Wrapped key material produced with RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256.
    * This field contains the concatenation of two wrapped keys: 1. An ephemeral AES-256 wrapping key
    * wrapped with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and
    * an empty label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP
@@ -210,6 +232,91 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
    */
   public ImportCryptoKeyVersionRequest encodeRsaAesWrappedKey(byte[] rsaAesWrappedKey) {
     this.rsaAesWrappedKey = com.google.api.client.util.Base64.encodeBase64URLSafeString(rsaAesWrappedKey);
+    return this;
+  }
+
+  /**
+   * Optional. Wrapped key material produced with (RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256) for
+   * which, this field contains the concatenation of: 1. An ephemeral AES-256 wrapping key wrapped
+   * with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and an empty
+   * label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP (RFC
+   * 5649), or (RSA_OAEP_3072_SHA256 or RSA_OAEP_4096_SHA256) for which, this field contains the key
+   * to be imported, wrapped with the public_key using RSAES-OAEP with SHA-256, MGF1 with SHA-256,
+   * and an empty label. If importing symmetric key material, it is expected that the unwrapped key
+   * contains plain bytes. If importing asymmetric key material, it is expected that the unwrapped
+   * key is in PKCS#8-encoded DER format (the PrivateKeyInfo structure from RFC 5208). This format
+   * is the same as the format produced by PKCS#11 mechanism CKM_RSA_AES_KEY_WRAP.
+   * @see #decodeWrappedKey()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWrappedKey() {
+    return wrappedKey;
+  }
+
+  /**
+   * Optional. Wrapped key material produced with (RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256) for
+   * which, this field contains the concatenation of: 1. An ephemeral AES-256 wrapping key wrapped
+   * with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and an empty
+   * label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP (RFC
+   * 5649), or (RSA_OAEP_3072_SHA256 or RSA_OAEP_4096_SHA256) for which, this field contains the key
+   * to be imported, wrapped with the public_key using RSAES-OAEP with SHA-256, MGF1 with SHA-256,
+   * and an empty label. If importing symmetric key material, it is expected that the unwrapped key
+   * contains plain bytes. If importing asymmetric key material, it is expected that the unwrapped
+   * key is in PKCS#8-encoded DER format (the PrivateKeyInfo structure from RFC 5208). This format
+   * is the same as the format produced by PKCS#11 mechanism CKM_RSA_AES_KEY_WRAP.
+   * @see #getWrappedKey()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeWrappedKey() {
+    return com.google.api.client.util.Base64.decodeBase64(wrappedKey);
+  }
+
+  /**
+   * Optional. Wrapped key material produced with (RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256) for
+   * which, this field contains the concatenation of: 1. An ephemeral AES-256 wrapping key wrapped
+   * with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and an empty
+   * label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP (RFC
+   * 5649), or (RSA_OAEP_3072_SHA256 or RSA_OAEP_4096_SHA256) for which, this field contains the key
+   * to be imported, wrapped with the public_key using RSAES-OAEP with SHA-256, MGF1 with SHA-256,
+   * and an empty label. If importing symmetric key material, it is expected that the unwrapped key
+   * contains plain bytes. If importing asymmetric key material, it is expected that the unwrapped
+   * key is in PKCS#8-encoded DER format (the PrivateKeyInfo structure from RFC 5208). This format
+   * is the same as the format produced by PKCS#11 mechanism CKM_RSA_AES_KEY_WRAP.
+   * @see #encodeWrappedKey()
+   * @param wrappedKey wrappedKey or {@code null} for none
+   */
+  public ImportCryptoKeyVersionRequest setWrappedKey(java.lang.String wrappedKey) {
+    this.wrappedKey = wrappedKey;
+    return this;
+  }
+
+  /**
+   * Optional. Wrapped key material produced with (RSA_OAEP_3072_SHA1_AES_256 or
+   * RSA_OAEP_4096_SHA1_AES_256 or RSA_OAEP_3072_SHA256_AES_256 or RSA_OAEP_4096_SHA256_AES_256) for
+   * which, this field contains the concatenation of: 1. An ephemeral AES-256 wrapping key wrapped
+   * with the public_key using RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and an empty
+   * label. 2. The key to be imported, wrapped with the ephemeral AES-256 key using AES-KWP (RFC
+   * 5649), or (RSA_OAEP_3072_SHA256 or RSA_OAEP_4096_SHA256) for which, this field contains the key
+   * to be imported, wrapped with the public_key using RSAES-OAEP with SHA-256, MGF1 with SHA-256,
+   * and an empty label. If importing symmetric key material, it is expected that the unwrapped key
+   * contains plain bytes. If importing asymmetric key material, it is expected that the unwrapped
+   * key is in PKCS#8-encoded DER format (the PrivateKeyInfo structure from RFC 5208). This format
+   * is the same as the format produced by PKCS#11 mechanism CKM_RSA_AES_KEY_WRAP.
+   * @see #setWrappedKey()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public ImportCryptoKeyVersionRequest encodeWrappedKey(byte[] wrappedKey) {
+    this.wrappedKey = com.google.api.client.util.Base64.encodeBase64URLSafeString(wrappedKey);
     return this;
   }
 

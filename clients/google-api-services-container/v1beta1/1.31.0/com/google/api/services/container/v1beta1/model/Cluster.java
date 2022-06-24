@@ -98,6 +98,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * Configuration for the fine-grained cost management feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CostManagementConfig costManagementConfig;
+
+  /**
    * [Output only] The time the cluster was created, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
@@ -762,6 +769,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * Configuration for the fine-grained cost management feature.
+   * @return value or {@code null} for none
+   */
+  public CostManagementConfig getCostManagementConfig() {
+    return costManagementConfig;
+  }
+
+  /**
+   * Configuration for the fine-grained cost management feature.
+   * @param costManagementConfig costManagementConfig or {@code null} for none
+   */
+  public Cluster setCostManagementConfig(CostManagementConfig costManagementConfig) {
+    this.costManagementConfig = costManagementConfig;
     return this;
   }
 

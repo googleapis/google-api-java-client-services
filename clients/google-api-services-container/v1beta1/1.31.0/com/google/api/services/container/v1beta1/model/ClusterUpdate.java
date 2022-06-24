@@ -67,6 +67,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterTelemetry desiredClusterTelemetry;
 
   /**
+   * The desired configuration for the fine-grained cost management feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CostManagementConfig desiredCostManagementConfig;
+
+  /**
    * Configuration of etcd encryption.
    * The value may be {@code null}.
    */
@@ -429,6 +436,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredClusterTelemetry(ClusterTelemetry desiredClusterTelemetry) {
     this.desiredClusterTelemetry = desiredClusterTelemetry;
+    return this;
+  }
+
+  /**
+   * The desired configuration for the fine-grained cost management feature.
+   * @return value or {@code null} for none
+   */
+  public CostManagementConfig getDesiredCostManagementConfig() {
+    return desiredCostManagementConfig;
+  }
+
+  /**
+   * The desired configuration for the fine-grained cost management feature.
+   * @param desiredCostManagementConfig desiredCostManagementConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredCostManagementConfig(CostManagementConfig desiredCostManagementConfig) {
+    this.desiredCostManagementConfig = desiredCostManagementConfig;
     return this;
   }
 

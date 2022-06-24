@@ -23,6 +23,9 @@ package com.google.api.services.cloudidentity.v1;
  */
 public class CloudIdentityScopes {
 
+  /** Private Service: https://www.googleapis.com/auth/cloud-identity. */
+  public static final String CLOUD_IDENTITY = "https://www.googleapis.com/auth/cloud-identity";
+
   /** Private Service: https://www.googleapis.com/auth/cloud-identity.devices. */
   public static final String CLOUD_IDENTITY_DEVICES = "https://www.googleapis.com/auth/cloud-identity.devices";
 
@@ -48,6 +51,7 @@ public class CloudIdentityScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_IDENTITY);
     set.add(CLOUD_IDENTITY_DEVICES);
     set.add(CLOUD_IDENTITY_DEVICES_LOOKUP);
     set.add(CLOUD_IDENTITY_DEVICES_READONLY);

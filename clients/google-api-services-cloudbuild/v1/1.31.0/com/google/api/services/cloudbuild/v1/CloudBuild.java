@@ -6938,7 +6938,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Runs a `BuildTrigger` at a particular source revision.
+         * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
+         * the POST request that includes the location endpoint in the path. The POST request that does not
+         * include the location endpoint in the path can only be used when running global triggers.
          *
          * Create a request for the method "triggers.run".
          *
@@ -6964,7 +6966,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
 
           /**
-           * Runs a `BuildTrigger` at a particular source revision.
+           * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
+           * the POST request that includes the location endpoint in the path. The POST request that does
+           * not include the location endpoint in the path can only be used when running global triggers.
            *
            * Create a request for the method "triggers.run".
            *
@@ -9009,7 +9013,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Runs a `BuildTrigger` at a particular source revision.
+       * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
+       * the POST request that includes the location endpoint in the path. The POST request that does not
+       * include the location endpoint in the path can only be used when running global triggers.
        *
        * Create a request for the method "triggers.run".
        *
@@ -9032,7 +9038,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}:run";
 
         /**
-         * Runs a `BuildTrigger` at a particular source revision.
+         * Runs a `BuildTrigger` at a particular source revision. To run a regional or global trigger, use
+         * the POST request that includes the location endpoint in the path. The POST request that does
+         * not include the location endpoint in the path can only be used when running global triggers.
          *
          * Create a request for the method "triggers.run".
          *

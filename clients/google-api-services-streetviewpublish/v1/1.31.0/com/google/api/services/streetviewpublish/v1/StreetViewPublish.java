@@ -858,6 +858,784 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
   }
 
   /**
+   * An accessor for creating requests from the PhotoSequence collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code StreetViewPublish streetviewpublish = new StreetViewPublish(...);}
+   *   {@code StreetViewPublish.PhotoSequence.List request = streetviewpublish.photoSequence().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public PhotoSequence photoSequence() {
+    return new PhotoSequence();
+  }
+
+  /**
+   * The "photoSequence" collection of methods.
+   */
+  public class PhotoSequence {
+
+    /**
+     * After the client finishes uploading the PhotoSequence with the returned UploadRef,
+     * CreatePhotoSequence extracts a sequence of 360 photos from a video or Extensible Device Metadata
+     * (XDM, http://www.xdm.org/) to be published to Street View on Google Maps. `CreatePhotoSequence`
+     * returns an Operation, with the PhotoSequence Id set in the `Operation.name` field. This method
+     * returns the following error codes: * google.rpc.Code.INVALID_ARGUMENT if the request is
+     * malformed. * google.rpc.Code.NOT_FOUND if the upload reference does not exist.
+     *
+     * Create a request for the method "photoSequence.create".
+     *
+     * This request holds the parameters needed by the streetviewpublish server.  After setting any
+     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.streetviewpublish.v1.model.PhotoSequence}
+     * @return the request
+     */
+    public Create create(com.google.api.services.streetviewpublish.v1.model.PhotoSequence content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends StreetViewPublishRequest<com.google.api.services.streetviewpublish.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/photoSequence";
+
+      /**
+       * After the client finishes uploading the PhotoSequence with the returned UploadRef,
+       * CreatePhotoSequence extracts a sequence of 360 photos from a video or Extensible Device
+       * Metadata (XDM, http://www.xdm.org/) to be published to Street View on Google Maps.
+       * `CreatePhotoSequence` returns an Operation, with the PhotoSequence Id set in the
+       * `Operation.name` field. This method returns the following error codes: *
+       * google.rpc.Code.INVALID_ARGUMENT if the request is malformed. * google.rpc.Code.NOT_FOUND if
+       * the upload reference does not exist.
+       *
+       * Create a request for the method "photoSequence.create".
+       *
+       * This request holds the parameters needed by the the streetviewpublish server.  After setting
+       * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.streetviewpublish.v1.model.PhotoSequence}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.streetviewpublish.v1.model.PhotoSequence content) {
+        super(StreetViewPublish.this, "POST", REST_PATH, content, com.google.api.services.streetviewpublish.v1.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The input form of PhotoSequence. */
+      @com.google.api.client.util.Key
+      private java.lang.String inputType;
+
+      /** Required. The input form of PhotoSequence.
+       */
+      public java.lang.String getInputType() {
+        return inputType;
+      }
+
+      /** Required. The input form of PhotoSequence. */
+      public Create setInputType(java.lang.String inputType) {
+        this.inputType = inputType;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a PhotoSequence and its metadata. This method returns the following error codes: *
+     * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo
+     * sequence. * google.rpc.Code.NOT_FOUND if the photo sequence ID does not exist. *
+     * google.rpc.Code.FAILED_PRECONDITION if the photo sequence ID is not yet finished processing.
+     *
+     * Create a request for the method "photoSequence.delete".
+     *
+     * This request holds the parameters needed by the streetviewpublish server.  After setting any
+     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param sequenceId Required. ID of the PhotoSequence.
+     * @return the request
+     */
+    public Delete delete(java.lang.String sequenceId) throws java.io.IOException {
+      Delete result = new Delete(sequenceId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends StreetViewPublishRequest<com.google.api.services.streetviewpublish.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/photoSequence/{sequenceId}";
+
+      /**
+       * Deletes a PhotoSequence and its metadata. This method returns the following error codes: *
+       * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo
+       * sequence. * google.rpc.Code.NOT_FOUND if the photo sequence ID does not exist. *
+       * google.rpc.Code.FAILED_PRECONDITION if the photo sequence ID is not yet finished processing.
+       *
+       * Create a request for the method "photoSequence.delete".
+       *
+       * This request holds the parameters needed by the the streetviewpublish server.  After setting
+       * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param sequenceId Required. ID of the PhotoSequence.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String sequenceId) {
+        super(StreetViewPublish.this, "DELETE", REST_PATH, null, com.google.api.services.streetviewpublish.v1.model.Empty.class);
+        this.sequenceId = com.google.api.client.util.Preconditions.checkNotNull(sequenceId, "Required parameter sequenceId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. ID of the PhotoSequence. */
+      @com.google.api.client.util.Key
+      private java.lang.String sequenceId;
+
+      /** Required. ID of the PhotoSequence.
+       */
+      public java.lang.String getSequenceId() {
+        return sequenceId;
+      }
+
+      /** Required. ID of the PhotoSequence. */
+      public Delete setSequenceId(java.lang.String sequenceId) {
+        this.sequenceId = sequenceId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the metadata of the specified PhotoSequence via the Operation interface. This method returns
+     * the following three types of responses: * `Operation.done` = false, if the processing of
+     * PhotoSequence is not finished yet. * `Operation.done` = true and `Operation.error` is populated,
+     * if there was an error in processing. * `Operation.done` = true and `Operation.response` is
+     * poulated, which contains a PhotoSequence message. This method returns the following error codes:
+     * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested
+     * PhotoSequence. * google.rpc.Code.NOT_FOUND if the requested PhotoSequence does not exist.
+     *
+     * Create a request for the method "photoSequence.get".
+     *
+     * This request holds the parameters needed by the streetviewpublish server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param sequenceId Required. ID of the photo sequence.
+     * @return the request
+     */
+    public Get get(java.lang.String sequenceId) throws java.io.IOException {
+      Get result = new Get(sequenceId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends StreetViewPublishRequest<com.google.api.services.streetviewpublish.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/photoSequence/{sequenceId}";
+
+      /**
+       * Gets the metadata of the specified PhotoSequence via the Operation interface. This method
+       * returns the following three types of responses: * `Operation.done` = false, if the processing
+       * of PhotoSequence is not finished yet. * `Operation.done` = true and `Operation.error` is
+       * populated, if there was an error in processing. * `Operation.done` = true and
+       * `Operation.response` is poulated, which contains a PhotoSequence message. This method returns
+       * the following error codes: * google.rpc.Code.PERMISSION_DENIED if the requesting user did not
+       * create the requested PhotoSequence. * google.rpc.Code.NOT_FOUND if the requested PhotoSequence
+       * does not exist.
+       *
+       * Create a request for the method "photoSequence.get".
+       *
+       * This request holds the parameters needed by the the streetviewpublish server.  After setting
+       * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param sequenceId Required. ID of the photo sequence.
+       * @since 1.13
+       */
+      protected Get(java.lang.String sequenceId) {
+        super(StreetViewPublish.this, "GET", REST_PATH, null, com.google.api.services.streetviewpublish.v1.model.Operation.class);
+        this.sequenceId = com.google.api.client.util.Preconditions.checkNotNull(sequenceId, "Required parameter sequenceId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. ID of the photo sequence. */
+      @com.google.api.client.util.Key
+      private java.lang.String sequenceId;
+
+      /** Required. ID of the photo sequence.
+       */
+      public java.lang.String getSequenceId() {
+        return sequenceId;
+      }
+
+      /** Required. ID of the photo sequence. */
+      public Get setSequenceId(java.lang.String sequenceId) {
+        this.sequenceId = sequenceId;
+        return this;
+      }
+
+      /**
+       * Optional. The filter expression. For example: `published_status=PUBLISHED`. The filters
+       * supported are: `published_status`. See https://google.aip.dev/160 for more information.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. The filter expression. For example: `published_status=PUBLISHED`. The filters supported
+     are: `published_status`. See https://google.aip.dev/160 for more information.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. The filter expression. For example: `published_status=PUBLISHED`. The filters
+       * supported are: `published_status`. See https://google.aip.dev/160 for more information.
+       */
+      public Get setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Specifies if a download URL for the photo sequence should be returned in `download_url` of
+       * individual photos in the PhotoSequence response. > Note: Currently not implemented.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Specifies if a download URL for the photo sequence should be returned in `download_url` of
+     individual photos in the PhotoSequence response. > Note: Currently not implemented.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Specifies if a download URL for the photo sequence should be returned in `download_url` of
+       * individual photos in the PhotoSequence response. > Note: Currently not implemented.
+       */
+      public Get setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates an upload session to start uploading photo sequence data. The upload URL of the returned
+     * UploadRef is used to upload the data for the `photoSequence`. After the upload is complete, the
+     * UploadRef is used with CreatePhotoSequence to create the PhotoSequence object entry.
+     *
+     * Create a request for the method "photoSequence.startUpload".
+     *
+     * This request holds the parameters needed by the streetviewpublish server.  After setting any
+     * optional parameters, call the {@link StartUpload#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.streetviewpublish.v1.model.Empty}
+     * @return the request
+     */
+    public StartUpload startUpload(com.google.api.services.streetviewpublish.v1.model.Empty content) throws java.io.IOException {
+      StartUpload result = new StartUpload(content);
+      initialize(result);
+      return result;
+    }
+
+    public class StartUpload extends StreetViewPublishRequest<com.google.api.services.streetviewpublish.v1.model.UploadRef> {
+
+      private static final String REST_PATH = "v1/photoSequence:startUpload";
+
+      /**
+       * Creates an upload session to start uploading photo sequence data. The upload URL of the
+       * returned UploadRef is used to upload the data for the `photoSequence`. After the upload is
+       * complete, the UploadRef is used with CreatePhotoSequence to create the PhotoSequence object
+       * entry.
+       *
+       * Create a request for the method "photoSequence.startUpload".
+       *
+       * This request holds the parameters needed by the the streetviewpublish server.  After setting
+       * any optional parameters, call the {@link StartUpload#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * StartUpload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.streetviewpublish.v1.model.Empty}
+       * @since 1.13
+       */
+      protected StartUpload(com.google.api.services.streetviewpublish.v1.model.Empty content) {
+        super(StreetViewPublish.this, "POST", REST_PATH, content, com.google.api.services.streetviewpublish.v1.model.UploadRef.class);
+      }
+
+      @Override
+      public StartUpload set$Xgafv(java.lang.String $Xgafv) {
+        return (StartUpload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public StartUpload setAccessToken(java.lang.String accessToken) {
+        return (StartUpload) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public StartUpload setAlt(java.lang.String alt) {
+        return (StartUpload) super.setAlt(alt);
+      }
+
+      @Override
+      public StartUpload setCallback(java.lang.String callback) {
+        return (StartUpload) super.setCallback(callback);
+      }
+
+      @Override
+      public StartUpload setFields(java.lang.String fields) {
+        return (StartUpload) super.setFields(fields);
+      }
+
+      @Override
+      public StartUpload setKey(java.lang.String key) {
+        return (StartUpload) super.setKey(key);
+      }
+
+      @Override
+      public StartUpload setOauthToken(java.lang.String oauthToken) {
+        return (StartUpload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public StartUpload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (StartUpload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public StartUpload setQuotaUser(java.lang.String quotaUser) {
+        return (StartUpload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public StartUpload setUploadType(java.lang.String uploadType) {
+        return (StartUpload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public StartUpload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (StartUpload) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public StartUpload set(String parameterName, Object value) {
+        return (StartUpload) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the PhotoSequences collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code StreetViewPublish streetviewpublish = new StreetViewPublish(...);}
+   *   {@code StreetViewPublish.PhotoSequences.List request = streetviewpublish.photoSequences().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public PhotoSequences photoSequences() {
+    return new PhotoSequences();
+  }
+
+  /**
+   * The "photoSequences" collection of methods.
+   */
+  public class PhotoSequences {
+
+    /**
+     * Lists all the PhotoSequences that belong to the user, in descending CreatePhotoSequence timestamp
+     * order.
+     *
+     * Create a request for the method "photoSequences.list".
+     *
+     * This request holds the parameters needed by the streetviewpublish server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends StreetViewPublishRequest<com.google.api.services.streetviewpublish.v1.model.ListPhotoSequencesResponse> {
+
+      private static final String REST_PATH = "v1/photoSequences";
+
+      /**
+       * Lists all the PhotoSequences that belong to the user, in descending CreatePhotoSequence
+       * timestamp order.
+       *
+       * Create a request for the method "photoSequences.list".
+       *
+       * This request holds the parameters needed by the the streetviewpublish server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(StreetViewPublish.this, "GET", REST_PATH, null, com.google.api.services.streetviewpublish.v1.model.ListPhotoSequencesResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The filter expression. For example: `imagery_type=SPHERICAL`. The filters
+       * supported are: `imagery_type`, `processing_state`, `min_latitude`, `max_latitude`,
+       * `min_longitude`, `max_longitude`, and `filename_query`. See https://google.aip.dev/160 for
+       * more information. Filename queries should sent as a Phrase in order to support multple
+       * words and special characters by adding escaped quotes. Ex: filename_query="example of a
+       * phrase.mp4"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. The filter expression. For example: `imagery_type=SPHERICAL`. The filters supported are:
+     `imagery_type`, `processing_state`, `min_latitude`, `max_latitude`, `min_longitude`,
+     `max_longitude`, and `filename_query`. See https://google.aip.dev/160 for more information.
+     Filename queries should sent as a Phrase in order to support multple words and special characters
+     by adding escaped quotes. Ex: filename_query="example of a phrase.mp4"
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. The filter expression. For example: `imagery_type=SPHERICAL`. The filters
+       * supported are: `imagery_type`, `processing_state`, `min_latitude`, `max_latitude`,
+       * `min_longitude`, `max_longitude`, and `filename_query`. See https://google.aip.dev/160 for
+       * more information. Filename queries should sent as a Phrase in order to support multple
+       * words and special characters by adding escaped quotes. Ex: filename_query="example of a
+       * phrase.mp4"
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional. The maximum number of photo sequences to return. `pageSize` must be non-negative.
+       * If `pageSize` is zero or is not provided, the default page size of 100 is used. The number
+       * of photo sequences returned in the response may be less than `pageSize` if the number of
+       * matches is less than `pageSize`. This is currently unimplemented but is in process.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of photo sequences to return. `pageSize` must be non-negative. If
+     `pageSize` is zero or is not provided, the default page size of 100 is used. The number of photo
+     sequences returned in the response may be less than `pageSize` if the number of matches is less
+     than `pageSize`. This is currently unimplemented but is in process.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of photo sequences to return. `pageSize` must be non-negative.
+       * If `pageSize` is zero or is not provided, the default page size of 100 is used. The number
+       * of photo sequences returned in the response may be less than `pageSize` if the number of
+       * matches is less than `pageSize`. This is currently unimplemented but is in process.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. The nextPageToken value returned from a previous ListPhotoSequences request, if
+       * any.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. The nextPageToken value returned from a previous ListPhotoSequences request, if any.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. The nextPageToken value returned from a previous ListPhotoSequences request, if
+       * any.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Photos collection.
    *
    * <p>The typical use is:</p>

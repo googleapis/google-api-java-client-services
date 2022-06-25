@@ -26,6 +26,10 @@ package com.google.api.services.domains.v1.model;
  * from another registrar. First, go to the current registrar to unlock the domain for transfer and
  * retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to
  * confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`.
+ * Finally, you can create a new `Registration` by importing an existing domain managed with [Google
+ * Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to
+ * which the calling user has sufficient access. Then call `ImportDomain` on any domain names you
+ * want to use with Cloud Domains.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Domains API. For a detailed explanation see:
@@ -120,6 +124,14 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   private ContactSettings pendingContactSettings;
 
   /**
+   * Output only. The reason the domain registration failed. Only set for domains in
+   * REGISTRATION_FAILED state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String registerFailureReason;
+
+  /**
    * Output only. The state of the `Registration`
    * The value may be {@code null}.
    */
@@ -133,6 +145,14 @@ public final class Registration extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedPrivacy;
+
+  /**
+   * Output only. The reason the domain transfer failed. Only set for domains in TRANSFER_FAILED
+   * state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transferFailureReason;
 
   /**
    * Required. Settings for contact information linked to the `Registration`. You cannot update
@@ -329,6 +349,25 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The reason the domain registration failed. Only set for domains in
+   * REGISTRATION_FAILED state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegisterFailureReason() {
+    return registerFailureReason;
+  }
+
+  /**
+   * Output only. The reason the domain registration failed. Only set for domains in
+   * REGISTRATION_FAILED state.
+   * @param registerFailureReason registerFailureReason or {@code null} for none
+   */
+  public Registration setRegisterFailureReason(java.lang.String registerFailureReason) {
+    this.registerFailureReason = registerFailureReason;
+    return this;
+  }
+
+  /**
    * Output only. The state of the `Registration`
    * @return value or {@code null} for none
    */
@@ -361,6 +400,25 @@ public final class Registration extends com.google.api.client.json.GenericJson {
    */
   public Registration setSupportedPrivacy(java.util.List<java.lang.String> supportedPrivacy) {
     this.supportedPrivacy = supportedPrivacy;
+    return this;
+  }
+
+  /**
+   * Output only. The reason the domain transfer failed. Only set for domains in TRANSFER_FAILED
+   * state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransferFailureReason() {
+    return transferFailureReason;
+  }
+
+  /**
+   * Output only. The reason the domain transfer failed. Only set for domains in TRANSFER_FAILED
+   * state.
+   * @param transferFailureReason transferFailureReason or {@code null} for none
+   */
+  public Registration setTransferFailureReason(java.lang.String transferFailureReason) {
+    this.transferFailureReason = transferFailureReason;
     return this;
   }
 

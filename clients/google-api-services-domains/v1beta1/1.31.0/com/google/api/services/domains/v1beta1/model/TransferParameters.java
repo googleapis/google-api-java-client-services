@@ -37,6 +37,13 @@ public final class TransferParameters extends com.google.api.client.json.Generic
   private java.lang.String currentRegistrar;
 
   /**
+   * The URL of registrar that currently manages the domain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currentRegistrarUri;
+
+  /**
    * The domain name. Unicode domain names are expressed in Punycode format.
    * The value may be {@code null}.
    */
@@ -86,6 +93,23 @@ public final class TransferParameters extends com.google.api.client.json.Generic
    */
   public TransferParameters setCurrentRegistrar(java.lang.String currentRegistrar) {
     this.currentRegistrar = currentRegistrar;
+    return this;
+  }
+
+  /**
+   * The URL of registrar that currently manages the domain.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrentRegistrarUri() {
+    return currentRegistrarUri;
+  }
+
+  /**
+   * The URL of registrar that currently manages the domain.
+   * @param currentRegistrarUri currentRegistrarUri or {@code null} for none
+   */
+  public TransferParameters setCurrentRegistrarUri(java.lang.String currentRegistrarUri) {
+    this.currentRegistrarUri = currentRegistrarUri;
     return this;
   }
 

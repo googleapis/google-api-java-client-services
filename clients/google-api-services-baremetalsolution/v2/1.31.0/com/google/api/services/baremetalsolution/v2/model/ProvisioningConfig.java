@@ -101,6 +101,13 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   private java.lang.String state;
 
   /**
+   * Optional status messages associated with the FAILED state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String statusMessage;
+
+  /**
    * A generated ticket id to track provisioning request.
    * The value may be {@code null}.
    */
@@ -265,6 +272,23 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
    */
   public ProvisioningConfig setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional status messages associated with the FAILED state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatusMessage() {
+    return statusMessage;
+  }
+
+  /**
+   * Optional status messages associated with the FAILED state.
+   * @param statusMessage statusMessage or {@code null} for none
+   */
+  public ProvisioningConfig setStatusMessage(java.lang.String statusMessage) {
+    this.statusMessage = statusMessage;
     return this;
   }
 

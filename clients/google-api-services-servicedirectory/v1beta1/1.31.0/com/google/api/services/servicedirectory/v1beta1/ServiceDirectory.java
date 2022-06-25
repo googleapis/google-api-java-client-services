@@ -1256,35 +1256,39 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can
-           * be `name` or `labels.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`.
-           * Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the same data
-           * type as field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: *
-           * `labels.owner` returns namespaces that have a label with the key `owner`, this is the
-           * same as `labels:owner` * `labels.owner=sd` returns namespaces that have key/value
-           * `owner=sd` * `name>projects/my-project/locations/us-east1/namespaces/namespace-c`
-           * returns namespaces that have name that is alphabetically later than the string, so
-           * "namespace-e" is returned but "namespace-a" is not * `labels.owner!=sd AND
-           * labels.foo=bar` returns namespaces that have `owner` in label key but value is not `sd`
-           * AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note that
-           * namespace doesn't have a field called "doesnotexist". Since the filter does not match
-           * any namespaces, it returns no results For more information about filtering, see [API
+           * be `name`, `labels.` for map field, or `attributes.` for attributes field * `` can be
+           * `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`. Of which `:` means `HAS`, and is roughly the same
+           * as `=` * `` must be the same data type as field * `` can be `AND`, `OR`, `NOT` Examples
+           * of valid filters: * `labels.owner` returns namespaces that have a label with the key
+           * `owner`, this is the same as `labels:owner` * `labels.owner=sd` returns namespaces that
+           * have key/value `owner=sd` * `name>projects/my-project/locations/us-
+           * east1/namespaces/namespace-c` returns namespaces that have name that is alphabetically
+           * later than the string, so "namespace-e" is returned but "namespace-a" is not *
+           * `labels.owner!=sd AND labels.foo=bar` returns namespaces that have `owner` in label key
+           * but value is not `sd` AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an
+           * empty list. Note that namespace doesn't have a field called "doesnotexist". Since the
+           * filter does not match any namespaces, it returns no results *
+           * `attributes.managed_registration=true` returns namespaces that are managed by a GCP
+           * product or service For more information about filtering, see [API
            * Filtering](https://aip.dev/160).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can be `name`
-         or `labels.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`. Of which `:` means
-         `HAS`, and is roughly the same as `=` * `` must be the same data type as field * `` can be `AND`,
-         `OR`, `NOT` Examples of valid filters: * `labels.owner` returns namespaces that have a label with
-         the key `owner`, this is the same as `labels:owner` * `labels.owner=sd` returns namespaces that
-         have key/value `owner=sd` * `name>projects/my-project/locations/us-east1/namespaces/namespace-c`
-         returns namespaces that have name that is alphabetically later than the string, so "namespace-e" is
-         returned but "namespace-a" is not * `labels.owner!=sd AND labels.foo=bar` returns namespaces that
-         have `owner` in label key but value is not `sd` AND have key/value `foo=bar` *
-         `doesnotexist.foo=bar` returns an empty list. Note that namespace doesn't have a field called
-         "doesnotexist". Since the filter does not match any namespaces, it returns no results For more
-         information about filtering, see [API Filtering](https://aip.dev/160).
+          /** Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can be `name`,
+         `labels.` for map field, or `attributes.` for attributes field * `` can be `<`, `>`, `<=`, `>=`,
+         `!=`, `=`, `:`. Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the same data
+         type as field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: * `labels.owner` returns
+         namespaces that have a label with the key `owner`, this is the same as `labels:owner` *
+         `labels.owner=sd` returns namespaces that have key/value `owner=sd` * `name>projects/my-
+         project/locations/us-east1/namespaces/namespace-c` returns namespaces that have name that is
+         alphabetically later than the string, so "namespace-e" is returned but "namespace-a" is not *
+         `labels.owner!=sd AND labels.foo=bar` returns namespaces that have `owner` in label key but value
+         is not `sd` AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note that
+         namespace doesn't have a field called "doesnotexist". Since the filter does not match any
+         namespaces, it returns no results * `attributes.managed_registration=true` returns namespaces that
+         are managed by a GCP product or service For more information about filtering, see [API
+         Filtering](https://aip.dev/160).
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1292,18 +1296,20 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can
-           * be `name` or `labels.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`.
-           * Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the same data
-           * type as field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: *
-           * `labels.owner` returns namespaces that have a label with the key `owner`, this is the
-           * same as `labels:owner` * `labels.owner=sd` returns namespaces that have key/value
-           * `owner=sd` * `name>projects/my-project/locations/us-east1/namespaces/namespace-c`
-           * returns namespaces that have name that is alphabetically later than the string, so
-           * "namespace-e" is returned but "namespace-a" is not * `labels.owner!=sd AND
-           * labels.foo=bar` returns namespaces that have `owner` in label key but value is not `sd`
-           * AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note that
-           * namespace doesn't have a field called "doesnotexist". Since the filter does not match
-           * any namespaces, it returns no results For more information about filtering, see [API
+           * be `name`, `labels.` for map field, or `attributes.` for attributes field * `` can be
+           * `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`. Of which `:` means `HAS`, and is roughly the same
+           * as `=` * `` must be the same data type as field * `` can be `AND`, `OR`, `NOT` Examples
+           * of valid filters: * `labels.owner` returns namespaces that have a label with the key
+           * `owner`, this is the same as `labels:owner` * `labels.owner=sd` returns namespaces that
+           * have key/value `owner=sd` * `name>projects/my-project/locations/us-
+           * east1/namespaces/namespace-c` returns namespaces that have name that is alphabetically
+           * later than the string, so "namespace-e" is returned but "namespace-a" is not *
+           * `labels.owner!=sd AND labels.foo=bar` returns namespaces that have `owner` in label key
+           * but value is not `sd` AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an
+           * empty list. Note that namespace doesn't have a field called "doesnotexist". Since the
+           * filter does not match any namespaces, it returns no results *
+           * `attributes.managed_registration=true` returns namespaces that are managed by a GCP
+           * product or service For more information about filtering, see [API
            * Filtering](https://aip.dev/160).
            */
           public List setFilter(java.lang.String filter) {
@@ -2566,7 +2572,8 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * metadata key but value is not `sd` AND have key/value `foo=bar` *
              * `doesnotexist.foo=bar` returns an empty list. Note that service doesn't have a field
              * called "doesnotexist". Since the filter does not match any services, it returns no
-             * results For more information about filtering, see [API
+             * results * `attributes.managed_registration=true` returns services that are managed by
+             * a GCP product or service For more information about filtering, see [API
              * Filtering](https://aip.dev/160).
              */
             @com.google.api.client.util.Key
@@ -2583,7 +2590,8 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            `metadata.owner!=sd AND metadata.foo=bar` returns services that have `owner` in metadata key but
            value is not `sd` AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note
            that service doesn't have a field called "doesnotexist". Since the filter does not match any
-           services, it returns no results For more information about filtering, see [API
+           services, it returns no results * `attributes.managed_registration=true` returns services that are
+           managed by a GCP product or service For more information about filtering, see [API
            Filtering](https://aip.dev/160).
              */
             public java.lang.String getFilter() {
@@ -2604,7 +2612,8 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * metadata key but value is not `sd` AND have key/value `foo=bar` *
              * `doesnotexist.foo=bar` returns an empty list. Note that service doesn't have a field
              * called "doesnotexist". Since the filter does not match any services, it returns no
-             * results For more information about filtering, see [API
+             * results * `attributes.managed_registration=true` returns services that are managed by
+             * a GCP product or service For more information about filtering, see [API
              * Filtering](https://aip.dev/160).
              */
             public List setFilter(java.lang.String filter) {

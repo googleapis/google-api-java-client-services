@@ -1962,6 +1962,149 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Imports a domain name from [Google Domains](https://domains.google/) for use in Cloud Domains. To
+         * transfer a domain from another registrar, use the `TransferDomain` method instead. Since
+         * individual users can own domains in Google Domains, the calling user must have ownership
+         * permission on the domain.
+         *
+         * Create a request for the method "registrations.import".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link CloudDomainsImport#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the Registration. Must be in the format `projects/locations`.
+         * @param content the {@link com.google.api.services.domains.v1alpha2.model.ImportDomainRequest}
+         * @return the request
+         */
+        public CloudDomainsImport domainsImport(java.lang.String parent, com.google.api.services.domains.v1alpha2.model.ImportDomainRequest content) throws java.io.IOException {
+          CloudDomainsImport result = new CloudDomainsImport(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CloudDomainsImport extends CloudDomainsRequest<com.google.api.services.domains.v1alpha2.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha2/{+parent}/registrations:import";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Imports a domain name from [Google Domains](https://domains.google/) for use in Cloud Domains.
+           * To transfer a domain from another registrar, use the `TransferDomain` method instead. Since
+           * individual users can own domains in Google Domains, the calling user must have ownership
+           * permission on the domain.
+           *
+           * Create a request for the method "registrations.import".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link CloudDomainsImport#execute()} method to invoke the remote
+           * operation. <p> {@link CloudDomainsImport#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the Registration. Must be in the format `projects/locations`.
+           * @param content the {@link com.google.api.services.domains.v1alpha2.model.ImportDomainRequest}
+           * @since 1.13
+           */
+          protected CloudDomainsImport(java.lang.String parent, com.google.api.services.domains.v1alpha2.model.ImportDomainRequest content) {
+            super(CloudDomains.this, "POST", REST_PATH, content, com.google.api.services.domains.v1alpha2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public CloudDomainsImport set$Xgafv(java.lang.String $Xgafv) {
+            return (CloudDomainsImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CloudDomainsImport setAccessToken(java.lang.String accessToken) {
+            return (CloudDomainsImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CloudDomainsImport setAlt(java.lang.String alt) {
+            return (CloudDomainsImport) super.setAlt(alt);
+          }
+
+          @Override
+          public CloudDomainsImport setCallback(java.lang.String callback) {
+            return (CloudDomainsImport) super.setCallback(callback);
+          }
+
+          @Override
+          public CloudDomainsImport setFields(java.lang.String fields) {
+            return (CloudDomainsImport) super.setFields(fields);
+          }
+
+          @Override
+          public CloudDomainsImport setKey(java.lang.String key) {
+            return (CloudDomainsImport) super.setKey(key);
+          }
+
+          @Override
+          public CloudDomainsImport setOauthToken(java.lang.String oauthToken) {
+            return (CloudDomainsImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CloudDomainsImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CloudDomainsImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CloudDomainsImport setQuotaUser(java.lang.String quotaUser) {
+            return (CloudDomainsImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CloudDomainsImport setUploadType(java.lang.String uploadType) {
+            return (CloudDomainsImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CloudDomainsImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CloudDomainsImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the Registration. Must be in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the Registration. Must be in the format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the Registration. Must be in the format
+           * `projects/locations`.
+           */
+          public CloudDomainsImport setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public CloudDomainsImport set(String parameterName, Object value) {
+            return (CloudDomainsImport) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the `Registration` resources in a project.
          *
          * Create a request for the method "registrations.list".
@@ -2806,6 +2949,190 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud
+         * Domains using the `ImportDomain` method. Since individual users can own domains in Google
+         * Domains, the list of domains returned depends on the individual user making the call. Domains
+         * supported by Google Domains, but not supported by Cloud Domains, are not returned.
+         *
+         * Create a request for the method "registrations.retrieveImportableDomains".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link RetrieveImportableDomains#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param location Required. The location. Must be in the format `projects/locations`.
+         * @return the request
+         */
+        public RetrieveImportableDomains retrieveImportableDomains(java.lang.String location) throws java.io.IOException {
+          RetrieveImportableDomains result = new RetrieveImportableDomains(location);
+          initialize(result);
+          return result;
+        }
+
+        public class RetrieveImportableDomains extends CloudDomainsRequest<com.google.api.services.domains.v1alpha2.model.RetrieveImportableDomainsResponse> {
+
+          private static final String REST_PATH = "v1alpha2/{+location}/registrations:retrieveImportableDomains";
+
+          private final java.util.regex.Pattern LOCATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud
+           * Domains using the `ImportDomain` method. Since individual users can own domains in Google
+           * Domains, the list of domains returned depends on the individual user making the call. Domains
+           * supported by Google Domains, but not supported by Cloud Domains, are not returned.
+           *
+           * Create a request for the method "registrations.retrieveImportableDomains".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link RetrieveImportableDomains#execute()} method to invoke the remote
+           * operation. <p> {@link RetrieveImportableDomains#initialize(com.google.api.client.googleapis.ser
+           * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param location Required. The location. Must be in the format `projects/locations`.
+           * @since 1.13
+           */
+          protected RetrieveImportableDomains(java.lang.String location) {
+            super(CloudDomains.this, "GET", REST_PATH, null, com.google.api.services.domains.v1alpha2.model.RetrieveImportableDomainsResponse.class);
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public RetrieveImportableDomains set$Xgafv(java.lang.String $Xgafv) {
+            return (RetrieveImportableDomains) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RetrieveImportableDomains setAccessToken(java.lang.String accessToken) {
+            return (RetrieveImportableDomains) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RetrieveImportableDomains setAlt(java.lang.String alt) {
+            return (RetrieveImportableDomains) super.setAlt(alt);
+          }
+
+          @Override
+          public RetrieveImportableDomains setCallback(java.lang.String callback) {
+            return (RetrieveImportableDomains) super.setCallback(callback);
+          }
+
+          @Override
+          public RetrieveImportableDomains setFields(java.lang.String fields) {
+            return (RetrieveImportableDomains) super.setFields(fields);
+          }
+
+          @Override
+          public RetrieveImportableDomains setKey(java.lang.String key) {
+            return (RetrieveImportableDomains) super.setKey(key);
+          }
+
+          @Override
+          public RetrieveImportableDomains setOauthToken(java.lang.String oauthToken) {
+            return (RetrieveImportableDomains) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RetrieveImportableDomains setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RetrieveImportableDomains) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RetrieveImportableDomains setQuotaUser(java.lang.String quotaUser) {
+            return (RetrieveImportableDomains) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RetrieveImportableDomains setUploadType(java.lang.String uploadType) {
+            return (RetrieveImportableDomains) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RetrieveImportableDomains setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RetrieveImportableDomains) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The location. Must be in the format `projects/locations`. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. The location. Must be in the format `projects/locations`.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** Required. The location. Must be in the format `projects/locations`. */
+          public RetrieveImportableDomains setLocation(java.lang.String location) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.location = location;
+            return this;
+          }
+
+          /** Maximum number of results to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of results to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of results to return. */
+          public RetrieveImportableDomains setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * When set to the `next_page_token` from a prior response, provides the next page of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** When set to the `next_page_token` from a prior response, provides the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * When set to the `next_page_token` from a prior response, provides the next page of
+           * results.
+           */
+          public RetrieveImportableDomains setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public RetrieveImportableDomains set(String parameterName, Object value) {
+            return (RetrieveImportableDomains) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets parameters needed to register a new domain name, including price and up-to-date
          * availability. Use the returned values to call `RegisterDomain`.
          *
@@ -2969,8 +3296,8 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
         }
         /**
          * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
-         * domains managed by Google Domains, transferring to Cloud Domains is not supported. Use the
-         * returned values to call `TransferDomain`.
+         * domains already managed by [Google Domains](https://domains.google/), use `ImportDomain` instead.
+         * Use the returned values to call `TransferDomain`.
          *
          * Create a request for the method "registrations.retrieveTransferParameters".
          *
@@ -2996,8 +3323,8 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
 
           /**
            * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
-           * domains managed by Google Domains, transferring to Cloud Domains is not supported. Use the
-           * returned values to call `TransferDomain`.
+           * domains already managed by [Google Domains](https://domains.google/), use `ImportDomain`
+           * instead. Use the returned values to call `TransferDomain`.
            *
            * Create a request for the method "registrations.retrieveTransferParameters".
            *
@@ -3589,18 +3916,18 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Transfers a domain name from another registrar to Cloud Domains. For domains managed by Google
-         * Domains, transferring to Cloud Domains is not supported. Before calling this method, go to the
-         * domain's current registrar to unlock the domain for transfer and retrieve the domain's transfer
-         * authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked
-         * and to get values needed to build a call to this method. A successful call creates a
-         * `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
-         * transfer process. The registrant can often speed up this process by approving the transfer
-         * through the current registrar, either by clicking a link in an email from the registrar or by
-         * visiting the registrar's website. A few minutes after transfer approval, the resource transitions
-         * to state `ACTIVE`, indicating that the transfer was successful. If the transfer is rejected or
-         * the request expires without being approved, the resource can end up in state `TRANSFER_FAILED`.
-         * If transfer fails, you can safely delete the resource and retry the transfer.
+         * Transfers a domain name from another registrar to Cloud Domains. For domains already managed by
+         * [Google Domains](https://domains.google/), use `ImportDomain` instead. Before calling this
+         * method, go to the domain's current registrar to unlock the domain for transfer and retrieve the
+         * domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the
+         * domain is unlocked and to get values needed to build a call to this method. A successful call
+         * creates a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to
+         * complete the transfer process. The registrant can often speed up this process by approving the
+         * transfer through the current registrar, either by clicking a link in an email from the registrar
+         * or by visiting the registrar's website. A few minutes after transfer approval, the resource
+         * transitions to state `ACTIVE`, indicating that the transfer was successful. If the transfer is
+         * rejected or the request expires without being approved, the resource can end up in state
+         * `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the transfer.
          *
          * Create a request for the method "registrations.transfer".
          *
@@ -3625,18 +3952,18 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Transfers a domain name from another registrar to Cloud Domains. For domains managed by Google
-           * Domains, transferring to Cloud Domains is not supported. Before calling this method, go to the
-           * domain's current registrar to unlock the domain for transfer and retrieve the domain's transfer
-           * authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is
-           * unlocked and to get values needed to build a call to this method. A successful call creates a
-           * `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
-           * transfer process. The registrant can often speed up this process by approving the transfer
-           * through the current registrar, either by clicking a link in an email from the registrar or by
-           * visiting the registrar's website. A few minutes after transfer approval, the resource
-           * transitions to state `ACTIVE`, indicating that the transfer was successful. If the transfer is
-           * rejected or the request expires without being approved, the resource can end up in state
-           * `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the
+           * Transfers a domain name from another registrar to Cloud Domains. For domains already managed by
+           * [Google Domains](https://domains.google/), use `ImportDomain` instead. Before calling this
+           * method, go to the domain's current registrar to unlock the domain for transfer and retrieve the
+           * domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that
+           * the domain is unlocked and to get values needed to build a call to this method. A successful
+           * call creates a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to
+           * complete the transfer process. The registrant can often speed up this process by approving the
+           * transfer through the current registrar, either by clicking a link in an email from the
+           * registrar or by visiting the registrar's website. A few minutes after transfer approval, the
+           * resource transitions to state `ACTIVE`, indicating that the transfer was successful. If the
+           * transfer is rejected or the request expires without being approved, the resource can end up in
+           * state `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the
            * transfer.
            *
            * Create a request for the method "registrations.transfer".

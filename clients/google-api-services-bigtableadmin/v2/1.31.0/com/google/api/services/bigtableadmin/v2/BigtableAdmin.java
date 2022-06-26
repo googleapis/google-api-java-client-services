@@ -7574,6 +7574,146 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             return (TestIamPermissions) super.set(parameterName, value);
           }
         }
+        /**
+         * Restores a specified table which was accidentally deleted.
+         *
+         * Create a request for the method "tables.undelete".
+         *
+         * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+         * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The unique name of the table to be restored. Values are of the form
+         *        `projects/{project}/instances/{instance}/tables/{table}`.
+         * @param content the {@link com.google.api.services.bigtableadmin.v2.model.UndeleteTableRequest}
+         * @return the request
+         */
+        public Undelete undelete(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.UndeleteTableRequest content) throws java.io.IOException {
+          Undelete result = new Undelete(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Undelete extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:undelete";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+
+          /**
+           * Restores a specified table which was accidentally deleted.
+           *
+           * Create a request for the method "tables.undelete".
+           *
+           * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+           * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The unique name of the table to be restored. Values are of the form
+         *        `projects/{project}/instances/{instance}/tables/{table}`.
+           * @param content the {@link com.google.api.services.bigtableadmin.v2.model.UndeleteTableRequest}
+           * @since 1.13
+           */
+          protected Undelete(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.UndeleteTableRequest content) {
+            super(BigtableAdmin.this, "POST", REST_PATH, content, com.google.api.services.bigtableadmin.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+            }
+          }
+
+          @Override
+          public Undelete set$Xgafv(java.lang.String $Xgafv) {
+            return (Undelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Undelete setAccessToken(java.lang.String accessToken) {
+            return (Undelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Undelete setAlt(java.lang.String alt) {
+            return (Undelete) super.setAlt(alt);
+          }
+
+          @Override
+          public Undelete setCallback(java.lang.String callback) {
+            return (Undelete) super.setCallback(callback);
+          }
+
+          @Override
+          public Undelete setFields(java.lang.String fields) {
+            return (Undelete) super.setFields(fields);
+          }
+
+          @Override
+          public Undelete setKey(java.lang.String key) {
+            return (Undelete) super.setKey(key);
+          }
+
+          @Override
+          public Undelete setOauthToken(java.lang.String oauthToken) {
+            return (Undelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Undelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Undelete setQuotaUser(java.lang.String quotaUser) {
+            return (Undelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Undelete setUploadType(java.lang.String uploadType) {
+            return (Undelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Undelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The unique name of the table to be restored. Values are of the form
+           * `projects/{project}/instances/{instance}/tables/{table}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The unique name of the table to be restored. Values are of the form
+         `projects/{project}/instances/{instance}/tables/{table}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The unique name of the table to be restored. Values are of the form
+           * `projects/{project}/instances/{instance}/tables/{table}`.
+           */
+          public Undelete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Undelete set(String parameterName, Object value) {
+            return (Undelete) super.set(parameterName, value);
+          }
+        }
 
       }
     }

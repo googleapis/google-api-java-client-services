@@ -30,11 +30,35 @@ package com.google.api.services.vmmigration.v1.model;
 public final class AwsSourceVmDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The total size of the disks being migrated in bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long committedStorageBytes;
+
+  /**
    * The firmware type of the source VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String firmware;
+
+  /**
+   * The total size of the disks being migrated in bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCommittedStorageBytes() {
+    return committedStorageBytes;
+  }
+
+  /**
+   * The total size of the disks being migrated in bytes.
+   * @param committedStorageBytes committedStorageBytes or {@code null} for none
+   */
+  public AwsSourceVmDetails setCommittedStorageBytes(java.lang.Long committedStorageBytes) {
+    this.committedStorageBytes = committedStorageBytes;
+    return this;
+  }
 
   /**
    * The firmware type of the source VM.

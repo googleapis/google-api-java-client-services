@@ -445,14 +445,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
-       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -460,7 +460,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
         /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like "displayName=tokyo", and is documented in more detail in
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {
@@ -994,8 +994,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @return the request
          */
         public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -1023,8 +1024,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @since 1.13
            */
           protected GetIamPolicy(java.lang.String resource) {
@@ -1103,22 +1105,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public GetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -1546,8 +1551,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
          * @return the request
          */
@@ -1576,8 +1582,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
            * @since 1.13
            */
@@ -1647,22 +1654,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public SetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -1691,8 +1701,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1TestIamPermissionsRequest}
          * @return the request
          */
@@ -1723,8 +1734,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1TestIamPermissionsRequest}
            * @since 1.13
            */
@@ -1794,22 +1806,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-         documentation for the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public TestIamPermissions setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -2309,8 +2324,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @return the request
          */
         public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -2338,8 +2354,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @since 1.13
            */
           protected GetIamPolicy(java.lang.String resource) {
@@ -2418,22 +2435,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public GetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -2861,8 +2881,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
          * @return the request
          */
@@ -2891,8 +2912,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
            * @since 1.13
            */
@@ -2962,22 +2984,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public SetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -3006,8 +3031,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1TestIamPermissionsRequest}
          * @return the request
          */
@@ -3038,8 +3064,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1TestIamPermissionsRequest}
            * @since 1.13
            */
@@ -3109,22 +3136,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-         documentation for the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public TestIamPermissions setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -4260,8 +4290,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @return the request
          */
         public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
@@ -4289,8 +4320,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @since 1.13
            */
           protected GetIamPolicy(java.lang.String resource) {
@@ -4369,22 +4401,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public GetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -4812,8 +4847,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
          * @return the request
          */
@@ -4842,8 +4878,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         *        the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
            * @since 1.13
            */
@@ -4913,22 +4950,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public SetIamPolicy setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {
@@ -4957,8 +4997,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1TestIamPermissionsRequest}
          * @return the request
          */
@@ -4989,8 +5030,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
-         *        documentation for the appropriate value for this field.
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.GoogleIamV1TestIamPermissionsRequest}
            * @since 1.13
            */
@@ -5060,22 +5102,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String resource;
 
-          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-         documentation for the appropriate value for this field.
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
            */
           public java.lang.String getResource() {
             return resource;
           }
 
           /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
            */
           public TestIamPermissions setResource(java.lang.String resource) {
             if (!getSuppressPatternChecks()) {

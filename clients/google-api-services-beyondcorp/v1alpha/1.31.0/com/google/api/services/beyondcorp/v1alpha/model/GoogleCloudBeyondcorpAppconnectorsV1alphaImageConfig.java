@@ -30,21 +30,24 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpAppconnectorsV1alphaImageConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The stable image that the remote agent will fallback to if the target image fails.
+   * The stable image that the remote agent will fallback to if the target image fails. Format would
+   * be a gcr image path, e.g.: gcr.io/PROJECT-ID/my-image:tag1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stableImage;
 
   /**
-   * The initial image the remote agent will attempt to run for the control plane.
+   * The initial image the remote agent will attempt to run for the control plane. Format would be a
+   * gcr image path, e.g.: gcr.io/PROJECT-ID/my-image:tag1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetImage;
 
   /**
-   * The stable image that the remote agent will fallback to if the target image fails.
+   * The stable image that the remote agent will fallback to if the target image fails. Format would
+   * be a gcr image path, e.g.: gcr.io/PROJECT-ID/my-image:tag1
    * @return value or {@code null} for none
    */
   public java.lang.String getStableImage() {
@@ -52,7 +55,8 @@ public final class GoogleCloudBeyondcorpAppconnectorsV1alphaImageConfig extends 
   }
 
   /**
-   * The stable image that the remote agent will fallback to if the target image fails.
+   * The stable image that the remote agent will fallback to if the target image fails. Format would
+   * be a gcr image path, e.g.: gcr.io/PROJECT-ID/my-image:tag1
    * @param stableImage stableImage or {@code null} for none
    */
   public GoogleCloudBeyondcorpAppconnectorsV1alphaImageConfig setStableImage(java.lang.String stableImage) {
@@ -61,7 +65,8 @@ public final class GoogleCloudBeyondcorpAppconnectorsV1alphaImageConfig extends 
   }
 
   /**
-   * The initial image the remote agent will attempt to run for the control plane.
+   * The initial image the remote agent will attempt to run for the control plane. Format would be a
+   * gcr image path, e.g.: gcr.io/PROJECT-ID/my-image:tag1
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetImage() {
@@ -69,7 +74,8 @@ public final class GoogleCloudBeyondcorpAppconnectorsV1alphaImageConfig extends 
   }
 
   /**
-   * The initial image the remote agent will attempt to run for the control plane.
+   * The initial image the remote agent will attempt to run for the control plane. Format would be a
+   * gcr image path, e.g.: gcr.io/PROJECT-ID/my-image:tag1
    * @param targetImage targetImage or {@code null} for none
    */
   public GoogleCloudBeyondcorpAppconnectorsV1alphaImageConfig setTargetImage(java.lang.String targetImage) {

@@ -30,16 +30,14 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpAppconnectorsV1alphaNotificationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Pub/Sub topic for AppConnector to subscribe and receive notifications from
-   * `projects/{project}/topics/{pubsub_topic}`
+   * Cloud Pub/Sub Configuration to receive notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudBeyondcorpAppconnectorsV1alphaNotificationConfigCloudPubSubNotificationConfig pubsubNotification;
 
   /**
-   * Pub/Sub topic for AppConnector to subscribe and receive notifications from
-   * `projects/{project}/topics/{pubsub_topic}`
+   * Cloud Pub/Sub Configuration to receive notifications.
    * @return value or {@code null} for none
    */
   public GoogleCloudBeyondcorpAppconnectorsV1alphaNotificationConfigCloudPubSubNotificationConfig getPubsubNotification() {
@@ -47,8 +45,7 @@ public final class GoogleCloudBeyondcorpAppconnectorsV1alphaNotificationConfig e
   }
 
   /**
-   * Pub/Sub topic for AppConnector to subscribe and receive notifications from
-   * `projects/{project}/topics/{pubsub_topic}`
+   * Cloud Pub/Sub Configuration to receive notifications.
    * @param pubsubNotification pubsubNotification or {@code null} for none
    */
   public GoogleCloudBeyondcorpAppconnectorsV1alphaNotificationConfig setPubsubNotification(GoogleCloudBeyondcorpAppconnectorsV1alphaNotificationConfigCloudPubSubNotificationConfig pubsubNotification) {

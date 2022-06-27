@@ -62,6 +62,13 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   private java.lang.Boolean logDeniesEnabled;
 
   /**
+   * Monitoring specifies the configuration of monitoring.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerMonitoringConfig monitoring;
+
+  /**
    * Enables the ability to mutate resources using Policy Controller.
    * The value may be {@code null}.
    */
@@ -156,6 +163,23 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
    */
   public PolicyControllerHubConfig setLogDeniesEnabled(java.lang.Boolean logDeniesEnabled) {
     this.logDeniesEnabled = logDeniesEnabled;
+    return this;
+  }
+
+  /**
+   * Monitoring specifies the configuration of monitoring.
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerMonitoringConfig getMonitoring() {
+    return monitoring;
+  }
+
+  /**
+   * Monitoring specifies the configuration of monitoring.
+   * @param monitoring monitoring or {@code null} for none
+   */
+  public PolicyControllerHubConfig setMonitoring(PolicyControllerMonitoringConfig monitoring) {
+    this.monitoring = monitoring;
     return this;
   }
 

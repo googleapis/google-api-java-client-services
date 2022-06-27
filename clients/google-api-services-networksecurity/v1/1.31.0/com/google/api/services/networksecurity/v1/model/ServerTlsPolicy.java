@@ -36,6 +36,8 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
    * connections. By default, it is set to false. This setting is not exclusive of other encryption
    * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
    * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+   * Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS
+   * and non-TLS traffic reaching port :80.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,6 +102,8 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
    * connections. By default, it is set to false. This setting is not exclusive of other encryption
    * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
    * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+   * Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS
+   * and non-TLS traffic reaching port :80.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowOpen() {
@@ -111,6 +115,8 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
    * connections. By default, it is set to false. This setting is not exclusive of other encryption
    * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
    * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+   * Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS
+   * and non-TLS traffic reaching port :80.
    * @param allowOpen allowOpen or {@code null} for none
    */
   public ServerTlsPolicy setAllowOpen(java.lang.Boolean allowOpen) {

@@ -69,7 +69,8 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   private java.lang.String package__;
 
   /**
-   * The syntax of the proto file. The supported values are "proto2" and "proto3".
+   * The syntax of the proto file. The supported values are "proto2", "proto3", and "editions". If
+   * `edition` is present, this value must be "editions".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +143,8 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   }
 
   /**
-   * The syntax of the proto file. The supported values are "proto2" and "proto3".
+   * The syntax of the proto file. The supported values are "proto2", "proto3", and "editions". If
+   * `edition` is present, this value must be "editions".
    * @return value or {@code null} for none
    */
   public java.lang.String getSyntax() {
@@ -150,7 +152,8 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   }
 
   /**
-   * The syntax of the proto file. The supported values are "proto2" and "proto3".
+   * The syntax of the proto file. The supported values are "proto2", "proto3", and "editions". If
+   * `edition` is present, this value must be "editions".
    * @param syntax syntax or {@code null} for none
    */
   public Proto2FileDescriptorProto setSyntax(java.lang.String syntax) {

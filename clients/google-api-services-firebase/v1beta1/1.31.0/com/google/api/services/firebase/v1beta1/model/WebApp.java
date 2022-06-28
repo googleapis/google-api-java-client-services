@@ -85,6 +85,13 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * Output only. The lifecycle state of the App.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Output only. Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This
    * identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases,
    * use `appId` to identify or reference the App. The `webId` value is only unique within a
@@ -217,6 +224,23 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
    */
   public WebApp setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @param state state or {@code null} for none
+   */
+  public WebApp setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

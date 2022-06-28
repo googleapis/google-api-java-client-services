@@ -2167,6 +2167,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         return this;
       }
 
+      /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showDeleted;
+
+      /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+       */
+      public java.lang.Boolean getShowDeleted() {
+        return showDeleted;
+      }
+
+      /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+      public SearchApps setShowDeleted(java.lang.Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+      }
+
       @Override
       public SearchApps set(String parameterName, Object value) {
         return (SearchApps) super.set(parameterName, value);
@@ -2884,6 +2900,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           return this;
         }
 
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -3060,13 +3092,13 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
-         * and `package_name` are all immutable.
+         * `package_name`, and `state` are all immutable.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`, and
-       `package_name` are all immutable.
+        /** Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
+       `package_name`, and `state` are all immutable.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -3074,7 +3106,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
         /**
          * Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`,
-         * and `package_name` are all immutable.
+         * `package_name`, and `state` are all immutable.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -4779,6 +4811,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           return this;
         }
 
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -4951,22 +4999,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and
-         * `bundleId` are all immutable.
+         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`,
+         * `bundleId`, and `state` are all immutable
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and `bundleId`
-       are all immutable.
+        /** Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, `bundleId`,
+       and `state` are all immutable
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and
-         * `bundleId` are all immutable.
+         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`,
+         * `bundleId`, and `state` are all immutable
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -5688,6 +5736,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           return this;
         }
 
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /** Controls whether Apps in the DELETED state should be returned. Defaults to false. */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -5860,22 +5924,22 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, and `projectId`
-         * are all immutable.
+         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId` and
+         * `state` are all immutable
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Specifies which fields to update. Note that the fields `name`, `appId`, and `projectId` are all
-       immutable.
+        /** Specifies which fields to update. Note that the fields `name`, `appId`, `projectId` and `state` are
+       all immutable
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Specifies which fields to update. Note that the fields `name`, `appId`, and `projectId`
-         * are all immutable.
+         * Specifies which fields to update. Note that the fields `name`, `appId`, `projectId` and
+         * `state` are all immutable
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

@@ -33,7 +33,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Average order size - the average number of items in an order. **This metric cannot be segmented
-   * by product dimensions.**
+   * by product dimensions and customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * currency of the returned value is stored in the currency_code segment. If this metric is
    * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
    * query (unless it is explicitly selected by the user) and the currency_code segment is populated
-   * in the response. **This metric cannot be segmented by product dimensions.**
+   * in the response. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +98,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Average number of days between an order being placed and the order being fully shipped,
-   * reported on the last shipment date. **This metric cannot be segmented by product dimensions.**
+   * reported on the last shipment date. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +113,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Long impressions;
 
   /**
-   * Average number of days between an item being ordered and the item being
+   * Average number of days between an item being ordered and the item being **This metric cannot be
+   * segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +123,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   /**
    * Percentage of shipped items in relation to all finalized items (shipped or rejected by the
    * merchant; unshipped items are not taken into account), reported on the order date. Item fill
-   * rate is lowered by merchant rejections.
+   * rate is lowered by merchant rejections. **This metric cannot be segmented by
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +135,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * that happened within 30 minutes of placing the order. The currency of the returned value is
    * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
    * automatically added to the SELECT clause in the search query (unless it is explicitly selected
-   * by the user) and the currency_code segment is populated in the response.
+   * by the user) and the currency_code segment is populated in the response. **This metric cannot
+   * be segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -139,7 +144,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of ordered items. Excludes customer cancellations that happened within 30 minutes of
-   * placing the order.
+   * placing the order. **This metric cannot be segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -147,14 +152,16 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of placed orders. Excludes customer cancellations that happened within 30 minutes of
-   * placing the order. **This metric cannot be segmented by product dimensions.**
+   * placing the order. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long orders;
 
   /**
-   * Number of ordered items canceled by the merchant, reported on the order date.
+   * Number of ordered items canceled by the merchant, reported on the order date. **This metric
+   * cannot be segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -164,7 +171,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * Total price of returned items divided by the total price of shipped items, reported on the
    * order date. If this metric is selected, 'segments.currency_code' is automatically added to the
    * SELECT clause in the search query (unless it is explicitly selected by the user) and the
-   * currency_code segment is populated in the response.
+   * currency_code segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +180,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of ordered items sent back for return, reported on the date when the merchant accepted
-   * the return.
+   * the return. **This metric cannot be segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -183,7 +191,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * accepted the return. The currency of the returned value is stored in the currency_code segment.
    * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
    * clause in the search query (unless it is explicitly selected by the user) and the currency_code
-   * segment is populated in the response.
+   * segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -194,14 +203,15 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * only). The currency of the returned value is stored in the currency_code segment. If this
    * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
    * search query (unless it is explicitly selected by the user) and the currency_code segment is
-   * populated in the response.
+   * populated in the response. **This metric cannot be segmented by customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long shippedItemSalesMicros;
 
   /**
-   * Number of shipped items, reported on the shipment date.
+   * Number of shipped items, reported on the shipment date. **This metric cannot be segmented by
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -209,7 +219,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of fully shipped orders, reported on the last shipment date. **This metric cannot be
-   * segmented by product dimensions.**
+   * segmented by product dimensions and customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -218,7 +228,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   /**
    * Number of ordered items not shipped up until the end of the queried day. If a multi-day period
    * is specified in the search query, the returned value is the average number of unshipped items
-   * over the days in the queried period.
+   * over the days in the queried period. **This metric cannot be segmented by
+   * customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,7 +239,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * Number of orders not shipped or partially shipped up until the end of the queried day. If a
    * multi-day period is specified in the search query, the returned value is the average number of
    * unshipped orders over the days in the queried period. **This metric cannot be segmented by
-   * product dimensions.**
+   * product dimensions and customer_country_code.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +247,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Average order size - the average number of items in an order. **This metric cannot be segmented
-   * by product dimensions.**
+   * by product dimensions and customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getAos() {
@@ -245,7 +256,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Average order size - the average number of items in an order. **This metric cannot be segmented
-   * by product dimensions.**
+   * by product dimensions and customer_country_code.**
    * @param aos aos or {@code null} for none
    */
   public Metrics setAos(java.lang.Double aos) {
@@ -258,7 +269,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * currency of the returned value is stored in the currency_code segment. If this metric is
    * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
    * query (unless it is explicitly selected by the user) and the currency_code segment is populated
-   * in the response. **This metric cannot be segmented by product dimensions.**
+   * in the response. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getAovMicros() {
@@ -270,7 +282,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * currency of the returned value is stored in the currency_code segment. If this metric is
    * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
    * query (unless it is explicitly selected by the user) and the currency_code segment is populated
-   * in the response. **This metric cannot be segmented by product dimensions.**
+   * in the response. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * @param aovMicros aovMicros or {@code null} for none
    */
   public Metrics setAovMicros(java.lang.Double aovMicros) {
@@ -385,7 +398,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Average number of days between an order being placed and the order being fully shipped,
-   * reported on the last shipment date. **This metric cannot be segmented by product dimensions.**
+   * reported on the last shipment date. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getDaysToShip() {
@@ -394,7 +408,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Average number of days between an order being placed and the order being fully shipped,
-   * reported on the last shipment date. **This metric cannot be segmented by product dimensions.**
+   * reported on the last shipment date. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * @param daysToShip daysToShip or {@code null} for none
    */
   public Metrics setDaysToShip(java.lang.Double daysToShip) {
@@ -420,7 +435,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average number of days between an item being ordered and the item being
+   * Average number of days between an item being ordered and the item being **This metric cannot be
+   * segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getItemDaysToShip() {
@@ -428,7 +444,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average number of days between an item being ordered and the item being
+   * Average number of days between an item being ordered and the item being **This metric cannot be
+   * segmented by customer_country_code.**
    * @param itemDaysToShip itemDaysToShip or {@code null} for none
    */
   public Metrics setItemDaysToShip(java.lang.Double itemDaysToShip) {
@@ -439,7 +456,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   /**
    * Percentage of shipped items in relation to all finalized items (shipped or rejected by the
    * merchant; unshipped items are not taken into account), reported on the order date. Item fill
-   * rate is lowered by merchant rejections.
+   * rate is lowered by merchant rejections. **This metric cannot be segmented by
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getItemFillRate() {
@@ -449,7 +467,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   /**
    * Percentage of shipped items in relation to all finalized items (shipped or rejected by the
    * merchant; unshipped items are not taken into account), reported on the order date. Item fill
-   * rate is lowered by merchant rejections.
+   * rate is lowered by merchant rejections. **This metric cannot be segmented by
+   * customer_country_code.**
    * @param itemFillRate itemFillRate or {@code null} for none
    */
   public Metrics setItemFillRate(java.lang.Double itemFillRate) {
@@ -462,7 +481,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * that happened within 30 minutes of placing the order. The currency of the returned value is
    * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
    * automatically added to the SELECT clause in the search query (unless it is explicitly selected
-   * by the user) and the currency_code segment is populated in the response.
+   * by the user) and the currency_code segment is populated in the response. **This metric cannot
+   * be segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getOrderedItemSalesMicros() {
@@ -474,7 +494,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * that happened within 30 minutes of placing the order. The currency of the returned value is
    * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
    * automatically added to the SELECT clause in the search query (unless it is explicitly selected
-   * by the user) and the currency_code segment is populated in the response.
+   * by the user) and the currency_code segment is populated in the response. **This metric cannot
+   * be segmented by customer_country_code.**
    * @param orderedItemSalesMicros orderedItemSalesMicros or {@code null} for none
    */
   public Metrics setOrderedItemSalesMicros(java.lang.Long orderedItemSalesMicros) {
@@ -484,7 +505,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of ordered items. Excludes customer cancellations that happened within 30 minutes of
-   * placing the order.
+   * placing the order. **This metric cannot be segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getOrderedItems() {
@@ -493,7 +514,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of ordered items. Excludes customer cancellations that happened within 30 minutes of
-   * placing the order.
+   * placing the order. **This metric cannot be segmented by customer_country_code.**
    * @param orderedItems orderedItems or {@code null} for none
    */
   public Metrics setOrderedItems(java.lang.Long orderedItems) {
@@ -503,7 +524,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of placed orders. Excludes customer cancellations that happened within 30 minutes of
-   * placing the order. **This metric cannot be segmented by product dimensions.**
+   * placing the order. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getOrders() {
@@ -512,7 +534,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of placed orders. Excludes customer cancellations that happened within 30 minutes of
-   * placing the order. **This metric cannot be segmented by product dimensions.**
+   * placing the order. **This metric cannot be segmented by product dimensions and
+   * customer_country_code.**
    * @param orders orders or {@code null} for none
    */
   public Metrics setOrders(java.lang.Long orders) {
@@ -521,7 +544,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of ordered items canceled by the merchant, reported on the order date.
+   * Number of ordered items canceled by the merchant, reported on the order date. **This metric
+   * cannot be segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getRejectedItems() {
@@ -529,7 +553,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of ordered items canceled by the merchant, reported on the order date.
+   * Number of ordered items canceled by the merchant, reported on the order date. **This metric
+   * cannot be segmented by customer_country_code.**
    * @param rejectedItems rejectedItems or {@code null} for none
    */
   public Metrics setRejectedItems(java.lang.Long rejectedItems) {
@@ -541,7 +566,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * Total price of returned items divided by the total price of shipped items, reported on the
    * order date. If this metric is selected, 'segments.currency_code' is automatically added to the
    * SELECT clause in the search query (unless it is explicitly selected by the user) and the
-   * currency_code segment is populated in the response.
+   * currency_code segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getReturnRate() {
@@ -552,7 +578,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * Total price of returned items divided by the total price of shipped items, reported on the
    * order date. If this metric is selected, 'segments.currency_code' is automatically added to the
    * SELECT clause in the search query (unless it is explicitly selected by the user) and the
-   * currency_code segment is populated in the response.
+   * currency_code segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * @param returnRate returnRate or {@code null} for none
    */
   public Metrics setReturnRate(java.lang.Double returnRate) {
@@ -562,7 +589,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of ordered items sent back for return, reported on the date when the merchant accepted
-   * the return.
+   * the return. **This metric cannot be segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getReturnedItems() {
@@ -571,7 +598,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of ordered items sent back for return, reported on the date when the merchant accepted
-   * the return.
+   * the return. **This metric cannot be segmented by customer_country_code.**
    * @param returnedItems returnedItems or {@code null} for none
    */
   public Metrics setReturnedItems(java.lang.Long returnedItems) {
@@ -584,7 +611,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * accepted the return. The currency of the returned value is stored in the currency_code segment.
    * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
    * clause in the search query (unless it is explicitly selected by the user) and the currency_code
-   * segment is populated in the response.
+   * segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getReturnsMicros() {
@@ -596,7 +624,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * accepted the return. The currency of the returned value is stored in the currency_code segment.
    * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
    * clause in the search query (unless it is explicitly selected by the user) and the currency_code
-   * segment is populated in the response.
+   * segment is populated in the response. **This metric cannot be segmented by
+   * customer_country_code.**
    * @param returnsMicros returnsMicros or {@code null} for none
    */
   public Metrics setReturnsMicros(java.lang.Long returnsMicros) {
@@ -609,7 +638,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * only). The currency of the returned value is stored in the currency_code segment. If this
    * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
    * search query (unless it is explicitly selected by the user) and the currency_code segment is
-   * populated in the response.
+   * populated in the response. **This metric cannot be segmented by customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getShippedItemSalesMicros() {
@@ -621,7 +650,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * only). The currency of the returned value is stored in the currency_code segment. If this
    * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
    * search query (unless it is explicitly selected by the user) and the currency_code segment is
-   * populated in the response.
+   * populated in the response. **This metric cannot be segmented by customer_country_code.**
    * @param shippedItemSalesMicros shippedItemSalesMicros or {@code null} for none
    */
   public Metrics setShippedItemSalesMicros(java.lang.Long shippedItemSalesMicros) {
@@ -630,7 +659,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of shipped items, reported on the shipment date.
+   * Number of shipped items, reported on the shipment date. **This metric cannot be segmented by
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getShippedItems() {
@@ -638,7 +668,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of shipped items, reported on the shipment date.
+   * Number of shipped items, reported on the shipment date. **This metric cannot be segmented by
+   * customer_country_code.**
    * @param shippedItems shippedItems or {@code null} for none
    */
   public Metrics setShippedItems(java.lang.Long shippedItems) {
@@ -648,7 +679,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of fully shipped orders, reported on the last shipment date. **This metric cannot be
-   * segmented by product dimensions.**
+   * segmented by product dimensions and customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Long getShippedOrders() {
@@ -657,7 +688,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of fully shipped orders, reported on the last shipment date. **This metric cannot be
-   * segmented by product dimensions.**
+   * segmented by product dimensions and customer_country_code.**
    * @param shippedOrders shippedOrders or {@code null} for none
    */
   public Metrics setShippedOrders(java.lang.Long shippedOrders) {
@@ -668,7 +699,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   /**
    * Number of ordered items not shipped up until the end of the queried day. If a multi-day period
    * is specified in the search query, the returned value is the average number of unshipped items
-   * over the days in the queried period.
+   * over the days in the queried period. **This metric cannot be segmented by
+   * customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getUnshippedItems() {
@@ -678,7 +710,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   /**
    * Number of ordered items not shipped up until the end of the queried day. If a multi-day period
    * is specified in the search query, the returned value is the average number of unshipped items
-   * over the days in the queried period.
+   * over the days in the queried period. **This metric cannot be segmented by
+   * customer_country_code.**
    * @param unshippedItems unshippedItems or {@code null} for none
    */
   public Metrics setUnshippedItems(java.lang.Double unshippedItems) {
@@ -690,7 +723,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * Number of orders not shipped or partially shipped up until the end of the queried day. If a
    * multi-day period is specified in the search query, the returned value is the average number of
    * unshipped orders over the days in the queried period. **This metric cannot be segmented by
-   * product dimensions.**
+   * product dimensions and customer_country_code.**
    * @return value or {@code null} for none
    */
   public java.lang.Double getUnshippedOrders() {
@@ -701,7 +734,7 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    * Number of orders not shipped or partially shipped up until the end of the queried day. If a
    * multi-day period is specified in the search query, the returned value is the average number of
    * unshipped orders over the days in the queried period. **This metric cannot be segmented by
-   * product dimensions.**
+   * product dimensions and customer_country_code.**
    * @param unshippedOrders unshippedOrders or {@code null} for none
    */
   public Metrics setUnshippedOrders(java.lang.Double unshippedOrders) {

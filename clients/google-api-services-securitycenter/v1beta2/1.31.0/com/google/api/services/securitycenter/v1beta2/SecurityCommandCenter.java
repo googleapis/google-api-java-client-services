@@ -629,6 +629,165 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Get the RapidVulnerabilityDetectionSettings resource.
+     *
+     * Create a request for the method "folders.getRapidVulnerabilityDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @return the request
+     */
+    public GetRapidVulnerabilityDetectionSettings getRapidVulnerabilityDetectionSettings(java.lang.String name) throws java.io.IOException {
+      GetRapidVulnerabilityDetectionSettings result = new GetRapidVulnerabilityDetectionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetRapidVulnerabilityDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+      /**
+       * Get the RapidVulnerabilityDetectionSettings resource.
+       *
+       * Create a request for the method "folders.getRapidVulnerabilityDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method
+       * to invoke the remote operation. <p> {@link GetRapidVulnerabilityDetectionSettings#initialize(co
+       * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @since 1.13
+       */
+      protected GetRapidVulnerabilityDetectionSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetRapidVulnerabilityDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setAlt(java.lang.String alt) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setCallback(java.lang.String callback) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setFields(java.lang.String fields) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setKey(java.lang.String key) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     folders/{folder}/rapidVulnerabilityDetectionSettings *
+     projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public GetRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings set(String parameterName, Object value) {
+        return (GetRapidVulnerabilityDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the SecurityCenterSettings resource.
      *
      * Create a request for the method "folders.getSecurityCenterSettings".
@@ -1595,6 +1754,173 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Update the RapidVulnerabilityDetectionSettings resource.
+     *
+     * Create a request for the method "folders.updateRapidVulnerabilityDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()} method
+     * to invoke the remote operation.
+     *
+     * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
+     * @return the request
+     */
+    public UpdateRapidVulnerabilityDetectionSettings updateRapidVulnerabilityDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings content) throws java.io.IOException {
+      UpdateRapidVulnerabilityDetectionSettings result = new UpdateRapidVulnerabilityDetectionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateRapidVulnerabilityDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+      /**
+       * Update the RapidVulnerabilityDetectionSettings resource.
+       *
+       * Create a request for the method "folders.updateRapidVulnerabilityDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()}
+       * method to invoke the remote operation. <p> {@link UpdateRapidVulnerabilityDetectionSettings#ini
+       * tialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called
+       * to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
+       * @since 1.13
+       */
+      protected UpdateRapidVulnerabilityDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings content) {
+        super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setAlt(java.lang.String alt) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setCallback(java.lang.String callback) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setFields(java.lang.String fields) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setKey(java.lang.String key) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     folders/{folder}/rapidVulnerabilityDetectionSettings *
+     projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public UpdateRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** The list of fields to be updated. */
+      public UpdateRapidVulnerabilityDetectionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings set(String parameterName, Object value) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Update the SecurityHealthAnalyticsSettings resource.
      *
      * Create a request for the method "folders.updateSecurityHealthAnalyticsSettings".
@@ -2449,6 +2775,188 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^folders/[^/]+/eventThreatDetectionSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Calculate set(String parameterName, Object value) {
+          return (Calculate) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the RapidVulnerabilityDetectionSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.RapidVulnerabilityDetectionSettings.List request = securitycenter.rapidVulnerabilityDetectionSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public RapidVulnerabilityDetectionSettings rapidVulnerabilityDetectionSettings() {
+      return new RapidVulnerabilityDetectionSettings();
+    }
+
+    /**
+     * The "rapidVulnerabilityDetectionSettings" collection of methods.
+     */
+    public class RapidVulnerabilityDetectionSettings {
+
+      /**
+       * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
+       * hierarchy and its settings.
+       *
+       * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+       *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @return the request
+       */
+      public Calculate calculate(java.lang.String name) throws java.io.IOException {
+        Calculate result = new Calculate(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Calculate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:calculate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+        /**
+         * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
+         * hierarchy and its settings.
+         *
+         * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Calculate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+       *        projects/{project}/rapidVulnerabilityDetectionSettings
+         * @since 1.13
+         */
+        protected Calculate(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Calculate set$Xgafv(java.lang.String $Xgafv) {
+          return (Calculate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Calculate setAccessToken(java.lang.String accessToken) {
+          return (Calculate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Calculate setAlt(java.lang.String alt) {
+          return (Calculate) super.setAlt(alt);
+        }
+
+        @Override
+        public Calculate setCallback(java.lang.String callback) {
+          return (Calculate) super.setCallback(callback);
+        }
+
+        @Override
+        public Calculate setFields(java.lang.String fields) {
+          return (Calculate) super.setFields(fields);
+        }
+
+        @Override
+        public Calculate setKey(java.lang.String key) {
+          return (Calculate) super.setKey(key);
+        }
+
+        @Override
+        public Calculate setOauthToken(java.lang.String oauthToken) {
+          return (Calculate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Calculate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Calculate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Calculate setQuotaUser(java.lang.String quotaUser) {
+          return (Calculate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Calculate setUploadType(java.lang.String uploadType) {
+          return (Calculate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Calculate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Calculate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+         * folders/{folder}/rapidVulnerabilityDetectionSettings *
+         * projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       folders/{folder}/rapidVulnerabilityDetectionSettings *
+       projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+         * folders/{folder}/rapidVulnerabilityDetectionSettings *
+         * projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        public Calculate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
           }
           this.name = name;
           return this;
@@ -3502,6 +4010,165 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public GetOnboardingState set(String parameterName, Object value) {
         return (GetOnboardingState) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get the RapidVulnerabilityDetectionSettings resource.
+     *
+     * Create a request for the method "organizations.getRapidVulnerabilityDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @return the request
+     */
+    public GetRapidVulnerabilityDetectionSettings getRapidVulnerabilityDetectionSettings(java.lang.String name) throws java.io.IOException {
+      GetRapidVulnerabilityDetectionSettings result = new GetRapidVulnerabilityDetectionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetRapidVulnerabilityDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+      /**
+       * Get the RapidVulnerabilityDetectionSettings resource.
+       *
+       * Create a request for the method "organizations.getRapidVulnerabilityDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method
+       * to invoke the remote operation. <p> {@link GetRapidVulnerabilityDetectionSettings#initialize(co
+       * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @since 1.13
+       */
+      protected GetRapidVulnerabilityDetectionSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetRapidVulnerabilityDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setAlt(java.lang.String alt) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setCallback(java.lang.String callback) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setFields(java.lang.String fields) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setKey(java.lang.String key) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     folders/{folder}/rapidVulnerabilityDetectionSettings *
+     projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public GetRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings set(String parameterName, Object value) {
+        return (GetRapidVulnerabilityDetectionSettings) super.set(parameterName, value);
       }
     }
     /**
@@ -4620,6 +5287,173 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Update the RapidVulnerabilityDetectionSettings resource.
+     *
+     * Create a request for the method "organizations.updateRapidVulnerabilityDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()} method
+     * to invoke the remote operation.
+     *
+     * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
+     * @return the request
+     */
+    public UpdateRapidVulnerabilityDetectionSettings updateRapidVulnerabilityDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings content) throws java.io.IOException {
+      UpdateRapidVulnerabilityDetectionSettings result = new UpdateRapidVulnerabilityDetectionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateRapidVulnerabilityDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+      /**
+       * Update the RapidVulnerabilityDetectionSettings resource.
+       *
+       * Create a request for the method "organizations.updateRapidVulnerabilityDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()}
+       * method to invoke the remote operation. <p> {@link UpdateRapidVulnerabilityDetectionSettings#ini
+       * tialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called
+       * to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
+       * @since 1.13
+       */
+      protected UpdateRapidVulnerabilityDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings content) {
+        super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setAlt(java.lang.String alt) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setCallback(java.lang.String callback) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setFields(java.lang.String fields) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setKey(java.lang.String key) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     folders/{folder}/rapidVulnerabilityDetectionSettings *
+     projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public UpdateRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** The list of fields to be updated. */
+      public UpdateRapidVulnerabilityDetectionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings set(String parameterName, Object value) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Update the SecurityHealthAnalyticsSettings resource.
      *
      * Create a request for the method "organizations.updateSecurityHealthAnalyticsSettings".
@@ -5474,6 +6308,188 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^organizations/[^/]+/eventThreatDetectionSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Calculate set(String parameterName, Object value) {
+          return (Calculate) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the RapidVulnerabilityDetectionSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.RapidVulnerabilityDetectionSettings.List request = securitycenter.rapidVulnerabilityDetectionSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public RapidVulnerabilityDetectionSettings rapidVulnerabilityDetectionSettings() {
+      return new RapidVulnerabilityDetectionSettings();
+    }
+
+    /**
+     * The "rapidVulnerabilityDetectionSettings" collection of methods.
+     */
+    public class RapidVulnerabilityDetectionSettings {
+
+      /**
+       * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
+       * hierarchy and its settings.
+       *
+       * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+       *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @return the request
+       */
+      public Calculate calculate(java.lang.String name) throws java.io.IOException {
+        Calculate result = new Calculate(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Calculate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:calculate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+        /**
+         * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
+         * hierarchy and its settings.
+         *
+         * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Calculate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+       *        projects/{project}/rapidVulnerabilityDetectionSettings
+         * @since 1.13
+         */
+        protected Calculate(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Calculate set$Xgafv(java.lang.String $Xgafv) {
+          return (Calculate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Calculate setAccessToken(java.lang.String accessToken) {
+          return (Calculate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Calculate setAlt(java.lang.String alt) {
+          return (Calculate) super.setAlt(alt);
+        }
+
+        @Override
+        public Calculate setCallback(java.lang.String callback) {
+          return (Calculate) super.setCallback(callback);
+        }
+
+        @Override
+        public Calculate setFields(java.lang.String fields) {
+          return (Calculate) super.setFields(fields);
+        }
+
+        @Override
+        public Calculate setKey(java.lang.String key) {
+          return (Calculate) super.setKey(key);
+        }
+
+        @Override
+        public Calculate setOauthToken(java.lang.String oauthToken) {
+          return (Calculate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Calculate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Calculate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Calculate setQuotaUser(java.lang.String quotaUser) {
+          return (Calculate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Calculate setUploadType(java.lang.String uploadType) {
+          return (Calculate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Calculate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Calculate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+         * folders/{folder}/rapidVulnerabilityDetectionSettings *
+         * projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       folders/{folder}/rapidVulnerabilityDetectionSettings *
+       projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+         * folders/{folder}/rapidVulnerabilityDetectionSettings *
+         * projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        public Calculate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
           }
           this.name = name;
           return this;
@@ -6530,6 +7546,165 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
+     * Get the RapidVulnerabilityDetectionSettings resource.
+     *
+     * Create a request for the method "projects.getRapidVulnerabilityDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @return the request
+     */
+    public GetRapidVulnerabilityDetectionSettings getRapidVulnerabilityDetectionSettings(java.lang.String name) throws java.io.IOException {
+      GetRapidVulnerabilityDetectionSettings result = new GetRapidVulnerabilityDetectionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetRapidVulnerabilityDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+      /**
+       * Get the RapidVulnerabilityDetectionSettings resource.
+       *
+       * Create a request for the method "projects.getRapidVulnerabilityDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method
+       * to invoke the remote operation. <p> {@link GetRapidVulnerabilityDetectionSettings#initialize(co
+       * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @since 1.13
+       */
+      protected GetRapidVulnerabilityDetectionSettings(java.lang.String name) {
+        super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetRapidVulnerabilityDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setAlt(java.lang.String alt) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setCallback(java.lang.String callback) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setFields(java.lang.String fields) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setKey(java.lang.String key) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+     organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     folders/{folder}/rapidVulnerabilityDetectionSettings *
+     projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public GetRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetRapidVulnerabilityDetectionSettings set(String parameterName, Object value) {
+        return (GetRapidVulnerabilityDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the SecurityCenterSettings resource.
      *
      * Create a request for the method "projects.getSecurityCenterSettings".
@@ -7493,6 +8668,173 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @Override
       public UpdateEventThreatDetectionSettings set(String parameterName, Object value) {
         return (UpdateEventThreatDetectionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the RapidVulnerabilityDetectionSettings resource.
+     *
+     * Create a request for the method "projects.updateRapidVulnerabilityDetectionSettings".
+     *
+     * This request holds the parameters needed by the securitycenter server.  After setting any
+     * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()} method
+     * to invoke the remote operation.
+     *
+     * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
+     * @return the request
+     */
+    public UpdateRapidVulnerabilityDetectionSettings updateRapidVulnerabilityDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings content) throws java.io.IOException {
+      UpdateRapidVulnerabilityDetectionSettings result = new UpdateRapidVulnerabilityDetectionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateRapidVulnerabilityDetectionSettings extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+      /**
+       * Update the RapidVulnerabilityDetectionSettings resource.
+       *
+       * Create a request for the method "projects.updateRapidVulnerabilityDetectionSettings".
+       *
+       * This request holds the parameters needed by the the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()}
+       * method to invoke the remote operation. <p> {@link UpdateRapidVulnerabilityDetectionSettings#ini
+       * tialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called
+       * to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
+       * @since 1.13
+       */
+      protected UpdateRapidVulnerabilityDetectionSettings(java.lang.String name, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings content) {
+        super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setAlt(java.lang.String alt) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setCallback(java.lang.String callback) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setFields(java.lang.String fields) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setKey(java.lang.String key) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+     organizations/{organization}/rapidVulnerabilityDetectionSettings *
+     folders/{folder}/rapidVulnerabilityDetectionSettings *
+     projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
+       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       * folders/{folder}/rapidVulnerabilityDetectionSettings *
+       * projects/{project}/rapidVulnerabilityDetectionSettings
+       */
+      public UpdateRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** The list of fields to be updated. */
+      public UpdateRapidVulnerabilityDetectionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateRapidVulnerabilityDetectionSettings set(String parameterName, Object value) {
+        return (UpdateRapidVulnerabilityDetectionSettings) super.set(parameterName, value);
       }
     }
     /**
@@ -8927,6 +10269,188 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         }
       }
+    }
+    /**
+     * An accessor for creating requests from the RapidVulnerabilityDetectionSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.RapidVulnerabilityDetectionSettings.List request = securitycenter.rapidVulnerabilityDetectionSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public RapidVulnerabilityDetectionSettings rapidVulnerabilityDetectionSettings() {
+      return new RapidVulnerabilityDetectionSettings();
+    }
+
+    /**
+     * The "rapidVulnerabilityDetectionSettings" collection of methods.
+     */
+    public class RapidVulnerabilityDetectionSettings {
+
+      /**
+       * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
+       * hierarchy and its settings.
+       *
+       * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+       *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @return the request
+       */
+      public Calculate calculate(java.lang.String name) throws java.io.IOException {
+        Calculate result = new Calculate(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Calculate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:calculate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+
+        /**
+         * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
+         * hierarchy and its settings.
+         *
+         * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Calculate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
+       *        projects/{project}/rapidVulnerabilityDetectionSettings
+         * @since 1.13
+         */
+        protected Calculate(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Calculate set$Xgafv(java.lang.String $Xgafv) {
+          return (Calculate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Calculate setAccessToken(java.lang.String accessToken) {
+          return (Calculate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Calculate setAlt(java.lang.String alt) {
+          return (Calculate) super.setAlt(alt);
+        }
+
+        @Override
+        public Calculate setCallback(java.lang.String callback) {
+          return (Calculate) super.setCallback(callback);
+        }
+
+        @Override
+        public Calculate setFields(java.lang.String fields) {
+          return (Calculate) super.setFields(fields);
+        }
+
+        @Override
+        public Calculate setKey(java.lang.String key) {
+          return (Calculate) super.setKey(key);
+        }
+
+        @Override
+        public Calculate setOauthToken(java.lang.String oauthToken) {
+          return (Calculate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Calculate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Calculate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Calculate setQuotaUser(java.lang.String quotaUser) {
+          return (Calculate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Calculate setUploadType(java.lang.String uploadType) {
+          return (Calculate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Calculate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Calculate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+         * folders/{folder}/rapidVulnerabilityDetectionSettings *
+         * projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+       organizations/{organization}/rapidVulnerabilityDetectionSettings *
+       folders/{folder}/rapidVulnerabilityDetectionSettings *
+       projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
+         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
+         * folders/{folder}/rapidVulnerabilityDetectionSettings *
+         * projects/{project}/rapidVulnerabilityDetectionSettings
+         */
+        public Calculate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Calculate set(String parameterName, Object value) {
+          return (Calculate) super.set(parameterName, value);
+        }
+      }
+
     }
     /**
      * An accessor for creating requests from the SecurityHealthAnalyticsSettings collection.

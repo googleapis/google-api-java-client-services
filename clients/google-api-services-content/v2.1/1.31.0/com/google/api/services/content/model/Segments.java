@@ -125,6 +125,14 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   private java.lang.String customLabel4;
 
   /**
+   * Code of the country where the customer is located at the time of the event. Represented in the
+   * ISO 3166 format. If the customer country cannot be determined, a special 'ZZ' code is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerCountryCode;
+
+  /**
    * Date in the merchant timezone to which metrics apply.
    * The value may be {@code null}.
    */
@@ -417,6 +425,25 @@ public final class Segments extends com.google.api.client.json.GenericJson {
    */
   public Segments setCustomLabel4(java.lang.String customLabel4) {
     this.customLabel4 = customLabel4;
+    return this;
+  }
+
+  /**
+   * Code of the country where the customer is located at the time of the event. Represented in the
+   * ISO 3166 format. If the customer country cannot be determined, a special 'ZZ' code is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerCountryCode() {
+    return customerCountryCode;
+  }
+
+  /**
+   * Code of the country where the customer is located at the time of the event. Represented in the
+   * ISO 3166 format. If the customer country cannot be determined, a special 'ZZ' code is returned.
+   * @param customerCountryCode customerCountryCode or {@code null} for none
+   */
+  public Segments setCustomerCountryCode(java.lang.String customerCountryCode) {
+    this.customerCountryCode = customerCountryCode;
     return this;
   }
 

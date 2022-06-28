@@ -30,7 +30,9 @@ package com.google.api.services.sheets.v4.model;
 public final class ColorStyle extends com.google.api.client.json.GenericJson {
 
   /**
-   * RGB color.
+   * RGB color. The [`alpha`](/sheets/api/reference/rest/v4/spreadsheets/other#Color.FIELDS.alpha)
+   * value in the [`Color`](/sheets/api/reference/rest/v4/spreadsheets/other#color) object isn't
+   * generally supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +46,9 @@ public final class ColorStyle extends com.google.api.client.json.GenericJson {
   private java.lang.String themeColor;
 
   /**
-   * RGB color.
+   * RGB color. The [`alpha`](/sheets/api/reference/rest/v4/spreadsheets/other#Color.FIELDS.alpha)
+   * value in the [`Color`](/sheets/api/reference/rest/v4/spreadsheets/other#color) object isn't
+   * generally supported.
    * @return value or {@code null} for none
    */
   public Color getRgbColor() {
@@ -52,7 +56,9 @@ public final class ColorStyle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * RGB color.
+   * RGB color. The [`alpha`](/sheets/api/reference/rest/v4/spreadsheets/other#Color.FIELDS.alpha)
+   * value in the [`Color`](/sheets/api/reference/rest/v4/spreadsheets/other#color) object isn't
+   * generally supported.
    * @param rgbColor rgbColor or {@code null} for none
    */
   public ColorStyle setRgbColor(Color rgbColor) {

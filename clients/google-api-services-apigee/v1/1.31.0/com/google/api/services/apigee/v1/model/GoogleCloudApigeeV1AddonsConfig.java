@@ -37,6 +37,13 @@ public final class GoogleCloudApigeeV1AddonsConfig extends com.google.api.client
   private GoogleCloudApigeeV1AdvancedApiOpsConfig advancedApiOpsConfig;
 
   /**
+   * Configuration for the API Security add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1ApiSecurityConfig apiSecurityConfig;
+
+  /**
    * Configuration for the Connectors Platform add-on.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class GoogleCloudApigeeV1AddonsConfig extends com.google.api.client
    */
   public GoogleCloudApigeeV1AddonsConfig setAdvancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfig advancedApiOpsConfig) {
     this.advancedApiOpsConfig = advancedApiOpsConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the API Security add-on.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiSecurityConfig getApiSecurityConfig() {
+    return apiSecurityConfig;
+  }
+
+  /**
+   * Configuration for the API Security add-on.
+   * @param apiSecurityConfig apiSecurityConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1AddonsConfig setApiSecurityConfig(GoogleCloudApigeeV1ApiSecurityConfig apiSecurityConfig) {
+    this.apiSecurityConfig = apiSecurityConfig;
     return this;
   }
 

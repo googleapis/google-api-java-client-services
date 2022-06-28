@@ -30538,6 +30538,889 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
       }
       /**
+       * An accessor for creating requests from the SecurityReports collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.SecurityReports.List request = apigee.securityReports().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SecurityReports securityReports() {
+        return new SecurityReports();
+      }
+
+      /**
+       * The "securityReports" collection of methods.
+       */
+      public class SecurityReports {
+
+        /**
+         * Submit a report request to be processed in the background. If the submission succeeds, the API
+         * returns a 200 status and an ID that refer to the report request. In addition to the HTTP status
+         * 200, the `state` of "enqueued" means that the request succeeded.
+         *
+         * Create a request for the method "securityReports.create".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. Must be of the form `organizations/{org}/environments/{env}`.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport> {
+
+          private static final String REST_PATH = "v1/{+parent}/securityReports";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Submit a report request to be processed in the background. If the submission succeeds, the API
+           * returns a 200 status and an ID that refer to the report request. In addition to the HTTP status
+           * 200, the `state` of "enqueued" means that the request succeeded.
+           *
+           * Create a request for the method "securityReports.create".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. Must be of the form `organizations/{org}/environments/{env}`.
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. Must be of the form
+           * `organizations/{org}/environments/{env}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. Must be of the form `organizations/{org}/environments/{env}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. Must be of the form
+           * `organizations/{org}/environments/{env}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get security report status If the query is still in progress, the `state` is set to "running"
+         * After the query has completed successfully, `state` is set to "completed"
+         *
+         * Create a request for the method "securityReports.get".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the security report to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/securityReports/{reportId}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+$");
+
+          /**
+           * Get security report status If the query is still in progress, the `state` is set to "running"
+           * After the query has completed successfully, `state` is set to "completed"
+           *
+           * Create a request for the method "securityReports.get".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the security report to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/securityReports/{reportId}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the security report to get. Must be of the form
+           * `organizations/{org}/environments/{env}/securityReports/{reportId}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the security report to get. Must be of the form
+         `organizations/{org}/environments/{env}/securityReports/{reportId}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the security report to get. Must be of the form
+           * `organizations/{org}/environments/{env}/securityReports/{reportId}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * After the query is completed, use this API to retrieve the results as file. If the request
+         * succeeds, and there is a non-zero result set, the result is downloaded to the client as a zipped
+         * JSON file. The name of the downloaded file will be: OfflineQueryResult-.zip Example:
+         * `OfflineQueryResult-9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+         *
+         * Create a request for the method "securityReports.getResult".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link GetResult#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the security report result to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/securityReports/{reportId}/result`.
+         * @return the request
+         */
+        public GetResult getResult(java.lang.String name) throws java.io.IOException {
+          GetResult result = new GetResult(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetResult extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleApiHttpBody> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+/result$");
+
+          /**
+           * After the query is completed, use this API to retrieve the results as file. If the request
+           * succeeds, and there is a non-zero result set, the result is downloaded to the client as a
+           * zipped JSON file. The name of the downloaded file will be: OfflineQueryResult-.zip Example:
+           * `OfflineQueryResult-9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+           *
+           * Create a request for the method "securityReports.getResult".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link GetResult#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * GetResult#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the security report result to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/securityReports/{reportId}/result`.
+           * @since 1.13
+           */
+          protected GetResult(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleApiHttpBody.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+/result$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetResult set$Xgafv(java.lang.String $Xgafv) {
+            return (GetResult) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetResult setAccessToken(java.lang.String accessToken) {
+            return (GetResult) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetResult setAlt(java.lang.String alt) {
+            return (GetResult) super.setAlt(alt);
+          }
+
+          @Override
+          public GetResult setCallback(java.lang.String callback) {
+            return (GetResult) super.setCallback(callback);
+          }
+
+          @Override
+          public GetResult setFields(java.lang.String fields) {
+            return (GetResult) super.setFields(fields);
+          }
+
+          @Override
+          public GetResult setKey(java.lang.String key) {
+            return (GetResult) super.setKey(key);
+          }
+
+          @Override
+          public GetResult setOauthToken(java.lang.String oauthToken) {
+            return (GetResult) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetResult setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetResult) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetResult setQuotaUser(java.lang.String quotaUser) {
+            return (GetResult) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetResult setUploadType(java.lang.String uploadType) {
+            return (GetResult) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetResult setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetResult) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the security report result to get. Must be of the form
+           * `organizations/{org}/environments/{env}/securityReports/{reportId}/result`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the security report result to get. Must be of the form
+         `organizations/{org}/environments/{env}/securityReports/{reportId}/result`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the security report result to get. Must be of the form
+           * `organizations/{org}/environments/{env}/securityReports/{reportId}/result`.
+           */
+          public GetResult setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+/result$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetResult set(String parameterName, Object value) {
+            return (GetResult) super.set(parameterName, value);
+          }
+        }
+        /**
+         * After the query is completed, use this API to view the query result when result size is small.
+         *
+         * Create a request for the method "securityReports.getResultView".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link GetResultView#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the security report result view to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/securityReports/{reportId}/resultView`.
+         * @return the request
+         */
+        public GetResultView getResultView(java.lang.String name) throws java.io.IOException {
+          GetResultView result = new GetResultView(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetResultView extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportResultView> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+/resultView$");
+
+          /**
+           * After the query is completed, use this API to view the query result when result size is small.
+           *
+           * Create a request for the method "securityReports.getResultView".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link GetResultView#execute()} method to invoke the remote operation. <p>
+           * {@link GetResultView#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name Required. Name of the security report result view to get. Must be of the form
+         *        `organizations/{org}/environments/{env}/securityReports/{reportId}/resultView`.
+           * @since 1.13
+           */
+          protected GetResultView(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportResultView.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+/resultView$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetResultView set$Xgafv(java.lang.String $Xgafv) {
+            return (GetResultView) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetResultView setAccessToken(java.lang.String accessToken) {
+            return (GetResultView) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetResultView setAlt(java.lang.String alt) {
+            return (GetResultView) super.setAlt(alt);
+          }
+
+          @Override
+          public GetResultView setCallback(java.lang.String callback) {
+            return (GetResultView) super.setCallback(callback);
+          }
+
+          @Override
+          public GetResultView setFields(java.lang.String fields) {
+            return (GetResultView) super.setFields(fields);
+          }
+
+          @Override
+          public GetResultView setKey(java.lang.String key) {
+            return (GetResultView) super.setKey(key);
+          }
+
+          @Override
+          public GetResultView setOauthToken(java.lang.String oauthToken) {
+            return (GetResultView) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetResultView setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetResultView) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetResultView setQuotaUser(java.lang.String quotaUser) {
+            return (GetResultView) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetResultView setUploadType(java.lang.String uploadType) {
+            return (GetResultView) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetResultView setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetResultView) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the security report result view to get. Must be of the form
+           * `organizations/{org}/environments/{env}/securityReports/{reportId}/resultView`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the security report result view to get. Must be of the form
+         `organizations/{org}/environments/{env}/securityReports/{reportId}/resultView`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the security report result view to get. Must be of the form
+           * `organizations/{org}/environments/{env}/securityReports/{reportId}/resultView`.
+           */
+          public GetResultView setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityReports/[^/]+/resultView$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetResultView set(String parameterName, Object value) {
+            return (GetResultView) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Return a list of Security Reports
+         *
+         * Create a request for the method "securityReports.list".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. Must be of the form `organizations/{org}/environments/{env}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityReportsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/securityReports";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Return a list of Security Reports
+           *
+           * Create a request for the method "securityReports.list".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. Must be of the form `organizations/{org}/environments/{env}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityReportsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. Must be of the form
+           * `organizations/{org}/environments/{env}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. Must be of the form `organizations/{org}/environments/{env}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. Must be of the form
+           * `organizations/{org}/environments/{env}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Filter response list by dataset. Example: `api`, `mint` */
+          @com.google.api.client.util.Key
+          private java.lang.String dataset;
+
+          /** Filter response list by dataset. Example: `api`, `mint`
+           */
+          public java.lang.String getDataset() {
+            return dataset;
+          }
+
+          /** Filter response list by dataset. Example: `api`, `mint` */
+          public List setDataset(java.lang.String dataset) {
+            this.dataset = dataset;
+            return this;
+          }
+
+          /**
+           * Filter response list by returning security reports that created after this date time.
+           * Time must be in ISO date-time format like '2011-12-03T10:15:30Z'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String from;
+
+          /** Filter response list by returning security reports that created after this date time. Time must be
+         in ISO date-time format like '2011-12-03T10:15:30Z'.
+           */
+          public java.lang.String getFrom() {
+            return from;
+          }
+
+          /**
+           * Filter response list by returning security reports that created after this date time.
+           * Time must be in ISO date-time format like '2011-12-03T10:15:30Z'.
+           */
+          public List setFrom(java.lang.String from) {
+            this.from = from;
+            return this;
+          }
+
+          /** The maximum number of security report to return in the list response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of security report to return in the list response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of security report to return in the list response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Token returned from the previous list response to fetch the next page. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Token returned from the previous list response to fetch the next page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Token returned from the previous list response to fetch the next page. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Filter response list by security reports status. */
+          @com.google.api.client.util.Key
+          private java.lang.String status;
+
+          /** Filter response list by security reports status.
+           */
+          public java.lang.String getStatus() {
+            return status;
+          }
+
+          /** Filter response list by security reports status. */
+          public List setStatus(java.lang.String status) {
+            this.status = status;
+            return this;
+          }
+
+          /** Filter response list by user who submitted queries. */
+          @com.google.api.client.util.Key
+          private java.lang.String submittedBy;
+
+          /** Filter response list by user who submitted queries.
+           */
+          public java.lang.String getSubmittedBy() {
+            return submittedBy;
+          }
+
+          /** Filter response list by user who submitted queries. */
+          public List setSubmittedBy(java.lang.String submittedBy) {
+            this.submittedBy = submittedBy;
+            return this;
+          }
+
+          /**
+           * Filter response list by returning security reports that created before this date time.
+           * Time must be in ISO date-time format like '2011-12-03T10:16:30Z'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String to;
+
+          /** Filter response list by returning security reports that created before this date time. Time must be
+         in ISO date-time format like '2011-12-03T10:16:30Z'.
+           */
+          public java.lang.String getTo() {
+            return to;
+          }
+
+          /**
+           * Filter response list by returning security reports that created before this date time.
+           * Time must be in ISO date-time format like '2011-12-03T10:16:30Z'.
+           */
+          public List setTo(java.lang.String to) {
+            this.to = to;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Sharedflows collection.
        *
        * <p>The typical use is:</p>
@@ -34034,6 +34917,893 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Filter response list by returning asynchronous queries that created before this date
          * time. Time must be in ISO date-time format like '2011-12-03T10:16:30Z'.
+         */
+        public List setTo(java.lang.String to) {
+          this.to = to;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the HostSecurityReports collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.HostSecurityReports.List request = apigee.hostSecurityReports().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public HostSecurityReports hostSecurityReports() {
+      return new HostSecurityReports();
+    }
+
+    /**
+     * The "hostSecurityReports" collection of methods.
+     */
+    public class HostSecurityReports {
+
+      /**
+       * Submit a query at host level to be processed in the background. If the submission of the query
+       * succeeds, the API returns a 201 status and an ID that refer to the query. In addition to the HTTP
+       * status 201, the `state` of "enqueued" means that the request succeeded.
+       *
+       * Create a request for the method "hostSecurityReports.create".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name. Must be of the form `organizations/{org}`.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport> {
+
+        private static final String REST_PATH = "v1/{+parent}/hostSecurityReports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Submit a query at host level to be processed in the background. If the submission of the query
+         * succeeds, the API returns a 201 status and an ID that refer to the query. In addition to the
+         * HTTP status 201, the `state` of "enqueued" means that the request succeeded.
+         *
+         * Create a request for the method "hostSecurityReports.create".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name. Must be of the form `organizations/{org}`.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportQuery content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent resource name. Must be of the form `organizations/{org}`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name. Must be of the form `organizations/{org}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent resource name. Must be of the form `organizations/{org}`. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get status of a query submitted at host level. If the query is still in progress, the `state` is
+       * set to "running" After the query has completed successfully, `state` is set to "completed"
+       *
+       * Create a request for the method "hostSecurityReports.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the security report to get. Must be of the form
+       *        `organizations/{org}/securityReports/{reportId}`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/hostSecurityReports/[^/]+$");
+
+        /**
+         * Get status of a query submitted at host level. If the query is still in progress, the `state`
+         * is set to "running" After the query has completed successfully, `state` is set to "completed"
+         *
+         * Create a request for the method "hostSecurityReports.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the security report to get. Must be of the form
+       *        `organizations/{org}/securityReports/{reportId}`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/hostSecurityReports/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the security report to get. Must be of the form
+         * `organizations/{org}/securityReports/{reportId}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the security report to get. Must be of the form
+       `organizations/{org}/securityReports/{reportId}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the security report to get. Must be of the form
+         * `organizations/{org}/securityReports/{reportId}`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/hostSecurityReports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * After the query is completed, use this API to retrieve the results. If the request succeeds, and
+       * there is a non-zero result set, the result is downloaded to the client as a zipped JSON file. The
+       * name of the downloaded file will be: OfflineQueryResult-.zip Example: `OfflineQueryResult-
+       * 9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+       *
+       * Create a request for the method "hostSecurityReports.getResult".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetResult#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the security report result to get. Must be of the form
+       *        `organizations/{org}/securityReports/{reportId}/result`.
+       * @return the request
+       */
+      public GetResult getResult(java.lang.String name) throws java.io.IOException {
+        GetResult result = new GetResult(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetResult extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleApiHttpBody> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/hostSecurityReports/[^/]+/result$");
+
+        /**
+         * After the query is completed, use this API to retrieve the results. If the request succeeds,
+         * and there is a non-zero result set, the result is downloaded to the client as a zipped JSON
+         * file. The name of the downloaded file will be: OfflineQueryResult-.zip Example:
+         * `OfflineQueryResult-9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+         *
+         * Create a request for the method "hostSecurityReports.getResult".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetResult#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * GetResult#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the security report result to get. Must be of the form
+       *        `organizations/{org}/securityReports/{reportId}/result`.
+         * @since 1.13
+         */
+        protected GetResult(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleApiHttpBody.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/hostSecurityReports/[^/]+/result$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetResult set$Xgafv(java.lang.String $Xgafv) {
+          return (GetResult) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetResult setAccessToken(java.lang.String accessToken) {
+          return (GetResult) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetResult setAlt(java.lang.String alt) {
+          return (GetResult) super.setAlt(alt);
+        }
+
+        @Override
+        public GetResult setCallback(java.lang.String callback) {
+          return (GetResult) super.setCallback(callback);
+        }
+
+        @Override
+        public GetResult setFields(java.lang.String fields) {
+          return (GetResult) super.setFields(fields);
+        }
+
+        @Override
+        public GetResult setKey(java.lang.String key) {
+          return (GetResult) super.setKey(key);
+        }
+
+        @Override
+        public GetResult setOauthToken(java.lang.String oauthToken) {
+          return (GetResult) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetResult setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetResult) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetResult setQuotaUser(java.lang.String quotaUser) {
+          return (GetResult) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetResult setUploadType(java.lang.String uploadType) {
+          return (GetResult) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetResult setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetResult) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the security report result to get. Must be of the form
+         * `organizations/{org}/securityReports/{reportId}/result`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the security report result to get. Must be of the form
+       `organizations/{org}/securityReports/{reportId}/result`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the security report result to get. Must be of the form
+         * `organizations/{org}/securityReports/{reportId}/result`.
+         */
+        public GetResult setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/hostSecurityReports/[^/]+/result$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetResult set(String parameterName, Object value) {
+          return (GetResult) super.set(parameterName, value);
+        }
+      }
+      /**
+       * After the query is completed, use this API to view the query result when result size is small.
+       *
+       * Create a request for the method "hostSecurityReports.getResultView".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetResultView#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the security report result view to get. Must be of the form
+       *        `organizations/{org}/securityReports/{reportId}/resultView`.
+       * @return the request
+       */
+      public GetResultView getResultView(java.lang.String name) throws java.io.IOException {
+        GetResultView result = new GetResultView(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetResultView extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportResultView> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/hostSecurityReports/[^/]+/resultView$");
+
+        /**
+         * After the query is completed, use this API to view the query result when result size is small.
+         *
+         * Create a request for the method "hostSecurityReports.getResultView".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetResultView#execute()} method to invoke the remote operation. <p>
+         * {@link GetResultView#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+         * equest)} must be called to initialize this instance immediately after invoking the constructor.
+         * </p>
+         *
+         * @param name Required. Name of the security report result view to get. Must be of the form
+       *        `organizations/{org}/securityReports/{reportId}/resultView`.
+         * @since 1.13
+         */
+        protected GetResultView(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityReportResultView.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/hostSecurityReports/[^/]+/resultView$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetResultView set$Xgafv(java.lang.String $Xgafv) {
+          return (GetResultView) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetResultView setAccessToken(java.lang.String accessToken) {
+          return (GetResultView) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetResultView setAlt(java.lang.String alt) {
+          return (GetResultView) super.setAlt(alt);
+        }
+
+        @Override
+        public GetResultView setCallback(java.lang.String callback) {
+          return (GetResultView) super.setCallback(callback);
+        }
+
+        @Override
+        public GetResultView setFields(java.lang.String fields) {
+          return (GetResultView) super.setFields(fields);
+        }
+
+        @Override
+        public GetResultView setKey(java.lang.String key) {
+          return (GetResultView) super.setKey(key);
+        }
+
+        @Override
+        public GetResultView setOauthToken(java.lang.String oauthToken) {
+          return (GetResultView) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetResultView setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetResultView) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetResultView setQuotaUser(java.lang.String quotaUser) {
+          return (GetResultView) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetResultView setUploadType(java.lang.String uploadType) {
+          return (GetResultView) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetResultView setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetResultView) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the security report result view to get. Must be of the form
+         * `organizations/{org}/securityReports/{reportId}/resultView`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the security report result view to get. Must be of the form
+       `organizations/{org}/securityReports/{reportId}/resultView`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the security report result view to get. Must be of the form
+         * `organizations/{org}/securityReports/{reportId}/resultView`.
+         */
+        public GetResultView setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/hostSecurityReports/[^/]+/resultView$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetResultView set(String parameterName, Object value) {
+          return (GetResultView) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Return a list of Security Reports at host level.
+       *
+       * Create a request for the method "hostSecurityReports.list".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name. Must be of the form `organizations/{org}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityReportsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/hostSecurityReports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Return a list of Security Reports at host level.
+         *
+         * Create a request for the method "hostSecurityReports.list".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name. Must be of the form `organizations/{org}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityReportsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent resource name. Must be of the form `organizations/{org}`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name. Must be of the form `organizations/{org}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent resource name. Must be of the form `organizations/{org}`. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Filter response list by dataset. Example: `api`, `mint` */
+        @com.google.api.client.util.Key
+        private java.lang.String dataset;
+
+        /** Filter response list by dataset. Example: `api`, `mint`
+         */
+        public java.lang.String getDataset() {
+          return dataset;
+        }
+
+        /** Filter response list by dataset. Example: `api`, `mint` */
+        public List setDataset(java.lang.String dataset) {
+          this.dataset = dataset;
+          return this;
+        }
+
+        /** Required. Filter response list by hostname. */
+        @com.google.api.client.util.Key
+        private java.lang.String envgroupHostname;
+
+        /** Required. Filter response list by hostname.
+         */
+        public java.lang.String getEnvgroupHostname() {
+          return envgroupHostname;
+        }
+
+        /** Required. Filter response list by hostname. */
+        public List setEnvgroupHostname(java.lang.String envgroupHostname) {
+          this.envgroupHostname = envgroupHostname;
+          return this;
+        }
+
+        /**
+         * Filter response list by returning security reports that created after this date time.
+         * Time must be in ISO date-time format like '2011-12-03T10:15:30Z'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String from;
+
+        /** Filter response list by returning security reports that created after this date time. Time must be
+       in ISO date-time format like '2011-12-03T10:15:30Z'.
+         */
+        public java.lang.String getFrom() {
+          return from;
+        }
+
+        /**
+         * Filter response list by returning security reports that created after this date time.
+         * Time must be in ISO date-time format like '2011-12-03T10:15:30Z'.
+         */
+        public List setFrom(java.lang.String from) {
+          this.from = from;
+          return this;
+        }
+
+        /** The maximum number of security report to return in the list response. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of security report to return in the list response.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of security report to return in the list response. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Token returned from the previous list response to fetch the next page. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token returned from the previous list response to fetch the next page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Token returned from the previous list response to fetch the next page. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Filter response list by security report status. */
+        @com.google.api.client.util.Key
+        private java.lang.String status;
+
+        /** Filter response list by security report status.
+         */
+        public java.lang.String getStatus() {
+          return status;
+        }
+
+        /** Filter response list by security report status. */
+        public List setStatus(java.lang.String status) {
+          this.status = status;
+          return this;
+        }
+
+        /** Filter response list by user who submitted queries. */
+        @com.google.api.client.util.Key
+        private java.lang.String submittedBy;
+
+        /** Filter response list by user who submitted queries.
+         */
+        public java.lang.String getSubmittedBy() {
+          return submittedBy;
+        }
+
+        /** Filter response list by user who submitted queries. */
+        public List setSubmittedBy(java.lang.String submittedBy) {
+          this.submittedBy = submittedBy;
+          return this;
+        }
+
+        /**
+         * Filter response list by returning security reports that created before this date time.
+         * Time must be in ISO date-time format like '2011-12-03T10:16:30Z'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String to;
+
+        /** Filter response list by returning security reports that created before this date time. Time must be
+       in ISO date-time format like '2011-12-03T10:16:30Z'.
+         */
+        public java.lang.String getTo() {
+          return to;
+        }
+
+        /**
+         * Filter response list by returning security reports that created before this date time.
+         * Time must be in ISO date-time format like '2011-12-03T10:16:30Z'.
          */
         public List setTo(java.lang.String to) {
           this.to = to;
@@ -39743,6 +41513,1021 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the SecurityProfiles collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.SecurityProfiles.List request = apigee.securityProfiles().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SecurityProfiles securityProfiles() {
+      return new SecurityProfiles();
+    }
+
+    /**
+     * The "securityProfiles" collection of methods.
+     */
+    public class SecurityProfiles {
+
+      /**
+       * GetSecurityProfile gets the specified security profile. Returns NOT_FOUND if security profile is
+       * not present for the specified organization.
+       *
+       * Create a request for the method "securityProfiles.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Security profile in the following format:
+       *        `organizations/{org}/securityProfiles/{profile}'. Profile may optionally contain revision
+       *        ID. If revision ID is not provided, the response will contain latest revision by default.
+       *        Example: organizations/testOrg/securityProfiles/testProfile@5
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityProfiles/[^/]+$");
+
+        /**
+         * GetSecurityProfile gets the specified security profile. Returns NOT_FOUND if security profile
+         * is not present for the specified organization.
+         *
+         * Create a request for the method "securityProfiles.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Security profile in the following format:
+       *        `organizations/{org}/securityProfiles/{profile}'. Profile may optionally contain revision
+       *        ID. If revision ID is not provided, the response will contain latest revision by default.
+       *        Example: organizations/testOrg/securityProfiles/testProfile@5
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Security profile in the following format:
+         * `organizations/{org}/securityProfiles/{profile}'. Profile may optionally contain revision
+         * ID. If revision ID is not provided, the response will contain latest revision by default.
+         * Example: organizations/testOrg/securityProfiles/testProfile@5
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Security profile in the following format:
+       `organizations/{org}/securityProfiles/{profile}'. Profile may optionally contain revision ID. If
+       revision ID is not provided, the response will contain latest revision by default. Example:
+       organizations/testOrg/securityProfiles/testProfile@5
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Security profile in the following format:
+         * `organizations/{org}/securityProfiles/{profile}'. Profile may optionally contain revision
+         * ID. If revision ID is not provided, the response will contain latest revision by default.
+         * Example: organizations/testOrg/securityProfiles/testProfile@5
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * ListSecurityProfiles lists all the security profiles associated with the org including attached
+       * and unattached profiles.
+       *
+       * Create a request for the method "securityProfiles.list".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. For a specific organization, list of all the security profiles. Format:
+       *        `organizations/{org}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityProfilesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/securityProfiles";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * ListSecurityProfiles lists all the security profiles associated with the org including attached
+         * and unattached profiles.
+         *
+         * Create a request for the method "securityProfiles.list".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. For a specific organization, list of all the security profiles. Format:
+       *        `organizations/{org}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityProfilesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. For a specific organization, list of all the security profiles. Format:
+         * `organizations/{org}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. For a specific organization, list of all the security profiles. Format:
+       `organizations/{org}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. For a specific organization, list of all the security profiles. Format:
+         * `organizations/{org}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of profiles to return. The service may return fewer than this value.
+         * If unspecified, at most 50 profiles will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of profiles to return. The service may return fewer than this value. If
+       unspecified, at most 50 profiles will be returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of profiles to return. The service may return fewer than this value.
+         * If unspecified, at most 50 profiles will be returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListSecurityProfiles` call. Provide this to
+         * retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListSecurityProfiles` call. Provide this to retrieve the
+       subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListSecurityProfiles` call. Provide this to
+         * retrieve the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * ListSecurityProfileRevisions lists all the revisions of the security profile.
+       *
+       * Create a request for the method "securityProfiles.listRevisions".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. For a specific profile, list all the revisions. Format:
+       *        `organizations/{org}/securityProfiles/{profile}`
+       * @return the request
+       */
+      public ListRevisions listRevisions(java.lang.String name) throws java.io.IOException {
+        ListRevisions result = new ListRevisions(name);
+        initialize(result);
+        return result;
+      }
+
+      public class ListRevisions extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityProfileRevisionsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:listRevisions";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityProfiles/[^/]+$");
+
+        /**
+         * ListSecurityProfileRevisions lists all the revisions of the security profile.
+         *
+         * Create a request for the method "securityProfiles.listRevisions".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation. <p>
+         * {@link ListRevisions#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+         * equest)} must be called to initialize this instance immediately after invoking the constructor.
+         * </p>
+         *
+         * @param name Required. For a specific profile, list all the revisions. Format:
+       *        `organizations/{org}/securityProfiles/{profile}`
+         * @since 1.13
+         */
+        protected ListRevisions(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityProfileRevisionsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public ListRevisions set$Xgafv(java.lang.String $Xgafv) {
+          return (ListRevisions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ListRevisions setAccessToken(java.lang.String accessToken) {
+          return (ListRevisions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ListRevisions setAlt(java.lang.String alt) {
+          return (ListRevisions) super.setAlt(alt);
+        }
+
+        @Override
+        public ListRevisions setCallback(java.lang.String callback) {
+          return (ListRevisions) super.setCallback(callback);
+        }
+
+        @Override
+        public ListRevisions setFields(java.lang.String fields) {
+          return (ListRevisions) super.setFields(fields);
+        }
+
+        @Override
+        public ListRevisions setKey(java.lang.String key) {
+          return (ListRevisions) super.setKey(key);
+        }
+
+        @Override
+        public ListRevisions setOauthToken(java.lang.String oauthToken) {
+          return (ListRevisions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ListRevisions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ListRevisions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ListRevisions setQuotaUser(java.lang.String quotaUser) {
+          return (ListRevisions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ListRevisions setUploadType(java.lang.String uploadType) {
+          return (ListRevisions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ListRevisions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ListRevisions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. For a specific profile, list all the revisions. Format:
+         * `organizations/{org}/securityProfiles/{profile}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. For a specific profile, list all the revisions. Format:
+       `organizations/{org}/securityProfiles/{profile}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. For a specific profile, list all the revisions. Format:
+         * `organizations/{org}/securityProfiles/{profile}`
+         */
+        public ListRevisions setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The maximum number of profile revisions to return. The service may return fewer than this
+         * value. If unspecified, at most 50 revisions will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of profile revisions to return. The service may return fewer than this value. If
+       unspecified, at most 50 revisions will be returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of profile revisions to return. The service may return fewer than this
+         * value. If unspecified, at most 50 revisions will be returned.
+         */
+        public ListRevisions setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListSecurityProfileRevisions` call. Provide this
+         * to retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListSecurityProfileRevisions` call. Provide this to
+       retrieve the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListSecurityProfileRevisions` call. Provide this
+         * to retrieve the subsequent page.
+         */
+        public ListRevisions setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public ListRevisions set(String parameterName, Object value) {
+          return (ListRevisions) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Environments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.Environments.List request = apigee.environments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Environments environments() {
+        return new Environments();
+      }
+
+      /**
+       * The "environments" collection of methods.
+       */
+      public class Environments {
+
+        /**
+         * ComputeEnvironmentScores calculates scores for requested time range for the specified security
+         * profile and environment.
+         *
+         * Create a request for the method "environments.computeEnvironmentScores".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link ComputeEnvironmentScores#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param profileEnvironment Required. Name of organization and environment and profile id for which score needs to be computed.
+         *        Format: organizations/{org}/securityProfiles/{profile}/environments/{env}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ComputeEnvironmentScoresRequest}
+         * @return the request
+         */
+        public ComputeEnvironmentScores computeEnvironmentScores(java.lang.String profileEnvironment, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ComputeEnvironmentScoresRequest content) throws java.io.IOException {
+          ComputeEnvironmentScores result = new ComputeEnvironmentScores(profileEnvironment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ComputeEnvironmentScores extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ComputeEnvironmentScoresResponse> {
+
+          private static final String REST_PATH = "v1/{+profileEnvironment}:computeEnvironmentScores";
+
+          private final java.util.regex.Pattern PROFILE_ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/securityProfiles/[^/]+/environments/[^/]+$");
+
+          /**
+           * ComputeEnvironmentScores calculates scores for requested time range for the specified security
+           * profile and environment.
+           *
+           * Create a request for the method "environments.computeEnvironmentScores".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link ComputeEnvironmentScores#execute()} method to invoke the remote
+           * operation. <p> {@link ComputeEnvironmentScores#initialize(com.google.api.client.googleapis.serv
+           * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param profileEnvironment Required. Name of organization and environment and profile id for which score needs to be computed.
+         *        Format: organizations/{org}/securityProfiles/{profile}/environments/{env}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ComputeEnvironmentScoresRequest}
+           * @since 1.13
+           */
+          protected ComputeEnvironmentScores(java.lang.String profileEnvironment, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ComputeEnvironmentScoresRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ComputeEnvironmentScoresResponse.class);
+            this.profileEnvironment = com.google.api.client.util.Preconditions.checkNotNull(profileEnvironment, "Required parameter profileEnvironment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROFILE_ENVIRONMENT_PATTERN.matcher(profileEnvironment).matches(),
+                  "Parameter profileEnvironment must conform to the pattern " +
+                  "^organizations/[^/]+/securityProfiles/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public ComputeEnvironmentScores set$Xgafv(java.lang.String $Xgafv) {
+            return (ComputeEnvironmentScores) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setAccessToken(java.lang.String accessToken) {
+            return (ComputeEnvironmentScores) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setAlt(java.lang.String alt) {
+            return (ComputeEnvironmentScores) super.setAlt(alt);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setCallback(java.lang.String callback) {
+            return (ComputeEnvironmentScores) super.setCallback(callback);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setFields(java.lang.String fields) {
+            return (ComputeEnvironmentScores) super.setFields(fields);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setKey(java.lang.String key) {
+            return (ComputeEnvironmentScores) super.setKey(key);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setOauthToken(java.lang.String oauthToken) {
+            return (ComputeEnvironmentScores) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ComputeEnvironmentScores) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setQuotaUser(java.lang.String quotaUser) {
+            return (ComputeEnvironmentScores) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setUploadType(java.lang.String uploadType) {
+            return (ComputeEnvironmentScores) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ComputeEnvironmentScores setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ComputeEnvironmentScores) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of organization and environment and profile id for which score needs to
+           * be computed. Format: organizations/{org}/securityProfiles/{profile}/environments/{env}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String profileEnvironment;
+
+          /** Required. Name of organization and environment and profile id for which score needs to be computed.
+         Format: organizations/{org}/securityProfiles/{profile}/environments/{env}
+           */
+          public java.lang.String getProfileEnvironment() {
+            return profileEnvironment;
+          }
+
+          /**
+           * Required. Name of organization and environment and profile id for which score needs to
+           * be computed. Format: organizations/{org}/securityProfiles/{profile}/environments/{env}
+           */
+          public ComputeEnvironmentScores setProfileEnvironment(java.lang.String profileEnvironment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROFILE_ENVIRONMENT_PATTERN.matcher(profileEnvironment).matches(),
+                  "Parameter profileEnvironment must conform to the pattern " +
+                  "^organizations/[^/]+/securityProfiles/[^/]+/environments/[^/]+$");
+            }
+            this.profileEnvironment = profileEnvironment;
+            return this;
+          }
+
+          @Override
+          public ComputeEnvironmentScores set(String parameterName, Object value) {
+            return (ComputeEnvironmentScores) super.set(parameterName, value);
+          }
+        }
+        /**
+         * CreateSecurityProfileEnvironmentAssociation creates profile environment association i.e. attaches
+         * environment to security profile.
+         *
+         * Create a request for the method "environments.create".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of organization and security profile ID. Format:
+         *        organizations/{org}/securityProfiles/{profile}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation> {
+
+          private static final String REST_PATH = "v1/{+parent}/environments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/securityProfiles/[^/]+$");
+
+          /**
+           * CreateSecurityProfileEnvironmentAssociation creates profile environment association i.e.
+           * attaches environment to security profile.
+           *
+           * Create a request for the method "environments.create".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of organization and security profile ID. Format:
+         *        organizations/{org}/securityProfiles/{profile}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/securityProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of organization and security profile ID. Format:
+           * organizations/{org}/securityProfiles/{profile}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of organization and security profile ID. Format:
+         organizations/{org}/securityProfiles/{profile}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of organization and security profile ID. Format:
+           * organizations/{org}/securityProfiles/{profile}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/securityProfiles/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * DeleteSecurityProfileEnvironmentAssociation removes profile environment association i.e. detaches
+         * environment from security profile.
+         *
+         * Create a request for the method "environments.delete".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the environment attachment to delete. Format:
+         *        organizations/{org}/securityProfiles/{profile}/environments/{env}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/securityProfiles/[^/]+/environments/[^/]+$");
+
+          /**
+           * DeleteSecurityProfileEnvironmentAssociation removes profile environment association i.e.
+           * detaches environment from security profile.
+           *
+           * Create a request for the method "environments.delete".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the environment attachment to delete. Format:
+         *        organizations/{org}/securityProfiles/{profile}/environments/{env}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/securityProfiles/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the environment attachment to delete. Format:
+           * organizations/{org}/securityProfiles/{profile}/environments/{env}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the environment attachment to delete. Format:
+         organizations/{org}/securityProfiles/{profile}/environments/{env}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the environment attachment to delete. Format:
+           * organizations/{org}/securityProfiles/{profile}/environments/{env}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/securityProfiles/[^/]+/environments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Sharedflows collection.

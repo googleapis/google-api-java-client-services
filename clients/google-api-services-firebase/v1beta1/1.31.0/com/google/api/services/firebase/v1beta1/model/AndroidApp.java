@@ -86,6 +86,13 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * Output only. The lifecycle state of the App.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
    * only have restrictions that are valid for the associated Firebase App. Cannot be set in create
    * requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one
@@ -210,6 +217,23 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
    */
   public AndroidApp setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @param state state or {@code null} for none
+   */
+  public AndroidApp setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

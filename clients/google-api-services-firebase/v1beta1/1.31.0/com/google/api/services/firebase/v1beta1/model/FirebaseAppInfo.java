@@ -73,6 +73,13 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   private java.lang.String platform;
 
   /**
+   * Output only. The lifecycle state of the App.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
    * This identifier should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
@@ -168,6 +175,23 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
    */
   public FirebaseAppInfo setPlatform(java.lang.String platform) {
     this.platform = platform;
+    return this;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @param state state or {@code null} for none
+   */
+  public FirebaseAppInfo setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

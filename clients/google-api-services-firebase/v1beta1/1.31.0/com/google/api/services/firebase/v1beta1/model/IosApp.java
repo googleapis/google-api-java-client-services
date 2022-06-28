@@ -92,6 +92,13 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * Output only. The lifecycle state of the App.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The Apple Developer Team ID associated with the App in the App Store.
    * The value may be {@code null}.
    */
@@ -238,6 +245,23 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
    */
   public IosApp setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The lifecycle state of the App.
+   * @param state state or {@code null} for none
+   */
+  public IosApp setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

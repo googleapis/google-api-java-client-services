@@ -109,6 +109,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
+   * Node network config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeNetworkConfig nodeNetworkConfig;
+
+  /**
    * Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
    * replaced by the name field.
    * The value may be {@code null}.
@@ -361,6 +368,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Node network config.
+   * @return value or {@code null} for none
+   */
+  public NodeNetworkConfig getNodeNetworkConfig() {
+    return nodeNetworkConfig;
+  }
+
+  /**
+   * Node network config.
+   * @param nodeNetworkConfig nodeNetworkConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setNodeNetworkConfig(NodeNetworkConfig nodeNetworkConfig) {
+    this.nodeNetworkConfig = nodeNetworkConfig;
     return this;
   }
 

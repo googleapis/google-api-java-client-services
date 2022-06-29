@@ -68,7 +68,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   /**
    * [Output only] The resource URLs of the [managed instance
    * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
-   * instances) associated with this node pool.
+   * instances) associated with this node pool. During the node pool blue-green upgrade operation,
+   * the URLs contain both blue and green resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,6 +146,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String statusMessage;
+
+  /**
+   * Output only. [Output only] Update info contains relevant information during a node pool update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateInfo updateInfo;
 
   /**
    * Upgrade settings control disruption and speed of the upgrade.
@@ -237,7 +245,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   /**
    * [Output only] The resource URLs of the [managed instance
    * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
-   * instances) associated with this node pool.
+   * instances) associated with this node pool. During the node pool blue-green upgrade operation,
+   * the URLs contain both blue and green resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceGroupUrls() {
@@ -247,7 +256,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   /**
    * [Output only] The resource URLs of the [managed instance
    * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
-   * instances) associated with this node pool.
+   * instances) associated with this node pool. During the node pool blue-green upgrade operation,
+   * the URLs contain both blue and green resources.
    * @param instanceGroupUrls instanceGroupUrls or {@code null} for none
    */
   public NodePool setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
@@ -423,6 +433,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] Update info contains relevant information during a node pool update.
+   * @return value or {@code null} for none
+   */
+  public UpdateInfo getUpdateInfo() {
+    return updateInfo;
+  }
+
+  /**
+   * Output only. [Output only] Update info contains relevant information during a node pool update.
+   * @param updateInfo updateInfo or {@code null} for none
+   */
+  public NodePool setUpdateInfo(UpdateInfo updateInfo) {
+    this.updateInfo = updateInfo;
     return this;
   }
 

@@ -3593,6 +3593,146 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         public class NodePools {
 
           /**
+           * CompleteNodePoolUpgrade will signal an on-going node pool upgrade to complete.
+           *
+           * Create a request for the method "nodePools.completeUpgrade".
+           *
+           * This request holds the parameters needed by the container server.  After setting any optional
+           * parameters, call the {@link CompleteUpgrade#execute()} method to invoke the remote operation.
+           *
+           * @param name The name (project, location, cluster, node pool id) of the node pool to complete upgrade. Specified
+           *        in the format 'projects/locations/clusters/nodePools'.
+           * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteNodePoolUpgradeRequest}
+           * @return the request
+           */
+          public CompleteUpgrade completeUpgrade(java.lang.String name, com.google.api.services.container.v1beta1.model.CompleteNodePoolUpgradeRequest content) throws java.io.IOException {
+            CompleteUpgrade result = new CompleteUpgrade(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CompleteUpgrade extends ContainerRequest<com.google.api.services.container.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:completeUpgrade";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+
+            /**
+             * CompleteNodePoolUpgrade will signal an on-going node pool upgrade to complete.
+             *
+             * Create a request for the method "nodePools.completeUpgrade".
+             *
+             * This request holds the parameters needed by the the container server.  After setting any
+             * optional parameters, call the {@link CompleteUpgrade#execute()} method to invoke the remote
+             * operation. <p> {@link CompleteUpgrade#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name The name (project, location, cluster, node pool id) of the node pool to complete upgrade. Specified
+           *        in the format 'projects/locations/clusters/nodePools'.
+             * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteNodePoolUpgradeRequest}
+             * @since 1.13
+             */
+            protected CompleteUpgrade(java.lang.String name, com.google.api.services.container.v1beta1.model.CompleteNodePoolUpgradeRequest content) {
+              super(Container.this, "POST", REST_PATH, content, com.google.api.services.container.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+              }
+            }
+
+            @Override
+            public CompleteUpgrade set$Xgafv(java.lang.String $Xgafv) {
+              return (CompleteUpgrade) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CompleteUpgrade setAccessToken(java.lang.String accessToken) {
+              return (CompleteUpgrade) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CompleteUpgrade setAlt(java.lang.String alt) {
+              return (CompleteUpgrade) super.setAlt(alt);
+            }
+
+            @Override
+            public CompleteUpgrade setCallback(java.lang.String callback) {
+              return (CompleteUpgrade) super.setCallback(callback);
+            }
+
+            @Override
+            public CompleteUpgrade setFields(java.lang.String fields) {
+              return (CompleteUpgrade) super.setFields(fields);
+            }
+
+            @Override
+            public CompleteUpgrade setKey(java.lang.String key) {
+              return (CompleteUpgrade) super.setKey(key);
+            }
+
+            @Override
+            public CompleteUpgrade setOauthToken(java.lang.String oauthToken) {
+              return (CompleteUpgrade) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CompleteUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CompleteUpgrade) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CompleteUpgrade setQuotaUser(java.lang.String quotaUser) {
+              return (CompleteUpgrade) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CompleteUpgrade setUploadType(java.lang.String uploadType) {
+              return (CompleteUpgrade) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CompleteUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CompleteUpgrade) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name (project, location, cluster, node pool id) of the node pool to complete
+             * upgrade. Specified in the format 'projects/locations/clusters/nodePools'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name (project, location, cluster, node pool id) of the node pool to complete upgrade. Specified
+           in the format 'projects/locations/clusters/nodePools'.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name (project, location, cluster, node pool id) of the node pool to complete
+             * upgrade. Specified in the format 'projects/locations/clusters/nodePools'.
+             */
+            public CompleteUpgrade setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CompleteUpgrade set(String parameterName, Object value) {
+              return (CompleteUpgrade) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a node pool for a cluster.
            *
            * Create a request for the method "nodePools.create".

@@ -48,6 +48,13 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   private java.lang.Double altitude;
 
   /**
+   * Time of the GPS record since UTC epoch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String gpsRecordTimestampUnixEpoch;
+
+  /**
    * The following pose parameters pertain to the center of the photo. They match
    * https://developers.google.com/streetview/spherical-metadata. Compass heading, measured at the
    * center of the photo in degrees clockwise from North. Value must be >=0 and <360. NaN indicates
@@ -129,6 +136,23 @@ public final class Pose extends com.google.api.client.json.GenericJson {
    */
   public Pose setAltitude(java.lang.Double altitude) {
     this.altitude = altitude;
+    return this;
+  }
+
+  /**
+   * Time of the GPS record since UTC epoch.
+   * @return value or {@code null} for none
+   */
+  public String getGpsRecordTimestampUnixEpoch() {
+    return gpsRecordTimestampUnixEpoch;
+  }
+
+  /**
+   * Time of the GPS record since UTC epoch.
+   * @param gpsRecordTimestampUnixEpoch gpsRecordTimestampUnixEpoch or {@code null} for none
+   */
+  public Pose setGpsRecordTimestampUnixEpoch(String gpsRecordTimestampUnixEpoch) {
+    this.gpsRecordTimestampUnixEpoch = gpsRecordTimestampUnixEpoch;
     return this;
   }
 

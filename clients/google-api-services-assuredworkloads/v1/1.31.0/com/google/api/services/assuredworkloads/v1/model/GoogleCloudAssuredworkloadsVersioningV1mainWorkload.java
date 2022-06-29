@@ -56,6 +56,13 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
   private java.lang.String complianceRegime;
 
   /**
+   * Output only. Count of active Violations in the Workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus complianceStatus;
+
+  /**
    * Output only. Immutable. The Workload creation timestamp.
    * The value may be {@code null}.
    */
@@ -232,6 +239,23 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkload extends c
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkload setComplianceRegime(java.lang.String complianceRegime) {
     this.complianceRegime = complianceRegime;
+    return this;
+  }
+
+  /**
+   * Output only. Count of active Violations in the Workload.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus getComplianceStatus() {
+    return complianceStatus;
+  }
+
+  /**
+   * Output only. Count of active Violations in the Workload.
+   * @param complianceStatus complianceStatus or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsVersioningV1mainWorkload setComplianceStatus(GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus complianceStatus) {
+    this.complianceStatus = complianceStatus;
     return this;
   }
 

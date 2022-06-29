@@ -65,6 +65,13 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
   private java.lang.String projectId;
 
   /**
+   * Option for rollback to ignore the PodDisruptionBudget. Default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean respectPdb;
+
+  /**
    * Required. Deprecated. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
    * This field has been deprecated and replaced by the name field.
@@ -148,6 +155,23 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
    */
   public RollbackNodePoolUpgradeRequest setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Option for rollback to ignore the PodDisruptionBudget. Default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRespectPdb() {
+    return respectPdb;
+  }
+
+  /**
+   * Option for rollback to ignore the PodDisruptionBudget. Default value is false.
+   * @param respectPdb respectPdb or {@code null} for none
+   */
+  public RollbackNodePoolUpgradeRequest setRespectPdb(java.lang.Boolean respectPdb) {
+    this.respectPdb = respectPdb;
     return this;
   }
 

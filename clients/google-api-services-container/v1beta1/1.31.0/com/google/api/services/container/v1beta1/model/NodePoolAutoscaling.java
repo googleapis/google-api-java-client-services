@@ -46,6 +46,13 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   private java.lang.Boolean enabled;
 
   /**
+   * Location policy used when scaling up a nodepool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationPolicy;
+
+  /**
    * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
    * to be enough quota to scale up the cluster.
    * The value may be {@code null}.
@@ -59,6 +66,24 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodeCount;
+
+  /**
+   * Maximum number of nodes in the node pool. Must be greater than total_min_node_count. There has
+   * to be enough quota to scale up the cluster. The total_*_node_count fields are mutually
+   * exclusive with the *_node_count fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalMaxNodeCount;
+
+  /**
+   * Minimum number of nodes in the node pool. Must be greater than 1 less than
+   * total_max_node_count. The total_*_node_count fields are mutually exclusive with the
+   * *_node_count fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalMinNodeCount;
 
   /**
    * Can this node pool be deleted automatically.
@@ -95,6 +120,23 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
+   * Location policy used when scaling up a nodepool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationPolicy() {
+    return locationPolicy;
+  }
+
+  /**
+   * Location policy used when scaling up a nodepool.
+   * @param locationPolicy locationPolicy or {@code null} for none
+   */
+  public NodePoolAutoscaling setLocationPolicy(java.lang.String locationPolicy) {
+    this.locationPolicy = locationPolicy;
+    return this;
+  }
+
+  /**
    * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
    * to be enough quota to scale up the cluster.
    * @return value or {@code null} for none
@@ -127,6 +169,48 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
    */
   public NodePoolAutoscaling setMinNodeCount(java.lang.Integer minNodeCount) {
     this.minNodeCount = minNodeCount;
+    return this;
+  }
+
+  /**
+   * Maximum number of nodes in the node pool. Must be greater than total_min_node_count. There has
+   * to be enough quota to scale up the cluster. The total_*_node_count fields are mutually
+   * exclusive with the *_node_count fields.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalMaxNodeCount() {
+    return totalMaxNodeCount;
+  }
+
+  /**
+   * Maximum number of nodes in the node pool. Must be greater than total_min_node_count. There has
+   * to be enough quota to scale up the cluster. The total_*_node_count fields are mutually
+   * exclusive with the *_node_count fields.
+   * @param totalMaxNodeCount totalMaxNodeCount or {@code null} for none
+   */
+  public NodePoolAutoscaling setTotalMaxNodeCount(java.lang.Integer totalMaxNodeCount) {
+    this.totalMaxNodeCount = totalMaxNodeCount;
+    return this;
+  }
+
+  /**
+   * Minimum number of nodes in the node pool. Must be greater than 1 less than
+   * total_max_node_count. The total_*_node_count fields are mutually exclusive with the
+   * *_node_count fields.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalMinNodeCount() {
+    return totalMinNodeCount;
+  }
+
+  /**
+   * Minimum number of nodes in the node pool. Must be greater than 1 less than
+   * total_max_node_count. The total_*_node_count fields are mutually exclusive with the
+   * *_node_count fields.
+   * @param totalMinNodeCount totalMinNodeCount or {@code null} for none
+   */
+  public NodePoolAutoscaling setTotalMinNodeCount(java.lang.Integer totalMinNodeCount) {
+    this.totalMinNodeCount = totalMinNodeCount;
     return this;
   }
 

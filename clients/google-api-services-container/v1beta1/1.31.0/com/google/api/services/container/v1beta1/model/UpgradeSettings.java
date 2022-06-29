@@ -17,7 +17,20 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Model definition for UpgradeSettings.
+ * These upgrade settings configure the upgrade strategy for the node pool. Use strategy to switch
+ * between the strategies applied to the node pool. If the strategy is SURGE, use max_surge and
+ * max_unavailable to control the level of parallelism and the level of disruption caused by
+ * upgrade. 1. maxSurge controls the number of additional nodes that can be added to the node pool
+ * temporarily for the time of the upgrade to increase the number of available nodes. 2.
+ * maxUnavailable controls the number of nodes that can be simultaneously unavailable. 3.
+ * (maxUnavailable + maxSurge) determines the level of parallelism (how many nodes are being
+ * upgraded at the same time). If the strategy is BLUE_GREEN, use blue_green_settings to configure
+ * the blue-green upgrade related settings. 1. standard_rollout_policy is the default policy. The
+ * policy is used to control the way blue pool gets drained. The draining is executed in the batch
+ * mode. The batch size could be specified as either percentage of the node pool size or the number
+ * of nodes. batch_soak_duration is the soak time after each batch gets drained. 2.
+ * node_pool_soak_duration is the soak time after all blue nodes are drained. After this period, the
+ * blue pool nodes will be deleted.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,6 +42,13 @@ package com.google.api.services.container.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class UpgradeSettings extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Settings for blue-green upgrade strategy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BlueGreenSettings blueGreenSettings;
 
   /**
    * The maximum number of nodes that can be created beyond the current size of the node pool during
@@ -45,6 +65,30 @@ public final class UpgradeSettings extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxUnavailable;
+
+  /**
+   * Update strategy of the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String strategy;
+
+  /**
+   * Settings for blue-green upgrade strategy.
+   * @return value or {@code null} for none
+   */
+  public BlueGreenSettings getBlueGreenSettings() {
+    return blueGreenSettings;
+  }
+
+  /**
+   * Settings for blue-green upgrade strategy.
+   * @param blueGreenSettings blueGreenSettings or {@code null} for none
+   */
+  public UpgradeSettings setBlueGreenSettings(BlueGreenSettings blueGreenSettings) {
+    this.blueGreenSettings = blueGreenSettings;
+    return this;
+  }
 
   /**
    * The maximum number of nodes that can be created beyond the current size of the node pool during
@@ -81,6 +125,23 @@ public final class UpgradeSettings extends com.google.api.client.json.GenericJso
    */
   public UpgradeSettings setMaxUnavailable(java.lang.Integer maxUnavailable) {
     this.maxUnavailable = maxUnavailable;
+    return this;
+  }
+
+  /**
+   * Update strategy of the node pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStrategy() {
+    return strategy;
+  }
+
+  /**
+   * Update strategy of the node pool.
+   * @param strategy strategy or {@code null} for none
+   */
+  public UpgradeSettings setStrategy(java.lang.String strategy) {
+    this.strategy = strategy;
     return this;
   }
 

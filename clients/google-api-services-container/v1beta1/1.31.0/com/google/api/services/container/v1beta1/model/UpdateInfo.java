@@ -17,7 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Subset of NodeConfig message that has defaults.
+ * UpdateInfo contains resource (instance groups, etc), status and other intermediate information
+ * relevant to a node pool upgrade.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,40 +29,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class NodeConfigDefaults extends com.google.api.client.json.GenericJson {
+public final class UpdateInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * GCFS (Google Container File System, a.k.a. Riptide) options.
+   * Information of a blue-green upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GcfsConfig gcfsConfig;
+  private BlueGreenInfo blueGreenInfo;
 
   /**
-   * GCFS (Google Container File System, a.k.a. Riptide) options.
+   * Information of a blue-green upgrade.
    * @return value or {@code null} for none
    */
-  public GcfsConfig getGcfsConfig() {
-    return gcfsConfig;
+  public BlueGreenInfo getBlueGreenInfo() {
+    return blueGreenInfo;
   }
 
   /**
-   * GCFS (Google Container File System, a.k.a. Riptide) options.
-   * @param gcfsConfig gcfsConfig or {@code null} for none
+   * Information of a blue-green upgrade.
+   * @param blueGreenInfo blueGreenInfo or {@code null} for none
    */
-  public NodeConfigDefaults setGcfsConfig(GcfsConfig gcfsConfig) {
-    this.gcfsConfig = gcfsConfig;
+  public UpdateInfo setBlueGreenInfo(BlueGreenInfo blueGreenInfo) {
+    this.blueGreenInfo = blueGreenInfo;
     return this;
   }
 
   @Override
-  public NodeConfigDefaults set(String fieldName, Object value) {
-    return (NodeConfigDefaults) super.set(fieldName, value);
+  public UpdateInfo set(String fieldName, Object value) {
+    return (UpdateInfo) super.set(fieldName, value);
   }
 
   @Override
-  public NodeConfigDefaults clone() {
-    return (NodeConfigDefaults) super.clone();
+  public UpdateInfo clone() {
+    return (UpdateInfo) super.clone();
   }
 
 }

@@ -64,7 +64,9 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
 
   /**
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
-   * as `attributes.xyz`.
+   * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
+   * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +176,9 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
 
   /**
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
-   * as `attributes.xyz`.
+   * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
+   * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -183,7 +187,9 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
 
   /**
    * Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such
-   * as `attributes.xyz`.
+   * as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric
+   * characters and underscores. For example, an attribute named `attributes.abc_xyz` can be
+   * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed.
    * @param key key or {@code null} for none
    */
   public GoogleCloudRetailV2betaCatalogAttribute setKey(java.lang.String key) {

@@ -45,6 +45,12 @@ public final class Cuepoint extends com.google.api.client.json.GenericJson {
   private java.lang.Long durationSecs;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * The identifier for cuepoint resource.
    * The value may be {@code null}.
    */
@@ -95,6 +101,21 @@ public final class Cuepoint extends com.google.api.client.json.GenericJson {
    */
   public Cuepoint setDurationSecs(java.lang.Long durationSecs) {
     this.durationSecs = durationSecs;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * @param etag etag or {@code null} for none
+   */
+  public Cuepoint setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

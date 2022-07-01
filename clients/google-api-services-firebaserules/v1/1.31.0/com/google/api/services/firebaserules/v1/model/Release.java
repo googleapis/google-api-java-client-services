@@ -45,7 +45,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the
+   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the
    * `Release` to be created.
    * The value may be {@code null}.
    */
@@ -94,7 +94,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the
+   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the
    * `Release` to be created.
    * @return value or {@code null} for none
    */
@@ -103,7 +103,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the
+   * Required. Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the
    * `Release` to be created.
    * @param rulesetName rulesetName or {@code null} for none
    */

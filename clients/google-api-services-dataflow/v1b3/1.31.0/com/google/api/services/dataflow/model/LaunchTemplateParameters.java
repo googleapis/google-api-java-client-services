@@ -39,7 +39,8 @@ public final class LaunchTemplateParameters extends com.google.api.client.json.G
   private RuntimeEnvironment environment;
 
   /**
-   * Required. The job name to use for the created job.
+   * Required. The job name to use for the created job. The name must match the regular expression
+   * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class LaunchTemplateParameters extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The job name to use for the created job.
+   * Required. The job name to use for the created job. The name must match the regular expression
+   * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @return value or {@code null} for none
    */
   public java.lang.String getJobName() {
@@ -94,7 +96,8 @@ public final class LaunchTemplateParameters extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The job name to use for the created job.
+   * Required. The job name to use for the created job. The name must match the regular expression
+   * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @param jobName jobName or {@code null} for none
    */
   public LaunchTemplateParameters setJobName(java.lang.String jobName) {

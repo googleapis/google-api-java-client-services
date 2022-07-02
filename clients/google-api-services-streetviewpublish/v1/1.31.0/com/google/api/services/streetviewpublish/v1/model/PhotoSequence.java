@@ -47,6 +47,14 @@ public final class PhotoSequence extends com.google.api.client.json.GenericJson 
   private java.lang.Double distanceMeters;
 
   /**
+   * Output only. If this sequence has `failure_reason` set, this may contain additional details
+   * about the failure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProcessingFailureDetails failureDetails;
+
+  /**
    * Output only. If this sequence has processing_state = FAILED, this will contain the reason why
    * it failed. If the processing_state is any other value, this field will be unset.
    * The value may be {@code null}.
@@ -183,6 +191,25 @@ public final class PhotoSequence extends com.google.api.client.json.GenericJson 
    */
   public PhotoSequence setDistanceMeters(java.lang.Double distanceMeters) {
     this.distanceMeters = distanceMeters;
+    return this;
+  }
+
+  /**
+   * Output only. If this sequence has `failure_reason` set, this may contain additional details
+   * about the failure.
+   * @return value or {@code null} for none
+   */
+  public ProcessingFailureDetails getFailureDetails() {
+    return failureDetails;
+  }
+
+  /**
+   * Output only. If this sequence has `failure_reason` set, this may contain additional details
+   * about the failure.
+   * @param failureDetails failureDetails or {@code null} for none
+   */
+  public PhotoSequence setFailureDetails(ProcessingFailureDetails failureDetails) {
+    this.failureDetails = failureDetails;
     return this;
   }
 

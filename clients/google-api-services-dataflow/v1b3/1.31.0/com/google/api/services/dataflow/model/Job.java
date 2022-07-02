@@ -127,7 +127,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * project within one region at any given time. Jobs in different regions can have the same name.
    * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
    * returns the existing Job. The name must match the regular expression
-   * `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -469,7 +469,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * project within one region at any given time. Jobs in different regions can have the same name.
    * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
    * returns the existing Job. The name must match the regular expression
-   * `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -481,7 +481,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * project within one region at any given time. Jobs in different regions can have the same name.
    * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
    * returns the existing Job. The name must match the regular expression
-   * `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
   public Job setName(java.lang.String name) {

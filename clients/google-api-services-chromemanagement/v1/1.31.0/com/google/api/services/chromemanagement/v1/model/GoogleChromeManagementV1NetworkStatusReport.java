@@ -31,6 +31,27 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1NetworkStatusReport extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Current connection state of the network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionState;
+
+  /**
+   * Output only. Network connection type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionType;
+
+  /**
+   * Output only. Whether the wifi encryption key is turned off.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean encryptionOn;
+
+  /**
    * Output only. Gateway IP address.
    * The value may be {@code null}.
    */
@@ -38,11 +59,25 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   private java.lang.String gatewayIpAddress;
 
   /**
+   * Output only. Network connection guid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String guid;
+
+  /**
    * Output only. LAN IP address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lanIpAddress;
+
+  /**
+   * Output only. Receiving bit rate measured in megabytes per second.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long receivingBitRateMbps;
 
   /**
    * Output only. Time at which the network state was reported.
@@ -66,6 +101,86 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   private java.lang.Integer signalStrengthDbm;
 
   /**
+   * Output only. Transmission bit rate measured in megabytes per second.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long transmissionBitRateMbps;
+
+  /**
+   * Output only. Transmission power measured in decibels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer transmissionPowerDbm;
+
+  /**
+   * Output only. Wifi link quality. Value ranges from [0, 70]. 0 indicates no signal and 70
+   * indicates a strong signal.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long wifiLinkQuality;
+
+  /**
+   * Output only. Wifi power management enabled
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean wifiPowerManagementEnabled;
+
+  /**
+   * Output only. Current connection state of the network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionState() {
+    return connectionState;
+  }
+
+  /**
+   * Output only. Current connection state of the network.
+   * @param connectionState connectionState or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setConnectionState(java.lang.String connectionState) {
+    this.connectionState = connectionState;
+    return this;
+  }
+
+  /**
+   * Output only. Network connection type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionType() {
+    return connectionType;
+  }
+
+  /**
+   * Output only. Network connection type.
+   * @param connectionType connectionType or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setConnectionType(java.lang.String connectionType) {
+    this.connectionType = connectionType;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the wifi encryption key is turned off.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEncryptionOn() {
+    return encryptionOn;
+  }
+
+  /**
+   * Output only. Whether the wifi encryption key is turned off.
+   * @param encryptionOn encryptionOn or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setEncryptionOn(java.lang.Boolean encryptionOn) {
+    this.encryptionOn = encryptionOn;
+    return this;
+  }
+
+  /**
    * Output only. Gateway IP address.
    * @return value or {@code null} for none
    */
@@ -83,6 +198,23 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   }
 
   /**
+   * Output only. Network connection guid.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGuid() {
+    return guid;
+  }
+
+  /**
+   * Output only. Network connection guid.
+   * @param guid guid or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setGuid(java.lang.String guid) {
+    this.guid = guid;
+    return this;
+  }
+
+  /**
    * Output only. LAN IP address.
    * @return value or {@code null} for none
    */
@@ -96,6 +228,23 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
    */
   public GoogleChromeManagementV1NetworkStatusReport setLanIpAddress(java.lang.String lanIpAddress) {
     this.lanIpAddress = lanIpAddress;
+    return this;
+  }
+
+  /**
+   * Output only. Receiving bit rate measured in megabytes per second.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getReceivingBitRateMbps() {
+    return receivingBitRateMbps;
+  }
+
+  /**
+   * Output only. Receiving bit rate measured in megabytes per second.
+   * @param receivingBitRateMbps receivingBitRateMbps or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setReceivingBitRateMbps(java.lang.Long receivingBitRateMbps) {
+    this.receivingBitRateMbps = receivingBitRateMbps;
     return this;
   }
 
@@ -147,6 +296,76 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
    */
   public GoogleChromeManagementV1NetworkStatusReport setSignalStrengthDbm(java.lang.Integer signalStrengthDbm) {
     this.signalStrengthDbm = signalStrengthDbm;
+    return this;
+  }
+
+  /**
+   * Output only. Transmission bit rate measured in megabytes per second.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTransmissionBitRateMbps() {
+    return transmissionBitRateMbps;
+  }
+
+  /**
+   * Output only. Transmission bit rate measured in megabytes per second.
+   * @param transmissionBitRateMbps transmissionBitRateMbps or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setTransmissionBitRateMbps(java.lang.Long transmissionBitRateMbps) {
+    this.transmissionBitRateMbps = transmissionBitRateMbps;
+    return this;
+  }
+
+  /**
+   * Output only. Transmission power measured in decibels.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTransmissionPowerDbm() {
+    return transmissionPowerDbm;
+  }
+
+  /**
+   * Output only. Transmission power measured in decibels.
+   * @param transmissionPowerDbm transmissionPowerDbm or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setTransmissionPowerDbm(java.lang.Integer transmissionPowerDbm) {
+    this.transmissionPowerDbm = transmissionPowerDbm;
+    return this;
+  }
+
+  /**
+   * Output only. Wifi link quality. Value ranges from [0, 70]. 0 indicates no signal and 70
+   * indicates a strong signal.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getWifiLinkQuality() {
+    return wifiLinkQuality;
+  }
+
+  /**
+   * Output only. Wifi link quality. Value ranges from [0, 70]. 0 indicates no signal and 70
+   * indicates a strong signal.
+   * @param wifiLinkQuality wifiLinkQuality or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setWifiLinkQuality(java.lang.Long wifiLinkQuality) {
+    this.wifiLinkQuality = wifiLinkQuality;
+    return this;
+  }
+
+  /**
+   * Output only. Wifi power management enabled
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWifiPowerManagementEnabled() {
+    return wifiPowerManagementEnabled;
+  }
+
+  /**
+   * Output only. Wifi power management enabled
+   * @param wifiPowerManagementEnabled wifiPowerManagementEnabled or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setWifiPowerManagementEnabled(java.lang.Boolean wifiPowerManagementEnabled) {
+    this.wifiPowerManagementEnabled = wifiPowerManagementEnabled;
     return this;
   }
 

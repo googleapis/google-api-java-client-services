@@ -159,6 +159,26 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   private java.lang.String name;
 
   /**
+   * Output only. Network diagnostics collected periodically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1NetworkDiagnosticsReport> networkDiagnosticsReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1NetworkDiagnosticsReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1NetworkDiagnosticsReport.class);
+  }
+
+  /**
+   * Output only. Network devices information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1NetworkInfo networkInfo;
+
+  /**
    * Output only. Network specs collected periodically.
    * The value may be {@code null}.
    */
@@ -218,6 +238,13 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1StorageStatusReport.class);
   }
+
+  /**
+   * Output only. Information on Thunderbolt bus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1ThunderboltInfo> thunderboltInfo;
 
   /**
    * Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
@@ -428,6 +455,40 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
+   * Output only. Network diagnostics collected periodically.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1NetworkDiagnosticsReport> getNetworkDiagnosticsReport() {
+    return networkDiagnosticsReport;
+  }
+
+  /**
+   * Output only. Network diagnostics collected periodically.
+   * @param networkDiagnosticsReport networkDiagnosticsReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setNetworkDiagnosticsReport(java.util.List<GoogleChromeManagementV1NetworkDiagnosticsReport> networkDiagnosticsReport) {
+    this.networkDiagnosticsReport = networkDiagnosticsReport;
+    return this;
+  }
+
+  /**
+   * Output only. Network devices information.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkInfo getNetworkInfo() {
+    return networkInfo;
+  }
+
+  /**
+   * Output only. Network devices information.
+   * @param networkInfo networkInfo or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setNetworkInfo(GoogleChromeManagementV1NetworkInfo networkInfo) {
+    this.networkInfo = networkInfo;
+    return this;
+  }
+
+  /**
    * Output only. Network specs collected periodically.
    * @return value or {@code null} for none
    */
@@ -528,6 +589,23 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
    */
   public GoogleChromeManagementV1TelemetryDevice setStorageStatusReport(java.util.List<GoogleChromeManagementV1StorageStatusReport> storageStatusReport) {
     this.storageStatusReport = storageStatusReport;
+    return this;
+  }
+
+  /**
+   * Output only. Information on Thunderbolt bus.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1ThunderboltInfo> getThunderboltInfo() {
+    return thunderboltInfo;
+  }
+
+  /**
+   * Output only. Information on Thunderbolt bus.
+   * @param thunderboltInfo thunderboltInfo or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setThunderboltInfo(java.util.List<GoogleChromeManagementV1ThunderboltInfo> thunderboltInfo) {
+    this.thunderboltInfo = thunderboltInfo;
     return this;
   }
 

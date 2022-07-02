@@ -38,6 +38,13 @@ public final class GoogleChromeManagementV1MemoryInfo extends com.google.api.cli
   private java.lang.Long availableRamBytes;
 
   /**
+   * Output only. Total memory encryption info for the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TotalMemoryEncryptionInfo totalMemoryEncryption;
+
+  /**
    * Output only. Total RAM in bytes.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class GoogleChromeManagementV1MemoryInfo extends com.google.api.cli
    */
   public GoogleChromeManagementV1MemoryInfo setAvailableRamBytes(java.lang.Long availableRamBytes) {
     this.availableRamBytes = availableRamBytes;
+    return this;
+  }
+
+  /**
+   * Output only. Total memory encryption info for the device.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TotalMemoryEncryptionInfo getTotalMemoryEncryption() {
+    return totalMemoryEncryption;
+  }
+
+  /**
+   * Output only. Total memory encryption info for the device.
+   * @param totalMemoryEncryption totalMemoryEncryption or {@code null} for none
+   */
+  public GoogleChromeManagementV1MemoryInfo setTotalMemoryEncryption(GoogleChromeManagementV1TotalMemoryEncryptionInfo totalMemoryEncryption) {
+    this.totalMemoryEncryption = totalMemoryEncryption;
     return this;
   }
 

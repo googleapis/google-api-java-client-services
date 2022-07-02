@@ -38,6 +38,21 @@ public final class GoogleChromeManagementV1CpuInfo extends com.google.api.client
   private java.lang.String architecture;
 
   /**
+   * Output only. Whether keylocker is configured.`TRUE` = Enabled; `FALSE` = disabled. Only
+   * reported if keylockerSupported = `TRUE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean keylockerConfigured;
+
+  /**
+   * Output only. Whether keylocker is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean keylockerSupported;
+
+  /**
    * Output only. The max CPU clock speed in kHz.
    * The value may be {@code null}.
    */
@@ -65,6 +80,42 @@ public final class GoogleChromeManagementV1CpuInfo extends com.google.api.client
    */
   public GoogleChromeManagementV1CpuInfo setArchitecture(java.lang.String architecture) {
     this.architecture = architecture;
+    return this;
+  }
+
+  /**
+   * Output only. Whether keylocker is configured.`TRUE` = Enabled; `FALSE` = disabled. Only
+   * reported if keylockerSupported = `TRUE`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getKeylockerConfigured() {
+    return keylockerConfigured;
+  }
+
+  /**
+   * Output only. Whether keylocker is configured.`TRUE` = Enabled; `FALSE` = disabled. Only
+   * reported if keylockerSupported = `TRUE`.
+   * @param keylockerConfigured keylockerConfigured or {@code null} for none
+   */
+  public GoogleChromeManagementV1CpuInfo setKeylockerConfigured(java.lang.Boolean keylockerConfigured) {
+    this.keylockerConfigured = keylockerConfigured;
+    return this;
+  }
+
+  /**
+   * Output only. Whether keylocker is supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getKeylockerSupported() {
+    return keylockerSupported;
+  }
+
+  /**
+   * Output only. Whether keylocker is supported.
+   * @param keylockerSupported keylockerSupported or {@code null} for none
+   */
+  public GoogleChromeManagementV1CpuInfo setKeylockerSupported(java.lang.Boolean keylockerSupported) {
+    this.keylockerSupported = keylockerSupported;
     return this;
   }
 

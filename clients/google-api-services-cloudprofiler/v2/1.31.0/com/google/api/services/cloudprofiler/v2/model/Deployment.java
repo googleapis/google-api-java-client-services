@@ -55,7 +55,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    * Target is the service name used to group related deployments: * Service name for App Engine
    * Flex / Standard. * Cluster and container name for GKE. * User-specified string for direct
    * Compute Engine profiling (e.g. Java). * Job name for Dataflow. Validation regex:
-   * `^[a-z]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
+   * `^[a-z0-9]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    * Target is the service name used to group related deployments: * Service name for App Engine
    * Flex / Standard. * Cluster and container name for GKE. * User-specified string for direct
    * Compute Engine profiling (e.g. Java). * Job name for Dataflow. Validation regex:
-   * `^[a-z]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
+   * `^[a-z0-9]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -124,7 +124,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    * Target is the service name used to group related deployments: * Service name for App Engine
    * Flex / Standard. * Cluster and container name for GKE. * User-specified string for direct
    * Compute Engine profiling (e.g. Java). * Job name for Dataflow. Validation regex:
-   * `^[a-z]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
+   * `^[a-z0-9]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
    * @param target target or {@code null} for none
    */
   public Deployment setTarget(java.lang.String target) {

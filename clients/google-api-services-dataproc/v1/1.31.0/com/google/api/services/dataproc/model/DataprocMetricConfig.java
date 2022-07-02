@@ -30,14 +30,14 @@ package com.google.api.services.dataproc.model;
 public final class DataprocMetricConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Metrics to enable.
+   * Required. Metrics sources to enable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Metric> metrics;
 
   /**
-   * Required. Metrics to enable.
+   * Required. Metrics sources to enable.
    * @return value or {@code null} for none
    */
   public java.util.List<Metric> getMetrics() {
@@ -45,7 +45,7 @@ public final class DataprocMetricConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Metrics to enable.
+   * Required. Metrics sources to enable.
    * @param metrics metrics or {@code null} for none
    */
   public DataprocMetricConfig setMetrics(java.util.List<Metric> metrics) {

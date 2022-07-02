@@ -38,10 +38,10 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   private java.util.List<GkeNodePoolAcceleratorConfig> accelerators;
 
   /**
-   * Optional. The Customer Managed Encryption Key (CMEK)
-   * (https://cloud.google.com/compute/docs/disks/customer-managed-encryption) used to encrypt the
-   * boot disk attached to each node in the node pool. Specify the key using the following format:
-   * projects/KEY_PROJECT_ID /locations/LOCATION/keyRings/RING_NAME/cryptoKeys/KEY_NAME.
+   * Optional. The Customer Managed Encryption Key (CMEK) (https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/using-cmek) used to encrypt the boot disk attached to each node in the node
+   * pool. Specify the key using the following format: projects/KEY_PROJECT_ID/locations/LOCATION
+   * /keyRings/RING_NAME/cryptoKeys/KEY_NAME.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,10 +111,10 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Customer Managed Encryption Key (CMEK)
-   * (https://cloud.google.com/compute/docs/disks/customer-managed-encryption) used to encrypt the
-   * boot disk attached to each node in the node pool. Specify the key using the following format:
-   * projects/KEY_PROJECT_ID /locations/LOCATION/keyRings/RING_NAME/cryptoKeys/KEY_NAME.
+   * Optional. The Customer Managed Encryption Key (CMEK) (https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/using-cmek) used to encrypt the boot disk attached to each node in the node
+   * pool. Specify the key using the following format: projects/KEY_PROJECT_ID/locations/LOCATION
+   * /keyRings/RING_NAME/cryptoKeys/KEY_NAME.
    * @return value or {@code null} for none
    */
   public java.lang.String getBootDiskKmsKey() {
@@ -122,10 +122,10 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Customer Managed Encryption Key (CMEK)
-   * (https://cloud.google.com/compute/docs/disks/customer-managed-encryption) used to encrypt the
-   * boot disk attached to each node in the node pool. Specify the key using the following format:
-   * projects/KEY_PROJECT_ID /locations/LOCATION/keyRings/RING_NAME/cryptoKeys/KEY_NAME.
+   * Optional. The Customer Managed Encryption Key (CMEK) (https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/using-cmek) used to encrypt the boot disk attached to each node in the node
+   * pool. Specify the key using the following format: projects/KEY_PROJECT_ID/locations/LOCATION
+   * /keyRings/RING_NAME/cryptoKeys/KEY_NAME.
    * @param bootDiskKmsKey bootDiskKmsKey or {@code null} for none
    */
   public GkeNodeConfig setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {

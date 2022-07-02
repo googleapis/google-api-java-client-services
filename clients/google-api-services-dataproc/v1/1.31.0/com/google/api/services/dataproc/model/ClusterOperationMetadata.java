@@ -30,6 +30,13 @@ package com.google.api.services.dataproc.model;
 public final class ClusterOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Child operation ids
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> childOperationIds;
+
+  /**
    * Output only. Name of the cluster for the operation.
    * The value may be {@code null}.
    */
@@ -84,6 +91,23 @@ public final class ClusterOperationMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> warnings;
+
+  /**
+   * Output only. Child operation ids
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getChildOperationIds() {
+    return childOperationIds;
+  }
+
+  /**
+   * Output only. Child operation ids
+   * @param childOperationIds childOperationIds or {@code null} for none
+   */
+  public ClusterOperationMetadata setChildOperationIds(java.util.List<java.lang.String> childOperationIds) {
+    this.childOperationIds = childOperationIds;
+    return this;
+  }
 
   /**
    * Output only. Name of the cluster for the operation.

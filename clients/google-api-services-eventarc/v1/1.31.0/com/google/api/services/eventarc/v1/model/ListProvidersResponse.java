@@ -30,8 +30,8 @@ package com.google.api.services.eventarc.v1.model;
 public final class ListProvidersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A page token that can be sent to ListProviders to request the next page. If this is empty, then
-   * there are no more pages.
+   * A page token that can be sent to `ListProviders` to request the next page. If this is empty,
+   * then there are no more pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class ListProvidersResponse extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * A page token that can be sent to ListProviders to request the next page. If this is empty, then
-   * there are no more pages.
+   * A page token that can be sent to `ListProviders` to request the next page. If this is empty,
+   * then there are no more pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -61,8 +61,8 @@ public final class ListProvidersResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * A page token that can be sent to ListProviders to request the next page. If this is empty, then
-   * there are no more pages.
+   * A page token that can be sent to `ListProviders` to request the next page. If this is empty,
+   * then there are no more pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListProvidersResponse setNextPageToken(java.lang.String nextPageToken) {

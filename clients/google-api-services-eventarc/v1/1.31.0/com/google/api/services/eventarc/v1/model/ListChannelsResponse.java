@@ -43,8 +43,8 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A page token that can be sent to ListChannels to request the next page. If this is empty, then
-   * there are no more pages.
+   * A page token that can be sent to `ListChannels` to request the next page. If this is empty,
+   * then there are no more pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A page token that can be sent to ListChannels to request the next page. If this is empty, then
-   * there are no more pages.
+   * A page token that can be sent to `ListChannels` to request the next page. If this is empty,
+   * then there are no more pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -84,8 +84,8 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A page token that can be sent to ListChannels to request the next page. If this is empty, then
-   * there are no more pages.
+   * A page token that can be sent to `ListChannels` to request the next page. If this is empty,
+   * then there are no more pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListChannelsResponse setNextPageToken(java.lang.String nextPageToken) {

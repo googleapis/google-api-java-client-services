@@ -64,8 +64,8 @@ public final class ChannelConnection extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Output only. / Output only. Server assigned ID of the resource. The server guarantees
-   * uniqueness and immutability until deleted.
+   * Output only. Server assigned ID of the resource. The server guarantees uniqueness and
+   * immutability until deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +155,8 @@ public final class ChannelConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. / Output only. Server assigned ID of the resource. The server guarantees
-   * uniqueness and immutability until deleted.
+   * Output only. Server assigned ID of the resource. The server guarantees uniqueness and
+   * immutability until deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -164,8 +164,8 @@ public final class ChannelConnection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. / Output only. Server assigned ID of the resource. The server guarantees
-   * uniqueness and immutability until deleted.
+   * Output only. Server assigned ID of the resource. The server guarantees uniqueness and
+   * immutability until deleted.
    * @param uid uid or {@code null} for none
    */
   public ChannelConnection setUid(java.lang.String uid) {

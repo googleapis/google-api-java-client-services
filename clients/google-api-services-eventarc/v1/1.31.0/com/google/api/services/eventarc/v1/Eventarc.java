@@ -311,6 +311,146 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Get a GoogleChannelConfig
+       *
+       * Create a request for the method "locations.getGoogleChannelConfig".
+       *
+       * This request holds the parameters needed by the eventarc server.  After setting any optional
+       * parameters, call the {@link GetGoogleChannelConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the config to get.
+       * @return the request
+       */
+      public GetGoogleChannelConfig getGoogleChannelConfig(java.lang.String name) throws java.io.IOException {
+        GetGoogleChannelConfig result = new GetGoogleChannelConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetGoogleChannelConfig extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleChannelConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/googleChannelConfig$");
+
+        /**
+         * Get a GoogleChannelConfig
+         *
+         * Create a request for the method "locations.getGoogleChannelConfig".
+         *
+         * This request holds the parameters needed by the the eventarc server.  After setting any
+         * optional parameters, call the {@link GetGoogleChannelConfig#execute()} method to invoke the
+         * remote operation. <p> {@link GetGoogleChannelConfig#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the config to get.
+         * @since 1.13
+         */
+        protected GetGoogleChannelConfig(java.lang.String name) {
+          super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.GoogleChannelConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/googleChannelConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetGoogleChannelConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetGoogleChannelConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setAccessToken(java.lang.String accessToken) {
+          return (GetGoogleChannelConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setAlt(java.lang.String alt) {
+          return (GetGoogleChannelConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setCallback(java.lang.String callback) {
+          return (GetGoogleChannelConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setFields(java.lang.String fields) {
+          return (GetGoogleChannelConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setKey(java.lang.String key) {
+          return (GetGoogleChannelConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetGoogleChannelConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetGoogleChannelConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetGoogleChannelConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setUploadType(java.lang.String uploadType) {
+          return (GetGoogleChannelConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetGoogleChannelConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetGoogleChannelConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the config to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the config to get.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the config to get. */
+        public GetGoogleChannelConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/googleChannelConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetGoogleChannelConfig set(String parameterName, Object value) {
+          return (GetGoogleChannelConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -510,6 +650,173 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update a single GoogleChannelConfig
+       *
+       * Create a request for the method "locations.updateGoogleChannelConfig".
+       *
+       * This request holds the parameters needed by the eventarc server.  After setting any optional
+       * parameters, call the {@link UpdateGoogleChannelConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The resource name of the config. Must be in the format of,
+       *        `projects/{project}/locations/{location}/googleChannelConfig`.
+       * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleChannelConfig}
+       * @return the request
+       */
+      public UpdateGoogleChannelConfig updateGoogleChannelConfig(java.lang.String name, com.google.api.services.eventarc.v1.model.GoogleChannelConfig content) throws java.io.IOException {
+        UpdateGoogleChannelConfig result = new UpdateGoogleChannelConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateGoogleChannelConfig extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleChannelConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/googleChannelConfig$");
+
+        /**
+         * Update a single GoogleChannelConfig
+         *
+         * Create a request for the method "locations.updateGoogleChannelConfig".
+         *
+         * This request holds the parameters needed by the the eventarc server.  After setting any
+         * optional parameters, call the {@link UpdateGoogleChannelConfig#execute()} method to invoke the
+         * remote operation. <p> {@link UpdateGoogleChannelConfig#initialize(com.google.api.client.googlea
+         * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the config. Must be in the format of,
+       *        `projects/{project}/locations/{location}/googleChannelConfig`.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleChannelConfig}
+         * @since 1.13
+         */
+        protected UpdateGoogleChannelConfig(java.lang.String name, com.google.api.services.eventarc.v1.model.GoogleChannelConfig content) {
+          super(Eventarc.this, "PATCH", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleChannelConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/googleChannelConfig$");
+          }
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateGoogleChannelConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateGoogleChannelConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setAlt(java.lang.String alt) {
+          return (UpdateGoogleChannelConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setCallback(java.lang.String callback) {
+          return (UpdateGoogleChannelConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setFields(java.lang.String fields) {
+          return (UpdateGoogleChannelConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setKey(java.lang.String key) {
+          return (UpdateGoogleChannelConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateGoogleChannelConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateGoogleChannelConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateGoogleChannelConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateGoogleChannelConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateGoogleChannelConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the config. Must be in the format of,
+         * `projects/{project}/locations/{location}/googleChannelConfig`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the config. Must be in the format of,
+       `projects/{project}/locations/{location}/googleChannelConfig`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the config. Must be in the format of,
+         * `projects/{project}/locations/{location}/googleChannelConfig`.
+         */
+        public UpdateGoogleChannelConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/googleChannelConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The fields to be updated; only fields explicitly provided are updated. If no field mask
+         * is provided, all provided fields in the request are updated. To update all fields,
+         * provide a field mask of "*".
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The fields to be updated; only fields explicitly provided are updated. If no field mask is
+       provided, all provided fields in the request are updated. To update all fields, provide a field
+       mask of "*".
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The fields to be updated; only fields explicitly provided are updated. If no field mask
+         * is provided, all provided fields in the request are updated. To update all fields,
+         * provide a field mask of "*".
+         */
+        public UpdateGoogleChannelConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateGoogleChannelConfig set(String parameterName, Object value) {
+          return (UpdateGoogleChannelConfig) super.set(parameterName, value);
         }
       }
 

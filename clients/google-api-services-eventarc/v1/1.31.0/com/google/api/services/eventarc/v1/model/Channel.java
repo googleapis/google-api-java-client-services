@@ -47,6 +47,14 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their
+   * event data. It must match the pattern `projects/locations/keyRings/cryptoKeys`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyName;
+
+  /**
    * Required. The resource name of the channel. Must be unique within the location on the project
    * and must be in `projects/{project}/locations/{location}/channels/{channel_id}` format.
    * The value may be {@code null}.
@@ -126,6 +134,25 @@ public final class Channel extends com.google.api.client.json.GenericJson {
    */
   public Channel setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their
+   * event data. It must match the pattern `projects/locations/keyRings/cryptoKeys`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyName() {
+    return cryptoKeyName;
+  }
+
+  /**
+   * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their
+   * event data. It must match the pattern `projects/locations/keyRings/cryptoKeys`.
+   * @param cryptoKeyName cryptoKeyName or {@code null} for none
+   */
+  public Channel setCryptoKeyName(java.lang.String cryptoKeyName) {
+    this.cryptoKeyName = cryptoKeyName;
     return this;
   }
 

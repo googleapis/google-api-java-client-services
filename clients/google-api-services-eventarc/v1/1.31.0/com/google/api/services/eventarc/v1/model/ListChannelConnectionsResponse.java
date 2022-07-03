@@ -43,7 +43,7 @@ public final class ListChannelConnectionsResponse extends com.google.api.client.
   }
 
   /**
-   * A page token that can be sent to ListChannelConnections to request the next page. If this is
+   * A page token that can be sent to `ListChannelConnections` to request the next page. If this is
    * empty, then there are no more pages.
    * The value may be {@code null}.
    */
@@ -75,7 +75,7 @@ public final class ListChannelConnectionsResponse extends com.google.api.client.
   }
 
   /**
-   * A page token that can be sent to ListChannelConnections to request the next page. If this is
+   * A page token that can be sent to `ListChannelConnections` to request the next page. If this is
    * empty, then there are no more pages.
    * @return value or {@code null} for none
    */
@@ -84,7 +84,7 @@ public final class ListChannelConnectionsResponse extends com.google.api.client.
   }
 
   /**
-   * A page token that can be sent to ListChannelConnections to request the next page. If this is
+   * A page token that can be sent to `ListChannelConnections` to request the next page. If this is
    * empty, then there are no more pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

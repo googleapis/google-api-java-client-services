@@ -58,7 +58,7 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   private IdentityServiceMembershipState identityservice;
 
   /**
-   * Metering-specific spec.
+   * Metering-specific state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   }
 
   /**
-   * Metering-specific spec.
+   * Metering-specific state.
    * @return value or {@code null} for none
    */
   public MeteringMembershipState getMetering() {
@@ -162,7 +162,7 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   }
 
   /**
-   * Metering-specific spec.
+   * Metering-specific state.
    * @param metering metering or {@code null} for none
    */
   public MembershipFeatureState setMetering(MeteringMembershipState metering) {

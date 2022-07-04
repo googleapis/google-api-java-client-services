@@ -1926,6 +1926,138 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Simulates a maintenance event.
+         *
+         * Create a request for the method "nodes.simulateMaintenanceEvent".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link SimulateMaintenanceEvent#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name.
+         * @param content the {@link com.google.api.services.tpu.v2alpha1.model.SimulateMaintenanceEventRequest}
+         * @return the request
+         */
+        public SimulateMaintenanceEvent simulateMaintenanceEvent(java.lang.String name, com.google.api.services.tpu.v2alpha1.model.SimulateMaintenanceEventRequest content) throws java.io.IOException {
+          SimulateMaintenanceEvent result = new SimulateMaintenanceEvent(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SimulateMaintenanceEvent extends TPURequest<com.google.api.services.tpu.v2alpha1.model.Operation> {
+
+          private static final String REST_PATH = "v2alpha1/{+name}:simulateMaintenanceEvent";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
+
+          /**
+           * Simulates a maintenance event.
+           *
+           * Create a request for the method "nodes.simulateMaintenanceEvent".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link SimulateMaintenanceEvent#execute()} method to invoke the remote
+           * operation. <p> {@link SimulateMaintenanceEvent#initialize(com.google.api.client.googleapis.serv
+           * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The resource name.
+           * @param content the {@link com.google.api.services.tpu.v2alpha1.model.SimulateMaintenanceEventRequest}
+           * @since 1.13
+           */
+          protected SimulateMaintenanceEvent(java.lang.String name, com.google.api.services.tpu.v2alpha1.model.SimulateMaintenanceEventRequest content) {
+            super(TPU.this, "POST", REST_PATH, content, com.google.api.services.tpu.v2alpha1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
+            }
+          }
+
+          @Override
+          public SimulateMaintenanceEvent set$Xgafv(java.lang.String $Xgafv) {
+            return (SimulateMaintenanceEvent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setAccessToken(java.lang.String accessToken) {
+            return (SimulateMaintenanceEvent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setAlt(java.lang.String alt) {
+            return (SimulateMaintenanceEvent) super.setAlt(alt);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setCallback(java.lang.String callback) {
+            return (SimulateMaintenanceEvent) super.setCallback(callback);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setFields(java.lang.String fields) {
+            return (SimulateMaintenanceEvent) super.setFields(fields);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setKey(java.lang.String key) {
+            return (SimulateMaintenanceEvent) super.setKey(key);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setOauthToken(java.lang.String oauthToken) {
+            return (SimulateMaintenanceEvent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SimulateMaintenanceEvent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setQuotaUser(java.lang.String quotaUser) {
+            return (SimulateMaintenanceEvent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setUploadType(java.lang.String uploadType) {
+            return (SimulateMaintenanceEvent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SimulateMaintenanceEvent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SimulateMaintenanceEvent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name. */
+          public SimulateMaintenanceEvent setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SimulateMaintenanceEvent set(String parameterName, Object value) {
+            return (SimulateMaintenanceEvent) super.set(parameterName, value);
+          }
+        }
+        /**
          * Starts a node.
          *
          * Create a request for the method "nodes.start".

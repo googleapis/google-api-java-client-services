@@ -121,6 +121,21 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
       private java.lang.String code;
 
       /**
+       * [Output Only] An optional list of messages that contain the error details. There is a set of
+       * defined message types to use for providing details.The syntax depends on the error code. For
+       * example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<ErrorDetails> errorDetails;
+
+      static {
+        // hack to force ProGuard to consider ErrorDetails used, since otherwise it would be stripped out
+        // see https://github.com/google/google-api-java-client/issues/543
+        com.google.api.client.util.Data.nullOf(ErrorDetails.class);
+      }
+
+      /**
        * [Output Only] Indicates the field in the request that caused the error. This property is
        * optional.
        * The value may be {@code null}.
@@ -149,6 +164,27 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
        */
       public ManagedInstanceLastAttemptErrorsErrors setCode(java.lang.String code) {
         this.code = code;
+        return this;
+      }
+
+      /**
+       * [Output Only] An optional list of messages that contain the error details. There is a set of
+       * defined message types to use for providing details.The syntax depends on the error code. For
+       * example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<ErrorDetails> getErrorDetails() {
+        return errorDetails;
+      }
+
+      /**
+       * [Output Only] An optional list of messages that contain the error details. There is a set of
+       * defined message types to use for providing details.The syntax depends on the error code. For
+       * example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
+       * @param errorDetails errorDetails or {@code null} for none
+       */
+      public ManagedInstanceLastAttemptErrorsErrors setErrorDetails(java.util.List<ErrorDetails> errorDetails) {
+        this.errorDetails = errorDetails;
         return this;
       }
 
@@ -198,6 +234,85 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
         return (ManagedInstanceLastAttemptErrorsErrors) super.clone();
       }
 
+      /**
+       * Model definition for ManagedInstanceLastAttemptErrorsErrorsErrorDetails.
+       */
+      public static final class ErrorDetails extends com.google.api.client.json.GenericJson {
+
+        /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private ErrorInfo errorInfo;
+
+        /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private Help help;
+
+        /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private LocalizedMessage localizedMessage;
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public ErrorInfo getErrorInfo() {
+          return errorInfo;
+        }
+
+        /**
+         * @param errorInfo errorInfo or {@code null} for none
+         */
+        public ErrorDetails setErrorInfo(ErrorInfo errorInfo) {
+          this.errorInfo = errorInfo;
+          return this;
+        }
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public Help getHelp() {
+          return help;
+        }
+
+        /**
+         * @param help help or {@code null} for none
+         */
+        public ErrorDetails setHelp(Help help) {
+          this.help = help;
+          return this;
+        }
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public LocalizedMessage getLocalizedMessage() {
+          return localizedMessage;
+        }
+
+        /**
+         * @param localizedMessage localizedMessage or {@code null} for none
+         */
+        public ErrorDetails setLocalizedMessage(LocalizedMessage localizedMessage) {
+          this.localizedMessage = localizedMessage;
+          return this;
+        }
+
+        @Override
+        public ErrorDetails set(String fieldName, Object value) {
+          return (ErrorDetails) super.set(fieldName, value);
+        }
+
+        @Override
+        public ErrorDetails clone() {
+          return (ErrorDetails) super.clone();
+        }
+
+      }
     }
   }
 }

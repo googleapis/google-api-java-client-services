@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class SavedDisk extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The architecture of the attached disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
    * [Output Only] Type of the resource. Always compute#savedDisk for attached disks.
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class SavedDisk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String storageBytesStatus;
+
+  /**
+   * [Output Only] The architecture of the attached disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * [Output Only] The architecture of the attached disk.
+   * @param architecture architecture or {@code null} for none
+   */
+  public SavedDisk setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
+    return this;
+  }
 
   /**
    * [Output Only] Type of the resource. Always compute#savedDisk for attached disks.

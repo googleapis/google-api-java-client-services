@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
+   * The architecture of the image. Valid values are ARM64 or X86_64.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
    * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
    * The value may be {@code null}.
    */
@@ -292,6 +299,23 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> storageLocations;
+
+  /**
+   * The architecture of the image. Valid values are ARM64 or X86_64.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * The architecture of the image. Valid values are ARM64 or X86_64.
+   * @param architecture architecture or {@code null} for none
+   */
+  public Image setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
+    return this;
+  }
 
   /**
    * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).

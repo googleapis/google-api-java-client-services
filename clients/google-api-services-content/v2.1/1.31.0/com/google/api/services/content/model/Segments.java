@@ -18,10 +18,10 @@ package com.google.api.services.content.model;
 
 /**
  * Dimensions according to which metrics are segmented in the response. Values of product
- * dimensions, e.g., offer id, reflect the state of a product at the time of the corresponding
- * event, e.g., impression or order. Segment fields cannot be selected in queries without also
- * selecting at least one metric field. Values are only set for dimensions requested explicitly in
- * the request's search query.
+ * dimensions, such as `offer_id`, reflect the state of a product at the time of the corresponding
+ * event, for example, impression or order. Segment fields cannot be selected in queries without
+ * also selecting at least one metric field. Values are only set for dimensions requested explicitly
+ * in the request's search query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -82,7 +82,7 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   private java.lang.String categoryL5;
 
   /**
-   * Currency in which price metrics are represented, e.g., if you select
+   * Currency in which price metrics are represented, for example, if you select
    * `ordered_item_sales_micros`, the returned value will be represented by this currency.
    * The value may be {@code null}.
    */
@@ -192,7 +192,7 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   private java.lang.String productTypeL5;
 
   /**
-   * Program to which metrics apply, e.g., Free Product Listing.
+   * Program to which metrics apply, for example, Free Product Listing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +325,7 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Currency in which price metrics are represented, e.g., if you select
+   * Currency in which price metrics are represented, for example, if you select
    * `ordered_item_sales_micros`, the returned value will be represented by this currency.
    * @return value or {@code null} for none
    */
@@ -334,7 +334,7 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Currency in which price metrics are represented, e.g., if you select
+   * Currency in which price metrics are represented, for example, if you select
    * `ordered_item_sales_micros`, the returned value will be represented by this currency.
    * @param currencyCode currencyCode or {@code null} for none
    */
@@ -587,7 +587,7 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Program to which metrics apply, e.g., Free Product Listing.
+   * Program to which metrics apply, for example, Free Product Listing.
    * @return value or {@code null} for none
    */
   public java.lang.String getProgram() {
@@ -595,7 +595,7 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Program to which metrics apply, e.g., Free Product Listing.
+   * Program to which metrics apply, for example, Free Product Listing.
    * @param program program or {@code null} for none
    */
   public Segments setProgram(java.lang.String program) {

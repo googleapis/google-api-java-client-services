@@ -44,6 +44,14 @@ public final class UserPasswordValidationPolicy extends com.google.api.client.js
   private java.lang.Boolean enableFailedAttemptsCheck;
 
   /**
+   * If true, the user must specify the current password before changing the password. This flag is
+   * supported only for MySQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePasswordVerification;
+
+  /**
    * Expiration duration after password is updated.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class UserPasswordValidationPolicy extends com.google.api.client.js
    */
   public UserPasswordValidationPolicy setEnableFailedAttemptsCheck(java.lang.Boolean enableFailedAttemptsCheck) {
     this.enableFailedAttemptsCheck = enableFailedAttemptsCheck;
+    return this;
+  }
+
+  /**
+   * If true, the user must specify the current password before changing the password. This flag is
+   * supported only for MySQL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePasswordVerification() {
+    return enablePasswordVerification;
+  }
+
+  /**
+   * If true, the user must specify the current password before changing the password. This flag is
+   * supported only for MySQL.
+   * @param enablePasswordVerification enablePasswordVerification or {@code null} for none
+   */
+  public UserPasswordValidationPolicy setEnablePasswordVerification(java.lang.Boolean enablePasswordVerification) {
+    this.enablePasswordVerification = enablePasswordVerification;
     return this;
   }
 

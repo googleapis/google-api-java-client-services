@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
+   * Dual password status for the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dualPasswordType;
+
+  /**
    * This field is deprecated and will be removed from a future version of the API.
    * The value may be {@code null}.
    */
@@ -104,6 +111,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Dual password status for the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDualPasswordType() {
+    return dualPasswordType;
+  }
+
+  /**
+   * Dual password status for the user.
+   * @param dualPasswordType dualPasswordType or {@code null} for none
+   */
+  public User setDualPasswordType(java.lang.String dualPasswordType) {
+    this.dualPasswordType = dualPasswordType;
+    return this;
+  }
 
   /**
    * This field is deprecated and will be removed from a future version of the API.

@@ -78,7 +78,8 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   private CertValidationFailureEvent certValidationFailureEvent;
 
   /**
-   * A TCP connect event was initiated through the standard network stack. Part of NETWORK_LOGS.
+   * A TCP connect event was initiated through the standard network stack. Part of
+   * NETWORK_ACTIVITY_LOGS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   private CryptoSelfTestCompletedEvent cryptoSelfTestCompletedEvent;
 
   /**
-   * A DNS lookup event was initiated through the standard network stack. Part of NETWORK_LOGS.
+   * A DNS lookup event was initiated through the standard network stack. Part of
+   * NETWORK_ACTIVITY_LOGS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,7 +250,7 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   private RemoteLockEvent remoteLockEvent;
 
   /**
-   * The work profile or company-owned device failed to wipe when when requested. This could be user
+   * The work profile or company-owned device failed to wipe when requested. This could be user
    * initiated or admin initiated e.g. delete was received. Part of SECURITY_LOGS.
    * The value may be {@code null}.
    */
@@ -368,7 +370,8 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A TCP connect event was initiated through the standard network stack. Part of NETWORK_LOGS.
+   * A TCP connect event was initiated through the standard network stack. Part of
+   * NETWORK_ACTIVITY_LOGS.
    * @return value or {@code null} for none
    */
   public ConnectEvent getConnectEvent() {
@@ -376,7 +379,8 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A TCP connect event was initiated through the standard network stack. Part of NETWORK_LOGS.
+   * A TCP connect event was initiated through the standard network stack. Part of
+   * NETWORK_ACTIVITY_LOGS.
    * @param connectEvent connectEvent or {@code null} for none
    */
   public UsageLogEvent setConnectEvent(ConnectEvent connectEvent) {
@@ -406,7 +410,8 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A DNS lookup event was initiated through the standard network stack. Part of NETWORK_LOGS.
+   * A DNS lookup event was initiated through the standard network stack. Part of
+   * NETWORK_ACTIVITY_LOGS.
    * @return value or {@code null} for none
    */
   public DnsEvent getDnsEvent() {
@@ -414,7 +419,8 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A DNS lookup event was initiated through the standard network stack. Part of NETWORK_LOGS.
+   * A DNS lookup event was initiated through the standard network stack. Part of
+   * NETWORK_ACTIVITY_LOGS.
    * @param dnsEvent dnsEvent or {@code null} for none
    */
   public UsageLogEvent setDnsEvent(DnsEvent dnsEvent) {
@@ -777,7 +783,7 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The work profile or company-owned device failed to wipe when when requested. This could be user
+   * The work profile or company-owned device failed to wipe when requested. This could be user
    * initiated or admin initiated e.g. delete was received. Part of SECURITY_LOGS.
    * @return value or {@code null} for none
    */
@@ -786,7 +792,7 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The work profile or company-owned device failed to wipe when when requested. This could be user
+   * The work profile or company-owned device failed to wipe when requested. This could be user
    * initiated or admin initiated e.g. delete was received. Part of SECURITY_LOGS.
    * @param wipeFailureEvent wipeFailureEvent or {@code null} for none
    */

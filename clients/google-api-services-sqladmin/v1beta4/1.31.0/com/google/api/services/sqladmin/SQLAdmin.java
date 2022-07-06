@@ -7116,6 +7116,178 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Retrieves a resource containing information about a user.
+     *
+     * Create a request for the method "users.get".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID of the project that contains the instance.
+     * @param instance Database instance ID. This does not include the project ID.
+     * @param name User of the instance. If the database user has a host, this is specified as {username}@{host} else
+     *        as {username}.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String instance, java.lang.String name) throws java.io.IOException {
+      Get result = new Get(project, instance, name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.User> {
+
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/users/{name}";
+
+      /**
+       * Retrieves a resource containing information about a user.
+       *
+       * Create a request for the method "users.get".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Database instance ID. This does not include the project ID.
+       * @param name User of the instance. If the database user has a host, this is specified as {username}@{host} else
+     *        as {username}.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String instance, java.lang.String name) {
+        super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.User.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID of the project that contains the instance. */
+      public Get setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Database instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Database instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Database instance ID. This does not include the project ID. */
+      public Get setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      /**
+       * User of the instance. If the database user has a host, this is specified as
+       * {username}@{host} else as {username}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** User of the instance. If the database user has a host, this is specified as {username}@{host} else
+     as {username}.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * User of the instance. If the database user has a host, this is specified as
+       * {username}@{host} else as {username}.
+       */
+      public Get setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a new user in a Cloud SQL instance.
      *
      * Create a request for the method "users.insert".

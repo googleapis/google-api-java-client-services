@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * The work profile or company-owned device failed to wipe when when requested. This could be user
+ * The work profile or company-owned device failed to wipe when requested. This could be user
  * initiated or admin initiated e.g. delete was received. Intentionally empty.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -39,9 +39,9 @@ public final class AppProcessInfo extends com.google.api.client.json.GenericJson
   private java.lang.String apkSha256Hash;
 
   /**
-   * Package names of all packages that are associated with the particular user id. In most cases,
-   * this will be a single package name, the package that has been assigned that user id. If
-   * multiple application share a uid then all packages sharing uid will be included.
+   * Package names of all packages that are associated with the particular user ID. In most cases,
+   * this will be a single package name, the package that has been assigned that user ID. If
+   * multiple application share a UID then all packages sharing UID will be included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,9 +100,9 @@ public final class AppProcessInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Package names of all packages that are associated with the particular user id. In most cases,
-   * this will be a single package name, the package that has been assigned that user id. If
-   * multiple application share a uid then all packages sharing uid will be included.
+   * Package names of all packages that are associated with the particular user ID. In most cases,
+   * this will be a single package name, the package that has been assigned that user ID. If
+   * multiple application share a UID then all packages sharing UID will be included.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPackageNames() {
@@ -110,9 +110,9 @@ public final class AppProcessInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Package names of all packages that are associated with the particular user id. In most cases,
-   * this will be a single package name, the package that has been assigned that user id. If
-   * multiple application share a uid then all packages sharing uid will be included.
+   * Package names of all packages that are associated with the particular user ID. In most cases,
+   * this will be a single package name, the package that has been assigned that user ID. If
+   * multiple application share a UID then all packages sharing UID will be included.
    * @param packageNames packageNames or {@code null} for none
    */
   public AppProcessInfo setPackageNames(java.util.List<java.lang.String> packageNames) {

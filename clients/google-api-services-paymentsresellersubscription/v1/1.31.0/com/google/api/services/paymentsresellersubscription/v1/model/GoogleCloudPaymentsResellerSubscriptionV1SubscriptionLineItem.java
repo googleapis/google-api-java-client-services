@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Individual line item definition of a subscription. Next id: 6
+ * Individual line item definition of a subscription. Next id: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -56,12 +56,26 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec> lineItemPromotionSpecs;
 
   /**
+   * Output only. Details only set for a ONE_TIME recurrence line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails;
+
+  /**
    * Required. Product resource name that identifies one the line item The format is
    * 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String product;
+
+  /**
+   * Output only. The recurrence type of the line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recurrenceType;
 
   /**
    * Output only. The state of the line item.
@@ -130,6 +144,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   }
 
   /**
+   * Output only. Details only set for a ONE_TIME recurrence line item.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails getOneTimeRecurrenceDetails() {
+    return oneTimeRecurrenceDetails;
+  }
+
+  /**
+   * Output only. Details only set for a ONE_TIME recurrence line item.
+   * @param oneTimeRecurrenceDetails oneTimeRecurrenceDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setOneTimeRecurrenceDetails(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails) {
+    this.oneTimeRecurrenceDetails = oneTimeRecurrenceDetails;
+    return this;
+  }
+
+  /**
    * Required. Product resource name that identifies one the line item The format is
    * 'partners/{partner_id}/products/{product_id}'.
    * @return value or {@code null} for none
@@ -145,6 +176,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setProduct(java.lang.String product) {
     this.product = product;
+    return this;
+  }
+
+  /**
+   * Output only. The recurrence type of the line item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecurrenceType() {
+    return recurrenceType;
+  }
+
+  /**
+   * Output only. The recurrence type of the line item.
+   * @param recurrenceType recurrenceType or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setRecurrenceType(java.lang.String recurrenceType) {
+    this.recurrenceType = recurrenceType;
     return this;
   }
 

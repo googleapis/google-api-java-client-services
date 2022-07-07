@@ -48,9 +48,9 @@ public final class AutoRenewingBasePlanType extends com.google.api.client.json.G
   private java.lang.String gracePeriodDuration;
 
   /**
-   * Whether the renewing base plan is compatible with legacy version of the Play Billing Library
-   * (prior to version 3) or not. Only one renewing base plan can be marked as legacy compatible for
-   * a given subscription.
+   * Whether the renewing base plan is backward compatible. The backward compatible base plan is
+   * returned by the Google Play Billing Library deprecated method querySkuDetailsAsync(). Only one
+   * renewing base plan can be marked as legacy compatible for a given subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,9 +113,9 @@ public final class AutoRenewingBasePlanType extends com.google.api.client.json.G
   }
 
   /**
-   * Whether the renewing base plan is compatible with legacy version of the Play Billing Library
-   * (prior to version 3) or not. Only one renewing base plan can be marked as legacy compatible for
-   * a given subscription.
+   * Whether the renewing base plan is backward compatible. The backward compatible base plan is
+   * returned by the Google Play Billing Library deprecated method querySkuDetailsAsync(). Only one
+   * renewing base plan can be marked as legacy compatible for a given subscription.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLegacyCompatible() {
@@ -123,9 +123,9 @@ public final class AutoRenewingBasePlanType extends com.google.api.client.json.G
   }
 
   /**
-   * Whether the renewing base plan is compatible with legacy version of the Play Billing Library
-   * (prior to version 3) or not. Only one renewing base plan can be marked as legacy compatible for
-   * a given subscription.
+   * Whether the renewing base plan is backward compatible. The backward compatible base plan is
+   * returned by the Google Play Billing Library deprecated method querySkuDetailsAsync(). Only one
+   * renewing base plan can be marked as legacy compatible for a given subscription.
    * @param legacyCompatible legacyCompatible or {@code null} for none
    */
   public AutoRenewingBasePlanType setLegacyCompatible(java.lang.Boolean legacyCompatible) {

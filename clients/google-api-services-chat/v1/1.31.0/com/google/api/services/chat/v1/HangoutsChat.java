@@ -1762,39 +1762,39 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Requested page size. The value is capped at 1000. Server may return fewer results than
-       * requested. If unspecified, server will default to 100.
+       * Optional. Requested page size. The value is capped at 1000. Server may return fewer results
+       * than requested. If unspecified, server will default to 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Requested page size. The value is capped at 1000. Server may return fewer results than requested.
-     If unspecified, server will default to 100.
+      /** Optional. Requested page size. The value is capped at 1000. Server may return fewer results than
+     requested. If unspecified, server will default to 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Requested page size. The value is capped at 1000. Server may return fewer results than
-       * requested. If unspecified, server will default to 100.
+       * Optional. Requested page size. The value is capped at 1000. Server may return fewer results
+       * than requested. If unspecified, server will default to 100.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** A token identifying a page of results the server should return. */
+      /** Optional. A token identifying a page of results the server should return. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A token identifying a page of results the server should return.
+      /** Optional. A token identifying a page of results the server should return.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** A token identifying a page of results the server should return. */
+      /** Optional. A token identifying a page of results the server should return. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;

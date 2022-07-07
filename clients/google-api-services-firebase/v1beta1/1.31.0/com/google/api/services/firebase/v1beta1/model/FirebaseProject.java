@@ -57,7 +57,7 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Immutable. A user-assigned unique identifier for the Project. This identifier may appear in
+   * Output only. A user-assigned unique identifier for the Project. This identifier may appear in
    * URLs or names for some Firebase resources associated with the Project, but it should generally
    * be treated as a convenience alias to reference the Project.
    * The value may be {@code null}.
@@ -66,16 +66,16 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.String projectId;
 
   /**
-   * Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this
-   * identifier when configuring integrations and/or making API calls to Firebase or third-party
-   * services.
+   * Output only. The globally unique, Google-assigned canonical identifier for the Project. Use
+   * this identifier when configuring integrations and/or making API calls to Firebase or third-
+   * party services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long projectNumber;
 
   /**
-   * The default Firebase resources associated with the Project.
+   * Output only. The default Firebase resources associated with the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. A user-assigned unique identifier for the Project. This identifier may appear in
+   * Output only. A user-assigned unique identifier for the Project. This identifier may appear in
    * URLs or names for some Firebase resources associated with the Project, but it should generally
    * be treated as a convenience alias to reference the Project.
    * @return value or {@code null} for none
@@ -145,7 +145,7 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. A user-assigned unique identifier for the Project. This identifier may appear in
+   * Output only. A user-assigned unique identifier for the Project. This identifier may appear in
    * URLs or names for some Firebase resources associated with the Project, but it should generally
    * be treated as a convenience alias to reference the Project.
    * @param projectId projectId or {@code null} for none
@@ -156,9 +156,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this
-   * identifier when configuring integrations and/or making API calls to Firebase or third-party
-   * services.
+   * Output only. The globally unique, Google-assigned canonical identifier for the Project. Use
+   * this identifier when configuring integrations and/or making API calls to Firebase or third-
+   * party services.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -166,9 +166,9 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this
-   * identifier when configuring integrations and/or making API calls to Firebase or third-party
-   * services.
+   * Output only. The globally unique, Google-assigned canonical identifier for the Project. Use
+   * this identifier when configuring integrations and/or making API calls to Firebase or third-
+   * party services.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public FirebaseProject setProjectNumber(java.lang.Long projectNumber) {
@@ -177,7 +177,7 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The default Firebase resources associated with the Project.
+   * Output only. The default Firebase resources associated with the Project.
    * @return value or {@code null} for none
    */
   public DefaultResources getResources() {
@@ -185,7 +185,7 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The default Firebase resources associated with the Project.
+   * Output only. The default Firebase resources associated with the Project.
    * @param resources resources or {@code null} for none
    */
   public FirebaseProject setResources(DefaultResources resources) {

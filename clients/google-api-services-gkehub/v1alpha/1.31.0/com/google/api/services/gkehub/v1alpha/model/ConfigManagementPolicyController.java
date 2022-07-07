@@ -68,7 +68,8 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
   private ConfigManagementPolicyControllerMonitoring monitoring;
 
   /**
-   * Enable users to try out mutation for PolicyController.
+   * Enable or disable mutation in policy controller. If true, mutation CRDs, webhook and controller
+   * deployment will be deployed to the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +182,8 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
   }
 
   /**
-   * Enable users to try out mutation for PolicyController.
+   * Enable or disable mutation in policy controller. If true, mutation CRDs, webhook and controller
+   * deployment will be deployed to the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMutationEnabled() {
@@ -189,7 +191,8 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
   }
 
   /**
-   * Enable users to try out mutation for PolicyController.
+   * Enable or disable mutation in policy controller. If true, mutation CRDs, webhook and controller
+   * deployment will be deployed to the cluster.
    * @param mutationEnabled mutationEnabled or {@code null} for none
    */
   public ConfigManagementPolicyController setMutationEnabled(java.lang.Boolean mutationEnabled) {

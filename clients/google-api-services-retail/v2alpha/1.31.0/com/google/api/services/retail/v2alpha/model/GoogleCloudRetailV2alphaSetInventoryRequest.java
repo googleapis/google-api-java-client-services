@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Request message for SetInventory method.
+ * Request message for ProductService.SetInventory method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -59,7 +59,8 @@ public final class GoogleCloudRetailV2alphaSetInventoryRequest extends com.googl
    * types have empty SetInventoryRequest.inventory.fulfillment_info.place_ids The last update time
    * is recorded for the following inventory fields: * Product.price_info * Product.availability *
    * Product.available_quantity * Product.fulfillment_info If a full overwrite of inventory
-   * information while ignoring timestamps is needed, UpdateProduct should be invoked instead.
+   * information while ignoring timestamps is needed, ProductService.UpdateProduct should be invoked
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +125,8 @@ public final class GoogleCloudRetailV2alphaSetInventoryRequest extends com.googl
    * types have empty SetInventoryRequest.inventory.fulfillment_info.place_ids The last update time
    * is recorded for the following inventory fields: * Product.price_info * Product.availability *
    * Product.available_quantity * Product.fulfillment_info If a full overwrite of inventory
-   * information while ignoring timestamps is needed, UpdateProduct should be invoked instead.
+   * information while ignoring timestamps is needed, ProductService.UpdateProduct should be invoked
+   * instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct getInventory() {
@@ -152,7 +154,8 @@ public final class GoogleCloudRetailV2alphaSetInventoryRequest extends com.googl
    * types have empty SetInventoryRequest.inventory.fulfillment_info.place_ids The last update time
    * is recorded for the following inventory fields: * Product.price_info * Product.availability *
    * Product.available_quantity * Product.fulfillment_info If a full overwrite of inventory
-   * information while ignoring timestamps is needed, UpdateProduct should be invoked instead.
+   * information while ignoring timestamps is needed, ProductService.UpdateProduct should be invoked
+   * instead.
    * @param inventory inventory or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSetInventoryRequest setInventory(GoogleCloudRetailV2alphaProduct inventory) {

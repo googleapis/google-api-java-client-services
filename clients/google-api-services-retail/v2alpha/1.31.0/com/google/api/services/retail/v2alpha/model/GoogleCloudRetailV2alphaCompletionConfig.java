@@ -30,8 +30,7 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The input config for the import of the source data that contains the autocomplete
-   * allowlist phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete allowlist phrases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   private java.lang.Boolean autoLearning;
 
   /**
-   * Output only. The input config for the import of the source data that contains the /
-   * autocomplete denylist phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete denylist phrases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,16 +111,14 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   private java.lang.String name;
 
   /**
-   * Output only. The input config for the import of the source data that contains the autocomplete
-   * phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete suggestion phrases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRetailV2alphaCompletionDataInputConfig suggestionsInputConfig;
 
   /**
-   * Output only. The input config for the import of the source data that contains the autocomplete
-   * allowlist phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete allowlist phrases.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionDataInputConfig getAllowlistInputConfig() {
@@ -130,8 +126,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * Output only. The input config for the import of the source data that contains the autocomplete
-   * allowlist phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete allowlist phrases.
    * @param allowlistInputConfig allowlistInputConfig or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionConfig setAllowlistInputConfig(GoogleCloudRetailV2alphaCompletionDataInputConfig allowlistInputConfig) {
@@ -161,8 +156,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * Output only. The input config for the import of the source data that contains the /
-   * autocomplete denylist phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete denylist phrases.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionDataInputConfig getDenylistInputConfig() {
@@ -170,8 +164,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * Output only. The input config for the import of the source data that contains the /
-   * autocomplete denylist phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete denylist phrases.
    * @param denylistInputConfig denylistInputConfig or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionConfig setDenylistInputConfig(GoogleCloudRetailV2alphaCompletionDataInputConfig denylistInputConfig) {
@@ -317,8 +310,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * Output only. The input config for the import of the source data that contains the autocomplete
-   * phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete suggestion phrases.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionDataInputConfig getSuggestionsInputConfig() {
@@ -326,8 +318,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * Output only. The input config for the import of the source data that contains the autocomplete
-   * phrases uploaded by the customer.
+   * Output only. The source data for the latest import of the autocomplete suggestion phrases.
    * @param suggestionsInputConfig suggestionsInputConfig or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionConfig setSuggestionsInputConfig(GoogleCloudRetailV2alphaCompletionDataInputConfig suggestionsInputConfig) {

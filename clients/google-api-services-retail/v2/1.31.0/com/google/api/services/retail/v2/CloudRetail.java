@@ -406,33 +406,36 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The language filters applied to the output suggestions. If set, it should contain the
-           * language of the query. If not set, suggestions are returned without considering
-           * language restrictions. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-           * For more information, see [Tags for Identifying
-           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of language codes is
-           * 3.
+           * Note that this field applies for `user-data` dataset only. For requests with `cloud-
+           * retail` dataset, setting this field has no effect. The language filters applied to the
+           * output suggestions. If set, it should contain the language of the query. If not set,
+           * suggestions are returned without considering language restrictions. This is the BCP-47
+           * language code, such as "en-US" or "sr-Latn". For more information, see [Tags for
+           * Identifying Languages](https://tools.ietf.org/html/bcp47). The maximum number of
+           * language codes is 3.
            */
           @com.google.api.client.util.Key
           private java.util.List<java.lang.String> languageCodes;
 
-          /** The language filters applied to the output suggestions. If set, it should contain the language of
-         the query. If not set, suggestions are returned without considering language restrictions. This is
-         the BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Tags for
-         Identifying Languages](https://tools.ietf.org/html/bcp47). The maximum number of language codes is
-         3.
+          /** Note that this field applies for `user-data` dataset only. For requests with `cloud-retail`
+         dataset, setting this field has no effect. The language filters applied to the output suggestions.
+         If set, it should contain the language of the query. If not set, suggestions are returned without
+         considering language restrictions. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+         For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47). The
+         maximum number of language codes is 3.
            */
           public java.util.List<java.lang.String> getLanguageCodes() {
             return languageCodes;
           }
 
           /**
-           * The language filters applied to the output suggestions. If set, it should contain the
-           * language of the query. If not set, suggestions are returned without considering
-           * language restrictions. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-           * For more information, see [Tags for Identifying
-           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of language codes is
-           * 3.
+           * Note that this field applies for `user-data` dataset only. For requests with `cloud-
+           * retail` dataset, setting this field has no effect. The language filters applied to the
+           * output suggestions. If set, it should contain the language of the query. If not set,
+           * suggestions are returned without considering language restrictions. This is the BCP-47
+           * language code, such as "en-US" or "sr-Latn". For more information, see [Tags for
+           * Identifying Languages](https://tools.ietf.org/html/bcp47). The maximum number of
+           * language codes is 3.
            */
           public CompleteQuery setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
             this.languageCodes = languageCodes;
@@ -1404,8 +1407,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * and does not require the Product to exist before updating fulfillment information. If the request
              * is valid, the update will be enqueued and processed downstream. As a consequence, when a response
              * is returned, the added place IDs are not immediately manifested in the Product queried by
-             * GetProduct or ListProducts. This feature is only available for users who have Retail Search
-             * enabled. Please enable Retail Search on Cloud Console before using this feature.
+             * ProductService.GetProduct or ProductService.ListProducts. This feature is only available for
+             * users who have Retail Search enabled. Please enable Retail Search on Cloud Console before using
+             * this feature.
              *
              * Create a request for the method "products.addFulfillmentPlaces".
              *
@@ -1438,9 +1442,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
                * consequence, when a response is returned, the added place IDs are not immediately manifested in
-               * the Product queried by GetProduct or ListProducts. This feature is only available for users who
-               * have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
-               * feature.
+               * the Product queried by ProductService.GetProduct or ProductService.ListProducts. This feature
+               * is only available for users who have Retail Search enabled. Please enable Retail Search on
+               * Cloud Console before using this feature.
                *
                * Create a request for the method "products.addFulfillmentPlaces".
                *
@@ -1565,10 +1569,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * update timestamps of each inventory field. This process is asynchronous and does not require the
              * Product to exist before updating inventory information. If the request is valid, the update will
              * be enqueued and processed downstream. As a consequence, when a response is returned, updates are
-             * not immediately manifested in the Product queried by GetProduct or ListProducts. Local inventory
-             * information can only be modified using this method. CreateProduct and UpdateProduct has no effect
-             * on local inventories. This feature is only available for users who have Retail Search enabled.
-             * Please enable Retail Search on Cloud Console before using this feature.
+             * not immediately manifested in the Product queried by ProductService.GetProduct or
+             * ProductService.ListProducts. Local inventory information can only be modified using this method.
+             * ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local inventories.
+             * This feature is only available for users who have Retail Search enabled. Please enable Retail
+             * Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.addLocalInventories".
              *
@@ -1600,11 +1605,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * last update timestamps of each inventory field. This process is asynchronous and does not
                * require the Product to exist before updating inventory information. If the request is valid,
                * the update will be enqueued and processed downstream. As a consequence, when a response is
-               * returned, updates are not immediately manifested in the Product queried by GetProduct or
-               * ListProducts. Local inventory information can only be modified using this method. CreateProduct
-               * and UpdateProduct has no effect on local inventories. This feature is only available for users
-               * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
-               * feature.
+               * returned, updates are not immediately manifested in the Product queried by
+               * ProductService.GetProduct or ProductService.ListProducts. Local inventory information can only
+               * be modified using this method. ProductService.CreateProduct and ProductService.UpdateProduct
+               * has no effect on local inventories. This feature is only available for users who have Retail
+               * Search enabled. Please enable Retail Search on Cloud Console before using this feature.
                *
                * Create a request for the method "products.addLocalInventories".
                *
@@ -2871,8 +2876,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * asynchronous and does not require the Product to exist before updating fulfillment information.
              * If the request is valid, the update will be enqueued and processed downstream. As a consequence,
              * when a response is returned, the removed place IDs are not immediately manifested in the Product
-             * queried by GetProduct or ListProducts. This feature is only available for users who have Retail
-             * Search enabled. Please enable Retail Search on Cloud Console before using this feature.
+             * queried by ProductService.GetProduct or ProductService.ListProducts. This feature is only
+             * available for users who have Retail Search enabled. Please enable Retail Search on Cloud Console
+             * before using this feature.
              *
              * Create a request for the method "products.removeFulfillmentPlaces".
              *
@@ -2905,9 +2911,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
                * consequence, when a response is returned, the removed place IDs are not immediately manifested
-               * in the Product queried by GetProduct or ListProducts. This feature is only available for users
-               * who have Retail Search enabled. Please enable Retail Search on Cloud Console before using this
-               * feature.
+               * in the Product queried by ProductService.GetProduct or ProductService.ListProducts. This
+               * feature is only available for users who have Retail Search enabled. Please enable Retail Search
+               * on Cloud Console before using this feature.
                *
                * Create a request for the method "products.removeFulfillmentPlaces".
                *
@@ -3031,10 +3037,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Remove local inventory information for a Product at a list of places at a removal timestamp. This
              * process is asynchronous. If the request is valid, the removal will be enqueued and processed
              * downstream. As a consequence, when a response is returned, removals are not immediately
-             * manifested in the Product queried by GetProduct or ListProducts. Local inventory information can
-             * only be removed using this method. CreateProduct and UpdateProduct has no effect on local
-             * inventories. This feature is only available for users who have Retail Search enabled. Please
-             * enable Retail Search on Cloud Console before using this feature.
+             * manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts.
+             * Local inventory information can only be removed using this method. ProductService.CreateProduct
+             * and ProductService.UpdateProduct has no effect on local inventories. This feature is only
+             * available for users who have Retail Search enabled. Please enable Retail Search on Cloud Console
+             * before using this feature.
              *
              * Create a request for the method "products.removeLocalInventories".
              *
@@ -3066,10 +3073,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * Remove local inventory information for a Product at a list of places at a removal timestamp.
                * This process is asynchronous. If the request is valid, the removal will be enqueued and
                * processed downstream. As a consequence, when a response is returned, removals are not
-               * immediately manifested in the Product queried by GetProduct or ListProducts. Local inventory
-               * information can only be removed using this method. CreateProduct and UpdateProduct has no
-               * effect on local inventories. This feature is only available for users who have Retail Search
-               * enabled. Please enable Retail Search on Cloud Console before using this feature.
+               * immediately manifested in the Product queried by ProductService.GetProduct or
+               * ProductService.ListProducts. Local inventory information can only be removed using this method.
+               * ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local
+               * inventories. This feature is only available for users who have Retail Search enabled. Please
+               * enable Retail Search on Cloud Console before using this feature.
                *
                * Create a request for the method "products.removeLocalInventories".
                *
@@ -3194,17 +3202,18 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * inventory field. This process is asynchronous and does not require the Product to exist before
              * updating fulfillment information. If the request is valid, the update will be enqueued and
              * processed downstream. As a consequence, when a response is returned, updates are not immediately
-             * manifested in the Product queried by GetProduct or ListProducts. When inventory is updated with
-             * CreateProduct and UpdateProduct, the specified inventory field value(s) will overwrite any
-             * existing value(s) while ignoring the last update time for this field. Furthermore, the last
-             * update time for the specified inventory fields will be overwritten to the time of the
-             * CreateProduct or UpdateProduct request. If no inventory fields are set in
+             * manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts.
+             * When inventory is updated with ProductService.CreateProduct and ProductService.UpdateProduct, the
+             * specified inventory field value(s) will overwrite any existing value(s) while ignoring the last
+             * update time for this field. Furthermore, the last update time for the specified inventory fields
+             * will be overwritten to the time of the ProductService.CreateProduct or
+             * ProductService.UpdateProduct request. If no inventory fields are set in
              * CreateProductRequest.product, then any pre-existing inventory information for this product will
              * be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
              * inventory information will be preserved. Pre-existing inventory information can only be updated
-             * with SetInventory, ProductService.AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature
-             * is only available for users who have Retail Search enabled. Please enable Retail Search on Cloud
-             * Console before using this feature.
+             * with ProductService.SetInventory, ProductService.AddFulfillmentPlaces, and
+             * ProductService.RemoveFulfillmentPlaces. This feature is only available for users who have Retail
+             * Search enabled. Please enable Retail Search on Cloud Console before using this feature.
              *
              * Create a request for the method "products.setInventory".
              *
@@ -3235,17 +3244,18 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * inventory field. This process is asynchronous and does not require the Product to exist before
                * updating fulfillment information. If the request is valid, the update will be enqueued and
                * processed downstream. As a consequence, when a response is returned, updates are not
-               * immediately manifested in the Product queried by GetProduct or ListProducts. When inventory is
-               * updated with CreateProduct and UpdateProduct, the specified inventory field value(s) will
-               * overwrite any existing value(s) while ignoring the last update time for this field.
-               * Furthermore, the last update time for the specified inventory fields will be overwritten to the
-               * time of the CreateProduct or UpdateProduct request. If no inventory fields are set in
-               * CreateProductRequest.product, then any pre-existing inventory information for this product will
-               * be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing
-               * inventory information will be preserved. Pre-existing inventory information can only be updated
-               * with SetInventory, ProductService.AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This
-               * feature is only available for users who have Retail Search enabled. Please enable Retail Search
-               * on Cloud Console before using this feature.
+               * immediately manifested in the Product queried by ProductService.GetProduct or
+               * ProductService.ListProducts. When inventory is updated with ProductService.CreateProduct and
+               * ProductService.UpdateProduct, the specified inventory field value(s) will overwrite any
+               * existing value(s) while ignoring the last update time for this field. Furthermore, the last
+               * update time for the specified inventory fields will be overwritten to the time of the
+               * ProductService.CreateProduct or ProductService.UpdateProduct request. If no inventory fields
+               * are set in CreateProductRequest.product, then any pre-existing inventory information for this
+               * product will be used. If no inventory fields are set in SetInventoryRequest.set_mask, then any
+               * existing inventory information will be preserved. Pre-existing inventory information can only
+               * be updated with ProductService.SetInventory, ProductService.AddFulfillmentPlaces, and
+               * ProductService.RemoveFulfillmentPlaces. This feature is only available for users who have
+               * Retail Search enabled. Please enable Retail Search on Cloud Console before using this feature.
                *
                * Create a request for the method "products.setInventory".
                *

@@ -18,7 +18,7 @@ package com.google.api.services.retail.v2.model;
 
 /**
  * Response of the SetInventoryRequest. Currently empty because there is no meaningful response
- * populated from the SetInventory method.
+ * populated from the ProductService.SetInventory method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

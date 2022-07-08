@@ -77,13 +77,13 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   private java.lang.String key;
 
   /**
-   * The order in which Facet.values are returned. Allowed values are: * "count desc", which means
-   * order by Facet.FacetValue.count descending. * "value desc", which means order by
-   * Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values
-   * are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical
-   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals;
-   * FulfillmentInfo.place_ids are sorted in the order given by
-   * FacetSpec.FacetKey.restricted_values.
+   * The order in which SearchResponse.Facet.values are returned. Allowed values are: * "count
+   * desc", which means order by SearchResponse.Facet.values.count descending. * "value desc", which
+   * means order by SearchResponse.Facet.values.value descending. Only applies to textual facets. If
+   * not set, textual values are sorted in [natural
+   * order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical intervals are sorted in the
+   * order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.place_ids are sorted in the order
+   * given by FacetSpec.FacetKey.restricted_values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,12 +103,12 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
    * The query that is used to compute facet for the given facet key. When provided, it will
    * override the default behavior of facet computation. The query syntax is the same as a filter
    * expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no
-   * limitation on FacetKey.key when query is specified. In the response, FacetValue.value will be
-   * always "1" and FacetValue.count will be the number of results that matches the query. For
-   * example, you can set a customized facet for "shipToStore", where FacetKey.key is
-   * "customizedShipToStore", and FacetKey.query is "availability: ANY(\"IN_STOCK\") AND
-   * shipToStore: ANY(\"123\")". Then the facet will count the products that are both in stock and
-   * ship to store "123".
+   * limitation on FacetKey.key when query is specified. In the response,
+   * SearchResponse.Facet.values.value will be always "1" and SearchResponse.Facet.values.count will
+   * be the number of results that match the query. For example, you can set a customized facet for
+   * "shipToStore", where FacetKey.key is "customizedShipToStore", and FacetKey.query is
+   * "availability: ANY(\"IN_STOCK\") AND shipToStore: ANY(\"123\")". Then the facet will count the
+   * products that are both in stock and ship to store "123".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,13 +221,13 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   }
 
   /**
-   * The order in which Facet.values are returned. Allowed values are: * "count desc", which means
-   * order by Facet.FacetValue.count descending. * "value desc", which means order by
-   * Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values
-   * are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical
-   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals;
-   * FulfillmentInfo.place_ids are sorted in the order given by
-   * FacetSpec.FacetKey.restricted_values.
+   * The order in which SearchResponse.Facet.values are returned. Allowed values are: * "count
+   * desc", which means order by SearchResponse.Facet.values.count descending. * "value desc", which
+   * means order by SearchResponse.Facet.values.value descending. Only applies to textual facets. If
+   * not set, textual values are sorted in [natural
+   * order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical intervals are sorted in the
+   * order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.place_ids are sorted in the order
+   * given by FacetSpec.FacetKey.restricted_values.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -235,13 +235,13 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   }
 
   /**
-   * The order in which Facet.values are returned. Allowed values are: * "count desc", which means
-   * order by Facet.FacetValue.count descending. * "value desc", which means order by
-   * Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values
-   * are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical
-   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals;
-   * FulfillmentInfo.place_ids are sorted in the order given by
-   * FacetSpec.FacetKey.restricted_values.
+   * The order in which SearchResponse.Facet.values are returned. Allowed values are: * "count
+   * desc", which means order by SearchResponse.Facet.values.count descending. * "value desc", which
+   * means order by SearchResponse.Facet.values.value descending. Only applies to textual facets. If
+   * not set, textual values are sorted in [natural
+   * order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical intervals are sorted in the
+   * order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.place_ids are sorted in the order
+   * given by FacetSpec.FacetKey.restricted_values.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey setOrderBy(java.lang.String orderBy) {
@@ -276,12 +276,12 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
    * The query that is used to compute facet for the given facet key. When provided, it will
    * override the default behavior of facet computation. The query syntax is the same as a filter
    * expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no
-   * limitation on FacetKey.key when query is specified. In the response, FacetValue.value will be
-   * always "1" and FacetValue.count will be the number of results that matches the query. For
-   * example, you can set a customized facet for "shipToStore", where FacetKey.key is
-   * "customizedShipToStore", and FacetKey.query is "availability: ANY(\"IN_STOCK\") AND
-   * shipToStore: ANY(\"123\")". Then the facet will count the products that are both in stock and
-   * ship to store "123".
+   * limitation on FacetKey.key when query is specified. In the response,
+   * SearchResponse.Facet.values.value will be always "1" and SearchResponse.Facet.values.count will
+   * be the number of results that match the query. For example, you can set a customized facet for
+   * "shipToStore", where FacetKey.key is "customizedShipToStore", and FacetKey.query is
+   * "availability: ANY(\"IN_STOCK\") AND shipToStore: ANY(\"123\")". Then the facet will count the
+   * products that are both in stock and ship to store "123".
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -292,12 +292,12 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
    * The query that is used to compute facet for the given facet key. When provided, it will
    * override the default behavior of facet computation. The query syntax is the same as a filter
    * expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no
-   * limitation on FacetKey.key when query is specified. In the response, FacetValue.value will be
-   * always "1" and FacetValue.count will be the number of results that matches the query. For
-   * example, you can set a customized facet for "shipToStore", where FacetKey.key is
-   * "customizedShipToStore", and FacetKey.query is "availability: ANY(\"IN_STOCK\") AND
-   * shipToStore: ANY(\"123\")". Then the facet will count the products that are both in stock and
-   * ship to store "123".
+   * limitation on FacetKey.key when query is specified. In the response,
+   * SearchResponse.Facet.values.value will be always "1" and SearchResponse.Facet.values.count will
+   * be the number of results that match the query. For example, you can set a customized facet for
+   * "shipToStore", where FacetKey.key is "customizedShipToStore", and FacetKey.query is
+   * "availability: ANY(\"IN_STOCK\") AND shipToStore: ANY(\"123\")". Then the facet will count the
+   * products that are both in stock and ship to store "123".
    * @param query query or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey setQuery(java.lang.String query) {

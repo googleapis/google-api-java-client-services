@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Request message for RemoveLocalInventories method.
+ * Request message for ProductService.RemoveLocalInventories method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

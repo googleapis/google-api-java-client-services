@@ -18,7 +18,8 @@ package com.google.api.services.retail.v2alpha.model;
 
 /**
  * Metadata related to the progress of the RemoveFulfillmentPlaces operation. Currently empty
- * because there is no meaningful metadata populated from the RemoveFulfillmentPlaces method.
+ * because there is no meaningful metadata populated from the ProductService.RemoveFulfillmentPlaces
+ * method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:

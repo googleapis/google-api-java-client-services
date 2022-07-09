@@ -31,7 +31,7 @@ package com.google.api.services.datastream.v1.model;
 public final class VpcPeeringConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
+   * Required. A free subnet for peering. (CIDR of /29)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class VpcPeeringConfig extends com.google.api.client.json.GenericJs
   private java.lang.String vpc;
 
   /**
-   * Required. A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
+   * Required. A free subnet for peering. (CIDR of /29)
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnet() {
@@ -54,7 +54,7 @@ public final class VpcPeeringConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
+   * Required. A free subnet for peering. (CIDR of /29)
    * @param subnet subnet or {@code null} for none
    */
   public VpcPeeringConfig setSubnet(java.lang.String subnet) {

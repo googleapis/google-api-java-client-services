@@ -18,8 +18,11 @@ package com.google.api.services.dialogflow.v3.model;
 
 /**
  * Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at
- * lower level overrides the settings exposed at higher level. Hierarchy:
- * Agent->Flow->Page->Fulfillment/Parameter.
+ * lower level overrides the settings exposed at higher level. Overriding occurs at the sub-setting
+ * level. For example, the playback_interruption_settings at fulfillment level only overrides the
+ * playback_interruption_settings at the agent level, leaving other settings at the agent level
+ * unchanged. DTMF settings does not override each other. DTMF settings set at different levels
+ * define DTMF detections running in parallel. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

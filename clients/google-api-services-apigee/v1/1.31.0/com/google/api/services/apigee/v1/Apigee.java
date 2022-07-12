@@ -18200,8 +18200,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Deletes an environment from an organization. **Note**: You must delete all key value maps and key
-       * value entries before you can delete an environment.
+       * Deletes an environment from an organization. **Warning: You must delete all key value maps and
+       * key value entries before you delete an environment.** Otherwise, if you re-create the environment
+       * the key value map entry operations will encounter encryption/decryption discrepancies.
        *
        * Create a request for the method "environments.delete".
        *
@@ -18226,8 +18227,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
 
         /**
-         * Deletes an environment from an organization. **Note**: You must delete all key value maps and
-         * key value entries before you can delete an environment.
+         * Deletes an environment from an organization. **Warning: You must delete all key value maps and
+         * key value entries before you delete an environment.** Otherwise, if you re-create the
+         * environment the key value map entry operations will encounter encryption/decryption
+         * discrepancies.
          *
          * Create a request for the method "environments.delete".
          *

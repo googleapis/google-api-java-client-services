@@ -38,6 +38,13 @@ public final class DetachLunRequest extends com.google.api.client.json.GenericJs
   private java.lang.String lun;
 
   /**
+   * If true, performs lun unmapping without instance reboot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipReboot;
+
+  /**
    * Required. Name of the Lun to detach.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class DetachLunRequest extends com.google.api.client.json.GenericJs
    */
   public DetachLunRequest setLun(java.lang.String lun) {
     this.lun = lun;
+    return this;
+  }
+
+  /**
+   * If true, performs lun unmapping without instance reboot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipReboot() {
+    return skipReboot;
+  }
+
+  /**
+   * If true, performs lun unmapping without instance reboot.
+   * @param skipReboot skipReboot or {@code null} for none
+   */
+  public DetachLunRequest setSkipReboot(java.lang.Boolean skipReboot) {
+    this.skipReboot = skipReboot;
     return this;
   }
 

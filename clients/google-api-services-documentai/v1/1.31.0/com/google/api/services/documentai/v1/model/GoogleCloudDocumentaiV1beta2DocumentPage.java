@@ -39,6 +39,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPage extends com.google.a
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageBlock> blocks;
 
   /**
+   * A list of detected barcodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode> detectedBarcodes;
+
+  /**
    * A list of detected languages together with confidence.
    * The value may be {@code null}.
    */
@@ -156,6 +163,23 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPage extends com.google.a
    */
   public GoogleCloudDocumentaiV1beta2DocumentPage setBlocks(java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageBlock> blocks) {
     this.blocks = blocks;
+    return this;
+  }
+
+  /**
+   * A list of detected barcodes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode> getDetectedBarcodes() {
+    return detectedBarcodes;
+  }
+
+  /**
+   * A list of detected barcodes.
+   * @param detectedBarcodes detectedBarcodes or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPage setDetectedBarcodes(java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode> detectedBarcodes) {
+    this.detectedBarcodes = detectedBarcodes;
     return this;
   }
 

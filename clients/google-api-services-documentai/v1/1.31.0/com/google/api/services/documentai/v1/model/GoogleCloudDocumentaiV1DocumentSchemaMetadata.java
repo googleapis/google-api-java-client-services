@@ -46,6 +46,13 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   private java.lang.Boolean documentSplitter;
 
   /**
+   * If set, all the nested entities must be prefixed with the parents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean prefixedNamingOnProperties;
+
+  /**
    * If true, on a given page, there can be multiple `document` annotations covering it.
    * @return value or {@code null} for none
    */
@@ -78,6 +85,23 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
    */
   public GoogleCloudDocumentaiV1DocumentSchemaMetadata setDocumentSplitter(java.lang.Boolean documentSplitter) {
     this.documentSplitter = documentSplitter;
+    return this;
+  }
+
+  /**
+   * If set, all the nested entities must be prefixed with the parents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrefixedNamingOnProperties() {
+    return prefixedNamingOnProperties;
+  }
+
+  /**
+   * If set, all the nested entities must be prefixed with the parents.
+   * @param prefixedNamingOnProperties prefixedNamingOnProperties or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentSchemaMetadata setPrefixedNamingOnProperties(java.lang.Boolean prefixedNamingOnProperties) {
+    this.prefixedNamingOnProperties = prefixedNamingOnProperties;
     return this;
   }
 

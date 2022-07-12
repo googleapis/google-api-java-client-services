@@ -73,7 +73,7 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   private java.lang.String lanIpAddress;
 
   /**
-   * Output only. Receiving bit rate measured in megabytes per second.
+   * Output only. Receiving bit rate measured in Megabits per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -101,7 +101,7 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   private java.lang.Integer signalStrengthDbm;
 
   /**
-   * Output only. Transmission bit rate measured in megabytes per second.
+   * Output only. Transmission bit rate measured in Megabits per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -232,7 +232,7 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   }
 
   /**
-   * Output only. Receiving bit rate measured in megabytes per second.
+   * Output only. Receiving bit rate measured in Megabits per second.
    * @return value or {@code null} for none
    */
   public java.lang.Long getReceivingBitRateMbps() {
@@ -240,7 +240,7 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   }
 
   /**
-   * Output only. Receiving bit rate measured in megabytes per second.
+   * Output only. Receiving bit rate measured in Megabits per second.
    * @param receivingBitRateMbps receivingBitRateMbps or {@code null} for none
    */
   public GoogleChromeManagementV1NetworkStatusReport setReceivingBitRateMbps(java.lang.Long receivingBitRateMbps) {
@@ -300,7 +300,7 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   }
 
   /**
-   * Output only. Transmission bit rate measured in megabytes per second.
+   * Output only. Transmission bit rate measured in Megabits per second.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTransmissionBitRateMbps() {
@@ -308,7 +308,7 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   }
 
   /**
-   * Output only. Transmission bit rate measured in megabytes per second.
+   * Output only. Transmission bit rate measured in Megabits per second.
    * @param transmissionBitRateMbps transmissionBitRateMbps or {@code null} for none
    */
   public GoogleChromeManagementV1NetworkStatusReport setTransmissionBitRateMbps(java.lang.Long transmissionBitRateMbps) {

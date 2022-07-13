@@ -135,7 +135,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Float maxRatePerInstance;
 
   /**
-   * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid
+   * Optional parameter to define a target capacity for the UTILIZATION balancing mode. The valid
    * range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
    * The value may be {@code null}.
    */
@@ -386,7 +386,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid
+   * Optional parameter to define a target capacity for the UTILIZATION balancing mode. The valid
    * range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
    * @return value or {@code null} for none
    */
@@ -395,7 +395,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid
+   * Optional parameter to define a target capacity for the UTILIZATION balancing mode. The valid
    * range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
    * @param maxUtilization maxUtilization or {@code null} for none
    */

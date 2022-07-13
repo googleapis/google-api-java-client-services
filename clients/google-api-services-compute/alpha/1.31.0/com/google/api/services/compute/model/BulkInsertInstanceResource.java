@@ -53,7 +53,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private InstanceProperties instanceProperties;
 
   /**
-   * Policy for chosing target zone.
+   * Policy for chosing target zone. For more information, see Create VMs in bulk .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Policy for chosing target zone.
+   * Policy for chosing target zone. For more information, see Create VMs in bulk .
    * @return value or {@code null} for none
    */
   public LocationPolicy getLocationPolicy() {
@@ -167,7 +167,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Policy for chosing target zone.
+   * Policy for chosing target zone. For more information, see Create VMs in bulk .
    * @param locationPolicy locationPolicy or {@code null} for none
    */
   public BulkInsertInstanceResource setLocationPolicy(LocationPolicy locationPolicy) {

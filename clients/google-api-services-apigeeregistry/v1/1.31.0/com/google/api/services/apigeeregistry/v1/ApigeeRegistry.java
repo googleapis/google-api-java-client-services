@@ -818,6 +818,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /**
+           * If set to true, any child resources will also be deleted. (Otherwise, the request will
+           * only work if there are no child resources.)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** If set to true, any child resources will also be deleted. (Otherwise, the request will only work if
+         there are no child resources.)
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * If set to true, any child resources will also be deleted. (Otherwise, the request will
+           * only work if there are no child resources.)
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -6530,6 +6553,29 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                     "^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+$");
               }
               this.name = name;
+              return this;
+            }
+
+            /**
+             * If set to true, any child resources will also be deleted. (Otherwise, the request
+             * will only work if there are no child resources.)
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** If set to true, any child resources will also be deleted. (Otherwise, the request will only work if
+           there are no child resources.)
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * If set to true, any child resources will also be deleted. (Otherwise, the request
+             * will only work if there are no child resources.)
+             */
+            public Delete setForce(java.lang.Boolean force) {
+              this.force = force;
               return this;
             }
 

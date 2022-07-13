@@ -31,14 +31,14 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Count of active Violations in the Workload.
+   * Count of active Violations in the Workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer activeViolationCount;
 
   /**
-   * Optional. Count of active Violations in the Workload.
+   * Count of active Violations in the Workload.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getActiveViolationCount() {
@@ -46,7 +46,7 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadCompliance
   }
 
   /**
-   * Optional. Count of active Violations in the Workload.
+   * Count of active Violations in the Workload.
    * @param activeViolationCount activeViolationCount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus setActiveViolationCount(java.lang.Integer activeViolationCount) {

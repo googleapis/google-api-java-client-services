@@ -31,6 +31,16 @@ package com.google.api.services.mybusinessaccountmanagement.v1.model;
 public final class Admin extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. The name of the Account resource that this Admin refers to. Used when calling
+   * CreateAccountAdmin or CreateLocationAdmin to invite UserGroups or LocationGroups as admins,
+   * respectively. If both this field and `admin` are set on `CREATE` requests, this field takes
+   * precedence and the email address in `admin` will be ignored. Format: `accounts/{account}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String account;
+
+  /**
    * Optional. The name of the admin. When making the initial invitation, this is the invitee's
    * email address. On `GET` calls, the user's email address is returned if the invitation is still
    * pending. Otherwise, it contains the user's first and last names. This field is only needed to
@@ -63,6 +73,29 @@ public final class Admin extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
+
+  /**
+   * Immutable. The name of the Account resource that this Admin refers to. Used when calling
+   * CreateAccountAdmin or CreateLocationAdmin to invite UserGroups or LocationGroups as admins,
+   * respectively. If both this field and `admin` are set on `CREATE` requests, this field takes
+   * precedence and the email address in `admin` will be ignored. Format: `accounts/{account}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccount() {
+    return account;
+  }
+
+  /**
+   * Immutable. The name of the Account resource that this Admin refers to. Used when calling
+   * CreateAccountAdmin or CreateLocationAdmin to invite UserGroups or LocationGroups as admins,
+   * respectively. If both this field and `admin` are set on `CREATE` requests, this field takes
+   * precedence and the email address in `admin` will be ignored. Format: `accounts/{account}`.
+   * @param account account or {@code null} for none
+   */
+  public Admin setAccount(java.lang.String account) {
+    this.account = account;
+    return this;
+  }
 
   /**
    * Optional. The name of the admin. When making the initial invitation, this is the invitee's

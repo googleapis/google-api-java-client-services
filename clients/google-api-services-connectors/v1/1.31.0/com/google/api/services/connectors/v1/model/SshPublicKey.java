@@ -51,6 +51,13 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
   private Secret sshClientCert;
 
   /**
+   * Password (passphrase) for ssh client certificate if it has one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Secret sshClientCertPass;
+
+  /**
    * The user account used to authenticate.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
    */
   public SshPublicKey setSshClientCert(Secret sshClientCert) {
     this.sshClientCert = sshClientCert;
+    return this;
+  }
+
+  /**
+   * Password (passphrase) for ssh client certificate if it has one.
+   * @return value or {@code null} for none
+   */
+  public Secret getSshClientCertPass() {
+    return sshClientCertPass;
+  }
+
+  /**
+   * Password (passphrase) for ssh client certificate if it has one.
+   * @param sshClientCertPass sshClientCertPass or {@code null} for none
+   */
+  public SshPublicKey setSshClientCertPass(Secret sshClientCertPass) {
+    this.sshClientCertPass = sshClientCertPass;
     return this;
   }
 

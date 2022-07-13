@@ -73,13 +73,6 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. Outbound domains/hosts needs to be allowlisted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> egressBackends;
-
-  /**
    * Output only. GCR location where the envoy image is stored. formatted like:
    * gcr.io/{bucketName}/{imageName}
    * The value may be {@code null}.
@@ -241,23 +234,6 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * Output only. Outbound domains/hosts needs to be allowlisted.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getEgressBackends() {
-    return egressBackends;
-  }
-
-  /**
-   * Output only. Outbound domains/hosts needs to be allowlisted.
-   * @param egressBackends egressBackends or {@code null} for none
-   */
-  public Connection setEgressBackends(java.util.List<java.lang.String> egressBackends) {
-    this.egressBackends = egressBackends;
     return this;
   }
 

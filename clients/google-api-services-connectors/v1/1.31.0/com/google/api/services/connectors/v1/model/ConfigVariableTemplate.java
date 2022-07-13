@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v1.model;
 public final class ConfigVariableTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Authorization code link options. To be populated if `ValueType` is `AUTHORIZATION_CODE`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthorizationCodeLink authorizationCodeLink;
+
+  /**
    * Description.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String valueType;
+
+  /**
+   * Authorization code link options. To be populated if `ValueType` is `AUTHORIZATION_CODE`
+   * @return value or {@code null} for none
+   */
+  public AuthorizationCodeLink getAuthorizationCodeLink() {
+    return authorizationCodeLink;
+  }
+
+  /**
+   * Authorization code link options. To be populated if `ValueType` is `AUTHORIZATION_CODE`
+   * @param authorizationCodeLink authorizationCodeLink or {@code null} for none
+   */
+  public ConfigVariableTemplate setAuthorizationCodeLink(AuthorizationCodeLink authorizationCodeLink) {
+    this.authorizationCodeLink = authorizationCodeLink;
+    return this;
+  }
 
   /**
    * Description.

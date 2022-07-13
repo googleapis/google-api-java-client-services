@@ -47,8 +47,7 @@ public final class PathFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the position of the path the filter should match to (first, last, or any event in
-   * path).
+   * The position of the path the filter should match to (first, last, or any event in path).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +71,7 @@ public final class PathFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the position of the path the filter should match to (first, last, or any event in
-   * path).
+   * The position of the path the filter should match to (first, last, or any event in path).
    * @return value or {@code null} for none
    */
   public java.lang.String getPathMatchPosition() {
@@ -81,8 +79,7 @@ public final class PathFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the position of the path the filter should match to (first, last, or any event in
-   * path).
+   * The position of the path the filter should match to (first, last, or any event in path).
    * @param pathMatchPosition pathMatchPosition or {@code null} for none
    */
   public PathFilter setPathMatchPosition(java.lang.String pathMatchPosition) {

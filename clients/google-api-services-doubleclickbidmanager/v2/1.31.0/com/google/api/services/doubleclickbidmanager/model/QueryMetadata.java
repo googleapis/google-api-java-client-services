@@ -31,7 +31,8 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class QueryMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Range of report data.
+   * Range of report data. All reports will be based on the same time zone as used by the
+   * advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
 
   /**
    * List of email addresses which are sent email notifications when the report is finished.
-   * Separate from `sendNotification`.
+   * Separate from send_notification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.String title;
 
   /**
-   * Range of report data.
+   * Range of report data. All reports will be based on the same time zone as used by the
+   * advertiser.
    * @return value or {@code null} for none
    */
   public DataRange getDataRange() {
@@ -75,7 +77,8 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Range of report data.
+   * Range of report data. All reports will be based on the same time zone as used by the
+   * advertiser.
    * @param dataRange dataRange or {@code null} for none
    */
   public QueryMetadata setDataRange(DataRange dataRange) {
@@ -119,7 +122,7 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
 
   /**
    * List of email addresses which are sent email notifications when the report is finished.
-   * Separate from `sendNotification`.
+   * Separate from send_notification.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getShareEmailAddress() {
@@ -128,7 +131,7 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
 
   /**
    * List of email addresses which are sent email notifications when the report is finished.
-   * Separate from `sendNotification`.
+   * Separate from send_notification.
    * @param shareEmailAddress shareEmailAddress or {@code null} for none
    */
   public QueryMetadata setShareEmailAddress(java.util.List<java.lang.String> shareEmailAddress) {

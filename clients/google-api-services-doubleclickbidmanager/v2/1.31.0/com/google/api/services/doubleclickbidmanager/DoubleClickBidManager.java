@@ -252,14 +252,14 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Deletes a stored query as well as the associated stored reports.
+     * Deletes a query as well as the associated reports.
      *
      * Create a request for the method "queries.delete".
      *
      * This request holds the parameters needed by the doubleclickbidmanager server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param queryId Required. Query ID to delete.
+     * @param queryId Required. ID of query to delete.
      * @return the request
      */
     public Delete delete(java.lang.Long queryId) throws java.io.IOException {
@@ -273,7 +273,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       private static final String REST_PATH = "queries/{queryId}";
 
       /**
-       * Deletes a stored query as well as the associated stored reports.
+       * Deletes a query as well as the associated reports.
        *
        * Create a request for the method "queries.delete".
        *
@@ -283,7 +283,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param queryId Required. Query ID to delete.
+       * @param queryId Required. ID of query to delete.
        * @since 1.13
        */
       protected Delete(java.lang.Long queryId) {
@@ -346,17 +346,17 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Query ID to delete. */
+      /** Required. ID of query to delete. */
       @com.google.api.client.util.Key
       private java.lang.Long queryId;
 
-      /** Required. Query ID to delete.
+      /** Required. ID of query to delete.
        */
       public java.lang.Long getQueryId() {
         return queryId;
       }
 
-      /** Required. Query ID to delete. */
+      /** Required. ID of query to delete. */
       public Delete setQueryId(java.lang.Long queryId) {
         this.queryId = queryId;
         return this;
@@ -368,14 +368,14 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Retrieves a stored query.
+     * Retrieves a query.
      *
      * Create a request for the method "queries.get".
      *
      * This request holds the parameters needed by the doubleclickbidmanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param queryId Required. Query ID to retrieve.
+     * @param queryId Required. ID of query to retrieve.
      * @return the request
      */
     public Get get(java.lang.Long queryId) throws java.io.IOException {
@@ -389,7 +389,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       private static final String REST_PATH = "queries/{queryId}";
 
       /**
-       * Retrieves a stored query.
+       * Retrieves a query.
        *
        * Create a request for the method "queries.get".
        *
@@ -399,7 +399,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param queryId Required. Query ID to retrieve.
+       * @param queryId Required. ID of query to retrieve.
        * @since 1.13
        */
       protected Get(java.lang.Long queryId) {
@@ -472,17 +472,17 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Query ID to retrieve. */
+      /** Required. ID of query to retrieve. */
       @com.google.api.client.util.Key
       private java.lang.Long queryId;
 
-      /** Required. Query ID to retrieve.
+      /** Required. ID of query to retrieve.
        */
       public java.lang.Long getQueryId() {
         return queryId;
       }
 
-      /** Required. Query ID to retrieve. */
+      /** Required. ID of query to retrieve. */
       public Get setQueryId(java.lang.Long queryId) {
         this.queryId = queryId;
         return this;
@@ -494,7 +494,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Retrieves stored queries.
+     * Lists queries created by the current user.
      *
      * Create a request for the method "queries.list".
      *
@@ -514,7 +514,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       private static final String REST_PATH = "queries";
 
       /**
-       * Retrieves stored queries.
+       * Lists queries created by the current user.
        *
        * Create a request for the method "queries.list".
        *
@@ -598,14 +598,14 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       /**
        * Name of a field used to order results. The default sorting order is ascending. To specify
        * descending order for a field, append a " desc" suffix. For example "metadata.title desc".
-       * Sorting is only supported for the following fields: * queryId * metadata.title
+       * Sorting is only supported for the following fields: * `queryId` * `metadata.title`
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Name of a field used to order results. The default sorting order is ascending. To specify
      descending order for a field, append a " desc" suffix. For example "metadata.title desc". Sorting
-     is only supported for the following fields: * queryId * metadata.title
+     is only supported for the following fields: * `queryId` * `metadata.title`
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -614,7 +614,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       /**
        * Name of a field used to order results. The default sorting order is ascending. To specify
        * descending order for a field, append a " desc" suffix. For example "metadata.title desc".
-       * Sorting is only supported for the following fields: * queryId * metadata.title
+       * Sorting is only supported for the following fields: * `queryId` * `metadata.title`
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -680,7 +680,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
      * This request holds the parameters needed by the doubleclickbidmanager server.  After setting any
      * optional parameters, call the {@link Run#execute()} method to invoke the remote operation.
      *
-     * @param queryId Required. Query ID to run.
+     * @param queryId Required. ID of query to run.
      * @param content the {@link com.google.api.services.doubleclickbidmanager.model.RunQueryRequest}
      * @return the request
      */
@@ -705,7 +705,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
        * Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param queryId Required. Query ID to run.
+       * @param queryId Required. ID of query to run.
        * @param content the {@link com.google.api.services.doubleclickbidmanager.model.RunQueryRequest}
        * @since 1.13
        */
@@ -769,17 +769,17 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         return (Run) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Query ID to run. */
+      /** Required. ID of query to run. */
       @com.google.api.client.util.Key
       private java.lang.Long queryId;
 
-      /** Required. Query ID to run.
+      /** Required. ID of query to run.
        */
       public java.lang.Long getQueryId() {
         return queryId;
       }
 
-      /** Required. Query ID to run. */
+      /** Required. ID of query to run. */
       public Run setQueryId(java.lang.Long queryId) {
         this.queryId = queryId;
         return this;
@@ -837,7 +837,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
     public class Reports {
 
       /**
-       * Retrieves a stored report.
+       * Retrieves a report.
        *
        * Create a request for the method "reports.get".
        *
@@ -859,7 +859,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         private static final String REST_PATH = "queries/{queryId}/reports/{reportId}";
 
         /**
-         * Retrieves a stored report.
+         * Retrieves a report.
          *
          * Create a request for the method "reports.get".
          *
@@ -982,14 +982,14 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists reports.
+       * Lists reports associated with a query.
        *
        * Create a request for the method "reports.list".
        *
        * This request holds the parameters needed by the doubleclickbidmanager server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param queryId Required. Query ID with which the reports are associated.
+       * @param queryId Required. ID of the query with which the reports are associated.
        * @return the request
        */
       public List list(java.lang.Long queryId) throws java.io.IOException {
@@ -1003,7 +1003,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         private static final String REST_PATH = "queries/{queryId}/reports";
 
         /**
-         * Lists reports.
+         * Lists reports associated with a query.
          *
          * Create a request for the method "reports.list".
          *
@@ -1013,7 +1013,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param queryId Required. Query ID with which the reports are associated.
+         * @param queryId Required. ID of the query with which the reports are associated.
          * @since 1.13
          */
         protected List(java.lang.Long queryId) {
@@ -1086,17 +1086,17 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Query ID with which the reports are associated. */
+        /** Required. ID of the query with which the reports are associated. */
         @com.google.api.client.util.Key
         private java.lang.Long queryId;
 
-        /** Required. Query ID with which the reports are associated.
+        /** Required. ID of the query with which the reports are associated.
          */
         public java.lang.Long getQueryId() {
           return queryId;
         }
 
-        /** Required. Query ID with which the reports are associated. */
+        /** Required. ID of the query with which the reports are associated. */
         public List setQueryId(java.lang.Long queryId) {
           this.queryId = queryId;
           return this;
@@ -1105,14 +1105,14 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         /**
          * Name of a field used to order results. The default sorting order is ascending. To specify
          * descending order for a field, append a " desc" suffix. For example "key.reportId desc".
-         * Sorting is only supported for the following fields: * key.reportId
+         * Sorting is only supported for the following fields: * `key.reportId`
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Name of a field used to order results. The default sorting order is ascending. To specify
        descending order for a field, append a " desc" suffix. For example "key.reportId desc". Sorting is
-       only supported for the following fields: * key.reportId
+       only supported for the following fields: * `key.reportId`
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -1121,7 +1121,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         /**
          * Name of a field used to order results. The default sorting order is ascending. To specify
          * descending order for a field, append a " desc" suffix. For example "key.reportId desc".
-         * Sorting is only supported for the following fields: * key.reportId
+         * Sorting is only supported for the following fields: * `key.reportId`
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;

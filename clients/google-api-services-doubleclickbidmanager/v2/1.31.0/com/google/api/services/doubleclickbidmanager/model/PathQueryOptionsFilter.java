@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Dimension Filter on path events.
+ * Dimension filter on path events.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -38,14 +38,14 @@ public final class PathQueryOptionsFilter extends com.google.api.client.json.Gen
   private java.lang.String filter;
 
   /**
-   * Indicates how the filter should be matched to the value.
+   * Match logic of the filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String match;
 
   /**
-   * Value to filter on.
+   * Values to filter on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class PathQueryOptionsFilter extends com.google.api.client.json.Gen
   }
 
   /**
-   * Indicates how the filter should be matched to the value.
+   * Match logic of the filter.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatch() {
@@ -77,7 +77,7 @@ public final class PathQueryOptionsFilter extends com.google.api.client.json.Gen
   }
 
   /**
-   * Indicates how the filter should be matched to the value.
+   * Match logic of the filter.
    * @param match match or {@code null} for none
    */
   public PathQueryOptionsFilter setMatch(java.lang.String match) {
@@ -86,7 +86,7 @@ public final class PathQueryOptionsFilter extends com.google.api.client.json.Gen
   }
 
   /**
-   * Value to filter on.
+   * Values to filter on.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -94,7 +94,7 @@ public final class PathQueryOptionsFilter extends com.google.api.client.json.Gen
   }
 
   /**
-   * Value to filter on.
+   * Values to filter on.
    * @param values values or {@code null} for none
    */
   public PathQueryOptionsFilter setValues(java.util.List<java.lang.String> values) {

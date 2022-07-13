@@ -151,6 +151,15 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.util.List<java.lang.String> replicaZones;
 
   /**
+   * Resource manager tags to be bound to the disk. Tag keys and values have the same definition as
+   * resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the
+   * format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceManagerTags;
+
+  /**
    * Resource policies applied to this disk for automatic snapshot creations. Specified using the
    * full or partial URL. For instance template, specify only the resource policy name.
    * The value may be {@code null}.
@@ -488,6 +497,27 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setReplicaZones(java.util.List<java.lang.String> replicaZones) {
     this.replicaZones = replicaZones;
+    return this;
+  }
+
+  /**
+   * Resource manager tags to be bound to the disk. Tag keys and values have the same definition as
+   * resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the
+   * format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * Resource manager tags to be bound to the disk. Tag keys and values have the same definition as
+   * resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the
+   * format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
     return this;
   }
 

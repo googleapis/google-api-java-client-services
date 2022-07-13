@@ -223,6 +223,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String options;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskParams params;
+
+  /**
    * Physical block size of the persistent disk, in bytes. If not present in a request, a default
    * value is used. The currently supported size is 4096, other sizes may be added in the future. If
    * an unsupported value is requested, the error message will list the supported values for the
@@ -960,6 +968,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setOptions(java.lang.String options) {
     this.options = options;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public DiskParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Disk setParams(DiskParams params) {
+    this.params = params;
     return this;
   }
 

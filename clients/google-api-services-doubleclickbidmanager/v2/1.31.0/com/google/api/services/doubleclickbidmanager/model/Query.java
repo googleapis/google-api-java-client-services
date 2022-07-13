@@ -52,7 +52,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private java.lang.Long queryId;
 
   /**
-   * Information on how often and when to run a query.
+   * Information on how often and when to run a query. If `ONE_TIME` is set to the frequency field,
+   * the query will only be run at the time of creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +111,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information on how often and when to run a query.
+   * Information on how often and when to run a query. If `ONE_TIME` is set to the frequency field,
+   * the query will only be run at the time of creation.
    * @return value or {@code null} for none
    */
   public QuerySchedule getSchedule() {
@@ -118,7 +120,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information on how often and when to run a query.
+   * Information on how often and when to run a query. If `ONE_TIME` is set to the frequency field,
+   * the query will only be run at the time of creation.
    * @param schedule schedule or {@code null} for none
    */
   public Query setSchedule(QuerySchedule schedule) {

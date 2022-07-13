@@ -65,7 +65,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   private Options options;
 
   /**
-   * Report type.
+   * The type of the report. The type of the report will dictate what dimesions, filters, and
+   * metrics can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +141,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Report type.
+   * The type of the report. The type of the report will dictate what dimesions, filters, and
+   * metrics can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -148,7 +150,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Report type.
+   * The type of the report. The type of the report will dictate what dimesions, filters, and
+   * metrics can be used.
    * @param type type or {@code null} for none
    */
   public Parameters setType(java.lang.String type) {

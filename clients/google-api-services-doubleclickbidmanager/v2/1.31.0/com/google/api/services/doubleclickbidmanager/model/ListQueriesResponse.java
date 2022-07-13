@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Represents a list of queries.
+ * Model definition for ListQueriesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,23 +31,23 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class ListQueriesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page of queries. If this field
-   * is omitted, there are no subsequent pages.
+   * A token, which can be sent as page_token to retrieve the next page of queries. If this field is
+   * omitted, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Retrieved queries.
+   * The list of queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Query> queries;
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page of queries. If this field
-   * is omitted, there are no subsequent pages.
+   * A token, which can be sent as page_token to retrieve the next page of queries. If this field is
+   * omitted, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +55,8 @@ public final class ListQueriesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page of queries. If this field
-   * is omitted, there are no subsequent pages.
+   * A token, which can be sent as page_token to retrieve the next page of queries. If this field is
+   * omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListQueriesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -65,7 +65,7 @@ public final class ListQueriesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Retrieved queries.
+   * The list of queries.
    * @return value or {@code null} for none
    */
   public java.util.List<Query> getQueries() {
@@ -73,7 +73,7 @@ public final class ListQueriesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Retrieved queries.
+   * The list of queries.
    * @param queries queries or {@code null} for none
    */
   public ListQueriesResponse setQueries(java.util.List<Query> queries) {

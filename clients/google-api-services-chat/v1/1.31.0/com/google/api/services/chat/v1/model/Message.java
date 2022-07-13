@@ -100,8 +100,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String fallbackText;
 
   /**
-   * Output only. The time at which the message was last updated. If the message was never updated,
-   * this field matches `create_time`.
+   * Output only. The time at which the message was last edited by a user. If the message has never
+   * been edited, this field is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,8 +286,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was last updated. If the message was never updated,
-   * this field matches `create_time`.
+   * Output only. The time at which the message was last edited by a user. If the message has never
+   * been edited, this field is empty.
    * @return value or {@code null} for none
    */
   public String getLastUpdateTime() {
@@ -295,8 +295,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was last updated. If the message was never updated,
-   * this field matches `create_time`.
+   * Output only. The time at which the message was last edited by a user. If the message has never
+   * been edited, this field is empty.
    * @param lastUpdateTime lastUpdateTime or {@code null} for none
    */
   public Message setLastUpdateTime(String lastUpdateTime) {

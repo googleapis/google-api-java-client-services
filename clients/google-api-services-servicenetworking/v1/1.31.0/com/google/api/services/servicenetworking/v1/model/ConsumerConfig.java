@@ -31,6 +31,19 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class ConsumerConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Represents one or multiple Cloud SQL configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudSQLConfig> cloudsqlConfigs;
+
+  static {
+    // hack to force ProGuard to consider CloudSQLConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CloudSQLConfig.class);
+  }
+
+  /**
    * Export custom routes flag value for peering from consumer to producer.
    * The value may be {@code null}.
    */
@@ -116,6 +129,23 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean vpcScReferenceArchitectureEnabled;
+
+  /**
+   * Represents one or multiple Cloud SQL configurations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudSQLConfig> getCloudsqlConfigs() {
+    return cloudsqlConfigs;
+  }
+
+  /**
+   * Represents one or multiple Cloud SQL configurations.
+   * @param cloudsqlConfigs cloudsqlConfigs or {@code null} for none
+   */
+  public ConsumerConfig setCloudsqlConfigs(java.util.List<CloudSQLConfig> cloudsqlConfigs) {
+    this.cloudsqlConfigs = cloudsqlConfigs;
+    return this;
+  }
 
   /**
    * Export custom routes flag value for peering from consumer to producer.

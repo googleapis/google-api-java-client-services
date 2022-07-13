@@ -104,6 +104,14 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.util.List<GoogleCloudRunV2VolumeMount> volumeMounts;
 
   /**
+   * Container's working directory. If not specified, the container runtime's default will be used,
+   * which might be configured in the container image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workingDir;
+
+  /**
    * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
    * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
    * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
@@ -268,6 +276,25 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Container setVolumeMounts(java.util.List<GoogleCloudRunV2VolumeMount> volumeMounts) {
     this.volumeMounts = volumeMounts;
+    return this;
+  }
+
+  /**
+   * Container's working directory. If not specified, the container runtime's default will be used,
+   * which might be configured in the container image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkingDir() {
+    return workingDir;
+  }
+
+  /**
+   * Container's working directory. If not specified, the container runtime's default will be used,
+   * which might be configured in the container image.
+   * @param workingDir workingDir or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setWorkingDir(java.lang.String workingDir) {
+    this.workingDir = workingDir;
     return this;
   }
 

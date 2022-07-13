@@ -967,6 +967,400 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
     public class Reports {
 
       /**
+       * Generate report of the number of devices expiring in each month of the selected time frame.
+       * Devices are grouped by auto update expiration date and model. Further information can be found
+       * [here](https://support.google.com/chrome/a/answer/10564947).
+       *
+       * Create a request for the method "reports.countChromeDevicesReachingAutoExpirationDate".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountChromeDevicesReachingAutoExpirationDate#execute()}
+       * method to invoke the remote operation.
+       *
+       * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+       * @return the request
+       */
+      public CountChromeDevicesReachingAutoExpirationDate countChromeDevicesReachingAutoExpirationDate(java.lang.String customer) throws java.io.IOException {
+        CountChromeDevicesReachingAutoExpirationDate result = new CountChromeDevicesReachingAutoExpirationDate(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountChromeDevicesReachingAutoExpirationDate extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countChromeDevicesReachingAutoExpirationDate";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Generate report of the number of devices expiring in each month of the selected time frame.
+         * Devices are grouped by auto update expiration date and model. Further information can be found
+         * [here](https://support.google.com/chrome/a/answer/10564947).
+         *
+         * Create a request for the method "reports.countChromeDevicesReachingAutoExpirationDate".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountChromeDevicesReachingAutoExpirationDate#execute()}
+         * method to invoke the remote operation. <p> {@link CountChromeDevicesReachingAutoExpirationDate#
+         * initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+         * @since 1.13
+         */
+        protected CountChromeDevicesReachingAutoExpirationDate(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate set$Xgafv(java.lang.String $Xgafv) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setAccessToken(java.lang.String accessToken) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setAlt(java.lang.String alt) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setAlt(alt);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setCallback(java.lang.String callback) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setCallback(callback);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setFields(java.lang.String fields) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setFields(fields);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setKey(java.lang.String key) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setKey(key);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setOauthToken(java.lang.String oauthToken) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setQuotaUser(java.lang.String quotaUser) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setUploadType(java.lang.String uploadType) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        public CountChromeDevicesReachingAutoExpirationDate setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum expiration date in format yyyy-mm-dd in UTC timezone. If included
+         * returns all devices that have already expired and devices with auto expiration date equal
+         * to or earlier than the maximum date.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String maxAueDate;
+
+        /** Optional. Maximum expiration date in format yyyy-mm-dd in UTC timezone. If included returns all
+       devices that have already expired and devices with auto expiration date equal to or earlier than
+       the maximum date.
+         */
+        public java.lang.String getMaxAueDate() {
+          return maxAueDate;
+        }
+
+        /**
+         * Optional. Maximum expiration date in format yyyy-mm-dd in UTC timezone. If included
+         * returns all devices that have already expired and devices with auto expiration date equal
+         * to or earlier than the maximum date.
+         */
+        public CountChromeDevicesReachingAutoExpirationDate setMaxAueDate(java.lang.String maxAueDate) {
+          this.maxAueDate = maxAueDate;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum expiration date in format yyyy-mm-dd in UTC timezone. If included
+         * returns all devices that have already expired and devices with auto expiration date equal
+         * to or later than the minimum date.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String minAueDate;
+
+        /** Optional. Maximum expiration date in format yyyy-mm-dd in UTC timezone. If included returns all
+       devices that have already expired and devices with auto expiration date equal to or later than the
+       minimum date.
+         */
+        public java.lang.String getMinAueDate() {
+          return minAueDate;
+        }
+
+        /**
+         * Optional. Maximum expiration date in format yyyy-mm-dd in UTC timezone. If included
+         * returns all devices that have already expired and devices with auto expiration date equal
+         * to or later than the minimum date.
+         */
+        public CountChromeDevicesReachingAutoExpirationDate setMinAueDate(java.lang.String minAueDate) {
+          this.minAueDate = minAueDate;
+          return this;
+        }
+
+        /**
+         * Optional. The organizational unit ID, if omitted, will return data for all organizational
+         * units.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** Optional. The organizational unit ID, if omitted, will return data for all organizational units.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /**
+         * Optional. The organizational unit ID, if omitted, will return data for all organizational
+         * units.
+         */
+        public CountChromeDevicesReachingAutoExpirationDate setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        @Override
+        public CountChromeDevicesReachingAutoExpirationDate set(String parameterName, Object value) {
+          return (CountChromeDevicesReachingAutoExpirationDate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Counts of ChromeOS devices that have not synced policies or have lacked user activity in the past
+       * 28 days, are out of date, or are not complaint. Further information can be found here
+       * https://support.google.com/chrome/a/answer/10564947
+       *
+       * Create a request for the method "reports.countChromeDevicesThatNeedAttention".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountChromeDevicesThatNeedAttention#execute()} method to
+       * invoke the remote operation.
+       *
+       * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+       * @return the request
+       */
+      public CountChromeDevicesThatNeedAttention countChromeDevicesThatNeedAttention(java.lang.String customer) throws java.io.IOException {
+        CountChromeDevicesThatNeedAttention result = new CountChromeDevicesThatNeedAttention(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountChromeDevicesThatNeedAttention extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countChromeDevicesThatNeedAttention";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Counts of ChromeOS devices that have not synced policies or have lacked user activity in the
+         * past 28 days, are out of date, or are not complaint. Further information can be found here
+         * https://support.google.com/chrome/a/answer/10564947
+         *
+         * Create a request for the method "reports.countChromeDevicesThatNeedAttention".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountChromeDevicesThatNeedAttention#execute()} method to
+         * invoke the remote operation. <p> {@link CountChromeDevicesThatNeedAttention#initialize(com.goog
+         * le.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+         * this instance immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+         * @since 1.13
+         */
+        protected CountChromeDevicesThatNeedAttention(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention set$Xgafv(java.lang.String $Xgafv) {
+          return (CountChromeDevicesThatNeedAttention) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setAccessToken(java.lang.String accessToken) {
+          return (CountChromeDevicesThatNeedAttention) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setAlt(java.lang.String alt) {
+          return (CountChromeDevicesThatNeedAttention) super.setAlt(alt);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setCallback(java.lang.String callback) {
+          return (CountChromeDevicesThatNeedAttention) super.setCallback(callback);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setFields(java.lang.String fields) {
+          return (CountChromeDevicesThatNeedAttention) super.setFields(fields);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setKey(java.lang.String key) {
+          return (CountChromeDevicesThatNeedAttention) super.setKey(key);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setOauthToken(java.lang.String oauthToken) {
+          return (CountChromeDevicesThatNeedAttention) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountChromeDevicesThatNeedAttention) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setQuotaUser(java.lang.String quotaUser) {
+          return (CountChromeDevicesThatNeedAttention) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setUploadType(java.lang.String uploadType) {
+          return (CountChromeDevicesThatNeedAttention) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountChromeDevicesThatNeedAttention) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        public CountChromeDevicesThatNeedAttention setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /** Optional. The ID of the organizational unit. If omitted, all data will be returned. */
+        public CountChromeDevicesThatNeedAttention setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        /** Required. Mask of the fields that should be populated in the returned report. */
+        @com.google.api.client.util.Key
+        private String readMask;
+
+        /** Required. Mask of the fields that should be populated in the returned report.
+         */
+        public String getReadMask() {
+          return readMask;
+        }
+
+        /** Required. Mask of the fields that should be populated in the returned report. */
+        public CountChromeDevicesThatNeedAttention setReadMask(String readMask) {
+          this.readMask = readMask;
+          return this;
+        }
+
+        @Override
+        public CountChromeDevicesThatNeedAttention set(String parameterName, Object value) {
+          return (CountChromeDevicesThatNeedAttention) super.set(parameterName, value);
+        }
+      }
+      /**
        * Generate report of installed Chrome versions.
        *
        * Create a request for the method "reports.countChromeVersions".

@@ -34,7 +34,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
 
   /**
    * Integer representation of mode bits to use on created files by default. Must be a value between
-   * 01 and 0777 (octal). If 0 or not set, it will default to 0644. Directories within the path are
+   * 01 and 0777 (octal). If 0 or not set, it will default to 0444. Directories within the path are
    * not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-
    * zero value. * This is an integer representation of the mode bits. So, the octal integer value
    * should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod
@@ -87,7 +87,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
 
   /**
    * Integer representation of mode bits to use on created files by default. Must be a value between
-   * 01 and 0777 (octal). If 0 or not set, it will default to 0644. Directories within the path are
+   * 01 and 0777 (octal). If 0 or not set, it will default to 0444. Directories within the path are
    * not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-
    * zero value. * This is an integer representation of the mode bits. So, the octal integer value
    * should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod
@@ -103,7 +103,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
 
   /**
    * Integer representation of mode bits to use on created files by default. Must be a value between
-   * 01 and 0777 (octal). If 0 or not set, it will default to 0644. Directories within the path are
+   * 01 and 0777 (octal). If 0 or not set, it will default to 0444. Directories within the path are
    * not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-
    * zero value. * This is an integer representation of the mode bits. So, the octal integer value
    * should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod

@@ -79,7 +79,7 @@ public final class GoogleCloudRetailV2alphaPredictRequest extends com.google.api
   private java.lang.Integer pageSize;
 
   /**
-   * The previous PredictResponse.next_page_token.
+   * This field is not used for now, please leave it unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,7 +237,7 @@ public final class GoogleCloudRetailV2alphaPredictRequest extends com.google.api
   }
 
   /**
-   * The previous PredictResponse.next_page_token.
+   * This field is not used for now, please leave it unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -245,7 +245,7 @@ public final class GoogleCloudRetailV2alphaPredictRequest extends com.google.api
   }
 
   /**
-   * The previous PredictResponse.next_page_token.
+   * This field is not used for now, please leave it unset.
    * @param pageToken pageToken or {@code null} for none
    */
   public GoogleCloudRetailV2alphaPredictRequest setPageToken(java.lang.String pageToken) {

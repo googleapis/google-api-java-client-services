@@ -53,8 +53,14 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   private java.lang.String allowPersonalUsage;
 
   /**
-   * The length of time the enrollment token is valid, ranging from 1 minute to 90 days. If not
-   * specified, the default duration is 1 hour.
+   * The length of time the enrollment token is valid, ranging from 1 minute to Durations.MAX_VALUE
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE), approximately
+   * 10,000 years. If not specified, the default duration is 1 hour. Please note that if requested
+   * duration causes the resulting expiration_timestamp to exceed Timestamps.MAX_VALUE
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/util/Timestamps.html#MAX_VALUE), then
+   * expiration_timestamp is coerced to Timestamps.MAX_VALUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +178,14 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The length of time the enrollment token is valid, ranging from 1 minute to 90 days. If not
-   * specified, the default duration is 1 hour.
+   * The length of time the enrollment token is valid, ranging from 1 minute to Durations.MAX_VALUE
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE), approximately
+   * 10,000 years. If not specified, the default duration is 1 hour. Please note that if requested
+   * duration causes the resulting expiration_timestamp to exceed Timestamps.MAX_VALUE
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/util/Timestamps.html#MAX_VALUE), then
+   * expiration_timestamp is coerced to Timestamps.MAX_VALUE.
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -181,8 +193,14 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The length of time the enrollment token is valid, ranging from 1 minute to 90 days. If not
-   * specified, the default duration is 1 hour.
+   * The length of time the enrollment token is valid, ranging from 1 minute to Durations.MAX_VALUE
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE), approximately
+   * 10,000 years. If not specified, the default duration is 1 hour. Please note that if requested
+   * duration causes the resulting expiration_timestamp to exceed Timestamps.MAX_VALUE
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/util/Timestamps.html#MAX_VALUE), then
+   * expiration_timestamp is coerced to Timestamps.MAX_VALUE.
    * @param duration duration or {@code null} for none
    */
   public EnrollmentToken setDuration(String duration) {

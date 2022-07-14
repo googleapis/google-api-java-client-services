@@ -200,6 +200,13 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * An overview of the labels on the file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LabelInfo labelInfo;
+
+  /**
    * The last user to modify the file.
    * The value may be {@code null}.
    */
@@ -884,6 +891,23 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * An overview of the labels on the file.
+   * @return value or {@code null} for none
+   */
+  public LabelInfo getLabelInfo() {
+    return labelInfo;
+  }
+
+  /**
+   * An overview of the labels on the file.
+   * @param labelInfo labelInfo or {@code null} for none
+   */
+  public File setLabelInfo(LabelInfo labelInfo) {
+    this.labelInfo = labelInfo;
     return this;
   }
 
@@ -1733,6 +1757,13 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canModifyContentRestriction;
 
     /**
+     * Whether the current user can modify the labels on this file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canModifyLabels;
+
+    /**
      * Whether the current user can move children of this folder outside of the shared drive. This is
      * false when the item is not a folder. Only populated for items in shared drives.
      * The value may be {@code null}.
@@ -1816,6 +1847,13 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canReadDrive;
+
+    /**
+     * Whether the current user can read the labels on this file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canReadLabels;
 
     /**
      * Whether the current user can read the revisions resource of this file. For a shared drive item,
@@ -2177,6 +2215,23 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
+     * Whether the current user can modify the labels on this file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanModifyLabels() {
+      return canModifyLabels;
+    }
+
+    /**
+     * Whether the current user can modify the labels on this file.
+     * @param canModifyLabels canModifyLabels or {@code null} for none
+     */
+    public Capabilities setCanModifyLabels(java.lang.Boolean canModifyLabels) {
+      this.canModifyLabels = canModifyLabels;
+      return this;
+    }
+
+    /**
      * Whether the current user can move children of this folder outside of the shared drive. This is
      * false when the item is not a folder. Only populated for items in shared drives.
      * @return value or {@code null} for none
@@ -2376,6 +2431,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanReadDrive(java.lang.Boolean canReadDrive) {
       this.canReadDrive = canReadDrive;
+      return this;
+    }
+
+    /**
+     * Whether the current user can read the labels on this file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanReadLabels() {
+      return canReadLabels;
+    }
+
+    /**
+     * Whether the current user can read the labels on this file.
+     * @param canReadLabels canReadLabels or {@code null} for none
+     */
+    public Capabilities setCanReadLabels(java.lang.Boolean canReadLabels) {
+      this.canReadLabels = canReadLabels;
       return this;
     }
 
@@ -3328,6 +3400,50 @@ public final class File extends com.google.api.client.json.GenericJson {
       }
 
     }
+  }
+
+  /**
+   * An overview of the labels on the file.
+   */
+  public static final class LabelInfo extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The set of labels on the file as requested by the label IDs in the includeLabels parameter. By
+     * default, no labels are returned.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<Label> labels;
+
+    /**
+     * The set of labels on the file as requested by the label IDs in the includeLabels parameter. By
+     * default, no labels are returned.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<Label> getLabels() {
+      return labels;
+    }
+
+    /**
+     * The set of labels on the file as requested by the label IDs in the includeLabels parameter. By
+     * default, no labels are returned.
+     * @param labels labels or {@code null} for none
+     */
+    public LabelInfo setLabels(java.util.List<Label> labels) {
+      this.labels = labels;
+      return this;
+    }
+
+    @Override
+    public LabelInfo set(String fieldName, Object value) {
+      return (LabelInfo) super.set(fieldName, value);
+    }
+
+    @Override
+    public LabelInfo clone() {
+      return (LabelInfo) super.clone();
+    }
+
   }
 
   /**

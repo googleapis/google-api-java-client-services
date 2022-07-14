@@ -708,6 +708,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public List setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+      }
+
+      /**
        * Specifies which additional view's permissions to include in the response. Only 'published'
        * is supported.
        */
@@ -1249,6 +1269,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return includeItemsFromAllDrives;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public Watch setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
       }
 
       /**
@@ -3663,6 +3703,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public Copy setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+      }
+
+      /**
        * Specifies which additional view's permissions to include in the response. Only 'published'
        * is supported.
        */
@@ -4068,6 +4128,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return ignoreDefaultVisibility;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public Create setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
       }
 
       /**
@@ -5131,6 +5211,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public Get setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+      }
+
+      /**
        * Specifies which additional view's permissions to include in the response. Only 'published'
        * is supported.
        */
@@ -5433,6 +5533,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public List setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+      }
+
+      /**
        * Specifies which additional view's permissions to include in the response. Only 'published'
        * is supported.
        */
@@ -5732,6 +5852,250 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
+     * Lists the labels on a file.
+     *
+     * Create a request for the method "files.listLabels".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link ListLabels#execute()} method to invoke the remote operation.
+     *
+     * @param fileId The ID of the file.
+     * @return the request
+     */
+    public ListLabels listLabels(java.lang.String fileId) throws java.io.IOException {
+      ListLabels result = new ListLabels(fileId);
+      initialize(result);
+      return result;
+    }
+
+    public class ListLabels extends DriveRequest<com.google.api.services.drive.model.LabelList> {
+
+      private static final String REST_PATH = "files/{fileId}/listLabels";
+
+      /**
+       * Lists the labels on a file.
+       *
+       * Create a request for the method "files.listLabels".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link ListLabels#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * ListLabels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId The ID of the file.
+       * @since 1.13
+       */
+      protected ListLabels(java.lang.String fileId) {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.LabelList.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListLabels setAlt(java.lang.String alt) {
+        return (ListLabels) super.setAlt(alt);
+      }
+
+      @Override
+      public ListLabels setFields(java.lang.String fields) {
+        return (ListLabels) super.setFields(fields);
+      }
+
+      @Override
+      public ListLabels setKey(java.lang.String key) {
+        return (ListLabels) super.setKey(key);
+      }
+
+      @Override
+      public ListLabels setOauthToken(java.lang.String oauthToken) {
+        return (ListLabels) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListLabels setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListLabels) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListLabels setQuotaUser(java.lang.String quotaUser) {
+        return (ListLabels) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListLabels setUserIp(java.lang.String userIp) {
+        return (ListLabels) super.setUserIp(userIp);
+      }
+
+      /** The ID of the file. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** The ID of the file.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** The ID of the file. */
+      public ListLabels setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** The maximum number of labels to return per page. When not set, this defaults to 100. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxResults;
+
+      /** The maximum number of labels to return per page. When not set, this defaults to 100. [default: 100]
+     [minimum: 1] [maximum: 100]
+       */
+      public java.lang.Integer getMaxResults() {
+        return maxResults;
+      }
+
+      /** The maximum number of labels to return per page. When not set, this defaults to 100. */
+      public ListLabels setMaxResults(java.lang.Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * The token for continuing a previous list request on the next page. This should be set to
+       * the value of 'nextPageToken' from the previous response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The token for continuing a previous list request on the next page. This should be set to the value
+     of 'nextPageToken' from the previous response.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The token for continuing a previous list request on the next page. This should be set to
+       * the value of 'nextPageToken' from the previous response.
+       */
+      public ListLabels setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public ListLabels set(String parameterName, Object value) {
+        return (ListLabels) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Modifies the set of labels on a file.
+     *
+     * Create a request for the method "files.modifyLabels".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link ModifyLabels#execute()} method to invoke the remote operation.
+     *
+     * @param fileId The ID of the file for which the labels are modified.
+     * @param content the {@link com.google.api.services.drive.model.ModifyLabelsRequest}
+     * @return the request
+     */
+    public ModifyLabels modifyLabels(java.lang.String fileId, com.google.api.services.drive.model.ModifyLabelsRequest content) throws java.io.IOException {
+      ModifyLabels result = new ModifyLabels(fileId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ModifyLabels extends DriveRequest<com.google.api.services.drive.model.ModifyLabelsResponse> {
+
+      private static final String REST_PATH = "files/{fileId}/modifyLabels";
+
+      /**
+       * Modifies the set of labels on a file.
+       *
+       * Create a request for the method "files.modifyLabels".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link ModifyLabels#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * ModifyLabels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId The ID of the file for which the labels are modified.
+       * @param content the {@link com.google.api.services.drive.model.ModifyLabelsRequest}
+       * @since 1.13
+       */
+      protected ModifyLabels(java.lang.String fileId, com.google.api.services.drive.model.ModifyLabelsRequest content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.ModifyLabelsResponse.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+      }
+
+      @Override
+      public ModifyLabels setAlt(java.lang.String alt) {
+        return (ModifyLabels) super.setAlt(alt);
+      }
+
+      @Override
+      public ModifyLabels setFields(java.lang.String fields) {
+        return (ModifyLabels) super.setFields(fields);
+      }
+
+      @Override
+      public ModifyLabels setKey(java.lang.String key) {
+        return (ModifyLabels) super.setKey(key);
+      }
+
+      @Override
+      public ModifyLabels setOauthToken(java.lang.String oauthToken) {
+        return (ModifyLabels) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ModifyLabels setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ModifyLabels) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ModifyLabels setQuotaUser(java.lang.String quotaUser) {
+        return (ModifyLabels) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ModifyLabels setUserIp(java.lang.String userIp) {
+        return (ModifyLabels) super.setUserIp(userIp);
+      }
+
+      /** The ID of the file for which the labels are modified. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** The ID of the file for which the labels are modified.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** The ID of the file for which the labels are modified. */
+      public ModifyLabels setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      @Override
+      public ModifyLabels set(String parameterName, Object value) {
+        return (ModifyLabels) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates a file's metadata and/or content. When calling this method, only populate fields in the
      * request that you want to modify. When updating fields, some fields might change automatically,
      * such as modifiedDate. This method supports patch semantics.
@@ -5942,6 +6306,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return enforceSingleParent;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public Update setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
       }
 
       /**
@@ -6355,6 +6739,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return acknowledgeAbuse;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String includeLabels;
+
+      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public java.lang.String getIncludeLabels() {
+        return includeLabels;
+      }
+
+      /**
+       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       */
+      public Watch setIncludeLabels(java.lang.String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
       }
 
       /**

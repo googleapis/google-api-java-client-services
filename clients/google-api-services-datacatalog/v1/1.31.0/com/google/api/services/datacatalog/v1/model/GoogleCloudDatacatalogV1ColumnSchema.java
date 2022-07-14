@@ -47,6 +47,13 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
   private java.lang.String description;
 
   /**
+   * Looker specific column info of this column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec lookerColumnSpec;
+
+  /**
    * Optional. A column's mode indicates whether values in this column are required, nullable, or
    * repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is
    * `NULLABLE`.
@@ -104,6 +111,23 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
    */
   public GoogleCloudDatacatalogV1ColumnSchema setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Looker specific column info of this column.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec getLookerColumnSpec() {
+    return lookerColumnSpec;
+  }
+
+  /**
+   * Looker specific column info of this column.
+   * @param lookerColumnSpec lookerColumnSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchema setLookerColumnSpec(GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec lookerColumnSpec) {
+    this.lookerColumnSpec = lookerColumnSpec;
     return this;
   }
 

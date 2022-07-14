@@ -31,6 +31,20 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class DiscoveryOccurrence extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnalysisCompleted analysisCompleted;
+
+  /**
+   * Indicates any errors encountered during analysis of a resource. There could be 0 or more of
+   * these errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Status> analysisError;
+
+  /**
    * The status of discovery for the resource.
    * The value may be {@code null}.
    */
@@ -72,6 +86,40 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private String lastScanTime;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AnalysisCompleted getAnalysisCompleted() {
+    return analysisCompleted;
+  }
+
+  /**
+   * @param analysisCompleted analysisCompleted or {@code null} for none
+   */
+  public DiscoveryOccurrence setAnalysisCompleted(AnalysisCompleted analysisCompleted) {
+    this.analysisCompleted = analysisCompleted;
+    return this;
+  }
+
+  /**
+   * Indicates any errors encountered during analysis of a resource. There could be 0 or more of
+   * these errors.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Status> getAnalysisError() {
+    return analysisError;
+  }
+
+  /**
+   * Indicates any errors encountered during analysis of a resource. There could be 0 or more of
+   * these errors.
+   * @param analysisError analysisError or {@code null} for none
+   */
+  public DiscoveryOccurrence setAnalysisError(java.util.List<Status> analysisError) {
+    this.analysisError = analysisError;
+    return this;
+  }
 
   /**
    * The status of discovery for the resource.

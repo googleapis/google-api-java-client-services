@@ -534,6 +534,152 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
       public class Queues {
 
         /**
+         * Creates and buffers a new task without the need to explicitly define a Task message. The queue
+         * must be an http queue (i.e., must have HTTP target). This method is used for a simplified
+         * application of Cloud Tasks queues in buffer and rate limitting HTTP requests.
+         *
+         * Create a request for the method "queues.buffer".
+         *
+         * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+         * parameters, call the {@link Buffer#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+         *        The queue must already exist.
+         * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest}
+         * @return the request
+         */
+        public Buffer buffer(java.lang.String name, com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest content) throws java.io.IOException {
+          Buffer result = new Buffer(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Buffer extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.BufferQueueResponse> {
+
+          private static final String REST_PATH = "v2beta2/{+name}:buffer";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+
+          /**
+           * Creates and buffers a new task without the need to explicitly define a Task message. The queue
+           * must be an http queue (i.e., must have HTTP target). This method is used for a simplified
+           * application of Cloud Tasks queues in buffer and rate limitting HTTP requests.
+           *
+           * Create a request for the method "queues.buffer".
+           *
+           * This request holds the parameters needed by the the cloudtasks server.  After setting any
+           * optional parameters, call the {@link Buffer#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Buffer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+         *        The queue must already exist.
+           * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest}
+           * @since 1.13
+           */
+          protected Buffer(java.lang.String name, com.google.api.services.cloudtasks.v2beta2.model.BufferQueueRequest content) {
+            super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.BufferQueueResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+            }
+          }
+
+          @Override
+          public Buffer set$Xgafv(java.lang.String $Xgafv) {
+            return (Buffer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Buffer setAccessToken(java.lang.String accessToken) {
+            return (Buffer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Buffer setAlt(java.lang.String alt) {
+            return (Buffer) super.setAlt(alt);
+          }
+
+          @Override
+          public Buffer setCallback(java.lang.String callback) {
+            return (Buffer) super.setCallback(callback);
+          }
+
+          @Override
+          public Buffer setFields(java.lang.String fields) {
+            return (Buffer) super.setFields(fields);
+          }
+
+          @Override
+          public Buffer setKey(java.lang.String key) {
+            return (Buffer) super.setKey(key);
+          }
+
+          @Override
+          public Buffer setOauthToken(java.lang.String oauthToken) {
+            return (Buffer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Buffer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Buffer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Buffer setQuotaUser(java.lang.String quotaUser) {
+            return (Buffer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Buffer setUploadType(java.lang.String uploadType) {
+            return (Buffer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Buffer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Buffer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+           * exist.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+         The queue must already exist.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+           * exist.
+           */
+          public Buffer setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Buffer set(String parameterName, Object value) {
+            return (Buffer) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a queue. Queues created with this method allow tasks to live for a maximum of 31 days.
          * After a task is 31 days old, the task will be deleted regardless of whether it was dispatched or
          * not. WARNING: Using this method may have unintended side effects if you are using an App Engine

@@ -47,6 +47,14 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * HTTP request that is sent to the task's target. An HTTP task is a task that has HttpRequest
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRequest httpRequest;
+
+  /**
    * Optionally caller-specified in CreateTask. The task name. The task name must have the following
    * format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` *
    * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or
@@ -132,6 +140,25 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   public Task setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * HTTP request that is sent to the task's target. An HTTP task is a task that has HttpRequest
+   * set.
+   * @return value or {@code null} for none
+   */
+  public HttpRequest getHttpRequest() {
+    return httpRequest;
+  }
+
+  /**
+   * HTTP request that is sent to the task's target. An HTTP task is a task that has HttpRequest
+   * set.
+   * @param httpRequest httpRequest or {@code null} for none
+   */
+  public Task setHttpRequest(HttpRequest httpRequest) {
+    this.httpRequest = httpRequest;
     return this;
   }
 

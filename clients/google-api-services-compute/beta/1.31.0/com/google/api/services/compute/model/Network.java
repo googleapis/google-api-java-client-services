@@ -73,6 +73,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableUlaInternalIpv6;
 
   /**
+   * [Output Only] URL of the firewall policy the network is associated with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firewallPolicy;
+
+  /**
    * [Output Only] The gateway address for default routing out of the network, selected by GCP.
    * The value may be {@code null}.
    */
@@ -263,6 +270,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setEnableUlaInternalIpv6(java.lang.Boolean enableUlaInternalIpv6) {
     this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the firewall policy the network is associated with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirewallPolicy() {
+    return firewallPolicy;
+  }
+
+  /**
+   * [Output Only] URL of the firewall policy the network is associated with.
+   * @param firewallPolicy firewallPolicy or {@code null} for none
+   */
+  public Network setFirewallPolicy(java.lang.String firewallPolicy) {
+    this.firewallPolicy = firewallPolicy;
     return this;
   }
 

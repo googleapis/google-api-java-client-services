@@ -44,6 +44,19 @@ public final class ObjectOptions extends com.google.api.client.json.GenericJson 
   private FreshnessOptions freshnessOptions;
 
   /**
+   * Operators that can be used to filter suggestions. For Suggest API, only operators mentioned
+   * here will be honored in the FilterOptions. Only TEXT and ENUM operators are supported. NOTE:
+   * "objecttype", "type" and "mimetype" are already supported. This property is to configure schema
+   * specific operators. Even though this is an array, only one operator can be specified. This is
+   * an array for future extensibility. Operators mapping to multiple properties within the same
+   * object are not supported. If the operator spans across different object types, this option has
+   * to be set once for each object definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> suggestionFilteringOperators;
+
+  /**
    * The options that determine how the object is displayed in the Cloud Search results page.
    * @return value or {@code null} for none
    */
@@ -74,6 +87,35 @@ public final class ObjectOptions extends com.google.api.client.json.GenericJson 
    */
   public ObjectOptions setFreshnessOptions(FreshnessOptions freshnessOptions) {
     this.freshnessOptions = freshnessOptions;
+    return this;
+  }
+
+  /**
+   * Operators that can be used to filter suggestions. For Suggest API, only operators mentioned
+   * here will be honored in the FilterOptions. Only TEXT and ENUM operators are supported. NOTE:
+   * "objecttype", "type" and "mimetype" are already supported. This property is to configure schema
+   * specific operators. Even though this is an array, only one operator can be specified. This is
+   * an array for future extensibility. Operators mapping to multiple properties within the same
+   * object are not supported. If the operator spans across different object types, this option has
+   * to be set once for each object definition.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSuggestionFilteringOperators() {
+    return suggestionFilteringOperators;
+  }
+
+  /**
+   * Operators that can be used to filter suggestions. For Suggest API, only operators mentioned
+   * here will be honored in the FilterOptions. Only TEXT and ENUM operators are supported. NOTE:
+   * "objecttype", "type" and "mimetype" are already supported. This property is to configure schema
+   * specific operators. Even though this is an array, only one operator can be specified. This is
+   * an array for future extensibility. Operators mapping to multiple properties within the same
+   * object are not supported. If the operator spans across different object types, this option has
+   * to be set once for each object definition.
+   * @param suggestionFilteringOperators suggestionFilteringOperators or {@code null} for none
+   */
+  public ObjectOptions setSuggestionFilteringOperators(java.util.List<java.lang.String> suggestionFilteringOperators) {
+    this.suggestionFilteringOperators = suggestionFilteringOperators;
     return this;
   }
 

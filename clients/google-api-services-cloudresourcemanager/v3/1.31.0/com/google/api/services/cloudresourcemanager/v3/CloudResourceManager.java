@@ -4954,7 +4954,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
        * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
        * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
-       * label `color` has the value `red` and its label `size` has the value `big`.| ``` If no
+       * label `color` has the value `red` or its label `size` has the value `big`. | ``` If no
        * query is specified, the call will return projects for which the user has the
        * `resourcemanager.projects.get` permission.
        */
@@ -4976,7 +4976,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
      labels.color:* | The project has the label `color`. | | labels.color:red | The project's label
      `color` has the value `red`. | | labels.color:red labels.size:big | The project's label `color` has
-     the value `red` and its label `size` has the value `big`.| ``` If no query is specified, the call
+     the value `red` or its label `size` has the value `big`. | ``` If no query is specified, the call
      will return projects for which the user has the `resourcemanager.projects.get` permission.
        */
       public java.lang.String getQuery() {
@@ -5001,7 +5001,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
        * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
        * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
-       * label `color` has the value `red` and its label `size` has the value `big`.| ``` If no
+       * label `color` has the value `red` or its label `size` has the value `big`. | ``` If no
        * query is specified, the call will return projects for which the user has the
        * `resourcemanager.projects.get` permission.
        */

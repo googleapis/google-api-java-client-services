@@ -4438,7 +4438,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
        * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
        * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
-       * label `color` has the value `red` and its label `size` has the value `big`.| |
+       * label `color` has the value `red` or its label `size` has the value `big`. | |
        * lifecycleState:DELETE_REQUESTED | Only show projects that are pending deletion.| If no
        * filter is specified, the call will return projects for which the user has the
        * `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what
@@ -4459,8 +4459,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      project's name starts with "how". | | name:Howl | The project's name is `Howl` or `howl`. | |
      name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | | labels.color:* | The
      project has the label `color`. | | labels.color:red | The project's label `color` has the value
-     `red`. | | labels.color:red labels.size:big | The project's label `color` has the value `red` and
-     its label `size` has the value `big`.| | lifecycleState:DELETE_REQUESTED | Only show projects that
+     `red`. | | labels.color:red labels.size:big | The project's label `color` has the value `red` or
+     its label `size` has the value `big`. | | lifecycleState:DELETE_REQUESTED | Only show projects that
      are pending deletion.| If no filter is specified, the call will return projects for which the user
      has the `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what
      projects are directly in a Folder), the caller must have the `resourcemanager.projects.list`
@@ -4483,7 +4483,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
        * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
        * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
-       * label `color` has the value `red` and its label `size` has the value `big`.| |
+       * label `color` has the value `red` or its label `size` has the value `big`. | |
        * lifecycleState:DELETE_REQUESTED | Only show projects that are pending deletion.| If no
        * filter is specified, the call will return projects for which the user has the
        * `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what

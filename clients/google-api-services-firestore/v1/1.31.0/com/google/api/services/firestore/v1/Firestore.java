@@ -327,28 +327,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /**
-         * If set, validate the request and preview the response, but do not actually create the
-         * database.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean validateOnly;
-
-        /** If set, validate the request and preview the response, but do not actually create the database.
-         */
-        public java.lang.Boolean getValidateOnly() {
-          return validateOnly;
-        }
-
-        /**
-         * If set, validate the request and preview the response, but do not actually create the
-         * database.
-         */
-        public Create setValidateOnly(java.lang.Boolean validateOnly) {
-          this.validateOnly = validateOnly;
-          return this;
-        }
-
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);

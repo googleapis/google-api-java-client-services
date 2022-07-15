@@ -6036,10 +6036,11 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the youtube server.  After setting any optional
      * parameters, call the {@link InsertCuepoint#execute()} method to invoke the remote operation.
      *
+     * @param content the {@link com.google.api.services.youtube.model.Cuepoint}
      * @return the request
      */
-    public InsertCuepoint insertCuepoint() throws java.io.IOException {
-      InsertCuepoint result = new InsertCuepoint();
+    public InsertCuepoint insertCuepoint(com.google.api.services.youtube.model.Cuepoint content) throws java.io.IOException {
+      InsertCuepoint result = new InsertCuepoint(content);
       initialize(result);
       return result;
     }
@@ -6059,10 +6060,11 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * ientRequest)} must be called to initialize this instance immediately after invoking the
        * constructor. </p>
        *
+       * @param content the {@link com.google.api.services.youtube.model.Cuepoint}
        * @since 1.13
        */
-      protected InsertCuepoint() {
-        super(YouTube.this, "POST", REST_PATH, null, com.google.api.services.youtube.model.Cuepoint.class);
+      protected InsertCuepoint(com.google.api.services.youtube.model.Cuepoint content) {
+        super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.Cuepoint.class);
       }
 
       @Override
@@ -6257,111 +6259,6 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        */
       public InsertCuepoint setPart(java.util.List<java.lang.String> part) {
         this.part = part;
-        return this;
-      }
-
-      @com.google.api.client.util.Key("resource.cueType")
-      private java.lang.String resourceCueType;
-
-      /**
-
-       */
-      public java.lang.String getResourceCueType() {
-        return resourceCueType;
-      }
-
-      public InsertCuepoint setResourceCueType(java.lang.String resourceCueType) {
-        this.resourceCueType = resourceCueType;
-        return this;
-      }
-
-      /** The duration of this cuepoint. */
-      @com.google.api.client.util.Key("resource.durationSecs")
-      private java.lang.Long resourceDurationSecs;
-
-      /** The duration of this cuepoint.
-       */
-      public java.lang.Long getResourceDurationSecs() {
-        return resourceDurationSecs;
-      }
-
-      /** The duration of this cuepoint. */
-      public InsertCuepoint setResourceDurationSecs(java.lang.Long resourceDurationSecs) {
-        this.resourceDurationSecs = resourceDurationSecs;
-        return this;
-      }
-
-      @com.google.api.client.util.Key("resource.etag")
-      private java.lang.String resourceEtag;
-
-      /**
-
-       */
-      public java.lang.String getResourceEtag() {
-        return resourceEtag;
-      }
-
-      public InsertCuepoint setResourceEtag(java.lang.String resourceEtag) {
-        this.resourceEtag = resourceEtag;
-        return this;
-      }
-
-      /** The identifier for cuepoint resource. */
-      @com.google.api.client.util.Key("resource.id")
-      private java.lang.String resourceId;
-
-      /** The identifier for cuepoint resource.
-       */
-      public java.lang.String getResourceId() {
-        return resourceId;
-      }
-
-      /** The identifier for cuepoint resource. */
-      public InsertCuepoint setResourceId(java.lang.String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-      }
-
-      /**
-       * The time when the cuepoint should be inserted by offset to the broadcast actual start time.
-       */
-      @com.google.api.client.util.Key("resource.insertionOffsetTimeMs")
-      private java.lang.Long resourceInsertionOffsetTimeMs;
-
-      /** The time when the cuepoint should be inserted by offset to the broadcast actual start time.
-       */
-      public java.lang.Long getResourceInsertionOffsetTimeMs() {
-        return resourceInsertionOffsetTimeMs;
-      }
-
-      /**
-       * The time when the cuepoint should be inserted by offset to the broadcast actual start time.
-       */
-      public InsertCuepoint setResourceInsertionOffsetTimeMs(java.lang.Long resourceInsertionOffsetTimeMs) {
-        this.resourceInsertionOffsetTimeMs = resourceInsertionOffsetTimeMs;
-        return this;
-      }
-
-      /**
-       * The wall clock time at which the cuepoint should be inserted. Only one of
-       * insertion_offset_time_ms and walltime_ms may be set at a time.
-       */
-      @com.google.api.client.util.Key("resource.walltimeMs")
-      private java.math.BigInteger resourceWalltimeMs;
-
-      /** The wall clock time at which the cuepoint should be inserted. Only one of insertion_offset_time_ms
-     and walltime_ms may be set at a time.
-       */
-      public java.math.BigInteger getResourceWalltimeMs() {
-        return resourceWalltimeMs;
-      }
-
-      /**
-       * The wall clock time at which the cuepoint should be inserted. Only one of
-       * insertion_offset_time_ms and walltime_ms may be set at a time.
-       */
-      public InsertCuepoint setResourceWalltimeMs(java.math.BigInteger resourceWalltimeMs) {
-        this.resourceWalltimeMs = resourceWalltimeMs;
         return this;
       }
 

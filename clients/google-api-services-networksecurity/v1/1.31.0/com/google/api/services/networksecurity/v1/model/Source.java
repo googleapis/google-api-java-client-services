@@ -42,7 +42,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   /**
    * Optional. List of peer identities to match for authorization. At least one principal should
    * match. Each peer can be an exact match, or a prefix match (example, "namespace") or a suffix
-   * match (example, // service-account") or a presence match "*". Authorization based on the
+   * match (example, "service-account") or a presence match "*". Authorization based on the
    * principal name without certificate validation (configured by ServerTlsPolicy resource) is
    * considered insecure.
    * The value may be {@code null}.
@@ -76,7 +76,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   /**
    * Optional. List of peer identities to match for authorization. At least one principal should
    * match. Each peer can be an exact match, or a prefix match (example, "namespace") or a suffix
-   * match (example, // service-account") or a presence match "*". Authorization based on the
+   * match (example, "service-account") or a presence match "*". Authorization based on the
    * principal name without certificate validation (configured by ServerTlsPolicy resource) is
    * considered insecure.
    * @return value or {@code null} for none
@@ -88,7 +88,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   /**
    * Optional. List of peer identities to match for authorization. At least one principal should
    * match. Each peer can be an exact match, or a prefix match (example, "namespace") or a suffix
-   * match (example, // service-account") or a presence match "*". Authorization based on the
+   * match (example, "service-account") or a presence match "*". Authorization based on the
    * principal name without certificate validation (configured by ServerTlsPolicy resource) is
    * considered insecure.
    * @param principals principals or {@code null} for none

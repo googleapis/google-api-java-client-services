@@ -31,7 +31,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpoint extends com.goo
 
   /**
    * Required. The target URI of the gRPC endpoint. Only UDS path is supported, and should start
-   * with “unix:”.
+   * with "unix:".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpoint extends com.goo
 
   /**
    * Required. The target URI of the gRPC endpoint. Only UDS path is supported, and should start
-   * with “unix:”.
+   * with "unix:".
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetUri() {
@@ -48,7 +48,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpoint extends com.goo
 
   /**
    * Required. The target URI of the gRPC endpoint. Only UDS path is supported, and should start
-   * with “unix:”.
+   * with "unix:".
    * @param targetUri targetUri or {@code null} for none
    */
   public GoogleCloudNetworksecurityV1beta1GrpcEndpoint setTargetUri(java.lang.String targetUri) {

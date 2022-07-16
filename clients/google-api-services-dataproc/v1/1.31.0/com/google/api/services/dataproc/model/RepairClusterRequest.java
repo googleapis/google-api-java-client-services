@@ -38,6 +38,19 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String clusterUuid;
 
   /**
+   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
+   * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
+   * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
+   * Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
+   * versions 1.2+.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String gracefulDecommissionTimeout;
+
+  /**
    * Optional. Node pools and corresponding repair action to be taken. All node pools should be
    * unique in this request. i.e. Multiple entries for the same node pool id are not allowed.
    * The value may be {@code null}.
@@ -79,6 +92,35 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    */
   public RepairClusterRequest setClusterUuid(java.lang.String clusterUuid) {
     this.clusterUuid = clusterUuid;
+    return this;
+  }
+
+  /**
+   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
+   * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
+   * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
+   * Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
+   * versions 1.2+.
+   * @return value or {@code null} for none
+   */
+  public String getGracefulDecommissionTimeout() {
+    return gracefulDecommissionTimeout;
+  }
+
+  /**
+   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
+   * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
+   * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
+   * Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
+   * versions 1.2+.
+   * @param gracefulDecommissionTimeout gracefulDecommissionTimeout or {@code null} for none
+   */
+  public RepairClusterRequest setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
+    this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
     return this;
   }
 

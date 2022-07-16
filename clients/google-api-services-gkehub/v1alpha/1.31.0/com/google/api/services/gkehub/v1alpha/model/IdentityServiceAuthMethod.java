@@ -31,6 +31,13 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class IdentityServiceAuthMethod extends com.google.api.client.json.GenericJson {
 
   /**
+   * AzureAD specific Configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceAzureADConfig azureadConfig;
+
+  /**
    * Identifier for auth config.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String proxy;
+
+  /**
+   * AzureAD specific Configuration.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceAzureADConfig getAzureadConfig() {
+    return azureadConfig;
+  }
+
+  /**
+   * AzureAD specific Configuration.
+   * @param azureadConfig azureadConfig or {@code null} for none
+   */
+  public IdentityServiceAuthMethod setAzureadConfig(IdentityServiceAzureADConfig azureadConfig) {
+    this.azureadConfig = azureadConfig;
+    return this;
+  }
 
   /**
    * Identifier for auth config.

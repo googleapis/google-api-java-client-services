@@ -51,8 +51,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSet
    * Optional. The MaintenancePolicies that have been attached to the instance. The key must be of
    * the type name of the oneof policy name defined in MaintenancePolicy, and the embedded policy
    * must define the same policy type. For complete details of MaintenancePolicy, please refer to go
-   * /cloud-saas-mw-ug. If only the name is needed (like in the deprecated
-   * Instance.maintenance_policy_names field) then only populate MaintenancePolicy.name.
+   * /cloud-saas-mw-ug. If only the name is needed, then only populate MaintenancePolicy.name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +99,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSet
    * Optional. The MaintenancePolicies that have been attached to the instance. The key must be of
    * the type name of the oneof policy name defined in MaintenancePolicy, and the embedded policy
    * must define the same policy type. For complete details of MaintenancePolicy, please refer to go
-   * /cloud-saas-mw-ug. If only the name is needed (like in the deprecated
-   * Instance.maintenance_policy_names field) then only populate MaintenancePolicy.name.
+   * /cloud-saas-mw-ug. If only the name is needed, then only populate MaintenancePolicy.name.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, MaintenancePolicy> getMaintenancePolicies() {
@@ -112,8 +110,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSet
    * Optional. The MaintenancePolicies that have been attached to the instance. The key must be of
    * the type name of the oneof policy name defined in MaintenancePolicy, and the embedded policy
    * must define the same policy type. For complete details of MaintenancePolicy, please refer to go
-   * /cloud-saas-mw-ug. If only the name is needed (like in the deprecated
-   * Instance.maintenance_policy_names field) then only populate MaintenancePolicy.name.
+   * /cloud-saas-mw-ug. If only the name is needed, then only populate MaintenancePolicy.name.
    * @param maintenancePolicies maintenancePolicies or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings setMaintenancePolicies(java.util.Map<String, MaintenancePolicy> maintenancePolicies) {

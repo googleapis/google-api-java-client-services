@@ -67,10 +67,10 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Deprecated. The MaintenancePolicies that have been attached to the instance. The key must be of
-   * the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy
-   * must define the same policy type. For complete details of MaintenancePolicy, please refer to go
-   * /cloud-saas-mw-ug.
+   * Optional. Deprecated. The MaintenancePolicies that have been attached to the instance. The key
+   * must be of the type name of the oneof policy name defined in MaintenancePolicy, and the
+   * referenced policy must define the same policy type. For complete details of MaintenancePolicy,
+   * please refer to go/cloud-saas-mw-ug.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,10 +259,10 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   }
 
   /**
-   * Deprecated. The MaintenancePolicies that have been attached to the instance. The key must be of
-   * the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy
-   * must define the same policy type. For complete details of MaintenancePolicy, please refer to go
-   * /cloud-saas-mw-ug.
+   * Optional. Deprecated. The MaintenancePolicies that have been attached to the instance. The key
+   * must be of the type name of the oneof policy name defined in MaintenancePolicy, and the
+   * referenced policy must define the same policy type. For complete details of MaintenancePolicy,
+   * please refer to go/cloud-saas-mw-ug.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMaintenancePolicyNames() {
@@ -270,10 +270,10 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   }
 
   /**
-   * Deprecated. The MaintenancePolicies that have been attached to the instance. The key must be of
-   * the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy
-   * must define the same policy type. For complete details of MaintenancePolicy, please refer to go
-   * /cloud-saas-mw-ug.
+   * Optional. Deprecated. The MaintenancePolicies that have been attached to the instance. The key
+   * must be of the type name of the oneof policy name defined in MaintenancePolicy, and the
+   * referenced policy must define the same policy type. For complete details of MaintenancePolicy,
+   * please refer to go/cloud-saas-mw-ug.
    * @param maintenancePolicyNames maintenancePolicyNames or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenancePolicyNames(java.util.Map<String, java.lang.String> maintenancePolicyNames) {

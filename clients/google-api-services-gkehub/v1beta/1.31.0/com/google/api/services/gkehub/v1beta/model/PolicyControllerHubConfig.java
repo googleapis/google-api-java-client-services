@@ -69,6 +69,13 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   private PolicyControllerMonitoringConfig monitoring;
 
   /**
+   * Enables the ability to mutate resources using Policy Controller.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean mutationEnabled;
+
+  /**
    * Enables the ability to use Constraint Templates that reference to objects other than the object
    * currently being evaluated.
    * The value may be {@code null}.
@@ -173,6 +180,23 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
    */
   public PolicyControllerHubConfig setMonitoring(PolicyControllerMonitoringConfig monitoring) {
     this.monitoring = monitoring;
+    return this;
+  }
+
+  /**
+   * Enables the ability to mutate resources using Policy Controller.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMutationEnabled() {
+    return mutationEnabled;
+  }
+
+  /**
+   * Enables the ability to mutate resources using Policy Controller.
+   * @param mutationEnabled mutationEnabled or {@code null} for none
+   */
+  public PolicyControllerHubConfig setMutationEnabled(java.lang.Boolean mutationEnabled) {
+    this.mutationEnabled = mutationEnabled;
     return this;
   }
 

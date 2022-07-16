@@ -396,6 +396,745 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
       public class Functions {
 
         /**
+         * Creates a new function. If a function with the given name already exists in the specified
+         * project, the long running operation will return `ALREADY_EXISTS` error.
+         *
+         * Create a request for the method "functions.create".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location in which the function should be created, specified in the format
+         *        `projects/locations`
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.Function}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudfunctions.v2.model.Function content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/functions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new function. If a function with the given name already exists in the specified
+           * project, the long running operation will return `ALREADY_EXISTS` error.
+           *
+           * Create a request for the method "functions.create".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location in which the function should be created, specified in the format
+         *        `projects/locations`
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.Function}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudfunctions.v2.model.Function content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location in which the function should be created, specified
+           * in the format `projects/locations`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location in which the function should be created, specified in the format
+         `projects/locations`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location in which the function should be created, specified
+           * in the format `projects/locations`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The ID to use for the function, which will become the final component of the function's
+           * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String functionId;
+
+          /** The ID to use for the function, which will become the final component of the function's resource
+         name. This value should be 4-63 characters, and valid characters are /a-z-/.
+           */
+          public java.lang.String getFunctionId() {
+            return functionId;
+          }
+
+          /**
+           * The ID to use for the function, which will become the final component of the function's
+           * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+           */
+          public Create setFunctionId(java.lang.String functionId) {
+            this.functionId = functionId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a function with the given name from the specified project. If the given function is used
+         * by some trigger, the trigger will be updated to remove this function.
+         *
+         * Create a request for the method "functions.delete".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the function which should be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Deletes a function with the given name from the specified project. If the given function is
+           * used by some trigger, the trigger will be updated to remove this function.
+           *
+           * Create a request for the method "functions.delete".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function which should be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudFunctions.this, "DELETE", REST_PATH, null, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the function which should be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function which should be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the function which should be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a signed URL for downloading deployed function source code. The URL is only valid for a
+         * limited period and should be used within 30 minutes of generation. For more information about the
+         * signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls
+         *
+         * Create a request for the method "functions.generateDownloadUrl".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link GenerateDownloadUrl#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name of function for which source code Google Cloud Storage signed URL should be
+         *        generated.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.GenerateDownloadUrlRequest}
+         * @return the request
+         */
+        public GenerateDownloadUrl generateDownloadUrl(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.GenerateDownloadUrlRequest content) throws java.io.IOException {
+          GenerateDownloadUrl result = new GenerateDownloadUrl(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateDownloadUrl extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.GenerateDownloadUrlResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:generateDownloadUrl";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Returns a signed URL for downloading deployed function source code. The URL is only valid for a
+           * limited period and should be used within 30 minutes of generation. For more information about
+           * the signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls
+           *
+           * Create a request for the method "functions.generateDownloadUrl".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link GenerateDownloadUrl#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateDownloadUrl#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name of function for which source code Google Cloud Storage signed URL should be
+         *        generated.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.GenerateDownloadUrlRequest}
+           * @since 1.13
+           */
+          protected GenerateDownloadUrl(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.GenerateDownloadUrlRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.GenerateDownloadUrlResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateDownloadUrl set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateDownloadUrl) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateDownloadUrl setAccessToken(java.lang.String accessToken) {
+            return (GenerateDownloadUrl) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateDownloadUrl setAlt(java.lang.String alt) {
+            return (GenerateDownloadUrl) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateDownloadUrl setCallback(java.lang.String callback) {
+            return (GenerateDownloadUrl) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateDownloadUrl setFields(java.lang.String fields) {
+            return (GenerateDownloadUrl) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateDownloadUrl setKey(java.lang.String key) {
+            return (GenerateDownloadUrl) super.setKey(key);
+          }
+
+          @Override
+          public GenerateDownloadUrl setOauthToken(java.lang.String oauthToken) {
+            return (GenerateDownloadUrl) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateDownloadUrl setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateDownloadUrl) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateDownloadUrl setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateDownloadUrl) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateDownloadUrl setUploadType(java.lang.String uploadType) {
+            return (GenerateDownloadUrl) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateDownloadUrl setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateDownloadUrl) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of function for which source code Google Cloud Storage signed URL
+           * should be generated.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of function for which source code Google Cloud Storage signed URL should be
+         generated.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of function for which source code Google Cloud Storage signed URL
+           * should be generated.
+           */
+          public GenerateDownloadUrl setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateDownloadUrl set(String parameterName, Object value) {
+            return (GenerateDownloadUrl) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a signed URL for uploading a function source code. For more information about the signed
+         * URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls. Once the
+         * function source code upload is complete, the used signed URL should be provided in CreateFunction
+         * or UpdateFunction request as a reference to the function source code. When uploading source code
+         * to the generated signed URL, please follow these restrictions: * Source file type should be a zip
+         * file. * No credentials should be attached - the signed URLs provide access to the target bucket
+         * using internal service identity; if credentials were attached, the identity from the credentials
+         * would be used, but that identity does not have permissions to upload files to the URL. When
+         * making a HTTP PUT request, these two headers need to be specified: * `content-type:
+         * application/zip` And this header SHOULD NOT be specified: * `Authorization: Bearer YOUR_TOKEN`
+         *
+         * Create a request for the method "functions.generateUploadUrl".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link GenerateUploadUrl#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The project and location in which the Google Cloud Storage signed URL should be generated,
+         *        specified in the format `projects/locations`.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.GenerateUploadUrlRequest}
+         * @return the request
+         */
+        public GenerateUploadUrl generateUploadUrl(java.lang.String parent, com.google.api.services.cloudfunctions.v2.model.GenerateUploadUrlRequest content) throws java.io.IOException {
+          GenerateUploadUrl result = new GenerateUploadUrl(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateUploadUrl extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.GenerateUploadUrlResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/functions:generateUploadUrl";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns a signed URL for uploading a function source code. For more information about the
+           * signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls. Once
+           * the function source code upload is complete, the used signed URL should be provided in
+           * CreateFunction or UpdateFunction request as a reference to the function source code. When
+           * uploading source code to the generated signed URL, please follow these restrictions: * Source
+           * file type should be a zip file. * No credentials should be attached - the signed URLs provide
+           * access to the target bucket using internal service identity; if credentials were attached, the
+           * identity from the credentials would be used, but that identity does not have permissions to
+           * upload files to the URL. When making a HTTP PUT request, these two headers need to be
+           * specified: * `content-type: application/zip` And this header SHOULD NOT be specified: *
+           * `Authorization: Bearer YOUR_TOKEN`
+           *
+           * Create a request for the method "functions.generateUploadUrl".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link GenerateUploadUrl#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateUploadUrl#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location in which the Google Cloud Storage signed URL should be generated,
+         *        specified in the format `projects/locations`.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.GenerateUploadUrlRequest}
+           * @since 1.13
+           */
+          protected GenerateUploadUrl(java.lang.String parent, com.google.api.services.cloudfunctions.v2.model.GenerateUploadUrlRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.GenerateUploadUrlResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateUploadUrl set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateUploadUrl) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateUploadUrl setAccessToken(java.lang.String accessToken) {
+            return (GenerateUploadUrl) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateUploadUrl setAlt(java.lang.String alt) {
+            return (GenerateUploadUrl) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateUploadUrl setCallback(java.lang.String callback) {
+            return (GenerateUploadUrl) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateUploadUrl setFields(java.lang.String fields) {
+            return (GenerateUploadUrl) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateUploadUrl setKey(java.lang.String key) {
+            return (GenerateUploadUrl) super.setKey(key);
+          }
+
+          @Override
+          public GenerateUploadUrl setOauthToken(java.lang.String oauthToken) {
+            return (GenerateUploadUrl) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateUploadUrl setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateUploadUrl) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateUploadUrl setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateUploadUrl) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateUploadUrl setUploadType(java.lang.String uploadType) {
+            return (GenerateUploadUrl) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateUploadUrl setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateUploadUrl) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location in which the Google Cloud Storage signed URL should
+           * be generated, specified in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location in which the Google Cloud Storage signed URL should be
+         generated, specified in the format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location in which the Google Cloud Storage signed URL should
+           * be generated, specified in the format `projects/locations`.
+           */
+          public GenerateUploadUrl setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public GenerateUploadUrl set(String parameterName, Object value) {
+            return (GenerateUploadUrl) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a function with the given name from the requested project.
+         *
+         * Create a request for the method "functions.get".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the function which details should be obtained.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Function> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Returns a function with the given name from the requested project.
+           *
+           * Create a request for the method "functions.get".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function which details should be obtained.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudFunctions.this, "GET", REST_PATH, null, com.google.api.services.cloudfunctions.v2.model.Function.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the function which details should be obtained. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function which details should be obtained.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the function which details should be obtained. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -592,6 +1331,418 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a list of functions that belong to the requested project.
+         *
+         * Create a request for the method "functions.list".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the function should be listed, specified in the format
+         *        `projects/locations` If you want to list functions in all locations, use "-" in place of a
+         *        location. When listing functions in all locations, if one or more location(s) are
+         *        unreachable, the response will contain functions from all reachable locations along with
+         *        the names of any unreachable locations.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.ListFunctionsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/functions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns a list of functions that belong to the requested project.
+           *
+           * Create a request for the method "functions.list".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the function should be listed, specified in the format
+         *        `projects/locations` If you want to list functions in all locations, use "-" in place of a
+         *        location. When listing functions in all locations, if one or more location(s) are
+         *        unreachable, the response will contain functions from all reachable locations along with
+         *        the names of any unreachable locations.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudFunctions.this, "GET", REST_PATH, null, com.google.api.services.cloudfunctions.v2.model.ListFunctionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the function should be listed, specified
+           * in the format `projects/locations` If you want to list functions in all locations, use
+           * "-" in place of a location. When listing functions in all locations, if one or more
+           * location(s) are unreachable, the response will contain functions from all reachable
+           * locations along with the names of any unreachable locations.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the function should be listed, specified in the
+         format `projects/locations` If you want to list functions in all locations, use "-" in place of a
+         location. When listing functions in all locations, if one or more location(s) are unreachable, the
+         response will contain functions from all reachable locations along with the names of any
+         unreachable locations.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the function should be listed, specified
+           * in the format `projects/locations` If you want to list functions in all locations, use
+           * "-" in place of a location. When listing functions in all locations, if one or more
+           * location(s) are unreachable, the response will contain functions from all reachable
+           * locations along with the names of any unreachable locations.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter for Functions that match the filter expression, following the syntax
+           * outlined in https://google.aip.dev/160.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter for Functions that match the filter expression, following the syntax outlined in
+         https://google.aip.dev/160.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter for Functions that match the filter expression, following the syntax
+           * outlined in https://google.aip.dev/160.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The sorting order of the resources returned. Value should be a comma separated list of
+           * fields. The default sorting oder is ascending. See https://google.aip.dev/132#ordering.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** The sorting order of the resources returned. Value should be a comma separated list of fields. The
+         default sorting oder is ascending. See https://google.aip.dev/132#ordering.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * The sorting order of the resources returned. Value should be a comma separated list of
+           * fields. The default sorting oder is ascending. See https://google.aip.dev/132#ordering.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Maximum number of functions to return per call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of functions to return per call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of functions to return per call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListFunctionsResponse`; indicates that this is a
+           * continuation of a prior `ListFunctions` call, and that the system should return the
+           * next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListFunctionsResponse`; indicates that this is a continuation of a
+         prior `ListFunctions` call, and that the system should return the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListFunctionsResponse`; indicates that this is a
+           * continuation of a prior `ListFunctions` call, and that the system should return the
+           * next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates existing function.
+         *
+         * Create a request for the method "functions.patch".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name A user-defined name of the function. Function names must be unique globally and match pattern
+         *        `projects/locations/functions`
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.Function}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.Function content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Updates existing function.
+           *
+           * Create a request for the method "functions.patch".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name A user-defined name of the function. Function names must be unique globally and match pattern
+         *        `projects/locations/functions`
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.Function}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.Function content) {
+            super(CloudFunctions.this, "PATCH", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * A user-defined name of the function. Function names must be unique globally and match
+           * pattern `projects/locations/functions`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** A user-defined name of the function. Function names must be unique globally and match pattern
+         `projects/locations/functions`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * A user-defined name of the function. Function names must be unique globally and match
+           * pattern `projects/locations/functions`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The list of fields to be updated. If no field mask is provided, all provided fields in
+           * the request will be updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated. If no field mask is provided, all provided fields in the request
+         will be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The list of fields to be updated. If no field mask is provided, all provided fields in
+           * the request will be updated.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -1273,6 +2424,198 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Runtimes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudFunctions cloudfunctions = new CloudFunctions(...);}
+       *   {@code CloudFunctions.Runtimes.List request = cloudfunctions.runtimes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Runtimes runtimes() {
+        return new Runtimes();
+      }
+
+      /**
+       * The "runtimes" collection of methods.
+       */
+      public class Runtimes {
+
+        /**
+         * Returns a list of runtimes that are supported for the requested project.
+         *
+         * Create a request for the method "runtimes.list".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the runtimes should be listed, specified in the format
+         *        `projects/locations`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.ListRuntimesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/runtimes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns a list of runtimes that are supported for the requested project.
+           *
+           * Create a request for the method "runtimes.list".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the runtimes should be listed, specified in the format
+         *        `projects/locations`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudFunctions.this, "GET", REST_PATH, null, com.google.api.services.cloudfunctions.v2.model.ListRuntimesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the runtimes should be listed, specified
+           * in the format `projects/locations`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the runtimes should be listed, specified in the
+         format `projects/locations`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the runtimes should be listed, specified
+           * in the format `projects/locations`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter for Runtimes that match the filter expression, following the syntax outlined
+           * in https://google.aip.dev/160.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter for Runtimes that match the filter expression, following the syntax outlined in
+         https://google.aip.dev/160.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter for Runtimes that match the filter expression, following the syntax outlined
+           * in https://google.aip.dev/160.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 

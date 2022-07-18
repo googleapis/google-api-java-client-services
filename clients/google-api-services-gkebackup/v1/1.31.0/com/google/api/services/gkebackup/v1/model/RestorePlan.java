@@ -32,7 +32,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source
-   * for Restores created via this RestorePlan. Format: projects/locations/backupPlans.
+   * for Restores created via this RestorePlan. Format: `projects/locations/backupPlans`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The target cluster into which Restores created via this RestorePlan will
    * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters
+   * `projects/locations/clusters` - `projects/zones/clusters`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the RestorePlan resource. Format:
-   * projects/locations/restorePlans.
+   * `projects/locations/restorePlans`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source
-   * for Restores created via this RestorePlan. Format: projects/locations/backupPlans.
+   * for Restores created via this RestorePlan. Format: `projects/locations/backupPlans`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupPlan() {
@@ -122,7 +122,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source
-   * for Restores created via this RestorePlan. Format: projects/locations/backupPlans.
+   * for Restores created via this RestorePlan. Format: `projects/locations/backupPlans`.
    * @param backupPlan backupPlan or {@code null} for none
    */
   public RestorePlan setBackupPlan(java.lang.String backupPlan) {
@@ -133,7 +133,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The target cluster into which Restores created via this RestorePlan will
    * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters
+   * `projects/locations/clusters` - `projects/zones/clusters`
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -143,7 +143,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The target cluster into which Restores created via this RestorePlan will
    * restore data. NOTE: the cluster's region must be the same as the RestorePlan. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters
+   * `projects/locations/clusters` - `projects/zones/clusters`
    * @param cluster cluster or {@code null} for none
    */
   public RestorePlan setCluster(java.lang.String cluster) {
@@ -233,7 +233,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the RestorePlan resource. Format:
-   * projects/locations/restorePlans.
+   * `projects/locations/restorePlans`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -242,7 +242,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the RestorePlan resource. Format:
-   * projects/locations/restorePlans.
+   * `projects/locations/restorePlans`.
    * @param name name or {@code null} for none
    */
   public RestorePlan setName(java.lang.String name) {

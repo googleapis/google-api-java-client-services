@@ -674,7 +674,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location within which to create the BackupPlan. Format: projects/locations
+         * @param parent Required. The location within which to create the BackupPlan. Format: `projects/locations`
          * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupPlan}
          * @return the request
          */
@@ -702,7 +702,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location within which to create the BackupPlan. Format: projects/locations
+           * @param parent Required. The location within which to create the BackupPlan. Format: `projects/locations`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupPlan}
            * @since 1.13
            */
@@ -773,12 +773,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location within which to create the BackupPlan. Format:
-           * projects/locations
+           * `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location within which to create the BackupPlan. Format: projects/locations
+          /** Required. The location within which to create the BackupPlan. Format: `projects/locations`
            */
           public java.lang.String getParent() {
             return parent;
@@ -786,7 +786,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location within which to create the BackupPlan. Format:
-           * projects/locations
+           * `projects/locations`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -840,7 +840,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans
+         * @param name Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -867,7 +867,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans
+           * @param name Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -935,17 +935,21 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans */
+          /**
+           * Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans
+          /** Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans */
+          /**
+           * Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -992,7 +996,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans
+         * @param name Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1018,7 +1022,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans
+           * @param name Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1096,17 +1100,21 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans */
+          /**
+           * Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans
+          /** Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Fully qualified BackupPlan name. Format: projects/locations/backupPlans */
+          /**
+           * Required. Fully qualified BackupPlan name. Format: `projects/locations/backupPlans`
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1328,7 +1336,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location that contains the BackupPlans to list. Format: projects/locations
+         * @param parent Required. The location that contains the BackupPlans to list. Format: `projects/locations`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1354,7 +1362,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location that contains the BackupPlans to list. Format: projects/locations
+           * @param parent Required. The location that contains the BackupPlans to list. Format: `projects/locations`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1434,12 +1442,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location that contains the BackupPlans to list. Format:
-           * projects/locations
+           * `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location that contains the BackupPlans to list. Format: projects/locations
+          /** Required. The location that contains the BackupPlans to list. Format: `projects/locations`
            */
           public java.lang.String getParent() {
             return parent;
@@ -1447,7 +1455,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location that contains the BackupPlans to list. Format:
-           * projects/locations
+           * `projects/locations`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1560,7 +1568,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The full name of the BackupPlan resource. Format: projects/locations/backupPlans
+         * @param name Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
          * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupPlan}
          * @return the request
          */
@@ -1588,7 +1596,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The full name of the BackupPlan resource. Format: projects/locations/backupPlans
+           * @param name Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupPlan}
            * @since 1.13
            */
@@ -1659,12 +1667,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Output only. The full name of the BackupPlan resource. Format:
-           * projects/locations/backupPlans
+           * `projects/locations/backupPlans`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The full name of the BackupPlan resource. Format: projects/locations/backupPlans
+          /** Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
            */
           public java.lang.String getName() {
             return name;
@@ -1672,7 +1680,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Output only. The full name of the BackupPlan resource. Format:
-           * projects/locations/backupPlans
+           * `projects/locations/backupPlans`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2053,7 +2061,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The BackupPlan within which to create the Backup. Format: projects/locations/backupPlans
+           * @param parent Required. The BackupPlan within which to create the Backup. Format: `projects/locations/backupPlans`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.Backup}
            * @return the request
            */
@@ -2081,7 +2089,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The BackupPlan within which to create the Backup. Format: projects/locations/backupPlans
+             * @param parent Required. The BackupPlan within which to create the Backup. Format: `projects/locations/backupPlans`
              * @param content the {@link com.google.api.services.gkebackup.v1.model.Backup}
              * @since 1.13
              */
@@ -2152,12 +2160,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The BackupPlan within which to create the Backup. Format:
-             * projects/locations/backupPlans
+             * `projects/locations/backupPlans`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The BackupPlan within which to create the Backup. Format: projects/locations/backupPlans
+            /** Required. The BackupPlan within which to create the Backup. Format:
+           `projects/locations/backupPlans`
              */
             public java.lang.String getParent() {
               return parent;
@@ -2165,7 +2174,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The BackupPlan within which to create the Backup. Format:
-             * projects/locations/backupPlans
+             * `projects/locations/backupPlans`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2219,7 +2228,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the Backup resource. Format: projects/locations/backupPlans/backups
+           * @param name Required. Name of the Backup resource. Format: `projects/locations/backupPlans/backups`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2246,7 +2255,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the Backup resource. Format: projects/locations/backupPlans/backups
+             * @param name Required. Name of the Backup resource. Format: `projects/locations/backupPlans/backups`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -2315,19 +2324,21 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. Name of the Backup resource. Format: projects/locations/backupPlans/backups
+             * Required. Name of the Backup resource. Format:
+             * `projects/locations/backupPlans/backups`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the Backup resource. Format: projects/locations/backupPlans/backups
+            /** Required. Name of the Backup resource. Format: `projects/locations/backupPlans/backups`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the Backup resource. Format: projects/locations/backupPlans/backups
+             * Required. Name of the Backup resource. Format:
+             * `projects/locations/backupPlans/backups`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2398,7 +2409,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Full name of the Backup resource. Format: projects/locations/backupPlans/backups
+           * @param name Required. Full name of the Backup resource. Format: `projects/locations/backupPlans/backups`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2424,7 +2435,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Full name of the Backup resource. Format: projects/locations/backupPlans/backups
+             * @param name Required. Full name of the Backup resource. Format: `projects/locations/backupPlans/backups`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2504,12 +2515,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Full name of the Backup resource. Format:
-             * projects/locations/backupPlans/backups
+             * `projects/locations/backupPlans/backups`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Full name of the Backup resource. Format: projects/locations/backupPlans/backups
+            /** Required. Full name of the Backup resource. Format: `projects/locations/backupPlans/backups`
              */
             public java.lang.String getName() {
               return name;
@@ -2517,7 +2528,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Full name of the Backup resource. Format:
-             * projects/locations/backupPlans/backups
+             * `projects/locations/backupPlans/backups`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2740,7 +2751,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The BackupPlan that contains the Backups to list. Format: projects/locations/backupPlans
+           * @param parent Required. The BackupPlan that contains the Backups to list. Format: `projects/locations/backupPlans`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2766,7 +2777,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The BackupPlan that contains the Backups to list. Format: projects/locations/backupPlans
+             * @param parent Required. The BackupPlan that contains the Backups to list. Format: `projects/locations/backupPlans`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2846,12 +2857,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The BackupPlan that contains the Backups to list. Format:
-             * projects/locations/backupPlans
+             * `projects/locations/backupPlans`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The BackupPlan that contains the Backups to list. Format: projects/locations/backupPlans
+            /** Required. The BackupPlan that contains the Backups to list. Format:
+           `projects/locations/backupPlans`
              */
             public java.lang.String getParent() {
               return parent;
@@ -2859,7 +2871,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The BackupPlan that contains the Backups to list. Format:
-             * projects/locations/backupPlans
+             * `projects/locations/backupPlans`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2972,7 +2984,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The fully qualified name of the Backup. projects/locations/backupPlans/backups
+           * @param name Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.Backup}
            * @return the request
            */
@@ -3000,7 +3012,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The fully qualified name of the Backup. projects/locations/backupPlans/backups
+             * @param name Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
              * @param content the {@link com.google.api.services.gkebackup.v1.model.Backup}
              * @since 1.13
              */
@@ -3071,12 +3083,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Output only. The fully qualified name of the Backup.
-             * projects/locations/backupPlans/backups
+             * `projects/locations/backupPlans/backups`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The fully qualified name of the Backup. projects/locations/backupPlans/backups
+            /** Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
              */
             public java.lang.String getName() {
               return name;
@@ -3084,7 +3096,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Output only. The fully qualified name of the Backup.
-             * projects/locations/backupPlans/backups
+             * `projects/locations/backupPlans/backups`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3463,7 +3475,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. Full name of the VolumeBackup resource. Format:
-             *        projects/locations/backupPlans/backups/volumeBackups
+             *        `projects/locations/backupPlans/backups/volumeBackups`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -3490,7 +3502,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. Full name of the VolumeBackup resource. Format:
-             *        projects/locations/backupPlans/backups/volumeBackups
+             *        `projects/locations/backupPlans/backups/volumeBackups`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -3570,13 +3582,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. Full name of the VolumeBackup resource. Format:
-               * projects/locations/backupPlans/backups/volumeBackups
+               * `projects/locations/backupPlans/backups/volumeBackups`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. Full name of the VolumeBackup resource. Format:
-             projects/locations/backupPlans/backups/volumeBackups
+             `projects/locations/backupPlans/backups/volumeBackups`
                */
               public java.lang.String getName() {
                 return name;
@@ -3584,7 +3596,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. Full name of the VolumeBackup resource. Format:
-               * projects/locations/backupPlans/backups/volumeBackups
+               * `projects/locations/backupPlans/backups/volumeBackups`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -3810,7 +3822,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The Backup that contains the VolumeBackups to list. Format:
-             *        projects/locations/backupPlans/backups
+             *        `projects/locations/backupPlans/backups`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -3837,7 +3849,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The Backup that contains the VolumeBackups to list. Format:
-             *        projects/locations/backupPlans/backups
+             *        `projects/locations/backupPlans/backups`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -3917,13 +3929,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The Backup that contains the VolumeBackups to list. Format:
-               * projects/locations/backupPlans/backups
+               * `projects/locations/backupPlans/backups`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The Backup that contains the VolumeBackups to list. Format:
-             projects/locations/backupPlans/backups
+             `projects/locations/backupPlans/backups`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -3931,7 +3943,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The Backup that contains the VolumeBackups to list. Format:
-               * projects/locations/backupPlans/backups
+               * `projects/locations/backupPlans/backups`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -4869,7 +4881,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location within which to create the RestorePlan. Format: projects/locations
+         * @param parent Required. The location within which to create the RestorePlan. Format: `projects/locations`
          * @param content the {@link com.google.api.services.gkebackup.v1.model.RestorePlan}
          * @return the request
          */
@@ -4897,7 +4909,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location within which to create the RestorePlan. Format: projects/locations
+           * @param parent Required. The location within which to create the RestorePlan. Format: `projects/locations`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.RestorePlan}
            * @since 1.13
            */
@@ -4968,12 +4980,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location within which to create the RestorePlan. Format:
-           * projects/locations
+           * `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location within which to create the RestorePlan. Format: projects/locations
+          /** Required. The location within which to create the RestorePlan. Format: `projects/locations`
            */
           public java.lang.String getParent() {
             return parent;
@@ -4981,7 +4993,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location within which to create the RestorePlan. Format:
-           * projects/locations
+           * `projects/locations`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5035,7 +5047,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+         * @param name Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5062,7 +5074,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+           * @param name Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -5131,19 +5143,19 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+           * Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+          /** Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+           * Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5214,7 +5226,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+         * @param name Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5240,7 +5252,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+           * @param name Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5319,19 +5331,19 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+           * Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+          /** Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Fully qualified RestorePlan name. Format: projects/locations/restorePlans
+           * Required. Fully qualified RestorePlan name. Format: `projects/locations/restorePlans`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5554,7 +5566,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location that contains the RestorePlans to list. Format: projects/locations
+         * @param parent Required. The location that contains the RestorePlans to list. Format: `projects/locations`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5580,7 +5592,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location that contains the RestorePlans to list. Format: projects/locations
+           * @param parent Required. The location that contains the RestorePlans to list. Format: `projects/locations`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5660,12 +5672,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location that contains the RestorePlans to list. Format:
-           * projects/locations
+           * `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location that contains the RestorePlans to list. Format: projects/locations
+          /** Required. The location that contains the RestorePlans to list. Format: `projects/locations`
            */
           public java.lang.String getParent() {
             return parent;
@@ -5673,7 +5685,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The location that contains the RestorePlans to list. Format:
-           * projects/locations
+           * `projects/locations`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5786,7 +5798,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The full name of the RestorePlan resource. Format: projects/locations/restorePlans.
+         * @param name Output only. The full name of the RestorePlan resource. Format: `projects/locations/restorePlans`.
          * @param content the {@link com.google.api.services.gkebackup.v1.model.RestorePlan}
          * @return the request
          */
@@ -5814,7 +5826,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The full name of the RestorePlan resource. Format: projects/locations/restorePlans.
+           * @param name Output only. The full name of the RestorePlan resource. Format: `projects/locations/restorePlans`.
            * @param content the {@link com.google.api.services.gkebackup.v1.model.RestorePlan}
            * @since 1.13
            */
@@ -5885,12 +5897,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Output only. The full name of the RestorePlan resource. Format:
-           * projects/locations/restorePlans.
+           * `projects/locations/restorePlans`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The full name of the RestorePlan resource. Format: projects/locations/restorePlans.
+          /** Output only. The full name of the RestorePlan resource. Format: `projects/locations/restorePlans`.
            */
           public java.lang.String getName() {
             return name;
@@ -5898,7 +5910,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
           /**
            * Output only. The full name of the RestorePlan resource. Format:
-           * projects/locations/restorePlans.
+           * `projects/locations/restorePlans`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6278,7 +6290,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The RestorePlan within which to create the Restore. Format:
-           *        projects/locations/restorePlans
+           *        `projects/locations/restorePlans`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.Restore}
            * @return the request
            */
@@ -6307,7 +6319,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The RestorePlan within which to create the Restore. Format:
-           *        projects/locations/restorePlans
+           *        `projects/locations/restorePlans`
              * @param content the {@link com.google.api.services.gkebackup.v1.model.Restore}
              * @since 1.13
              */
@@ -6378,13 +6390,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The RestorePlan within which to create the Restore. Format:
-             * projects/locations/restorePlans
+             * `projects/locations/restorePlans`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The RestorePlan within which to create the Restore. Format:
-           projects/locations/restorePlans
+           `projects/locations/restorePlans`
              */
             public java.lang.String getParent() {
               return parent;
@@ -6392,7 +6404,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The RestorePlan within which to create the Restore. Format:
-             * projects/locations/restorePlans
+             * `projects/locations/restorePlans`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6446,7 +6458,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Full name of the Restore Format: projects/locations/restorePlans/restores
+           * @param name Required. Full name of the Restore Format: `projects/locations/restorePlans/restores`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6473,7 +6485,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Full name of the Restore Format: projects/locations/restorePlans/restores
+             * @param name Required. Full name of the Restore Format: `projects/locations/restorePlans/restores`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6542,19 +6554,19 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. Full name of the Restore Format: projects/locations/restorePlans/restores
+             * Required. Full name of the Restore Format: `projects/locations/restorePlans/restores`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Full name of the Restore Format: projects/locations/restorePlans/restores
+            /** Required. Full name of the Restore Format: `projects/locations/restorePlans/restores`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Full name of the Restore Format: projects/locations/restorePlans/restores
+             * Required. Full name of the Restore Format: `projects/locations/restorePlans/restores`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6625,7 +6637,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the restore resource. Format: projects/locations/restorePlans/restores
+           * @param name Required. Name of the restore resource. Format: `projects/locations/restorePlans/restores`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -6651,7 +6663,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the restore resource. Format: projects/locations/restorePlans/restores
+             * @param name Required. Name of the restore resource. Format: `projects/locations/restorePlans/restores`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -6731,12 +6743,12 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Name of the restore resource. Format:
-             * projects/locations/restorePlans/restores
+             * `projects/locations/restorePlans/restores`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the restore resource. Format: projects/locations/restorePlans/restores
+            /** Required. Name of the restore resource. Format: `projects/locations/restorePlans/restores`
              */
             public java.lang.String getName() {
               return name;
@@ -6744,7 +6756,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Name of the restore resource. Format:
-             * projects/locations/restorePlans/restores
+             * `projects/locations/restorePlans/restores`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6968,7 +6980,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The RestorePlan that contains the Restores to list. Format:
-           *        projects/locations/restorePlans
+           *        `projects/locations/restorePlans`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -6995,7 +7007,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The RestorePlan that contains the Restores to list. Format:
-           *        projects/locations/restorePlans
+           *        `projects/locations/restorePlans`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -7075,13 +7087,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The RestorePlan that contains the Restores to list. Format:
-             * projects/locations/restorePlans
+             * `projects/locations/restorePlans`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The RestorePlan that contains the Restores to list. Format:
-           projects/locations/restorePlans
+           `projects/locations/restorePlans`
              */
             public java.lang.String getParent() {
               return parent;
@@ -7089,7 +7101,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The RestorePlan that contains the Restores to list. Format:
-             * projects/locations/restorePlans
+             * `projects/locations/restorePlans`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -7202,7 +7214,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The full name of the Restore resource. Format: projects/locations/restorePlans/restores
+           * @param name Output only. The full name of the Restore resource. Format:
+           *        `projects/locations/restorePlans/restores`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.Restore}
            * @return the request
            */
@@ -7230,7 +7243,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The full name of the Restore resource. Format: projects/locations/restorePlans/restores
+             * @param name Output only. The full name of the Restore resource. Format:
+           *        `projects/locations/restorePlans/restores`
              * @param content the {@link com.google.api.services.gkebackup.v1.model.Restore}
              * @since 1.13
              */
@@ -7301,13 +7315,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Output only. The full name of the Restore resource. Format:
-             * projects/locations/restorePlans/restores
+             * `projects/locations/restorePlans/restores`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Output only. The full name of the Restore resource. Format:
-           projects/locations/restorePlans/restores
+           `projects/locations/restorePlans/restores`
              */
             public java.lang.String getName() {
               return name;
@@ -7315,7 +7329,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
             /**
              * Output only. The full name of the Restore resource. Format:
-             * projects/locations/restorePlans/restores
+             * `projects/locations/restorePlans/restores`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -7694,7 +7708,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. Full name of the VolumeRestore resource. Format:
-             *        projects/locations/restorePlans/restores/volumeRestores
+             *        `projects/locations/restorePlans/restores/volumeRestores`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -7721,7 +7735,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. Full name of the VolumeRestore resource. Format:
-             *        projects/locations/restorePlans/restores/volumeRestores
+             *        `projects/locations/restorePlans/restores/volumeRestores`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -7801,13 +7815,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. Full name of the VolumeRestore resource. Format:
-               * projects/locations/restorePlans/restores/volumeRestores
+               * `projects/locations/restorePlans/restores/volumeRestores`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. Full name of the VolumeRestore resource. Format:
-             projects/locations/restorePlans/restores/volumeRestores
+             `projects/locations/restorePlans/restores/volumeRestores`
                */
               public java.lang.String getName() {
                 return name;
@@ -7815,7 +7829,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. Full name of the VolumeRestore resource. Format:
-               * projects/locations/restorePlans/restores/volumeRestores
+               * `projects/locations/restorePlans/restores/volumeRestores`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -8041,7 +8055,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The Restore that contains the VolumeRestores to list. Format:
-             *        projects/locations/restorePlans/restores
+             *        `projects/locations/restorePlans/restores`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -8068,7 +8082,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The Restore that contains the VolumeRestores to list. Format:
-             *        projects/locations/restorePlans/restores
+             *        `projects/locations/restorePlans/restores`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -8148,13 +8162,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The Restore that contains the VolumeRestores to list. Format:
-               * projects/locations/restorePlans/restores
+               * `projects/locations/restorePlans/restores`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The Restore that contains the VolumeRestores to list. Format:
-             projects/locations/restorePlans/restores
+             `projects/locations/restorePlans/restores`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -8162,7 +8176,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
 
               /**
                * Required. The Restore that contains the VolumeRestores to list. Format:
-               * projects/locations/restorePlans/restores
+               * `projects/locations/restorePlans/restores`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {

@@ -33,7 +33,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. A reference to the Backup used as the source from which this Restore will
    * restore. Note that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
-   * projects/locations/backupPlans/backups.
+   * `projects/locations/backupPlans/backups`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The target cluster into which this Restore will restore data. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters Inherited from parent RestorePlan's
+   * `projects/locations/clusters` - `projects/zones/clusters` Inherited from parent RestorePlan's
    * cluster value.
    * The value may be {@code null}.
    */
@@ -90,7 +90,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the Restore resource. Format:
-   * projects/locations/restorePlans/restores
+   * `projects/locations/restorePlans/restores`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. A reference to the Backup used as the source from which this Restore will
    * restore. Note that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
-   * projects/locations/backupPlans/backups.
+   * `projects/locations/backupPlans/backups`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackup() {
@@ -173,7 +173,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. A reference to the Backup used as the source from which this Restore will
    * restore. Note that this Backup must be a sub-resource of the RestorePlan's backup_plan. Format:
-   * projects/locations/backupPlans/backups.
+   * `projects/locations/backupPlans/backups`.
    * @param backup backup or {@code null} for none
    */
   public Restore setBackup(java.lang.String backup) {
@@ -183,7 +183,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The target cluster into which this Restore will restore data. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters Inherited from parent RestorePlan's
+   * `projects/locations/clusters` - `projects/zones/clusters` Inherited from parent RestorePlan's
    * cluster value.
    * @return value or {@code null} for none
    */
@@ -193,7 +193,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The target cluster into which this Restore will restore data. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters Inherited from parent RestorePlan's
+   * `projects/locations/clusters` - `projects/zones/clusters` Inherited from parent RestorePlan's
    * cluster value.
    * @param cluster cluster or {@code null} for none
    */
@@ -299,7 +299,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the Restore resource. Format:
-   * projects/locations/restorePlans/restores
+   * `projects/locations/restorePlans/restores`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -308,7 +308,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full name of the Restore resource. Format:
-   * projects/locations/restorePlans/restores
+   * `projects/locations/restorePlans/restores`
    * @param name name or {@code null} for none
    */
   public Restore setName(java.lang.String name) {

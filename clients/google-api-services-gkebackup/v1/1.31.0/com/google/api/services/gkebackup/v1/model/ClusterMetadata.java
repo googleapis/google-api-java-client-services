@@ -45,7 +45,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * The source cluster from which this Backup was created. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters This is inherited from the parent
+   * `projects/locations/clusters` - `projects/zones/clusters` This is inherited from the parent
    * BackupPlan's cluster field.
    * The value may be {@code null}.
    */
@@ -102,7 +102,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * The source cluster from which this Backup was created. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters This is inherited from the parent
+   * `projects/locations/clusters` - `projects/zones/clusters` This is inherited from the parent
    * BackupPlan's cluster field.
    * @return value or {@code null} for none
    */
@@ -112,7 +112,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * The source cluster from which this Backup was created. Valid formats: -
-   * projects/locations/clusters - projects/zones/clusters This is inherited from the parent
+   * `projects/locations/clusters` - `projects/zones/clusters` This is inherited from the parent
    * BackupPlan's cluster field.
    * @param cluster cluster or {@code null} for none
    */

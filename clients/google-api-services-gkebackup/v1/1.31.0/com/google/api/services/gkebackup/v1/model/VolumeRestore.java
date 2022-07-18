@@ -55,7 +55,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Full name of the VolumeRestore resource. Format:
-   * projects/locations/restorePlans/restores/volumeRestores.
+   * `projects/locations/restorePlans/restores/volumeRestores`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The full name of the VolumeBackup from which the volume will be restored. Format:
-   * projects/locations/backupPlans/backups/volumeBackups.
+   * `projects/locations/backupPlans/backups/volumeBackups`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,7 +179,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Full name of the VolumeRestore resource. Format:
-   * projects/locations/restorePlans/restores/volumeRestores.
+   * `projects/locations/restorePlans/restores/volumeRestores`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -188,7 +188,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Full name of the VolumeRestore resource. Format:
-   * projects/locations/restorePlans/restores/volumeRestores.
+   * `projects/locations/restorePlans/restores/volumeRestores`
    * @param name name or {@code null} for none
    */
   public VolumeRestore setName(java.lang.String name) {
@@ -285,7 +285,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The full name of the VolumeBackup from which the volume will be restored. Format:
-   * projects/locations/backupPlans/backups/volumeBackups.
+   * `projects/locations/backupPlans/backups/volumeBackups`.
    * @return value or {@code null} for none
    */
   public java.lang.String getVolumeBackup() {
@@ -294,7 +294,7 @@ public final class VolumeRestore extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The full name of the VolumeBackup from which the volume will be restored. Format:
-   * projects/locations/backupPlans/backups/volumeBackups.
+   * `projects/locations/backupPlans/backups/volumeBackups`.
    * @param volumeBackup volumeBackup or {@code null} for none
    */
   public VolumeRestore setVolumeBackup(java.lang.String volumeBackup) {

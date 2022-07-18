@@ -144,7 +144,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean manual;
 
   /**
-   * Output only. The fully qualified name of the Backup. projects/locations/backupPlans/backups
+   * Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,8 +167,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * The age (in days) after which this Backup will be automatically deleted. Must be an integer
    * value >= 0: - If 0, no automatic deletion will occur for this Backup. - If not 0, this must be
-   * >= delete_lock_days. Once a Backup is created, this value may only be increased. Defaults to
-   * the parent BackupPlan's backup_retain_days value.
+   * >= delete_lock_days and <= 365. Once a Backup is created, this value may only be increased.
+   * Defaults to the parent BackupPlan's backup_retain_days value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -508,7 +508,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully qualified name of the Backup. projects/locations/backupPlans/backups
+   * Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -516,7 +516,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully qualified name of the Backup. projects/locations/backupPlans/backups
+   * Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {
@@ -561,8 +561,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * The age (in days) after which this Backup will be automatically deleted. Must be an integer
    * value >= 0: - If 0, no automatic deletion will occur for this Backup. - If not 0, this must be
-   * >= delete_lock_days. Once a Backup is created, this value may only be increased. Defaults to
-   * the parent BackupPlan's backup_retain_days value.
+   * >= delete_lock_days and <= 365. Once a Backup is created, this value may only be increased.
+   * Defaults to the parent BackupPlan's backup_retain_days value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetainDays() {
@@ -572,8 +572,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * The age (in days) after which this Backup will be automatically deleted. Must be an integer
    * value >= 0: - If 0, no automatic deletion will occur for this Backup. - If not 0, this must be
-   * >= delete_lock_days. Once a Backup is created, this value may only be increased. Defaults to
-   * the parent BackupPlan's backup_retain_days value.
+   * >= delete_lock_days and <= 365. Once a Backup is created, this value may only be increased.
+   * Defaults to the parent BackupPlan's backup_retain_days value.
    * @param retainDays retainDays or {@code null} for none
    */
   public Backup setRetainDays(java.lang.Integer retainDays) {

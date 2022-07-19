@@ -47,6 +47,13 @@ public final class AccessDeniedPageSettings extends com.google.api.client.json.G
   private java.lang.Boolean generateTroubleshootingUri;
 
   /**
+   * Whether to generate remediation token on access denied events to this application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean remediationTokenGenerationEnabled;
+
+  /**
    * The URI to be redirected to when access is denied.
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class AccessDeniedPageSettings extends com.google.api.client.json.G
    */
   public AccessDeniedPageSettings setGenerateTroubleshootingUri(java.lang.Boolean generateTroubleshootingUri) {
     this.generateTroubleshootingUri = generateTroubleshootingUri;
+    return this;
+  }
+
+  /**
+   * Whether to generate remediation token on access denied events to this application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRemediationTokenGenerationEnabled() {
+    return remediationTokenGenerationEnabled;
+  }
+
+  /**
+   * Whether to generate remediation token on access denied events to this application.
+   * @param remediationTokenGenerationEnabled remediationTokenGenerationEnabled or {@code null} for none
+   */
+  public AccessDeniedPageSettings setRemediationTokenGenerationEnabled(java.lang.Boolean remediationTokenGenerationEnabled) {
+    this.remediationTokenGenerationEnabled = remediationTokenGenerationEnabled;
     return this;
   }
 

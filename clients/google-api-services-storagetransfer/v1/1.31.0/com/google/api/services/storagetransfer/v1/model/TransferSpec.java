@@ -30,6 +30,13 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * An AWS S3 compatible data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsS3CompatibleData awsS3CompatibleDataSource;
+
+  /**
    * An AWS S3 data source.
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TransferOptions transferOptions;
+
+  /**
+   * An AWS S3 compatible data source.
+   * @return value or {@code null} for none
+   */
+  public AwsS3CompatibleData getAwsS3CompatibleDataSource() {
+    return awsS3CompatibleDataSource;
+  }
+
+  /**
+   * An AWS S3 compatible data source.
+   * @param awsS3CompatibleDataSource awsS3CompatibleDataSource or {@code null} for none
+   */
+  public TransferSpec setAwsS3CompatibleDataSource(AwsS3CompatibleData awsS3CompatibleDataSource) {
+    this.awsS3CompatibleDataSource = awsS3CompatibleDataSource;
+    return this;
+  }
 
   /**
    * An AWS S3 data source.

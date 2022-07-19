@@ -31,6 +31,13 @@ package com.google.api.services.iap.v1.model;
 public final class AccessSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Settings to configure and enable allowed domains.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllowedDomainsSettings allowedDomainsSettings;
+
+  /**
    * Configuration to allow cross-origin requests via IAP.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private ReauthSettings reauthSettings;
+
+  /**
+   * Settings to configure and enable allowed domains.
+   * @return value or {@code null} for none
+   */
+  public AllowedDomainsSettings getAllowedDomainsSettings() {
+    return allowedDomainsSettings;
+  }
+
+  /**
+   * Settings to configure and enable allowed domains.
+   * @param allowedDomainsSettings allowedDomainsSettings or {@code null} for none
+   */
+  public AccessSettings setAllowedDomainsSettings(AllowedDomainsSettings allowedDomainsSettings) {
+    this.allowedDomainsSettings = allowedDomainsSettings;
+    return this;
+  }
 
   /**
    * Configuration to allow cross-origin requests via IAP.

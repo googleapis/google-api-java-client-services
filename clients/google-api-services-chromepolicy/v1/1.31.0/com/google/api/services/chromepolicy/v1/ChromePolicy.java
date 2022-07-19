@@ -978,6 +978,214 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Media collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ChromePolicy chromepolicy = new ChromePolicy(...);}
+   *   {@code ChromePolicy.Media.List request = chromepolicy.media().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Media media() {
+    return new Media();
+  }
+
+  /**
+   * The "media" collection of methods.
+   */
+  public class Media {
+
+    /**
+     * Creates an enterprise file from the content provided by user. Returns a public download url for
+     * end user.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * @param customer Required. The customer for which the file upload will apply.
+     * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest}
+     * @return the request
+     */
+    public Upload upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content) throws java.io.IOException {
+      Upload result = new Upload(customer, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Creates an enterprise file from the content provided by user. Returns a public download url for
+     * end user.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the the chromepolicy server.  After setting any
+     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param customer Required. The customer for which the file upload will apply.
+     * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Upload upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Upload result = new Upload(customer, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Upload extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileResponse> {
+
+      private static final String REST_PATH = "v1/{+customer}/policies/files:uploadPolicyFile";
+
+      private final java.util.regex.Pattern CUSTOMER_PATTERN =
+          java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+      /**
+       * Creates an enterprise file from the content provided by user. Returns a public download url for
+       * end user.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the chromepolicy server.  After setting any
+       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param customer Required. The customer for which the file upload will apply.
+       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest}
+       * @since 1.13
+       */
+      protected Upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content) {
+        super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileResponse.class);
+        this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+              "Parameter customer must conform to the pattern " +
+              "^customers/[^/]+$");
+        }
+      }
+
+      /**
+       * Creates an enterprise file from the content provided by user. Returns a public download url for
+       * end user.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the chromepolicy server.  After setting any
+       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param customer Required. The customer for which the file upload will apply.
+       * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @since 1.13
+       */
+      protected Upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(ChromePolicy.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UploadPolicyFileResponse.class);
+        this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Upload set$Xgafv(java.lang.String $Xgafv) {
+        return (Upload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Upload setAccessToken(java.lang.String accessToken) {
+        return (Upload) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Upload setAlt(java.lang.String alt) {
+        return (Upload) super.setAlt(alt);
+      }
+
+      @Override
+      public Upload setCallback(java.lang.String callback) {
+        return (Upload) super.setCallback(callback);
+      }
+
+      @Override
+      public Upload setFields(java.lang.String fields) {
+        return (Upload) super.setFields(fields);
+      }
+
+      @Override
+      public Upload setKey(java.lang.String key) {
+        return (Upload) super.setKey(key);
+      }
+
+      @Override
+      public Upload setOauthToken(java.lang.String oauthToken) {
+        return (Upload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Upload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Upload setQuotaUser(java.lang.String quotaUser) {
+        return (Upload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Upload setUploadType(java.lang.String uploadType) {
+        return (Upload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Upload) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The customer for which the file upload will apply. */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Required. The customer for which the file upload will apply.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /** Required. The customer for which the file upload will apply. */
+      public Upload setCustomer(java.lang.String customer) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+              "Parameter customer must conform to the pattern " +
+              "^customers/[^/]+$");
+        }
+        this.customer = customer;
+        return this;
+      }
+
+      @Override
+      public Upload set(String parameterName, Object value) {
+        return (Upload) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link ChromePolicy}.
    *
    * <p>

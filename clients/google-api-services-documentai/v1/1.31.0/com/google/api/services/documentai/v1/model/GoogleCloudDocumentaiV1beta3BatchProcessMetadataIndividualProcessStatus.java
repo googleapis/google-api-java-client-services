@@ -64,7 +64,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   private java.lang.String outputGcsDestination;
 
   /**
-   * The status of the processing of the document.
+   * The error encountered while attempting to process the document. Empty if there are no errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   }
 
   /**
-   * The status of the processing of the document.
+   * The error encountered while attempting to process the document. Empty if there are no errors.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -157,7 +157,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   }
 
   /**
-   * The status of the processing of the document.
+   * The error encountered while attempting to process the document. Empty if there are no errors.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus setStatus(GoogleRpcStatus status) {

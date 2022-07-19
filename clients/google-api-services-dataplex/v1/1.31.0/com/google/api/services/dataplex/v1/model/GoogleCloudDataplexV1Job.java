@@ -44,16 +44,15 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
   private java.lang.String message;
 
   /**
-   * Output only. The relative resource name of the job, of the form:
-   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/
-   * tasks/{task_id}/jobs/{job_id}.
+   * Output only. The relative resource name of the job, of the form: projects/{project_number}/loca
+   * tions/{location_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{job_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. . The number of times the job has been retried (excluding the initial attempt).
+   * Output only. The number of times the job has been retried (excluding the initial attempt).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,9 +128,8 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The relative resource name of the job, of the form:
-   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/
-   * tasks/{task_id}/jobs/{job_id}.
+   * Output only. The relative resource name of the job, of the form: projects/{project_number}/loca
+   * tions/{location_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{job_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -139,9 +137,8 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The relative resource name of the job, of the form:
-   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/
-   * tasks/{task_id}/jobs/{job_id}.
+   * Output only. The relative resource name of the job, of the form: projects/{project_number}/loca
+   * tions/{location_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{job_id}.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1Job setName(java.lang.String name) {
@@ -150,7 +147,7 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. . The number of times the job has been retried (excluding the initial attempt).
+   * Output only. The number of times the job has been retried (excluding the initial attempt).
    * @return value or {@code null} for none
    */
   public java.lang.Long getRetryCount() {
@@ -158,7 +155,7 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. . The number of times the job has been retried (excluding the initial attempt).
+   * Output only. The number of times the job has been retried (excluding the initial attempt).
    * @param retryCount retryCount or {@code null} for none
    */
   public GoogleCloudDataplexV1Job setRetryCount(java.lang.Long retryCount) {

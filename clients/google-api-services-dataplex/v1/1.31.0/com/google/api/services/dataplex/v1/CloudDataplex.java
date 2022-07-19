@@ -740,7 +740,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the lake:
-         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -769,7 +769,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the lake:
-         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -839,13 +839,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake:
-           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the lake:
-         projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+         projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            */
           public java.lang.String getName() {
             return name;
@@ -853,7 +853,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake:
-           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -879,7 +879,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the lake:
-         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -906,7 +906,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the lake:
-         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+         *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -986,13 +986,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake:
-           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the lake:
-         projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+         projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            */
           public java.lang.String getName() {
             return name;
@@ -1000,7 +1000,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake:
-           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1953,7 +1953,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1980,7 +1980,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2060,13 +2060,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent lake:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -2074,7 +2074,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4948,7 +4948,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Environment}
            * @return the request
            */
@@ -4977,7 +4977,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Environment}
              * @since 1.13
              */
@@ -5048,13 +5048,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent lake:
-           projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+           projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -5062,7 +5062,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -5138,7 +5138,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the environment:
            *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id
-           *        }`
+           *        }.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5168,7 +5168,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param name Required. The resource name of the environment:
            *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id
-           *        }`
+           *        }.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -5238,13 +5238,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the environment: projects/{project_id}/locations/{loca
-             * tion_id}/lakes/{lake_id}/environments/{environment_id}`
+             * tion_id}/lakes/{lake_id}/environments/{environment_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the environment:
-           projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}`
+           projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}.
              */
             public java.lang.String getName() {
               return name;
@@ -5252,7 +5252,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the environment: projects/{project_id}/locations/{loca
-             * tion_id}/lakes/{lake_id}/environments/{environment_id}`
+             * tion_id}/lakes/{lake_id}/environments/{environment_id}.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5279,7 +5279,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the environment:
            *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id
-           *        }
+           *        }.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -5307,7 +5307,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param name Required. The resource name of the environment:
            *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id
-           *        }
+           *        }.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -5387,13 +5387,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the environment: projects/{project_id}/locations/{loca
-             * tion_id}/lakes/{lake_id}/environments/{environment_id}
+             * tion_id}/lakes/{lake_id}/environments/{environment_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the environment:
-           projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}
+           projects/{project_id}/locations/{location_id}/lakes/{lake_id}/environments/{environment_id}.
              */
             public java.lang.String getName() {
               return name;
@@ -5401,7 +5401,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the environment: projects/{project_id}/locations/{loca
-             * tion_id}/lakes/{lake_id}/environments/{environment_id}
+             * tion_id}/lakes/{lake_id}/environments/{environment_id}.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5624,7 +5624,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5651,7 +5651,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5731,13 +5731,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent lake:
-           projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+           projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -5745,7 +5745,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_id}/locations/{location_id}/lakes/{lake_id}.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6351,7 +6351,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The resource name of the parent environment:
              *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment
-             *        _id}
+             *        _id}.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -6379,7 +6379,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                *
                * @param parent Required. The resource name of the parent environment:
              *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment
-             *        _id}
+             *        _id}.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -6459,13 +6459,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent environment: projects/{project_number}/lo
-               * cations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+               * cations/{location_id}/lakes/{lake_id}/environment/{environment_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the parent environment:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/environment/{environment_id}.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -6473,7 +6473,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent environment: projects/{project_number}/lo
-               * cations/{location_id}/lakes/{lake_id}/environment/{environment_id}
+               * cations/{location_id}/lakes/{lake_id}/environment/{environment_id}.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -6608,7 +6608,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Task}
            * @return the request
            */
@@ -6637,7 +6637,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Task}
              * @since 1.13
              */
@@ -6708,13 +6708,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent lake:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -6722,7 +6722,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6786,7 +6786,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the task:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /task/{task_id}`
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6814,7 +6814,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the task:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /task/{task_id}`
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6884,13 +6884,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the task:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /task/{task_id}`
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the task:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id} /task/{task_id}`
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}.
              */
             public java.lang.String getName() {
               return name;
@@ -6898,7 +6898,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the task:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /task/{task_id}`
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6924,7 +6924,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the task:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /tasks/{tasks_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -6951,7 +6951,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the task:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /tasks/{tasks_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -7031,13 +7031,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the task:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /tasks/{tasks_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the task:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id} /tasks/{tasks_id}
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}.
              */
             public java.lang.String getName() {
               return name;
@@ -7045,7 +7045,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the task:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /tasks/{tasks_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{tasks_id}.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -7268,7 +7268,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -7295,7 +7295,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -7375,13 +7375,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent lake:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -7389,7 +7389,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -7994,8 +7994,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the job:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /task/{task_id}/job/{job_id}`
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}/job/{job_
+             *        id}.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelJobRequest}
              * @return the request
              */
@@ -8024,8 +8024,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the job:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /task/{task_id}/job/{job_id}`
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}/job/{job_
+             *        id}.
                * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelJobRequest}
                * @since 1.13
                */
@@ -8095,24 +8095,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               }
 
               /**
-               * Required. The resource name of the job:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /task/{task_id}/job/{job_id}`
+               * Required. The resource name of the job: projects/{project_number}/locations/{locati
+               * on_id}/lakes/{lake_id}/task/{task_id}/job/{job_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The resource name of the job:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id} /task/{task_id}/job/{job_id}`
+             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/task/{task_id}/job/{job_id}.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the job:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /task/{task_id}/job/{job_id}`
+               * Required. The resource name of the job: projects/{project_number}/locations/{locati
+               * on_id}/lakes/{lake_id}/task/{task_id}/job/{job_id}.
                */
               public Cancel setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -8138,8 +8136,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the job:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /tasks/{task_id}/jobs/{job_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{jo
+             *        b_id}.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -8166,8 +8164,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the job:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /tasks/{task_id}/jobs/{job_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{jo
+             *        b_id}.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -8246,24 +8244,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               }
 
               /**
-               * Required. The resource name of the job:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /tasks/{task_id}/jobs/{job_id}
+               * Required. The resource name of the job: projects/{project_number}/locations/{locati
+               * on_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{job_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The resource name of the job:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id} /tasks/{task_id}/jobs/{job_id}
+             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{job_id}.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the job:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /tasks/{task_id}/jobs/{job_id}
+               * Required. The resource name of the job: projects/{project_number}/locations/{locati
+               * on_id}/lakes/{lake_id}/tasks/{task_id}/jobs/{job_id}.
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -8289,7 +8285,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The resource name of the parent environment:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -8316,7 +8312,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The resource name of the parent environment:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -8396,13 +8392,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent environment:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the parent environment:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}
+             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -8410,7 +8406,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent environment:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -8511,7 +8507,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Zone}
            * @return the request
            */
@@ -8540,7 +8536,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Zone}
              * @since 1.13
              */
@@ -8611,13 +8607,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent lake:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -8625,7 +8621,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -8707,7 +8703,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the zone:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8736,7 +8732,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the zone:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -8806,13 +8802,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the zone:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the zone:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              */
             public java.lang.String getName() {
               return name;
@@ -8820,7 +8816,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the zone:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8846,7 +8842,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the zone:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -8873,7 +8869,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the zone:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -8953,13 +8949,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the zone:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the zone:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              */
             public java.lang.String getName() {
               return name;
@@ -8967,7 +8963,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the zone:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -9190,7 +9186,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -9217,7 +9213,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent lake:
-           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -9297,13 +9293,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent lake:
-           projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+           projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -9311,7 +9307,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent lake:
-             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
+             * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -9916,7 +9912,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The resource name of the parent zone:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -9943,7 +9939,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The resource name of the parent zone:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -10023,13 +10019,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent zone:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the parent zone:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}
+             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -10037,7 +10033,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent zone:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -10137,7 +10133,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The resource name of the parent zone:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Asset}
              * @return the request
              */
@@ -10166,7 +10162,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The resource name of the parent zone:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Asset}
                * @since 1.13
                */
@@ -10237,13 +10233,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent zone:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the parent zone:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -10251,7 +10247,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent zone:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -10331,8 +10327,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the asset:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /zones/{zone_id}/assets/{asset_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{
+             *        asset_id}.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -10361,8 +10357,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the asset:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /zones/{zone_id}/assets/{asset_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{
+             *        asset_id}.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -10431,25 +10427,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               }
 
               /**
-               * Required. The resource name of the asset:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /zones/{zone_id}/assets/{asset_id}
+               * Required. The resource name of the asset: projects/{project_number}/locations/{loca
+               * tion_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the asset:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             /zones/{zone_id}/assets/{asset_id}
+              /** Required. The resource name of the asset: projects/{project_number}/locations/{location_id}/lakes/{
+             lake_id}/zones/{zone_id}/assets/{asset_id}.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the asset:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /zones/{zone_id}/assets/{asset_id}
+               * Required. The resource name of the asset: projects/{project_number}/locations/{loca
+               * tion_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -10475,8 +10468,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the asset:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /zones/{zone_id}/assets/{asset_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{
+             *        asset_id}.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -10503,8 +10496,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the asset:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             *        /zones/{zone_id}/assets/{asset_id}
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{
+             *        asset_id}.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -10583,25 +10576,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               }
 
               /**
-               * Required. The resource name of the asset:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /zones/{zone_id}/assets/{asset_id}
+               * Required. The resource name of the asset: projects/{project_number}/locations/{loca
+               * tion_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the asset:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-             /zones/{zone_id}/assets/{asset_id}
+              /** Required. The resource name of the asset: projects/{project_number}/locations/{location_id}/lakes/{
+             lake_id}/zones/{zone_id}/assets/{asset_id}.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the asset:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}
-               * /zones/{zone_id}/assets/{asset_id}
+               * Required. The resource name of the asset: projects/{project_number}/locations/{loca
+               * tion_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -10826,7 +10816,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The resource name of the parent zone:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -10853,7 +10843,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The resource name of the parent zone:
-             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -10933,13 +10923,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent zone:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the parent zone:
-             projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+             projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -10947,7 +10937,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
               /**
                * Required. The resource name of the parent zone:
-               * projects/{project_number}/locations/{location_id}/lakes/{lake_id} /zones/{zone_id}`
+               * projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -11557,7 +11547,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                *
                * @param parent Required. The resource name of the parent asset:
                *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{
-               *        asset_id}
+               *        asset_id}.
                * @return the request
                */
               public List list(java.lang.String parent) throws java.io.IOException {
@@ -11585,7 +11575,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                  *
                  * @param parent Required. The resource name of the parent asset:
                *        projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{
-               *        asset_id}
+               *        asset_id}.
                  * @since 1.13
                  */
                 protected List(java.lang.String parent) {
@@ -11665,13 +11655,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
                 /**
                  * Required. The resource name of the parent asset: projects/{project_number}/locati
-                 * ons/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}
+                 * ons/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** Required. The resource name of the parent asset:
-               projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}
+                /** Required. The resource name of the parent asset: projects/{project_number}/locations/{location_id}/
+               lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
                  */
                 public java.lang.String getParent() {
                   return parent;
@@ -11679,7 +11669,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
                 /**
                  * Required. The resource name of the parent asset: projects/{project_number}/locati
-                 * ons/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}
+                 * ons/{location_id}/lakes/{lake_id}/zones/{zone_id}/assets/{asset_id}.
                  */
                 public List setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {

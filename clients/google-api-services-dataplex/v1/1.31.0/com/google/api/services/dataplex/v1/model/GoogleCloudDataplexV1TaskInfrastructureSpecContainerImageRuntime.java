@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Container image to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String image;
+
+  /**
    * Optional. A list of Java JARS to add to the classpath. Valid input includes Cloud Storage URIs
    * to Jar binaries. For example, gs://bucket-name/my/path/to/file.jar
    * The value may be {@code null}.
@@ -54,6 +61,23 @@ public final class GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRunt
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> pythonPackages;
+
+  /**
+   * Optional. Container image to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImage() {
+    return image;
+  }
+
+  /**
+   * Optional. Container image to use.
+   * @param image image or {@code null} for none
+   */
+  public GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime setImage(java.lang.String image) {
+    this.image = image;
+    return this;
+  }
 
   /**
    * Optional. A list of Java JARS to add to the classpath. Valid input includes Cloud Storage URIs

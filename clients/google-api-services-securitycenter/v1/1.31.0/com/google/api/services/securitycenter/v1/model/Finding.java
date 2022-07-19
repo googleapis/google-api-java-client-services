@@ -90,8 +90,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * Output only. Map containing the point of contacts for the given finding. The key represents the
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security":[ { "contact":{ "email":"person1@company.com" } }, { "contact":{
-   * "email":“person2@company.com” } } ] }
+   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
+   * "person2@company.com" } ] }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,6 +101,20 @@ public final class Finding extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider ContactDetails used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ContactDetails.class);
+  }
+
+  /**
+   * Containers associated with the finding. containers provides information for both Kubernetes and
+   * non-Kubernetes containers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Container> containers;
+
+  static {
+    // hack to force ProGuard to consider Container used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Container.class);
   }
 
   /**
@@ -175,6 +189,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Indicator indicator;
+
+  /**
+   * Kubernetes resources associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Kubernetes kubernetes;
 
   /**
    * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
@@ -391,8 +412,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * Output only. Map containing the point of contacts for the given finding. The key represents the
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security":[ { "contact":{ "email":"person1@company.com" } }, { "contact":{
-   * "email":“person2@company.com” } } ] }
+   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
+   * "person2@company.com" } ] }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ContactDetails> getContacts() {
@@ -403,12 +424,31 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * Output only. Map containing the point of contacts for the given finding. The key represents the
    * type of contact, while the value contains a list of all the contacts that pertain. Please refer
    * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security":[ { "contact":{ "email":"person1@company.com" } }, { "contact":{
-   * "email":“person2@company.com” } } ] }
+   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
+   * "person2@company.com" } ] }
    * @param contacts contacts or {@code null} for none
    */
   public Finding setContacts(java.util.Map<String, ContactDetails> contacts) {
     this.contacts = contacts;
+    return this;
+  }
+
+  /**
+   * Containers associated with the finding. containers provides information for both Kubernetes and
+   * non-Kubernetes containers.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Container> getContainers() {
+    return containers;
+  }
+
+  /**
+   * Containers associated with the finding. containers provides information for both Kubernetes and
+   * non-Kubernetes containers.
+   * @param containers containers or {@code null} for none
+   */
+  public Finding setContainers(java.util.List<Container> containers) {
+    this.containers = containers;
     return this;
   }
 
@@ -582,6 +622,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setIndicator(Indicator indicator) {
     this.indicator = indicator;
+    return this;
+  }
+
+  /**
+   * Kubernetes resources associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public Kubernetes getKubernetes() {
+    return kubernetes;
+  }
+
+  /**
+   * Kubernetes resources associated with the finding.
+   * @param kubernetes kubernetes or {@code null} for none
+   */
+  public Finding setKubernetes(Kubernetes kubernetes) {
+    this.kubernetes = kubernetes;
     return this;
   }
 

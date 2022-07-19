@@ -43,6 +43,15 @@ public final class GoogleCloudDataplexV1TaskExecutionSpec extends com.google.api
   private java.util.Map<String, java.lang.String> args;
 
   /**
+   * Optional. The Cloud KMS key to use for encryption, of the form:
+   * projects/{project_number}/locations/{location_id}/keyRings/{key-ring-name}/cryptoKeys/{key-
+   * name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
+
+  /**
    * Optional. The maximum duration after which the job execution is expired.
    * The value may be {@code null}.
    */
@@ -92,6 +101,27 @@ public final class GoogleCloudDataplexV1TaskExecutionSpec extends com.google.api
    */
   public GoogleCloudDataplexV1TaskExecutionSpec setArgs(java.util.Map<String, java.lang.String> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud KMS key to use for encryption, of the form:
+   * projects/{project_number}/locations/{location_id}/keyRings/{key-ring-name}/cryptoKeys/{key-
+   * name}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Optional. The Cloud KMS key to use for encryption, of the form:
+   * projects/{project_number}/locations/{location_id}/keyRings/{key-ring-name}/cryptoKeys/{key-
+   * name}.
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public GoogleCloudDataplexV1TaskExecutionSpec setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 

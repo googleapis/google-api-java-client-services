@@ -31,11 +31,35 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Count of acknowledged violations in the Workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer acknowledgedViolationCount;
+
+  /**
    * Count of active Violations in the Workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer activeViolationCount;
+
+  /**
+   * Count of acknowledged violations in the Workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAcknowledgedViolationCount() {
+    return acknowledgedViolationCount;
+  }
+
+  /**
+   * Count of acknowledged violations in the Workload.
+   * @param acknowledgedViolationCount acknowledgedViolationCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus setAcknowledgedViolationCount(java.lang.Integer acknowledgedViolationCount) {
+    this.acknowledgedViolationCount = acknowledgedViolationCount;
+    return this;
+  }
 
   /**
    * Count of active Violations in the Workload.

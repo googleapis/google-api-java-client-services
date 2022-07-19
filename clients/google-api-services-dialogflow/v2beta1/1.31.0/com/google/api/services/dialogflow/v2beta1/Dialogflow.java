@@ -13780,6 +13780,29 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * Optional. Filters to restrict results to specific answer records. For more information
+         * about filtering, see [API Filtering](https://aip.dev/160).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Filters to restrict results to specific answer records. For more information about
+       filtering, see [API Filtering](https://aip.dev/160).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Filters to restrict results to specific answer records. For more information
+         * about filtering, see [API Filtering](https://aip.dev/160).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Optional. The maximum number of records to return in a single page. The server may return
          * fewer records than this. If unspecified, we use 10. The maximum is 100.
          */
@@ -31948,6 +31971,29 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filters to restrict results to specific answer records. For more information
+           * about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filters to restrict results to specific answer records. For more information about
+         filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filters to restrict results to specific answer records. For more information
+           * about filtering, see [API Filtering](https://aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 

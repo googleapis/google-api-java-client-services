@@ -20,7 +20,7 @@ package com.google.api.services.beyondcorp.v1alpha;
  * Service definition for BeyondCorp (v1alpha).
  *
  * <p>
- * Beyondcorp Enterprise provides identity and context aware access controls for enterprise resources and enables zero-trust access. Using the Beyondcorp Enterprise APIs, enterprises can set up multi-cloud and on-prem connectivity using the App Connector hybrid connectivity solution.
+ * Beyondcorp Enterprise provides identity and context aware access controls for enterprise resources and enables zero-trust access. Using the Beyondcorp Enterprise APIs, enterprises can set up multi-cloud and on-prem connectivity solutions.
  * </p>
  *
  * <p>
@@ -7216,7 +7216,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * ClientConnectorService resource by the update. The fields specified in the update_mask
            * are relative to the resource, not the full request. A field will be overwritten if it
            * is in the mask. If the user does not provide a mask then all fields will be
-           * overwritten. Mutable fields: display_name.
+           * overwritten. Mutable fields: display_name, ingress.config.destination_routes.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -7224,7 +7224,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           /** Required. Field mask is used to specify the fields to be overwritten in the ClientConnectorService
          resource by the update. The fields specified in the update_mask are relative to the resource, not
          the full request. A field will be overwritten if it is in the mask. If the user does not provide a
-         mask then all fields will be overwritten. Mutable fields: display_name.
+         mask then all fields will be overwritten. Mutable fields: display_name,
+         ingress.config.destination_routes.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -7235,7 +7236,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * ClientConnectorService resource by the update. The fields specified in the update_mask
            * are relative to the resource, not the full request. A field will be overwritten if it
            * is in the mask. If the user does not provide a mask then all fields will be
-           * overwritten. Mutable fields: display_name.
+           * overwritten. Mutable fields: display_name, ingress.config.destination_routes.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

@@ -1,6 +1,6 @@
 # BeyondCorp API Client Library for Java
 
-Beyondcorp Enterprise provides identity and context aware access controls for enterprise resources and enables zero-trust access. Using the Beyondcorp Enterprise APIs, enterprises can set up multi-cloud and on-prem connectivity using the App Connector hybrid connectivity solution.
+Beyondcorp Enterprise provides identity and context aware access controls for enterprise resources and enables zero-trust access. Using the Beyondcorp Enterprise APIs, enterprises can set up multi-cloud and on-prem connectivity solutions.
 
 This page contains information about getting started with the BeyondCorp API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-beyondcorp</artifactId>
-      <version>v1-rev20220616-1.32.1</version>
+      <version>v1-rev20220712-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-beyondcorp:v1-rev20220616-1.32.1'
+  implementation 'com.google.apis:google-api-services-beyondcorp:v1-rev20220712-1.32.1'
 }
 ```
 

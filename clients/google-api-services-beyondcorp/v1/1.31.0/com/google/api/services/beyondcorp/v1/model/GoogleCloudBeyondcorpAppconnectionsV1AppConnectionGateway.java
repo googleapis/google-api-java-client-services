@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.beyondcorp.v1alpha.model;
+package com.google.api.services.beyondcorp.v1.model;
 
 /**
  * Gateway represents a user facing component that serves as an entrance to enable connectivity.
@@ -27,7 +27,7 @@ package com.google.api.services.beyondcorp.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. AppGateway name in following format:
@@ -73,7 +73,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGatewa
    * `projects/{project_id}/locations/{location_id}/appgateways/{gateway_id}`
    * @param appGateway appGateway or {@code null} for none
    */
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway setAppGateway(java.lang.String appGateway) {
+  public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway setAppGateway(java.lang.String appGateway) {
     this.appGateway = appGateway;
     return this;
   }
@@ -92,7 +92,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGatewa
    * zero, the default port is 19443.
    * @param ingressPort ingressPort or {@code null} for none
    */
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway setIngressPort(java.lang.Integer ingressPort) {
+  public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway setIngressPort(java.lang.Integer ingressPort) {
     this.ingressPort = ingressPort;
     return this;
   }
@@ -109,7 +109,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGatewa
    * Required. The type of hosting used by the gateway.
    * @param type type or {@code null} for none
    */
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway setType(java.lang.String type) {
+  public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway setType(java.lang.String type) {
     this.type = type;
     return this;
   }
@@ -126,19 +126,19 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGatewa
    * Output only. Server-defined URI for this resource.
    * @param uri uri or {@code null} for none
    */
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway setUri(java.lang.String uri) {
+  public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway setUri(java.lang.String uri) {
     this.uri = uri;
     return this;
   }
 
   @Override
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway set(String fieldName, Object value) {
-    return (GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway) super.set(fieldName, value);
+  public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway set(String fieldName, Object value) {
+    return (GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway clone() {
-    return (GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway) super.clone();
+  public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway clone() {
+    return (GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway) super.clone();
   }
 
 }

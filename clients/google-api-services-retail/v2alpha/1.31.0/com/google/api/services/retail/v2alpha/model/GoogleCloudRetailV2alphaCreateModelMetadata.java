@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2beta.model;
+package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Redirects a shopper to a specific page. * Rule Condition: - Must specify Condition.query_terms. *
- * Action Input: Request Query * Action Result: Redirects shopper to provided uri.
+ * Metadata associated with a create operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -28,40 +27,43 @@ package com.google.api.services.retail.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2betaRuleRedirectAction extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2alphaCreateModelMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL must have length equal or less than 2000 characters.
+   * The resource name of the model that this create applies to. Format:
+   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String redirectUri;
+  private java.lang.String model;
 
   /**
-   * URL must have length equal or less than 2000 characters.
+   * The resource name of the model that this create applies to. Format:
+   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
    * @return value or {@code null} for none
    */
-  public java.lang.String getRedirectUri() {
-    return redirectUri;
+  public java.lang.String getModel() {
+    return model;
   }
 
   /**
-   * URL must have length equal or less than 2000 characters.
-   * @param redirectUri redirectUri or {@code null} for none
+   * The resource name of the model that this create applies to. Format:
+   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+   * @param model model or {@code null} for none
    */
-  public GoogleCloudRetailV2betaRuleRedirectAction setRedirectUri(java.lang.String redirectUri) {
-    this.redirectUri = redirectUri;
+  public GoogleCloudRetailV2alphaCreateModelMetadata setModel(java.lang.String model) {
+    this.model = model;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2betaRuleRedirectAction set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2betaRuleRedirectAction) super.set(fieldName, value);
+  public GoogleCloudRetailV2alphaCreateModelMetadata set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2alphaCreateModelMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2betaRuleRedirectAction clone() {
-    return (GoogleCloudRetailV2betaRuleRedirectAction) super.clone();
+  public GoogleCloudRetailV2alphaCreateModelMetadata clone() {
+    return (GoogleCloudRetailV2alphaCreateModelMetadata) super.clone();
   }
 
 }

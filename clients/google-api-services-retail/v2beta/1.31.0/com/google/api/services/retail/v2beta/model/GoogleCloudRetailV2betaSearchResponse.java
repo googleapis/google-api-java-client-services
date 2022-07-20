@@ -47,7 +47,7 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
 
   /**
    * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
-   * the search results are based on corrected_query. Otherwise the original query will be used for
+   * the search results are based on corrected_query. Otherwise the original query is used for
    * search.
    * The value may be {@code null}.
    */
@@ -152,7 +152,7 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
 
   /**
    * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
-   * the search results are based on corrected_query. Otherwise the original query will be used for
+   * the search results are based on corrected_query. Otherwise the original query is used for
    * search.
    * @return value or {@code null} for none
    */
@@ -162,7 +162,7 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
 
   /**
    * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
-   * the search results are based on corrected_query. Otherwise the original query will be used for
+   * the search results are based on corrected_query. Otherwise the original query is used for
    * search.
    * @param correctedQuery correctedQuery or {@code null} for none
    */

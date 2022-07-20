@@ -63,8 +63,8 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Human-readable display name of the listing. The display name must contain only
-   * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end
-   * with spaces. Default value is an empty string. Max length: 63 bytes.
+   * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&) and
+   * can't start or end with spaces. Default value is an empty string. Max length: 63 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,8 +198,8 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Human-readable display name of the listing. The display name must contain only
-   * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end
-   * with spaces. Default value is an empty string. Max length: 63 bytes.
+   * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&) and
+   * can't start or end with spaces. Default value is an empty string. Max length: 63 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -208,8 +208,8 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Human-readable display name of the listing. The display name must contain only
-   * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end
-   * with spaces. Default value is an empty string. Max length: 63 bytes.
+   * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&) and
+   * can't start or end with spaces. Default value is an empty string. Max length: 63 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public Listing setDisplayName(java.lang.String displayName) {

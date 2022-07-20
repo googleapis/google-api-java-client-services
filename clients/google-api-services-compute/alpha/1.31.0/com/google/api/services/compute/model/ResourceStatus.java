@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] An opaque ID of the host on which the VM is running.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String physicalHost;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +48,23 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private ResourceStatusUpcomingMaintenance upcomingMaintenance;
+
+  /**
+   * [Output Only] An opaque ID of the host on which the VM is running.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhysicalHost() {
+    return physicalHost;
+  }
+
+  /**
+   * [Output Only] An opaque ID of the host on which the VM is running.
+   * @param physicalHost physicalHost or {@code null} for none
+   */
+  public ResourceStatus setPhysicalHost(java.lang.String physicalHost) {
+    this.physicalHost = physicalHost;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

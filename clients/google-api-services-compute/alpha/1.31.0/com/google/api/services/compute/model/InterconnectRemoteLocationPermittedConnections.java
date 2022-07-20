@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InterconnectRemoteLocationPermittedConnections extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] URL of an Interconnect location that is permitted to connect to this Interconnect
+   * [Output Only] URL of an Interconnect location that is permitted to connect to this Interconnect
    * remote location.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class InterconnectRemoteLocationPermittedConnections extends com.go
   private java.lang.String interconnectLocation;
 
   /**
-   * [Output-only] URL of an Interconnect location that is permitted to connect to this Interconnect
+   * [Output Only] URL of an Interconnect location that is permitted to connect to this Interconnect
    * remote location.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class InterconnectRemoteLocationPermittedConnections extends com.go
   }
 
   /**
-   * [Output-only] URL of an Interconnect location that is permitted to connect to this Interconnect
+   * [Output Only] URL of an Interconnect location that is permitted to connect to this Interconnect
    * remote location.
    * @param interconnectLocation interconnectLocation or {@code null} for none
    */

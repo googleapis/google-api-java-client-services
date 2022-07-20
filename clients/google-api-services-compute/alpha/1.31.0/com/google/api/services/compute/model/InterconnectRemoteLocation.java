@@ -39,12 +39,28 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   private java.lang.String address;
 
   /**
+   * [Output Only] Subset of fields from InterconnectAttachment's |configurationConstraints| field
+   * that apply to all attachments for this remote location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectAttachmentConfigurationConstraints attachmentConfigurationConstraints;
+
+  /**
    * [Output Only] Metropolitan area designator that indicates which city an interconnect is
    * located. For example: "Chicago, IL", "Amsterdam, Netherlands".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String city;
+
+  /**
+   * [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect and
+   * associated InterconnectAttachments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectRemoteLocationConstraints constraints;
 
   /**
    * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
@@ -98,6 +114,22 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   private java.lang.String kind;
 
   /**
+   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take one of the
+   * following values: LACP_SUPPORTED, LACP_UNSUPPORTED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lacp;
+
+  /**
+   * [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation group (LAG).
+   * When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxLagSize100Gbps;
+
+  /**
    * [Output Only] Name of the resource.
    * The value may be {@code null}.
    */
@@ -113,11 +145,11 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   private java.lang.String peeringdbFacilityId;
 
   /**
-   * [Output-only] Permitted connections.
+   * [Output Only] Permitted connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private InterconnectRemoteLocationPermittedConnections permittedConnections;
+  private java.util.List<InterconnectRemoteLocationPermittedConnections> permittedConnections;
 
   /**
    * [Output Only] Indicates the service provider present at the remote location. Example values:
@@ -171,6 +203,25 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
+   * [Output Only] Subset of fields from InterconnectAttachment's |configurationConstraints| field
+   * that apply to all attachments for this remote location.
+   * @return value or {@code null} for none
+   */
+  public InterconnectAttachmentConfigurationConstraints getAttachmentConfigurationConstraints() {
+    return attachmentConfigurationConstraints;
+  }
+
+  /**
+   * [Output Only] Subset of fields from InterconnectAttachment's |configurationConstraints| field
+   * that apply to all attachments for this remote location.
+   * @param attachmentConfigurationConstraints attachmentConfigurationConstraints or {@code null} for none
+   */
+  public InterconnectRemoteLocation setAttachmentConfigurationConstraints(InterconnectAttachmentConfigurationConstraints attachmentConfigurationConstraints) {
+    this.attachmentConfigurationConstraints = attachmentConfigurationConstraints;
+    return this;
+  }
+
+  /**
    * [Output Only] Metropolitan area designator that indicates which city an interconnect is
    * located. For example: "Chicago, IL", "Amsterdam, Netherlands".
    * @return value or {@code null} for none
@@ -186,6 +237,25 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
    */
   public InterconnectRemoteLocation setCity(java.lang.String city) {
     this.city = city;
+    return this;
+  }
+
+  /**
+   * [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect and
+   * associated InterconnectAttachments.
+   * @return value or {@code null} for none
+   */
+  public InterconnectRemoteLocationConstraints getConstraints() {
+    return constraints;
+  }
+
+  /**
+   * [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect and
+   * associated InterconnectAttachments.
+   * @param constraints constraints or {@code null} for none
+   */
+  public InterconnectRemoteLocation setConstraints(InterconnectRemoteLocationConstraints constraints) {
+    this.constraints = constraints;
     return this;
   }
 
@@ -313,6 +383,44 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
+   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take one of the
+   * following values: LACP_SUPPORTED, LACP_UNSUPPORTED
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLacp() {
+    return lacp;
+  }
+
+  /**
+   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take one of the
+   * following values: LACP_SUPPORTED, LACP_UNSUPPORTED
+   * @param lacp lacp or {@code null} for none
+   */
+  public InterconnectRemoteLocation setLacp(java.lang.String lacp) {
+    this.lacp = lacp;
+    return this;
+  }
+
+  /**
+   * [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation group (LAG).
+   * When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxLagSize100Gbps() {
+    return maxLagSize100Gbps;
+  }
+
+  /**
+   * [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation group (LAG).
+   * When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
+   * @param maxLagSize100Gbps maxLagSize100Gbps or {@code null} for none
+   */
+  public InterconnectRemoteLocation setMaxLagSize100Gbps(java.lang.Integer maxLagSize100Gbps) {
+    this.maxLagSize100Gbps = maxLagSize100Gbps;
+    return this;
+  }
+
+  /**
    * [Output Only] Name of the resource.
    * @return value or {@code null} for none
    */
@@ -349,18 +457,18 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output-only] Permitted connections.
+   * [Output Only] Permitted connections.
    * @return value or {@code null} for none
    */
-  public InterconnectRemoteLocationPermittedConnections getPermittedConnections() {
+  public java.util.List<InterconnectRemoteLocationPermittedConnections> getPermittedConnections() {
     return permittedConnections;
   }
 
   /**
-   * [Output-only] Permitted connections.
+   * [Output Only] Permitted connections.
    * @param permittedConnections permittedConnections or {@code null} for none
    */
-  public InterconnectRemoteLocation setPermittedConnections(InterconnectRemoteLocationPermittedConnections permittedConnections) {
+  public InterconnectRemoteLocation setPermittedConnections(java.util.List<InterconnectRemoteLocationPermittedConnections> permittedConnections) {
     this.permittedConnections = permittedConnections;
     return this;
   }

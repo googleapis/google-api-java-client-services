@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for RegionTargetHttpsProxiesSetSslCertificatesRequest.
+ * Model definition for InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,58 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RegionTargetHttpsProxiesSetSslCertificatesRequest extends com.google.api.client.json.GenericJson {
+public final class InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> sslCertificates;
+  private java.lang.Long max;
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long min;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getSslCertificates() {
-    return sslCertificates;
+  public java.lang.Long getMax() {
+    return max;
   }
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
-   * @param sslCertificates sslCertificates or {@code null} for none
+   * @param max max or {@code null} for none
    */
-  public RegionTargetHttpsProxiesSetSslCertificatesRequest setSslCertificates(java.util.List<java.lang.String> sslCertificates) {
-    this.sslCertificates = sslCertificates;
+  public InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange setMax(java.lang.Long max) {
+    this.max = max;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMin() {
+    return min;
+  }
+
+  /**
+   * @param min min or {@code null} for none
+   */
+  public InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange setMin(java.lang.Long min) {
+    this.min = min;
     return this;
   }
 
   @Override
-  public RegionTargetHttpsProxiesSetSslCertificatesRequest set(String fieldName, Object value) {
-    return (RegionTargetHttpsProxiesSetSslCertificatesRequest) super.set(fieldName, value);
+  public InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange set(String fieldName, Object value) {
+    return (InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange) super.set(fieldName, value);
   }
 
   @Override
-  public RegionTargetHttpsProxiesSetSslCertificatesRequest clone() {
-    return (RegionTargetHttpsProxiesSetSslCertificatesRequest) super.clone();
+  public InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange clone() {
+    return (InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange) super.clone();
   }
 
 }

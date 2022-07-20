@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for RegionTargetHttpsProxiesSetSslCertificatesRequest.
+ * Model definition for InterconnectRemoteLocationConstraintsSubnetLengthRange.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,58 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RegionTargetHttpsProxiesSetSslCertificatesRequest extends com.google.api.client.json.GenericJson {
+public final class InterconnectRemoteLocationConstraintsSubnetLengthRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> sslCertificates;
+  private java.lang.Integer max;
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer min;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getSslCertificates() {
-    return sslCertificates;
+  public java.lang.Integer getMax() {
+    return max;
   }
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
-   * @param sslCertificates sslCertificates or {@code null} for none
+   * @param max max or {@code null} for none
    */
-  public RegionTargetHttpsProxiesSetSslCertificatesRequest setSslCertificates(java.util.List<java.lang.String> sslCertificates) {
-    this.sslCertificates = sslCertificates;
+  public InterconnectRemoteLocationConstraintsSubnetLengthRange setMax(java.lang.Integer max) {
+    this.max = max;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMin() {
+    return min;
+  }
+
+  /**
+   * @param min min or {@code null} for none
+   */
+  public InterconnectRemoteLocationConstraintsSubnetLengthRange setMin(java.lang.Integer min) {
+    this.min = min;
     return this;
   }
 
   @Override
-  public RegionTargetHttpsProxiesSetSslCertificatesRequest set(String fieldName, Object value) {
-    return (RegionTargetHttpsProxiesSetSslCertificatesRequest) super.set(fieldName, value);
+  public InterconnectRemoteLocationConstraintsSubnetLengthRange set(String fieldName, Object value) {
+    return (InterconnectRemoteLocationConstraintsSubnetLengthRange) super.set(fieldName, value);
   }
 
   @Override
-  public RegionTargetHttpsProxiesSetSslCertificatesRequest clone() {
-    return (RegionTargetHttpsProxiesSetSslCertificatesRequest) super.clone();
+  public InterconnectRemoteLocationConstraintsSubnetLengthRange clone() {
+    return (InterconnectRemoteLocationConstraintsSubnetLengthRange) super.clone();
   }
 
 }

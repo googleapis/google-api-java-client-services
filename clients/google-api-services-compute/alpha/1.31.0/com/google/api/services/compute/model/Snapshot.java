@@ -172,6 +172,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
+   * Number of days the snapshot should be retained before being deleted automatically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxRetentionDays;
+
+  /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -681,6 +688,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setLocationHint(java.lang.String locationHint) {
     this.locationHint = locationHint;
+    return this;
+  }
+
+  /**
+   * Number of days the snapshot should be retained before being deleted automatically.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxRetentionDays() {
+    return maxRetentionDays;
+  }
+
+  /**
+   * Number of days the snapshot should be retained before being deleted automatically.
+   * @param maxRetentionDays maxRetentionDays or {@code null} for none
+   */
+  public Snapshot setMaxRetentionDays(java.lang.Integer maxRetentionDays) {
+    this.maxRetentionDays = maxRetentionDays;
     return this;
   }
 

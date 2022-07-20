@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.beyondcorp.v1alpha.model;
+package com.google.api.services.beyondcorp.v1.model;
 
 /**
  * Details of the AppConnection.
@@ -27,14 +27,14 @@ package com.google.api.services.beyondcorp.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectionsResponseAppConnectionDetails extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * A BeyondCorp AppConnection in the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnection appConnection;
+  private GoogleCloudBeyondcorpAppconnectionsV1AppConnection appConnection;
 
   /**
    * If type=GCP_REGIONAL_MIG, contains most recent VM instances, like `https://www.googleapis.com/c
@@ -48,7 +48,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectio
    * A BeyondCorp AppConnection in the project.
    * @return value or {@code null} for none
    */
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnection getAppConnection() {
+  public GoogleCloudBeyondcorpAppconnectionsV1AppConnection getAppConnection() {
     return appConnection;
   }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectio
    * A BeyondCorp AppConnection in the project.
    * @param appConnection appConnection or {@code null} for none
    */
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectionsResponseAppConnectionDetails setAppConnection(GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnection appConnection) {
+  public GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails setAppConnection(GoogleCloudBeyondcorpAppconnectionsV1AppConnection appConnection) {
     this.appConnection = appConnection;
     return this;
   }
@@ -75,19 +75,19 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectio
    * ompute/v1/projects/{project_id}/zones/{zone_id}/instances/{instance_id}`.
    * @param recentMigVms recentMigVms or {@code null} for none
    */
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectionsResponseAppConnectionDetails setRecentMigVms(java.util.List<java.lang.String> recentMigVms) {
+  public GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails setRecentMigVms(java.util.List<java.lang.String> recentMigVms) {
     this.recentMigVms = recentMigVms;
     return this;
   }
 
   @Override
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectionsResponseAppConnectionDetails set(String fieldName, Object value) {
-    return (GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectionsResponseAppConnectionDetails) super.set(fieldName, value);
+  public GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails set(String fieldName, Object value) {
+    return (GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectionsResponseAppConnectionDetails clone() {
-    return (GoogleCloudBeyondcorpAppconnectionsV1alphaResolveAppConnectionsResponseAppConnectionDetails) super.clone();
+  public GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails clone() {
+    return (GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails) super.clone();
   }
 
 }

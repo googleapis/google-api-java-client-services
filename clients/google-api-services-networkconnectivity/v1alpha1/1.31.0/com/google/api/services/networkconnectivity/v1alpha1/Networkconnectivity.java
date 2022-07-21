@@ -20,7 +20,7 @@ package com.google.api.services.networkconnectivity.v1alpha1;
  * Service definition for Networkconnectivity (v1alpha1).
  *
  * <p>
- * The Network Connectivity API provides access to Network Connectivity Center.
+ * This API enables connectivity with and between Google Cloud resources.
  * </p>
  *
  * <p>
@@ -1077,7 +1077,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
         public class Hubs {
 
           /**
-           * Creates a new Hub in a given project and location.
+           * Creates a new Network Connectivity Center hub in the specified project.
            *
            * Create a request for the method "hubs.create".
            *
@@ -1102,7 +1102,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
 
             /**
-             * Creates a new Hub in a given project and location.
+             * Creates a new Network Connectivity Center hub in the specified project.
              *
              * Create a request for the method "hubs.create".
              *
@@ -1267,7 +1267,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Deletes a single Hub.
+           * Deletes a Network Connectivity Center hub.
            *
            * Create a request for the method "hubs.delete".
            *
@@ -1291,7 +1291,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Deletes a single Hub.
+             * Deletes a Network Connectivity Center hub.
              *
              * Create a request for the method "hubs.delete".
              *
@@ -1439,7 +1439,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Gets details of a single Hub.
+           * Gets details about a Network Connectivity Center hub.
            *
            * Create a request for the method "hubs.get".
            *
@@ -1463,7 +1463,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Gets details of a single Hub.
+             * Gets details about a Network Connectivity Center hub.
              *
              * Create a request for the method "hubs.get".
              *
@@ -1777,7 +1777,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Lists Hubs in a given project and location.
+           * Lists the Network Connectivity Center hubs associated with a given project.
            *
            * Create a request for the method "hubs.list".
            *
@@ -1801,7 +1801,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
 
             /**
-             * Lists Hubs in a given project and location.
+             * Lists the Network Connectivity Center hubs associated with a given project.
              *
              * Create a request for the method "hubs.list".
              *
@@ -1980,7 +1980,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Updates the parameters of a single Hub.
+           * Updates the description and/or labels of a Network Connectivity Center hub.
            *
            * Create a request for the method "hubs.patch".
            *
@@ -2005,7 +2005,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Updates the parameters of a single Hub.
+             * Updates the description and/or labels of a Network Connectivity Center hub.
              *
              * Create a request for the method "hubs.patch".
              *
@@ -3645,6 +3645,527 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
       }
       /**
+       * An accessor for creating requests from the ServiceIdentifiers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Networkconnectivity networkconnectivity = new Networkconnectivity(...);}
+       *   {@code Networkconnectivity.ServiceIdentifiers.List request = networkconnectivity.serviceIdentifiers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ServiceIdentifiers serviceIdentifiers() {
+        return new ServiceIdentifiers();
+      }
+
+      /**
+       * The "serviceIdentifiers" collection of methods.
+       */
+      public class ServiceIdentifiers {
+
+        /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
+         *
+         * Create a request for the method "serviceIdentifiers.getIamPolicy".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1alpha1.model.Policy> {
+
+          private static final String REST_PATH = "v1alpha1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+           * and does not have a policy set.
+           *
+           * Create a request for the method "serviceIdentifiers.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1alpha1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         *
+         * Create a request for the method "serviceIdentifiers.setIamPolicy".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.networkconnectivity.v1alpha1.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1alpha1.model.Policy> {
+
+          private static final String REST_PATH = "v1alpha1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "serviceIdentifiers.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.networkconnectivity.v1alpha1.model.SetIamPolicyRequest content) {
+            super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1alpha1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "serviceIdentifiers.testIamPermissions".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.networkconnectivity.v1alpha1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1alpha1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1alpha1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "serviceIdentifiers.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the
+           * remote operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.ser
+           * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.networkconnectivity.v1alpha1.model.TestIamPermissionsRequest content) {
+            super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1alpha1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceIdentifiers/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the ServiceInstances collection.
        *
        * <p>The typical use is:</p>
@@ -4186,7 +4707,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
       public class Spokes {
 
         /**
-         * Creates a new Spoke in a given project and location.
+         * Creates a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.create".
          *
@@ -4211,7 +4732,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new Spoke in a given project and location.
+           * Creates a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.create".
            *
@@ -4376,7 +4897,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Deletes a single Spoke.
+         * Deletes a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.delete".
          *
@@ -4400,7 +4921,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/spokes/[^/]+$");
 
           /**
-           * Deletes a single Spoke.
+           * Deletes a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.delete".
            *
@@ -4548,7 +5069,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Gets details of a single Spoke.
+         * Gets details about a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.get".
          *
@@ -4572,7 +5093,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/spokes/[^/]+$");
 
           /**
-           * Gets details of a single Spoke.
+           * Gets details about a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.get".
            *
@@ -4886,7 +5407,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Lists Spokes in a given project and location.
+         * Lists the Network Connectivity Center spokes in a specified project and location.
          *
          * Create a request for the method "spokes.list".
          *
@@ -4910,7 +5431,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Spokes in a given project and location.
+           * Lists the Network Connectivity Center spokes in a specified project and location.
            *
            * Create a request for the method "spokes.list".
            *
@@ -5089,7 +5610,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Updates the parameters of a single Spoke.
+         * Updates the parameters of a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.patch".
          *
@@ -5114,7 +5635,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/spokes/[^/]+$");
 
           /**
-           * Updates the parameters of a single Spoke.
+           * Updates the parameters of a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.patch".
            *

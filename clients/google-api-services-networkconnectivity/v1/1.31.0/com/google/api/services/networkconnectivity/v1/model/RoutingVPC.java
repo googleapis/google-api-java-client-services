@@ -17,7 +17,8 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * RoutingVPC contains information about the VPC networks that are associated with a hub's spokes.
+ * RoutingVPC contains information about the VPC networks associated with the spokes of a Network
+ * Connectivity Center hub.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation

@@ -33,14 +33,20 @@ package com.google.api.services.compute.model;
 public final class RequestMirrorPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full or partial URL to the BackendService resource being mirrored to.
+   * The full or partial URL to the BackendService resource being mirrored to. The backend service
+   * configured for a mirroring policy must reference backends that are of the same type as the
+   * original backend service matched in the URL map. Serverless NEG backends are not currently
+   * supported as a mirrored backend service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backendService;
 
   /**
-   * The full or partial URL to the BackendService resource being mirrored to.
+   * The full or partial URL to the BackendService resource being mirrored to. The backend service
+   * configured for a mirroring policy must reference backends that are of the same type as the
+   * original backend service matched in the URL map. Serverless NEG backends are not currently
+   * supported as a mirrored backend service.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendService() {
@@ -48,7 +54,10 @@ public final class RequestMirrorPolicy extends com.google.api.client.json.Generi
   }
 
   /**
-   * The full or partial URL to the BackendService resource being mirrored to.
+   * The full or partial URL to the BackendService resource being mirrored to. The backend service
+   * configured for a mirroring policy must reference backends that are of the same type as the
+   * original backend service matched in the URL map. Serverless NEG backends are not currently
+   * supported as a mirrored backend service.
    * @param backendService backendService or {@code null} for none
    */
   public RequestMirrorPolicy setBackendService(java.lang.String backendService) {

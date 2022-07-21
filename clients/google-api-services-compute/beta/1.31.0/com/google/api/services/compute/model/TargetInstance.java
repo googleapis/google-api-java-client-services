@@ -82,8 +82,8 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default
-   * value) is supported.
+   * Must have a value of NO_NAT. Protocol forwarding delivers packets while preserving the
+   * destination IP address of the forwarding rule referencing the target instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,8 +231,8 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default
-   * value) is supported.
+   * Must have a value of NO_NAT. Protocol forwarding delivers packets while preserving the
+   * destination IP address of the forwarding rule referencing the target instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getNatPolicy() {
@@ -240,8 +240,8 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default
-   * value) is supported.
+   * Must have a value of NO_NAT. Protocol forwarding delivers packets while preserving the
+   * destination IP address of the forwarding rule referencing the target instance.
    * @param natPolicy natPolicy or {@code null} for none
    */
   public TargetInstance setNatPolicy(java.lang.String natPolicy) {

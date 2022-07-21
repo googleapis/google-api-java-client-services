@@ -30,16 +30,14 @@ package com.google.api.services.compute.model;
 public final class RegionTargetHttpsProxiesSetSslCertificatesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource. Currently
-   * exactly one SslCertificate resource must be specified.
+   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sslCertificates;
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource. Currently
-   * exactly one SslCertificate resource must be specified.
+   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSslCertificates() {
@@ -47,8 +45,7 @@ public final class RegionTargetHttpsProxiesSetSslCertificatesRequest extends com
   }
 
   /**
-   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource. Currently
-   * exactly one SslCertificate resource must be specified.
+   * New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
    * @param sslCertificates sslCertificates or {@code null} for none
    */
   public RegionTargetHttpsProxiesSetSslCertificatesRequest setSslCertificates(java.util.List<java.lang.String> sslCertificates) {

@@ -17,7 +17,8 @@
 package com.google.api.services.streetviewpublish.v1.model;
 
 /**
- * Details related to ProcessingFailureReason#NOT_OUTDOORS.
+ * Details related to ProcessingFailureReason#NOT_OUTDOORS. If there are multiple indoor frames
+ * found, the first frame is recorded here.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Street View Publish API. For a detailed explanation

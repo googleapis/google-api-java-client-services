@@ -30,6 +30,14 @@ package com.google.api.services.monitoring.v3.model;
 public final class HttpCheck extends com.google.api.client.json.GenericJson {
 
   /**
+   * If present, the check will only pass if the HTTP response status code is in this set of status
+   * codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResponseStatusCode> acceptedResponseStatusCodes;
+
+  /**
    * The authentication information. Optional when creating an HTTP check; defaults to empty.
    * The value may be {@code null}.
    */
@@ -122,6 +130,25 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateSsl;
+
+  /**
+   * If present, the check will only pass if the HTTP response status code is in this set of status
+   * codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResponseStatusCode> getAcceptedResponseStatusCodes() {
+    return acceptedResponseStatusCodes;
+  }
+
+  /**
+   * If present, the check will only pass if the HTTP response status code is in this set of status
+   * codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299.
+   * @param acceptedResponseStatusCodes acceptedResponseStatusCodes or {@code null} for none
+   */
+  public HttpCheck setAcceptedResponseStatusCodes(java.util.List<ResponseStatusCode> acceptedResponseStatusCodes) {
+    this.acceptedResponseStatusCodes = acceptedResponseStatusCodes;
+    return this;
+  }
 
   /**
    * The authentication information. Optional when creating an HTTP check; defaults to empty.

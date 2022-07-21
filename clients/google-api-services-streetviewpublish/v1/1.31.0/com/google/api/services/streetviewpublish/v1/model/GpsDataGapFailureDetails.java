@@ -17,7 +17,8 @@
 package com.google.api.services.streetviewpublish.v1.model;
 
 /**
- * Details related to ProcessingFailureReason#GPS_DATA_GAP.
+ * Details related to ProcessingFailureReason#GPS_DATA_GAP. If there are multiple GPS data gaps,
+ * only the one with the largest duration is reported here.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Street View Publish API. For a detailed explanation

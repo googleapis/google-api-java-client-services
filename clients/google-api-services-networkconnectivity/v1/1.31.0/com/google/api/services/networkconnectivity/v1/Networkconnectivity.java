@@ -20,7 +20,7 @@ package com.google.api.services.networkconnectivity.v1;
  * Service definition for Networkconnectivity (v1).
  *
  * <p>
- * The Network Connectivity API provides access to Network Connectivity Center.
+ * This API enables connectivity with and between Google Cloud resources.
  * </p>
  *
  * <p>
@@ -556,7 +556,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
         public class Hubs {
 
           /**
-           * Creates a new hub in the specified project.
+           * Creates a new Network Connectivity Center hub in the specified project.
            *
            * Create a request for the method "hubs.create".
            *
@@ -581,7 +581,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
 
             /**
-             * Creates a new hub in the specified project.
+             * Creates a new Network Connectivity Center hub in the specified project.
              *
              * Create a request for the method "hubs.create".
              *
@@ -749,7 +749,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Deletes the specified hub.
+           * Deletes a Network Connectivity Center hub.
            *
            * Create a request for the method "hubs.delete".
            *
@@ -773,7 +773,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Deletes the specified hub.
+             * Deletes a Network Connectivity Center hub.
              *
              * Create a request for the method "hubs.delete".
              *
@@ -924,7 +924,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Gets details about the specified hub.
+           * Gets details about a Network Connectivity Center hub.
            *
            * Create a request for the method "hubs.get".
            *
@@ -948,7 +948,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Gets details about the specified hub.
+             * Gets details about a Network Connectivity Center hub.
              *
              * Create a request for the method "hubs.get".
              *
@@ -1262,7 +1262,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Lists hubs in a given project.
+           * Lists the Network Connectivity Center hubs associated with a given project.
            *
            * Create a request for the method "hubs.list".
            *
@@ -1286,7 +1286,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
 
             /**
-             * Lists hubs in a given project.
+             * Lists the Network Connectivity Center hubs associated with a given project.
              *
              * Create a request for the method "hubs.list".
              *
@@ -1465,7 +1465,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Updates the description and/or labels of the specified hub.
+           * Updates the description and/or labels of a Network Connectivity Center hub.
            *
            * Create a request for the method "hubs.patch".
            *
@@ -1491,7 +1491,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Updates the description and/or labels of the specified hub.
+             * Updates the description and/or labels of a Network Connectivity Center hub.
              *
              * Create a request for the method "hubs.patch".
              *
@@ -3162,7 +3162,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
       public class Spokes {
 
         /**
-         * Creates a spoke in the specified project and location.
+         * Creates a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.create".
          *
@@ -3187,7 +3187,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a spoke in the specified project and location.
+           * Creates a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.create".
            *
@@ -3355,7 +3355,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Deletes the specified spoke.
+         * Deletes a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.delete".
          *
@@ -3379,7 +3379,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/spokes/[^/]+$");
 
           /**
-           * Deletes the specified spoke.
+           * Deletes a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.delete".
            *
@@ -3530,7 +3530,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Gets details about the specified spoke.
+         * Gets details about a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.get".
          *
@@ -3554,7 +3554,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/spokes/[^/]+$");
 
           /**
-           * Gets details about the specified spoke.
+           * Gets details about a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.get".
            *
@@ -3868,7 +3868,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Lists the spokes in the specified project and location.
+         * Lists the Network Connectivity Center spokes in a specified project and location.
          *
          * Create a request for the method "spokes.list".
          *
@@ -3892,7 +3892,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the spokes in the specified project and location.
+           * Lists the Network Connectivity Center spokes in a specified project and location.
            *
            * Create a request for the method "spokes.list".
            *
@@ -4071,7 +4071,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Updates the parameters of the specified spoke.
+         * Updates the parameters of a Network Connectivity Center spoke.
          *
          * Create a request for the method "spokes.patch".
          *
@@ -4097,7 +4097,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/spokes/[^/]+$");
 
           /**
-           * Updates the parameters of the specified spoke.
+           * Updates the parameters of a Network Connectivity Center spoke.
            *
            * Create a request for the method "spokes.patch".
            *

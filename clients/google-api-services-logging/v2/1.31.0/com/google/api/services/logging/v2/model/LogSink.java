@@ -138,14 +138,15 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. An IAM identity—a service account or group—under which Cloud Logging writes the
-   * exported log entries to the sink's destination. This field is set by sinks.create and
-   * sinks.update based on the value of unique_writer_identity in those methods.Until you grant this
-   * identity write-access to the destination, log entry exports from this sink will fail. For more
-   * information, see Granting Access for a Resource (https://cloud.google.com/iam/docs/granting-
-   * roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). Consult the
-   * destination service's documentation to determine the appropriate IAM roles to assign to the
-   * identity.Sinks that have a destination that is a log bucket in the same project as the sink do
-   * not have a writer_identity and no additional permissions are required.
+   * exported log entries to the sink's destination. This field is either set by specifying
+   * custom_writer_identity or set automatically by sinks.create and sinks.update based on the value
+   * of unique_writer_identity in those methods.Until you grant this identity write-access to the
+   * destination, log entry exports from this sink will fail. For more information, see Granting
+   * Access for a Resource (https://cloud.google.com/iam/docs/granting-roles-to-service-
+   * accounts#granting_access_to_a_service_account_for_a_resource). Consult the destination
+   * service's documentation to determine the appropriate IAM roles to assign to the identity.Sinks
+   * that have a destination that is a log bucket in the same project as the sink cannot have a
+   * writer_identity and no additional permissions are required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -382,14 +383,15 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. An IAM identity—a service account or group—under which Cloud Logging writes the
-   * exported log entries to the sink's destination. This field is set by sinks.create and
-   * sinks.update based on the value of unique_writer_identity in those methods.Until you grant this
-   * identity write-access to the destination, log entry exports from this sink will fail. For more
-   * information, see Granting Access for a Resource (https://cloud.google.com/iam/docs/granting-
-   * roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). Consult the
-   * destination service's documentation to determine the appropriate IAM roles to assign to the
-   * identity.Sinks that have a destination that is a log bucket in the same project as the sink do
-   * not have a writer_identity and no additional permissions are required.
+   * exported log entries to the sink's destination. This field is either set by specifying
+   * custom_writer_identity or set automatically by sinks.create and sinks.update based on the value
+   * of unique_writer_identity in those methods.Until you grant this identity write-access to the
+   * destination, log entry exports from this sink will fail. For more information, see Granting
+   * Access for a Resource (https://cloud.google.com/iam/docs/granting-roles-to-service-
+   * accounts#granting_access_to_a_service_account_for_a_resource). Consult the destination
+   * service's documentation to determine the appropriate IAM roles to assign to the identity.Sinks
+   * that have a destination that is a log bucket in the same project as the sink cannot have a
+   * writer_identity and no additional permissions are required.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriterIdentity() {
@@ -398,14 +400,15 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. An IAM identity—a service account or group—under which Cloud Logging writes the
-   * exported log entries to the sink's destination. This field is set by sinks.create and
-   * sinks.update based on the value of unique_writer_identity in those methods.Until you grant this
-   * identity write-access to the destination, log entry exports from this sink will fail. For more
-   * information, see Granting Access for a Resource (https://cloud.google.com/iam/docs/granting-
-   * roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). Consult the
-   * destination service's documentation to determine the appropriate IAM roles to assign to the
-   * identity.Sinks that have a destination that is a log bucket in the same project as the sink do
-   * not have a writer_identity and no additional permissions are required.
+   * exported log entries to the sink's destination. This field is either set by specifying
+   * custom_writer_identity or set automatically by sinks.create and sinks.update based on the value
+   * of unique_writer_identity in those methods.Until you grant this identity write-access to the
+   * destination, log entry exports from this sink will fail. For more information, see Granting
+   * Access for a Resource (https://cloud.google.com/iam/docs/granting-roles-to-service-
+   * accounts#granting_access_to_a_service_account_for_a_resource). Consult the destination
+   * service's documentation to determine the appropriate IAM roles to assign to the identity.Sinks
+   * that have a destination that is a log bucket in the same project as the sink cannot have a
+   * writer_identity and no additional permissions are required.
    * @param writerIdentity writerIdentity or {@code null} for none
    */
   public LogSink setWriterIdentity(java.lang.String writerIdentity) {

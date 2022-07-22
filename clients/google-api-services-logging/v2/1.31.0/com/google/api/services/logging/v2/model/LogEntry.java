@@ -142,9 +142,22 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private LogEntrySourceLocation sourceLocation;
 
   /**
-   * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
-   * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
-   * array, such as 000000000000004a.
+   * Optional. The ID of the Cloud Trace (https://cloud.google.com/trace) span associated with the
+   * current operation in which the log is being written. For example, if a span has the REST
+   * resource name of "projects/some-project/traces/some-trace/spans/some-span-id", then the span_id
+   * field is "some-span-id".A Span
+   * (https://cloud.google.com/trace/docs/reference/v2/rest/v2/projects.traces/batchWrite#Span)
+   * represents a single operation within a trace. Whereas a trace may involve multiple different
+   * microservices running on multiple different machines, a span generally corresponds to a single
+   * logical operation being performed in a single instance of a microservice on one specific
+   * machine. Spans are the nodes within the tree that is a trace.Applications that are instrumented
+   * for tracing (https://cloud.google.com/trace/docs/setup) will generally assign a new, unique
+   * span ID on each incoming request. It is also common to create and record additional spans
+   * corresponding to internal processing elements as well as issuing requests to dependencies.The
+   * span ID is expected to be a 16-character, hexadecimal encoding of an 8-byte array and should
+   * not be zero. It should be unique within the trace and should, ideally, be generated in a manner
+   * that is uniformly random.Example values: 000000000000004a 7a2190356c3fc94b 0000f00300090021
+   * d39223e101960076
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,9 +193,12 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private String timestamp;
 
   /**
-   * Optional. Resource name of the trace associated with the log entry, if any. If it contains a
-   * relative resource name, the name is assumed to be relative to //tracing.googleapis.com.
-   * Example: projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824
+   * Optional. The REST resource name of the trace being written to Cloud Trace
+   * (https://cloud.google.com/trace) in association with this log entry. For example, if your trace
+   * data is stored in the Cloud project "my-trace-project" and if the service that is creating the
+   * log entry receives a trace header that includes the trace ID "12345", then the service should
+   * use "projects/my-tracing-project/traces/12345".The trace field provides the link between logs
+   * and traces. By using this field, you can navigate from a log entry to a trace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -460,9 +476,22 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
-   * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
-   * array, such as 000000000000004a.
+   * Optional. The ID of the Cloud Trace (https://cloud.google.com/trace) span associated with the
+   * current operation in which the log is being written. For example, if a span has the REST
+   * resource name of "projects/some-project/traces/some-trace/spans/some-span-id", then the span_id
+   * field is "some-span-id".A Span
+   * (https://cloud.google.com/trace/docs/reference/v2/rest/v2/projects.traces/batchWrite#Span)
+   * represents a single operation within a trace. Whereas a trace may involve multiple different
+   * microservices running on multiple different machines, a span generally corresponds to a single
+   * logical operation being performed in a single instance of a microservice on one specific
+   * machine. Spans are the nodes within the tree that is a trace.Applications that are instrumented
+   * for tracing (https://cloud.google.com/trace/docs/setup) will generally assign a new, unique
+   * span ID on each incoming request. It is also common to create and record additional spans
+   * corresponding to internal processing elements as well as issuing requests to dependencies.The
+   * span ID is expected to be a 16-character, hexadecimal encoding of an 8-byte array and should
+   * not be zero. It should be unique within the trace and should, ideally, be generated in a manner
+   * that is uniformly random.Example values: 000000000000004a 7a2190356c3fc94b 0000f00300090021
+   * d39223e101960076
    * @return value or {@code null} for none
    */
   public java.lang.String getSpanId() {
@@ -470,9 +499,22 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
-   * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
-   * array, such as 000000000000004a.
+   * Optional. The ID of the Cloud Trace (https://cloud.google.com/trace) span associated with the
+   * current operation in which the log is being written. For example, if a span has the REST
+   * resource name of "projects/some-project/traces/some-trace/spans/some-span-id", then the span_id
+   * field is "some-span-id".A Span
+   * (https://cloud.google.com/trace/docs/reference/v2/rest/v2/projects.traces/batchWrite#Span)
+   * represents a single operation within a trace. Whereas a trace may involve multiple different
+   * microservices running on multiple different machines, a span generally corresponds to a single
+   * logical operation being performed in a single instance of a microservice on one specific
+   * machine. Spans are the nodes within the tree that is a trace.Applications that are instrumented
+   * for tracing (https://cloud.google.com/trace/docs/setup) will generally assign a new, unique
+   * span ID on each incoming request. It is also common to create and record additional spans
+   * corresponding to internal processing elements as well as issuing requests to dependencies.The
+   * span ID is expected to be a 16-character, hexadecimal encoding of an 8-byte array and should
+   * not be zero. It should be unique within the trace and should, ideally, be generated in a manner
+   * that is uniformly random.Example values: 000000000000004a 7a2190356c3fc94b 0000f00300090021
+   * d39223e101960076
    * @param spanId spanId or {@code null} for none
    */
   public LogEntry setSpanId(java.lang.String spanId) {
@@ -548,9 +590,12 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource name of the trace associated with the log entry, if any. If it contains a
-   * relative resource name, the name is assumed to be relative to //tracing.googleapis.com.
-   * Example: projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824
+   * Optional. The REST resource name of the trace being written to Cloud Trace
+   * (https://cloud.google.com/trace) in association with this log entry. For example, if your trace
+   * data is stored in the Cloud project "my-trace-project" and if the service that is creating the
+   * log entry receives a trace header that includes the trace ID "12345", then the service should
+   * use "projects/my-tracing-project/traces/12345".The trace field provides the link between logs
+   * and traces. By using this field, you can navigate from a log entry to a trace.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrace() {
@@ -558,9 +603,12 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource name of the trace associated with the log entry, if any. If it contains a
-   * relative resource name, the name is assumed to be relative to //tracing.googleapis.com.
-   * Example: projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824
+   * Optional. The REST resource name of the trace being written to Cloud Trace
+   * (https://cloud.google.com/trace) in association with this log entry. For example, if your trace
+   * data is stored in the Cloud project "my-trace-project" and if the service that is creating the
+   * log entry receives a trace header that includes the trace ID "12345", then the service should
+   * use "projects/my-tracing-project/traces/12345".The trace field provides the link between logs
+   * and traces. By using this field, you can navigate from a log entry to a trace.
    * @param trace trace or {@code null} for none
    */
   public LogEntry setTrace(java.lang.String trace) {

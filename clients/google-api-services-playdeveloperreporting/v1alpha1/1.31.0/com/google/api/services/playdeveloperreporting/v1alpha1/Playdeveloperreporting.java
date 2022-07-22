@@ -1547,110 +1547,131 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           @com.google.api.client.util.Key("interval.endTime.day")
           private java.lang.Integer intervalEndTimeDay;
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month.
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
            */
           public java.lang.Integer getIntervalEndTimeDay() {
             return intervalEndTimeDay;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           public Search setIntervalEndTimeDay(java.lang.Integer intervalEndTimeDay) {
             this.intervalEndTimeDay = intervalEndTimeDay;
             return this;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           @com.google.api.client.util.Key("interval.endTime.hours")
           private java.lang.Integer intervalEndTimeHours;
 
-          /** Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the
-         value "24:00:00" for scenarios like business closing time.
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
            */
           public java.lang.Integer getIntervalEndTimeHours() {
             return intervalEndTimeHours;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           public Search setIntervalEndTimeHours(java.lang.Integer intervalEndTimeHours) {
             this.intervalEndTimeHours = intervalEndTimeHours;
             return this;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           @com.google.api.client.util.Key("interval.endTime.minutes")
           private java.lang.Integer intervalEndTimeMinutes;
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59.
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
            */
           public java.lang.Integer getIntervalEndTimeMinutes() {
             return intervalEndTimeMinutes;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           public Search setIntervalEndTimeMinutes(java.lang.Integer intervalEndTimeMinutes) {
             this.intervalEndTimeMinutes = intervalEndTimeMinutes;
             return this;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           @com.google.api.client.util.Key("interval.endTime.month")
           private java.lang.Integer intervalEndTimeMonth;
 
-          /** Required. Month of year. Must be from 1 to 12.
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
            */
           public java.lang.Integer getIntervalEndTimeMonth() {
             return intervalEndTimeMonth;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           public Search setIntervalEndTimeMonth(java.lang.Integer intervalEndTimeMonth) {
             this.intervalEndTimeMonth = intervalEndTimeMonth;
             return this;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           @com.google.api.client.util.Key("interval.endTime.nanos")
           private java.lang.Integer intervalEndTimeNanos;
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
            */
           public java.lang.Integer getIntervalEndTimeNanos() {
             return intervalEndTimeNanos;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           public Search setIntervalEndTimeNanos(java.lang.Integer intervalEndTimeNanos) {
             this.intervalEndTimeNanos = intervalEndTimeNanos;
             return this;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           @com.google.api.client.util.Key("interval.endTime.seconds")
           private java.lang.Integer intervalEndTimeSeconds;
 
-          /** Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value
-         60 if it allows leap-seconds.
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
            */
           public java.lang.Integer getIntervalEndTimeSeconds() {
             return intervalEndTimeSeconds;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           public Search setIntervalEndTimeSeconds(java.lang.Integer intervalEndTimeSeconds) {
             this.intervalEndTimeSeconds = intervalEndTimeSeconds;
@@ -1734,110 +1755,131 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           @com.google.api.client.util.Key("interval.startTime.day")
           private java.lang.Integer intervalStartTimeDay;
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month.
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
            */
           public java.lang.Integer getIntervalStartTimeDay() {
             return intervalStartTimeDay;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           public Search setIntervalStartTimeDay(java.lang.Integer intervalStartTimeDay) {
             this.intervalStartTimeDay = intervalStartTimeDay;
             return this;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           @com.google.api.client.util.Key("interval.startTime.hours")
           private java.lang.Integer intervalStartTimeHours;
 
-          /** Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the
-         value "24:00:00" for scenarios like business closing time.
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
            */
           public java.lang.Integer getIntervalStartTimeHours() {
             return intervalStartTimeHours;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           public Search setIntervalStartTimeHours(java.lang.Integer intervalStartTimeHours) {
             this.intervalStartTimeHours = intervalStartTimeHours;
             return this;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           @com.google.api.client.util.Key("interval.startTime.minutes")
           private java.lang.Integer intervalStartTimeMinutes;
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59.
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
            */
           public java.lang.Integer getIntervalStartTimeMinutes() {
             return intervalStartTimeMinutes;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           public Search setIntervalStartTimeMinutes(java.lang.Integer intervalStartTimeMinutes) {
             this.intervalStartTimeMinutes = intervalStartTimeMinutes;
             return this;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           @com.google.api.client.util.Key("interval.startTime.month")
           private java.lang.Integer intervalStartTimeMonth;
 
-          /** Required. Month of year. Must be from 1 to 12.
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
            */
           public java.lang.Integer getIntervalStartTimeMonth() {
             return intervalStartTimeMonth;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           public Search setIntervalStartTimeMonth(java.lang.Integer intervalStartTimeMonth) {
             this.intervalStartTimeMonth = intervalStartTimeMonth;
             return this;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           @com.google.api.client.util.Key("interval.startTime.nanos")
           private java.lang.Integer intervalStartTimeNanos;
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
            */
           public java.lang.Integer getIntervalStartTimeNanos() {
             return intervalStartTimeNanos;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           public Search setIntervalStartTimeNanos(java.lang.Integer intervalStartTimeNanos) {
             this.intervalStartTimeNanos = intervalStartTimeNanos;
             return this;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           @com.google.api.client.util.Key("interval.startTime.seconds")
           private java.lang.Integer intervalStartTimeSeconds;
 
-          /** Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value
-         60 if it allows leap-seconds.
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
            */
           public java.lang.Integer getIntervalStartTimeSeconds() {
             return intervalStartTimeSeconds;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           public Search setIntervalStartTimeSeconds(java.lang.Integer intervalStartTimeSeconds) {
             this.intervalStartTimeSeconds = intervalStartTimeSeconds;
@@ -2229,110 +2271,131 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           @com.google.api.client.util.Key("interval.endTime.day")
           private java.lang.Integer intervalEndTimeDay;
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month.
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
            */
           public java.lang.Integer getIntervalEndTimeDay() {
             return intervalEndTimeDay;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           public Search setIntervalEndTimeDay(java.lang.Integer intervalEndTimeDay) {
             this.intervalEndTimeDay = intervalEndTimeDay;
             return this;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           @com.google.api.client.util.Key("interval.endTime.hours")
           private java.lang.Integer intervalEndTimeHours;
 
-          /** Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the
-         value "24:00:00" for scenarios like business closing time.
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
            */
           public java.lang.Integer getIntervalEndTimeHours() {
             return intervalEndTimeHours;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           public Search setIntervalEndTimeHours(java.lang.Integer intervalEndTimeHours) {
             this.intervalEndTimeHours = intervalEndTimeHours;
             return this;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           @com.google.api.client.util.Key("interval.endTime.minutes")
           private java.lang.Integer intervalEndTimeMinutes;
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59.
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
            */
           public java.lang.Integer getIntervalEndTimeMinutes() {
             return intervalEndTimeMinutes;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           public Search setIntervalEndTimeMinutes(java.lang.Integer intervalEndTimeMinutes) {
             this.intervalEndTimeMinutes = intervalEndTimeMinutes;
             return this;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           @com.google.api.client.util.Key("interval.endTime.month")
           private java.lang.Integer intervalEndTimeMonth;
 
-          /** Required. Month of year. Must be from 1 to 12.
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
            */
           public java.lang.Integer getIntervalEndTimeMonth() {
             return intervalEndTimeMonth;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           public Search setIntervalEndTimeMonth(java.lang.Integer intervalEndTimeMonth) {
             this.intervalEndTimeMonth = intervalEndTimeMonth;
             return this;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           @com.google.api.client.util.Key("interval.endTime.nanos")
           private java.lang.Integer intervalEndTimeNanos;
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
            */
           public java.lang.Integer getIntervalEndTimeNanos() {
             return intervalEndTimeNanos;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           public Search setIntervalEndTimeNanos(java.lang.Integer intervalEndTimeNanos) {
             this.intervalEndTimeNanos = intervalEndTimeNanos;
             return this;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           @com.google.api.client.util.Key("interval.endTime.seconds")
           private java.lang.Integer intervalEndTimeSeconds;
 
-          /** Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value
-         60 if it allows leap-seconds.
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
            */
           public java.lang.Integer getIntervalEndTimeSeconds() {
             return intervalEndTimeSeconds;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           public Search setIntervalEndTimeSeconds(java.lang.Integer intervalEndTimeSeconds) {
             this.intervalEndTimeSeconds = intervalEndTimeSeconds;
@@ -2416,110 +2479,131 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           @com.google.api.client.util.Key("interval.startTime.day")
           private java.lang.Integer intervalStartTimeDay;
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month.
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
            */
           public java.lang.Integer getIntervalStartTimeDay() {
             return intervalStartTimeDay;
           }
 
-          /** Required. Day of month. Must be from 1 to 31 and valid for the year and month. */
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
           public Search setIntervalStartTimeDay(java.lang.Integer intervalStartTimeDay) {
             this.intervalStartTimeDay = intervalStartTimeDay;
             return this;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           @com.google.api.client.util.Key("interval.startTime.hours")
           private java.lang.Integer intervalStartTimeHours;
 
-          /** Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the
-         value "24:00:00" for scenarios like business closing time.
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
            */
           public java.lang.Integer getIntervalStartTimeHours() {
             return intervalStartTimeHours;
           }
 
           /**
-           * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
-           * allow the value "24:00:00" for scenarios like business closing time.
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
            */
           public Search setIntervalStartTimeHours(java.lang.Integer intervalStartTimeHours) {
             this.intervalStartTimeHours = intervalStartTimeHours;
             return this;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           @com.google.api.client.util.Key("interval.startTime.minutes")
           private java.lang.Integer intervalStartTimeMinutes;
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59.
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
            */
           public java.lang.Integer getIntervalStartTimeMinutes() {
             return intervalStartTimeMinutes;
           }
 
-          /** Required. Minutes of hour of day. Must be from 0 to 59. */
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
           public Search setIntervalStartTimeMinutes(java.lang.Integer intervalStartTimeMinutes) {
             this.intervalStartTimeMinutes = intervalStartTimeMinutes;
             return this;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           @com.google.api.client.util.Key("interval.startTime.month")
           private java.lang.Integer intervalStartTimeMonth;
 
-          /** Required. Month of year. Must be from 1 to 12.
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
            */
           public java.lang.Integer getIntervalStartTimeMonth() {
             return intervalStartTimeMonth;
           }
 
-          /** Required. Month of year. Must be from 1 to 12. */
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
           public Search setIntervalStartTimeMonth(java.lang.Integer intervalStartTimeMonth) {
             this.intervalStartTimeMonth = intervalStartTimeMonth;
             return this;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           @com.google.api.client.util.Key("interval.startTime.nanos")
           private java.lang.Integer intervalStartTimeNanos;
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
            */
           public java.lang.Integer getIntervalStartTimeNanos() {
             return intervalStartTimeNanos;
           }
 
-          /** Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. */
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
           public Search setIntervalStartTimeNanos(java.lang.Integer intervalStartTimeNanos) {
             this.intervalStartTimeNanos = intervalStartTimeNanos;
             return this;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           @com.google.api.client.util.Key("interval.startTime.seconds")
           private java.lang.Integer intervalStartTimeSeconds;
 
-          /** Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value
-         60 if it allows leap-seconds.
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
            */
           public java.lang.Integer getIntervalStartTimeSeconds() {
             return intervalStartTimeSeconds;
           }
 
           /**
-           * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may
-           * allow the value 60 if it allows leap-seconds.
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
            */
           public Search setIntervalStartTimeSeconds(java.lang.Integer intervalStartTimeSeconds) {
             this.intervalStartTimeSeconds = intervalStartTimeSeconds;

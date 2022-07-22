@@ -22,9 +22,9 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
  * calendar day with a particular offset from UTC. * When time_zone is set and utc_offset is unset:
  * a civil time on a calendar day in a particular time zone. * When neither time_zone nor utc_offset
  * is set: a civil time on a calendar day in local time. The date is relative to the Proleptic
- * Gregorian Calendar. If year is 0, the DateTime is considered not to have a specific year. month
- * and day must have valid, non-zero values. This type may also be used to represent a physical time
- * if all the date and time fields are set and either case of the `time_offset` oneof is set.
+ * Gregorian Calendar. If year, month, or day are 0, the DateTime is considered not to have a
+ * specific year, month, or day respectively. This type may also be used to represent a physical
+ * time if all the date and time fields are set and either case of the `time_offset` oneof is set.
  * Consider using `Timestamp` message for physical time instead. If your use case also would like to
  * store the user's timezone, that can be done in another field. This type is more flexible than
  * some applications may want. Make sure to document and validate your application's limitations.
@@ -41,44 +41,45 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
 public final class GoogleTypeDateTime extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Day of month. Must be from 1 to 31 and valid for the year and month.
+   * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+   * specifying a datetime without a day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer day;
 
   /**
-   * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow
-   * the value "24:00:00" for scenarios like business closing time.
+   * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An
+   * API may choose to allow the value "24:00:00" for scenarios like business closing time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer hours;
 
   /**
-   * Required. Minutes of hour of day. Must be from 0 to 59.
+   * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minutes;
 
   /**
-   * Required. Month of year. Must be from 1 to 12.
+   * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer month;
 
   /**
-   * Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+   * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer nanos;
 
   /**
-   * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the
-   * value 60 if it allows leap-seconds.
+   * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API
+   * may allow the value 60 if it allows leap-seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +108,8 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   private java.lang.Integer year;
 
   /**
-   * Required. Day of month. Must be from 1 to 31 and valid for the year and month.
+   * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+   * specifying a datetime without a day.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDay() {
@@ -115,7 +117,8 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Day of month. Must be from 1 to 31 and valid for the year and month.
+   * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+   * specifying a datetime without a day.
    * @param day day or {@code null} for none
    */
   public GoogleTypeDateTime setDay(java.lang.Integer day) {
@@ -124,8 +127,8 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow
-   * the value "24:00:00" for scenarios like business closing time.
+   * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An
+   * API may choose to allow the value "24:00:00" for scenarios like business closing time.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHours() {
@@ -133,8 +136,8 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow
-   * the value "24:00:00" for scenarios like business closing time.
+   * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An
+   * API may choose to allow the value "24:00:00" for scenarios like business closing time.
    * @param hours hours or {@code null} for none
    */
   public GoogleTypeDateTime setHours(java.lang.Integer hours) {
@@ -143,7 +146,7 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Minutes of hour of day. Must be from 0 to 59.
+   * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinutes() {
@@ -151,7 +154,7 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Minutes of hour of day. Must be from 0 to 59.
+   * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
    * @param minutes minutes or {@code null} for none
    */
   public GoogleTypeDateTime setMinutes(java.lang.Integer minutes) {
@@ -160,7 +163,7 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Month of year. Must be from 1 to 12.
+   * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMonth() {
@@ -168,7 +171,7 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Month of year. Must be from 1 to 12.
+   * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
    * @param month month or {@code null} for none
    */
   public GoogleTypeDateTime setMonth(java.lang.Integer month) {
@@ -177,7 +180,7 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+   * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNanos() {
@@ -185,7 +188,7 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+   * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
    * @param nanos nanos or {@code null} for none
    */
   public GoogleTypeDateTime setNanos(java.lang.Integer nanos) {
@@ -194,8 +197,8 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the
-   * value 60 if it allows leap-seconds.
+   * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API
+   * may allow the value 60 if it allows leap-seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSeconds() {
@@ -203,8 +206,8 @@ public final class GoogleTypeDateTime extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the
-   * value 60 if it allows leap-seconds.
+   * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API
+   * may allow the value 60 if it allows leap-seconds.
    * @param seconds seconds or {@code null} for none
    */
   public GoogleTypeDateTime setSeconds(java.lang.Integer seconds) {

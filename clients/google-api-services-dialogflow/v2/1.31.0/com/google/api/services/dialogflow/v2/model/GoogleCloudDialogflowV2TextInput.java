@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowV2TextInput extends com.google.api.clien
 
   /**
    * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters.
+   * 256 characters for virtual agent interactions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowV2TextInput extends com.google.api.clien
 
   /**
    * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters.
+   * 256 characters for virtual agent interactions.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -82,7 +82,7 @@ public final class GoogleCloudDialogflowV2TextInput extends com.google.api.clien
 
   /**
    * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters.
+   * 256 characters for virtual agent interactions.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextInput setText(java.lang.String text) {

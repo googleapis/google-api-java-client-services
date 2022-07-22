@@ -36,22 +36,22 @@ public final class NotOutdoorsFailureDetails extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String time;
+  private String startTime;
 
   /**
    * Relative time (from the start of the video stream) when an indoor frame was found.
    * @return value or {@code null} for none
    */
-  public String getTime() {
-    return time;
+  public String getStartTime() {
+    return startTime;
   }
 
   /**
    * Relative time (from the start of the video stream) when an indoor frame was found.
-   * @param time time or {@code null} for none
+   * @param startTime startTime or {@code null} for none
    */
-  public NotOutdoorsFailureDetails setTime(String time) {
-    this.time = time;
+  public NotOutdoorsFailureDetails setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

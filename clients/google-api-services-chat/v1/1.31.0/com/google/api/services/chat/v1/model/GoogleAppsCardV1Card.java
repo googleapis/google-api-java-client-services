@@ -56,7 +56,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.util.List<GoogleAppsCardV1CardAction> cardActions;
 
   /**
-   * The display style for `peekCardHeader`.
+   * The `peekCardHeader` display style for. Not supported by Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards.
+   * can navigate forward between the homepage cards and the contextual cards. Not supported by
+   * Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The display style for `peekCardHeader`.
+   * The `peekCardHeader` display style for. Not supported by Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayStyle() {
@@ -134,7 +135,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The display style for `peekCardHeader`.
+   * The `peekCardHeader` display style for. Not supported by Google Chat apps.
    * @param displayStyle displayStyle or {@code null} for none
    */
   public GoogleAppsCardV1Card setDisplayStyle(java.lang.String displayStyle) {
@@ -195,7 +196,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards.
+   * can navigate forward between the homepage cards and the contextual cards. Not supported by
+   * Google Chat apps.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader getPeekCardHeader() {
@@ -204,7 +206,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards.
+   * can navigate forward between the homepage cards and the contextual cards. Not supported by
+   * Google Chat apps.
    * @param peekCardHeader peekCardHeader or {@code null} for none
    */
   public GoogleAppsCardV1Card setPeekCardHeader(GoogleAppsCardV1CardHeader peekCardHeader) {

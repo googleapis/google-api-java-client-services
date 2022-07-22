@@ -57,6 +57,14 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. User's role within a Chat space, which determines their permitted actions in the
+   * space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String role;
+
+  /**
    * Output only. State of the membership.
    * The value may be {@code null}.
    */
@@ -121,6 +129,25 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   public Membership setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. User's role within a Chat space, which determines their permitted actions in the
+   * space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRole() {
+    return role;
+  }
+
+  /**
+   * Output only. User's role within a Chat space, which determines their permitted actions in the
+   * space.
+   * @param role role or {@code null} for none
+   */
+  public Membership setRole(java.lang.String role) {
+    this.role = role;
     return this;
   }
 

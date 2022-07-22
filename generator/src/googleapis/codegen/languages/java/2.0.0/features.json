@@ -2,7 +2,7 @@
   "language": "java",
   "description": "Java libraries for Google APIs.",
   "generator": "java1_15",
-  "releaseVersion": "1.32.1",
+  "releaseVersion": "2.0.0",
   "baseClientLibrary": "2.0.0",
   "oauthClientLibrary": "1.31.2",
   "httpClientLibrary": "1.41.7",

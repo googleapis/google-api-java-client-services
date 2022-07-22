@@ -61,7 +61,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * `persist_values` is set to `false`, it is strongly recommended that the card use
    * [LoadIndicator.SPINNER](workspace/add-ons/reference/rpc/google.apps.card.v1#loadindicator) for
    * all actions, as this locks the UI to ensure no changes are made by the user while the action is
-   * being processed.
+   * being processed. Not supported by Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +128,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * `persist_values` is set to `false`, it is strongly recommended that the card use
    * [LoadIndicator.SPINNER](workspace/add-ons/reference/rpc/google.apps.card.v1#loadindicator) for
    * all actions, as this locks the UI to ensure no changes are made by the user while the action is
-   * being processed.
+   * being processed. Not supported by Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPersistValues() {
@@ -145,7 +145,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * `persist_values` is set to `false`, it is strongly recommended that the card use
    * [LoadIndicator.SPINNER](workspace/add-ons/reference/rpc/google.apps.card.v1#loadindicator) for
    * all actions, as this locks the UI to ensure no changes are made by the user while the action is
-   * being processed.
+   * being processed. Not supported by Google Chat apps.
    * @param persistValues persistValues or {@code null} for none
    */
   public GoogleAppsCardV1Action setPersistValues(java.lang.Boolean persistValues) {

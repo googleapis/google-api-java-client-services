@@ -30,17 +30,6 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * Represents the platform specific uri/intent to open on each client. For example: A
-   * companion_url will open in a companion window on the web. An iOS URL and android intent will
-   * open in the corresponding hosting apps. If these platform specific URLs can't be handled
-   * correctly, i.e. if the companion isn't supported on web and the hosting apps aren't available
-   * on the mobile platforms then the `uri` will open in a new browser window on all the platforms.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAppsCardV1AppUri appUri;
-
-  /**
    * Whether the client forgets about a link after opening it, or observes it until the window
    * closes. Not supported by Chat apps.
    * The value may be {@code null}.
@@ -61,31 +50,6 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
-
-  /**
-   * Represents the platform specific uri/intent to open on each client. For example: A
-   * companion_url will open in a companion window on the web. An iOS URL and android intent will
-   * open in the corresponding hosting apps. If these platform specific URLs can't be handled
-   * correctly, i.e. if the companion isn't supported on web and the hosting apps aren't available
-   * on the mobile platforms then the `uri` will open in a new browser window on all the platforms.
-   * @return value or {@code null} for none
-   */
-  public GoogleAppsCardV1AppUri getAppUri() {
-    return appUri;
-  }
-
-  /**
-   * Represents the platform specific uri/intent to open on each client. For example: A
-   * companion_url will open in a companion window on the web. An iOS URL and android intent will
-   * open in the corresponding hosting apps. If these platform specific URLs can't be handled
-   * correctly, i.e. if the companion isn't supported on web and the hosting apps aren't available
-   * on the mobile platforms then the `uri` will open in a new browser window on all the platforms.
-   * @param appUri appUri or {@code null} for none
-   */
-  public GoogleAppsCardV1OpenLink setAppUri(GoogleAppsCardV1AppUri appUri) {
-    this.appUri = appUri;
-    return this;
-  }
 
   /**
    * Whether the client forgets about a link after opening it, or observes it until the window

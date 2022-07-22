@@ -43,7 +43,7 @@ public final class GpsDataGapFailureDetails extends com.google.api.client.json.G
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String gapTime;
+  private String gapStartTime;
 
   /**
    * The duration of the gap in GPS data that was found.
@@ -66,16 +66,16 @@ public final class GpsDataGapFailureDetails extends com.google.api.client.json.G
    * Relative time (from the start of the video stream) when the gap started.
    * @return value or {@code null} for none
    */
-  public String getGapTime() {
-    return gapTime;
+  public String getGapStartTime() {
+    return gapStartTime;
   }
 
   /**
    * Relative time (from the start of the video stream) when the gap started.
-   * @param gapTime gapTime or {@code null} for none
+   * @param gapStartTime gapStartTime or {@code null} for none
    */
-  public GpsDataGapFailureDetails setGapTime(String gapTime) {
-    this.gapTime = gapTime;
+  public GpsDataGapFailureDetails setGapStartTime(String gapStartTime) {
+    this.gapStartTime = gapStartTime;
     return this;
   }
 

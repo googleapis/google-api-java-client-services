@@ -51,6 +51,21 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   private OracleRdbms includeObjects;
 
   /**
+   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
+   * to 0), the system's default value will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxConcurrentCdcTasks;
+
+  /**
+   * Stream large object values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StreamLargeObjects streamLargeObjects;
+
+  /**
    * Drop large object values.
    * @return value or {@code null} for none
    */
@@ -98,6 +113,42 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
    */
   public OracleSourceConfig setIncludeObjects(OracleRdbms includeObjects) {
     this.includeObjects = includeObjects;
+    return this;
+  }
+
+  /**
+   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
+   * to 0), the system's default value will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxConcurrentCdcTasks() {
+    return maxConcurrentCdcTasks;
+  }
+
+  /**
+   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
+   * to 0), the system's default value will be used.
+   * @param maxConcurrentCdcTasks maxConcurrentCdcTasks or {@code null} for none
+   */
+  public OracleSourceConfig setMaxConcurrentCdcTasks(java.lang.Integer maxConcurrentCdcTasks) {
+    this.maxConcurrentCdcTasks = maxConcurrentCdcTasks;
+    return this;
+  }
+
+  /**
+   * Stream large object values.
+   * @return value or {@code null} for none
+   */
+  public StreamLargeObjects getStreamLargeObjects() {
+    return streamLargeObjects;
+  }
+
+  /**
+   * Stream large object values.
+   * @param streamLargeObjects streamLargeObjects or {@code null} for none
+   */
+  public OracleSourceConfig setStreamLargeObjects(StreamLargeObjects streamLargeObjects) {
+    this.streamLargeObjects = streamLargeObjects;
     return this;
   }
 

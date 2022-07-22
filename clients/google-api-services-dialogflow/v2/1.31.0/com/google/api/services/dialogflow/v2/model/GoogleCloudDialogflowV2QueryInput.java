@@ -46,7 +46,8 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   private GoogleCloudDialogflowV2EventInput event;
 
   /**
-   * The natural language text to be processed.
+   * The natural language text to be processed. Text length must not exceed 256 character for
+   * virtual agent interactions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   }
 
   /**
-   * The natural language text to be processed.
+   * The natural language text to be processed. Text length must not exceed 256 character for
+   * virtual agent interactions.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextInput getText() {
@@ -95,7 +97,8 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   }
 
   /**
-   * The natural language text to be processed.
+   * The natural language text to be processed. Text length must not exceed 256 character for
+   * virtual agent interactions.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryInput setText(GoogleCloudDialogflowV2TextInput text) {

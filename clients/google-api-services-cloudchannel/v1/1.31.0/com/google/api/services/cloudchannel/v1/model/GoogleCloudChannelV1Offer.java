@@ -38,6 +38,13 @@ public final class GoogleCloudChannelV1Offer extends com.google.api.client.json.
   private GoogleCloudChannelV1Constraints constraints;
 
   /**
+   * The deal code of the offer to get a special promotion or discount.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dealCode;
+
+  /**
    * Output only. End of the Offer validity time.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class GoogleCloudChannelV1Offer extends com.google.api.client.json.
    */
   public GoogleCloudChannelV1Offer setConstraints(GoogleCloudChannelV1Constraints constraints) {
     this.constraints = constraints;
+    return this;
+  }
+
+  /**
+   * The deal code of the offer to get a special promotion or discount.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDealCode() {
+    return dealCode;
+  }
+
+  /**
+   * The deal code of the offer to get a special promotion or discount.
+   * @param dealCode dealCode or {@code null} for none
+   */
+  public GoogleCloudChannelV1Offer setDealCode(java.lang.String dealCode) {
+    this.dealCode = dealCode;
     return this;
   }
 

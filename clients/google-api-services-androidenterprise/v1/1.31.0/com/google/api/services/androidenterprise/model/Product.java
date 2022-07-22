@@ -34,6 +34,13 @@ package com.google.api.services.androidenterprise.model;
 public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
+   * The app restriction schema
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppRestrictionsSchema appRestrictionsSchema;
+
+  /**
    * The tracks visible to the enterprise.
    * The value may be {@code null}.
    */
@@ -215,6 +222,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String workDetailsUrl;
+
+  /**
+   * The app restriction schema
+   * @return value or {@code null} for none
+   */
+  public AppRestrictionsSchema getAppRestrictionsSchema() {
+    return appRestrictionsSchema;
+  }
+
+  /**
+   * The app restriction schema
+   * @param appRestrictionsSchema appRestrictionsSchema or {@code null} for none
+   */
+  public Product setAppRestrictionsSchema(AppRestrictionsSchema appRestrictionsSchema) {
+    this.appRestrictionsSchema = appRestrictionsSchema;
+    return this;
+  }
 
   /**
    * The tracks visible to the enterprise.

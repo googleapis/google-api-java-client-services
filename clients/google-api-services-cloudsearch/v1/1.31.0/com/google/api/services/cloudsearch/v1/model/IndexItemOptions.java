@@ -30,16 +30,16 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class IndexItemOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies if the index request should allow gsuite principals that do not exist or are deleted
-   * in the index request.
+   * Specifies if the index request should allow Google Workspace principals that do not exist or
+   * are deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowUnknownGsuitePrincipals;
 
   /**
-   * Specifies if the index request should allow gsuite principals that do not exist or are deleted
-   * in the index request.
+   * Specifies if the index request should allow Google Workspace principals that do not exist or
+   * are deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowUnknownGsuitePrincipals() {
@@ -47,8 +47,8 @@ public final class IndexItemOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies if the index request should allow gsuite principals that do not exist or are deleted
-   * in the index request.
+   * Specifies if the index request should allow Google Workspace principals that do not exist or
+   * are deleted.
    * @param allowUnknownGsuitePrincipals allowUnknownGsuitePrincipals or {@code null} for none
    */
   public IndexItemOptions setAllowUnknownGsuitePrincipals(java.lang.Boolean allowUnknownGsuitePrincipals) {

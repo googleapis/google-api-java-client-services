@@ -44,6 +44,14 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   private MysqlRdbms includeObjects;
 
   /**
+   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
+   * to 0), the system's default value will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxConcurrentCdcTasks;
+
+  /**
    * MySQL objects to exclude from the stream.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
    */
   public MysqlSourceConfig setIncludeObjects(MysqlRdbms includeObjects) {
     this.includeObjects = includeObjects;
+    return this;
+  }
+
+  /**
+   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
+   * to 0), the system's default value will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxConcurrentCdcTasks() {
+    return maxConcurrentCdcTasks;
+  }
+
+  /**
+   * Maximum number of concurrent CDC tasks. The number should be non negative. If not set (or set
+   * to 0), the system's default value will be used.
+   * @param maxConcurrentCdcTasks maxConcurrentCdcTasks or {@code null} for none
+   */
+  public MysqlSourceConfig setMaxConcurrentCdcTasks(java.lang.Integer maxConcurrentCdcTasks) {
+    this.maxConcurrentCdcTasks = maxConcurrentCdcTasks;
     return this;
   }
 

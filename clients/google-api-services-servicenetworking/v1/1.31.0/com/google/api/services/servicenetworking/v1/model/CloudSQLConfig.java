@@ -38,14 +38,14 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   private java.lang.String service;
 
   /**
-   * The name of network in Cloud SQL umbrella project.
+   * The name of the umbrella network in the Cloud SQL umbrella project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String umbrellaNetwork;
 
   /**
-   * The project number of Cloud SQL umbrella project.
+   * The project number of the Cloud SQL umbrella project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -69,7 +69,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of network in Cloud SQL umbrella project.
+   * The name of the umbrella network in the Cloud SQL umbrella project.
    * @return value or {@code null} for none
    */
   public java.lang.String getUmbrellaNetwork() {
@@ -77,7 +77,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of network in Cloud SQL umbrella project.
+   * The name of the umbrella network in the Cloud SQL umbrella project.
    * @param umbrellaNetwork umbrellaNetwork or {@code null} for none
    */
   public CloudSQLConfig setUmbrellaNetwork(java.lang.String umbrellaNetwork) {
@@ -86,7 +86,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The project number of Cloud SQL umbrella project.
+   * The project number of the Cloud SQL umbrella project.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUmbrellaProject() {
@@ -94,7 +94,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The project number of Cloud SQL umbrella project.
+   * The project number of the Cloud SQL umbrella project.
    * @param umbrellaProject umbrellaProject or {@code null} for none
    */
   public CloudSQLConfig setUmbrellaProject(java.lang.Long umbrellaProject) {

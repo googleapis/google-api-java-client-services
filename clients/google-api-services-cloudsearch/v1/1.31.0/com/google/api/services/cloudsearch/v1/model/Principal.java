@@ -38,7 +38,7 @@ public final class Principal extends com.google.api.client.json.GenericJson {
   private java.lang.String groupResourceName;
 
   /**
-   * This principal is a GSuite user, group or domain.
+   * This principal is a Google Workspace user, group or domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class Principal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This principal is a GSuite user, group or domain.
+   * This principal is a Google Workspace user, group or domain.
    * @return value or {@code null} for none
    */
   public GSuitePrincipal getGsuitePrincipal() {
@@ -80,7 +80,7 @@ public final class Principal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This principal is a GSuite user, group or domain.
+   * This principal is a Google Workspace user, group or domain.
    * @param gsuitePrincipal gsuitePrincipal or {@code null} for none
    */
   public Principal setGsuitePrincipal(GSuitePrincipal gsuitePrincipal) {

@@ -30,28 +30,28 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class GSuitePrincipal extends com.google.api.client.json.GenericJson {
 
   /**
-   * This principal represents all users of the G Suite domain of the customer.
+   * This principal represents all users of the Google Workspace domain of the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean gsuiteDomain;
 
   /**
-   * This principal references a G Suite group account
+   * This principal references a Google Workspace group name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gsuiteGroupEmail;
 
   /**
-   * This principal references a G Suite user account
+   * This principal references a Google Workspace user account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gsuiteUserEmail;
 
   /**
-   * This principal represents all users of the G Suite domain of the customer.
+   * This principal represents all users of the Google Workspace domain of the customer.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGsuiteDomain() {
@@ -59,7 +59,7 @@ public final class GSuitePrincipal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This principal represents all users of the G Suite domain of the customer.
+   * This principal represents all users of the Google Workspace domain of the customer.
    * @param gsuiteDomain gsuiteDomain or {@code null} for none
    */
   public GSuitePrincipal setGsuiteDomain(java.lang.Boolean gsuiteDomain) {
@@ -68,7 +68,7 @@ public final class GSuitePrincipal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This principal references a G Suite group account
+   * This principal references a Google Workspace group name.
    * @return value or {@code null} for none
    */
   public java.lang.String getGsuiteGroupEmail() {
@@ -76,7 +76,7 @@ public final class GSuitePrincipal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This principal references a G Suite group account
+   * This principal references a Google Workspace group name.
    * @param gsuiteGroupEmail gsuiteGroupEmail or {@code null} for none
    */
   public GSuitePrincipal setGsuiteGroupEmail(java.lang.String gsuiteGroupEmail) {
@@ -85,7 +85,7 @@ public final class GSuitePrincipal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This principal references a G Suite user account
+   * This principal references a Google Workspace user account.
    * @return value or {@code null} for none
    */
   public java.lang.String getGsuiteUserEmail() {
@@ -93,7 +93,7 @@ public final class GSuitePrincipal extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This principal references a G Suite user account
+   * This principal references a Google Workspace user account.
    * @param gsuiteUserEmail gsuiteUserEmail or {@code null} for none
    */
   public GSuitePrincipal setGsuiteUserEmail(java.lang.String gsuiteUserEmail) {

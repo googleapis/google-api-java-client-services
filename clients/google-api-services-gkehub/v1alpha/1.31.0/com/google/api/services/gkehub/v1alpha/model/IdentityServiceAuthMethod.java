@@ -38,6 +38,13 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
   private IdentityServiceAzureADConfig azureadConfig;
 
   /**
+   * GoogleConfig specific configuration
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceGoogleConfig googleConfig;
+
+  /**
    * Identifier for auth config.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
    */
   public IdentityServiceAuthMethod setAzureadConfig(IdentityServiceAzureADConfig azureadConfig) {
     this.azureadConfig = azureadConfig;
+    return this;
+  }
+
+  /**
+   * GoogleConfig specific configuration
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceGoogleConfig getGoogleConfig() {
+    return googleConfig;
+  }
+
+  /**
+   * GoogleConfig specific configuration
+   * @param googleConfig googleConfig or {@code null} for none
+   */
+  public IdentityServiceAuthMethod setGoogleConfig(IdentityServiceGoogleConfig googleConfig) {
+    this.googleConfig = googleConfig;
     return this;
   }
 

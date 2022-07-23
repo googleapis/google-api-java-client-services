@@ -38,14 +38,14 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   private java.lang.String clientId;
 
   /**
-   * Raw client secret will be passed to the GKE Hub CLH.
+   * Input only. Unencrypted AzureAD client secret will be passed to the GKE Hub CLH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientSecret;
 
   /**
-   * Encrypted AzureAD client secrets
+   * Output only. Encrypted AzureAD client secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   }
 
   /**
-   * Raw client secret will be passed to the GKE Hub CLH.
+   * Input only. Unencrypted AzureAD client secret will be passed to the GKE Hub CLH.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecret() {
@@ -94,7 +94,7 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   }
 
   /**
-   * Raw client secret will be passed to the GKE Hub CLH.
+   * Input only. Unencrypted AzureAD client secret will be passed to the GKE Hub CLH.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public IdentityServiceAzureADConfig setClientSecret(java.lang.String clientSecret) {
@@ -103,7 +103,7 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   }
 
   /**
-   * Encrypted AzureAD client secrets
+   * Output only. Encrypted AzureAD client secret.
    * @see #decodeEncryptedClientSecret()
    * @return value or {@code null} for none
    */
@@ -112,7 +112,7 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   }
 
   /**
-   * Encrypted AzureAD client secrets
+   * Output only. Encrypted AzureAD client secret.
    * @see #getEncryptedClientSecret()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -123,7 +123,7 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   }
 
   /**
-   * Encrypted AzureAD client secrets
+   * Output only. Encrypted AzureAD client secret.
    * @see #encodeEncryptedClientSecret()
    * @param encryptedClientSecret encryptedClientSecret or {@code null} for none
    */
@@ -133,7 +133,7 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   }
 
   /**
-   * Encrypted AzureAD client secrets
+   * Output only. Encrypted AzureAD client secret.
    * @see #setEncryptedClientSecret()
    *
    * <p>

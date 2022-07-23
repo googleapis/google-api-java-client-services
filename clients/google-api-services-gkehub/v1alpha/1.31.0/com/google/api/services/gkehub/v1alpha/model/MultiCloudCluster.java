@@ -41,7 +41,8 @@ public final class MultiCloudCluster extends com.google.api.client.json.GenericJ
    * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example:
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-
-   * cluster
+   * cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-
+   * west1-a/attachedClusters/my-cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class MultiCloudCluster extends com.google.api.client.json.GenericJ
    * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example:
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-
-   * cluster
+   * cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-
+   * west1-a/attachedClusters/my-cluster
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceLink() {
@@ -81,7 +83,8 @@ public final class MultiCloudCluster extends com.google.api.client.json.GenericJ
    * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example:
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-
-   * cluster
+   * cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-
+   * west1-a/attachedClusters/my-cluster
    * @param resourceLink resourceLink or {@code null} for none
    */
   public MultiCloudCluster setResourceLink(java.lang.String resourceLink) {

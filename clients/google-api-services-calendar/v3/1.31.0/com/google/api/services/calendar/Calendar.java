@@ -3434,7 +3434,8 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Returns an event.
+     * Returns an event based on its Google Calendar ID. To retrieve an event using its iCalendar ID,
+     * call the events.list method using the iCalUID parameter.
      *
      * Create a request for the method "events.get".
      *
@@ -3457,7 +3458,8 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "calendars/{calendarId}/events/{eventId}";
 
       /**
-       * Returns an event.
+       * Returns an event based on its Google Calendar ID. To retrieve an event using its iCalendar ID,
+       * call the events.list method using the iCalUID parameter.
        *
        * Create a request for the method "events.get".
        *
@@ -4517,17 +4519,24 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Specifies event ID in the iCalendar format to be included in the response. Optional. */
+      /**
+       * Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use
+       * this if you want to search for an event by its iCalendar ID.
+       */
       @com.google.api.client.util.Key
       private java.lang.String iCalUID;
 
-      /** Specifies event ID in the iCalendar format to be included in the response. Optional.
+      /** Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use this if
+     you want to search for an event by its iCalendar ID.
        */
       public java.lang.String getICalUID() {
         return iCalUID;
       }
 
-      /** Specifies event ID in the iCalendar format to be included in the response. Optional. */
+      /**
+       * Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use
+       * this if you want to search for an event by its iCalendar ID.
+       */
       public List setICalUID(java.lang.String iCalUID) {
         this.iCalUID = iCalUID;
         return this;
@@ -5986,17 +5995,24 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Specifies event ID in the iCalendar format to be included in the response. Optional. */
+      /**
+       * Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use
+       * this if you want to search for an event by its iCalendar ID.
+       */
       @com.google.api.client.util.Key
       private java.lang.String iCalUID;
 
-      /** Specifies event ID in the iCalendar format to be included in the response. Optional.
+      /** Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use this if
+     you want to search for an event by its iCalendar ID.
        */
       public java.lang.String getICalUID() {
         return iCalUID;
       }
 
-      /** Specifies event ID in the iCalendar format to be included in the response. Optional. */
+      /**
+       * Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use
+       * this if you want to search for an event by its iCalendar ID.
+       */
       public Watch setICalUID(java.lang.String iCalUID) {
         this.iCalUID = iCalUID;
         return this;

@@ -38,11 +38,30 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class FirebaseProject extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set of user-defined annotations for the FirebaseProject as per
+   * [AIP-128](https://google.aip.dev/128#annotations). These annotations are intended solely for
+   * developers and client-side tools Firebase services will not mutate this annotation set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * The user-assigned display name of the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update requests to ensure the client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154#declarative-friendly-resources). This etag is strongly
+   * validated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
 
   /**
    * The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER
@@ -91,6 +110,27 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.String state;
 
   /**
+   * Set of user-defined annotations for the FirebaseProject as per
+   * [AIP-128](https://google.aip.dev/128#annotations). These annotations are intended solely for
+   * developers and client-side tools Firebase services will not mutate this annotation set.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Set of user-defined annotations for the FirebaseProject as per
+   * [AIP-128](https://google.aip.dev/128#annotations). These annotations are intended solely for
+   * developers and client-side tools Firebase services will not mutate this annotation set.
+   * @param annotations annotations or {@code null} for none
+   */
+  public FirebaseProject setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
+
+  /**
    * The user-assigned display name of the Project.
    * @return value or {@code null} for none
    */
@@ -104,6 +144,29 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
    */
   public FirebaseProject setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update requests to ensure the client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154#declarative-friendly-resources). This etag is strongly
+   * validated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update requests to ensure the client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154#declarative-friendly-resources). This etag is strongly
+   * validated.
+   * @param etag etag or {@code null} for none
+   */
+  public FirebaseProject setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

@@ -68,12 +68,14 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * range](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
    * when using PRIVATE_SERVICE_ACCESS connect mode. When the name of an allocated IP address range
    * is specified, it must be one of the ranges associated with the private service access
-   * connection. When specified as a direct CIDR value, it must be a /29 CIDR block for Basic tier
-   * or a /24 CIDR block for High Scale or Enterprise tier in one of the [internal IP address
+   * connection. When specified as a direct CIDR value, it must be a /29 CIDR block for Basic tier,
+   * a /24 CIDR block for High Scale tier, or a /26 CIDR block for Enterprise tier in one of the
+   * [internal IP address
    * ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies
-   * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or
-   * 192.168.0.0/24. The range you specify can't overlap with either existing subnets or assigned IP
-   * address ranges for other Cloud Filestore instances in the selected VPC network.
+   * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29, 192.168.0.0/24,
+   * or 192.168.0.0/26, respectively. The range you specify can't overlap with either existing
+   * subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC
+   * network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,12 +165,14 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * range](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
    * when using PRIVATE_SERVICE_ACCESS connect mode. When the name of an allocated IP address range
    * is specified, it must be one of the ranges associated with the private service access
-   * connection. When specified as a direct CIDR value, it must be a /29 CIDR block for Basic tier
-   * or a /24 CIDR block for High Scale or Enterprise tier in one of the [internal IP address
+   * connection. When specified as a direct CIDR value, it must be a /29 CIDR block for Basic tier,
+   * a /24 CIDR block for High Scale tier, or a /26 CIDR block for Enterprise tier in one of the
+   * [internal IP address
    * ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies
-   * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or
-   * 192.168.0.0/24. The range you specify can't overlap with either existing subnets or assigned IP
-   * address ranges for other Cloud Filestore instances in the selected VPC network.
+   * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29, 192.168.0.0/24,
+   * or 192.168.0.0/26, respectively. The range you specify can't overlap with either existing
+   * subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC
+   * network.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservedIpRange() {
@@ -181,12 +185,14 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * range](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
    * when using PRIVATE_SERVICE_ACCESS connect mode. When the name of an allocated IP address range
    * is specified, it must be one of the ranges associated with the private service access
-   * connection. When specified as a direct CIDR value, it must be a /29 CIDR block for Basic tier
-   * or a /24 CIDR block for High Scale or Enterprise tier in one of the [internal IP address
+   * connection. When specified as a direct CIDR value, it must be a /29 CIDR block for Basic tier,
+   * a /24 CIDR block for High Scale tier, or a /26 CIDR block for Enterprise tier in one of the
+   * [internal IP address
    * ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies
-   * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or
-   * 192.168.0.0/24. The range you specify can't overlap with either existing subnets or assigned IP
-   * address ranges for other Cloud Filestore instances in the selected VPC network.
+   * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29, 192.168.0.0/24,
+   * or 192.168.0.0/26, respectively. The range you specify can't overlap with either existing
+   * subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC
+   * network.
    * @param reservedIpRange reservedIpRange or {@code null} for none
    */
   public NetworkConfig setReservedIpRange(java.lang.String reservedIpRange) {

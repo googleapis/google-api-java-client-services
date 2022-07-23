@@ -53,17 +53,6 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The name for the fleet. The name must meet the following constraints: + The name of a fleet
-   * should be unique within the organization; + It must consist of lower case alphanumeric
-   * characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names
-   * must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb
-   * （Punycode form for "生产环境")
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fleetName;
-
-  /**
    * Output only. The full, unique resource name of this fleet in the format of
    * `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one
    * fleet resource, named "default".
@@ -71,6 +60,13 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. State of the namespace resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetLifecycleState state;
 
   /**
    * Output only. Google-generated UUID for this resource. This is unique across all Fleet
@@ -144,31 +140,6 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name for the fleet. The name must meet the following constraints: + The name of a fleet
-   * should be unique within the organization; + It must consist of lower case alphanumeric
-   * characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names
-   * must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb
-   * （Punycode form for "生产环境")
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFleetName() {
-    return fleetName;
-  }
-
-  /**
-   * The name for the fleet. The name must meet the following constraints: + The name of a fleet
-   * should be unique within the organization; + It must consist of lower case alphanumeric
-   * characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names
-   * must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb
-   * （Punycode form for "生产环境")
-   * @param fleetName fleetName or {@code null} for none
-   */
-  public Fleet setFleetName(java.lang.String fleetName) {
-    this.fleetName = fleetName;
-    return this;
-  }
-
-  /**
    * Output only. The full, unique resource name of this fleet in the format of
    * `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one
    * fleet resource, named "default".
@@ -186,6 +157,23 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
    */
   public Fleet setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. State of the namespace resource.
+   * @return value or {@code null} for none
+   */
+  public FleetLifecycleState getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the namespace resource.
+   * @param state state or {@code null} for none
+   */
+  public Fleet setState(FleetLifecycleState state) {
+    this.state = state;
     return this;
   }
 

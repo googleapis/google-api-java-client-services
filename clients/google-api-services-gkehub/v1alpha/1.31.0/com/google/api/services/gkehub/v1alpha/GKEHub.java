@@ -2303,7 +2303,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           return result;
         }
 
-        public class Create extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Fleet> {
+        public class Create extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
 
           private static final String REST_PATH = "v1alpha/{+parent}/fleets";
 
@@ -2326,7 +2326,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * @since 1.13
            */
           protected Create(java.lang.String parent, com.google.api.services.gkehub.v1alpha.model.Fleet content) {
-            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Fleet.class);
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Operation.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2440,7 +2440,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           return result;
         }
 
-        public class Delete extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Empty> {
+        public class Delete extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
 
           private static final String REST_PATH = "v1alpha/{+name}";
 
@@ -2461,7 +2461,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(GKEHub.this, "DELETE", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.Empty.class);
+            super(GKEHub.this, "DELETE", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2908,7 +2908,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           return result;
         }
 
-        public class Patch extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Fleet> {
+        public class Patch extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
 
           private static final String REST_PATH = "v1alpha/{+name}";
 
@@ -2932,7 +2932,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * @since 1.13
            */
           protected Patch(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.Fleet content) {
-            super(GKEHub.this, "PATCH", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Fleet.class);
+            super(GKEHub.this, "PATCH", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

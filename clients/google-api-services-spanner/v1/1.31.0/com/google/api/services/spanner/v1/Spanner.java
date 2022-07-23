@@ -7343,6 +7343,161 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               return (List) super.set(parameterName, value);
             }
           }
+          /**
+           * Returns permissions that the caller has on the specified database or backup resource. Attempting
+           * this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if the user
+           * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
+           * returns an empty set of permissions. Calling this method on a backup that does not exist will
+           * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
+           * instance.
+           *
+           * Create a request for the method "databaseRoles.testIamPermissions".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The Cloud Spanner resource for which permissions are being tested. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        database resources.
+           * @param content the {@link com.google.api.services.spanner.v1.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.spanner.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends SpannerRequest<com.google.api.services.spanner.v1.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/databaseRoles/[^/]+$");
+
+            /**
+             * Returns permissions that the caller has on the specified database or backup resource.
+             * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error
+             * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
+             * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
+             * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
+             * containing instance.
+             *
+             * Create a request for the method "databaseRoles.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The Cloud Spanner resource for which permissions are being tested. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        database resources.
+             * @param content the {@link com.google.api.services.spanner.v1.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.spanner.v1.model.TestIamPermissionsRequest content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/databaseRoles/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which permissions are being tested. The
+             * format is `projects//instances/` for instance resources and
+             * `projects//instances//databases/` for database resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The Cloud Spanner resource for which permissions are being tested. The format is
+           `projects//instances/` for instance resources and `projects//instances//databases/` for database
+           resources.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which permissions are being tested. The
+             * format is `projects//instances/` for instance resources and
+             * `projects//instances//databases/` for database resources.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/databaseRoles/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
 
         }
         /**

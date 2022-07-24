@@ -4576,14 +4576,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * The value returned by the last `ListHttpRoutesResponse` Indicates that this is a
-           * continuation of a prior `ListRouters` call, and that the system should return the next
-           * page of data.
+           * continuation of a prior `ListHttpRoutes` call, and that the system should return the
+           * next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** The value returned by the last `ListHttpRoutesResponse` Indicates that this is a continuation of a
-         prior `ListRouters` call, and that the system should return the next page of data.
+         prior `ListHttpRoutes` call, and that the system should return the next page of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -4591,8 +4591,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * The value returned by the last `ListHttpRoutesResponse` Indicates that this is a
-           * continuation of a prior `ListRouters` call, and that the system should return the next
-           * page of data.
+           * continuation of a prior `ListHttpRoutes` call, and that the system should return the
+           * next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -8490,14 +8490,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * The value returned by the last `ListTcpRoutesResponse` Indicates that this is a
-           * continuation of a prior `ListRouters` call, and that the system should return the next
-           * page of data.
+           * continuation of a prior `ListTcpRoutes` call, and that the system should return the
+           * next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** The value returned by the last `ListTcpRoutesResponse` Indicates that this is a continuation of a
-         prior `ListRouters` call, and that the system should return the next page of data.
+         prior `ListTcpRoutes` call, and that the system should return the next page of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -8505,8 +8505,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * The value returned by the last `ListTcpRoutesResponse` Indicates that this is a
-           * continuation of a prior `ListRouters` call, and that the system should return the next
-           * page of data.
+           * continuation of a prior `ListTcpRoutes` call, and that the system should return the
+           * next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -9311,14 +9311,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * The value returned by the last `ListTlsRoutesResponse` Indicates that this is a
-           * continuation of a prior `ListRouters` call, and that the system should return the next
-           * page of data.
+           * continuation of a prior `ListTlsRoutes` call, and that the system should return the
+           * next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** The value returned by the last `ListTlsRoutesResponse` Indicates that this is a continuation of a
-         prior `ListRouters` call, and that the system should return the next page of data.
+         prior `ListTlsRoutes` call, and that the system should return the next page of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -9326,8 +9326,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * The value returned by the last `ListTlsRoutesResponse` Indicates that this is a
-           * continuation of a prior `ListRouters` call, and that the system should return the next
-           * page of data.
+           * continuation of a prior `ListTlsRoutes` call, and that the system should return the
+           * next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

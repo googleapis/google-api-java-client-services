@@ -60,8 +60,9 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. One or more ports that the Gateway must receive traffic on. The proxy binds to the
-   * ports specified. Gateway listen on 0.0.0.0 on the ports specified below.
+   * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
+   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
+   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +94,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.lang.String serverTlsPolicy;
 
   /**
-   * Immutable. The type of the customer managed gateway.
+   * Immutable. The type of the customer managed gateway. This field is required. If unspecified, an
+   * error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +177,9 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. One or more ports that the Gateway must receive traffic on. The proxy binds to the
-   * ports specified. Gateway listen on 0.0.0.0 on the ports specified below.
+   * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
+   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
+   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getPorts() {
@@ -184,8 +187,9 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. One or more ports that the Gateway must receive traffic on. The proxy binds to the
-   * ports specified. Gateway listen on 0.0.0.0 on the ports specified below.
+   * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
+   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
+   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
    * @param ports ports or {@code null} for none
    */
   public Gateway setPorts(java.util.List<java.lang.Integer> ports) {
@@ -253,7 +257,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The type of the customer managed gateway.
+   * Immutable. The type of the customer managed gateway. This field is required. If unspecified, an
+   * error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -261,7 +266,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The type of the customer managed gateway.
+   * Immutable. The type of the customer managed gateway. This field is required. If unspecified, an
+   * error is returned.
    * @param type type or {@code null} for none
    */
   public Gateway setType(java.lang.String type) {

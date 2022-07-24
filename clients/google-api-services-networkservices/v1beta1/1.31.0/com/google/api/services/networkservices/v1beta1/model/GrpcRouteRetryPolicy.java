@@ -30,7 +30,7 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class GrpcRouteRetryPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the allowed number of retries. This number must be > 0. If not specpfied, default to
+   * Specifies the allowed number of retries. This number must be > 0. If not specified, default to
    * 1.
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class GrpcRouteRetryPolicy extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> retryConditions;
 
   /**
-   * Specifies the allowed number of retries. This number must be > 0. If not specpfied, default to
+   * Specifies the allowed number of retries. This number must be > 0. If not specified, default to
    * 1.
    * @return value or {@code null} for none
    */
@@ -61,7 +61,7 @@ public final class GrpcRouteRetryPolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the allowed number of retries. This number must be > 0. If not specpfied, default to
+   * Specifies the allowed number of retries. This number must be > 0. If not specified, default to
    * 1.
    * @param numRetries numRetries or {@code null} for none
    */

@@ -31,21 +31,21 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count of acknowledged violations in the Workload.
+   * Count of active Violations which are acknowledged in the Workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer acknowledgedViolationCount;
 
   /**
-   * Count of active Violations in the Workload.
+   * Count of active Violations which haven't been acknowledged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer activeViolationCount;
 
   /**
-   * Count of acknowledged violations in the Workload.
+   * Count of active Violations which are acknowledged in the Workload.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAcknowledgedViolationCount() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadCompliance
   }
 
   /**
-   * Count of acknowledged violations in the Workload.
+   * Count of active Violations which are acknowledged in the Workload.
    * @param acknowledgedViolationCount acknowledgedViolationCount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus setAcknowledgedViolationCount(java.lang.Integer acknowledgedViolationCount) {
@@ -62,7 +62,7 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadCompliance
   }
 
   /**
-   * Count of active Violations in the Workload.
+   * Count of active Violations which haven't been acknowledged.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getActiveViolationCount() {
@@ -70,7 +70,7 @@ public final class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadCompliance
   }
 
   /**
-   * Count of active Violations in the Workload.
+   * Count of active Violations which haven't been acknowledged.
    * @param activeViolationCount activeViolationCount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus setActiveViolationCount(java.lang.Integer activeViolationCount) {

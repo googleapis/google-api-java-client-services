@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata extends
   private java.util.List<GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus> individualImportStatuses;
 
   /**
+   * Total number of the documents that are qualified for importing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalDocumentCount;
+
+  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata extends
    */
   public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata setIndividualImportStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus> individualImportStatuses) {
     this.individualImportStatuses = individualImportStatuses;
+    return this;
+  }
+
+  /**
+   * Total number of the documents that are qualified for importing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalDocumentCount() {
+    return totalDocumentCount;
+  }
+
+  /**
+   * Total number of the documents that are qualified for importing.
+   * @param totalDocumentCount totalDocumentCount or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata setTotalDocumentCount(java.lang.Integer totalDocumentCount) {
+    this.totalDocumentCount = totalDocumentCount;
     return this;
   }
 

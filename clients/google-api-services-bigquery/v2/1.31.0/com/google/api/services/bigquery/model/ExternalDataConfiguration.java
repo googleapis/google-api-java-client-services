@@ -140,6 +140,14 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private ParquetOptions parquetOptions;
 
   /**
+   * [Optional] Provide a referencing file with the expected table schema. Enabled for the format:
+   * AVRO, PARQUET, ORC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String referenceFileSchemaUri;
+
+  /**
    * [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is
    * disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
    * The value may be {@code null}.
@@ -422,6 +430,25 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setParquetOptions(ParquetOptions parquetOptions) {
     this.parquetOptions = parquetOptions;
+    return this;
+  }
+
+  /**
+   * [Optional] Provide a referencing file with the expected table schema. Enabled for the format:
+   * AVRO, PARQUET, ORC.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReferenceFileSchemaUri() {
+    return referenceFileSchemaUri;
+  }
+
+  /**
+   * [Optional] Provide a referencing file with the expected table schema. Enabled for the format:
+   * AVRO, PARQUET, ORC.
+   * @param referenceFileSchemaUri referenceFileSchemaUri or {@code null} for none
+   */
+  public ExternalDataConfiguration setReferenceFileSchemaUri(java.lang.String referenceFileSchemaUri) {
+    this.referenceFileSchemaUri = referenceFileSchemaUri;
     return this;
   }
 

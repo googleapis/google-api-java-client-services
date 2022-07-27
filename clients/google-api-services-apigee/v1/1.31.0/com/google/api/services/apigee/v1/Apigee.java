@@ -464,8 +464,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
     /**
      * Delete an Apigee organization. For organizations with BillingType EVALUATION, an immediate
      * deletion is performed. For paid organizations, a soft-deletion is performed. The organization can
-     * be restored within the soft-deletion period - which can be controlled using the retention field
-     * in the request.
+     * be restored within the soft-deletion period which can be controlled using the retention field in
+     * the request.
      *
      * Create a request for the method "organizations.delete".
      *
@@ -492,7 +492,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Delete an Apigee organization. For organizations with BillingType EVALUATION, an immediate
        * deletion is performed. For paid organizations, a soft-deletion is performed. The organization
-       * can be restored within the soft-deletion period - which can be controlled using the retention
+       * can be restored within the soft-deletion period which can be controlled using the retention
        * field in the request.
        *
        * Create a request for the method "organizations.delete".
@@ -600,7 +600,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
 
       /**
-       * Optional. This setting is only applicable for organizations that are soft-deleted (i.e.
+       * Optional. This setting is applicable only for organizations that are soft-deleted (i.e.,
        * BillingType is not EVALUATION). It controls how long Organization data will be retained
        * after the initial delete operation completes. During this period, the Organization may be
        * restored to its last known state. After this period, the Organization will no longer be
@@ -609,17 +609,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       @com.google.api.client.util.Key
       private java.lang.String retention;
 
-      /** Optional. This setting is only applicable for organizations that are soft-deleted (i.e. BillingType
-     is not EVALUATION). It controls how long Organization data will be retained after the initial
-     delete operation completes. During this period, the Organization may be restored to its last known
-     state. After this period, the Organization will no longer be able to be restored.
+      /** Optional. This setting is applicable only for organizations that are soft-deleted (i.e.,
+     BillingType is not EVALUATION). It controls how long Organization data will be retained after the
+     initial delete operation completes. During this period, the Organization may be restored to its
+     last known state. After this period, the Organization will no longer be able to be restored.
        */
       public java.lang.String getRetention() {
         return retention;
       }
 
       /**
-       * Optional. This setting is only applicable for organizations that are soft-deleted (i.e.
+       * Optional. This setting is applicable only for organizations that are soft-deleted (i.e.,
        * BillingType is not EVALUATION). It controls how long Organization data will be retained
        * after the initial delete operation completes. During this period, the Organization may be
        * restored to its last known state. After this period, the Organization will no longer be
@@ -11646,15 +11646,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Manages access to a developer app by enabling you to: * Approve or revoke a developer app *
          * Generate a new consumer key and secret for a developer app To approve or revoke a developer app,
-         * set the `action` query parameter to `approved` or `revoked`, respectively, and the `Content-Type`
+         * set the `action` query parameter to `approve` or `revoke`, respectively, and the `Content-Type`
          * header to `application/octet-stream`. If a developer app is revoked, none of its API keys are
-         * valid for API calls even though the keys are still `approved`. If successful, the API call
-         * returns the following HTTP status code: `204 No Content` To generate a new consumer key and
-         * secret for a developer app, pass the new key/secret details. Rather than replace an existing key,
-         * this API generates a new key. In this case, multiple key pairs may be associated with a single
-         * developer app. Each key pair has an independent status (`approved` or `revoked`) and expiration
-         * time. Any approved, non-expired key can be used in an API call. For example, if you're using API
-         * key rotation, you can generate new keys with expiration times that overlap keys that are going to
+         * valid for API calls even though the keys are still approved. If successful, the API call returns
+         * the following HTTP status code: `204 No Content` To generate a new consumer key and secret for a
+         * developer app, pass the new key/secret details. Rather than replace an existing key, this API
+         * generates a new key. In this case, multiple key pairs may be associated with a single developer
+         * app. Each key pair has an independent status (`approve` or `revoke`) and expiration time. Any
+         * approved, non-expired key can be used in an API call. For example, if you're using API key
+         * rotation, you can generate new keys with expiration times that overlap keys that are going to
          * expire. You might also generate a new consumer key/secret if the security of the original
          * key/secret is compromised. The `keyExpiresIn` property defines the expiration time for the API
          * key in milliseconds. If you don't set this property or set it to `-1`, the API key never expires.
@@ -11690,14 +11690,14 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Manages access to a developer app by enabling you to: * Approve or revoke a developer app *
            * Generate a new consumer key and secret for a developer app To approve or revoke a developer
-           * app, set the `action` query parameter to `approved` or `revoked`, respectively, and the
-           * `Content-Type` header to `application/octet-stream`. If a developer app is revoked, none of its
-           * API keys are valid for API calls even though the keys are still `approved`. If successful, the
-           * API call returns the following HTTP status code: `204 No Content` To generate a new consumer
-           * key and secret for a developer app, pass the new key/secret details. Rather than replace an
-           * existing key, this API generates a new key. In this case, multiple key pairs may be associated
-           * with a single developer app. Each key pair has an independent status (`approved` or `revoked`)
-           * and expiration time. Any approved, non-expired key can be used in an API call. For example, if
+           * app, set the `action` query parameter to `approve` or `revoke`, respectively, and the `Content-
+           * Type` header to `application/octet-stream`. If a developer app is revoked, none of its API keys
+           * are valid for API calls even though the keys are still approved. If successful, the API call
+           * returns the following HTTP status code: `204 No Content` To generate a new consumer key and
+           * secret for a developer app, pass the new key/secret details. Rather than replace an existing
+           * key, this API generates a new key. In this case, multiple key pairs may be associated with a
+           * single developer app. Each key pair has an independent status (`approve` or `revoke`) and
+           * expiration time. Any approved, non-expired key can be used in an API call. For example, if
            * you're using API key rotation, you can generate new keys with expiration times that overlap
            * keys that are going to expire. You might also generate a new consumer key/secret if the
            * security of the original key/secret is compromised. The `keyExpiresIn` property defines the

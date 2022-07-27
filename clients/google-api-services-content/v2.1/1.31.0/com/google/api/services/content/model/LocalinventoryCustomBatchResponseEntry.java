@@ -38,7 +38,7 @@ public final class LocalinventoryCustomBatchResponseEntry extends com.google.api
   private java.lang.Long batchId;
 
   /**
-   * A list of errors defined if and only if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class LocalinventoryCustomBatchResponseEntry extends com.google.api
   }
 
   /**
-   * A list of errors defined if and only if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * @return value or {@code null} for none
    */
   public Errors getErrors() {
@@ -78,7 +78,7 @@ public final class LocalinventoryCustomBatchResponseEntry extends com.google.api
   }
 
   /**
-   * A list of errors defined if and only if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * @param errors errors or {@code null} for none
    */
   public LocalinventoryCustomBatchResponseEntry setErrors(Errors errors) {

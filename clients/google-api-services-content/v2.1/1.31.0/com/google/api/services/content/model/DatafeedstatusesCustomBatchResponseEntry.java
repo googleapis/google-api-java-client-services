@@ -45,7 +45,7 @@ public final class DatafeedstatusesCustomBatchResponseEntry extends com.google.a
   private DatafeedStatus datafeedStatus;
 
   /**
-   * A list of errors defined if and only if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class DatafeedstatusesCustomBatchResponseEntry extends com.google.a
   }
 
   /**
-   * A list of errors defined if and only if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * @return value or {@code null} for none
    */
   public Errors getErrors() {
@@ -94,7 +94,7 @@ public final class DatafeedstatusesCustomBatchResponseEntry extends com.google.a
   }
 
   /**
-   * A list of errors defined if and only if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * @param errors errors or {@code null} for none
    */
   public DatafeedstatusesCustomBatchResponseEntry setErrors(Errors errors) {

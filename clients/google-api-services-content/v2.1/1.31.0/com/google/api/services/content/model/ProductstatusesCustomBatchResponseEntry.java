@@ -38,7 +38,7 @@ public final class ProductstatusesCustomBatchResponseEntry extends com.google.ap
   private java.lang.Long batchId;
 
   /**
-   * A list of errors, if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class ProductstatusesCustomBatchResponseEntry extends com.google.ap
   }
 
   /**
-   * A list of errors, if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * @return value or {@code null} for none
    */
   public Errors getErrors() {
@@ -85,7 +85,7 @@ public final class ProductstatusesCustomBatchResponseEntry extends com.google.ap
   }
 
   /**
-   * A list of errors, if the request failed.
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail the whole request.
    * @param errors errors or {@code null} for none
    */
   public ProductstatusesCustomBatchResponseEntry setErrors(Errors errors) {

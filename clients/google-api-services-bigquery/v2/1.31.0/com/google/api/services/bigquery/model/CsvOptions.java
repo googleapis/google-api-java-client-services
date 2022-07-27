@@ -74,6 +74,15 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String nullMarker;
 
   /**
+   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
+   * other formats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preserveAsciiControlCharacters;
+
+  /**
    * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
    * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
@@ -199,6 +208,27 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
    */
   public CsvOptions setNullMarker(java.lang.String nullMarker) {
     this.nullMarker = nullMarker;
+    return this;
+  }
+
+  /**
+   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
+   * other formats.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreserveAsciiControlCharacters() {
+    return preserveAsciiControlCharacters;
+  }
+
+  /**
+   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
+   * other formats.
+   * @param preserveAsciiControlCharacters preserveAsciiControlCharacters or {@code null} for none
+   */
+  public CsvOptions setPreserveAsciiControlCharacters(java.lang.Boolean preserveAsciiControlCharacters) {
+    this.preserveAsciiControlCharacters = preserveAsciiControlCharacters;
     return this;
   }
 

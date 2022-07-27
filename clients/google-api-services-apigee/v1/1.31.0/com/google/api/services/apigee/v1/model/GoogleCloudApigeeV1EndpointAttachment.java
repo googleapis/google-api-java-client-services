@@ -17,7 +17,9 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * Apigee endpoint attachment. For more information, see Southbound networking patterns.
+ * Apigee endpoint attachment. For more information, see [Southbound networking patterns]
+ * (https://cloud.google.com/apigee/docs/api-platform/architecture/southbound-networking-patterns-
+ * endpoints).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:

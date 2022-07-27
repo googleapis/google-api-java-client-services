@@ -46,6 +46,13 @@ public final class GoogleCloudRetailV2betaExportUserEventsResponse extends com.g
   private GoogleCloudRetailV2betaExportErrorsConfig errorsConfig;
 
   /**
+   * Output result indicating where the data were exported to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaOutputResult outputResult;
+
+  /**
    * A sample of errors encountered while processing the request.
    * @return value or {@code null} for none
    */
@@ -76,6 +83,23 @@ public final class GoogleCloudRetailV2betaExportUserEventsResponse extends com.g
    */
   public GoogleCloudRetailV2betaExportUserEventsResponse setErrorsConfig(GoogleCloudRetailV2betaExportErrorsConfig errorsConfig) {
     this.errorsConfig = errorsConfig;
+    return this;
+  }
+
+  /**
+   * Output result indicating where the data were exported to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaOutputResult getOutputResult() {
+    return outputResult;
+  }
+
+  /**
+   * Output result indicating where the data were exported to.
+   * @param outputResult outputResult or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaExportUserEventsResponse setOutputResult(GoogleCloudRetailV2betaOutputResult outputResult) {
+    this.outputResult = outputResult;
     return this;
   }
 

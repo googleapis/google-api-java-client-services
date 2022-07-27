@@ -106,6 +106,13 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   private java.lang.String periodicTuningState;
 
   /**
+   * Output only. The list of valid serving configs associated with the PageOptimizationConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaModelServingConfigList> servingConfigLists;
+
+  /**
    * Output only. The serving state of the model: ACTIVE, NOT_ACTIVE.
    * The value may be {@code null}.
    */
@@ -322,6 +329,23 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
    */
   public GoogleCloudRetailV2alphaModel setPeriodicTuningState(java.lang.String periodicTuningState) {
     this.periodicTuningState = periodicTuningState;
+    return this;
+  }
+
+  /**
+   * Output only. The list of valid serving configs associated with the PageOptimizationConfig.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaModelServingConfigList> getServingConfigLists() {
+    return servingConfigLists;
+  }
+
+  /**
+   * Output only. The list of valid serving configs associated with the PageOptimizationConfig.
+   * @param servingConfigLists servingConfigLists or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaModel setServingConfigLists(java.util.List<GoogleCloudRetailV2alphaModelServingConfigList> servingConfigLists) {
+    this.servingConfigLists = servingConfigLists;
     return this;
   }
 

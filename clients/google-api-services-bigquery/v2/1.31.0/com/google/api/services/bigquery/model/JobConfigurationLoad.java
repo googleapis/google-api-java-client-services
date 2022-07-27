@@ -232,6 +232,14 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private RangePartitioning rangePartitioning;
 
   /**
+   * User provided referencing file with the expected reader schema, Available for the format: AVRO,
+   * PARQUET, ORC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String referenceFileSchemaUri;
+
+  /**
    * [Optional] The schema for the destination table. The schema can be omitted if the destination
    * table already exists, or if you're loading data from Google Cloud Datastore.
    * The value may be {@code null}.
@@ -793,6 +801,25 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setRangePartitioning(RangePartitioning rangePartitioning) {
     this.rangePartitioning = rangePartitioning;
+    return this;
+  }
+
+  /**
+   * User provided referencing file with the expected reader schema, Available for the format: AVRO,
+   * PARQUET, ORC.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReferenceFileSchemaUri() {
+    return referenceFileSchemaUri;
+  }
+
+  /**
+   * User provided referencing file with the expected reader schema, Available for the format: AVRO,
+   * PARQUET, ORC.
+   * @param referenceFileSchemaUri referenceFileSchemaUri or {@code null} for none
+   */
+  public JobConfigurationLoad setReferenceFileSchemaUri(java.lang.String referenceFileSchemaUri) {
+    this.referenceFileSchemaUri = referenceFileSchemaUri;
     return this;
   }
 

@@ -61,7 +61,8 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
   private java.lang.Long estimatedRunnableUnits;
 
   /**
-   * Total parallel units of work remaining for the active stages.
+   * Total units of work remaining for the query. This number can be revised (increased or
+   * decreased) while the query is running.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -149,7 +150,8 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
   }
 
   /**
-   * Total parallel units of work remaining for the active stages.
+   * Total units of work remaining for the query. This number can be revised (increased or
+   * decreased) while the query is running.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPendingUnits() {
@@ -157,7 +159,8 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
   }
 
   /**
-   * Total parallel units of work remaining for the active stages.
+   * Total units of work remaining for the query. This number can be revised (increased or
+   * decreased) while the query is running.
    * @param pendingUnits pendingUnits or {@code null} for none
    */
   public QueryTimelineSample setPendingUnits(java.lang.Long pendingUnits) {

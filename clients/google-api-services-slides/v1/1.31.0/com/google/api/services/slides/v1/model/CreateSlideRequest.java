@@ -17,7 +17,7 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Creates a new slide.
+ * Creates a slide.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -31,7 +31,7 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * The optional zero-based index indicating where to insert the slides. If you don't specify an
-   * index, the new slide is created at the end.
+   * index, the slide is created at the end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +41,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
    * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
    * elements in the presentation. The ID must start with an alphanumeric character or an underscore
    * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
-   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
-   * than 50. If you don't specify an ID, a unique one is generated.
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The ID length must be between 5 and 50 characters,
+   * inclusive. If you don't specify an ID, a unique one is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * An optional list of object ID mappings from the placeholder(s) on the layout to the
-   * placeholder(s) that will be created on the new slide from that specified layout. Can only be
-   * used when `slide_layout_reference` is specified.
+   * placeholders that are created on the slide from the specified layout. Can only be used when
+   * `slide_layout_reference` is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,7 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
    * the following: - The master of the previous slide index. - The master of the first slide, if
    * the insertion_index is zero. - The first master in the presentation, if there are no slides. If
    * the LayoutReference is not found in the current master, a 400 bad request error is returned. If
-   * you don't specify a layout reference, then the new slide will use the predefined layout
-   * `BLANK`.
+   * you don't specify a layout reference, the slide uses the predefined `BLANK` layout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +70,7 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * The optional zero-based index indicating where to insert the slides. If you don't specify an
-   * index, the new slide is created at the end.
+   * index, the slide is created at the end.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInsertionIndex() {
@@ -80,7 +79,7 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * The optional zero-based index indicating where to insert the slides. If you don't specify an
-   * index, the new slide is created at the end.
+   * index, the slide is created at the end.
    * @param insertionIndex insertionIndex or {@code null} for none
    */
   public CreateSlideRequest setInsertionIndex(java.lang.Integer insertionIndex) {
@@ -92,8 +91,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
    * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
    * elements in the presentation. The ID must start with an alphanumeric character or an underscore
    * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
-   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
-   * than 50. If you don't specify an ID, a unique one is generated.
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The ID length must be between 5 and 50 characters,
+   * inclusive. If you don't specify an ID, a unique one is generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -104,8 +103,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
    * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
    * elements in the presentation. The ID must start with an alphanumeric character or an underscore
    * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
-   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
-   * than 50. If you don't specify an ID, a unique one is generated.
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The ID length must be between 5 and 50 characters,
+   * inclusive. If you don't specify an ID, a unique one is generated.
    * @param objectId objectId or {@code null} for none
    */
   public CreateSlideRequest setObjectId(java.lang.String objectId) {
@@ -115,8 +114,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * An optional list of object ID mappings from the placeholder(s) on the layout to the
-   * placeholder(s) that will be created on the new slide from that specified layout. Can only be
-   * used when `slide_layout_reference` is specified.
+   * placeholders that are created on the slide from the specified layout. Can only be used when
+   * `slide_layout_reference` is specified.
    * @return value or {@code null} for none
    */
   public java.util.List<LayoutPlaceholderIdMapping> getPlaceholderIdMappings() {
@@ -125,8 +124,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * An optional list of object ID mappings from the placeholder(s) on the layout to the
-   * placeholder(s) that will be created on the new slide from that specified layout. Can only be
-   * used when `slide_layout_reference` is specified.
+   * placeholders that are created on the slide from the specified layout. Can only be used when
+   * `slide_layout_reference` is specified.
    * @param placeholderIdMappings placeholderIdMappings or {@code null} for none
    */
   public CreateSlideRequest setPlaceholderIdMappings(java.util.List<LayoutPlaceholderIdMapping> placeholderIdMappings) {
@@ -139,8 +138,7 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
    * the following: - The master of the previous slide index. - The master of the first slide, if
    * the insertion_index is zero. - The first master in the presentation, if there are no slides. If
    * the LayoutReference is not found in the current master, a 400 bad request error is returned. If
-   * you don't specify a layout reference, then the new slide will use the predefined layout
-   * `BLANK`.
+   * you don't specify a layout reference, the slide uses the predefined `BLANK` layout.
    * @return value or {@code null} for none
    */
   public LayoutReference getSlideLayoutReference() {
@@ -152,8 +150,7 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
    * the following: - The master of the previous slide index. - The master of the first slide, if
    * the insertion_index is zero. - The first master in the presentation, if there are no slides. If
    * the LayoutReference is not found in the current master, a 400 bad request error is returned. If
-   * you don't specify a layout reference, then the new slide will use the predefined layout
-   * `BLANK`.
+   * you don't specify a layout reference, the slide uses the predefined `BLANK` layout.
    * @param slideLayoutReference slideLayoutReference or {@code null} for none
    */
   public CreateSlideRequest setSlideLayoutReference(LayoutReference slideLayoutReference) {

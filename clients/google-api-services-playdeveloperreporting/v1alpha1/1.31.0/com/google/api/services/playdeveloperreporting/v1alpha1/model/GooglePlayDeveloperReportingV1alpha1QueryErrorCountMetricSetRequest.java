@@ -37,7 +37,20 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * user's device model. * `deviceType` (string): identifier of the device's form factor, e.g.,
    * PHONE. * `reportType` (string): the type of error. The value should correspond to one of the
    * possible values in ErrorType. * `issueId` (string): the id an error was assigned to. The value
-   * should correspond to the `{issue}` component of the issue name.
+   * should correspond to the `{issue}` component of the issue name. * `deviceRamBucket` (int64):
+   * RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the
+   * device's primary system-on-chip, e.g., Samsung.
+   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
+   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
+   * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel`
+   * (string): Model of the device's CPU, e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the
+   * device's GPU, e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
+   * `deviceGpuVersion` (string): Version of the device's GPU, e.g., T750. * `deviceVulkanVersion`
+   * (string): Vulkan version of the device, e.g., "4198400". * `deviceGlEsVersion` (string): OpenGL
+   * ES version of the device, e.g., "196610". * `deviceScreenSize` (string): Screen size of the
+   * device, e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the device, e.g.,
+   * mdpi, hdpi.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +109,20 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * user's device model. * `deviceType` (string): identifier of the device's form factor, e.g.,
    * PHONE. * `reportType` (string): the type of error. The value should correspond to one of the
    * possible values in ErrorType. * `issueId` (string): the id an error was assigned to. The value
-   * should correspond to the `{issue}` component of the issue name.
+   * should correspond to the `{issue}` component of the issue name. * `deviceRamBucket` (int64):
+   * RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the
+   * device's primary system-on-chip, e.g., Samsung.
+   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
+   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
+   * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel`
+   * (string): Model of the device's CPU, e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the
+   * device's GPU, e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
+   * `deviceGpuVersion` (string): Version of the device's GPU, e.g., T750. * `deviceVulkanVersion`
+   * (string): Vulkan version of the device, e.g., "4198400". * `deviceGlEsVersion` (string): OpenGL
+   * ES version of the device, e.g., "196610". * `deviceScreenSize` (string): Screen size of the
+   * device, e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the device, e.g.,
+   * mdpi, hdpi.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDimensions() {
@@ -110,7 +136,20 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * user's device model. * `deviceType` (string): identifier of the device's form factor, e.g.,
    * PHONE. * `reportType` (string): the type of error. The value should correspond to one of the
    * possible values in ErrorType. * `issueId` (string): the id an error was assigned to. The value
-   * should correspond to the `{issue}` component of the issue name.
+   * should correspond to the `{issue}` component of the issue name. * `deviceRamBucket` (int64):
+   * RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the
+   * device's primary system-on-chip, e.g., Samsung.
+   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
+   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
+   * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel`
+   * (string): Model of the device's CPU, e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the
+   * device's GPU, e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
+   * `deviceGpuVersion` (string): Version of the device's GPU, e.g., T750. * `deviceVulkanVersion`
+   * (string): Vulkan version of the device, e.g., "4198400". * `deviceGlEsVersion` (string): OpenGL
+   * ES version of the device, e.g., "196610". * `deviceScreenSize` (string): Screen size of the
+   * device, e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the device, e.g.,
+   * mdpi, hdpi.
    * @param dimensions dimensions or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetRequest setDimensions(java.util.List<java.lang.String> dimensions) {

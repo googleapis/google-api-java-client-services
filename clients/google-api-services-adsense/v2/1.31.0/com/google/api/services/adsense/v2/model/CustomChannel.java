@@ -38,7 +38,7 @@ public final class CustomChannel extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
-   * Resource name of the custom channel. Format:
+   * Output only. Resource name of the custom channel. Format:
    * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class CustomChannel extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Resource name of the custom channel. Format:
+   * Output only. Resource name of the custom channel. Format:
    * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class CustomChannel extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Resource name of the custom channel. Format:
+   * Output only. Resource name of the custom channel. Format:
    * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
    * @param name name or {@code null} for none
    */

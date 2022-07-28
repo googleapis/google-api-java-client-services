@@ -31,7 +31,7 @@ package com.google.api.services.adsense.v2.model;
 public final class SavedReport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the report. Format: accounts/{account}/reports/{report}
+   * Output only. Resource name of the report. Format: accounts/{account}/reports/{report}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class SavedReport extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Resource name of the report. Format: accounts/{account}/reports/{report}
+   * Output only. Resource name of the report. Format: accounts/{account}/reports/{report}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -53,7 +53,7 @@ public final class SavedReport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the report. Format: accounts/{account}/reports/{report}
+   * Output only. Resource name of the report. Format: accounts/{account}/reports/{report}
    * @param name name or {@code null} for none
    */
   public SavedReport setName(java.lang.String name) {

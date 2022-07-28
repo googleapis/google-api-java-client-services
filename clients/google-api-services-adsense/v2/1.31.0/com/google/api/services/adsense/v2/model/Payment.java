@@ -52,10 +52,10 @@ public final class Payment extends com.google.api.client.json.GenericJson {
   private Date date;
 
   /**
-   * Resource name of the payment. Format: - accounts/{account}/payments/unpaid for unpaid (current)
-   * AdSense earnings. - accounts/{account}/payments/youtube-unpaid for unpaid (current) YouTube
-   * earnings. - accounts/{account}/payments/yyyy-MM-dd for paid AdSense earnings. -
-   * accounts/{account}/payments/youtube-yyyy-MM-dd for paid YouTube earnings.
+   * Output only. Resource name of the payment. Format: - accounts/{account}/payments/unpaid for
+   * unpaid (current) AdSense earnings. - accounts/{account}/payments/youtube-unpaid for unpaid
+   * (current) YouTube earnings. - accounts/{account}/payments/yyyy-MM-dd for paid AdSense earnings.
+   * - accounts/{account}/payments/youtube-yyyy-MM-dd for paid YouTube earnings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,10 +102,10 @@ public final class Payment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the payment. Format: - accounts/{account}/payments/unpaid for unpaid (current)
-   * AdSense earnings. - accounts/{account}/payments/youtube-unpaid for unpaid (current) YouTube
-   * earnings. - accounts/{account}/payments/yyyy-MM-dd for paid AdSense earnings. -
-   * accounts/{account}/payments/youtube-yyyy-MM-dd for paid YouTube earnings.
+   * Output only. Resource name of the payment. Format: - accounts/{account}/payments/unpaid for
+   * unpaid (current) AdSense earnings. - accounts/{account}/payments/youtube-unpaid for unpaid
+   * (current) YouTube earnings. - accounts/{account}/payments/yyyy-MM-dd for paid AdSense earnings.
+   * - accounts/{account}/payments/youtube-yyyy-MM-dd for paid YouTube earnings.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -113,10 +113,10 @@ public final class Payment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the payment. Format: - accounts/{account}/payments/unpaid for unpaid (current)
-   * AdSense earnings. - accounts/{account}/payments/youtube-unpaid for unpaid (current) YouTube
-   * earnings. - accounts/{account}/payments/yyyy-MM-dd for paid AdSense earnings. -
-   * accounts/{account}/payments/youtube-yyyy-MM-dd for paid YouTube earnings.
+   * Output only. Resource name of the payment. Format: - accounts/{account}/payments/unpaid for
+   * unpaid (current) AdSense earnings. - accounts/{account}/payments/youtube-unpaid for unpaid
+   * (current) YouTube earnings. - accounts/{account}/payments/yyyy-MM-dd for paid AdSense earnings.
+   * - accounts/{account}/payments/youtube-yyyy-MM-dd for paid YouTube earnings.
    * @param name name or {@code null} for none
    */
   public Payment setName(java.lang.String name) {

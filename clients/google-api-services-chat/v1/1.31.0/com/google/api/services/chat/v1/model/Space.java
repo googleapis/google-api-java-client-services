@@ -52,6 +52,13 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean singleUserBotDm;
 
   /**
+   * Details about the space including description and rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpaceDetails spaceDetails;
+
+  /**
    * Output only. Whether messages are threaded in this space.
    * The value may be {@code null}.
    */
@@ -59,8 +66,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean threaded;
 
   /**
-   * Output only. Deprecated: Use `single_user_bot_dm` or `space_type` (developer preview) instead.
-   * The type of a space.
+   * Output only. Deprecated: Use `singleUserBotDm` or `spaceType` (developer preview) instead. The
+   * type of a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,6 +125,23 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Details about the space including description and rules.
+   * @return value or {@code null} for none
+   */
+  public SpaceDetails getSpaceDetails() {
+    return spaceDetails;
+  }
+
+  /**
+   * Details about the space including description and rules.
+   * @param spaceDetails spaceDetails or {@code null} for none
+   */
+  public Space setSpaceDetails(SpaceDetails spaceDetails) {
+    this.spaceDetails = spaceDetails;
+    return this;
+  }
+
+  /**
    * Output only. Whether messages are threaded in this space.
    * @return value or {@code null} for none
    */
@@ -135,8 +159,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated: Use `single_user_bot_dm` or `space_type` (developer preview) instead.
-   * The type of a space.
+   * Output only. Deprecated: Use `singleUserBotDm` or `spaceType` (developer preview) instead. The
+   * type of a space.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -144,8 +168,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated: Use `single_user_bot_dm` or `space_type` (developer preview) instead.
-   * The type of a space.
+   * Output only. Deprecated: Use `singleUserBotDm` or `spaceType` (developer preview) instead. The
+   * type of a space.
    * @param type type or {@code null} for none
    */
   public Space setType(java.lang.String type) {

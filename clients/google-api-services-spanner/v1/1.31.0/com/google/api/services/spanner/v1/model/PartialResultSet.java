@@ -90,9 +90,12 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
    * example, suppose a streaming SQL query is yielding a result set whose rows contain a single
    * string field. The following `PartialResultSet`s might be yielded: { "metadata": { ... }
    * "values": ["Hello", "W"] "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"]
-   * "chunked_value": true "resume_token": "Bqp2..." } { "values": ["d"] "resume_token": "Zx1B..." }
-   * This sequence of `PartialResultSet`s encodes two rows, one containing the field value
-   * `"Hello"`, and a second containing the field value `"World" = "W" + "orl" + "d"`.
+   * "chunked_value": true } { "values": ["d"] "resume_token": "Zx1B..." } This sequence of
+   * `PartialResultSet`s encodes two rows, one containing the field value `"Hello"`, and a second
+   * containing the field value `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a
+   * `resume_token`. Execution can only be resumed from a previously yielded `resume_token`. For the
+   * above sequence of `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` will
+   * yield results from the `PartialResultSet` with value `["orl"]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,9 +243,12 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
    * example, suppose a streaming SQL query is yielding a result set whose rows contain a single
    * string field. The following `PartialResultSet`s might be yielded: { "metadata": { ... }
    * "values": ["Hello", "W"] "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"]
-   * "chunked_value": true "resume_token": "Bqp2..." } { "values": ["d"] "resume_token": "Zx1B..." }
-   * This sequence of `PartialResultSet`s encodes two rows, one containing the field value
-   * `"Hello"`, and a second containing the field value `"World" = "W" + "orl" + "d"`.
+   * "chunked_value": true } { "values": ["d"] "resume_token": "Zx1B..." } This sequence of
+   * `PartialResultSet`s encodes two rows, one containing the field value `"Hello"`, and a second
+   * containing the field value `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a
+   * `resume_token`. Execution can only be resumed from a previously yielded `resume_token`. For the
+   * above sequence of `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` will
+   * yield results from the `PartialResultSet` with value `["orl"]`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Object> getValues() {
@@ -273,9 +279,12 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
    * example, suppose a streaming SQL query is yielding a result set whose rows contain a single
    * string field. The following `PartialResultSet`s might be yielded: { "metadata": { ... }
    * "values": ["Hello", "W"] "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"]
-   * "chunked_value": true "resume_token": "Bqp2..." } { "values": ["d"] "resume_token": "Zx1B..." }
-   * This sequence of `PartialResultSet`s encodes two rows, one containing the field value
-   * `"Hello"`, and a second containing the field value `"World" = "W" + "orl" + "d"`.
+   * "chunked_value": true } { "values": ["d"] "resume_token": "Zx1B..." } This sequence of
+   * `PartialResultSet`s encodes two rows, one containing the field value `"Hello"`, and a second
+   * containing the field value `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a
+   * `resume_token`. Execution can only be resumed from a previously yielded `resume_token`. For the
+   * above sequence of `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` will
+   * yield results from the `PartialResultSet` with value `["orl"]`.
    * @param values values or {@code null} for none
    */
   public PartialResultSet setValues(java.util.List<java.lang.Object> values) {

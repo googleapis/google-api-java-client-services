@@ -38,6 +38,14 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
+   * Output only. Describes whether free instances are available to be created in this instance
+   * config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String freeInstanceAvailability;
+
+  /**
    * Allowed values of the "default_leader" schema option for databases in instances that use this
    * instance configuration.
    * The value may be {@code null}.
@@ -75,6 +83,25 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Describes whether free instances are available to be created in this instance
+   * config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFreeInstanceAvailability() {
+    return freeInstanceAvailability;
+  }
+
+  /**
+   * Output only. Describes whether free instances are available to be created in this instance
+   * config.
+   * @param freeInstanceAvailability freeInstanceAvailability or {@code null} for none
+   */
+  public InstanceConfig setFreeInstanceAvailability(java.lang.String freeInstanceAvailability) {
+    this.freeInstanceAvailability = freeInstanceAvailability;
     return this;
   }
 

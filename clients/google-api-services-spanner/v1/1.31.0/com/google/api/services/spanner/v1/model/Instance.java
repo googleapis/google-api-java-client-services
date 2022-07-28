@@ -60,6 +60,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> endpointUris;
 
   /**
+   * Free instance metadata. Only populated for free instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FreeInstanceMetadata freeInstanceMetadata;
+
+  /**
+   * The `InstanceType` of the current instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceType;
+
+  /**
    * Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into
    * groups that reflect a customer's organizational needs and deployment strategies. Cloud Labels
    * can be used to filter collections of resources. They can be used to control how resource
@@ -193,6 +207,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setEndpointUris(java.util.List<java.lang.String> endpointUris) {
     this.endpointUris = endpointUris;
+    return this;
+  }
+
+  /**
+   * Free instance metadata. Only populated for free instances.
+   * @return value or {@code null} for none
+   */
+  public FreeInstanceMetadata getFreeInstanceMetadata() {
+    return freeInstanceMetadata;
+  }
+
+  /**
+   * Free instance metadata. Only populated for free instances.
+   * @param freeInstanceMetadata freeInstanceMetadata or {@code null} for none
+   */
+  public Instance setFreeInstanceMetadata(FreeInstanceMetadata freeInstanceMetadata) {
+    this.freeInstanceMetadata = freeInstanceMetadata;
+    return this;
+  }
+
+  /**
+   * The `InstanceType` of the current instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceType() {
+    return instanceType;
+  }
+
+  /**
+   * The `InstanceType` of the current instance.
+   * @param instanceType instanceType or {@code null} for none
+   */
+  public Instance setInstanceType(java.lang.String instanceType) {
+    this.instanceType = instanceType;
     return this;
   }
 

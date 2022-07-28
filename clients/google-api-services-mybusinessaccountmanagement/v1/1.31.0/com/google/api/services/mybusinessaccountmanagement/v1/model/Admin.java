@@ -32,9 +32,9 @@ public final class Admin extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The name of the Account resource that this Admin refers to. Used when calling
-   * CreateAccountAdmin or CreateLocationAdmin to invite UserGroups or LocationGroups as admins,
-   * respectively. If both this field and `admin` are set on `CREATE` requests, this field takes
-   * precedence and the email address in `admin` will be ignored. Format: `accounts/{account}`.
+   * locations.admins.create to invite a LocationGroup as an admin. If both this field and `admin`
+   * are set on `CREATE` requests, this field takes precedence and the email address in `admin` will
+   * be ignored. Format: `accounts/{account}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,9 +76,9 @@ public final class Admin extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The name of the Account resource that this Admin refers to. Used when calling
-   * CreateAccountAdmin or CreateLocationAdmin to invite UserGroups or LocationGroups as admins,
-   * respectively. If both this field and `admin` are set on `CREATE` requests, this field takes
-   * precedence and the email address in `admin` will be ignored. Format: `accounts/{account}`.
+   * locations.admins.create to invite a LocationGroup as an admin. If both this field and `admin`
+   * are set on `CREATE` requests, this field takes precedence and the email address in `admin` will
+   * be ignored. Format: `accounts/{account}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccount() {
@@ -87,9 +87,9 @@ public final class Admin extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The name of the Account resource that this Admin refers to. Used when calling
-   * CreateAccountAdmin or CreateLocationAdmin to invite UserGroups or LocationGroups as admins,
-   * respectively. If both this field and `admin` are set on `CREATE` requests, this field takes
-   * precedence and the email address in `admin` will be ignored. Format: `accounts/{account}`.
+   * locations.admins.create to invite a LocationGroup as an admin. If both this field and `admin`
+   * are set on `CREATE` requests, this field takes precedence and the email address in `admin` will
+   * be ignored. Format: `accounts/{account}`.
    * @param account account or {@code null} for none
    */
   public Admin setAccount(java.lang.String account) {

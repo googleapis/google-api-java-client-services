@@ -536,24 +536,17 @@ public class MyBusinessAccountManagement extends com.google.api.client.googleapi
         return this;
       }
 
-      /**
-       * Optional. How many accounts to fetch per page. The minimum supported page_size is 2. The
-       * default and maximum is 20.
-       */
+      /** Optional. How many accounts to fetch per page. The default and maximum is 20. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. How many accounts to fetch per page. The minimum supported page_size is 2. The default
-     and maximum is 20.
+      /** Optional. How many accounts to fetch per page. The default and maximum is 20.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /**
-       * Optional. How many accounts to fetch per page. The minimum supported page_size is 2. The
-       * default and maximum is 20.
-       */
+      /** Optional. How many accounts to fetch per page. The default and maximum is 20. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

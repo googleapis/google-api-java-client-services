@@ -3910,9 +3910,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class MetricDescriptors {
 
       /**
-       * Creates a new metric descriptor. The creation is executed asynchronously and callers may check
-       * the returned operation to track its progress. User-created metric descriptors define custom
-       * metrics (https://cloud.google.com/monitoring/custom-metrics).
+       * Creates a new metric descriptor. The creation is executed asynchronously. User-created metric
+       * descriptors define custom metrics (https://cloud.google.com/monitoring/custom-metrics). The
+       * metric descriptor is updated if it already exists, except that metric labels are never removed.
        *
        * Create a request for the method "metricDescriptors.create".
        *
@@ -3938,9 +3938,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new metric descriptor. The creation is executed asynchronously and callers may check
-         * the returned operation to track its progress. User-created metric descriptors define custom
-         * metrics (https://cloud.google.com/monitoring/custom-metrics).
+         * Creates a new metric descriptor. The creation is executed asynchronously. User-created metric
+         * descriptors define custom metrics (https://cloud.google.com/monitoring/custom-metrics). The
+         * metric descriptor is updated if it already exists, except that metric labels are never removed.
          *
          * Create a request for the method "metricDescriptors.create".
          *

@@ -43,6 +43,13 @@ public final class TimeSeriesTable extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional. Store rendering strategy
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metricVisualization;
+
+  /**
    * Required. The data displayed in this table.
    * @return value or {@code null} for none
    */
@@ -56,6 +63,23 @@ public final class TimeSeriesTable extends com.google.api.client.json.GenericJso
    */
   public TimeSeriesTable setDataSets(java.util.List<TableDataSet> dataSets) {
     this.dataSets = dataSets;
+    return this;
+  }
+
+  /**
+   * Optional. Store rendering strategy
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetricVisualization() {
+    return metricVisualization;
+  }
+
+  /**
+   * Optional. Store rendering strategy
+   * @param metricVisualization metricVisualization or {@code null} for none
+   */
+  public TimeSeriesTable setMetricVisualization(java.lang.String metricVisualization) {
+    this.metricVisualization = metricVisualization;
     return this;
   }
 

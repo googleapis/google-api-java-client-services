@@ -155,6 +155,16 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   private String timeout;
 
   /**
+   * User-supplied key/value data to be used for organizing and identifying the UptimeCheckConfig
+   * objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
+   * characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase
+   * letters, numerals, underscores, and dashes. Keys must begin with a letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> userLabels;
+
+  /**
    * The type of checkers to use to execute the Uptime check.
    * @return value or {@code null} for none
    */
@@ -416,6 +426,29 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
    */
   public UptimeCheckConfig setTimeout(String timeout) {
     this.timeout = timeout;
+    return this;
+  }
+
+  /**
+   * User-supplied key/value data to be used for organizing and identifying the UptimeCheckConfig
+   * objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
+   * characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase
+   * letters, numerals, underscores, and dashes. Keys must begin with a letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getUserLabels() {
+    return userLabels;
+  }
+
+  /**
+   * User-supplied key/value data to be used for organizing and identifying the UptimeCheckConfig
+   * objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
+   * characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase
+   * letters, numerals, underscores, and dashes. Keys must begin with a letter.
+   * @param userLabels userLabels or {@code null} for none
+   */
+  public UptimeCheckConfig setUserLabels(java.util.Map<String, java.lang.String> userLabels) {
+    this.userLabels = userLabels;
     return this;
   }
 

@@ -88,13 +88,6 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   private java.lang.String priority;
 
   /**
-   * The ID of the project associated with the case.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String projectId;
-
-  /**
    * The severity of this case. Deprecated. Use priority instead.
    * The value may be {@code null}.
    */
@@ -273,23 +266,6 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
    */
   public CloudSupportCase setPriority(java.lang.String priority) {
     this.priority = priority;
-    return this;
-  }
-
-  /**
-   * The ID of the project associated with the case.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProjectId() {
-    return projectId;
-  }
-
-  /**
-   * The ID of the project associated with the case.
-   * @param projectId projectId or {@code null} for none
-   */
-  public CloudSupportCase setProjectId(java.lang.String projectId) {
-    this.projectId = projectId;
     return this;
   }
 

@@ -46,7 +46,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   private java.lang.String domain;
 
   /**
-   * Resource name of a site. Format: accounts/{account}/sites/{site}
+   * Output only. Resource name of a site. Format: accounts/{account}/sites/{site}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of a site. Format: accounts/{account}/sites/{site}
+   * Output only. Resource name of a site. Format: accounts/{account}/sites/{site}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -111,7 +111,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of a site. Format: accounts/{account}/sites/{site}
+   * Output only. Resource name of a site. Format: accounts/{account}/sites/{site}
    * @param name name or {@code null} for none
    */
   public Site setName(java.lang.String name) {

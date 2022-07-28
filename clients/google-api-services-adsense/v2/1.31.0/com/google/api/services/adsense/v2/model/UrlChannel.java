@@ -33,7 +33,7 @@ package com.google.api.services.adsense.v2.model;
 public final class UrlChannel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the URL channel. Format:
+   * Output only. Resource name of the URL channel. Format:
    * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
    * The value may be {@code null}.
    */
@@ -57,7 +57,7 @@ public final class UrlChannel extends com.google.api.client.json.GenericJson {
   private java.lang.String uriPattern;
 
   /**
-   * Resource name of the URL channel. Format:
+   * Output only. Resource name of the URL channel. Format:
    * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
    * @return value or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class UrlChannel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the URL channel. Format:
+   * Output only. Resource name of the URL channel. Format:
    * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
    * @param name name or {@code null} for none
    */

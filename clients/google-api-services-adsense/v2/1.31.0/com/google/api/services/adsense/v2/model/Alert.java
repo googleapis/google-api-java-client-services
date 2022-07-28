@@ -39,7 +39,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.lang.String message;
 
   /**
-   * Resource name of the alert. Format: accounts/{account}/alerts/{alert}
+   * Output only. Resource name of the alert. Format: accounts/{account}/alerts/{alert}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the alert. Format: accounts/{account}/alerts/{alert}
+   * Output only. Resource name of the alert. Format: accounts/{account}/alerts/{alert}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -88,7 +88,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the alert. Format: accounts/{account}/alerts/{alert}
+   * Output only. Resource name of the alert. Format: accounts/{account}/alerts/{alert}
    * @param name name or {@code null} for none
    */
   public Alert setName(java.lang.String name) {

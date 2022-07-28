@@ -31,11 +31,23 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
  * `versionCode` (int64): version of the app that was running on the user's device. * `deviceModel`
  * (string): unique identifier of the user's device model. * `deviceType` (string): identifier of
  * the device's form factor, e.g., PHONE. * `issueId` (string): the id an error was assigned to. The
- * value should correspond to the `{issue}` component of the issue name. **Required permissions**:
- * to access this resource, the calling user needs the _View app information (read-only)_ permission
- * for the app. **Related metric sets:** * vitals.errors.counts contains normalized metrics about
- * Crashes, another stability metric. * vitals.errors.counts contains normalized metrics about ANRs,
- * another stability metric.
+ * value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
+ * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make
+ * of the device's primary system-on-chip, e.g., Samsung.
+ * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
+ * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
+ * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) * `deviceCpuMake`
+ * (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel` (string): Model of the
+ * device's CPU, e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the device's GPU, e.g., ARM.
+ * * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. * `deviceGpuVersion`
+ * (string): Version of the device's GPU, e.g., T750. * `deviceVulkanVersion` (string): Vulkan
+ * version of the device, e.g., "4198400". * `deviceGlEsVersion` (string): OpenGL ES version of the
+ * device, e.g., "196610". * `deviceScreenSize` (string): Screen size of the device, e.g., NORMAL,
+ * LARGE. * `deviceScreenDpi` (string): Screen density of the device, e.g., mdpi, hdpi. **Required
+ * permissions**: to access this resource, the calling user needs the _View app information (read-
+ * only)_ permission for the app. **Related metric sets:** * vitals.errors.counts contains
+ * normalized metrics about Crashes, another stability metric. * vitals.errors.counts contains
+ * normalized metrics about ANRs, another stability metric.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Developer Reporting API. For a detailed

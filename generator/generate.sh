@@ -44,7 +44,7 @@ python2 -m googleapis.codegen \
     --output_dir=${OUTPUT_DIR} \
     --input=${DISCOVERY} \
     --language=java \
-    --language_variant=1.31.0 \
+    --language_variant=2.0.0 \
     --package_path=api/services
 
 echo "Wrote client to ${OUTPUT_DIR}"

@@ -85,6 +85,25 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
+   * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
+   * Cards are usually displayed below the text-body of a Chat message, but can situationally appear
+   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
+   * `cardId` is a unique identifier among cards in the same message and for identifying user input
+   * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
+   * `ButtonList`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CardWithId> cardsV2;
+
+  static {
+    // hack to force ProGuard to consider CardWithId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CardWithId.class);
+  }
+
+  /**
    * Output only. The time at which the message was created in Google Chat server.
    * The value may be {@code null}.
    */
@@ -246,6 +265,35 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setCards(java.util.List<Card> cards) {
     this.cards = cards;
+    return this;
+  }
+
+  /**
+   * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
+   * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
+   * Cards are usually displayed below the text-body of a Chat message, but can situationally appear
+   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
+   * `cardId` is a unique identifier among cards in the same message and for identifying user input
+   * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
+   * `ButtonList`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CardWithId> getCardsV2() {
+    return cardsV2;
+  }
+
+  /**
+   * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
+   * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
+   * Cards are usually displayed below the text-body of a Chat message, but can situationally appear
+   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). The
+   * `cardId` is a unique identifier among cards in the same message and for identifying user input
+   * values. Currently supported widgets include: - `TextParagraph` - `DecoratedText` - `Image` -
+   * `ButtonList`
+   * @param cardsV2 cardsV2 or {@code null} for none
+   */
+  public Message setCardsV2(java.util.List<CardWithId> cardsV2) {
+    this.cardsV2 = cardsV2;
     return this;
   }
 

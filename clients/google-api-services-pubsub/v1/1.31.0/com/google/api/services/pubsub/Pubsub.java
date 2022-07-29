@@ -4503,8 +4503,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Pulls messages from the server. The server may return `UNAVAILABLE` if there are too many
-       * concurrent pull requests pending for the given subscription.
+       * Pulls messages from the server.
        *
        * Create a request for the method "subscriptions.pull".
        *
@@ -4530,8 +4529,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/subscriptions/[^/]+$");
 
         /**
-         * Pulls messages from the server. The server may return `UNAVAILABLE` if there are too many
-         * concurrent pull requests pending for the given subscription.
+         * Pulls messages from the server.
          *
          * Create a request for the method "subscriptions.pull".
          *

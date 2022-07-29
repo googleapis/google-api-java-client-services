@@ -100,6 +100,13 @@ public final class Page extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
+   * RFC 3339 date-time when this Page was trashed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trashed;
+
+  /**
    * RFC 3339 date-time when this Page was last updated.
    * The value may be {@code null}.
    */
@@ -280,6 +287,23 @@ public final class Page extends com.google.api.client.json.GenericJson {
    */
   public Page setTitle(java.lang.String title) {
     this.title = title;
+    return this;
+  }
+
+  /**
+   * RFC 3339 date-time when this Page was trashed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrashed() {
+    return trashed;
+  }
+
+  /**
+   * RFC 3339 date-time when this Page was trashed.
+   * @param trashed trashed or {@code null} for none
+   */
+  public Page setTrashed(java.lang.String trashed) {
+    this.trashed = trashed;
     return this;
   }
 

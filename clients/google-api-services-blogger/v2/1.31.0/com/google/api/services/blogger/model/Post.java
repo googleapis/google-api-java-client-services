@@ -155,6 +155,13 @@ public final class Post extends com.google.api.client.json.GenericJson {
   private java.lang.String titleLink;
 
   /**
+   * RFC 3339 date-time when this Post was last trashed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trashed;
+
+  /**
    * RFC 3339 date-time when this Post was last updated.
    * The value may be {@code null}.
    */
@@ -454,6 +461,23 @@ public final class Post extends com.google.api.client.json.GenericJson {
    */
   public Post setTitleLink(java.lang.String titleLink) {
     this.titleLink = titleLink;
+    return this;
+  }
+
+  /**
+   * RFC 3339 date-time when this Post was last trashed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrashed() {
+    return trashed;
+  }
+
+  /**
+   * RFC 3339 date-time when this Post was last trashed.
+   * @param trashed trashed or {@code null} for none
+   */
+  public Post setTrashed(java.lang.String trashed) {
+    this.trashed = trashed;
     return this;
   }
 

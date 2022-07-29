@@ -38,6 +38,19 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String clusterUuid;
 
   /**
+   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
+   * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
+   * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
+   * Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
+   * versions 1.2+.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String gracefulDecommissionTimeout;
+
+  /**
    * Optional. Node pools and corresponding repair action to be taken. All node pools should be
    * unique in this request. i.e. Multiple entries for the same node pool id are not allowed.
    * The value may be {@code null}.
@@ -50,6 +63,13 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(NodePool.class);
   }
+
+  /**
+   * Optional. operation id of the parent operation sending the repair request
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentOperationId;
 
   /**
    * Optional. A unique ID used to identify the request. If the server receives two
@@ -83,6 +103,35 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
+   * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
+   * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
+   * Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
+   * versions 1.2+.
+   * @return value or {@code null} for none
+   */
+  public String getGracefulDecommissionTimeout() {
+    return gracefulDecommissionTimeout;
+  }
+
+  /**
+   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning facilitates the
+   * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
+   * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
+   * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
+   * Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
+   * versions 1.2+.
+   * @param gracefulDecommissionTimeout gracefulDecommissionTimeout or {@code null} for none
+   */
+  public RepairClusterRequest setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
+    this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
+    return this;
+  }
+
+  /**
    * Optional. Node pools and corresponding repair action to be taken. All node pools should be
    * unique in this request. i.e. Multiple entries for the same node pool id are not allowed.
    * @return value or {@code null} for none
@@ -98,6 +147,23 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    */
   public RepairClusterRequest setNodePools(java.util.List<NodePool> nodePools) {
     this.nodePools = nodePools;
+    return this;
+  }
+
+  /**
+   * Optional. operation id of the parent operation sending the repair request
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentOperationId() {
+    return parentOperationId;
+  }
+
+  /**
+   * Optional. operation id of the parent operation sending the repair request
+   * @param parentOperationId parentOperationId or {@code null} for none
+   */
+  public RepairClusterRequest setParentOperationId(java.lang.String parentOperationId) {
+    this.parentOperationId = parentOperationId;
     return this;
   }
 

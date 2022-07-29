@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Widgets for chatbots to specify.
+ * Widgets for Chat apps to specify.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,21 +30,22 @@ package com.google.api.services.chat.v1.model;
 public final class CardWithId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Card proto that allows chatbots to specify UI elements and editable widgets.
+   * Card proto that allows Chat apps to specify UI elements and editable widgets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Card card;
 
   /**
-   * Chatbot-specified identifier for this widget. Scoped within a message.
+   * Required for `cardsV2` messages. Chat app-specified identifier for this widget. Scoped within a
+   * message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cardId;
 
   /**
-   * Card proto that allows chatbots to specify UI elements and editable widgets.
+   * Card proto that allows Chat apps to specify UI elements and editable widgets.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Card getCard() {
@@ -52,7 +53,7 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Card proto that allows chatbots to specify UI elements and editable widgets.
+   * Card proto that allows Chat apps to specify UI elements and editable widgets.
    * @param card card or {@code null} for none
    */
   public CardWithId setCard(GoogleAppsCardV1Card card) {
@@ -61,7 +62,8 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Chatbot-specified identifier for this widget. Scoped within a message.
+   * Required for `cardsV2` messages. Chat app-specified identifier for this widget. Scoped within a
+   * message.
    * @return value or {@code null} for none
    */
   public java.lang.String getCardId() {
@@ -69,7 +71,8 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Chatbot-specified identifier for this widget. Scoped within a message.
+   * Required for `cardsV2` messages. Chat app-specified identifier for this widget. Scoped within a
+   * message.
    * @param cardId cardId or {@code null} for none
    */
   public CardWithId setCardId(java.lang.String cardId) {

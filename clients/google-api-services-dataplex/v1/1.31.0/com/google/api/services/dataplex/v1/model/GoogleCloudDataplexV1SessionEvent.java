@@ -31,6 +31,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * The status of the event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean eventSucceeded;
+
+  /**
    * The log message.
    * The value may be {@code null}.
    */
@@ -59,11 +66,43 @@ public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.clie
   private java.lang.String type;
 
   /**
-   * The information about the user that created the session.
+   * The idle duration of a warm pooled session before it is assigned to user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String unassignedDuration;
+
+  /**
+   * The information about the user that created the session. It will be the email address of the
+   * user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
+
+  /**
+   * If the session is a warm pooled session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean warmPoolEnabled;
+
+  /**
+   * The status of the event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEventSucceeded() {
+    return eventSucceeded;
+  }
+
+  /**
+   * The status of the event.
+   * @param eventSucceeded eventSucceeded or {@code null} for none
+   */
+  public GoogleCloudDataplexV1SessionEvent setEventSucceeded(java.lang.Boolean eventSucceeded) {
+    this.eventSucceeded = eventSucceeded;
+    return this;
+  }
 
   /**
    * The log message.
@@ -134,7 +173,25 @@ public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.clie
   }
 
   /**
-   * The information about the user that created the session.
+   * The idle duration of a warm pooled session before it is assigned to user.
+   * @return value or {@code null} for none
+   */
+  public String getUnassignedDuration() {
+    return unassignedDuration;
+  }
+
+  /**
+   * The idle duration of a warm pooled session before it is assigned to user.
+   * @param unassignedDuration unassignedDuration or {@code null} for none
+   */
+  public GoogleCloudDataplexV1SessionEvent setUnassignedDuration(String unassignedDuration) {
+    this.unassignedDuration = unassignedDuration;
+    return this;
+  }
+
+  /**
+   * The information about the user that created the session. It will be the email address of the
+   * user.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -142,11 +199,29 @@ public final class GoogleCloudDataplexV1SessionEvent extends com.google.api.clie
   }
 
   /**
-   * The information about the user that created the session.
+   * The information about the user that created the session. It will be the email address of the
+   * user.
    * @param userId userId or {@code null} for none
    */
   public GoogleCloudDataplexV1SessionEvent setUserId(java.lang.String userId) {
     this.userId = userId;
+    return this;
+  }
+
+  /**
+   * If the session is a warm pooled session.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWarmPoolEnabled() {
+    return warmPoolEnabled;
+  }
+
+  /**
+   * If the session is a warm pooled session.
+   * @param warmPoolEnabled warmPoolEnabled or {@code null} for none
+   */
+  public GoogleCloudDataplexV1SessionEvent setWarmPoolEnabled(java.lang.Boolean warmPoolEnabled) {
+    this.warmPoolEnabled = warmPoolEnabled;
     return this;
   }
 

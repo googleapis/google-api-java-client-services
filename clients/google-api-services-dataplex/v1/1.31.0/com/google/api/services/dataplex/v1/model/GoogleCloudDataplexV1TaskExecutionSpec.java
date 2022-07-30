@@ -60,8 +60,7 @@ public final class GoogleCloudDataplexV1TaskExecutionSpec extends com.google.api
 
   /**
    * Optional. The project in which jobs are run. By default, the project containing the Lake is
-   * used. If a project is provided, the executionspec.service_account must belong to this same
-   * project.
+   * used. If a project is provided, the ExecutionSpec.service_account must belong to this project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +143,7 @@ public final class GoogleCloudDataplexV1TaskExecutionSpec extends com.google.api
 
   /**
    * Optional. The project in which jobs are run. By default, the project containing the Lake is
-   * used. If a project is provided, the executionspec.service_account must belong to this same
-   * project.
+   * used. If a project is provided, the ExecutionSpec.service_account must belong to this project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -154,8 +152,7 @@ public final class GoogleCloudDataplexV1TaskExecutionSpec extends com.google.api
 
   /**
    * Optional. The project in which jobs are run. By default, the project containing the Lake is
-   * used. If a project is provided, the executionspec.service_account must belong to this same
-   * project.
+   * used. If a project is provided, the ExecutionSpec.service_account must belong to this project.
    * @param project project or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskExecutionSpec setProject(java.lang.String project) {

@@ -79,6 +79,13 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private RoleGrant roleGrant;
 
   /**
+   * State of the config variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Regular expression in RE2 syntax used for validating the `value` of a `ConfigVariable`.
    * The value may be {@code null}.
    */
@@ -209,6 +216,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setRoleGrant(RoleGrant roleGrant) {
     this.roleGrant = roleGrant;
+    return this;
+  }
+
+  /**
+   * State of the config variable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * State of the config variable.
+   * @param state state or {@code null} for none
+   */
+  public ConfigVariableTemplate setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

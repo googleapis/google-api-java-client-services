@@ -38,7 +38,14 @@ public final class InstanceQuota extends com.google.api.client.json.GenericJson 
   private java.lang.Integer availableMachineCount;
 
   /**
-   * Instance type.
+   * The gcp service of the provisioning quota.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcpService;
+
+  /**
+   * Instance type. Deprecated: use gcp_service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +83,24 @@ public final class InstanceQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Instance type.
+   * The gcp service of the provisioning quota.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcpService() {
+    return gcpService;
+  }
+
+  /**
+   * The gcp service of the provisioning quota.
+   * @param gcpService gcpService or {@code null} for none
+   */
+  public InstanceQuota setGcpService(java.lang.String gcpService) {
+    this.gcpService = gcpService;
+    return this;
+  }
+
+  /**
+   * Instance type. Deprecated: use gcp_service.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceType() {
@@ -84,7 +108,7 @@ public final class InstanceQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Instance type.
+   * Instance type. Deprecated: use gcp_service.
    * @param instanceType instanceType or {@code null} for none
    */
   public InstanceQuota setInstanceType(java.lang.String instanceType) {

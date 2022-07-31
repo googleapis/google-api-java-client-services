@@ -697,6 +697,137 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
       public class Instances {
 
         /**
+         * Create an Instance.
+         *
+         * Create a request for the method "instances.create".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent project and location.
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.Instance}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.baremetalsolution.v2.model.Instance content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/instances";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create an Instance.
+           *
+           * Create a request for the method "instances.create".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent project and location.
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.Instance}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.baremetalsolution.v2.model.Instance content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent project and location. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent project and location.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent project and location. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
          * Detach LUN from Instance.
          *
          * Create a request for the method "instances.detachLun".
@@ -1168,8 +1299,8 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the baremetalsolution server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of this `Instance`. Resource names are schemeless URIs that follow
-         *        the conventions in https://cloud.google.com/apis/design/resource_names. Format:
+         * @param name Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
+         *        conventions in https://cloud.google.com/apis/design/resource_names. Format:
          *        `projects/{project}/locations/{location}/instances/{instance}`
          * @param content the {@link com.google.api.services.baremetalsolution.v2.model.Instance}
          * @return the request
@@ -1198,8 +1329,8 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of this `Instance`. Resource names are schemeless URIs that follow
-         *        the conventions in https://cloud.google.com/apis/design/resource_names. Format:
+           * @param name Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
+         *        conventions in https://cloud.google.com/apis/design/resource_names. Format:
          *        `projects/{project}/locations/{location}/instances/{instance}`
            * @param content the {@link com.google.api.services.baremetalsolution.v2.model.Instance}
            * @since 1.13
@@ -1270,15 +1401,15 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Output only. The resource name of this `Instance`. Resource names are schemeless URIs
+           * Immutable. The resource name of this `Instance`. Resource names are schemeless URIs
            * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
            * Format: `projects/{project}/locations/{location}/instances/{instance}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of this `Instance`. Resource names are schemeless URIs that follow
-         the conventions in https://cloud.google.com/apis/design/resource_names. Format:
+          /** Immutable. The resource name of this `Instance`. Resource names are schemeless URIs that follow the
+         conventions in https://cloud.google.com/apis/design/resource_names. Format:
          `projects/{project}/locations/{location}/instances/{instance}`
            */
           public java.lang.String getName() {
@@ -1286,7 +1417,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Output only. The resource name of this `Instance`. Resource names are schemeless URIs
+           * Immutable. The resource name of this `Instance`. Resource names are schemeless URIs
            * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
            * Format: `projects/{project}/locations/{location}/instances/{instance}`
            */

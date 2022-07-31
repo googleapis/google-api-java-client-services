@@ -66,6 +66,14 @@ public final class AllowedClient extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
+   * Output only. The path to access NFS, in format shareIP:/InstanceID InstanceID is the generated
+   * ID instead of customer provided name. example like "10.0.0.0:/g123456789-nfs001"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nfsPath;
+
+  /**
    * Disable root squashing, which is a feature of NFS. Root squash is a special mapping of the
    * remote superuser (root) identity when using identity authentication.
    * The value may be {@code null}.
@@ -162,6 +170,25 @@ public final class AllowedClient extends com.google.api.client.json.GenericJson 
    */
   public AllowedClient setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Output only. The path to access NFS, in format shareIP:/InstanceID InstanceID is the generated
+   * ID instead of customer provided name. example like "10.0.0.0:/g123456789-nfs001"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNfsPath() {
+    return nfsPath;
+  }
+
+  /**
+   * Output only. The path to access NFS, in format shareIP:/InstanceID InstanceID is the generated
+   * ID instead of customer provided name. example like "10.0.0.0:/g123456789-nfs001"
+   * @param nfsPath nfsPath or {@code null} for none
+   */
+  public AllowedClient setNfsPath(java.lang.String nfsPath) {
+    this.nfsPath = nfsPath;
     return this;
   }
 

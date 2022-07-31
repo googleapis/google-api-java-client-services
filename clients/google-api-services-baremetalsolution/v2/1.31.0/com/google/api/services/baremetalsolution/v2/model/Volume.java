@@ -100,6 +100,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String pod;
 
   /**
+   * Output only. Storage protocol for the Volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protocol;
+
+  /**
    * The space remaining in the storage volume for new LUNs, in GiB, excluding space reserved for
    * snapshots.
    * The value may be {@code null}.
@@ -318,6 +325,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setPod(java.lang.String pod) {
     this.pod = pod;
+    return this;
+  }
+
+  /**
+   * Output only. Storage protocol for the Volume.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtocol() {
+    return protocol;
+  }
+
+  /**
+   * Output only. Storage protocol for the Volume.
+   * @param protocol protocol or {@code null} for none
+   */
+  public Volume setProtocol(java.lang.String protocol) {
+    this.protocol = protocol;
     return this;
   }
 

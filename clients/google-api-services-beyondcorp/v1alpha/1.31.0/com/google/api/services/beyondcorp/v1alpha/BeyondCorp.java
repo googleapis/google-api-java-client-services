@@ -133,6 +133,898 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
+   *   {@code BeyondCorp.Organizations.List request = beyondcorp.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
+     *   {@code BeyondCorp.Locations.List request = beyondcorp.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Insights collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
+       *   {@code BeyondCorp.Insights.List request = beyondcorp.insights().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Insights insights() {
+        return new Insights();
+      }
+
+      /**
+       * The "insights" collection of methods.
+       */
+      public class Insights {
+
+        /**
+         * Gets the value for a selected particular insight based on the provided filters. Use the
+         * organization level path for fetching at org level and project level path for fetching the insight
+         * value specific to a particular project.
+         *
+         * Create a request for the method "insights.configuredInsight".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link ConfiguredInsight#execute()} method to invoke the remote operation.
+         *
+         * @param insight Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+         * @return the request
+         */
+        public ConfiguredInsight configuredInsight(java.lang.String insight) throws java.io.IOException {
+          ConfiguredInsight result = new ConfiguredInsight(insight);
+          initialize(result);
+          return result;
+        }
+
+        public class ConfiguredInsight extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaConfiguredInsightResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+insight}:configuredInsight";
+
+          private final java.util.regex.Pattern INSIGHT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/insights/[^/]+$");
+
+          /**
+           * Gets the value for a selected particular insight based on the provided filters. Use the
+           * organization level path for fetching at org level and project level path for fetching the
+           * insight value specific to a particular project.
+           *
+           * Create a request for the method "insights.configuredInsight".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link ConfiguredInsight#execute()} method to invoke the remote
+           * operation. <p> {@link ConfiguredInsight#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param insight Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           * @since 1.13
+           */
+          protected ConfiguredInsight(java.lang.String insight) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaConfiguredInsightResponse.class);
+            this.insight = com.google.api.client.util.Preconditions.checkNotNull(insight, "Required parameter insight must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(INSIGHT_PATTERN.matcher(insight).matches(),
+                  "Parameter insight must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ConfiguredInsight set$Xgafv(java.lang.String $Xgafv) {
+            return (ConfiguredInsight) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ConfiguredInsight setAccessToken(java.lang.String accessToken) {
+            return (ConfiguredInsight) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ConfiguredInsight setAlt(java.lang.String alt) {
+            return (ConfiguredInsight) super.setAlt(alt);
+          }
+
+          @Override
+          public ConfiguredInsight setCallback(java.lang.String callback) {
+            return (ConfiguredInsight) super.setCallback(callback);
+          }
+
+          @Override
+          public ConfiguredInsight setFields(java.lang.String fields) {
+            return (ConfiguredInsight) super.setFields(fields);
+          }
+
+          @Override
+          public ConfiguredInsight setKey(java.lang.String key) {
+            return (ConfiguredInsight) super.setKey(key);
+          }
+
+          @Override
+          public ConfiguredInsight setOauthToken(java.lang.String oauthToken) {
+            return (ConfiguredInsight) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ConfiguredInsight setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ConfiguredInsight) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ConfiguredInsight setQuotaUser(java.lang.String quotaUser) {
+            return (ConfiguredInsight) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ConfiguredInsight setUploadType(java.lang.String uploadType) {
+            return (ConfiguredInsight) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ConfiguredInsight setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ConfiguredInsight) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String insight;
+
+          /** Required. The resource name of the insight using the form:
+         `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           */
+          public java.lang.String getInsight() {
+            return insight;
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           */
+          public ConfiguredInsight setInsight(java.lang.String insight) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(INSIGHT_PATTERN.matcher(insight).matches(),
+                  "Parameter insight must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+            this.insight = insight;
+            return this;
+          }
+
+          /**
+           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * list and get APIs in `BASIC` view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String aggregation;
+
+          /** Optional. Aggregation type. Available aggregation could be fetched by calling insight list and get
+         APIs in `BASIC` view.
+           */
+          public java.lang.String getAggregation() {
+            return aggregation;
+          }
+
+          /**
+           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * list and get APIs in `BASIC` view.
+           */
+          public ConfiguredInsight setAggregation(java.lang.String aggregation) {
+            this.aggregation = aggregation;
+            return this;
+          }
+
+          /**
+           * Optional. Filterable parameters to be added to the grouping clause. Available fields
+           * could be fetched by calling insight list and get APIs in `BASIC` view. `=` is the only
+           * comparison operator supported. `AND` is the only logical operator supported. Usage:
+           * field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND`
+           * conditions are allowed. NOTE: Use the `filter_alias` from `Insight.Metadata.Field`
+           * message for the filtering the corresponding fields in this filter field. (These
+           * expressions are based on the filter language described at https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key("customGrouping.fieldFilter")
+          private java.lang.String customGroupingFieldFilter;
+
+          /** Optional. Filterable parameters to be added to the grouping clause. Available fields could be
+         fetched by calling insight list and get APIs in `BASIC` view. `=` is the only comparison operator
+         supported. `AND` is the only logical operator supported. Usage: field_filter="fieldName1=fieldVal1
+         AND fieldName2=fieldVal2". NOTE: Only `AND` conditions are allowed. NOTE: Use the `filter_alias`
+         from `Insight.Metadata.Field` message for the filtering the corresponding fields in this filter
+         field. (These expressions are based on the filter language described at
+         https://google.aip.dev/160).
+           */
+          public java.lang.String getCustomGroupingFieldFilter() {
+            return customGroupingFieldFilter;
+          }
+
+          /**
+           * Optional. Filterable parameters to be added to the grouping clause. Available fields
+           * could be fetched by calling insight list and get APIs in `BASIC` view. `=` is the only
+           * comparison operator supported. `AND` is the only logical operator supported. Usage:
+           * field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND`
+           * conditions are allowed. NOTE: Use the `filter_alias` from `Insight.Metadata.Field`
+           * message for the filtering the corresponding fields in this filter field. (These
+           * expressions are based on the filter language described at https://google.aip.dev/160).
+           */
+          public ConfiguredInsight setCustomGroupingFieldFilter(java.lang.String customGroupingFieldFilter) {
+            this.customGroupingFieldFilter = customGroupingFieldFilter;
+            return this;
+          }
+
+          /**
+           * Required. Fields to be used for grouping. NOTE: Use the `filter_alias` from
+           * `Insight.Metadata.Field` message for declaring the fields to be grouped-by here.
+           */
+          @com.google.api.client.util.Key("customGrouping.groupFields")
+          private java.util.List<java.lang.String> customGroupingGroupFields;
+
+          /** Required. Fields to be used for grouping. NOTE: Use the `filter_alias` from
+         `Insight.Metadata.Field` message for declaring the fields to be grouped-by here.
+           */
+          public java.util.List<java.lang.String> getCustomGroupingGroupFields() {
+            return customGroupingGroupFields;
+          }
+
+          /**
+           * Required. Fields to be used for grouping. NOTE: Use the `filter_alias` from
+           * `Insight.Metadata.Field` message for declaring the fields to be grouped-by here.
+           */
+          public ConfiguredInsight setCustomGroupingGroupFields(java.util.List<java.lang.String> customGroupingGroupFields) {
+            this.customGroupingGroupFields = customGroupingGroupFields;
+            return this;
+          }
+
+          /** Required. Ending time for the duration for which insight is to be pulled. */
+          @com.google.api.client.util.Key
+          private String endTime;
+
+          /** Required. Ending time for the duration for which insight is to be pulled.
+           */
+          public String getEndTime() {
+            return endTime;
+          }
+
+          /** Required. Ending time for the duration for which insight is to be pulled. */
+          public ConfiguredInsight setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+          }
+
+          /**
+           * Optional. Other filterable/configurable parameters as applicable to the selected
+           * insight. Available fields could be fetched by calling insight list and get APIs in
+           * `BASIC` view. `=` is the only comparison operator supported. `AND` is the only logical
+           * operator supported. Usage: field_filter="fieldName1=fieldVal1 AND
+           * fieldName2=fieldVal2". NOTE: Only `AND` conditions are allowed. NOTE: Use the
+           * `filter_alias` from `Insight.Metadata.Field` message for the filtering the
+           * corresponding fields in this filter field. (These expressions are based on the filter
+           * language described at https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fieldFilter;
+
+          /** Optional. Other filterable/configurable parameters as applicable to the selected insight. Available
+         fields could be fetched by calling insight list and get APIs in `BASIC` view. `=` is the only
+         comparison operator supported. `AND` is the only logical operator supported. Usage:
+         field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND` conditions are
+         allowed. NOTE: Use the `filter_alias` from `Insight.Metadata.Field` message for the filtering the
+         corresponding fields in this filter field. (These expressions are based on the filter language
+         described at https://google.aip.dev/160).
+           */
+          public java.lang.String getFieldFilter() {
+            return fieldFilter;
+          }
+
+          /**
+           * Optional. Other filterable/configurable parameters as applicable to the selected
+           * insight. Available fields could be fetched by calling insight list and get APIs in
+           * `BASIC` view. `=` is the only comparison operator supported. `AND` is the only logical
+           * operator supported. Usage: field_filter="fieldName1=fieldVal1 AND
+           * fieldName2=fieldVal2". NOTE: Only `AND` conditions are allowed. NOTE: Use the
+           * `filter_alias` from `Insight.Metadata.Field` message for the filtering the
+           * corresponding fields in this filter field. (These expressions are based on the filter
+           * language described at https://google.aip.dev/160).
+           */
+          public ConfiguredInsight setFieldFilter(java.lang.String fieldFilter) {
+            this.fieldFilter = fieldFilter;
+            return this;
+          }
+
+          /**
+           * Optional. Group id of the available groupings for the insight. Available groupings
+           * could be fetched by calling insight list and get APIs in `BASIC` view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String group;
+
+          /** Optional. Group id of the available groupings for the insight. Available groupings could be fetched
+         by calling insight list and get APIs in `BASIC` view.
+           */
+          public java.lang.String getGroup() {
+            return group;
+          }
+
+          /**
+           * Optional. Group id of the available groupings for the insight. Available groupings
+           * could be fetched by calling insight list and get APIs in `BASIC` view.
+           */
+          public ConfiguredInsight setGroup(java.lang.String group) {
+            this.group = group;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public ConfiguredInsight setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Used to fetch the page represented by the token. Fetches the first page when
+           * not set.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Used to fetch the page represented by the token. Fetches the first page when not set.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Used to fetch the page represented by the token. Fetches the first page when
+           * not set.
+           */
+          public ConfiguredInsight setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. Starting time for the duration for which insight is to be pulled. */
+          @com.google.api.client.util.Key
+          private String startTime;
+
+          /** Required. Starting time for the duration for which insight is to be pulled.
+           */
+          public String getStartTime() {
+            return startTime;
+          }
+
+          /** Required. Starting time for the duration for which insight is to be pulled. */
+          public ConfiguredInsight setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+          }
+
+          @Override
+          public ConfiguredInsight set(String parameterName, Object value) {
+            return (ConfiguredInsight) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the value for a selected particular insight with default configuration. The default
+         * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
+         * The data will be returned for recent 7 days. Use the organization level path for fetching at org
+         * level and project level path for fetching the insight value specific to a particular project.
+         * Setting the `view` to `BASIC` will only return the metadata for the insight.
+         *
+         * Create a request for the method "insights.get".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaInsight> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/insights/[^/]+$");
+
+          /**
+           * Gets the value for a selected particular insight with default configuration. The default
+           * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
+           * The data will be returned for recent 7 days. Use the organization level path for fetching at
+           * org level and project level path for fetching the insight value specific to a particular
+           * project. Setting the `view` to `BASIC` will only return the metadata for the insight.
+           *
+           * Create a request for the method "insights.get".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaInsight.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the insight using the form:
+         `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Metadata only or full data view. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Required. Metadata only or full data view.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Required. Metadata only or full data view. */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists for all the available insights that could be fetched from the system. Allows to filter
+         * using category. Setting the `view` to `BASIC` will let you iterate over the list of insight
+         * metadatas.
+         *
+         * Create a request for the method "insights.list".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of InsightMetadata using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+         *        `projects/{project_id}/locations/{location_id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaListInsightsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/insights";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists for all the available insights that could be fetched from the system. Allows to filter
+           * using category. Setting the `view` to `BASIC` will let you iterate over the list of insight
+           * metadatas.
+           *
+           * Create a request for the method "insights.list".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of InsightMetadata using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+         *        `projects/{project_id}/locations/{location_id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaListInsightsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of InsightMetadata using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           * `projects/{project_id}/locations/{location_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of InsightMetadata using the form:
+         `organizations/{organization_id}/locations/{location}`
+         `projects/{project_id}/locations/{location_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of InsightMetadata using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           * `projects/{project_id}/locations/{location_id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter expression to restrict the insights returned. Supported filter fields:
+           * * `type` * `category` * `subCategory` Examples: * "category = application AND type =
+           * count" * "category = application AND subCategory = iap" * "type = status" Allowed
+           * values: * type: [count, latency, status, list] * category: [application, device,
+           * request, security] * subCategory: [iap, webprotect] NOTE: Only equality based
+           * comparison is allowed. Only `AND` conjunction is allowed. NOTE: The 'AND' in the filter
+           * field needs to be in capital letters only. NOTE: Just filtering on `subCategory` is not
+           * allowed. It should be passed in with the parent `category` too. (These expressions are
+           * based on the filter language described at https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter expression to restrict the insights returned. Supported filter fields: * `type` *
+         `category` * `subCategory` Examples: * "category = application AND type = count" * "category =
+         application AND subCategory = iap" * "type = status" Allowed values: * type: [count, latency,
+         status, list] * category: [application, device, request, security] * subCategory: [iap, webprotect]
+         NOTE: Only equality based comparison is allowed. Only `AND` conjunction is allowed. NOTE: The 'AND'
+         in the filter field needs to be in capital letters only. NOTE: Just filtering on `subCategory` is
+         not allowed. It should be passed in with the parent `category` too. (These expressions are based on
+         the filter language described at https://google.aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter expression to restrict the insights returned. Supported filter fields:
+           * * `type` * `category` * `subCategory` Examples: * "category = application AND type =
+           * count" * "category = application AND subCategory = iap" * "type = status" Allowed
+           * values: * type: [count, latency, status, list] * category: [application, device,
+           * request, security] * subCategory: [iap, webprotect] NOTE: Only equality based
+           * comparison is allowed. Only `AND` conjunction is allowed. NOTE: The 'AND' in the filter
+           * field needs to be in capital letters only. NOTE: Just filtering on `subCategory` is not
+           * allowed. It should be passed in with the parent `category` too. (These expressions are
+           * based on the filter language described at https://google.aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. This is currently ignored. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results. This is currently ignored.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. This is currently ignored. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default. NOTE: Default page size is 50.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default. NOTE: Default page size is 50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default. NOTE: Default page size is 50.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. List only metadata or full data. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Required. List only metadata or full data.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Required. List only metadata or full data. */
+          public List setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -3736,8 +4628,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Get instance config for a given AppConnector. An internal method called by a AppConnector to get
-         * its container config.
+         * Gets instance configuration for a given AppConnector. An internal method called by a AppConnector
+         * to get its container config.
          *
          * Create a request for the method "appConnectors.resolveInstanceConfig".
          *
@@ -3763,8 +4655,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/appConnectors/[^/]+$");
 
           /**
-           * Get instance config for a given AppConnector. An internal method called by a AppConnector to
-           * get its container config.
+           * Gets instance configuration for a given AppConnector. An internal method called by a
+           * AppConnector to get its container config.
            *
            * Create a request for the method "appConnectors.resolveInstanceConfig".
            *
@@ -12068,8 +12960,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Get instance config for a given connector. An internal method called by a connector to get its
-         * container config.
+         * Gets instance configuration for a given connector. An internal method called by a connector to
+         * get its container config.
          *
          * Create a request for the method "connectors.resolveInstanceConfig".
          *
@@ -12095,8 +12987,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connectors/[^/]+$");
 
           /**
-           * Get instance config for a given connector. An internal method called by a connector to get its
-           * container config.
+           * Gets instance configuration for a given connector. An internal method called by a connector to
+           * get its container config.
            *
            * Create a request for the method "connectors.resolveInstanceConfig".
            *
@@ -12514,6 +13406,855 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Insights collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
+       *   {@code BeyondCorp.Insights.List request = beyondcorp.insights().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Insights insights() {
+        return new Insights();
+      }
+
+      /**
+       * The "insights" collection of methods.
+       */
+      public class Insights {
+
+        /**
+         * Gets the value for a selected particular insight based on the provided filters. Use the
+         * organization level path for fetching at org level and project level path for fetching the insight
+         * value specific to a particular project.
+         *
+         * Create a request for the method "insights.configuredInsight".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link ConfiguredInsight#execute()} method to invoke the remote operation.
+         *
+         * @param insight Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+         * @return the request
+         */
+        public ConfiguredInsight configuredInsight(java.lang.String insight) throws java.io.IOException {
+          ConfiguredInsight result = new ConfiguredInsight(insight);
+          initialize(result);
+          return result;
+        }
+
+        public class ConfiguredInsight extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaConfiguredInsightResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+insight}:configuredInsight";
+
+          private final java.util.regex.Pattern INSIGHT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insights/[^/]+$");
+
+          /**
+           * Gets the value for a selected particular insight based on the provided filters. Use the
+           * organization level path for fetching at org level and project level path for fetching the
+           * insight value specific to a particular project.
+           *
+           * Create a request for the method "insights.configuredInsight".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link ConfiguredInsight#execute()} method to invoke the remote
+           * operation. <p> {@link ConfiguredInsight#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param insight Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           * @since 1.13
+           */
+          protected ConfiguredInsight(java.lang.String insight) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaConfiguredInsightResponse.class);
+            this.insight = com.google.api.client.util.Preconditions.checkNotNull(insight, "Required parameter insight must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(INSIGHT_PATTERN.matcher(insight).matches(),
+                  "Parameter insight must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ConfiguredInsight set$Xgafv(java.lang.String $Xgafv) {
+            return (ConfiguredInsight) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ConfiguredInsight setAccessToken(java.lang.String accessToken) {
+            return (ConfiguredInsight) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ConfiguredInsight setAlt(java.lang.String alt) {
+            return (ConfiguredInsight) super.setAlt(alt);
+          }
+
+          @Override
+          public ConfiguredInsight setCallback(java.lang.String callback) {
+            return (ConfiguredInsight) super.setCallback(callback);
+          }
+
+          @Override
+          public ConfiguredInsight setFields(java.lang.String fields) {
+            return (ConfiguredInsight) super.setFields(fields);
+          }
+
+          @Override
+          public ConfiguredInsight setKey(java.lang.String key) {
+            return (ConfiguredInsight) super.setKey(key);
+          }
+
+          @Override
+          public ConfiguredInsight setOauthToken(java.lang.String oauthToken) {
+            return (ConfiguredInsight) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ConfiguredInsight setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ConfiguredInsight) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ConfiguredInsight setQuotaUser(java.lang.String quotaUser) {
+            return (ConfiguredInsight) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ConfiguredInsight setUploadType(java.lang.String uploadType) {
+            return (ConfiguredInsight) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ConfiguredInsight setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ConfiguredInsight) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String insight;
+
+          /** Required. The resource name of the insight using the form:
+         `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           */
+          public java.lang.String getInsight() {
+            return insight;
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`.
+           */
+          public ConfiguredInsight setInsight(java.lang.String insight) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(INSIGHT_PATTERN.matcher(insight).matches(),
+                  "Parameter insight must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+            this.insight = insight;
+            return this;
+          }
+
+          /**
+           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * list and get APIs in `BASIC` view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String aggregation;
+
+          /** Optional. Aggregation type. Available aggregation could be fetched by calling insight list and get
+         APIs in `BASIC` view.
+           */
+          public java.lang.String getAggregation() {
+            return aggregation;
+          }
+
+          /**
+           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * list and get APIs in `BASIC` view.
+           */
+          public ConfiguredInsight setAggregation(java.lang.String aggregation) {
+            this.aggregation = aggregation;
+            return this;
+          }
+
+          /**
+           * Optional. Filterable parameters to be added to the grouping clause. Available fields
+           * could be fetched by calling insight list and get APIs in `BASIC` view. `=` is the only
+           * comparison operator supported. `AND` is the only logical operator supported. Usage:
+           * field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND`
+           * conditions are allowed. NOTE: Use the `filter_alias` from `Insight.Metadata.Field`
+           * message for the filtering the corresponding fields in this filter field. (These
+           * expressions are based on the filter language described at https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key("customGrouping.fieldFilter")
+          private java.lang.String customGroupingFieldFilter;
+
+          /** Optional. Filterable parameters to be added to the grouping clause. Available fields could be
+         fetched by calling insight list and get APIs in `BASIC` view. `=` is the only comparison operator
+         supported. `AND` is the only logical operator supported. Usage: field_filter="fieldName1=fieldVal1
+         AND fieldName2=fieldVal2". NOTE: Only `AND` conditions are allowed. NOTE: Use the `filter_alias`
+         from `Insight.Metadata.Field` message for the filtering the corresponding fields in this filter
+         field. (These expressions are based on the filter language described at
+         https://google.aip.dev/160).
+           */
+          public java.lang.String getCustomGroupingFieldFilter() {
+            return customGroupingFieldFilter;
+          }
+
+          /**
+           * Optional. Filterable parameters to be added to the grouping clause. Available fields
+           * could be fetched by calling insight list and get APIs in `BASIC` view. `=` is the only
+           * comparison operator supported. `AND` is the only logical operator supported. Usage:
+           * field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND`
+           * conditions are allowed. NOTE: Use the `filter_alias` from `Insight.Metadata.Field`
+           * message for the filtering the corresponding fields in this filter field. (These
+           * expressions are based on the filter language described at https://google.aip.dev/160).
+           */
+          public ConfiguredInsight setCustomGroupingFieldFilter(java.lang.String customGroupingFieldFilter) {
+            this.customGroupingFieldFilter = customGroupingFieldFilter;
+            return this;
+          }
+
+          /**
+           * Required. Fields to be used for grouping. NOTE: Use the `filter_alias` from
+           * `Insight.Metadata.Field` message for declaring the fields to be grouped-by here.
+           */
+          @com.google.api.client.util.Key("customGrouping.groupFields")
+          private java.util.List<java.lang.String> customGroupingGroupFields;
+
+          /** Required. Fields to be used for grouping. NOTE: Use the `filter_alias` from
+         `Insight.Metadata.Field` message for declaring the fields to be grouped-by here.
+           */
+          public java.util.List<java.lang.String> getCustomGroupingGroupFields() {
+            return customGroupingGroupFields;
+          }
+
+          /**
+           * Required. Fields to be used for grouping. NOTE: Use the `filter_alias` from
+           * `Insight.Metadata.Field` message for declaring the fields to be grouped-by here.
+           */
+          public ConfiguredInsight setCustomGroupingGroupFields(java.util.List<java.lang.String> customGroupingGroupFields) {
+            this.customGroupingGroupFields = customGroupingGroupFields;
+            return this;
+          }
+
+          /** Required. Ending time for the duration for which insight is to be pulled. */
+          @com.google.api.client.util.Key
+          private String endTime;
+
+          /** Required. Ending time for the duration for which insight is to be pulled.
+           */
+          public String getEndTime() {
+            return endTime;
+          }
+
+          /** Required. Ending time for the duration for which insight is to be pulled. */
+          public ConfiguredInsight setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+          }
+
+          /**
+           * Optional. Other filterable/configurable parameters as applicable to the selected
+           * insight. Available fields could be fetched by calling insight list and get APIs in
+           * `BASIC` view. `=` is the only comparison operator supported. `AND` is the only logical
+           * operator supported. Usage: field_filter="fieldName1=fieldVal1 AND
+           * fieldName2=fieldVal2". NOTE: Only `AND` conditions are allowed. NOTE: Use the
+           * `filter_alias` from `Insight.Metadata.Field` message for the filtering the
+           * corresponding fields in this filter field. (These expressions are based on the filter
+           * language described at https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fieldFilter;
+
+          /** Optional. Other filterable/configurable parameters as applicable to the selected insight. Available
+         fields could be fetched by calling insight list and get APIs in `BASIC` view. `=` is the only
+         comparison operator supported. `AND` is the only logical operator supported. Usage:
+         field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND` conditions are
+         allowed. NOTE: Use the `filter_alias` from `Insight.Metadata.Field` message for the filtering the
+         corresponding fields in this filter field. (These expressions are based on the filter language
+         described at https://google.aip.dev/160).
+           */
+          public java.lang.String getFieldFilter() {
+            return fieldFilter;
+          }
+
+          /**
+           * Optional. Other filterable/configurable parameters as applicable to the selected
+           * insight. Available fields could be fetched by calling insight list and get APIs in
+           * `BASIC` view. `=` is the only comparison operator supported. `AND` is the only logical
+           * operator supported. Usage: field_filter="fieldName1=fieldVal1 AND
+           * fieldName2=fieldVal2". NOTE: Only `AND` conditions are allowed. NOTE: Use the
+           * `filter_alias` from `Insight.Metadata.Field` message for the filtering the
+           * corresponding fields in this filter field. (These expressions are based on the filter
+           * language described at https://google.aip.dev/160).
+           */
+          public ConfiguredInsight setFieldFilter(java.lang.String fieldFilter) {
+            this.fieldFilter = fieldFilter;
+            return this;
+          }
+
+          /**
+           * Optional. Group id of the available groupings for the insight. Available groupings
+           * could be fetched by calling insight list and get APIs in `BASIC` view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String group;
+
+          /** Optional. Group id of the available groupings for the insight. Available groupings could be fetched
+         by calling insight list and get APIs in `BASIC` view.
+           */
+          public java.lang.String getGroup() {
+            return group;
+          }
+
+          /**
+           * Optional. Group id of the available groupings for the insight. Available groupings
+           * could be fetched by calling insight list and get APIs in `BASIC` view.
+           */
+          public ConfiguredInsight setGroup(java.lang.String group) {
+            this.group = group;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public ConfiguredInsight setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Used to fetch the page represented by the token. Fetches the first page when
+           * not set.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Used to fetch the page represented by the token. Fetches the first page when not set.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Used to fetch the page represented by the token. Fetches the first page when
+           * not set.
+           */
+          public ConfiguredInsight setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. Starting time for the duration for which insight is to be pulled. */
+          @com.google.api.client.util.Key
+          private String startTime;
+
+          /** Required. Starting time for the duration for which insight is to be pulled.
+           */
+          public String getStartTime() {
+            return startTime;
+          }
+
+          /** Required. Starting time for the duration for which insight is to be pulled. */
+          public ConfiguredInsight setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+          }
+
+          @Override
+          public ConfiguredInsight set(String parameterName, Object value) {
+            return (ConfiguredInsight) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the value for a selected particular insight with default configuration. The default
+         * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
+         * The data will be returned for recent 7 days. Use the organization level path for fetching at org
+         * level and project level path for fetching the insight value specific to a particular project.
+         * Setting the `view` to `BASIC` will only return the metadata for the insight.
+         *
+         * Create a request for the method "insights.get".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaInsight> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insights/[^/]+$");
+
+          /**
+           * Gets the value for a selected particular insight with default configuration. The default
+           * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
+           * The data will be returned for recent 7 days. Use the organization level path for fetching at
+           * org level and project level path for fetching the insight value specific to a particular
+           * project. Setting the `view` to `BASIC` will only return the metadata for the insight.
+           *
+           * Create a request for the method "insights.get".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the insight using the form:
+         *        `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         *        `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaInsight.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the insight using the form:
+         `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+         `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the insight using the form:
+           * `organizations/{organization_id}/locations/{location_id}/insights/{insight_id}`
+           * `projects/{project_id}/locations/{location_id}/insights/{insight_id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insights/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Metadata only or full data view. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Required. Metadata only or full data view.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Required. Metadata only or full data view. */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists for all the available insights that could be fetched from the system. Allows to filter
+         * using category. Setting the `view` to `BASIC` will let you iterate over the list of insight
+         * metadatas.
+         *
+         * Create a request for the method "insights.list".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of InsightMetadata using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+         *        `projects/{project_id}/locations/{location_id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaListInsightsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/insights";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists for all the available insights that could be fetched from the system. Allows to filter
+           * using category. Setting the `view` to `BASIC` will let you iterate over the list of insight
+           * metadatas.
+           *
+           * Create a request for the method "insights.list".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of InsightMetadata using the form:
+         *        `organizations/{organization_id}/locations/{location}`
+         *        `projects/{project_id}/locations/{location_id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformInsightsV1alphaListInsightsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of InsightMetadata using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           * `projects/{project_id}/locations/{location_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of InsightMetadata using the form:
+         `organizations/{organization_id}/locations/{location}`
+         `projects/{project_id}/locations/{location_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of InsightMetadata using the form:
+           * `organizations/{organization_id}/locations/{location}`
+           * `projects/{project_id}/locations/{location_id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter expression to restrict the insights returned. Supported filter fields:
+           * * `type` * `category` * `subCategory` Examples: * "category = application AND type =
+           * count" * "category = application AND subCategory = iap" * "type = status" Allowed
+           * values: * type: [count, latency, status, list] * category: [application, device,
+           * request, security] * subCategory: [iap, webprotect] NOTE: Only equality based
+           * comparison is allowed. Only `AND` conjunction is allowed. NOTE: The 'AND' in the filter
+           * field needs to be in capital letters only. NOTE: Just filtering on `subCategory` is not
+           * allowed. It should be passed in with the parent `category` too. (These expressions are
+           * based on the filter language described at https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter expression to restrict the insights returned. Supported filter fields: * `type` *
+         `category` * `subCategory` Examples: * "category = application AND type = count" * "category =
+         application AND subCategory = iap" * "type = status" Allowed values: * type: [count, latency,
+         status, list] * category: [application, device, request, security] * subCategory: [iap, webprotect]
+         NOTE: Only equality based comparison is allowed. Only `AND` conjunction is allowed. NOTE: The 'AND'
+         in the filter field needs to be in capital letters only. NOTE: Just filtering on `subCategory` is
+         not allowed. It should be passed in with the parent `category` too. (These expressions are based on
+         the filter language described at https://google.aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter expression to restrict the insights returned. Supported filter fields:
+           * * `type` * `category` * `subCategory` Examples: * "category = application AND type =
+           * count" * "category = application AND subCategory = iap" * "type = status" Allowed
+           * values: * type: [count, latency, status, list] * category: [application, device,
+           * request, security] * subCategory: [iap, webprotect] NOTE: Only equality based
+           * comparison is allowed. Only `AND` conjunction is allowed. NOTE: The 'AND' in the filter
+           * field needs to be in capital letters only. NOTE: Just filtering on `subCategory` is not
+           * allowed. It should be passed in with the parent `category` too. (These expressions are
+           * based on the filter language described at https://google.aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. This is currently ignored. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results. This is currently ignored.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. This is currently ignored. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default. NOTE: Default page size is 50.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default. NOTE: Default page size is 50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default. NOTE: Default page size is 50.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. List only metadata or full data. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Required. List only metadata or full data.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Required. List only metadata or full data. */
+          public List setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 

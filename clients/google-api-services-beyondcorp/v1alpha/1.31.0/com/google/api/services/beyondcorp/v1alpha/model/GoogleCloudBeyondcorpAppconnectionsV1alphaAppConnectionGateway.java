@@ -46,6 +46,13 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGatewa
   private java.lang.Integer ingressPort;
 
   /**
+   * Output only. L7 private service connection for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String l7psc;
+
+  /**
    * Required. The type of hosting used by the gateway.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGatewa
    */
   public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway setIngressPort(java.lang.Integer ingressPort) {
     this.ingressPort = ingressPort;
+    return this;
+  }
+
+  /**
+   * Output only. L7 private service connection for this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getL7psc() {
+    return l7psc;
+  }
+
+  /**
+   * Output only. L7 private service connection for this resource.
+   * @param l7psc l7psc or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionGateway setL7psc(java.lang.String l7psc) {
+    this.l7psc = l7psc;
     return this;
   }
 

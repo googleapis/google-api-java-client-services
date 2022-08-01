@@ -28,7 +28,7 @@ fi
 
 if [[ -z "${VARIANT}" ]]
 then
-  VARIANT=1.31.0
+  VARIANT=2.0.0
 fi
 
 # install the local generators

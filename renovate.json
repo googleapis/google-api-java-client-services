@@ -1,3 +1,44 @@
 {
-  "enabled": false
+  "extends": [
+    "config:base"
+  ],
+  "enabledManagers": ["regex"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^.*java/2.0.0/features.json$"],
+      "matchStrings": ["\"baseClientLibrary\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "com.google.api-client:google-api-client-bom",
+      "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^.*java/2.0.0/features.json$"],
+      "matchStrings": ["\"oauthClientLibrary\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "com.google.oauth-client:google-oauth-client-bom",
+      "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^.*java/2.0.0/features.json$"],
+      "matchStrings": ["\"httpClientLibrary\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "com.google.http-client:google-http-client-bom",
+      "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^.*java/2.0.0/features.json$"],
+      "matchStrings": ["\"gsonVersion\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "com.google.code.gson:gson",
+      "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^.*java/2.0.0/features.json$"],
+      "matchStrings": ["\"httpClientVersion\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "org.apache.httpcomponents:httpclient",
+      "datasourceTemplate": "maven"
+    },
+    {
+      "fileMatch": ["^.*java/2.0.0/features.json$"],
+      "matchStrings": ["\"jackson2CoreVersion\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "com.fasterxml.jackson:jackson-bom",
+      "datasourceTemplate": "maven"
+    }
+  ]
 }

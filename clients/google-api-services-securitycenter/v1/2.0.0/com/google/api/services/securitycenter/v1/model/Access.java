@@ -52,11 +52,46 @@ public final class Access extends com.google.api.client.json.GenericJson {
   private java.lang.String methodName;
 
   /**
-   * Associated email, such as "foo@google.com".
+   * Associated email, such as "foo@google.com". The email address of the authenticated user (or
+   * service account on behalf of third party principal) making the request. For third party
+   * identity callers, the `principal_subject` field is populated instead of this field. For privacy
+   * reasons, the principal email address is sometimes redacted. For more information, see [Caller
+   * identities in audit logs](https://cloud.google.com/logging/docs/audit#user-id).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principalEmail;
+
+  /**
+   * A string representing the principal_subject associated with the identity. As compared to
+   * `principal_email`, supports principals that aren't associated with email addresses, such as
+   * third party principals. For most identities, the format will be
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)` except for some GKE
+   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
+   * `serviceAccount:{identity pool name}[{subject}]`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String principalSubject;
+
+  /**
+   * Identity delegation history of an authenticated service account that makes the request. It
+   * contains information on the real authorities that try to access GCP resources by delegating on
+   * a service account. When multiple authorities are present, they are guaranteed to be sorted
+   * based on the original ordering of the identity delegation events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ServiceAccountDelegationInfo> serviceAccountDelegationInfo;
+
+  /**
+   * The name of the service account key used to create or exchange credentials for authenticating
+   * the service account making the request. This is a scheme-less URI full resource name. For
+   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountKeyName;
 
   /**
    * This is the API service that the service account made a call to, e.g. "iam.googleapis.com"
@@ -125,7 +160,11 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associated email, such as "foo@google.com".
+   * Associated email, such as "foo@google.com". The email address of the authenticated user (or
+   * service account on behalf of third party principal) making the request. For third party
+   * identity callers, the `principal_subject` field is populated instead of this field. For privacy
+   * reasons, the principal email address is sometimes redacted. For more information, see [Caller
+   * identities in audit logs](https://cloud.google.com/logging/docs/audit#user-id).
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalEmail() {
@@ -133,11 +172,86 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associated email, such as "foo@google.com".
+   * Associated email, such as "foo@google.com". The email address of the authenticated user (or
+   * service account on behalf of third party principal) making the request. For third party
+   * identity callers, the `principal_subject` field is populated instead of this field. For privacy
+   * reasons, the principal email address is sometimes redacted. For more information, see [Caller
+   * identities in audit logs](https://cloud.google.com/logging/docs/audit#user-id).
    * @param principalEmail principalEmail or {@code null} for none
    */
   public Access setPrincipalEmail(java.lang.String principalEmail) {
     this.principalEmail = principalEmail;
+    return this;
+  }
+
+  /**
+   * A string representing the principal_subject associated with the identity. As compared to
+   * `principal_email`, supports principals that aren't associated with email addresses, such as
+   * third party principals. For most identities, the format will be
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)` except for some GKE
+   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
+   * `serviceAccount:{identity pool name}[{subject}]`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrincipalSubject() {
+    return principalSubject;
+  }
+
+  /**
+   * A string representing the principal_subject associated with the identity. As compared to
+   * `principal_email`, supports principals that aren't associated with email addresses, such as
+   * third party principals. For most identities, the format will be
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)` except for some GKE
+   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
+   * `serviceAccount:{identity pool name}[{subject}]`
+   * @param principalSubject principalSubject or {@code null} for none
+   */
+  public Access setPrincipalSubject(java.lang.String principalSubject) {
+    this.principalSubject = principalSubject;
+    return this;
+  }
+
+  /**
+   * Identity delegation history of an authenticated service account that makes the request. It
+   * contains information on the real authorities that try to access GCP resources by delegating on
+   * a service account. When multiple authorities are present, they are guaranteed to be sorted
+   * based on the original ordering of the identity delegation events.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ServiceAccountDelegationInfo> getServiceAccountDelegationInfo() {
+    return serviceAccountDelegationInfo;
+  }
+
+  /**
+   * Identity delegation history of an authenticated service account that makes the request. It
+   * contains information on the real authorities that try to access GCP resources by delegating on
+   * a service account. When multiple authorities are present, they are guaranteed to be sorted
+   * based on the original ordering of the identity delegation events.
+   * @param serviceAccountDelegationInfo serviceAccountDelegationInfo or {@code null} for none
+   */
+  public Access setServiceAccountDelegationInfo(java.util.List<ServiceAccountDelegationInfo> serviceAccountDelegationInfo) {
+    this.serviceAccountDelegationInfo = serviceAccountDelegationInfo;
+    return this;
+  }
+
+  /**
+   * The name of the service account key used to create or exchange credentials for authenticating
+   * the service account making the request. This is a scheme-less URI full resource name. For
+   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountKeyName() {
+    return serviceAccountKeyName;
+  }
+
+  /**
+   * The name of the service account key used to create or exchange credentials for authenticating
+   * the service account making the request. This is a scheme-less URI full resource name. For
+   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * @param serviceAccountKeyName serviceAccountKeyName or {@code null} for none
+   */
+  public Access setServiceAccountKeyName(java.lang.String serviceAccountKeyName) {
+    this.serviceAccountKeyName = serviceAccountKeyName;
     return this;
   }
 

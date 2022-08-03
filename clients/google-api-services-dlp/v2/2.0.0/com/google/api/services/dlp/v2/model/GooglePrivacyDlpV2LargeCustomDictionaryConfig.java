@@ -19,7 +19,7 @@ package com.google.api.services.dlp.v2.model;
 /**
  * Configuration for a custom dictionary created from a data source of any size up to the maximum
  * size defined in the [limits](https://cloud.google.com/dlp/limits) page. The artifacts of
- * dictionary creation are stored in the specified Google Cloud Storage location. Consider using
+ * dictionary creation are stored in the specified Cloud Storage location. Consider using
  * `CustomInfoType.Dictionary` for smaller dictionaries that satisfy the size requirements.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -48,9 +48,9 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfig extends com.goo
   private GooglePrivacyDlpV2CloudStorageFileSet cloudStorageFileSet;
 
   /**
-   * Location to store dictionary artifacts in Google Cloud Storage. These files will only be
-   * accessible by project owners and the DLP API. If any of these artifacts are modified, the
-   * dictionary is considered invalid and can no longer be used.
+   * Location to store dictionary artifacts in Cloud Storage. These files will only be accessible by
+   * project owners and the DLP API. If any of these artifacts are modified, the dictionary is
+   * considered invalid and can no longer be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +91,9 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfig extends com.goo
   }
 
   /**
-   * Location to store dictionary artifacts in Google Cloud Storage. These files will only be
-   * accessible by project owners and the DLP API. If any of these artifacts are modified, the
-   * dictionary is considered invalid and can no longer be used.
+   * Location to store dictionary artifacts in Cloud Storage. These files will only be accessible by
+   * project owners and the DLP API. If any of these artifacts are modified, the dictionary is
+   * considered invalid and can no longer be used.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStoragePath getOutputPath() {
@@ -101,9 +101,9 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfig extends com.goo
   }
 
   /**
-   * Location to store dictionary artifacts in Google Cloud Storage. These files will only be
-   * accessible by project owners and the DLP API. If any of these artifacts are modified, the
-   * dictionary is considered invalid and can no longer be used.
+   * Location to store dictionary artifacts in Cloud Storage. These files will only be accessible by
+   * project owners and the DLP API. If any of these artifacts are modified, the dictionary is
+   * considered invalid and can no longer be used.
    * @param outputPath outputPath or {@code null} for none
    */
   public GooglePrivacyDlpV2LargeCustomDictionaryConfig setOutputPath(GooglePrivacyDlpV2CloudStoragePath outputPath) {

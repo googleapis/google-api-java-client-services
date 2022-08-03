@@ -18,7 +18,9 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Configuration to control the number of findings returned for inspection. This is not used for de-
- * identification or data profiling.
+ * identification or data profiling. When redacting sensitive data from images, finding limits don't
+ * apply. They can cause unexpected or inconsistent results, where only some data is redacted. Don't
+ * include finding limits in RedactImage requests. Otherwise, Cloud DLP returns an error.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

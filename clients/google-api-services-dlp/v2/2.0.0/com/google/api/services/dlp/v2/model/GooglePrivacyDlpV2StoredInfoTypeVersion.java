@@ -50,11 +50,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
    * Errors that occurred when creating this storedInfoType version, or anomalies detected in the
    * storedInfoType data that render it unusable. Only the five most recent errors will be
    * displayed, with the most recent error appearing first. For example, some of the data for stored
-   * custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is
-   * modified or deleted by the user or another system, the dictionary becomes invalid. If any
-   * errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType
-   * API method to create another version of the storedInfoType to continue using it, reusing the
-   * same `config` if it was not the source of the error.
+   * custom dictionaries is put in the user's Cloud Storage bucket, and if this data is modified or
+   * deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix
+   * the problem indicated by the error message and use the UpdateStoredInfoType API method to
+   * create another version of the storedInfoType to continue using it, reusing the same `config` if
+   * it was not the source of the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,11 +120,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
    * Errors that occurred when creating this storedInfoType version, or anomalies detected in the
    * storedInfoType data that render it unusable. Only the five most recent errors will be
    * displayed, with the most recent error appearing first. For example, some of the data for stored
-   * custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is
-   * modified or deleted by the user or another system, the dictionary becomes invalid. If any
-   * errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType
-   * API method to create another version of the storedInfoType to continue using it, reusing the
-   * same `config` if it was not the source of the error.
+   * custom dictionaries is put in the user's Cloud Storage bucket, and if this data is modified or
+   * deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix
+   * the problem indicated by the error message and use the UpdateStoredInfoType API method to
+   * create another version of the storedInfoType to continue using it, reusing the same `config` if
+   * it was not the source of the error.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Error> getErrors() {
@@ -135,11 +135,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
    * Errors that occurred when creating this storedInfoType version, or anomalies detected in the
    * storedInfoType data that render it unusable. Only the five most recent errors will be
    * displayed, with the most recent error appearing first. For example, some of the data for stored
-   * custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is
-   * modified or deleted by the user or another system, the dictionary becomes invalid. If any
-   * errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType
-   * API method to create another version of the storedInfoType to continue using it, reusing the
-   * same `config` if it was not the source of the error.
+   * custom dictionaries is put in the user's Cloud Storage bucket, and if this data is modified or
+   * deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix
+   * the problem indicated by the error message and use the UpdateStoredInfoType API method to
+   * create another version of the storedInfoType to continue using it, reusing the same `config` if
+   * it was not the source of the error.
    * @param errors errors or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeVersion setErrors(java.util.List<GooglePrivacyDlpV2Error> errors) {

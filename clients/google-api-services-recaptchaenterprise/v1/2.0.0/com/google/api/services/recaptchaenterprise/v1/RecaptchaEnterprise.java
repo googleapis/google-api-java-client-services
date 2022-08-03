@@ -1522,9 +1522,8 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Returns the secret key related to the specified public key. You should use the legacy secret key
-       * only if you are integrating with a 3rd party using the legacy reCAPTCHA instead of reCAPTCHA
-       * Enterprise.
+       * Returns the secret key related to the specified public key. You must use the legacy secret key
+       * only in a 3rd party integration with legacy reCAPTCHA.
        *
        * Create a request for the method "keys.retrieveLegacySecretKey".
        *
@@ -1532,7 +1531,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link RetrieveLegacySecretKey#execute()} method to invoke the
        * remote operation.
        *
-       * @param key Required. The public key name linked to the requested secret key , in the format
+       * @param key Required. The public key name linked to the requested secret key in the format
        *        "projects/{project}/keys/{key}".
        * @return the request
        */
@@ -1550,9 +1549,8 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+$");
 
         /**
-         * Returns the secret key related to the specified public key. You should use the legacy secret
-         * key only if you are integrating with a 3rd party using the legacy reCAPTCHA instead of
-         * reCAPTCHA Enterprise.
+         * Returns the secret key related to the specified public key. You must use the legacy secret key
+         * only in a 3rd party integration with legacy reCAPTCHA.
          *
          * Create a request for the method "keys.retrieveLegacySecretKey".
          *
@@ -1562,7 +1560,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param key Required. The public key name linked to the requested secret key , in the format
+         * @param key Required. The public key name linked to the requested secret key in the format
        *        "projects/{project}/keys/{key}".
          * @since 1.13
          */
@@ -1642,13 +1640,13 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The public key name linked to the requested secret key , in the format
+         * Required. The public key name linked to the requested secret key in the format
          * "projects/{project}/keys/{key}".
          */
         @com.google.api.client.util.Key
         private java.lang.String key;
 
-        /** Required. The public key name linked to the requested secret key , in the format
+        /** Required. The public key name linked to the requested secret key in the format
        "projects/{project}/keys/{key}".
          */
         public java.lang.String getKey() {
@@ -1656,7 +1654,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The public key name linked to the requested secret key , in the format
+         * Required. The public key name linked to the requested secret key in the format
          * "projects/{project}/keys/{key}".
          */
         public RetrieveLegacySecretKey setKey(java.lang.String key) {
@@ -1704,8 +1702,8 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
        * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
        *
-       * @param project Required. The name of the project to search related account group memberships from, in the format
-       *        "projects/{project}".
+       * @param project Required. The name of the project to search related account group memberships from. Specify the
+       *        project name in the following format: "projects/{project}".
        * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest}
        * @return the request
        */
@@ -1733,8 +1731,8 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param project Required. The name of the project to search related account group memberships from, in the format
-       *        "projects/{project}".
+         * @param project Required. The name of the project to search related account group memberships from. Specify the
+       *        project name in the following format: "projects/{project}".
          * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest}
          * @since 1.13
          */
@@ -1804,22 +1802,22 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The name of the project to search related account group memberships from, in
-         * the format "projects/{project}".
+         * Required. The name of the project to search related account group memberships from.
+         * Specify the project name in the following format: "projects/{project}".
          */
         @com.google.api.client.util.Key
         private java.lang.String project;
 
-        /** Required. The name of the project to search related account group memberships from, in the format
-       "projects/{project}".
+        /** Required. The name of the project to search related account group memberships from. Specify the
+       project name in the following format: "projects/{project}".
          */
         public java.lang.String getProject() {
           return project;
         }
 
         /**
-         * Required. The name of the project to search related account group memberships from, in
-         * the format "projects/{project}".
+         * Required. The name of the project to search related account group memberships from.
+         * Specify the project name in the following format: "projects/{project}".
          */
         public Search setProject(java.lang.String project) {
           if (!getSuppressPatternChecks()) {
@@ -2002,25 +2000,25 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The maximum number of groups to return. The service may return fewer than this
-         * value. If unspecified, at most 50 groups will be returned. The maximum value is 1000;
-         * values above 1000 will be coerced to 1000.
+         * Optional. The maximum number of groups to return. The service might return fewer than
+         * this value. If unspecified, at most 50 groups are returned. The maximum value is 1000;
+         * values above 1000 are coerced to 1000.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. The maximum number of groups to return. The service may return fewer than this value. If
-       unspecified, at most 50 groups will be returned. The maximum value is 1000; values above 1000 will
-       be coerced to 1000.
+        /** Optional. The maximum number of groups to return. The service might return fewer than this value.
+       If unspecified, at most 50 groups are returned. The maximum value is 1000; values above 1000 are
+       coerced to 1000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional. The maximum number of groups to return. The service may return fewer than this
-         * value. If unspecified, at most 50 groups will be returned. The maximum value is 1000;
-         * values above 1000 will be coerced to 1000.
+         * Optional. The maximum number of groups to return. The service might return fewer than
+         * this value. If unspecified, at most 50 groups are returned. The maximum value is 1000;
+         * values above 1000 are coerced to 1000.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2080,7 +2078,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
       public class Memberships {
 
         /**
-         * Get the memberships in a group of related accounts.
+         * Get memberships in a group of related accounts.
          *
          * Create a request for the method "memberships.list".
          *
@@ -2105,7 +2103,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/relatedaccountgroups/[^/]+$");
 
           /**
-           * Get the memberships in a group of related accounts.
+           * Get memberships in a group of related accounts.
            *
            * Create a request for the method "memberships.list".
            *
@@ -2223,25 +2221,25 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Optional. The maximum number of accounts to return. The service may return fewer than
-           * this value. If unspecified, at most 50 accounts will be returned. The maximum value is
-           * 1000; values above 1000 will be coerced to 1000.
+           * Optional. The maximum number of accounts to return. The service might return fewer than
+           * this value. If unspecified, at most 50 accounts are returned. The maximum value is
+           * 1000; values above 1000 are coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of accounts to return. The service may return fewer than this value.
-         If unspecified, at most 50 accounts will be returned. The maximum value is 1000; values above 1000
-         will be coerced to 1000.
+          /** Optional. The maximum number of accounts to return. The service might return fewer than this value.
+         If unspecified, at most 50 accounts are returned. The maximum value is 1000; values above 1000 are
+         coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. The maximum number of accounts to return. The service may return fewer than
-           * this value. If unspecified, at most 50 accounts will be returned. The maximum value is
-           * 1000; values above 1000 will be coerced to 1000.
+           * Optional. The maximum number of accounts to return. The service might return fewer than
+           * this value. If unspecified, at most 50 accounts are returned. The maximum value is
+           * 1000; values above 1000 are coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

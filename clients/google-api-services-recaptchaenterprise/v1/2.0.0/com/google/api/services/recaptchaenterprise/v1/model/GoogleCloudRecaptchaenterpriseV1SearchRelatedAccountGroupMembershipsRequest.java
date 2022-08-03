@@ -32,17 +32,17 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
 
   /**
    * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous CreateAssessment
-   * or AnnotateAssessment call.
+   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
+   * or `AnnotateAssessment` call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hashedAccountId;
 
   /**
-   * Optional. The maximum number of groups to return. The service may return fewer than this value.
-   * If unspecified, at most 50 groups will be returned. The maximum value is 1000; values above
-   * 1000 will be coerced to 1000.
+   * Optional. The maximum number of groups to return. The service might return fewer than this
+   * value. If unspecified, at most 50 groups are returned. The maximum value is 1000; values above
+   * 1000 are coerced to 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
 
   /**
    * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous CreateAssessment
-   * or AnnotateAssessment call.
+   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
+   * or `AnnotateAssessment` call.
    * @see #decodeHashedAccountId()
    * @return value or {@code null} for none
    */
@@ -70,8 +70,8 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
 
   /**
    * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous CreateAssessment
-   * or AnnotateAssessment call.
+   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
+   * or `AnnotateAssessment` call.
    * @see #getHashedAccountId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -83,8 +83,8 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
 
   /**
    * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous CreateAssessment
-   * or AnnotateAssessment call.
+   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
+   * or `AnnotateAssessment` call.
    * @see #encodeHashedAccountId()
    * @param hashedAccountId hashedAccountId or {@code null} for none
    */
@@ -95,8 +95,8 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
 
   /**
    * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous CreateAssessment
-   * or AnnotateAssessment call.
+   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
+   * or `AnnotateAssessment` call.
    * @see #setHashedAccountId()
    *
    * <p>
@@ -111,9 +111,9 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The maximum number of groups to return. The service may return fewer than this value.
-   * If unspecified, at most 50 groups will be returned. The maximum value is 1000; values above
-   * 1000 will be coerced to 1000.
+   * Optional. The maximum number of groups to return. The service might return fewer than this
+   * value. If unspecified, at most 50 groups are returned. The maximum value is 1000; values above
+   * 1000 are coerced to 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -121,9 +121,9 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The maximum number of groups to return. The service may return fewer than this value.
-   * If unspecified, at most 50 groups will be returned. The maximum value is 1000; values above
-   * 1000 will be coerced to 1000.
+   * Optional. The maximum number of groups to return. The service might return fewer than this
+   * value. If unspecified, at most 50 groups are returned. The maximum value is 1000; values above
+   * 1000 are coerced to 1000.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest setPageSize(java.lang.Integer pageSize) {

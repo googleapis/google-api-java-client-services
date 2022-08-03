@@ -127,6 +127,13 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey extend
   private java.util.List<java.lang.String> restrictedValues;
 
   /**
+   * Returns the min and max value for each numerical facet intervals. Ignored for textual facets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnMinMax;
+
+  /**
    * True to make facet keys case insensitive when getting faceting values with prefixes or
    * contains; false otherwise.
    * @return value or {@code null} for none
@@ -329,6 +336,23 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey extend
    */
   public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey setRestrictedValues(java.util.List<java.lang.String> restrictedValues) {
     this.restrictedValues = restrictedValues;
+    return this;
+  }
+
+  /**
+   * Returns the min and max value for each numerical facet intervals. Ignored for textual facets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnMinMax() {
+    return returnMinMax;
+  }
+
+  /**
+   * Returns the min and max value for each numerical facet intervals. Ignored for textual facets.
+   * @param returnMinMax returnMinMax or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey setReturnMinMax(java.lang.Boolean returnMinMax) {
+    this.returnMinMax = returnMinMax;
     return this;
   }
 

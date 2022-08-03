@@ -55,6 +55,16 @@ public final class GoogleCloudRetailV2betaSearchResponseSearchResult extends com
   private java.util.Map<String, String> matchingVariantFields;
 
   /**
+   * Specifies previous events related to this product for this user based on UserEvent with same
+   * SearchRequest.visitor_id or UserInfo.user_id. This is set only when
+   * SearchRequest.PersonalizationSpec.mode is SearchRequest.PersonalizationSpec.Mode.AUTO. Possible
+   * values: * `purchased`: Indicates that this product has been purchased before.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> personalLabels;
+
+  /**
    * The product data snippet in the search response. Only Product.name is guaranteed to be
    * populated. Product.variants contains the product variants that match the search query. If there
    * are multiple product variants matching the query, top 5 most relevant product variants are
@@ -140,6 +150,29 @@ public final class GoogleCloudRetailV2betaSearchResponseSearchResult extends com
    */
   public GoogleCloudRetailV2betaSearchResponseSearchResult setMatchingVariantFields(java.util.Map<String, String> matchingVariantFields) {
     this.matchingVariantFields = matchingVariantFields;
+    return this;
+  }
+
+  /**
+   * Specifies previous events related to this product for this user based on UserEvent with same
+   * SearchRequest.visitor_id or UserInfo.user_id. This is set only when
+   * SearchRequest.PersonalizationSpec.mode is SearchRequest.PersonalizationSpec.Mode.AUTO. Possible
+   * values: * `purchased`: Indicates that this product has been purchased before.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPersonalLabels() {
+    return personalLabels;
+  }
+
+  /**
+   * Specifies previous events related to this product for this user based on UserEvent with same
+   * SearchRequest.visitor_id or UserInfo.user_id. This is set only when
+   * SearchRequest.PersonalizationSpec.mode is SearchRequest.PersonalizationSpec.Mode.AUTO. Possible
+   * values: * `purchased`: Indicates that this product has been purchased before.
+   * @param personalLabels personalLabels or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchResponseSearchResult setPersonalLabels(java.util.List<java.lang.String> personalLabels) {
+    this.personalLabels = personalLabels;
     return this;
   }
 

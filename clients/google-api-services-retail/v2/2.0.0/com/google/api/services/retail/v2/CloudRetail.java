@@ -529,6 +529,302 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Gets an AttributesConfig.
+         *
+         * Create a request for the method "catalogs.getAttributesConfig".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link GetAttributesConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Full AttributesConfig resource name. Format:
+         *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+         * @return the request
+         */
+        public GetAttributesConfig getAttributesConfig(java.lang.String name) throws java.io.IOException {
+          GetAttributesConfig result = new GetAttributesConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetAttributesConfig extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+
+          /**
+           * Gets an AttributesConfig.
+           *
+           * Create a request for the method "catalogs.getAttributesConfig".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link GetAttributesConfig#execute()} method to invoke the remote
+           * operation. <p> {@link GetAttributesConfig#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Full AttributesConfig resource name. Format:
+         *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+           * @since 1.13
+           */
+          protected GetAttributesConfig(java.lang.String name) {
+            super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetAttributesConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetAttributesConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetAttributesConfig setAccessToken(java.lang.String accessToken) {
+            return (GetAttributesConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetAttributesConfig setAlt(java.lang.String alt) {
+            return (GetAttributesConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetAttributesConfig setCallback(java.lang.String callback) {
+            return (GetAttributesConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetAttributesConfig setFields(java.lang.String fields) {
+            return (GetAttributesConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetAttributesConfig setKey(java.lang.String key) {
+            return (GetAttributesConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetAttributesConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetAttributesConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetAttributesConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetAttributesConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetAttributesConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetAttributesConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetAttributesConfig setUploadType(java.lang.String uploadType) {
+            return (GetAttributesConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetAttributesConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetAttributesConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full AttributesConfig resource name. Format: `projects/{project_number}/locat
+           * ions/{location_id}/catalogs/{catalog_id}/attributesConfig`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full AttributesConfig resource name. Format:
+         `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full AttributesConfig resource name. Format: `projects/{project_number}/locat
+           * ions/{location_id}/catalogs/{catalog_id}/attributesConfig`
+           */
+          public GetAttributesConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetAttributesConfig set(String parameterName, Object value) {
+            return (GetAttributesConfig) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a CompletionConfig.
+         *
+         * Create a request for the method "catalogs.getCompletionConfig".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Full CompletionConfig resource name. Format:
+         *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+         * @return the request
+         */
+        public GetCompletionConfig getCompletionConfig(java.lang.String name) throws java.io.IOException {
+          GetCompletionConfig result = new GetCompletionConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetCompletionConfig extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/completionConfig$");
+
+          /**
+           * Gets a CompletionConfig.
+           *
+           * Create a request for the method "catalogs.getCompletionConfig".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote
+           * operation. <p> {@link GetCompletionConfig#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Full CompletionConfig resource name. Format:
+         *        projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+           * @since 1.13
+           */
+          protected GetCompletionConfig(java.lang.String name) {
+            super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/completionConfig$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetCompletionConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetCompletionConfig setAccessToken(java.lang.String accessToken) {
+            return (GetCompletionConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetCompletionConfig setAlt(java.lang.String alt) {
+            return (GetCompletionConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetCompletionConfig setCallback(java.lang.String callback) {
+            return (GetCompletionConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetCompletionConfig setFields(java.lang.String fields) {
+            return (GetCompletionConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetCompletionConfig setKey(java.lang.String key) {
+            return (GetCompletionConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetCompletionConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetCompletionConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetCompletionConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetCompletionConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetCompletionConfig setUploadType(java.lang.String uploadType) {
+            return (GetCompletionConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetCompletionConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full CompletionConfig resource name. Format: projects/{project_number}/locati
+           * ons/{location_id}/catalogs/{catalog_id}/completionConfig
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full CompletionConfig resource name. Format:
+         projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/completionConfig
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full CompletionConfig resource name. Format: projects/{project_number}/locati
+           * ons/{location_id}/catalogs/{catalog_id}/completionConfig
+           */
+          public GetCompletionConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/completionConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetCompletionConfig set(String parameterName, Object value) {
+            return (GetCompletionConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Get which branch is currently default branch set by CatalogService.SetDefaultBranch method under
          * a specified parent catalog.
          *
@@ -1200,7 +1496,657 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             return (SetDefaultBranch) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the AttributesConfig. The catalog attributes in the request will be updated in the
+         * catalog, or inserted if they do not exist. Existing catalog attributes not included in the
+         * request will remain unchanged. Attributes that are assigned to products, but do not exist at the
+         * catalog level, are always included in the response. The product attribute is assigned default
+         * values for missing catalog attribute fields, e.g., searchable and dynamic facetable options.
+         *
+         * Create a request for the method "catalogs.updateAttributesConfig".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link UpdateAttributesConfig#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Immutable. The fully qualified resource name of the attribute config. Format:
+         *        `projects/locations/catalogs/attributesConfig`
+         * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig}
+         * @return the request
+         */
+        public UpdateAttributesConfig updateAttributesConfig(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig content) throws java.io.IOException {
+          UpdateAttributesConfig result = new UpdateAttributesConfig(name, content);
+          initialize(result);
+          return result;
+        }
 
+        public class UpdateAttributesConfig extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+
+          /**
+           * Updates the AttributesConfig. The catalog attributes in the request will be updated in the
+           * catalog, or inserted if they do not exist. Existing catalog attributes not included in the
+           * request will remain unchanged. Attributes that are assigned to products, but do not exist at
+           * the catalog level, are always included in the response. The product attribute is assigned
+           * default values for missing catalog attribute fields, e.g., searchable and dynamic facetable
+           * options.
+           *
+           * Create a request for the method "catalogs.updateAttributesConfig".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link UpdateAttributesConfig#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateAttributesConfig#initialize(com.google.api.client.googleapis.servic
+           * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Immutable. The fully qualified resource name of the attribute config. Format:
+         *        `projects/locations/catalogs/attributesConfig`
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig}
+           * @since 1.13
+           */
+          protected UpdateAttributesConfig(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig content) {
+            super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+            }
+          }
+
+          @Override
+          public UpdateAttributesConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateAttributesConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateAttributesConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateAttributesConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateAttributesConfig setAlt(java.lang.String alt) {
+            return (UpdateAttributesConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateAttributesConfig setCallback(java.lang.String callback) {
+            return (UpdateAttributesConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateAttributesConfig setFields(java.lang.String fields) {
+            return (UpdateAttributesConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateAttributesConfig setKey(java.lang.String key) {
+            return (UpdateAttributesConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateAttributesConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateAttributesConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateAttributesConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateAttributesConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateAttributesConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateAttributesConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateAttributesConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateAttributesConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateAttributesConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateAttributesConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Immutable. The fully qualified resource name of the attribute config. Format:
+           * `projects/locations/catalogs/attributesConfig`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Immutable. The fully qualified resource name of the attribute config. Format:
+         `projects/locations/catalogs/attributesConfig`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Immutable. The fully qualified resource name of the attribute config. Format:
+           * `projects/locations/catalogs/attributesConfig`
+           */
+          public UpdateAttributesConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Indicates which fields in the provided AttributesConfig to update. The following is the
+           * only supported field: * AttributesConfig.catalog_attributes If not set, all supported
+           * fields are updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Indicates which fields in the provided AttributesConfig to update. The following is the only
+         supported field: * AttributesConfig.catalog_attributes If not set, all supported fields are
+         updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Indicates which fields in the provided AttributesConfig to update. The following is the
+           * only supported field: * AttributesConfig.catalog_attributes If not set, all supported
+           * fields are updated.
+           */
+          public UpdateAttributesConfig setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateAttributesConfig set(String parameterName, Object value) {
+            return (UpdateAttributesConfig) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the CompletionConfigs.
+         *
+         * Create a request for the method "catalogs.updateCompletionConfig".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
+         * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig}
+         * @return the request
+         */
+        public UpdateCompletionConfig updateCompletionConfig(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig content) throws java.io.IOException {
+          UpdateCompletionConfig result = new UpdateCompletionConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateCompletionConfig extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/completionConfig$");
+
+          /**
+           * Updates the CompletionConfigs.
+           *
+           * Create a request for the method "catalogs.updateCompletionConfig".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateCompletionConfig#initialize(com.google.api.client.googleapis.servic
+           * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig}
+           * @since 1.13
+           */
+          protected UpdateCompletionConfig(java.lang.String name, com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig content) {
+            super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2CompletionConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/completionConfig$");
+            }
+          }
+
+          @Override
+          public UpdateCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateCompletionConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateCompletionConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateCompletionConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateCompletionConfig setAlt(java.lang.String alt) {
+            return (UpdateCompletionConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateCompletionConfig setCallback(java.lang.String callback) {
+            return (UpdateCompletionConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateCompletionConfig setFields(java.lang.String fields) {
+            return (UpdateCompletionConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateCompletionConfig setKey(java.lang.String key) {
+            return (UpdateCompletionConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateCompletionConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateCompletionConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateCompletionConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateCompletionConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateCompletionConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateCompletionConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateCompletionConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Immutable. Fully qualified name
+           * `projects/locations/catalogs/completionConfig`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Immutable. Fully qualified name
+           * `projects/locations/catalogs/completionConfig`
+           */
+          public UpdateCompletionConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/completionConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Indicates which fields in the provided CompletionConfig to update. The following are
+           * the only supported fields: * CompletionConfig.matching_order *
+           * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+           * CompletionConfig.auto_learning If not set, all supported fields are updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Indicates which fields in the provided CompletionConfig to update. The following are the only
+         supported fields: * CompletionConfig.matching_order * CompletionConfig.max_suggestions *
+         CompletionConfig.min_prefix_length * CompletionConfig.auto_learning If not set, all supported
+         fields are updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Indicates which fields in the provided CompletionConfig to update. The following are
+           * the only supported fields: * CompletionConfig.matching_order *
+           * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+           * CompletionConfig.auto_learning If not set, all supported fields are updated.
+           */
+          public UpdateCompletionConfig setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateCompletionConfig set(String parameterName, Object value) {
+            return (UpdateCompletionConfig) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the AttributesConfig collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.AttributesConfig.List request = retail.attributesConfig().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AttributesConfig attributesConfig() {
+          return new AttributesConfig();
+        }
+
+        /**
+         * The "attributesConfig" collection of methods.
+         */
+        public class AttributesConfig {
+
+          /**
+           * Adds the specified CatalogAttribute to the AttributesConfig. If the CatalogAttribute to add
+           * already exists, an ALREADY_EXISTS error is returned.
+           *
+           * Create a request for the method "attributesConfig.addCatalogAttribute".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link AddCatalogAttribute#execute()} method to invoke the remote operation.
+           *
+           * @param attributesConfig Required. Full AttributesConfig resource name. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2AddCatalogAttributeRequest}
+           * @return the request
+           */
+          public AddCatalogAttribute addCatalogAttribute(java.lang.String attributesConfig, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AddCatalogAttributeRequest content) throws java.io.IOException {
+            AddCatalogAttribute result = new AddCatalogAttribute(attributesConfig, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AddCatalogAttribute extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig> {
+
+            private static final String REST_PATH = "v2/{+attributesConfig}:addCatalogAttribute";
+
+            private final java.util.regex.Pattern ATTRIBUTES_CONFIG_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+
+            /**
+             * Adds the specified CatalogAttribute to the AttributesConfig. If the CatalogAttribute to add
+             * already exists, an ALREADY_EXISTS error is returned.
+             *
+             * Create a request for the method "attributesConfig.addCatalogAttribute".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link AddCatalogAttribute#execute()} method to invoke the remote
+             * operation. <p> {@link AddCatalogAttribute#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param attributesConfig Required. Full AttributesConfig resource name. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2AddCatalogAttributeRequest}
+             * @since 1.13
+             */
+            protected AddCatalogAttribute(java.lang.String attributesConfig, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AddCatalogAttributeRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig.class);
+              this.attributesConfig = com.google.api.client.util.Preconditions.checkNotNull(attributesConfig, "Required parameter attributesConfig must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ATTRIBUTES_CONFIG_PATTERN.matcher(attributesConfig).matches(),
+                    "Parameter attributesConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+              }
+            }
+
+            @Override
+            public AddCatalogAttribute set$Xgafv(java.lang.String $Xgafv) {
+              return (AddCatalogAttribute) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AddCatalogAttribute setAccessToken(java.lang.String accessToken) {
+              return (AddCatalogAttribute) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AddCatalogAttribute setAlt(java.lang.String alt) {
+              return (AddCatalogAttribute) super.setAlt(alt);
+            }
+
+            @Override
+            public AddCatalogAttribute setCallback(java.lang.String callback) {
+              return (AddCatalogAttribute) super.setCallback(callback);
+            }
+
+            @Override
+            public AddCatalogAttribute setFields(java.lang.String fields) {
+              return (AddCatalogAttribute) super.setFields(fields);
+            }
+
+            @Override
+            public AddCatalogAttribute setKey(java.lang.String key) {
+              return (AddCatalogAttribute) super.setKey(key);
+            }
+
+            @Override
+            public AddCatalogAttribute setOauthToken(java.lang.String oauthToken) {
+              return (AddCatalogAttribute) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AddCatalogAttribute setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AddCatalogAttribute) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AddCatalogAttribute setQuotaUser(java.lang.String quotaUser) {
+              return (AddCatalogAttribute) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AddCatalogAttribute setUploadType(java.lang.String uploadType) {
+              return (AddCatalogAttribute) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AddCatalogAttribute setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AddCatalogAttribute) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full AttributesConfig resource name. Format: `projects/{project_number}/loc
+             * ations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String attributesConfig;
+
+            /** Required. Full AttributesConfig resource name. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             */
+            public java.lang.String getAttributesConfig() {
+              return attributesConfig;
+            }
+
+            /**
+             * Required. Full AttributesConfig resource name. Format: `projects/{project_number}/loc
+             * ations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             */
+            public AddCatalogAttribute setAttributesConfig(java.lang.String attributesConfig) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ATTRIBUTES_CONFIG_PATTERN.matcher(attributesConfig).matches(),
+                    "Parameter attributesConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+              }
+              this.attributesConfig = attributesConfig;
+              return this;
+            }
+
+            @Override
+            public AddCatalogAttribute set(String parameterName, Object value) {
+              return (AddCatalogAttribute) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Removes the specified CatalogAttribute from the AttributesConfig. If the CatalogAttribute to
+           * remove does not exist, a NOT_FOUND error is returned.
+           *
+           * Create a request for the method "attributesConfig.removeCatalogAttribute".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link RemoveCatalogAttribute#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param attributesConfig Required. Full AttributesConfig resource name. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2RemoveCatalogAttributeRequest}
+           * @return the request
+           */
+          public RemoveCatalogAttribute removeCatalogAttribute(java.lang.String attributesConfig, com.google.api.services.retail.v2.model.GoogleCloudRetailV2RemoveCatalogAttributeRequest content) throws java.io.IOException {
+            RemoveCatalogAttribute result = new RemoveCatalogAttribute(attributesConfig, content);
+            initialize(result);
+            return result;
+          }
+
+          public class RemoveCatalogAttribute extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig> {
+
+            private static final String REST_PATH = "v2/{+attributesConfig}:removeCatalogAttribute";
+
+            private final java.util.regex.Pattern ATTRIBUTES_CONFIG_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+
+            /**
+             * Removes the specified CatalogAttribute from the AttributesConfig. If the CatalogAttribute to
+             * remove does not exist, a NOT_FOUND error is returned.
+             *
+             * Create a request for the method "attributesConfig.removeCatalogAttribute".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link RemoveCatalogAttribute#execute()} method to invoke the remote
+             * operation. <p> {@link RemoveCatalogAttribute#initialize(com.google.api.client.googleapis.servic
+             * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param attributesConfig Required. Full AttributesConfig resource name. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2RemoveCatalogAttributeRequest}
+             * @since 1.13
+             */
+            protected RemoveCatalogAttribute(java.lang.String attributesConfig, com.google.api.services.retail.v2.model.GoogleCloudRetailV2RemoveCatalogAttributeRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2AttributesConfig.class);
+              this.attributesConfig = com.google.api.client.util.Preconditions.checkNotNull(attributesConfig, "Required parameter attributesConfig must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ATTRIBUTES_CONFIG_PATTERN.matcher(attributesConfig).matches(),
+                    "Parameter attributesConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+              }
+            }
+
+            @Override
+            public RemoveCatalogAttribute set$Xgafv(java.lang.String $Xgafv) {
+              return (RemoveCatalogAttribute) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setAccessToken(java.lang.String accessToken) {
+              return (RemoveCatalogAttribute) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setAlt(java.lang.String alt) {
+              return (RemoveCatalogAttribute) super.setAlt(alt);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setCallback(java.lang.String callback) {
+              return (RemoveCatalogAttribute) super.setCallback(callback);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setFields(java.lang.String fields) {
+              return (RemoveCatalogAttribute) super.setFields(fields);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setKey(java.lang.String key) {
+              return (RemoveCatalogAttribute) super.setKey(key);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setOauthToken(java.lang.String oauthToken) {
+              return (RemoveCatalogAttribute) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (RemoveCatalogAttribute) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setQuotaUser(java.lang.String quotaUser) {
+              return (RemoveCatalogAttribute) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setUploadType(java.lang.String uploadType) {
+              return (RemoveCatalogAttribute) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public RemoveCatalogAttribute setUploadProtocol(java.lang.String uploadProtocol) {
+              return (RemoveCatalogAttribute) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full AttributesConfig resource name. Format: `projects/{project_number}/loc
+             * ations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String attributesConfig;
+
+            /** Required. Full AttributesConfig resource name. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             */
+            public java.lang.String getAttributesConfig() {
+              return attributesConfig;
+            }
+
+            /**
+             * Required. Full AttributesConfig resource name. Format: `projects/{project_number}/loc
+             * ations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             */
+            public RemoveCatalogAttribute setAttributesConfig(java.lang.String attributesConfig) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ATTRIBUTES_CONFIG_PATTERN.matcher(attributesConfig).matches(),
+                    "Parameter attributesConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+              }
+              this.attributesConfig = attributesConfig;
+              return this;
+            }
+
+            @Override
+            public RemoveCatalogAttribute set(String parameterName, Object value) {
+              return (RemoveCatalogAttribute) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the Branches collection.
          *

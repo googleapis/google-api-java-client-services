@@ -140,7 +140,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * resources, although some resources may allow a client to request the generation of an
    * appropriate name automatically. Name is primarily intended for creation idempotence and
    * configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/user-
-   * guide/identifiers#names +optional
+   * guide/identifiers#names If ObjectMeta is part of a namespaces.services.create request, name
+   * must contain fewer than 50 characters. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -436,7 +437,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * resources, although some resources may allow a client to request the generation of an
    * appropriate name automatically. Name is primarily intended for creation idempotence and
    * configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/user-
-   * guide/identifiers#names +optional
+   * guide/identifiers#names If ObjectMeta is part of a namespaces.services.create request, name
+   * must contain fewer than 50 characters. +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -448,7 +450,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * resources, although some resources may allow a client to request the generation of an
    * appropriate name automatically. Name is primarily intended for creation idempotence and
    * configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/user-
-   * guide/identifiers#names +optional
+   * guide/identifiers#names If ObjectMeta is part of a namespaces.services.create request, name
+   * must contain fewer than 50 characters. +optional
    * @param name name or {@code null} for none
    */
   public ObjectMeta setName(java.lang.String name) {

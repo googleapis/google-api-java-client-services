@@ -40,6 +40,15 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   private java.lang.String dynamicFacetableOption;
 
   /**
+   * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
+   * applies to textual custom attributes and requires indexable set to enabled to enable exact-
+   * searchable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exactSearchableOption;
+
+  /**
    * Output only. Indicates whether this attribute has been used by any products. `True` if at least
    * one Product is using this attribute in Product.attributes. Otherwise, this field is `False`.
    * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute,
@@ -120,6 +129,27 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setDynamicFacetableOption(java.lang.String dynamicFacetableOption) {
     this.dynamicFacetableOption = dynamicFacetableOption;
+    return this;
+  }
+
+  /**
+   * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
+   * applies to textual custom attributes and requires indexable set to enabled to enable exact-
+   * searchable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExactSearchableOption() {
+    return exactSearchableOption;
+  }
+
+  /**
+   * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
+   * applies to textual custom attributes and requires indexable set to enabled to enable exact-
+   * searchable.
+   * @param exactSearchableOption exactSearchableOption or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaCatalogAttribute setExactSearchableOption(java.lang.String exactSearchableOption) {
+    this.exactSearchableOption = exactSearchableOption;
     return this;
   }
 

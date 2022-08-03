@@ -44,6 +44,22 @@ public final class GoogleCloudRetailV2betaSearchResponseFacetFacetValue extends 
   private GoogleCloudRetailV2betaInterval interval;
 
   /**
+   * The maximum value in the FacetValue.interval. Only supported on numerical facets and returned
+   * if SearchRequest.FacetSpec.FacetKey.return_min_max is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double maxValue;
+
+  /**
+   * The minimum value in the FacetValue.interval. Only supported on numerical facets and returned
+   * if SearchRequest.FacetSpec.FacetKey.return_min_max is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double minValue;
+
+  /**
    * Text value of a facet, such as "Black" for facet "colorFamilies".
    * The value may be {@code null}.
    */
@@ -81,6 +97,44 @@ public final class GoogleCloudRetailV2betaSearchResponseFacetFacetValue extends 
    */
   public GoogleCloudRetailV2betaSearchResponseFacetFacetValue setInterval(GoogleCloudRetailV2betaInterval interval) {
     this.interval = interval;
+    return this;
+  }
+
+  /**
+   * The maximum value in the FacetValue.interval. Only supported on numerical facets and returned
+   * if SearchRequest.FacetSpec.FacetKey.return_min_max is true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMaxValue() {
+    return maxValue;
+  }
+
+  /**
+   * The maximum value in the FacetValue.interval. Only supported on numerical facets and returned
+   * if SearchRequest.FacetSpec.FacetKey.return_min_max is true.
+   * @param maxValue maxValue or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchResponseFacetFacetValue setMaxValue(java.lang.Double maxValue) {
+    this.maxValue = maxValue;
+    return this;
+  }
+
+  /**
+   * The minimum value in the FacetValue.interval. Only supported on numerical facets and returned
+   * if SearchRequest.FacetSpec.FacetKey.return_min_max is true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMinValue() {
+    return minValue;
+  }
+
+  /**
+   * The minimum value in the FacetValue.interval. Only supported on numerical facets and returned
+   * if SearchRequest.FacetSpec.FacetKey.return_min_max is true.
+   * @param minValue minValue or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchResponseFacetFacetValue setMinValue(java.lang.Double minValue) {
+    this.minValue = minValue;
     return this;
   }
 

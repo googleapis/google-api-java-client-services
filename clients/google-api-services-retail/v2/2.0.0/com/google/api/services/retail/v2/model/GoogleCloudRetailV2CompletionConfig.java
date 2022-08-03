@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2beta.model;
+package com.google.api.services.retail.v2.model;
 
 /**
  * Catalog level autocomplete config for customers to customize autocomplete feature's settings.
@@ -27,14 +27,14 @@ package com.google.api.services.retail.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2CompletionConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The source data for the latest import of the autocomplete allowlist phrases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudRetailV2betaCompletionDataInputConfig allowlistInputConfig;
+  private GoogleCloudRetailV2CompletionDataInputConfig allowlistInputConfig;
 
   /**
    * If set to true, the auto learning function is enabled. Auto learning uses user data to generate
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudRetailV2betaCompletionDataInputConfig denylistInputConfig;
+  private GoogleCloudRetailV2CompletionDataInputConfig denylistInputConfig;
 
   /**
    * Output only. Name of the LRO corresponding to the latest allowlist import. Can use GetOperation
@@ -114,13 +114,13 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudRetailV2betaCompletionDataInputConfig suggestionsInputConfig;
+  private GoogleCloudRetailV2CompletionDataInputConfig suggestionsInputConfig;
 
   /**
    * Output only. The source data for the latest import of the autocomplete allowlist phrases.
    * @return value or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionDataInputConfig getAllowlistInputConfig() {
+  public GoogleCloudRetailV2CompletionDataInputConfig getAllowlistInputConfig() {
     return allowlistInputConfig;
   }
 
@@ -128,7 +128,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * Output only. The source data for the latest import of the autocomplete allowlist phrases.
    * @param allowlistInputConfig allowlistInputConfig or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setAllowlistInputConfig(GoogleCloudRetailV2betaCompletionDataInputConfig allowlistInputConfig) {
+  public GoogleCloudRetailV2CompletionConfig setAllowlistInputConfig(GoogleCloudRetailV2CompletionDataInputConfig allowlistInputConfig) {
     this.allowlistInputConfig = allowlistInputConfig;
     return this;
   }
@@ -149,7 +149,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * users use `cloud-retail` data in CompleteQueryRequest.
    * @param autoLearning autoLearning or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setAutoLearning(java.lang.Boolean autoLearning) {
+  public GoogleCloudRetailV2CompletionConfig setAutoLearning(java.lang.Boolean autoLearning) {
     this.autoLearning = autoLearning;
     return this;
   }
@@ -158,7 +158,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * Output only. The source data for the latest import of the autocomplete denylist phrases.
    * @return value or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionDataInputConfig getDenylistInputConfig() {
+  public GoogleCloudRetailV2CompletionDataInputConfig getDenylistInputConfig() {
     return denylistInputConfig;
   }
 
@@ -166,7 +166,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * Output only. The source data for the latest import of the autocomplete denylist phrases.
    * @param denylistInputConfig denylistInputConfig or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setDenylistInputConfig(GoogleCloudRetailV2betaCompletionDataInputConfig denylistInputConfig) {
+  public GoogleCloudRetailV2CompletionConfig setDenylistInputConfig(GoogleCloudRetailV2CompletionDataInputConfig denylistInputConfig) {
     this.denylistInputConfig = denylistInputConfig;
     return this;
   }
@@ -185,7 +185,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * API to retrieve the latest state of the Long Running Operation.
    * @param lastAllowlistImportOperation lastAllowlistImportOperation or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setLastAllowlistImportOperation(java.lang.String lastAllowlistImportOperation) {
+  public GoogleCloudRetailV2CompletionConfig setLastAllowlistImportOperation(java.lang.String lastAllowlistImportOperation) {
     this.lastAllowlistImportOperation = lastAllowlistImportOperation;
     return this;
   }
@@ -204,7 +204,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * API to retrieve the latest state of the Long Running Operation.
    * @param lastDenylistImportOperation lastDenylistImportOperation or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setLastDenylistImportOperation(java.lang.String lastDenylistImportOperation) {
+  public GoogleCloudRetailV2CompletionConfig setLastDenylistImportOperation(java.lang.String lastDenylistImportOperation) {
     this.lastDenylistImportOperation = lastDenylistImportOperation;
     return this;
   }
@@ -223,7 +223,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * GetOperation API to retrieve the latest state of the Long Running Operation.
    * @param lastSuggestionsImportOperation lastSuggestionsImportOperation or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setLastSuggestionsImportOperation(java.lang.String lastSuggestionsImportOperation) {
+  public GoogleCloudRetailV2CompletionConfig setLastSuggestionsImportOperation(java.lang.String lastSuggestionsImportOperation) {
     this.lastSuggestionsImportOperation = lastSuggestionsImportOperation;
     return this;
   }
@@ -246,7 +246,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * order' * 'exact-prefix' Default value: 'exact-prefix'.
    * @param matchingOrder matchingOrder or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setMatchingOrder(java.lang.String matchingOrder) {
+  public GoogleCloudRetailV2CompletionConfig setMatchingOrder(java.lang.String matchingOrder) {
     this.matchingOrder = matchingOrder;
     return this;
   }
@@ -265,7 +265,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * @param maxSuggestions maxSuggestions or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setMaxSuggestions(java.lang.Integer maxSuggestions) {
+  public GoogleCloudRetailV2CompletionConfig setMaxSuggestions(java.lang.Integer maxSuggestions) {
     this.maxSuggestions = maxSuggestions;
     return this;
   }
@@ -284,7 +284,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * is 2. If left unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * @param minPrefixLength minPrefixLength or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setMinPrefixLength(java.lang.Integer minPrefixLength) {
+  public GoogleCloudRetailV2CompletionConfig setMinPrefixLength(java.lang.Integer minPrefixLength) {
     this.minPrefixLength = minPrefixLength;
     return this;
   }
@@ -301,7 +301,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * Required. Immutable. Fully qualified name `projects/locations/catalogs/completionConfig`
    * @param name name or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setName(java.lang.String name) {
+  public GoogleCloudRetailV2CompletionConfig setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -310,7 +310,7 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * Output only. The source data for the latest import of the autocomplete suggestion phrases.
    * @return value or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionDataInputConfig getSuggestionsInputConfig() {
+  public GoogleCloudRetailV2CompletionDataInputConfig getSuggestionsInputConfig() {
     return suggestionsInputConfig;
   }
 
@@ -318,19 +318,19 @@ public final class GoogleCloudRetailV2betaCompletionConfig extends com.google.ap
    * Output only. The source data for the latest import of the autocomplete suggestion phrases.
    * @param suggestionsInputConfig suggestionsInputConfig or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCompletionConfig setSuggestionsInputConfig(GoogleCloudRetailV2betaCompletionDataInputConfig suggestionsInputConfig) {
+  public GoogleCloudRetailV2CompletionConfig setSuggestionsInputConfig(GoogleCloudRetailV2CompletionDataInputConfig suggestionsInputConfig) {
     this.suggestionsInputConfig = suggestionsInputConfig;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2betaCompletionConfig set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2betaCompletionConfig) super.set(fieldName, value);
+  public GoogleCloudRetailV2CompletionConfig set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2CompletionConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2betaCompletionConfig clone() {
-    return (GoogleCloudRetailV2betaCompletionConfig) super.clone();
+  public GoogleCloudRetailV2CompletionConfig clone() {
+    return (GoogleCloudRetailV2CompletionConfig) super.clone();
   }
 
 }

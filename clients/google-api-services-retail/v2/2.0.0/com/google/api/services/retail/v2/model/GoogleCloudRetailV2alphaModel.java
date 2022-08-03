@@ -49,8 +49,8 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The display name of the model. Should be human readable, used to display
-   * Recommendation Models in the Retail Pantheon Dashboard. UTF-8 encoded string with limit of 1024
-   * characters.
+   * Recommendation Models in the Retail Cloud Cosole Dashboard. UTF-8 encoded string with limit of
+   * 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,8 +197,8 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The display name of the model. Should be human readable, used to display
-   * Recommendation Models in the Retail Pantheon Dashboard. UTF-8 encoded string with limit of 1024
-   * characters.
+   * Recommendation Models in the Retail Cloud Cosole Dashboard. UTF-8 encoded string with limit of
+   * 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -207,8 +207,8 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The display name of the model. Should be human readable, used to display
-   * Recommendation Models in the Retail Pantheon Dashboard. UTF-8 encoded string with limit of 1024
-   * characters.
+   * Recommendation Models in the Retail Cloud Cosole Dashboard. UTF-8 encoded string with limit of
+   * 1024 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModel setDisplayName(java.lang.String displayName) {

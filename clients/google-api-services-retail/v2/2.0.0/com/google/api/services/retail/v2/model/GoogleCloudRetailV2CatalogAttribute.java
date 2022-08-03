@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2beta.model;
+package com.google.api.services.retail.v2.model;
 
 /**
  * Catalog level attribute config for an attribute. For example, if customers want to enable/disable
@@ -28,7 +28,7 @@ package com.google.api.services.retail.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2CatalogAttribute extends com.google.api.client.json.GenericJson {
 
   /**
    * If DYNAMIC_FACETABLE_ENABLED, attribute values are available for dynamic facet. Could only be
@@ -38,15 +38,6 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String dynamicFacetableOption;
-
-  /**
-   * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
-   * applies to textual custom attributes and requires indexable set to enabled to enable exact-
-   * searchable.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String exactSearchableOption;
 
   /**
    * Output only. Indicates whether this attribute has been used by any products. `True` if at least
@@ -84,16 +75,6 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
 
   /**
    * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
-   * RECOMMENDATIONS_FILTERING_ENABLED, attribute values are filterable for recommendations. This
-   * option works for categorical features only, does not work for numerical features, inventory
-   * filtering.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String recommendationsFilteringOption;
-
-  /**
-   * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
    * SEARCHABLE_ENABLED, attribute values are searchable by text queries in SearchService.Search. If
    * SEARCHABLE_ENABLED but attribute type is numerical, attribute values will not be searchable by
    * text queries in SearchService.Search, as there are no text values associated to numerical
@@ -127,29 +108,8 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
    * Otherwise, an INVALID_ARGUMENT error is returned.
    * @param dynamicFacetableOption dynamicFacetableOption or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCatalogAttribute setDynamicFacetableOption(java.lang.String dynamicFacetableOption) {
+  public GoogleCloudRetailV2CatalogAttribute setDynamicFacetableOption(java.lang.String dynamicFacetableOption) {
     this.dynamicFacetableOption = dynamicFacetableOption;
-    return this;
-  }
-
-  /**
-   * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
-   * applies to textual custom attributes and requires indexable set to enabled to enable exact-
-   * searchable.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getExactSearchableOption() {
-    return exactSearchableOption;
-  }
-
-  /**
-   * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only
-   * applies to textual custom attributes and requires indexable set to enabled to enable exact-
-   * searchable.
-   * @param exactSearchableOption exactSearchableOption or {@code null} for none
-   */
-  public GoogleCloudRetailV2betaCatalogAttribute setExactSearchableOption(java.lang.String exactSearchableOption) {
-    this.exactSearchableOption = exactSearchableOption;
     return this;
   }
 
@@ -181,7 +141,7 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
    * minutes for this field to update.
    * @param inUse inUse or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCatalogAttribute setInUse(java.lang.Boolean inUse) {
+  public GoogleCloudRetailV2CatalogAttribute setInUse(java.lang.Boolean inUse) {
     this.inUse = inUse;
     return this;
   }
@@ -202,7 +162,7 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
    * in SearchService.Search.
    * @param indexableOption indexableOption or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCatalogAttribute setIndexableOption(java.lang.String indexableOption) {
+  public GoogleCloudRetailV2CatalogAttribute setIndexableOption(java.lang.String indexableOption) {
     this.indexableOption = indexableOption;
     return this;
   }
@@ -225,31 +185,8 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
    * indexed, but an attribute named `attributes.abc-xyz` cannot be indexed.
    * @param key key or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCatalogAttribute setKey(java.lang.String key) {
+  public GoogleCloudRetailV2CatalogAttribute setKey(java.lang.String key) {
     this.key = key;
-    return this;
-  }
-
-  /**
-   * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
-   * RECOMMENDATIONS_FILTERING_ENABLED, attribute values are filterable for recommendations. This
-   * option works for categorical features only, does not work for numerical features, inventory
-   * filtering.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRecommendationsFilteringOption() {
-    return recommendationsFilteringOption;
-  }
-
-  /**
-   * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if
-   * RECOMMENDATIONS_FILTERING_ENABLED, attribute values are filterable for recommendations. This
-   * option works for categorical features only, does not work for numerical features, inventory
-   * filtering.
-   * @param recommendationsFilteringOption recommendationsFilteringOption or {@code null} for none
-   */
-  public GoogleCloudRetailV2betaCatalogAttribute setRecommendationsFilteringOption(java.lang.String recommendationsFilteringOption) {
-    this.recommendationsFilteringOption = recommendationsFilteringOption;
     return this;
   }
 
@@ -273,7 +210,7 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
    * attributes.
    * @param searchableOption searchableOption or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCatalogAttribute setSearchableOption(java.lang.String searchableOption) {
+  public GoogleCloudRetailV2CatalogAttribute setSearchableOption(java.lang.String searchableOption) {
     this.searchableOption = searchableOption;
     return this;
   }
@@ -292,19 +229,19 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
    * Product.attributes.
    * @param type type or {@code null} for none
    */
-  public GoogleCloudRetailV2betaCatalogAttribute setType(java.lang.String type) {
+  public GoogleCloudRetailV2CatalogAttribute setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2betaCatalogAttribute set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2betaCatalogAttribute) super.set(fieldName, value);
+  public GoogleCloudRetailV2CatalogAttribute set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2CatalogAttribute) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2betaCatalogAttribute clone() {
-    return (GoogleCloudRetailV2betaCatalogAttribute) super.clone();
+  public GoogleCloudRetailV2CatalogAttribute clone() {
+    return (GoogleCloudRetailV2CatalogAttribute) super.clone();
   }
 
 }

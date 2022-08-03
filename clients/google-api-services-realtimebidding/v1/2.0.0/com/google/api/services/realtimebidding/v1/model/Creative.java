@@ -175,7 +175,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> restrictedCategories;
 
   /**
-   * Output only. The version of this creative. Version for a new creative is 1 and it increments
+   * Output only. The version of the creative. Version for a new creative is 1 and it increments
    * during subsequent creative updates.
    * The value may be {@code null}.
    */
@@ -532,7 +532,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The version of this creative. Version for a new creative is 1 and it increments
+   * Output only. The version of the creative. Version for a new creative is 1 and it increments
    * during subsequent creative updates.
    * @return value or {@code null} for none
    */
@@ -541,7 +541,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The version of this creative. Version for a new creative is 1 and it increments
+   * Output only. The version of the creative. Version for a new creative is 1 and it increments
    * during subsequent creative updates.
    * @param version version or {@code null} for none
    */

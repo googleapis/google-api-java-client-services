@@ -32,7 +32,7 @@ public final class SpecificNonComplianceContext extends com.google.api.client.js
 
   /**
    * Additional context for non-compliance related to Wi-Fi configuration. See
-   * ONC_WIFI_INVALID_VALUE.
+   * ONC_WIFI_INVALID_VALUE and ONC_WIFI_API_LEVEL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class SpecificNonComplianceContext extends com.google.api.client.js
 
   /**
    * Additional context for non-compliance related to Wi-Fi configuration. See
-   * ONC_WIFI_INVALID_VALUE.
+   * ONC_WIFI_INVALID_VALUE and ONC_WIFI_API_LEVEL
    * @return value or {@code null} for none
    */
   public OncWifiContext getOncWifiContext() {
@@ -57,7 +57,7 @@ public final class SpecificNonComplianceContext extends com.google.api.client.js
 
   /**
    * Additional context for non-compliance related to Wi-Fi configuration. See
-   * ONC_WIFI_INVALID_VALUE.
+   * ONC_WIFI_INVALID_VALUE and ONC_WIFI_API_LEVEL
    * @param oncWifiContext oncWifiContext or {@code null} for none
    */
   public SpecificNonComplianceContext setOncWifiContext(OncWifiContext oncWifiContext) {

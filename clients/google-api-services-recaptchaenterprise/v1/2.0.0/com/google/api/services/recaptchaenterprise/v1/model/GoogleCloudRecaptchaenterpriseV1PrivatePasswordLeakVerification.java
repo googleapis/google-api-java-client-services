@@ -32,7 +32,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. List of prefixes of the encrypted potential password leaks that matched the given
-   * parameters. They should be compared with the client-side decryption prefix of
+   * parameters. They must be compared with the client-side decryption prefix of
    * `reencrypted_user_credentials_hash`
    * The value may be {@code null}.
    */
@@ -57,7 +57,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. Corresponds to the re-encryption of the `encrypted_user_credentials_hash` field.
-   * Used to match potential password leaks within `encrypted_leak_match_prefixes`.
+   * It is used to match potential password leaks within `encrypted_leak_match_prefixes`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. List of prefixes of the encrypted potential password leaks that matched the given
-   * parameters. They should be compared with the client-side decryption prefix of
+   * parameters. They must be compared with the client-side decryption prefix of
    * `reencrypted_user_credentials_hash`
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. List of prefixes of the encrypted potential password leaks that matched the given
-   * parameters. They should be compared with the client-side decryption prefix of
+   * parameters. They must be compared with the client-side decryption prefix of
    * `reencrypted_user_credentials_hash`
    * @param encryptedLeakMatchPrefixes encryptedLeakMatchPrefixes or {@code null} for none
    */
@@ -184,7 +184,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. Corresponds to the re-encryption of the `encrypted_user_credentials_hash` field.
-   * Used to match potential password leaks within `encrypted_leak_match_prefixes`.
+   * It is used to match potential password leaks within `encrypted_leak_match_prefixes`.
    * @see #decodeReencryptedUserCredentialsHash()
    * @return value or {@code null} for none
    */
@@ -194,7 +194,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. Corresponds to the re-encryption of the `encrypted_user_credentials_hash` field.
-   * Used to match potential password leaks within `encrypted_leak_match_prefixes`.
+   * It is used to match potential password leaks within `encrypted_leak_match_prefixes`.
    * @see #getReencryptedUserCredentialsHash()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -206,7 +206,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. Corresponds to the re-encryption of the `encrypted_user_credentials_hash` field.
-   * Used to match potential password leaks within `encrypted_leak_match_prefixes`.
+   * It is used to match potential password leaks within `encrypted_leak_match_prefixes`.
    * @see #encodeReencryptedUserCredentialsHash()
    * @param reencryptedUserCredentialsHash reencryptedUserCredentialsHash or {@code null} for none
    */
@@ -217,7 +217,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
 
   /**
    * Output only. Corresponds to the re-encryption of the `encrypted_user_credentials_hash` field.
-   * Used to match potential password leaks within `encrypted_leak_match_prefixes`.
+   * It is used to match potential password leaks within `encrypted_leak_match_prefixes`.
    * @see #setReencryptedUserCredentialsHash()
    *
    * <p>

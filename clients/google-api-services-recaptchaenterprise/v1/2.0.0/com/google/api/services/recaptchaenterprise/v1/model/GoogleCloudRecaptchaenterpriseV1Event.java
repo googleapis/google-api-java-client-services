@@ -39,8 +39,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String expectedAction;
 
   /**
-   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
-   * ideally be hashed using sha256 with stable secret.
+   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
+   * using hmac-sha256 with stable secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
-   * ideally be hashed using sha256 with stable secret.
+   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
+   * using hmac-sha256 with stable secret.
    * @see #decodeHashedAccountId()
    * @return value or {@code null} for none
    */
@@ -105,8 +105,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
-   * ideally be hashed using sha256 with stable secret.
+   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
+   * using hmac-sha256 with stable secret.
    * @see #getHashedAccountId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -117,8 +117,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
-   * ideally be hashed using sha256 with stable secret.
+   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
+   * using hmac-sha256 with stable secret.
    * @see #encodeHashedAccountId()
    * @param hashedAccountId hashedAccountId or {@code null} for none
    */
@@ -128,8 +128,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
-   * ideally be hashed using sha256 with stable secret.
+   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
+   * using hmac-sha256 with stable secret.
    * @see #setHashedAccountId()
    *
    * <p>

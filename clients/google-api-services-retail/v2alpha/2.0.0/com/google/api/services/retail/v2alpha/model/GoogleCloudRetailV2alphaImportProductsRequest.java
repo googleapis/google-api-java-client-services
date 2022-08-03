@@ -47,10 +47,9 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
    * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
    * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
    * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
-   * has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-
-   * retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-
-   * retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic.
-   * Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * has to be within the same project as ImportProductsRequest.parent. Make sure that `service
+   * -@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the
+   * topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,10 +126,9 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
    * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
    * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
    * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
-   * has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-
-   * retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-
-   * retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic.
-   * Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * has to be within the same project as ImportProductsRequest.parent. Make sure that `service
+   * -@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the
+   * topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPubsubTopic() {
@@ -141,10 +139,9 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
    * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
    * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
    * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
-   * has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-
-   * retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-
-   * retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic.
-   * Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * has to be within the same project as ImportProductsRequest.parent. Make sure that `service
+   * -@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the
+   * topic.
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */
   public GoogleCloudRetailV2alphaImportProductsRequest setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {

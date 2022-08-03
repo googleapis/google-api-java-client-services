@@ -2003,6 +2003,149 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Removes all specified CatalogAttributes from the AttributesConfig.
+           *
+           * Create a request for the method "attributesConfig.batchRemoveCatalogAttributes".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link BatchRemoveCatalogAttributes#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param attributesConfig Required. The attributes config resource shared by all catalog attributes being deleted. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesRequest}
+           * @return the request
+           */
+          public BatchRemoveCatalogAttributes batchRemoveCatalogAttributes(java.lang.String attributesConfig, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesRequest content) throws java.io.IOException {
+            BatchRemoveCatalogAttributes result = new BatchRemoveCatalogAttributes(attributesConfig, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchRemoveCatalogAttributes extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+attributesConfig}:batchRemoveCatalogAttributes";
+
+            private final java.util.regex.Pattern ATTRIBUTES_CONFIG_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+
+            /**
+             * Removes all specified CatalogAttributes from the AttributesConfig.
+             *
+             * Create a request for the method "attributesConfig.batchRemoveCatalogAttributes".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link BatchRemoveCatalogAttributes#execute()} method to invoke the remote
+             * operation. <p> {@link BatchRemoveCatalogAttributes#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param attributesConfig Required. The attributes config resource shared by all catalog attributes being deleted. Format:
+           *        `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesRequest}
+             * @since 1.13
+             */
+            protected BatchRemoveCatalogAttributes(java.lang.String attributesConfig, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse.class);
+              this.attributesConfig = com.google.api.client.util.Preconditions.checkNotNull(attributesConfig, "Required parameter attributesConfig must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ATTRIBUTES_CONFIG_PATTERN.matcher(attributesConfig).matches(),
+                    "Parameter attributesConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+              }
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchRemoveCatalogAttributes) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setAccessToken(java.lang.String accessToken) {
+              return (BatchRemoveCatalogAttributes) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setAlt(java.lang.String alt) {
+              return (BatchRemoveCatalogAttributes) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setCallback(java.lang.String callback) {
+              return (BatchRemoveCatalogAttributes) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setFields(java.lang.String fields) {
+              return (BatchRemoveCatalogAttributes) super.setFields(fields);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setKey(java.lang.String key) {
+              return (BatchRemoveCatalogAttributes) super.setKey(key);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setOauthToken(java.lang.String oauthToken) {
+              return (BatchRemoveCatalogAttributes) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchRemoveCatalogAttributes) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setQuotaUser(java.lang.String quotaUser) {
+              return (BatchRemoveCatalogAttributes) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setUploadType(java.lang.String uploadType) {
+              return (BatchRemoveCatalogAttributes) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchRemoveCatalogAttributes) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The attributes config resource shared by all catalog attributes being
+             * deleted. Format: `projects/{project_number}/locations/{location_id}/catalogs/{catalog
+             * _id}/attributesConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String attributesConfig;
+
+            /** Required. The attributes config resource shared by all catalog attributes being deleted. Format:
+           `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/attributesConfig`
+             */
+            public java.lang.String getAttributesConfig() {
+              return attributesConfig;
+            }
+
+            /**
+             * Required. The attributes config resource shared by all catalog attributes being
+             * deleted. Format: `projects/{project_number}/locations/{location_id}/catalogs/{catalog
+             * _id}/attributesConfig`
+             */
+            public BatchRemoveCatalogAttributes setAttributesConfig(java.lang.String attributesConfig) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ATTRIBUTES_CONFIG_PATTERN.matcher(attributesConfig).matches(),
+                    "Parameter attributesConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/attributesConfig$");
+              }
+              this.attributesConfig = attributesConfig;
+              return this;
+            }
+
+            @Override
+            public BatchRemoveCatalogAttributes set(String parameterName, Object value) {
+              return (BatchRemoveCatalogAttributes) super.set(parameterName, value);
+            }
+          }
+          /**
            * Removes the specified CatalogAttribute from the AttributesConfig. If the CatalogAttribute to
            * remove does not exist, a NOT_FOUND error is returned.
            *

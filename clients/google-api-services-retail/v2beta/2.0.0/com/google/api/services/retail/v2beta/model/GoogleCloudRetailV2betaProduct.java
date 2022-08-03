@@ -119,7 +119,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The id of the collection members when type is Type.COLLECTION. Non-existent product ids are
-   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise and
+   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise an
    * INVALID_ARGUMENT error is thrown. Should not set it for other types. A maximum of 1000 values
    * are allowed. Otherwise, an INVALID_ARGUMENT error is return.
    * The value may be {@code null}.
@@ -603,7 +603,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The id of the collection members when type is Type.COLLECTION. Non-existent product ids are
-   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise and
+   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise an
    * INVALID_ARGUMENT error is thrown. Should not set it for other types. A maximum of 1000 values
    * are allowed. Otherwise, an INVALID_ARGUMENT error is return.
    * @return value or {@code null} for none
@@ -614,7 +614,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The id of the collection members when type is Type.COLLECTION. Non-existent product ids are
-   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise and
+   * allowed. The type of the members must be either Type.PRIMARY or Type.VARIANT otherwise an
    * INVALID_ARGUMENT error is thrown. Should not set it for other types. A maximum of 1000 values
    * are allowed. Otherwise, an INVALID_ARGUMENT error is return.
    * @param collectionMemberIds collectionMemberIds or {@code null} for none

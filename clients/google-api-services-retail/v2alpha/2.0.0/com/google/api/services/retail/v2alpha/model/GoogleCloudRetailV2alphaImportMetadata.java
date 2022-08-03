@@ -68,6 +68,13 @@ public final class GoogleCloudRetailV2alphaImportMetadata extends com.google.api
   private java.lang.Long successCount;
 
   /**
+   * Metadata related to transform user events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaTransformedUserEventsMetadata transformedUserEventsMetadata;
+
+  /**
    * Operation last update time. If the operation is done, this is also the finish time.
    * The value may be {@code null}.
    */
@@ -160,6 +167,23 @@ public final class GoogleCloudRetailV2alphaImportMetadata extends com.google.api
    */
   public GoogleCloudRetailV2alphaImportMetadata setSuccessCount(java.lang.Long successCount) {
     this.successCount = successCount;
+    return this;
+  }
+
+  /**
+   * Metadata related to transform user events.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaTransformedUserEventsMetadata getTransformedUserEventsMetadata() {
+    return transformedUserEventsMetadata;
+  }
+
+  /**
+   * Metadata related to transform user events.
+   * @param transformedUserEventsMetadata transformedUserEventsMetadata or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaImportMetadata setTransformedUserEventsMetadata(GoogleCloudRetailV2alphaTransformedUserEventsMetadata transformedUserEventsMetadata) {
+    this.transformedUserEventsMetadata = transformedUserEventsMetadata;
     return this;
   }
 

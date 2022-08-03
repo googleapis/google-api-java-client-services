@@ -87,9 +87,8 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   private java.lang.String matchingOrder;
 
   /**
-   * The maximum number of autocomplete suggestions returned per term. The maximum allowed max
-   * suggestions is 20. Default value is 20. If left unset or set to 0, then will fallback to
-   * default value.
+   * The maximum number of autocomplete suggestions returned per term. Default value is 20. If left
+   * unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +96,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
 
   /**
    * The minimum number of characters needed to be typed in order to get suggestions. Default value
-   * is 2. If left unset or set to 0, then will fallback to default value.
+   * is 2. If left unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,9 +252,8 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * The maximum number of autocomplete suggestions returned per term. The maximum allowed max
-   * suggestions is 20. Default value is 20. If left unset or set to 0, then will fallback to
-   * default value.
+   * The maximum number of autocomplete suggestions returned per term. Default value is 20. If left
+   * unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxSuggestions() {
@@ -263,9 +261,8 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   }
 
   /**
-   * The maximum number of autocomplete suggestions returned per term. The maximum allowed max
-   * suggestions is 20. Default value is 20. If left unset or set to 0, then will fallback to
-   * default value.
+   * The maximum number of autocomplete suggestions returned per term. Default value is 20. If left
+   * unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * @param maxSuggestions maxSuggestions or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionConfig setMaxSuggestions(java.lang.Integer maxSuggestions) {
@@ -275,7 +272,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
 
   /**
    * The minimum number of characters needed to be typed in order to get suggestions. Default value
-   * is 2. If left unset or set to 0, then will fallback to default value.
+   * is 2. If left unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinPrefixLength() {
@@ -284,7 +281,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
 
   /**
    * The minimum number of characters needed to be typed in order to get suggestions. Default value
-   * is 2. If left unset or set to 0, then will fallback to default value.
+   * is 2. If left unset or set to 0, then will fallback to default value. Value range is 1 to 20.
    * @param minPrefixLength minPrefixLength or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionConfig setMinPrefixLength(java.lang.Integer minPrefixLength) {

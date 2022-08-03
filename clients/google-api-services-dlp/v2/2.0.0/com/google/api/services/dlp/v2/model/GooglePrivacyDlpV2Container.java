@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * A string representation of the full container name. Examples: - BigQuery:
-   * 'Project:DataSetId.TableId' - Google Cloud Storage: 'gs://Bucket/folders/filename.txt'
+   * 'Project:DataSetId.TableId' - Cloud Storage: 'gs://Bucket/folders/filename.txt'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The rest of the path after the root. Examples: - For BigQuery table
-   * `project_id:dataset_id.table_id`, the relative path is `table_id` - Google Cloud Storage file
+   * `project_id:dataset_id.table_id`, the relative path is `table_id` - For Cloud Storage file
    * `gs://bucket/folder/filename.txt`, the relative path is `folder/filename.txt`
    * The value may be {@code null}.
    */
@@ -57,31 +57,31 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The root of the container. Examples: - For BigQuery table `project_id:dataset_id.table_id`, the
-   * root is `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
-   * root is `gs://bucket`
+   * root is `dataset_id` - For Cloud Storage file `gs://bucket/folder/filename.txt`, the root is
+   * `gs://bucket`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rootPath;
 
   /**
-   * Container type, for example BigQuery or Google Cloud Storage.
+   * Container type, for example BigQuery or Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Findings container modification timestamp, if applicable. For Google Cloud Storage contains
-   * last file modification timestamp. For BigQuery table contains last_modified_time property. For
-   * Datastore - not populated.
+   * Findings container modification timestamp, if applicable. For Cloud Storage, this field
+   * contains the last file modification timestamp. For a BigQuery table, this field contains the
+   * last_modified_time property. For Datastore, this field isn't populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Findings container version, if available ("generation" for Google Cloud Storage).
+   * Findings container version, if available ("generation" for Cloud Storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * A string representation of the full container name. Examples: - BigQuery:
-   * 'Project:DataSetId.TableId' - Google Cloud Storage: 'gs://Bucket/folders/filename.txt'
+   * 'Project:DataSetId.TableId' - Cloud Storage: 'gs://Bucket/folders/filename.txt'
    * @return value or {@code null} for none
    */
   public java.lang.String getFullPath() {
@@ -98,7 +98,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * A string representation of the full container name. Examples: - BigQuery:
-   * 'Project:DataSetId.TableId' - Google Cloud Storage: 'gs://Bucket/folders/filename.txt'
+   * 'Project:DataSetId.TableId' - Cloud Storage: 'gs://Bucket/folders/filename.txt'
    * @param fullPath fullPath or {@code null} for none
    */
   public GooglePrivacyDlpV2Container setFullPath(java.lang.String fullPath) {
@@ -125,7 +125,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The rest of the path after the root. Examples: - For BigQuery table
-   * `project_id:dataset_id.table_id`, the relative path is `table_id` - Google Cloud Storage file
+   * `project_id:dataset_id.table_id`, the relative path is `table_id` - For Cloud Storage file
    * `gs://bucket/folder/filename.txt`, the relative path is `folder/filename.txt`
    * @return value or {@code null} for none
    */
@@ -135,7 +135,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The rest of the path after the root. Examples: - For BigQuery table
-   * `project_id:dataset_id.table_id`, the relative path is `table_id` - Google Cloud Storage file
+   * `project_id:dataset_id.table_id`, the relative path is `table_id` - For Cloud Storage file
    * `gs://bucket/folder/filename.txt`, the relative path is `folder/filename.txt`
    * @param relativePath relativePath or {@code null} for none
    */
@@ -146,8 +146,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The root of the container. Examples: - For BigQuery table `project_id:dataset_id.table_id`, the
-   * root is `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
-   * root is `gs://bucket`
+   * root is `dataset_id` - For Cloud Storage file `gs://bucket/folder/filename.txt`, the root is
+   * `gs://bucket`
    * @return value or {@code null} for none
    */
   public java.lang.String getRootPath() {
@@ -156,8 +156,8 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
 
   /**
    * The root of the container. Examples: - For BigQuery table `project_id:dataset_id.table_id`, the
-   * root is `dataset_id` - For Google Cloud Storage file `gs://bucket/folder/filename.txt`, the
-   * root is `gs://bucket`
+   * root is `dataset_id` - For Cloud Storage file `gs://bucket/folder/filename.txt`, the root is
+   * `gs://bucket`
    * @param rootPath rootPath or {@code null} for none
    */
   public GooglePrivacyDlpV2Container setRootPath(java.lang.String rootPath) {
@@ -166,7 +166,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
   }
 
   /**
-   * Container type, for example BigQuery or Google Cloud Storage.
+   * Container type, for example BigQuery or Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -174,7 +174,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
   }
 
   /**
-   * Container type, for example BigQuery or Google Cloud Storage.
+   * Container type, for example BigQuery or Cloud Storage.
    * @param type type or {@code null} for none
    */
   public GooglePrivacyDlpV2Container setType(java.lang.String type) {
@@ -183,9 +183,9 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
   }
 
   /**
-   * Findings container modification timestamp, if applicable. For Google Cloud Storage contains
-   * last file modification timestamp. For BigQuery table contains last_modified_time property. For
-   * Datastore - not populated.
+   * Findings container modification timestamp, if applicable. For Cloud Storage, this field
+   * contains the last file modification timestamp. For a BigQuery table, this field contains the
+   * last_modified_time property. For Datastore, this field isn't populated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -193,9 +193,9 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
   }
 
   /**
-   * Findings container modification timestamp, if applicable. For Google Cloud Storage contains
-   * last file modification timestamp. For BigQuery table contains last_modified_time property. For
-   * Datastore - not populated.
+   * Findings container modification timestamp, if applicable. For Cloud Storage, this field
+   * contains the last file modification timestamp. For a BigQuery table, this field contains the
+   * last_modified_time property. For Datastore, this field isn't populated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GooglePrivacyDlpV2Container setUpdateTime(String updateTime) {
@@ -204,7 +204,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
   }
 
   /**
-   * Findings container version, if available ("generation" for Google Cloud Storage).
+   * Findings container version, if available ("generation" for Cloud Storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -212,7 +212,7 @@ public final class GooglePrivacyDlpV2Container extends com.google.api.client.jso
   }
 
   /**
-   * Findings container version, if available ("generation" for Google Cloud Storage).
+   * Findings container version, if available ("generation" for Cloud Storage).
    * @param version version or {@code null} for none
    */
   public GooglePrivacyDlpV2Container setVersion(java.lang.String version) {

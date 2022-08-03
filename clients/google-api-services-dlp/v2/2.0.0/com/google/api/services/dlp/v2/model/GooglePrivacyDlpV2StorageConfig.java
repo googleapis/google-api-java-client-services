@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   private GooglePrivacyDlpV2BigQueryOptions bigQueryOptions;
 
   /**
-   * Google Cloud Storage options.
+   * Cloud Storage options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
-   * Google Cloud Storage options.
+   * Cloud Storage options.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions getCloudStorageOptions() {
@@ -90,7 +90,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
-   * Google Cloud Storage options.
+   * Cloud Storage options.
    * @param cloudStorageOptions cloudStorageOptions or {@code null} for none
    */
   public GooglePrivacyDlpV2StorageConfig setCloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptions cloudStorageOptions) {

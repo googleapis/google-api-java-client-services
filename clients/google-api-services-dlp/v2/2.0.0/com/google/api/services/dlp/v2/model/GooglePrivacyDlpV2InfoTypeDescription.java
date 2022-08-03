@@ -72,6 +72,13 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   private java.util.List<java.lang.String> supportedBy;
 
   /**
+   * A list of available versions for the infotype.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2VersionDescription> versions;
+
+  /**
    * The category of the infoType.
    * @return value or {@code null} for none
    */
@@ -153,6 +160,23 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
    */
   public GooglePrivacyDlpV2InfoTypeDescription setSupportedBy(java.util.List<java.lang.String> supportedBy) {
     this.supportedBy = supportedBy;
+    return this;
+  }
+
+  /**
+   * A list of available versions for the infotype.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2VersionDescription> getVersions() {
+    return versions;
+  }
+
+  /**
+   * A list of available versions for the infotype.
+   * @param versions versions or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeDescription setVersions(java.util.List<GooglePrivacyDlpV2VersionDescription> versions) {
+    this.versions = versions;
     return this;
   }
 

@@ -32,6 +32,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.GenericJson {
 
   /**
+   * Create a de-identified copy of the input data. Applicable for non-image data only. The de-
+   * identified copy is in the same location as the original data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2Deidentify deidentify;
+
+  /**
    * Enable email notification for project owners and editors on job's completion/failure.
    * The value may be {@code null}.
    */
@@ -72,6 +80,25 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2SaveFindings saveFindings;
+
+  /**
+   * Create a de-identified copy of the input data. Applicable for non-image data only. The de-
+   * identified copy is in the same location as the original data.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Deidentify getDeidentify() {
+    return deidentify;
+  }
+
+  /**
+   * Create a de-identified copy of the input data. Applicable for non-image data only. The de-
+   * identified copy is in the same location as the original data.
+   * @param deidentify deidentify or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Action setDeidentify(GooglePrivacyDlpV2Deidentify deidentify) {
+    this.deidentify = deidentify;
+    return this;
+  }
 
   /**
    * Enable email notification for project owners and editors on job's completion/failure.

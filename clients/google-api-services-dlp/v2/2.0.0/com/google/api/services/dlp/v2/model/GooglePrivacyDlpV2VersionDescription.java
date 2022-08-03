@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Results of re-identifying an item.
+ * Details about each available version for an infotype.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2ReidentifyContentResponse extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2VersionDescription extends com.google.api.client.json.GenericJson {
 
   /**
-   * The re-identified item.
+   * Description of the version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GooglePrivacyDlpV2ContentItem item;
+  private java.lang.String description;
 
   /**
-   * An overview of the changes that were made to the `item`.
+   * Name of the version
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GooglePrivacyDlpV2TransformationOverview overview;
+  private java.lang.String version;
 
   /**
-   * The re-identified item.
+   * Description of the version.
    * @return value or {@code null} for none
    */
-  public GooglePrivacyDlpV2ContentItem getItem() {
-    return item;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * The re-identified item.
-   * @param item item or {@code null} for none
+   * Description of the version.
+   * @param description description or {@code null} for none
    */
-  public GooglePrivacyDlpV2ReidentifyContentResponse setItem(GooglePrivacyDlpV2ContentItem item) {
-    this.item = item;
+  public GooglePrivacyDlpV2VersionDescription setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * An overview of the changes that were made to the `item`.
+   * Name of the version
    * @return value or {@code null} for none
    */
-  public GooglePrivacyDlpV2TransformationOverview getOverview() {
-    return overview;
+  public java.lang.String getVersion() {
+    return version;
   }
 
   /**
-   * An overview of the changes that were made to the `item`.
-   * @param overview overview or {@code null} for none
+   * Name of the version
+   * @param version version or {@code null} for none
    */
-  public GooglePrivacyDlpV2ReidentifyContentResponse setOverview(GooglePrivacyDlpV2TransformationOverview overview) {
-    this.overview = overview;
+  public GooglePrivacyDlpV2VersionDescription setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public GooglePrivacyDlpV2ReidentifyContentResponse set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2ReidentifyContentResponse) super.set(fieldName, value);
+  public GooglePrivacyDlpV2VersionDescription set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2VersionDescription) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2ReidentifyContentResponse clone() {
-    return (GooglePrivacyDlpV2ReidentifyContentResponse) super.clone();
+  public GooglePrivacyDlpV2VersionDescription clone() {
+    return (GooglePrivacyDlpV2VersionDescription) super.clone();
   }
 
 }

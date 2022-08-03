@@ -88,6 +88,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * Configuration to control the number of findings returned. This is not used for data profiling.
+   * When redacting sensitive data from images, finding limits don't apply. They can cause
+   * unexpected or inconsistent results, where only some data is redacted. Don't include finding
+   * limits in RedactImage requests. Otherwise, Cloud DLP returns an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,6 +216,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * Configuration to control the number of findings returned. This is not used for data profiling.
+   * When redacting sensitive data from images, finding limits don't apply. They can cause
+   * unexpected or inconsistent results, where only some data is redacted. Don't include finding
+   * limits in RedactImage requests. Otherwise, Cloud DLP returns an error.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FindingLimits getLimits() {
@@ -221,6 +227,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * Configuration to control the number of findings returned. This is not used for data profiling.
+   * When redacting sensitive data from images, finding limits don't apply. They can cause
+   * unexpected or inconsistent results, where only some data is redacted. Don't include finding
+   * limits in RedactImage requests. Otherwise, Cloud DLP returns an error.
    * @param limits limits or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setLimits(GooglePrivacyDlpV2FindingLimits limits) {

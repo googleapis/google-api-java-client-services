@@ -35,23 +35,23 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    * or table name. Names of some common storage containers are formatted as follows: * BigQuery
    * tables: `{project_id}:{dataset_id}.{table_id}` * Cloud Storage files: `gs://{bucket}/{path}` *
    * Datastore namespace: {namespace} Nested names could be absent if the embedded object has no
-   * string identifier (for an example an image contained within a document).
+   * string identifier (for example, an image contained within a document).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String containerName;
 
   /**
-   * Findings container modification timestamp, if applicable. For Google Cloud Storage contains
-   * last file modification timestamp. For BigQuery table contains last_modified_time property. For
-   * Datastore - not populated.
+   * Finding container modification timestamp, if applicable. For Cloud Storage, this field contains
+   * the last file modification timestamp. For a BigQuery table, this field contains the
+   * last_modified_time property. For Datastore, this field isn't populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String containerTimestamp;
 
   /**
-   * Findings container version, if available ("generation" for Google Cloud Storage).
+   * Finding container version, if available ("generation" for Cloud Storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    * or table name. Names of some common storage containers are formatted as follows: * BigQuery
    * tables: `{project_id}:{dataset_id}.{table_id}` * Cloud Storage files: `gs://{bucket}/{path}` *
    * Datastore namespace: {namespace} Nested names could be absent if the embedded object has no
-   * string identifier (for an example an image contained within a document).
+   * string identifier (for example, an image contained within a document).
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerName() {
@@ -102,7 +102,7 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    * or table name. Names of some common storage containers are formatted as follows: * BigQuery
    * tables: `{project_id}:{dataset_id}.{table_id}` * Cloud Storage files: `gs://{bucket}/{path}` *
    * Datastore namespace: {namespace} Nested names could be absent if the embedded object has no
-   * string identifier (for an example an image contained within a document).
+   * string identifier (for example, an image contained within a document).
    * @param containerName containerName or {@code null} for none
    */
   public GooglePrivacyDlpV2ContentLocation setContainerName(java.lang.String containerName) {
@@ -111,9 +111,9 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
   }
 
   /**
-   * Findings container modification timestamp, if applicable. For Google Cloud Storage contains
-   * last file modification timestamp. For BigQuery table contains last_modified_time property. For
-   * Datastore - not populated.
+   * Finding container modification timestamp, if applicable. For Cloud Storage, this field contains
+   * the last file modification timestamp. For a BigQuery table, this field contains the
+   * last_modified_time property. For Datastore, this field isn't populated.
    * @return value or {@code null} for none
    */
   public String getContainerTimestamp() {
@@ -121,9 +121,9 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
   }
 
   /**
-   * Findings container modification timestamp, if applicable. For Google Cloud Storage contains
-   * last file modification timestamp. For BigQuery table contains last_modified_time property. For
-   * Datastore - not populated.
+   * Finding container modification timestamp, if applicable. For Cloud Storage, this field contains
+   * the last file modification timestamp. For a BigQuery table, this field contains the
+   * last_modified_time property. For Datastore, this field isn't populated.
    * @param containerTimestamp containerTimestamp or {@code null} for none
    */
   public GooglePrivacyDlpV2ContentLocation setContainerTimestamp(String containerTimestamp) {
@@ -132,7 +132,7 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
   }
 
   /**
-   * Findings container version, if available ("generation" for Google Cloud Storage).
+   * Finding container version, if available ("generation" for Cloud Storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerVersion() {
@@ -140,7 +140,7 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
   }
 
   /**
-   * Findings container version, if available ("generation" for Google Cloud Storage).
+   * Finding container version, if available ("generation" for Cloud Storage).
    * @param containerVersion containerVersion or {@code null} for none
    */
   public GooglePrivacyDlpV2ContentLocation setContainerVersion(java.lang.String containerVersion) {

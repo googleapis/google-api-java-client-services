@@ -62,8 +62,9 @@ public final class TagValue extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Namespaced name of the TagValue. Must be in the format
-   * `{organization_id}/{tag_key_short_name}/{short_name}`.
+   * Output only. Namespaced name of the TagValue. Now only supported in the format
+   * `{organization_id}/{tag_key_short_name}/{short_name}`. Other formats will be supported when we
+   * add non-org parented tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,8 +168,9 @@ public final class TagValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Namespaced name of the TagValue. Must be in the format
-   * `{organization_id}/{tag_key_short_name}/{short_name}`.
+   * Output only. Namespaced name of the TagValue. Now only supported in the format
+   * `{organization_id}/{tag_key_short_name}/{short_name}`. Other formats will be supported when we
+   * add non-org parented tags.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespacedName() {
@@ -176,8 +178,9 @@ public final class TagValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Namespaced name of the TagValue. Must be in the format
-   * `{organization_id}/{tag_key_short_name}/{short_name}`.
+   * Output only. Namespaced name of the TagValue. Now only supported in the format
+   * `{organization_id}/{tag_key_short_name}/{short_name}`. Other formats will be supported when we
+   * add non-org parented tags.
    * @param namespacedName namespacedName or {@code null} for none
    */
   public TagValue setNamespacedName(java.lang.String namespacedName) {

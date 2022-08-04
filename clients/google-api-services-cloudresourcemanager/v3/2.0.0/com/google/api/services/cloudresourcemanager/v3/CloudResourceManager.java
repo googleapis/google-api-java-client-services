@@ -7577,8 +7577,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not
-     * have permission to view it, this method will return `PERMISSION_DENIED`.
+     * Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the value does not exist or
+     * the user does not have permission to view it.
      *
      * Create a request for the method "tagValues.get".
      *
@@ -7602,8 +7602,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^tagValues/[^/]+$");
 
       /**
-       * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not
-       * have permission to view it, this method will return `PERMISSION_DENIED`.
+       * Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the value does not exist
+       * or the user does not have permission to view it.
        *
        * Create a request for the method "tagValues.get".
        *

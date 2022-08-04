@@ -256,7 +256,11 @@ packages on [Maven Central][maven-search].
 
 ## Authentication
 
-google-api-java recommends using the [google-auth-library-java][google-auth-library-java] library to authenticate requests. google-auth-library-java supports a wide range of authentication types; see the [project's README](https://github.com/googleapis/google-auth-library-java#google-auth-library) and [javadoc](https://googleapis.dev/java/google-auth-library/latest/) for more details.
+google-api-java recommends using the [google-auth-library-java][google-auth-library-java]
+library to authenticate HTTPS requests. google-auth-library-java supports a wide range of authentication types;
+see the [project's README](https://github.com/googleapis/google-auth-library-java#using-credentials-with-google-http-client)
+for how to use credentials with google-http-client and
+[javadoc](https://cloud.google.com/java/docs/reference/google-auth-library/latest/overview) for more details.
 
 ## Generating the API clients
 

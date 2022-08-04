@@ -3224,7 +3224,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The location and project in which this service should be created. Format:
-         *        projects/{projectnumber}/locations/{location}
+         *        projects/{projectnumber}/locations/{location} Only lowercase, digits, and hyphens; must
+         *        begin with letter, and may not end with hyphen; must contain fewer than 50 characters.
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
          * @return the request
          */
@@ -3252,7 +3253,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The location and project in which this service should be created. Format:
-         *        projects/{projectnumber}/locations/{location}
+         *        projects/{projectnumber}/locations/{location} Only lowercase, digits, and hyphens; must
+         *        begin with letter, and may not end with hyphen; must contain fewer than 50 characters.
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
            * @since 1.13
            */
@@ -3323,13 +3325,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this service should be created. Format:
-           * projects/{projectnumber}/locations/{location}
+           * projects/{projectnumber}/locations/{location} Only lowercase, digits, and hyphens; must
+           * begin with letter, and may not end with hyphen; must contain fewer than 50 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location and project in which this service should be created. Format:
-         projects/{projectnumber}/locations/{location}
+         projects/{projectnumber}/locations/{location} Only lowercase, digits, and hyphens; must begin with
+         letter, and may not end with hyphen; must contain fewer than 50 characters.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3337,7 +3341,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this service should be created. Format:
-           * projects/{projectnumber}/locations/{location}
+           * projects/{projectnumber}/locations/{location} Only lowercase, digits, and hyphens; must
+           * begin with letter, and may not end with hyphen; must contain fewer than 50 characters.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

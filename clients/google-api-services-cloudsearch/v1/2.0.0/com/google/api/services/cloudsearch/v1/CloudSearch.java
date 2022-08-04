@@ -5263,6 +5263,168 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Updates a datasource. **Note:** This API requires an admin account to execute.
        *
+       * Create a request for the method "datasources.patch".
+       *
+       * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+       *        creating a datasource.
+       * @param content the {@link com.google.api.services.cloudsearch.v1.model.DataSource}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.cloudsearch.v1.model.DataSource content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/settings/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^datasources/[^/]+$");
+
+        /**
+         * Updates a datasource. **Note:** This API requires an admin account to execute.
+         *
+         * Create a request for the method "datasources.patch".
+         *
+         * This request holds the parameters needed by the the cloudsearch server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+       *        creating a datasource.
+         * @param content the {@link com.google.api.services.cloudsearch.v1.model.DataSource}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.cloudsearch.v1.model.DataSource content) {
+          super(CloudSearch.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^datasources/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the datasource resource. Format: datasources/{source_id}. The name is ignored
+         * when creating a datasource.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+       creating a datasource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the datasource resource. Format: datasources/{source_id}. The name is ignored
+         * when creating a datasource.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^datasources/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
+         */
+        @com.google.api.client.util.Key("debugOptions.enableDebugging")
+        private java.lang.Boolean debugOptionsEnableDebugging;
+
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
+         */
+        public java.lang.Boolean getDebugOptionsEnableDebugging() {
+          return debugOptionsEnableDebugging;
+        }
+
+        /**
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
+         */
+        public Patch setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
+          this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a datasource. **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "datasources.update".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -6000,6 +6162,137 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a search application. **Note:** This API requires an admin account to execute.
+       *
+       * Create a request for the method "searchapplications.patch".
+       *
+       * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the Search Application. Format: searchapplications/{application_id}.
+       * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchApplication}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.cloudsearch.v1.model.SearchApplication content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/settings/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
+
+        /**
+         * Updates a search application. **Note:** This API requires an admin account to execute.
+         *
+         * Create a request for the method "searchapplications.patch".
+         *
+         * This request holds the parameters needed by the the cloudsearch server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the Search Application. Format: searchapplications/{application_id}.
+         * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchApplication}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.cloudsearch.v1.model.SearchApplication content) {
+          super(CloudSearch.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^searchapplications/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the Search Application. Format: searchapplications/{application_id}. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the Search Application. Format: searchapplications/{application_id}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the Search Application. Format: searchapplications/{application_id}. */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^searchapplications/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
       /**

@@ -185,6 +185,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String firmwareVersion;
 
   /**
+   * Date and time for the first time the device was enrolled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firstEnrollmentTime;
+
+  /**
    * The type of resource. For the Chromeosdevices resource, the value is
    * `admin#directory#chromeosdevice`.
    * The value may be {@code null}.
@@ -295,6 +302,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String orgUnitPath;
+
+  /**
+   * The status of the OS updates for the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OsUpdateStatus osUpdateStatus;
 
   /**
    * The Chrome device's operating system version.
@@ -688,6 +702,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Date and time for the first time the device was enrolled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirstEnrollmentTime() {
+    return firstEnrollmentTime;
+  }
+
+  /**
+   * Date and time for the first time the device was enrolled.
+   * @param firstEnrollmentTime firstEnrollmentTime or {@code null} for none
+   */
+  public ChromeOsDevice setFirstEnrollmentTime(java.lang.String firstEnrollmentTime) {
+    this.firstEnrollmentTime = firstEnrollmentTime;
+    return this;
+  }
+
+  /**
    * The type of resource. For the Chromeosdevices resource, the value is
    * `admin#directory#chromeosdevice`.
    * @return value or {@code null} for none
@@ -932,6 +963,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setOrgUnitPath(java.lang.String orgUnitPath) {
     this.orgUnitPath = orgUnitPath;
+    return this;
+  }
+
+  /**
+   * The status of the OS updates for the device.
+   * @return value or {@code null} for none
+   */
+  public OsUpdateStatus getOsUpdateStatus() {
+    return osUpdateStatus;
+  }
+
+  /**
+   * The status of the OS updates for the device.
+   * @param osUpdateStatus osUpdateStatus or {@code null} for none
+   */
+  public ChromeOsDevice setOsUpdateStatus(OsUpdateStatus osUpdateStatus) {
+    this.osUpdateStatus = osUpdateStatus;
     return this;
   }
 

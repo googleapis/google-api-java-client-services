@@ -43,15 +43,18 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean inherited;
 
   /**
-   * The namespaced_name of the TagKey, in the format of `{organization_id}/{tag_key_short_name}`
+   * The namespaced_name of the TagKey. Now only supported in the format of
+   * `{organization_id}/{tag_key_short_name}`. Other formats will be supported when we add non-org
+   * parented tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namespacedTagKey;
 
   /**
-   * Namespaced name of the TagValue. Must be in the format
-   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`.
+   * Namespaced name of the TagValue. Now only supported in the format
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`. Other formats will be
+   * supported when we add non-org parented tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +96,9 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The namespaced_name of the TagKey, in the format of `{organization_id}/{tag_key_short_name}`
+   * The namespaced_name of the TagKey. Now only supported in the format of
+   * `{organization_id}/{tag_key_short_name}`. Other formats will be supported when we add non-org
+   * parented tags.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespacedTagKey() {
@@ -101,7 +106,9 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The namespaced_name of the TagKey, in the format of `{organization_id}/{tag_key_short_name}`
+   * The namespaced_name of the TagKey. Now only supported in the format of
+   * `{organization_id}/{tag_key_short_name}`. Other formats will be supported when we add non-org
+   * parented tags.
    * @param namespacedTagKey namespacedTagKey or {@code null} for none
    */
   public EffectiveTag setNamespacedTagKey(java.lang.String namespacedTagKey) {
@@ -110,8 +117,9 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Namespaced name of the TagValue. Must be in the format
-   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`.
+   * Namespaced name of the TagValue. Now only supported in the format
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`. Other formats will be
+   * supported when we add non-org parented tags.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespacedTagValue() {
@@ -119,8 +127,9 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Namespaced name of the TagValue. Must be in the format
-   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`.
+   * Namespaced name of the TagValue. Now only supported in the format
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`. Other formats will be
+   * supported when we add non-org parented tags.
    * @param namespacedTagValue namespacedTagValue or {@code null} for none
    */
   public EffectiveTag setNamespacedTagValue(java.lang.String namespacedTagValue) {

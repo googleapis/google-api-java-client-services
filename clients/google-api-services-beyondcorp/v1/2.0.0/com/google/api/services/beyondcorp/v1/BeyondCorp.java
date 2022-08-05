@@ -3737,8 +3737,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Get instance config for a given AppConnector. An internal method called by a AppConnector to get
-         * its container config.
+         * Gets instance configuration for a given AppConnector. An internal method called by a AppConnector
+         * to get its container config.
          *
          * Create a request for the method "appConnectors.resolveInstanceConfig".
          *
@@ -3764,8 +3764,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/appConnectors/[^/]+$");
 
           /**
-           * Get instance config for a given AppConnector. An internal method called by a AppConnector to
-           * get its container config.
+           * Gets instance configuration for a given AppConnector. An internal method called by a
+           * AppConnector to get its container config.
            *
            * Create a request for the method "appConnectors.resolveInstanceConfig".
            *

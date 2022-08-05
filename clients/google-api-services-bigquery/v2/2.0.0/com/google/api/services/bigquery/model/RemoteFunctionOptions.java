@@ -31,23 +31,24 @@ public final class RemoteFunctionOptions extends com.google.api.client.json.Gene
 
   /**
    * Fully qualified name of the user-provided connection object which holds the authentication
-   * information to send requests to the remote service.
-   * projects/{project_id}/locations/{location_id}/connections/{connection_id}
+   * information to send requests to the remote service. Format:
+   * ```"projects/{projectId}/locations/{locationId}/connections/{connectionId}"```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connection;
 
   /**
-   * Endpoint of the user-provided remote service (e.g. a function url in Google Cloud Functions).
+   * Endpoint of the user-provided remote service, e.g. ```https://us-
+   * east1-my_gcf_project.cloudfunctions.net/remote_add```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String endpoint;
 
   /**
-   * Max number of rows in each batch sent to the remote service. If absent or if 0, it means no
-   * limit.
+   * Max number of rows in each batch sent to the remote service. If absent or if 0, BigQuery
+   * dynamically decides the number of rows in a batch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -64,8 +65,8 @@ public final class RemoteFunctionOptions extends com.google.api.client.json.Gene
 
   /**
    * Fully qualified name of the user-provided connection object which holds the authentication
-   * information to send requests to the remote service.
-   * projects/{project_id}/locations/{location_id}/connections/{connection_id}
+   * information to send requests to the remote service. Format:
+   * ```"projects/{projectId}/locations/{locationId}/connections/{connectionId}"```
    * @return value or {@code null} for none
    */
   public java.lang.String getConnection() {
@@ -74,8 +75,8 @@ public final class RemoteFunctionOptions extends com.google.api.client.json.Gene
 
   /**
    * Fully qualified name of the user-provided connection object which holds the authentication
-   * information to send requests to the remote service.
-   * projects/{project_id}/locations/{location_id}/connections/{connection_id}
+   * information to send requests to the remote service. Format:
+   * ```"projects/{projectId}/locations/{locationId}/connections/{connectionId}"```
    * @param connection connection or {@code null} for none
    */
   public RemoteFunctionOptions setConnection(java.lang.String connection) {
@@ -84,7 +85,8 @@ public final class RemoteFunctionOptions extends com.google.api.client.json.Gene
   }
 
   /**
-   * Endpoint of the user-provided remote service (e.g. a function url in Google Cloud Functions).
+   * Endpoint of the user-provided remote service, e.g. ```https://us-
+   * east1-my_gcf_project.cloudfunctions.net/remote_add```
    * @return value or {@code null} for none
    */
   public java.lang.String getEndpoint() {
@@ -92,7 +94,8 @@ public final class RemoteFunctionOptions extends com.google.api.client.json.Gene
   }
 
   /**
-   * Endpoint of the user-provided remote service (e.g. a function url in Google Cloud Functions).
+   * Endpoint of the user-provided remote service, e.g. ```https://us-
+   * east1-my_gcf_project.cloudfunctions.net/remote_add```
    * @param endpoint endpoint or {@code null} for none
    */
   public RemoteFunctionOptions setEndpoint(java.lang.String endpoint) {
@@ -101,8 +104,8 @@ public final class RemoteFunctionOptions extends com.google.api.client.json.Gene
   }
 
   /**
-   * Max number of rows in each batch sent to the remote service. If absent or if 0, it means no
-   * limit.
+   * Max number of rows in each batch sent to the remote service. If absent or if 0, BigQuery
+   * dynamically decides the number of rows in a batch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxBatchingRows() {
@@ -110,8 +113,8 @@ public final class RemoteFunctionOptions extends com.google.api.client.json.Gene
   }
 
   /**
-   * Max number of rows in each batch sent to the remote service. If absent or if 0, it means no
-   * limit.
+   * Max number of rows in each batch sent to the remote service. If absent or if 0, BigQuery
+   * dynamically decides the number of rows in a batch.
    * @param maxBatchingRows maxBatchingRows or {@code null} for none
    */
   public RemoteFunctionOptions setMaxBatchingRows(java.lang.Long maxBatchingRows) {

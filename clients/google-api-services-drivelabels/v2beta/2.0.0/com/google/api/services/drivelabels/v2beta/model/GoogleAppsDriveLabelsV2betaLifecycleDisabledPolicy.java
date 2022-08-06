@@ -31,9 +31,9 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to hide this disabled object in the search menu for Drive items. * When `false` the
-   * object will generally be shown in the UI as disabled (but still permit searching) when
-   * searching for Drive items. * When `true` the object will generally be hidden in the UI when
+   * Whether to hide this disabled object in the search menu for Drive items. * When `false`, the
+   * object is generally shown in the UI as disabled but it appears in the search results when
+   * searching for Drive items. * When `true`, the object is generally hidden in the UI when
    * searching for Drive items.
    * The value may be {@code null}.
    */
@@ -41,18 +41,18 @@ public final class GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy extends co
   private java.lang.Boolean hideInSearch;
 
   /**
-   * Whether to show this disabled object in the apply menu on Drive items. * When `true` the object
-   * will generally be shown in the UI as disabled and is unselectable. * When `false` the object
-   * will generally be hidden in the UI.
+   * Whether to show this disabled object in the apply menu on Drive items. * When `true`, the
+   * object is generally shown in the UI as disabled and is unselectable. * When `false`, the object
+   * is generally hidden in the UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean showInApply;
 
   /**
-   * Whether to hide this disabled object in the search menu for Drive items. * When `false` the
-   * object will generally be shown in the UI as disabled (but still permit searching) when
-   * searching for Drive items. * When `true` the object will generally be hidden in the UI when
+   * Whether to hide this disabled object in the search menu for Drive items. * When `false`, the
+   * object is generally shown in the UI as disabled but it appears in the search results when
+   * searching for Drive items. * When `true`, the object is generally hidden in the UI when
    * searching for Drive items.
    * @return value or {@code null} for none
    */
@@ -61,9 +61,9 @@ public final class GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy extends co
   }
 
   /**
-   * Whether to hide this disabled object in the search menu for Drive items. * When `false` the
-   * object will generally be shown in the UI as disabled (but still permit searching) when
-   * searching for Drive items. * When `true` the object will generally be hidden in the UI when
+   * Whether to hide this disabled object in the search menu for Drive items. * When `false`, the
+   * object is generally shown in the UI as disabled but it appears in the search results when
+   * searching for Drive items. * When `true`, the object is generally hidden in the UI when
    * searching for Drive items.
    * @param hideInSearch hideInSearch or {@code null} for none
    */
@@ -73,9 +73,9 @@ public final class GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy extends co
   }
 
   /**
-   * Whether to show this disabled object in the apply menu on Drive items. * When `true` the object
-   * will generally be shown in the UI as disabled and is unselectable. * When `false` the object
-   * will generally be hidden in the UI.
+   * Whether to show this disabled object in the apply menu on Drive items. * When `true`, the
+   * object is generally shown in the UI as disabled and is unselectable. * When `false`, the object
+   * is generally hidden in the UI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShowInApply() {
@@ -83,9 +83,9 @@ public final class GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy extends co
   }
 
   /**
-   * Whether to show this disabled object in the apply menu on Drive items. * When `true` the object
-   * will generally be shown in the UI as disabled and is unselectable. * When `false` the object
-   * will generally be hidden in the UI.
+   * Whether to show this disabled object in the apply menu on Drive items. * When `true`, the
+   * object is generally shown in the UI as disabled and is unselectable. * When `false`, the object
+   * is generally hidden in the UI.
    * @param showInApply showInApply or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy setShowInApply(java.lang.Boolean showInApply) {

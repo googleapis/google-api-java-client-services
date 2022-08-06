@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * UI Display hints for rendering a Option.
+ * UI display hints for rendering an option.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints extends com.google.api.client.json.GenericJson {
 
   /**
-   * The colors to use for the badge. Coerced to Google Material colors based on the chosen
+   * The colors to use for the badge. Changed to Google Material colors based on the chosen
    * `properties.badge_config.color`.
    * The value may be {@code null}.
    */
@@ -38,17 +38,17 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   private GoogleAppsDriveLabelsV2BadgeColors badgeColors;
 
   /**
-   * The priority of this badge, used to compare and sort between multiple badges. A lower number
-   * means that the badge should be shown first. When a badging configuration is not present, this
-   * will be 0. Otherwise, this will be set to `BadgeConfig.priority_override` or the default
-   * heuristic which prefers creation date of the Label, and field and option priority.
+   * The priority of this badge. Used to compare and sort between multiple badges. A lower number
+   * means the badge should be shown first. When a badging configuration is not present, this will
+   * be 0. Otherwise, this will be set to `BadgeConfig.priority_override` or the default heuristic
+   * which prefers creation date of the label, and field and option priority.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long badgePriority;
 
   /**
-   * The dark-mode color to use for the badge. Coerced to Google Material colors based on the chosen
+   * The dark-mode color to use for the badge. Changed to Google Material colors based on the chosen
    * `properties.badge_config.color`.
    * The value may be {@code null}.
    */
@@ -63,21 +63,21 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   private java.lang.Boolean disabled;
 
   /**
-   * This option should be hidden in the search menu.
+   * This option should be hidden in the search menu when searching for Drive items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hiddenInSearch;
 
   /**
-   * This option should be shown in the menu when applying values to a Drive item.
+   * This option should be shown in the apply menu when applying values to a Drive item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean shownInApply;
 
   /**
-   * The colors to use for the badge. Coerced to Google Material colors based on the chosen
+   * The colors to use for the badge. Changed to Google Material colors based on the chosen
    * `properties.badge_config.color`.
    * @return value or {@code null} for none
    */
@@ -86,7 +86,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * The colors to use for the badge. Coerced to Google Material colors based on the chosen
+   * The colors to use for the badge. Changed to Google Material colors based on the chosen
    * `properties.badge_config.color`.
    * @param badgeColors badgeColors or {@code null} for none
    */
@@ -96,10 +96,10 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * The priority of this badge, used to compare and sort between multiple badges. A lower number
-   * means that the badge should be shown first. When a badging configuration is not present, this
-   * will be 0. Otherwise, this will be set to `BadgeConfig.priority_override` or the default
-   * heuristic which prefers creation date of the Label, and field and option priority.
+   * The priority of this badge. Used to compare and sort between multiple badges. A lower number
+   * means the badge should be shown first. When a badging configuration is not present, this will
+   * be 0. Otherwise, this will be set to `BadgeConfig.priority_override` or the default heuristic
+   * which prefers creation date of the label, and field and option priority.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBadgePriority() {
@@ -107,10 +107,10 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * The priority of this badge, used to compare and sort between multiple badges. A lower number
-   * means that the badge should be shown first. When a badging configuration is not present, this
-   * will be 0. Otherwise, this will be set to `BadgeConfig.priority_override` or the default
-   * heuristic which prefers creation date of the Label, and field and option priority.
+   * The priority of this badge. Used to compare and sort between multiple badges. A lower number
+   * means the badge should be shown first. When a badging configuration is not present, this will
+   * be 0. Otherwise, this will be set to `BadgeConfig.priority_override` or the default heuristic
+   * which prefers creation date of the label, and field and option priority.
    * @param badgePriority badgePriority or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints setBadgePriority(java.lang.Long badgePriority) {
@@ -119,7 +119,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * The dark-mode color to use for the badge. Coerced to Google Material colors based on the chosen
+   * The dark-mode color to use for the badge. Changed to Google Material colors based on the chosen
    * `properties.badge_config.color`.
    * @return value or {@code null} for none
    */
@@ -128,7 +128,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * The dark-mode color to use for the badge. Coerced to Google Material colors based on the chosen
+   * The dark-mode color to use for the badge. Changed to Google Material colors based on the chosen
    * `properties.badge_config.color`.
    * @param darkBadgeColors darkBadgeColors or {@code null} for none
    */
@@ -155,7 +155,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * This option should be hidden in the search menu.
+   * This option should be hidden in the search menu when searching for Drive items.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHiddenInSearch() {
@@ -163,7 +163,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * This option should be hidden in the search menu.
+   * This option should be hidden in the search menu when searching for Drive items.
    * @param hiddenInSearch hiddenInSearch or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints setHiddenInSearch(java.lang.Boolean hiddenInSearch) {
@@ -172,7 +172,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * This option should be shown in the menu when applying values to a Drive item.
+   * This option should be shown in the apply menu when applying values to a Drive item.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShownInApply() {
@@ -180,7 +180,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHint
   }
 
   /**
-   * This option should be shown in the menu when applying values to a Drive item.
+   * This option should be shown in the apply menu when applying values to a Drive item.
    * @param shownInApply shownInApply or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints setShownInApply(java.lang.Boolean shownInApply) {

@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Behavior of this Label when its applied to Drive items.
+ * Behavior of this label when it's applied to Drive items.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates how the applied Label, and Field values should be copied when a Drive item is copied.
+   * Indicates how the applied label and field values should be copied when a Drive item is copied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String copyMode;
 
   /**
-   * Indicates how the applied Label, and Field values should be copied when a Drive item is copied.
+   * Indicates how the applied label and field values should be copied when a Drive item is copied.
    * @return value or {@code null} for none
    */
   public java.lang.String getCopyMode() {
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy extends co
   }
 
   /**
-   * Indicates how the applied Label, and Field values should be copied when a Drive item is copied.
+   * Indicates how the applied label and field values should be copied when a Drive item is copied.
    * @param copyMode copyMode or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy setCopyMode(java.lang.String copyMode) {

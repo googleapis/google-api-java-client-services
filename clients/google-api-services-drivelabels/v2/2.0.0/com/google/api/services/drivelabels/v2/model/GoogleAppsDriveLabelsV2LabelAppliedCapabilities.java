@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * The capabilities a user has on this Label's applied metadata.
+ * The capabilities a user has on this label's applied metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the user can apply this Label to items.
+   * Whether the user can apply this label to items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends com.g
   private java.lang.Boolean canRead;
 
   /**
-   * Whether the user can remove this Label from items.
+   * Whether the user can remove this label from items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canRemove;
 
   /**
-   * Whether the user can apply this Label to items.
+   * Whether the user can apply this label to items.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanApply() {
@@ -59,7 +59,7 @@ public final class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends com.g
   }
 
   /**
-   * Whether the user can apply this Label to items.
+   * Whether the user can apply this label to items.
    * @param canApply canApply or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelAppliedCapabilities setCanApply(java.lang.Boolean canApply) {
@@ -85,7 +85,7 @@ public final class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends com.g
   }
 
   /**
-   * Whether the user can remove this Label from items.
+   * Whether the user can remove this label from items.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanRemove() {
@@ -93,7 +93,7 @@ public final class GoogleAppsDriveLabelsV2LabelAppliedCapabilities extends com.g
   }
 
   /**
-   * Whether the user can remove this Label from items.
+   * Whether the user can remove this label from items.
    * @param canRemove canRemove or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelAppliedCapabilities setCanRemove(java.lang.Boolean canRemove) {

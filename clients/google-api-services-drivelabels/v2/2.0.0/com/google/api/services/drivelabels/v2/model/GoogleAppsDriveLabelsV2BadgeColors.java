@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * The color derived from BadgeConfig and coerced to the nearest supported color.
+ * The color derived from BadgeConfig and changed to the closest recommended supported color.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2BadgeColors extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Badge background which pairs with the foreground
+   * Output only. Badge background that pairs with the foreground.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeColor backgroundColor;
 
   /**
-   * Output only. Badge foreground which pairs with the background
+   * Output only. Badge foreground that pairs with the background.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeColor foregroundColor;
 
   /**
-   * Output only. Color that can be used for text without a background
+   * Output only. Color that can be used for text without a background.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeColor soloColor;
 
   /**
-   * Output only. Badge background which pairs with the foreground
+   * Output only. Badge background that pairs with the foreground.
    * @return value or {@code null} for none
    */
   public GoogleTypeColor getBackgroundColor() {
@@ -59,7 +59,7 @@ public final class GoogleAppsDriveLabelsV2BadgeColors extends com.google.api.cli
   }
 
   /**
-   * Output only. Badge background which pairs with the foreground
+   * Output only. Badge background that pairs with the foreground.
    * @param backgroundColor backgroundColor or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2BadgeColors setBackgroundColor(GoogleTypeColor backgroundColor) {
@@ -68,7 +68,7 @@ public final class GoogleAppsDriveLabelsV2BadgeColors extends com.google.api.cli
   }
 
   /**
-   * Output only. Badge foreground which pairs with the background
+   * Output only. Badge foreground that pairs with the background.
    * @return value or {@code null} for none
    */
   public GoogleTypeColor getForegroundColor() {
@@ -76,7 +76,7 @@ public final class GoogleAppsDriveLabelsV2BadgeColors extends com.google.api.cli
   }
 
   /**
-   * Output only. Badge foreground which pairs with the background
+   * Output only. Badge foreground that pairs with the background.
    * @param foregroundColor foregroundColor or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2BadgeColors setForegroundColor(GoogleTypeColor foregroundColor) {
@@ -85,7 +85,7 @@ public final class GoogleAppsDriveLabelsV2BadgeColors extends com.google.api.cli
   }
 
   /**
-   * Output only. Color that can be used for text without a background
+   * Output only. Color that can be used for text without a background.
    * @return value or {@code null} for none
    */
   public GoogleTypeColor getSoloColor() {
@@ -93,7 +93,7 @@ public final class GoogleAppsDriveLabelsV2BadgeColors extends com.google.api.cli
   }
 
   /**
-   * Output only. Color that can be used for text without a background
+   * Output only. Color that can be used for text without a background.
    * @param soloColor soloColor or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2BadgeColors setSoloColor(GoogleTypeColor soloColor) {

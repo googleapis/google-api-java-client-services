@@ -17,9 +17,9 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * A Label defines a taxonomy which may be applied to a Drive items in order to organize and search
- * across Items. Labels may be simple strings, or may contain Fields that describe additional
- * metadata which can be further used to organize and search Drive items.
+ * A label defines a taxonomy that can be applied to Drive items in order to organize and search
+ * across items. Labels can be simple strings, or can contain fields that describe additional
+ * metadata that can be further used to organize and search Drive items.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -39,7 +39,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private GoogleAppsDriveLabelsV2LabelAppliedCapabilities appliedCapabilities;
 
   /**
-   * Output only. Behavior of this Label when its applied to Drive items.
+   * Output only. Behavior of this label when it's applied to Drive items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,14 +76,14 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private GoogleAppsDriveLabelsV2UserInfo disabler;
 
   /**
-   * Output only. UI Display hints for rendering the Label.
+   * Output only. UI display hints for rendering the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2LabelDisplayHints displayHints;
 
   /**
-   * List of Fields in descending priority order.
+   * List of fields in descending priority order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Globally unique identifier of this Label. ID makes up part of the Label `name`,
+   * Output only. Globally unique identifier of this label. ID makes up part of the label `name`,
    * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`
    * The value may be {@code null}.
    */
@@ -104,7 +104,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private java.lang.String id;
 
   /**
-   * Required. The type of this label.
+   * Required. The type of label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private GoogleAppsDriveLabelsV2LockStatus lockStatus;
 
   /**
-   * Output only. Resource name of the Label. Will be in the form of either: `labels/{id}` or
+   * Output only. Resource name of the label. Will be in the form of either: `labels/{id}` or
    * `labels/{id}@{revision_id}` depending on the request. See `id` and `revision_id` below.
    * The value may be {@code null}.
    */
@@ -142,7 +142,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private java.lang.String name;
 
   /**
-   * Required. The basic properties of the Label.
+   * Required. The basic properties of the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,8 +179,8 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private GoogleAppsDriveLabelsV2UserInfo revisionCreator;
 
   /**
-   * Output only. Revision ID of the Label. Revision ID may be part of the Label `name` depending on
-   * the request issued. A new revision is created whenever revisioned properties of a Label are
+   * Output only. Revision ID of the label. Revision ID might be part of the label `name` depending
+   * on the request issued. A new revision is created whenever revisioned properties of a label are
    * changed. Matches the regex: `([a-zA-Z0-9])+`
    * The value may be {@code null}.
    */
@@ -188,7 +188,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private java.lang.String revisionId;
 
   /**
-   * Output only. The capabilities the user has on this Label.
+   * Output only. The capabilities the user has on this label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,7 +212,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Behavior of this Label when its applied to Drive items.
+   * Output only. Behavior of this label when it's applied to Drive items.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy getAppliedLabelPolicy() {
@@ -220,7 +220,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Behavior of this Label when its applied to Drive items.
+   * Output only. Behavior of this label when it's applied to Drive items.
    * @param appliedLabelPolicy appliedLabelPolicy or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2Label setAppliedLabelPolicy(GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy appliedLabelPolicy) {
@@ -301,7 +301,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. UI Display hints for rendering the Label.
+   * Output only. UI display hints for rendering the label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelDisplayHints getDisplayHints() {
@@ -309,7 +309,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. UI Display hints for rendering the Label.
+   * Output only. UI display hints for rendering the label.
    * @param displayHints displayHints or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2Label setDisplayHints(GoogleAppsDriveLabelsV2LabelDisplayHints displayHints) {
@@ -318,7 +318,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * List of Fields in descending priority order.
+   * List of fields in descending priority order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsDriveLabelsV2Field> getFields() {
@@ -326,7 +326,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * List of Fields in descending priority order.
+   * List of fields in descending priority order.
    * @param fields fields or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2Label setFields(java.util.List<GoogleAppsDriveLabelsV2Field> fields) {
@@ -335,7 +335,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Globally unique identifier of this Label. ID makes up part of the Label `name`,
+   * Output only. Globally unique identifier of this label. ID makes up part of the label `name`,
    * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`
    * @return value or {@code null} for none
    */
@@ -344,7 +344,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Globally unique identifier of this Label. ID makes up part of the Label `name`,
+   * Output only. Globally unique identifier of this label. ID makes up part of the label `name`,
    * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`
    * @param id id or {@code null} for none
    */
@@ -354,7 +354,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Required. The type of this label.
+   * Required. The type of label.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelType() {
@@ -362,7 +362,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Required. The type of this label.
+   * Required. The type of label.
    * @param labelType labelType or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2Label setLabelType(java.lang.String labelType) {
@@ -426,7 +426,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Resource name of the Label. Will be in the form of either: `labels/{id}` or
+   * Output only. Resource name of the label. Will be in the form of either: `labels/{id}` or
    * `labels/{id}@{revision_id}` depending on the request. See `id` and `revision_id` below.
    * @return value or {@code null} for none
    */
@@ -435,7 +435,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Resource name of the Label. Will be in the form of either: `labels/{id}` or
+   * Output only. Resource name of the label. Will be in the form of either: `labels/{id}` or
    * `labels/{id}@{revision_id}` depending on the request. See `id` and `revision_id` below.
    * @param name name or {@code null} for none
    */
@@ -445,7 +445,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Required. The basic properties of the Label.
+   * Required. The basic properties of the label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelProperties getProperties() {
@@ -453,7 +453,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Required. The basic properties of the Label.
+   * Required. The basic properties of the label.
    * @param properties properties or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2Label setProperties(GoogleAppsDriveLabelsV2LabelProperties properties) {
@@ -534,8 +534,8 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Revision ID of the Label. Revision ID may be part of the Label `name` depending on
-   * the request issued. A new revision is created whenever revisioned properties of a Label are
+   * Output only. Revision ID of the label. Revision ID might be part of the label `name` depending
+   * on the request issued. A new revision is created whenever revisioned properties of a label are
    * changed. Matches the regex: `([a-zA-Z0-9])+`
    * @return value or {@code null} for none
    */
@@ -544,8 +544,8 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. Revision ID of the Label. Revision ID may be part of the Label `name` depending on
-   * the request issued. A new revision is created whenever revisioned properties of a Label are
+   * Output only. Revision ID of the label. Revision ID might be part of the label `name` depending
+   * on the request issued. A new revision is created whenever revisioned properties of a label are
    * changed. Matches the regex: `([a-zA-Z0-9])+`
    * @param revisionId revisionId or {@code null} for none
    */
@@ -555,7 +555,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. The capabilities the user has on this Label.
+   * Output only. The capabilities the user has on this label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelSchemaCapabilities getSchemaCapabilities() {
@@ -563,7 +563,7 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   }
 
   /**
-   * Output only. The capabilities the user has on this Label.
+   * Output only. The capabilities the user has on this label.
    * @param schemaCapabilities schemaCapabilities or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2Label setSchemaCapabilities(GoogleAppsDriveLabelsV2LabelSchemaCapabilities schemaCapabilities) {

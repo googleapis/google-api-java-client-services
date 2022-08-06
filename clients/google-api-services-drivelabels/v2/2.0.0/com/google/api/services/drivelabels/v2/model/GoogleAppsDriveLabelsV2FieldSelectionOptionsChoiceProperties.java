@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Basic properties of the Choice.
+ * Basic properties of the choice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The badge configuration for this Choice. When set, the Label that owns this Choice will be
+   * The badge configuration for this choice. When set, the label that owns this choice is
    * considered a "badged label".
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties 
   private GoogleAppsDriveLabelsV2BadgeConfig badgeConfig;
 
   /**
-   * The description of this Label.
+   * The description of this label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,15 +52,15 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties 
   private java.lang.String displayName;
 
   /**
-   * Input only. Insert or move this Choice to be ordered before the indicated Choice. If empty, the
-   * Choice will be placed at the end of the list.
+   * Input only. Insert or move this choice before the indicated choice. If empty, the choice is
+   * placed at the end of the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String insertBeforeChoice;
 
   /**
-   * The badge configuration for this Choice. When set, the Label that owns this Choice will be
+   * The badge configuration for this choice. When set, the label that owns this choice is
    * considered a "badged label".
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties 
   }
 
   /**
-   * The badge configuration for this Choice. When set, the Label that owns this Choice will be
+   * The badge configuration for this choice. When set, the label that owns this choice is
    * considered a "badged label".
    * @param badgeConfig badgeConfig or {@code null} for none
    */
@@ -79,7 +79,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties 
   }
 
   /**
-   * The description of this Label.
+   * The description of this label.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -87,7 +87,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties 
   }
 
   /**
-   * The description of this Label.
+   * The description of this label.
    * @param description description or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties setDescription(java.lang.String description) {
@@ -113,8 +113,8 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties 
   }
 
   /**
-   * Input only. Insert or move this Choice to be ordered before the indicated Choice. If empty, the
-   * Choice will be placed at the end of the list.
+   * Input only. Insert or move this choice before the indicated choice. If empty, the choice is
+   * placed at the end of the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertBeforeChoice() {
@@ -122,8 +122,8 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties 
   }
 
   /**
-   * Input only. Insert or move this Choice to be ordered before the indicated Choice. If empty, the
-   * Choice will be placed at the end of the list.
+   * Input only. Insert or move this choice before the indicated choice. If empty, the choice is
+   * placed at the end of the list.
    * @param insertBeforeChoice insertBeforeChoice or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties setInsertBeforeChoice(java.lang.String insertBeforeChoice) {

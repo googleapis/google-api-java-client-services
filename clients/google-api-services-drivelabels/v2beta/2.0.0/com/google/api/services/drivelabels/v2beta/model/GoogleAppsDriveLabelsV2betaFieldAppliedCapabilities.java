@@ -37,14 +37,14 @@ public final class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities extends c
   private java.lang.Boolean canRead;
 
   /**
-   * Whether the user can search for drive items referencing this field.
+   * Whether the user can search for Drive items referencing this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canSearch;
 
   /**
-   * Whether the user can set this field on drive items.
+   * Whether the user can set this field on Drive items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities extends c
   }
 
   /**
-   * Whether the user can search for drive items referencing this field.
+   * Whether the user can search for Drive items referencing this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanSearch() {
@@ -76,7 +76,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities extends c
   }
 
   /**
-   * Whether the user can search for drive items referencing this field.
+   * Whether the user can search for Drive items referencing this field.
    * @param canSearch canSearch or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities setCanSearch(java.lang.Boolean canSearch) {
@@ -85,7 +85,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities extends c
   }
 
   /**
-   * Whether the user can set this field on drive items.
+   * Whether the user can set this field on Drive items.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanWrite() {
@@ -93,7 +93,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities extends c
   }
 
   /**
-   * Whether the user can set this field on drive items.
+   * Whether the user can set this field on Drive items.
    * @param canWrite canWrite or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities setCanWrite(java.lang.Boolean canWrite) {

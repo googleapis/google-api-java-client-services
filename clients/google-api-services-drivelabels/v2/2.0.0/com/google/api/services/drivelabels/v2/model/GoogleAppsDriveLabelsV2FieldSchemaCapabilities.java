@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * The capabilities related to this Field when editing the Field.
+ * The capabilities related to this field when editing the field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the user can delete this Field. The user must have permissions and the Field must be
+   * Whether the user can delete this field. The user must have permission and the field must be
    * deprecated.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   private java.lang.Boolean canDelete;
 
   /**
-   * Whether the user can disable this Field. The user must have permissions and this Field must not
+   * Whether the user can disable this field. The user must have permission and this field must not
    * already be disabled.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   private java.lang.Boolean canDisable;
 
   /**
-   * Whether the user can enable this Field. The user must have permissions and this Field must be
+   * Whether the user can enable this field. The user must have permission and this field must be
    * disabled.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   private java.lang.Boolean canUpdate;
 
   /**
-   * Whether the user can delete this Field. The user must have permissions and the Field must be
+   * Whether the user can delete this field. The user must have permission and the field must be
    * deprecated.
    * @return value or {@code null} for none
    */
@@ -70,7 +70,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   }
 
   /**
-   * Whether the user can delete this Field. The user must have permissions and the Field must be
+   * Whether the user can delete this field. The user must have permission and the field must be
    * deprecated.
    * @param canDelete canDelete or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   }
 
   /**
-   * Whether the user can disable this Field. The user must have permissions and this Field must not
+   * Whether the user can disable this field. The user must have permission and this field must not
    * already be disabled.
    * @return value or {@code null} for none
    */
@@ -89,7 +89,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   }
 
   /**
-   * Whether the user can disable this Field. The user must have permissions and this Field must not
+   * Whether the user can disable this field. The user must have permission and this field must not
    * already be disabled.
    * @param canDisable canDisable or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   }
 
   /**
-   * Whether the user can enable this Field. The user must have permissions and this Field must be
+   * Whether the user can enable this field. The user must have permission and this field must be
    * disabled.
    * @return value or {@code null} for none
    */
@@ -108,7 +108,7 @@ public final class GoogleAppsDriveLabelsV2FieldSchemaCapabilities extends com.go
   }
 
   /**
-   * Whether the user can enable this Field. The user must have permissions and this Field must be
+   * Whether the user can enable this field. The user must have permission and this field must be
    * disabled.
    * @param canEnable canEnable or {@code null} for none
    */

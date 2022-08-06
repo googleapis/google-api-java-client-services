@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * UI Display hints for rendering a Field.
+ * UI display hints for rendering a field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -37,21 +37,21 @@ public final class GoogleAppsDriveLabelsV2betaFieldDisplayHints extends com.goog
   private java.lang.Boolean disabled;
 
   /**
-   * This Field should be hidden in the search menu.
+   * This field should be hidden in the search menu when searching for Drive items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hiddenInSearch;
 
   /**
-   * Whether the Field should be shown as required in the UI.
+   * Whether the field should be shown as required in the UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean required;
 
   /**
-   * This Field should be shown when applying values to a Drive item.
+   * This field should be shown in the apply menu when applying values to a Drive item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldDisplayHints extends com.goog
   }
 
   /**
-   * This Field should be hidden in the search menu.
+   * This field should be hidden in the search menu when searching for Drive items.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHiddenInSearch() {
@@ -83,7 +83,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldDisplayHints extends com.goog
   }
 
   /**
-   * This Field should be hidden in the search menu.
+   * This field should be hidden in the search menu when searching for Drive items.
    * @param hiddenInSearch hiddenInSearch or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldDisplayHints setHiddenInSearch(java.lang.Boolean hiddenInSearch) {
@@ -92,7 +92,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldDisplayHints extends com.goog
   }
 
   /**
-   * Whether the Field should be shown as required in the UI.
+   * Whether the field should be shown as required in the UI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequired() {
@@ -100,7 +100,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldDisplayHints extends com.goog
   }
 
   /**
-   * Whether the Field should be shown as required in the UI.
+   * Whether the field should be shown as required in the UI.
    * @param required required or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldDisplayHints setRequired(java.lang.Boolean required) {
@@ -109,7 +109,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldDisplayHints extends com.goog
   }
 
   /**
-   * This Field should be shown when applying values to a Drive item.
+   * This field should be shown in the apply menu when applying values to a Drive item.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShownInApply() {
@@ -117,7 +117,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldDisplayHints extends com.goog
   }
 
   /**
-   * This Field should be shown when applying values to a Drive item.
+   * This field should be shown in the apply menu when applying values to a Drive item.
    * @param shownInApply shownInApply or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldDisplayHints setShownInApply(java.lang.Boolean shownInApply) {

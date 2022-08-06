@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Basic properties of the Label.
+ * Basic properties of the label.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2LabelProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description of this Label.
+   * The description of the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. Title of the Label.
+   * Required. Title of the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The description of this Label.
+   * The description of the label.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2LabelProperties extends com.google.api
   }
 
   /**
-   * The description of this Label.
+   * The description of the label.
    * @param description description or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelProperties setDescription(java.lang.String description) {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2LabelProperties extends com.google.api
   }
 
   /**
-   * Required. Title of the Label.
+   * Required. Title of the label.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2LabelProperties extends com.google.api
   }
 
   /**
-   * Required. Title of the Label.
+   * Required. Title of the label.
    * @param title title or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelProperties setTitle(java.lang.String title) {

@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * The capabilities related to this Label when editing the Label.
+ * The capabilities related to this label when editing the label.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the user can delete this Label. The user must have permission and the Label must be
+   * Whether the user can delete this label. The user must have permission and the label must be
    * disabled.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   private java.lang.Boolean canDelete;
 
   /**
-   * Whether the user can disable this Label. The user must have permission and this Label must not
+   * Whether the user can disable this label. The user must have permission and this label must not
    * already be disabled.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   private java.lang.Boolean canDisable;
 
   /**
-   * Whether the user can enable this Label. The user must have permission and this Label must be
+   * Whether the user can enable this label. The user must have permission and this label must be
    * disabled.
    * The value may be {@code null}.
    */
@@ -54,14 +54,14 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   private java.lang.Boolean canEnable;
 
   /**
-   * Whether the user can change this Label.
+   * Whether the user can change this label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canUpdate;
 
   /**
-   * Whether the user can delete this Label. The user must have permission and the Label must be
+   * Whether the user can delete this label. The user must have permission and the label must be
    * disabled.
    * @return value or {@code null} for none
    */
@@ -70,7 +70,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   }
 
   /**
-   * Whether the user can delete this Label. The user must have permission and the Label must be
+   * Whether the user can delete this label. The user must have permission and the label must be
    * disabled.
    * @param canDelete canDelete or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   }
 
   /**
-   * Whether the user can disable this Label. The user must have permission and this Label must not
+   * Whether the user can disable this label. The user must have permission and this label must not
    * already be disabled.
    * @return value or {@code null} for none
    */
@@ -89,7 +89,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   }
 
   /**
-   * Whether the user can disable this Label. The user must have permission and this Label must not
+   * Whether the user can disable this label. The user must have permission and this label must not
    * already be disabled.
    * @param canDisable canDisable or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   }
 
   /**
-   * Whether the user can enable this Label. The user must have permission and this Label must be
+   * Whether the user can enable this label. The user must have permission and this label must be
    * disabled.
    * @return value or {@code null} for none
    */
@@ -108,7 +108,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   }
 
   /**
-   * Whether the user can enable this Label. The user must have permission and this Label must be
+   * Whether the user can enable this label. The user must have permission and this label must be
    * disabled.
    * @param canEnable canEnable or {@code null} for none
    */
@@ -118,7 +118,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   }
 
   /**
-   * Whether the user can change this Label.
+   * Whether the user can change this label.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanUpdate() {
@@ -126,7 +126,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities extends co
   }
 
   /**
-   * Whether the user can change this Label.
+   * Whether the user can change this label.
    * @param canUpdate canUpdate or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities setCanUpdate(java.lang.Boolean canUpdate) {

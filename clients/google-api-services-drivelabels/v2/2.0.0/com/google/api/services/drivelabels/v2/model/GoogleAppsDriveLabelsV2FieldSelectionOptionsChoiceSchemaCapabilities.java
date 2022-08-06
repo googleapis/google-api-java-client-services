@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * The capabilities related to this Choice when editing the Choice.
+ * The capabilities related to this choice when editing the choice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,35 +30,35 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapabilities extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the user can delete this Choice.
+   * Whether the user can delete this choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canDelete;
 
   /**
-   * Whether the user can disable this Chioce.
+   * Whether the user can disable this choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canDisable;
 
   /**
-   * Whether the user can enable this Choice.
+   * Whether the user can enable this choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canEnable;
 
   /**
-   * Whether the user can update this Choice.
+   * Whether the user can update this choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canUpdate;
 
   /**
-   * Whether the user can delete this Choice.
+   * Whether the user can delete this choice.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanDelete() {
@@ -66,7 +66,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapab
   }
 
   /**
-   * Whether the user can delete this Choice.
+   * Whether the user can delete this choice.
    * @param canDelete canDelete or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapabilities setCanDelete(java.lang.Boolean canDelete) {
@@ -75,7 +75,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapab
   }
 
   /**
-   * Whether the user can disable this Chioce.
+   * Whether the user can disable this choice.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanDisable() {
@@ -83,7 +83,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapab
   }
 
   /**
-   * Whether the user can disable this Chioce.
+   * Whether the user can disable this choice.
    * @param canDisable canDisable or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapabilities setCanDisable(java.lang.Boolean canDisable) {
@@ -92,7 +92,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapab
   }
 
   /**
-   * Whether the user can enable this Choice.
+   * Whether the user can enable this choice.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanEnable() {
@@ -100,7 +100,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapab
   }
 
   /**
-   * Whether the user can enable this Choice.
+   * Whether the user can enable this choice.
    * @param canEnable canEnable or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapabilities setCanEnable(java.lang.Boolean canEnable) {
@@ -109,7 +109,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapab
   }
 
   /**
-   * Whether the user can update this Choice.
+   * Whether the user can update this choice.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanUpdate() {
@@ -117,7 +117,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapab
   }
 
   /**
-   * Whether the user can update this Choice.
+   * Whether the user can update this choice.
    * @param canUpdate canUpdate or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapabilities setCanUpdate(java.lang.Boolean canUpdate) {

@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * The capabilities related to this Choice on applied metadata.
+ * The capabilities related to this choice on applied metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -37,14 +37,14 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceApplied
   private java.lang.Boolean canRead;
 
   /**
-   * Whether the user can use this Choice in search queries.
+   * Whether the user can use this choice in search queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canSearch;
 
   /**
-   * Whether the user can select this Choice on an item.
+   * Whether the user can select this choice on an item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceApplied
   }
 
   /**
-   * Whether the user can use this Choice in search queries.
+   * Whether the user can use this choice in search queries.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanSearch() {
@@ -76,7 +76,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceApplied
   }
 
   /**
-   * Whether the user can use this Choice in search queries.
+   * Whether the user can use this choice in search queries.
    * @param canSearch canSearch or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities setCanSearch(java.lang.Boolean canSearch) {
@@ -85,7 +85,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceApplied
   }
 
   /**
-   * Whether the user can select this Choice on an item.
+   * Whether the user can select this choice on an item.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanSelect() {
@@ -93,7 +93,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceApplied
   }
 
   /**
-   * Whether the user can select this Choice on an item.
+   * Whether the user can select this choice on an item.
    * @param canSelect canSelect or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities setCanSelect(java.lang.Boolean canSelect) {

@@ -154,10 +154,10 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
   public class Labels {
 
     /**
-     * Get a Label by its resource name. Resource name may be any of: * `labels/{id}` - See to
-     * `labels/{id}@latest` * `labels/{id}@latest` - Gets the latest revision of the Label. *
-     * `labels/{id}@published` - Gets the current published revision of the Label. *
-     * `labels/{id}@{revision_id}` - Gets the Label at the specified revision ID.
+     * Get a label by its resource name. Resource name may be any of: * `labels/{id}` - See
+     * `labels/{id}@latest` * `labels/{id}@latest` - Gets the latest revision of the label. *
+     * `labels/{id}@published` - Gets the current published revision of the label. *
+     * `labels/{id}@{revision_id}` - Gets the label at the specified revision ID.
      *
      * Create a request for the method "labels.get".
      *
@@ -182,10 +182,10 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Get a Label by its resource name. Resource name may be any of: * `labels/{id}` - See to
-       * `labels/{id}@latest` * `labels/{id}@latest` - Gets the latest revision of the Label. *
-       * `labels/{id}@published` - Gets the current published revision of the Label. *
-       * `labels/{id}@{revision_id}` - Gets the Label at the specified revision ID.
+       * Get a label by its resource name. Resource name may be any of: * `labels/{id}` - See
+       * `labels/{id}@latest` * `labels/{id}@latest` - Gets the latest revision of the label. *
+       * `labels/{id}@published` - Gets the current published revision of the label. *
+       * `labels/{id}@{revision_id}` - Gets the label at the specified revision ID.
        *
        * Create a request for the method "labels.get".
        *
@@ -304,22 +304,22 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The BCP-47 language code to use for evaluating localized Field labels. When not specified,
-       * values in the default configured language will be used.
+       * The BCP-47 language code to use for evaluating localized field labels. When not specified,
+       * values in the default configured language are used.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** The BCP-47 language code to use for evaluating localized Field labels. When not specified, values
-     in the default configured language will be used.
+      /** The BCP-47 language code to use for evaluating localized field labels. When not specified, values
+     in the default configured language are used.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
       }
 
       /**
-       * The BCP-47 language code to use for evaluating localized Field labels. When not specified,
-       * values in the default configured language will be used.
+       * The BCP-47 language code to use for evaluating localized field labels. When not specified,
+       * values in the default configured language are used.
        */
       public Get setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -327,39 +327,39 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Set to `true` in order to use the user's admin credentials. The server will verify the user
-       * is an admin for the Label before allowing access.
+       * Set to `true` in order to use the user's admin credentials. The server verifies that the
+       * user is an admin for the label before allowing access.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-     admin for the Label before allowing access.
+      /** Set to `true` in order to use the user's admin credentials. The server verifies that the user is an
+     admin for the label before allowing access.
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
       }
 
       /**
-       * Set to `true` in order to use the user's admin credentials. The server will verify the user
-       * is an admin for the Label before allowing access.
+       * Set to `true` in order to use the user's admin credentials. The server verifies that the
+       * user is an admin for the label before allowing access.
        */
       public Get setUseAdminAccess(java.lang.Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
       }
 
-      /** When specified, only certain Fields belonging to the indicated view will be returned. */
+      /** When specified, only certain fields belonging to the indicated view are returned. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** When specified, only certain Fields belonging to the indicated view will be returned.
+      /** When specified, only certain fields belonging to the indicated view are returned.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /** When specified, only certain Fields belonging to the indicated view will be returned. */
+      /** When specified, only certain fields belonging to the indicated view are returned. */
       public Get setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -371,8 +371,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * -------------------------------------------------------------------------- ## Label APIs
-     * --------------------------------------------------------------- List Labels.
+     * List labels.
      *
      * Create a request for the method "labels.list".
      *
@@ -392,8 +391,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v2/labels";
 
       /**
-       * -------------------------------------------------------------------------- ## Label APIs
-       * --------------------------------------------------------------- List Labels.
+       * List labels.
        *
        * Create a request for the method "labels.list".
        *
@@ -475,13 +473,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * The BCP-47 language code to use for evaluating localized field labels. When not specified,
-       * values in the default configured language will be used.
+       * values in the default configured language are used.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
       /** The BCP-47 language code to use for evaluating localized field labels. When not specified, values
-     in the default configured language will be used.
+     in the default configured language are used.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
@@ -489,7 +487,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * The BCP-47 language code to use for evaluating localized field labels. When not specified,
-       * values in the default configured language will be used.
+       * values in the default configured language are used.
        */
       public List setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -519,17 +517,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         return this;
       }
 
-      /** Maximum number of Labels to return per page. Default: 50. Max: 200. */
+      /** Maximum number of labels to return per page. Default: 50. Max: 200. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of Labels to return per page. Default: 50. Max: 200.
+      /** Maximum number of labels to return per page. Default: 50. Max: 200.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Maximum number of Labels to return per page. Default: 50. Max: 200. */
+      /** Maximum number of labels to return per page. Default: 50. Max: 200. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -553,19 +551,19 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * Whether to include only published labels in the results. * When `true`, only the current
-       * published label revisions will be returned. Disabled labels will be included. Returned
-       * Label resource names will reference the published revision (`labels/{id}/{revision_id}`). *
-       * When `false`, the current label revisions will be returned, which may not by published.
-       * Returned Label resource names will not reference a specific revision (`labels/{id}`).
+       * published label revisions are returned. Disabled labels are included. Returned label
+       * resource names reference the published revision (`labels/{id}/{revision_id}`). * When
+       * `false`, the current label revisions are returned, which might not be published. Returned
+       * label resource names don't reference a specific revision (`labels/{id}`).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean publishedOnly;
 
       /** Whether to include only published labels in the results. * When `true`, only the current published
-     label revisions will be returned. Disabled labels will be included. Returned Label resource names
-     will reference the published revision (`labels/{id}/{revision_id}`). * When `false`, the current
-     label revisions will be returned, which may not by published. Returned Label resource names will
-     not reference a specific revision (`labels/{id}`).
+     label revisions are returned. Disabled labels are included. Returned label resource names reference
+     the published revision (`labels/{id}/{revision_id}`). * When `false`, the current label revisions
+     are returned, which might not be published. Returned label resource names don't reference a
+     specific revision (`labels/{id}`).
        */
       public java.lang.Boolean getPublishedOnly() {
         return publishedOnly;
@@ -573,10 +571,10 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * Whether to include only published labels in the results. * When `true`, only the current
-       * published label revisions will be returned. Disabled labels will be included. Returned
-       * Label resource names will reference the published revision (`labels/{id}/{revision_id}`). *
-       * When `false`, the current label revisions will be returned, which may not by published.
-       * Returned Label resource names will not reference a specific revision (`labels/{id}`).
+       * published label revisions are returned. Disabled labels are included. Returned label
+       * resource names reference the published revision (`labels/{id}/{revision_id}`). * When
+       * `false`, the current label revisions are returned, which might not be published. Returned
+       * label resource names don't reference a specific revision (`labels/{id}`).
        */
       public List setPublishedOnly(java.lang.Boolean publishedOnly) {
         this.publishedOnly = publishedOnly;
@@ -606,17 +604,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         return this;
       }
 
-      /** When specified, only certain fields belonging to the indicated view will be returned. */
+      /** When specified, only certain fields belonging to the indicated view are returned. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** When specified, only certain fields belonging to the indicated view will be returned.
+      /** When specified, only certain fields belonging to the indicated view are returned.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /** When specified, only certain fields belonging to the indicated view will be returned. */
+      /** When specified, only certain fields belonging to the indicated view are returned. */
       public List setView(java.lang.String view) {
         this.view = view;
         return this;

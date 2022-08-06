@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2FieldUserOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * When specified, indicates that this field support a list of values. Once the field is
+   * When specified, indicates that this field supports a list of values. Once the field is
    * published, this cannot be changed.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleAppsDriveLabelsV2FieldUserOptions extends com.google.ap
   private GoogleAppsDriveLabelsV2FieldListOptions listOptions;
 
   /**
-   * When specified, indicates that this field support a list of values. Once the field is
+   * When specified, indicates that this field supports a list of values. Once the field is
    * published, this cannot be changed.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class GoogleAppsDriveLabelsV2FieldUserOptions extends com.google.ap
   }
 
   /**
-   * When specified, indicates that this field support a list of values. Once the field is
+   * When specified, indicates that this field supports a list of values. Once the field is
    * published, this cannot be changed.
    * @param listOptions listOptions or {@code null} for none
    */

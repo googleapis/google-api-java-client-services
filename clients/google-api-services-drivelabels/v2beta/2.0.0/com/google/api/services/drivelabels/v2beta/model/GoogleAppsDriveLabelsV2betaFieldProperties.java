@@ -37,8 +37,8 @@ public final class GoogleAppsDriveLabelsV2betaFieldProperties extends com.google
   private java.lang.String displayName;
 
   /**
-   * Input only. Insert or move this Field to be ordered before the indicated Field. If empty, the
-   * Field will be placed at the end of the list.
+   * Input only. Insert or move this field before the indicated field. If empty, the field is placed
+   * at the end of the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class GoogleAppsDriveLabelsV2betaFieldProperties extends com.google
   }
 
   /**
-   * Input only. Insert or move this Field to be ordered before the indicated Field. If empty, the
-   * Field will be placed at the end of the list.
+   * Input only. Insert or move this field before the indicated field. If empty, the field is placed
+   * at the end of the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertBeforeField() {
@@ -78,8 +78,8 @@ public final class GoogleAppsDriveLabelsV2betaFieldProperties extends com.google
   }
 
   /**
-   * Input only. Insert or move this Field to be ordered before the indicated Field. If empty, the
-   * Field will be placed at the end of the list.
+   * Input only. Insert or move this field before the indicated field. If empty, the field is placed
+   * at the end of the list.
    * @param insertBeforeField insertBeforeField or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldProperties setInsertBeforeField(java.lang.String insertBeforeField) {

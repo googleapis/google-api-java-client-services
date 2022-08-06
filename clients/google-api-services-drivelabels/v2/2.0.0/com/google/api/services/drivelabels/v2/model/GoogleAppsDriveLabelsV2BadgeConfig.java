@@ -30,8 +30,9 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2BadgeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The color of the badge. When not specified, no badge will be rendered. This color will be
-   * coerced into the closest recommended supported color.
+   * The color of the badge. When not specified, no badge is rendered. The background, foreground,
+   * and solo (light and dark mode) colors set here are changed in the Drive UI into the closest
+   * recommended supported color.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,15 +40,16 @@ public final class GoogleAppsDriveLabelsV2BadgeConfig extends com.google.api.cli
 
   /**
    * Override the default global priority of this badge. When set to 0, the default priority
-   * heuristic will be used.
+   * heuristic is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long priorityOverride;
 
   /**
-   * The color of the badge. When not specified, no badge will be rendered. This color will be
-   * coerced into the closest recommended supported color.
+   * The color of the badge. When not specified, no badge is rendered. The background, foreground,
+   * and solo (light and dark mode) colors set here are changed in the Drive UI into the closest
+   * recommended supported color.
    * @return value or {@code null} for none
    */
   public GoogleTypeColor getColor() {
@@ -55,8 +57,9 @@ public final class GoogleAppsDriveLabelsV2BadgeConfig extends com.google.api.cli
   }
 
   /**
-   * The color of the badge. When not specified, no badge will be rendered. This color will be
-   * coerced into the closest recommended supported color.
+   * The color of the badge. When not specified, no badge is rendered. The background, foreground,
+   * and solo (light and dark mode) colors set here are changed in the Drive UI into the closest
+   * recommended supported color.
    * @param color color or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2BadgeConfig setColor(GoogleTypeColor color) {
@@ -66,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2BadgeConfig extends com.google.api.cli
 
   /**
    * Override the default global priority of this badge. When set to 0, the default priority
-   * heuristic will be used.
+   * heuristic is used.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriorityOverride() {
@@ -75,7 +78,7 @@ public final class GoogleAppsDriveLabelsV2BadgeConfig extends com.google.api.cli
 
   /**
    * Override the default global priority of this badge. When set to 0, the default priority
-   * heuristic will be used.
+   * heuristic is used.
    * @param priorityOverride priorityOverride or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2BadgeConfig setPriorityOverride(java.lang.Long priorityOverride) {

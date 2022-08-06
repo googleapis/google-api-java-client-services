@@ -31,8 +31,8 @@ public final class GoogleAppsDriveLabelsV2LockStatus extends com.google.api.clie
 
   /**
    * Output only. Indicates whether this label component is the (direct) target of a LabelLock. A
-   * label component may be implicitly locked even if it is not the direct target of a LabelLock, in
-   * which case this field will be false.
+   * label component can be implicitly locked even if it's not the direct target of a LabelLock, in
+   * which case this field is set to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class GoogleAppsDriveLabelsV2LockStatus extends com.google.api.clie
 
   /**
    * Output only. Indicates whether this label component is the (direct) target of a LabelLock. A
-   * label component may be implicitly locked even if it is not the direct target of a LabelLock, in
-   * which case this field will be false.
+   * label component can be implicitly locked even if it's not the direct target of a LabelLock, in
+   * which case this field is set to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -50,8 +50,8 @@ public final class GoogleAppsDriveLabelsV2LockStatus extends com.google.api.clie
 
   /**
    * Output only. Indicates whether this label component is the (direct) target of a LabelLock. A
-   * label component may be implicitly locked even if it is not the direct target of a LabelLock, in
-   * which case this field will be false.
+   * label component can be implicitly locked even if it's not the direct target of a LabelLock, in
+   * which case this field is set to false.
    * @param locked locked or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LockStatus setLocked(java.lang.Boolean locked) {

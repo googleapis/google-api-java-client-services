@@ -38,8 +38,8 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptions extends com.
   private java.util.List<GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice> choices;
 
   /**
-   * When specified, indicates that this field support a list of values. Once the field is
-   * published, this cannot be changed.
+   * When specified, indicates this field supports a list of values. Once the field is published,
+   * this cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptions extends com.
   }
 
   /**
-   * When specified, indicates that this field support a list of values. Once the field is
-   * published, this cannot be changed.
+   * When specified, indicates this field supports a list of values. Once the field is published,
+   * this cannot be changed.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldListOptions getListOptions() {
@@ -74,8 +74,8 @@ public final class GoogleAppsDriveLabelsV2betaFieldSelectionOptions extends com.
   }
 
   /**
-   * When specified, indicates that this field support a list of values. Once the field is
-   * published, this cannot be changed.
+   * When specified, indicates this field supports a list of values. Once the field is published,
+   * this cannot be changed.
    * @param listOptions listOptions or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldSelectionOptions setListOptions(GoogleAppsDriveLabelsV2betaFieldListOptions listOptions) {

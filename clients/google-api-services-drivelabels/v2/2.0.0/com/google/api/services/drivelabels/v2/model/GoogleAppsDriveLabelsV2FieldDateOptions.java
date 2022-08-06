@@ -30,15 +30,15 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2FieldDateOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. ICU Date format.
+   * Output only. ICU date format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dateFormat;
 
   /**
-   * Localized date formatting option. Field values will be rendered in this format according to
-   * their locale.
+   * Localized date formatting option. Field values are rendered in this format according to their
+   * locale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class GoogleAppsDriveLabelsV2FieldDateOptions extends com.google.ap
   private GoogleTypeDate minValue;
 
   /**
-   * Output only. ICU Date format.
+   * Output only. ICU date format.
    * @return value or {@code null} for none
    */
   public java.lang.String getDateFormat() {
@@ -67,7 +67,7 @@ public final class GoogleAppsDriveLabelsV2FieldDateOptions extends com.google.ap
   }
 
   /**
-   * Output only. ICU Date format.
+   * Output only. ICU date format.
    * @param dateFormat dateFormat or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldDateOptions setDateFormat(java.lang.String dateFormat) {
@@ -76,8 +76,8 @@ public final class GoogleAppsDriveLabelsV2FieldDateOptions extends com.google.ap
   }
 
   /**
-   * Localized date formatting option. Field values will be rendered in this format according to
-   * their locale.
+   * Localized date formatting option. Field values are rendered in this format according to their
+   * locale.
    * @return value or {@code null} for none
    */
   public java.lang.String getDateFormatType() {
@@ -85,8 +85,8 @@ public final class GoogleAppsDriveLabelsV2FieldDateOptions extends com.google.ap
   }
 
   /**
-   * Localized date formatting option. Field values will be rendered in this format according to
-   * their locale.
+   * Localized date formatting option. Field values are rendered in this format according to their
+   * locale.
    * @param dateFormatType dateFormatType or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldDateOptions setDateFormatType(java.lang.String dateFormatType) {

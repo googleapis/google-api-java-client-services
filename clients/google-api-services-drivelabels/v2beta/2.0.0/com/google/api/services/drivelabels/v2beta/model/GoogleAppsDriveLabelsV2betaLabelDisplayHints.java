@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * UI Display hints for rendering the Label.
+ * UI display hints for rendering the label.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,35 +30,35 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the Label should be shown in the UI as disabled.
+   * Whether the label should be shown in the UI as disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * This Label should be hidden in the search menu when searching for Drive items.
+   * This label should be hidden in the search menu when searching for Drive items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hiddenInSearch;
 
   /**
-   * Order to display label in a list
+   * Order to display label in a list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long priority;
 
   /**
-   * This Label should be shown in the apply menu.
+   * This label should be shown in the apply menu when applying values to a Drive item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean shownInApply;
 
   /**
-   * Whether the Label should be shown in the UI as disabled.
+   * Whether the label should be shown in the UI as disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -66,7 +66,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.goog
   }
 
   /**
-   * Whether the Label should be shown in the UI as disabled.
+   * Whether the label should be shown in the UI as disabled.
    * @param disabled disabled or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelDisplayHints setDisabled(java.lang.Boolean disabled) {
@@ -75,7 +75,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.goog
   }
 
   /**
-   * This Label should be hidden in the search menu when searching for Drive items.
+   * This label should be hidden in the search menu when searching for Drive items.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHiddenInSearch() {
@@ -83,7 +83,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.goog
   }
 
   /**
-   * This Label should be hidden in the search menu when searching for Drive items.
+   * This label should be hidden in the search menu when searching for Drive items.
    * @param hiddenInSearch hiddenInSearch or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelDisplayHints setHiddenInSearch(java.lang.Boolean hiddenInSearch) {
@@ -92,7 +92,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.goog
   }
 
   /**
-   * Order to display label in a list
+   * Order to display label in a list.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriority() {
@@ -100,7 +100,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.goog
   }
 
   /**
-   * Order to display label in a list
+   * Order to display label in a list.
    * @param priority priority or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelDisplayHints setPriority(java.lang.Long priority) {
@@ -109,7 +109,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.goog
   }
 
   /**
-   * This Label should be shown in the apply menu.
+   * This label should be shown in the apply menu when applying values to a Drive item.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShownInApply() {
@@ -117,7 +117,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelDisplayHints extends com.goog
   }
 
   /**
-   * This Label should be shown in the apply menu.
+   * This label should be shown in the apply menu when applying values to a Drive item.
    * @param shownInApply shownInApply or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelDisplayHints setShownInApply(java.lang.Boolean shownInApply) {

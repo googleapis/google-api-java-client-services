@@ -17,7 +17,8 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * A subscription resource.
+ * A subscription resource. If none of `push_config` or `bigquery_config` is set, then the
+ * subscriber will pull and ack messages using API methods. At most one of these fields may be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:
@@ -49,8 +50,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * If delivery to BigQuery is used with this subscription, this field is used to configure it.
-   * Either `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
-   * subscriber will pull and ack messages using API methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,9 +149,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. Either
-   * `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
-   * subscriber will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,8 +245,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * If delivery to BigQuery is used with this subscription, this field is used to configure it.
-   * Either `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
-   * subscriber will pull and ack messages using API methods.
    * @return value or {@code null} for none
    */
   public BigQueryConfig getBigqueryConfig() {
@@ -258,8 +253,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * If delivery to BigQuery is used with this subscription, this field is used to configure it.
-   * Either `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
-   * subscriber will pull and ack messages using API methods.
    * @param bigqueryConfig bigqueryConfig or {@code null} for none
    */
   public Subscription setBigqueryConfig(BigQueryConfig bigqueryConfig) {
@@ -481,9 +474,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. Either
-   * `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
-   * subscriber will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it.
    * @return value or {@code null} for none
    */
   public PushConfig getPushConfig() {
@@ -491,9 +482,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If push delivery is used with this subscription, this field is used to configure it. Either
-   * `pushConfig` or `bigQueryConfig` can be set, but not both. If both are empty, then the
-   * subscriber will pull and ack messages using API methods.
+   * If push delivery is used with this subscription, this field is used to configure it.
    * @param pushConfig pushConfig or {@code null} for none
    */
   public Subscription setPushConfig(PushConfig pushConfig) {

@@ -6775,7 +6775,8 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag': 'latest' }], } } Currently,
            * only the following fields can be updated: - software_config.kernels -
            * software_config.post_startup_script - software_config.custom_gpu_driver_path -
-           * software_config.idle_shutdown - software_config.idle_shutdown_timeout
+           * software_config.idle_shutdown - software_config.idle_shutdown_timeout -
+           * software_config.disable_terminal
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -6787,7 +6788,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          'tag': 'latest' }], } } Currently, only the following fields can be updated: -
          software_config.kernels - software_config.post_startup_script -
          software_config.custom_gpu_driver_path - software_config.idle_shutdown -
-         software_config.idle_shutdown_timeout
+         software_config.idle_shutdown_timeout - software_config.disable_terminal
            */
           public String getUpdateMask() {
             return updateMask;
@@ -6801,7 +6802,8 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * 'gcr.io/deeplearning-platform-release/pytorch-gpu', 'tag': 'latest' }], } } Currently,
            * only the following fields can be updated: - software_config.kernels -
            * software_config.post_startup_script - software_config.custom_gpu_driver_path -
-           * software_config.idle_shutdown - software_config.idle_shutdown_timeout
+           * software_config.idle_shutdown - software_config.idle_shutdown_timeout -
+           * software_config.disable_terminal
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

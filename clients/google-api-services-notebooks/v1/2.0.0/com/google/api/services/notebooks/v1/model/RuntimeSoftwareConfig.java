@@ -40,6 +40,13 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   private java.lang.String customGpuDriverPath;
 
   /**
+   * Bool indicating whether JupyterLab terminal will be available or not. Default: False
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableTerminal;
+
+  /**
    * Verifies core internal services are running. Default: True
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
    */
   public RuntimeSoftwareConfig setCustomGpuDriverPath(java.lang.String customGpuDriverPath) {
     this.customGpuDriverPath = customGpuDriverPath;
+    return this;
+  }
+
+  /**
+   * Bool indicating whether JupyterLab terminal will be available or not. Default: False
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableTerminal() {
+    return disableTerminal;
+  }
+
+  /**
+   * Bool indicating whether JupyterLab terminal will be available or not. Default: False
+   * @param disableTerminal disableTerminal or {@code null} for none
+   */
+  public RuntimeSoftwareConfig setDisableTerminal(java.lang.Boolean disableTerminal) {
+    this.disableTerminal = disableTerminal;
     return this;
   }
 

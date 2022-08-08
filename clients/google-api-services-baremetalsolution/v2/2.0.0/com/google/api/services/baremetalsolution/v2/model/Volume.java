@@ -39,6 +39,14 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.Long autoGrownSizeGib;
 
   /**
+   * Output only. Whether this volume is a boot volume. A boot volume is one which contains a boot
+   * LUN.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bootVolume;
+
+  /**
    * The current size of this storage volume, in GiB, including space reserved for snapshots. This
    * size might be different than the requested size if the storage volume has been configured with
    * auto grow or auto shrink.
@@ -179,6 +187,25 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setAutoGrownSizeGib(java.lang.Long autoGrownSizeGib) {
     this.autoGrownSizeGib = autoGrownSizeGib;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this volume is a boot volume. A boot volume is one which contains a boot
+   * LUN.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBootVolume() {
+    return bootVolume;
+  }
+
+  /**
+   * Output only. Whether this volume is a boot volume. A boot volume is one which contains a boot
+   * LUN.
+   * @param bootVolume bootVolume or {@code null} for none
+   */
+  public Volume setBootVolume(java.lang.Boolean bootVolume) {
+    this.bootVolume = bootVolume;
     return this;
   }
 

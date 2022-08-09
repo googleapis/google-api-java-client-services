@@ -77,9 +77,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
    * more information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) This field
-   * is deprecated, min_cpu_platform should be specified using cloud.google.com/requested-min-cpu-
-   * platform label selector on the pod. To unset the min cpu platform field pass "automatic" as
-   * field value.
+   * is deprecated, min_cpu_platform should be specified using https://cloud.google.com/requested-
+   * min-cpu-platform label selector on the pod. To unset the min cpu platform field pass
+   * "automatic" as field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,9 +216,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
    * more information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) This field
-   * is deprecated, min_cpu_platform should be specified using cloud.google.com/requested-min-cpu-
-   * platform label selector on the pod. To unset the min cpu platform field pass "automatic" as
-   * field value.
+   * is deprecated, min_cpu_platform should be specified using https://cloud.google.com/requested-
+   * min-cpu-platform label selector on the pod. To unset the min cpu platform field pass
+   * "automatic" as field value.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -231,9 +231,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
    * more information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) This field
-   * is deprecated, min_cpu_platform should be specified using cloud.google.com/requested-min-cpu-
-   * platform label selector on the pod. To unset the min cpu platform field pass "automatic" as
-   * field value.
+   * is deprecated, min_cpu_platform should be specified using https://cloud.google.com/requested-
+   * min-cpu-platform label selector on the pod. To unset the min cpu platform field pass
+   * "automatic" as field value.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setMinCpuPlatform(java.lang.String minCpuPlatform) {

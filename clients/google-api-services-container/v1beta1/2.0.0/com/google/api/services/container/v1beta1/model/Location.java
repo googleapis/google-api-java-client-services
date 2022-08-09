@@ -39,7 +39,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Whether the location is recomended for GKE cluster scheduling.
+   * Whether the location is recommended for GKE cluster scheduling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the location is recomended for GKE cluster scheduling.
+   * Whether the location is recommended for GKE cluster scheduling.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRecommended() {
@@ -78,7 +78,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the location is recomended for GKE cluster scheduling.
+   * Whether the location is recommended for GKE cluster scheduling.
    * @param recommended recommended or {@code null} for none
    */
   public Location setRecommended(java.lang.Boolean recommended) {

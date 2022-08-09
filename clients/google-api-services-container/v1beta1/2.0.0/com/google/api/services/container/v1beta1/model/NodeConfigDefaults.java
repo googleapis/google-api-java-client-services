@@ -31,14 +31,14 @@ package com.google.api.services.container.v1beta1.model;
 public final class NodeConfigDefaults extends com.google.api.client.json.GenericJson {
 
   /**
-   * GCFS (Google Container File System, a.k.a. Riptide) options.
+   * GCFS (Google Container File System, also known as Riptide) options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcfsConfig gcfsConfig;
 
   /**
-   * GCFS (Google Container File System, a.k.a. Riptide) options.
+   * GCFS (Google Container File System, also known as Riptide) options.
    * @return value or {@code null} for none
    */
   public GcfsConfig getGcfsConfig() {
@@ -46,7 +46,7 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
   }
 
   /**
-   * GCFS (Google Container File System, a.k.a. Riptide) options.
+   * GCFS (Google Container File System, also known as Riptide) options.
    * @param gcfsConfig gcfsConfig or {@code null} for none
    */
   public NodeConfigDefaults setGcfsConfig(GcfsConfig gcfsConfig) {

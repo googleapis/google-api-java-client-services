@@ -31,8 +31,9 @@ package com.google.api.services.container.model;
 public final class BinaryAuthorization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
+   * This field is deprecated. Leave this unset and instead configure BinaryAuthorization using
+   * evaluation_mode. If evaluation_mode is set to anything other than EVALUATION_MODE_UNSPECIFIED,
+   * this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +48,9 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
   private java.lang.String evaluationMode;
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
+   * This field is deprecated. Leave this unset and instead configure BinaryAuthorization using
+   * evaluation_mode. If evaluation_mode is set to anything other than EVALUATION_MODE_UNSPECIFIED,
+   * this field is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -56,8 +58,9 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
   }
 
   /**
-   * Enable Binary Authorization for this cluster. If enabled, all container images will be
-   * validated by Binary Authorization.
+   * This field is deprecated. Leave this unset and instead configure BinaryAuthorization using
+   * evaluation_mode. If evaluation_mode is set to anything other than EVALUATION_MODE_UNSPECIFIED,
+   * this field is ignored.
    * @param enabled enabled or {@code null} for none
    */
   public BinaryAuthorization setEnabled(java.lang.Boolean enabled) {

@@ -81,8 +81,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
 
   /**
    * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support
-   * (https://cloud.google.com/translate/docs/languages).
+   * Latn". Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,8 +199,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
 
   /**
    * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support
-   * (https://cloud.google.com/translate/docs/languages).
+   * Latn". Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceLanguageCode() {
@@ -209,8 +209,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
 
   /**
    * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support
-   * (https://cloud.google.com/translate/docs/languages).
+   * Latn". Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * @param sourceLanguageCode sourceLanguageCode or {@code null} for none
    */
   public BatchTranslateDocumentRequest setSourceLanguageCode(java.lang.String sourceLanguageCode) {

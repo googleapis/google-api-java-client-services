@@ -3456,7 +3456,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link CompleteUpgrade#execute()} method to invoke the remote operation.
            *
            * @param name The name (project, location, cluster, node pool id) of the node pool to complete upgrade. Specified
-           *        in the format 'projects/locations/clusters/nodePools'.
+           *        in the format `projects/locations/clusters/nodePools`.
            * @param content the {@link com.google.api.services.container.model.CompleteNodePoolUpgradeRequest}
            * @return the request
            */
@@ -3485,7 +3485,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * the constructor. </p>
              *
              * @param name The name (project, location, cluster, node pool id) of the node pool to complete upgrade. Specified
-           *        in the format 'projects/locations/clusters/nodePools'.
+           *        in the format `projects/locations/clusters/nodePools`.
              * @param content the {@link com.google.api.services.container.model.CompleteNodePoolUpgradeRequest}
              * @since 1.13
              */
@@ -3556,13 +3556,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to complete
-             * upgrade. Specified in the format 'projects/locations/clusters/nodePools'.
+             * upgrade. Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node pool to complete upgrade. Specified
-           in the format 'projects/locations/clusters/nodePools'.
+           in the format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -3570,7 +3570,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to complete
-             * upgrade. Specified in the format 'projects/locations/clusters/nodePools'.
+             * upgrade. Specified in the format `projects/locations/clusters/nodePools`.
              */
             public CompleteUpgrade setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

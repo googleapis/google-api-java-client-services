@@ -272,6 +272,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String externalSellerId;
 
   /**
+   * Feed label for the item. Either `targetCountry` or `feedLabel` is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String feedLabel;
+
+  /**
    * Target gender of the item.
    * The value may be {@code null}.
    */
@@ -1269,6 +1276,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setExternalSellerId(java.lang.String externalSellerId) {
     this.externalSellerId = externalSellerId;
+    return this;
+  }
+
+  /**
+   * Feed label for the item. Either `targetCountry` or `feedLabel` is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeedLabel() {
+    return feedLabel;
+  }
+
+  /**
+   * Feed label for the item. Either `targetCountry` or `feedLabel` is required.
+   * @param feedLabel feedLabel or {@code null} for none
+   */
+  public Product setFeedLabel(java.lang.String feedLabel) {
+    this.feedLabel = feedLabel;
     return this;
   }
 

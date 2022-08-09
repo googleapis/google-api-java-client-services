@@ -54,6 +54,13 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   private InventorySizeTargeting inventorySizeTargeting;
 
   /**
+   * Output only. Inventory type targeting information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InventoryTypeTargeting inventoryTypeTargeting;
+
+  /**
    * Output only. Placement targeting information, for example, URL, mobile applications.
    * The value may be {@code null}.
    */
@@ -130,6 +137,23 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
    */
   public MarketplaceTargeting setInventorySizeTargeting(InventorySizeTargeting inventorySizeTargeting) {
     this.inventorySizeTargeting = inventorySizeTargeting;
+    return this;
+  }
+
+  /**
+   * Output only. Inventory type targeting information.
+   * @return value or {@code null} for none
+   */
+  public InventoryTypeTargeting getInventoryTypeTargeting() {
+    return inventoryTypeTargeting;
+  }
+
+  /**
+   * Output only. Inventory type targeting information.
+   * @param inventoryTypeTargeting inventoryTypeTargeting or {@code null} for none
+   */
+  public MarketplaceTargeting setInventoryTypeTargeting(InventoryTypeTargeting inventoryTypeTargeting) {
+    this.inventoryTypeTargeting = inventoryTypeTargeting;
     return this;
   }
 

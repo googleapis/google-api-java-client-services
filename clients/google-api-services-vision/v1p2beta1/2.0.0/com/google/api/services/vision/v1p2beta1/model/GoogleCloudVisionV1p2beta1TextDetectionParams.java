@@ -31,12 +31,36 @@ package com.google.api.services.vision.v1p2beta1.model;
 public final class GoogleCloudVisionV1p2beta1TextDetectionParams extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of advanced OCR options to fine-tune OCR behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> advancedOcrOptions;
+
+  /**
    * By default, Cloud Vision API only includes confidence score for DOCUMENT_TEXT_DETECTION result.
    * Set the flag to true to include confidence score for TEXT_DETECTION as well.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableTextDetectionConfidenceScore;
+
+  /**
+   * A list of advanced OCR options to fine-tune OCR behavior.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdvancedOcrOptions() {
+    return advancedOcrOptions;
+  }
+
+  /**
+   * A list of advanced OCR options to fine-tune OCR behavior.
+   * @param advancedOcrOptions advancedOcrOptions or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1TextDetectionParams setAdvancedOcrOptions(java.util.List<java.lang.String> advancedOcrOptions) {
+    this.advancedOcrOptions = advancedOcrOptions;
+    return this;
+  }
 
   /**
    * By default, Cloud Vision API only includes confidence score for DOCUMENT_TEXT_DETECTION result.

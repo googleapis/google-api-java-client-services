@@ -19136,6 +19136,164 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Updates properties for an Apigee environment with patch semantics using a field mask. **Note:**
+       * Not supported for Apigee hybrid.
+       *
+       * Create a request for the method "environments.modifyEnvironment".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link ModifyEnvironment#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the environment. Use the following structure in your request:
+       *        `organizations/{org}/environments/{environment}`.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Environment}
+       * @return the request
+       */
+      public ModifyEnvironment modifyEnvironment(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Environment content) throws java.io.IOException {
+        ModifyEnvironment result = new ModifyEnvironment(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ModifyEnvironment extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+        /**
+         * Updates properties for an Apigee environment with patch semantics using a field mask. **Note:**
+         * Not supported for Apigee hybrid.
+         *
+         * Create a request for the method "environments.modifyEnvironment".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link ModifyEnvironment#execute()} method to invoke the remote operation.
+         * <p> {@link ModifyEnvironment#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+         * eClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. Name of the environment. Use the following structure in your request:
+       *        `organizations/{org}/environments/{environment}`.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Environment}
+         * @since 1.13
+         */
+        protected ModifyEnvironment(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Environment content) {
+          super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+$");
+          }
+        }
+
+        @Override
+        public ModifyEnvironment set$Xgafv(java.lang.String $Xgafv) {
+          return (ModifyEnvironment) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ModifyEnvironment setAccessToken(java.lang.String accessToken) {
+          return (ModifyEnvironment) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ModifyEnvironment setAlt(java.lang.String alt) {
+          return (ModifyEnvironment) super.setAlt(alt);
+        }
+
+        @Override
+        public ModifyEnvironment setCallback(java.lang.String callback) {
+          return (ModifyEnvironment) super.setCallback(callback);
+        }
+
+        @Override
+        public ModifyEnvironment setFields(java.lang.String fields) {
+          return (ModifyEnvironment) super.setFields(fields);
+        }
+
+        @Override
+        public ModifyEnvironment setKey(java.lang.String key) {
+          return (ModifyEnvironment) super.setKey(key);
+        }
+
+        @Override
+        public ModifyEnvironment setOauthToken(java.lang.String oauthToken) {
+          return (ModifyEnvironment) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ModifyEnvironment setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ModifyEnvironment) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ModifyEnvironment setQuotaUser(java.lang.String quotaUser) {
+          return (ModifyEnvironment) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ModifyEnvironment setUploadType(java.lang.String uploadType) {
+          return (ModifyEnvironment) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ModifyEnvironment setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ModifyEnvironment) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the environment. Use the following structure in your request:
+         * `organizations/{org}/environments/{environment}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the environment. Use the following structure in your request:
+       `organizations/{org}/environments/{environment}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the environment. Use the following structure in your request:
+         * `organizations/{org}/environments/{environment}`.
+         */
+        public ModifyEnvironment setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** List of fields to be updated. Fields that can be updated: node_config. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** List of fields to be updated. Fields that can be updated: node_config.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** List of fields to be updated. Fields that can be updated: node_config. */
+        public ModifyEnvironment setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public ModifyEnvironment set(String parameterName, Object value) {
+          return (ModifyEnvironment) super.set(parameterName, value);
+        }
+      }
+      /**
        * Sets the IAM policy on an environment, if the policy already exists it will be replaced. For more
        * information, see [Manage users, roles, and permissions using the
        * API](https://cloud.google.com/apigee/docs/api-platform/system-administration/manage-users-roles).
@@ -31420,6 +31578,291 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SecurityStats collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.SecurityStats.List request = apigee.securityStats().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SecurityStats securityStats() {
+        return new SecurityStats();
+      }
+
+      /**
+       * The "securityStats" collection of methods.
+       */
+      public class SecurityStats {
+
+        /**
+         * Retrieve security statistics as tabular rows.
+         *
+         * Create a request for the method "securityStats.queryTabularStats".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link QueryTabularStats#execute()} method to invoke the remote operation.
+         *
+         * @param orgenv Required. Should be of the form organizations//environments/.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTabularStatsRequest}
+         * @return the request
+         */
+        public QueryTabularStats queryTabularStats(java.lang.String orgenv, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTabularStatsRequest content) throws java.io.IOException {
+          QueryTabularStats result = new QueryTabularStats(orgenv, content);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryTabularStats extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTabularStatsResponse> {
+
+          private static final String REST_PATH = "v1/{+orgenv}/securityStats:queryTabularStats";
+
+          private final java.util.regex.Pattern ORGENV_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Retrieve security statistics as tabular rows.
+           *
+           * Create a request for the method "securityStats.queryTabularStats".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link QueryTabularStats#execute()} method to invoke the remote operation.
+           * <p> {@link QueryTabularStats#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+           * eClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param orgenv Required. Should be of the form organizations//environments/.
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTabularStatsRequest}
+           * @since 1.13
+           */
+          protected QueryTabularStats(java.lang.String orgenv, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTabularStatsRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTabularStatsResponse.class);
+            this.orgenv = com.google.api.client.util.Preconditions.checkNotNull(orgenv, "Required parameter orgenv must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ORGENV_PATTERN.matcher(orgenv).matches(),
+                  "Parameter orgenv must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public QueryTabularStats set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryTabularStats) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryTabularStats setAccessToken(java.lang.String accessToken) {
+            return (QueryTabularStats) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryTabularStats setAlt(java.lang.String alt) {
+            return (QueryTabularStats) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryTabularStats setCallback(java.lang.String callback) {
+            return (QueryTabularStats) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryTabularStats setFields(java.lang.String fields) {
+            return (QueryTabularStats) super.setFields(fields);
+          }
+
+          @Override
+          public QueryTabularStats setKey(java.lang.String key) {
+            return (QueryTabularStats) super.setKey(key);
+          }
+
+          @Override
+          public QueryTabularStats setOauthToken(java.lang.String oauthToken) {
+            return (QueryTabularStats) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryTabularStats setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryTabularStats) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryTabularStats setQuotaUser(java.lang.String quotaUser) {
+            return (QueryTabularStats) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryTabularStats setUploadType(java.lang.String uploadType) {
+            return (QueryTabularStats) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryTabularStats setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryTabularStats) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Should be of the form organizations//environments/. */
+          @com.google.api.client.util.Key
+          private java.lang.String orgenv;
+
+          /** Required. Should be of the form organizations//environments/.
+           */
+          public java.lang.String getOrgenv() {
+            return orgenv;
+          }
+
+          /** Required. Should be of the form organizations//environments/. */
+          public QueryTabularStats setOrgenv(java.lang.String orgenv) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ORGENV_PATTERN.matcher(orgenv).matches(),
+                  "Parameter orgenv must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+            this.orgenv = orgenv;
+            return this;
+          }
+
+          @Override
+          public QueryTabularStats set(String parameterName, Object value) {
+            return (QueryTabularStats) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieve security statistics as a collection of time series.
+         *
+         * Create a request for the method "securityStats.queryTimeSeriesStats".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link QueryTimeSeriesStats#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param orgenv Required. Should be of the form organizations//environments/.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTimeSeriesStatsRequest}
+         * @return the request
+         */
+        public QueryTimeSeriesStats queryTimeSeriesStats(java.lang.String orgenv, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTimeSeriesStatsRequest content) throws java.io.IOException {
+          QueryTimeSeriesStats result = new QueryTimeSeriesStats(orgenv, content);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryTimeSeriesStats extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTimeSeriesStatsResponse> {
+
+          private static final String REST_PATH = "v1/{+orgenv}/securityStats:queryTimeSeriesStats";
+
+          private final java.util.regex.Pattern ORGENV_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Retrieve security statistics as a collection of time series.
+           *
+           * Create a request for the method "securityStats.queryTimeSeriesStats".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link QueryTimeSeriesStats#execute()} method to invoke the remote
+           * operation. <p> {@link QueryTimeSeriesStats#initialize(com.google.api.client.googleapis.services
+           * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param orgenv Required. Should be of the form organizations//environments/.
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTimeSeriesStatsRequest}
+           * @since 1.13
+           */
+          protected QueryTimeSeriesStats(java.lang.String orgenv, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTimeSeriesStatsRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1QueryTimeSeriesStatsResponse.class);
+            this.orgenv = com.google.api.client.util.Preconditions.checkNotNull(orgenv, "Required parameter orgenv must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ORGENV_PATTERN.matcher(orgenv).matches(),
+                  "Parameter orgenv must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public QueryTimeSeriesStats set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryTimeSeriesStats) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setAccessToken(java.lang.String accessToken) {
+            return (QueryTimeSeriesStats) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setAlt(java.lang.String alt) {
+            return (QueryTimeSeriesStats) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setCallback(java.lang.String callback) {
+            return (QueryTimeSeriesStats) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setFields(java.lang.String fields) {
+            return (QueryTimeSeriesStats) super.setFields(fields);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setKey(java.lang.String key) {
+            return (QueryTimeSeriesStats) super.setKey(key);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setOauthToken(java.lang.String oauthToken) {
+            return (QueryTimeSeriesStats) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryTimeSeriesStats) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setQuotaUser(java.lang.String quotaUser) {
+            return (QueryTimeSeriesStats) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setUploadType(java.lang.String uploadType) {
+            return (QueryTimeSeriesStats) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryTimeSeriesStats setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryTimeSeriesStats) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Should be of the form organizations//environments/. */
+          @com.google.api.client.util.Key
+          private java.lang.String orgenv;
+
+          /** Required. Should be of the form organizations//environments/.
+           */
+          public java.lang.String getOrgenv() {
+            return orgenv;
+          }
+
+          /** Required. Should be of the form organizations//environments/. */
+          public QueryTimeSeriesStats setOrgenv(java.lang.String orgenv) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ORGENV_PATTERN.matcher(orgenv).matches(),
+                  "Parameter orgenv must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+            this.orgenv = orgenv;
+            return this;
+          }
+
+          @Override
+          public QueryTimeSeriesStats set(String parameterName, Object value) {
+            return (QueryTimeSeriesStats) super.set(parameterName, value);
           }
         }
 

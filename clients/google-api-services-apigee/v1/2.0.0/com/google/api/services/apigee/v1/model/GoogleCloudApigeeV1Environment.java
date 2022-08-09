@@ -95,6 +95,13 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
   private java.lang.String name;
 
   /**
+   * Optional. NodeConfig of the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1NodeConfig nodeConfig;
+
+  /**
    * Optional. Key-value pairs that may be used for customizing the environment.
    * The value may be {@code null}.
    */
@@ -260,6 +267,23 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
    */
   public GoogleCloudApigeeV1Environment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. NodeConfig of the environment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1NodeConfig getNodeConfig() {
+    return nodeConfig;
+  }
+
+  /**
+   * Optional. NodeConfig of the environment.
+   * @param nodeConfig nodeConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Environment setNodeConfig(GoogleCloudApigeeV1NodeConfig nodeConfig) {
+    this.nodeConfig = nodeConfig;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class CollectionStatusDestinationStatus extends com.google.api.clie
   private java.lang.String destination;
 
   /**
-   * The status for the specified destination.
+   * The status for the specified destination in the collections target country.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class CollectionStatusDestinationStatus extends com.google.api.clie
   }
 
   /**
-   * The status for the specified destination.
+   * The status for the specified destination in the collections target country.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -70,7 +70,7 @@ public final class CollectionStatusDestinationStatus extends com.google.api.clie
   }
 
   /**
-   * The status for the specified destination.
+   * The status for the specified destination in the collections target country.
    * @param status status or {@code null} for none
    */
   public CollectionStatusDestinationStatus setStatus(java.lang.String status) {

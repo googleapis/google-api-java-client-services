@@ -39,7 +39,7 @@ public final class CollectionStatus extends com.google.api.client.json.GenericJs
 
   /**
    * Date on which the collection has been created in [ISO
-   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, e.g.
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, for example
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class CollectionStatus extends com.google.api.client.json.GenericJs
 
   /**
    * Date on which the collection has been last updated in [ISO
-   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, e.g.
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, for example
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class CollectionStatus extends com.google.api.client.json.GenericJs
 
   /**
    * Date on which the collection has been created in [ISO
-   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, e.g.
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, for example
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class CollectionStatus extends com.google.api.client.json.GenericJs
 
   /**
    * Date on which the collection has been created in [ISO
-   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, e.g.
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, for example
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
    * @param creationDate creationDate or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class CollectionStatus extends com.google.api.client.json.GenericJs
 
   /**
    * Date on which the collection has been last updated in [ISO
-   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, e.g.
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, for example
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
    * @return value or {@code null} for none
    */
@@ -153,7 +153,7 @@ public final class CollectionStatus extends com.google.api.client.json.GenericJs
 
   /**
    * Date on which the collection has been last updated in [ISO
-   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, e.g.
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format: Date, time, and offset, for example
    * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z"
    * @param lastUpdateDate lastUpdateDate or {@code null} for none
    */

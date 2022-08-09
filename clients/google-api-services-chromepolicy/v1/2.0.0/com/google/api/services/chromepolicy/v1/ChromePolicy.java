@@ -312,6 +312,612 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * An accessor for creating requests from the Groups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChromePolicy chromepolicy = new ChromePolicy(...);}
+       *   {@code ChromePolicy.Groups.List request = chromepolicy.groups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Groups groups() {
+        return new Groups();
+      }
+
+      /**
+       * The "groups" collection of methods.
+       */
+      public class Groups {
+
+        /**
+         * Delete multiple policy values that are applied to a specific group. All targets must have the
+         * same target format. That is to say that they must point to the same target resource and must have
+         * the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be
+         * different. On failure the request will return the error details as part of the google.rpc.Status.
+         *
+         * Create a request for the method "groups.batchDelete".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
+         *
+         * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
+         *        request.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest}
+         * @return the request
+         */
+        public BatchDelete batchDelete(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest content) throws java.io.IOException {
+          BatchDelete result = new BatchDelete(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchDelete extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/groups:batchDelete";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Delete multiple policy values that are applied to a specific group. All targets must have the
+           * same target format. That is to say that they must point to the same target resource and must
+           * have the same keys specified in `additionalTargetKeyNames`, though the values for those keys
+           * may be different. On failure the request will return the error details as part of the
+           * google.rpc.Status.
+           *
+           * Create a request for the method "groups.batchDelete".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
+         *        request.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest}
+           * @since 1.13
+           */
+          protected BatchDelete(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchDeleteGroupPoliciesRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchDelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchDelete setAccessToken(java.lang.String accessToken) {
+            return (BatchDelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchDelete setAlt(java.lang.String alt) {
+            return (BatchDelete) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchDelete setCallback(java.lang.String callback) {
+            return (BatchDelete) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchDelete setFields(java.lang.String fields) {
+            return (BatchDelete) super.setFields(fields);
+          }
+
+          @Override
+          public BatchDelete setKey(java.lang.String key) {
+            return (BatchDelete) super.setKey(key);
+          }
+
+          @Override
+          public BatchDelete setOauthToken(java.lang.String oauthToken) {
+            return (BatchDelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchDelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+            return (BatchDelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchDelete setUploadType(java.lang.String uploadType) {
+            return (BatchDelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * ID of the Google Workspace account or literal "my_customer" for the customer associated
+           * to the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** ID of the Google Workspace account or literal "my_customer" for the customer associated to the
+         request.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * ID of the Google Workspace account or literal "my_customer" for the customer associated
+           * to the request.
+           */
+          public BatchDelete setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public BatchDelete set(String parameterName, Object value) {
+            return (BatchDelete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Modify multiple policy values that are applied to a specific group. All targets must have the
+         * same target format. That is to say that they must point to the same target resource and must have
+         * the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be
+         * different. On failure the request will return the error details as part of the google.rpc.Status.
+         *
+         * Create a request for the method "groups.batchModify".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link BatchModify#execute()} method to invoke the remote operation.
+         *
+         * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
+         *        request.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest}
+         * @return the request
+         */
+        public BatchModify batchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest content) throws java.io.IOException {
+          BatchModify result = new BatchModify(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchModify extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/groups:batchModify";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Modify multiple policy values that are applied to a specific group. All targets must have the
+           * same target format. That is to say that they must point to the same target resource and must
+           * have the same keys specified in `additionalTargetKeyNames`, though the values for those keys
+           * may be different. On failure the request will return the error details as part of the
+           * google.rpc.Status.
+           *
+           * Create a request for the method "groups.batchModify".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link BatchModify#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchModify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param customer ID of the Google Workspace account or literal "my_customer" for the customer associated to the
+         *        request.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest}
+           * @since 1.13
+           */
+          protected BatchModify(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1BatchModifyGroupPoliciesRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchModify set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchModify) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchModify setAccessToken(java.lang.String accessToken) {
+            return (BatchModify) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchModify setAlt(java.lang.String alt) {
+            return (BatchModify) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchModify setCallback(java.lang.String callback) {
+            return (BatchModify) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchModify setFields(java.lang.String fields) {
+            return (BatchModify) super.setFields(fields);
+          }
+
+          @Override
+          public BatchModify setKey(java.lang.String key) {
+            return (BatchModify) super.setKey(key);
+          }
+
+          @Override
+          public BatchModify setOauthToken(java.lang.String oauthToken) {
+            return (BatchModify) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchModify setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchModify) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchModify setQuotaUser(java.lang.String quotaUser) {
+            return (BatchModify) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchModify setUploadType(java.lang.String uploadType) {
+            return (BatchModify) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchModify setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchModify) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * ID of the Google Workspace account or literal "my_customer" for the customer associated
+           * to the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** ID of the Google Workspace account or literal "my_customer" for the customer associated to the
+         request.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * ID of the Google Workspace account or literal "my_customer" for the customer associated
+           * to the request.
+           */
+          public BatchModify setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public BatchModify set(String parameterName, Object value) {
+            return (BatchModify) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieve a group priority ordering for an app. The target app must be supplied in
+         * `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error
+         * details as part of the google.rpc.Status.
+         *
+         * Create a request for the method "groups.listGroupPriorityOrdering".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link ListGroupPriorityOrdering#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
+         *        the request.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest}
+         * @return the request
+         */
+        public ListGroupPriorityOrdering listGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest content) throws java.io.IOException {
+          ListGroupPriorityOrdering result = new ListGroupPriorityOrdering(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ListGroupPriorityOrdering extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/groups:listGroupPriorityOrdering";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Retrieve a group priority ordering for an app. The target app must be supplied in
+           * `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error
+           * details as part of the google.rpc.Status.
+           *
+           * Create a request for the method "groups.listGroupPriorityOrdering".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link ListGroupPriorityOrdering#execute()} method to invoke the
+           * remote operation. <p> {@link ListGroupPriorityOrdering#initialize(com.google.api.client.googlea
+           * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
+         *        the request.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest}
+           * @since 1.13
+           */
+          protected ListGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1ListGroupPriorityOrderingResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public ListGroupPriorityOrdering set$Xgafv(java.lang.String $Xgafv) {
+            return (ListGroupPriorityOrdering) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setAccessToken(java.lang.String accessToken) {
+            return (ListGroupPriorityOrdering) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setAlt(java.lang.String alt) {
+            return (ListGroupPriorityOrdering) super.setAlt(alt);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setCallback(java.lang.String callback) {
+            return (ListGroupPriorityOrdering) super.setCallback(callback);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setFields(java.lang.String fields) {
+            return (ListGroupPriorityOrdering) super.setFields(fields);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setKey(java.lang.String key) {
+            return (ListGroupPriorityOrdering) super.setKey(key);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setOauthToken(java.lang.String oauthToken) {
+            return (ListGroupPriorityOrdering) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListGroupPriorityOrdering) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setQuotaUser(java.lang.String quotaUser) {
+            return (ListGroupPriorityOrdering) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setUploadType(java.lang.String uploadType) {
+            return (ListGroupPriorityOrdering) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListGroupPriorityOrdering setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListGroupPriorityOrdering) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. ID of the Google Workspace account or literal "my_customer" for the customer
+           * associated to the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. ID of the Google Workspace account or literal "my_customer" for the customer associated
+         to the request.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * Required. ID of the Google Workspace account or literal "my_customer" for the customer
+           * associated to the request.
+           */
+          public ListGroupPriorityOrdering setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public ListGroupPriorityOrdering set(String parameterName, Object value) {
+            return (ListGroupPriorityOrdering) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a group priority ordering for an app. The target app must be supplied in
+         * `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error
+         * details as part of the google.rpc.Status.
+         *
+         * Create a request for the method "groups.updateGroupPriorityOrdering".
+         *
+         * This request holds the parameters needed by the chromepolicy server.  After setting any optional
+         * parameters, call the {@link UpdateGroupPriorityOrdering#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
+         *        the request.
+         * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest}
+         * @return the request
+         */
+        public UpdateGroupPriorityOrdering updateGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest content) throws java.io.IOException {
+          UpdateGroupPriorityOrdering result = new UpdateGroupPriorityOrdering(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateGroupPriorityOrdering extends ChromePolicyRequest<com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+customer}/policies/groups:updateGroupPriorityOrdering";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Update a group priority ordering for an app. The target app must be supplied in
+           * `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error
+           * details as part of the google.rpc.Status.
+           *
+           * Create a request for the method "groups.updateGroupPriorityOrdering".
+           *
+           * This request holds the parameters needed by the the chromepolicy server.  After setting any
+           * optional parameters, call the {@link UpdateGroupPriorityOrdering#execute()} method to invoke
+           * the remote operation. <p> {@link UpdateGroupPriorityOrdering#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param customer Required. ID of the Google Workspace account or literal "my_customer" for the customer associated to
+         *        the request.
+           * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest}
+           * @since 1.13
+           */
+          protected UpdateGroupPriorityOrdering(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyV1UpdateGroupPriorityOrderingRequest content) {
+            super(ChromePolicy.this, "POST", REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleProtobufEmpty.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateGroupPriorityOrdering) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setAccessToken(java.lang.String accessToken) {
+            return (UpdateGroupPriorityOrdering) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setAlt(java.lang.String alt) {
+            return (UpdateGroupPriorityOrdering) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setCallback(java.lang.String callback) {
+            return (UpdateGroupPriorityOrdering) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setFields(java.lang.String fields) {
+            return (UpdateGroupPriorityOrdering) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setKey(java.lang.String key) {
+            return (UpdateGroupPriorityOrdering) super.setKey(key);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setOauthToken(java.lang.String oauthToken) {
+            return (UpdateGroupPriorityOrdering) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateGroupPriorityOrdering) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateGroupPriorityOrdering) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setUploadType(java.lang.String uploadType) {
+            return (UpdateGroupPriorityOrdering) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateGroupPriorityOrdering) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. ID of the Google Workspace account or literal "my_customer" for the customer
+           * associated to the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. ID of the Google Workspace account or literal "my_customer" for the customer associated
+         to the request.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * Required. ID of the Google Workspace account or literal "my_customer" for the customer
+           * associated to the request.
+           */
+          public UpdateGroupPriorityOrdering setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public UpdateGroupPriorityOrdering set(String parameterName, Object value) {
+            return (UpdateGroupPriorityOrdering) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Orgunits collection.
        *
        * <p>The typical use is:</p>

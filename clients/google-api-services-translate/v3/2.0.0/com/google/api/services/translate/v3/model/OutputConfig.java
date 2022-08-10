@@ -49,8 +49,8 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * Callers should also expect all the content in input_file are processed and ready to be consumed
    * (that is, no partial output file is written). Since index.csv will be keeping updated during
    * the process, please make sure there is no custom retention policy applied on the output bucket
-   * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock?hl=en
-   * #retention-policy) The format of translations_file (for target language code 'trg') is:
+   * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock#retention-
+   * policy) The format of translations_file (for target language code 'trg') is:
    * gs://translation_test/a_b_c_'trg'_translations.[extension] If the input file extension is tsv,
    * the output has the following columns: Column 1: ID of the request provided in the input, if
    * it's not provided in the input, then the input row number is used (0-based). Column 2: source
@@ -93,8 +93,8 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * Callers should also expect all the content in input_file are processed and ready to be consumed
    * (that is, no partial output file is written). Since index.csv will be keeping updated during
    * the process, please make sure there is no custom retention policy applied on the output bucket
-   * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock?hl=en
-   * #retention-policy) The format of translations_file (for target language code 'trg') is:
+   * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock#retention-
+   * policy) The format of translations_file (for target language code 'trg') is:
    * gs://translation_test/a_b_c_'trg'_translations.[extension] If the input file extension is tsv,
    * the output has the following columns: Column 1: ID of the request provided in the input, if
    * it's not provided in the input, then the input row number is used (0-based). Column 2: source
@@ -138,8 +138,8 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * Callers should also expect all the content in input_file are processed and ready to be consumed
    * (that is, no partial output file is written). Since index.csv will be keeping updated during
    * the process, please make sure there is no custom retention policy applied on the output bucket
-   * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock?hl=en
-   * #retention-policy) The format of translations_file (for target language code 'trg') is:
+   * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock#retention-
+   * policy) The format of translations_file (for target language code 'trg') is:
    * gs://translation_test/a_b_c_'trg'_translations.[extension] If the input file extension is tsv,
    * the output has the following columns: Column 1: ID of the request provided in the input, if
    * it's not provided in the input, then the input row number is used (0-based). Column 2: source

@@ -31,6 +31,13 @@ package com.google.api.services.translate.v3.model;
 public final class Glossary extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The display name of the glossary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Output only. When the glossary creation was finished.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class Glossary extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String submitTime;
+
+  /**
+   * Optional. The display name of the glossary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. The display name of the glossary.
+   * @param displayName displayName or {@code null} for none
+   */
+  public Glossary setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Output only. When the glossary creation was finished.

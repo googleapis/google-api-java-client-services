@@ -137,6 +137,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String gender;
 
   /**
+   * Grocery Attributes. For more information, see go/mfc-nutrition-attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Grocery grocery;
+
+  /**
    * The Global Trade Item Number (GTIN) of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#gtin.
    * The value may be {@code null}.
@@ -184,6 +191,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String mpn;
+
+  /**
+   * Nutrition Attributes. For more information, see go/mfc-nutrition-attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Nutrition nutrition;
 
   /**
    * The pattern of the product. For more information, see
@@ -579,6 +593,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Grocery Attributes. For more information, see go/mfc-nutrition-attributes.
+   * @return value or {@code null} for none
+   */
+  public Grocery getGrocery() {
+    return grocery;
+  }
+
+  /**
+   * Grocery Attributes. For more information, see go/mfc-nutrition-attributes.
+   * @param grocery grocery or {@code null} for none
+   */
+  public Attributes setGrocery(Grocery grocery) {
+    this.grocery = grocery;
+    return this;
+  }
+
+  /**
    * The Global Trade Item Number (GTIN) of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#gtin.
    * @return value or {@code null} for none
@@ -691,6 +722,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setMpn(java.lang.String mpn) {
     this.mpn = mpn;
+    return this;
+  }
+
+  /**
+   * Nutrition Attributes. For more information, see go/mfc-nutrition-attributes.
+   * @return value or {@code null} for none
+   */
+  public Nutrition getNutrition() {
+    return nutrition;
+  }
+
+  /**
+   * Nutrition Attributes. For more information, see go/mfc-nutrition-attributes.
+   * @param nutrition nutrition or {@code null} for none
+   */
+  public Attributes setNutrition(Nutrition nutrition) {
+    this.nutrition = nutrition;
     return this;
   }
 

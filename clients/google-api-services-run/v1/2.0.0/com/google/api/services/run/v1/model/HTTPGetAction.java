@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run HTTPGetAction describes an action based on HTTP Get requests.
+ * HTTPGetAction describes an action based on HTTP Get requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

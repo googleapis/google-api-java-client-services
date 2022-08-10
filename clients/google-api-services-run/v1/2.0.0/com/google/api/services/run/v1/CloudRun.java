@@ -1676,6 +1676,145 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Executions {
 
       /**
+       * Cancel an execution.
+       *
+       * Create a request for the method "executions.cancel".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the execution to cancel. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param content the {@link com.google.api.services.run.v1.model.CancelExecutionRequest}
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name, com.google.api.services.run.v1.model.CancelExecutionRequest content) throws java.io.IOException {
+        Cancel result = new Cancel(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends CloudRunRequest<com.google.api.services.run.v1.model.Execution> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/executions/[^/]+$");
+
+        /**
+         * Cancel an execution.
+         *
+         * Create a request for the method "executions.cancel".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the execution to cancel. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param content the {@link com.google.api.services.run.v1.model.CancelExecutionRequest}
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name, com.google.api.services.run.v1.model.CancelExecutionRequest content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Execution.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/executions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the execution to cancel. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the execution to cancel. Replace {namespace} with the project ID or number.
+       It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the execution to cancel. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/executions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
+      /**
        * Delete an execution.
        *
        * Create a request for the method "executions.delete".

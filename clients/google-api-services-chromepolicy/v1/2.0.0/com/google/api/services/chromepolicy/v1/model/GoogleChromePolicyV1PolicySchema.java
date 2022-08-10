@@ -96,8 +96,8 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
 
   /**
    * Output only. The fully qualified name of the policy schema. This value is used to fill the
-   * field `policy_schema` in PolicyValue when calling BatchInheritOrgUnitPolicies or
-   * BatchModifyOrgUnitPolicies
+   * field `policy_schema` in PolicyValue when calling BatchInheritOrgUnitPolicies
+   * BatchModifyOrgUnitPolicies BatchModifyGroupPolicies or BatchDeleteGroupPolicies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,8 +261,8 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
 
   /**
    * Output only. The fully qualified name of the policy schema. This value is used to fill the
-   * field `policy_schema` in PolicyValue when calling BatchInheritOrgUnitPolicies or
-   * BatchModifyOrgUnitPolicies
+   * field `policy_schema` in PolicyValue when calling BatchInheritOrgUnitPolicies
+   * BatchModifyOrgUnitPolicies BatchModifyGroupPolicies or BatchDeleteGroupPolicies.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaName() {
@@ -271,8 +271,8 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
 
   /**
    * Output only. The fully qualified name of the policy schema. This value is used to fill the
-   * field `policy_schema` in PolicyValue when calling BatchInheritOrgUnitPolicies or
-   * BatchModifyOrgUnitPolicies
+   * field `policy_schema` in PolicyValue when calling BatchInheritOrgUnitPolicies
+   * BatchModifyOrgUnitPolicies BatchModifyGroupPolicies or BatchDeleteGroupPolicies.
    * @param schemaName schemaName or {@code null} for none
    */
   public GoogleChromePolicyV1PolicySchema setSchemaName(java.lang.String schemaName) {

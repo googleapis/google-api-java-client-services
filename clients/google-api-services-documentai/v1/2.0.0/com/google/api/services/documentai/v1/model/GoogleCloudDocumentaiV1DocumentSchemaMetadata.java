@@ -53,6 +53,15 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   private java.lang.Boolean prefixedNamingOnProperties;
 
   /**
+   * If set, we will skip the naming format validation in the schema. So the string values in
+   * `DocumentSchema.EntityType.name` and `DocumentSchema.EntityType.Property.name` will not be
+   * checked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipNamingValidation;
+
+  /**
    * If true, on a given page, there can be multiple `document` annotations covering it.
    * @return value or {@code null} for none
    */
@@ -102,6 +111,27 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
    */
   public GoogleCloudDocumentaiV1DocumentSchemaMetadata setPrefixedNamingOnProperties(java.lang.Boolean prefixedNamingOnProperties) {
     this.prefixedNamingOnProperties = prefixedNamingOnProperties;
+    return this;
+  }
+
+  /**
+   * If set, we will skip the naming format validation in the schema. So the string values in
+   * `DocumentSchema.EntityType.name` and `DocumentSchema.EntityType.Property.name` will not be
+   * checked.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipNamingValidation() {
+    return skipNamingValidation;
+  }
+
+  /**
+   * If set, we will skip the naming format validation in the schema. So the string values in
+   * `DocumentSchema.EntityType.name` and `DocumentSchema.EntityType.Property.name` will not be
+   * checked.
+   * @param skipNamingValidation skipNamingValidation or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentSchemaMetadata setSkipNamingValidation(java.lang.Boolean skipNamingValidation) {
+    this.skipNamingValidation = skipNamingValidation;
     return this;
   }
 

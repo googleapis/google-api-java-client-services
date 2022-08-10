@@ -125,6 +125,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Database associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Database database;
+
+  /**
    * Contains more detail about the finding.
    * The value may be {@code null}.
    */
@@ -466,6 +473,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Database associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public Database getDatabase() {
+    return database;
+  }
+
+  /**
+   * Database associated with the finding.
+   * @param database database or {@code null} for none
+   */
+  public Finding setDatabase(Database database) {
+    this.database = database;
     return this;
   }
 

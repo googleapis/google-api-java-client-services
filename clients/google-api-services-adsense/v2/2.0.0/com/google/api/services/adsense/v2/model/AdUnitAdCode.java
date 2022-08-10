@@ -17,7 +17,9 @@
 package com.google.api.services.adsense.v2.model;
 
 /**
- * Representation of the AdSense code for a given ad unit.
+ * Representation of the ad unit code for a given ad unit. For more information, see [About the
+ * AdSense code](https://support.google.com/adsense/answer/9274634) and [Where to place the ad code
+ * in your HTML](https://support.google.com/adsense/answer/9190028).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AdSense Management API. For a detailed explanation
@@ -31,14 +33,14 @@ package com.google.api.services.adsense.v2.model;
 public final class AdUnitAdCode extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The AdSense code snippet to add to the body of an HTML page.
+   * Output only. The code snippet to add to the body of an HTML page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adCode;
 
   /**
-   * Output only. The AdSense code snippet to add to the body of an HTML page.
+   * Output only. The code snippet to add to the body of an HTML page.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdCode() {
@@ -46,7 +48,7 @@ public final class AdUnitAdCode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The AdSense code snippet to add to the body of an HTML page.
+   * Output only. The code snippet to add to the body of an HTML page.
    * @param adCode adCode or {@code null} for none
    */
   public AdUnitAdCode setAdCode(java.lang.String adCode) {

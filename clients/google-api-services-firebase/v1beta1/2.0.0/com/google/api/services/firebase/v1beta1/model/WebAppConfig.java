@@ -31,7 +31,11 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class WebAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API key associated with the `WebApp`.
+   * The [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key
+   * associated with the `WebApp`. Note that this value is _not_ the
+   * [`apiKeyId`](../projects.webApps#WebApp.FIELDS.api_key_id) (the UID) of the API key associated
+   * with the `WebApp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +113,11 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String storageBucket;
 
   /**
-   * The API key associated with the `WebApp`.
+   * The [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key
+   * associated with the `WebApp`. Note that this value is _not_ the
+   * [`apiKeyId`](../projects.webApps#WebApp.FIELDS.api_key_id) (the UID) of the API key associated
+   * with the `WebApp`.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKey() {
@@ -117,7 +125,11 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API key associated with the `WebApp`.
+   * The [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key
+   * associated with the `WebApp`. Note that this value is _not_ the
+   * [`apiKeyId`](../projects.webApps#WebApp.FIELDS.api_key_id) (the UID) of the API key associated
+   * with the `WebApp`.
    * @param apiKey apiKey or {@code null} for none
    */
   public WebAppConfig setApiKey(java.lang.String apiKey) {

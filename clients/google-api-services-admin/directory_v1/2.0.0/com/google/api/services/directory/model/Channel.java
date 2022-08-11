@@ -60,7 +60,9 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Additional parameters controlling delivery channel behavior. Optional.
+   * Additional parameters controlling delivery channel behavior. Optional. For example,
+   * `params.ttl` specifies the time-to-live in seconds for the notification channel, where the
+   * default is 2 hours and the maximum TTL is 2 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +178,9 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional parameters controlling delivery channel behavior. Optional.
+   * Additional parameters controlling delivery channel behavior. Optional. For example,
+   * `params.ttl` specifies the time-to-live in seconds for the notification channel, where the
+   * default is 2 hours and the maximum TTL is 2 days.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParams() {
@@ -184,7 +188,9 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional parameters controlling delivery channel behavior. Optional.
+   * Additional parameters controlling delivery channel behavior. Optional. For example,
+   * `params.ttl` specifies the time-to-live in seconds for the notification channel, where the
+   * default is 2 hours and the maximum TTL is 2 days.
    * @param params params or {@code null} for none
    */
   public Channel setParams(java.util.Map<String, java.lang.String> params) {

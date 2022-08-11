@@ -133,7 +133,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Stores the hash format of the `password` property. The following `hashFunction` values are
-   * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA1` - Accepts simple hex-encoded
+   * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA-1` - Accepts simple hex-encoded
    * values. * `crypt` - Compliant with the [C crypt
    * library](https://en.wikipedia.org/wiki/Crypt_%28C%29). Supports the DES, MD5 (hash prefix
    * `$1$`), SHA-256 (hash prefix `$5$`), and SHA-512 (hash prefix `$6$`) hash algorithms. If rounds
@@ -634,7 +634,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Stores the hash format of the `password` property. The following `hashFunction` values are
-   * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA1` - Accepts simple hex-encoded
+   * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA-1` - Accepts simple hex-encoded
    * values. * `crypt` - Compliant with the [C crypt
    * library](https://en.wikipedia.org/wiki/Crypt_%28C%29). Supports the DES, MD5 (hash prefix
    * `$1$`), SHA-256 (hash prefix `$5$`), and SHA-512 (hash prefix `$6$`) hash algorithms. If rounds
@@ -647,7 +647,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * Stores the hash format of the `password` property. The following `hashFunction` values are
-   * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA1` - Accepts simple hex-encoded
+   * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA-1` - Accepts simple hex-encoded
    * values. * `crypt` - Compliant with the [C crypt
    * library](https://en.wikipedia.org/wiki/Crypt_%28C%29). Supports the DES, MD5 (hash prefix
    * `$1$`), SHA-256 (hash prefix `$5$`), and SHA-512 (hash prefix `$6$`) hash algorithms. If rounds

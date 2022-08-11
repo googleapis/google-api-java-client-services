@@ -18,7 +18,8 @@ package com.google.api.services.datacatalog.v1.model;
 
 /**
  * Specification that applies to a data source connection. Valid only for entries with the
- * `DATA_SOURCE_CONNECTION` type.
+ * `DATA_SOURCE_CONNECTION` type. Only one of internal specs can be set at the time, and cannot be
+ * changed later.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -32,14 +33,14 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1DataSourceConnectionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fields specific to BigQuery connections.
+   * Output only. Fields specific to BigQuery connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1BigQueryConnectionSpec bigqueryConnectionSpec;
 
   /**
-   * Fields specific to BigQuery connections.
+   * Output only. Fields specific to BigQuery connections.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1BigQueryConnectionSpec getBigqueryConnectionSpec() {
@@ -47,7 +48,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpec extends com.
   }
 
   /**
-   * Fields specific to BigQuery connections.
+   * Output only. Fields specific to BigQuery connections.
    * @param bigqueryConnectionSpec bigqueryConnectionSpec or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataSourceConnectionSpec setBigqueryConnectionSpec(GoogleCloudDatacatalogV1BigQueryConnectionSpec bigqueryConnectionSpec) {

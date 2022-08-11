@@ -31,10 +31,19 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class WebApp extends com.google.api.client.json.GenericJson {
 
   /**
-   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
-   * only have restrictions that are valid for the associated Firebase App. Cannot be set in create
-   * requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one
-   * will be provisioned for you. Cannot be set to an empty value in update requests.
+   * The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with
+   * the `WebApp`. Be aware that this value is the UID of the API key, _not_ the
+   * [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key. The
+   * `keyString` is the value that can be found in the App's [configuration
+   * artifact](../../rest/v1beta1/projects.webApps/getConfig). If `api_key_id` is not set in
+   * requests to [`webApps.Create`](../../rest/v1beta1/projects.webApps/create), then Firebase
+   * automatically associates an `api_key_id` with the `WebApp`. This auto-associated key may be an
+   * existing valid key or, if no valid key exists, a new one will be provisioned. In patch
+   * requests, `api_key_id` cannot be set to an empty value, and the new UID must have no
+   * restrictions or only have restrictions that are valid for the associated `WebApp`. We recommend
+   * using the [Google Cloud Console](https://console.cloud.google.com/apis/credentials) to manage
+   * API keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,10 +111,19 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String webId;
 
   /**
-   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
-   * only have restrictions that are valid for the associated Firebase App. Cannot be set in create
-   * requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one
-   * will be provisioned for you. Cannot be set to an empty value in update requests.
+   * The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with
+   * the `WebApp`. Be aware that this value is the UID of the API key, _not_ the
+   * [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key. The
+   * `keyString` is the value that can be found in the App's [configuration
+   * artifact](../../rest/v1beta1/projects.webApps/getConfig). If `api_key_id` is not set in
+   * requests to [`webApps.Create`](../../rest/v1beta1/projects.webApps/create), then Firebase
+   * automatically associates an `api_key_id` with the `WebApp`. This auto-associated key may be an
+   * existing valid key or, if no valid key exists, a new one will be provisioned. In patch
+   * requests, `api_key_id` cannot be set to an empty value, and the new UID must have no
+   * restrictions or only have restrictions that are valid for the associated `WebApp`. We recommend
+   * using the [Google Cloud Console](https://console.cloud.google.com/apis/credentials) to manage
+   * API keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKeyId() {
@@ -113,10 +131,19 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
-   * only have restrictions that are valid for the associated Firebase App. Cannot be set in create
-   * requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one
-   * will be provisioned for you. Cannot be set to an empty value in update requests.
+   * The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with
+   * the `WebApp`. Be aware that this value is the UID of the API key, _not_ the
+   * [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key. The
+   * `keyString` is the value that can be found in the App's [configuration
+   * artifact](../../rest/v1beta1/projects.webApps/getConfig). If `api_key_id` is not set in
+   * requests to [`webApps.Create`](../../rest/v1beta1/projects.webApps/create), then Firebase
+   * automatically associates an `api_key_id` with the `WebApp`. This auto-associated key may be an
+   * existing valid key or, if no valid key exists, a new one will be provisioned. In patch
+   * requests, `api_key_id` cannot be set to an empty value, and the new UID must have no
+   * restrictions or only have restrictions that are valid for the associated `WebApp`. We recommend
+   * using the [Google Cloud Console](https://console.cloud.google.com/apis/credentials) to manage
+   * API keys.
    * @param apiKeyId apiKeyId or {@code null} for none
    */
   public WebApp setApiKeyId(java.lang.String apiKeyId) {

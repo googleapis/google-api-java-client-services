@@ -31,10 +31,19 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class FirebaseAppInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
-   * only have restrictions that are valid for the associated Firebase App. Cannot be set to an
-   * empty value in update requests. If left unset on create requests, an existing valid API Key
-   * will be chosen, or if no valid API Keys exist, one will be provisioned for you.
+   * The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with
+   * the App. Be aware that this value is the UID of the API key, _not_ the
+   * [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key. The
+   * `keyString` is the value that can be found in the App's configuration artifact
+   * ([`AndroidApp`](../../rest/v1beta1/projects.androidApps/getConfig) |
+   * [`IosApp`](../../rest/v1beta1/projects.iosApps/getConfig) |
+   * [`WebApp`](../../rest/v1beta1/projects.webApps/getConfig)). If `api_key_id` is not set in
+   * requests to create the App ([`AndroidApp`](../../rest/v1beta1/projects.androidApps/create) |
+   * [`IosApp`](../../rest/v1beta1/projects.iosApps/create) |
+   * [`WebApp`](../../rest/v1beta1/projects.webApps/create)), then Firebase automatically associates
+   * an `api_key_id` with the App. This auto-associated key may be an existing valid key or, if no
+   * valid key exists, a new one will be provisioned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,10 +99,19 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   private java.lang.String state;
 
   /**
-   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
-   * only have restrictions that are valid for the associated Firebase App. Cannot be set to an
-   * empty value in update requests. If left unset on create requests, an existing valid API Key
-   * will be chosen, or if no valid API Keys exist, one will be provisioned for you.
+   * The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with
+   * the App. Be aware that this value is the UID of the API key, _not_ the
+   * [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key. The
+   * `keyString` is the value that can be found in the App's configuration artifact
+   * ([`AndroidApp`](../../rest/v1beta1/projects.androidApps/getConfig) |
+   * [`IosApp`](../../rest/v1beta1/projects.iosApps/getConfig) |
+   * [`WebApp`](../../rest/v1beta1/projects.webApps/getConfig)). If `api_key_id` is not set in
+   * requests to create the App ([`AndroidApp`](../../rest/v1beta1/projects.androidApps/create) |
+   * [`IosApp`](../../rest/v1beta1/projects.iosApps/create) |
+   * [`WebApp`](../../rest/v1beta1/projects.webApps/create)), then Firebase automatically associates
+   * an `api_key_id` with the App. This auto-associated key may be an existing valid key or, if no
+   * valid key exists, a new one will be provisioned.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKeyId() {
@@ -101,10 +119,19 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or
-   * only have restrictions that are valid for the associated Firebase App. Cannot be set to an
-   * empty value in update requests. If left unset on create requests, an existing valid API Key
-   * will be chosen, or if no valid API Keys exist, one will be provisioned for you.
+   * The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with
+   * the App. Be aware that this value is the UID of the API key, _not_ the
+   * [`keyString`](https://cloud.google.com/api-
+   * keys/docs/reference/rest/v2/projects.locations.keys#Key.FIELDS.key_string) of the API key. The
+   * `keyString` is the value that can be found in the App's configuration artifact
+   * ([`AndroidApp`](../../rest/v1beta1/projects.androidApps/getConfig) |
+   * [`IosApp`](../../rest/v1beta1/projects.iosApps/getConfig) |
+   * [`WebApp`](../../rest/v1beta1/projects.webApps/getConfig)). If `api_key_id` is not set in
+   * requests to create the App ([`AndroidApp`](../../rest/v1beta1/projects.androidApps/create) |
+   * [`IosApp`](../../rest/v1beta1/projects.iosApps/create) |
+   * [`WebApp`](../../rest/v1beta1/projects.webApps/create)), then Firebase automatically associates
+   * an `api_key_id` with the App. This auto-associated key may be an existing valid key or, if no
+   * valid key exists, a new one will be provisioned.
    * @param apiKeyId apiKeyId or {@code null} for none
    */
   public FirebaseAppInfo setApiKeyId(java.lang.String apiKeyId) {

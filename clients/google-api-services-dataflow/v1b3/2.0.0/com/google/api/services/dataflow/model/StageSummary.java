@@ -79,6 +79,13 @@ public final class StageSummary extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Straggler summary for this stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StragglerSummary stragglerSummary;
+
+  /**
    * End time of this stage. If the work item is completed, this is the actual end time of the
    * stage. Otherwise, it is the predicted end time.
    * @return value or {@code null} for none
@@ -179,6 +186,23 @@ public final class StageSummary extends com.google.api.client.json.GenericJson {
    */
   public StageSummary setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Straggler summary for this stage.
+   * @return value or {@code null} for none
+   */
+  public StragglerSummary getStragglerSummary() {
+    return stragglerSummary;
+  }
+
+  /**
+   * Straggler summary for this stage.
+   * @param stragglerSummary stragglerSummary or {@code null} for none
+   */
+  public StageSummary setStragglerSummary(StragglerSummary stragglerSummary) {
+    this.stragglerSummary = stragglerSummary;
     return this;
   }
 

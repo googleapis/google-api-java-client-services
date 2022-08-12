@@ -79,6 +79,13 @@ public final class WorkItemDetails extends com.google.api.client.json.GenericJso
   private java.lang.String state;
 
   /**
+   * Information about straggler detections for this work item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StragglerInfo stragglerInfo;
+
+  /**
    * Name of this work item.
    * The value may be {@code null}.
    */
@@ -186,6 +193,23 @@ public final class WorkItemDetails extends com.google.api.client.json.GenericJso
    */
   public WorkItemDetails setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Information about straggler detections for this work item.
+   * @return value or {@code null} for none
+   */
+  public StragglerInfo getStragglerInfo() {
+    return stragglerInfo;
+  }
+
+  /**
+   * Information about straggler detections for this work item.
+   * @param stragglerInfo stragglerInfo or {@code null} for none
+   */
+  public WorkItemDetails setStragglerInfo(StragglerInfo stragglerInfo) {
+    this.stragglerInfo = stragglerInfo;
     return this;
   }
 

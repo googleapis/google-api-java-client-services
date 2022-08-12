@@ -52,7 +52,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
    * it. This feature is only available when CompleteQueryRequest.visitor_id field is set and
    * UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from
    * latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They
-   * are transformed to lower cases. * They are UTF-8 safe. Recent searches are deduplicated. More
+   * are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More
    * recent searches will be reserved when duplication happens.
    * The value may be {@code null}.
    */
@@ -105,7 +105,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
    * it. This feature is only available when CompleteQueryRequest.visitor_id field is set and
    * UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from
    * latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They
-   * are transformed to lower cases. * They are UTF-8 safe. Recent searches are deduplicated. More
+   * are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More
    * recent searches will be reserved when duplication happens.
    * @return value or {@code null} for none
    */
@@ -119,7 +119,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
    * it. This feature is only available when CompleteQueryRequest.visitor_id field is set and
    * UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from
    * latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They
-   * are transformed to lower cases. * They are UTF-8 safe. Recent searches are deduplicated. More
+   * are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More
    * recent searches will be reserved when duplication happens.
    * @param recentSearchResults recentSearchResults or {@code null} for none
    */

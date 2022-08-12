@@ -70,16 +70,16 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Maximum number of results to return per page. Set this property to the number of prediction
-   * results needed. If zero, the service will choose a reasonable default. The maximum allowed
-   * value is 100. Values above 100 will be coerced to 100.
+   * Maximum number of results to return. Set this property to the number of prediction results
+   * needed. If zero, the service will choose a reasonable default. The maximum allowed value is
+   * 100. Values above 100 will be coerced to 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * This field is not used for now, leave it unset.
+   * This field is not used; leave it unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,9 +216,9 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   }
 
   /**
-   * Maximum number of results to return per page. Set this property to the number of prediction
-   * results needed. If zero, the service will choose a reasonable default. The maximum allowed
-   * value is 100. Values above 100 will be coerced to 100.
+   * Maximum number of results to return. Set this property to the number of prediction results
+   * needed. If zero, the service will choose a reasonable default. The maximum allowed value is
+   * 100. Values above 100 will be coerced to 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -226,9 +226,9 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   }
 
   /**
-   * Maximum number of results to return per page. Set this property to the number of prediction
-   * results needed. If zero, the service will choose a reasonable default. The maximum allowed
-   * value is 100. Values above 100 will be coerced to 100.
+   * Maximum number of results to return. Set this property to the number of prediction results
+   * needed. If zero, the service will choose a reasonable default. The maximum allowed value is
+   * 100. Values above 100 will be coerced to 100.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleCloudRetailV2betaPredictRequest setPageSize(java.lang.Integer pageSize) {
@@ -237,7 +237,7 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   }
 
   /**
-   * This field is not used for now, leave it unset.
+   * This field is not used; leave it unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -245,7 +245,7 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   }
 
   /**
-   * This field is not used for now, leave it unset.
+   * This field is not used; leave it unset.
    * @param pageToken pageToken or {@code null} for none
    */
   public GoogleCloudRetailV2betaPredictRequest setPageToken(java.lang.String pageToken) {

@@ -42,9 +42,10 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
 
   /**
    * String representing the destination to import for, all if left empty. List of possible values
-   * can be found here. [https://support.google.com/merchants/answer/7501026] List of allowed string
-   * values: "Shopping_ads", "Buy_on_google_listings", "Display_ads", "Local_inventory _ads",
-   * "Free_listings", "Free_local_listings" NOTE: The string values are case sensitive.
+   * is given in [Included destination](https://support.google.com/merchants/answer/7501026). List
+   * of allowed string values: "Shopping_ads", "Buy_on_google_listings", "Display_ads",
+   * "Local_inventory _ads", "Free_listings", "Free_local_listings" NOTE: The string values are case
+   * sensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,9 +105,10 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
 
   /**
    * String representing the destination to import for, all if left empty. List of possible values
-   * can be found here. [https://support.google.com/merchants/answer/7501026] List of allowed string
-   * values: "Shopping_ads", "Buy_on_google_listings", "Display_ads", "Local_inventory _ads",
-   * "Free_listings", "Free_local_listings" NOTE: The string values are case sensitive.
+   * is given in [Included destination](https://support.google.com/merchants/answer/7501026). List
+   * of allowed string values: "Shopping_ads", "Buy_on_google_listings", "Display_ads",
+   * "Local_inventory _ads", "Free_listings", "Free_local_listings" NOTE: The string values are case
+   * sensitive.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestinations() {
@@ -115,9 +117,10 @@ public final class GoogleCloudRetailV2betaMerchantCenterLink extends com.google.
 
   /**
    * String representing the destination to import for, all if left empty. List of possible values
-   * can be found here. [https://support.google.com/merchants/answer/7501026] List of allowed string
-   * values: "Shopping_ads", "Buy_on_google_listings", "Display_ads", "Local_inventory _ads",
-   * "Free_listings", "Free_local_listings" NOTE: The string values are case sensitive.
+   * is given in [Included destination](https://support.google.com/merchants/answer/7501026). List
+   * of allowed string values: "Shopping_ads", "Buy_on_google_listings", "Display_ads",
+   * "Local_inventory _ads", "Free_listings", "Free_local_listings" NOTE: The string values are case
+   * sensitive.
    * @param destinations destinations or {@code null} for none
    */
   public GoogleCloudRetailV2betaMerchantCenterLink setDestinations(java.util.List<java.lang.String> destinations) {

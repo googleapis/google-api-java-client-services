@@ -155,6 +155,13 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.String routineType;
 
   /**
+   * Optional. Spark specific options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkOptions sparkOptions;
+
+  /**
    * Optional. Can be set for procedures only. If true (default), the definition body will be
    * validated in the creation and the updates of the procedure. For procedures with an argument of
    * ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this
@@ -441,6 +448,23 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setRoutineType(java.lang.String routineType) {
     this.routineType = routineType;
+    return this;
+  }
+
+  /**
+   * Optional. Spark specific options.
+   * @return value or {@code null} for none
+   */
+  public SparkOptions getSparkOptions() {
+    return sparkOptions;
+  }
+
+  /**
+   * Optional. Spark specific options.
+   * @param sparkOptions sparkOptions or {@code null} for none
+   */
+  public Routine setSparkOptions(SparkOptions sparkOptions) {
+    this.sparkOptions = sparkOptions;
     return this;
   }
 

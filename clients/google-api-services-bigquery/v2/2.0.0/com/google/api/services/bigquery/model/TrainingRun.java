@@ -94,6 +94,13 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   private TrainingOptions trainingOptions;
 
   /**
+   * The start time of this training run, in milliseconds since epoch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long trainingStartTime;
+
+  /**
    * The model id in Vertex AI Model Registry for this training run
    * The value may be {@code null}.
    */
@@ -229,6 +236,23 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
    */
   public TrainingRun setTrainingOptions(TrainingOptions trainingOptions) {
     this.trainingOptions = trainingOptions;
+    return this;
+  }
+
+  /**
+   * The start time of this training run, in milliseconds since epoch.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTrainingStartTime() {
+    return trainingStartTime;
+  }
+
+  /**
+   * The start time of this training run, in milliseconds since epoch.
+   * @param trainingStartTime trainingStartTime or {@code null} for none
+   */
+  public TrainingRun setTrainingStartTime(java.lang.Long trainingStartTime) {
+    this.trainingStartTime = trainingStartTime;
     return this;
   }
 

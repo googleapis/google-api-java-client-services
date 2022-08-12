@@ -80,6 +80,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean cleanSpikesAndDips;
 
   /**
+   * Enums for color space, used for processing images in Object Table. See more details at
+   * https://www.tensorflow.org/io/tutorials/colorspace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String colorSpace;
+
+  /**
    * Subsample ratio of columns for each level for boosted tree models.
    * The value may be {@code null}.
    */
@@ -428,7 +436,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean preserveInputStructs;
 
   /**
-   * Number of paths for the sampled shapley explain method.
+   * Number of paths for the sampled Shapley explain method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -630,6 +638,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setCleanSpikesAndDips(java.lang.Boolean cleanSpikesAndDips) {
     this.cleanSpikesAndDips = cleanSpikesAndDips;
+    return this;
+  }
+
+  /**
+   * Enums for color space, used for processing images in Object Table. See more details at
+   * https://www.tensorflow.org/io/tutorials/colorspace.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getColorSpace() {
+    return colorSpace;
+  }
+
+  /**
+   * Enums for color space, used for processing images in Object Table. See more details at
+   * https://www.tensorflow.org/io/tutorials/colorspace.
+   * @param colorSpace colorSpace or {@code null} for none
+   */
+  public TrainingOptions setColorSpace(java.lang.String colorSpace) {
+    this.colorSpace = colorSpace;
     return this;
   }
 
@@ -1471,7 +1498,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Number of paths for the sampled shapley explain method.
+   * Number of paths for the sampled Shapley explain method.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSampledShapleyNumPaths() {
@@ -1479,7 +1506,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Number of paths for the sampled shapley explain method.
+   * Number of paths for the sampled Shapley explain method.
    * @param sampledShapleyNumPaths sampledShapleyNumPaths or {@code null} for none
    */
   public TrainingOptions setSampledShapleyNumPaths(java.lang.Long sampledShapleyNumPaths) {

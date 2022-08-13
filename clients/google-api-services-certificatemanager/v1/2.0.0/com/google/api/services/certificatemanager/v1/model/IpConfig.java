@@ -31,21 +31,21 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class IpConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * An external IP address.
+   * Output only. An external IP address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * Ports.
+   * Output only. Ports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Long> ports;
 
   /**
-   * An external IP address.
+   * Output only. An external IP address.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -53,7 +53,7 @@ public final class IpConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An external IP address.
+   * Output only. An external IP address.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public IpConfig setIpAddress(java.lang.String ipAddress) {
@@ -62,7 +62,7 @@ public final class IpConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ports.
+   * Output only. Ports.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getPorts() {
@@ -70,7 +70,7 @@ public final class IpConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ports.
+   * Output only. Ports.
    * @param ports ports or {@code null} for none
    */
   public IpConfig setPorts(java.util.List<java.lang.Long> ports) {

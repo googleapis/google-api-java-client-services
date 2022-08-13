@@ -31,14 +31,14 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class GclbTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * IP configurations for this Target Proxy where the Certificate Map is serving.
+   * Output only. IP configurations for this Target Proxy where the Certificate Map is serving.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<IpConfig> ipConfigs;
 
   /**
-   * This field returns the resource name in the following format:
+   * Output only. This field returns the resource name in the following format:
    * `//compute.googleapis.com/projects/global/targetHttpsProxies`.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   private java.lang.String targetHttpsProxy;
 
   /**
-   * This field returns the resource name in the following format:
+   * Output only. This field returns the resource name in the following format:
    * `//compute.googleapis.com/projects/global/targetSslProxies`.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   private java.lang.String targetSslProxy;
 
   /**
-   * IP configurations for this Target Proxy where the Certificate Map is serving.
+   * Output only. IP configurations for this Target Proxy where the Certificate Map is serving.
    * @return value or {@code null} for none
    */
   public java.util.List<IpConfig> getIpConfigs() {
@@ -62,7 +62,7 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IP configurations for this Target Proxy where the Certificate Map is serving.
+   * Output only. IP configurations for this Target Proxy where the Certificate Map is serving.
    * @param ipConfigs ipConfigs or {@code null} for none
    */
   public GclbTarget setIpConfigs(java.util.List<IpConfig> ipConfigs) {
@@ -71,7 +71,7 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field returns the resource name in the following format:
+   * Output only. This field returns the resource name in the following format:
    * `//compute.googleapis.com/projects/global/targetHttpsProxies`.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field returns the resource name in the following format:
+   * Output only. This field returns the resource name in the following format:
    * `//compute.googleapis.com/projects/global/targetHttpsProxies`.
    * @param targetHttpsProxy targetHttpsProxy or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field returns the resource name in the following format:
+   * Output only. This field returns the resource name in the following format:
    * `//compute.googleapis.com/projects/global/targetSslProxies`.
    * @return value or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class GclbTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field returns the resource name in the following format:
+   * Output only. This field returns the resource name in the following format:
    * `//compute.googleapis.com/projects/global/targetSslProxies`.
    * @param targetSslProxy targetSslProxy or {@code null} for none
    */

@@ -31,23 +31,23 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class ProvisioningIssue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable explanation about the issue. Provided to help address the configuration issues.
-   * Not guaranteed to be stable. For programmatic access use Reason enum.
+   * Output only. Human readable explanation about the issue. Provided to help address the
+   * configuration issues. Not guaranteed to be stable. For programmatic access use Reason enum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String details;
 
   /**
-   * Reason for provisioning failures.
+   * Output only. Reason for provisioning failures.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * Human readable explanation about the issue. Provided to help address the configuration issues.
-   * Not guaranteed to be stable. For programmatic access use Reason enum.
+   * Output only. Human readable explanation about the issue. Provided to help address the
+   * configuration issues. Not guaranteed to be stable. For programmatic access use Reason enum.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetails() {
@@ -55,8 +55,8 @@ public final class ProvisioningIssue extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Human readable explanation about the issue. Provided to help address the configuration issues.
-   * Not guaranteed to be stable. For programmatic access use Reason enum.
+   * Output only. Human readable explanation about the issue. Provided to help address the
+   * configuration issues. Not guaranteed to be stable. For programmatic access use Reason enum.
    * @param details details or {@code null} for none
    */
   public ProvisioningIssue setDetails(java.lang.String details) {
@@ -65,7 +65,7 @@ public final class ProvisioningIssue extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Reason for provisioning failures.
+   * Output only. Reason for provisioning failures.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -73,7 +73,7 @@ public final class ProvisioningIssue extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Reason for provisioning failures.
+   * Output only. Reason for provisioning failures.
    * @param reason reason or {@code null} for none
    */
   public ProvisioningIssue setReason(java.lang.String reason) {

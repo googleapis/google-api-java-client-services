@@ -346,13 +346,13 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * Required. Aggregation type. Available aggregation could be fetched by calling insight
            * list and get APIs in `BASIC` view.
            */
           @com.google.api.client.util.Key
           private java.lang.String aggregation;
 
-          /** Optional. Aggregation type. Available aggregation could be fetched by calling insight list and get
+          /** Required. Aggregation type. Available aggregation could be fetched by calling insight list and get
          APIs in `BASIC` view.
            */
           public java.lang.String getAggregation() {
@@ -360,7 +360,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * Required. Aggregation type. Available aggregation could be fetched by calling insight
            * list and get APIs in `BASIC` view.
            */
           public ConfiguredInsight setAggregation(java.lang.String aggregation) {
@@ -577,9 +577,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
         /**
          * Gets the value for a selected particular insight with default configuration. The default
          * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
-         * The data will be returned for recent 7 days. Use the organization level path for fetching at org
-         * level and project level path for fetching the insight value specific to a particular project.
-         * Setting the `view` to `BASIC` will only return the metadata for the insight.
+         * The data will be returned for recent 7 days starting the day before. The insight data size will
+         * be limited to 50 rows. Use the organization level path for fetching at org level and project
+         * level path for fetching the insight value specific to a particular project. Setting the `view` to
+         * `BASIC` will only return the metadata for the insight.
          *
          * Create a request for the method "insights.get".
          *
@@ -607,9 +608,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           /**
            * Gets the value for a selected particular insight with default configuration. The default
            * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
-           * The data will be returned for recent 7 days. Use the organization level path for fetching at
-           * org level and project level path for fetching the insight value specific to a particular
-           * project. Setting the `view` to `BASIC` will only return the metadata for the insight.
+           * The data will be returned for recent 7 days starting the day before. The insight data size will
+           * be limited to 50 rows. Use the organization level path for fetching at org level and project
+           * level path for fetching the insight value specific to a particular project. Setting the `view`
+           * to `BASIC` will only return the metadata for the insight.
            *
            * Create a request for the method "insights.get".
            *
@@ -13584,13 +13586,13 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * Required. Aggregation type. Available aggregation could be fetched by calling insight
            * list and get APIs in `BASIC` view.
            */
           @com.google.api.client.util.Key
           private java.lang.String aggregation;
 
-          /** Optional. Aggregation type. Available aggregation could be fetched by calling insight list and get
+          /** Required. Aggregation type. Available aggregation could be fetched by calling insight list and get
          APIs in `BASIC` view.
            */
           public java.lang.String getAggregation() {
@@ -13598,7 +13600,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Aggregation type. Available aggregation could be fetched by calling insight
+           * Required. Aggregation type. Available aggregation could be fetched by calling insight
            * list and get APIs in `BASIC` view.
            */
           public ConfiguredInsight setAggregation(java.lang.String aggregation) {
@@ -13815,9 +13817,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
         /**
          * Gets the value for a selected particular insight with default configuration. The default
          * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
-         * The data will be returned for recent 7 days. Use the organization level path for fetching at org
-         * level and project level path for fetching the insight value specific to a particular project.
-         * Setting the `view` to `BASIC` will only return the metadata for the insight.
+         * The data will be returned for recent 7 days starting the day before. The insight data size will
+         * be limited to 50 rows. Use the organization level path for fetching at org level and project
+         * level path for fetching the insight value specific to a particular project. Setting the `view` to
+         * `BASIC` will only return the metadata for the insight.
          *
          * Create a request for the method "insights.get".
          *
@@ -13845,9 +13848,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           /**
            * Gets the value for a selected particular insight with default configuration. The default
            * aggregation level is 'DAILY' and no grouping will be applied or default grouping if applicable.
-           * The data will be returned for recent 7 days. Use the organization level path for fetching at
-           * org level and project level path for fetching the insight value specific to a particular
-           * project. Setting the `view` to `BASIC` will only return the metadata for the insight.
+           * The data will be returned for recent 7 days starting the day before. The insight data size will
+           * be limited to 50 rows. Use the organization level path for fetching at org level and project
+           * level path for fetching the insight value specific to a particular project. Setting the `view`
+           * to `BASIC` will only return the metadata for the insight.
            *
            * Create a request for the method "insights.get".
            *

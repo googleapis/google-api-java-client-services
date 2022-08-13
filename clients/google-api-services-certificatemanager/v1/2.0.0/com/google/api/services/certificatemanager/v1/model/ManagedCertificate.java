@@ -61,7 +61,7 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> domains;
 
   /**
-   * Information about issues with provisioning a Managed Certificate.
+   * Output only. Information about issues with provisioning a Managed Certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Information about issues with provisioning a Managed Certificate.
+   * Output only. Information about issues with provisioning a Managed Certificate.
    * @return value or {@code null} for none
    */
   public ProvisioningIssue getProvisioningIssue() {
@@ -138,7 +138,7 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Information about issues with provisioning a Managed Certificate.
+   * Output only. Information about issues with provisioning a Managed Certificate.
    * @param provisioningIssue provisioningIssue or {@code null} for none
    */
   public ManagedCertificate setProvisioningIssue(ProvisioningIssue provisioningIssue) {

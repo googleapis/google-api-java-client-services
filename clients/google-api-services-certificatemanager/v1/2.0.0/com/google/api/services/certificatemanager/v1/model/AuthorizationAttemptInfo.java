@@ -31,8 +31,9 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class AuthorizationAttemptInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable explanation for reaching the state. Provided to help address the configuration
-   * issues. Not guaranteed to be stable. For programmatic access use Reason enum.
+   * Output only. Human readable explanation for reaching the state. Provided to help address the
+   * configuration issues. Not guaranteed to be stable. For programmatic access use FailureReason
+   * enum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,15 +54,16 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
   private java.lang.String failureReason;
 
   /**
-   * State of the domain for managed certificate issuance.
+   * Output only. State of the domain for managed certificate issuance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Human readable explanation for reaching the state. Provided to help address the configuration
-   * issues. Not guaranteed to be stable. For programmatic access use Reason enum.
+   * Output only. Human readable explanation for reaching the state. Provided to help address the
+   * configuration issues. Not guaranteed to be stable. For programmatic access use FailureReason
+   * enum.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetails() {
@@ -69,8 +71,9 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Human readable explanation for reaching the state. Provided to help address the configuration
-   * issues. Not guaranteed to be stable. For programmatic access use Reason enum.
+   * Output only. Human readable explanation for reaching the state. Provided to help address the
+   * configuration issues. Not guaranteed to be stable. For programmatic access use FailureReason
+   * enum.
    * @param details details or {@code null} for none
    */
   public AuthorizationAttemptInfo setDetails(java.lang.String details) {
@@ -113,7 +116,7 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
   }
 
   /**
-   * State of the domain for managed certificate issuance.
+   * Output only. State of the domain for managed certificate issuance.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -121,7 +124,7 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
   }
 
   /**
-   * State of the domain for managed certificate issuance.
+   * Output only. State of the domain for managed certificate issuance.
    * @param state state or {@code null} for none
    */
   public AuthorizationAttemptInfo setState(java.lang.String state) {

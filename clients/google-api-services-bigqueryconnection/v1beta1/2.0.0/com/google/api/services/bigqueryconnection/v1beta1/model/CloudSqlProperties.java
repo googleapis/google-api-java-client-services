@@ -54,7 +54,8 @@ public final class CloudSqlProperties extends com.google.api.client.json.Generic
   /**
    * Output only. The account ID of the service used for the purpose of this connection. When the
    * connection is used in the context of an operation in BigQuery, this service account will serve
-   * as identity being used for connecting to the CloudSQL instance specified in this connection.
+   * as the identity being used for connecting to the CloudSQL instance specified in this
+   * connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +122,8 @@ public final class CloudSqlProperties extends com.google.api.client.json.Generic
   /**
    * Output only. The account ID of the service used for the purpose of this connection. When the
    * connection is used in the context of an operation in BigQuery, this service account will serve
-   * as identity being used for connecting to the CloudSQL instance specified in this connection.
+   * as the identity being used for connecting to the CloudSQL instance specified in this
+   * connection.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountId() {
@@ -131,7 +133,8 @@ public final class CloudSqlProperties extends com.google.api.client.json.Generic
   /**
    * Output only. The account ID of the service used for the purpose of this connection. When the
    * connection is used in the context of an operation in BigQuery, this service account will serve
-   * as identity being used for connecting to the CloudSQL instance specified in this connection.
+   * as the identity being used for connecting to the CloudSQL instance specified in this
+   * connection.
    * @param serviceAccountId serviceAccountId or {@code null} for none
    */
   public CloudSqlProperties setServiceAccountId(java.lang.String serviceAccountId) {

@@ -30,8 +30,8 @@ package com.google.api.services.file.v1beta1.model;
 public final class RestoreInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the file share in the Cloud Filestore instance that the snapshot is being
-   * restored to.
+   * Required. Name of the file share in the Filestore instance that the snapshot is being restored
+   * to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
   private java.lang.String sourceSnapshot;
 
   /**
-   * Required. Name of the file share in the Cloud Filestore instance that the snapshot is being
-   * restored to.
+   * Required. Name of the file share in the Filestore instance that the snapshot is being restored
+   * to.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileShare() {
@@ -63,8 +63,8 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Name of the file share in the Cloud Filestore instance that the snapshot is being
-   * restored to.
+   * Required. Name of the file share in the Filestore instance that the snapshot is being restored
+   * to.
    * @param fileShare fileShare or {@code null} for none
    */
   public RestoreInstanceRequest setFileShare(java.lang.String fileShare) {

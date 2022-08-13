@@ -74,7 +74,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies
    * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29, 192.168.0.0/24
    * or 192.168.0.0/26, respectively. The range you specify can't overlap with either existing
-   * subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC
+   * subnets or assigned IP address ranges for other Filestore instances in the selected VPC
    * network.
    * The value may be {@code null}.
    */
@@ -171,7 +171,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies
    * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29, 192.168.0.0/24
    * or 192.168.0.0/26, respectively. The range you specify can't overlap with either existing
-   * subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC
+   * subnets or assigned IP address ranges for other Filestore instances in the selected VPC
    * network.
    * @return value or {@code null} for none
    */
@@ -191,7 +191,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies
    * the range of IP addresses reserved for this instance. For example, 10.0.0.0/29, 192.168.0.0/24
    * or 192.168.0.0/26, respectively. The range you specify can't overlap with either existing
-   * subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC
+   * subnets or assigned IP address ranges for other Filestore instances in the selected VPC
    * network.
    * @param reservedIpRange reservedIpRange or {@code null} for none
    */

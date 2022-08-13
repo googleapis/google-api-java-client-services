@@ -17,7 +17,7 @@
 package com.google.api.services.file.v1beta1.model;
 
 /**
- * A Cloud Filestore backup.
+ * A Filestore backup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -88,14 +88,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Name of the file share in the source Cloud Filestore instance that the backup is created from.
+   * Name of the file share in the source Filestore instance that the backup is created from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceFileShare;
 
   /**
-   * The resource name of the source Cloud Filestore instance, in the format
+   * The resource name of the source Filestore instance, in the format
    * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this
    * backup.
    * The value may be {@code null}.
@@ -104,8 +104,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInstance;
 
   /**
-   * Output only. The service tier of the source Cloud Filestore instance that this backup is
-   * created from.
+   * Output only. The service tier of the source Filestore instance that this backup is created
+   * from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +267,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the file share in the source Cloud Filestore instance that the backup is created from.
+   * Name of the file share in the source Filestore instance that the backup is created from.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceFileShare() {
@@ -275,7 +275,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the file share in the source Cloud Filestore instance that the backup is created from.
+   * Name of the file share in the source Filestore instance that the backup is created from.
    * @param sourceFileShare sourceFileShare or {@code null} for none
    */
   public Backup setSourceFileShare(java.lang.String sourceFileShare) {
@@ -284,7 +284,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the source Cloud Filestore instance, in the format
+   * The resource name of the source Filestore instance, in the format
    * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this
    * backup.
    * @return value or {@code null} for none
@@ -294,7 +294,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the source Cloud Filestore instance, in the format
+   * The resource name of the source Filestore instance, in the format
    * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this
    * backup.
    * @param sourceInstance sourceInstance or {@code null} for none
@@ -305,8 +305,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The service tier of the source Cloud Filestore instance that this backup is
-   * created from.
+   * Output only. The service tier of the source Filestore instance that this backup is created
+   * from.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceInstanceTier() {
@@ -314,8 +314,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The service tier of the source Cloud Filestore instance that this backup is
-   * created from.
+   * Output only. The service tier of the source Filestore instance that this backup is created
+   * from.
    * @param sourceInstanceTier sourceInstanceTier or {@code null} for none
    */
   public Backup setSourceInstanceTier(java.lang.String sourceInstanceTier) {

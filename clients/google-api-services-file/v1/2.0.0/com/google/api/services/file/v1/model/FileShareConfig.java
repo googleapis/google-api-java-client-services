@@ -30,7 +30,7 @@ package com.google.api.services.file.v1.model;
 public final class FileShareConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -60,7 +60,7 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.lang.String sourceBackup;
 
   /**
-   * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCapacityGb() {
@@ -68,7 +68,7 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes.
    * @param capacityGb capacityGb or {@code null} for none
    */
   public FileShareConfig setCapacityGb(java.lang.Long capacityGb) {

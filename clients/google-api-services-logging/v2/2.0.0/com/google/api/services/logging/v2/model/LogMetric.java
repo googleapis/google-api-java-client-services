@@ -34,6 +34,16 @@ package com.google.api.services.logging.v2.model;
 public final class LogMetric extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in
+   * projects are supported. The bucket has to be in the same project as the metric.For
+   * example:projects/my-project/locations/global/buckets/my-bucketIf empty, then the Log Metric is
+   * considered a non-Bucket Log Metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bucketName;
+
+  /**
    * Optional. The bucket_options are required when the logs-based metric is using a DISTRIBUTION
    * value type and it describes the bucket boundaries used to create a histogram of the extracted
    * values.
@@ -79,7 +89,7 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    * data from a log entry field and assign as the label value. Each label key specified in the
    * LabelDescriptor must have an associated extractor expression in this map. The syntax of the
    * extractor expression is the same as for the value_extractor field.The extracted value is
-   * converted to the type defined in the label descriptor. If the either the extraction or the type
+   * converted to the type defined in the label descriptor. If either the extraction or the type
    * conversion fails, the label will have a default value. The default value for a string label is
    * an empty string, for an integer label its 0, and for a boolean label its false.Note that there
    * are upper bounds on the maximum number of labels and the number of active time series that are
@@ -151,6 +161,29 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Optional. The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in
+   * projects are supported. The bucket has to be in the same project as the metric.For
+   * example:projects/my-project/locations/global/buckets/my-bucketIf empty, then the Log Metric is
+   * considered a non-Bucket Log Metric.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBucketName() {
+    return bucketName;
+  }
+
+  /**
+   * Optional. The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in
+   * projects are supported. The bucket has to be in the same project as the metric.For
+   * example:projects/my-project/locations/global/buckets/my-bucketIf empty, then the Log Metric is
+   * considered a non-Bucket Log Metric.
+   * @param bucketName bucketName or {@code null} for none
+   */
+  public LogMetric setBucketName(java.lang.String bucketName) {
+    this.bucketName = bucketName;
+    return this;
+  }
 
   /**
    * Optional. The bucket_options are required when the logs-based metric is using a DISTRIBUTION
@@ -254,7 +287,7 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    * data from a log entry field and assign as the label value. Each label key specified in the
    * LabelDescriptor must have an associated extractor expression in this map. The syntax of the
    * extractor expression is the same as for the value_extractor field.The extracted value is
-   * converted to the type defined in the label descriptor. If the either the extraction or the type
+   * converted to the type defined in the label descriptor. If either the extraction or the type
    * conversion fails, the label will have a default value. The default value for a string label is
    * an empty string, for an integer label its 0, and for a boolean label its false.Note that there
    * are upper bounds on the maximum number of labels and the number of active time series that are
@@ -270,7 +303,7 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    * data from a log entry field and assign as the label value. Each label key specified in the
    * LabelDescriptor must have an associated extractor expression in this map. The syntax of the
    * extractor expression is the same as for the value_extractor field.The extracted value is
-   * converted to the type defined in the label descriptor. If the either the extraction or the type
+   * converted to the type defined in the label descriptor. If either the extraction or the type
    * conversion fails, the label will have a default value. The default value for a string label is
    * an empty string, for an integer label its 0, and for a boolean label its false.Note that there
    * are upper bounds on the maximum number of labels and the number of active time series that are

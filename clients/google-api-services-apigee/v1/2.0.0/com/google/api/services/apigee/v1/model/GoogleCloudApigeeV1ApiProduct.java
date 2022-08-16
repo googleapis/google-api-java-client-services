@@ -165,6 +165,19 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
   private java.lang.String quota;
 
   /**
+   * Scope of the quota decides how the quota counter gets applied and evaluate for quota violation.
+   * If the Scope is set as PROXY, then all the operations defined for the APIproduct that are
+   * associated with the same proxy will share the same quota counter set at the APIproduct level,
+   * making it a global counter at a proxy level. If the Scope is set as OPERATION, then each
+   * operations get the counter set at the API product dedicated, making it a local counter. Note
+   * that, the QuotaCounterScope applies only when an operation does not have dedicated quota set
+   * for itself.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String quotaCounterScope;
+
+  /**
    * Time interval over which the number of request messages is calculated.
    * The value may be {@code null}.
    */
@@ -494,6 +507,35 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
    */
   public GoogleCloudApigeeV1ApiProduct setQuota(java.lang.String quota) {
     this.quota = quota;
+    return this;
+  }
+
+  /**
+   * Scope of the quota decides how the quota counter gets applied and evaluate for quota violation.
+   * If the Scope is set as PROXY, then all the operations defined for the APIproduct that are
+   * associated with the same proxy will share the same quota counter set at the APIproduct level,
+   * making it a global counter at a proxy level. If the Scope is set as OPERATION, then each
+   * operations get the counter set at the API product dedicated, making it a local counter. Note
+   * that, the QuotaCounterScope applies only when an operation does not have dedicated quota set
+   * for itself.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuotaCounterScope() {
+    return quotaCounterScope;
+  }
+
+  /**
+   * Scope of the quota decides how the quota counter gets applied and evaluate for quota violation.
+   * If the Scope is set as PROXY, then all the operations defined for the APIproduct that are
+   * associated with the same proxy will share the same quota counter set at the APIproduct level,
+   * making it a global counter at a proxy level. If the Scope is set as OPERATION, then each
+   * operations get the counter set at the API product dedicated, making it a local counter. Note
+   * that, the QuotaCounterScope applies only when an operation does not have dedicated quota set
+   * for itself.
+   * @param quotaCounterScope quotaCounterScope or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setQuotaCounterScope(java.lang.String quotaCounterScope) {
+    this.quotaCounterScope = quotaCounterScope;
     return this;
   }
 

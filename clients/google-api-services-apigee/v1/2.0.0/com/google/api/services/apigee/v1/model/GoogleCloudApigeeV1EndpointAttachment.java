@@ -32,6 +32,13 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1EndpointAttachment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. State of the endpoint attachment connection to the service attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionState;
+
+  /**
    * Output only. Host that can be used in either the HTTP target endpoint directly or as the host
    * in target server.
    * The value may be {@code null}.
@@ -68,6 +75,23 @@ public final class GoogleCloudApigeeV1EndpointAttachment extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. State of the endpoint attachment connection to the service attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionState() {
+    return connectionState;
+  }
+
+  /**
+   * Output only. State of the endpoint attachment connection to the service attachment.
+   * @param connectionState connectionState or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EndpointAttachment setConnectionState(java.lang.String connectionState) {
+    this.connectionState = connectionState;
+    return this;
+  }
 
   /**
    * Output only. Host that can be used in either the HTTP target endpoint directly or as the host

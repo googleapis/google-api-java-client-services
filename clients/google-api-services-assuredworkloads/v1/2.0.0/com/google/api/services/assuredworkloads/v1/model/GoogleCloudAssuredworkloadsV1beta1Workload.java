@@ -31,7 +31,7 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. The billing account used for the resources which are direct children of workload.
+   * Output only. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
    * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
@@ -177,7 +177,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private GoogleCloudAssuredworkloadsV1beta1WorkloadSaaEnrollmentResponse saaEnrollmentResponse;
 
   /**
-   * Input only. The billing account used for the resources which are direct children of workload.
+   * Output only. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
    * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
@@ -189,7 +189,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Input only. The billing account used for the resources which are direct children of workload.
+   * Output only. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
    * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For

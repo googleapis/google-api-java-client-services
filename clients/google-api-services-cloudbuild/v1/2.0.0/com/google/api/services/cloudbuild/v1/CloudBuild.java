@@ -3779,15 +3779,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
             /**
              * The maximum number of configs to return. The service may return fewer than this
-             * value. If unspecified, at most 50 configs will be returned. The maximum value is
-             * 1000; values above 1000 will be coerced to 1000.
+             * value. The maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of configs to return. The service may return fewer than this value. If
-           unspecified, at most 50 configs will be returned. The maximum value is 1000; values above 1000 will
-           be coerced to 1000.
+            /** The maximum number of configs to return. The service may return fewer than this value. The maximum
+           value is 1000; values above 1000 will be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -3795,8 +3793,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
             /**
              * The maximum number of configs to return. The service may return fewer than this
-             * value. If unspecified, at most 50 configs will be returned. The maximum value is
-             * 1000; values above 1000 will be coerced to 1000.
+             * value. The maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

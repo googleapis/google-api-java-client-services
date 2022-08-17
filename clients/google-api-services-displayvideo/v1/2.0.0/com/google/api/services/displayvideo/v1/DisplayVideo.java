@@ -6471,7 +6471,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param advertiserId The ID of the advertiser this insertion order belongs to.
-       * @param insertionOrderId The ID of the insertion order we need to delete.
+       * @param insertionOrderId The ID of the insertion order to delete.
        * @return the request
        */
       public Delete delete(java.lang.Long advertiserId, java.lang.Long insertionOrderId) throws java.io.IOException {
@@ -6504,7 +6504,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param advertiserId The ID of the advertiser this insertion order belongs to.
-         * @param insertionOrderId The ID of the insertion order we need to delete.
+         * @param insertionOrderId The ID of the insertion order to delete.
          * @since 1.13
          */
         protected Delete(java.lang.Long advertiserId, java.lang.Long insertionOrderId) {
@@ -6584,17 +6584,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The ID of the insertion order we need to delete. */
+        /** The ID of the insertion order to delete. */
         @com.google.api.client.util.Key
         private java.lang.Long insertionOrderId;
 
-        /** The ID of the insertion order we need to delete.
+        /** The ID of the insertion order to delete.
          */
         public java.lang.Long getInsertionOrderId() {
           return insertionOrderId;
         }
 
-        /** The ID of the insertion order we need to delete. */
+        /** The ID of the insertion order to delete. */
         public Delete setInsertionOrderId(java.lang.Long insertionOrderId) {
           this.insertionOrderId = insertionOrderId;
           return this;
@@ -8760,7 +8760,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param advertiserId The ID of the advertiser this line item belongs to.
-       * @param lineItemId The ID of the line item we need to fetch.
+       * @param lineItemId The ID of the line item to delete.
        * @return the request
        */
       public Delete delete(java.lang.Long advertiserId, java.lang.Long lineItemId) throws java.io.IOException {
@@ -8793,7 +8793,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param advertiserId The ID of the advertiser this line item belongs to.
-         * @param lineItemId The ID of the line item we need to fetch.
+         * @param lineItemId The ID of the line item to delete.
          * @since 1.13
          */
         protected Delete(java.lang.Long advertiserId, java.lang.Long lineItemId) {
@@ -8873,17 +8873,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The ID of the line item we need to fetch. */
+        /** The ID of the line item to delete. */
         @com.google.api.client.util.Key
         private java.lang.Long lineItemId;
 
-        /** The ID of the line item we need to fetch.
+        /** The ID of the line item to delete.
          */
         public java.lang.Long getLineItemId() {
           return lineItemId;
         }
 
-        /** The ID of the line item we need to fetch. */
+        /** The ID of the line item to delete. */
         public Delete setLineItemId(java.lang.Long lineItemId) {
           this.lineItemId = lineItemId;
           return this;
@@ -15136,7 +15136,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param advertiserId Required. The ID of the advertiser.
          * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
          * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
          * @return the request
@@ -15173,7 +15174,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param advertiserId Required. The ID of the advertiser.
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
            * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
            * @since 1.13
@@ -15279,14 +15281,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
           /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
-         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
+         `TARGETING_TYPE_YOUTUBE_CHANNEL`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -15295,7 +15299,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
            */
           public Get setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
@@ -15351,7 +15356,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param advertiserId Required. The ID of the advertiser.
          * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
          * @return the request
          */
         public List list(java.lang.Long advertiserId, java.lang.String targetingType) throws java.io.IOException {
@@ -15383,7 +15389,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param advertiserId Required. The ID of the advertiser.
            * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
            * @since 1.13
            */
           protected List(java.lang.Long advertiserId, java.lang.String targetingType) {
@@ -15482,14 +15489,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of assigned targeting options to list. Supported
            * targeting types: * `TARGETING_TYPE_CHANNEL` *
            * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
+           * `TARGETING_TYPE_YOUTUBE_CHANNEL`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
           /** Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
-         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
+         `TARGETING_TYPE_YOUTUBE_CHANNEL`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -15499,7 +15508,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of assigned targeting options to list. Supported
            * targeting types: * `TARGETING_TYPE_CHANNEL` *
            * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
+           * `TARGETING_TYPE_YOUTUBE_CHANNEL`
            */
           public List setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {

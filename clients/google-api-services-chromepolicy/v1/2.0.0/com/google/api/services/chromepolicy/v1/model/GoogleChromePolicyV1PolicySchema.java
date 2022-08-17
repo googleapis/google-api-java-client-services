@@ -17,7 +17,7 @@
 package com.google.api.services.chromepolicy.v1.model;
 
 /**
- * Resource representing a policy schema. Next ID: 12
+ * Resource representing a policy schema. Next ID: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Policy API. For a detailed explanation see:
@@ -81,7 +81,14 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
   private java.util.List<GoogleChromePolicyV1PolicySchemaNoticeDescription> notices;
 
   /**
-   * Output only. Current life cycle information.
+   * Output only. Current lifecycle information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifecycle;
+
+  /**
+   * Deprecated field because of typo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +233,24 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
   }
 
   /**
-   * Output only. Current life cycle information.
+   * Output only. Current lifecycle information.
+   * @return value or {@code null} for none
+   */
+  public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle getPolicyApiLifecycle() {
+    return policyApiLifecycle;
+  }
+
+  /**
+   * Output only. Current lifecycle information.
+   * @param policyApiLifecycle policyApiLifecycle or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicySchema setPolicyApiLifecycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifecycle) {
+    this.policyApiLifecycle = policyApiLifecycle;
+    return this;
+  }
+
+  /**
+   * Deprecated field because of typo.
    * @return value or {@code null} for none
    */
   public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle getPolicyApiLifeycle() {
@@ -234,7 +258,7 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
   }
 
   /**
-   * Output only. Current life cycle information.
+   * Deprecated field because of typo.
    * @param policyApiLifeycle policyApiLifeycle or {@code null} for none
    */
   public GoogleChromePolicyV1PolicySchema setPolicyApiLifeycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifeycle) {

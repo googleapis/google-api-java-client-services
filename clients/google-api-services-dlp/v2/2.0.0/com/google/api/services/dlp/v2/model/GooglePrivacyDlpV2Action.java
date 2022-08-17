@@ -32,8 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.GenericJson {
 
   /**
-   * Create a de-identified copy of the input data. Applicable for non-image data only. The de-
-   * identified copy is in the same location as the original data.
+   * Create a de-identified copy of the input data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,8 +81,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2SaveFindings saveFindings;
 
   /**
-   * Create a de-identified copy of the input data. Applicable for non-image data only. The de-
-   * identified copy is in the same location as the original data.
+   * Create a de-identified copy of the input data.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Deidentify getDeidentify() {
@@ -91,8 +89,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Create a de-identified copy of the input data. Applicable for non-image data only. The de-
-   * identified copy is in the same location as the original data.
+   * Create a de-identified copy of the input data.
    * @param deidentify deidentify or {@code null} for none
    */
   public GooglePrivacyDlpV2Action setDeidentify(GooglePrivacyDlpV2Deidentify deidentify) {

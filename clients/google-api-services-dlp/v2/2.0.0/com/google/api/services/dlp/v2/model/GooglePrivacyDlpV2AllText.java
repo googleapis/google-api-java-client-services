@@ -17,9 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Sends an email when the job completes. The email goes to IAM project owners and technical
- * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
- * contacts).
+ * Apply to all text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -30,16 +28,16 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2JobNotificationEmails extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2AllText extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GooglePrivacyDlpV2JobNotificationEmails set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2JobNotificationEmails) super.set(fieldName, value);
+  public GooglePrivacyDlpV2AllText set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2AllText) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2JobNotificationEmails clone() {
-    return (GooglePrivacyDlpV2JobNotificationEmails) super.clone();
+  public GooglePrivacyDlpV2AllText clone() {
+    return (GooglePrivacyDlpV2AllText) super.clone();
   }
 
 }

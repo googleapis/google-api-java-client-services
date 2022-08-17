@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The status of each individual document in the batch delete process.
+ * Resync status against inconsistency types on the dataset level.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,41 +28,43 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The document id of the document.
+   * The type of the inconsistency of the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiUiv1beta3DocumentId documentId;
+  private java.lang.String datasetInconsistencyType;
 
   /**
-   * The status of deleting the document in storage.
+   * The status of resyncing the dataset with regards to the detected inconsistency. Empty if
+   * `validate_only` is true in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
 
   /**
-   * The document id of the document.
+   * The type of the inconsistency of the dataset.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3DocumentId getDocumentId() {
-    return documentId;
+  public java.lang.String getDatasetInconsistencyType() {
+    return datasetInconsistencyType;
   }
 
   /**
-   * The document id of the document.
-   * @param documentId documentId or {@code null} for none
+   * The type of the inconsistency of the dataset.
+   * @param datasetInconsistencyType datasetInconsistencyType or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus setDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId documentId) {
-    this.documentId = documentId;
+  public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus setDatasetInconsistencyType(java.lang.String datasetInconsistencyType) {
+    this.datasetInconsistencyType = datasetInconsistencyType;
     return this;
   }
 
   /**
-   * The status of deleting the document in storage.
+   * The status of resyncing the dataset with regards to the detected inconsistency. Empty if
+   * `validate_only` is true in the request.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -70,22 +72,23 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataInd
   }
 
   /**
-   * The status of deleting the document in storage.
+   * The status of resyncing the dataset with regards to the detected inconsistency. Empty if
+   * `validate_only` is true in the request.
    * @param status status or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus setStatus(GoogleRpcStatus status) {
+  public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus setStatus(GoogleRpcStatus status) {
     this.status = status;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus) super.set(fieldName, value);
+  public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus clone() {
-    return (GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus) super.clone();
+  public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus clone() {
+    return (GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus) super.clone();
   }
 
 }

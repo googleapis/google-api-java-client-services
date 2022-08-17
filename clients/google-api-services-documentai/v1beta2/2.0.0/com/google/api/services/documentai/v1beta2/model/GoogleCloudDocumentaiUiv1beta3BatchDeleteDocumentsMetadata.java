@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata ex
   private java.util.List<GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus> individualBatchDeleteStatuses;
 
   /**
+   * Total number of documents deleting from dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalDocumentCount;
+
+  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata ex
    */
   public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata setIndividualBatchDeleteStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus> individualBatchDeleteStatuses) {
     this.individualBatchDeleteStatuses = individualBatchDeleteStatuses;
+    return this;
+  }
+
+  /**
+   * Total number of documents deleting from dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalDocumentCount() {
+    return totalDocumentCount;
+  }
+
+  /**
+   * Total number of documents deleting from dataset.
+   * @param totalDocumentCount totalDocumentCount or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata setTotalDocumentCount(java.lang.Integer totalDocumentCount) {
+    this.totalDocumentCount = totalDocumentCount;
     return this;
   }
 

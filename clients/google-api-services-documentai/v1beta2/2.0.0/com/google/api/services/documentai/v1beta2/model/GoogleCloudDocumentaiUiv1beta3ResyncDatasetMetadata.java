@@ -38,6 +38,22 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
+   * The list of dataset resync statuses. Not checked when `dataset_documents` is specified in
+   * ResyncRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus> datasetResyncStatuses;
+
+  /**
+   * The list of document resync statuses. The same document could have multiple
+   * `individual_document_resync_statuses` if it has multiple inconsistencies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus> individualDocumentResyncStatuses;
+
+  /**
    * Returns the newly added document Cloud Storage prefix if the documents are founded in Cloud
    * Storage while not in Document Service storage.
    * The value may be {@code null}.
@@ -59,6 +75,44 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
    */
   public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
+    return this;
+  }
+
+  /**
+   * The list of dataset resync statuses. Not checked when `dataset_documents` is specified in
+   * ResyncRequest.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus> getDatasetResyncStatuses() {
+    return datasetResyncStatuses;
+  }
+
+  /**
+   * The list of dataset resync statuses. Not checked when `dataset_documents` is specified in
+   * ResyncRequest.
+   * @param datasetResyncStatuses datasetResyncStatuses or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata setDatasetResyncStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus> datasetResyncStatuses) {
+    this.datasetResyncStatuses = datasetResyncStatuses;
+    return this;
+  }
+
+  /**
+   * The list of document resync statuses. The same document could have multiple
+   * `individual_document_resync_statuses` if it has multiple inconsistencies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus> getIndividualDocumentResyncStatuses() {
+    return individualDocumentResyncStatuses;
+  }
+
+  /**
+   * The list of document resync statuses. The same document could have multiple
+   * `individual_document_resync_statuses` if it has multiple inconsistencies.
+   * @param individualDocumentResyncStatuses individualDocumentResyncStatuses or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata setIndividualDocumentResyncStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus> individualDocumentResyncStatuses) {
+    this.individualDocumentResyncStatuses = individualDocumentResyncStatuses;
     return this;
   }
 

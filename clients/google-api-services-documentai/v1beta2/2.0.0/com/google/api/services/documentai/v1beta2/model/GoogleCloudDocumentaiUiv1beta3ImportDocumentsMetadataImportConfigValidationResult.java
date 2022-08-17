@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.documentai.v1beta3.model;
+package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * The status of each individual document in the batch delete process.
+ * The validation status of each import config. Status is ok if the configuration is valid and the
+ * specified documents are valid for importing. Otherwise status will be set as errors.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,41 +29,41 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The document id of the document.
+   * The source Cloud Storage URI specified in the import config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiUiv1beta3DocumentId documentId;
+  private java.lang.String inputGcsSource;
 
   /**
-   * The status of deleting the document in storage.
+   * The validation status of import config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
 
   /**
-   * The document id of the document.
+   * The source Cloud Storage URI specified in the import config.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3DocumentId getDocumentId() {
-    return documentId;
+  public java.lang.String getInputGcsSource() {
+    return inputGcsSource;
   }
 
   /**
-   * The document id of the document.
-   * @param documentId documentId or {@code null} for none
+   * The source Cloud Storage URI specified in the import config.
+   * @param inputGcsSource inputGcsSource or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus setDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId documentId) {
-    this.documentId = documentId;
+  public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult setInputGcsSource(java.lang.String inputGcsSource) {
+    this.inputGcsSource = inputGcsSource;
     return this;
   }
 
   /**
-   * The status of deleting the document in storage.
+   * The validation status of import config.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -70,22 +71,22 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataInd
   }
 
   /**
-   * The status of deleting the document in storage.
+   * The validation status of import config.
    * @param status status or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus setStatus(GoogleRpcStatus status) {
+  public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult setStatus(GoogleRpcStatus status) {
     this.status = status;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus) super.set(fieldName, value);
+  public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus clone() {
-    return (GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus) super.clone();
+  public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult clone() {
+    return (GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult) super.clone();
   }
 
 }

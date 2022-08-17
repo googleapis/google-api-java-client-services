@@ -74,7 +74,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "";
+  public static final String DEFAULT_SERVICE_PATH = "dfareporting/v4/";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -173,7 +173,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountActiveAdSummary> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountActiveAdSummaries/{summaryAccountId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountActiveAdSummaries/{summaryAccountId}";
 
       /**
        * Gets the account's active ad summary by account ID.
@@ -340,7 +340,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermissionGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountPermissionGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissionGroups/{id}";
 
       /**
        * Gets one account permission group by ID.
@@ -483,7 +483,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermissionGroupsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountPermissionGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissionGroups";
 
       /**
        * Retrieves the list of account permission groups.
@@ -632,7 +632,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermission> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountPermissions/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissions/{id}";
 
       /**
        * Gets one account permission by ID.
@@ -775,7 +775,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermissionsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountPermissions";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissions";
 
       /**
        * Retrieves the list of account permissions.
@@ -924,7 +924,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountUserProfiles/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles/{id}";
 
       /**
        * Gets one account user profile by ID.
@@ -1068,7 +1068,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
 
       /**
        * Inserts a new account user profile.
@@ -1185,7 +1185,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfilesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
 
       /**
        * Retrieves a list of account user profiles, possibly filtered. This method supports paging.
@@ -1474,7 +1474,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
 
       /**
        * Updates an existing account user profile. This method supports patch semantics.
@@ -1610,7 +1610,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
 
       /**
        * Updates an existing account user profile.
@@ -1751,7 +1751,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Account> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accounts/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/accounts/{id}";
 
       /**
        * Gets one account by ID.
@@ -1894,7 +1894,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accounts";
+      private static final String REST_PATH = "userprofiles/{profileId}/accounts";
 
       /**
        * Retrieves the list of accounts, possibly filtered. This method supports paging.
@@ -2155,7 +2155,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Account> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accounts";
+      private static final String REST_PATH = "userprofiles/{profileId}/accounts";
 
       /**
        * Updates an existing account. This method supports patch semantics.
@@ -2291,7 +2291,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Account> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/accounts";
+      private static final String REST_PATH = "userprofiles/{profileId}/accounts";
 
       /**
        * Updates an existing account.
@@ -2432,7 +2432,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/ads/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/ads/{id}";
 
       /**
        * Gets one ad by ID.
@@ -2576,7 +2576,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{profileId}/ads";
 
       /**
        * Inserts a new ad.
@@ -2693,7 +2693,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{profileId}/ads";
 
       /**
        * Retrieves a list of ads, possibly filtered. This method supports paging.
@@ -3227,7 +3227,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{profileId}/ads";
 
       /**
        * Updates an existing ad. This method supports patch semantics.
@@ -3363,7 +3363,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{profileId}/ads";
 
       /**
        * Updates an existing ad.
@@ -3504,7 +3504,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups/{id}";
 
       /**
        * Deletes an existing advertiser group.
@@ -3639,7 +3639,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups/{id}";
 
       /**
        * Gets one advertiser group by ID.
@@ -3783,7 +3783,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
 
       /**
        * Inserts a new advertiser group.
@@ -3900,7 +3900,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroupsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
 
       /**
        * Retrieves a list of advertiser groups, possibly filtered. This method supports paging.
@@ -4142,7 +4142,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
 
       /**
        * Updates an existing advertiser group. This method supports patch semantics.
@@ -4278,7 +4278,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
 
       /**
        * Updates an existing advertiser group.
@@ -4420,7 +4420,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserInvoicesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertisers/{advertiserId}/invoices";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertisers/{advertiserId}/invoices";
 
       /**
        * Retrieves a list of invoices for a particular issue month. The api only works if the billing
@@ -4636,7 +4636,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserLandingPages/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages/{id}";
 
       /**
        * Gets one landing page by ID.
@@ -4780,7 +4780,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
 
       /**
        * Inserts a new landing page.
@@ -4897,7 +4897,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserLandingPagesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
 
       /**
        * Retrieves a list of landing pages.
@@ -5209,7 +5209,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
 
       /**
        * Updates an existing advertiser landing page. This method supports patch semantics.
@@ -5345,7 +5345,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
 
       /**
        * Updates an existing landing page.
@@ -5486,7 +5486,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertisers/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertisers/{id}";
 
       /**
        * Gets one advertiser by ID.
@@ -5630,7 +5630,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
 
       /**
        * Inserts a new advertiser.
@@ -5747,7 +5747,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertisersListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
 
       /**
        * Retrieves a list of advertisers, possibly filtered. This method supports paging.
@@ -6084,7 +6084,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
 
       /**
        * Updates an existing advertiser. This method supports patch semantics.
@@ -6220,7 +6220,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
 
       /**
        * Updates an existing advertiser.
@@ -6365,7 +6365,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingAssignment> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments";
+      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments";
 
       /**
        * Inserts a new billing assignment and returns the new assignment. Only one of advertiser_id or
@@ -6504,7 +6504,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingAssignmentsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments";
+      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments";
 
       /**
        * Retrieves a list of billing assignments.
@@ -6671,7 +6671,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingProfile> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/billingProfiles/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{id}";
 
       /**
        * Gets one billing profile by ID.
@@ -6814,7 +6814,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingProfilesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/billingProfiles";
+      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles";
 
       /**
        * Retrieves a list of billing profiles, possibly filtered. This method supports paging.
@@ -7130,7 +7130,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingProfile> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/billingProfiles";
+      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles";
 
       /**
        * Updates an existing billing profile.
@@ -7271,7 +7271,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingRatesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingRates";
+      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingRates";
 
       /**
        * Retrieves a list of billing rates. This method supports paging.
@@ -7437,7 +7437,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BrowsersListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/browsers";
+      private static final String REST_PATH = "userprofiles/{profileId}/browsers";
 
       /**
        * Retrieves a list of browsers.
@@ -7588,7 +7588,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CampaignCreativeAssociation> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations";
+      private static final String REST_PATH = "userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations";
 
       /**
        * Associates a creative with the specified campaign. This method creates a default ad with
@@ -7726,7 +7726,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CampaignCreativeAssociationsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations";
+      private static final String REST_PATH = "userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations";
 
       /**
        * Retrieves the list of creative IDs associated with the specified campaign. This method supports
@@ -7942,7 +7942,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/campaigns/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/campaigns/{id}";
 
       /**
        * Gets one campaign by ID.
@@ -8086,7 +8086,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
 
       /**
        * Inserts a new campaign.
@@ -8203,7 +8203,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CampaignsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
 
       /**
        * Retrieves a list of campaigns, possibly filtered. This method supports paging.
@@ -8561,7 +8561,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
 
       /**
        * Updates an existing campaign. This method supports patch semantics.
@@ -8697,7 +8697,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
 
       /**
        * Updates an existing campaign.
@@ -8838,7 +8838,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.ChangeLog> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/changeLogs/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/changeLogs/{id}";
 
       /**
        * Gets one change log by ID.
@@ -8981,7 +8981,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ChangeLogsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/changeLogs";
+      private static final String REST_PATH = "userprofiles/{profileId}/changeLogs";
 
       /**
        * Retrieves a list of change logs. This method supports paging.
@@ -9327,7 +9327,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CitiesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/cities";
+      private static final String REST_PATH = "userprofiles/{profileId}/cities";
 
       /**
        * Retrieves a list of cities, possibly filtered.
@@ -9540,7 +9540,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.ConnectionType> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/connectionTypes/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/connectionTypes/{id}";
 
       /**
        * Gets one connection type by ID.
@@ -9683,7 +9683,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ConnectionTypesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/connectionTypes";
+      private static final String REST_PATH = "userprofiles/{profileId}/connectionTypes";
 
       /**
        * Retrieves a list of connection types.
@@ -9832,7 +9832,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/contentCategories/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories/{id}";
 
       /**
        * Deletes an existing content category.
@@ -9967,7 +9967,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/contentCategories/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories/{id}";
 
       /**
        * Gets one content category by ID.
@@ -10111,7 +10111,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
 
       /**
        * Inserts a new content category.
@@ -10228,7 +10228,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategoriesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
 
       /**
        * Retrieves a list of content categories, possibly filtered. This method supports paging.
@@ -10470,7 +10470,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
 
       /**
        * Updates an existing content category. This method supports patch semantics.
@@ -10606,7 +10606,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
 
       /**
        * Updates an existing content category.
@@ -10747,7 +10747,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Batchinsert extends DfareportingRequest<com.google.api.services.dfareporting.model.ConversionsBatchInsertResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/conversions/batchinsert";
+      private static final String REST_PATH = "userprofiles/{profileId}/conversions/batchinsert";
 
       /**
        * Inserts conversions.
@@ -10865,7 +10865,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Batchupdate extends DfareportingRequest<com.google.api.services.dfareporting.model.ConversionsBatchUpdateResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/conversions/batchupdate";
+      private static final String REST_PATH = "userprofiles/{profileId}/conversions/batchupdate";
 
       /**
        * Updates existing conversions.
@@ -11006,7 +11006,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Country> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/countries/{dartId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/countries/{dartId}";
 
       /**
        * Gets one country by ID.
@@ -11149,7 +11149,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CountriesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/countries";
+      private static final String REST_PATH = "userprofiles/{profileId}/countries";
 
       /**
        * Retrieves a list of countries.
@@ -11323,7 +11323,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeAssetMetadata> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets";
 
       /**
        * Inserts a new creative asset.
@@ -11510,7 +11510,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}";
 
       /**
        * Deletes an existing creative field value.
@@ -11664,7 +11664,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}";
 
       /**
        * Gets one creative field value by ID.
@@ -11827,7 +11827,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
 
       /**
        * Inserts a new creative field value.
@@ -11963,7 +11963,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValuesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
 
       /**
        * Retrieves a list of creative field values, possibly filtered. This method supports paging.
@@ -12211,7 +12211,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
 
       /**
        * Updates an existing creative field value. This method supports patch semantics.
@@ -12366,7 +12366,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
 
       /**
        * Updates an existing creative field value.
@@ -12525,7 +12525,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{id}";
 
       /**
        * Deletes an existing creative field.
@@ -12660,7 +12660,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{id}";
 
       /**
        * Gets one creative field by ID.
@@ -12804,7 +12804,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
 
       /**
        * Inserts a new creative field.
@@ -12921,7 +12921,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
 
       /**
        * Retrieves a list of creative fields, possibly filtered. This method supports paging.
@@ -13179,7 +13179,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
 
       /**
        * Updates an existing creative field. This method supports patch semantics.
@@ -13315,7 +13315,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
 
       /**
        * Updates an existing creative field.
@@ -13456,7 +13456,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups/{id}";
 
       /**
        * Gets one creative group by ID.
@@ -13600,7 +13600,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
 
       /**
        * Inserts a new creative group.
@@ -13717,7 +13717,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroupsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
 
       /**
        * Retrieves a list of creative groups, possibly filtered. This method supports paging.
@@ -13993,7 +13993,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
 
       /**
        * Updates an existing creative group. This method supports patch semantics.
@@ -14129,7 +14129,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
 
       /**
        * Updates an existing creative group.
@@ -14270,7 +14270,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creatives/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/creatives/{id}";
 
       /**
        * Gets one creative by ID.
@@ -14414,7 +14414,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
 
       /**
        * Inserts a new creative.
@@ -14531,7 +14531,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
 
       /**
        * Retrieves a list of creatives, possibly filtered. This method supports paging.
@@ -14934,7 +14934,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
 
       /**
        * Updates an existing creative. This method supports patch semantics.
@@ -15070,7 +15070,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
 
       /**
        * Updates an existing creative.
@@ -15211,7 +15211,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Query extends DfareportingRequest<com.google.api.services.dfareporting.model.DimensionValueList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/dimensionvalues/query";
+      private static final String REST_PATH = "userprofiles/{profileId}/dimensionvalues/query";
 
       /**
        * Retrieves list of report dimension values for a list of filters.
@@ -15384,7 +15384,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.DirectorySite> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/directorySites/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/directorySites/{id}";
 
       /**
        * Gets one directory site by ID.
@@ -15528,7 +15528,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.DirectorySite> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/directorySites";
+      private static final String REST_PATH = "userprofiles/{profileId}/directorySites";
 
       /**
        * Inserts a new directory site.
@@ -15645,7 +15645,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.DirectorySitesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/directorySites";
+      private static final String REST_PATH = "userprofiles/{profileId}/directorySites";
 
       /**
        * Retrieves a list of directory sites, possibly filtered. This method supports paging.
@@ -16012,7 +16012,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/dynamicTargetingKeys/{objectId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/dynamicTargetingKeys/{objectId}";
 
       /**
        * Deletes an existing dynamic targeting key.
@@ -16193,7 +16193,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicTargetingKey> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/dynamicTargetingKeys";
+      private static final String REST_PATH = "userprofiles/{profileId}/dynamicTargetingKeys";
 
       /**
        * Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being
@@ -16312,7 +16312,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicTargetingKeysListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/dynamicTargetingKeys";
+      private static final String REST_PATH = "userprofiles/{profileId}/dynamicTargetingKeys";
 
       /**
        * Retrieves a list of dynamic targeting keys.
@@ -16525,7 +16525,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/eventTags/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/eventTags/{id}";
 
       /**
        * Deletes an existing event tag.
@@ -16660,7 +16660,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/eventTags/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/eventTags/{id}";
 
       /**
        * Gets one event tag by ID.
@@ -16804,7 +16804,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
 
       /**
        * Inserts a new event tag.
@@ -16921,7 +16921,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTagsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
 
       /**
        * Retrieves a list of event tags, possibly filtered.
@@ -17268,7 +17268,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
 
       /**
        * Updates an existing event tag. This method supports patch semantics.
@@ -17404,7 +17404,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
 
       /**
        * Updates an existing event tag.
@@ -17545,7 +17545,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.File> {
 
-      private static final String REST_PATH = "dfareporting/v4/reports/{reportId}/files/{fileId}";
+      private static final String REST_PATH = "reports/{reportId}/files/{fileId}";
 
       /**
        * Retrieves a report file by its report ID and file ID. This method supports media download.
@@ -17704,7 +17704,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FileList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/files";
+      private static final String REST_PATH = "userprofiles/{profileId}/files";
 
       /**
        * Lists files for a user profile.
@@ -17933,7 +17933,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivities/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities/{id}";
 
       /**
        * Deletes an existing floodlight activity.
@@ -18067,7 +18067,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Generatetag extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivitiesGenerateTagResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivities/generatetag";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities/generatetag";
 
       /**
        * Generates a tag for a floodlight activity.
@@ -18200,7 +18200,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivities/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities/{id}";
 
       /**
        * Gets one floodlight activity by ID.
@@ -18344,7 +18344,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
 
       /**
        * Inserts a new floodlight activity.
@@ -18461,7 +18461,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivitiesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
 
       /**
        * Retrieves a list of floodlight activities, possibly filtered. This method supports paging.
@@ -18840,7 +18840,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
 
       /**
        * Updates an existing floodlight activity. This method supports patch semantics.
@@ -18976,7 +18976,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
 
       /**
        * Updates an existing floodlight activity.
@@ -19117,7 +19117,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivityGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups/{id}";
 
       /**
        * Gets one floodlight activity group by ID.
@@ -19261,7 +19261,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
 
       /**
        * Inserts a new floodlight activity group.
@@ -19378,7 +19378,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroupsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
 
       /**
        * Retrieves a list of floodlight activity groups, possibly filtered. This method supports paging.
@@ -19696,7 +19696,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
 
       /**
        * Updates an existing floodlight activity group. This method supports patch semantics.
@@ -19832,7 +19832,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
 
       /**
        * Updates an existing floodlight activity group.
@@ -19973,7 +19973,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfiguration> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightConfigurations/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations/{id}";
 
       /**
        * Gets one floodlight configuration by ID.
@@ -20116,7 +20116,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfigurationsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightConfigurations";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations";
 
       /**
        * Retrieves a list of floodlight configurations, possibly filtered.
@@ -20266,7 +20266,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfiguration> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightConfigurations";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations";
 
       /**
        * Updates an existing floodlight configuration. This method supports patch semantics.
@@ -20402,7 +20402,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfiguration> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/floodlightConfigurations";
+      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations";
 
       /**
        * Updates an existing floodlight configuration.
@@ -20544,7 +20544,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.InventoryItem> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}";
 
       /**
        * Gets one inventory item by ID.
@@ -20706,7 +20706,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.InventoryItemsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects/{projectId}/inventoryItems";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/inventoryItems";
 
       /**
        * Retrieves a list of inventory items, possibly filtered. This method supports paging.
@@ -21016,7 +21016,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.LanguagesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/languages";
+      private static final String REST_PATH = "userprofiles/{profileId}/languages";
 
       /**
        * Retrieves a list of languages.
@@ -21164,7 +21164,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.MetrosListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/metros";
+      private static final String REST_PATH = "userprofiles/{profileId}/metros";
 
       /**
        * Retrieves a list of metros.
@@ -21313,7 +21313,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileApp> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/mobileApps/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/mobileApps/{id}";
 
       /**
        * Gets one mobile app by ID.
@@ -21456,7 +21456,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileAppsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/mobileApps";
+      private static final String REST_PATH = "userprofiles/{profileId}/mobileApps";
 
       /**
        * Retrieves list of available mobile apps.
@@ -21700,7 +21700,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileCarrier> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/mobileCarriers/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/mobileCarriers/{id}";
 
       /**
        * Gets one mobile carrier by ID.
@@ -21843,7 +21843,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileCarriersListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/mobileCarriers";
+      private static final String REST_PATH = "userprofiles/{profileId}/mobileCarriers";
 
       /**
        * Retrieves a list of mobile carriers.
@@ -21992,7 +21992,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystemVersion> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/operatingSystemVersions/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystemVersions/{id}";
 
       /**
        * Gets one operating system version by ID.
@@ -22135,7 +22135,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystemVersionsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/operatingSystemVersions";
+      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystemVersions";
 
       /**
        * Retrieves a list of operating system versions.
@@ -22284,7 +22284,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystem> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/operatingSystems/{dartId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystems/{dartId}";
 
       /**
        * Gets one operating system by DART ID.
@@ -22427,7 +22427,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystemsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/operatingSystems";
+      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystems";
 
       /**
        * Retrieves a list of operating systems.
@@ -22577,7 +22577,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.OrderDocument> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects/{projectId}/orderDocuments/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orderDocuments/{id}";
 
       /**
        * Gets one order document by ID.
@@ -22739,7 +22739,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OrderDocumentsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects/{projectId}/orderDocuments";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orderDocuments";
 
       /**
        * Retrieves a list of order documents, possibly filtered. This method supports paging.
@@ -23070,7 +23070,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Order> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects/{projectId}/orders/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orders/{id}";
 
       /**
        * Gets one order by ID.
@@ -23232,7 +23232,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OrdersListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects/{projectId}/orders";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orders";
 
       /**
        * Retrieves a list of orders, possibly filtered. This method supports paging.
@@ -23527,7 +23527,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups/{id}";
 
       /**
        * Gets one placement group by ID.
@@ -23671,7 +23671,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
 
       /**
        * Inserts a new placement group.
@@ -23788,7 +23788,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroupsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
 
       /**
        * Retrieves a list of placement groups, possibly filtered. This method supports paging.
@@ -24282,7 +24282,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
 
       /**
        * Updates an existing placement group. This method supports patch semantics.
@@ -24418,7 +24418,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
 
       /**
        * Updates an existing placement group.
@@ -24559,7 +24559,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementStrategies/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies/{id}";
 
       /**
        * Deletes an existing placement strategy.
@@ -24694,7 +24694,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementStrategies/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies/{id}";
 
       /**
        * Gets one placement strategy by ID.
@@ -24838,7 +24838,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
 
       /**
        * Inserts a new placement strategy.
@@ -24955,7 +24955,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategiesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
 
       /**
        * Retrieves a list of placement strategies, possibly filtered. This method supports paging.
@@ -25197,7 +25197,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
 
       /**
        * Updates an existing placement strategy. This method supports patch semantics.
@@ -25333,7 +25333,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
 
       /**
        * Updates an existing placement strategy.
@@ -25473,7 +25473,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Generatetags extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementsGenerateTagsResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placements/generatetags";
+      private static final String REST_PATH = "userprofiles/{profileId}/placements/generatetags";
 
       /**
        * Generates tags for a placement.
@@ -25645,7 +25645,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placements/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/placements/{id}";
 
       /**
        * Gets one placement by ID.
@@ -25789,7 +25789,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{profileId}/placements";
 
       /**
        * Inserts a new placement.
@@ -25906,7 +25906,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{profileId}/placements";
 
       /**
        * Retrieves a list of placements, possibly filtered. This method supports paging.
@@ -26444,7 +26444,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{profileId}/placements";
 
       /**
        * Updates an existing placement. This method supports patch semantics.
@@ -26580,7 +26580,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{profileId}/placements";
 
       /**
        * Updates an existing placement.
@@ -26721,7 +26721,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PlatformType> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/platformTypes/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/platformTypes/{id}";
 
       /**
        * Gets one platform type by ID.
@@ -26864,7 +26864,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlatformTypesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/platformTypes";
+      private static final String REST_PATH = "userprofiles/{profileId}/platformTypes";
 
       /**
        * Retrieves a list of platform types.
@@ -27013,7 +27013,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PostalCode> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/postalCodes/{code}";
+      private static final String REST_PATH = "userprofiles/{profileId}/postalCodes/{code}";
 
       /**
        * Gets one postal code by ID.
@@ -27156,7 +27156,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PostalCodesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/postalCodes";
+      private static final String REST_PATH = "userprofiles/{profileId}/postalCodes";
 
       /**
        * Retrieves a list of postal codes.
@@ -27305,7 +27305,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Project> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects/{id}";
 
       /**
        * Gets one project by ID.
@@ -27448,7 +27448,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ProjectsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/projects";
+      private static final String REST_PATH = "userprofiles/{profileId}/projects";
 
       /**
        * Retrieves a list of projects, possibly filtered. This method supports paging .
@@ -27724,7 +27724,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.RegionsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/regions";
+      private static final String REST_PATH = "userprofiles/{profileId}/regions";
 
       /**
        * Retrieves a list of regions.
@@ -27873,7 +27873,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingListShares/{remarketingListId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares/{remarketingListId}";
 
       /**
        * Gets one remarketing list share by remarketing list ID.
@@ -28018,7 +28018,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingListShares";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares";
 
       /**
        * Updates an existing remarketing list share. This method supports patch semantics.
@@ -28154,7 +28154,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingListShares";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares";
 
       /**
        * Updates an existing remarketing list share.
@@ -28295,7 +28295,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingLists/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists/{id}";
 
       /**
        * Gets one remarketing list by ID.
@@ -28439,7 +28439,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
 
       /**
        * Inserts a new remarketing list.
@@ -28557,7 +28557,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
 
       /**
        * Retrieves a list of remarketing lists, possibly filtered. This method supports paging.
@@ -28833,7 +28833,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
 
       /**
        * Updates an existing remarketing list. This method supports patch semantics.
@@ -28969,7 +28969,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
 
       /**
        * Updates an existing remarketing list.
@@ -29110,7 +29110,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/{reportId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}";
 
       /**
        * Deletes a report by its ID.
@@ -29245,7 +29245,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Report> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/{reportId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}";
 
       /**
        * Retrieves a report by its ID.
@@ -29389,7 +29389,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Report> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports";
+      private static final String REST_PATH = "userprofiles/{profileId}/reports";
 
       /**
        * Creates a report.
@@ -29510,7 +29510,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ReportList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports";
+      private static final String REST_PATH = "userprofiles/{profileId}/reports";
 
       /**
        * Retrieves list of reports.
@@ -29717,7 +29717,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Report> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/{reportId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}";
 
       /**
        * Updates an existing report. This method supports patch semantics.
@@ -29853,7 +29853,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Run extends DfareportingRequest<com.google.api.services.dfareporting.model.File> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/{reportId}/run";
+      private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}/run";
 
       /**
        * Runs a report.
@@ -30031,7 +30031,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Report> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/{reportId}";
+      private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}";
 
       /**
        * Updates a report.
@@ -30201,7 +30201,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
       public class Query extends DfareportingRequest<com.google.api.services.dfareporting.model.CompatibleFields> {
 
-        private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/compatiblefields/query";
+        private static final String REST_PATH = "userprofiles/{profileId}/reports/compatiblefields/query";
 
         /**
          * Returns the fields that are compatible to be selected in the respective sections of a report
@@ -30343,7 +30343,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
       public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.File> {
 
-        private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/{reportId}/files/{fileId}";
+        private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}/files/{fileId}";
 
         /**
          * Retrieves a report file by its report ID and file ID. This method supports media download.
@@ -30521,7 +30521,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
       public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FileList> {
 
-        private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/reports/{reportId}/files";
+        private static final String REST_PATH = "userprofiles/{profileId}/reports/{reportId}/files";
 
         /**
          * Lists files for a report.
@@ -30753,7 +30753,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sites/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/sites/{id}";
 
       /**
        * Gets one site by ID.
@@ -30897,7 +30897,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{profileId}/sites";
 
       /**
        * Inserts a new site.
@@ -31014,7 +31014,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.SitesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{profileId}/sites";
 
       /**
        * Retrieves a list of sites, possibly filtered. This method supports paging.
@@ -31405,7 +31405,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{profileId}/sites";
 
       /**
        * Updates an existing site. This method supports patch semantics.
@@ -31541,7 +31541,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{profileId}/sites";
 
       /**
        * Updates an existing site.
@@ -31682,7 +31682,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Size> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sizes/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/sizes/{id}";
 
       /**
        * Gets one size by ID.
@@ -31826,7 +31826,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Size> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sizes";
+      private static final String REST_PATH = "userprofiles/{profileId}/sizes";
 
       /**
        * Inserts a new size.
@@ -31945,7 +31945,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.SizesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/sizes";
+      private static final String REST_PATH = "userprofiles/{profileId}/sizes";
 
       /**
        * Retrieves a list of sizes, possibly filtered. Retrieved sizes are globally unique and may
@@ -32164,7 +32164,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/subaccounts/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts/{id}";
 
       /**
        * Gets one subaccount by ID.
@@ -32308,7 +32308,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
 
       /**
        * Inserts a new subaccount.
@@ -32425,7 +32425,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.SubaccountsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
 
       /**
        * Gets a list of subaccounts, possibly filtered. This method supports paging.
@@ -32666,7 +32666,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
 
       /**
        * Updates an existing subaccount. This method supports patch semantics.
@@ -32802,7 +32802,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
 
       /**
        * Updates an existing subaccount.
@@ -32943,7 +32943,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetableRemarketingList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/targetableRemarketingLists/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/targetableRemarketingLists/{id}";
 
       /**
        * Gets one remarketing list by ID.
@@ -33087,7 +33087,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetableRemarketingListsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/targetableRemarketingLists";
+      private static final String REST_PATH = "userprofiles/{profileId}/targetableRemarketingLists";
 
       /**
        * Retrieves a list of targetable remarketing lists, possibly filtered. This method supports
@@ -33370,7 +33370,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/targetingTemplates/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates/{id}";
 
       /**
        * Gets one targeting template by ID.
@@ -33514,7 +33514,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
 
       /**
        * Inserts a new targeting template.
@@ -33631,7 +33631,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplatesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
 
       /**
        * Retrieves a list of targeting templates, optionally filtered. This method supports paging.
@@ -33886,7 +33886,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
 
       /**
        * Updates an existing targeting template. This method supports patch semantics.
@@ -34022,7 +34022,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
 
       /**
        * Updates an existing targeting template.
@@ -34162,7 +34162,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.UserProfile> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}";
+      private static final String REST_PATH = "userprofiles/{profileId}";
 
       /**
        * Gets one user profile by ID.
@@ -34286,7 +34286,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.UserProfileList> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles";
+      private static final String REST_PATH = "userprofiles";
 
       /**
        * Retrieves list of user profiles for a user.
@@ -34417,7 +34417,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermissionGroup> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRolePermissionGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissionGroups/{id}";
 
       /**
        * Gets one user role permission group by ID.
@@ -34560,7 +34560,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermissionGroupsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRolePermissionGroups";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissionGroups";
 
       /**
        * Gets a list of all supported user role permission groups.
@@ -34709,7 +34709,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermission> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRolePermissions/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissions/{id}";
 
       /**
        * Gets one user role permission by ID.
@@ -34852,7 +34852,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermissionsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRolePermissions";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissions";
 
       /**
        * Gets a list of user role permissions, possibly filtered.
@@ -35017,7 +35017,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRoles/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRoles/{id}";
 
       /**
        * Deletes an existing user role.
@@ -35152,7 +35152,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRoles/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRoles/{id}";
 
       /**
        * Gets one user role by ID.
@@ -35296,7 +35296,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
 
       /**
        * Inserts a new user role.
@@ -35413,7 +35413,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolesListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
 
       /**
        * Retrieves a list of user roles, possibly filtered. This method supports paging.
@@ -35684,7 +35684,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
 
       /**
        * Updates an existing user role. This method supports patch semantics.
@@ -35820,7 +35820,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
 
       /**
        * Updates an existing user role.
@@ -35961,7 +35961,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.VideoFormat> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/videoFormats/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/videoFormats/{id}";
 
       /**
        * Gets one video format by ID.
@@ -36104,7 +36104,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.VideoFormatsListResponse> {
 
-      private static final String REST_PATH = "dfareporting/v4/userprofiles/{profileId}/videoFormats";
+      private static final String REST_PATH = "userprofiles/{profileId}/videoFormats";
 
       /**
        * Lists available video formats.

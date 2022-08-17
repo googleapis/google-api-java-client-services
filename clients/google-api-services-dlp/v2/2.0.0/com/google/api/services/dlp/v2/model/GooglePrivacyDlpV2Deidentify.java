@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Create a de-identified copy of the requested table or files. . A TransformationDetail will be
+ * Create a de-identified copy of the requested table or files. A TransformationDetail will be
  * created for each transformation. If any rows in BigQuery are skipped during de-identification
  * (transformation errors or row size exceeds BigQuery insert API limits) they are placed in the
  * failure output table. If the original row exceeds the BigQuery insert API limit it will be
@@ -38,10 +38,10 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. User settable GCS bucket and folders to store de-identified files. This field must be
-   * set for cloud storage deidentification. The output GCS bucket must be different from the input
-   * bucket. De-identified files will overwrite files in the output path. Form of:
-   * gs://bucket/folder/ or gs://bucket
+   * Required. User settable Cloud Storage bucket and folders to store de-identified files. This
+   * field must be set for cloud storage deidentification. The output Cloud Storage bucket must be
+   * different from the input bucket. De-identified files will overwrite files in the output path.
+   * Form of: gs://bucket/folder/ or gs://bucket
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,10 +77,10 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
   private GooglePrivacyDlpV2TransformationDetailsStorageConfig transformationDetailsStorageConfig;
 
   /**
-   * Required. User settable GCS bucket and folders to store de-identified files. This field must be
-   * set for cloud storage deidentification. The output GCS bucket must be different from the input
-   * bucket. De-identified files will overwrite files in the output path. Form of:
-   * gs://bucket/folder/ or gs://bucket
+   * Required. User settable Cloud Storage bucket and folders to store de-identified files. This
+   * field must be set for cloud storage deidentification. The output Cloud Storage bucket must be
+   * different from the input bucket. De-identified files will overwrite files in the output path.
+   * Form of: gs://bucket/folder/ or gs://bucket
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudStorageOutput() {
@@ -88,10 +88,10 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
   }
 
   /**
-   * Required. User settable GCS bucket and folders to store de-identified files. This field must be
-   * set for cloud storage deidentification. The output GCS bucket must be different from the input
-   * bucket. De-identified files will overwrite files in the output path. Form of:
-   * gs://bucket/folder/ or gs://bucket
+   * Required. User settable Cloud Storage bucket and folders to store de-identified files. This
+   * field must be set for cloud storage deidentification. The output Cloud Storage bucket must be
+   * different from the input bucket. De-identified files will overwrite files in the output path.
+   * Form of: gs://bucket/folder/ or gs://bucket
    * @param cloudStorageOutput cloudStorageOutput or {@code null} for none
    */
   public GooglePrivacyDlpV2Deidentify setCloudStorageOutput(java.lang.String cloudStorageOutput) {

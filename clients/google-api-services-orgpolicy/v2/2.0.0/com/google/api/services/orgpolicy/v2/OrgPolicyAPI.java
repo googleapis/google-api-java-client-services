@@ -1582,6 +1582,792 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
     }
     /**
+     * An accessor for creating requests from the CustomConstraints collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code OrgPolicyAPI orgpolicy = new OrgPolicyAPI(...);}
+     *   {@code OrgPolicyAPI.CustomConstraints.List request = orgpolicy.customConstraints().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public CustomConstraints customConstraints() {
+      return new CustomConstraints();
+    }
+
+    /**
+     * The "customConstraints" collection of methods.
+     */
+    public class CustomConstraints {
+
+      /**
+       * Creates a CustomConstraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+       * organization does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS`
+       * if the constraint already exists on the given organization.
+       *
+       * Create a request for the method "customConstraints.create".
+       *
+       * This request holds the parameters needed by the orgpolicy server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Must be in the following form: * `organizations/{organization_id}`
+       * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends OrgPolicyAPIRequest<com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint> {
+
+        private static final String REST_PATH = "v2/{+parent}/customConstraints";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a CustomConstraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if
+         * the organization does not exist. Returns a `google.rpc.Status` with
+         * `google.rpc.Code.ALREADY_EXISTS` if the constraint already exists on the given organization.
+         *
+         * Create a request for the method "customConstraints.create".
+         *
+         * This request holds the parameters needed by the the orgpolicy server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Must be in the following form: * `organizations/{organization_id}`
+         * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint content) {
+          super(OrgPolicyAPI.this, "POST", REST_PATH, content, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Must be in the following form: * `organizations/{organization_id}` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Must be in the following form: * `organizations/{organization_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Must be in the following form: * `organizations/{organization_id}` */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a Custom Constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if
+       * the constraint does not exist.
+       *
+       * Create a request for the method "customConstraints.delete".
+       *
+       * This request holds the parameters needed by the orgpolicy server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the custom constraint to delete. See `CustomConstraint` for naming rules.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends OrgPolicyAPIRequest<com.google.api.services.orgpolicy.v2.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/customConstraints/[^/]+$");
+
+        /**
+         * Deletes a Custom Constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if
+         * the constraint does not exist.
+         *
+         * Create a request for the method "customConstraints.delete".
+         *
+         * This request holds the parameters needed by the the orgpolicy server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the custom constraint to delete. See `CustomConstraint` for naming rules.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(OrgPolicyAPI.this, "DELETE", REST_PATH, null, com.google.api.services.orgpolicy.v2.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the custom constraint to delete. See `CustomConstraint` for naming
+         * rules.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the custom constraint to delete. See `CustomConstraint` for naming rules.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the custom constraint to delete. See `CustomConstraint` for naming
+         * rules.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a CustomConstraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+       * CustomConstraint does not exist.
+       *
+       * Create a request for the method "customConstraints.get".
+       *
+       * This request holds the parameters needed by the orgpolicy server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Resource name of the custom constraint. See `CustomConstraint` for naming requirements.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends OrgPolicyAPIRequest<com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/customConstraints/[^/]+$");
+
+        /**
+         * Gets a CustomConstraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+         * CustomConstraint does not exist.
+         *
+         * Create a request for the method "customConstraints.get".
+         *
+         * This request holds the parameters needed by the the orgpolicy server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Resource name of the custom constraint. See `CustomConstraint` for naming requirements.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(OrgPolicyAPI.this, "GET", REST_PATH, null, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the custom constraint. See `CustomConstraint` for naming
+         * requirements.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of the custom constraint. See `CustomConstraint` for naming requirements.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of the custom constraint. See `CustomConstraint` for naming
+         * requirements.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves all of the `CustomConstraints` that exist on a particular organization resource.
+       *
+       * Create a request for the method "customConstraints.list".
+       *
+       * This request holds the parameters needed by the orgpolicy server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The target Cloud resource that parents the set of custom constraints that will be returned
+       *        from this call. Must be in one of the following forms: * `organizations/{organization_id}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends OrgPolicyAPIRequest<com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2ListCustomConstraintsResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/customConstraints";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Retrieves all of the `CustomConstraints` that exist on a particular organization resource.
+         *
+         * Create a request for the method "customConstraints.list".
+         *
+         * This request holds the parameters needed by the the orgpolicy server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The target Cloud resource that parents the set of custom constraints that will be returned
+       *        from this call. Must be in one of the following forms: * `organizations/{organization_id}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(OrgPolicyAPI.this, "GET", REST_PATH, null, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2ListCustomConstraintsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The target Cloud resource that parents the set of custom constraints that will
+         * be returned from this call. Must be in one of the following forms: *
+         * `organizations/{organization_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The target Cloud resource that parents the set of custom constraints that will be
+       returned from this call. Must be in one of the following forms: * `organizations/{organization_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The target Cloud resource that parents the set of custom constraints that will
+         * be returned from this call. Must be in one of the following forms: *
+         * `organizations/{organization_id}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Size of the pages to be returned. This is currently unsupported and will be ignored. The
+         * server may at any point start using this field to limit page size.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Size of the pages to be returned. This is currently unsupported and will be ignored. The server may
+       at any point start using this field to limit page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Size of the pages to be returned. This is currently unsupported and will be ignored. The
+         * server may at any point start using this field to limit page size.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Page token used to retrieve the next page. This is currently unsupported and will be
+         * ignored. The server may at any point start using this field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Page token used to retrieve the next page. This is currently unsupported and will be ignored. The
+       server may at any point start using this field.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Page token used to retrieve the next page. This is currently unsupported and will be
+         * ignored. The server may at any point start using this field.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a Custom Constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if
+       * the constraint does not exist. Note: the supplied policy will perform a full overwrite of all
+       * fields.
+       *
+       * Create a request for the method "customConstraints.patch".
+       *
+       * This request holds the parameters needed by the orgpolicy server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Immutable. Name of the constraint. This is unique within the organization. Format of the name should
+       *        be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+       * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends OrgPolicyAPIRequest<com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/customConstraints/[^/]+$");
+
+        /**
+         * Updates a Custom Constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if
+         * the constraint does not exist. Note: the supplied policy will perform a full overwrite of all
+         * fields.
+         *
+         * Create a request for the method "customConstraints.patch".
+         *
+         * This request holds the parameters needed by the the orgpolicy server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Immutable. Name of the constraint. This is unique within the organization. Format of the name should
+       *        be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+       *        "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint content) {
+          super(OrgPolicyAPI.this, "PATCH", REST_PATH, content, com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2CustomConstraint.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Immutable. Name of the constraint. This is unique within the organization. Format of the
+         * name should be *
+         * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Immutable. Name of the constraint. This is unique within the organization. Format of the name
+       should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+       "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Immutable. Name of the constraint. This is unique within the organization. Format of the
+         * name should be *
+         * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example :
+         * "organizations/123/customConstraints/custom.createOnlyE2TypeVms"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/customConstraints/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Policies collection.
      *
      * <p>The typical use is:</p>

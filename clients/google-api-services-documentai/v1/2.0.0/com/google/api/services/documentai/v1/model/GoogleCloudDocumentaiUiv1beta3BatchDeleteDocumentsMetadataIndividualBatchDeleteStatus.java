@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataInd
   private GoogleCloudDocumentaiUiv1beta3DocumentId documentId;
 
   /**
-   * The status of deleting the document.
+   * The status of deleting the document in storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataInd
   }
 
   /**
-   * The status of deleting the document.
+   * The status of deleting the document in storage.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataInd
   }
 
   /**
-   * The status of deleting the document.
+   * The status of deleting the document in storage.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus setStatus(GoogleRpcStatus status) {

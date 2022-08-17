@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata extends
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
+   * Validation statuses of the batch documents import config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult> importConfigValidationResults;
+
+  /**
    * The list of response details of each document.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata extends
    */
   public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
+    return this;
+  }
+
+  /**
+   * Validation statuses of the batch documents import config.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult> getImportConfigValidationResults() {
+    return importConfigValidationResults;
+  }
+
+  /**
+   * Validation statuses of the batch documents import config.
+   * @param importConfigValidationResults importConfigValidationResults or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata setImportConfigValidationResults(java.util.List<GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult> importConfigValidationResults) {
+    this.importConfigValidationResults = importConfigValidationResults;
     return this;
   }
 

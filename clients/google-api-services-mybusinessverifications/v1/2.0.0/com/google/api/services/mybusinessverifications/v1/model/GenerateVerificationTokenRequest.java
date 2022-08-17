@@ -31,14 +31,18 @@ package com.google.api.services.mybusinessverifications.v1.model;
 public final class GenerateVerificationTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The target location.
+   * Required. The target location. Note: The location information should exactly match the target
+   * Location, otherwise the generated verification token won't be able to verify the target
+   * Location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Location location;
 
   /**
-   * Required. The target location.
+   * Required. The target location. Note: The location information should exactly match the target
+   * Location, otherwise the generated verification token won't be able to verify the target
+   * Location.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -46,7 +50,9 @@ public final class GenerateVerificationTokenRequest extends com.google.api.clien
   }
 
   /**
-   * Required. The target location.
+   * Required. The target location. Note: The location information should exactly match the target
+   * Location, otherwise the generated verification token won't be able to verify the target
+   * Location.
    * @param location location or {@code null} for none
    */
   public GenerateVerificationTokenRequest setLocation(Location location) {

@@ -95,20 +95,6 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * The SHA1 certificate hashes for the AndroidApp.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> sha1Hashes;
-
-  /**
-   * The SHA256 certificate hashes for the AndroidApp.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> sha256Hashes;
-
-  /**
    * Output only. The lifecycle state of the App.
    * The value may be {@code null}.
    */
@@ -258,40 +244,6 @@ public final class AndroidApp extends com.google.api.client.json.GenericJson {
    */
   public AndroidApp setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
-    return this;
-  }
-
-  /**
-   * The SHA1 certificate hashes for the AndroidApp.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSha1Hashes() {
-    return sha1Hashes;
-  }
-
-  /**
-   * The SHA1 certificate hashes for the AndroidApp.
-   * @param sha1Hashes sha1Hashes or {@code null} for none
-   */
-  public AndroidApp setSha1Hashes(java.util.List<java.lang.String> sha1Hashes) {
-    this.sha1Hashes = sha1Hashes;
-    return this;
-  }
-
-  /**
-   * The SHA256 certificate hashes for the AndroidApp.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSha256Hashes() {
-    return sha256Hashes;
-  }
-
-  /**
-   * The SHA256 certificate hashes for the AndroidApp.
-   * @param sha256Hashes sha256Hashes or {@code null} for none
-   */
-  public AndroidApp setSha256Hashes(java.util.List<java.lang.String> sha256Hashes) {
-    this.sha256Hashes = sha256Hashes;
     return this;
   }
 

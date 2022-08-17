@@ -31,6 +31,13 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DeidentifyConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Treat the dataset as an image and redact.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2ImageTransformations imageTransformations;
+
+  /**
    * Treat the dataset as free-form text and apply the same free text transformation everywhere.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class GooglePrivacyDlpV2DeidentifyConfig extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2TransformationErrorHandling transformationErrorHandling;
+
+  /**
+   * Treat the dataset as an image and redact.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ImageTransformations getImageTransformations() {
+    return imageTransformations;
+  }
+
+  /**
+   * Treat the dataset as an image and redact.
+   * @param imageTransformations imageTransformations or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DeidentifyConfig setImageTransformations(GooglePrivacyDlpV2ImageTransformations imageTransformations) {
+    this.imageTransformations = imageTransformations;
+    return this;
+  }
 
   /**
    * Treat the dataset as free-form text and apply the same free text transformation everywhere.

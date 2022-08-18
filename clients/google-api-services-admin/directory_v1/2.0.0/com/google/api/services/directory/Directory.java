@@ -1394,7 +1394,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link MoveDevicesToOu#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the Google Workspace account
+     * @param customerId Immutable. ID of the Google Workspace account
      * @param orgUnitPath Full path of the target organizational unit or its ID
      * @param content the {@link com.google.api.services.directory.model.ChromeOsMoveDevicesToOu}
      * @return the request
@@ -1421,7 +1421,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * lientRequest)} must be called to initialize this instance immediately after invoking the
        * constructor. </p>
        *
-       * @param customerId Immutable ID of the Google Workspace account
+       * @param customerId Immutable. ID of the Google Workspace account
        * @param orgUnitPath Full path of the target organizational unit or its ID
        * @param content the {@link com.google.api.services.directory.model.ChromeOsMoveDevicesToOu}
        * @since 1.13
@@ -1487,17 +1487,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (MoveDevicesToOu) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Workspace account */
+      /** Immutable. ID of the Google Workspace account */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the Google Workspace account
+      /** Immutable. ID of the Google Workspace account
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the Google Workspace account */
+      /** Immutable. ID of the Google Workspace account */
       public MoveDevicesToOu setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -1955,8 +1955,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the admin server.  After setting any optional
          * parameters, call the {@link IssueCommand#execute()} method to invoke the remote operation.
          *
-         * @param customerId Immutable. Immutable ID of the Google Workspace account.
-         * @param deviceId Immutable. Immutable ID of Chrome OS Device.
+         * @param customerId Immutable. ID of the Google Workspace account.
+         * @param deviceId Immutable. ID of Chrome OS Device.
          * @param content the {@link com.google.api.services.directory.model.DirectoryChromeosdevicesIssueCommandRequest}
          * @return the request
          */
@@ -1981,8 +1981,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * IssueCommand#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param customerId Immutable. Immutable ID of the Google Workspace account.
-           * @param deviceId Immutable. Immutable ID of Chrome OS Device.
+           * @param customerId Immutable. ID of the Google Workspace account.
+           * @param deviceId Immutable. ID of Chrome OS Device.
            * @param content the {@link com.google.api.services.directory.model.DirectoryChromeosdevicesIssueCommandRequest}
            * @since 1.13
            */
@@ -2047,33 +2047,33 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
             return (IssueCommand) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Immutable ID of the Google Workspace account. */
+          /** Immutable. ID of the Google Workspace account. */
           @com.google.api.client.util.Key
           private java.lang.String customerId;
 
-          /** Immutable. Immutable ID of the Google Workspace account.
+          /** Immutable. ID of the Google Workspace account.
            */
           public java.lang.String getCustomerId() {
             return customerId;
           }
 
-          /** Immutable. Immutable ID of the Google Workspace account. */
+          /** Immutable. ID of the Google Workspace account. */
           public IssueCommand setCustomerId(java.lang.String customerId) {
             this.customerId = customerId;
             return this;
           }
 
-          /** Immutable. Immutable ID of Chrome OS Device. */
+          /** Immutable. ID of Chrome OS Device. */
           @com.google.api.client.util.Key
           private java.lang.String deviceId;
 
-          /** Immutable. Immutable ID of Chrome OS Device.
+          /** Immutable. ID of Chrome OS Device.
            */
           public java.lang.String getDeviceId() {
             return deviceId;
           }
 
-          /** Immutable. Immutable ID of Chrome OS Device. */
+          /** Immutable. ID of Chrome OS Device. */
           public IssueCommand setDeviceId(java.lang.String deviceId) {
             this.deviceId = deviceId;
             return this;
@@ -2113,9 +2113,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the admin server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param customerId Immutable. Immutable ID of the Google Workspace account.
-           * @param deviceId Immutable. Immutable ID of Chrome OS Device.
-           * @param commandId Immutable. Immutable ID of Chrome OS Device Command.
+           * @param customerId Immutable. ID of the Google Workspace account.
+           * @param deviceId Immutable. ID of Chrome OS Device.
+           * @param commandId Immutable. ID of Chrome OS Device Command.
            * @return the request
            */
           public Get get(java.lang.String customerId, java.lang.String deviceId, java.lang.Long commandId) throws java.io.IOException {
@@ -2138,9 +2138,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param customerId Immutable. Immutable ID of the Google Workspace account.
-             * @param deviceId Immutable. Immutable ID of Chrome OS Device.
-             * @param commandId Immutable. Immutable ID of Chrome OS Device Command.
+             * @param customerId Immutable. ID of the Google Workspace account.
+             * @param deviceId Immutable. ID of Chrome OS Device.
+             * @param commandId Immutable. ID of Chrome OS Device Command.
              * @since 1.13
              */
             protected Get(java.lang.String customerId, java.lang.String deviceId, java.lang.Long commandId) {
@@ -2215,49 +2215,49 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Immutable. Immutable ID of the Google Workspace account. */
+            /** Immutable. ID of the Google Workspace account. */
             @com.google.api.client.util.Key
             private java.lang.String customerId;
 
-            /** Immutable. Immutable ID of the Google Workspace account.
+            /** Immutable. ID of the Google Workspace account.
              */
             public java.lang.String getCustomerId() {
               return customerId;
             }
 
-            /** Immutable. Immutable ID of the Google Workspace account. */
+            /** Immutable. ID of the Google Workspace account. */
             public Get setCustomerId(java.lang.String customerId) {
               this.customerId = customerId;
               return this;
             }
 
-            /** Immutable. Immutable ID of Chrome OS Device. */
+            /** Immutable. ID of Chrome OS Device. */
             @com.google.api.client.util.Key
             private java.lang.String deviceId;
 
-            /** Immutable. Immutable ID of Chrome OS Device.
+            /** Immutable. ID of Chrome OS Device.
              */
             public java.lang.String getDeviceId() {
               return deviceId;
             }
 
-            /** Immutable. Immutable ID of Chrome OS Device. */
+            /** Immutable. ID of Chrome OS Device. */
             public Get setDeviceId(java.lang.String deviceId) {
               this.deviceId = deviceId;
               return this;
             }
 
-            /** Immutable. Immutable ID of Chrome OS Device Command. */
+            /** Immutable. ID of Chrome OS Device Command. */
             @com.google.api.client.util.Key
             private java.lang.Long commandId;
 
-            /** Immutable. Immutable ID of Chrome OS Device Command.
+            /** Immutable. ID of Chrome OS Device Command.
              */
             public java.lang.Long getCommandId() {
               return commandId;
             }
 
-            /** Immutable. Immutable ID of Chrome OS Device Command. */
+            /** Immutable. ID of Chrome OS Device Command. */
             public Get setCommandId(java.lang.Long commandId) {
               this.commandId = commandId;
               return this;
@@ -6814,7 +6814,12 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Checks whether the given user is a member of the group. Membership can be direct or nested.
+     * Checks whether the given user is a member of the group. Membership can be direct or nested, but
+     * if nested, the `memberKey` and `groupKey` must be entities in the same domain or an `Invalid
+     * input` error is returned. To check for nested memberships that include entities outside of the
+     * group's domain, use the [`checkTransitiveMembership()`](https://cloud.google.com/identity/docs/re
+     * ference/rest/v1/groups.memberships/checkTransitiveMembership) method in the Cloud Identity Groups
+     * API.
      *
      * Create a request for the method "members.hasMember".
      *
@@ -6838,7 +6843,12 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/groups/{groupKey}/hasMember/{memberKey}";
 
       /**
-       * Checks whether the given user is a member of the group. Membership can be direct or nested.
+       * Checks whether the given user is a member of the group. Membership can be direct or nested, but
+       * if nested, the `memberKey` and `groupKey` must be entities in the same domain or an `Invalid
+       * input` error is returned. To check for nested memberships that include entities outside of the
+       * group's domain, use the [`checkTransitiveMembership()`](https://cloud.google.com/identity/docs/
+       * reference/rest/v1/groups.memberships/checkTransitiveMembership) method in the Cloud Identity
+       * Groups API.
        *
        * Create a request for the method "members.hasMember".
        *

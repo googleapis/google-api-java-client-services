@@ -64,12 +64,6 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   private java.lang.Integer cpuMemCost;
 
   /**
-   * If true, the service will do the following list of checks before an account is uploaded: *
-   * Duplicate emails * Duplicate federated IDs * Federated ID provider validation If the
-   * duplication exists within the list of accounts to be uploaded, it will prevent the entire list
-   * from being uploaded. If the email or federated ID is a duplicate of a user already within the
-   * project/tenant, the account will not be uploaded, but the rest of the accounts will be
-   * unaffected. If false, these checks will be skipped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -131,6 +125,12 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   private java.lang.String saltSeparator;
 
   /**
+   * If true, the service will do the following list of checks before an account is uploaded: *
+   * Duplicate emails * Duplicate federated IDs * Federated ID provider validation If the
+   * duplication exists within the list of accounts to be uploaded, it will prevent the entire list
+   * from being uploaded. If the email or federated ID is a duplicate of a user already within the
+   * project/tenant, the account will not be uploaded, but the rest of the accounts will be
+   * unaffected. If false, these checks will be skipped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +152,8 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   private java.lang.String tenantId;
 
   /**
-   * A list of accounts to upload.
+   * A list of accounts to upload. `local_id` is required for each user; everything else is
+   * optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,12 +240,6 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   }
 
   /**
-   * If true, the service will do the following list of checks before an account is uploaded: *
-   * Duplicate emails * Duplicate federated IDs * Federated ID provider validation If the
-   * duplication exists within the list of accounts to be uploaded, it will prevent the entire list
-   * from being uploaded. If the email or federated ID is a duplicate of a user already within the
-   * project/tenant, the account will not be uploaded, but the rest of the accounts will be
-   * unaffected. If false, these checks will be skipped.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDelegatedProjectNumber() {
@@ -252,12 +247,6 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   }
 
   /**
-   * If true, the service will do the following list of checks before an account is uploaded: *
-   * Duplicate emails * Duplicate federated IDs * Federated ID provider validation If the
-   * duplication exists within the list of accounts to be uploaded, it will prevent the entire list
-   * from being uploaded. If the email or federated ID is a duplicate of a user already within the
-   * project/tenant, the account will not be uploaded, but the rest of the accounts will be
-   * unaffected. If false, these checks will be skipped.
    * @param delegatedProjectNumber delegatedProjectNumber or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1UploadAccountRequest setDelegatedProjectNumber(java.lang.Long delegatedProjectNumber) {
@@ -427,6 +416,12 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   }
 
   /**
+   * If true, the service will do the following list of checks before an account is uploaded: *
+   * Duplicate emails * Duplicate federated IDs * Federated ID provider validation If the
+   * duplication exists within the list of accounts to be uploaded, it will prevent the entire list
+   * from being uploaded. If the email or federated ID is a duplicate of a user already within the
+   * project/tenant, the account will not be uploaded, but the rest of the accounts will be
+   * unaffected. If false, these checks will be skipped.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSanityCheck() {
@@ -434,6 +429,12 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   }
 
   /**
+   * If true, the service will do the following list of checks before an account is uploaded: *
+   * Duplicate emails * Duplicate federated IDs * Federated ID provider validation If the
+   * duplication exists within the list of accounts to be uploaded, it will prevent the entire list
+   * from being uploaded. If the email or federated ID is a duplicate of a user already within the
+   * project/tenant, the account will not be uploaded, but the rest of the accounts will be
+   * unaffected. If false, these checks will be skipped.
    * @param sanityCheck sanityCheck or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1UploadAccountRequest setSanityCheck(java.lang.Boolean sanityCheck) {
@@ -508,7 +509,8 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   }
 
   /**
-   * A list of accounts to upload.
+   * A list of accounts to upload. `local_id` is required for each user; everything else is
+   * optional.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudIdentitytoolkitV1UserInfo> getUsers() {
@@ -516,7 +518,8 @@ public final class GoogleCloudIdentitytoolkitV1UploadAccountRequest extends com.
   }
 
   /**
-   * A list of accounts to upload.
+   * A list of accounts to upload. `local_id` is required for each user; everything else is
+   * optional.
    * @param users users or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1UploadAccountRequest setUsers(java.util.List<GoogleCloudIdentitytoolkitV1UserInfo> users) {

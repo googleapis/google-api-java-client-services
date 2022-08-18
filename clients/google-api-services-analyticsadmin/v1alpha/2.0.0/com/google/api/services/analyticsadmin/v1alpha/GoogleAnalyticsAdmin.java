@@ -5214,7 +5214,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Lookup for a single Audience. Audiences created before 2020 may not be supported.
+       * Lookup for a single Audience. Audiences created before 2020 may not be supported. Default
+       * audiences will not show filter definitions.
        *
        * Create a request for the method "audiences.get".
        *
@@ -5238,7 +5239,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+/audiences/[^/]+$");
 
         /**
-         * Lookup for a single Audience. Audiences created before 2020 may not be supported.
+         * Lookup for a single Audience. Audiences created before 2020 may not be supported. Default
+         * audiences will not show filter definitions.
          *
          * Create a request for the method "audiences.get".
          *
@@ -5356,7 +5358,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Lists Audiences on a property. Audiences created before 2020 may not be supported.
+       * Lists Audiences on a property. Audiences created before 2020 may not be supported. Default
+       * audiences will not show filter definitions.
        *
        * Create a request for the method "audiences.list".
        *
@@ -5380,7 +5383,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+$");
 
         /**
-         * Lists Audiences on a property. Audiences created before 2020 may not be supported.
+         * Lists Audiences on a property. Audiences created before 2020 may not be supported. Default
+         * audiences will not show filter definitions.
          *
          * Create a request for the method "audiences.list".
          *

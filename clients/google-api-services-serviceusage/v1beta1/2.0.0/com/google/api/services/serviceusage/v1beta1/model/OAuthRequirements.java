@@ -40,6 +40,17 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class OAuthRequirements extends com.google.api.client.json.GenericJson {
 
   /**
+   * UNIMPLEMENTED: If enabled, ESF will allow OAuth credentials with any scope, more details in
+   * http://go/esf-oauth-any-scope. WARNING: Enabling this option will bring security risks.
+   * Customers enabling this feature accidentally may have the risk of losing authentication
+   * enforcement. Please reach out to api-auth@ and esf-team@ for approval and allowlisting before
+   * you enable this option.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowAnyScope;
+
+  /**
    * The list of publicly documented OAuth scopes that are allowed access. An OAuth token containing
    * any of these scopes will be accepted. Example: canonical_scopes:
    * https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/calendar.read
@@ -47,6 +58,31 @@ public final class OAuthRequirements extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String canonicalScopes;
+
+  /**
+   * UNIMPLEMENTED: If enabled, ESF will allow OAuth credentials with any scope, more details in
+   * http://go/esf-oauth-any-scope. WARNING: Enabling this option will bring security risks.
+   * Customers enabling this feature accidentally may have the risk of losing authentication
+   * enforcement. Please reach out to api-auth@ and esf-team@ for approval and allowlisting before
+   * you enable this option.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowAnyScope() {
+    return allowAnyScope;
+  }
+
+  /**
+   * UNIMPLEMENTED: If enabled, ESF will allow OAuth credentials with any scope, more details in
+   * http://go/esf-oauth-any-scope. WARNING: Enabling this option will bring security risks.
+   * Customers enabling this feature accidentally may have the risk of losing authentication
+   * enforcement. Please reach out to api-auth@ and esf-team@ for approval and allowlisting before
+   * you enable this option.
+   * @param allowAnyScope allowAnyScope or {@code null} for none
+   */
+  public OAuthRequirements setAllowAnyScope(java.lang.Boolean allowAnyScope) {
+    this.allowAnyScope = allowAnyScope;
+    return this;
+  }
 
   /**
    * The list of publicly documented OAuth scopes that are allowed access. An OAuth token containing

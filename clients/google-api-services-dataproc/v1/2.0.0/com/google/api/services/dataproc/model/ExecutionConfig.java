@@ -30,6 +30,16 @@ package com.google.api.services.dataproc.model;
 public final class ExecutionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The duration to keep the underlying cluster alive while idling Passing this threshold
+   * will cause the cluster to be terminated. Minimum value is 30 minutes; maximum value is 14 days
+   * (see JSON representation of Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String idleTtl;
+
+  /**
    * Optional. The Cloud KMS key to use for encryption.
    * The value may be {@code null}.
    */
@@ -63,6 +73,29 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetworkUri;
+
+  /**
+   * Optional. The duration to keep the underlying cluster alive while idling Passing this threshold
+   * will cause the cluster to be terminated. Minimum value is 30 minutes; maximum value is 14 days
+   * (see JSON representation of Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).
+   * @return value or {@code null} for none
+   */
+  public String getIdleTtl() {
+    return idleTtl;
+  }
+
+  /**
+   * Optional. The duration to keep the underlying cluster alive while idling Passing this threshold
+   * will cause the cluster to be terminated. Minimum value is 30 minutes; maximum value is 14 days
+   * (see JSON representation of Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).
+   * @param idleTtl idleTtl or {@code null} for none
+   */
+  public ExecutionConfig setIdleTtl(String idleTtl) {
+    this.idleTtl = idleTtl;
+    return this;
+  }
 
   /**
    * Optional. The Cloud KMS key to use for encryption.

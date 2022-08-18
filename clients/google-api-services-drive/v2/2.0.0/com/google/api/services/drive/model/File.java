@@ -445,6 +445,24 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * The SHA1 checksum associated with this file, if available. This field is only populated for
+   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sha1Checksum;
+
+  /**
+   * The SHA256 checksum associated with this file, if available. This field is only populated for
+   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sha256Checksum;
+
+  /**
    * Deprecated: use capabilities/canShare.
    * The value may be {@code null}.
    */
@@ -1566,6 +1584,48 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * The SHA1 checksum associated with this file, if available. This field is only populated for
+   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSha1Checksum() {
+    return sha1Checksum;
+  }
+
+  /**
+   * The SHA1 checksum associated with this file, if available. This field is only populated for
+   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files.
+   * @param sha1Checksum sha1Checksum or {@code null} for none
+   */
+  public File setSha1Checksum(java.lang.String sha1Checksum) {
+    this.sha1Checksum = sha1Checksum;
+    return this;
+  }
+
+  /**
+   * The SHA256 checksum associated with this file, if available. This field is only populated for
+   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSha256Checksum() {
+    return sha256Checksum;
+  }
+
+  /**
+   * The SHA256 checksum associated with this file, if available. This field is only populated for
+   * files with content stored in Google Drive; it is not populated for Docs Editors or shortcut
+   * files.
+   * @param sha256Checksum sha256Checksum or {@code null} for none
+   */
+  public File setSha256Checksum(java.lang.String sha256Checksum) {
+    this.sha256Checksum = sha256Checksum;
     return this;
   }
 

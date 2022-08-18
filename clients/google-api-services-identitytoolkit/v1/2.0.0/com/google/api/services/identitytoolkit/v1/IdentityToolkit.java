@@ -25,7 +25,7 @@ package com.google.api.services.identitytoolkit.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://firebase.google.com/docs/auth/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/identity-platform" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

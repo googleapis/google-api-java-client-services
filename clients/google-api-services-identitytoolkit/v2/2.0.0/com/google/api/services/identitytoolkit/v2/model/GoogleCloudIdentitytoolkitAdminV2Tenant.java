@@ -44,6 +44,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
   private java.lang.Boolean autodeleteAnonymousUsers;
 
   /**
+   * Options related to how clients making requests on behalf of a project should be configured.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2ClientPermissionConfig client;
+
+  /**
    * Whether authentication is disabled for the tenant. If true, the users under the disabled tenant
    * are not allowed to sign-in. Admins of the disabled tenant are not able to manage its users.
    * The value may be {@code null}.
@@ -144,6 +151,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Tenant setAutodeleteAnonymousUsers(java.lang.Boolean autodeleteAnonymousUsers) {
     this.autodeleteAnonymousUsers = autodeleteAnonymousUsers;
+    return this;
+  }
+
+  /**
+   * Options related to how clients making requests on behalf of a project should be configured.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2ClientPermissionConfig getClient() {
+    return client;
+  }
+
+  /**
+   * Options related to how clients making requests on behalf of a project should be configured.
+   * @param client client or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Tenant setClient(GoogleCloudIdentitytoolkitAdminV2ClientPermissionConfig client) {
+    this.client = client;
     return this;
   }
 

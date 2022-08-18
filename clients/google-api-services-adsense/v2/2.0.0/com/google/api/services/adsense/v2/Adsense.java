@@ -292,6 +292,146 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Gets the ad blocking recovery tag of an account.
+     *
+     * Create a request for the method "accounts.getAdBlockingRecoveryTag".
+     *
+     * This request holds the parameters needed by the adsense server.  After setting any optional
+     * parameters, call the {@link GetAdBlockingRecoveryTag#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the account to get the tag for. Format: accounts/{account}
+     * @return the request
+     */
+    public GetAdBlockingRecoveryTag getAdBlockingRecoveryTag(java.lang.String name) throws java.io.IOException {
+      GetAdBlockingRecoveryTag result = new GetAdBlockingRecoveryTag(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetAdBlockingRecoveryTag extends AdsenseRequest<com.google.api.services.adsense.v2.model.AdBlockingRecoveryTag> {
+
+      private static final String REST_PATH = "v2/{+name}/adBlockingRecoveryTag";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+      /**
+       * Gets the ad blocking recovery tag of an account.
+       *
+       * Create a request for the method "accounts.getAdBlockingRecoveryTag".
+       *
+       * This request holds the parameters needed by the the adsense server.  After setting any optional
+       * parameters, call the {@link GetAdBlockingRecoveryTag#execute()} method to invoke the remote
+       * operation. <p> {@link GetAdBlockingRecoveryTag#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the account to get the tag for. Format: accounts/{account}
+       * @since 1.13
+       */
+      protected GetAdBlockingRecoveryTag(java.lang.String name) {
+        super(Adsense.this, "GET", REST_PATH, null, com.google.api.services.adsense.v2.model.AdBlockingRecoveryTag.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAdBlockingRecoveryTag) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setAccessToken(java.lang.String accessToken) {
+        return (GetAdBlockingRecoveryTag) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setAlt(java.lang.String alt) {
+        return (GetAdBlockingRecoveryTag) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setCallback(java.lang.String callback) {
+        return (GetAdBlockingRecoveryTag) super.setCallback(callback);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setFields(java.lang.String fields) {
+        return (GetAdBlockingRecoveryTag) super.setFields(fields);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setKey(java.lang.String key) {
+        return (GetAdBlockingRecoveryTag) super.setKey(key);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setOauthToken(java.lang.String oauthToken) {
+        return (GetAdBlockingRecoveryTag) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetAdBlockingRecoveryTag) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setQuotaUser(java.lang.String quotaUser) {
+        return (GetAdBlockingRecoveryTag) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setUploadType(java.lang.String uploadType) {
+        return (GetAdBlockingRecoveryTag) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAdBlockingRecoveryTag) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the account to get the tag for. Format: accounts/{account} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the account to get the tag for. Format: accounts/{account}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the account to get the tag for. Format: accounts/{account} */
+      public GetAdBlockingRecoveryTag setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetAdBlockingRecoveryTag set(String parameterName, Object value) {
+        return (GetAdBlockingRecoveryTag) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lists all accounts available to this user.
      *
      * Create a request for the method "accounts.list".

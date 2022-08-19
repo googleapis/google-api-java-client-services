@@ -17,13 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * An Attachment represents a linked entity associated with a piece of social content. This may be a
- * 1st-party or 3rd-party entity. In the Papyrus context, an Attachment is part of a Cent, and sits
- * alongside the main content of the cent, which is represented as a sequence of Segments. Right now
- * an Attachment is just a wrapper around an Embed, but we provide the extra layer of abstraction
- * since, as Embeds move to separate storage in Briefcase, we may want to add additional fields that
- * are not part of the Embed proper, but that (for example) relate to the usage of the linked
- * content within the particular post/cent.
+ * Attachments that follow the message text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -36,50 +30,173 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * An embed represents an external entity. See go/es-embeds.
+   * Revised version of Gmail AddOn attachment approved by API design review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private EmbedClientItem embedItem;
+  private GoogleChatV1ContextualAddOnMarkup addOnData;
 
   /**
-   * An id to uniquely identify an attachment when several attachments are in a collection.
+   * The userId for the bot/app that created this data, to be used for attribution of attachments
+   * when the attachment was not created by the message sender.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private UserId appId;
 
   /**
-   * An embed represents an external entity. See go/es-embeds.
+   * To identify an attachment within repeated in a message
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attachmentId;
+
+  /**
+   * Card AddOn attachment with the possibility for specifying editable widgets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedCard cardAddOnData;
+
+  /**
+   * Deprecated version of Gmail AddOn attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContextualAddOnMarkup deprecatedAddOnData;
+
+  /**
+   * Slack attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteV1ApiCompatV1Attachment slackData;
+
+  /**
+   * The height of image url as fetched by fife. This field is asynchronously filled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer slackDataImageUrlHeight;
+
+  /**
+   * Revised version of Gmail AddOn attachment approved by API design review.
    * @return value or {@code null} for none
    */
-  public EmbedClientItem getEmbedItem() {
-    return embedItem;
+  public GoogleChatV1ContextualAddOnMarkup getAddOnData() {
+    return addOnData;
   }
 
   /**
-   * An embed represents an external entity. See go/es-embeds.
-   * @param embedItem embedItem or {@code null} for none
+   * Revised version of Gmail AddOn attachment approved by API design review.
+   * @param addOnData addOnData or {@code null} for none
    */
-  public Attachment setEmbedItem(EmbedClientItem embedItem) {
-    this.embedItem = embedItem;
+  public Attachment setAddOnData(GoogleChatV1ContextualAddOnMarkup addOnData) {
+    this.addOnData = addOnData;
     return this;
   }
 
   /**
-   * An id to uniquely identify an attachment when several attachments are in a collection.
+   * The userId for the bot/app that created this data, to be used for attribution of attachments
+   * when the attachment was not created by the message sender.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public UserId getAppId() {
+    return appId;
   }
 
   /**
-   * An id to uniquely identify an attachment when several attachments are in a collection.
-   * @param id id or {@code null} for none
+   * The userId for the bot/app that created this data, to be used for attribution of attachments
+   * when the attachment was not created by the message sender.
+   * @param appId appId or {@code null} for none
    */
-  public Attachment setId(java.lang.String id) {
-    this.id = id;
+  public Attachment setAppId(UserId appId) {
+    this.appId = appId;
+    return this;
+  }
+
+  /**
+   * To identify an attachment within repeated in a message
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttachmentId() {
+    return attachmentId;
+  }
+
+  /**
+   * To identify an attachment within repeated in a message
+   * @param attachmentId attachmentId or {@code null} for none
+   */
+  public Attachment setAttachmentId(java.lang.String attachmentId) {
+    this.attachmentId = attachmentId;
+    return this;
+  }
+
+  /**
+   * Card AddOn attachment with the possibility for specifying editable widgets.
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedCard getCardAddOnData() {
+    return cardAddOnData;
+  }
+
+  /**
+   * Card AddOn attachment with the possibility for specifying editable widgets.
+   * @param cardAddOnData cardAddOnData or {@code null} for none
+   */
+  public Attachment setCardAddOnData(AppsDynamiteSharedCard cardAddOnData) {
+    this.cardAddOnData = cardAddOnData;
+    return this;
+  }
+
+  /**
+   * Deprecated version of Gmail AddOn attachment.
+   * @return value or {@code null} for none
+   */
+  public ContextualAddOnMarkup getDeprecatedAddOnData() {
+    return deprecatedAddOnData;
+  }
+
+  /**
+   * Deprecated version of Gmail AddOn attachment.
+   * @param deprecatedAddOnData deprecatedAddOnData or {@code null} for none
+   */
+  public Attachment setDeprecatedAddOnData(ContextualAddOnMarkup deprecatedAddOnData) {
+    this.deprecatedAddOnData = deprecatedAddOnData;
+    return this;
+  }
+
+  /**
+   * Slack attachment.
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteV1ApiCompatV1Attachment getSlackData() {
+    return slackData;
+  }
+
+  /**
+   * Slack attachment.
+   * @param slackData slackData or {@code null} for none
+   */
+  public Attachment setSlackData(AppsDynamiteV1ApiCompatV1Attachment slackData) {
+    this.slackData = slackData;
+    return this;
+  }
+
+  /**
+   * The height of image url as fetched by fife. This field is asynchronously filled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSlackDataImageUrlHeight() {
+    return slackDataImageUrlHeight;
+  }
+
+  /**
+   * The height of image url as fetched by fife. This field is asynchronously filled.
+   * @param slackDataImageUrlHeight slackDataImageUrlHeight or {@code null} for none
+   */
+  public Attachment setSlackDataImageUrlHeight(java.lang.Integer slackDataImageUrlHeight) {
+    this.slackDataImageUrlHeight = slackDataImageUrlHeight;
     return this;
   }
 

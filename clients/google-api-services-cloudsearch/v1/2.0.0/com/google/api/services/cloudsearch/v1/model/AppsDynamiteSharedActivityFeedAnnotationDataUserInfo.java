@@ -49,7 +49,7 @@ public final class AppsDynamiteSharedActivityFeedAnnotationDataUserInfo extends 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteUserId updaterToShow;
+  private UserId updaterToShow;
 
   /**
    * Describes how updater_count_to_show should be used.
@@ -91,7 +91,7 @@ public final class AppsDynamiteSharedActivityFeedAnnotationDataUserInfo extends 
    * The updater for clients to show.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteUserId getUpdaterToShow() {
+  public UserId getUpdaterToShow() {
     return updaterToShow;
   }
 
@@ -99,7 +99,7 @@ public final class AppsDynamiteSharedActivityFeedAnnotationDataUserInfo extends 
    * The updater for clients to show.
    * @param updaterToShow updaterToShow or {@code null} for none
    */
-  public AppsDynamiteSharedActivityFeedAnnotationDataUserInfo setUpdaterToShow(AppsDynamiteUserId updaterToShow) {
+  public AppsDynamiteSharedActivityFeedAnnotationDataUserInfo setUpdaterToShow(UserId updaterToShow) {
     this.updaterToShow = updaterToShow;
     return this;
   }

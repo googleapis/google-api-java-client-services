@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A Meet initiated in Dynamite and its URL.
+ * Model definition for VideoCallMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -30,23 +30,77 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class VideoCallMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Thor meeting space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String meetingUrl;
+  private MeetingSpace meetingSpace;
 
   /**
+   * If this field is set to true, server should still contact external backends to get metadata for
+   * search but clients should not render this chip.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean shouldNotRender;
+
+  /**
+   * Whether this meeting space was created via Dynamite in this Dynamite group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean wasCreatedInCurrentGroup;
+
+  /**
+   * Thor meeting space.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMeetingUrl() {
-    return meetingUrl;
+  public MeetingSpace getMeetingSpace() {
+    return meetingSpace;
   }
 
   /**
-   * @param meetingUrl meetingUrl or {@code null} for none
+   * Thor meeting space.
+   * @param meetingSpace meetingSpace or {@code null} for none
    */
-  public VideoCallMetadata setMeetingUrl(java.lang.String meetingUrl) {
-    this.meetingUrl = meetingUrl;
+  public VideoCallMetadata setMeetingSpace(MeetingSpace meetingSpace) {
+    this.meetingSpace = meetingSpace;
+    return this;
+  }
+
+  /**
+   * If this field is set to true, server should still contact external backends to get metadata for
+   * search but clients should not render this chip.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getShouldNotRender() {
+    return shouldNotRender;
+  }
+
+  /**
+   * If this field is set to true, server should still contact external backends to get metadata for
+   * search but clients should not render this chip.
+   * @param shouldNotRender shouldNotRender or {@code null} for none
+   */
+  public VideoCallMetadata setShouldNotRender(java.lang.Boolean shouldNotRender) {
+    this.shouldNotRender = shouldNotRender;
+    return this;
+  }
+
+  /**
+   * Whether this meeting space was created via Dynamite in this Dynamite group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWasCreatedInCurrentGroup() {
+    return wasCreatedInCurrentGroup;
+  }
+
+  /**
+   * Whether this meeting space was created via Dynamite in this Dynamite group.
+   * @param wasCreatedInCurrentGroup wasCreatedInCurrentGroup or {@code null} for none
+   */
+  public VideoCallMetadata setWasCreatedInCurrentGroup(java.lang.Boolean wasCreatedInCurrentGroup) {
+    this.wasCreatedInCurrentGroup = wasCreatedInCurrentGroup;
     return this;
   }
 

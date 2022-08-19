@@ -50,7 +50,7 @@ public final class LinkData extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Attachment attachment;
+  private SocialCommonAttachmentAttachment attachment;
 
   /**
    * The hint to use when rendering the associated attachment. Ignored if there is no associated
@@ -114,7 +114,7 @@ public final class LinkData extends com.google.api.client.json.GenericJson {
    * visibility annotations. See: apps/tacotown/proto/embeds/embed_annotations.proto
    * @return value or {@code null} for none
    */
-  public Attachment getAttachment() {
+  public SocialCommonAttachmentAttachment getAttachment() {
     return attachment;
   }
 
@@ -137,7 +137,7 @@ public final class LinkData extends com.google.api.client.json.GenericJson {
    * visibility annotations. See: apps/tacotown/proto/embeds/embed_annotations.proto
    * @param attachment attachment or {@code null} for none
    */
-  public LinkData setAttachment(Attachment attachment) {
+  public LinkData setAttachment(SocialCommonAttachmentAttachment attachment) {
     this.attachment = attachment;
     return this;
   }

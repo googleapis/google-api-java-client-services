@@ -33,7 +33,7 @@ public final class AppsDynamiteSharedOriginAppSuggestion extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteAppId appId;
+  private AppId appId;
 
   /**
    * The value may be {@code null}.
@@ -44,14 +44,14 @@ public final class AppsDynamiteSharedOriginAppSuggestion extends com.google.api.
   /**
    * @return value or {@code null} for none
    */
-  public AppsDynamiteAppId getAppId() {
+  public AppId getAppId() {
     return appId;
   }
 
   /**
    * @param appId appId or {@code null} for none
    */
-  public AppsDynamiteSharedOriginAppSuggestion setAppId(AppsDynamiteAppId appId) {
+  public AppsDynamiteSharedOriginAppSuggestion setAppId(AppId appId) {
     this.appId = appId;
     return this;
   }

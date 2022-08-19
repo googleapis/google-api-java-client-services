@@ -34,13 +34,13 @@ public final class AppsDynamiteSharedTasksAnnotationDataAssigneeChange extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteUserId oldAssignee;
+  private UserId oldAssignee;
 
   /**
    * Obfuscated user ID of previous assignee. Not set if the task was originally not assigned.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteUserId getOldAssignee() {
+  public UserId getOldAssignee() {
     return oldAssignee;
   }
 
@@ -48,7 +48,7 @@ public final class AppsDynamiteSharedTasksAnnotationDataAssigneeChange extends c
    * Obfuscated user ID of previous assignee. Not set if the task was originally not assigned.
    * @param oldAssignee oldAssignee or {@code null} for none
    */
-  public AppsDynamiteSharedTasksAnnotationDataAssigneeChange setOldAssignee(AppsDynamiteUserId oldAssignee) {
+  public AppsDynamiteSharedTasksAnnotationDataAssigneeChange setOldAssignee(UserId oldAssignee) {
     this.oldAssignee = oldAssignee;
     return this;
   }

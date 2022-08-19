@@ -30,11 +30,56 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class EmailAddress extends com.google.api.client.json.GenericJson {
 
   /**
+   * If the value of type is custom, this property contains the custom type string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customType;
+
+  /**
    * The email address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String emailAddress;
+
+  /**
+   * The URL to send email.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String emailUrl;
+
+  /**
+   * Indicates if this is the user's primary email. Only one entry can be marked as primary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean primary;
+
+  /**
+   * The type of the email account. Acceptable values are: "custom", "home", "other", "work".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * If the value of type is custom, this property contains the custom type string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomType() {
+    return customType;
+  }
+
+  /**
+   * If the value of type is custom, this property contains the custom type string.
+   * @param customType customType or {@code null} for none
+   */
+  public EmailAddress setCustomType(java.lang.String customType) {
+    this.customType = customType;
+    return this;
+  }
 
   /**
    * The email address.
@@ -50,6 +95,57 @@ public final class EmailAddress extends com.google.api.client.json.GenericJson {
    */
   public EmailAddress setEmailAddress(java.lang.String emailAddress) {
     this.emailAddress = emailAddress;
+    return this;
+  }
+
+  /**
+   * The URL to send email.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmailUrl() {
+    return emailUrl;
+  }
+
+  /**
+   * The URL to send email.
+   * @param emailUrl emailUrl or {@code null} for none
+   */
+  public EmailAddress setEmailUrl(java.lang.String emailUrl) {
+    this.emailUrl = emailUrl;
+    return this;
+  }
+
+  /**
+   * Indicates if this is the user's primary email. Only one entry can be marked as primary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrimary() {
+    return primary;
+  }
+
+  /**
+   * Indicates if this is the user's primary email. Only one entry can be marked as primary.
+   * @param primary primary or {@code null} for none
+   */
+  public EmailAddress setPrimary(java.lang.Boolean primary) {
+    this.primary = primary;
+    return this;
+  }
+
+  /**
+   * The type of the email account. Acceptable values are: "custom", "home", "other", "work".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * The type of the email account. Acceptable values are: "custom", "home", "other", "work".
+   * @param type type or {@code null} for none
+   */
+  public EmailAddress setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

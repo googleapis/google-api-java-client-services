@@ -79,6 +79,13 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String calendarEventId;
 
   /**
+   * Configuration for the chat for this conference.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChatConfig chatConfig;
+
+  /**
    * The current co-activity session, or unset if there is none in progress. A co-activity session
    * can be initiated by devices in JOINED state . Initiator of the co-activity is expected to
    * populate this field to start the session. Once clients detect that the co-activity has
@@ -188,13 +195,6 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<StreamingSessionInfo> streamingSessions;
-
-  /**
-   * Supported caption languages in BCP 47 language code format, e.g.'en-US'.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> supportedCaptionLanguages;
 
   /**
    * Information about active transcription session in the ongoing conference.
@@ -331,6 +331,23 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    */
   public CallInfo setCalendarEventId(java.lang.String calendarEventId) {
     this.calendarEventId = calendarEventId;
+    return this;
+  }
+
+  /**
+   * Configuration for the chat for this conference.
+   * @return value or {@code null} for none
+   */
+  public ChatConfig getChatConfig() {
+    return chatConfig;
+  }
+
+  /**
+   * Configuration for the chat for this conference.
+   * @param chatConfig chatConfig or {@code null} for none
+   */
+  public CallInfo setChatConfig(ChatConfig chatConfig) {
+    this.chatConfig = chatConfig;
     return this;
   }
 
@@ -589,23 +606,6 @@ public final class CallInfo extends com.google.api.client.json.GenericJson {
    */
   public CallInfo setStreamingSessions(java.util.List<StreamingSessionInfo> streamingSessions) {
     this.streamingSessions = streamingSessions;
-    return this;
-  }
-
-  /**
-   * Supported caption languages in BCP 47 language code format, e.g.'en-US'.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSupportedCaptionLanguages() {
-    return supportedCaptionLanguages;
-  }
-
-  /**
-   * Supported caption languages in BCP 47 language code format, e.g.'en-US'.
-   * @param supportedCaptionLanguages supportedCaptionLanguages or {@code null} for none
-   */
-  public CallInfo setSupportedCaptionLanguages(java.util.List<java.lang.String> supportedCaptionLanguages) {
-    this.supportedCaptionLanguages = supportedCaptionLanguages;
     return this;
   }
 

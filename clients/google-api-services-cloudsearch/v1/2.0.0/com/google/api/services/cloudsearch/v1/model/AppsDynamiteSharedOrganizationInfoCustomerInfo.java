@@ -33,19 +33,19 @@ public final class AppsDynamiteSharedOrganizationInfoCustomerInfo extends com.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteCustomerId customerId;
+  private CustomerId customerId;
 
   /**
    * @return value or {@code null} for none
    */
-  public AppsDynamiteCustomerId getCustomerId() {
+  public CustomerId getCustomerId() {
     return customerId;
   }
 
   /**
    * @param customerId customerId or {@code null} for none
    */
-  public AppsDynamiteSharedOrganizationInfoCustomerInfo setCustomerId(AppsDynamiteCustomerId customerId) {
+  public AppsDynamiteSharedOrganizationInfoCustomerInfo setCustomerId(CustomerId customerId) {
     this.customerId = customerId;
     return this;
   }

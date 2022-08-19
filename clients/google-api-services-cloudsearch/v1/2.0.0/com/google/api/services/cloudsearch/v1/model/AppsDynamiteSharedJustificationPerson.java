@@ -41,7 +41,7 @@ public final class AppsDynamiteSharedJustificationPerson extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteUserId user;
+  private UserId user;
 
   /**
    * Whether the person is the recipient of the suggestions.
@@ -64,7 +64,7 @@ public final class AppsDynamiteSharedJustificationPerson extends com.google.api.
    * Obfuscated user ID.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteUserId getUser() {
+  public UserId getUser() {
     return user;
   }
 
@@ -72,7 +72,7 @@ public final class AppsDynamiteSharedJustificationPerson extends com.google.api.
    * Obfuscated user ID.
    * @param user user or {@code null} for none
    */
-  public AppsDynamiteSharedJustificationPerson setUser(AppsDynamiteUserId user) {
+  public AppsDynamiteSharedJustificationPerson setUser(UserId user) {
     this.user = user;
     return this;
   }

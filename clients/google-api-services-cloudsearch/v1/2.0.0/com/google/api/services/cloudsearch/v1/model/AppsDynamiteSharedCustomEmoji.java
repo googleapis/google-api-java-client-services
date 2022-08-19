@@ -60,7 +60,7 @@ public final class AppsDynamiteSharedCustomEmoji extends com.google.api.client.j
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteUserId creatorUserId;
+  private UserId creatorUserId;
 
   /**
    * Time when the emoji was deleted, in microseconds. This field may be present in Spanner, within
@@ -83,7 +83,7 @@ public final class AppsDynamiteSharedCustomEmoji extends com.google.api.client.j
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteCustomerId ownerCustomerId;
+  private CustomerId ownerCustomerId;
 
   /**
    * Opaque token that clients use to construct the URL for accessing the custom emoji’s image data.
@@ -185,7 +185,7 @@ public final class AppsDynamiteSharedCustomEmoji extends com.google.api.client.j
    * This field should *never* be persisted to Spanner.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteUserId getCreatorUserId() {
+  public UserId getCreatorUserId() {
     return creatorUserId;
   }
 
@@ -193,7 +193,7 @@ public final class AppsDynamiteSharedCustomEmoji extends com.google.api.client.j
    * This field should *never* be persisted to Spanner.
    * @param creatorUserId creatorUserId or {@code null} for none
    */
-  public AppsDynamiteSharedCustomEmoji setCreatorUserId(AppsDynamiteUserId creatorUserId) {
+  public AppsDynamiteSharedCustomEmoji setCreatorUserId(UserId creatorUserId) {
     this.creatorUserId = creatorUserId;
     return this;
   }
@@ -240,7 +240,7 @@ public final class AppsDynamiteSharedCustomEmoji extends com.google.api.client.j
    * This field should *never* be persisted to Spanner.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteCustomerId getOwnerCustomerId() {
+  public CustomerId getOwnerCustomerId() {
     return ownerCustomerId;
   }
 
@@ -248,7 +248,7 @@ public final class AppsDynamiteSharedCustomEmoji extends com.google.api.client.j
    * This field should *never* be persisted to Spanner.
    * @param ownerCustomerId ownerCustomerId or {@code null} for none
    */
-  public AppsDynamiteSharedCustomEmoji setOwnerCustomerId(AppsDynamiteCustomerId ownerCustomerId) {
+  public AppsDynamiteSharedCustomEmoji setOwnerCustomerId(CustomerId ownerCustomerId) {
     this.ownerCustomerId = ownerCustomerId;
     return this;
   }

@@ -30,11 +30,35 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class ResponseDebugInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Experiments enabled in QAPI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> enabledExperiments;
+
+  /**
    * General debug info formatted for display.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String formattedDebugInfo;
+
+  /**
+   * Experiments enabled in QAPI.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getEnabledExperiments() {
+    return enabledExperiments;
+  }
+
+  /**
+   * Experiments enabled in QAPI.
+   * @param enabledExperiments enabledExperiments or {@code null} for none
+   */
+  public ResponseDebugInfo setEnabledExperiments(java.util.List<java.lang.Integer> enabledExperiments) {
+    this.enabledExperiments = enabledExperiments;
+    return this;
+  }
 
   /**
    * General debug info formatted for display.

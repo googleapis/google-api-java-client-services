@@ -35,7 +35,7 @@ public final class AppsDynamiteSharedMessageInfo extends com.google.api.client.j
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteMessageId messageId;
+  private MessageId messageId;
 
   /**
    * Timestamp of when the topic containing the message has been read by the user. This is populated
@@ -51,7 +51,7 @@ public final class AppsDynamiteSharedMessageInfo extends com.google.api.client.j
    * AF message ID.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteMessageId getMessageId() {
+  public MessageId getMessageId() {
     return messageId;
   }
 
@@ -60,7 +60,7 @@ public final class AppsDynamiteSharedMessageInfo extends com.google.api.client.j
    * AF message ID.
    * @param messageId messageId or {@code null} for none
    */
-  public AppsDynamiteSharedMessageInfo setMessageId(AppsDynamiteMessageId messageId) {
+  public AppsDynamiteSharedMessageInfo setMessageId(MessageId messageId) {
     this.messageId = messageId;
     return this;
   }

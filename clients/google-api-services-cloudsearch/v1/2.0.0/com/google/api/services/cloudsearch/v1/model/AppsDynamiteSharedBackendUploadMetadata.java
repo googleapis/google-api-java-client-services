@@ -73,14 +73,14 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteBackendDlpScanSummary dlpScanSummary;
+  private DlpScanSummary dlpScanSummary;
 
   /**
    * GroupId to which this attachment is uploaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteGroupId groupId;
+  private GroupId groupId;
 
   /**
    * Original dimension of the content. Only set for image attachments.
@@ -99,7 +99,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteMessageId quoteReplyMessageId;
+  private MessageId quoteReplyMessageId;
 
   /**
    * The SHA256 hash of the attachment bytes.
@@ -240,7 +240,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * the backend when they are uploaded.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteBackendDlpScanSummary getDlpScanSummary() {
+  public DlpScanSummary getDlpScanSummary() {
     return dlpScanSummary;
   }
 
@@ -249,7 +249,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * the backend when they are uploaded.
    * @param dlpScanSummary dlpScanSummary or {@code null} for none
    */
-  public AppsDynamiteSharedBackendUploadMetadata setDlpScanSummary(AppsDynamiteBackendDlpScanSummary dlpScanSummary) {
+  public AppsDynamiteSharedBackendUploadMetadata setDlpScanSummary(DlpScanSummary dlpScanSummary) {
     this.dlpScanSummary = dlpScanSummary;
     return this;
   }
@@ -258,7 +258,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * GroupId to which this attachment is uploaded.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteGroupId getGroupId() {
+  public GroupId getGroupId() {
     return groupId;
   }
 
@@ -266,7 +266,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * GroupId to which this attachment is uploaded.
    * @param groupId groupId or {@code null} for none
    */
-  public AppsDynamiteSharedBackendUploadMetadata setGroupId(AppsDynamiteGroupId groupId) {
+  public AppsDynamiteSharedBackendUploadMetadata setGroupId(GroupId groupId) {
     this.groupId = groupId;
     return this;
   }
@@ -297,7 +297,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * /message-quoting-attachments for more context.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteMessageId getQuoteReplyMessageId() {
+  public MessageId getQuoteReplyMessageId() {
     return quoteReplyMessageId;
   }
 
@@ -310,7 +310,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    * /message-quoting-attachments for more context.
    * @param quoteReplyMessageId quoteReplyMessageId or {@code null} for none
    */
-  public AppsDynamiteSharedBackendUploadMetadata setQuoteReplyMessageId(AppsDynamiteMessageId quoteReplyMessageId) {
+  public AppsDynamiteSharedBackendUploadMetadata setQuoteReplyMessageId(MessageId quoteReplyMessageId) {
     this.quoteReplyMessageId = quoteReplyMessageId;
     return this;
   }

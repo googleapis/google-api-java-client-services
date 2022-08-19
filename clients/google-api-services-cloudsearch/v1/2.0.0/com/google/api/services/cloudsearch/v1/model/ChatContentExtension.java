@@ -42,7 +42,7 @@ public final class ChatContentExtension extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DynamitePlaceholderMetadata dynamitePlaceholderMetadata;
+  private ChatConserverDynamitePlaceholderMetadata dynamitePlaceholderMetadata;
 
   /**
    * Is this event OnTR or OffTR? Since some events can be ON_THE_RECORD and have an
@@ -122,7 +122,7 @@ public final class ChatContentExtension extends com.google.api.client.json.Gener
    * go/localization-of-system-messages. This is only used as part of REGULAR_CHAT_MESSAGE events.
    * @return value or {@code null} for none
    */
-  public DynamitePlaceholderMetadata getDynamitePlaceholderMetadata() {
+  public ChatConserverDynamitePlaceholderMetadata getDynamitePlaceholderMetadata() {
     return dynamitePlaceholderMetadata;
   }
 
@@ -131,7 +131,7 @@ public final class ChatContentExtension extends com.google.api.client.json.Gener
    * go/localization-of-system-messages. This is only used as part of REGULAR_CHAT_MESSAGE events.
    * @param dynamitePlaceholderMetadata dynamitePlaceholderMetadata or {@code null} for none
    */
-  public ChatContentExtension setDynamitePlaceholderMetadata(DynamitePlaceholderMetadata dynamitePlaceholderMetadata) {
+  public ChatContentExtension setDynamitePlaceholderMetadata(ChatConserverDynamitePlaceholderMetadata dynamitePlaceholderMetadata) {
     this.dynamitePlaceholderMetadata = dynamitePlaceholderMetadata;
     return this;
   }

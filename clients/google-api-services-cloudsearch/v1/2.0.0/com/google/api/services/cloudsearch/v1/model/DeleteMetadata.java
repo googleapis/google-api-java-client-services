@@ -17,7 +17,9 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A message was deleted in Dynamite.
+ * A message delete in Dynamite inserts a Babel-only item containing this field. This is only
+ * inserted for messages before the source-of-truth flip. See go/hsc-message-deletions for more
+ * details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

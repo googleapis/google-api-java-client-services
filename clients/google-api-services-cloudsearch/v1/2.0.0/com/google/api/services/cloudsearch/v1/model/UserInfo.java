@@ -63,7 +63,7 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteUserId updaterToShowUserId;
+  private UserId updaterToShowUserId;
 
   /**
    * Describes how updater_count_to_show should be used.
@@ -139,7 +139,7 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * The updater for clients to show used for Dynamite Chat items.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteUserId getUpdaterToShowUserId() {
+  public UserId getUpdaterToShowUserId() {
     return updaterToShowUserId;
   }
 
@@ -147,7 +147,7 @@ public final class UserInfo extends com.google.api.client.json.GenericJson {
    * The updater for clients to show used for Dynamite Chat items.
    * @param updaterToShowUserId updaterToShowUserId or {@code null} for none
    */
-  public UserInfo setUpdaterToShowUserId(AppsDynamiteUserId updaterToShowUserId) {
+  public UserInfo setUpdaterToShowUserId(UserId updaterToShowUserId) {
     this.updaterToShowUserId = updaterToShowUserId;
     return this;
   }

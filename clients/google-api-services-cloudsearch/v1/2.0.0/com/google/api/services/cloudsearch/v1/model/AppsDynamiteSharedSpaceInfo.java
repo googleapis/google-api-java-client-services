@@ -51,7 +51,7 @@ public final class AppsDynamiteSharedSpaceInfo extends com.google.api.client.jso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteGroupId groupId;
+  private GroupId groupId;
 
   /**
    * The email address of the user that invited the calling user to the room, if available. This
@@ -136,14 +136,14 @@ public final class AppsDynamiteSharedSpaceInfo extends com.google.api.client.jso
   /**
    * @return value or {@code null} for none
    */
-  public AppsDynamiteGroupId getGroupId() {
+  public GroupId getGroupId() {
     return groupId;
   }
 
   /**
    * @param groupId groupId or {@code null} for none
    */
-  public AppsDynamiteSharedSpaceInfo setGroupId(AppsDynamiteGroupId groupId) {
+  public AppsDynamiteSharedSpaceInfo setGroupId(GroupId groupId) {
     this.groupId = groupId;
     return this;
   }

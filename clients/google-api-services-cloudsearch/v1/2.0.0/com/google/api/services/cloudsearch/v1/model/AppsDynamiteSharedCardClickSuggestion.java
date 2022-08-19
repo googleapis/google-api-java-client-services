@@ -42,7 +42,7 @@ public final class AppsDynamiteSharedCardClickSuggestion extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteMessageId suggestionMessageId;
+  private MessageId suggestionMessageId;
 
   /**
    * Identify the button/action that created the suggestion. A simple example would be a card button
@@ -67,7 +67,7 @@ public final class AppsDynamiteSharedCardClickSuggestion extends com.google.api.
    * The message_id for the message that was posted by the app/bot.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteMessageId getSuggestionMessageId() {
+  public MessageId getSuggestionMessageId() {
     return suggestionMessageId;
   }
 
@@ -75,7 +75,7 @@ public final class AppsDynamiteSharedCardClickSuggestion extends com.google.api.
    * The message_id for the message that was posted by the app/bot.
    * @param suggestionMessageId suggestionMessageId or {@code null} for none
    */
-  public AppsDynamiteSharedCardClickSuggestion setSuggestionMessageId(AppsDynamiteMessageId suggestionMessageId) {
+  public AppsDynamiteSharedCardClickSuggestion setSuggestionMessageId(MessageId suggestionMessageId) {
     this.suggestionMessageId = suggestionMessageId;
     return this;
   }

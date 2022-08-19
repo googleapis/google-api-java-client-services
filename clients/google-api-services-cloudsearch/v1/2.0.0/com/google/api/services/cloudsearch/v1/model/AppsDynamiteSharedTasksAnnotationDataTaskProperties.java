@@ -34,7 +34,7 @@ public final class AppsDynamiteSharedTasksAnnotationDataTaskProperties extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppsDynamiteUserId assignee;
+  private UserId assignee;
 
   /**
    * Whether the task is marked as completed.
@@ -84,7 +84,7 @@ public final class AppsDynamiteSharedTasksAnnotationDataTaskProperties extends c
    * Obfuscated user ID of new assignee. Not set if the task doesn't have an assignee.
    * @return value or {@code null} for none
    */
-  public AppsDynamiteUserId getAssignee() {
+  public UserId getAssignee() {
     return assignee;
   }
 
@@ -92,7 +92,7 @@ public final class AppsDynamiteSharedTasksAnnotationDataTaskProperties extends c
    * Obfuscated user ID of new assignee. Not set if the task doesn't have an assignee.
    * @param assignee assignee or {@code null} for none
    */
-  public AppsDynamiteSharedTasksAnnotationDataTaskProperties setAssignee(AppsDynamiteUserId assignee) {
+  public AppsDynamiteSharedTasksAnnotationDataTaskProperties setAssignee(UserId assignee) {
     this.assignee = assignee;
     return this;
   }

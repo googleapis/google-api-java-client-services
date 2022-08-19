@@ -51,13 +51,6 @@ public final class WhiteboardInfo extends com.google.api.client.json.GenericJson
   private java.lang.String uri;
 
   /**
-   * This field is deprecated and will be removed. Please use "uri" instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String whiteboardUri;
-
-  /**
    * The Cosmo Id of the whiteboard document (Jam).
    * @return value or {@code null} for none
    */
@@ -105,23 +98,6 @@ public final class WhiteboardInfo extends com.google.api.client.json.GenericJson
    */
   public WhiteboardInfo setUri(java.lang.String uri) {
     this.uri = uri;
-    return this;
-  }
-
-  /**
-   * This field is deprecated and will be removed. Please use "uri" instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getWhiteboardUri() {
-    return whiteboardUri;
-  }
-
-  /**
-   * This field is deprecated and will be removed. Please use "uri" instead.
-   * @param whiteboardUri whiteboardUri or {@code null} for none
-   */
-  public WhiteboardInfo setWhiteboardUri(java.lang.String whiteboardUri) {
-    this.whiteboardUri = whiteboardUri;
     return this;
   }
 

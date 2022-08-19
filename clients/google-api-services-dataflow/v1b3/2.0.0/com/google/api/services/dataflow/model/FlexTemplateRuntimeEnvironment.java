@@ -72,6 +72,13 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.Boolean dumpHeapOnOom;
 
   /**
+   * If true serial port logging will be enabled for the launcher VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableLauncherVmSerialPortLogging;
+
+  /**
    * Whether to enable Streaming Engine for the job.
    * The value may be {@code null}.
    */
@@ -312,6 +319,23 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setDumpHeapOnOom(java.lang.Boolean dumpHeapOnOom) {
     this.dumpHeapOnOom = dumpHeapOnOom;
+    return this;
+  }
+
+  /**
+   * If true serial port logging will be enabled for the launcher VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableLauncherVmSerialPortLogging() {
+    return enableLauncherVmSerialPortLogging;
+  }
+
+  /**
+   * If true serial port logging will be enabled for the launcher VM.
+   * @param enableLauncherVmSerialPortLogging enableLauncherVmSerialPortLogging or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setEnableLauncherVmSerialPortLogging(java.lang.Boolean enableLauncherVmSerialPortLogging) {
+    this.enableLauncherVmSerialPortLogging = enableLauncherVmSerialPortLogging;
     return this;
   }
 

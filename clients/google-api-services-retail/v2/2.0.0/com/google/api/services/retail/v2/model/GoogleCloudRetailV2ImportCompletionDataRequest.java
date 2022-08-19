@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2ImportCompletionDataRequest extends com.go
 
   /**
    * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * notification is sent to specified Pub/Sub topic. The message data is JSON string of a
    * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
    * The value may be {@code null}.
    */
@@ -64,7 +64,7 @@ public final class GoogleCloudRetailV2ImportCompletionDataRequest extends com.go
 
   /**
    * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * notification is sent to specified Pub/Sub topic. The message data is JSON string of a
    * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class GoogleCloudRetailV2ImportCompletionDataRequest extends com.go
 
   /**
    * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * notification is sent to specified Pub/Sub topic. The message data is JSON string of a
    * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2beta.model;
 
 /**
- * Metadata related to the progress of the Import operation. This will be returned by the
+ * Metadata related to the progress of the Import operation. This is returned by the
  * google.longrunning.Operation.metadata field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2ImportMetadata extends com.google.api.clie
 
   /**
    * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * notification is sent to specified Pub/Sub topic. The message data is JSON string of a
    * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
    * The value may be {@code null}.
    */
@@ -110,7 +110,7 @@ public final class GoogleCloudRetailV2ImportMetadata extends com.google.api.clie
 
   /**
    * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * notification is sent to specified Pub/Sub topic. The message data is JSON string of a
    * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
    * @return value or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class GoogleCloudRetailV2ImportMetadata extends com.google.api.clie
 
   /**
    * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
-   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * notification is sent to specified Pub/Sub topic. The message data is JSON string of a
    * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */

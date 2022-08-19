@@ -17,8 +17,8 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Represents an ordered combination of valid serving configs, which / may be used for
- * PAGE_OPTIMIZATION recommendations.
+ * Represents an ordered combination of valid serving configs, which can be used for
+ * `PAGE_OPTIMIZATION` recommendations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -31,14 +31,14 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaModelServingConfigList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A set of valid serving configs that may be used for PAGE_OPTIMIZATION.
+   * Optional. A set of valid serving configs that may be used for `PAGE_OPTIMIZATION`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> servingConfigIds;
 
   /**
-   * Optional. A set of valid serving configs that may be used for PAGE_OPTIMIZATION.
+   * Optional. A set of valid serving configs that may be used for `PAGE_OPTIMIZATION`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServingConfigIds() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaModelServingConfigList extends com.go
   }
 
   /**
-   * Optional. A set of valid serving configs that may be used for PAGE_OPTIMIZATION.
+   * Optional. A set of valid serving configs that may be used for `PAGE_OPTIMIZATION`.
    * @param servingConfigIds servingConfigIds or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModelServingConfigList setServingConfigIds(java.util.List<java.lang.String> servingConfigIds) {

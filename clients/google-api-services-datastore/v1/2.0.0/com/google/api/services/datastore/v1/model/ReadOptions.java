@@ -30,7 +30,7 @@ package com.google.api.services.datastore.v1.model;
 public final class ReadOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * The non-transactional read consistency to use. Cannot be set to `STRONG` for global queries.
+   * The non-transactional read consistency to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class ReadOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String transaction;
 
   /**
-   * The non-transactional read consistency to use. Cannot be set to `STRONG` for global queries.
+   * The non-transactional read consistency to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getReadConsistency() {
@@ -61,7 +61,7 @@ public final class ReadOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The non-transactional read consistency to use. Cannot be set to `STRONG` for global queries.
+   * The non-transactional read consistency to use.
    * @param readConsistency readConsistency or {@code null} for none
    */
   public ReadOptions setReadConsistency(java.lang.String readConsistency) {

@@ -30,7 +30,8 @@ package com.google.api.services.datastore.v1beta3.model;
 public final class ReserveIdsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * If not empty, the ID of the database against which to make the request.
+   * The ID of the database against which to make the request. '(default)' is not allowed; please
+   * use empty string '' to refer the default database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class ReserveIdsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * If not empty, the ID of the database against which to make the request.
+   * The ID of the database against which to make the request. '(default)' is not allowed; please
+   * use empty string '' to refer the default database.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseId() {
@@ -59,7 +61,8 @@ public final class ReserveIdsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * If not empty, the ID of the database against which to make the request.
+   * The ID of the database against which to make the request. '(default)' is not allowed; please
+   * use empty string '' to refer the default database.
    * @param databaseId databaseId or {@code null} for none
    */
   public ReserveIdsRequest setDatabaseId(java.lang.String databaseId) {

@@ -45,11 +45,10 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
 
   /**
    * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
-   * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
-   * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
-   * has to be within the same project as ImportProductsRequest.parent. Make sure that `service
-   * -@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the
-   * topic.
+   * finished, a notification is sent to specified Pub/Sub topic. The message data is JSON string of
+   * a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has to be
+   * within the same project as ImportProductsRequest.parent. Make sure that `service-@gcp-sa-
+   * retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +70,8 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
   private java.lang.String requestId;
 
   /**
-   * Indicates which fields in the provided imported 'products' to update. If not set, will by
-   * default update all fields.
+   * Indicates which fields in the provided imported `products` to update. If not set, all fields
+   * are updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,11 +113,10 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
 
   /**
    * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
-   * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
-   * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
-   * has to be within the same project as ImportProductsRequest.parent. Make sure that `service
-   * -@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the
-   * topic.
+   * finished, a notification is sent to specified Pub/Sub topic. The message data is JSON string of
+   * a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has to be
+   * within the same project as ImportProductsRequest.parent. Make sure that `service-@gcp-sa-
+   * retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPubsubTopic() {
@@ -127,11 +125,10 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
 
   /**
    * Full Pub/Sub topic name for receiving notification. If this field is set, when the import is
-   * finished, a notification will be sent to specified Pub/Sub topic. The message data will be JSON
-   * string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It
-   * has to be within the same project as ImportProductsRequest.parent. Make sure that `service
-   * -@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the
-   * topic.
+   * finished, a notification is sent to specified Pub/Sub topic. The message data is JSON string of
+   * a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has to be
+   * within the same project as ImportProductsRequest.parent. Make sure that `service-@gcp-sa-
+   * retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the topic.
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */
   public GoogleCloudRetailV2ImportProductsRequest setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
@@ -176,8 +173,8 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
   }
 
   /**
-   * Indicates which fields in the provided imported 'products' to update. If not set, will by
-   * default update all fields.
+   * Indicates which fields in the provided imported `products` to update. If not set, all fields
+   * are updated.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -185,8 +182,8 @@ public final class GoogleCloudRetailV2ImportProductsRequest extends com.google.a
   }
 
   /**
-   * Indicates which fields in the provided imported 'products' to update. If not set, will by
-   * default update all fields.
+   * Indicates which fields in the provided imported `products` to update. If not set, all fields
+   * are updated.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleCloudRetailV2ImportProductsRequest setUpdateMask(String updateMask) {

@@ -43,8 +43,8 @@ public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel exte
   }
 
   /**
-   * Required. The default candidate (in case the model fails at serving time, we can fall back to
-   * the default).
+   * Required. The default candidate. If the model fails at serving time, we fall back to the
+   * default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel exte
   }
 
   /**
-   * Required. The default candidate (in case the model fails at serving time, we can fall back to
-   * the default).
+   * Required. The default candidate. If the model fails at serving time, we fall back to the
+   * default.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate getDefaultCandidate() {
@@ -84,8 +84,8 @@ public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel exte
   }
 
   /**
-   * Required. The default candidate (in case the model fails at serving time, we can fall back to
-   * the default).
+   * Required. The default candidate. If the model fails at serving time, we fall back to the
+   * default.
    * @param defaultCandidate defaultCandidate or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel setDefaultCandidate(GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate defaultCandidate) {

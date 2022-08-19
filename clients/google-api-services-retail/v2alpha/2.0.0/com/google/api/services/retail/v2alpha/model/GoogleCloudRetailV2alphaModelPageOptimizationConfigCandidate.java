@@ -30,18 +30,18 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate extends com.google.api.client.json.GenericJson {
 
   /**
-   * This has to be a valid ServingConfig identifier. e.g. for a ServingConfig with full name:
-   * `projects/locations/global/catalogs/default_catalog/servingConfigs/my_candidate_config` this
-   * would be 'my_candidate_config'
+   * This has to be a valid ServingConfig identifier. For example, for a ServingConfig with full
+   * name: `projects/locations/global/catalogs/default_catalog/servingConfigs/my_candidate_config`,
+   * this would be `my_candidate_config`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String servingConfigId;
 
   /**
-   * This has to be a valid ServingConfig identifier. e.g. for a ServingConfig with full name:
-   * `projects/locations/global/catalogs/default_catalog/servingConfigs/my_candidate_config` this
-   * would be 'my_candidate_config'
+   * This has to be a valid ServingConfig identifier. For example, for a ServingConfig with full
+   * name: `projects/locations/global/catalogs/default_catalog/servingConfigs/my_candidate_config`,
+   * this would be `my_candidate_config`.
    * @return value or {@code null} for none
    */
   public java.lang.String getServingConfigId() {
@@ -49,9 +49,9 @@ public final class GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate 
   }
 
   /**
-   * This has to be a valid ServingConfig identifier. e.g. for a ServingConfig with full name:
-   * `projects/locations/global/catalogs/default_catalog/servingConfigs/my_candidate_config` this
-   * would be 'my_candidate_config'
+   * This has to be a valid ServingConfig identifier. For example, for a ServingConfig with full
+   * name: `projects/locations/global/catalogs/default_catalog/servingConfigs/my_candidate_config`,
+   * this would be `my_candidate_config`.
    * @param servingConfigId servingConfigId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate setServingConfigId(java.lang.String servingConfigId) {

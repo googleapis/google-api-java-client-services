@@ -18,7 +18,7 @@ package com.google.api.services.retail.v2alpha.model;
 
 /**
  * Metadata that describes the training and serving parameters of a Model. A Model can be associated
- * with a ServingConfig and then queried through the Predict api.
+ * with a ServingConfig and then queried through the Predict API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -38,10 +38,11 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   private String createTime;
 
   /**
-   * Output only. The state of data requirements for this model: DATA_OK and DATA_ERROR.
-   * Recommendation model cannot be trained if the data is in DATA_ERROR state. Recommendation model
-   * can have DATA_ERROR state even if serving state is ACTIVE: models were trained successfully
-   * before, but cannot be refreshed because model no longer has sufficient data for training.
+   * Output only. The state of data requirements for this model: `DATA_OK` and `DATA_ERROR`.
+   * Recommendation model cannot be trained if the data is in `DATA_ERROR` state. Recommendation
+   * model can have `DATA_ERROR` state even if serving state is `ACTIVE`: models were trained
+   * successfully before, but cannot be refreshed because model no longer has sufficient data for
+   * training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +50,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The display name of the model. Should be human readable, used to display
-   * Recommendation Models in the Retail Cloud Cosole Dashboard. UTF-8 encoded string with limit of
+   * Recommendation Models in the Retail Cloud Console Dashboard. UTF-8 encoded string with limit of
    * 1024 characters.
    * The value may be {@code null}.
    */
@@ -57,7 +58,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   private java.lang.String displayName;
 
   /**
-   * Optional. If RECOMMENDATIONS_FILTERING_ENABLED, recommendation filtering by attributes is
+   * Optional. If `RECOMMENDATIONS_FILTERING_ENABLED`, recommendation filtering by attributes is
    * enabled for the model.
    * The value may be {@code null}.
    */
@@ -73,7 +74,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The fully qualified resource name of the model. Format:
-   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+   * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
    * catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
    * The value may be {@code null}.
    */
@@ -99,7 +100,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Optional. The state of periodic tuning. The period we use is 3 months - to do a one-off tune
-   * earlier use the TuneModel method. Default value is PERIODIC_TUNING_ENABLED.
+   * earlier use the `TuneModel` method. Default value is `PERIODIC_TUNING_ENABLED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,18 +114,18 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   private java.util.List<GoogleCloudRetailV2alphaModelServingConfigList> servingConfigLists;
 
   /**
-   * Output only. The serving state of the model: ACTIVE, NOT_ACTIVE.
+   * Output only. The serving state of the model: `ACTIVE`, `NOT_ACTIVE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String servingState;
 
   /**
-   * Optional. The training state that the model is in (e.g. TRAINING or PAUSED). Since part of the
-   * cost of running the service is frequency of training - this can be used to determine when to
-   * train model in order to control cost. If not specified: the default value for CreateModel
-   * method is TRAINING. the default value for UpdateModel method is to keep the state the same as
-   * before.
+   * Optional. The training state that the model is in (e.g. `TRAINING` or `PAUSED`). Since part of
+   * the cost of running the service is frequency of training - this can be used to determine when
+   * to train model in order to control cost. If not specified: the default value for `CreateModel`
+   * method is `TRAINING`. The default value for `UpdateModel` method is to keep the state the same
+   * as before.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +141,8 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The type of model e.g. `home-page`. Currently supported values: `recommended-for-
-   * you`, `others-you-may-like`, `frequently-bought-together`, `page-optimization`, 'similar-
-   * items', 'buy-it-again', `recently-viewed`(readonly value).
+   * you`, `others-you-may-like`, `frequently-bought-together`, `page-optimization`, `similar-
+   * items`, `buy-it-again`, and `recently-viewed`(readonly value).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,10 +174,11 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Output only. The state of data requirements for this model: DATA_OK and DATA_ERROR.
-   * Recommendation model cannot be trained if the data is in DATA_ERROR state. Recommendation model
-   * can have DATA_ERROR state even if serving state is ACTIVE: models were trained successfully
-   * before, but cannot be refreshed because model no longer has sufficient data for training.
+   * Output only. The state of data requirements for this model: `DATA_OK` and `DATA_ERROR`.
+   * Recommendation model cannot be trained if the data is in `DATA_ERROR` state. Recommendation
+   * model can have `DATA_ERROR` state even if serving state is `ACTIVE`: models were trained
+   * successfully before, but cannot be refreshed because model no longer has sufficient data for
+   * training.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataState() {
@@ -184,10 +186,11 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Output only. The state of data requirements for this model: DATA_OK and DATA_ERROR.
-   * Recommendation model cannot be trained if the data is in DATA_ERROR state. Recommendation model
-   * can have DATA_ERROR state even if serving state is ACTIVE: models were trained successfully
-   * before, but cannot be refreshed because model no longer has sufficient data for training.
+   * Output only. The state of data requirements for this model: `DATA_OK` and `DATA_ERROR`.
+   * Recommendation model cannot be trained if the data is in `DATA_ERROR` state. Recommendation
+   * model can have `DATA_ERROR` state even if serving state is `ACTIVE`: models were trained
+   * successfully before, but cannot be refreshed because model no longer has sufficient data for
+   * training.
    * @param dataState dataState or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModel setDataState(java.lang.String dataState) {
@@ -197,7 +200,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The display name of the model. Should be human readable, used to display
-   * Recommendation Models in the Retail Cloud Cosole Dashboard. UTF-8 encoded string with limit of
+   * Recommendation Models in the Retail Cloud Console Dashboard. UTF-8 encoded string with limit of
    * 1024 characters.
    * @return value or {@code null} for none
    */
@@ -207,7 +210,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The display name of the model. Should be human readable, used to display
-   * Recommendation Models in the Retail Cloud Cosole Dashboard. UTF-8 encoded string with limit of
+   * Recommendation Models in the Retail Cloud Console Dashboard. UTF-8 encoded string with limit of
    * 1024 characters.
    * @param displayName displayName or {@code null} for none
    */
@@ -217,7 +220,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Optional. If RECOMMENDATIONS_FILTERING_ENABLED, recommendation filtering by attributes is
+   * Optional. If `RECOMMENDATIONS_FILTERING_ENABLED`, recommendation filtering by attributes is
    * enabled for the model.
    * @return value or {@code null} for none
    */
@@ -226,7 +229,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Optional. If RECOMMENDATIONS_FILTERING_ENABLED, recommendation filtering by attributes is
+   * Optional. If `RECOMMENDATIONS_FILTERING_ENABLED`, recommendation filtering by attributes is
    * enabled for the model.
    * @param filteringOption filteringOption or {@code null} for none
    */
@@ -254,7 +257,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The fully qualified resource name of the model. Format:
-   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+   * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
    * catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
    * @return value or {@code null} for none
    */
@@ -264,7 +267,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The fully qualified resource name of the model. Format:
-   * projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}
+   * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
    * catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
    * @param name name or {@code null} for none
    */
@@ -315,7 +318,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Optional. The state of periodic tuning. The period we use is 3 months - to do a one-off tune
-   * earlier use the TuneModel method. Default value is PERIODIC_TUNING_ENABLED.
+   * earlier use the `TuneModel` method. Default value is `PERIODIC_TUNING_ENABLED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeriodicTuningState() {
@@ -324,7 +327,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Optional. The state of periodic tuning. The period we use is 3 months - to do a one-off tune
-   * earlier use the TuneModel method. Default value is PERIODIC_TUNING_ENABLED.
+   * earlier use the `TuneModel` method. Default value is `PERIODIC_TUNING_ENABLED`.
    * @param periodicTuningState periodicTuningState or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModel setPeriodicTuningState(java.lang.String periodicTuningState) {
@@ -350,7 +353,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Output only. The serving state of the model: ACTIVE, NOT_ACTIVE.
+   * Output only. The serving state of the model: `ACTIVE`, `NOT_ACTIVE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getServingState() {
@@ -358,7 +361,7 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Output only. The serving state of the model: ACTIVE, NOT_ACTIVE.
+   * Output only. The serving state of the model: `ACTIVE`, `NOT_ACTIVE`.
    * @param servingState servingState or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModel setServingState(java.lang.String servingState) {
@@ -367,11 +370,11 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Optional. The training state that the model is in (e.g. TRAINING or PAUSED). Since part of the
-   * cost of running the service is frequency of training - this can be used to determine when to
-   * train model in order to control cost. If not specified: the default value for CreateModel
-   * method is TRAINING. the default value for UpdateModel method is to keep the state the same as
-   * before.
+   * Optional. The training state that the model is in (e.g. `TRAINING` or `PAUSED`). Since part of
+   * the cost of running the service is frequency of training - this can be used to determine when
+   * to train model in order to control cost. If not specified: the default value for `CreateModel`
+   * method is `TRAINING`. The default value for `UpdateModel` method is to keep the state the same
+   * as before.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrainingState() {
@@ -379,11 +382,11 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   }
 
   /**
-   * Optional. The training state that the model is in (e.g. TRAINING or PAUSED). Since part of the
-   * cost of running the service is frequency of training - this can be used to determine when to
-   * train model in order to control cost. If not specified: the default value for CreateModel
-   * method is TRAINING. the default value for UpdateModel method is to keep the state the same as
-   * before.
+   * Optional. The training state that the model is in (e.g. `TRAINING` or `PAUSED`). Since part of
+   * the cost of running the service is frequency of training - this can be used to determine when
+   * to train model in order to control cost. If not specified: the default value for `CreateModel`
+   * method is `TRAINING`. The default value for `UpdateModel` method is to keep the state the same
+   * as before.
    * @param trainingState trainingState or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModel setTrainingState(java.lang.String trainingState) {
@@ -412,8 +415,8 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The type of model e.g. `home-page`. Currently supported values: `recommended-for-
-   * you`, `others-you-may-like`, `frequently-bought-together`, `page-optimization`, 'similar-
-   * items', 'buy-it-again', `recently-viewed`(readonly value).
+   * you`, `others-you-may-like`, `frequently-bought-together`, `page-optimization`, `similar-
+   * items`, `buy-it-again`, and `recently-viewed`(readonly value).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -422,8 +425,8 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
 
   /**
    * Required. The type of model e.g. `home-page`. Currently supported values: `recommended-for-
-   * you`, `others-you-may-like`, `frequently-bought-together`, `page-optimization`, 'similar-
-   * items', 'buy-it-again', `recently-viewed`(readonly value).
+   * you`, `others-you-may-like`, `frequently-bought-together`, `page-optimization`, `similar-
+   * items`, `buy-it-again`, and `recently-viewed`(readonly value).
    * @param type type or {@code null} for none
    */
   public GoogleCloudRetailV2alphaModel setType(java.lang.String type) {

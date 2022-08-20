@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * TaskStatus represents the status of a task of a job execution.
+ * TaskStatus represents the status of a task.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -32,7 +32,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Represents time when the task was completed. It is not guaranteed to be set in
    * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The latest available observations of a task's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   private java.lang.Integer index;
 
   /**
-   * Optional. Result of the last attempt of this task. +optional
+   * Optional. Result of the last attempt of this task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String logUri;
 
   /**
-   * Optional. The 'generation' of the execution that was last processed by the controller.
+   * Optional. The 'generation' of the task that was last processed by the controller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The number of times this task was retried. Instances are retried when they fail up to
-   * the maxRetries limit. +optional
+   * the maxRetries limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Represents time when the task started to run. It is not guaranteed to be set in
    * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Represents time when the task was completed. It is not guaranteed to be set in
    * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * UTC.
    * @return value or {@code null} for none
    */
   public String getCompletionTime() {
@@ -110,7 +110,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Represents time when the task was completed. It is not guaranteed to be set in
    * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * UTC.
    * @param completionTime completionTime or {@code null} for none
    */
   public TaskStatus setCompletionTime(String completionTime) {
@@ -120,7 +120,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The latest available observations of a task's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -129,7 +129,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The latest available observations of a task's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
    * @param conditions conditions or {@code null} for none
    */
   public TaskStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {
@@ -155,7 +155,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Result of the last attempt of this task. +optional
+   * Optional. Result of the last attempt of this task.
    * @return value or {@code null} for none
    */
   public TaskAttemptResult getLastAttemptResult() {
@@ -163,7 +163,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Result of the last attempt of this task. +optional
+   * Optional. Result of the last attempt of this task.
    * @param lastAttemptResult lastAttemptResult or {@code null} for none
    */
   public TaskStatus setLastAttemptResult(TaskAttemptResult lastAttemptResult) {
@@ -189,7 +189,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The 'generation' of the execution that was last processed by the controller.
+   * Optional. The 'generation' of the task that was last processed by the controller.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getObservedGeneration() {
@@ -197,7 +197,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The 'generation' of the execution that was last processed by the controller.
+   * Optional. The 'generation' of the task that was last processed by the controller.
    * @param observedGeneration observedGeneration or {@code null} for none
    */
   public TaskStatus setObservedGeneration(java.lang.Integer observedGeneration) {
@@ -207,7 +207,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The number of times this task was retried. Instances are retried when they fail up to
-   * the maxRetries limit. +optional
+   * the maxRetries limit.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetried() {
@@ -216,7 +216,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The number of times this task was retried. Instances are retried when they fail up to
-   * the maxRetries limit. +optional
+   * the maxRetries limit.
    * @param retried retried or {@code null} for none
    */
   public TaskStatus setRetried(java.lang.Integer retried) {
@@ -227,7 +227,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Represents time when the task started to run. It is not guaranteed to be set in
    * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * UTC.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -237,7 +237,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Represents time when the task started to run. It is not guaranteed to be set in
    * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * UTC.
    * @param startTime startTime or {@code null} for none
    */
   public TaskStatus setStartTime(String startTime) {

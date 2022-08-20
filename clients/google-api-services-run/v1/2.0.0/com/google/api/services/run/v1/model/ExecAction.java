@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run ExecAction describes a "run in container" action.
+ * Not supported by Cloud Run. ExecAction describes a "run in container" action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,22 +30,22 @@ package com.google.api.services.run.v1.model;
 public final class ExecAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Command is the command line to execute inside the container, the working directory
-   * for the command is root ('/') in the container's filesystem. The command is simply exec'd, it
-   * is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a
-   * shell, you need to explicitly call out to that shell. Exit status of 0 is treated as
-   * live/healthy and non-zero is unhealthy.
+   * Command is the command line to execute inside the container, the working directory for the
+   * command is root ('/') in the container's filesystem. The command is simply exec'd, it is not
+   * run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell,
+   * you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and
+   * non-zero is unhealthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> command;
 
   /**
-   * (Optional) Command is the command line to execute inside the container, the working directory
-   * for the command is root ('/') in the container's filesystem. The command is simply exec'd, it
-   * is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a
-   * shell, you need to explicitly call out to that shell. Exit status of 0 is treated as
-   * live/healthy and non-zero is unhealthy.
+   * Command is the command line to execute inside the container, the working directory for the
+   * command is root ('/') in the container's filesystem. The command is simply exec'd, it is not
+   * run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell,
+   * you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and
+   * non-zero is unhealthy.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommand() {
@@ -53,11 +53,11 @@ public final class ExecAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Command is the command line to execute inside the container, the working directory
-   * for the command is root ('/') in the container's filesystem. The command is simply exec'd, it
-   * is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a
-   * shell, you need to explicitly call out to that shell. Exit status of 0 is treated as
-   * live/healthy and non-zero is unhealthy.
+   * Command is the command line to execute inside the container, the working directory for the
+   * command is root ('/') in the container's filesystem. The command is simply exec'd, it is not
+   * run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell,
+   * you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and
+   * non-zero is unhealthy.
    * @param command command or {@code null} for none
    */
   public ExecAction setCommand(java.util.List<java.lang.String> command) {

@@ -65,7 +65,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   /**
    * Traffic holds the configured traffic distribution. These entries will always contain
    * RevisionName references. When ConfigurationName appears in the spec, this will hold the
-   * LatestReadyRevisionName that we last observed.
+   * LatestReadyRevisionName that was last observed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   /**
    * Traffic holds the configured traffic distribution. These entries will always contain
    * RevisionName references. When ConfigurationName appears in the spec, this will hold the
-   * LatestReadyRevisionName that we last observed.
+   * LatestReadyRevisionName that was last observed.
    * @return value or {@code null} for none
    */
   public java.util.List<TrafficTarget> getTraffic() {
@@ -155,7 +155,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   /**
    * Traffic holds the configured traffic distribution. These entries will always contain
    * RevisionName references. When ConfigurationName appears in the spec, this will hold the
-   * LatestReadyRevisionName that we last observed.
+   * LatestReadyRevisionName that was last observed.
    * @param traffic traffic or {@code null} for none
    */
   public RouteStatus setTraffic(java.util.List<TrafficTarget> traffic) {

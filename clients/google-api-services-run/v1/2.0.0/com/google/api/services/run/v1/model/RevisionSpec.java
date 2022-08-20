@@ -31,9 +31,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud
-   * Run for Anthos: supported, defaults to 0, which means concurrency to the application is not
-   * limited, and the system decides the target concurrency for the autoscaler.
+   * container instance of the Revision. Cloud Run: supported, defaults to 80
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +41,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
    * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
+   * documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,21 +54,14 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether information about services should be injected into pod's environment
-   * variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud
-   * Run for Anthos: supported, defaults to true.
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableServiceLinks;
 
   /**
-   * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling
-   * any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from
-   * Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by
-   * the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-
-   * imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos:
-   * supported.
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +85,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   * Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600
-   * seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed
-   * value is configurable by the cluster operator.
+   * Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +99,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud
-   * Run for Anthos: supported, defaults to 0, which means concurrency to the application is not
-   * limited, and the system decides the target concurrency for the autoscaler.
+   * container instance of the Revision. Cloud Run: supported, defaults to 80
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContainerConcurrency() {
@@ -121,9 +108,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud
-   * Run for Anthos: supported, defaults to 0, which means concurrency to the application is not
-   * limited, and the system decides the target concurrency for the autoscaler.
+   * container instance of the Revision. Cloud Run: supported, defaults to 80
    * @param containerConcurrency containerConcurrency or {@code null} for none
    */
   public RevisionSpec setContainerConcurrency(java.lang.Integer containerConcurrency) {
@@ -135,7 +120,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
    * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
+   * documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
    * @return value or {@code null} for none
    */
   public java.util.List<Container> getContainers() {
@@ -146,7 +131,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
    * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
+   * documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
    * @param containers containers or {@code null} for none
    */
   public RevisionSpec setContainers(java.util.List<Container> containers) {
@@ -155,9 +140,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether information about services should be injected into pod's environment
-   * variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud
-   * Run for Anthos: supported, defaults to true.
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableServiceLinks() {
@@ -165,9 +148,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether information about services should be injected into pod's environment
-   * variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud
-   * Run for Anthos: supported, defaults to true.
+   * Not supported by Cloud Run.
    * @param enableServiceLinks enableServiceLinks or {@code null} for none
    */
   public RevisionSpec setEnableServiceLinks(java.lang.Boolean enableServiceLinks) {
@@ -176,12 +157,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling
-   * any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from
-   * Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by
-   * the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-
-   * imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos:
-   * supported.
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.util.List<LocalObjectReference> getImagePullSecrets() {
@@ -189,12 +165,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling
-   * any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from
-   * Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by
-   * the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-
-   * imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos:
-   * supported.
+   * Not supported by Cloud Run.
    * @param imagePullSecrets imagePullSecrets or {@code null} for none
    */
   public RevisionSpec setImagePullSecrets(java.util.List<LocalObjectReference> imagePullSecrets) {
@@ -227,9 +198,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   * Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600
-   * seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed
-   * value is configurable by the cluster operator.
+   * Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSeconds() {
@@ -238,9 +207,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   * Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600
-   * seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed
-   * value is configurable by the cluster operator.
+   * Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour).
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public RevisionSpec setTimeoutSeconds(java.lang.Integer timeoutSeconds) {

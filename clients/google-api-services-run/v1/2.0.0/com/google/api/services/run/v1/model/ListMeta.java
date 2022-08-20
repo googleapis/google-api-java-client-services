@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * ListMeta describes metadata that synthetic resources must have, including lists and various
- * status objects. A resource may have only one of {ObjectMeta, ListMeta}.
+ * Metadata for synthetic resources like List. In Cloud Run, all List Resources Responses will have
+ * a ListMeta instead of ObjectMeta.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,42 +31,35 @@ package com.google.api.services.run.v1.model;
 public final class ListMeta extends com.google.api.client.json.GenericJson {
 
   /**
-   * continue may be set if the user set a limit on the number of items returned, and indicates that
-   * the server has more data available. The value is opaque and may be used to issue another
-   * request to the endpoint that served this list to retrieve the next set of available objects.
-   * Continuing a list may not be possible if the server configuration has changed or more than a
-   * few minutes have passed. The resourceVersion field returned when using this continue value will
-   * be identical to the value in the first response.
+   * Continuation token is a value emitted when the count of items is larger than the user/system
+   * limit. To retrieve the next page of items, pass the value of `continue` as the next request's
+   * `page_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("continue")
   private java.lang.String continue__;
 
   /**
-   * String that identifies the server's internal version of this object that can be used by clients
-   * to determine when objects have changed. Value must be treated as opaque by clients and passed
-   * unmodified back to the server. Populated by the system. Read-only. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-
-   * consistency +optional
+   * Opaque string that identifies the server's internal version of this object. It can be used by
+   * clients to determine when objects have changed. If the message is passed back to the server, it
+   * must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md
+   * #concurrency-control-and-consistency
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceVersion;
 
   /**
-   * SelfLink is a URL representing this object. Populated by the system. Read-only. +optional
+   * URL representing this object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * continue may be set if the user set a limit on the number of items returned, and indicates that
-   * the server has more data available. The value is opaque and may be used to issue another
-   * request to the endpoint that served this list to retrieve the next set of available objects.
-   * Continuing a list may not be possible if the server configuration has changed or more than a
-   * few minutes have passed. The resourceVersion field returned when using this continue value will
-   * be identical to the value in the first response.
+   * Continuation token is a value emitted when the count of items is larger than the user/system
+   * limit. To retrieve the next page of items, pass the value of `continue` as the next request's
+   * `page_token`.
    * @return value or {@code null} for none
    */
   public java.lang.String getContinue() {
@@ -74,12 +67,9 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * continue may be set if the user set a limit on the number of items returned, and indicates that
-   * the server has more data available. The value is opaque and may be used to issue another
-   * request to the endpoint that served this list to retrieve the next set of available objects.
-   * Continuing a list may not be possible if the server configuration has changed or more than a
-   * few minutes have passed. The resourceVersion field returned when using this continue value will
-   * be identical to the value in the first response.
+   * Continuation token is a value emitted when the count of items is larger than the user/system
+   * limit. To retrieve the next page of items, pass the value of `continue` as the next request's
+   * `page_token`.
    * @param continue__ continue__ or {@code null} for none
    */
   public ListMeta setContinue(java.lang.String continue__) {
@@ -88,11 +78,10 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String that identifies the server's internal version of this object that can be used by clients
-   * to determine when objects have changed. Value must be treated as opaque by clients and passed
-   * unmodified back to the server. Populated by the system. Read-only. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-
-   * consistency +optional
+   * Opaque string that identifies the server's internal version of this object. It can be used by
+   * clients to determine when objects have changed. If the message is passed back to the server, it
+   * must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md
+   * #concurrency-control-and-consistency
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -100,11 +89,10 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String that identifies the server's internal version of this object that can be used by clients
-   * to determine when objects have changed. Value must be treated as opaque by clients and passed
-   * unmodified back to the server. Populated by the system. Read-only. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-
-   * consistency +optional
+   * Opaque string that identifies the server's internal version of this object. It can be used by
+   * clients to determine when objects have changed. If the message is passed back to the server, it
+   * must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md
+   * #concurrency-control-and-consistency
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public ListMeta setResourceVersion(java.lang.String resourceVersion) {
@@ -113,7 +101,7 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SelfLink is a URL representing this object. Populated by the system. Read-only. +optional
+   * URL representing this object.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -121,7 +109,7 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SelfLink is a URL representing this object. Populated by the system. Read-only. +optional
+   * URL representing this object.
    * @param selfLink selfLink or {@code null} for none
    */
   public ListMeta setSelfLink(java.lang.String selfLink) {

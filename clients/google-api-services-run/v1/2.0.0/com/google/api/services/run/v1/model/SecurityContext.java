@@ -17,9 +17,9 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run SecurityContext holds security configuration that will be applied to a
- * container. Some fields are present in both SecurityContext and PodSecurityContext. When both are
- * set, the values in SecurityContext take precedence.
+ * Not supported by Cloud Run. SecurityContext holds security configuration that will be applied to
+ * a container. Some fields are present in both SecurityContext and PodSecurityContext. When both
+ * are set, the values in SecurityContext take precedence.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -32,20 +32,18 @@ package com.google.api.services.run.v1.model;
 public final class SecurityContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) The UID to run the entrypoint of the container process. Defaults to user specified
-   * in image metadata if unspecified. May also be set in PodSecurityContext. If set in both
-   * SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
-   * precedence.
+   * The UID to run the entrypoint of the container process. Defaults to user specified in image
+   * metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext
+   * and PodSecurityContext, the value specified in SecurityContext takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer runAsUser;
 
   /**
-   * (Optional) The UID to run the entrypoint of the container process. Defaults to user specified
-   * in image metadata if unspecified. May also be set in PodSecurityContext. If set in both
-   * SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
-   * precedence.
+   * The UID to run the entrypoint of the container process. Defaults to user specified in image
+   * metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext
+   * and PodSecurityContext, the value specified in SecurityContext takes precedence.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRunAsUser() {
@@ -53,10 +51,9 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * (Optional) The UID to run the entrypoint of the container process. Defaults to user specified
-   * in image metadata if unspecified. May also be set in PodSecurityContext. If set in both
-   * SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
-   * precedence.
+   * The UID to run the entrypoint of the container process. Defaults to user specified in image
+   * metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext
+   * and PodSecurityContext, the value specified in SecurityContext takes precedence.
    * @param runAsUser runAsUser or {@code null} for none
    */
   public SecurityContext setRunAsUser(java.lang.Integer runAsUser) {

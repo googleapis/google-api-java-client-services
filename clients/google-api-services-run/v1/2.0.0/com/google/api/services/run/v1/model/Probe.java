@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run Probe describes a health check to be performed against a container to
- * determine whether it is alive or ready to receive traffic.
+ * Probe describes a health check to be performed against a container to determine whether it is
+ * alive or ready to receive traffic.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,75 +31,71 @@ package com.google.api.services.run.v1.model;
 public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Not supported by Cloud Run One and only one of the following should be specified.
-   * Exec specifies the action to take. A field inlined from the Handler message.
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExecAction exec;
 
   /**
-   * (Optional) Minimum consecutive failures for the probe to be considered failed after having
-   * succeeded. Defaults to 3. Minimum value is 1.
+   * Minimum consecutive failures for the probe to be considered failed after having succeeded.
+   * Defaults to 3. Minimum value is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer failureThreshold;
 
   /**
-   * (Optional) GRPCAction specifies an action involving a GRPC port. A field inlined from the
-   * Handler message.
+   * GRPCAction specifies an action involving a GRPC port.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GRPCAction grpc;
 
   /**
-   * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler
-   * message.
+   * HTTPGet specifies the http request to perform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HTTPGetAction httpGet;
 
   /**
-   * (Optional) Number of seconds after the container has started before the probe is initiated.
-   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
-   * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
-   * /pod-lifecycle#container-probes
+   * Number of seconds after the container has started before the probe is initiated. Defaults to 0
+   * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
+   * startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-
+   * lifecycle#container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer initialDelaySeconds;
 
   /**
-   * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
-   * greater or equal than timeout_seconds.
+   * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
+   * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
+   * equal than timeout_seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer periodSeconds;
 
   /**
-   * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Must be 1 if set.
+   * Minimum consecutive successes for the probe to be considered successful after having failed.
+   * Must be 1 if set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer successThreshold;
 
   /**
-   * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A
-   * field inlined from the Handler message.
+   * TCPSocket specifies an action involving a TCP port.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TCPSocketAction tcpSocket;
 
   /**
-   * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
-   * value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info:
+   * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
+   * Maximum value is 3600. Must be smaller than period_seconds. More info:
    * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * The value may be {@code null}.
    */
@@ -107,8 +103,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   private java.lang.Integer timeoutSeconds;
 
   /**
-   * (Optional) Not supported by Cloud Run One and only one of the following should be specified.
-   * Exec specifies the action to take. A field inlined from the Handler message.
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public ExecAction getExec() {
@@ -116,8 +111,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Not supported by Cloud Run One and only one of the following should be specified.
-   * Exec specifies the action to take. A field inlined from the Handler message.
+   * Not supported by Cloud Run.
    * @param exec exec or {@code null} for none
    */
   public Probe setExec(ExecAction exec) {
@@ -126,8 +120,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Minimum consecutive failures for the probe to be considered failed after having
-   * succeeded. Defaults to 3. Minimum value is 1.
+   * Minimum consecutive failures for the probe to be considered failed after having succeeded.
+   * Defaults to 3. Minimum value is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFailureThreshold() {
@@ -135,8 +129,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Minimum consecutive failures for the probe to be considered failed after having
-   * succeeded. Defaults to 3. Minimum value is 1.
+   * Minimum consecutive failures for the probe to be considered failed after having succeeded.
+   * Defaults to 3. Minimum value is 1.
    * @param failureThreshold failureThreshold or {@code null} for none
    */
   public Probe setFailureThreshold(java.lang.Integer failureThreshold) {
@@ -145,8 +139,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) GRPCAction specifies an action involving a GRPC port. A field inlined from the
-   * Handler message.
+   * GRPCAction specifies an action involving a GRPC port.
    * @return value or {@code null} for none
    */
   public GRPCAction getGrpc() {
@@ -154,8 +147,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) GRPCAction specifies an action involving a GRPC port. A field inlined from the
-   * Handler message.
+   * GRPCAction specifies an action involving a GRPC port.
    * @param grpc grpc or {@code null} for none
    */
   public Probe setGrpc(GRPCAction grpc) {
@@ -164,8 +156,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler
-   * message.
+   * HTTPGet specifies the http request to perform.
    * @return value or {@code null} for none
    */
   public HTTPGetAction getHttpGet() {
@@ -173,8 +164,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler
-   * message.
+   * HTTPGet specifies the http request to perform.
    * @param httpGet httpGet or {@code null} for none
    */
   public Probe setHttpGet(HTTPGetAction httpGet) {
@@ -183,10 +173,10 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Number of seconds after the container has started before the probe is initiated.
-   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
-   * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
-   * /pod-lifecycle#container-probes
+   * Number of seconds after the container has started before the probe is initiated. Defaults to 0
+   * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
+   * startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-
+   * lifecycle#container-probes
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySeconds() {
@@ -194,10 +184,10 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Number of seconds after the container has started before the probe is initiated.
-   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
-   * value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods
-   * /pod-lifecycle#container-probes
+   * Number of seconds after the container has started before the probe is initiated. Defaults to 0
+   * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
+   * startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-
+   * lifecycle#container-probes
    * @param initialDelaySeconds initialDelaySeconds or {@code null} for none
    */
   public Probe setInitialDelaySeconds(java.lang.Integer initialDelaySeconds) {
@@ -206,9 +196,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
-   * greater or equal than timeout_seconds.
+   * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
+   * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
+   * equal than timeout_seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodSeconds() {
@@ -216,9 +206,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
-   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
-   * greater or equal than timeout_seconds.
+   * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
+   * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
+   * equal than timeout_seconds.
    * @param periodSeconds periodSeconds or {@code null} for none
    */
   public Probe setPeriodSeconds(java.lang.Integer periodSeconds) {
@@ -227,8 +217,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Must be 1 if set.
+   * Minimum consecutive successes for the probe to be considered successful after having failed.
+   * Must be 1 if set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessThreshold() {
@@ -236,8 +226,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Minimum consecutive successes for the probe to be considered successful after having
-   * failed. Must be 1 if set.
+   * Minimum consecutive successes for the probe to be considered successful after having failed.
+   * Must be 1 if set.
    * @param successThreshold successThreshold or {@code null} for none
    */
   public Probe setSuccessThreshold(java.lang.Integer successThreshold) {
@@ -246,8 +236,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A
-   * field inlined from the Handler message.
+   * TCPSocket specifies an action involving a TCP port.
    * @return value or {@code null} for none
    */
   public TCPSocketAction getTcpSocket() {
@@ -255,8 +244,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A
-   * field inlined from the Handler message.
+   * TCPSocket specifies an action involving a TCP port.
    * @param tcpSocket tcpSocket or {@code null} for none
    */
   public Probe setTcpSocket(TCPSocketAction tcpSocket) {
@@ -265,8 +253,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
-   * value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info:
+   * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
+   * Maximum value is 3600. Must be smaller than period_seconds. More info:
    * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @return value or {@code null} for none
    */
@@ -275,8 +263,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
-   * value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info:
+   * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
+   * Maximum value is 3600. Must be smaller than period_seconds. More info:
    * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */

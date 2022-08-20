@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run ConfigMapEnvSource selects a ConfigMap to populate the environment
+ * Not supported by Cloud Run. ConfigMapEnvSource selects a ConfigMap to populate the environment
  * variables with. The contents of the target ConfigMap's Data field will represent the key-value
  * pairs as environment variables.
  *
@@ -47,7 +47,7 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * (Optional) Specify whether the ConfigMap must be defined
+   * Specify whether the ConfigMap must be defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * (Optional) Specify whether the ConfigMap must be defined
+   * Specify whether the ConfigMap must be defined.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptional() {
@@ -98,7 +98,7 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * (Optional) Specify whether the ConfigMap must be defined
+   * Specify whether the ConfigMap must be defined.
    * @param optional optional or {@code null} for none
    */
   public ConfigMapEnvSource setOptional(java.lang.Boolean optional) {

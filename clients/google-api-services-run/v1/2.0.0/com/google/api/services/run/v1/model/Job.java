@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Job represents the configuration of a single job. A job an immutable resource that references a
- * container image which is run to completion.
+ * Job represents the configuration of a single job, which references a container image which is run
+ * to completion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -34,7 +34,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
    * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources +optional
+   * conventions.md#resources
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
    * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds +optional
+   * conventions.md#types-kinds
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specification of the desired behavior of a job. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
+   * status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Current status of a job. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
+   * status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +80,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
    * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources +optional
+   * conventions.md#resources
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -89,7 +91,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
    * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources +optional
+   * conventions.md#resources
    * @param apiVersion apiVersion or {@code null} for none
    */
   public Job setApiVersion(java.lang.String apiVersion) {
@@ -101,7 +103,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
    * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds +optional
+   * conventions.md#types-kinds
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -112,7 +114,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
    * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds +optional
+   * conventions.md#types-kinds
    * @param kind kind or {@code null} for none
    */
   public Job setKind(java.lang.String kind) {
@@ -122,7 +124,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -131,7 +133,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
    * @param metadata metadata or {@code null} for none
    */
   public Job setMetadata(ObjectMeta metadata) {
@@ -141,7 +143,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specification of the desired behavior of a job. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
+   * status
    * @return value or {@code null} for none
    */
   public JobSpec getSpec() {
@@ -150,7 +153,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specification of the desired behavior of a job. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
+   * status
    * @param spec spec or {@code null} for none
    */
   public Job setSpec(JobSpec spec) {
@@ -160,7 +164,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Current status of a job. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
+   * status
    * @return value or {@code null} for none
    */
   public JobStatus getStatus() {
@@ -169,7 +174,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Current status of a job. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
+   * status
    * @param status status or {@code null} for none
    */
   public Job setStatus(JobStatus status) {

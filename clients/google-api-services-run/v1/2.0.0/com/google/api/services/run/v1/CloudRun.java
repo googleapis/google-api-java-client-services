@@ -373,8 +373,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
-       *        with the project ID or number.
+       * @param name The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the project ID
+       *        or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -400,8 +400,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
-       *        with the project ID or number.
+         * @param name The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the project ID
+       *        or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -480,22 +480,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
-         * {namespace_id} with the project ID or number.
+         * The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the
+         * project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
-       with the project ID or number.
+        /** The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the project
+       ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
-         * {namespace_id} with the project ID or number.
+         * The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the
+         * project ID or number.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -520,8 +520,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID or number.
+       * @param parent The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id}
+       *        with the project ID or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -547,8 +547,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
-       *        {namespace_id} with the project ID or number.
+         * @param parent The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id}
+       *        with the project ID or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -627,22 +627,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The namespace from which the configurations should be listed. For Cloud Run (fully
-         * managed), replace {namespace_id} with the project ID or number.
+         * The namespace from which the configurations should be listed. For Cloud Run, replace
+         * {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The namespace from which the configurations should be listed. For Cloud Run (fully managed),
-       replace {namespace_id} with the project ID or number.
+        /** The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id}
+       with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The namespace from which the configurations should be listed. For Cloud Run (fully
-         * managed), replace {namespace_id} with the project ID or number.
+         * The namespace from which the configurations should be listed. For Cloud Run, replace
+         * {namespace_id} with the project ID or number.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -670,40 +670,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Allows to filter resources based on a specific value for a field name. Send this in a
-         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-         */
+        /** Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String fieldSelector;
 
-        /** Allows to filter resources based on a specific value for a field name. Send this in a query string
-       format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+        /** Not supported by Cloud Run.
          */
         public java.lang.String getFieldSelector() {
           return fieldSelector;
         }
 
-        /**
-         * Allows to filter resources based on a specific value for a field name. Send this in a
-         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-         */
+        /** Not supported by Cloud Run. */
         public List setFieldSelector(java.lang.String fieldSelector) {
           this.fieldSelector = fieldSelector;
           return this;
         }
 
-        /** Not currently used by Cloud Run. */
+        /** Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUninitialized;
 
-        /** Not currently used by Cloud Run.
+        /** Not supported by Cloud Run.
          */
         public java.lang.Boolean getIncludeUninitialized() {
           return includeUninitialized;
         }
 
-        /** Not currently used by Cloud Run. */
+        /** Not supported by Cloud Run. */
         public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
           this.includeUninitialized = includeUninitialized;
           return this;
@@ -731,63 +724,49 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. The maximum number of records that should be returned. */
+        /** Optional. The maximum number of the records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** Optional. The maximum number of records that should be returned.
+        /** Optional. The maximum number of the records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** Optional. The maximum number of records that should be returned. */
+        /** Optional. The maximum number of the records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
         }
 
-        /**
-         * The baseline resource version from which the list or watch operation should start. Not
-         * currently used by Cloud Run.
-         */
+        /** Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String resourceVersion;
 
-        /** The baseline resource version from which the list or watch operation should start. Not currently
-       used by Cloud Run.
+        /** Not supported by Cloud Run.
          */
         public java.lang.String getResourceVersion() {
           return resourceVersion;
         }
 
-        /**
-         * The baseline resource version from which the list or watch operation should start. Not
-         * currently used by Cloud Run.
-         */
+        /** Not supported by Cloud Run. */
         public List setResourceVersion(java.lang.String resourceVersion) {
           this.resourceVersion = resourceVersion;
           return this;
         }
 
-        /**
-         * Flag that indicates that the client expects to watch this resource as well. Not currently
-         * used by Cloud Run.
-         */
+        /** Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean watch;
 
-        /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
-       Cloud Run.
+        /** Not supported by Cloud Run.
          */
         public java.lang.Boolean getWatch() {
           return watch;
         }
 
-        /**
-         * Flag that indicates that the client expects to watch this resource as well. Not currently
-         * used by Cloud Run.
-         */
+        /** Not supported by Cloud Run. */
         public List setWatch(java.lang.Boolean watch) {
           this.watch = watch;
           return this;
@@ -1181,15 +1160,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
+         * deletes in the background. Please see kubernetes.io/docs/concepts/architecture/garbage-
+         * collection/ for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String propagationPolicy;
 
         /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-       for more information.
+       in the background. Please see kubernetes.io/docs/concepts/architecture/garbage-collection/ for more
+       information.
          */
         public java.lang.String getPropagationPolicy() {
           return propagationPolicy;
@@ -1197,8 +1176,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
+         * deletes in the background. Please see kubernetes.io/docs/concepts/architecture/garbage-
+         * collection/ for more information.
          */
         public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
           this.propagationPolicy = propagationPolicy;
@@ -1363,7 +1342,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List domain mappings.
+       * List all domain mappings.
        *
        * Create a request for the method "domainmappings.list".
        *
@@ -1389,7 +1368,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * List domain mappings.
+         * List all domain mappings.
          *
          * Create a request for the method "domainmappings.list".
          *
@@ -1981,15 +1960,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
          * setting, and deletes in the background. Please see
-         * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+         * http://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
          * information.
          */
         @com.google.api.client.util.Key
         private java.lang.String propagationPolicy;
 
         /** Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-       deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-
-       collection/ for more information.
+       deletes in the background. Please see http://kubernetes.io/docs/concepts/workloads/controllers
+       /garbage-collection/ for more information.
          */
         public java.lang.String getPropagationPolicy() {
           return propagationPolicy;
@@ -1998,7 +1977,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
          * setting, and deletes in the background. Please see
-         * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+         * http://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
          * information.
          */
         public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
@@ -2320,42 +2299,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Optional. Allows to filter resources based on a specific value for a field name. Send
-         * this in a query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud
-         * Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String fieldSelector;
 
-        /** Optional. Allows to filter resources based on a specific value for a field name. Send this in a
-       query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.String getFieldSelector() {
           return fieldSelector;
         }
 
-        /**
-         * Optional. Allows to filter resources based on a specific value for a field name. Send
-         * this in a query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud
-         * Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setFieldSelector(java.lang.String fieldSelector) {
           this.fieldSelector = fieldSelector;
           return this;
         }
 
-        /** Optional. Not currently used by Cloud Run. */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUninitialized;
 
-        /** Optional. Not currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.Boolean getIncludeUninitialized() {
           return includeUninitialized;
         }
 
-        /** Optional. Not currently used by Cloud Run. */
+        /** Optional. Not supported by Cloud Run. */
         public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
           this.includeUninitialized = includeUninitialized;
           return this;
@@ -2384,63 +2354,49 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. The maximum number of records that should be returned. */
+        /** Optional. The maximum number of the records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** Optional. The maximum number of records that should be returned.
+        /** Optional. The maximum number of the records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** Optional. The maximum number of records that should be returned. */
+        /** Optional. The maximum number of the records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
         }
 
-        /**
-         * Optional. The baseline resource version from which the list or watch operation should
-         * start. Not currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String resourceVersion;
 
-        /** Optional. The baseline resource version from which the list or watch operation should start. Not
-       currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.String getResourceVersion() {
           return resourceVersion;
         }
 
-        /**
-         * Optional. The baseline resource version from which the list or watch operation should
-         * start. Not currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setResourceVersion(java.lang.String resourceVersion) {
           this.resourceVersion = resourceVersion;
           return this;
         }
 
-        /**
-         * Optional. Flag that indicates that the client expects to watch this resource as well. Not
-         * currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean watch;
 
-        /** Optional. Flag that indicates that the client expects to watch this resource as well. Not currently
-       used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.Boolean getWatch() {
           return watch;
         }
 
-        /**
-         * Optional. Flag that indicates that the client expects to watch this resource as well. Not
-         * currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setWatch(java.lang.Boolean watch) {
           this.watch = watch;
           return this;
@@ -3118,42 +3074,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Optional. Allows to filter resources based on a specific value for a field name. Send
-         * this in a query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud
-         * Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String fieldSelector;
 
-        /** Optional. Allows to filter resources based on a specific value for a field name. Send this in a
-       query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.String getFieldSelector() {
           return fieldSelector;
         }
 
-        /**
-         * Optional. Allows to filter resources based on a specific value for a field name. Send
-         * this in a query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud
-         * Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setFieldSelector(java.lang.String fieldSelector) {
           this.fieldSelector = fieldSelector;
           return this;
         }
 
-        /** Optional. Not currently used by Cloud Run. */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUninitialized;
 
-        /** Optional. Not currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.Boolean getIncludeUninitialized() {
           return includeUninitialized;
         }
 
-        /** Optional. Not currently used by Cloud Run. */
+        /** Optional. Not supported by Cloud Run. */
         public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
           this.includeUninitialized = includeUninitialized;
           return this;
@@ -3198,47 +3145,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Optional. The baseline resource version from which the list or watch operation should
-         * start. Not currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String resourceVersion;
 
-        /** Optional. The baseline resource version from which the list or watch operation should start. Not
-       currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.String getResourceVersion() {
           return resourceVersion;
         }
 
-        /**
-         * Optional. The baseline resource version from which the list or watch operation should
-         * start. Not currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setResourceVersion(java.lang.String resourceVersion) {
           this.resourceVersion = resourceVersion;
           return this;
         }
 
-        /**
-         * Optional. Flag that indicates that the client expects to watch this resource as well. Not
-         * currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean watch;
 
-        /** Optional. Flag that indicates that the client expects to watch this resource as well. Not currently
-       used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.Boolean getWatch() {
           return watch;
         }
 
-        /**
-         * Optional. Flag that indicates that the client expects to watch this resource as well. Not
-         * currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setWatch(java.lang.Boolean watch) {
           this.watch = watch;
           return this;
@@ -3259,8 +3192,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link ReplaceJob#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the service being replaced. Replace {namespace} with the project ID or number.
-       *        It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param name Required. The name of the job being replaced. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
        * @param content the {@link com.google.api.services.run.v1.model.Job}
        * @return the request
        */
@@ -3291,8 +3224,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * ReplaceJob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the service being replaced. Replace {namespace} with the project ID or number.
-       *        It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param name Required. The name of the job being replaced. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
          * @param content the {@link com.google.api.services.run.v1.model.Job}
          * @since 1.13
          */
@@ -3362,22 +3295,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The name of the service being replaced. Replace {namespace} with the project ID
-         * or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * Required. The name of the job being replaced. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the service being replaced. Replace {namespace} with the project ID or
-       number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** Required. The name of the job being replaced. Replace {namespace} with the project ID or number. It
+       takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the service being replaced. Replace {namespace} with the project ID
-         * or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * Required. The name of the job being replaced. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public ReplaceJob setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3748,14 +3681,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * deletes in the background. Please see https://kubernetes.io/docs/concepts/architecture
          * /garbage-collection/ for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String propagationPolicy;
 
         /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+       in the background. Please see https://kubernetes.io/docs/concepts/architecture/garbage-collection/
        for more information.
          */
         public java.lang.String getPropagationPolicy() {
@@ -3764,7 +3697,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * deletes in the background. Please see https://kubernetes.io/docs/concepts/architecture
          * /garbage-collection/ for more information.
          */
         public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
@@ -4706,16 +4639,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Services {
 
       /**
-       * Create a service.
+       * Creates a new Service. Service creation will trigger a new deployment. Use GetService, and check
+       * service.status to determine if the Service is ready.
        *
        * Create a request for the method "services.create".
        *
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
-       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-       *        example: namespaces/PROJECT_ID
+       * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
+       *        * `projects/{project_id_or_number}/regions/{region}`
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
        */
@@ -4733,7 +4667,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * Create a service.
+         * Creates a new Service. Service creation will trigger a new deployment. Use GetService, and
+         * check service.status to determine if the Service is ready.
          *
          * Create a request for the method "services.create".
          *
@@ -4742,9 +4677,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
-       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-       *        example: namespaces/PROJECT_ID
+         * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
+       *        * `projects/{project_id_or_number}/regions/{region}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
          */
@@ -4814,25 +4749,27 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The namespace in which the service should be created. For Cloud Run (fully managed),
-         * replace {namespace} with the project ID or number. It takes the form
-         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * The resource's parent. In Cloud Run, it may be one of the following: *
+         * `namespaces/{project_id_or_number}` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The namespace in which the service should be created. For Cloud Run (fully managed), replace
-       {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
-       namespaces/PROJECT_ID
+        /** The resource's parent. In Cloud Run, it may be one of the following: *
+       `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
+       `projects/{project_id_or_number}/regions/{region}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The namespace in which the service should be created. For Cloud Run (fully managed),
-         * replace {namespace} with the project ID or number. It takes the form
-         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * The resource's parent. In Cloud Run, it may be one of the following: *
+         * `namespaces/{project_id_or_number}` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4873,17 +4810,18 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Delete a service. This will cause the Service to stop serving traffic and will delete the child
-       * entities like Routes, Configurations and Revisions.
+       * Deletes the provided service. This will cause the Service to stop serving traffic and will delete
+       * all associated Revisions.
        *
        * Create a request for the method "services.delete".
        *
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+       * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4900,8 +4838,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+/services/[^/]+$");
 
         /**
-         * Delete a service. This will cause the Service to stop serving traffic and will delete the child
-         * entities like Routes, Configurations and Revisions.
+         * Deletes the provided service. This will cause the Service to stop serving traffic and will
+         * delete all associated Revisions.
          *
          * Create a request for the method "services.delete".
          *
@@ -4910,9 +4848,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+         * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -4981,24 +4920,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the service to delete. For Cloud Run (fully managed), replace {namespace}
-         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * The fully qualified name of the service to delete. It can be any of the following forms:
+         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the service to delete. For Cloud Run (fully managed), replace {namespace} with the
-       project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** The fully qualified name of the service to delete. It can be any of the following forms: *
+       `namespaces/{project_id_or_number}/services/{service_name}` *
+       `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the service to delete. For Cloud Run (fully managed), replace {namespace}
-         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * The fully qualified name of the service to delete. It can be any of the following forms:
+         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5010,17 +4953,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Cloud Run currently ignores this parameter. */
+        /** Not supported, and ignored by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String apiVersion;
 
-        /** Cloud Run currently ignores this parameter.
+        /** Not supported, and ignored by Cloud Run.
          */
         public java.lang.String getApiVersion() {
           return apiVersion;
         }
 
-        /** Cloud Run currently ignores this parameter. */
+        /** Not supported, and ignored by Cloud Run. */
         public Delete setApiVersion(java.lang.String apiVersion) {
           this.apiVersion = apiVersion;
           return this;
@@ -5049,43 +4992,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Cloud Run currently ignores this parameter. */
+        /** Not supported, and ignored by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String kind;
 
-        /** Cloud Run currently ignores this parameter.
+        /** Not supported, and ignored by Cloud Run.
          */
         public java.lang.String getKind() {
           return kind;
         }
 
-        /** Cloud Run currently ignores this parameter. */
+        /** Not supported, and ignored by Cloud Run. */
         public Delete setKind(java.lang.String kind) {
           this.kind = kind;
           return this;
         }
 
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String propagationPolicy;
 
-        /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-       for more information.
+        /** Not supported, and ignored by Cloud Run.
          */
         public java.lang.String getPropagationPolicy() {
           return propagationPolicy;
         }
 
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
           this.propagationPolicy = propagationPolicy;
           return this;
@@ -5097,16 +5030,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Get information about a service.
+       * Gets information about a service.
        *
        * Create a request for the method "services.get".
        *
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+       * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5123,7 +5057,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+/services/[^/]+$");
 
         /**
-         * Get information about a service.
+         * Gets information about a service.
          *
          * Create a request for the method "services.get".
          *
@@ -5132,9 +5066,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+         * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5213,24 +5148,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace}
-         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * The fully qualified name of the service to retrieve. It can be any of the following
+         * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace} with the
-       project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** The fully qualified name of the service to retrieve. It can be any of the following forms: *
+       `namespaces/{project_id_or_number}/services/{service_name}` *
+       `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace}
-         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * The fully qualified name of the service to retrieve. It can be any of the following
+         * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5248,16 +5187,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List services.
+       * Lists services for the given project and region.
        *
        * Create a request for the method "services.list".
        *
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
-       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-       *        example: namespaces/PROJECT_ID
+       * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
+       *        * `namespaces/{project_id_or_number}` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5274,7 +5214,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * List services.
+         * Lists services for the given project and region.
          *
          * Create a request for the method "services.list".
          *
@@ -5283,9 +5223,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
-       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-       *        example: namespaces/PROJECT_ID
+         * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
+       *        * `namespaces/{project_id_or_number}` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5364,25 +5305,27 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The namespace from which the services should be listed. For Cloud Run (fully managed),
-         * replace {namespace} with the project ID or number. It takes the form
-         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * The parent from where the resources should be listed. In Cloud Run, it may be one of the
+         * following: * `namespaces/{project_id_or_number}` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The namespace from which the services should be listed. For Cloud Run (fully managed), replace
-       {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
-       namespaces/PROJECT_ID
+        /** The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
+       * `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
+       `projects/{project_id_or_number}/regions/{region}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The namespace from which the services should be listed. For Cloud Run (fully managed),
-         * replace {namespace} with the project ID or number. It takes the form
-         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * The parent from where the resources should be listed. In Cloud Run, it may be one of the
+         * following: * `namespaces/{project_id_or_number}` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5410,40 +5353,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Allows to filter resources based on a specific value for a field name. Send this in a
-         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String fieldSelector;
 
-        /** Allows to filter resources based on a specific value for a field name. Send this in a query string
-       format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+        /** Not supported, and ignored by Cloud Run.
          */
         public java.lang.String getFieldSelector() {
           return fieldSelector;
         }
 
-        /**
-         * Allows to filter resources based on a specific value for a field name. Send this in a
-         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         public List setFieldSelector(java.lang.String fieldSelector) {
           this.fieldSelector = fieldSelector;
           return this;
         }
 
-        /** Not currently used by Cloud Run. */
+        /** Not supported, and ignored by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUninitialized;
 
-        /** Not currently used by Cloud Run.
+        /** Not supported, and ignored by Cloud Run.
          */
         public java.lang.Boolean getIncludeUninitialized() {
           return includeUninitialized;
         }
 
-        /** Not currently used by Cloud Run. */
+        /** Not supported, and ignored by Cloud Run. */
         public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
           this.includeUninitialized = includeUninitialized;
           return this;
@@ -5487,47 +5423,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * The baseline resource version from which the list or watch operation should start. Not
-         * currently used by Cloud Run.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String resourceVersion;
 
-        /** The baseline resource version from which the list or watch operation should start. Not currently
-       used by Cloud Run.
+        /** Not supported, and ignored by Cloud Run.
          */
         public java.lang.String getResourceVersion() {
           return resourceVersion;
         }
 
-        /**
-         * The baseline resource version from which the list or watch operation should start. Not
-         * currently used by Cloud Run.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         public List setResourceVersion(java.lang.String resourceVersion) {
           this.resourceVersion = resourceVersion;
           return this;
         }
 
-        /**
-         * Flag that indicates that the client expects to watch this resource as well. Not currently
-         * used by Cloud Run.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean watch;
 
-        /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
-       Cloud Run.
+        /** Not supported, and ignored by Cloud Run.
          */
         public java.lang.Boolean getWatch() {
           return watch;
         }
 
-        /**
-         * Flag that indicates that the client expects to watch this resource as well. Not currently
-         * used by Cloud Run.
-         */
+        /** Not supported, and ignored by Cloud Run. */
         public List setWatch(java.lang.Boolean watch) {
           this.watch = watch;
           return this;
@@ -5539,7 +5461,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+       * Replaces a service. Only the spec and metadata labels and annotations are modifiable. After the
        * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide
        * metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
        *
@@ -5548,9 +5470,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+       * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
        */
@@ -5568,7 +5491,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+/services/[^/]+$");
 
         /**
-         * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+         * Replaces a service. Only the spec and metadata labels and annotations are modifiable. After the
          * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
          * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
          * control.
@@ -5581,9 +5504,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * ientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+         * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
+       *        `namespaces/{project_id_or_number}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
          */
@@ -5653,24 +5577,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the service being replaced. For Cloud Run (fully managed), replace
-         * {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         * example: namespaces/PROJECT_ID
+         * The fully qualified name of the service to replace. It can be any of the following forms:
+         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the service being replaced. For Cloud Run (fully managed), replace {namespace} with the
-       project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** The fully qualified name of the service to replace. It can be any of the following forms: *
+       `namespaces/{project_id_or_number}/services/{service_name}` *
+       `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+       `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the service being replaced. For Cloud Run (fully managed), replace
-         * {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         * example: namespaces/PROJECT_ID
+         * The fully qualified name of the service to replace. It can be any of the following forms:
+         * * `namespaces/{project_id_or_number}/services/{service_name}` *
+         * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          */
         public ReplaceService setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6039,42 +5967,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Optional. Allows to filter resources based on a specific value for a field name. Send
-         * this in a query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud
-         * Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String fieldSelector;
 
-        /** Optional. Allows to filter resources based on a specific value for a field name. Send this in a
-       query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.String getFieldSelector() {
           return fieldSelector;
         }
 
-        /**
-         * Optional. Allows to filter resources based on a specific value for a field name. Send
-         * this in a query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud
-         * Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setFieldSelector(java.lang.String fieldSelector) {
           this.fieldSelector = fieldSelector;
           return this;
         }
 
-        /** Optional. Not currently used by Cloud Run. */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUninitialized;
 
-        /** Optional. Not currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.Boolean getIncludeUninitialized() {
           return includeUninitialized;
         }
 
-        /** Optional. Not currently used by Cloud Run. */
+        /** Optional. Not supported by Cloud Run. */
         public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
           this.includeUninitialized = includeUninitialized;
           return this;
@@ -6119,47 +6038,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Optional. The baseline resource version from which the list or watch operation should
-         * start. Not currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.String resourceVersion;
 
-        /** Optional. The baseline resource version from which the list or watch operation should start. Not
-       currently used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.String getResourceVersion() {
           return resourceVersion;
         }
 
-        /**
-         * Optional. The baseline resource version from which the list or watch operation should
-         * start. Not currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setResourceVersion(java.lang.String resourceVersion) {
           this.resourceVersion = resourceVersion;
           return this;
         }
 
-        /**
-         * Optional. Flag that indicates that the client expects to watch this resource as well. Not
-         * currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         @com.google.api.client.util.Key
         private java.lang.Boolean watch;
 
-        /** Optional. Flag that indicates that the client expects to watch this resource as well. Not currently
-       used by Cloud Run.
+        /** Optional. Not supported by Cloud Run.
          */
         public java.lang.Boolean getWatch() {
           return watch;
         }
 
-        /**
-         * Optional. Flag that indicates that the client expects to watch this resource as well. Not
-         * currently used by Cloud Run.
-         */
+        /** Optional. Not supported by Cloud Run. */
         public List setWatch(java.lang.Boolean watch) {
           this.watch = watch;
           return this;
@@ -6829,8 +6734,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
-         *        with the project ID or number.
+         * @param name The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the project ID
+         *        or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6856,8 +6761,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
-         *        with the project ID or number.
+           * @param name The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the project ID
+         *        or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6936,22 +6841,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
-           * {namespace_id} with the project ID or number.
+           * The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with
+           * the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
-         with the project ID or number.
+          /** The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with the project
+         ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
-           * {namespace_id} with the project ID or number.
+           * The name of the configuration to retrieve. For Cloud Run, replace {namespace_id} with
+           * the project ID or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6976,8 +6881,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID or number.
+         * @param parent The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id}
+         *        with the project ID or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7003,8 +6908,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the configurations should be listed. For Cloud Run (fully managed), replace
-         *        {namespace_id} with the project ID or number.
+           * @param parent The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id}
+         *        with the project ID or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7083,22 +6988,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The namespace from which the configurations should be listed. For Cloud Run (fully
-           * managed), replace {namespace_id} with the project ID or number.
+           * The namespace from which the configurations should be listed. For Cloud Run, replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The namespace from which the configurations should be listed. For Cloud Run (fully managed),
-         replace {namespace_id} with the project ID or number.
+          /** The namespace from which the configurations should be listed. For Cloud Run, replace {namespace_id}
+         with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The namespace from which the configurations should be listed. For Cloud Run (fully
-           * managed), replace {namespace_id} with the project ID or number.
+           * The namespace from which the configurations should be listed. For Cloud Run, replace
+           * {namespace_id} with the project ID or number.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7126,40 +7031,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * Allows to filter resources based on a specific value for a field name. Send this in a
-           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-           */
+          /** Not supported by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.String fieldSelector;
 
-          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
-         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+          /** Not supported by Cloud Run.
            */
           public java.lang.String getFieldSelector() {
             return fieldSelector;
           }
 
-          /**
-           * Allows to filter resources based on a specific value for a field name. Send this in a
-           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-           */
+          /** Not supported by Cloud Run. */
           public List setFieldSelector(java.lang.String fieldSelector) {
             this.fieldSelector = fieldSelector;
             return this;
           }
 
-          /** Not currently used by Cloud Run. */
+          /** Not supported by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.Boolean includeUninitialized;
 
-          /** Not currently used by Cloud Run.
+          /** Not supported by Cloud Run.
            */
           public java.lang.Boolean getIncludeUninitialized() {
             return includeUninitialized;
           }
 
-          /** Not currently used by Cloud Run. */
+          /** Not supported by Cloud Run. */
           public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
             this.includeUninitialized = includeUninitialized;
             return this;
@@ -7187,63 +7085,49 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The maximum number of records that should be returned. */
+          /** Optional. The maximum number of the records that should be returned. */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
-          /** Optional. The maximum number of records that should be returned.
+          /** Optional. The maximum number of the records that should be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
           }
 
-          /** Optional. The maximum number of records that should be returned. */
+          /** Optional. The maximum number of the records that should be returned. */
           public List setLimit(java.lang.Integer limit) {
             this.limit = limit;
             return this;
           }
 
-          /**
-           * The baseline resource version from which the list or watch operation should start. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.String resourceVersion;
 
-          /** The baseline resource version from which the list or watch operation should start. Not currently
-         used by Cloud Run.
+          /** Not supported by Cloud Run.
            */
           public java.lang.String getResourceVersion() {
             return resourceVersion;
           }
 
-          /**
-           * The baseline resource version from which the list or watch operation should start. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported by Cloud Run. */
           public List setResourceVersion(java.lang.String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
           }
 
-          /**
-           * Flag that indicates that the client expects to watch this resource as well. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.Boolean watch;
 
-          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
-         Cloud Run.
+          /** Not supported by Cloud Run.
            */
           public java.lang.Boolean getWatch() {
             return watch;
           }
 
-          /**
-           * Flag that indicates that the client expects to watch this resource as well. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported by Cloud Run. */
           public List setWatch(java.lang.Boolean watch) {
             this.watch = watch;
             return this;
@@ -7637,16 +7521,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
+           * and deletes in the background. Please see kubernetes.io/docs/concepts/architecture
+           * /garbage-collection/ for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String propagationPolicy;
 
           /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-         for more information.
+         in the background. Please see kubernetes.io/docs/concepts/architecture/garbage-collection/ for more
+         information.
            */
           public java.lang.String getPropagationPolicy() {
             return propagationPolicy;
@@ -7654,9 +7537,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
+           * and deletes in the background. Please see kubernetes.io/docs/concepts/architecture
+           * /garbage-collection/ for more information.
            */
           public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
             this.propagationPolicy = propagationPolicy;
@@ -7821,7 +7703,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List domain mappings.
+         * List all domain mappings.
          *
          * Create a request for the method "domainmappings.list".
          *
@@ -7847,7 +7729,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List domain mappings.
+           * List all domain mappings.
            *
            * Create a request for the method "domainmappings.list".
            *
@@ -8839,14 +8721,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
            * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * https://kubernetes.io/docs/concepts/architecture/garbage-collection/ for more
            * information.
            */
           @com.google.api.client.util.Key
           private java.lang.String propagationPolicy;
 
           /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+         in the background. Please see https://kubernetes.io/docs/concepts/architecture/garbage-collection/
          for more information.
            */
           public java.lang.String getPropagationPolicy() {
@@ -8856,7 +8738,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
            * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * https://kubernetes.io/docs/concepts/architecture/garbage-collection/ for more
            * information.
            */
           public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
@@ -9798,16 +9680,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       public class Services {
 
         /**
-         * Create a service.
+         * Creates a new Service. Service creation will trigger a new deployment. Use GetService, and check
+         * service.status to determine if the Service is ready.
          *
          * Create a request for the method "services.create".
          *
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
-         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         *        example: namespaces/PROJECT_ID
+         * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
+         *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
+         *        * `projects/{project_id_or_number}/regions/{region}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
          */
@@ -9825,7 +9708,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create a service.
+           * Creates a new Service. Service creation will trigger a new deployment. Use GetService, and
+           * check service.status to determine if the Service is ready.
            *
            * Create a request for the method "services.create".
            *
@@ -9834,9 +9718,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace in which the service should be created. For Cloud Run (fully managed), replace
-         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         *        example: namespaces/PROJECT_ID
+           * @param parent The resource's parent. In Cloud Run, it may be one of the following: *
+         *        `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}`
+         *        * `projects/{project_id_or_number}/regions/{region}`
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
            */
@@ -9906,25 +9790,27 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The namespace in which the service should be created. For Cloud Run (fully managed),
-           * replace {namespace} with the project ID or number. It takes the form
-           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+           * The resource's parent. In Cloud Run, it may be one of the following: *
+           * `namespaces/{project_id_or_number}` *
+           * `projects/{project_id_or_number}/locations/{region}` *
+           * `projects/{project_id_or_number}/regions/{region}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The namespace in which the service should be created. For Cloud Run (fully managed), replace
-         {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         namespaces/PROJECT_ID
+          /** The resource's parent. In Cloud Run, it may be one of the following: *
+         `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
+         `projects/{project_id_or_number}/regions/{region}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The namespace in which the service should be created. For Cloud Run (fully managed),
-           * replace {namespace} with the project ID or number. It takes the form
-           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+           * The resource's parent. In Cloud Run, it may be one of the following: *
+           * `namespaces/{project_id_or_number}` *
+           * `projects/{project_id_or_number}/locations/{region}` *
+           * `projects/{project_id_or_number}/regions/{region}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9965,17 +9851,18 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Delete a service. This will cause the Service to stop serving traffic and will delete the child
-         * entities like Routes, Configurations and Revisions.
+         * Deletes the provided service. This will cause the Service to stop serving traffic and will delete
+         * all associated Revisions.
          *
          * Create a request for the method "services.delete".
          *
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace} with the
-         *        project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+         * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -9992,8 +9879,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Delete a service. This will cause the Service to stop serving traffic and will delete the child
-           * entities like Routes, Configurations and Revisions.
+           * Deletes the provided service. This will cause the Service to stop serving traffic and will
+           * delete all associated Revisions.
            *
            * Create a request for the method "services.delete".
            *
@@ -10002,9 +9889,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the service to delete. For Cloud Run (fully managed), replace {namespace} with the
-         *        project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+           * @param name The fully qualified name of the service to delete. It can be any of the following forms: *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -10073,24 +9961,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the service to delete. For Cloud Run (fully managed), replace {namespace}
-           * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-           * namespaces/PROJECT_ID
+           * The fully qualified name of the service to delete. It can be any of the following
+           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+           * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the service to delete. For Cloud Run (fully managed), replace {namespace} with the
-         project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+          /** The fully qualified name of the service to delete. It can be any of the following forms: *
+         `namespaces/{project_id_or_number}/services/{service_name}` *
+         `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the service to delete. For Cloud Run (fully managed), replace {namespace}
-           * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-           * namespaces/PROJECT_ID
+           * The fully qualified name of the service to delete. It can be any of the following
+           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+           * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -10102,17 +9994,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Cloud Run currently ignores this parameter. */
+          /** Not supported, and ignored by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.String apiVersion;
 
-          /** Cloud Run currently ignores this parameter.
+          /** Not supported, and ignored by Cloud Run.
            */
           public java.lang.String getApiVersion() {
             return apiVersion;
           }
 
-          /** Cloud Run currently ignores this parameter. */
+          /** Not supported, and ignored by Cloud Run. */
           public Delete setApiVersion(java.lang.String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
@@ -10141,45 +10033,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Cloud Run currently ignores this parameter. */
+          /** Not supported, and ignored by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.String kind;
 
-          /** Cloud Run currently ignores this parameter.
+          /** Not supported, and ignored by Cloud Run.
            */
           public java.lang.String getKind() {
             return kind;
           }
 
-          /** Cloud Run currently ignores this parameter. */
+          /** Not supported, and ignored by Cloud Run. */
           public Delete setKind(java.lang.String kind) {
             this.kind = kind;
             return this;
           }
 
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.String propagationPolicy;
 
-          /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-         for more information.
+          /** Not supported, and ignored by Cloud Run.
            */
           public java.lang.String getPropagationPolicy() {
             return propagationPolicy;
           }
 
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
             this.propagationPolicy = propagationPolicy;
             return this;
@@ -10191,16 +10071,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Get information about a service.
+         * Gets information about a service.
          *
          * Create a request for the method "services.get".
          *
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace} with the
-         *        project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+         * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -10217,7 +10098,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Get information about a service.
+           * Gets information about a service.
            *
            * Create a request for the method "services.get".
            *
@@ -10226,9 +10107,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace} with the
-         *        project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+           * @param name The fully qualified name of the service to retrieve. It can be any of the following forms: *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -10307,24 +10189,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace}
-           * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-           * namespaces/PROJECT_ID
+           * The fully qualified name of the service to retrieve. It can be any of the following
+           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+           * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace} with the
-         project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+          /** The fully qualified name of the service to retrieve. It can be any of the following forms: *
+         `namespaces/{project_id_or_number}/services/{service_name}` *
+         `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace}
-           * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-           * namespaces/PROJECT_ID
+           * The fully qualified name of the service to retrieve. It can be any of the following
+           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+           * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -10342,7 +10228,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Get the IAM Access Control policy currently in effect for the given Cloud Run service. This
+         * Gets the IAM Access Control policy currently in effect for the given Cloud Run service. This
          * result does not include any inherited policies.
          *
          * Create a request for the method "services.getIamPolicy".
@@ -10369,7 +10255,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Get the IAM Access Control policy currently in effect for the given Cloud Run service. This
+           * Gets the IAM Access Control policy currently in effect for the given Cloud Run service. This
            * result does not include any inherited policies.
            *
            * Create a request for the method "services.getIamPolicy".
@@ -10540,16 +10426,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List services.
+         * Lists services for the given project and region.
          *
          * Create a request for the method "services.list".
          *
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
-         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         *        example: namespaces/PROJECT_ID
+         * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
+         *        * `namespaces/{project_id_or_number}` *
+         *        `projects/{project_id_or_number}/locations/{region}` *
+         *        `projects/{project_id_or_number}/regions/{region}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -10566,7 +10453,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List services.
+           * Lists services for the given project and region.
            *
            * Create a request for the method "services.list".
            *
@@ -10575,9 +10462,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the services should be listed. For Cloud Run (fully managed), replace
-         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         *        example: namespaces/PROJECT_ID
+           * @param parent The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
+         *        * `namespaces/{project_id_or_number}` *
+         *        `projects/{project_id_or_number}/locations/{region}` *
+         *        `projects/{project_id_or_number}/regions/{region}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -10656,25 +10544,27 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The namespace from which the services should be listed. For Cloud Run (fully managed),
-           * replace {namespace} with the project ID or number. It takes the form
-           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+           * The parent from where the resources should be listed. In Cloud Run, it may be one of
+           * the following: * `namespaces/{project_id_or_number}` *
+           * `projects/{project_id_or_number}/locations/{region}` *
+           * `projects/{project_id_or_number}/regions/{region}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The namespace from which the services should be listed. For Cloud Run (fully managed), replace
-         {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         namespaces/PROJECT_ID
+          /** The parent from where the resources should be listed. In Cloud Run, it may be one of the following:
+         * `namespaces/{project_id_or_number}` * `projects/{project_id_or_number}/locations/{region}` *
+         `projects/{project_id_or_number}/regions/{region}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The namespace from which the services should be listed. For Cloud Run (fully managed),
-           * replace {namespace} with the project ID or number. It takes the form
-           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
+           * The parent from where the resources should be listed. In Cloud Run, it may be one of
+           * the following: * `namespaces/{project_id_or_number}` *
+           * `projects/{project_id_or_number}/locations/{region}` *
+           * `projects/{project_id_or_number}/regions/{region}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -10702,40 +10592,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * Allows to filter resources based on a specific value for a field name. Send this in a
-           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.String fieldSelector;
 
-          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
-         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+          /** Not supported, and ignored by Cloud Run.
            */
           public java.lang.String getFieldSelector() {
             return fieldSelector;
           }
 
-          /**
-           * Allows to filter resources based on a specific value for a field name. Send this in a
-           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           public List setFieldSelector(java.lang.String fieldSelector) {
             this.fieldSelector = fieldSelector;
             return this;
           }
 
-          /** Not currently used by Cloud Run. */
+          /** Not supported, and ignored by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.Boolean includeUninitialized;
 
-          /** Not currently used by Cloud Run.
+          /** Not supported, and ignored by Cloud Run.
            */
           public java.lang.Boolean getIncludeUninitialized() {
             return includeUninitialized;
           }
 
-          /** Not currently used by Cloud Run. */
+          /** Not supported, and ignored by Cloud Run. */
           public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
             this.includeUninitialized = includeUninitialized;
             return this;
@@ -10779,47 +10662,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * The baseline resource version from which the list or watch operation should start. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.String resourceVersion;
 
-          /** The baseline resource version from which the list or watch operation should start. Not currently
-         used by Cloud Run.
+          /** Not supported, and ignored by Cloud Run.
            */
           public java.lang.String getResourceVersion() {
             return resourceVersion;
           }
 
-          /**
-           * The baseline resource version from which the list or watch operation should start. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           public List setResourceVersion(java.lang.String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
           }
 
-          /**
-           * Flag that indicates that the client expects to watch this resource as well. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           @com.google.api.client.util.Key
           private java.lang.Boolean watch;
 
-          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
-         Cloud Run.
+          /** Not supported, and ignored by Cloud Run.
            */
           public java.lang.Boolean getWatch() {
             return watch;
           }
 
-          /**
-           * Flag that indicates that the client expects to watch this resource as well. Not
-           * currently used by Cloud Run.
-           */
+          /** Not supported, and ignored by Cloud Run. */
           public List setWatch(java.lang.Boolean watch) {
             this.watch = watch;
             return this;
@@ -10831,7 +10700,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+         * Replaces a service. Only the spec and metadata labels and annotations are modifiable. After the
          * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide
          * metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
          *
@@ -10840,9 +10709,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace} with the
-         *        project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+         * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
          */
@@ -10860,7 +10730,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Replace a service. Only the spec and metadata labels and annotations are modifiable. After the
+           * Replaces a service. Only the spec and metadata labels and annotations are modifiable. After the
            * Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
            * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
            * control.
@@ -10873,9 +10743,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * ientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param name The name of the service being replaced. For Cloud Run (fully managed), replace {namespace} with the
-         *        project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+           * @param name The fully qualified name of the service to replace. It can be any of the following forms: *
+         *        `namespaces/{project_id_or_number}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         *        `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
            */
@@ -10945,24 +10816,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the service being replaced. For Cloud Run (fully managed), replace
-           * {namespace} with the project ID or number. It takes the form namespaces/{namespace}.
-           * For example: namespaces/PROJECT_ID
+           * The fully qualified name of the service to replace. It can be any of the following
+           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+           * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the service being replaced. For Cloud Run (fully managed), replace {namespace} with the
-         project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+          /** The fully qualified name of the service to replace. It can be any of the following forms: *
+         `namespaces/{project_id_or_number}/services/{service_name}` *
+         `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+         `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the service being replaced. For Cloud Run (fully managed), replace
-           * {namespace} with the project ID or number. It takes the form namespaces/{namespace}.
-           * For example: namespaces/PROJECT_ID
+           * The fully qualified name of the service to replace. It can be any of the following
+           * forms: * `namespaces/{project_id_or_number}/services/{service_name}` *
+           * `projects/{project_id_or_number}/locations/{region}/services/{service_name}` *
+           * `projects/{project_id_or_number}/regions/{region}/services/{service_name}`
            */
           public ReplaceService setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

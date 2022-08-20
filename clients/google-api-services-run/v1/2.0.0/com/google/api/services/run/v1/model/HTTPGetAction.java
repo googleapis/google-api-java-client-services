@@ -30,37 +30,35 @@ package com.google.api.services.run.v1.model;
 public final class HTTPGetAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
-   * httpHeaders instead.
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+   * Custom headers to set in the request. HTTP allows repeated headers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<HTTPHeader> httpHeaders;
 
   /**
-   * (Optional) Path to access on the HTTP server.
+   * Path to access on the HTTP server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scheme;
 
   /**
-   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
-   * httpHeaders instead.
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -68,8 +66,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
-   * httpHeaders instead.
+   * Not supported by Cloud Run.
    * @param host host or {@code null} for none
    */
   public HTTPGetAction setHost(java.lang.String host) {
@@ -78,7 +75,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+   * Custom headers to set in the request. HTTP allows repeated headers.
    * @return value or {@code null} for none
    */
   public java.util.List<HTTPHeader> getHttpHeaders() {
@@ -86,7 +83,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+   * Custom headers to set in the request. HTTP allows repeated headers.
    * @param httpHeaders httpHeaders or {@code null} for none
    */
   public HTTPGetAction setHttpHeaders(java.util.List<HTTPHeader> httpHeaders) {
@@ -95,7 +92,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Path to access on the HTTP server.
+   * Path to access on the HTTP server.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -103,7 +100,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Path to access on the HTTP server.
+   * Path to access on the HTTP server.
    * @param path path or {@code null} for none
    */
   public HTTPGetAction setPath(java.lang.String path) {
@@ -112,7 +109,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getScheme() {
@@ -120,7 +117,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+   * Not supported by Cloud Run.
    * @param scheme scheme or {@code null} for none
    */
   public HTTPGetAction setScheme(java.lang.String scheme) {

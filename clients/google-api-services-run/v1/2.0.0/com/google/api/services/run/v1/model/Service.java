@@ -37,27 +37,32 @@ package com.google.api.services.run.v1.model;
 public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * The API version for this call. It must be "serving.knative.dev/v1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * The kind of resource, in this case "Service".
+   * The kind of resource. It must be "Service".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Metadata associated with this Service, including name, namespace, labels, and annotations.
-   * Cloud Run (fully managed) uses the following annotation keys to configure features on a
-   * Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the
-   * ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress
-   * settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently
-   * active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from
-   * `run.googleapis.com/ingress` while the system is processing a change to
+   * Metadata associated with this Service, including name, namespace, labels, and annotations. In
+   * Cloud Run, annotations with 'run.googleapis.com/' and 'autoscaling.knative.dev' are restricted,
+   * and the accepted annotations will be different depending on the resource type. The following
+   * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
+   * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
+   * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
+   * `run.googleapis.com/description` * `run.googleapis.com/gc-traffic-tags` *
+   * `run.googleapis.com/ingress` * `run.googleapis.com/ingress` sets the ingress settings for the
+   * Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on
+   * configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains
+   * the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may
+   * differ from `run.googleapis.com/ingress` while the system is processing a change to
    * `run.googleapis.com/ingress` or if the system failed to process a change to
    * `run.googleapis.com/ingress`. When the system has processed all changes successfully
    * `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
@@ -67,21 +72,21 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private ObjectMeta metadata;
 
   /**
-   * Spec holds the desired state of the Service (from the client).
+   * Holds the desired state of the Service (from the client).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ServiceSpec spec;
 
   /**
-   * Status communicates the observed state of the Service (from the controller).
+   * Communicates the system-controlled state of the Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ServiceStatus status;
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * The API version for this call. It must be "serving.knative.dev/v1".
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -89,7 +94,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * The API version for this call. It must be "serving.knative.dev/v1".
    * @param apiVersion apiVersion or {@code null} for none
    */
   public Service setApiVersion(java.lang.String apiVersion) {
@@ -98,7 +103,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of resource, in this case "Service".
+   * The kind of resource. It must be "Service".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -106,7 +111,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of resource, in this case "Service".
+   * The kind of resource. It must be "Service".
    * @param kind kind or {@code null} for none
    */
   public Service setKind(java.lang.String kind) {
@@ -115,13 +120,18 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with this Service, including name, namespace, labels, and annotations.
-   * Cloud Run (fully managed) uses the following annotation keys to configure features on a
-   * Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the
-   * ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress
-   * settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently
-   * active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from
-   * `run.googleapis.com/ingress` while the system is processing a change to
+   * Metadata associated with this Service, including name, namespace, labels, and annotations. In
+   * Cloud Run, annotations with 'run.googleapis.com/' and 'autoscaling.knative.dev' are restricted,
+   * and the accepted annotations will be different depending on the resource type. The following
+   * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
+   * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
+   * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
+   * `run.googleapis.com/description` * `run.googleapis.com/gc-traffic-tags` *
+   * `run.googleapis.com/ingress` * `run.googleapis.com/ingress` sets the ingress settings for the
+   * Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on
+   * configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains
+   * the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may
+   * differ from `run.googleapis.com/ingress` while the system is processing a change to
    * `run.googleapis.com/ingress` or if the system failed to process a change to
    * `run.googleapis.com/ingress`. When the system has processed all changes successfully
    * `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
@@ -132,13 +142,18 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with this Service, including name, namespace, labels, and annotations.
-   * Cloud Run (fully managed) uses the following annotation keys to configure features on a
-   * Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the
-   * ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress
-   * settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently
-   * active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from
-   * `run.googleapis.com/ingress` while the system is processing a change to
+   * Metadata associated with this Service, including name, namespace, labels, and annotations. In
+   * Cloud Run, annotations with 'run.googleapis.com/' and 'autoscaling.knative.dev' are restricted,
+   * and the accepted annotations will be different depending on the resource type. The following
+   * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
+   * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
+   * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
+   * `run.googleapis.com/description` * `run.googleapis.com/gc-traffic-tags` *
+   * `run.googleapis.com/ingress` * `run.googleapis.com/ingress` sets the ingress settings for the
+   * Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on
+   * configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains
+   * the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may
+   * differ from `run.googleapis.com/ingress` while the system is processing a change to
    * `run.googleapis.com/ingress` or if the system failed to process a change to
    * `run.googleapis.com/ingress`. When the system has processed all changes successfully
    * `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
@@ -150,7 +165,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Spec holds the desired state of the Service (from the client).
+   * Holds the desired state of the Service (from the client).
    * @return value or {@code null} for none
    */
   public ServiceSpec getSpec() {
@@ -158,7 +173,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Spec holds the desired state of the Service (from the client).
+   * Holds the desired state of the Service (from the client).
    * @param spec spec or {@code null} for none
    */
   public Service setSpec(ServiceSpec spec) {
@@ -167,7 +182,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status communicates the observed state of the Service (from the controller).
+   * Communicates the system-controlled state of the Service.
    * @return value or {@code null} for none
    */
   public ServiceStatus getStatus() {
@@ -175,7 +190,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status communicates the observed state of the Service (from the controller).
+   * Communicates the system-controlled state of the Service.
    * @param status status or {@code null} for none
    */
   public Service setStatus(ServiceStatus status) {

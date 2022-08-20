@@ -32,7 +32,7 @@ public final class TaskTemplateSpec extends com.google.api.client.json.GenericJs
   /**
    * Optional. Specification of the desired behavior of the task. More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status +optional
+   * status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class TaskTemplateSpec extends com.google.api.client.json.GenericJs
   /**
    * Optional. Specification of the desired behavior of the task. More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status +optional
+   * status
    * @return value or {@code null} for none
    */
   public TaskSpec getSpec() {
@@ -51,7 +51,7 @@ public final class TaskTemplateSpec extends com.google.api.client.json.GenericJs
   /**
    * Optional. Specification of the desired behavior of the task. More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status +optional
+   * status
    * @param spec spec or {@code null} for none
    */
   public TaskTemplateSpec setSpec(TaskSpec spec) {

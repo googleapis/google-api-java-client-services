@@ -30,9 +30,9 @@ package com.google.api.services.run.v1.model;
 public final class TrafficTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * ConfigurationName of a configuration to whose latest revision we will send this portion of
-   * traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we
-   * will automatically migrate traffic from the prior "latest ready" revision to the new one. This
+   * ConfigurationName of a configuration to whose latest revision which will be sent this portion
+   * of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes,
+   * traffic will automatically migrate from the prior "latest ready" revision to the new one. This
    * field is never set in Route's status, only its spec. This is mutually exclusive with
    * RevisionName. Cloud Run currently supports a single ConfigurationName.
    * The value may be {@code null}.
@@ -82,9 +82,9 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.String url;
 
   /**
-   * ConfigurationName of a configuration to whose latest revision we will send this portion of
-   * traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we
-   * will automatically migrate traffic from the prior "latest ready" revision to the new one. This
+   * ConfigurationName of a configuration to whose latest revision which will be sent this portion
+   * of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes,
+   * traffic will automatically migrate from the prior "latest ready" revision to the new one. This
    * field is never set in Route's status, only its spec. This is mutually exclusive with
    * RevisionName. Cloud Run currently supports a single ConfigurationName.
    * @return value or {@code null} for none
@@ -94,9 +94,9 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * ConfigurationName of a configuration to whose latest revision we will send this portion of
-   * traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we
-   * will automatically migrate traffic from the prior "latest ready" revision to the new one. This
+   * ConfigurationName of a configuration to whose latest revision which will be sent this portion
+   * of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes,
+   * traffic will automatically migrate from the prior "latest ready" revision to the new one. This
    * field is never set in Route's status, only its spec. This is mutually exclusive with
    * RevisionName. Cloud Run currently supports a single ConfigurationName.
    * @param configurationName configurationName or {@code null} for none

@@ -17,7 +17,10 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Condition defines a generic condition for a Resource.
+ * Conditions show the status of reconciliation progress on a given resource. Most resource use a
+ * top-level condition type "Ready" or "Completed" to show overall status with other conditions to
+ * checkpoint each stage of reconciliation. Note that if metadata.Generation does not equal
+ * status.ObservedGeneration, the conditions shown may not be relevant for the current spec.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -44,14 +47,17 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   private java.lang.String message;
 
   /**
-   * Optional. One-word CamelCase reason for the condition's last transition.
+   * Optional. One-word CamelCase reason for the condition's last transition. These are intended to
+   * be stable, unique values which the client may use to trigger error handling logic, whereas
+   * messages which may be changed later by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * Optional. How to interpret failures of this condition, one of Error, Warning, Info
+   * Optional. How to interpret this condition. One of Error, Warning, or Info. Conditions of
+   * severity Info do not contribute to resource readiness.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +73,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   /**
    * type is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
-   * Types common to all resources include: * "Ready": True when the Resource is ready.
+   * Types common to all resources include: * "Ready" or "Completed": True when the Resource is
+   * ready.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +115,9 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   }
 
   /**
-   * Optional. One-word CamelCase reason for the condition's last transition.
+   * Optional. One-word CamelCase reason for the condition's last transition. These are intended to
+   * be stable, unique values which the client may use to trigger error handling logic, whereas
+   * messages which may be changed later by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -116,7 +125,9 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   }
 
   /**
-   * Optional. One-word CamelCase reason for the condition's last transition.
+   * Optional. One-word CamelCase reason for the condition's last transition. These are intended to
+   * be stable, unique values which the client may use to trigger error handling logic, whereas
+   * messages which may be changed later by the server.
    * @param reason reason or {@code null} for none
    */
   public GoogleCloudRunV1Condition setReason(java.lang.String reason) {
@@ -125,7 +136,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   }
 
   /**
-   * Optional. How to interpret failures of this condition, one of Error, Warning, Info
+   * Optional. How to interpret this condition. One of Error, Warning, or Info. Conditions of
+   * severity Info do not contribute to resource readiness.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -133,7 +145,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   }
 
   /**
-   * Optional. How to interpret failures of this condition, one of Error, Warning, Info
+   * Optional. How to interpret this condition. One of Error, Warning, or Info. Conditions of
+   * severity Info do not contribute to resource readiness.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudRunV1Condition setSeverity(java.lang.String severity) {
@@ -161,7 +174,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   /**
    * type is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
-   * Types common to all resources include: * "Ready": True when the Resource is ready.
+   * Types common to all resources include: * "Ready" or "Completed": True when the Resource is
+   * ready.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -171,7 +185,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   /**
    * type is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
-   * Types common to all resources include: * "Ready": True when the Resource is ready.
+   * Types common to all resources include: * "Ready" or "Completed": True when the Resource is
+   * ready.
    * @param type type or {@code null} for none
    */
   public GoogleCloudRunV1Condition setType(java.lang.String type) {

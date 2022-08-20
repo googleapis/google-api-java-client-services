@@ -54,16 +54,16 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
    * Optional. Email address of the IAM service account associated with the task of a job execution.
    * The service account represents the identity of the running task, and determines what
    * permissions the task has. If not provided, the task will use the project's default service
-   * account. +optional
+   * account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccountName;
 
   /**
-   * Optional. Optional duration in seconds the task may be active before the system will actively
-   * try to mark it failed and kill associated containers. This applies per attempt of a task,
-   * meaning each retry can run for the full timeout. +optional
+   * Optional. Duration in seconds the task may be active before the system will actively try to
+   * mark it failed and kill associated containers. This applies per attempt of a task, meaning each
+   * retry can run for the full timeout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -71,7 +71,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of volumes that can be mounted by containers belonging to the task. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes +optional
+   * https://kubernetes.io/docs/concepts/storage/volumes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
    * Optional. Email address of the IAM service account associated with the task of a job execution.
    * The service account represents the identity of the running task, and determines what
    * permissions the task has. If not provided, the task will use the project's default service
-   * account. +optional
+   * account.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountName() {
@@ -128,7 +128,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
    * Optional. Email address of the IAM service account associated with the task of a job execution.
    * The service account represents the identity of the running task, and determines what
    * permissions the task has. If not provided, the task will use the project's default service
-   * account. +optional
+   * account.
    * @param serviceAccountName serviceAccountName or {@code null} for none
    */
   public TaskSpec setServiceAccountName(java.lang.String serviceAccountName) {
@@ -137,9 +137,9 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional duration in seconds the task may be active before the system will actively
-   * try to mark it failed and kill associated containers. This applies per attempt of a task,
-   * meaning each retry can run for the full timeout. +optional
+   * Optional. Duration in seconds the task may be active before the system will actively try to
+   * mark it failed and kill associated containers. This applies per attempt of a task, meaning each
+   * retry can run for the full timeout.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTimeoutSeconds() {
@@ -147,9 +147,9 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional duration in seconds the task may be active before the system will actively
-   * try to mark it failed and kill associated containers. This applies per attempt of a task,
-   * meaning each retry can run for the full timeout. +optional
+   * Optional. Duration in seconds the task may be active before the system will actively try to
+   * mark it failed and kill associated containers. This applies per attempt of a task, meaning each
+   * retry can run for the full timeout.
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public TaskSpec setTimeoutSeconds(java.lang.Long timeoutSeconds) {
@@ -159,7 +159,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of volumes that can be mounted by containers belonging to the task. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes +optional
+   * https://kubernetes.io/docs/concepts/storage/volumes
    * @return value or {@code null} for none
    */
   public java.util.List<Volume> getVolumes() {
@@ -168,7 +168,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of volumes that can be mounted by containers belonging to the task. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes +optional
+   * https://kubernetes.io/docs/concepts/storage/volumes
    * @param volumes volumes or {@code null} for none
    */
   public TaskSpec setVolumes(java.util.List<Volume> volumes) {

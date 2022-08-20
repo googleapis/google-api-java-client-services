@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class ConfigurationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
    * the "spec" inline with the observed state of the world.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
 
   /**
    * LatestCreatedRevisionName is the last revision that was created from this Configuration. It
-   * might not be ready yet, for that use LatestReadyRevisionName.
+   * might not be ready yet, so for the latest ready revision, use LatestReadyRevisionName.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
   private java.lang.Integer observedGeneration;
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
    * the "spec" inline with the observed state of the world.
    * @return value or {@code null} for none
    */
@@ -73,7 +73,7 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
   }
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
+   * Conditions communicate information about ongoing/complete reconciliation processes that bring
    * the "spec" inline with the observed state of the world.
    * @param conditions conditions or {@code null} for none
    */
@@ -84,7 +84,7 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
 
   /**
    * LatestCreatedRevisionName is the last revision that was created from this Configuration. It
-   * might not be ready yet, for that use LatestReadyRevisionName.
+   * might not be ready yet, so for the latest ready revision, use LatestReadyRevisionName.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestCreatedRevisionName() {
@@ -93,7 +93,7 @@ public final class ConfigurationStatus extends com.google.api.client.json.Generi
 
   /**
    * LatestCreatedRevisionName is the last revision that was created from this Configuration. It
-   * might not be ready yet, for that use LatestReadyRevisionName.
+   * might not be ready yet, so for the latest ready revision, use LatestReadyRevisionName.
    * @param latestCreatedRevisionName latestCreatedRevisionName or {@code null} for none
    */
   public ConfigurationStatus setLatestCreatedRevisionName(java.lang.String latestCreatedRevisionName) {

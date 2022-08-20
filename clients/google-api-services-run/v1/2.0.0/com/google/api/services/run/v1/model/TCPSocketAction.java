@@ -30,23 +30,21 @@ package com.google.api.services.run.v1.model;
 public final class TCPSocketAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Optional: Host name to connect to, defaults to the pod IP.
+   * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
-   * proto's inability to properly support the IntOrString golang type.
+   * Port number to access on the container. Number must be in the range 1 to 65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * (Optional) Optional: Host name to connect to, defaults to the pod IP.
+   * Not supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -54,7 +52,7 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * (Optional) Optional: Host name to connect to, defaults to the pod IP.
+   * Not supported by Cloud Run.
    * @param host host or {@code null} for none
    */
   public TCPSocketAction setHost(java.lang.String host) {
@@ -63,9 +61,7 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
-   * proto's inability to properly support the IntOrString golang type.
+   * Port number to access on the container. Number must be in the range 1 to 65535.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -73,9 +69,7 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
-   * proto's inability to properly support the IntOrString golang type.
+   * Port number to access on the container. Number must be in the range 1 to 65535.
    * @param port port or {@code null} for none
    */
   public TCPSocketAction setPort(java.lang.Integer port) {

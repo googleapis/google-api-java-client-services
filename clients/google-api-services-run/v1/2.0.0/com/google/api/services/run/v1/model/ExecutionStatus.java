@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * ExecutionStatus represents the current state of a Execution.
+ * ExecutionStatus represents the current state of an Execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,15 +30,15 @@ package com.google.api.services.run.v1.model;
 public final class ExecutionStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The number of tasks which reached phase Cancelled. +optional
+   * Optional. The number of tasks which reached phase Cancelled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer cancelledCount;
 
   /**
-   * Optional. Represents time when the execution was completed. It is not guaranteed to be set in
-   * happens-before order across separate operations. It is represented in RFC3339 form and is in
+   * Optional. Represents the time that the execution was completed. It is not guaranteed to be set
+   * in happens-before order across separate operations. It is represented in RFC3339 form and is in
    * UTC. +optional
    * The value may be {@code null}.
    */
@@ -46,15 +46,14 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   private String completionTime;
 
   /**
-   * Optional. The latest available observations of an execution's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * Optional. The latest available observations of an execution's current state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRunV1Condition> conditions;
 
   /**
-   * Optional. The number of tasks which reached phase Failed. +optional
+   * Optional. The number of tasks which reached phase Failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,37 +74,37 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   private java.lang.Integer observedGeneration;
 
   /**
-   * Optional. The number of tasks which have retried at least once. +optional
+   * Optional. The number of tasks which have retried at least once.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer retriedCount;
 
   /**
-   * Optional. The number of actively running tasks. +optional
+   * Optional. The number of actively running tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer runningCount;
 
   /**
-   * Optional. Represents time when the execution started to run. It is not guaranteed to be set in
-   * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * Optional. Represents the time that the execution started to run. It is not guaranteed to be set
+   * in happens-before order across separate operations. It is represented in RFC3339 form and is in
+   * UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Optional. The number of tasks which reached phase Succeeded. +optional
+   * Optional. The number of tasks which reached phase Succeeded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer succeededCount;
 
   /**
-   * Optional. The number of tasks which reached phase Cancelled. +optional
+   * Optional. The number of tasks which reached phase Cancelled.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCancelledCount() {
@@ -113,7 +112,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of tasks which reached phase Cancelled. +optional
+   * Optional. The number of tasks which reached phase Cancelled.
    * @param cancelledCount cancelledCount or {@code null} for none
    */
   public ExecutionStatus setCancelledCount(java.lang.Integer cancelledCount) {
@@ -122,8 +121,8 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Represents time when the execution was completed. It is not guaranteed to be set in
-   * happens-before order across separate operations. It is represented in RFC3339 form and is in
+   * Optional. Represents the time that the execution was completed. It is not guaranteed to be set
+   * in happens-before order across separate operations. It is represented in RFC3339 form and is in
    * UTC. +optional
    * @return value or {@code null} for none
    */
@@ -132,8 +131,8 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Represents time when the execution was completed. It is not guaranteed to be set in
-   * happens-before order across separate operations. It is represented in RFC3339 form and is in
+   * Optional. Represents the time that the execution was completed. It is not guaranteed to be set
+   * in happens-before order across separate operations. It is represented in RFC3339 form and is in
    * UTC. +optional
    * @param completionTime completionTime or {@code null} for none
    */
@@ -143,8 +142,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The latest available observations of an execution's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * Optional. The latest available observations of an execution's current state.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -152,8 +150,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The latest available observations of an execution's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+   * Optional. The latest available observations of an execution's current state.
    * @param conditions conditions or {@code null} for none
    */
   public ExecutionStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {
@@ -162,7 +159,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of tasks which reached phase Failed. +optional
+   * Optional. The number of tasks which reached phase Failed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFailedCount() {
@@ -170,7 +167,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of tasks which reached phase Failed. +optional
+   * Optional. The number of tasks which reached phase Failed.
    * @param failedCount failedCount or {@code null} for none
    */
   public ExecutionStatus setFailedCount(java.lang.Integer failedCount) {
@@ -213,7 +210,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of tasks which have retried at least once. +optional
+   * Optional. The number of tasks which have retried at least once.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetriedCount() {
@@ -221,7 +218,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of tasks which have retried at least once. +optional
+   * Optional. The number of tasks which have retried at least once.
    * @param retriedCount retriedCount or {@code null} for none
    */
   public ExecutionStatus setRetriedCount(java.lang.Integer retriedCount) {
@@ -230,7 +227,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of actively running tasks. +optional
+   * Optional. The number of actively running tasks.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRunningCount() {
@@ -238,7 +235,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of actively running tasks. +optional
+   * Optional. The number of actively running tasks.
    * @param runningCount runningCount or {@code null} for none
    */
   public ExecutionStatus setRunningCount(java.lang.Integer runningCount) {
@@ -247,9 +244,9 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Represents time when the execution started to run. It is not guaranteed to be set in
-   * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * Optional. Represents the time that the execution started to run. It is not guaranteed to be set
+   * in happens-before order across separate operations. It is represented in RFC3339 form and is in
+   * UTC.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -257,9 +254,9 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Represents time when the execution started to run. It is not guaranteed to be set in
-   * happens-before order across separate operations. It is represented in RFC3339 form and is in
-   * UTC. +optional
+   * Optional. Represents the time that the execution started to run. It is not guaranteed to be set
+   * in happens-before order across separate operations. It is represented in RFC3339 form and is in
+   * UTC.
    * @param startTime startTime or {@code null} for none
    */
   public ExecutionStatus setStartTime(String startTime) {
@@ -268,7 +265,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of tasks which reached phase Succeeded. +optional
+   * Optional. The number of tasks which reached phase Succeeded.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSucceededCount() {
@@ -276,7 +273,7 @@ public final class ExecutionStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The number of tasks which reached phase Succeeded. +optional
+   * Optional. The number of tasks which reached phase Succeeded.
    * @param succeededCount succeededCount or {@code null} for none
    */
   public ExecutionStatus setSucceededCount(java.lang.Integer succeededCount) {

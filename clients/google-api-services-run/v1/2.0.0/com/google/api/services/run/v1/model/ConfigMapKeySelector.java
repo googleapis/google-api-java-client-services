@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run Selects a key from a ConfigMap.
+ * Not supported by Cloud Run. Selects a key from a ConfigMap.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class ConfigMapKeySelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * The key to select.
+   * Required. The key to select.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,21 +45,21 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   private LocalObjectReference localObjectReference;
 
   /**
-   * The ConfigMap to select from.
+   * Required. The ConfigMap to select from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * (Optional) Specify whether the ConfigMap or its key must be defined
+   * Specify whether the ConfigMap or its key must be defined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean optional;
 
   /**
-   * The key to select.
+   * Required. The key to select.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -67,7 +67,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * The key to select.
+   * Required. The key to select.
    * @param key key or {@code null} for none
    */
   public ConfigMapKeySelector setKey(java.lang.String key) {
@@ -95,7 +95,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ConfigMap to select from.
+   * Required. The ConfigMap to select from.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +103,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ConfigMap to select from.
+   * Required. The ConfigMap to select from.
    * @param name name or {@code null} for none
    */
   public ConfigMapKeySelector setName(java.lang.String name) {
@@ -112,7 +112,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Specify whether the ConfigMap or its key must be defined
+   * Specify whether the ConfigMap or its key must be defined
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptional() {
@@ -120,7 +120,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Specify whether the ConfigMap or its key must be defined
+   * Specify whether the ConfigMap or its key must be defined
    * @param optional optional or {@code null} for none
    */
   public ConfigMapKeySelector setOptional(java.lang.Boolean optional) {

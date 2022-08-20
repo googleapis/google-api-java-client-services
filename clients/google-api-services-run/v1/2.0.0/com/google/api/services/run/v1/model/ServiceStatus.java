@@ -30,18 +30,18 @@ package com.google.api.services.run.v1.model;
 public final class ServiceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * From RouteStatus. Similar to url, information on where the service is available on HTTP.
+   * Similar to url, information on where the service is available on HTTP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Addressable address;
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
-   * the "spec" inline with the observed state of the world. Service-specific conditions include: *
-   * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true
-   * when the underlying Route is ready. * "Ready": true when both the underlying Route and
-   * Configuration are ready.
+   * Communicates information about ongoing/complete reconciliation processes that bring the `spec`
+   * inline with the observed state of the world. Service-specific conditions include: *
+   * `ConfigurationsReady`: `True` when the underlying Configuration is ready. * `RoutesReady`:
+   * `True` when the underlying Route is ready. * `Ready`: `True` when all underlying resources are
+   * ready.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,33 +54,34 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from
-   * this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+   * Name of the last revision that was created from this Service's Configuration. It might not be
+   * ready yet, for that use LatestReadyRevisionName.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestCreatedRevisionName;
 
   /**
-   * From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped
-   * out from this Service's Configuration that has had its "Ready" condition become "True".
+   * Name of the latest Revision from this Service's Configuration that has had its `Ready`
+   * condition become `True`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestReadyRevisionName;
 
   /**
-   * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
-   * Clients polling for completed reconciliation should poll until observedGeneration =
-   * metadata.generation and the Ready condition's status is True or False.
+   * Returns the generation last fully processed by the system. This will only match
+   * metadata.generation when reconciliation is complete. Clients polling for completed
+   * reconciliation should poll until observedGeneration = metadata.generation and the Ready
+   * condition's status is True or False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer observedGeneration;
 
   /**
-   * From RouteStatus. Traffic holds the configured traffic distribution. These entries will always
-   * contain RevisionName references. When ConfigurationName appears in the spec, this will hold the
+   * Holds the configured traffic distribution. These entries will always contain RevisionName
+   * references. When ConfigurationName appears in the spec, this will hold the
    * LatestReadyRevisionName that we last observed.
    * The value may be {@code null}.
    */
@@ -88,16 +89,15 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   private java.util.List<TrafficTarget> traffic;
 
   /**
-   * From RouteStatus. URL holds the url that will distribute traffic over the provided traffic
-   * targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-
-   * suffix}.a.run.app
+   * URL that will distribute traffic over the provided traffic targets. It generally has the form
+   * https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * From RouteStatus. Similar to url, information on where the service is available on HTTP.
+   * Similar to url, information on where the service is available on HTTP.
    * @return value or {@code null} for none
    */
   public Addressable getAddress() {
@@ -105,7 +105,7 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From RouteStatus. Similar to url, information on where the service is available on HTTP.
+   * Similar to url, information on where the service is available on HTTP.
    * @param address address or {@code null} for none
    */
   public ServiceStatus setAddress(Addressable address) {
@@ -114,11 +114,11 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
-   * the "spec" inline with the observed state of the world. Service-specific conditions include: *
-   * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true
-   * when the underlying Route is ready. * "Ready": true when both the underlying Route and
-   * Configuration are ready.
+   * Communicates information about ongoing/complete reconciliation processes that bring the `spec`
+   * inline with the observed state of the world. Service-specific conditions include: *
+   * `ConfigurationsReady`: `True` when the underlying Configuration is ready. * `RoutesReady`:
+   * `True` when the underlying Route is ready. * `Ready`: `True` when all underlying resources are
+   * ready.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -126,11 +126,11 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Conditions communicates information about ongoing/complete reconciliation processes that bring
-   * the "spec" inline with the observed state of the world. Service-specific conditions include: *
-   * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true
-   * when the underlying Route is ready. * "Ready": true when both the underlying Route and
-   * Configuration are ready.
+   * Communicates information about ongoing/complete reconciliation processes that bring the `spec`
+   * inline with the observed state of the world. Service-specific conditions include: *
+   * `ConfigurationsReady`: `True` when the underlying Configuration is ready. * `RoutesReady`:
+   * `True` when the underlying Route is ready. * `Ready`: `True` when all underlying resources are
+   * ready.
    * @param conditions conditions or {@code null} for none
    */
   public ServiceStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {
@@ -139,8 +139,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from
-   * this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+   * Name of the last revision that was created from this Service's Configuration. It might not be
+   * ready yet, for that use LatestReadyRevisionName.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestCreatedRevisionName() {
@@ -148,8 +148,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from
-   * this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+   * Name of the last revision that was created from this Service's Configuration. It might not be
+   * ready yet, for that use LatestReadyRevisionName.
    * @param latestCreatedRevisionName latestCreatedRevisionName or {@code null} for none
    */
   public ServiceStatus setLatestCreatedRevisionName(java.lang.String latestCreatedRevisionName) {
@@ -158,8 +158,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped
-   * out from this Service's Configuration that has had its "Ready" condition become "True".
+   * Name of the latest Revision from this Service's Configuration that has had its `Ready`
+   * condition become `True`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestReadyRevisionName() {
@@ -167,8 +167,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped
-   * out from this Service's Configuration that has had its "Ready" condition become "True".
+   * Name of the latest Revision from this Service's Configuration that has had its `Ready`
+   * condition become `True`.
    * @param latestReadyRevisionName latestReadyRevisionName or {@code null} for none
    */
   public ServiceStatus setLatestReadyRevisionName(java.lang.String latestReadyRevisionName) {
@@ -177,9 +177,10 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
-   * Clients polling for completed reconciliation should poll until observedGeneration =
-   * metadata.generation and the Ready condition's status is True or False.
+   * Returns the generation last fully processed by the system. This will only match
+   * metadata.generation when reconciliation is complete. Clients polling for completed
+   * reconciliation should poll until observedGeneration = metadata.generation and the Ready
+   * condition's status is True or False.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getObservedGeneration() {
@@ -187,9 +188,10 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller.
-   * Clients polling for completed reconciliation should poll until observedGeneration =
-   * metadata.generation and the Ready condition's status is True or False.
+   * Returns the generation last fully processed by the system. This will only match
+   * metadata.generation when reconciliation is complete. Clients polling for completed
+   * reconciliation should poll until observedGeneration = metadata.generation and the Ready
+   * condition's status is True or False.
    * @param observedGeneration observedGeneration or {@code null} for none
    */
   public ServiceStatus setObservedGeneration(java.lang.Integer observedGeneration) {
@@ -198,8 +200,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From RouteStatus. Traffic holds the configured traffic distribution. These entries will always
-   * contain RevisionName references. When ConfigurationName appears in the spec, this will hold the
+   * Holds the configured traffic distribution. These entries will always contain RevisionName
+   * references. When ConfigurationName appears in the spec, this will hold the
    * LatestReadyRevisionName that we last observed.
    * @return value or {@code null} for none
    */
@@ -208,8 +210,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From RouteStatus. Traffic holds the configured traffic distribution. These entries will always
-   * contain RevisionName references. When ConfigurationName appears in the spec, this will hold the
+   * Holds the configured traffic distribution. These entries will always contain RevisionName
+   * references. When ConfigurationName appears in the spec, this will hold the
    * LatestReadyRevisionName that we last observed.
    * @param traffic traffic or {@code null} for none
    */
@@ -219,9 +221,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From RouteStatus. URL holds the url that will distribute traffic over the provided traffic
-   * targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-
-   * suffix}.a.run.app
+   * URL that will distribute traffic over the provided traffic targets. It generally has the form
+   * https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -229,9 +230,8 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * From RouteStatus. URL holds the url that will distribute traffic over the provided traffic
-   * targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-
-   * suffix}.a.run.app
+   * URL that will distribute traffic over the provided traffic targets. It generally has the form
+   * https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
    * @param url url or {@code null} for none
    */
   public ServiceStatus setUrl(java.lang.String url) {

@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class ListServicesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * The API version for this call; returns "serving.knative.dev/v1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   private java.util.List<Service> items;
 
   /**
-   * The kind of this resource, in this case "ServiceList".
+   * The kind of this resource; returns "ServiceList".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +58,15 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   private ListMeta metadata;
 
   /**
-   * Locations that could not be reached.
+   * For calls against the global endpoint, returns the list of Cloud locations that could not be
+   * reached. For regional calls, this field is not used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * The API version for this call; returns "serving.knative.dev/v1".
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -73,7 +74,7 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * The API version for this call; returns "serving.knative.dev/v1".
    * @param apiVersion apiVersion or {@code null} for none
    */
   public ListServicesResponse setApiVersion(java.lang.String apiVersion) {
@@ -99,7 +100,7 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The kind of this resource, in this case "ServiceList".
+   * The kind of this resource; returns "ServiceList".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -107,7 +108,7 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The kind of this resource, in this case "ServiceList".
+   * The kind of this resource; returns "ServiceList".
    * @param kind kind or {@code null} for none
    */
   public ListServicesResponse setKind(java.lang.String kind) {
@@ -133,7 +134,8 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Locations that could not be reached.
+   * For calls against the global endpoint, returns the list of Cloud locations that could not be
+   * reached. For regional calls, this field is not used.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -141,7 +143,8 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Locations that could not be reached.
+   * For calls against the global endpoint, returns the list of Cloud locations that could not be
+   * reached. For regional calls, this field is not used.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListServicesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

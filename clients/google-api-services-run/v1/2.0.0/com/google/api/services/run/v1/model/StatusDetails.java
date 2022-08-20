@@ -34,7 +34,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The Causes array includes more details associated with the StatusReason failure. Not all
-   * StatusReasons may provide detailed causes. +optional
+   * StatusReasons may provide detailed causes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The group attribute of the resource associated with the status StatusReason. +optional
+   * The group attribute of the resource associated with the status StatusReason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,6 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
    * The kind attribute of the resource associated with the status StatusReason. On some operations
    * may differ from the requested resource Kind. More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-   * +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +64,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The name attribute of the resource associated with the status StatusReason (when there is a
-   * single name which can be described). +optional
+   * single name which can be described).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +73,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   /**
    * If specified, the time in seconds before the operation should be retried. Some errors may
    * indicate the client must take an alternate action - for those errors this field may indicate
-   * how long to wait before taking the alternate action. +optional
+   * how long to wait before taking the alternate action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +81,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * UID of the resource. (when there is a single resource which can be described). More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#uids +optional
+   * https://kubernetes.io/docs/user-guide/identifiers#uids
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +89,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The Causes array includes more details associated with the StatusReason failure. Not all
-   * StatusReasons may provide detailed causes. +optional
+   * StatusReasons may provide detailed causes.
    * @return value or {@code null} for none
    */
   public java.util.List<StatusCause> getCauses() {
@@ -99,7 +98,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The Causes array includes more details associated with the StatusReason failure. Not all
-   * StatusReasons may provide detailed causes. +optional
+   * StatusReasons may provide detailed causes.
    * @param causes causes or {@code null} for none
    */
   public StatusDetails setCauses(java.util.List<StatusCause> causes) {
@@ -108,7 +107,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The group attribute of the resource associated with the status StatusReason. +optional
+   * The group attribute of the resource associated with the status StatusReason.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -116,7 +115,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The group attribute of the resource associated with the status StatusReason. +optional
+   * The group attribute of the resource associated with the status StatusReason.
    * @param group group or {@code null} for none
    */
   public StatusDetails setGroup(java.lang.String group) {
@@ -128,7 +127,6 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
    * The kind attribute of the resource associated with the status StatusReason. On some operations
    * may differ from the requested resource Kind. More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-   * +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -139,7 +137,6 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
    * The kind attribute of the resource associated with the status StatusReason. On some operations
    * may differ from the requested resource Kind. More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-   * +optional
    * @param kind kind or {@code null} for none
    */
   public StatusDetails setKind(java.lang.String kind) {
@@ -149,7 +146,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The name attribute of the resource associated with the status StatusReason (when there is a
-   * single name which can be described). +optional
+   * single name which can be described).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -158,7 +155,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The name attribute of the resource associated with the status StatusReason (when there is a
-   * single name which can be described). +optional
+   * single name which can be described).
    * @param name name or {@code null} for none
    */
   public StatusDetails setName(java.lang.String name) {
@@ -169,7 +166,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   /**
    * If specified, the time in seconds before the operation should be retried. Some errors may
    * indicate the client must take an alternate action - for those errors this field may indicate
-   * how long to wait before taking the alternate action. +optional
+   * how long to wait before taking the alternate action.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetryAfterSeconds() {
@@ -179,7 +176,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   /**
    * If specified, the time in seconds before the operation should be retried. Some errors may
    * indicate the client must take an alternate action - for those errors this field may indicate
-   * how long to wait before taking the alternate action. +optional
+   * how long to wait before taking the alternate action.
    * @param retryAfterSeconds retryAfterSeconds or {@code null} for none
    */
   public StatusDetails setRetryAfterSeconds(java.lang.Integer retryAfterSeconds) {
@@ -189,7 +186,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * UID of the resource. (when there is a single resource which can be described). More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#uids +optional
+   * https://kubernetes.io/docs/user-guide/identifiers#uids
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -198,7 +195,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * UID of the resource. (when there is a single resource which can be described). More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#uids +optional
+   * https://kubernetes.io/docs/user-guide/identifiers#uids
    * @param uid uid or {@code null} for none
    */
   public StatusDetails setUid(java.lang.String uid) {

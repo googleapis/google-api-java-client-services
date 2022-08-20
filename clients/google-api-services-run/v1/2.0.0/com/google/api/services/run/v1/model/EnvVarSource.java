@@ -30,21 +30,21 @@ package com.google.api.services.run.v1.model;
 public final class EnvVarSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+   * Not supported by Cloud Run. Selects a key of a ConfigMap.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigMapKeySelector configMapKeyRef;
 
   /**
-   * (Optional) Selects a key (version) of a secret in Secret Manager.
+   * Selects a key (version) of a secret in Secret Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecretKeySelector secretKeyRef;
 
   /**
-   * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+   * Not supported by Cloud Run. Selects a key of a ConfigMap.
    * @return value or {@code null} for none
    */
   public ConfigMapKeySelector getConfigMapKeyRef() {
@@ -52,7 +52,7 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+   * Not supported by Cloud Run. Selects a key of a ConfigMap.
    * @param configMapKeyRef configMapKeyRef or {@code null} for none
    */
   public EnvVarSource setConfigMapKeyRef(ConfigMapKeySelector configMapKeyRef) {
@@ -61,7 +61,7 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Selects a key (version) of a secret in Secret Manager.
+   * Selects a key (version) of a secret in Secret Manager.
    * @return value or {@code null} for none
    */
   public SecretKeySelector getSecretKeyRef() {
@@ -69,7 +69,7 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Selects a key (version) of a secret in Secret Manager.
+   * Selects a key (version) of a secret in Secret Manager.
    * @param secretKeyRef secretKeyRef or {@code null} for none
    */
   public EnvVarSource setSecretKeyRef(SecretKeySelector secretKeyRef) {

@@ -31,7 +31,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The latest available observations of a job's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The latest available observations of a job's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV1Condition> getConditions() {
@@ -76,7 +76,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The latest available observations of a job's current state. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * https://kubernetes.io/docs/concepts/workloads/controllers/job/
    * @param conditions conditions or {@code null} for none
    */
   public JobStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {

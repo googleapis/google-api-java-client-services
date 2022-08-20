@@ -31,22 +31,22 @@ package com.google.api.services.run.v1.model;
 public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template holds the latest specification for the Revision to be stamped out.
+   * Holds the latest specification for the Revision to be stamped out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RevisionTemplate template;
 
   /**
-   * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
-   * Configurations.
+   * Specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+   * to the Service's main URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TrafficTarget> traffic;
 
   /**
-   * Template holds the latest specification for the Revision to be stamped out.
+   * Holds the latest specification for the Revision to be stamped out.
    * @return value or {@code null} for none
    */
   public RevisionTemplate getTemplate() {
@@ -54,7 +54,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Template holds the latest specification for the Revision to be stamped out.
+   * Holds the latest specification for the Revision to be stamped out.
    * @param template template or {@code null} for none
    */
   public ServiceSpec setTemplate(RevisionTemplate template) {
@@ -63,8 +63,8 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
-   * Configurations.
+   * Specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+   * to the Service's main URL.
    * @return value or {@code null} for none
    */
   public java.util.List<TrafficTarget> getTraffic() {
@@ -72,8 +72,8 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
-   * Configurations.
+   * Specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+   * to the Service's main URL.
    * @param traffic traffic or {@code null} for none
    */
   public ServiceSpec setTraffic(java.util.List<TrafficTarget> traffic) {

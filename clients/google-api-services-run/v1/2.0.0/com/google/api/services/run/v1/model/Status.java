@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Status is a return value for calls that don't return other objects
+ * Status is a return value for calls that don't return other objects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
-   * Suggested HTTP return code for this status, 0 if not set. +optional
+   * Suggested HTTP return code for this status, 0 if not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,14 +39,14 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * Extended data associated with the reason. Each reason may define its own extended details. This
    * field is optional and the data returned is not guaranteed to conform to any schema except that
-   * defined by the reason type. +optional
+   * defined by the reason type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StatusDetails details;
 
   /**
-   * A human-readable description of the status of this operation. +optional
+   * A human-readable description of the status of this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
    * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-
-   * architecture/api-conventions.md#types-kinds +optional
+   * architecture/api-conventions.md#types-kinds
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * A machine-readable description of why this operation is in the "Failure" status. If this value
    * is empty there is no information available. A Reason clarifies an HTTP status code but does not
-   * override it. +optional
+   * override it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,14 +72,14 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * Status of the operation. One of: "Success" or "Failure". More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status +optional
+   * status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Suggested HTTP return code for this status, 0 if not set. +optional
+   * Suggested HTTP return code for this status, 0 if not set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCode() {
@@ -87,7 +87,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Suggested HTTP return code for this status, 0 if not set. +optional
+   * Suggested HTTP return code for this status, 0 if not set.
    * @param code code or {@code null} for none
    */
   public Status setCode(java.lang.Integer code) {
@@ -98,7 +98,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * Extended data associated with the reason. Each reason may define its own extended details. This
    * field is optional and the data returned is not guaranteed to conform to any schema except that
-   * defined by the reason type. +optional
+   * defined by the reason type.
    * @return value or {@code null} for none
    */
   public StatusDetails getDetails() {
@@ -108,7 +108,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * Extended data associated with the reason. Each reason may define its own extended details. This
    * field is optional and the data returned is not guaranteed to conform to any schema except that
-   * defined by the reason type. +optional
+   * defined by the reason type.
    * @param details details or {@code null} for none
    */
   public Status setDetails(StatusDetails details) {
@@ -117,7 +117,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-readable description of the status of this operation. +optional
+   * A human-readable description of the status of this operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -125,7 +125,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-readable description of the status of this operation. +optional
+   * A human-readable description of the status of this operation.
    * @param message message or {@code null} for none
    */
   public Status setMessage(java.lang.String message) {
@@ -135,7 +135,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
    * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-
-   * architecture/api-conventions.md#types-kinds +optional
+   * architecture/api-conventions.md#types-kinds
    * @return value or {@code null} for none
    */
   public ListMeta getMetadata() {
@@ -144,7 +144,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
    * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-
-   * architecture/api-conventions.md#types-kinds +optional
+   * architecture/api-conventions.md#types-kinds
    * @param metadata metadata or {@code null} for none
    */
   public Status setMetadata(ListMeta metadata) {
@@ -155,7 +155,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * A machine-readable description of why this operation is in the "Failure" status. If this value
    * is empty there is no information available. A Reason clarifies an HTTP status code but does not
-   * override it. +optional
+   * override it.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -165,7 +165,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * A machine-readable description of why this operation is in the "Failure" status. If this value
    * is empty there is no information available. A Reason clarifies an HTTP status code but does not
-   * override it. +optional
+   * override it.
    * @param reason reason or {@code null} for none
    */
   public Status setReason(java.lang.String reason) {
@@ -176,7 +176,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * Status of the operation. One of: "Success" or "Failure". More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status +optional
+   * status
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -186,7 +186,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   /**
    * Status of the operation. One of: "Success" or "Failure". More info:
    * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status +optional
+   * status
    * @param status status or {@code null} for none
    */
   public Status setStatus(java.lang.String status) {

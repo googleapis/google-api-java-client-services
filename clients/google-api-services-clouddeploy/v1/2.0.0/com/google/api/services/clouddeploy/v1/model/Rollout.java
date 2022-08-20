@@ -69,8 +69,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String deployEndTime;
 
   /**
-   * Output only. The reason this deploy failed. This will always be unspecified while the deploy in
-   * progress.
+   * Output only. The reason this rollout failed. This will always be unspecified while the rollout
+   * is in progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Output only. Reason the build failed. Empty if the build succeeded.
+   * Output only. Additional information about the rollout failure, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,8 +252,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason this deploy failed. This will always be unspecified while the deploy in
-   * progress.
+   * Output only. The reason this rollout failed. This will always be unspecified while the rollout
+   * is in progress.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeployFailureCause() {
@@ -261,8 +261,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason this deploy failed. This will always be unspecified while the deploy in
-   * progress.
+   * Output only. The reason this rollout failed. This will always be unspecified while the rollout
+   * is in progress.
    * @param deployFailureCause deployFailureCause or {@code null} for none
    */
   public Rollout setDeployFailureCause(java.lang.String deployFailureCause) {
@@ -360,7 +360,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Reason the build failed. Empty if the build succeeded.
+   * Output only. Additional information about the rollout failure, if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailureReason() {
@@ -368,7 +368,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Reason the build failed. Empty if the build succeeded.
+   * Output only. Additional information about the rollout failure, if available.
    * @param failureReason failureReason or {@code null} for none
    */
   public Rollout setFailureReason(java.lang.String failureReason) {

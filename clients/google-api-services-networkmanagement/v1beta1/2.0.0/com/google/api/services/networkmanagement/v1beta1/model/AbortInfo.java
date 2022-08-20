@@ -38,6 +38,14 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String cause;
 
   /**
+   * List of project IDs that the user has specified in the request but does not have permission to
+   * access network configs. Analysis is aborted in this case with the PERMISSION_DENIED cause.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> projectsMissingPermission;
+
+  /**
    * URI of the resource that caused the abort.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
    */
   public AbortInfo setCause(java.lang.String cause) {
     this.cause = cause;
+    return this;
+  }
+
+  /**
+   * List of project IDs that the user has specified in the request but does not have permission to
+   * access network configs. Analysis is aborted in this case with the PERMISSION_DENIED cause.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProjectsMissingPermission() {
+    return projectsMissingPermission;
+  }
+
+  /**
+   * List of project IDs that the user has specified in the request but does not have permission to
+   * access network configs. Analysis is aborted in this case with the PERMISSION_DENIED cause.
+   * @param projectsMissingPermission projectsMissingPermission or {@code null} for none
+   */
+  public AbortInfo setProjectsMissingPermission(java.util.List<java.lang.String> projectsMissingPermission) {
+    this.projectsMissingPermission = projectsMissingPermission;
     return this;
   }
 

@@ -46,6 +46,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean causesDrop;
 
   /**
+   * Display information of a Cloud function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudFunctionInfo cloudFunction;
+
+  /**
    * Display information of a Cloud SQL instance.
    * The value may be {@code null}.
    */
@@ -153,6 +160,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Display information of a VPC connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpcConnectorInfo vpcConnector;
+
+  /**
    * Display information of a Compute Engine VPN gateway.
    * The value may be {@code null}.
    */
@@ -197,6 +211,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setCausesDrop(java.lang.Boolean causesDrop) {
     this.causesDrop = causesDrop;
+    return this;
+  }
+
+  /**
+   * Display information of a Cloud function.
+   * @return value or {@code null} for none
+   */
+  public CloudFunctionInfo getCloudFunction() {
+    return cloudFunction;
+  }
+
+  /**
+   * Display information of a Cloud function.
+   * @param cloudFunction cloudFunction or {@code null} for none
+   */
+  public Step setCloudFunction(CloudFunctionInfo cloudFunction) {
+    this.cloudFunction = cloudFunction;
     return this;
   }
 
@@ -456,6 +487,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Display information of a VPC connector.
+   * @return value or {@code null} for none
+   */
+  public VpcConnectorInfo getVpcConnector() {
+    return vpcConnector;
+  }
+
+  /**
+   * Display information of a VPC connector.
+   * @param vpcConnector vpcConnector or {@code null} for none
+   */
+  public Step setVpcConnector(VpcConnectorInfo vpcConnector) {
+    this.vpcConnector = vpcConnector;
     return this;
   }
 

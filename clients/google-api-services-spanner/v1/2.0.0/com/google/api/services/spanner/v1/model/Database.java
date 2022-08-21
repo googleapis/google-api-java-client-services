@@ -73,10 +73,11 @@ public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. For databases that are using customer managed encryption, this field contains the
-   * encryption information for the database, such as encryption state and the Cloud KMS key
-   * versions that are in use. For databases that are using Google default or other types of
-   * encryption, this field is empty. This field is propagated lazily from the backend. There might
-   * be a delay from when a key version is being used and when it appears in this field.
+   * encryption information for the database, such as all Cloud KMS key versions that are in use.
+   * The `encryption_status' field inside of each `EncryptionInfo` is not populated. For databases
+   * that are using Google default or other types of encryption, this field is empty. This field is
+   * propagated lazily from the backend. There might be a delay from when a key version is being
+   * used and when it appears in this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,10 +217,11 @@ public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. For databases that are using customer managed encryption, this field contains the
-   * encryption information for the database, such as encryption state and the Cloud KMS key
-   * versions that are in use. For databases that are using Google default or other types of
-   * encryption, this field is empty. This field is propagated lazily from the backend. There might
-   * be a delay from when a key version is being used and when it appears in this field.
+   * encryption information for the database, such as all Cloud KMS key versions that are in use.
+   * The `encryption_status' field inside of each `EncryptionInfo` is not populated. For databases
+   * that are using Google default or other types of encryption, this field is empty. This field is
+   * propagated lazily from the backend. There might be a delay from when a key version is being
+   * used and when it appears in this field.
    * @return value or {@code null} for none
    */
   public java.util.List<EncryptionInfo> getEncryptionInfo() {
@@ -228,10 +230,11 @@ public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. For databases that are using customer managed encryption, this field contains the
-   * encryption information for the database, such as encryption state and the Cloud KMS key
-   * versions that are in use. For databases that are using Google default or other types of
-   * encryption, this field is empty. This field is propagated lazily from the backend. There might
-   * be a delay from when a key version is being used and when it appears in this field.
+   * encryption information for the database, such as all Cloud KMS key versions that are in use.
+   * The `encryption_status' field inside of each `EncryptionInfo` is not populated. For databases
+   * that are using Google default or other types of encryption, this field is empty. This field is
+   * propagated lazily from the backend. There might be a delay from when a key version is being
+   * used and when it appears in this field.
    * @param encryptionInfo encryptionInfo or {@code null} for none
    */
   public Database setEncryptionInfo(java.util.List<EncryptionInfo> encryptionInfo) {

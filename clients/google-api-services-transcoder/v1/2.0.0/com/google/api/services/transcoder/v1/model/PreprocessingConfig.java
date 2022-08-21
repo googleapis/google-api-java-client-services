@@ -58,6 +58,13 @@ public final class PreprocessingConfig extends com.google.api.client.json.Generi
   private Deblock deblock;
 
   /**
+   * Specify the video deinterlace configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Deinterlace deinterlace;
+
+  /**
    * Denoise preprocessing configuration.
    * The value may be {@code null}.
    */
@@ -136,6 +143,23 @@ public final class PreprocessingConfig extends com.google.api.client.json.Generi
    */
   public PreprocessingConfig setDeblock(Deblock deblock) {
     this.deblock = deblock;
+    return this;
+  }
+
+  /**
+   * Specify the video deinterlace configuration.
+   * @return value or {@code null} for none
+   */
+  public Deinterlace getDeinterlace() {
+    return deinterlace;
+  }
+
+  /**
+   * Specify the video deinterlace configuration.
+   * @param deinterlace deinterlace or {@code null} for none
+   */
+  public PreprocessingConfig setDeinterlace(Deinterlace deinterlace) {
+    this.deinterlace = deinterlace;
     return this;
   }
 

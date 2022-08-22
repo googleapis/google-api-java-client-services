@@ -39,22 +39,15 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   private java.lang.String clusterName;
 
   /**
-   * Membership configuration in the cluster. This represents the actual state in the cluster, while
-   * the MembershipSpec in the FeatureSpec represents the intended state
+   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.
+   * "constraint template library"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerMembershipSpec membershipSpec;
+  private java.util.Map<String, PolicyControllerOnClusterState> componentStates;
 
   /**
-   * Policy Controller state observed by the Policy Controller Hub
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PolicyControllerHubState policyControllerHubState;
-
-  /**
-   * The lifecycle state Policy Controller is in.
+   * The overall Policy Controller lifecycle state observed by the Hub Feature controller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,43 +75,26 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   }
 
   /**
-   * Membership configuration in the cluster. This represents the actual state in the cluster, while
-   * the MembershipSpec in the FeatureSpec represents the intended state
+   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.
+   * "constraint template library"
    * @return value or {@code null} for none
    */
-  public PolicyControllerMembershipSpec getMembershipSpec() {
-    return membershipSpec;
+  public java.util.Map<String, PolicyControllerOnClusterState> getComponentStates() {
+    return componentStates;
   }
 
   /**
-   * Membership configuration in the cluster. This represents the actual state in the cluster, while
-   * the MembershipSpec in the FeatureSpec represents the intended state
-   * @param membershipSpec membershipSpec or {@code null} for none
+   * Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation" 4.
+   * "constraint template library"
+   * @param componentStates componentStates or {@code null} for none
    */
-  public PolicyControllerMembershipState setMembershipSpec(PolicyControllerMembershipSpec membershipSpec) {
-    this.membershipSpec = membershipSpec;
+  public PolicyControllerMembershipState setComponentStates(java.util.Map<String, PolicyControllerOnClusterState> componentStates) {
+    this.componentStates = componentStates;
     return this;
   }
 
   /**
-   * Policy Controller state observed by the Policy Controller Hub
-   * @return value or {@code null} for none
-   */
-  public PolicyControllerHubState getPolicyControllerHubState() {
-    return policyControllerHubState;
-  }
-
-  /**
-   * Policy Controller state observed by the Policy Controller Hub
-   * @param policyControllerHubState policyControllerHubState or {@code null} for none
-   */
-  public PolicyControllerMembershipState setPolicyControllerHubState(PolicyControllerHubState policyControllerHubState) {
-    this.policyControllerHubState = policyControllerHubState;
-    return this;
-  }
-
-  /**
-   * The lifecycle state Policy Controller is in.
+   * The overall Policy Controller lifecycle state observed by the Hub Feature controller.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -126,7 +102,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   }
 
   /**
-   * The lifecycle state Policy Controller is in.
+   * The overall Policy Controller lifecycle state observed by the Hub Feature controller.
    * @param state state or {@code null} for none
    */
   public PolicyControllerMembershipState setState(java.lang.String state) {
